@@ -878,7 +878,7 @@
     /* ==================================================== */
     /* Screenshot-Matching Custom Navigation Menu */
     /* ==================================================== */
-    .custom-menu-dropdown-wrap {
+    /* .custom-menu-dropdown-wrap removed */ {
       position: relative;
       display: inline-block;
     }
@@ -970,10 +970,126 @@
       color: #024a77 !important;
     }
 
+
+    /* ==================================================== */
+    /* Two-Column Fluid Layout with Left Sticky Sidebar */
+    /* ==================================================== */
+    @media (min-width: 1025px) {
+      .portal-layout-wrapper {
+        display: grid;
+        grid-template-columns: 290px minmax(0, 1fr);
+        gap: 22px;
+        align-items: start;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .desktop-left-sidebar {
+        position: sticky;
+        top: 14px;
+        display: block !important;
+        width: 290px;
+        z-index: 100;
+        box-sizing: border-box;
+      }
+    }
+
+    /* Mobile & Tablet: Completely Hidden on screens <= 1024px */
+    @media (max-width: 1024px) {
+      .portal-layout-wrapper {
+        display: block !important;
+        width: 100% !important;
+      }
+
+      .desktop-left-sidebar {
+        display: none !important;
+      }
+    }
+
+    /* Screenshot-Matching Left Menu Box Styling */
+    .sidebar-menu-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 14px rgba(212, 175, 55, 0.25);
+      border: 1.5px solid #cbd5e1;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    .sidebar-menu-card .menu-nav-link {
+      display: block;
+      padding: 13px 18px;
+      color: #1e293b;
+      text-decoration: none;
+      font-size: 0.96rem;
+      font-weight: 700;
+      border-bottom: 1px solid #e2e8f0;
+      background: #ffffff;
+      transition: all 0.2s ease;
+      text-align: left;
+      line-height: 1.35;
+    }
+
+    .sidebar-menu-card .menu-nav-link:last-child {
+      border-bottom: none;
+    }
+
+    .sidebar-menu-card .menu-nav-link:hover {
+      background-color: #f8fafc;
+      color: #0284c7;
+      padding-left: 22px;
+    }
+
+    /* Top Active Item: Entrance Examination (Matches Image Light Blue) */
+    .sidebar-menu-card .menu-nav-link.active-blue {
+      background-color: #cbe7fd !important;
+      color: #0369a1 !important;
+      font-weight: 800 !important;
+      font-size: 1.02rem !important;
+      border-bottom: 1px solid #bae6fd !important;
+    }
+
+    .sidebar-menu-card .menu-nav-link.active-blue:hover {
+      background-color: #b9dffc !important;
+      color: #024a77 !important;
+    }
+
 </style>
 </head>
 <body>
 <div class="container">
+
+<div class="portal-layout-wrapper">
+  <!-- Left Sticky Fixed Sidebar (Hidden on Mobile) -->
+  <aside class="desktop-left-sidebar no-print">
+    <div class="sidebar-menu-card">
+      <a href="00_entrance_exams.html" class="menu-nav-link active-blue">
+        Entrance Examination
+      </a>
+      <a href="#gateway-merit" onclick="scrollToGateway('cat-merit');" class="menu-nav-link">
+        Direct Admissions
+      </a>
+      <a href="#gateway-colleges" onclick="scrollToGateway('cat-colleges');" class="menu-nav-link">
+        Colleges & Universities Directory
+      </a>
+      <a href="#gateway-competitive" onclick="scrollToGateway('cat-competitive');" class="menu-nav-link">
+        Govt Exams
+      </a>
+      <a href="#gateway-skills" onclick="scrollToGateway('cat-skills');" class="menu-nav-link">
+        Direct Careers
+      </a>
+      <a href="#gateway-support" onclick="scrollToGateway('cat-support');" class="menu-nav-link">
+        Helpdesk & Contacts
+      </a>
+      <a href="javascript:void(0);" onclick="alert('பாடக்குறிப்புகள், மாதிரி வினாத்தாள்கள் (Study Materials & PYQs) தயாரிப்பில் உள்ளன. மிக விரைவில் இப்பகுதியில் பதிவேற்றப்படும்!');" class="menu-nav-link">
+        Download & Study Resources
+      </a>
+    </div>
+  </aside>
+
+  <!-- Right Main Content Area -->
+  <main class="portal-main-col">
+
 <!-- Top Bar with relative Home link -->
 <div class="top-bar">
 <div class="top-nav-left">
@@ -982,37 +1098,7 @@
           முகப்பு (HOME)
         </a>
 <div class="quick-tools-nav">
-<div class="custom-menu-dropdown-wrap">
-  <button class="menu-toggle-btn" id="menuToggleBtn" onclick="togglePortalMenu(event)" type="button" title="முதன்மை மெனு">
-    <span style="font-size:16px;">☰</span>
-    <span>வழிகாட்டல் மெனு</span>
-    <span style="font-size:10px;">▼</span>
-  </button>
-  <!-- Screenshot Matching Menu -->
-  <div class="custom-menu-panel" id="portalMenuPanel">
-    <a href="00_entrance_exams.html" class="menu-nav-link active-blue">
-      Entrance Examination
-    </a>
-    <a href="#gateway-merit" onclick="closePortalMenu(); scrollToGateway('cat-merit');" class="menu-nav-link">
-      Direct Admissions
-    </a>
-    <a href="#gateway-colleges" onclick="closePortalMenu(); scrollToGateway('cat-colleges');" class="menu-nav-link">
-      Colleges & Universities Directory
-    </a>
-    <a href="#gateway-competitive" onclick="closePortalMenu(); scrollToGateway('cat-competitive');" class="menu-nav-link">
-      Govt Exams
-    </a>
-    <a href="#gateway-skills" onclick="closePortalMenu(); scrollToGateway('cat-skills');" class="menu-nav-link">
-      Direct Careers
-    </a>
-    <a href="#gateway-support" onclick="closePortalMenu(); scrollToGateway('cat-support');" class="menu-nav-link">
-      Helpdesk & Contacts
-    </a>
-    <a href="javascript:void(0);" onclick="closePortalMenu(); alert('பாடக்குறிப்புகள், மாதிரி வினாத்தாள்கள் (Study Materials & PYQs) தயாரிப்பில் உள்ளன. மிக விரைவில் இப்பகுதியில் பதிவேற்றப்படும்!');" class="menu-nav-link">
-      Download & Study Resources
-    </a>
-  </div>
-</div>
+<div class="quick-tools-nav">
 <button class="quick-tool-btn btn-cutoff" onclick="openCutoffModal()" title="அனைத்து வகை படிப்புகளுக்கான கட்-ஆஃப் கால்குலேட்டர்" type="button">
             🧮 கட்-ஆஃப் கால்குலேட்டர்
           </button>
@@ -1381,6 +1467,8 @@
 </footer>
 </div>
 
+</main>
+</div>
 <!-- கட்-ஆஃப் கால்குலேட்டர் மோடல் -->
 <div class="modal-overlay" id="cutoffModal">
 <div class="modal-content" style="border: 2px solid #d4af37; box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(212, 175, 55, 0.3);">
@@ -1993,7 +2081,7 @@
 
     // Close menu when clicking outside
     document.addEventListener('click', function(e) {
-      const wrap = document.querySelector('.custom-menu-dropdown-wrap');
+      const wrap = document.querySelector('/* .custom-menu-dropdown-wrap removed */');
       if (wrap && !wrap.contains(e.target)) {
         closePortalMenu();
       }
