@@ -874,6 +874,102 @@
     .card:hover .btn-link svg {
       transform: translateX(5px);
     }
+
+    /* ==================================================== */
+    /* Screenshot-Matching Custom Navigation Menu */
+    /* ==================================================== */
+    .custom-menu-dropdown-wrap {
+      position: relative;
+      display: inline-block;
+    }
+
+    .menu-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: linear-gradient(135deg, #0f1d42 0%, #1e3a8a 50%, #0f1d42 100%);
+      color: #fef08a;
+      border: 1.8px solid #d4af37;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 0 12px rgba(212, 175, 55, 0.25);
+      transition: all 0.25s ease;
+      font-family: inherit;
+    }
+
+    .menu-toggle-btn:hover {
+      background: linear-gradient(135deg, #d4af37 0%, #fef08a 100%);
+      color: #070e22;
+      border-color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+    }
+
+    .custom-menu-panel {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      width: 320px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.28), 0 0 1px rgba(0, 0, 0, 0.1);
+      border: 1px solid #cbd5e1;
+      overflow: hidden;
+      z-index: 1000;
+      animation: menuFadeIn 0.25s ease-out;
+    }
+
+    .custom-menu-panel.show {
+      display: block;
+    }
+
+    @keyframes menuFadeIn {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .menu-nav-link {
+      display: block;
+      padding: 13px 20px;
+      color: #1e293b;
+      text-decoration: none;
+      font-size: 0.98rem;
+      font-weight: 700;
+      border-bottom: 1px solid #e2e8f0;
+      transition: all 0.2s ease;
+      background: #ffffff;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    .menu-nav-link:last-child {
+      border-bottom: none;
+    }
+
+    .menu-nav-link:hover {
+      background-color: #f8fafc;
+      color: #0284c7;
+      padding-left: 24px;
+    }
+
+    /* Top active item: Entrance Examination (Matches Image Light Blue) */
+    .menu-nav-link.active-blue {
+      background-color: #cbe7fd !important;
+      color: #0369a1 !important;
+      font-weight: 800 !important;
+      font-size: 1.05rem !important;
+      border-bottom: 1px solid #bae6fd !important;
+    }
+
+    .menu-nav-link.active-blue:hover {
+      background-color: #b9dffc !important;
+      color: #024a77 !important;
+    }
+
 </style>
 </head>
 <body>
@@ -886,6 +982,37 @@
           முகப்பு (HOME)
         </a>
 <div class="quick-tools-nav">
+<div class="custom-menu-dropdown-wrap">
+  <button class="menu-toggle-btn" id="menuToggleBtn" onclick="togglePortalMenu(event)" type="button" title="முதன்மை மெனு">
+    <span style="font-size:16px;">☰</span>
+    <span>வழிகாட்டல் மெனு</span>
+    <span style="font-size:10px;">▼</span>
+  </button>
+  <!-- Screenshot Matching Menu -->
+  <div class="custom-menu-panel" id="portalMenuPanel">
+    <a href="00_entrance_exams.html" class="menu-nav-link active-blue">
+      Entrance Examination
+    </a>
+    <a href="#gateway-merit" onclick="closePortalMenu(); scrollToGateway('cat-merit');" class="menu-nav-link">
+      Direct Admissions
+    </a>
+    <a href="#gateway-colleges" onclick="closePortalMenu(); scrollToGateway('cat-colleges');" class="menu-nav-link">
+      Colleges & Universities Directory
+    </a>
+    <a href="#gateway-competitive" onclick="closePortalMenu(); scrollToGateway('cat-competitive');" class="menu-nav-link">
+      Govt Exams
+    </a>
+    <a href="#gateway-skills" onclick="closePortalMenu(); scrollToGateway('cat-skills');" class="menu-nav-link">
+      Direct Careers
+    </a>
+    <a href="#gateway-support" onclick="closePortalMenu(); scrollToGateway('cat-support');" class="menu-nav-link">
+      Helpdesk & Contacts
+    </a>
+    <a href="javascript:void(0);" onclick="closePortalMenu(); alert('பாடக்குறிப்புகள், மாதிரி வினாத்தாள்கள் (Study Materials & PYQs) தயாரிப்பில் உள்ளன. மிக விரைவில் இப்பகுதியில் பதிவேற்றப்படும்!');" class="menu-nav-link">
+      Download & Study Resources
+    </a>
+  </div>
+</div>
 <button class="quick-tool-btn btn-cutoff" onclick="openCutoffModal()" title="அனைத்து வகை படிப்புகளுக்கான கட்-ஆஃப் கால்குலேட்டர்" type="button">
             🧮 கட்-ஆஃப் கால்குலேட்டர்
           </button>
@@ -1847,6 +1974,31 @@
     } else {
       typeCreatorDetails();
     }
+
+    // Menu Dropdown Handlers
+    function togglePortalMenu(e) {
+      if (e) e.stopPropagation();
+      const panel = document.getElementById('portalMenuPanel');
+      if (panel) {
+        panel.classList.toggle('show');
+      }
+    }
+
+    function closePortalMenu() {
+      const panel = document.getElementById('portalMenuPanel');
+      if (panel) {
+        panel.classList.remove('show');
+      }
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      const wrap = document.querySelector('.custom-menu-dropdown-wrap');
+      if (wrap && !wrap.contains(e.target)) {
+        closePortalMenu();
+      }
+    });
+
 </script>
 </body>
 </html>
