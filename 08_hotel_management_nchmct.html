@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+
+<html lang="ta">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>உணவக மேலாண்மை மற்றும் விருந்தோம்பல் நிர்வாகம் (Hotel Management - NCHMCT JEE, IHMs) முழுமையான வழிகாட்டி - முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
+<!-- Google Fonts: Inter & Noto Sans Tamil -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Noto+Sans+Tamil:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
+    /* CSS Reset & Variables - Hospitality Luxury Wine & Gold Theme */
+    :root {
+      --wine-900: #3b0712;      /* Deep Royal Burgundy / Wine */
+      --wine-800: #4c0519;      /* Classic Hospitality Wine */
+      --wine-700: #831843;      /* Rose Wine */
+      --wine-600: #9f1239;      /* Bright Burgundy */
+      --gold-600: #b45309;      /* Polished Brass */
+      --gold-500: #d97706;      /* Luxury Gold */
+      --gold-400: #f59e0b;      /* Warm Champagne Amber */
+      --gold-100: #fef3c7;      /* Subtle Champagne Tint */
+      --gold-50: #fffbeb;       /* Light Warm Cream */
+      --navy-900: #0f172a;      /* Deep Executive Slate */
+      --navy-800: #1e293b;
+      --navy-700: #334155;
+      --slate-600: #475569;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --white: #ffffff;
+      --success: #15803d;
+      --teal-700: #0f766e;
+      --teal-100: #ccfbf1;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --shadow-sm: 0 2px 6px rgba(59, 7, 18, 0.06);
+      --shadow-md: 0 6px 20px rgba(59, 7, 18, 0.1);
+      --shadow-lg: 0 12px 36px rgba(59, 7, 18, 0.16);
+      --shadow-gold: 0 8px 24px rgba(217, 119, 6, 0.22);
+    }
+  
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+  
+    body {
+      font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #faf7f5;
+      color: var(--navy-900);
+      line-height: 1.68;
+      font-size: 15.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+  
+    .metric-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+  
+    .metric-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+  
+    .metric-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+  
+    .icon-colleges { background: #fef3c7; color: #b45309; }
+    .icon-degree { background: #ffe4e6; color: #9f1239; }
+    .icon-salary { background: #dcfce7; color: #15803d; }
+    .icon-stream { background: #e0e7ff; color: #4338ca; }
+  
+    .metric-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--slate-600);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 4px;
+    }
+  
+    .metric-value {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--wine-900);
+      line-height: 1.3;
+    }
+  
+    .metric-desc {
+      font-size: 12.5px;
+      color: var(--slate-600);
+      margin-top: 4px;
+    }
+  
+    .content-section {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 34px 28px;
+      margin-bottom: 30px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid #e2e8f0;
+      scroll-margin-top: 20px;
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+  
+    @keyframes sectionHighlightPulse {
+      0% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.45); }
+      40% { box-shadow: 0 0 0 10px rgba(217, 119, 6, 0.25); }
+      100% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0); }
+    }
+    .section-pulse-highlight {
+      animation: sectionHighlightPulse 1.4s ease-out !important;
+      border-color: var(--gold-500) !important;
+    }
+  
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+      border-bottom: 2px solid var(--slate-100);
+      padding-bottom: 16px;
+    }
+  
+    .section-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+  
+    .section-icon-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      background: linear-gradient(135deg, var(--wine-900), var(--wine-800));
+      color: var(--white);
+      box-shadow: 0 4px 10px rgba(59, 7, 18, 0.2);
+      flex-shrink: 0;
+    }
+  
+    .section-icon-badge.gold {
+      background: linear-gradient(135deg, var(--gold-600), var(--gold-500));
+    }
+  
+    .section-icon-badge.teal {
+      background: linear-gradient(135deg, var(--teal-700), #14b8a6);
+    }
+  
+    .section-title {
+      font-size: 23px;
+      font-weight: 800;
+      color: var(--wine-900);
+      line-height: 1.35;
+    }
+  
+    .section-tag {
+      font-size: 13px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: var(--slate-100);
+      color: var(--navy-800);
+    }
+  
+    .table-container {
+      overflow-x: auto;
+      border-radius: var(--radius-md);
+      border: 1px solid #e2e8f0;
+      margin: 18px 0;
+      background: var(--white);
+    }
+  
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14.5px;
+    }
+  
+    table.data-table th {
+      background: var(--wine-900);
+      color: var(--white);
+      padding: 13px 16px;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      border-bottom: 1px solid #20030a;
+    }
+  
+    table.data-table th.gold {
+      background: var(--gold-600);
+    }
+  
+    table.data-table th.navy {
+      background: var(--navy-900);
+    }
+  
+    table.data-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid #f1f5f9;
+      color: var(--navy-900);
+      vertical-align: middle;
+    }
+  
+    table.data-table tr:nth-child(even) td {
+      background-color: var(--slate-50);
+    }
+  
+    table.data-table tr:hover td {
+      background-color: #fff7ed50;
+    }
+  
+    .tag-badge {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      font-weight: 700;
+    }
+  
+    .tag-wine { background: #ffe4e6; color: #9f1239; }
+    .tag-gold { background: #fef3c7; color: #b45309; }
+    .tag-green { background: #dcfce7; color: #15803d; }
+    .tag-blue { background: #e0f2fe; color: #0284c7; }
+    .tag-purple { background: #f3e8ff; color: #7e22ce; }
+  
+    .cards-2col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+      margin: 18px 0;
+    }
+  
+    .cards-3col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 18px 0;
+    }
+  
+    .cards-4col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin: 18px 0;
+    }
+  
+    .info-card {
+      background: var(--slate-50);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+  
+    .info-card:hover {
+      border-color: #cbd5e1;
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+    }
+  
+    .info-card.highlight {
+      border-left: 4px solid var(--gold-500);
+      background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%);
+    }
+  
+    .info-card.highlight-wine {
+      border-left: 4px solid var(--wine-800);
+      background: linear-gradient(180deg, #fff1f2 0%, #ffffff 100%);
+    }
+  
+    .info-card.highlight-teal {
+      border-left: 4px solid var(--teal-700);
+      background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 100%);
+    }
+  
+    .info-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+  
+    .info-card-title {
+      font-size: 16.5px;
+      font-weight: 800;
+      color: var(--wine-900);
+    }
+  
+    .stepper-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin: 20px 0;
+    }
+  
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--slate-50);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      border: 1px solid #e2e8f0;
+    }
+  
+    .step-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--wine-900);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+  
+    .step-number.gold { background: var(--gold-600); }
+    .step-number.teal { background: var(--teal-700); }
+  
+    .step-content {
+      flex: 1;
+    }
+  
+    .step-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--wine-900);
+      margin-bottom: 4px;
+    }
+  
+    .step-desc {
+      font-size: 14.5px;
+      color: var(--slate-700);
+      line-height: 1.62;
+    }
+  
+    .accordion-item {
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: var(--white);
+      transition: all 0.2s ease;
+    }
+  
+    .accordion-item:hover {
+      border-color: #cbd5e1;
+    }
+  
+    .accordion-trigger {
+      width: 100%;
+      text-align: left;
+      padding: 16px 20px;
+      background: var(--white);
+      border: none;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--wine-900);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: background 0.2s ease;
+    }
+  
+    .accordion-trigger:hover {
+      background: var(--slate-50);
+    }
+  
+    .accordion-trigger.active {
+      background: #fdf2f4;
+      border-bottom: 1px solid #fecdd3;
+      color: var(--wine-800);
+    }
+  
+    .accordion-chevron {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.2s ease;
+      fill: var(--slate-600);
+      flex-shrink: 0;
+    }
+  
+    .accordion-trigger.active .accordion-chevron {
+      transform: rotate(180deg);
+      fill: var(--wine-800);
+    }
+  
+    .accordion-body {
+      display: none;
+      padding: 18px 20px;
+      font-size: 14.8px;
+      color: var(--slate-700);
+      line-height: 1.7;
+      background: var(--white);
+    }
+  
+    .accordion-body.open {
+      display: block;
+    }
+  
+    .portal-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      background: var(--wine-900);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(59, 7, 18, 0.18);
+    }
+  
+    .portal-link-btn:hover {
+      background: var(--wine-800);
+      color: var(--gold-400);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(59, 7, 18, 0.28);
+    }
+  
+    .portal-link-btn.gold {
+      background: var(--gold-500);
+      color: var(--wine-900);
+    }
+  
+    .portal-link-btn.gold:hover {
+      background: var(--gold-600);
+      color: var(--white);
+    }
+  
+    .alert-box {
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      margin: 18px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 14.5px;
+      line-height: 1.62;
+    }
+  
+    .alert-box.danger { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; }
+    .alert-box.info { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; }
+    .alert-box.success { background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; }
+    .alert-box.warning { background: #fffbeb; border: 1px solid #fde68a; color: #92400e; }
+    .alert-box.wine { background: #fff1f2; border: 1px solid #fecdd3; color: #9f1239; }
+  
+    
+  
+    
+  
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--wine-900);
+      color: var(--gold-400);
+      border: 2px solid var(--gold-500);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+  
+    .back-to-top.show { opacity: 1; visibility: visible; }
+    .back-to-top:hover { background: #20030a; transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  
+    @media print {
+      body { background: #fff !important; color: #000 !important; font-size: 12pt; }
+      .portal-header { background: #3b0712 !important; color: #fff !important; border: 1px solid #000 !important; page-break-after: avoid; }
+      .filter-wrapper, .quick-nav-pills, .bottom-action-bar, .back-to-top, .accordion-chevron { display: none !important; }
+      .content-section { box-shadow: none !important; border: 1px solid #ccc !important; page-break-inside: avoid; margin-bottom: 20px !important; }
+      .accordion-body { display: block !important; }
+      .data-table th { background: #3b0712 !important; color: #fff !important; }
+      .data-table td { border: 1px solid #ddd !important; }
+      a { text-decoration: none !important; color: #000 !important; }
+    }
+  
+    /* ============================================================ */
+  /* Monitor Auto-Expanding Fluid Layout (Matching Section 01 & 02) */
+  /* ============================================================ */
+  html, body {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  body {
+    font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.75;
+    color: var(--navy-900);
+    background-color: #f1f5f9;
+    padding: 16px !important;
+    -webkit-font-smoothing: antialiased;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  .portal-container, .container {
+    width: 98% !important;
+    max-width: 1680px !important;
+    margin: 0 auto !important;
+    position: relative;
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+  .content-section, .card {
+    width: 100% !important;
+    box-sizing: border-box;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: 30px 26px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #e2e8f0;
+    scroll-margin-top: 20px;
+  }
+
+  /* Grand Executive Portal Header (Matching Section 01 & 02) */
+  .portal-header {
+    background: linear-gradient(135deg, #0f172a 0%, #3b0712 35%, #4c0519 70%, #831843 100%);
+    border-radius: var(--radius-xl);
+    padding: 38px 32px 32px;
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(59, 7, 18, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 4px solid var(--gold-500);
+    margin-bottom: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .portal-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-badge-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+    position: relative;
+    z-index: 1;
+  }
+  .header-tag {
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+  .header-tag.primary { background-color: #fef08a; color: #713f12; border-color: #fde047; }
+  .header-tag.secondary { background-color: rgba(255, 255, 255, 0.18); color: #f8fafc; backdrop-filter: blur(8px); }
+  .header-tag.amber { background-color: #d97706; color: #ffffff; border-color: #f59e0b; }
+  .portal-title {
+    font-size: 2.15rem;
+    font-weight: 900;
+    line-height: 1.35;
+    margin-bottom: 12px;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 1;
+  }
+  .accent-gold { color: #fde047; }
+  .portal-subtitle {
+    font-size: 1.04rem;
+    color: #fecdd3;
+    max-width: 1100px;
+    margin: 0 auto;
+    line-height: 1.65;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Segmented Breadcrumb Menu Bar */
+  .nav-button-menu-bar {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .nav-button-menu-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .menu-btn-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+  .menu-btn-pill svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    fill: currentColor;
+  }
+  .btn-main-site { background: #f1f5f9; color: var(--navy-900); border-color: #cbd5e1; }
+  .btn-main-site:hover { background: #e2e8f0; color: #4c0519; }
+  .btn-career { background: #eff6ff; color: #1e40af; border-color: #bfdbfe; }
+  .btn-career:hover { background: #dbeafe; }
+  .btn-entrance { background: #fef3c7; color: #92400e; border-color: #fde68a; }
+  .btn-entrance:hover { background: #fde68a; }
+    .btn-current-page {
+    background: linear-gradient(135deg, #4c0519 0%, #9f1239 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(159, 18, 57, 0.3);
+  }
+  .menu-arrow {
+    color: #94a3b8;
+    font-weight: 800;
+    font-size: 14px;
+    user-select: none;
+  }
+
+  /* Quick Navigation Card */
+  .quick-nav-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 24px;
+    border: 1.5px solid #fbcfe8;
+    background-color: #fff1f2;
+    box-shadow: 0 2px 8px rgba(159, 18, 57, 0.08);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .quick-nav-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 700;
+    color: #831843;
+    margin-bottom: 14px;
+    border-bottom: 1.5px solid #fbcfe8;
+    padding-bottom: 8px;
+  }
+  .quick-nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 9px; }
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #ffffff;
+    border: 1px solid #fbcfe8;
+    border-radius: 6px;
+    color: #4c0519;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .nav-btn:hover {
+    background: #831843;
+    color: #ffffff;
+    border-color: #831843;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(131, 24, 67, 0.25);
+  }
+  .nav-btn .badge-no {
+    background: #ffe4e6;
+    color: #9f1239;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .nav-btn:hover .badge-no {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+  }
+
+  /* Thirukkural Card */
+  .kural-card {
+    background: #fffbeb;
+    border: 1.5px solid #fde68a;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 28px 0 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.08);
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .kural-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+    border-bottom: 1px dashed #fcd34d;
+    padding-bottom: 8px;
+  }
+  .kural-badge {
+    background: #9f1239;
+    color: #ffffff;
+    font-size: 11.5px;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.3px;
+  }
+  .kural-number {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #4c0519;
+  }
+  .kural-text {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #4c0519;
+    line-height: 1.7;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.2px;
+  }
+  .kural-explanation {
+    font-size: 0.92rem;
+    color: #4c0519;
+    line-height: 1.6;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* Creator Single-Line Card */
+  .creator-card {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1.5px solid rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 14px 22px;
+    margin: 28px 0 16px 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    text-align: center;
+    flex-wrap: wrap;
+    backdrop-filter: blur(14px);
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .creator-name-ta, .creator-name-en {
+    font-weight: 800;
+    font-size: 1.05rem;
+    background: linear-gradient(135deg, #1e40af 0%, #7c3aed 50%, #db2777 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    letter-spacing: 0.3px;
+    padding: 0 2px;
+  }
+  .creator-label { font-size: 0.96rem; color: #475569; font-weight: 600; }
+  .creator-role { font-size: 0.92rem; color: #475569; font-weight: 500; }
+  .creator-phone-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+    color: #ffffff !important;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(5, 150, 105, 0.3);
+    margin-left: 8px;
+    transition: all 0.2s ease;
+  }
+  .creator-phone-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(5, 150, 105, 0.45);
+  }
+  .typing-cursor {
+    display: inline-block;
+    color: #3b82f6;
+    font-weight: 700;
+    font-size: 1.1rem;
+    animation: blink 0.75s infinite;
+    margin-left: 2px;
+  }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+  /* Portal Footer */
+    .portal-footer {
+    background: #ffffff;
+    border-top: 1px solid var(--border, #e2e8f0);
+    border-radius: 12px;
+    padding: 24px 20px;
+    margin-top: 28px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Floating Back to Top */
+  .back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: linear-gradient(135deg, #4c0519 0%, #831843 100%);
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    font-size: 13.5px;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(76, 5, 25, 0.35);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .back-to-top.visible { opacity: 1; visibility: visible; }
+  .back-to-top:hover {
+    background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(180, 83, 9, 0.45);
+  }
+  @media print {
+    .no-print, .nav-button-menu-bar, .quick-nav-card, .back-to-top, .portal-footer, .creator-card { display: none !important; }
+    body { padding: 0 !important; background: #ffffff !important; }
+    .content-section, .card { box-shadow: none !important; border: 1px solid #ccc !important; page-break-inside: avoid; }
+  }
+
+/* ============================================================
+   Section 08 Full-Width Unique Animated Thirukkural & Standard Header
+   ============================================================ */
+.portal-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 45%, #1e293b 100%);
+  border-radius: 20px;
+  padding: 34px 28px 28px;
+  color: #ffffff;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.header-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.header-tag {
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+}
+.header-tag.primary { background-color: #fef08a; color: #713f12; border-color: #fde047; }
+.header-tag.secondary { background-color: rgba(255, 255, 255, 0.18); color: #f8fafc; backdrop-filter: blur(8px); }
+.header-tag.amber { background-color: #d97706; color: #ffffff; border-color: #f59e0b; }
+.portal-title {
+  font-size: 2.1rem;
+  font-weight: 900;
+  line-height: 1.35;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+.accent-gold { color: #fde047; }
+.portal-subtitle {
+  font-size: 1.02rem;
+  color: #e2e8f0;
+  max-width: 1050px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* FULL-WIDTH THIRUKKURAL COMPONENT */
+.full-width-kural-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 36px 0 26px 0 !important;
+  padding: 30px 28px !important;
+  border-radius: 18px !important;
+  text-align: center !important;
+  background: linear-gradient(135deg, #3f0713 0%, #4c0519 50%, #7c2d12 100%) !important;
+  color: #ffffff !important;
+  border: 2px solid #facc15 !important;
+  box-shadow: 0 8px 24px rgba(250, 204, 21, 0.25) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  animation: kuralHospitalityWarmth 4s ease-in-out infinite alternate !important;
+}
+
+@keyframes kuralHospitalityWarmth {
+  0%, 100% { border-color: #facc15; box-shadow: 0 8px 24px rgba(250, 204, 21, 0.22); }
+  50% { border-color: #fb923c; box-shadow: 0 12px 34px rgba(251, 146, 60, 0.44); }
+}
+
+.kural-header-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  margin-bottom: 16px;
+  color: #fef08a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.kural-badge-icon { font-size: 1.1rem; }
+.kural-badge-title { font-weight: 900; color: #ffffff; }
+.kural-badge-dot { color: rgba(255, 255, 255, 0.6); }
+.kural-badge-chapter { color: #fde047; font-weight: 700; }
+
+.kural-verse-box {
+  margin: 10px auto 16px auto;
+  max-width: 900px;
+}
+.kural-verse-line {
+  font-family: 'Nirmala UI', 'Latha', 'Mukta Malar', 'Georgia', serif;
+  font-size: 1.38rem;
+  font-weight: 800;
+  line-height: 1.6;
+  margin: 4px 0;
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+  letter-spacing: 0.2px;
+}
+
+.kural-explanation-box {
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 14px 20px;
+  max-width: 950px;
+  margin: 12px auto 0 auto;
+  line-height: 1.65;
+  font-size: 0.96rem;
+  color: #f1f5f9;
+}
+.kural-exp-label {
+  font-weight: 800;
+  color: #fde047;
+  margin-right: 6px;
+}
+.kural-exp-text {
+  color: #f8fafc;
+}
+
+@media (max-width: 768px) {
+  .portal-header { padding: 24px 16px; }
+  .portal-title { font-size: 1.6rem; }
+  .portal-subtitle { font-size: 0.92rem; }
+  .full-width-kural-container { padding: 22px 16px !important; margin: 26px 0 20px 0 !important; }
+  .kural-verse-line { font-size: 1.14rem; }
+  .kural-explanation-box { font-size: 0.88rem; padding: 10px 14px; }
+}
+
+</style>
+<style id="distinct-theme-css">
+/* ============================================================
+   Section 08: உணவக மேலாண்மை (NCHMCT JEE) - DISTINCT HERO THEME & TRADITIONAL 2-LINE KURAL
+   ============================================================ */
+.portal-header {
+  background: linear-gradient(135deg, #451a03 0%, #78350f 45%, #b45309 75%, #d97706 100%)!important;
+  border-radius: 22px !important;
+  padding: 38px 30px 30px !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(180, 83, 9, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-bottom: 3px solid #facc15 !important;
+  margin-bottom: 24px !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.header-badge-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 14px !important;
+}
+
+.header-tag {
+  padding: 5px 14px !important;
+  border-radius: 999px !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.3px !important;
+  text-transform: uppercase !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  display: inline-block !important;
+}
+.header-tag.primary { background-color: #fef08a !important; color: #713f12 !important; border-color: #fde047 !important; }
+.header-tag.secondary { background-color: rgba(255, 255, 255, 0.18) !important; color: #f8fafc !important; backdrop-filter: blur(8px) !important; }
+.header-tag.amber { background-color: #d97706 !important; color: #ffffff !important; border-color: #f59e0b !important; }
+
+.portal-title {
+  font-size: 2.1rem !important;
+  font-weight: 900 !important;
+  line-height: 1.35 !important;
+  margin: 0 0 10px 0 !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4) !important;
+}
+.accent-gold { color: #fde047 !important; }
+
+.portal-subtitle {
+  font-size: 1.02rem !important;
+  color: #e2e8f0 !important;
+  max-width: 1050px !important;
+  margin: 0 auto !important;
+  line-height: 1.62 !important;
+}
+
+/* TRADITIONAL 2-LINE ANIMATED THIRUKKURAL COMPONENT */
+.traditional-kural-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 22px 0 18px 0 !important;
+  padding: 16px 24px 15px !important;
+  border-radius: 16px !important;
+  text-align: center !important;
+  background: linear-gradient(135deg, #3f0713 0%, #4c0519 50%, #7c2d12 100%) !important;
+  border: 2px solid #facc15 !important;
+  box-shadow: 0 6px 22px rgba(250, 204, 21, 0.28) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  animation: kuralCardAura_08 4s ease-in-out infinite alternate !important;
+}
+
+.traditional-kural-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 30px rgba(250, 204, 21, 0.45) !important;
+}
+
+@keyframes kuralCardAura_08 {
+  0% {
+    box-shadow: 0 4px 18px rgba(250, 204, 21, 0.25), inset 0 0 12px rgba(250, 204, 21, 0.12);
+    border-color: #facc15;
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(250, 204, 21, 0.48), inset 0 0 20px rgba(250, 204, 21, 0.22);
+    border-color: #fde047;
+  }
+  100% {
+    box-shadow: 0 4px 18px rgba(250, 204, 21, 0.25), inset 0 0 12px rgba(250, 204, 21, 0.12);
+    border-color: #facc15;
+  }
+}
+
+.kural-top-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-bottom: 8px !important;
+  padding-bottom: 6px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
+}
+
+.kural-chip-wrap {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.kural-feather-icon {
+  font-size: 1.1rem !important;
+  display: inline-block !important;
+  animation: kuralFeatherFloat 3s ease-in-out infinite alternate !important;
+}
+
+@keyframes kuralFeatherFloat {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-3px) rotate(-10deg); }
+}
+
+.kural-chip-text {
+  font-size: 0.84rem !important;
+  font-weight: 800 !important;
+  color: #fef9c3 !important;
+  letter-spacing: 0.3px !important;
+}
+
+.kural-topic-badge {
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+  padding: 3px 12px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
+}
+
+/* STRICT TRADITIONAL TWO-LINE FORMAT */
+.kural-couplet-lines {
+  margin: 6px auto 8px auto !important;
+  text-align: center !important;
+}
+
+.kural-first-line,
+.kural-second-line {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  font-family: 'Nirmala UI', 'Latha', 'Mukta Malar', 'Georgia', serif !important;
+  font-size: 1.32rem !important;
+  font-weight: 800 !important;
+  line-height: 1.55 !important;
+  margin: 3px 0 !important;
+  letter-spacing: 0.25px !important;
+  color: #ffffff !important;
+  animation: kuralVerseGlow_08 4s ease-in-out infinite alternate !important;
+}
+
+@keyframes kuralVerseGlow_08 {
+  0%, 100% {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(254, 240, 138, 0.7), 0 0 22px rgba(234, 179, 8, 0.45);
+  }
+  50% {
+    color: #fef08a;
+    text-shadow: 0 0 16px rgba(253, 224, 71, 0.95), 0 0 32px rgba(245, 158, 11, 0.8), 0 0 45px rgba(250, 204, 21, 0.6);
+  }
+}
+
+.kural-meaning-row {
+  background: rgba(0, 0, 0, 0.24) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-radius: 10px !important;
+  padding: 8px 16px !important;
+  max-width: 950px !important;
+  margin: 6px auto 0 auto !important;
+  line-height: 1.55 !important;
+  font-size: 0.91rem !important;
+  color: #f1f5f9 !important;
+}
+
+.kural-meaning-label {
+  font-weight: 800 !important;
+  color: #fde047 !important;
+  margin-right: 5px !important;
+}
+
+.kural-meaning-text {
+  color: #f8fafc !important;
+}
+
+@media (max-width: 768px) {
+  .portal-header { padding: 24px 16px !important; }
+  .portal-title { font-size: 1.6rem !important; }
+  .portal-subtitle { font-size: 0.92rem !important; }
+  .traditional-kural-card { padding: 14px 14px 12px !important; margin: 18px 0 !important; }
+  .kural-first-line, .kural-second-line { font-size: 1.12rem !important; line-height: 1.5 !important; }
+  .kural-meaning-row { font-size: 0.84rem !important; padding: 7px 12px !important; }
+}
+</style></head>
+<body>
+<div class="portal-container" id="top">
+<!-- Header Section -->
+<!-- Compact & High-Impact Portal Header -->
+<nav aria-label="Breadcrumb Navigation" class="nav-button-menu-bar no-print">
+<div class="nav-button-menu-container">
+<a class="menu-btn-pill btn-main-site" href="https://www.ceosvg.in" rel="noopener noreferrer" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலக முகப்பு">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+<span>ceosvg.in முகப்பு</span>
+</a>
+<span class="menu-arrow">›</span>
+<a class="menu-btn-pill btn-career" href="https://www.ceosvg.in/career-guidance" rel="noopener noreferrer" target="_blank" title="உயர்கல்வி வழிகாட்டி முதன்மைப் பக்கம்">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"></path></svg>
+<span>🎓 உயர்கல்வி</span>
+</a>
+<span class="menu-arrow">›</span>
+<a class="menu-btn-pill btn-entrance" href="https://www.ceosvg.in/career-guidance/entrance-exams" rel="noopener noreferrer" target="_blank" title="உயர்கல்வி நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம்">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
+<span>📝 நுழைவுத்தேர்வுகள்</span>
+</a>
+<span class="menu-arrow">›</span>
+<span class="menu-btn-pill btn-current-page" title="தற்போதைய வழிகாட்டிப் பக்கம்">
+<span>🏨 பிரிவு 08: உணவக மேலாண்மை (NCHMCT JEE)</span>
+</span>
+</div>
+</nav><header class="portal-header">
+<div class="header-badge-row">
+<span class="header-tag primary">பிரிவு 08 (Section 08)</span>
+<span class="header-tag secondary">ஹோட்டல் மேனேஜ்மென்ட் &amp; ஹாஸ்பிடாலிட்டி (Hotel Management)</span>
+<span class="header-tag amber">தேசிய நுழைவுத்தேர்வு (NCHMCT JEE 2026) • மத்திய / மாநில IHMs • B.Sc H&amp;HA</span>
+</div>
+<h1 class="portal-title">
+    உணவக மேலாண்மை &amp; விருந்தோம்பல் நிர்வாகம் <span class="accent-gold">(Hotel Management)</span>
+</h1>
+<p class="portal-subtitle">
+    12-ஆம் வகுப்பு பள்ளி மாணவர்களுக்கான மத்திய அரசு IHMs (சென்னை தரமணி, தில்லி பூசா உள்ளிட்ட 21 கல்லூரிகள்), மாநில IHMs மற்றும் முன்னணி தனியார் உணவக மேலாண்மை நிறுவனங்களின் B.Sc Hospitality &amp; Hotel Administration பட்டப்படிப்பு மற்றும் சர்வதேச வேலைவாய்ப்புகளின் வழிகாட்டல் தொகுப்பு.
+  </p>
+</header>
+<!-- Button-Style Segmented Navigation Menu (வழிசெலுத்துதல் பட்டன் மெனு) -->
+<!-- Button-Style Quick Navigation Bar (விரைவு வழிசெலுத்துதல் பட்டன் அட்டை) -->
+<div class="quick-nav-card no-print" id="quick-nav">
+<div class="quick-nav-title">
+<span>🚀 முக்கியப் பிரிவுகள் &amp; தலைப்புகள் (Quick Navigation)</span>
+<span style="font-size: 12px; color: #831843; font-weight: normal;">நேரடியாகச் செல்ல விரும்பும் பிரிவை கிளிக் செய்யவும்</span>
+</div>
+<div class="quick-nav-grid">
+<a class="nav-btn" href="#section-overview"><span class="badge-no">01</span><span>🏨 4 முக்கிய துறைகள் அறிமுகம்</span></a>
+<a class="nav-btn" href="#section-exam"><span class="badge-no">02</span><span>📝 NCHMCT JEE தேர்வு முறை</span></a>
+<a class="nav-btn" href="#section-colleges"><span class="badge-no">03</span><span>🏛️ மத்திய அரசு vs மாநில IHM</span></a>
+<a class="nav-btn" href="#section-tamilnadu"><span class="badge-no">04</span><span>🌟 IHM சென்னை &amp; SIHM திருச்சி</span></a>
+<a class="nav-btn" href="#section-careers"><span class="badge-no">05</span><span>💼 வேலைவாய்ப்புகள் &amp; ஊதியம்</span></a>
+<a class="nav-btn" href="#section-cruise-airlines"><span class="badge-no">06</span><span>🚢 குரூஸ் கப்பல் &amp; ஏர்லைன்ஸ்</span></a>
+<a class="nav-btn" href="#section-fees"><span class="badge-no">07</span><span>💰 கல்விக் கட்டணம் &amp; கடன்கள்</span></a>
+<a class="nav-btn" href="#section-roadmap"><span class="badge-no">08</span><span>📅 9-12 பள்ளித் தயாரிப்பு</span></a>
+<a class="nav-btn" href="#section-portals"><span class="badge-no">09</span><span>🌐 அதிகாரப்பூர்வ போர்ட்டல்கள்</span></a>
+<a class="nav-btn" href="#section-faqs"><span class="badge-no">10</span><span>❓ அடிக்கடி கேட்கப்படும் வினாக்கள்</span></a>
+</div>
+</div>
+<!-- Key Highlights Grid -->
+<div class="metrics-grid">
+<div class="metric-card">
+<div class="metric-icon icon-colleges">🏛️</div>
+<div>
+<div class="metric-label">அரசு IHM கல்லூரிகள்</div>
+<div class="metric-value">75+ ஐ.எச்.எம் நிறுவனங்கள்</div>
+<div class="metric-desc">21 மத்திய அரசு + 28 மாநில அரசு + PSU IHMs</div>
+</div>
+</div>
+<div class="metric-card">
+<div class="metric-icon icon-degree">🎓</div>
+<div>
+<div class="metric-label">வழங்கப்படும் பட்டம்</div>
+<div class="metric-value">JNU அங்கீகரிக்கப்பட்ட B.Sc</div>
+<div class="metric-desc">B.Sc Hospitality &amp; Hotel Administration (3 ஆண்டுகள்)</div>
+</div>
+</div>
+<div class="metric-card">
+<div class="metric-icon icon-salary">🚢</div>
+<div>
+<div class="metric-label">குரூஸ் &amp; சர்வதேச ஊதியம்</div>
+<div class="metric-value">$1,500 - $4,000 / மாதம்</div>
+<div class="metric-desc">வரிவிலக்கு பெற்ற டாலர் சம்பளம் + உலகப் பயணம்</div>
+</div>
+</div>
+<div class="metric-card">
+<div class="metric-icon icon-stream">🌟</div>
+<div>
+<div class="metric-label">அனைத்துப் பிரிவு மாணவர்களுக்கும்</div>
+<div class="metric-value">Arts, Commerce, Science</div>
+<div class="metric-desc">12-ல் ஆங்கிலம் படித்திருந்தால் போதும்; வயது வரம்பு இல்லை!</div>
+</div>
+</div>
+</div>
+<!-- Live Search & Interactive Category Filter -->
+<!-- SECTION 1: OVERVIEW & 4 PILLARS -->
+<section class="content-section" id="section-overview">
+<div class="section-header">
+<div class="section-title-wrap">
+<div class="section-icon-badge">🏨</div>
+<div>
+<h2 class="section-title">உணவக மேலாண்மை அறிமுகம் &amp; 4 முதன்மை இயக்கத் துறைகள்</h2>
+<div class="section-tag">உலகளாவிய விருந்தோம்பல் துறையின் அடித்தளம் (4 Pillars of Hotel Operations)</div>
+</div>
+</div>
+</div>
+<p style="margin-bottom: 18px; font-size: 15.5px;">
+        உணவக மேலாண்மை (Hotel Management / Hospitality Management) என்பது வெறும் சமையல் கலை மட்டுமல்ல! இது உலகின் மிகப்பெரிய பொருளாதாரத் துறைகளில் ஒன்றான <strong>சுற்றுலா, சொகுசு தங்குமிடம், உலகத் தரம் வாய்ந்த உணவு உபசரிப்பு மற்றும் சர்வதேச வாடிக்கையாளர் நிர்வாகம் (Global Customer Relations)</strong> ஆகியவற்றை உள்ளடக்கிய ஒரு மாபெரும் நிர்வாக அறிவியலாகும்.
+      </p>
+<div class="alert-box success">
+<span style="font-size: 26px;">💡</span>
+<div>
+<strong>கிராமப்புற மற்றும் அரசுப் பள்ளி மாணவர்களுக்கான பொன்னான செய்தி:</strong><br/>
+          மருத்துவம், பொறியியலுக்கு அடுத்தபடியாக <strong>100% உடனடி கேம்பஸ் வேலைவாய்ப்பு (Campus Placement)</strong> வழங்கும் ஒரே அரசுத் துறை இதுவாகும்! 12-ஆம் வகுப்பில் கலை (Arts), வணிகவியல் (Commerce), அறிவியல் (Science) அல்லது தொழிற்கல்வி என எந்தப் பிரிவு படித்திருந்தாலும், ஆங்கிலத்தில் அடிப்படைத் தொடர்புத் திறன் இருந்தால் போதும். மத்திய சுற்றுலா அமைச்சகத்தின் ஐ.எச்.எம் (IHM) கல்லூரிகளில் படித்து சர்வதேச அளவில் பிரகாசிக்கலாம்!
+        </div>
+</div>
+<h3 style="font-size: 18px; font-weight: 800; color: var(--wine-900); margin: 26px 0 14px;">ஒரு சொகுசு 5-Star ஹோட்டலின் 4 தூண்கள் (Core Operational Departments)</h3>
+<div class="cards-4col">
+<!-- Pillar 1: Food Production -->
+<div class="info-card highlight-wine">
+<div class="info-card-header">
+<span class="info-card-title">1. உணவு உற்பத்தி</span>
+<span class="tag-badge tag-wine">Food Production</span>
+</div>
+<p style="font-size: 14px; line-height: 1.7; color: var(--slate-700);">
+            • <strong>சமையல் கலை (Culinary Arts):</strong> இந்திய, பிரெஞ்சு, இத்தாலிய, சீன, காண்டினென்டல் உணவு வகைகள் தயாரித்தல்.<br/>
+            • <strong>பேக்கரி &amp; மிட்டாய் தயாரிப்பு (Bakery &amp; Confectionery):</strong> கேக்குகள், பேஸ்ட்ரிகள், சாக்லேட் கலைகள்.<br/>
+            • <strong>பதவி வளர்ச்சி:</strong> Commi Chef → Chef de Partie → Sous Chef → <strong>Executive Chef (தலைமைச் சமையல் கலைஞர்)</strong>.
+          </p>
+</div>
+<!-- Pillar 2: F&B Service -->
+<div class="info-card highlight">
+<div class="info-card-header">
+<span class="info-card-title">2. உணவு பரிமாறுதல்</span>
+<span class="tag-badge tag-gold">F&amp;B Service</span>
+</div>
+<p style="font-size: 14px; line-height: 1.7; color: var(--slate-700);">
+            • <strong>உபசரிப்பு &amp; பரிமாறுதல்:</strong> நுண்ணிய உணவகங்கள் (Fine Dining), மதுபான பார் மேலாண்மை (Bar Operations), பார்ட்டி மற்றும் மாநாட்டு விருந்துகள் (Banquets).<br/>
+            • சர்வதேச மேஜை அலங்கார நெறிமுறைகள் மற்றும் விருந்தினர் கவனிப்பு.<br/>
+            • <strong>பதவி வளர்ச்சி:</strong> Steward → Captain → Banquet Manager → <strong>F&amp;B Director</strong>.
+          </p>
+</div>
+<!-- Pillar 3: Front Office -->
+<div class="info-card highlight-teal">
+<div class="info-card-header">
+<span class="info-card-title">3. வரவேற்பு &amp; முன்பதிவு</span>
+<span class="tag-badge tag-blue">Front Office</span>
+</div>
+<p style="font-size: 14px; line-height: 1.7; color: var(--slate-700);">
+            • <strong>ஹோட்டலின் முகம் (Showcase of Hotel):</strong> விருந்தினர் வரவேற்பு (Reception), அறை முன்பதிவு (Reservations), வழிகாட்டல் (Concierge).<br/>
+            • அன்னியச் செலாவணி மாற்றுதல், பில்லிங் மற்றும் சர்வதேச விஐபி விருந்தினர் கவனிப்பு.<br/>
+            • <strong>பதவி வளர்ச்சி:</strong> Front Desk Executive → Duty Manager → <strong>Front Office Manager (FOM)</strong>.
+          </p>
+</div>
+<!-- Pillar 4: Housekeeping -->
+<div class="info-card highlight-wine">
+<div class="info-card-header">
+<span class="info-card-title">4. தங்குமிட பராமரிப்பு</span>
+<span class="tag-badge tag-purple">Housekeeping</span>
+</div>
+<p style="font-size: 14px; line-height: 1.7; color: var(--slate-700);">
+            • <strong>தங்குமிட மேலாண்மை:</strong> சொகுசு அறைகள், பிரசிடென்ஷியல் சூட்கள் தூய்மை, மலர் அலங்காரம், லினன் &amp; சலவை மேலாண்மை.<br/>
+            • ஹோட்டலின் உள்கட்டமைப்பு அழகு மற்றும் விருந்தினர்களின் சுகாதாரம்.<br/>
+            • <strong>பதவி வளர்ச்சி:</strong> Floor Supervisor → Laundry Manager → <strong>Executive Housekeeper</strong>.
+          </p>
+</div>
+</div>
+</section>
+<!-- SECTION 2: NCHMCT JEE EXAM PATTERN -->
+<section class="content-section" id="section-exam">
+<div class="section-header">
+<div class="section-title-wrap">
+<div class="section-icon-badge gold">📝</div>
+<div>
+<h2 class="section-title">NTA NCHMCT JEE நுழைவுத்தேர்வு கட்டமைப்பு &amp; பாடத்திட்டம்</h2>
+<div class="section-tag">தேசிய தேர்வு முகமை (NTA) நடத்தும் அகில இந்திய கணினி வழித் தேர்வு</div>
+</div>
+</div>
+<a class="portal-link-btn gold" href="https://nchmjee.nta.nic.in" rel="noopener noreferrer" target="_blank">NTA NCHM JEE போர்டல் ↗</a>
+</div>
+<p style="font-size: 15px; margin-bottom: 16px;">
+        மத்திய சுற்றுலா அமைச்சகத்தின் கீழ் செயல்படும் தேசிய உணவக மேலாண்மை கவுன்சில் (NCHMCT) நடத்தும் இளங்கலை பட்டப்படிப்புக்கான (B.Sc H&amp;HA) அகில இந்திய நுழைவுத்தேர்வை <strong>தேசிய தேர்வு முகமை (NTA)</strong> ஆண்டுதோறும் மே மாதத்தில் கணினி வழித் தேர்வாக (CBT) நடத்துகிறது.
+      </p>
+<!-- Eligibility Info Box -->
+<div class="alert-box wine">
+<span style="font-size: 26px;">🎓</span>
+<div>
+<strong>மாணவர் சேர்க்கைத் தகுதி வரம்புகள் (Eligibility Criteria):</strong><br/>
+          1. <strong>கல்வித் தகுதி:</strong> 12-ஆம் வகுப்பு தேர்ச்சி பெற்றிருக்க வேண்டும் (Arts, Commerce, Science, Vocational என எந்தப் பிரிவும் தகுதியானது). 12-ஆம் வகுப்பு பொதுத்தேர்வு எழுதவிருக்கும் மாணவர்களும் விண்ணப்பிக்கலாம்.<br/>
+          2. <strong>ஆங்கிலப் பாடம் கட்டாயம்:</strong> 12-ஆம் வகுப்பில் ஆங்கிலத்தை ஒரு மொழிப் பாடமாக (Core/Elective/Functional) படித்து தேர்ச்சி பெற்றிருக்க வேண்டும்.<br/>
+          3. <strong>வயது வரம்பு:</strong> <strong>எந்தவித உச்ச வயது வரம்பும் கிடையாது (No Upper Age Limit)!</strong> எந்த வயதினரும் இத்தேர்வை எழுதலாம்.
+        </div>
+</div>
+<!-- Exam Pattern Table -->
+<h3 style="font-size: 18px; font-weight: 800; color: var(--wine-900); margin: 24px 0 12px;">தேர்வு வினாத்தாள் கட்டமைப்பு (மொத்தம்: 200 வினாக்கள் | 800 மதிப்பெண்கள் | 3 மணி நேரம்)</h3>
+<div class="table-container">
+<table class="data-table">
+<thead>
+<tr>
+<th>பகுதி (Section)</th>
+<th>பாடப் பகுதி</th>
+<th>வினாக்கள் எண்ணிக்கை</th>
+<th>அதிகபட்ச மதிப்பெண்</th>
+<th>மதிப்பெண் முறை &amp; எதிர்மறை மதிப்பெண்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>பகுதி 1</strong></td>
+<td><strong>கணிதத் திறன் (Numerical Ability &amp; Analytical Aptitude)</strong><br/><small style="color: var(--slate-600);">10-ஆம் வகுப்பு அடிப்படை கணிதம்: சதவீதம், லாப நட்டம், விகிதம், காலமும் வேலையும், எளிய வட்டி</small></td>
+<td>30 வினாக்கள்</td>
+<td>120 மதிப்பெண்கள்</td>
+<td>சரியான விடைக்கு <strong>+4</strong>; தவறான விடைக்கு <strong>-1</strong></td>
+</tr>
+<tr>
+<td><strong>பகுதி 2</strong></td>
+<td><strong>காரணறிதல் &amp; தர்க்கவியல் (Reasoning &amp; Logical Deduction)</strong><br/><small style="color: var(--slate-600);">தொடர் வரிசை, இரத்த உறவுகள், திசைகள், கூற்று-காரணம், வென் வரைபடங்கள்</small></td>
+<td>30 வினாக்கள்</td>
+<td>120 மதிப்பெண்கள்</td>
+<td>சரியான விடைக்கு <strong>+4</strong>; தவறான விடைக்கு <strong>-1</strong></td>
+</tr>
+<tr>
+<td><strong>பகுதி 3</strong></td>
+<td><strong>பொது அறிவு &amp; நடப்பு நிகழ்வுகள் (GK &amp; Current Affairs)</strong><br/><small style="color: var(--slate-600);">இந்திய வரலாறு, புவியியல், சுற்றுலாத் தலங்கள், விருதுகள், விளையாட்டு, சர்வதேச நிகழ்வுகள்</small></td>
+<td>30 வினாக்கள்</td>
+<td>120 மதிப்பெண்கள்</td>
+<td>சரியான விடைக்கு <strong>+4</strong>; தவறான விடைக்கு <strong>-1</strong></td>
+</tr>
+<tr>
+<td><strong>பகுதி 4</strong></td>
+<td><strong>ஆங்கில மொழித்திறன் (English Language)</strong> <em>(அதிக முக்கியத்துவம்!)</em><br/><small style="color: var(--slate-600);">Vocabulary, Synonyms/Antonyms, Idioms, Sentence Correction, Reading Comprehension</small></td>
+<td>60 வினாக்கள்</td>
+<td>240 மதிப்பெண்கள்</td>
+<td>சரியான விடைக்கு <strong>+4</strong>; தவறான விடைக்கு <strong>-1</strong></td>
+</tr>
+<tr style="background: #fffbeb;">
+<td><strong>பகுதி 5</strong></td>
+<td><strong>சேவைத் துறைக்கான நுண்ணறிவு (Aptitude for Service Sector)</strong> <em>(மிக எளிய பகுதி!)</em><br/><small style="color: #b45309;">விருந்தினரை உபசரிக்கும் மனப்பான்மை, இக்கட்டான சூழலை அமைதியாகக் கையாளும் திறன், குழு ஒத்துழைப்பு</small></td>
+<td>50 வினாக்கள்</td>
+<td>200 மதிப்பெண்கள்</td>
+<td><strong>படிநிலை மதிப்பெண் (Graded Scoring):</strong><br/>மிகச் சரியான விடைக்கு <strong>+4</strong>, அடுத்த நிலைக்கு <strong>+3</strong>, <strong>+2</strong>, <strong>+1</strong>, தவறான அணுகுமுறைக்கு <strong>0</strong>. (எதிர்மறை மதிப்பெண் இல்லை!)</td>
+</tr>
+<tr style="background: #ffe4e6; font-weight: bold;">
+<td colspan="2" style="text-align: right;">மொத்த மதிப்பெண்கள் (Total):</td>
+<td>200 வினாக்கள்</td>
+<td><span class="tag-badge tag-wine" style="font-size: 14px;">800 மதிப்பெண்கள்</span></td>
+<td>கால அளவு: 180 நிமிடங்கள் (3 மணி நேரம்)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cards-3col">
+<div class="info-card highlight-wine">
+<div class="info-card-header">
+<span class="info-card-title">1. ஆங்கிலத்திற்கு முதன்மை இடம்</span>
+<span class="tag-badge tag-wine">Weightage 30%</span>
+</div>
+<p style="font-size: 14px; color: var(--slate-700);">
+            மொத்தமுள்ள 200 வினாக்களில் 60 வினாக்கள் (240 மதிப்பெண்கள்) ஆங்கிலப் பாடத்திலிருந்தே கேட்கப்படுகின்றன. பள்ளிப் பருவத்தில் அடிப்படை ஆங்கில இலக்கணமும் வாசிப்புப் பழக்கமும் இருந்தால் எளிதில் அதிக கட்-ஆஃப் எடுக்கலாம்.
+          </p>
+</div>
+<div class="info-card highlight">
+<div class="info-card-header">
+<span class="info-card-title">2. Service Aptitude போனஸ்</span>
+<span class="tag-badge tag-gold">200 Marks</span>
+</div>
+<p style="font-size: 14px; color: var(--slate-700);">
+            சேவைத் துறை நுண்ணறிவுப் பகுதியில் எதிர்மறை மதிப்பெண் கிடையாது! உங்கள் பதிலின் நேர்மறைத் தன்மைக்கேற்ப 4, 3, 2, 1 என மதிப்பெண்கள் வழங்கப்படும். இது மாணவர்களின் ஒட்டுமொத்த ரேங்க்கை உயர்த்த உதவும்.
+          </p>
+</div>
+<div class="info-card highlight-teal">
+<div class="info-card-header">
+<span class="info-card-title">3. JNU பல்கலைக்கழகப் பட்டம்</span>
+<span class="tag-badge tag-blue">Global Value</span>
+</div>
+<p style="font-size: 14px; color: var(--slate-700);">
+            IHM-ல் படித்து முடிக்கும் மாணவர்களுக்கு இந்தியாவின் புகழ்பெற்ற <strong>ஜவஹர்லால் நேரு பல்கலைக்கழகம் (JNU, New Delhi)</strong> B.Sc (Hospitality &amp; Hotel Administration) பட்டத்தை வழங்குகிறது.
+          </p>
+</div>
+</div>
+</section>
+<!-- SECTION 3: CENTRAL VS STATE IHMS -->
+<section class="content-section" id="section-colleges">
+<div class="section-header">
+<div class="section-title-wrap">
+<div class="section-icon-badge">🏛️</div>
+<div>
+<h2 class="section-title">மத்திய அரசு IHM vs மாநில அரசு IHM — கல்வி நிறுவனங்களின் ஒப்பீடு</h2>
+<div class="section-tag">இந்தியாவின் தலைசிறந்த ஐ.எச்.எம் கல்லூரிகள் மற்றும் சேர்க்கை நடைமுறை</div>
+</div>
+</div>
+<a class="portal-link-btn" href="https://nchm.gov.in" rel="noopener noreferrer" target="_blank">NCHMCT கவுன்சில் தளம் ↗</a>
+</div>
+<p style="font-size: 15px; margin-bottom: 20px;">
+        NCHMCT அமைப்பின் கீழ் இந்தியாவில் மொத்தம் 75-க்கும் மேற்பட்ட கல்வி நிறுவனங்கள் இயங்குகின்றன. இதில் மத்திய அரசு நிறுவனங்கள் (Central IHMs) தேசிய அளவில் மிகப்பெரிய உள்கட்டமைப்பு மற்றும் சர்வதேச நிறுவனங்களின் நேரடி வேலைவாய்ப்புகளைப் பெற்றுள்ளன.
+      </p>
+<div class="table-container">
+<table class="data-table">
+<thead>
+<tr>
+<th>அம்சங்கள்</th>
+<th>மத்திய அரசு IHM (Central IHMs)</th>
+<th>மாநில அரசு IHM (State IHMs)</th>
+<th>தனியார் கல்வி நிறுவனங்கள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>நிறுவனங்களின் எண்ணிக்கை</strong></td>
+<td><strong>21 மத்திய அரசு நிறுவனங்கள்</strong> (IHM Pusa, Mumbai, Chennai, Bengaluru, Kolkata போன்றவை)</td>
+<td><strong>28 மாநில அரசு நிறுவனங்கள்</strong> (SIHM Trichy, Kovalam, Pondicherry, Kozhikode போன்றவை)</td>
+<td>30+ அங்கீகரிக்கப்பட்ட தனியார் நிறுவனங்கள்</td>
+</tr>
+<tr>
+<td><strong>நிர்வாகம் &amp; நிதி</strong></td>
+<td>மத்திய சுற்றுலா அமைச்சகம் (Ministry of Tourism, Govt of India) நேரடி நிதி.</td>
+<td>சம்பந்தப்பட்ட மாநில அரசுகளின் சுற்றுலாத் துறை &amp; மத்திய அரசு பங்களிப்பு.</td>
+<td>தனியார் அறக்கட்டளை / கல்வி நிறுவனங்கள்.</td>
+</tr>
+<tr>
+<td><strong>கல்விக் கட்டணம் (3 ஆண்டுகள்)</strong></td>
+<td>சுமார் <strong>₹3.5 லட்சம் முதல் ₹4.2 லட்சம் வரை</strong> (செமஸ்டர் வாரியாகச் செலுத்தலாம்).</td>
+<td>சுமார் <strong>₹2.5 லட்சம் முதல் ₹3.5 லட்சம் வரை</strong>.</td>
+<td>₹6 லட்சம் முதல் ₹15 லட்சம் வரை மிக அதிகம்.</td>
+</tr>
+<tr>
+<td><strong>வேலைவாய்ப்பு (Placement)</strong></td>
+<td><strong>100% கேம்பஸ் இன்டர்வியூ</strong>: Taj, Oberoi, Marriott, Hyatt, Emirates, Royal Caribbean Cruises.</td>
+<td>மிகச்சிறந்த வேலைவாய்ப்புகள் (உள்ளூர் மற்றும் தேசிய சொகுசு ஹோட்டல்கள்).</td>
+<td>கல்லூரியின் நற்பெயரைப் பொறுத்து மாறுபடும் (பல கல்லூரிகளில் போலி உத்தரவாதம்).</td>
+</tr>
+<tr>
+<td><strong>வழங்கப்படும் பட்டம்</strong></td>
+<td><strong>Jawaharlal Nehru University (JNU, New Delhi)</strong> வழங்கும் B.Sc H&amp;HA பட்டம்.</td>
+<td><strong>JNU / NCHMCT</strong> வழங்கும் அங்கீகரிக்கப்பட்ட பட்டம்.</td>
+<td>NCHMCT அங்கீகாரம் உள்ளதா என உறுதி செய்ய வேண்டும்.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 style="font-size: 18px; font-weight: 800; color: var(--wine-900); margin: 26px 0 12px;">இந்தியாவின் டாப் மத்திய அரசு IHM கல்வி நிறுவனங்கள் (Top Ranked Central IHMs)</h3>
+<div class="cards-2col">
+<div class="info-card highlight-wine">
+<div class="info-card-header">
+<span class="info-card-title">1. IHM பூசா (Pusa, New Delhi)</span>
+<span class="tag-badge tag-wine">India Rank #1</span>
+</div>
+<p style="font-size: 14px; color: var(--slate-700); line-height: 1.7;">
+            இந்தியாவின் நம்பர் 1 உணவக மேலாண்மை கல்வி நிறுவனம். JEE தேர்வில் முதல் 300 ரேங்க்கிற்குள் வருபவர்களுக்கு மட்டுமே இங்கு இடம் கிடைக்கும். சர்வதேச தூதரகங்கள் மற்றும் உலகளாவிய மாநாட்டு விருந்துகளில் நேரடிப் பயிற்சி.
+          </p>
+</div>
+<div class="info-card highlight-wine">
+<div class="info-card-header">
+<span class="info-card-title">2. IHM மும்பை (Dadar, Mumbai)</span>
+<span class="tag-badge tag-wine">Historic Rank #2</span>
+</div>
+<p style="font-size: 14px; color: var(--slate-700); line-height: 1.7;">
+            இந்தியாவில் தொடங்கப்பட்ட முதல் ஐ.எச்.எம் (1954). நாட்டின் வணிகத் தலைநகரில் அமைந்துள்ளதால் உலகளாவிய 7-Star சொகுசு ஹோட்டல்களின் முதன்மைத் தேர்வாக இக்கல்லூரி விளங்குகிறது.
+          </p>
+</div>
+<div class="info-card highlight">
+<div class="info-card-header">
+<span class="info-card-title">3. IHM சென்னை (Taramani, Chennai)</span>
+<span class="tag-badge tag-gold">தென்னிந்தியாவின் முதன்மை IHM</span>
+</div>
+<p style="font-size: 14px; color: var(--slate-700); line-height: 1.7;">
+            1963-ல் நிறுவப்பட்ட தென்னிந்தியாவின் தலைசிறந்த மத்திய அரசு நிறுவனம். தமிழ்நாட்டு மாணவர்களின் முதன்மை விருப்பக் கல்லூரி. விரிவான விவரங்கள் அடுத்த பகுதியில் தரப்பட்டுள்ளன.
+          </p>
+</div>
+<div class="info-card highlight">
+<div class="info-card-header">
+<span class="info-card-title">4. IHM பெங்களூரு &amp; ஐதராபாத்</span>
+<span class="tag-badge tag-gold">Top South IHMs</span>
+</div>
+<p style="font-size: 14px; color: var(--slate-700); line-height: 1.7;">
+            தொழில்நுட்ப மற்றும் தகவல் தொழில்நுட்ப பெருநகரங்களில் அமைந்துள்ளதால் சர்வதேச மாநாடுகள், விமான நிலைய உபசரிப்பு மற்றும் கார்ப்பரேட் கேட்டரிங் வேலைவாய்ப்புகளில் முன்னிலை வகிக்கின்றன.
+          </p>
+</div>
+</div>
+</section>
+<!-- SECTION 4: TAMIL NADU SPOTLIGHT -->
+<section class="content-section" id="section-tamilnadu">
+<div class="section-header">
+<div class="section-title-wrap">
+<div class="section-icon-badge gold">🌴</div>
+<div>
+<h2 class="section-title">தமிழ்நாடு ஸ்பாட்லைட்: IHM சென்னை &amp; SIHM திருச்சிராப்பள்ளி</h2>
+<div class="section-tag">தமிழ்நாட்டு மாணவர்களுக்கான அரசு உணவக மேலாண்மைக் கல்லூரிகள்</div>
+</div>
+</div>
+<a class="portal-link-btn gold" href="https://ihmchennai.org" rel="noopener noreferrer" target="_blank">IHM சென்னை தளம் ↗</a>
+</div>
+<div class="cards-2col">
+<!-- IHM Chennai Details -->
+<div class="info-card highlight">
+<div class="info-card-header">
+<span class="info-card-title">1. மத்திய அரசு IHM சென்னை (தரமணி, சென்னை)</span>
+<span class="tag-badge tag-wine">Central IHM Chennai</span>
+</div>
+<ul style="padding-left: 18px; font-size: 14.5px; line-height: 1.8; color: var(--slate-700);">
+<li><strong>அமைவிடம்:</strong> சி.ஐ.டி வளாகம் (CIT Campus), தரமணி, சென்னை - 600113 (டைடல் பார்க் அருகில்).</li>
+<li><strong>நிறுவப்பட்ட ஆண்டு:</strong> 1963 (மத்திய சுற்றுலா அமைச்சகத்தின் நேரடி நிறுவனம்).</li>
+<li><strong>வழங்கப்படும் முக்கியப் படிப்பு:</strong> B.Sc (Hospitality and Hotel Administration) — 3 ஆண்டுகள். JNU அங்கீகாரம்.</li>
+<li><strong>இடங்கள் எண்ணிக்கை:</strong> ஆண்டுக்கு சுமார் 350+ இடங்கள் (அகில இந்திய இடஒதுக்கீடு உண்டு).</li>
+<li><strong>ஆய்வக வசதிகள்:</strong> Advanced Training Kitchen (ATK), Bakery Lab, Quantity Food Kitchen, 60 இருக்கைகள் கொண்ட பயிற்சி உணவகம் (Training Restaurant), Mock Bar, Model Hotel Suite Room.</li>
+<li><strong>விடுதி வசதி (Hostel):</strong> மாணவ-மாணவியருக்கு தனித்தனி பாதுகாப்பான விடுதிகள் உணவுடன் கிடைக்கின்றன.</li>
+<li><strong>கேம்பஸ் பிளேஸ்மென்ட்:</strong> Taj, Oberoi, ITC Grand Chola, Leela Palace, Marriott, Hyatt, Starbucks, Domino's, Qatar Airways கேபின் க்ரூ என 100% வேலைவாய்ப்பு.</li>
+</ul>
+</div>
+<!-- SIHM Trichy Details -->
+<div class="info-card highlight-teal">
+<div class="info-card-header">
+<span class="info-card-title">2. மாநில அரசு SIHM திருச்சிராப்பள்ளி (துவாக்குடி, திருச்சி)</span>
+<span class="tag-badge tag-teal">State SIHM Trichy</span>
+</div>
+<ul style="padding-left: 18px; font-size: 14.5px; line-height: 1.8; color: var(--slate-700);">
+<li><strong>அமைவிடம்:</strong> தேசிய தொழில்நுட்பக் கழகம் (NIT திருச்சி) அருகில், துவாக்குடி, திருச்சிராப்பள்ளி - 620015.</li>
+<li><strong>நிர்வாகம்:</strong> தமிழ்நாடு அரசு சுற்றுலாத் துறை மற்றும் மத்திய சுற்றுலா அமைச்சகத்தின் கூட்டு நிறுவனம்.</li>
+<li><strong>வழங்கப்படும் படிப்பு:</strong> B.Sc (Hospitality and Hotel Administration) — 3 ஆண்டுகள்.</li>
+<li><strong>மாணவர் சேர்க்கை:</strong> NTA NCHMCT JEE நுழைவுத்தேர்வு கலந்தாய்வு மூலம் 100% இடங்கள் நிரப்பப்படுகின்றன.</li>
+<li><strong>குறைந்த கட்டணம்:</strong> மத்திய IHM-ஐ விட கல்விக் கட்டணம் சற்று குறைவு; தமிழக அரசு உதவித்தொகை (Post-Matric &amp; BC/MBC Scholarships) முழுமையாகப் பொருந்தும்.</li>
+<li><strong>தென் மாவட்ட மாணவர்களுக்கு ஏற்றது:</strong> மதுரை, சிவகங்கை, திருச்சி, தஞ்சாவூர், புதுக்கோட்டை உள்ளிட்ட டெல்டா மற்றும் தென் மாவட்ட மாணவர்களுக்கு மிக அருகிலுள்ள தலைசிறந்த அரசு உணவக மேலாண்மைக் கல்லூரி.</li>
+</ul>
+</div>
+</div>
+<!-- Cutoff & Reservation Info -->
+<h3 style="font-size: 18px; font-weight: 800; color: var(--wine-900); margin: 24px 0 12px;">சேர்க்கை இடஒதுக்கீடு &amp; எதிர்பார்க்கப்படும் கட்-ஆஃப் ரேங்க் வழிகாட்டல்</h3>
+<div class="table-container">
+<table class="data-table">
+<thead>
+<tr>
+<th class="navy">பிரிவு (Category)</th>
+<th class="navy">மத்திய அரசு இடஒதுக்கீடு</th>
+<th class="navy">IHM சென்னை எதிர்பார்க்கப்படும் Closing Rank</th>
+<th class="navy">SIHM திருச்சி எதிர்பார்க்கப்படும் Closing Rank</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>பொதுப் பிரிவு (Open / General)</strong></td>
+<td>—</td>
+<td>AIR 1,500 – 3,500</td>
+<td>AIR 6,000 – 9,500</td>
+</tr>
+<tr>
+<td><strong>இதர பிற்படுத்தப்பட்டோர் (OBC - NCL)</strong></td>
+<td><strong>27%</strong></td>
+<td>AIR 4,000 – 7,500</td>
+<td>AIR 9,000 – 12,500</td>
+</tr>
+<tr>
+<td><strong>பொருளாதாரத்தில் பின்தங்கியவர் (EWS)</strong></td>
+<td><strong>10%</strong></td>
+<td>AIR 5,000 – 8,000</td>
+<td>AIR 10,000 – 13,000</td>
+</tr>
+<tr>
+<td><strong>ஆதிதிராவிடர் (SC)</strong></td>
+<td><strong>15%</strong></td>
+<td>AIR 9,000 – 14,000</td>
+<td>AIR 13,000 – 16,500</td>
+</tr>
+<tr>
+<td><strong>பழங்குடியினர் (ST)</strong></td>
+<td><strong>7.5%</strong></td>
+<td>AIR 12,000 – 17,000</td>
+<td>AIR 15,000 – 19,000+</td>
+</tr>
+<tr>
+<td><strong>மாற்றுத்திறனாளிகள் (PwD)</strong></td>
+<td><strong>5% கிடைமட்ட ஒதுக்கீடு</strong></td>
+<td>தகுதி பெற்ற அனைவருக்கும் முன்னுரிமை</td>
+<td>தகுதி பெற்ற அனைவருக்கும் முன்னுரிமை</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- SECTION 5: CAREER OPPORTUNITIES & SALARY -->
+<section class="content-section" id="section-careers">
+<div class="section-header">
+<div class="section-title-wrap">
+<div class="section-icon-badge">💼</div>
+<div>
+<h2 class="section-title">வேலைவாய்ப்புத் துறைகள், பதவி உயர்வு &amp; சம்பள வளர்ச்சி</h2>
+<div class="section-tag">சொகுசு 5-Star ஹோட்டல்கள் முதல் சர்வதேச நிறுவனங்கள் வரை</div>
+</div>
+</div>
+</div>
+<p style="font-size: 15px; margin-bottom: 20px;">
+        IHM-ல் B.Sc (H&amp;HA) முடிக்கும் பட்டதாரிகளை உலகப்புகழ்பெற்ற ஹோட்டல் குழுமங்கள் வளாகத் தேர்விலேயே (Campus Interview) போட்டிபோட்டு தேர்வு செய்கின்றன.
+      </p>
+<!-- Career Progression Table -->
+<div class="table-container">
+<table class="data-table">
+<thead>
+<tr>
+<th>பணி நிலை (Career Level)</th>
+<th>வழக்கமான பதவிகள் (Designations)</th>
+<th>அனுபவக் காலம்</th>
+<th>மாதாந்திர ஊதியம் (தோராயமாக)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: #f0fdf4;">
+<td><strong>ஆரம்ப நிலை (Entry Level / Trainee)</strong></td>
+<td>Management Trainee (MT), Hotel Operations Trainee (HOT), Commis Chef, Front Desk Associate</td>
+<td>0 – 2 ஆண்டுகள்</td>
+<td><strong>₹25,000 – ₹45,000 / மாதம்</strong><br/><small style="color: var(--slate-600);">+ இலவச உணவு, தங்குமிடம், சீருடை, டிப்ஸ்</small></td>
+</tr>
+<tr>
+<td><strong>இடைநிலை அதிகாரி (Mid-Level Manager)</strong></td>
+<td>Chef de Partie, Restaurant Manager, Assistant Front Office Manager, Executive Floor Housekeeper</td>
+<td>3 – 6 ஆண்டுகள்</td>
+<td><strong>₹55,000 – ₹95,000 / மாதம்</strong><br/><small style="color: var(--slate-600);">(ஆண்டுக்கு ₹7L – ₹12 Lakhs)</small></td>
+</tr>
+<tr style="background: #fffbeb;">
+<td><strong>துறைத் தலைவர் (Head of Department - HOD)</strong></td>
+<td>Executive Chef (தலைமை சமையல் கலைஞர்), Food &amp; Beverage Director, Front Office Manager</td>
+<td>7 – 10 ஆண்டுகள்</td>
+<td><strong>₹1,20,000 – ₹2,50,000 / மாதம்</strong><br/><small style="color: var(--slate-600);">(ஆண்டுக்கு ₹15L – ₹30 Lakhs)</small></td>
+</tr>
+<tr style="background: #eff6ff; font-weight: bold;">
+<td><strong>ஹோட்டல் தலைமை (Top Executive)</strong></td>
+<td><strong>பொது மேலாளர் (General Manager - GM)</strong>, Vice President (Operations)</td>
+<td>12+ ஆண்டுகள்</td>
+<td><strong>₹3,00,000 – ₹6,00,000+ / மாதம்</strong><br/><small style="color: #1e40af;">(ஆண்டுக்கு ₹35L முதல் ₹75 Lakhs வரை + சொகுசு கார், பங்களா)</small></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 style="font-size: 18px; font-weight: 800; color: var(--wine-900); margin: 26px 0 12px;">வளாகத் தேர்வில் (Campus Placement) பங்கேற்கும் முன்னணி 5-Star ஹோட்டல் நிறுவனங்கள்</h3>
+<div class="cards-4col">
+<div class="info-card">
+<strong style="color: var(--wine-900); font-size: 16px;">தாஜ் குழுமம் (Taj Hotels)</strong>
+<p style="font-size: 13.5px; color: var(--slate-600); margin-top: 6px;">டாடா குழுமத்தின் உலகப்புகழ்பெற்ற சொகுசு அரண்மனை ஹோட்டல்கள் (Taj Palaces &amp; Resorts).</p>
+</div>
+<div class="info-card">
+<strong style="color: var(--wine-900); font-size: 16px;">ஓபராய் (The Oberoi Group)</strong>
+<p style="font-size: 13.5px; color: var(--slate-600); margin-top: 6px;">உலகின் சிறந்த சொகுசு சேவை விருதை பலமுறை வென்ற முன்னணி குழுமம்.</p>
+</div>
+<div class="info-card">
+<strong style="color: var(--wine-900); font-size: 16px;">மேரியட் (Marriott International)</strong>
+<p style="font-size: 13.5px; color: var(--slate-600); margin-top: 6px;">உலகின் மிகப்பெரிய ஹோட்டல் சங்கிலி (Sheraton, Westin, Ritz-Carlton, St. Regis).</p>
+</div>
+<div class="info-card">
+<strong style="color: var(--wine-900); font-size: 16px;">ஐ.டி.சி ஹோட்டல்கள் (ITC Hotels)</strong>
+<p style="font-size: 13.5px; color: var(--slate-600); margin-top: 6px;">ITC Grand Chola சென்னை உள்ளிட்ட இந்தியாவின் ஆடம்பர சூழல் நட்பு ஹோட்டல்கள்.</p>
+</div>
+</div>
+</section>
+<!-- SECTION 6: CRUISE SHIPS & AIRLINES -->
+<section class="content-section" id="section-cruise-airlines">
+<div class="section-header">
+<div class="section-title-wrap">
+<div class="section-icon-badge teal">🚢</div>
+<div>
+<h2 class="section-title">சர்வதேச சொகுசு குரூஸ் கப்பல்கள் (Cruise Lines) &amp; ஏர்லைன்ஸ் பணிகள்</h2>
+<div class="section-tag">வரிவிலக்கு பெற்ற டாலர் வருமானம் &amp; உலகைச் சுற்றிவரும் பொன்னான வாய்ப்புகள்</div>
+</div>
+</div>
+</div>
+<div class="cards-2col">
+<!-- Cruise Lines Card -->
+<div class="info-card highlight-teal">
+<div class="info-card-header">
+<span class="info-card-title">1. சர்வதேச சொகுசு குரூஸ் கப்பல்கள் (Cruise Ships)</span>
+<span class="tag-badge tag-green">Tax-Free Dollar Salary</span>
+</div>
+<p style="font-size: 14.5px; line-height: 1.75; color: var(--slate-700);">
+            IHM பட்டதாரிகளுக்குக் கிடைக்கும் மிகப்பெரிய கவர்ச்சிகரமான வாய்ப்பு சர்வதேச குரூஸ் கப்பல்களாகும் (மிதக்கும் 7-Star நகரங்கள்):<br/>
+            • <strong>முன்னணி நிறுவனங்கள்:</strong> Royal Caribbean, Carnival Cruise, Norwegian Cruise Line (NCL), MSC Cruises, Costa, Princess Cruises.<br/>
+            • <strong>மாதாந்திர ஊதியம்:</strong> தொடக்க நிலையிலேயே <strong>$1,200 முதல் $2,500 டாலர் (சுமார் ₹1,00,000 – ₹2,20,000/மாதம்)</strong>; தலைமை செஃப் மற்றும் மேனேஜர் நிலைகளில் <strong>$4,000 – $7,000 டாலர் (₹3.5L – ₹6L/மாதம்)</strong>.<br/>
+            • <strong>100% வரிவிலக்கு (Zero Tax):</strong> சர்வதேச கடல் எல்லைகளில் 182 நாட்களுக்கு மேல் பணிபுரிவதால் <strong>NRI அந்தஸ்து</strong> பெற்று, ஈட்டும் சம்பளத்திற்கு இந்தியாவில் வருமான வரி செலுத்தத் தேவையில்லை.<br/>
+            • <strong>செலவில்லா சேமிப்பு:</strong> கப்பலில் உணவு, ஏசி தங்குமிடம், உலகத் தரம் வாய்ந்த மருத்துவம் அனைத்தும் இலவசம் என்பதால் முழு சம்பளத்தையும் குடும்பத்திற்கு மிச்சப்படுத்தலாம்!
+          </p>
+</div>
+<!-- Airlines & Other Sectors -->
+<div class="info-card highlight-wine">
+<div class="info-card-header">
+<span class="info-card-title">2. விமானப் போக்குவரத்து &amp; பிற சொகுசுத் துறைகள்</span>
+<span class="tag-badge tag-wine">Airlines &amp; Corporate</span>
+</div>
+<p style="font-size: 14.5px; line-height: 1.75; color: var(--slate-700);">
+            ஹோட்டல்களைத் தாண்டி IHM பட்டதாரிகளை ஈர்க்கும் பிற மாபெரும் துறைகள்:<br/>
+            • <strong>விமானப் பணிப்பெண் &amp; கேபின் க்ரூ (Airlines Cabin Crew):</strong> Emirates, Qatar Airways, Singapore Airlines, Air India, IndiGo. தொடக்க ஊதியம் ₹80,000 முதல் ₹1.8 லட்சம்/மாதம்.<br/>
+            • <strong>விமான உணவு தயாரிப்பு (In-flight Flight Kitchens):</strong> TajSATS, Oberoi Flight Services, SkyGourmet.<br/>
+            • <strong>சொகுசு ரயில் உபசரிப்பு:</strong> IRCTC-ன் Palace on Wheels, Maharaja Express, Vande Bharat கேட்டரிங் மேலாண்மை.<br/>
+            • <strong>கார்ப்பரேட் வசதி மேலாண்மை (Facility Management):</strong> Google, Microsoft, Apple வளாகங்களின் உணவு மற்றும் தங்குமிடங்களை நிர்வகிக்கும் பன்னாட்டு நிறுவனங்கள் (Sodexo, Compass Group).<br/>
+            • <strong>சொகுசு திருமண மேலாண்மை (Luxury Wedding Planning):</strong> கோடிக்கணக்கில் வரவு செலவு செய்யும் டெஸ்டினேஷன் வெடிங் &amp; ஈவென்ட் மேனேஜ்மென்ட்.
+          </p>
+</div>
+</div>
+</section>
+<!-- SECTION 7: FEES, LOANS & SCHOLARSHIPS -->
+<section class="content-section" id="section-fees">
+<div class="section-header">
+<div class="section-title-wrap">
+<div class="section-icon-badge gold">💰</div>
+<div>
+<h2 class="section-title">கல்விக் கட்டணம், வங்கிக் கல்விக் கடன் &amp; அரசு உதவித்தொகைகள்</h2>
+<div class="section-tag">எளிய செமஸ்டர் கட்டணங்கள் மற்றும் அரசு நிதி ஆதரவுகள்</div>
+</div>
+</div>
+</div>
+<div class="cards-3col">
+<div class="info-card">
+<div class="info-card-header">
+<span class="info-card-title">1. கல்விக் கட்டண விவரம்</span>
+<span class="tag-badge tag-gold">Semester Basis</span>
+</div>
+<ul style="padding-left: 18px; font-size: 14px; line-height: 1.8; color: var(--slate-700);">
+<li>மத்திய அரசு IHM-ல் 3 ஆண்டுகளுக்கான மொத்தக் கல்விக் கட்டணம் சுமார் <strong>₹3.5 லட்சம் முதல் ₹4.2 லட்சம் வரை</strong> ஆகும்.</li>
+<li>இத்தொகையை மொத்தமாகச் செலுத்த வேண்டியதில்லை; <strong>6 தவணைகளாக (செமஸ்டருக்கு சுமார் ₹55,000 – ₹70,000)</strong> பிரித்துச் செலுத்தலாம்.</li>
+<li>விடுதிக் கட்டணம் மற்றும் உணவு தனித்துக் கணக்கிடப்படும்.</li>
+</ul>
+</div>
+<div class="info-card">
+<div class="info-card-header">
+<span class="info-card-title">2. வங்கிக் கல்விக் கடன்</span>
+<span class="tag-badge tag-blue">Vidya Lakshmi Portal</span>
+</div>
+<ul style="padding-left: 18px; font-size: 14px; line-height: 1.8; color: var(--slate-700);">
+<li>அரசு IHM கல்லூரிகள் மத்திய சுற்றுலா அமைச்சகத்தின் நேரடி அங்கீகாரம் பெற்றவை என்பதால் பொதுத்துறை வங்கிகள் <strong>100% முழுக் கல்விக் கடனை (Education Loan)</strong> எளிதில் வழங்குகின்றன.</li>
+<li>SBI Scholar Loan திட்டம் மூலம் சொத்து பிணையம் இன்றியே (Without Collateral) ₹7.5 லட்சம் வரை கடன் பெறலாம். படித்து முடித்து வேலை கிடைத்த பின்னரே தவணை தொடங்குகிறது.</li>
+</ul>
+</div>
+<div class="info-card">
+<div class="info-card-header">
+<span class="info-card-title">3. அரசு உதவித்தொகைகள்</span>
+<span class="tag-badge tag-green">Govt Scholarships</span>
+</div>
+<ul style="padding-left: 18px; font-size: 14px; line-height: 1.8; color: var(--slate-700);">
+<li><strong>Post-Matric Scholarship:</strong> ஆதிதிராவிடர் (SC) மற்றும் பழங்குடியின (ST) மாணவர்களுக்கு முழுக் கல்விக் கட்டணமும் அரசின் உதவித்தொகை மூலம் திரும்பப் பெறப்படும்.</li>
+<li><strong>Central Sector Scheme:</strong> 12-ஆம் வகுப்பில் 80% மதிப்பெண் பெற்ற மாணவர்களுக்கு ஆண்டுக்கு ₹12,000 முதல் ₹20,000 வரை தேசிய உதவித்தொகை.</li>
+<li>தமிழக அரசு பிற்படுத்தப்பட்டோர் (BC/MBC) நலத்துறை கல்வி உதவித்தொகைகளும் பொருந்தும்.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- SECTION 8: 9-12 ROADMAP -->
+<section class="content-section" id="section-roadmap">
+<div class="section-header">
+<div class="section-title-wrap">
+<div class="section-icon-badge gold">📅</div>
+<div>
+<h2 class="section-title">9 முதல் 12-ஆம் வகுப்பு வரை: மாணவர்களுக்கான படிப்படியான தயாரிப்புத் திட்டம்</h2>
+<div class="section-tag">பள்ளிப் பருவத்திலிருந்தே ஐ.எச்.எம் மாணவராக உருவெடுக்கும் வழிகாட்டல்</div>
+</div>
+</div>
+</div>
+<div class="stepper-wrap">
+<div class="step-item">
+<div class="step-number">09</div>
+<div class="step-content">
+<div class="step-title">9 &amp; 10-ஆம் வகுப்பு: ஆங்கில மொழித்திறன் &amp; ஆளுமை அடித்தளம்</div>
+<div class="step-desc">
+              • <strong>ஆங்கிலப் புலமை:</strong> ஆங்கில நாளிதழ் வாசிப்பு (The Hindu / Indian Express), புதிய சொற்களைக் குறிப்பெடுத்தல் மற்றும் எளிய ஆங்கில உரையாடல் பழக்கம்.<br/>
+              • <strong>அடிப்படை கணிதம்:</strong> 9, 10-ஆம் வகுப்பு சதவீதக் கணக்குகள், விகிதங்கள், காலமும் வேலையும் போன்ற எளிய கணிதச் சூத்திரங்களை தெளிவாகப் பயிலுதல்.<br/>
+              • <strong>விருந்தோம்பல் விழிப்புணர்வு:</strong> சர்வதேச நாடுகள், கலாச்சாரங்கள், புவியியல் மற்றும் உலக உணவுப் பழக்கவழக்கங்கள் குறித்த பொது அறிவை வளர்த்தல்.
+            </div>
+</div>
+</div>
+<div class="step-item">
+<div class="step-number gold">11</div>
+<div class="step-content">
+<div class="step-title">11-ஆம் வகுப்பு: தர்க்கவியல் &amp; பொது அறிவுத் தயாரிப்பு</div>
+<div class="step-desc">
+              • <strong>ரீசனிங் பயிற்சி:</strong> Logical Reasoning, தொடர் வரிசைக் கணக்குகள், கோடிங்-டீகோடிங் போன்ற போட்டித் தேர்வு வினாக்களைத் தினமும் 30 நிமிடங்கள் பயிற்சி செய்தல்.<br/>
+              • <strong>நடப்பு நிகழ்வுகள்:</strong> தேசிய மற்றும் சர்வதேச சுற்றுலா நிகழ்வுகள், விருந்தோம்பல் விருதுகள், வர்த்தகச் செய்திகளைத் தனி நோட்டில் குறித்து வருதல்.<br/>
+              • <strong>பழைய வினாத்தாள்கள்:</strong> NCHMCT JEE-ன் கடந்த 5 ஆண்டுகால வினாத்தாள்களைப் பதிவிறக்கம் செய்து மாதிரித் தேர்வுகள் எழுதிப் பழகுதல்.
+            </div>
+</div>
+</div>
+<div class="step-item">
+<div class="step-number teal">12</div>
+<div class="step-content">
+<div class="step-title">12-ஆம் வகுப்பு: NTA விண்ணப்பப் பதிவு &amp; கலந்தாய்வு</div>
+<div class="step-desc">
+              • <strong>விண்ணப்பப் பதிவு (பிப்ரவரி - மார்ச்):</strong> nchmjee.nta.nic.in இணையதளத்தில் அறிவிப்பு வெளியானவுடன் சரியான நேரத்தில் ஆன்லைனில் விண்ணப்பித்தல்.<br/>
+              • <strong>NTA கணினித் தேர்வு (மே மாதம்):</strong> 200 வினாக்களுக்கு 3 மணி நேர காலக்கெடுவுடன் ஆன்லைன் CBT மாதிரித் தேர்வுகளை எழுதிப் பயிற்சி செய்தல்.<br/>
+              • <strong>ஆன்லைன் கலந்தாய்வு (ஜூன் - ஜூலை):</strong> JEE ரேங்க் வெளியானவுடன் nchm.gov.in போர்ட்டலில் சாய்ஸ் ஃபில்லிங் (Choice Filling) செய்து IHM சென்னை, IHM மும்பை, SIHM திருச்சி உள்ளிட்ட சிறந்த கல்லூரிகளை வரிசைப்படுத்தி இடத்தைப் பெறுதல்.
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 9: OFFICIAL PORTALS -->
+<section class="content-section" id="section-portals">
+<div class="section-header">
+<div class="section-title-wrap">
+<div class="section-icon-badge gold">🌐</div>
+<div>
+<h2 class="section-title">அதிகாரப்பூர்வ இணையதளங்கள் &amp; நேரடி இணைப்புகள்</h2>
+<div class="section-tag">விண்ணப்பிக்க மற்றும் நம்பகமான தகவல்களைப் பெறும் போர்ட்டல்கள்</div>
+</div>
+</div>
+</div>
+<div class="cards-3col">
+<div class="info-card">
+<h4 style="font-weight: 800; color: var(--wine-900); margin-bottom: 8px;">NTA NCHMCT JEE போர்டல்</h4>
+<p style="font-size: 13.5px; color: var(--slate-600); margin-bottom: 12px;">தேர்வு அறிவிப்பு, விண்ணப்பப் பதிவு, ஹால் டிக்கெட் &amp; முடிவுகள்.</p>
+<a class="portal-link-btn" href="https://nchmjee.nta.nic.in" rel="noopener noreferrer" style="width: 100%; justify-content: center;" target="_blank">nchmjee.nta.nic.in ↗</a>
+</div>
+<div class="info-card">
+<h4 style="font-weight: 800; color: var(--wine-900); margin-bottom: 8px;">NCHMCT கவுன்சில் போர்டல்</h4>
+<p style="font-size: 13.5px; color: var(--slate-600); margin-bottom: 12px;">அகில இந்திய இடஒதுக்கீடு கலந்தாய்வு, சாய்ஸ் ஃபில்லிங் &amp; சீட் ஒதுக்கீடு.</p>
+<a class="portal-link-btn" href="https://nchm.gov.in" rel="noopener noreferrer" style="width: 100%; justify-content: center; background: var(--wine-800);" target="_blank">nchm.gov.in ↗</a>
+</div>
+<div class="info-card">
+<h4 style="font-weight: 800; color: var(--wine-900); margin-bottom: 8px;">மத்திய அரசு IHM சென்னை</h4>
+<p style="font-size: 13.5px; color: var(--slate-600); margin-bottom: 12px;">IHM தரமணி கேம்பஸ், பாடத்திட்டம், விடுதி &amp; கேம்பஸ் பிளேஸ்மென்ட்.</p>
+<a class="portal-link-btn gold" href="https://ihmchennai.org" rel="noopener noreferrer" style="width: 100%; justify-content: center;" target="_blank">ihmchennai.org ↗</a>
+</div>
+<div class="info-card">
+<h4 style="font-weight: 800; color: var(--wine-900); margin-bottom: 8px;">மாநில அரசு SIHM திருச்சி</h4>
+<p style="font-size: 13.5px; color: var(--slate-600); margin-bottom: 12px;">துவாக்குடி கேம்பஸ் விவரங்கள், கட்டணம் &amp; சேர்க்கை வழிகாட்டி.</p>
+<a class="portal-link-btn" href="https://sihmtrichy.com" rel="noopener noreferrer" style="width: 100%; justify-content: center; background: var(--teal-700);" target="_blank">sihmtrichy.com ↗</a>
+</div>
+<div class="info-card">
+<h4 style="font-weight: 800; color: var(--wine-900); margin-bottom: 8px;">மத்திய சுற்றுலா அமைச்சகம்</h4>
+<p style="font-size: 13.5px; color: var(--slate-600); margin-bottom: 12px;">இந்திய அரசின் சுற்றுலா மற்றும் விருந்தோம்பல் கொள்கைகள்.</p>
+<a class="portal-link-btn" href="https://tourism.gov.in" rel="noopener noreferrer" style="width: 100%; justify-content: center; background: #1e293b;" target="_blank">tourism.gov.in ↗</a>
+</div>
+<div class="info-card">
+<h4 style="font-weight: 800; color: var(--wine-900); margin-bottom: 8px;">வித்யா லட்சுமி கல்விக் கடன்</h4>
+<p style="font-size: 13.5px; color: var(--slate-600); margin-bottom: 12px;">அரசு வங்கி கல்விக் கடன்களுக்கான ஒற்றைச் சாளர போர்ட்டல்.</p>
+<a class="portal-link-btn" href="https://www.vidyalakshmi.co.in" rel="noopener noreferrer" style="width: 100%; justify-content: center; background: var(--gold-600);" target="_blank">vidyalakshmi.co.in ↗</a>
+</div>
+</div>
+</section>
+<!-- SECTION 10: 16 FAQS -->
+<section class="content-section" id="section-faqs">
+<div class="section-header">
+<div class="section-title-wrap">
+<div class="section-icon-badge gold">❓</div>
+<div>
+<h2 class="section-title">அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQs)</h2>
+<div class="section-tag">கிராமப்புற மற்றும் தமிழ் வழி மாணவர்களின் சந்தேகங்களுக்கான தெளிவுரைகள்</div>
+</div>
+</div>
+</div>
+<div class="faq-list">
+<!-- FAQ 1 -->
+<div class="accordion-item">
+<button class="accordion-trigger">
+<span>1. தமிழ் வழி அரசுப் பள்ளியில் படித்த மாணவர்கள் IHM-ல் சேர்ந்து சாதிக்க முடியுமா?</span>
+<svg class="accordion-chevron" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<div class="accordion-body">
+<strong>நிச்சயமாக மிகச்சிறப்பாக சாதிக்க முடியும்!</strong><br/>
+            IHM கல்லூரிகளில் சேரும் பெரும்பான்மையான மாணவர்கள் ஆரம்பத்தில் எளிய ஆங்கிலப் பின்னணியில் இருந்து வருபவர்களே. அங்கு கற்பிக்கப்படும் செய்முறைப் பயிற்சிகள் (Practical Training) செய்முறையாகக் கண்கூடாகப் பார்த்து கற்றுக்கொள்வதே ஆகும். மேலும் முதல் செமஸ்டரிலேயே ஆங்கில உரையாடல் மற்றும் தொடர்புத் திறன் (Communication Skills) சிறப்பு வகுப்புகள் நடத்தப்படுகின்றன. தமிழக அரசுப் பள்ளி மாணவர்கள் தங்களின் விடாமுயற்சி மற்றும் கடின உழைப்பால் இன்று உலகின் முன்னணி 5-Star ஹோட்டல்களில் தலைமை அதிகாரிகளாகவும், சொகுசு குரூஸ் கப்பல்களின் செஃப்களாகவும் ஜொலிக்கின்றனர்.
+          </div>
+</div>
+<!-- FAQ 2 -->
+<div class="accordion-item">
+<button class="accordion-trigger">
+<span>2. உணவக மேலாண்மை (Hotel Management) என்றால் சமையல் வேலை மட்டுமே கற்றுத் தருவார்களா?</span>
+<svg class="accordion-chevron" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<div class="accordion-body">
+<strong>முற்றிலும் தவறு! சமையல் என்பது 4 முக்கியப் பிரிவுகளில் ஒன்று மட்டுமே.</strong><br/>
+            B.Sc (H&amp;HA) பட்டப்படிப்பில் 4 முதன்மைத் துறைகள் சம அளவில் கற்பிக்கப்படுகின்றன:<br/>
+            1. <strong>Food Production (சமையல் கலை)</strong><br/>
+            2. <strong>Food &amp; Beverage Service (உணவக உபசரிப்பு &amp; மேலாண்மை)</strong><br/>
+            3. <strong>Front Office Management (வரவேற்பு, முன்பதிவு, வாடிக்கையாளர் தொடர்பு &amp; பில்லிங்)</strong><br/>
+            4. <strong>Accommodation Operations / Housekeeping (அறை மேலாண்மை, சொகுசு பராமரிப்பு &amp; உள்கட்டமைப்பு)</strong><br/>
+            இதுதவிர நிதி மேலாண்மை (Accounting), ஹோட்டல் சட்டம் (Hospitality Law), மனிதவள மேலாண்மை (HRM), சுற்றுலா மேலாண்மை (Tourism Marketing) ஆகியவையும் கற்றுத் தரப்படுவதால் மாணவர்கள் நிர்வாகத் தலைவர்களாக (General Managers) உயர்கின்றனர்.
+          </div>
+</div>
+<!-- FAQ 3 -->
+<div class="accordion-item">
+<button class="accordion-trigger">
+<span>3. முற்றிலும் சைவ உணவு (Vegetarian) உண்பவர்கள் IHM-ல் படிக்க முடியுமா? அசைவ உணவுகளைத் தொட வேண்டியிருக்குமா?</span>
+<svg class="accordion-chevron" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<div class="accordion-body">
+<strong>ஆம், தாராளமாகப் படிக்கலாம்!</strong><br/>
+            மத்திய அரசு IHM கல்லூரிகளில் மாணவர்களின் மத மற்றும் தனிப்பட்ட உணவுப் பழக்கவழக்கங்கள் முழுமையாக மதிக்கப்படுகின்றன. சமையல் செய்முறை வகுப்புகளில் அசைவ உணவுகளை உண்பது கட்டாயம் அல்ல. மேலும், ஒருவர் சமையல் துறையைத் தவிர்த்து <strong>Front Office (வரவேற்பு மேலாண்மை), Housekeeping (தங்குமிட மேலாண்மை), F&amp;B Service அல்லது Sales &amp; Marketing</strong> போன்ற பிற பிரதானத் துறைகளைத் தனது முதன்மை விருப்பப் பாடமாகத் தேர்வு செய்து மிகச்சிறந்த உயர் பதவிகளை அடைய முடியும்.
+          </div>
+</div>
+<!-- FAQ 4 -->
+<div class="accordion-item">
+<button class="accordion-trigger">
+<span>4. 12-ஆம் வகுப்பில் கலை (Arts), வணிகவியல் (Commerce) அல்லது தொழிற்கல்வி படித்தவர்கள் NCHMCT JEE எழுத முடியுமா?</span>
+<svg class="accordion-chevron" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<div class="accordion-body">
+<strong>ஆம், 100% தகுதியுடையவர்கள்!</strong><br/>
+            இத்தேர்வுக்கு அறிவியல் (Science) பாடப் பின்னணி தேவையே இல்லை. Arts, Commerce, Computer Applications, Vocational என எந்தப் பிரிவு மாணவர்களும் விண்ணப்பிக்கலாம். ஒரே ஒரு நிபந்தனை: 12-ஆம் வகுப்பில் ஆங்கிலத்தை ஒரு மொழிப் பாடமாகப் படித்து தேர்ச்சி பெற்றிருக்க வேண்டும்.
+          </div>
+</div>
+<!-- FAQ 5 -->
+<div class="accordion-item">
+<button class="accordion-trigger">
+<span>5. மாணவிகள் (பெண்கள்) உணவக மேலாண்மை படிப்பது பாதுகாப்பானதா? அவர்களுக்கு என்னென்ன பிரத்யேக வாய்ப்புகள் உள்ளன?</span>
+<svg class="accordion-chevron" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<div class="accordion-body">
+<strong>மிகவும் பாதுகாப்பானது மற்றும் பெண்களுக்கான அதிக வாய்ப்புகள் கொண்ட துறை!</strong><br/>
+            இன்று ஐ.எச்.எம் கல்லூரிகளில் சுமார் 30% முதல் 40% வரை மாணவிகள் பயில்கின்றனர். மத்திய அரசு IHM சென்னை, பூசா உள்ளிட்ட அனைத்து கல்லூரிகளிலும் மாணவிகளுக்கு தனிப் பாதுகாப்பான விடுதிகள் (Girls Hostel) உள்ளன. சொகுசு ஹோட்டல் துறையில் <strong>Front Office, Guest Relations, Housekeeping Direction, HR &amp; Marketing</strong> மற்றும் சர்வதேச ஏர்லைன்ஸ் நிறுவனங்களில் <strong>Cabin Crew / Air Hostess</strong> பணிகளில் மாணவிகளுக்கு மிகப்பெரிய அளவில் வரவேற்பும் முன்னுரிமையும் வழங்கப்படுகிறது.
+          </div>
+</div>
+<!-- FAQ 6 -->
+<div class="accordion-item">
+<button class="accordion-trigger">
+<span>6. IHM வழங்கும் B.Sc H&amp;HA பட்டத்தை எந்தப் பல்கலைக்கழகம் வழங்குகிறது? இதன் சர்வதேச மதிப்பு என்ன?</span>
+<svg class="accordion-chevron" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<div class="accordion-body">
+            இப்பட்டப்படிப்புக்கு இந்தியாவின் முதன்மையான <strong>ஜவஹர்லால் நேரு பல்கலைக்கழகம் (Jawaharlal Nehru University - JNU, New Delhi)</strong> B.Sc (Hospitality and Hotel Administration) பட்டத்தை வழங்குகிறது. JNU பட்டம் என்பது UGC அங்கீகாரம் பெற்றது மட்டுமல்லாமல், அமெரிக்கா, கனடா, ஐரோப்பா, ஆஸ்திரேலியா, துபாய் போன்ற உலக நாடுகள் அனைத்திலும் உயர் அங்கீகாரம் பெற்றுள்ளது. இப்பட்டத்தை வைத்து வெளிநாடுகளில் முதுகலை (MBA / M.Sc Hospitality) படிக்கவோ அல்லது சர்வதேச வேலைவாய்ப்புகளுக்கு விண்ணப்பிக்கவோ முடியும்.
+          </div>
+</div>
+<!-- FAQ 7 -->
+<div class="accordion-item">
+<button class="accordion-trigger">
+<span>7. சொகுசு குரூஸ் கப்பல்களில் (Cruise Ships) வேலை கிடைப்பது எப்படி? வரிவிலக்கு பெற்ற டாலர் சம்பளம் உண்மையா?</span>
+<svg class="accordion-chevron" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<div class="accordion-body">
+<strong>முற்றிலும் உண்மை!</strong><br/>
+            IHM கல்லூரிகளுக்கு Royal Caribbean, Carnival, Norwegian, MSC Cruises போன்ற சர்வதேச குரூஸ் நிறுவனங்கள் நேரடியாக வந்து வளாகத் தேர்வு நடத்துகின்றன அல்லது அங்கீகரிக்கப்பட்ட ஆட்சேர்ப்பு முகமைகள் மூலம் தேர்வு செய்கின்றன. குரூஸ் கப்பல்களில் தங்குமிடம், உணவு மற்றும் மருத்துவம் இலவசம் என்பதால், தொடக்க ஊதியமான $1,500 – $2,500 டாலர் (சுமார் ₹1.2L – ₹2L) முழுவதையும் அப்படியே சேமிக்கலாம். இந்திய வருமான வரிச் சட்டப்படி 182 நாட்களுக்கு மேல் சர்வதேச கடலில் இருப்பதால் இதற்கு இந்தியாவில் <strong>பூஜ்ஜிய வருமான வரி (Zero Tax / NRI Status)</strong> சலுகை கிடைக்கிறது.
+          </div>
+</div>
+<!-- FAQ 8 -->
+<div class="accordion-item">
+<button class="accordion-trigger">
+<span>8. IHM சென்னை மற்றும் SIHM திருச்சி கல்லூரிகளில் சேர எவ்வளவு கட்-ஆஃப் ரேங்க் தேவை?</span>
+<svg class="accordion-chevron" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<div class="accordion-body">
+            • <strong>IHM சென்னை (Taramani):</strong> பொதுப்பிரிவினருக்கு அகில இந்திய அளவில் ரேங்க் 1,500 – 3,500 வரையிலும், OBC பிரிவினருக்கு 7,000 வரையிலும், SC/ST மாணவர்களுக்கு 14,000 – 17,000 வரையிலும் பொதுவாக இடம் கிடைக்கிறது.<br/>
+            • <strong>SIHM திருச்சி:</strong> பொதுப்பிரிவினருக்கு 9,000 வரையிலும், இடஒதுக்கீட்டுப் பிரிவினருக்கு 18,000+ ரேங்க் வரை கூட இடம் கிடைக்க வாய்ப்புள்ளது.
+          </div>
+</div>
+<!-- FAQ 9 -->
+<div class="accordion-item">
+<button class="accordion-trigger">
+<span>9. படிக்கும் போதே 5-Star ஹோட்டல்களில் நேரடி தொழிற்பயிற்சி (Industrial Training) கிடைக்குமா? ஸ்டைபண்ட் உண்டா?</span>
+<svg class="accordion-chevron" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<div class="accordion-body">
+<strong>ஆம், கட்டாயத் தொழிற்பயிற்சி உண்டு!</strong><br/>
+            B.Sc படிப்பின் இரண்டாம் ஆண்டில் (3rd அல்லது 4th செமஸ்டர்), <strong>17 முதல் 20 வாரங்கள் (சுமார் 4-5 மாதங்கள்)</strong> மாணவர்கள் முன்னணி 5-Star சொகுசு ஹோட்டல்களில் (Taj, Oberoi, ITC, Marriott) முழுநேரப் பணியாளர்களாக நேரடிப் பயிற்சி பெறுவர். இப்பயிற்சியின் போது ஹோட்டல் நிர்வாகங்கள் மாணவர்களுக்கு மாதாந்திர ஊக்கத்தொகை (Stipend - சுமார் ₹4,000 முதல் ₹10,000 வரை) மற்றும் இலவச உணவு, சீருடை வழங்குகின்றன.
+          </div>
+</div>
+<!-- FAQ 10 -->
+<div class="accordion-item">
+<button class="accordion-trigger">
+<span>10. ஏர்லைன்ஸ் நிறுவனங்களில் விமானப் பணிப்பெண் / கேபின் க்ரூ (Cabin Crew) ஆவதற்கு IHM படிப்பு உதவுமா?</span>
+<svg class="accordion-chevron" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<div class="accordion-body">
+<strong>மிகப்பெரிய அளவில் முன்னுரிமை கிடைக்கும்!</strong><br/>
+            விமான நிறுவனங்கள் (Emirates, Qatar Airways, Singapore Airlines, Air India, IndiGo) தங்களின் கேபின் க்ரூ தேர்வில் IHM பட்டதாரிகளுக்கு மிகப்பெரிய முன்னுரிமை அளிக்கின்றன. ஏனெனில், உணவு உபசரிப்பு, உலகளாவிய வாடிக்கையாளர் கவனிப்பு, உடல் மொழி, அவசரகால முதலுதவி மற்றும் சீருடை ஒழுக்கம் ஆகிய அனைத்தும் IHM-ல் 3 ஆண்டுகள் கற்றுக்கொடுக்கப்படுவதால், அவர்கள் மிக எளிதாக விமானப் பணிப்பெண் மற்றும் ஏர்லைன் மேலாண்மைப் பணிகளில் தேர்வாகின்றனர்.
+          </div>
+</div>
+<!-- FAQ 11 -->
+<div class="accordion-item">
+<button class="accordion-trigger">
+<span>11. தனியார் கல்லூரிகளில் சேரும்போது என்னென்ன முன்னெச்சரிக்கைகள் தேவை? போலி கல்லூரிகளைத் தவிர்ப்பது எப்படி?</span>
+<svg class="accordion-chevron" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<div class="accordion-body">
+<strong>மிக முக்கியமான விழிப்புணர்வு:</strong><br/>
+            பல தனியார் நிறுவனங்கள் கவர்ச்சிகரமான விளம்பரங்களை வெளியிட்டு, போலி சர்வதேச டிப்ளமோக்களை வழங்கி லட்சக்கணக்கில் பணம் பறிக்கின்றன. மாணவர்கள் சேருவதற்கு முன், அக்கல்லூரி மத்திய அரசின் <strong>NCHMCT கவுன்சிலால் அங்கீகரிக்கப்பட்டதா (NCHM Affiliated)</strong> அல்லது UGC அங்கீகாரம் பெற்ற பல்கலைக்கழகத்துடன் இணைக்கப்பட்டுள்ளதா என்பதை <strong>nchm.gov.in</strong> தளத்தில் சரிபார்க்க வேண்டும். மத்திய அல்லது மாநில அரசு IHM-ல் சேர்வதே 100% பாதுகாப்பானது மற்றும் குறைந்த கட்டணம் கொண்டது.
+          </div>
+</div>
+<!-- FAQ 12 -->
+<div class="accordion-item">
+<button class="accordion-trigger">
+<span>12. கல்விக் கட்டணம் எவ்வளவு? பொதுத்துறை வங்கிகளில் கல்விக் கடன் (Education Loan) கிடைக்குமா?</span>
+<svg class="accordion-chevron" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<div class="accordion-body">
+            அரசு IHM கல்லூரிகளில் 3 ஆண்டுகளுக்கு மொத்தமாகச் சுமார் ₹3.5 லட்சம் முதல் ₹4.2 லட்சம் வரை கட்டணம் ஆகும். இது மத்திய அரசின் அதிகாரப்பூர்வ நிறுவனம் என்பதால், SBI, Indian Bank, Canara Bank, Bank of Baroda உள்ளிட்ட அனைத்து வங்கிகளும் <strong>வித்யா லட்சுமி போர்டல் (Vidya Lakshmi Portal)</strong> மூலம் எந்தவிதச் சொத்துப் பிணையமும் இன்றி (No Collateral) எளிதாகக் கல்விக் கடன் வழங்குகின்றன.
+          </div>
+</div>
+<!-- FAQ 13 -->
+<div class="accordion-item">
+<button class="accordion-trigger">
+<span>13. முதல் தலைமுறை பட்டதாரி மற்றும் SC/ST மாணவர்களுக்கு அரசு உதவித்தொகை (Scholarship) கிடைக்குமா?</span>
+<svg class="accordion-chevron" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<div class="accordion-body">
+<strong>ஆம், முழு உதவித்தொகை கிடைக்கும்!</strong><br/>
+            • SC / ST பிரிவு மாணவர்களுக்கு மத்திய மற்றும் மாநில அரசுகளின் <strong>Post-Matric Scholarship</strong> மூலம் முழுக் கல்விக் கட்டணமும் அரசின் சார்பில் திரும்ப வழங்கப்படுகிறது.<br/>
+            • பிற்படுத்தப்பட்டோர் மற்றும் மிகவும் பிற்படுத்தப்பட்டோர் (BC / MBC) நலத்துறை உதவித்தொகைகளும் SIHM திருச்சி மற்றும் IHM சென்னை கல்லூரிகளுக்குப் பொருந்தும்.<br/>
+            • தேசிய அளவில் 12-ஆம் வகுப்பில் அதிக மதிப்பெண் எடுத்த மாணவர்களுக்கு Central Sector Scholarship-ம் உண்டு.
+          </div>
+</div>
+<!-- FAQ 14 -->
+<div class="accordion-item">
+<button class="accordion-trigger">
+<span>14. உணவக மேலாண்மை முடித்தவர்கள் சொந்தமாக உணவகம், பேக்கரி அல்லது கேட்டரிங் தொழில் தொடங்க முடியுமா?</span>
+<svg class="accordion-chevron" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<div class="accordion-body">
+<strong>சுயதொழில் தொடங்குவதற்கு இதுவே மிகச்சிறந்த பட்டப்படிப்பு!</strong><br/>
+            உணவுத் தரம், மூலப்பொருள் விரயத்தைக் குறைக்கும் உத்திகள் (Food Costing), மெனு வடிவமைப்பு, சமையலறை உபகரணங்கள் கையாளுதல் மற்றும் உணவகச் சட்டங்கள் அனைத்தும் இங்குக் கற்பிக்கப்படுவதால், பட்டதாரிகள் சொந்தமாக <strong>Cloud Kitchen, தீம் ரெஸ்டாரன்ட், பேக்கரி &amp; கஃபே (Café), திருமண கேட்டரிங் நிறுவனம் அல்லது சொகுசு ரிசார்ட்</strong> போன்ற தொழில்களைத் தொடங்கி மிகப்பெரிய தொழிலதிபர்களாக உருவெடுக்க முடியும்.
+          </div>
+</div>
+<!-- FAQ 15 -->
+<div class="accordion-item">
+<button class="accordion-trigger">
+<span>15. NCHMCT JEE தேர்வில் "Aptitude for Service Sector" பகுதிக்கு எவ்வாறு தயாராவது?</span>
+<svg class="accordion-chevron" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<div class="accordion-body">
+            இப்பகுதிக்கு புத்தக மனப்பாடம் தேவையில்லை! விருந்தோம்பல் துறையின் முக்கிய தாரக மந்திரமான <strong>"விருந்தினரே கடவுள் (அதிதி தேவோ பவ)", புன்னகையுடன் கூடிய சேவை, கோபப்படும் வாடிக்கையாளரை அமைதியாகக் கையாளுதல், நேர்மை மற்றும் குழு மனப்பான்மை</strong> சார்ந்த சூழ்நிலைக் கேள்விகள் (Situational Questions) கேட்கப்படும். எப்போதும் வாடிக்கையாளருக்கு மதிப்பளிக்கும் மிகவும் கண்ணியமான விடையைத் தேர்வு செய்தாலே முழு மதிப்பெண்களான 200/200 எளிதில் பெறலாம்.
+          </div>
+</div>
+<!-- FAQ 16 -->
+<div class="accordion-item">
+<button class="accordion-trigger">
+<span>16. படிப்பை முடித்தவுடன் கிடைக்கும் ஆரம்ப ஊதியம் எவ்வளவு? 5 ஆண்டுகளில் எத்தகைய பதவி உயர்வு கிடைக்கும்?</span>
+<svg class="accordion-chevron" viewbox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<div class="accordion-body">
+            வளாகத் தேர்வில் நேரடியாகத் தேர்வாகும் மாணவர்களுக்கு தொடக்கத்தில் <strong>₹25,000 முதல் ₹45,000 வரை மாதாந்திர ஊதியத்துடன்</strong> இலவச உணவு, தங்குமிடம் மற்றும் சீருடை கிடைக்கும் (Management Trainee நிலைகளில் இன்னும் அதிகம்). அடுத்த 3 முதல் 5 ஆண்டுகளில் உதவி மேலாளர், செஃப் டி பார்ட்டி அல்லது ரெஸ்டாரன்ட் மேனேஜராக உயர்ந்து <strong>மாதம் ₹60,000 முதல் ₹1,20,000 வரை</strong> சம்பாதிக்கலாம். சர்வதேச குரூஸ் கப்பல்களுக்குச் சென்றால் 5 ஆண்டுகளில் மாதம் ₹2.5 லட்சம் முதல் ₹4 லட்சம் வரை வரிவிலக்கு பெற்ற டாலர் வருமானம் ஈட்ட முடியும்.
+          </div>
+</div>
+</div>
+</section>
+<!-- BOTTOM ACTION BAR: DEDICATED PRINT & NEW TAB BUTTONS -->
+<!-- FOOTER WITH DEVELOPER CREDITS -->
+<!-- Floating Back to Top Button -->
+<!-- ==================================================== -->
+<!-- உணவக மேலாண்மை & விருந்தோம்பல் திருக்குறள் வழிகாட்டல் -->
+<!-- ==================================================== -->
+<!-- ==================================================== -->
+<!-- தட்டச்சு அனிமேஷன் அட்டை (Creator Single-Line Typewriter Card) -->
+<!-- ==================================================== -->
+<div class="traditional-kural-card no-print">
+<div class="kural-top-row">
+<div class="kural-chip-wrap">
+<span class="kural-feather-icon">🪶</span>
+<span class="kural-chip-text">திருக்குறள் • அதிகாரம் 9: விருந்தோம்பல் (குறள்: 81)</span>
+</div>
+<span class="kural-topic-badge">🏨 விருந்தோம்பல் மாண்பு</span>
+</div>
+<div class="kural-couplet-lines">
+<p class="kural-first-line">“இருந்தோம்பி இல்வாழ்வ தெல்லாம் விருந்தோம்பி</p>
+<p class="kural-second-line">வேளாண்மை செய்தற் பொருட்டு.”</p>
+</div>
+<div class="kural-meaning-row">
+<span class="kural-meaning-label">💡 குறள் விளக்கம்:</span>
+<span class="kural-meaning-text">செல்வத்தைச் சேர்த்து இல்லறம் நடத்தி வாழ்வதன் முழு நோக்கமே, விருந்தினர்களை இன்முகத்தோடு உபசரித்து, அவர்களுக்கு வேண்டிய உதவிகளைச் செய்து விருந்தோம்புவதற்காகவே ஆகும்.</span>
+</div>
+</div><div class="creator-card">
+<div id="creatorTypewriterWrap" style="display: inline-flex; align-items: center; justify-content: center; flex-wrap: wrap; line-height: 1.8;">
+<span id="creatorTypewriterTarget"></span>
+<span class="typing-cursor" id="creatorCursor">|</span>
+</div>
+</div>
+<!-- ==================================================== -->
+<!-- அதிகாரப்பூர்வ அடிக்குறிப்பு (Official Footer Credit) -->
+<!-- ==================================================== -->
+<div class="portal-bottom-nav no-print" style="margin: 40px auto 25px auto; padding: 20px; background: #ffffff; border-radius: 14px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+<div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+<a class="portal-nav-btn prev-btn" href="https://www.ceosvg.in/career-guidance/entrance-exams/07_management_iim_ipm" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1; box-shadow:0 2px 4px rgba(0,0,0,0.04);" target="_blank">
+<span>← முந்தைய பிரிவு: 07 (மேலாண்மை (IIM IPM))</span>
+</a>
+</div>
+<div>
+<a class="portal-nav-btn home-btn" href="https://www.ceosvg.in/career-guidance/entrance-exams" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#1e1b4b; color:#ffffff; text-decoration:none; font-weight:700; font-size:14px; box-shadow:0 3px 8px rgba(30,27,75,0.25);" target="_blank">
+<span>🏠 நுழைவுத்தேர்வுகள் முதன்மை மெனு</span>
+</a>
+</div>
+<div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+<a class="portal-nav-btn next-btn" href="https://www.ceosvg.in/career-guidance/entrance-exams/09_maritime_merchant_navy" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1; box-shadow:0 2px 4px rgba(0,0,0,0.04);" target="_blank">
+<span>அடுத்த பிரிவு: 09 (கடல்சார் கல்வி (IMU CET)) →</span>
+</a>
+</div>
+</div><footer class="portal-footer no-print">
+<p style="margin-bottom: 6px; font-weight: 600; color: #334155; font-size: 0.95rem;">
+    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562,
+    <a href="tel:04575240408" style="color: #9f1239; text-decoration: none; font-weight: 700;">
+      ☎️ 04575240408
+    </a>
+</p>
+<p style="font-size: 0.86rem; color: #64748b; margin-top: 6px;">
+    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+  </p>
+</footer>
+<!-- மிதக்கும் மேலே செல்லும் பட்டன் (Floating Back to Top) -->
+<button class="back-to-top no-print" onclick="window.scrollTo({top:0, behavior:'smooth'});" title="மேலே செல்ல" type="button">
+    ▲ மேலே செல்க
+  </button>
+</div>
+<!-- JavaScript for Interactive Search, Filtering, Quick Nav, Accordion, and Back-to-Top -->
+<script>
+  // Accordion Toggle for FAQs
+  document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const body = trigger.nextElementSibling;
+      const isActive = trigger.classList.contains('active');
+      
+      document.querySelectorAll('.accordion-trigger').forEach(otherTrigger => {
+        if (otherTrigger !== trigger) {
+          otherTrigger.classList.remove('active');
+          if (otherTrigger.nextElementSibling) {
+            otherTrigger.nextElementSibling.classList.remove('open');
+          }
+        }
+      });
+
+      if (!isActive) {
+        trigger.classList.add('active');
+        body.classList.add('open');
+      } else {
+        trigger.classList.remove('active');
+        body.classList.remove('open');
+      }
+    });
+  });
+
+  // Creator Single-Line Typewriter Animation
+  const creatorSegments = [
+    { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
+    { text: "கூ. பூவலிங்கம்", tag: "span", class: "creator-name-ta" },
+    { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
+    { text: "K. Poovalingam", tag: "span", class: "creator-name-en" },
+    { text: ", Deputy Inspector of Schools  ", tag: "span", class: "creator-role" },
+    { text: "📱 9626471035", tag: "a", class: "creator-phone-badge", href: "tel:9626471035" }
+  ];
+
+  const creatorContainer = document.getElementById('creatorTypewriterTarget');
+  const creatorCursor = document.getElementById('creatorCursor');
+
+  let creatorSegIdx = 0;
+  let creatorCharIdx = 0;
+  let creatorCurrentElem = null;
+  let creatorHasStarted = false;
+
+  function typeCreatorDetails() {
+    if (!creatorContainer || creatorHasStarted) return;
+    creatorHasStarted = true;
+
+    function step() {
+      if (creatorSegIdx >= creatorSegments.length) {
+        if (creatorCursor) {
+          creatorCursor.style.animation = 'none';
+          creatorCursor.style.opacity = '0';
+          setTimeout(() => creatorCursor.remove(), 400);
+        }
+        return;
+      }
+
+      const seg = creatorSegments[creatorSegIdx];
+
+      if (creatorCharIdx === 0) {
+        creatorCurrentElem = document.createElement(seg.tag);
+        if (seg.class) creatorCurrentElem.className = seg.class;
+        if (seg.href) {
+          creatorCurrentElem.href = seg.href;
+          creatorCurrentElem.target = '_blank';
+          creatorCurrentElem.rel = 'noopener noreferrer';
+        }
+        creatorContainer.appendChild(creatorCurrentElem);
+      }
+
+      creatorCurrentElem.textContent += seg.text.charAt(creatorCharIdx);
+      creatorCharIdx++;
+
+      if (creatorCharIdx < seg.text.length) {
+        setTimeout(step, 24);
+      } else {
+        creatorSegIdx++;
+        creatorCharIdx = 0;
+        setTimeout(step, 80);
+      }
+    }
+
+    step();
+  }
+
+  // Floating Back to Top button show/hide
+  window.addEventListener('scroll', function() {
+    const btn = document.querySelector('.back-to-top');
+    if (btn) {
+      if (window.scrollY > 300) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(typeCreatorDetails, 400);
+  });
+</script></body>
+</html>
