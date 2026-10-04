@@ -1824,6 +1824,454 @@
         transform: scale(1.05);
       }
     }
+/* ========================================================
+       UNIFIED PORTAL-WIDE PERMANENT LEFT SIDEBAR WITH NESTED ACCORDIONS
+       ======================================================== */
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    .portal-layout-wrapper {
+      display: block;
+      width: 100%;
+      min-height: 100vh;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    /* Fixed Left Sidebar - 100% Permanently Anchored to Viewport */
+    .desktop-left-sidebar {
+      width: 295px;
+      min-width: 295px;
+      max-width: 295px;
+      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%);
+      border-right: 1.8px solid rgba(212, 175, 55, 0.35);
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      height: 100vh !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      z-index: 1000 !important;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      box-sizing: border-box;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Custom Slim Gold Scrollbar for Sidebar */
+    .desktop-left-sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .desktop-left-sidebar::-webkit-scrollbar-track {
+      background: rgba(10, 15, 29, 0.95);
+    }
+    .desktop-left-sidebar::-webkit-scrollbar-thumb {
+      background: rgba(212, 175, 55, 0.45);
+      border-radius: 4px;
+    }
+    .desktop-left-sidebar::-webkit-scrollbar-thumb:hover {
+      background: rgba(212, 175, 55, 0.75);
+    }
+
+    .sidebar-header {
+      padding: 16px 14px 14px;
+      border-bottom: 1.5px solid rgba(212, 175, 55, 0.25);
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(15, 23, 42, 0.4) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .sidebar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .sidebar-emblem {
+      font-size: 1.65rem;
+      line-height: 1;
+      filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.5));
+    }
+    .sidebar-title-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar-main-title {
+      font-size: 0.92rem;
+      font-weight: 900;
+      color: #fef08a;
+      letter-spacing: 0.3px;
+      line-height: 1.25;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    }
+    .sidebar-sub-title {
+      font-size: 0.74rem;
+      color: #94a3b8;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .sidebar-close-btn {
+      display: none;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fef08a;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    .sidebar-close-btn:hover {
+      background: rgba(220, 38, 38, 0.6);
+      color: #ffffff;
+    }
+
+    .sidebar-nav-body {
+      padding: 14px 10px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-grow: 1;
+    }
+
+    /* Top-level Main Menu Buttons */
+    .sidebar-main-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(15, 23, 42, 0.5) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 8px;
+      color: #e2e8f0;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    }
+    .sidebar-main-btn:hover {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(26, 86, 219, 0.25) 100%);
+      border-color: #d4af37;
+      color: #fef08a;
+      transform: translateX(2px);
+    }
+    .sidebar-main-btn.active-page {
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.3) 0%, rgba(26, 86, 219, 0.3) 100%) !important;
+      border-color: #fde047 !important;
+      color: #ffffff !important;
+      font-weight: 900 !important;
+    }
+
+    /* Accordion Menu Group */
+    .sidebar-accordion-group {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    /* Accordion Main Header (Click to Expand Sub-Menu) */
+    .sidebar-accordion-header {
+      width: 100%;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(30, 58, 138, 0.25) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 8px;
+      padding: 10px 12px;
+      color: #fef08a;
+      font-size: 0.86rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      transition: all 0.22s ease;
+      font-family: inherit;
+      text-align: left;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      user-select: none;
+    }
+    .sidebar-accordion-header:hover {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(30, 58, 138, 0.4) 100%);
+      border-color: #fde047;
+      color: #ffffff;
+      transform: translateX(2px);
+    }
+    .sidebar-accordion-header.open {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(15, 23, 42, 0.7) 100%);
+      border-color: #fde047;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .accordion-title-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-grow: 1;
+    }
+    .accordion-arrow {
+      font-size: 0.72rem;
+      transition: transform 0.28s ease;
+      color: #d4af37;
+      display: inline-block;
+    }
+    .sidebar-accordion-header.open .accordion-arrow {
+      transform: rotate(180deg);
+      color: #fef08a;
+    }
+
+    /* Accordion Sub-Menu Content */
+    .sidebar-accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.25s ease;
+      background: rgba(5, 8, 16, 0.75);
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      border-top: none;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      padding: 0 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      box-sizing: border-box;
+    }
+    .sidebar-accordion-content.open {
+      max-height: 1500px;
+      padding: 8px 6px;
+    }
+
+    /* Sub-menu Item Link */
+    .sidebar-link.sub-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6.5px 10px 6.5px 12px;
+      font-size: 0.81rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      border-left: 2.5px solid rgba(255, 255, 255, 0.12);
+      border-radius: 0 6px 6px 0;
+      margin-left: 4px;
+      transition: all 0.18s ease;
+      line-height: 1.35;
+    }
+    .sidebar-link.sub-link:hover {
+      border-left-color: #d4af37;
+      background: rgba(212, 175, 55, 0.16);
+      color: #fef08a;
+      transform: translateX(2px);
+    }
+    .sidebar-link.sub-link.primary-hub {
+      background: rgba(255, 255, 255, 0.08);
+      font-weight: 800;
+      color: #f8fafc;
+      border-left-color: #f59e0b;
+      margin-bottom: 2px;
+    }
+    .sidebar-link.sub-link.active-page {
+      border-left-color: #fde047 !important;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.3) 0%, rgba(26, 86, 219, 0.25) 100%) !important;
+      color: #fef08a !important;
+      font-weight: 800 !important;
+    }
+
+    /* Nested Sub-Accordion (For Medicine & Engineering Directories) */
+    .sidebar-nested-group {
+      margin: 3px 0 3px 4px;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      background: rgba(15, 23, 42, 0.5);
+    }
+    .sidebar-nested-header {
+      width: 100%;
+      background: rgba(30, 58, 138, 0.28);
+      border: none;
+      padding: 7px 10px;
+      color: #93c5fd;
+      font-size: 0.81rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      font-family: inherit;
+      text-align: left;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+    .sidebar-nested-header:hover {
+      background: rgba(30, 58, 138, 0.5);
+      color: #fef08a;
+    }
+    .sidebar-nested-header.open {
+      background: rgba(30, 58, 138, 0.55);
+      color: #fef08a;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+    }
+    .nested-title-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nested-arrow {
+      font-size: 0.65rem;
+      transition: transform 0.25s ease;
+      color: #d4af37;
+      display: inline-block;
+    }
+    .sidebar-nested-header.open .nested-arrow {
+      transform: rotate(180deg);
+      color: #fef08a;
+    }
+    .sidebar-nested-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 0 4px;
+      background: rgba(2, 6, 23, 0.7);
+    }
+    .sidebar-nested-content.open {
+      max-height: 400px;
+      padding: 4px;
+    }
+    .sidebar-link.sub-nested-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5.5px 10px 5.5px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      border-left: 2px solid rgba(212, 175, 55, 0.3);
+      border-radius: 0 4px 4px 0;
+      margin-left: 4px;
+      transition: all 0.15s ease;
+    }
+    .sidebar-link.sub-nested-link:hover {
+      background: rgba(212, 175, 55, 0.18);
+      color: #fef08a;
+      border-left-color: #fef08a;
+    }
+    .sidebar-link.sub-nested-link.active-page {
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.32) 0%, rgba(37, 99, 235, 0.25) 100%) !important;
+      color: #fef08a !important;
+      font-weight: 800 !important;
+      border-left-color: #fde047 !important;
+    }
+
+    .sidebar-link span.icon, .sidebar-main-btn span.icon {
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      width: 18px;
+      text-align: center;
+    }
+    .sidebar-badge {
+      margin-left: auto;
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: rgba(212, 175, 55, 0.22);
+      color: #fef08a;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+    }
+
+    /* Main Content Column */
+    .portal-main-content {
+      margin-left: 295px !important;
+      width: calc(100% - 295px) !important;
+      min-height: 100vh;
+      padding: 16px 22px 40px;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    .sidebar-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 9998;
+    }
+
+    .mobile-menu-floating-btn {
+      display: none;
+    }
+
+    /* Responsive Mobile & Tablet Rules */
+    @media (max-width: 1024px) {
+      .desktop-left-sidebar {
+        position: fixed !important;
+        left: -320px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 295px !important;
+        height: 100vh !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 9999 !important;
+        box-shadow: 6px 0 35px rgba(0, 0, 0, 0.85);
+      }
+      .desktop-left-sidebar.sidebar-open {
+        left: 0 !important;
+      }
+      .sidebar-close-btn {
+        display: inline-flex;
+      }
+      .portal-main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 8px 10px 30px !important;
+      }
+      .sidebar-backdrop.active {
+        display: block;
+      }
+      .mobile-menu-floating-btn {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        position: fixed;
+        bottom: 22px;
+        left: 20px;
+        background: linear-gradient(135deg, #091330 0%, #112255 100%);
+        color: #fef08a;
+        border: 1.8px solid #d4af37;
+        border-radius: 999px;
+        padding: 10px 18px;
+        font-size: 0.90rem;
+        font-weight: 800;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 14px rgba(212, 175, 55, 0.4);
+        z-index: 9990;
+        cursor: pointer;
+        font-family: inherit;
+        transition: all 0.2s ease;
+      }
+      .mobile-menu-floating-btn:hover {
+        background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        transform: scale(1.05);
+      }
+    }
 </style>
 </head>
 <body>
@@ -1856,7 +2304,7 @@
         <span>முதன்மை முகப்பு (Home)</span>
       </a>
 
-      <!-- GATEWAY 01: ENTRANCE EXAMS (ACCORDION) -->
+      <!-- GATEWAY 01: ENTRANCE EXAMS (MAIN ACCORDION) -->
       <div class="sidebar-accordion-group">
         <button class="sidebar-accordion-header" id="acc-hdr-01" onclick="toggleAccordion('01')" type="button">
           <div class="accordion-title-left">
@@ -1871,26 +2319,58 @@
             <span>11 தேர்வுகள் முதன்மை வழிகாட்டி</span>
             <span class="sidebar-badge">HUB</span>
           </a>
-          <a class="sidebar-link sub-link" href="01_medical_neet_ug.html">
-            <span class="icon">🩺</span>
-            <span>NEET (மருத்துவம்)</span>
-          </a>
-          <a class="sidebar-link sub-link" href="01_A_tn_med_colleges.html">
-            <span class="icon">🏥</span>
-            <span>தமிழக மருத்துவ அடைவு</span>
-          </a>
-          <a class="sidebar-link sub-link" href="01_B_in_med_colleges.html">
-            <span class="icon">🏛️</span>
-            <span>அகில இந்திய மருத்துவ அடைவு</span>
-          </a>
-          <a class="sidebar-link sub-link" href="02_engineering_jee.html">
-            <span class="icon">⚙️</span>
-            <span>JEE Main / Adv (IIT/NIT)</span>
-          </a>
-          <a class="sidebar-link sub-link" href="02_aiq_eng_colleges.html">
-            <span class="icon">🏛️</span>
-            <span>AIQ பொறியியல் அடைவு</span>
-          </a>
+
+          <!-- NESTED SUB-MENU: MEDICINE -->
+          <div class="sidebar-nested-group">
+            <button class="sidebar-nested-header" id="sub-hdr-med" onclick="toggleSubAccordion('med')" type="button">
+              <span class="nested-title-left">
+                <span class="icon">🩺</span>
+                <span>மருத்துவம் (NEET UG)</span>
+              </span>
+              <span class="nested-arrow">▼</span>
+            </button>
+            <div class="sidebar-nested-content" id="sub-cnt-med">
+              <a class="sidebar-link sub-nested-link" href="01_medical_neet_ug.html">
+                <span class="icon">📄</span>
+                <span>நீட் முதன்மை வழிகாட்டி</span>
+              </a>
+              <a class="sidebar-link sub-nested-link" href="01_A_tn_med_colleges.html">
+                <span class="icon">🏥</span>
+                <span>தமிழக மருத்துவ அடைவு</span>
+              </a>
+              <a class="sidebar-link sub-nested-link" href="01_B_in_med_colleges.html">
+                <span class="icon">🏛️</span>
+                <span>அகில இந்திய மருத்துவ அடைவு</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- NESTED SUB-MENU: ENGINEERING -->
+          <div class="sidebar-nested-group">
+            <button class="sidebar-nested-header" id="sub-hdr-eng" onclick="toggleSubAccordion('eng')" type="button">
+              <span class="nested-title-left">
+                <span class="icon">⚙️</span>
+                <span>பொறியியல் (JEE / IIT)</span>
+              </span>
+              <span class="nested-arrow">▼</span>
+            </button>
+            <div class="sidebar-nested-content" id="sub-cnt-eng">
+              <a class="sidebar-link sub-nested-link" href="02_engineering_jee.html">
+                <span class="icon">📄</span>
+                <span>JEE பொறியியல் வழிகாட்டி</span>
+              </a>
+              <a class="sidebar-link sub-nested-link" href="02_aiq_eng_colleges.html">
+                <span class="icon">🏛️</span>
+                <span>AIQ பொறியியல் அடைவு (119)</span>
+              </a>
+              <a class="sidebar-link sub-nested-link" href="02_01_tnea_engineering.html">
+                <span class="icon">🏢</span>
+                <span>தமிழக TNEA பொறியியல்</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Other Entrance Exams -->
           <a class="sidebar-link sub-link" href="03_science_research_iiser.html">
             <span class="icon">🔬</span>
             <span>IISER / NISER (அறிவியல்)</span>
@@ -1930,7 +2410,7 @@
         </div>
       </div>
 
-      <!-- GATEWAY 02: DIRECT ADMISSIONS (ACCORDION) -->
+      <!-- GATEWAY 02: DIRECT ADMISSIONS (MAIN ACCORDION) -->
       <div class="sidebar-accordion-group">
         <button class="sidebar-accordion-header" id="acc-hdr-02" onclick="toggleAccordion('02')" type="button">
           <div class="accordion-title-left">
@@ -1990,7 +2470,7 @@
         <span>03. கல்லூரிகள் அடைவு</span>
       </a>
 
-      <!-- GATEWAY 04: GOVT EXAMS (ACCORDION) -->
+      <!-- GATEWAY 04: GOVT EXAMS (MAIN ACCORDION) -->
       <div class="sidebar-accordion-group">
         <button class="sidebar-accordion-header" id="acc-hdr-04" onclick="toggleAccordion('04')" type="button">
           <div class="accordion-title-left">
@@ -2040,6 +2520,7 @@
 
   <!-- Main Portal Content Column -->
   <main class="portal-main-content">
+
 
 
 
@@ -4464,6 +4945,21 @@ function toggleAccordion(id) {
   }
 }
 
+function toggleSubAccordion(id) {
+  var header = document.getElementById('sub-hdr-' + id);
+  var content = document.getElementById('sub-cnt-' + id);
+  if (header && content) {
+    var isOpen = content.classList.contains('open');
+    if (isOpen) {
+      content.classList.remove('open');
+      header.classList.remove('open');
+    } else {
+      content.classList.add('open');
+      header.classList.add('open');
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   var rawPath = window.location.pathname;
   var currentPage = rawPath.substring(rawPath.lastIndexOf('/') + 1) || 'index.html';
@@ -4477,7 +4973,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Highlight active sub-link and auto-expand its parent accordion
+  // Highlight active sub-link and auto-expand parent accordion & nested sub-accordion
   var subLinks = document.querySelectorAll('.desktop-left-sidebar .sidebar-link');
   subLinks.forEach(function(l) {
     var href = l.getAttribute('href');
@@ -4485,6 +4981,17 @@ document.addEventListener('DOMContentLoaded', function() {
       var baseHref = href.split('#')[0];
       if (baseHref === currentPage) {
         l.classList.add('active-page');
+        
+        // Open nested sub-accordion if inside one
+        var parentNested = l.closest('.sidebar-nested-content');
+        if (parentNested) {
+          parentNested.classList.add('open');
+          var subId = parentNested.id.replace('sub-cnt-', '');
+          var subHdr = document.getElementById('sub-hdr-' + subId);
+          if (subHdr) subHdr.classList.add('open');
+        }
+
+        // Open main accordion if inside one
         var parentContent = l.closest('.sidebar-accordion-content');
         if (parentContent) {
           parentContent.classList.add('open');
@@ -4500,6 +5007,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+
 
 
 </body>
