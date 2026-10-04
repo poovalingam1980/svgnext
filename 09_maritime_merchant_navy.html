@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>இந்திய கடல்சார் பல்கலைக்கழகம் &amp; வணிகக் கப்பல் துறை (IMU CET)</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --primary: #07162c;
+    --navy-800: #0d2342;
+    --ocean-600: #0284c7;
+    --gold-500: #d97706;
+    --bg-main: #f4f7fb;
+    --card-bg: #ffffff;
+    --text-main: #0f172a;
+    --text-sub: #334155;
+    --border: #e2e8f0;
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  html, body { width: 100% !important; margin: 0 !important; padding: 0 !important; box-sizing: border-box; overflow-x: hidden; }
+  body { font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.75; color: var(--text-main); background-color: var(--bg-main); padding: 12px 16px; -webkit-font-smoothing: antialiased; }
+  .portal-container { width: 100% !important; max-width: 100% !important; margin: 0 auto; }
+  .nav-button-menu-bar { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); }
+  .nav-button-menu-container { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .menu-btn-pill { display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; border: 1px solid transparent; }
+  .menu-btn-pill svg { width: 15px; height: 15px; flex-shrink: 0; }
+  .btn-main-site { background: #f1f5f9; color: #0f172a; border-color: #cbd5e1; }
+  .btn-entrance { background: #fef3c7; color: #92400e; border-color: #fde68a; }
+  .btn-current-page { background: linear-gradient(135deg, #07162c 0%, #13335e 100%); color: #ffffff; box-shadow: 0 2px 6px rgba(7, 22, 44, 0.25); }
+  .menu-arrow { color: #94a3b8; font-weight: 800; font-size: 14px; user-select: none; }
+  .portal-header { background: linear-gradient(135deg, #031e30 0%, #073854 50%, #0e7490 100%) !important; border-radius: 22px !important; padding: 38px 30px 30px !important; color: #ffffff !important; box-shadow: 0 10px 30px rgba(7, 56, 84, 0.35) !important; border: 1px solid rgba(255, 255, 255, 0.18) !important; border-bottom: 3px solid #06b6d4 !important; margin-bottom: 24px !important; text-align: center !important; }
+  .portal-title { font-size: 2.1rem; font-weight: 900; line-height: 1.35; margin: 0 0 10px 0; color: #ffffff; }
+  .accent-gold { color: #fde047; }
+  .portal-subtitle { font-size: 1.02rem; color: #e2e8f0; max-width: 1050px; margin: 0 auto; line-height: 1.62; }
+  .card { background: #ffffff; border-radius: var(--radius-lg); padding: 32px 28px; margin-bottom: 24px; box-shadow: var(--shadow-md); border: 1px solid var(--border); border-top: 4px solid var(--primary); }
+  .card-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 2px solid var(--border); }
+  .card-title { margin: 0; font-size: 1.35rem; color: var(--primary); font-weight: 800; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0; }
+  .stat-item { background: #f8fafc; border-radius: var(--radius-md); padding: 16px 14px; text-align: center; border: 1px solid var(--border); border-left: 4px solid var(--ocean-600); }
+  .stat-num { font-size: 1.65rem; font-weight: 900; color: var(--primary); margin-bottom: 4px; }
+  .stat-label { font-size: 0.84rem; color: #64748b; font-weight: 700; }
+  .traditional-kural-card { width: 100% !important; box-sizing: border-box !important; margin: 22px 0 18px 0 !important; padding: 16px 24px 15px !important; border-radius: 16px !important; text-align: center !important; background: linear-gradient(135deg, #031e30 0%, #073854 50%, #0e7490 100%) !important; border: 2px solid #38bdf8 !important; color: #ffffff; }
+  .kural-first-line, .kural-second-line { font-size: 1.32rem !important; font-weight: 800 !important; line-height: 1.55 !important; margin: 3px 0 !important; color: #fef08a !important; }
+  .portal-footer { background: rgba(255, 255, 255, 0.96); border-radius: 12px; text-align: center; padding: 24px 16px 20px; font-size: 0.92rem; border: 1.5px solid rgba(255, 255, 255, 0.9); margin-top: 16px; color: #475569; }
+</style>
+</head>
+<body>
+<div class="portal-container" id="top">
+
+<nav aria-label="Breadcrumb Navigation" class="nav-button-menu-bar">
+<div class="nav-button-menu-container">
+<a class="menu-btn-pill btn-main-site" href="index.html" title="இணையதள முகப்பு">
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+<span>இணையதள முகப்பு</span>
+</a>
+<span class="menu-arrow">›</span>
+<a class="menu-btn-pill btn-entrance" href="00_entrance_exams.html" title="நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம்">
+<svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
+<span>📝 நுழைவுத்தேர்வுகள் மெனு</span>
+</a>
+<span class="menu-arrow">›</span>
+<span class="menu-btn-pill btn-current-page" title="தற்போதைய வழிகாட்டிப் பக்கம்">
+<span>⚓ பிரிவு 09: கடல்சார் கல்வி (IMU CET)</span>
+</span>
+</div>
+</nav>
+
+<header class="portal-header">
+<h1 class="portal-title">
+    இந்திய கடல்சார் பல்கலைக்கழகம் &amp; வணிகக் கப்பல் துறை <span class="accent-gold">(Merchant Navy)</span>
+</h1>
+<p class="portal-subtitle">
+    12-ஆம் வகுப்பிற்குப் பின் மத்திய கடல்சார் பல்கலைக்கழகம் (IMU) B.Tech Marine Engineering, B.Sc Nautical Science, DNS படிப்புகளுக்கான IMU CET நுழைவுத்தேர்வு &amp; கேப்டன் பணி வழிகாட்டல் தொகுப்பு.
+</p>
+</header>
+
+<div class="card">
+<div class="card-header">
+<h3 class="card-title">⚓ 1. IMU CET &amp; வணிகக் கப்பல் துறை கண்ணோட்டம்</h3>
+</div>
+<p>மத்திய கப்பல் போக்குவரத்து அமைச்சகத்தின் கீழ் செயல்படும் இந்திய கடல்சார் பல்கலைக்கழகம் (சென்னை தலைமையிடம்) உலகளாவிய சரக்குக் கப்பல்களை இயக்கும் கப்பல் கேப்டன் மற்றும் தலைமைப் பொறியாளர் ஆவதற்கான B.Tech Marine மற்றும் B.Sc Nautical Science படிப்புகளை வழங்குகிறது.</p>
+<div class="stats-grid">
+<div class="stat-item"><div class="stat-num">IMU சென்னை</div><div class="stat-label">மத்திய கடல்சார் பல்கலைக்கழகம்</div></div>
+<div class="stat-item"><div class="stat-num">டாலர் சம்பளம்</div><div class="stat-label">மாதம் ₹2L - ₹10L+ வரிவிலக்கு பெற்ற ஊதியம்</div></div>
+<div class="stat-item"><div class="stat-num">ஸ்பான்சர்ஷிப்</div><div class="stat-label">படிப்பின் போதே வேலை உத்தரவாதம்</div></div>
+<div class="stat-item"><div class="stat-num">6/6 பார்வை</div><div class="stat-label">DG Shipping மருத்துவத் தகுதி</div></div>
+</div>
+</div>
+
+<div class="traditional-kural-card no-print">
+<p class="kural-first-line">“முயற்சி திருவினை ஆக்கும் முயற்றின்மை</p>
+<p class="kural-second-line">இன்மை புகுத்தி விடும்.”</p>
+<p style="font-size: 0.88rem; color: #fef08a; margin-top: 6px;">💡 குறள் விளக்கம்: ஒருவன் தளராமல் செய்யும் விடாமுயற்சியே அவனுக்குப் பெரும் செல்வத்தையும் ஆக்கத்தையும் உண்டாக்கும்; முயற்சியில்லாமை அவனை வறுமையில் தள்ளிவிடும்.</p>
+</div>
+
+<div class="portal-bottom-nav no-print" style="margin: 30px auto 20px auto; padding: 18px; background: #ffffff; border-radius: 14px; border: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+<div>
+<a class="portal-nav-btn prev-btn" href="08_hotel_management_nchmct.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1;">
+<span>← முந்தைய பிரிவு: 08 (உணவக மேலாண்மை (NCHMCT))</span>
+</a>
+</div>
+<div>
+<a class="portal-nav-btn home-btn" href="00_entrance_exams.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#1e1b4b; color:#ffffff; text-decoration:none; font-weight:700; font-size:14px;">
+<span>🏠 நுழைவுத்தேர்வுகள் முதன்மை மெனு</span>
+</a>
+</div>
+<div>
+<a class="portal-nav-btn next-btn" href="index.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1;">
+<span>🏠 இணையதள முகப்புக்குச் செல் →</span>
+</a>
+</div>
+</div>
+
+<footer class="portal-footer no-print">
+<p style="margin-bottom: 6px; font-weight: 700; color: #1e293b; font-size: 0.95rem;">
+தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, 
+<a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 800;">☎️ 04575240408</a>
+</p>
+<p style="font-size: 0.85rem; color: #64748b; margin-top: 6px;">
+© Chief Educational Office, Sivagangai. All Rights Reserved. மாணவ வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே வெளியிடப்பட்டது.
+</p>
+</footer>
+
+</div>
+</body>
+</html>
