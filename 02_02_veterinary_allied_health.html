@@ -1,0 +1,3324 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>கால்நடை மருத்துவம், துணை மருத்துவம், டிப்ளமோ & சான்றிதழ் படிப்புகள் நேரடிச் சேர்க்கை வழிகாட்டி (Non-NEET 2026) | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
+  
+  <!-- Google Fonts: Inter & Noto Sans Tamil -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #065f46;          /* Deep Emerald Medical Green */
+      --primary-dark: #064e3b;     /* Deep Pine Slate */
+      --primary-light: #059669;    /* Vibrant Emerald */
+      --primary-accent: #10b981;   /* Bright Mint Green */
+      --secondary: #0284c7;        /* Medical Science Sky Blue */
+      --accent: #d97706;           /* Warm Amber Gold */
+      --accent-gold: #f59e0b;      /* Academic Gold */
+      --danger: #dc2626;           /* Crimson Red */
+      --success: #15803d;          /* Approved Green */
+      --bg-main: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-sub: #334155;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --border-accent: #cbd5e1;
+      --badge-bg: #ecfdf5;
+      --badge-text: #065f46;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.12);
+    }
+  
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+  
+    html {
+      scroll-behavior: smooth;
+    }
+  
+    body {
+      font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f1f5f9;
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+  
+    .portal-container {
+      max-width: 1260px;
+      margin: 0 auto;
+    }
+  
+    /* Top Navigation Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+  
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      background-color: var(--primary-dark);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 2px 5px rgba(15, 23, 42, 0.2);
+      transition: all 0.2s ease;
+    }
+  
+    .home-btn:hover {
+      background-color: #022c22;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.3);
+    }
+  
+    .home-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+  
+    .district-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #065f46;
+      background: #ecfdf5;
+      padding: 6px 16px;
+      border-radius: 999px;
+      border: 1px solid #a7f3d0;
+    }
+  
+    /* Header Section */
+    .portal-header {
+      background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%);
+      border-radius: var(--radius-xl);
+      padding: 36px 32px 30px;
+      color: #ffffff;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      margin-bottom: 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portal-header::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+  
+    .header-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+  
+    .header-tag {
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+  
+    .header-tag.primary {
+      background-color: #fef08a;
+      color: #713f12;
+      border-color: #fde047;
+    }
+  
+    .header-tag.secondary {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #ecfdf5;
+      backdrop-filter: blur(8px);
+    }
+  
+    .portal-title {
+      font-size: 2.1rem;
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 12px;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+  
+    .accent-gold {
+      color: #fde047;
+    }
+  
+    .portal-subtitle {
+      font-size: 1.02rem;
+      color: #d1fae5;
+      max-width: 960px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+  
+    /* Quick Navigation Pills */
+    .quick-nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 22px;
+    }
+  
+    .quick-nav-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transition: all 0.2s ease;
+      backdrop-filter: blur(4px);
+    }
+  
+    .quick-nav-pill:hover {
+      background: #ffffff;
+      color: #065f46;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+  
+    .quick-nav-pill.highlight-pill {
+      background: #fef08a;
+      color: #713f12;
+      font-weight: 800;
+      border-color: #fde047;
+    }
+  
+    .quick-nav-pill.highlight-pill:hover {
+      background: #ffffff;
+      color: #065f46;
+    }
+  
+    /* Highlights Grid */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+  
+    .highlight-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 14px;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      border-top: 4px solid var(--primary-light);
+      transition: transform 0.2s ease;
+    }
+  
+    .highlight-box:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+  
+    .highlight-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+  
+    .highlight-val {
+      font-size: 1.28rem;
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+  
+    .highlight-desc {
+      font-size: 0.80rem;
+      color: var(--text-sub);
+      line-height: 1.4;
+    }
+  
+    /* Section Cards Common */
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 26px 28px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+  
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 10px;
+    }
+  
+    .section-title .icon {
+      font-size: 1.5rem;
+    }
+  
+    /* Calculator Card */
+    .calculator-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+      border: 2px solid #a7f3d0;
+      border-radius: var(--radius-lg);
+      padding: 24px 26px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-md);
+    }
+  
+    .calc-header {
+      margin-bottom: 18px;
+      text-align: center;
+    }
+  
+    .calc-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #065f46;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+  
+    .calc-subtitle {
+      font-size: 0.90rem;
+      color: #047857;
+      margin-top: 4px;
+    }
+  
+    .calc-inputs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+  
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+  
+    .input-group label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-sub);
+    }
+  
+    .input-group input {
+      padding: 10px 14px;
+      border: 2px solid #cbd5e1;
+      border-radius: var(--radius-sm);
+      font-size: 1.05rem;
+      font-weight: 700;
+      font-family: inherit;
+      color: var(--text-main);
+      outline: none;
+      transition: all 0.2s ease;
+      background: #ffffff;
+    }
+  
+    .input-group input:focus {
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.18);
+    }
+  
+    .calc-result-box {
+      background: #065f46;
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #ffffff;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  
+    .calc-result-label {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #d1fae5;
+    }
+  
+    .calc-result-val {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #fef08a;
+      letter-spacing: 0.5px;
+    }
+
+    .calc-guidance {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 8px;
+      margin-top: 4px;
+      font-size: 0.84rem;
+      color: #ecfdf5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .guidance-badge {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+  
+    /* Sub Grid & Cards */
+    .sub-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 14px;
+    }
+
+    .sub-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 14px;
+    }
+  
+    .sub-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      transition: all 0.2s ease;
+    }
+
+    .sub-card:hover {
+      border-color: #cbd5e1;
+      background: #ffffff;
+      box-shadow: var(--shadow-sm);
+    }
+  
+    .sub-card-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  
+    .styled-list {
+      list-style: none;
+      padding: 0;
+    }
+  
+    .styled-list li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 10px;
+      font-size: 0.93rem;
+      color: var(--text-sub);
+      line-height: 1.55;
+    }
+  
+    .styled-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--primary-light);
+      font-weight: 900;
+      font-size: 1rem;
+    }
+
+    .styled-list.bullet-star li::before {
+      content: '★';
+      color: var(--accent);
+    }
+  
+    /* Step Cards (Counselling) */
+    .steps-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+  
+    .step-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      position: relative;
+      border-top: 4px solid var(--primary-light);
+      box-shadow: var(--shadow-sm);
+    }
+  
+    .step-number {
+      position: absolute;
+      top: -12px;
+      right: 14px;
+      background: var(--primary);
+      color: #ffffff;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 900;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+  
+    .step-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      padding-right: 20px;
+    }
+  
+    .step-desc {
+      font-size: 0.86rem;
+      color: var(--text-sub);
+      line-height: 1.5;
+    }
+  
+    /* Courses Catalog Tabs / Cards */
+    .course-card-detail {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      margin-bottom: 14px;
+      border-left: 5px solid var(--primary-light);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }
+
+    .course-card-detail:hover {
+      transform: translateX(4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .course-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .course-name-tamil {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .course-name-eng {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-left: 6px;
+    }
+
+    .course-meta-pill {
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .course-meta-pill.blue {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border-color: #bfdbfe;
+    }
+
+    .course-meta-pill.amber {
+      background: #fffbeb;
+      color: #b45309;
+      border-color: #fde68a;
+    }
+
+    .course-desc-text {
+      font-size: 0.92rem;
+      color: var(--text-sub);
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .career-scope {
+      background: #f8fafc;
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      font-size: 0.88rem;
+      color: var(--text-sub);
+      border-left: 3px solid var(--accent);
+    }
+
+    .career-scope strong {
+      color: var(--text-main);
+    }
+  
+    /* Banner Quota 7.5% */
+    .quota-banner {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      border: 2px solid #f59e0b;
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
+      margin-bottom: 20px;
+      color: #78350f;
+    }
+
+    .quota-banner-title {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #92400e;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .quota-banner-text {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: #78350f;
+    }
+
+    .quota-features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .quota-feature-item {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      border: 1px solid #fcd34d;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #92400e;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  
+    /* Search Box for Colleges */
+    .college-search-box {
+      display: flex;
+      align-items: center;
+      background: #f8fafc;
+      border: 2px solid #cbd5e1;
+      border-radius: var(--radius-sm);
+      padding: 10px 16px;
+      margin-bottom: 16px;
+      transition: all 0.2s ease;
+    }
+  
+    .college-search-box:focus-within {
+      border-color: var(--primary-light);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15);
+    }
+  
+    .college-search-box svg {
+      width: 20px;
+      height: 20px;
+      fill: #64748b;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+  
+    .college-search-input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      font-size: 0.96rem;
+      font-family: inherit;
+      color: var(--text-main);
+      outline: none;
+    }
+  
+    /* College Filter Pills */
+    .college-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+  
+    .college-pill {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 7px 16px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--text-sub);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+  
+    .college-pill:hover {
+      background: #ecfdf5;
+      color: var(--primary);
+      border-color: #a7f3d0;
+    }
+  
+    .college-pill.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 2px 6px rgba(6, 95, 70, 0.3);
+    }
+  
+    /* Colleges Data Table */
+    .table-container {
+      overflow-x: auto;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      margin-top: 10px;
+    }
+  
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.90rem;
+      text-align: left;
+      background: #ffffff;
+    }
+  
+    .styled-table thead tr {
+      background-color: #064e3b;
+      color: #ffffff;
+      text-align: left;
+      font-weight: 700;
+    }
+  
+    .styled-table th, 
+    .styled-table td {
+      padding: 13px 15px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: middle;
+    }
+  
+    .styled-table tbody tr {
+      transition: background 0.15s ease;
+    }
+  
+    .styled-table tbody tr:hover {
+      background-color: #f0fdf4;
+    }
+  
+    .code-badge {
+      display: inline-block;
+      font-family: 'Inter', monospace;
+      font-weight: 800;
+      font-size: 0.82rem;
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid #cbd5e1;
+    }
+
+    .highlight-row {
+      background-color: #fefce8 !important;
+    }
+  
+    .type-badge {
+      display: inline-block;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 3px 9px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  
+    .type-badge.tanuvas { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
+    .type-badge.govt { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    .type-badge.bnys { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+    .type-badge.btech { background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe; }
+  
+    .link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.80rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+  
+    .link-btn:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+  
+    /* Footer */
+    .portal-footer {
+      background: #064e3b;
+      color: #cbd5e1;
+      padding: 32px 24px;
+      border-radius: var(--radius-lg);
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.88rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  
+    .footer-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+  
+    .footer-sub {
+      color: #a7f3d0;
+      font-size: 0.90rem;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .footer-link-pill {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 6px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.2s ease;
+    }
+
+    .footer-link-pill:hover {
+      background: #fef08a;
+      color: #713f12;
+    }
+  
+    /* Responsive Breakpoints */
+    @media (max-width: 992px) {
+      .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .steps-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .sub-grid, .sub-grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .quota-features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    @media (max-width: 640px) {
+      body {
+        padding: 10px 8px;
+      }
+      .portal-header {
+        padding: 26px 16px 22px;
+      }
+      .portal-title {
+        font-size: 1.55rem;
+      }
+      .highlights-grid {
+        grid-template-columns: 1fr;
+      }
+      .calc-inputs {
+        grid-template-columns: 1fr;
+      }
+      .steps-container {
+        grid-template-columns: 1fr;
+      }
+      .content-card {
+        padding: 18px 14px;
+      }
+      .styled-table th, 
+      .styled-table td {
+        padding: 10px 8px;
+        font-size: 0.82rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="portal-container">
+
+    <!-- Top Navigation Bar -->
+    <div class="top-bar">
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+  <a href="index.html" class="home-btn" title="முதன்மை முகப்பு">
+    <svg viewBox="0 0 20 20" style="width:16px;height:16px;fill:currentColor;"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+    முகப்பு (HOME)
+  </a>
+  <a href="02_00_direct_admissions.html" class="home-btn" style="background-color:#1e293b;" title="நேரடிச் சேர்க்கைப் படிப்புகள் முதன்மைப் பக்கம்">
+    <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor;"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    நேரடிச் சேர்க்கை கையேடு
+  </a>
+</div>
+      <div class="district-badge">
+        <span>🏢</span> முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்
+      </div>
+    </div>
+
+    <!-- Portal Hero Header Banner -->
+    <header class="portal-header">
+      <div class="header-badge-row">
+        <span class="header-tag primary">பிரிவு 02</span>
+        <span class="header-tag secondary">TANUVAS & TN DME SELECTION</span>
+        <span class="header-tag secondary">பட்டப்படிப்பு (Degree) • டிப்ளமோ (Diploma) • சான்றிதழ் (Certificate)</span>
+        <span class="header-tag secondary">நீட் (NEET) இல்லாத நேரடிச் சேர்க்கை</span>
+      </div>
+
+      <h1 class="portal-title">
+        கால்நடை, துணை மருத்துவம், <span class="accent-gold">டிப்ளமோ & சான்றிதழ் படிப்புகள்</span> முழுமையான சேர்க்கை வழிகாட்டி
+      </h1>
+      <p class="portal-subtitle">
+        +2 பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் தமிழ்நாடு கால்நடை மருத்துவ அறிவியல் பல்கலைக்கழகம் (TANUVAS), மருத்துவக் கல்வி இயக்ககம் (DME Paramedical) மற்றும் அரசு மருத்துவக் கல்லூரிகள் வழங்கும் இளநிலைப் பட்டப் படிப்புகள் (Degree), 2 ஆண்டுகள் டிப்ளமோ (Diploma) மற்றும் 1 ஆண்டு சிறப்பு மருத்துவச் சான்றிதழ் (Certificate) படிப்புகளுக்கான முழுமையான வழிகாட்டி.
+      </p>
+
+      <!-- Quick Navigation Jump Pills -->
+      <div class="quick-nav-pills">
+        <a href="#calculator" class="quick-nav-pill">🧮 கட்-ஆஃப் கால்குலேட்டர்</a>
+        <a href="#overview" class="quick-nav-pill">📌 சேர்க்கை அமைப்புகள் & தகுதிகள்</a>
+        <a href="#quota" class="quick-nav-pill">🎯 7.5% அரசுப் பள்ளி முன்னுரிமை</a>
+        <a href="#tanuvas" class="quick-nav-pill">🐾 கால்நடை மருத்துவம் (B.V.Sc & B.Tech)</a>
+        <a href="#paramedical" class="quick-nav-pill">🩺 23 துணை மருத்துவப் பட்டங்கள்</a>
+        <a href="#core-7-seats" class="quick-nav-pill" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd; font-weight: 800;">🏥 7 முதன்மைப் பட்டங்கள் & இடங்கள்</a>
+        <a href="#rare-courses" class="quick-nav-pill" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800;">🔬 அரிதான படிப்புகள் & கல்லூரிகள்</a>
+        <a href="#bnys" class="quick-nav-pill">🌿 இயற்கை மருத்துவம் (BNYS டாக்டர்)</a>
+        <a href="#diploma-certificate" class="quick-nav-pill highlight-pill">📜 டிப்ளமோ & சான்றிதழ் படிப்புகள்</a>
+        <a href="#vhn-shn" class="quick-nav-pill" style="background: #fdf2f8; color: #9d174d; border-color: #fbcfe8; font-weight: 800;">👩‍⚕️ VHN & SHN செவிலியர் வழிகாட்டி</a>
+        <a href="#counselling" class="quick-nav-pill">🔄 கலந்தாய்வு 6 நிலைகள்</a>
+        <a href="#choice-filling" class="quick-nav-pill">💡 சாய்ஸ் உத்திகள்</a>
+        <a href="#colleges" class="quick-nav-pill">🏆 கல்லூரிகள் பட்டியல்</a>
+      </div>
+    </header>
+
+    <!-- Key Metrics Highlight Bar -->
+    <div class="highlights-grid">
+      <div class="highlight-box">
+        <div class="highlight-label">சேர்க்கை முறை</div>
+        <div class="highlight-val">NEET தேவையில்லை</div>
+        <div class="highlight-desc">+2 அறிவியல் பொதுத்தேர்வு மதிப்பெண் அடிப்படையில் மட்டுமே சேர்க்கை</div>
+      </div>
+      <div class="highlight-box">
+        <div class="highlight-label">கட்-ஆஃப் அளவீடு</div>
+        <div class="highlight-val">200 மதிப்பெண்கள்</div>
+        <div class="highlight-desc">+2 உயிரியல் (100) + இயற்பியல் (50) + வேதியியல் (50)</div>
+      </div>
+      <div class="highlight-box">
+        <div class="highlight-label">அரசுப் பள்ளி முன்னுரிமை</div>
+        <div class="highlight-val">7.5% தனி இடஒதுக்கீடு</div>
+        <div class="highlight-desc">கல்வி, தேர்வு, தங்கும் விடுதி மற்றும் உணவுக் கட்டணங்களை அரசே ஏற்கும்</div>
+      </div>
+      <div class="highlight-box">
+        <div class="highlight-label">முதன்மை அமைப்புகள்</div>
+        <div class="highlight-val">TANUVAS & DME</div>
+        <div class="highlight-desc">tanuvas.ac.in & tnmedicalselection.net இணையவழி ஒற்றைச் சாளரம்</div>
+      </div>
+    </div>
+
+    <!-- Section: Interactive Live Cut-off Calculator Widget -->
+    <section class="calculator-card" id="calculator">
+      <div class="calc-header">
+        <h2 class="calc-title">🧮 கால்நடை & துணை மருத்துவ கட்-ஆஃப் கால்குலேட்டர்</h2>
+        <p class="calc-subtitle">உங்கள் +2 உயிரியல் (Biology), இயற்பியல் (Physics) மற்றும் வேதியியல் (Chemistry) மதிப்பெண்களை உள்ளிட்டவுடன் கட்-ஆஃப் தானாகக் கணக்கிடப்படும்</p>
+      </div>
+
+      <div class="calc-inputs">
+        <div class="input-group">
+          <label for="biology">உயிரியல் / (தாவரவியல் + விலங்கியல்) (/100):</label>
+          <input type="number" id="biology" min="0" max="100" placeholder="எ.கா: 96" value="95">
+        </div>
+        <div class="input-group">
+          <label for="physics">இயற்பியல் (Physics /100):</label>
+          <input type="number" id="physics" min="0" max="100" placeholder="எ.கா: 88" value="90">
+        </div>
+        <div class="input-group">
+          <label for="chemistry">வேதியியல் (Chemistry /100):</label>
+          <input type="number" id="chemistry" min="0" max="100" placeholder="எ.கா: 92" value="92">
+        </div>
+      </div>
+
+      <div class="calc-result-box">
+        <div>
+          <div class="calc-result-label">கணக்கிடப்பட்ட மருத்துவக் கட்-ஆஃப் (Medical Cut-off Score):</div>
+          <div style="font-size: 0.85rem; color: #a7f3d0; margin-top: 2px;">சூத்திரம்: உயிரியல் + (இயற்பியல் + வேதியியல்)/2</div>
+        </div>
+        <div class="calc-result-val" id="cutoffResult">186.00 / 200</div>
+
+        <div class="calc-guidance">
+          <div id="cutoffStatusText">🎯 சிறப்பான கட்-ஆஃப் மதிப்பெண்! அரசு கல்லூரிகளில் B.V.Sc & A.H., B.Sc Nursing, B.Pharm மற்றும் உயர்தர Paramedical படிப்புகளுக்கு அதிக வாய்ப்புள்ளது.</div>
+          <span class="guidance-badge" id="chanceBadge">High Potential</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: Overview & Eligibility -->
+    <section class="content-card" id="overview">
+      <h2 class="section-title">
+        <span class="icon">📌</span> 1. சேர்க்கை அமைப்புகள் & கல்வித் தகுதிகள்
+      </h2>
+      <p style="margin-bottom: 14px; font-size: 0.98rem; color: #334155;">
+        தமிழ்நாட்டில் மருத்துவத் துறையில் சாதிக்க விரும்பும் மாணவச் செல்வங்களுக்கு <strong>நீட் (NEET) தேர்வு இன்றியே</strong> உயரிய டாக்டர் பட்டப்படிப்புகளும், முன்னணி மருத்துவமனை தொழில்நுட்பப் பட்டப்படிப்புகளும் வழங்கப்படுகின்றன. இவை அனைத்தும் தமிழ்நாடு அரசால் ஒற்றைச் சாளர இணையவழி கலந்தாய்வு முறையில் வெளிப்படையாக நடத்தப்படுகின்றன.
+      </p>
+
+      <div class="sub-grid-3">
+        <div class="sub-card" style="border-top: 4px solid #059669;">
+          <h3 class="sub-card-title">🐾 1. TANUVAS சேர்க்கை</h3>
+          <p style="font-size: 0.88rem; color: #475569; margin-bottom: 8px;"><strong>தமிழ்நாடு கால்நடை மருத்துவ அறிவியல் பல்கலைக்கழகம்:</strong></p>
+          <ul class="styled-list">
+            <li><strong>B.V.Sc & A.H. (5½ ஆண்டுகள்):</strong> கால்நடை டாக்டர் படிப்பு. +2 உயிரியல் கட்-ஆஃப் அடிப்படையில் சேர்க்கை.</li>
+            <li><strong>B.Tech படிப்புகள் (4 ஆண்டுகள்):</strong> Food Tech, Dairy Tech, Poultry Tech. கணிதம்/உயிரியல் மாணவர்கள் விண்ணப்பிக்கலாம்.</li>
+            <li><strong>தளம்:</strong> adm.tanuvas.ac.in</li>
+          </ul>
+        </div>
+
+        <div class="sub-card" style="border-top: 4px solid #0284c7;">
+          <h3 class="sub-card-title">🩺 2. TN DME Paramedical</h3>
+          <p style="font-size: 0.88rem; color: #475569; margin-bottom: 8px;"><strong>மருத்துவக் கல்வி மற்றும் ஆராய்ச்சி இயக்ககம்:</strong></p>
+          <ul class="styled-list">
+            <li><strong>23 துணை மருத்துவப் பட்டப் படிப்புகள்:</strong> B.Sc Nursing, B.Pharm, Pharm.D, BPT, BOT, BASLP, B.P.O, Radiography, Cardiac Tech, Dialysis, Emergency Care, MLT உட்பட முழுமையான 23 பட்டங்கள்.</li>
+            <li>அரசு மருத்துவக் கல்லூரிகள் மற்றும் சுயநிதிக் கல்லூரிகளின் அரசு ஒதுக்கீட்டு இடங்கள்.</li>
+            <li><strong>தளம்:</strong> tnmedicalselection.net</li>
+          </ul>
+        </div>
+
+        <div class="sub-card" style="border-top: 4px solid #d97706;">
+          <h3 class="sub-card-title">🌿 3. இந்திய மருத்துவம் (BNYS)</h3>
+          <p style="font-size: 0.88rem; color: #475569; margin-bottom: 8px;"><strong>இயற்கை மருத்துவம் மற்றும் யோகா அறிவியல்:</strong></p>
+          <ul class="styled-list">
+            <li><strong>BNYS (5½ ஆண்டுகள்):</strong> இயற்கை மருத்துவ டாக்டர் படிப்பு (A-Class Registered Doctor).</li>
+            <li>இந்திய மருத்துவம் மற்றும் ஓமியோபதி இயக்ககம் நடத்தும் நேரடி கலந்தாய்வு (Non-NEET).</li>
+            <li><strong>தளம்:</strong> tnhealth.tn.gov.in</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sub-grid" style="margin-top: 18px;">
+        <div class="sub-card">
+          <h3 class="sub-card-title">கல்வித் தகுதி மற்றும் வயது வரம்பு</h3>
+          <ul class="styled-list">
+            <li><strong>பாடங்கள்:</strong> +2 வகுப்பில் இயற்பியல், வேதியியல், உயிரியல் (அல்லது தாவரவியல் மற்றும் விலங்கியல்) பயின்று தேர்ச்சி பெற்றிருக்க வேண்டும்.</li>
+            <li><strong>வயது வரம்பு:</strong> சேர்க்கை ஆண்டின் டிசம்பர் 31-ஆம் தேதியன்று குறைந்தபட்சம் 17 வயது பூர்த்தியடைந்திருக்க வேண்டும்.</li>
+            <li><strong>அதிகபட்ச வயது:</strong> பொதுப்பிரிவினருக்கு 21 வயது வரை (SC/ST/SCA பிரிவினருக்கு அதிகபட்ச வயது வரம்பு இல்லை).</li>
+          </ul>
+        </div>
+
+        <div class="sub-card">
+          <h3 class="sub-card-title">குறைந்தபட்ச தேர்ச்சி மதிப்பெண்கள் (Eligibility Percentage)</h3>
+          <ul class="styled-list">
+            <li><strong>பொதுப் பிரிவு (OC):</strong> அறிவியல் பாடங்களில் (PCB) குறைந்தபட்சம் 50% மதிப்பெண்கள் (B.V.Sc-க்கு 60%).</li>
+            <li><strong>பிற்படுத்தப்பட்டோர் (BC / BCM):</strong> அறிவியல் பாடங்களில் குறைந்தபட்சம் 45% மதிப்பெண்கள் (B.V.Sc-க்கு 50%).</li>
+            <li><strong>மிகவும் பிற்படுத்தப்பட்டோர் (MBC / DNC):</strong> குறைந்தபட்சம் 40% மதிப்பெண்கள் (B.V.Sc-க்கு 45%).</li>
+            <li><strong>ஆதிதிராவிடர் & பழங்குடியினர் (SC / SCA / ST):</strong> +2 தேர்வில் தேர்ச்சி போதுமானது (B.V.Sc-க்கு 40%).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: 7.5% Govt School Quota -->
+    <section class="content-card" id="quota" style="border-top: 5px solid #d97706;">
+      <h2 class="section-title" style="color: #b45309;">
+        <span class="icon">🎯</span> 2. அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு & 100% இலவசக் கல்வி
+      </h2>
+      
+      <div class="quota-banner">
+        <div class="quota-banner-title">
+          <span>🏛️</span> தமிழ்நாடு அரசின் வரலாற்றுச் சிறப்புமிக்க நலத்திட்டம்!
+        </div>
+        <p class="quota-banner-text">
+          தமிழ்நாடு அரசுப் பள்ளிகளில் (ஊராட்சி ஒன்றியம், நகராட்சி, மாநகராட்சி, ஆதிதிராவிடர் நலப்பள்ளி, கள்ளர் சீரமைப்பு, வனத்துறை பள்ளிகள்) <strong>6-ஆம் வகுப்பு முதல் 12-ஆம் வகுப்பு வரை தொடர்ந்து பயின்ற மாணவர்களுக்கு</strong> கால்நடை மருத்துவம் (B.V.Sc & A.H.), B.Tech தொழில்நுட்பப் படிப்புகள், துணை மருத்துவப் படிப்புகள் (Paramedical) மற்றும் BNYS இயற்கை மருத்துவத்தில் <strong>7.5% கிடைமட்ட முன்னுரிமை இடஒதுக்கீடு (Horizontal Reservation)</strong> சட்டப்பூர்வமாக வழங்கப்படுகிறது.
+        </p>
+
+        <div class="quota-features-grid">
+          <div class="quota-feature-item">
+            <span>🎓</span> 100% முழுக் கல்விக் கட்டண விலக்கு (Full Tuition Fee Free)
+          </div>
+          <div class="quota-feature-item">
+            <span>🏢</span> அரசு மற்றும் கல்லூரி விடுதிக் கட்டணம் அரசே ஏற்பு
+          </div>
+          <div class="quota-feature-item">
+            <span>🍲</span> உணவுக் கட்டணம் (Mess Fees) முழுமையாக அரசு செலுத்தும்
+          </div>
+          <div class="quota-feature-item">
+            <span>📚</span> புத்தகங்கள், உபகரணங்கள் மற்றும் தேர்வுக் கட்டணங்கள் இலவசம்
+          </div>
+          <div class="quota-feature-item">
+            <span>📑</span> சிறப்பு தரவரிசைப் பட்டியல் (Dedicated 7.5% Rank List)
+          </div>
+          <div class="quota-feature-item">
+            <span>💰</span> புதுமைப் பெண் & தமிழ்ப் புதல்வன் திட்டம் (மாதம் ₹1,000)
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-grid">
+        <div class="sub-card">
+          <h3 class="sub-card-title">தேவையான முக்கியச் சான்றிதழ்</h3>
+          <p style="font-size: 0.90rem; color: #475569; margin-bottom: 8px;">
+            7.5% ஒதுக்கீட்டைப் பெற 6 முதல் 12-ஆம் வகுப்பு வரை அரசுப் பள்ளியில் படித்ததற்கான <strong>இருப்பிடப் பள்ளித் தலைமை ஆசிரியர் (HM) சான்றொப்பமிட்டு, சம்பந்தப்பட்ட வட்டாரக் கல்வி அலுவலர் (BEO) / மாவட்டக் கல்வி அலுவலர் (DEO) / முதன்மைக் கல்வி அலுவலர் (CEO)</strong> அவர்களால் மேலொப்பம் இடப்பட்ட <strong>போனஃபைட் சான்றிதழ் (Bonafide Certificate)</strong> சமர்ப்பிக்க வேண்டும்.
+          </p>
+        </div>
+
+        <div class="sub-card">
+          <h3 class="sub-card-title">சுயநிதி கல்லூரிகளிலும் இலவசம்!</h3>
+          <p style="font-size: 0.90rem; color: #475569; margin-bottom: 8px;">
+            அரசு மருத்துவக் கல்லூரிகள் மட்டுமின்றி, ஒற்றைச் சாளரக் கலந்தாய்வு மூலம் தனியார் சுயநிதி கல்லூரிகளில் அரசு ஒதுக்கீட்டு இடங்களில் (Govt Quota in Private Colleges) சேரும் 7.5% அரசுப் பள்ளி மாணவர்களுக்கான அனைத்துக் கட்டணங்களையும் தமிழ்நாடு அரசே நேரடியாக கல்லூரிக்குச் செலுத்துகிறது.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: TANUVAS Veterinary Sciences -->
+    <section class="content-card" id="tanuvas">
+      <h2 class="section-title">
+        <span class="icon">🐾</span> 3. தமிழ்நாடு கால்நடை மருத்துவ அறிவியல் பல்கலைக்கழகம் (TANUVAS)
+      </h2>
+      <p style="margin-bottom: 16px; font-size: 0.98rem; color: #334155;">
+        ஆசியாவிலேயே முதன்முதலில் உருவாக்கப்பட்ட புகழ்பெற்ற தமிழ்நாடு கால்நடை மருத்துவ அறிவியல் பல்கலைக்கழகம் (TANUVAS), உலகத்தரம் வாய்ந்த கால்நடை மருத்துவர்களையும் உணவு தொழில்நுட்ப வல்லுநர்களையும் உருவாக்குகிறது.
+      </p>
+
+      <!-- Course 1: BVSc -->
+      <div class="course-card-detail" style="border-left-color: #059669;">
+        <div class="course-title-row">
+          <div>
+            <span class="course-name-tamil">B.V.Sc. & A.H. (கால்நடை மருத்துவம் மற்றும் பராமரிப்பு)</span>
+            <span class="course-name-eng">Bachelor of Veterinary Science & Animal Husbandry</span>
+          </div>
+          <span class="course-meta-pill">கால அளவு: 5½ ஆண்டுகள் (4½ + 1 ஆண்டு Internship)</span>
+        </div>
+        <p class="course-desc-text">
+          விலங்குகள், பறவைகள், வளர்ப்புப் பிராணிகள் மற்றும் வனவிலங்குகளின் நோய்களைக் கண்டறிந்து அறுவை சிகிச்சை, தடுப்பூசி மற்றும் பராமரிப்பு வழங்கும் தலைசிறந்த டாக்டர் பட்டப்படிப்பு. இக்கல்வியை முடித்தவர்கள் தமிழ்நாடு கால்நடை மருத்துவக் கவுன்சிலில் (TNVMC) பதிவு செய்து "Dr." என்ற முன்னொட்டுடன் மருத்துவராகப் பணியாற்றலாம்.
+        </p>
+        <div class="career-scope">
+          <strong>வேலைவாய்ப்பு & எதிர்காலம்:</strong> தமிழ்நாடு அரசு கால்நடை பராமரிப்புத் துறையில் கால்நடை உதவி மருத்துவர் (Veterinary Assistant Surgeon - VAS), ஆவின் (AAVIN) மற்றும் பால் உற்பத்தியாளர் ஒன்றியங்கள், தேசிய பால்வள வாரியம் (NDDB), குதிரைப் பந்தய மைதானங்கள், விலங்கியல் பூங்காக்கள், மருந்து நிறுவனங்கள், இந்திய ராணுவத்தின் RVC பிரிவு, வங்கிகளில் வேளாண் கள அலுவலர் (AFO), வெளிநாட்டு மருத்துவப் பணிகள் மற்றும் சிவில் சர்வீசஸ் (UPSC/TNPSC).
+        </div>
+      </div>
+
+      <!-- B.Tech Courses under TANUVAS -->
+      <div class="sub-grid-3" style="margin-top: 14px;">
+        <div class="sub-card" style="border-top: 3px solid #0284c7;">
+          <h4 style="font-size: 1rem; font-weight: 800; color: #0369a1; margin-bottom: 6px;">B.Tech (Food Technology)</h4>
+          <p style="font-size: 0.84rem; color: #64748b; margin-bottom: 8px;">உணவு மற்றும் பால்வளத் தொழில்நுட்பக் கல்லூரி (CFDT), கொடுவள்ளி, சென்னை. (4 ஆண்டுகள்)</p>
+          <p style="font-size: 0.88rem; color: #334155;">உணவுப் பதப்படுத்துதல், தரக்கட்டுப்பாடு, ஊட்டச்சத்துப் பாதுகாப்பு மற்றும் சர்வதேச உணவு நிறுவனங்களில் மேலாளர் வாய்ப்புகள்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #16a34a;">
+          <h4 style="font-size: 1rem; font-weight: 800; color: #15803d; margin-bottom: 6px;">B.Tech (Dairy Technology)</h4>
+          <p style="font-size: 0.84rem; color: #64748b; margin-bottom: 8px;">உணவு மற்றும் பால்வளத் தொழில்நுட்பக் கல்லூரி (CFDT), கொடுவள்ளி, சென்னை. (4 ஆண்டுகள்)</p>
+          <p style="font-size: 0.88rem; color: #334155;">பால் பண்ணை உற்பத்திப் பொருட்கள், பதப்படுத்தும் இயந்திரங்கள், Aavin, Amul, Nestle போன்ற நிறுவனங்களில் பிளான்ட் மேலாளர்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #d97706;">
+          <h4 style="font-size: 1rem; font-weight: 800; color: #b45309; margin-bottom: 6px;">B.Tech (Poultry Technology)</h4>
+          <p style="font-size: 0.84rem; color: #64748b; margin-bottom: 8px;">கோழி உற்பத்தி மற்றும் மேலாண்மைக் கல்லூரி (CPPM), ஒசூர். (4 ஆண்டுகள்)</p>
+          <p style="font-size: 0.88rem; color: #334155;">கோழிப் பண்ணை மேலாண்மை, தீவன உற்பத்தி, முட்டை ஏற்றுமதி ஆலைகள் மற்றும் நவீன பண்ணை மேலாண்மைப் பணிகள்.</p>
+        </div>
+      </div>
+    </section>
+
+        <!-- Section 4: Comprehensive 23 Paramedical & Allied Health Degree Courses -->
+    <section class="content-card" id="paramedical">
+      <h2 class="section-title">
+        <span class="icon">🩺</span> 4. தமிழ்நாடு மருத்துவக் கல்வி இயக்ககம் (DME) நடத்தும் 23 துணை மருத்துவப் பட்டப் படிப்புகள்
+      </h2>
+      <p style="margin-bottom: 16px; font-size: 0.98rem; color: #334155;">
+        நவீன மருத்துவத்தில் மருத்துவர்களுக்கு இணையான முக்கியத்துவமும், உள்நாடு மற்றும் வெளிநாடுகளில் எப்போதும் குறையாத மிகப்பெரிய வேலைவாய்ப்புகளும் கொண்ட <strong>23 துணை மருத்துவப் பட்டப் படிப்புகள் (Paramedical & Allied Health Sciences Degree Courses)</strong> தமிழ்நாடு அரசு மருத்துவக் கல்லூரிகளில் வழங்கப்படுகின்றன. மாணவர்களின் முழுமையான புரிதலுக்காக, இவை 3 முதன்மைப் பிரிவுகளாகப் பிரிக்கப்பட்டு அனைத்து 23 படிப்புகளின் விரிவான தகவல்களும் கீழே தரப்பட்டுள்ளன.
+      </p>
+
+      <!-- Category A: 7 Core Professional Healthcare Degrees -->
+      <h3 style="font-size: 1.2rem; font-weight: 800; color: #1e40af; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+        <span>🏥</span> பிரிவு (A): முதன்மையான 7 மருத்துவத் தொழில்முறைப் பட்டங்கள் (Core Professional Degrees)
+      </h3>
+
+      <div class="sub-grid" style="margin-bottom: 24px;">
+        <!-- Course 1: B.Sc Nursing -->
+        <div class="course-card-detail" style="border-left-color: #e11d48;">
+          <div class="course-title-row">
+            <div>
+              <span class="course-name-tamil">1. B.Sc. Nursing (செவிலியர் பட்டப்படிப்பு)</span>
+              <span class="course-name-eng">Bachelor of Science in Nursing</span>
+            </div>
+            <span class="course-meta-pill" style="background: #fff1f2; color: #be123c; border-color: #fecdd3;">4 ஆண்டுகள் (இருபாலருக்கும்)</span>
+          </div>
+          <p class="course-desc-text">
+            நோயாளிகளுக்கு முழுமையான மருத்துவ சிகிச்சை அளித்தல், மருந்து செலுத்துதல், அவசர சிகிச்சை மேலாண்மை மற்றும் அறுவை சிகிச்சைக்குப் பிந்தைய தீவிர கண்காணிப்பு.
+          </p>
+          <div class="career-scope">
+            <strong>வேலைவாய்ப்பு:</strong> தமிழ்நாடு மருத்துவப் பணியாளர் தேர்வு வாரியம் (MRB) அரசு செவிலியர், AIIMS, ஜிப்மர், ரயில்வே, ராணுவம், UK, USA, கனடா, ஆஸ்திரேலியா, வளைகுடா நாடுகளில் லட்சக்கணக்கான ஊதியத்தில் உடனடி வேலைவாய்ப்பு.
+          </div>
+        </div>
+
+        <!-- Course 2: B.Pharm -->
+        <div class="course-card-detail" style="border-left-color: #2563eb;">
+          <div class="course-title-row">
+            <div>
+              <span class="course-name-tamil">2. B.Pharm (மருந்தியல் பட்டப்படிப்பு)</span>
+              <span class="course-name-eng">Bachelor of Pharmacy</span>
+            </div>
+            <span class="course-meta-pill blue">4 ஆண்டுகள்</span>
+          </div>
+          <p class="course-desc-text">
+            மருந்து மூலக்கூறுகள் கண்டுபிடிப்பு, வேதியியல் சேர்மங்கள், மருந்து உற்பத்தி முறைகள், மருந்தியல் சட்டம் மற்றும் தரக்கட்டுப்பாடு.
+          </p>
+          <div class="career-scope">
+            <strong>வேலைவாய்ப்பு:</strong> அரசு மற்றும் தனியார் மருத்துவமனை மருந்தாளர், பன்னாட்டு மருந்து உற்பத்தி நிறுவனங்களில் R&D / QC அலுவலர், அரசு மருந்து ஆய்வாளர் (Drug Inspector), சொந்தமாக மருந்தகம் (Pharmacy) அமைக்கும் உரிமம்.
+          </div>
+        </div>
+
+        <!-- Course 3: Pharm.D -->
+        <div class="course-card-detail" style="border-left-color: #7c3aed;">
+          <div class="course-title-row">
+            <div>
+              <span class="course-name-tamil">3. Pharm.D (டாக்டர் ஆஃப் பார்மசி)</span>
+              <span class="course-name-eng">Doctor of Pharmacy</span>
+            </div>
+            <span class="course-meta-pill" style="background: #f5f3ff; color: #6d28d9; border-color: #ddd6fe;">6 ஆண்டுகள் (5 படிப்பு + 1 ஆண்டு Internship)</span>
+          </div>
+          <p class="course-desc-text">
+            நேரடி கிளினிக்கல் மருத்துவமனை பார்மசி டாக்டர் படிப்பு. நோயாளிகளுக்கு மருத்துவர்கள் வழங்கும் மருந்துகளின் அளவு (Dosage), பக்கவிளைவுகள், மருந்து இடைவினைகள் (Drug Interactions) ஆகியவற்றை கண்காணிக்கும் உயர் பொறுப்பு.
+          </p>
+          <div class="career-scope">
+            <strong>வேலைவாய்ப்பு:</strong> "Dr." என்ற தலைப்புடன் மருத்துவமனை கிளினிக்கல் பார்மசிஸ்ட் (Clinical Pharmacist), சர்வதேச கிளினிக்கல் ஆராய்ச்சி நிறுவனங்கள் (CRO), ஃபார்மகோவிஜிலென்ஸ் (Pharmacovigilance) மற்றும் வெளிநாட்டு மருத்துவமனைகள்.
+          </div>
+        </div>
+
+        <!-- Course 4: BPT -->
+        <div class="course-card-detail" style="border-left-color: #059669;">
+          <div class="course-title-row">
+            <div>
+              <span class="course-name-tamil">4. BPT (பிசியோதெரபி / உடலியக்க மருத்துவம்)</span>
+              <span class="course-name-eng">Bachelor of Physiotherapy</span>
+            </div>
+            <span class="course-meta-pill">4½ ஆண்டுகள் (உள்ளுறைப் பயிற்சி உள்பட)</span>
+          </div>
+          <p class="course-desc-text">
+            எலும்பு முறிவு, பக்கவாதம், மூட்டு வலி, தசை-நரம்பு பலவீனம் மற்றும் விளையாட்டு வீரர்களின் காயங்களுக்கு மருந்துகளின்றி நவீன உடற்பயிற்சி மற்றும் எலக்ட்ரோதெரபி மூலம் குணப்படுத்துதல்.
+          </p>
+          <div class="career-scope">
+            <strong>வேலைவாய்ப்பு:</strong> அரசு மற்றும் தனியார் மருத்துவமனைகள், கிரிக்கெட்/விளையாட்டு அணிகள் (Sports Physiotherapist), முடநீக்கியல் மையங்கள், முதியோர் இல்லங்கள் மற்றும் சொந்த கிளினிக் அமைத்துப் பணிபுரிதல்.
+          </div>
+        </div>
+
+        <!-- Course 5: BOT -->
+        <div class="course-card-detail" style="border-left-color: #d97706;">
+          <div class="course-title-row">
+            <div>
+              <span class="course-name-tamil">5. BOT (ஆக்குபேஷனல் தெரபி)</span>
+              <span class="course-name-eng">Bachelor of Occupational Therapy</span>
+            </div>
+            <span class="course-meta-pill amber">4½ ஆண்டுகள் (உள்ளுறைப் பயிற்சி உள்பட)</span>
+          </div>
+          <p class="course-desc-text">
+            மூளை முடக்குவாதம் (Cerebral Palsy), மனவளர்ச்சி குறைபாடு, ஆட்டிசம் பாதிக்கப்பட்ட சிறப்புக் குழந்தைகள் மற்றும் விபத்தில் கை கால்களை இழந்தவர்களை தங்களின் அன்றாடப் பணிகளைத் தாங்களே செய்ய இயல்பு வாழ்க்கைக்கு மீட்கும் உன்னத சிகிச்சை.
+          </p>
+          <div class="career-scope">
+            <strong>வேலைவாய்ப்பு:</strong> சிறப்புக் குழந்தைகள் பள்ளிகள், மறுவாழ்வு இல்லங்கள், நரம்பியல் மையங்கள், வெளிநாடுகளில் அதிக வரவேற்பு கொண்ட மருத்துவப் பணி.
+          </div>
+        </div>
+
+        <!-- Course 6: BASLP -->
+        <div class="course-card-detail" style="border-left-color: #0891b2;">
+          <div class="course-title-row">
+            <div>
+              <span class="course-name-tamil">6. B.A.S.L.P (பேச்சு & செவித்திறன் மருத்துவம்)</span>
+              <span class="course-name-eng">Audiology & Speech-Language Pathology</span>
+            </div>
+            <span class="course-meta-pill" style="background: #ecfeff; color: #0e7490; border-color: #a5f3fc;">4 ஆண்டுகள் (3 படிப்பு + 1 ஆண்டு Internship)</span>
+          </div>
+          <p class="course-desc-text">
+            குழந்தைகள் மற்றும் பெரியவர்களுக்கு ஏற்படும் திக்குவாய், குரல்வளை பாதிப்பு, பேச முடியாமை மற்றும் காது கேளாமை குறைபாடுகளைக் கண்டறிந்து ஆடியோமெட்ரி மற்றும் ஸ்பீச் தெரபி மூலம் சரிசெய்தல்.
+          </p>
+          <div class="career-scope">
+            <strong>வேலைவாய்ப்பு:</strong> ENT காது மூக்கு தொண்டை மருத்துவமனைகள், ஸ்பீச் தெரபி கிளினிக்குகள், கேட்கும் கருவி (Hearing Aid) நிறுவனங்கள், சிறப்புப் பள்ளிகள் மற்றும் சொந்த ஆலோசனை மையம்.
+          </div>
+        </div>
+
+        <!-- Course 7: BPO -->
+        <div class="course-card-detail" style="border-left-color: #475569;">
+          <div class="course-title-row">
+            <div>
+              <span class="course-name-tamil">7. B.P.O (செயற்கை உறுப்பு & மூட்டு உபகரணப் படிப்பு)</span>
+              <span class="course-name-eng">Bachelor in Prosthetics and Orthotics</span>
+            </div>
+            <span class="course-meta-pill" style="background: #f1f5f9; color: #334155; border-color: #cbd5e1;">4½ ஆண்டுகள் (உள்ளுறைப் பயிற்சி உள்பட)</span>
+          </div>
+          <p class="course-desc-text">
+            விபத்து, சர்க்கரை நோய் அல்லது பிறவிக் குறைபாட்டால் கை கால்களை இழந்தவர்களுக்கு நவீன செயற்கை உறுப்புகள் (Prosthetics) மற்றும் போலியோ/முதுகெலும்பு கோளாறுகளுக்கு தாங்கு உபகரணங்கள் (Orthotics/Braces) வடிவமைத்து பொருத்துதல்.
+          </p>
+          <div class="career-scope">
+            <strong>வேலைவாய்ப்பு:</strong> அரசு மறுவாழ்வு மருத்துவமனை (KK Nagar சென்னை), செயற்கை மூட்டு உற்பத்தி மையங்கள், ராணுவ மருத்துவமனைகள், ALIMCO மற்றும் சர்வதேச செயற்கை உறுப்பு நிறுவனங்கள்.
+          </div>
+        </div>
+      </div>
+
+      <!-- Category B & C: Comprehensive Table of 16 Clinical Technology Degree Courses -->
+      <h3 style="font-size: 1.2rem; font-weight: 800; color: #065f46; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+        <span>🔬</span> பிரிவு (B & C): 16 அதிநவீன மருத்துவமனை தொழில்நுட்பப் பட்டப் படிப்புகள் (3 ஆண்டுகள் படிப்பு + 1 ஆண்டு கட்டாய மருத்துவமனை பயிற்சி)
+      </h3>
+      <p style="font-size: 0.90rem; color: #475569; margin-bottom: 14px;">
+        அரசு மருத்துவக் கல்லூரிகள் மற்றும் பெருநிறுவன மருத்துவமனைகளில் மருத்துவர்களுடன் இணைந்து உயர் தொழில்நுட்பக் கருவிகளை இயக்கும் 16 சிறப்பு B.Sc. பட்டப் படிப்புகளின் பட்டியல்:
+      </p>
+
+      <div class="table-container">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th style="width: 5%;">வ.எண்</th>
+              <th style="width: 32%;">பட்டப்படிப்பு பெயர் (Degree Course Name)</th>
+              <th style="width: 38%;">படிப்பின் நோக்கம் & இயங்கும் மருத்துவப் பிரிவு</th>
+              <th style="width: 25%;">முக்கியப் பணிபுரியும் இடங்கள்</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- ANM / VHN Training Schools -->
+            <tr data-type="anm-vhn" class="highlight-row" style="background: #fdf2f8;">
+              <td><span class="code-badge" style="background:#be185d;">ANM-IPH</span></td>
+              <td><strong>Institute of Public Health (பூந்தமல்லி பொது சுகாதார நிறுவனம்)</strong><br><span style="font-size:0.80rem; color:#be185d; font-weight:700;">அரசு முதன்மை பொது சுகாதார பயிற்சி நிலையம்</span></td>
+              <td>சென்னை (பூந்தமல்லி)</td>
+              <td>ANM / பலநோக்கு சுகாதாரப் பணியாளர் (MPHW-F) 2 ஆண்டு பட்டயப் படிப்பு (VHN / SHN பணி)</td>
+              <td><a href="https://dphpm.tn.gov.in" target="_blank" class="table-link">dphpm.tn.gov.in</a></td>
+            </tr>
+            <tr data-type="anm-vhn" style="background: #fdf2f8;">
+              <td><span class="code-badge" style="background:#be185d;">ANM-MDU</span></td>
+              <td><strong>அரசு துணை செவிலியர் பயிற்சிப் பள்ளி (Govt ANM Training School)</strong><br><span style="font-size:0.80rem; color:#be185d; font-weight:700;">பொது சுகாதார இயக்ககம் (DPH&PM)</span></td>
+              <td>மதுரை</td>
+              <td>ANM (MPHW-F) 2 ஆண்டு பட்டயப் படிப்பு (தாய்-சேய் நலம் & தடுப்பூசி களப்பயிற்சி)</td>
+              <td><a href="https://tnhealth.tn.gov.in" target="_blank" class="table-link">tnhealth.tn.gov.in</a></td>
+            </tr>
+            <tr data-type="anm-vhn" style="background: #fdf2f8;">
+              <td><span class="code-badge" style="background:#be185d;">ANM-SLM</span></td>
+              <td><strong>மண்டல பொது சுகாதார பயிற்சி நிலையம் (RHTC Salem)</strong><br><span style="font-size:0.80rem; color:#be185d; font-weight:700;">அரசு துணை செவிலியர் பயிற்சி மையம்</span></td>
+              <td>சேலம்</td>
+              <td>ANM / பலநோக்கு சுகாதாரப் பணியாளர் (பெண்கள்) பட்டயப் படிப்பு</td>
+              <td><a href="https://dphpm.tn.gov.in" target="_blank" class="table-link">dphpm.tn.gov.in</a></td>
+            </tr>
+            <tr data-type="anm-vhn" style="background: #fdf2f8;">
+              <td><span class="code-badge" style="background:#be185d;">ANM-CDL</span></td>
+              <td><strong>அரசு துணை செவிலியர் பயிற்சிப் பள்ளி (Govt ANM Training School)</strong><br><span style="font-size:0.80rem; color:#be185d; font-weight:700;">மாவட்ட தலைமை மருத்துவமனை வளாகம்</span></td>
+              <td>கடலூர்</td>
+              <td>ANM (MPHW-F) 2 ஆண்டு இலவச பயிற்சி (மாத உதவித்தொகையுடன்)</td>
+              <td><a href="https://tnhealth.tn.gov.in" target="_blank" class="table-link">tnhealth.tn.gov.in</a></td>
+            </tr>
+            <tr data-type="anm-vhn" style="background: #fdf2f8;">
+              <td><span class="code-badge" style="background:#be185d;">ANM-TRY</span></td>
+              <td><strong>அரசு துணை செவிலியர் பயிற்சிப் பள்ளி (Govt ANM Training School)</strong><br><span style="font-size:0.80rem; color:#be185d; font-weight:700;">பொது சுகாதாரம் & நோய் தடுப்பு இயக்ககம்</span></td>
+              <td>திருச்சிராப்பள்ளி</td>
+              <td>ANM / பலநோக்கு சுகாதாரப் பணியாளர் (பெண்கள்) 2 ஆண்டு பட்டயப் படிப்பு</td>
+              <td><a href="https://tnhealth.tn.gov.in" target="_blank" class="table-link">tnhealth.tn.gov.in</a></td>
+            </tr>
+            <tr data-type="anm-vhn" style="background: #fdf2f8;">
+              <td><span class="code-badge" style="background:#be185d;">ANM-RMD</span></td>
+              <td><strong>அரசு துணை செவிலியர் பயிற்சி மையம் (Govt ANM Training Centre)</strong><br><span style="font-size:0.80rem; color:#be185d; font-weight:700;">சிவகங்கை & இராமநாதபுரம் மண்டல மையம்</span></td>
+              <td>இராமநாதபுரம் / திண்டுக்கல்</td>
+              <td>ANM (MPHW-F) 2 ஆண்டு பட்டயப் படிப்பு (VHN நேரடி அரசு பணிக்கு)</td>
+              <td><a href="https://tnhealth.tn.gov.in" target="_blank" class="table-link">tnhealth.tn.gov.in</a></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td><strong>B.Sc. Accident & Emergency Care Technology</strong></td>
+              <td>விபத்து, அதிர்ச்சி (Trauma), விஷமுறிவு மற்றும் மாரடைப்பு நோயாளிகளுக்கு "Golden Hour" உயிர்காக்கும் அவசர சிகிச்சை கருவிகளை இயக்குதல்.</td>
+              <td>அவசர சிகிச்சை பிரிவு (Casualty), 108 அவசர கால சேவை</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td><strong>B.Sc. Critical Care Technology (ICU Tech)</strong></td>
+              <td>தீவிர சிகிச்சைப் பிரிவில் (ICU/CCU/NICU) வென்டிலேட்டர்கள், மல்டிபாரா மானிட்டர்கள், டிஃபிபிரிலேட்டர் கருவிகளை இயக்குதல்.</td>
+              <td>தீவிர சிகிச்சைப் பிரிவுகள் (ICU), அவசர பராமரிப்பு</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td><strong>B.Sc. Cardio-Pulmonary Perfusion Care Technology</strong></td>
+              <td>திறந்த இதய அறுவை சிகிச்சையின் போது நோயாளியின் இதயம் நிறுத்தப்படும் வேளையில் இதய-நுரையீரல் கருவியை (Heart-Lung Machine) இயக்கும் உயரிய பணி.</td>
+              <td>இதய அறுவை சிகிச்சை அரங்கம் (Cardiac OT)</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td><strong>B.Sc. Cardiac Technology</strong></td>
+              <td>ECG, Treadmill (TMT), Echocardiography (ECHO), Holter மற்றும் ஆஞ்சியோகிராம் கேத் லேப் (Cath Lab) சோதனைகள் நடத்துதல்.</td>
+              <td>இதய நோய் சிகிச்சை மையங்கள், கேத் லேப்</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td><strong>B.Sc. Operation Theatre & Anaesthesia Technology</strong></td>
+              <td>அறுவை அரங்கு மேலாண்மை, ஸ்டெரிலைசேஷன், மயக்க மருந்து கருவிகள் கண்காணிப்பு மற்றும் அறுவை சிகிச்சையில் நேரடி உதவி.</td>
+              <td>அனைத்து அறுவை சிகிச்சை அரங்குகள் (OT)</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td><strong>B.Sc. Dialysis Technology</strong></td>
+              <td>சிறுநீரக செயலிழப்பு நோயாளிகளுக்கு செயற்கை சிறுநீரக டயாலிசிஸ் இயந்திரங்கள் (Hemodialysis) மூலம் ரத்த சுத்திகரிப்பு சிகிச்சை அளித்தல்.</td>
+              <td>டயாலிசிஸ் மையங்கள், நெப்ராலஜி வார்டுகள்</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td><strong>B.Sc. Radiography and Imaging Technology (RIT)</strong></td>
+              <td>டிஜிட்டல் எக்ஸ்-ரே, 128-Slice CT Scan, 3-Tesla MRI Scan, மேமோகிராபி, அல்ட்ரா சவுண்ட் ஸ்கேன் கருவிகளை இயக்குதல்.</td>
+              <td>ரேடியாலஜி துறைகள், தனியார் ஸ்கேன் மையங்கள்</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td><strong>B.Sc. Radio Therapy Technology (RTT)</strong></td>
+              <td>புற்றுநோய் கட்டிகளுக்கு லீனியர் ஆக்ஸிலரேட்டர் (Linear Accelerator - LINAC) கதிர்வீச்சு மூலம் சிகிச்சை அளிக்கும் உயர் தொழில்நுட்பப் பணி.</td>
+              <td>அரசு & தனியார் புற்றுநோய் மருத்துவமனைகள்</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td><strong>B.Sc. Respiratory Therapy</strong></td>
+              <td>ஆஸ்துமா, நுரையீரல் தொற்று, சுவாச முடக்கம் நோயாளிகளுக்கு நெபுலைசர், ஆக்ஸிஜன் மற்றும் வென்டிலேட்டர் சுவாச சிகிச்சை அளித்தல்.</td>
+              <td>நுரையீரல் துறை (Pulmonology), தூக்க ஆய்வகங்கள்</td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td><strong>B.Optom (Bachelor of Optometry)</strong></td>
+              <td>கண் பார்வைத் திறன் பரிசோதனை, கிட்டப்பார்வை/தூரப்பார்வை அளவீடு, காண்டாக்ட் லென்ஸ் மற்றும் கண் பார்வை குறைபாடுகளைக் கண்டறிதல்.</td>
+              <td>கண் மருத்துவமனைகள், ஆப்டிகல் நிறுவனங்கள்</td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td><strong>B.Sc. Medical Laboratory Technology (BMLT / MLT)</strong></td>
+              <td>ரத்தம், சிறுநீர், திசு மாதிரிகள் (Biopsy), நுண்ணுயிரியல் மற்றும் பயோகெமிஸ்ட்ரி ஆய்வுகளை தானியங்கி இயந்திரங்கள் மூலம் செய்தல்.</td>
+              <td>மருத்துவக் கல்லூரி லேப்கள், ரத்த வங்கிகள்</td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td><strong>B.Sc. Physician Assistant</strong></td>
+              <td>மருத்துவர்களுக்கு மருத்துவ ஆலோசனை, நோயாளி பரிசோதனை, அறுவை சிகிச்சை உதவி மற்றும் வார்டு மேலாண்மையில் நேரடி உதவி.</td>
+              <td>அரசு & கார்ப்பரேட் மருத்துவமனைகள்</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td><strong>B.Sc. Neuro Electro Physiology</strong></td>
+              <td>வலிப்பு, பக்கவாதம், நரம்பு கோளாறுகளைக் கண்டறிய மூளை மின் வரைபடம் (EEG), தசை மின் வரைபடம் (EMG), NCV சோதனைகள் நடத்துதல்.</td>
+              <td>நரம்பியல் சிறப்பு மையங்கள் (Neurology)</td>
+            </tr>
+            <tr>
+              <td>21</td>
+              <td><strong>B.Sc. Clinical Nutrition and Dietetics</strong></td>
+              <td>சர்க்கரை, சிறுநீரகம், இதயம் மற்றும் தீவிர சிகிச்சைப் பிரிவு நோயாளிகளுக்கு அறிவியல் பூர்வமான மருத்துவ உணவுமுறை வகுத்தல்.</td>
+              <td>மருத்துவமனை உணவு ஆலோசகர் (Dietitian)</td>
+            </tr>
+            <tr>
+              <td>22</td>
+              <td><strong>B.Sc. Medical Record Science</strong></td>
+              <td>மின்னணு மருத்துவ ஆவணங்கள் (EHR), WHO நோய்க் குறியீட்டு முறை (ICD Coding), மருத்துவக் காப்பீடு மற்றும் சட்ட ரீதியான ஆவணப் பராமரிப்பு.</td>
+              <td>மருத்துவ ஆவணக் காப்பகம் (MRD), மெடிக்கல் கோடிங்</td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td><strong>B.Sc. Nuclear Medicine Technology</strong></td>
+              <td>கதிரியக்க ஐசோடோப்புகள் மற்றும் PET-CT / SPECT ஸ்கேனர்கள் மூலம் புற்றுநோய் மற்றும் இருதய அடைப்புகளை மூலக்கூறு அளவில் கண்டறிதல்.</td>
+              <td>அணுக்கரு மருத்துவ மையங்கள், கேன்சர் இன்ஸ்டிடியூட்</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Sub-section 4.1: College-wise Seat Matrix for Top 7 Core Healthcare Degrees -->
+      <div style="margin-top: 32px;" id="core-7-seats">
+        <h3 style="font-size: 1.25rem; font-weight: 800; color: #1e40af; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+          <span>🏥</span> முதன்மையான 7 மருத்துவத் தொழில்முறைப் பட்டங்கள் — வழங்கும் அரசு கல்லூரிகள் & இடங்கள் விவரம் (Seat Matrix)
+        </h3>
+        <p style="font-size: 0.92rem; color: #334155; margin-bottom: 16px;">
+          மாணவர்கள் மற்றும் பெற்றோர்கள் அதிகம் விரும்பும் தலைசிறந்த 7 தொழில்முறை மருத்துவப் பட்டங்களுக்கான அரசு மருத்துவக் கல்லூரிகள் மற்றும் இடங்களின் (Seats) அதிகாரப்பூர்வ தொகுப்பு:
+        </p>
+
+        <div class="table-container" style="margin-bottom: 24px;">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th style="width: 5%;">வ.எண்</th>
+                <th style="width: 22%;">பட்டப்படிப்பு பெயர்</th>
+                <th style="width: 12%;">கால அளவு</th>
+                <th style="width: 41%;">வழங்கும் முக்கிய அரசு கல்லூரிகள் & பயிற்சி நிறுவனங்கள்</th>
+                <th style="width: 20%;">அரசு & சுயநிதி இடங்கள் (Seats)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><strong>B.Sc. Nursing<br><small style="color: #64748b;">செவிலியர் படிப்பு</small></strong></td>
+                <td>4 ஆண்டுகள்</td>
+                <td>
+                  • மெட்ராஸ் மெடிக்கல் காலேஜ் (MMC சென்னை) – 50 இடங்கள்<br>
+                  • ஸ்டான்லி மருத்துவக் கல்லூரி, சென்னை – 50 இடங்கள்<br>
+                  • மதுரை மருத்துவக் கல்லூரி – 50 இடங்கள்<br>
+                  • செங்கல்பட்டு அரசு மருத்துவக் கல்லூரி – 50 இடங்கள்<br>
+                  • சேலம் மோகன் குமாரமங்கலம் மருத்துவக் கல்லூரி – 50 இடங்கள்<br>
+                  • திருச்சி கி.ஆ.பெ. விசுவநாதம் மருத்துவக் கல்லூரி – 50 இடங்கள்<br>
+                  • திருநெல்வேலி அரசு மருத்துவக் கல்லூரி – 50 இடங்கள்<br>
+                  • கடலூர் அரசு மருத்துவக் கல்லூரி (ராஜா முத்தையா வளாகம்) – 100 இடங்கள் (ஆண்கள்/பெண்கள்)
+                </td>
+                <td>
+                  <strong style="color: #065f46; font-size: 1rem;">அரசு இடங்கள்: ~450+</strong><br>
+                  <span style="font-size: 0.82rem; color: #475569;">சுயநிதிக் கல்லூரிகளில் அரசு ஒதுக்கீட்டு இடங்கள்: 3,500+ இடங்கள் (180+ கல்லூரிகள்)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><strong>B.Pharm<br><small style="color: #64748b;">மருந்தியல் படிப்பு</small></strong></td>
+                <td>4 ஆண்டுகள்</td>
+                <td>
+                  • மெட்ராஸ் மெடிக்கல் காலேஜ் (College of Pharmacy, MMC சென்னை) – 60 இடங்கள்<br>
+                  • மதுரை அரசு மருத்துவக் கல்லூரி (College of Pharmacy, Madurai) – 60 இடங்கள்
+                </td>
+                <td>
+                  <strong style="color: #065f46; font-size: 1rem;">அரசு இடங்கள்: 120</strong><br>
+                  <span style="font-size: 0.82rem; color: #475569;">சுயநிதிக் கல்லூரிகளில் அரசு ஒதுக்கீட்டு இடங்கள்: 3,000+ இடங்கள் (65+ கல்லூரிகள்)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><strong>Pharm.D<br><small style="color: #64748b;">டாக்டர் ஆஃப் பார்மசி</small></strong></td>
+                <td>6 ஆண்டுகள்<br><small>(5 படிப்பு + 1 Internship)</small></td>
+                <td>
+                  • கடலூர் அரசு மருத்துவக் கல்லூரி (அண்ணாமலைப் பல்கலைக்கழகம்)<br>
+                  • DME ஒற்றைச் சாளரக் கலந்தாய்வில் உள்ள முன்னணி சுயநிதி மருந்தியல் கல்லூரிகள் (KMCH கோவை, PSG, Sri Ramachandra, JKK Nattraja, SRPA)
+                </td>
+                <td>
+                  <strong style="color: #065f46; font-size: 1rem;">அரசு ஒதுக்கீட்டு இடங்கள்: ~400+</strong><br>
+                  <span style="font-size: 0.82rem; color: #475569;">கல்லூரிக்கு தலா 30 முதல் 60 அரசு ஒதுக்கீட்டு இடங்கள்</span>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><strong>BPT<br><small style="color: #64748b;">பிசியோதெரபி / உடலியக்கம்</small></strong></td>
+                <td>4½ ஆண்டுகள்<br><small>(6 மாத பயிற்சி உள்பட)</small></td>
+                <td>
+                  • அரசு மறுவாழ்வு மருத்துவமனை (GIRM), கே.கே. நகர், சென்னை (MMC இணைப்பு) – 25 இடங்கள்<br>
+                  • மதுரை அரசு மருத்துவக் கல்லூரி, மதுரை – 20 இடங்கள்<br>
+                  • திருநெல்வேலி அரசு மருத்துவக் கல்லூரி – 20 இடங்கள்
+                </td>
+                <td>
+                  <strong style="color: #065f46; font-size: 1rem;">அரசு இடங்கள்: 65</strong><br>
+                  <span style="font-size: 0.82rem; color: #475569;">சுயநிதிக் கல்லூரிகளில் அரசு ஒதுக்கீட்டு இடங்கள்: 1,500+ இடங்கள் (45+ கல்லூரிகள்)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td><strong>BOT<br><small style="color: #64748b;">ஆக்குபேஷனல் தெரபி</small></strong></td>
+                <td>4½ ஆண்டுகள்<br><small>(6 மாத பயிற்சி உள்பட)</small></td>
+                <td>
+                  • அரசு மறுவாழ்வு மருத்துவமனை (GIRM), கே.கே. நகர், சென்னை (MMC இணைப்பு) – 20 இடங்கள்<br>
+                  • மத்திய அரசு மாற்றுத்திறனாளிகள் மேம்பாட்டு நிறுவனம் (NIEPMD), முட்டுக்காடு, சென்னை – 25 இடங்கள்
+                </td>
+                <td>
+                  <strong style="color: #065f46; font-size: 1rem;">அரசு / மத்திய அரசு இடங்கள்: 45</strong><br>
+                  <span style="font-size: 0.82rem; color: #475569;">சுயநிதிக் கல்லூரிகளில் அரசு ஒதுக்கீட்டு இடங்கள்: 400+ இடங்கள்</span>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td><strong>B.A.S.L.P<br><small style="color: #64748b;">பேச்சு & செவித்திறன்</small></strong></td>
+                <td>4 ஆண்டுகள்<br><small>(1 ஆண்டு Internship)</small></td>
+                <td>
+                  • மெட்ராஸ் மெடிக்கல் காலேஜ் (MMC சென்னை) – 25 இடங்கள்<br>
+                  • NIEPMD (மத்திய மாற்றுத்திறனாளிகள் நிறுவனம்), ECR முட்டுக்காடு, சென்னை – 25 இடங்கள்<br>
+                  • ஹோலி கிராஸ் கல்லூரி (Holy Cross), திருச்சிராப்பள்ளி – 25 இடங்கள்
+                </td>
+                <td>
+                  <strong style="color: #065f46; font-size: 1rem;">அரசு ஒதுக்கீட்டு இடங்கள்: ~75</strong><br>
+                  <span style="font-size: 0.82rem; color: #475569;">தமிழ்நாட்டின் மிகக் குறைந்த எண்ணிக்கையிலான பிரத்யேக இடங்கள்</span>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td><strong>B.P.O<br><small style="color: #64748b;">செயற்கை உறுப்பு & மூட்டு உபகரணம்</small></strong></td>
+                <td>4½ ஆண்டுகள்<br><small>(6 மாத பயிற்சி உள்பட)</small></td>
+                <td>
+                  • அரசு மறுவாழ்வு மருத்துவமனை (GIRM), கே.கே. நகர், சென்னை (MMC இணைப்பு) – 10 இடங்கள்<br>
+                  • மத்திய அரசு நிறுவனம் NIEPMD, கிழக்குக் கடற்கரைச் சாலை (ECR), முட்டுக்காடு, சென்னை – 20 இடங்கள்
+                </td>
+                <td>
+                  <strong style="color: #065f46; font-size: 1rem;">அரசு / மத்திய அரசு இடங்கள்: 30</strong><br>
+                  <span style="font-size: 0.82rem; color: #475569;">அரிதான செயற்கை உறுப்பு வடிவமைக்கும் பொறியியல் மருத்துவப் படிப்பு</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Sub-section 4.2: Rare & Super-Specialized Allied Health Courses and Colleges -->
+      <div style="margin-top: 32px;" id="rare-courses">
+        <h3 style="font-size: 1.25rem; font-weight: 800; color: #b45309; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+          <span>🔬</span> தமிழ்நாட்டின் அரிதான & அதிநவீன துணை மருத்துவப் படிப்புகள் (Rare & Super-Specialized Courses)
+        </h3>
+        <p style="font-size: 0.92rem; color: #334155; margin-bottom: 16px;">
+          தமிழ்நாட்டில் குறிப்பிட்ட சில அரசு மருத்துவக் கல்லூரிகள் மற்றும் சிறப்பு மருத்துவ ஆராய்ச்சி நிறுவனங்களில் மட்டுமே வழங்கப்படும் மிகவும் அரிதான, சர்வதேச அளவில் உச்சபட்ச ஊதியம் பெற்றுத்தரும் உயர் தொழில்நுட்பப் படிப்புகள்:
+        </p>
+
+        <div class="sub-grid">
+          <!-- Rare Course 1: Perfusion Tech -->
+          <div class="course-card-detail" style="border-left-color: #dc2626;">
+            <div class="course-title-row">
+              <span class="course-name-tamil">1. B.Sc. Cardio-Pulmonary Perfusion Care Technology</span>
+              <span class="course-meta-pill" style="background: #fef2f2; color: #b91c1c; border-color: #fecaca;">அரிதான இதய அறுவை அரங்கு படிப்பு</span>
+            </div>
+            <p class="course-desc-text">
+              திறந்த இதய அறுவை சிகிச்சையின் போது இதய-நுரையீரல் கருவியை (Heart-Lung Machine) இயக்கும் உயரிய பணி.
+            </p>
+            <div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #dc2626; font-size: 0.88rem; color: #334155;">
+              <strong>வழங்கும் அரசு கல்லூரிகள்:</strong> மெட்ராஸ் மெடிக்கல் காலேஜ் (MMC சென்னை), மதுரை அரசு மருத்துவக் கல்லூரி, திருநெல்வேலி அரசு மருத்துவக் கல்லூரி.<br>
+              <strong>இடங்கள்:</strong> கல்லூரிக்கு <strong>5 முதல் 10 இடங்கள் மட்டுமே!</strong> (தமிழ்நாடு முழுமைக்கும் விரல்விட்டு எண்ணக்கூடிய மிகக் குறைந்த இடங்கள்).
+            </div>
+          </div>
+
+          <!-- Rare Course 2: Nuclear Medicine -->
+          <div class="course-card-detail" style="border-left-color: #7c3aed;">
+            <div class="course-title-row">
+              <span class="course-name-tamil">2. B.Sc. Nuclear Medicine Technology (அணுக்கரு மருத்துவம்)</span>
+              <span class="course-meta-pill" style="background: #f5f3ff; color: #6d28d9; border-color: #ddd6fe;">அதிநவீன அணுக்கதிர்வீச்சு படிப்பு</span>
+            </div>
+            <p class="course-desc-text">
+              கதிரியக்க ஐசோடோப்புகள், காமா கேமரா மற்றும் PET-CT / SPECT ஸ்கேனர் மூலம் புற்றுநோய் செல்களை மூலக்கூறு அளவில் கண்டறிதல்.
+            </p>
+            <div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #7c3aed; font-size: 0.88rem; color: #334155;">
+              <strong>வழங்கும் முதன்மை நிறுவனங்கள்:</strong> அடையாறு கேன்சர் இன்ஸ்டிடியூட் (Cancer Institute WIA, சென்னை), கிறிஸ்டியன் மெடிக்கல் காலேஜ் (CMC வேலூர்), ஸ்ரீ ராமச்சந்திரா (SRMC சென்னை).<br>
+              <strong>இடங்கள்:</strong> நிறுவனம் ஒன்றுக்கு <strong>10 முதல் 15 இடங்கள் மட்டுமே!</strong>
+            </div>
+          </div>
+
+          <!-- Rare Course 3: Neuro Electro Physiology -->
+          <div class="course-card-detail" style="border-left-color: #0284c7;">
+            <div class="course-title-row">
+              <span class="course-name-tamil">3. B.Sc. Neuro Electro Physiology (நரம்பியல் மின் உடலியங்கியல்)</span>
+              <span class="course-meta-pill blue">நரம்பியல் சிறப்புப் படிப்பு</span>
+            </div>
+            <p class="course-desc-text">
+              மூளை மின் வரைபடம் (EEG), தசை நரம்பு மின் வரைபடம் (EMG), நரம்பு கடத்தல் வேகம் (NCV) மற்றும் வலிப்பு/தூக்க குறைபாடு பரிசோதனைகள்.
+            </p>
+            <div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #0284c7; font-size: 0.88rem; color: #334155;">
+              <strong>வழங்கும் அரசு கல்லூரிகள்:</strong> மெட்ராஸ் மெடிக்கல் காலேஜ் - நரம்பியல் நிறுவனம் (Institute of Neurology, MMC சென்னை), மதுரை அரசு மருத்துவக் கல்லூரி நரம்பியல் பிரிவு.<br>
+              <strong>இடங்கள்:</strong> <strong>5 முதல் 10 இடங்கள் மட்டுமே!</strong>
+            </div>
+          </div>
+
+          <!-- Rare Course 4: Radio Therapy -->
+          <div class="course-card-detail" style="border-left-color: #d97706;">
+            <div class="course-title-row">
+              <span class="course-name-tamil">4. B.Sc. Radio Therapy Technology (RTT - புற்றுநோய் கதிர்வீச்சு)</span>
+              <span class="course-meta-pill amber">புற்றுநோய் கதிர்வீச்சு தொழில்நுட்பம்</span>
+            </div>
+            <p class="course-desc-text">
+              புற்றுநோய் கட்டிகளை அழிக்க லீனியர் ஆக்ஸிலரேட்டர் (Linac) இயந்திரம் மூலம் துல்லியமான கதிர்வீச்சு செலுத்தும் உயர் பணி.
+            </p>
+            <div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #d97706; font-size: 0.88rem; color: #334155;">
+              <strong>வழங்கும் அரசு நிறுவனங்கள்:</strong> மெட்ராஸ் மெடிக்கல் காலேஜ் (MMC சென்னை), அரசு அறிஞர் அண்ணா நினைவு புற்றுநோய் ஆராய்ச்சி மருத்துவமனை (காஞ்சிபுரம்), மதுரை அரசு ராஜாஜி மருத்துவமனை.<br>
+              <strong>இடங்கள்:</strong> <strong>10 முதல் 15 இடங்கள் மட்டுமே!</strong>
+            </div>
+          </div>
+
+          <!-- Rare Course 5: Prosthetics and Orthotics -->
+          <div class="course-card-detail" style="border-left-color: #475569;">
+            <div class="course-title-row">
+              <span class="course-name-tamil">5. B.P.O (செயற்கை உறுப்பு & மூட்டு உபகரணப் பொறியியல்)</span>
+              <span class="course-meta-pill" style="background: #f1f5f9; color: #334155; border-color: #cbd5e1;">மருத்துவப் பொறியியல் துறை</span>
+            </div>
+            <p class="course-desc-text">
+              செயற்கை கால்கள், கைகள் மற்றும் முதுகெலும்பு தாங்கு உபகரணங்கள் (Braces) தயாரித்து நோயாளிகளுக்குப் பொருத்துதல்.
+            </p>
+            <div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #475569; font-size: 0.88rem; color: #334155;">
+              <strong>வழங்கும் முதன்மை நிறுவனங்கள்:</strong> அரசு மறுவாழ்வு மருத்துவமனை (GIRM), கே.கே. நகர், சென்னை (MMC) & மத்திய அரசு நிறுவனம் NIEPMD முட்டுக்காடு, சென்னை.<br>
+              <strong>இடங்கள்:</strong> <strong>10 முதல் 20 இடங்கள் மட்டுமே!</strong>
+            </div>
+          </div>
+
+          <!-- Rare Course 6: Respiratory Therapy -->
+          <div class="course-card-detail" style="border-left-color: #059669;">
+            <div class="course-title-row">
+              <span class="course-name-tamil">6. B.Sc. Respiratory Therapy (சுவாச நோய் சிகிச்சை)</span>
+              <span class="course-meta-pill" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0;">நுரையீரல் & ICU சிறப்புப் படிப்பு</span>
+            </div>
+            <p class="course-desc-text">
+              தீவிர ஆஸ்துமா, நுரையீரல் முடக்கம், சுவாசக் கோளாறுகளுக்கு வென்டிலேட்டர் மற்றும் ஆக்ஸிஜன் சுவாச சிகிச்சை அளித்தல்.
+            </p>
+            <div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #059669; font-size: 0.88rem; color: #334155;">
+              <strong>வழங்கும் அரசு கல்லூரிகள்:</strong> அரசு ஸ்டான்லி மருத்துவக் கல்லூரி (Stanley சென்னை), மதுரை அரசு மருத்துவக் கல்லூரி, கோயம்புத்தூர் அரசு மருத்துவக் கல்லூரி.<br>
+              <strong>இடங்கள்:</strong> கல்லூரிக்கு <strong>10 முதல் 15 இடங்கள் மட்டுமே!</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+<!-- Section 5: BNYS Naturopathy Doctor Course -->
+    <section class="content-card" id="bnys" style="border-top: 5px solid #16a34a;">
+      <h2 class="section-title" style="color: #15803d;">
+        <span class="icon">🌿</span> 5. இயற்கை மருத்துவம் மற்றும் யோகா அறிவியல் (BNYS டாக்டர் பட்டப்படிப்பு)
+      </h2>
+      
+      <div class="course-card-detail" style="border-left-color: #16a34a;">
+        <div class="course-title-row">
+          <div>
+            <span class="course-name-tamil">BNYS (Bachelor of Naturopathy and Yogic Sciences)</span>
+            <span class="course-name-eng">இயற்கை மருத்துவம் & யோகா அறிவியல் டாக்டர் படிப்பு</span>
+          </div>
+          <span class="course-meta-pill" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">5½ ஆண்டுகள் (4½ படிப்பு + 1 ஆண்டு உள்ளுறைப் பயிற்சி)</span>
+        </div>
+        <p class="course-desc-text">
+          நீட் (NEET) தேர்வு எழுதாமல் <strong>"Dr." என்ற மருத்துவர் பட்டத்தைப் பெறக்கூடிய</strong> மகத்தான மருத்துவப் படிப்பு! மருந்துகள் இல்லா மருத்துவம், நீர் சிகிச்சை (Hydrotherapy), மண் சிகிச்சை (Mud Therapy), அக்குபஞ்சர் (Acupuncture), உணவுமுறை சிகிச்சை (Dietetics), மூலிகை மருத்துவம் மற்றும் மருத்துவ யோகாசனங்கள் மூலம் நோய்களை நிரந்தரமாகக் குணப்படுத்தும் மருத்துவ முறையாகும்.
+        </p>
+
+        <div class="sub-grid" style="margin-top: 12px;">
+          <div class="sub-card">
+            <h4 style="font-size: 0.95rem; font-weight: 800; color: #15803d; margin-bottom: 6px;">சேர்க்கை முறை (Selection Mode)</h4>
+            <p style="font-size: 0.88rem; color: #334155;">
+              தமிழ்நாடு அரசின் <strong>இந்திய மருத்துவம் மற்றும் ஓமியோபதி இயக்ககம் (Commissioner of Indian Medicine and Homoeopathy, Arumbakkam, Chennai)</strong> நடத்தும் ஒற்றைச் சாளர நேரடி கலந்தாய்வு மூலம் +2 அறிவியல் மதிப்பெண்கள் அடிப்படையில் சேர்க்கை நடைபெறுகிறது.
+            </p>
+          </div>
+          <div class="sub-card">
+            <h4 style="font-size: 0.95rem; font-weight: 800; color: #15803d; margin-bottom: 6px;">சட்டப்பூர்வ அந்தஸ்து & வேலைவாய்ப்பு</h4>
+            <p style="font-size: 0.88rem; color: #334155;">
+              படிப்பை முடித்தவுடன் தமிழ்நாடு பாரம்பரிய மருத்துவ கவுன்சிலில் பதிவு செய்து <strong>Class 'A' Medical Practitioner</strong> ஆக அங்கீகரிக்கப்படுவர். அரசு தலைமை மருத்துவமனைகளில் AYUSH இயற்கை மருத்துவர், வெல்னஸ் ரிசார்ட்டுகள் மற்றும் சொந்த கிளினிக் நடத்தலாம்.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Section 6: Diploma & Certificate Courses in Veterinary & Paramedical -->
+    <section class="content-card" id="diploma-certificate" style="border-top: 5px solid #7c3aed;">
+      <h2 class="section-title" style="color: #6d28d9;">
+        <span class="icon">📜</span> 6. கால்நடை & துணை மருத்துவ டிப்ளமோ மற்றும் சான்றிதழ் படிப்புகள் (Diploma & Certificate Courses)
+      </h2>
+      <p style="margin-bottom: 16px; font-size: 0.98rem; color: #334155;">
+        4 அல்லது 5 ஆண்டுகள் பட்டப்படிப்பு மட்டுமின்றி, குறுகிய காலத்தில் (1 அல்லது 2 ஆண்டுகளில்) குறைந்த கட்டணத்தில் படித்து முடித்து உடனடியாக அரசு மற்றும் தனியார் மருத்துவமனைகள், ஆய்வகங்கள், மருந்தகங்கள் மற்றும் கால்நடைப் பண்ணைகளில் சிறந்த வேலைவாய்ப்பைப் பெற உதவும் <strong>டிப்ளமோ மற்றும் சான்றிதழ் படிப்புகள்</strong> கீழே விரிவாகத் தரப்பட்டுள்ளன.
+      </p>
+
+      <!-- Highlights Banner for Diploma & Certificate -->
+      <div style="background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border: 2px solid #c4b5fd; border-radius: var(--radius-md); padding: 18px 20px; margin-bottom: 22px;">
+        <div style="font-size: 1.15rem; font-weight: 800; color: #5b21b6; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+          <span>⚡</span> குறுகிய கால மருத்துவப் படிப்புகளின் முக்கிய சிறப்பம்சங்கள்:
+        </div>
+        <div class="sub-grid-3" style="margin-top: 10px;">
+          <div style="background: #ffffff; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid #ddd6fe; font-size: 0.86rem; color: #4c1d95;">
+            <strong>குறைந்த கல்விக் கட்டணம்:</strong> அரசு மருத்துவக் கல்லூரிகளில் ஆண்டுக்கு ₹1,500 முதல் ₹3,000 மட்டுமே!
+          </div>
+          <div style="background: #ffffff; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid #ddd6fe; font-size: 0.86rem; color: #4c1d95;">
+            <strong>7.5% அரசுப் பள்ளி சலுகை:</strong> அரசுப் பள்ளி மாணவர்களுக்கு முழுமையான இலவசக் கல்வி மற்றும் விடுதி வசதி.
+          </div>
+          <div style="background: #ffffff; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid #ddd6fe; font-size: 0.86rem; color: #4c1d95;">
+            <strong>உடனடி வேலைவாய்ப்பு:</strong> அரசு தலைமை மருத்துவமனைகள், PHC, தனியார் லேப்கள், பார்மசி மற்றும் பண்ணைகளில் பணி.
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-section A: TANUVAS Diploma Courses -->
+      <h3 style="font-size: 1.2rem; font-weight: 800; color: #065f46; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+        <span>🐾</span> (A) தமிழ்நாடு கால்நடை மருத்துவ அறிவியல் பல்கலைக்கழக (TANUVAS) 2 ஆண்டு டிப்ளமோ படிப்புகள்
+      </h3>
+
+      <div class="sub-grid" style="margin-bottom: 24px;">
+        <!-- TANUVAS Diploma 1 -->
+        <div class="course-card-detail" style="border-left-color: #059669;">
+          <div class="course-title-row">
+            <span class="course-name-tamil">கால்நடை மற்றும் கால்நடை பராமரிப்பு உதவியாளர் டிப்ளமோ</span>
+            <span class="course-meta-pill" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0;">2 ஆண்டுகள் (VLDA Diploma)</span>
+          </div>
+          <p class="course-desc-text">
+            <strong>தகுதி:</strong> +2 தேர்ச்சி (இயற்பியல், வேதியியல், உயிரியல் அல்லது தொழிற்கல்வி வேளாண்மை / கால்நடைப் பிரிவு).<br>
+            <strong>பயிற்சி மையங்கள்:</strong> ஒரத்தநாடு (தஞ்சாவூர்), நாமக்கல், புதுக்கோட்டை மற்றும் திருநெல்வேலி பயிற்சி மையங்கள்.
+          </p>
+          <div class="career-scope">
+            <strong>அரசு பணி வாய்ப்பு:</strong> தமிழ்நாடு அரசு கால்நடை பராமரிப்புத் துறையில் <strong>கால்நடை ஆய்வாளர் நிலை-2 (Livestock Inspector Grade-II)</strong> நேரடி அரசுப் பணி, ஆவின் (AAVIN) பால் கொள்முதல் நிலையங்கள், தனியார் பால் மற்றும் கால்நடைப் பண்ணைகள்.
+          </div>
+        </div>
+
+        <!-- TANUVAS Diploma 2 -->
+        <div class="course-card-detail" style="border-left-color: #16a34a;">
+          <div class="course-title-row">
+            <span class="course-name-tamil">கோழிப்பண்ணை மேலாண்மை டிப்ளமோ</span>
+            <span class="course-meta-pill amber">2 ஆண்டுகள் (Diploma in Poultry Management)</span>
+          </div>
+          <p class="course-desc-text">
+            <strong>தகுதி:</strong> +2 தேர்ச்சி (அறிவியல் அல்லது தொழிற்கல்விப் பிரிவு).<br>
+            <strong>வளாகம்:</strong> கோழி உற்பத்தி மற்றும் மேலாண்மைக் கல்லூரி (CPPM), ஒசூர்.
+          </p>
+          <div class="career-scope">
+            <strong>பணி வாய்ப்பு:</strong> வணிகரீதியான பிராய்லர் மற்றும் முட்டை உற்பத்திக் கோழிப்பண்ணைகள், குஞ்சு பொரிப்பகங்கள் (Hatcheries), கோழித் தீவன ஆலைகளில் மேற்பார்வையாளர் பணி மற்றும் சொந்தப் பண்ணைத் தொழில் முனைவோர்.
+          </div>
+        </div>
+
+        <!-- TANUVAS Diploma 3 -->
+        <div class="course-card-detail" style="border-left-color: #0284c7;">
+          <div class="course-title-row">
+            <span class="course-name-tamil">பால்வளத் தொழில்நுட்ப டிப்ளமோ</span>
+            <span class="course-meta-pill blue">2 ஆண்டுகள் (Diploma in Dairy Technology)</span>
+          </div>
+          <p class="course-desc-text">
+            <strong>தகுதி:</strong> +2 தேர்ச்சி (இயற்பியல், வேதியியல், கணிதம் / உயிரியல்).<br>
+            <strong>வளாகம்:</strong> உணவு மற்றும் பால்வளத் தொழில்நுட்பக் கல்லூரி (CFDT), கொடுவள்ளி, சென்னை.
+          </p>
+          <div class="career-scope">
+            <strong>பணி வாய்ப்பு:</strong> பால் பதப்படுத்துதல், வெண்ணெய், நெய், பாலாடைக்கட்டி உற்பத்தி ஆலைகள், பால் தரக் கட்டுப்பாட்டு ஆய்வகங்கள் மற்றும் பால் கூட்டுறவு சங்கங்கள்.
+          </div>
+        </div>
+
+        <!-- TANUVAS Diploma 4 -->
+        <div class="course-card-detail" style="border-left-color: #d97706;">
+          <div class="course-title-row">
+            <span class="course-name-tamil">தீவனத் தொழில்நுட்ப டிப்ளமோ</span>
+            <span class="course-meta-pill amber">2 ஆண்டுகள் (Diploma in Feed Technology)</span>
+          </div>
+          <p class="course-desc-text">
+            <strong>தகுதி:</strong> +2 தேர்ச்சி (அறிவியல் பாடப்பிரிவுகள்).<br>
+            <strong>வளாகம்:</strong> CFDT கொடுவள்ளி / நாமக்கல் கால்நடை ஆராய்ச்சி மையம்.
+          </p>
+          <div class="career-scope">
+            <strong>பணி வாய்ப்பு:</strong> கால்நடை மற்றும் கோழித் தீவன ஆலைகளில் சத்துணவு கலவை மேலாண்மை, தீவனத் தரப் பரிசோதனை மற்றும் உற்பத்தி மேற்பார்வை.
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-section B: DME Paramedical Diploma Courses -->
+      <h3 style="font-size: 1.2rem; font-weight: 800; color: #1e40af; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+        <span>🩺</span> (B) மருத்துவக் கல்வி இயக்ககம் (DME) நடத்தும் துணை மருத்துவ டிப்ளமோ படிப்புகள்
+      </h3>
+      <p style="font-size: 0.90rem; color: #475569; margin-bottom: 14px;">
+        தமிழ்நாடு அரசு மருத்துவக் கல்லூரிகளில் இயங்கும் 2 முதல் 3 ஆண்டுகள் கால அளவு கொண்ட முன்னணி டிப்ளமோ படிப்புகள்:
+      </p>
+
+      <div class="table-container" style="margin-bottom: 24px;">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th style="width: 5%;">வ.எண்</th>
+              <th style="width: 30%;">டிப்ளமோ பாடப்பிரிவு (Course Name)</th>
+              <th style="width: 14%;">கால அளவு</th>
+              <th style="width: 25%;">கல்வித் தகுதி</th>
+              <th style="width: 26%;">பணி வாய்ப்புகள் & சிறப்பம்சம்</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><strong>D.Pharm (Diploma in Pharmacy - மருந்தியல்)</strong></td>
+              <td>2 ஆண்டுகள்</td>
+              <td>+2 இயற்பியல், வேதியியல், உயிரியல்/கணிதம்</td>
+              <td>தமிழ்நாடு பார்மசி கவுன்சில் பதிவுபெற்ற மருந்தாளர் (Registered Pharmacist) உரிமம்; அரசு/தனியார் மருந்தகம், சொந்த மெடிக்கல் ஷாப் அமைத்தல்.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><strong>GNM (General Nursing & Midwifery - பொதுச் செவிலியர் டிப்ளமோ)</strong></td>
+              <td>3 ஆண்டுகள்</td>
+              <td>+2 தேர்ச்சி (அறிவியல் மற்றும் பிற பிரிவுகளுக்கும் வாய்ப்பு)</td>
+              <td>அரசு மருத்துவக் கல்லூரி நர்சிங் பள்ளிகளில் தங்கும் விடுதியுடன் பயிற்சி; அரசு/தனியார் மருத்துவமனைகளில் Staff Nurse பணி; வெளிநாட்டு வேலைவாய்ப்பு.</td>
+            </tr>
+            <tr style="background: #fdf2f8;">
+              <td><span style="background:#be185d; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:800;">VHN பணி</span></td>
+              <td><strong style="color:#9d174d;">ANM / MPHW(F) (துணை செவிலியர் & பலநோக்கு சுகாதாரப் பணியாளர் - பெண்)</strong></td>
+              <td><strong>2 ஆண்டுகள்</strong></td>
+              <td><strong>+2 தேர்ச்சி (பெண்கள் மட்டும் - எந்தப் பாடப்பிரிவும்)</strong></td>
+              <td><strong>100% இலவசப் பயிற்சி + மாதாந்திர உதவித்தொகை!</strong> தமிழக அரசு ஆரம்ப சுகாதார துணை நிலையங்களில் <strong>கிராம சுகாதார செவிலியர் (VHN)</strong> மற்றும் பதவி உயர்வில் <strong>பகுதி சுகாதார செவிலியர் (SHN)</strong> நேரடி அரசுப் பணி!</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><strong>DMLT (Diploma in Medical Laboratory Technology)</strong></td>
+              <td>2 ஆண்டுகள்</td>
+              <td>+2 உயிரியல் பாடப்பிரிவு</td>
+              <td>ரத்தம், சிறுநீர், திசு பரிசோதனை; அரசு ஆரம்ப சுகாதார நிலையங்கள் (PHC), அரசு தலைமை மருத்துவமனைகள் மற்றும் கார்ப்பரேட் ஆய்வகங்களில் பணி.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><strong>Diploma in Radiological Technology (DRT - எக்ஸ்ரே & ரேடியோலஜி)</strong></td>
+              <td>2 ஆண்டுகள்</td>
+              <td>+2 இயற்பியல், வேதியியல், உயிரியல்</td>
+              <td>எக்ஸ்ரே, ஃப்ளூரோஸ்கோபி, அடிப்படை CT ஸ்கேன் கருவிகளை இயக்குதல்; மருத்துவமனைகள் மற்றும் ஸ்கேன் மையங்களில் உடனடி வேலை.</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><strong>Diploma in Radio Therapy Technology (DRTT)</strong></td>
+              <td>2 ஆண்டுகள்</td>
+              <td>+2 இயற்பியல், வேதியியல், கணிதம்/உயிரியல்</td>
+              <td>புற்றுநோய் சிறப்பு மருத்துவமனைகளில் கதிர்வீச்சு சிகிச்சை இயந்திரங்களை (Linac/Cobalt) இயக்கும் உயர் தொழில்நுட்பப் பணி.</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td><strong>Diploma in Optometry (கண் பார்வை அளவீடு)</strong></td>
+              <td>2 ஆண்டுகள்</td>
+              <td>+2 இயற்பியல், வேதியியல், உயிரியல்</td>
+              <td>கண் பார்வைத் திறன் சோதனை, கண்ணாடிகள் பரிந்துரைத்தல், கண் மருத்துவமனைகள் மற்றும் ஆப்டிகல் நிறுவனங்களில் பணி.</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td><strong>Diploma in Operation Theatre Technology (DOTT)</strong></td>
+              <td>2 ஆண்டுகள்</td>
+              <td>+2 அறிவியல் பிரிவு</td>
+              <td>அறுவை சிகிச்சை உபகரணங்கள் கிருமி நீக்கம் (Sterilization), அறுவை அரங்க தயாரிப்பு மற்றும் அறுவை சிகிச்சையில் உதவி.</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td><strong>Diploma in Anaesthesia Technology (DAT)</strong></td>
+              <td>2 ஆண்டுகள்</td>
+              <td>+2 அறிவியல் பிரிவு</td>
+              <td>மயக்க மருந்து கருவிகள் கண்காணிப்பு, மயக்கவியல் மருத்துவர்களுக்கு அறுவை சிகிச்சையின் போது நேரடி தொழில்நுட்ப உதவி.</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td><strong>Diploma in Dental Mechanics & Dental Hygienist</strong></td>
+              <td>2 ஆண்டுகள்</td>
+              <td>+2 அறிவியல் பிரிவு</td>
+              <td>பல் மருத்துவமனைகளில் செயற்கை பல் கட்டுதல் (Denture), பல் சீரமைப்பு உபகரணங்கள் தயாரித்தல் மற்றும் வாய் சுகாதார பராமரிப்பு.</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td><strong>Diploma in Dialysis Technology (டயாலிசிஸ் டிப்ளமோ)</strong></td>
+              <td>2 ஆண்டுகள்</td>
+              <td>+2 இயற்பியல், வேதியியல், உயிரியல்</td>
+              <td>சிறுநீரக செயலிழப்பு நோயாளிகளுக்கு செயற்கை சிறுநீரக டயாலிசிஸ் கருவிகள் மூலம் ரத்த சுத்திகரிப்பு சிகிச்சை அளித்தல்.</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td><strong>Diploma in Health Inspector (சுகாதார ஆய்வாளர் டிப்ளமோ)</strong></td>
+              <td>2 ஆண்டுகள்</td>
+              <td>+2 அறிவியல் பிரிவு தேர்ச்சி</td>
+              <td>பொதுச் சுகாதாரத் துறை (DPH), நகராட்சி, மாநகராட்சிகளில் சுகாதார ஆய்வாளர் (Health Inspector / Multipurpose Worker) அரசு பணி.</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td><strong>Diploma in Medical Record Science (DMRS)</strong></td>
+              <td>2 ஆண்டுகள்</td>
+              <td>+2 தேர்ச்சி (எந்தப் பிரிவும்)</td>
+              <td>மருத்துவ ஆவணங்கள் மேலாண்மை, மின்னணு மருத்துவப் பதிவேடுகள் (EMR) மற்றும் மருத்துவக் காப்பீட்டு ஆவணப் பணிகள்.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Sub-section C: 1-Year Certificate Courses in Govt Medical Colleges -->
+      <h3 style="font-size: 1.2rem; font-weight: 800; color: #b45309; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+        <span>🔬</span> (C) அரசு மருத்துவக் கல்லூரிகளில் 1 ஆண்டு சிறப்பு மருத்துவச் சான்றிதழ் படிப்புகள் (Certificate Courses)
+      </h3>
+      <p style="font-size: 0.90rem; color: #475569; margin-bottom: 14px;">
+        ஒரே ஆண்டில் படித்து முடித்து குறிப்பிட்ட மருத்துவக் கருவிகளை இயக்கும் நிபுணத்துவம் பெற்று உடனடியாக வேலைவாய்ப்பைப் பெற உதவும் 10 முதன்மைச் சான்றிதழ் படிப்புகள்:
+      </p>
+
+      <div class="sub-grid-3">
+        <div class="sub-card" style="border-top: 3px solid #dc2626;">
+          <h4 style="font-size: 0.96rem; font-weight: 800; color: #991b1b; margin-bottom: 6px;">1. Certificate in ECG / TMT Technician</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">காலம்: 1 ஆண்டு | தகுதி: +2 அறிவியல்</p>
+          <p style="font-size: 0.86rem; color: #334155;">இதயத் துடிப்பு மின் வரைபட (ECG) மற்றும் டிரெட்மில் (TMT) உடற்பயிற்சி இதய சோதனைக் கருவிகளை இயக்குதல்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #2563eb;">
+          <h4 style="font-size: 0.96rem; font-weight: 800; color: #1e40af; margin-bottom: 6px;">2. Certificate in EEG / EMG Technician</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">காலம்: 1 ஆண்டு | தகுதி: +2 அறிவியல்</p>
+          <p style="font-size: 0.86rem; color: #334155;">மூளை மின் வரைபட (EEG) மற்றும் தசை நரம்பு மின் வரைபட (EMG) கருவிகள் மூலம் நரம்பியல் குறைபாடுகளைக் கண்டறிதல்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #059669;">
+          <h4 style="font-size: 0.96rem; font-weight: 800; color: #065f46; margin-bottom: 6px;">3. Cardiac Cath Lab Technician</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">காலம்: 1 ஆண்டு | தகுதி: +2 அறிவியல்</p>
+          <p style="font-size: 0.86rem; color: #334155;">இதய ஆஞ்சியோகிராம், ஸ்டென்ட் பொருத்துதல் மற்றும் பேஸ்மேக்கர் பொருத்தும் கேத் லேப் அறையில் நேரடி உதவி.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #d97706;">
+          <h4 style="font-size: 0.96rem; font-weight: 800; color: #b45309; margin-bottom: 6px;">4. Dialysis Technician Certificate</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">காலம்: 1 ஆண்டு | தகுதி: +2 அறிவியல்</p>
+          <p style="font-size: 0.86rem; color: #334155;">சிறுநீரக டயாலிசிஸ் இயந்திரங்களை இயக்குதல், திரவங்களை அமைத்தல் மற்றும் நோயாளிகளை டயாலிசிஸில் பராமரித்தல்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #e11d48;">
+          <h4 style="font-size: 0.96rem; font-weight: 800; color: #9f1239; margin-bottom: 6px;">5. Emergency Care / Trauma Care</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">காலம்: 1 ஆண்டு | தகுதி: +2 அறிவியல்</p>
+          <p style="font-size: 0.86rem; color: #334155;">விபத்து மற்றும் அவசர கால சிகிச்சைப் பிரிவு (Casualty), 108 அவசர கால ஆம்புலன்ஸ் சேவை மற்றும் முதலுதவிப் பணிகள்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #7c3aed;">
+          <h4 style="font-size: 0.96rem; font-weight: 800; color: #6d28d9; margin-bottom: 6px;">6. Blood Bank Technician Certificate</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">காலம்: 1 ஆண்டு | தகுதி: +2 அறிவியல்</p>
+          <p style="font-size: 0.86rem; color: #334155;">ரத்ததானம் பெறுதல், ரத்தக் கூறுகளை (Plasma, Platelets, RBC) பிரித்தல், சேமித்தல் மற்றும் ரத்தப் பொருத்தம் (Cross-matching).</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #0891b2;">
+          <h4 style="font-size: 0.96rem; font-weight: 800; color: #0e7490; margin-bottom: 6px;">7. Anaesthesia Technician Certificate</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">காலம்: 1 ஆண்டு | தகுதி: +2 அறிவியல்</p>
+          <p style="font-size: 0.86rem; color: #334155;">அறுவை அரங்கில் மயக்க மருந்து குழாய்கள், சிலிண்டர்கள், மானிட்டர்கள் பராமரிப்பு மற்றும் மருத்துவர் உதவி.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #475569;">
+          <h4 style="font-size: 0.96rem; font-weight: 800; color: #334155; margin-bottom: 6px;">8. Orthopaedic / Plaster Technician</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">காலம்: 1 ஆண்டு | தகுதி: +2 தேர்ச்சி</p>
+          <p style="font-size: 0.86rem; color: #334155;">எலும்பு முறிவு நோயாளிகளுக்கு மாவுக்கட்டு (POP), ஃபைபர் கட்டு போடுதல், இழுவை சிகிச்சை (Traction) அமைத்தல்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #ca8a04;">
+          <h4 style="font-size: 0.96rem; font-weight: 800; color: #854d0e; margin-bottom: 6px;">9. Dark Room Assistant (DRA)</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">காலம்: 1 ஆண்டு | தகுதி: 10-ஆம் வகுப்பு / +2</p>
+          <p style="font-size: 0.86rem; color: #334155;">ரேடியோலஜி எக்ஸ்-ரே ஃபிலிம் பிராசசிங், கெமிக்கல் பராமரிப்பு மற்றும் இருட்டறை நிர்வாகம் (10-ஆம் வகுப்பு முடித்தவர்களும் சேரலாம்!).</p>
+        </div>
+      </div>
+          <!-- Sub-section D: Step-by-Step Application Procedure for 1-Year Certificate & Diploma Courses -->
+      <div style="margin-top: 30px; background: #ffffff; border: 2px solid #ddd6fe; border-radius: var(--radius-md); padding: 22px 24px; box-shadow: var(--shadow-sm);">
+        <h3 style="font-size: 1.25rem; font-weight: 800; color: #5b21b6; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+          <span>📝</span> (D) அரசு மருத்துவக் கல்லூரி சான்றிதழ் படிப்புகளுக்கு விண்ணப்பிக்கும் முறை — முழுமையான வழிகாட்டி
+        </h3>
+        <p style="font-size: 0.92rem; color: #334155; margin-bottom: 16px; line-height: 1.65;">
+          தமிழ்நாடு அரசு மருத்துவக் கல்லூரிகளில் வழங்கப்படும் 1 ஆண்டு கால சிறப்பு மருத்துவச் சான்றிதழ் படிப்புகள் மற்றும் 2 ஆண்டு டிப்ளமோ படிப்புகளுக்கான சேர்க்கை <strong>தமிழ்நாடு மருத்துவக் கல்வி மற்றும் ஆராய்ச்சி இயக்ககத்தின் தேர்வுக் குழு (Selection Committee - DME)</strong> மூலம் ஒற்றைச் சாளர முறையில் நடத்தப்படுகிறது. மாணவர்கள் விண்ணப்பிக்கும் முழுமையான நடைமுறை:
+        </p>
+
+        <!-- 5 Steps Flow Grid -->
+        <div class="steps-container" style="margin-bottom: 20px;">
+          <div class="step-card" style="border-top-color: #7c3aed;">
+            <div class="step-number" style="background: #7c3aed;">1</div>
+            <div class="step-title">அதிகாரப்பூர்வ தளத்தில் பதிவு</div>
+            <div class="step-desc">
+              <strong>tnmedicalselection.net</strong> இணையதளத்தில் ஆண்டுதோறும் வெளியாகும் "Paramedical Diploma / Certificate Courses" அறிவிப்பைப் பார்த்து, புதிய பயனர் பதிவில் மாணவரின் பெயர், பிறந்த தேதி, மொபைல் எண் மற்றும் மின்னஞ்சல் கொண்டு பதிவு செய்தல்.
+            </div>
+          </div>
+
+          <div class="step-card" style="border-top-color: #7c3aed;">
+            <div class="step-number" style="background: #7c3aed;">2</div>
+            <div class="step-title">கல்வி & தனிநபர் விவரங்கள்</div>
+            <div class="step-desc">
+              10-ஆம் வகுப்பு மற்றும் +2 பொதுத்தேர்வு மதிப்பெண்கள், பயின்ற பள்ளிகள் விவரம், EMIS எண், நிரந்தர முகவரி மற்றும் வகுப்பு இடஒதுக்கீடு (Community) விவரங்களை பிழையின்றி உள்ளீடு செய்தல்.
+            </div>
+          </div>
+
+          <div class="step-card" style="border-top-color: #7c3aed;">
+            <div class="step-number" style="background: #7c3aed;">3</div>
+            <div class="step-title">சான்றிதழ்கள் பதிவேற்றம்</div>
+            <div class="step-desc">
+              10-ஆம் வகுப்பு மதிப்பெண் பட்டியல், +2 மதிப்பெண் பட்டியல், மாற்றுச் சான்றிதழ் (TC), சாதிச் சான்றிதழ், 7.5% அரசுப் பள்ளி போனஃபைட் சான்றிதழ், மாணவர் புகைப்படம் மற்றும் கையொப்பத்தை இணையத்தில் ஸ்கேன் செய்து பதிவேற்றுதல்.
+            </div>
+          </div>
+
+          <div class="step-card" style="border-top-color: #7c3aed;">
+            <div class="step-number" style="background: #7c3aed;">4</div>
+            <div class="step-title">விண்ணப்பக் கட்டணம் செலுத்துதல்</div>
+            <div class="step-desc">
+              இணையவழியில் (Net Banking / Debit Card / UPI) விண்ணப்பக் கட்டணம் ₹300/- செலுத்துதல். <strong style="color: #059669;">SC / SCA / ST பிரிவினருக்கு விண்ணப்பக் கட்டணம் முற்றிலும் விலக்கு (Free)</strong>.
+            </div>
+          </div>
+
+          <div class="step-card" style="border-top-color: #7c3aed;">
+            <div class="step-number" style="background: #7c3aed;">5</div>
+            <div class="step-title">அச்சுப் படிவம் & அனுப்பிவைத்தல்</div>
+            <div class="step-desc">
+              பூர்த்தி செய்யப்பட்ட விண்ணப்பத்தை பதிவிறக்கம் (Printout) செய்து, மாணவர் மற்றும் பெற்றோர் கையொப்பமிட்டு, தேவையான சான்றிதழ் நகல்களை (Attested Xerox Copies) இணைத்து கீழ்ப்பாக்கம் தேர்வுக் குழுவிற்கு அஞ்சல் வழி அனுப்புதல் அல்லது அரசு மருத்துவக் கல்லூரி மையங்களில் சமர்ப்பித்தல்.
+            </div>
+          </div>
+
+          <div class="step-card" style="border-top-color: #059669;">
+            <div class="step-number" style="background: #059669;">6</div>
+            <div class="step-title">தரவரிசை & கல்லூரித் தேர்வு</div>
+            <div class="step-desc">
+              வெளியிடப்படும் தரவரிசைப் பட்டியல் (Rank List) அடிப்படையில் ஆன்லைன் கலந்தாய்வில் கலந்துகொண்டு, சிவகங்கை அரசு மருத்துவக் கல்லூரி உட்பட தங்களுக்கு விருப்பமான அரசு கல்லூரியில் உள்ள சான்றிதழ் படிப்பைத் தேர்வு செய்து ஒதுக்கீட்டு ஆணை பெறுதல்.
+            </div>
+          </div>
+        </div>
+
+        <!-- Practical Guidance and Tips for Rural / Govt School Students -->
+        <div class="sub-grid" style="margin-top: 14px;">
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius-sm); padding: 14px 16px; border-left: 4px solid #7c3aed;">
+            <h4 style="font-size: 0.95rem; font-weight: 800; color: #5b21b6; margin-bottom: 6px;">📍 விண்ணப்பம் சமர்ப்பிக்க வேண்டிய முகவரி:</h4>
+            <p style="font-size: 0.86rem; color: #334155; line-height: 1.55;">
+              <strong>செயலாளர் (Secretary), தேர்வுக் குழு (Selection Committee),</strong><br>
+              மருத்துவக் கல்வி மற்றும் ஆராய்ச்சி இயக்ககம் (Directorate of Medical Education & Research),<br>
+              எண் 162, பெரியார் ஈ.வெ.ரா நெடுஞ்சாலை, கீழ்ப்பாக்கம், சென்னை – 600 010.<br>
+              <span style="color: #64748b; font-size: 0.82rem;">(அல்லது அறிவிப்பில் குறிப்பிடப்படும் மாவட்ட அரசு மருத்துவக் கல்லூரி உதவி மையங்கள்).</span>
+            </p>
+          </div>
+
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--radius-sm); padding: 14px 16px; border-left: 4px solid #059669;">
+            <h4 style="font-size: 0.95rem; font-weight: 800; color: #065f46; margin-bottom: 6px;">💡 அரசுப் பள்ளி மாணவர்களுக்கான முக்கிய சலுகைகள்:</h4>
+            <ul style="list-style: none; padding: 0; font-size: 0.86rem; color: #334155; line-height: 1.55;">
+              <li>✓ <strong>7.5% முன்னுரிமை ஒதுக்கீடு:</strong> அரசுப் பள்ளி மாணவர்களுக்குத் தனித் தரவரிசைப் பட்டியல் மூலம் எளிதில் அரசு சேர்க்கை.</li>
+              <li>✓ <strong>100% இலவசக் கல்வி:</strong> அரசு மருத்துவக் கல்லூரிகளில் கல்விக் கட்டணம், தேர்வுக் கட்டணம் முற்றிலும் இலவசம்.</li>
+              <li>✓ <strong>குறைந்தபட்ச செலவு:</strong> இதர மாணவர்களுக்கும் ஆண்டு கட்டணம் சுமார் ₹1,500 - ₹2,000 மட்டுமே!</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-section E: Comprehensive VHN, SHN & ANM / MPHW(F) Guide -->
+      <div id="vhn-shn" style="margin-top: 30px; background: linear-gradient(135deg, #fdf2f8 0%, #fff1f2 50%, #faf5ff 100%); border: 2px solid #f472b6; border-radius: var(--radius-md); padding: 24px 26px; box-shadow: var(--shadow-md);">
+        
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; border-bottom: 2px solid #ec4899; padding-bottom: 12px;">
+          <div>
+            <h3 style="font-size: 1.32rem; font-weight: 900; color: #9d174d; margin: 0 0 4px 0; display: flex; align-items: center; gap: 8px;">
+              <span>👩‍⚕️</span> (E) கிராம சுகாதார செவிலியர் (VHN) & பகுதி சுகாதார செவிலியர் (SHN) ஆவதற்கான ANM / MPHW(F) பட்டயப் படிப்பு வழிகாட்டி
+            </h3>
+            <p style="margin: 0; font-size: 0.90rem; color: #831843; font-weight: 600;">
+              தமிழ்நாடு அரசு பொது சுகாதாரம் & நோய் தடுப்பு மருந்து இயக்ககத்தின் (DPH&PM) கீழான முதன்மை ஊரகச் சுகாதாரப் பணி வாய்ப்புகள்
+            </p>
+          </div>
+          <span class="badge" style="background: #db2777; color: #ffffff; padding: 6px 16px; border-radius: 999px; font-weight: 800; font-size: 0.84rem;">
+            100% இலவசக் கல்வி + மாத உதவித்தொகை!
+          </span>
+        </div>
+
+        <p style="font-size: 0.95rem; color: #334155; line-height: 1.75; margin-bottom: 18px;">
+          தமிழ்நாட்டின் ஊரகப் பகுதிகளில் தாய்-சேய் நலம் பேணவும், பச்சிளம் குழந்தைகளுக்கு 100% தடுப்பூசி திட்டங்களைச் செயல்படுத்தவும், பொது சுகாதாரத் திட்டங்களை முன்னெடுக்கவும் மிக முக்கியத் தூண்களாகத் திகழ்பவர்கள் <strong>கிராம சுகாதார செவிலியர் (Village Health Nurse - VHN)</strong> மற்றும் <strong>பகுதி சுகாதார செவிலியர் (Sector Health Nurse - SHN)</strong> ஆவர். இப்பணிகளுக்குத் தேவையான <strong>ANM (Auxiliary Nurse Midwife) / பலநோக்கு சுகாதாரப் பணியாளர் (பெண்கள்) 2 ஆண்டு பட்டயப் படிப்பு</strong> பற்றிய முழுமையான விபரங்கள்:
+        </p>
+
+        <!-- 2 Highlight Cards: VHN vs SHN Role -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin-bottom: 22px;">
+          
+          <!-- VHN Card -->
+          <div style="background: #ffffff; border: 1.5px solid #fbcfe8; border-top: 5px solid #db2777; border-radius: var(--radius-sm); padding: 18px; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+              <h4 style="margin: 0; color: #9d174d; font-size: 1.1rem; font-weight: 800;">1. கிராம சுகாதார செவிலியர் (VHN)</h4>
+              <span style="background: #fce7f3; color: #be185d; padding: 3px 10px; border-radius: 999px; font-size: 0.78rem; font-weight: 800;">ஆரம்ப நிலை அரசுப் பணி</span>
+            </div>
+            <ul style="font-size: 0.88rem; color: #334155; line-height: 1.7; margin: 0; padding-left: 18px;">
+              <li><strong>பணித்தளம்:</strong> கிராம சுகாதார துணை நிலையம் (Health Sub-Centre - HSC / நலவாழ்வு மையம்). சுமார் 3,000 முதல் 5,000 ஊரக மக்களுக்கு மருத்துவ முதலுதவி மற்றும் தாய்-சேய் நல சேவை.</li>
+              <li><strong>முக்கியப் பொறுப்புகள்:</strong>
+                <ul style="padding-left: 16px; margin-top: 4px;">
+                  <li>கர்ப்பிணித் தாய்மார்களைக் கண்டறிந்து <strong>PICME (RCH ID)</strong> பதிவு செய்து தாய்-சேய் நலக் கண்காணிப்பு அட்டை வழங்குதல்.</li>
+                  <li>தமிழக அரசின் <strong>டாக்டர் முத்துலட்சுமி ரெட்டி மகப்பேறு நிதி உதவித் திட்டத்தின் (₹18,000 + ஊட்டச்சத்து பெட்டகம்)</strong> சலுகைகளைப் பெற்றுத் தருதல்.</li>
+                  <li>பச்சிளம் குழந்தைகள் முதல் 5 வயது வரை உள்ள குழந்தைகளுக்கு <strong>100% தடுப்பூசிகள் (UIP)</strong> செலுத்துதல்.</li>
+                  <li>பிறப்பு மற்றும் இறப்பு பதிவேடுகள் பராமரித்தல், குடும்பக் கட்டுப்பாடு & ஊட்டச்சத்து ஆலோசனைகள்.</li>
+                </ul>
+              </li>
+              <li><strong>ஊதிய விகிதம்:</strong> தமிழ்நாடு அரசு ஊதியக் குழு நிலை 8 (Level 8: ₹19,500 - ₹62,000 + அகவிலைப்படி, வீட்டு வாடகைப்படி).</li>
+            </ul>
+          </div>
+
+          <!-- SHN Card -->
+          <div style="background: #ffffff; border: 1.5px solid #c4b5fd; border-top: 5px solid #7c3aed; border-radius: var(--radius-sm); padding: 18px; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+              <h4 style="margin: 0; color: #5b21b6; font-size: 1.1rem; font-weight: 800;">2. பகுதி சுகாதார செவிலியர் (SHN)</h4>
+              <span style="background: #ede9fe; color: #6d28d9; padding: 3px 10px; border-radius: 999px; font-size: 0.78rem; font-weight: 800;">VHN நேரடிப் பதவி உயர்வு</span>
+            </div>
+            <ul style="font-size: 0.88rem; color: #334155; line-height: 1.7; margin: 0; padding-left: 18px;">
+              <li><strong>பணித்தளம் & தன்மை:</strong> வட்டார ஆரம்ப சுகாதார நிலையத்தின் (Block PHC) கீழ் உள்ள ஒரு பகுதி (Sector).</li>
+              <li><strong>மேற்பார்வைப் பணி:</strong> ஒரு பகுதிக்குட்பட்ட <strong>4 முதல் 6 கிராம சுகாதார துணை நிலையங்களையும் (HSCs)</strong>, அங்குள்ள கிராம சுகாதார செவிலியர்களின் (VHNs) பணிகளையும் மேற்பார்வையிடுதல்.</li>
+              <li><strong>முக்கியப் பொறுப்புகள்:</strong>
+                <ul style="padding-left: 16px; margin-top: 4px;">
+                  <li>சிக்கலான கர்ப்பிணிப் பெண்களை (High-Risk Pregnancies) ஆரம்ப நிலையிலேயே கண்டறிந்து PHC / அரசு தலைமை மருத்துவமனைக்கு பரிந்துரைத்தல்.</li>
+                  <li>வட்டார அளவில் போலியோ முகாம்கள், தேசிய குடற்புழு நீக்க நாள், பள்ளிச் சுகாதாரப் பரிசோதனை முகாம்களை ஒருங்கிணைத்தல்.</li>
+                  <li>VHN செவிலியர்களின் பதிவேடுகளை தணிக்கை செய்து ஆரம்ப சுகாதார நிலைய மருத்துவ அலுவலருக்கு (MO) அறிக்கை சமர்ப்பித்தல்.</li>
+                </ul>
+              </li>
+              <li><strong>ஊதிய விகிதம்:</strong> தமிழ்நாடு அரசு ஊதியக் குழு நிலை 11 (Level 11: ₹35,400 - ₹1,12,400 + படிகள்).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Career Ladder Box -->
+        <div style="background: #ffffff; border: 1px solid #fbcfe8; border-radius: var(--radius-sm); padding: 16px 20px; margin-bottom: 22px;">
+          <h4 style="margin: 0 0 10px 0; color: #be185d; font-size: 1.02rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+            <span>🚀</span> பொது சுகாதார செவிலியர் பணி உயர்வுப் படிநிலைகள் (Career Growth Ladder):
+          </h4>
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 0.88rem; text-align: center;">
+            <div style="flex: 1; min-width: 140px; background: #fff1f2; border: 1.5px solid #fecdd3; border-radius: 8px; padding: 10px 8px;">
+              <div style="font-weight: 900; color: #e11d48; font-size: 0.95rem;">நிலை 1: VHN</div>
+              <div style="font-size: 0.78rem; color: #475569;">கிராம சுகாதார செவிலியர்<br>(துணை நிலையம் / HSC)</div>
+            </div>
+            <div style="font-weight: 900; color: #db2777; font-size: 1.2rem;">➔</div>
+            <div style="flex: 1; min-width: 140px; background: #fdf2f8; border: 1.5px solid #fbcfe8; border-radius: 8px; padding: 10px 8px;">
+              <div style="font-weight: 900; color: #db2777; font-size: 0.95rem;">நிலை 2: SHN</div>
+              <div style="font-size: 0.78rem; color: #475569;">பகுதி சுகாதார செவிலியர்<br>(Sector Supervisor)</div>
+            </div>
+            <div style="font-weight: 900; color: #7c3aed; font-size: 1.2rem;">➔</div>
+            <div style="flex: 1; min-width: 140px; background: #f5f3ff; border: 1.5px solid #ddd6fe; border-radius: 8px; padding: 10px 8px;">
+              <div style="font-weight: 900; color: #7c3aed; font-size: 0.95rem;">நிலை 3: CHN</div>
+              <div style="font-size: 0.78rem; color: #475569;">சமூக நல செவிலியர்<br>(Block Community Health)</div>
+            </div>
+            <div style="font-weight: 900; color: #0284c7; font-size: 1.2rem;">➔</div>
+            <div style="flex: 1; min-width: 140px; background: #f0f9ff; border: 1.5px solid #bae6fd; border-radius: 8px; padding: 10px 8px;">
+              <div style="font-weight: 900; color: #0284c7; font-size: 0.95rem;">நிலை 4: DCHN</div>
+              <div style="font-size: 0.78rem; color: #475569;">மாவட்ட சமூக நல செவிலியர்<br>(DDHS Office தலைமைப் பதவி)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course Structure, Eligibility & Admission Info Table -->
+        <div style="background: #ffffff; border: 1.5px solid #fbcfe8; border-radius: var(--radius-sm); padding: 20px; margin-bottom: 20px;">
+          <h4 style="margin: 0 0 14px 0; color: #9d174d; font-size: 1.05rem; font-weight: 800; border-bottom: 1.5px solid #fce7f3; padding-bottom: 8px;">
+            📋 ANM / பலநோக்கு சுகாதாரப் பணியாளர் (பெண்கள்) படிப்பு — முழு விவர அட்டவணை:
+          </h4>
+          <div class="table-container" style="margin: 0;">
+            <table class="styled-table" style="font-size: 0.88rem;">
+              <tbody>
+                <tr>
+                  <td style="width: 25%; font-weight: 800; background: #fff1f2; color: #9f1239;">படிப்பின் பெயர்</td>
+                  <td style="width: 75%;"><strong>Auxiliary Nurse Midwife (ANM) / Diploma in Multipurpose Health Worker (Female) - MPHW(F)</strong></td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 800; background: #fff1f2; color: #9f1239;">கால அளவு (Duration)</td>
+                  <td><strong>2 ஆண்டுகள்</strong> (18 மாதங்கள் வகுப்பறை & ஆய்வகக் கல்வி + 6 மாதங்கள் அரசு ஆரம்ப சுகாதார நிலையங்கள் & மருத்துவமனைகளில் நேரடி களப்பயிற்சி / Internship).</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 800; background: #fff1f2; color: #9f1239;">கல்வித் தகுதி (Eligibility)</td>
+                  <td><strong>12-ஆம் வகுப்பு (+2) பொதுத்தேர்வில் தேர்ச்சி.</strong> அறிவியல், கணித அறிவியல், கலை, வணிகவியல் அல்லது தொழிற்கல்வி என எந்தப் பாடப்பிரிவு பயின்ற மாணவிகளும் விண்ணப்பிக்கலாம் (அறிவியல் பிரிவு மாணவிகளுக்கு முன்னுரிமை உண்டு).</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 800; background: #fff1f2; color: #9f1239;">பாலினம் (Gender)</td>
+                  <td><span style="color: #be185d; font-weight: 900; background: #fce7f3; padding: 2px 10px; border-radius: 4px;">பெண்கள் மட்டுமே (Female Candidates Only)</span> — அரசு துணை செவிலியர் பயிற்சிப் பள்ளிகள் மாணவிகளுக்கு மட்டுமேயானது.</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 800; background: #fff1f2; color: #9f1239;">வயது வரம்பு (Age Limit)</td>
+                  <td>சேர்க்கை ஆண்டின் டிசம்பர் 31 அன்று குறைந்தபட்சம் <strong>17 வயது</strong> பூர்த்தியாகியிருக்க வேண்டும். அதிகபட்ச வயது 30 முதல் 35 ஆண்டுகள் வரை (அரசு இடஒதுக்கீட்டுப் பிரிவினருக்கு உரிய தளர்வு உண்டு).</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 800; background: #fff1f2; color: #9f1239;">சேர்க்கை முறை (Admission Mode)</td>
+                  <td><strong>100% நேரடிச் சேர்க்கை (Direct Merit Admission - No Entrance Exam):</strong> நீட் தேர்வோ அல்லது வேறு எந்த நுழைவுத் தேர்வோ கிடையாது! 12-ஆம் வகுப்பு பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் தயார் செய்யப்படும் தரவரிசைப் பட்டியல் (Rank List) மூலமே ஒற்றைச் சாளர முறையில் சேர்க்கை நடைபெறுகிறது.</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 800; background: #fff1f2; color: #9f1239;">சேர்க்கை நடத்தும் முகமை</td>
+                  <td><strong>தேர்வுக் குழு, பொது சுகாதாரம் மற்றும் நோய் தடுப்பு மருந்து இயக்ககம் (DPH&PM), சென்னை.</strong> அதிகாரப்பூர்வ இணையதளம்: <a href="https://tnhealth.tn.gov.in" target="_blank" style="color: #db2777; font-weight: 800;">tnhealth.tn.gov.in</a> / <a href="https://dphpm.tn.gov.in" target="_blank" style="color: #db2777; font-weight: 800;">dphpm.tn.gov.in</a>.</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 800; background: #fff1f2; color: #9f1239;">கல்விக் கட்டணம் & உதவித்தொகை</td>
+                  <td><strong>முற்றிலும் இலவசம் (100% Free):</strong> அரசுப் பயிற்சிப் பள்ளிகளில் கல்விக் கட்டணம் எதுவும் கிடையாது! பயிற்சி பெறும் மாணவிகளுக்கு அரசு மாதந்தோறும் <strong>உதவித்தொகை (Monthly Stipend)</strong> மற்றும் இலவச தங்குமிட வசதி வழங்குகிறது.</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 800; background: #fff1f2; color: #9f1239;">அரசுப் பணி நியமனம் (Recruitment)</td>
+                  <td>படிப்பு முடித்ததும் <strong>தமிழ்நாடு செவிலியர் கவுன்சிலில் (Tamil Nadu Nurses & Midwives Council - TNC)</strong> பதிவு செய்தல் வேண்டும். பின்னர், <strong>தமிழ்நாடு மருத்துவப் பணியாளர் தேர்வு வாரியம் (MRB)</strong> மூலம் நேரடியாக <strong>VHN (கிராம சுகாதார செவிலியர்)</strong> அரசுப் பணியில் நிரந்தரமாக நியமிக்கப்படுகிறார்கள்.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Training Centers in Tamil Nadu Grid -->
+        <div style="background: #ffffff; border: 1px solid #fbcfe8; border-radius: var(--radius-sm); padding: 18px 20px;">
+          <h4 style="margin: 0 0 10px 0; color: #9d174d; font-size: 1.02rem; font-weight: 800;">
+            🏛️ தமிழ்நாட்டில் ANM / பலநோக்கு சுகாதாரப் பணியாளர் பயிற்சி வழங்கும் அரசு நிலையங்கள்:
+          </h4>
+          <p style="font-size: 0.88rem; color: #475569; margin-bottom: 12px;">
+            தமிழகத்தின் அனைத்து மண்டலங்களிலும் பொது சுகாதார இயக்ககத்தின் (DPH&PM) கீழ் இயங்கும் அரசு பயிற்சி நிலையங்கள் மற்றும் மாவட்ட தலைமை மருத்துவமனைகளுடன் இணைந்த அரசு துணை செவிலியர் பயிற்சிப் பள்ளிகளில் இப்பயிற்சி வழங்கப்படுகிறது:
+          </p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; font-size: 0.86rem; color: #334155;">
+            <div style="background: #fdf2f8; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #db2777;">
+              <strong>சென்னை பூந்தமல்லி:</strong> பொது சுகாதார நிறுவனம் (Institute of Public Health - IPH)
+            </div>
+            <div style="background: #fdf2f8; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #db2777;">
+              <strong>மதுரை மண்டலம்:</strong> அரசு துணை செவிலியர் பயிற்சிப் பள்ளி, மதுரை
+            </div>
+            <div style="background: #fdf2f8; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #db2777;">
+              <strong>சேலம் மண்டலம்:</strong> மண்டல பொது சுகாதார பயிற்சி நிலையம், சேலம்
+            </div>
+            <div style="background: #fdf2f8; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #db2777;">
+              <strong>திருச்சிராப்பள்ளி:</strong> அரசு துணை செவிலியர் பயிற்சி மையம், திருச்சி
+            </div>
+            <div style="background: #fdf2f8; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #db2777;">
+              <strong>கடலூர் மண்டலம்:</strong> அரசு துணை செவிலியர் பயிற்சிப் பள்ளி, கடலூர்
+            </div>
+            <div style="background: #fdf2f8; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #db2777;">
+              <strong>தஞ்சாவூர் / திருவாரூர்:</strong> அரசு செவிலியர் பயிற்சி மையங்கள்
+            </div>
+            <div style="background: #fdf2f8; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #db2777;">
+              <strong>திண்டுக்கல் & இராமநாதபுரம்:</strong> மாவட்ட அரசு தலைமை மருத்துவமனை பயிற்சி மையங்கள்
+            </div>
+            <div style="background: #fdf2f8; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #db2777;">
+              <strong>திருநெல்வேலி:</strong> தென் மண்டல அரசு துணை செவிலியர் பயிற்சிப் பள்ளி
+            </div>
+          </div>
+          <div style="margin-top: 14px; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 6px; padding: 10px 14px; font-size: 0.86rem; color: #065f46;">
+            💡 <strong>சிவகங்கை மாவட்ட மாணவிகளுக்கு நல்வாய்ப்பு:</strong> 12-ஆம் வகுப்பில் கலை, அறிவியல், வணிகவியல் பயின்ற அரசுப் பள்ளி மாணவிகள் +2 மதிப்பெண் அடிப்படையில் மிக எளிதாக இப்பயிற்சியில் சேர்ந்து, ஊரக ஆரம்ப சுகாதார நிலையங்களில் நிரந்தர அரசு செவிலியர் பணியை (VHN) அடைவதற்கு இது ஒரு பொன்னான நேரடி வாய்ப்பாகும்!
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Section 7: Counselling Process 6 Steps -->
+    <section class="content-card" id="counselling">
+      <h2 class="section-title">
+        <span class="icon">🔄</span> 7. ஒற்றைச் சாளரக் கலந்தாய்வு நடைமுறைகள் & 6 முக்கிய நிலைகள்
+      </h2>
+      <p style="margin-bottom: 14px; font-size: 0.98rem; color: #334155;">
+        கால்நடை மருத்துவம் மற்றும் துணை மருத்துவப் படிப்புகளுக்கான சேர்க்கை முழுமையாக கணினி வழியில் வெளிப்படையாக நடைபெறுகிறது. மாணவர்கள் பின்வரும் 6 நிலைகளைக் கவனமாகப் பின்பற்ற வேண்டும்:
+      </p>
+
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-title">இணையவழி விண்ணப்பம்</div>
+          <div class="step-desc">TANUVAS அல்லது TN Health தளத்தில் மாணவரின் தொடர்பு விவரங்கள், பள்ளி விவரங்கள் மற்றும் +2 மதிப்பெண்களைப் பதிவு செய்து விண்ணப்பக் கட்டணம் செலுத்துதல்.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-title">சான்றிதழ் பதிவேற்றம்</div>
+          <div class="step-desc">10, 11, +2 மதிப்பெண் சான்றிதழ்கள், சாதிச் சான்றிதழ் மற்றும் 7.5% அரசுப் பள்ளி போனஃபைட் சான்றிதழ்களை ஸ்கேன் செய்து பதிவேற்றம் செய்தல்.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-title">தரவரிசைப் பட்டியல் வெளியீடு</div>
+          <div class="step-desc">சரிபார்ப்பிற்குப் பின் பொதுத் தரவரிசைப் பட்டியல் (General Rank) மற்றும் அரசுப் பள்ளி மாணவர்களுக்கான 7.5% சிறப்புத் தரவரிசைப் பட்டியல் இணையத்தில் வெளியிடுதல்.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-title">கல்லூரி மற்றும் பாடப்பிரிவு தேர்வு</div>
+          <div class="step-desc">தரவரிசை அடிப்படையில் அழைக்கப்படும் சுற்றில் கலந்துகொண்டு, விருப்பமான அரசு கல்லூரிகள் மற்றும் படிப்புகளை முன்னுரிமை வரிசையில் பதிவு செய்து Lock செய்தல்.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <div class="step-title">தற்காலிக இட ஒதுக்கீடு ஆணை</div>
+          <div class="step-desc">மாணவரின் கட்-ஆஃப் மதிப்பெண், வகுப்பு இடஒதுக்கீடு மற்றும் முன்னுரிமை அடிப்படையில் தற்காலிக இட ஒதுக்கீடு ஆணை (Tentative Allotment Order) வெளியிடப்படும்.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">6</div>
+          <div class="step-title">கல்லூரியில் இணைதல்</div>
+          <div class="step-desc">ஒதுக்கீட்டு ஆணையைப் பதிவிறக்கம் செய்து, குறிப்பிட்ட காலக்கெடுவுக்குள் ஒதுக்கப்பட்ட கல்லூரிக்கு நேரில் சென்று அசல் சான்றிதழ்களைச் சமர்ப்பித்து சேர்க்கையை உறுதி செய்தல்.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Required Documents Checklist -->
+    <section class="content-card" id="documents">
+      <h2 class="section-title">
+        <span class="icon">📑</span> 8. தேவையான ஆவணங்கள் & சரிபார்ப்புப் பட்டியல் (Checklist)
+      </h2>
+      <p style="margin-bottom: 14px; font-size: 0.98rem; color: #334155;">
+        கலந்தாய்வு விண்ணப்பத்தின் போதும், கல்லூரியில் சேரும்போதும் அசல் மற்றும் நகல்களாக சமர்ப்பிக்க வேண்டிய அத்தியாவசிய ஆவணங்கள்:
+      </p>
+
+      <div class="sub-grid">
+        <div class="sub-card">
+          <h3 class="sub-card-title">அனைத்து மாணவர்களுக்கும் பொதுவான சான்றிதழ்கள்</h3>
+          <ul class="styled-list">
+            <li>10-ஆம் வகுப்பு மதிப்பெண் சான்றிதழ் (SSLC Mark Sheet - பிறந்த தேதி சான்றாக)</li>
+            <li>11-ஆம் வகுப்பு மதிப்பெண் சான்றிதழ் (+1 Mark Sheet)</li>
+            <li>12-ஆம் வகுப்பு தற்காலிக / அசல் மதிப்பெண் சான்றிதழ் (+2 Mark Sheet)</li>
+            <li>பள்ளி மாற்றுச் சான்றிதழ் (Transfer Certificate - TC)</li>
+            <li>நிரந்தர சாதிச் சான்றிதழ் (Community Certificate with QR Code)</li>
+            <li>இருப்பிடச் சான்றிதழ் (Nativity Certificate - தமிழ்நாட்டிற்கு வெளியே பயின்றவர்களுக்கு)</li>
+            <li>மாணவர் மற்றும் பெற்றோர் ஆதார் அட்டை (Aadhaar Card)</li>
+            <li>பாஸ்போர்ட் அளவு புகைப்படங்கள் (சமீபத்தில் எடுக்கப்பட்ட வண்ணப் படங்கள்)</li>
+          </ul>
+        </div>
+
+        <div class="sub-card">
+          <h3 class="sub-card-title">சிறப்புச் சலுகை & முன்னுரிமை பெறுபவர்களுக்கு</h3>
+          <ul class="styled-list bullet-star">
+            <li><strong>7.5% அரசுப் பள்ளி இடஒதுக்கீடு:</strong> 6 முதல் 12-ஆம் வகுப்பு வரை அரசுப் பள்ளியில் படித்ததற்கான தலைமை ஆசிரியர் (HM) மற்றும் BEO/DEO/CEO சான்றொப்பமிட்ட போனஃபைட் சான்றிதழ்.</li>
+            <li><strong>முதல் பட்டதாரி சலுகை (FG Scheme):</strong> குடும்பத்தில் முதல் பட்டதாரி என்பதற்கான வட்டாட்சியர் (Tahsildar) வழங்கிய இ-சேவை சான்றிதழ் மற்றும் கூட்டு உறுதிமொழிப் படிவம்.</li>
+            <li><strong>வருமானச் சான்றிதழ் (Income Certificate):</strong> போஸ்ட்-மெட்ரிக் கல்வி உதவித்தொகை பெறும் SC/SCA/ST மற்றும் மதம் மாறிய கிறித்துவ ஆதிதிராவிடர் மாணவர்கள்.</li>
+            <li><strong>சிறப்புப் பிரிவு ஒதுக்கீடு:</strong> மாற்றுத்திறனாளிகள் (Eminent PwD), முன்னாள் படைவீரர் வாரிசுகள் (Ex-Servicemen) மற்றும் விளையாட்டு வீரர்கள் (Sports Quota) உரிய அதிகாரபூர்வ சான்றிதழ்கள்.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 9: Choice Filling Guidelines & Strategies -->
+    <section class="content-card" id="choice-filling" style="border-top: 5px solid #d97706;">
+      <h2 class="section-title" style="color: #b45309;">
+        <span class="icon">💡</span> 9. சாய்ஸ் ஃபில்லிங் வழிகாட்டி & வெற்றிக்கான முக்கிய உத்திகள் (Choice Filling Strategies)
+      </h2>
+      <p style="margin-bottom: 14px; font-size: 0.98rem; color: #334155;">
+        கலந்தாய்வில் அதிக மதிப்பெண் பெற்றிருந்தாலும், சாய்ஸ் ஃபில்லிங் (Choice Filling) செய்வதில் ஏற்படும் தவறுகளால் பல மாணவர்கள் தங்களுக்குக் கிடைக்க வேண்டிய சிறந்த அரசு இடங்களை இழக்க நேரிடுகிறது. எனவே பின்வரும் வழிகாட்டுதல்களை மிகக் கவனமாகப் பின்பற்றுங்கள்:
+      </p>
+
+      <div class="sub-grid">
+        <div class="sub-card">
+          <h3 class="sub-card-title">🐾 TANUVAS கால்நடை சேர்க்கை உத்திகள்</h3>
+          <ul class="styled-list">
+            <li><strong>B.V.Sc & A.H. விருப்ப வரிசை:</strong> உங்கள் இருப்பிடத்திற்கு அருகிலுள்ள அல்லது விருப்பமான வளாகத்தை (சென்னை, நாமக்கல், திருநெல்வேலி, ஒரத்தநாடு, சேலம், தேனி, உடுமலைப்பேட்டை) முதல் விருப்பமாகத் தேர்ந்தெடுத்து, அடுத்தடுத்து மற்ற அனைத்து வளாகங்களையும் வரிசையாகச் சேர்க்கவும்.</li>
+            <li><strong>அனைத்து வளாகங்களையும் தேர்வு செய்க:</strong> ஏதேனும் ஒரு கல்லூரியை மட்டும் தேர்வு செய்யாமல், 7 அரசு கால்நடை கல்லூரிகளையும் முன்னுரிமை வரிசையில் தவறாமல் Lock செய்யுங்கள்.</li>
+            <li><strong>B.Tech படிப்புகள்:</strong> உணவு மற்றும் பால்வளத் தொழில்நுட்பம் (Food / Dairy Tech) மற்றும் கோழிப்பண்ணை மேலாண்மையில் (Poultry Tech) ஆர்வமுள்ள மாணவர்கள் B.Tech படிப்புகளையும் உங்கள் விருப்பப் பட்டியலில் இணைக்கலாம்.</li>
+          </ul>
+        </div>
+
+        <div class="sub-card">
+          <h3 class="sub-card-title">🩺 துணை மருத்துவம் (Paramedical) சாய்ஸ் உத்திகள்</h3>
+          <ul class="styled-list">
+            <li><strong>அதிகபட்ச விருப்பங்களைச் சேர்க்கவும் (Add Maximum Choices):</strong> சாய்ஸ் ஃபில்லிங்கில் நீங்கள் எத்தனை கல்லூரிகள் மற்றும் பாடப்பிரிவுகளை வேண்டுமானாலும் தேர்வு செய்யலாம். குறைந்தது 30 முதல் 50 விருப்பங்களையாவது முன்னுரிமைப்படுத்துங்கள்.</li>
+            <li><strong>அரசு மருத்துவக் கல்லூரிகளுக்கு முதலிடம்:</strong> உங்கள் மாவட்டத்திலுள்ள சிவகங்கை அரசு மருத்துவக் கல்லூரி, மதுரை, MMC, ஸ்டான்லி போன்ற முன்னணி அரசு மருத்துவக் கல்லூரிகளுக்கு முதலிடம் அளியுங்கள்.</li>
+            <li><strong>7.5% அரசுப் பள்ளி மாணவர்கள் கவனத்திற்கு:</strong> அரசு மருத்துவக் கல்லூரிகள் மட்டுமின்றி, சுயநிதி தனியார் கல்லூரிகளில் உள்ள அரசு ஒதுக்கீட்டு இடங்களையும் (Govt Quota in Private Colleges) தயங்காமல் தேர்வு செய்யுங்கள்; ஏனெனில் கல்விக் கட்டணம், விடுதிக் கட்டணத்தை அரசே செலுத்துகிறது!</li>
+            <li><strong>சுற்று-2 (Round 2) காத்திருக்காமல் உறுதிப்படுத்துங்கள்:</strong> முதல் சுற்றில் அரசு கல்லூரி இடம் ஒதுக்கப்பட்டால் உடனடியாக 'Accept & Join' கொடுத்து கல்லூரியில் சேர்ந்துவிடுவது பாதுகாப்பானது.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 10: Colleges Table with Search & Filter -->
+    <section class="content-card" id="colleges" style="border-top: 5px solid #059669;">
+      <h2 class="section-title" style="color: #065f46;">
+        <span class="icon">🏆</span> 10. தமிழ்நாடு அரசு கல்லூரிகள், டிப்ளமோ & பயிற்சி மையங்கள் பட்டியல்
+      </h2>
+      <p style="margin-bottom: 16px; font-size: 0.98rem; color: #334155;">
+        தமிழ்நாட்டில் செயல்பட்டு வரும் 7 அரசு கால்நடை மருத்துவக் கல்லூரிகள், 36 அரசு மருத்துவக் கல்லூரிகளில் உள்ள துணை மருத்துவப் பிரிவுகள் மற்றும் BNYS அரசு கல்லூரிகளின் முழுமையான விபரங்கள் கீழே தரப்பட்டுள்ளன. கல்லூரி பெயர் அல்லது மாவட்டம் வாரியாக எளிதாகத் தேடலாம்.
+      </p>
+
+      <!-- Search & Filter Controls -->
+      <div class="college-search-box">
+        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        <input type="text" id="collegeSearchInput" class="college-search-input" placeholder="கல்லூரி பெயர், மாவட்டம் (எ.கா: சிவகங்கை, மதுரை, சென்னை, நாமக்கல்) அல்லது படிப்பு வாரியாகத் தேடவும்...">
+      </div>
+
+      <div class="college-pills">
+        <button class="college-pill active" data-type="all">அனைத்துக் கல்லூரிகள் (All)</button>
+        <button class="college-pill" data-type="tanuvas">🐾 TANUVAS கால்நடை கல்லூரிகள்</button>
+        <button class="college-pill" data-type="govt">🏛️ அரசு மருத்துவக் கல்லூரிகள் (DME)</button>
+        <button class="college-pill" data-type="diploma">📜 டிப்ளமோ & சான்றிதழ் மையங்கள்</button>
+        <button class="college-pill" data-type="anm-vhn">👩‍⚕️ அரசு ANM / VHN செவிலியர் பயிற்சிப் பள்ளிகள்</button>
+        <button class="college-pill" data-type="bnys">🌿 இயற்கை மருத்துவம் (BNYS)</button>
+        <button class="college-pill" data-type="btech">🥛 TANUVAS B.Tech வளாகங்கள்</button>
+      </div>
+
+      <!-- Colleges Table -->
+      <div class="table-container">
+        <table class="styled-table" id="collegesTable">
+          <thead>
+            <tr>
+              <th style="width: 6%;">வ.எண்</th>
+              <th style="width: 32%;">கல்லூரியின் பெயர் & வகை</th>
+              <th style="width: 18%;">மாவட்டம் / அமைவிடம்</th>
+              <th style="width: 30%;">வழங்கப்படும் முக்கியப் படிப்புகள்</th>
+              <th style="width: 14%;">அதிகாரப்பூர்வ தளம்</th>
+            </tr>
+          </thead>
+          <tbody>
+                        <!-- Diploma Center 1: Sivagangai Govt Medical College Nursing & Diploma Wing -->
+            <tr data-type="diploma" class="highlight-row">
+              <td><span class="code-badge">DIP-SVG</span></td>
+              <td>
+                <strong>சிவகங்கை அரசு செவிலியர் & துணை மருத்துவப் பள்ளி</strong><br>
+                <small style="color: #64748b;">School of Nursing & Paramedical Diploma, Govt. Sivagangai Medical College</small><br>
+                <span class="type-badge" style="background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe;">அரசு டிப்ளமோ மையம்</span>
+                <span class="type-badge" style="background: #fef3c7; color: #b45309; border: 1px solid #fde68a;">நமது மாவட்டம்</span>
+              </td>
+              <td><strong>சிவகங்கை (Sivagangai)</strong></td>
+              <td>
+                <strong>GNM நர்சிங் டிப்ளமோ (3 ஆண்டுகள்)</strong><br>
+                <strong>DMLT (ஆய்வகம் - 2 ஆண்டுகள்)</strong><br>
+                ECG / TMT, எக்ஸ்ரே DRA, Emergency Care சான்றிதழ் படிப்புகள்
+              </td>
+              <td>
+                <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="link-btn">விவரம் காண்க ↗</a>
+              </td>
+            </tr>
+
+            <!-- Diploma Center 2: TANUVAS VLDA Orathanadu -->
+            <tr data-type="diploma">
+              <td><span class="code-badge">TAN-DIP-01</span></td>
+              <td>
+                <strong>TANUVAS கால்நடை பராமரிப்பு உதவியாளர் பயிற்சி மையம்</strong><br>
+                <small style="color: #64748b;">Livestock Development Assistant (VLDA) Center, VCRI Orathanadu</small><br>
+                <span class="type-badge tanuvas">TANUVAS டிப்ளமோ</span>
+              </td>
+              <td><strong>ஒரத்தநாடு (தஞ்சாவூர்)</strong></td>
+              <td>
+                <strong>Diploma in VLDA (2 ஆண்டுகள்)</strong><br>
+                கால்நடை பராமரிப்பு உதவியாளர் நேரடி அரசுப் பணி வாய்ப்பு
+              </td>
+              <td>
+                <a href="https://tanuvas.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tanuvas.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- Diploma Center 3: TANUVAS VLDA Pudukkottai -->
+            <tr data-type="diploma">
+              <td><span class="code-badge">TAN-DIP-02</span></td>
+              <td>
+                <strong>TANUVAS கால்நடை ஆராய்ச்சி & பயிற்சி மையம், புதுக்கோட்டை</strong><br>
+                <small style="color: #64748b;">Veterinary University Training and Research Centre, Pudukkottai</small><br>
+                <span class="type-badge tanuvas">TANUVAS டிப்ளமோ</span>
+              </td>
+              <td><strong>புதுக்கோட்டை (அருகாமை)</strong></td>
+              <td>
+                <strong>Diploma in VLDA (கால்நடை உதவியாளர்) - 2 ஆண்டுகள்</strong><br>
+                நாட்டு மாடுகள் மற்றும் ஆடு வளர்ப்பு சிறப்புப் பயிற்சி
+              </td>
+              <td>
+                <a href="https://tanuvas.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tanuvas.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- Diploma Center 4: Madurai Medical College Diploma Wing -->
+            <tr data-type="diploma">
+              <td><span class="code-badge">DIP-MDU</span></td>
+              <td>
+                <strong>மதுரை அரசு மருத்துவக் கல்லூரி நர்சிங் & டிப்ளமோ பள்ளி</strong><br>
+                <small style="color: #64748b;">School of Nursing & Diploma Institute, Madurai Medical College</small><br>
+                <span class="type-badge" style="background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe;">அரசு டிப்ளமோ மையம்</span>
+              </td>
+              <td><strong>மதுரை (Madurai)</strong></td>
+              <td>
+                <strong>D.Pharm (2 ஆண்டுகள்), GNM (3 ஆண்டுகள்), DMLT (2 ஆண்டுகள்)</strong><br>
+                DRT எக்ஸ்ரே, Cardiac Cath Lab, Dialysis & Ortho Technician சான்றிதழ்கள்
+              </td>
+              <td>
+                <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="link-btn">விவரம் காண்க ↗</a>
+              </td>
+            </tr>
+
+            <!-- Diploma Center 5: King Institute Guindy Chennai -->
+            <tr data-type="diploma">
+              <td><span class="code-badge">DIP-KIPM</span></td>
+              <td>
+                <strong>கிங் தடுப்பு மருந்து மற்றும் ஆராய்ச்சி நிலையம் (King Institute)</strong><br>
+                <small style="color: #64748b;">King Institute of Preventive Medicine & Research, Guindy, Chennai</small><br>
+                <span class="type-badge" style="background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe;">முதன்மை அரசு ஆய்வகம்</span>
+              </td>
+              <td><strong>சென்னை (கிண்டி)</strong></td>
+              <td>
+                <strong>DMLT (மருத்துவ ஆய்வகத் தொழில்நுட்பம் - 2 ஆண்டுகள்)</strong><br>
+                வைராலஜி, தடுப்பூசி மற்றும் நவீன நுண்ணுயிரியல் சிறப்புப் பயிற்சி
+              </td>
+              <td>
+                <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="link-btn">விவரம் காண்க ↗</a>
+              </td>
+            </tr>
+
+            <!-- Sivagangai Government Medical College (Local District Highlight) -->
+            <tr data-type="govt" class="highlight-row">
+              <td><span class="code-badge">DME-SVG</span></td>
+              <td>
+                <strong>சிவகங்கை அரசு மருத்துவக் கல்லூரி</strong><br>
+                <small style="color: #64748b;">Government Sivagangai Medical College</small><br>
+                <span class="type-badge govt">அரசு மருத்துவக் கல்லூரி</span>
+                <span class="type-badge" style="background: #fef3c7; color: #b45309; border: 1px solid #fde68a;">நமது மாவட்டம்</span>
+              </td>
+              <td><strong>சிவகங்கை (Sivagangai)</strong></td>
+              <td>
+                B.Sc Nursing, B.Sc MLT (ஆய்வகம்), B.Sc Radiography, B.Sc OT & Anaesthesia, Dialysis Tech, Emergency Care
+              </td>
+              <td>
+                <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="link-btn">விவரம் காண்க ↗</a>
+              </td>
+            </tr>
+
+            <!-- TANUVAS 1: MVC Chennai -->
+            <tr data-type="tanuvas">
+              <td><span class="code-badge">TAN-01</span></td>
+              <td>
+                <strong>சென்னை கால்நடை மருத்துவக் கல்லூரி</strong><br>
+                <small style="color: #64748b;">Madras Veterinary College (MVC), Vepery (Est. 1903)</small><br>
+                <span class="type-badge tanuvas">TANUVAS தலைமை வளாகம்</span>
+              </td>
+              <td><strong>சென்னை (வேப்பேரி)</strong></td>
+              <td>
+                <strong>B.V.Sc. & A.H. (120 இடங்கள்)</strong><br>
+                ஆசியாவின் முன்னோடி கால்நடை மருத்துவ ஆராய்ச்சி மையம்
+              </td>
+              <td>
+                <a href="https://tanuvas.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tanuvas.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- TANUVAS 2: VCRI Namakkal -->
+            <tr data-type="tanuvas">
+              <td><span class="code-badge">TAN-02</span></td>
+              <td>
+                <strong>கால்நடை மருத்துவக் கல்லூரி & ஆராய்ச்சி நிலையம்</strong><br>
+                <small style="color: #64748b;">VCRI Namakkal (Est. 1985)</small><br>
+                <span class="type-badge tanuvas">TANUVAS அரசு கல்லூரி</span>
+              </td>
+              <td><strong>நாமக்கல் (Namakkal)</strong></td>
+              <td>
+                <strong>B.V.Sc. & A.H. (100 இடங்கள்)</strong><br>
+                முட்டை மற்றும் கோழி வளர்ப்பு ஆராய்ச்சி சிறப்பு மையம்
+              </td>
+              <td>
+                <a href="https://tanuvas.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tanuvas.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- TANUVAS 3: VCRI Tirunelveli -->
+            <tr data-type="tanuvas">
+              <td><span class="code-badge">TAN-03</span></td>
+              <td>
+                <strong>கால்நடை மருத்துவக் கல்லூரி & ஆராய்ச்சி நிலையம்</strong><br>
+                <small style="color: #64748b;">VCRI Tirunelveli (Ramayanpatti)</small><br>
+                <span class="type-badge tanuvas">TANUVAS அரசு கல்லூரி</span>
+              </td>
+              <td><strong>திருநெல்வேலி</strong></td>
+              <td>
+                <strong>B.V.Sc. & A.H. (100 இடங்கள்)</strong><br>
+                தென்மாவட்டங்களுக்கான முதன்மை கால்நடை மருத்துவமனை
+              </td>
+              <td>
+                <a href="https://tanuvas.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tanuvas.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- TANUVAS 4: VCRI Orathanadu Thanjavur -->
+            <tr data-type="tanuvas">
+              <td><span class="code-badge">TAN-04</span></td>
+              <td>
+                <strong>கால்நடை மருத்துவக் கல்லூரி & ஆராய்ச்சி நிலையம்</strong><br>
+                <small style="color: #64748b;">VCRI Orathanadu, Thanjavur</small><br>
+                <span class="type-badge tanuvas">TANUVAS அரசு கல்லூரி</span>
+              </td>
+              <td><strong>ஒரத்தநாடு (தஞ்சாவூர்)</strong></td>
+              <td>
+                <strong>B.V.Sc. & A.H. (100 இடங்கள்)</strong><br>
+                டெல்டா மாவட்ட கால்நடை பாதுகாப்பு மையம்
+              </td>
+              <td>
+                <a href="https://tanuvas.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tanuvas.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- TANUVAS 5: VCRI Salem -->
+            <tr data-type="tanuvas">
+              <td><span class="code-badge">TAN-05</span></td>
+              <td>
+                <strong>கால்நடை மருத்துவக் கல்லூரி & ஆராய்ச்சி நிலையம்</strong><br>
+                <small style="color: #64748b;">VCRI Thalaivasal, Salem</small><br>
+                <span class="type-badge tanuvas">TANUVAS அரசு கல்லூரி</span>
+              </td>
+              <td><strong>தலைவாசல் (சேலம்)</strong></td>
+              <td>
+                <strong>B.V.Sc. & A.H. (80 இடங்கள்)</strong><br>
+                மேம்பட்ட கால்நடை ஆராய்ச்சி பூங்கா
+              </td>
+              <td>
+                <a href="https://tanuvas.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tanuvas.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- TANUVAS 6: VCRI Theni -->
+            <tr data-type="tanuvas">
+              <td><span class="code-badge">TAN-06</span></td>
+              <td>
+                <strong>கால்நடை மருத்துவக் கல்லூரி & ஆராய்ச்சி நிலையம்</strong><br>
+                <small style="color: #64748b;">VCRI Veerapandi, Theni</small><br>
+                <span class="type-badge tanuvas">TANUVAS அரசு கல்லூரி</span>
+              </td>
+              <td><strong>வீரபாண்டி (தேனி)</strong></td>
+              <td>
+                <strong>B.V.Sc. & A.H. (80 இடங்கள்)</strong><br>
+                மலை மற்றும் நாட்டு மாடுகள் பாதுகாப்பு ஆராய்ச்சி
+              </td>
+              <td>
+                <a href="https://tanuvas.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tanuvas.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- TANUVAS 7: VCRI Udumalpet -->
+            <tr data-type="tanuvas">
+              <td><span class="code-badge">TAN-07</span></td>
+              <td>
+                <strong>கால்நடை மருத்துவக் கல்லூரி & ஆராய்ச்சி நிலையம்</strong><br>
+                <small style="color: #64748b;">VCRI Udumalpet, Tiruppur</small><br>
+                <span class="type-badge tanuvas">TANUVAS அரசு கல்லூரி</span>
+              </td>
+              <td><strong>உடுமலைப்பேட்டை (திருப்பூர்)</strong></td>
+              <td>
+                <strong>B.V.Sc. & A.H. (80 இடங்கள்)</strong><br>
+                கொங்கு மண்டல கால்நடை ஆராய்ச்சி மையம்
+              </td>
+              <td>
+                <a href="https://tanuvas.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tanuvas.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- Madurai Medical College (Adjacent District) -->
+            <tr data-type="govt">
+              <td><span class="code-badge">DME-MDU</span></td>
+              <td>
+                <strong>மதுரை அரசு மருத்துவக் கல்லூரி</strong><br>
+                <small style="color: #64748b;">Madurai Medical College, Madurai</small><br>
+                <span class="type-badge govt">அரசு மருத்துவக் கல்லூரி</span>
+              </td>
+              <td><strong>மதுரை (Madurai)</strong></td>
+              <td>
+                B.Pharm, B.Sc Nursing, BPT, B.Sc Radiography, B.Sc Cardiac Tech, MLT, Perfusion Tech, Operation Theatre Tech
+              </td>
+              <td>
+                <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="link-btn">விவரம் காண்க ↗</a>
+              </td>
+            </tr>
+
+            <!-- Madras Medical College MMC Chennai -->
+            <tr data-type="govt">
+              <td><span class="code-badge">DME-MMC</span></td>
+              <td>
+                <strong>மெட்ராஸ் மெடிக்கல் காலேஜ் (MMC)</strong><br>
+                <small style="color: #64748b;">Madras Medical College, Chennai (Est. 1835)</small><br>
+                <span class="type-badge govt">முதன்மை அரசு கல்லூரி</span>
+              </td>
+              <td><strong>சென்னை (மத்திய)</strong></td>
+              <td>
+                B.Pharm, B.Sc Nursing, BPT, BOT, Radiography, Radio Therapy, Cardiac Tech, Neuro Electrophysiology, MLT
+              </td>
+              <td>
+                <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="link-btn">விவரம் காண்க ↗</a>
+              </td>
+            </tr>
+
+            <!-- Stanley Medical College -->
+            <tr data-type="govt">
+              <td><span class="code-badge">DME-SMC</span></td>
+              <td>
+                <strong>ஸ்டான்லி அரசு மருத்துவக் கல்லூரி</strong><br>
+                <small style="color: #64748b;">Stanley Medical College, Chennai</small><br>
+                <span class="type-badge govt">அரசு மருத்துவக் கல்லூரி</span>
+              </td>
+              <td><strong>சென்னை (ராயபுரம்)</strong></td>
+              <td>
+                B.Sc Nursing, B.Pharm, BPT, Critical Care Tech, Dialysis Tech, Operation Theatre Tech, Physician Assistant
+              </td>
+              <td>
+                <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="link-btn">விவரம் காண்க ↗</a>
+              </td>
+            </tr>
+
+            <!-- Kilpauk Medical College -->
+            <tr data-type="govt">
+              <td><span class="code-badge">DME-KMC</span></td>
+              <td>
+                <strong>கீழ்ப்பாக்கம் அரசு மருத்துவக் கல்லூரி</strong><br>
+                <small style="color: #64748b;">Govt. Kilpauk Medical College, Chennai</small><br>
+                <span class="type-badge govt">அரசு மருத்துவக் கல்லூரி</span>
+              </td>
+              <td><strong>சென்னை (கீழ்ப்பாக்கம்)</strong></td>
+              <td>
+                B.Sc Nursing, B.Pharm, B.Sc Radiography, Medical Lab Tech, Emergency Care Tech, Dialysis Tech
+              </td>
+              <td>
+                <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="link-btn">விவரம் காண்க ↗</a>
+              </td>
+            </tr>
+
+            <!-- Coimbatore Medical College -->
+            <tr data-type="govt">
+              <td><span class="code-badge">DME-CBE</span></td>
+              <td>
+                <strong>கோயம்புத்தூர் அரசு மருத்துவக் கல்லூரி</strong><br>
+                <small style="color: #64748b;">Coimbatore Medical College (CMC)</small><br>
+                <span class="type-badge govt">அரசு மருத்துவக் கல்லூரி</span>
+              </td>
+              <td><strong>கோயம்புத்தூர்</strong></td>
+              <td>
+                B.Pharm, B.Sc Nursing, B.Sc Cardiac Tech, Radiography, Dialysis, Physician Assistant, Optometry
+              </td>
+              <td>
+                <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="link-btn">விவரம் காண்க ↗</a>
+              </td>
+            </tr>
+
+            <!-- Thanjavur Medical College -->
+            <tr data-type="govt">
+              <td><span class="code-badge">DME-TNJ</span></td>
+              <td>
+                <strong>தஞ்சாவூர் அரசு மருத்துவக் கல்லூரி</strong><br>
+                <small style="color: #64748b;">Thanjavur Medical College (TMC)</small><br>
+                <span class="type-badge govt">அரசு மருத்துவக் கல்லூரி</span>
+              </td>
+              <td><strong>தஞ்சாவூர்</strong></td>
+              <td>
+                B.Pharm, B.Sc Nursing, B.Sc MLT, Radiography, Operation Theatre Tech, Critical Care Technology
+              </td>
+              <td>
+                <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="link-btn">விவரம் காண்க ↗</a>
+              </td>
+            </tr>
+
+            <!-- Tirunelveli Medical College -->
+            <tr data-type="govt">
+              <td><span class="code-badge">DME-TVL</span></td>
+              <td>
+                <strong>திருநெல்வேலி அரசு மருத்துவக் கல்லூரி</strong><br>
+                <small style="color: #64748b;">Tirunelveli Medical College (TVMC)</small><br>
+                <span class="type-badge govt">அரசு மருத்துவக் கல்லூரி</span>
+              </td>
+              <td><strong>திருநெல்வேலி</strong></td>
+              <td>
+                B.Pharm, B.Sc Nursing, BPT, B.Sc Radiography, Cardiac Tech, Dialysis Tech, MLT, Physician Assistant
+              </td>
+              <td>
+                <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="link-btn">விவரம் காண்க ↗</a>
+              </td>
+            </tr>
+
+            <!-- Trichy KAPV Medical College -->
+            <tr data-type="govt">
+              <td><span class="code-badge">DME-TRY</span></td>
+              <td>
+                <strong>கி.ஆ.பெ. விசுவநாதம் அரசு மருத்துவக் கல்லூரி</strong><br>
+                <small style="color: #64748b;">KAPV Govt. Medical College, Tiruchirappalli</small><br>
+                <span class="type-badge govt">அரசு மருத்துவக் கல்லூரி</span>
+              </td>
+              <td><strong>திருச்சிராப்பள்ளி</strong></td>
+              <td>
+                B.Sc Nursing, B.Pharm, B.Sc Radiography, Medical Lab Technology, Operation Theatre Technology
+              </td>
+              <td>
+                <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="link-btn">விவரம் காண்க ↗</a>
+              </td>
+            </tr>
+
+                        <!-- Salem Mohan Kumaramangalam Medical College -->
+            <tr data-type="govt">
+              <td><span class="code-badge">DME-SLM</span></td>
+              <td>
+                <strong>மோகன் குமாரமங்கலம் அரசு மருத்துவக் கல்லூரி</strong><br>
+                <small style="color: #64748b;">Govt. Mohan Kumaramangalam Medical College, Salem</small><br>
+                <span class="type-badge govt">அரசு மருத்துவக் கல்லூரி</span>
+              </td>
+              <td><strong>சேலம் (Salem)</strong></td>
+              <td>
+                B.Pharm, B.Sc Nursing, B.Sc Radiography, Medical Lab Technology, Operation Theatre Tech
+              </td>
+              <td>
+                <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="link-btn">விவரம் காண்க ↗</a>
+              </td>
+            </tr>
+
+            <!-- Theni Government Medical College -->
+            <tr data-type="govt">
+              <td><span class="code-badge">DME-THN</span></td>
+              <td>
+                <strong>தேனி அரசு மருத்துவக் கல்லூரி</strong><br>
+                <small style="color: #64748b;">Govt. Theni Medical College, K.V.Patti, Theni</small><br>
+                <span class="type-badge govt">அரசு மருத்துவக் கல்லூரி</span>
+              </td>
+              <td><strong>தேனி (கானாவிலக்கு)</strong></td>
+              <td>
+                B.Sc Nursing, B.Sc MLT (ஆய்வகம்), Radiography, Dialysis Tech, Emergency Care Technology
+              </td>
+              <td>
+                <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="link-btn">விவரம் காண்க ↗</a>
+              </td>
+            </tr>
+
+            <!-- Vellore Government Medical College -->
+            <tr data-type="govt">
+              <td><span class="code-badge">DME-VEL</span></td>
+              <td>
+                <strong>வேலூர் அரசு மருத்துவக் கல்லூரி</strong><br>
+                <small style="color: #64748b;">Govt. Vellore Medical College, Adukkamparai</small><br>
+                <span class="type-badge govt">அரசு மருத்துவக் கல்லூரி</span>
+              </td>
+              <td><strong>வேலூர் (அடுக்கம்பாறை)</strong></td>
+              <td>
+                B.Sc Nursing, B.Pharm, Radiography, Cardiac Technology, Operation Theatre Technology
+              </td>
+              <td>
+                <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="link-btn">விவரம் காண்க ↗</a>
+              </td>
+            </tr>
+
+            <!-- Chengalpattu Government Medical College -->
+            <tr data-type="govt">
+              <td><span class="code-badge">DME-CGL</span></td>
+              <td>
+                <strong>செங்கல்பட்டு அரசு மருத்துவக் கல்லூரி</strong><br>
+                <small style="color: #64748b;">Govt. Chengalpattu Medical College, Chengalpattu</small><br>
+                <span class="type-badge govt">அரசு மருத்துவக் கல்லூரி</span>
+              </td>
+              <td><strong>செங்கல்பட்டு</strong></td>
+              <td>
+                B.Pharm, B.Sc Nursing, BPT (பிசியோதெரபி), Radiography, Dialysis Tech, Medical Lab Tech
+              </td>
+              <td>
+                <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="link-btn">விவரம் காண்க ↗</a>
+              </td>
+            </tr>
+
+            <!-- BNYS Government College Arumbakkam -->
+            <tr data-type="bnys">
+              <td><span class="code-badge">AYU-BNYS</span></td>
+              <td>
+                <strong>அரசு யோகா & இயற்கை மருத்துவக் கல்லூரி</strong><br>
+                <small style="color: #64748b;">Govt. Yoga & Naturopathy Medical College, Arumbakkam</small><br>
+                <span class="type-badge bnys">அரசு மருத்துவக் கல்லூரி</span>
+              </td>
+              <td><strong>சென்னை (அரும்பாக்கம்)</strong></td>
+              <td>
+                <strong>BNYS டாக்டர் பட்டப்படிப்பு (60 அரசு இடங்கள்)</strong><br>
+                அரசு இயற்கை மருத்துவ தலைமை மருத்துவமனை வளாகம்
+              </td>
+              <td>
+                <a href="https://tnhealth.tn.gov.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnhealth.tn.gov.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- BNYS Chengalpattu -->
+            <tr data-type="bnys">
+              <td><span class="code-badge">AYU-CGL</span></td>
+              <td>
+                <strong>அரசு இயற்கை மற்றும் யோகா மருத்துவக் கல்லூரி</strong><br>
+                <small style="color: #64748b;">Govt Yoga & Naturopathy Medical College, Chengalpattu</small><br>
+                <span class="type-badge bnys">அரசு மருத்துவக் கல்லூரி</span>
+              </td>
+              <td><strong>செங்கல்பட்டு</strong></td>
+              <td>
+                <strong>BNYS டாக்டர் பட்டப்படிப்பு (100 இடங்கள்)</strong><br>
+                இயற்கை மருத்துவ ஆராய்ச்சி & மூலிகை பூங்கா
+              </td>
+              <td>
+                <a href="https://tnhealth.tn.gov.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnhealth.tn.gov.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- CFDT Koduvalli (B.Tech Food & Dairy) -->
+            <tr data-type="btech">
+              <td><span class="code-badge">TAN-CFDT</span></td>
+              <td>
+                <strong>உணவு மற்றும் பால்வளத் தொழில்நுட்பக் கல்லூரி (CFDT)</strong><br>
+                <small style="color: #64748b;">College of Food and Dairy Technology, Koduvalli</small><br>
+                <span class="type-badge btech">TANUVAS B.Tech வளாகம்</span>
+              </td>
+              <td><strong>கொடுவள்ளி (சென்னை)</strong></td>
+              <td>
+                <strong>B.Tech (Food Technology) - 40 இடங்கள்</strong><br>
+                <strong>B.Tech (Dairy Technology) - 40 இடங்கள்</strong>
+              </td>
+              <td>
+                <a href="https://tanuvas.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tanuvas.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- CPPM Hosur (B.Tech Poultry) -->
+            <tr data-type="btech">
+              <td><span class="code-badge">TAN-CPPM</span></td>
+              <td>
+                <strong>கோழி உற்பத்தி மற்றும் மேலாண்மைக் கல்லூரி (CPPM)</strong><br>
+                <small style="color: #64748b;">College of Poultry Production & Management, Hosur</small><br>
+                <span class="type-badge btech">TANUVAS B.Tech வளாகம்</span>
+              </td>
+              <td><strong>ஒசூர் (கிருஷ்ணகிரி)</strong></td>
+              <td>
+                <strong>B.Tech (Poultry Technology) - 40 இடங்கள்</strong><br>
+                இந்தியாவின் முன்னோடி கோழிப்பண்ணை தொழில்நுட்பக் கல்வி
+              </td>
+              <td>
+                <a href="https://tanuvas.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tanuvas.ac.in ↗</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Sub-section 4.1: College-wise Seat Matrix for Top 7 Core Healthcare Degrees -->
+      <div style="margin-top: 32px;" id="core-7-seats">
+        <h3 style="font-size: 1.25rem; font-weight: 800; color: #1e40af; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+          <span>🏥</span> முதன்மையான 7 மருத்துவத் தொழில்முறைப் பட்டங்கள் — வழங்கும் அரசு கல்லூரிகள் & இடங்கள் விவரம் (Seat Matrix)
+        </h3>
+        <p style="font-size: 0.92rem; color: #334155; margin-bottom: 16px;">
+          மாணவர்கள் மற்றும் பெற்றோர்கள் அதிகம் விரும்பும் தலைசிறந்த 7 தொழில்முறை மருத்துவப் பட்டங்களுக்கான அரசு மருத்துவக் கல்லூரிகள் மற்றும் இடங்களின் (Seats) அதிகாரப்பூர்வ தொகுப்பு:
+        </p>
+
+        <div class="table-container" style="margin-bottom: 24px;">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th style="width: 5%;">வ.எண்</th>
+                <th style="width: 22%;">பட்டப்படிப்பு பெயர்</th>
+                <th style="width: 12%;">கால அளவு</th>
+                <th style="width: 41%;">வழங்கும் முக்கிய அரசு கல்லூரிகள் & பயிற்சி நிறுவனங்கள்</th>
+                <th style="width: 20%;">அரசு & சுயநிதி இடங்கள் (Seats)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><strong>B.Sc. Nursing<br><small style="color: #64748b;">செவிலியர் படிப்பு</small></strong></td>
+                <td>4 ஆண்டுகள்</td>
+                <td>
+                  • மெட்ராஸ் மெடிக்கல் காலேஜ் (MMC சென்னை) – 50 இடங்கள்<br>
+                  • ஸ்டான்லி மருத்துவக் கல்லூரி, சென்னை – 50 இடங்கள்<br>
+                  • மதுரை மருத்துவக் கல்லூரி – 50 இடங்கள்<br>
+                  • செங்கல்பட்டு அரசு மருத்துவக் கல்லூரி – 50 இடங்கள்<br>
+                  • சேலம் மோகன் குமாரமங்கலம் மருத்துவக் கல்லூரி – 50 இடங்கள்<br>
+                  • திருச்சி கி.ஆ.பெ. விசுவநாதம் மருத்துவக் கல்லூரி – 50 இடங்கள்<br>
+                  • திருநெல்வேலி அரசு மருத்துவக் கல்லூரி – 50 இடங்கள்<br>
+                  • கடலூர் அரசு மருத்துவக் கல்லூரி (ராஜா முத்தையா வளாகம்) – 100 இடங்கள் (ஆண்கள்/பெண்கள்)
+                </td>
+                <td>
+                  <strong style="color: #065f46; font-size: 1rem;">அரசு இடங்கள்: ~450+</strong><br>
+                  <span style="font-size: 0.82rem; color: #475569;">சுயநிதிக் கல்லூரிகளில் அரசு ஒதுக்கீட்டு இடங்கள்: 3,500+ இடங்கள் (180+ கல்லூரிகள்)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><strong>B.Pharm<br><small style="color: #64748b;">மருந்தியல் படிப்பு</small></strong></td>
+                <td>4 ஆண்டுகள்</td>
+                <td>
+                  • மெட்ராஸ் மெடிக்கல் காலேஜ் (College of Pharmacy, MMC சென்னை) – 60 இடங்கள்<br>
+                  • மதுரை அரசு மருத்துவக் கல்லூரி (College of Pharmacy, Madurai) – 60 இடங்கள்
+                </td>
+                <td>
+                  <strong style="color: #065f46; font-size: 1rem;">அரசு இடங்கள்: 120</strong><br>
+                  <span style="font-size: 0.82rem; color: #475569;">சுயநிதிக் கல்லூரிகளில் அரசு ஒதுக்கீட்டு இடங்கள்: 3,000+ இடங்கள் (65+ கல்லூரிகள்)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><strong>Pharm.D<br><small style="color: #64748b;">டாக்டர் ஆஃப் பார்மசி</small></strong></td>
+                <td>6 ஆண்டுகள்<br><small>(5 படிப்பு + 1 Internship)</small></td>
+                <td>
+                  • கடலூர் அரசு மருத்துவக் கல்லூரி (அண்ணாமலைப் பல்கலைக்கழகம்)<br>
+                  • DME ஒற்றைச் சாளரக் கலந்தாய்வில் உள்ள முன்னணி சுயநிதி மருந்தியல் கல்லூரிகள் (KMCH கோவை, PSG, Sri Ramachandra, JKK Nattraja, SRPA)
+                </td>
+                <td>
+                  <strong style="color: #065f46; font-size: 1rem;">அரசு ஒதுக்கீட்டு இடங்கள்: ~400+</strong><br>
+                  <span style="font-size: 0.82rem; color: #475569;">கல்லூரிக்கு தலா 30 முதல் 60 அரசு ஒதுக்கீட்டு இடங்கள்</span>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><strong>BPT<br><small style="color: #64748b;">பிசியோதெரபி / உடலியக்கம்</small></strong></td>
+                <td>4½ ஆண்டுகள்<br><small>(6 மாத பயிற்சி உள்பட)</small></td>
+                <td>
+                  • அரசு மறுவாழ்வு மருத்துவமனை (GIRM), கே.கே. நகர், சென்னை (MMC இணைப்பு) – 25 இடங்கள்<br>
+                  • மதுரை அரசு மருத்துவக் கல்லூரி, மதுரை – 20 இடங்கள்<br>
+                  • திருநெல்வேலி அரசு மருத்துவக் கல்லூரி – 20 இடங்கள்
+                </td>
+                <td>
+                  <strong style="color: #065f46; font-size: 1rem;">அரசு இடங்கள்: 65</strong><br>
+                  <span style="font-size: 0.82rem; color: #475569;">சுயநிதிக் கல்லூரிகளில் அரசு ஒதுக்கீட்டு இடங்கள்: 1,500+ இடங்கள் (45+ கல்லூரிகள்)</span>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td><strong>BOT<br><small style="color: #64748b;">ஆக்குபேஷனல் தெரபி</small></strong></td>
+                <td>4½ ஆண்டுகள்<br><small>(6 மாத பயிற்சி உள்பட)</small></td>
+                <td>
+                  • அரசு மறுவாழ்வு மருத்துவமனை (GIRM), கே.கே. நகர், சென்னை (MMC இணைப்பு) – 20 இடங்கள்<br>
+                  • மத்திய அரசு மாற்றுத்திறனாளிகள் மேம்பாட்டு நிறுவனம் (NIEPMD), முட்டுக்காடு, சென்னை – 25 இடங்கள்
+                </td>
+                <td>
+                  <strong style="color: #065f46; font-size: 1rem;">அரசு / மத்திய அரசு இடங்கள்: 45</strong><br>
+                  <span style="font-size: 0.82rem; color: #475569;">சுயநிதிக் கல்லூரிகளில் அரசு ஒதுக்கீட்டு இடங்கள்: 400+ இடங்கள்</span>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td><strong>B.A.S.L.P<br><small style="color: #64748b;">பேச்சு & செவித்திறன்</small></strong></td>
+                <td>4 ஆண்டுகள்<br><small>(1 ஆண்டு Internship)</small></td>
+                <td>
+                  • மெட்ராஸ் மெடிக்கல் காலேஜ் (MMC சென்னை) – 25 இடங்கள்<br>
+                  • NIEPMD (மத்திய மாற்றுத்திறனாளிகள் நிறுவனம்), ECR முட்டுக்காடு, சென்னை – 25 இடங்கள்<br>
+                  • ஹோலி கிராஸ் கல்லூரி (Holy Cross), திருச்சிராப்பள்ளி – 25 இடங்கள்
+                </td>
+                <td>
+                  <strong style="color: #065f46; font-size: 1rem;">அரசு ஒதுக்கீட்டு இடங்கள்: ~75</strong><br>
+                  <span style="font-size: 0.82rem; color: #475569;">தமிழ்நாட்டின் மிகக் குறைந்த எண்ணிக்கையிலான பிரத்யேக இடங்கள்</span>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td><strong>B.P.O<br><small style="color: #64748b;">செயற்கை உறுப்பு & மூட்டு உபகரணம்</small></strong></td>
+                <td>4½ ஆண்டுகள்<br><small>(6 மாத பயிற்சி உள்பட)</small></td>
+                <td>
+                  • அரசு மறுவாழ்வு மருத்துவமனை (GIRM), கே.கே. நகர், சென்னை (MMC இணைப்பு) – 10 இடங்கள்<br>
+                  • மத்திய அரசு நிறுவனம் NIEPMD, கிழக்குக் கடற்கரைச் சாலை (ECR), முட்டுக்காடு, சென்னை – 20 இடங்கள்
+                </td>
+                <td>
+                  <strong style="color: #065f46; font-size: 1rem;">அரசு / மத்திய அரசு இடங்கள்: 30</strong><br>
+                  <span style="font-size: 0.82rem; color: #475569;">அரிதான செயற்கை உறுப்பு வடிவமைக்கும் பொறியியல் மருத்துவப் படிப்பு</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Sub-section 4.2: Rare & Super-Specialized Allied Health Courses and Colleges -->
+      <div style="margin-top: 32px;" id="rare-courses">
+        <h3 style="font-size: 1.25rem; font-weight: 800; color: #b45309; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+          <span>🔬</span> தமிழ்நாட்டின் அரிதான & அதிநவீன துணை மருத்துவப் படிப்புகள் (Rare & Super-Specialized Courses)
+        </h3>
+        <p style="font-size: 0.92rem; color: #334155; margin-bottom: 16px;">
+          தமிழ்நாட்டில் குறிப்பிட்ட சில அரசு மருத்துவக் கல்லூரிகள் மற்றும் சிறப்பு மருத்துவ ஆராய்ச்சி நிறுவனங்களில் மட்டுமே வழங்கப்படும் மிகவும் அரிதான, சர்வதேச அளவில் உச்சபட்ச ஊதியம் பெற்றுத்தரும் உயர் தொழில்நுட்பப் படிப்புகள்:
+        </p>
+
+        <div class="sub-grid">
+          <!-- Rare Course 1: Perfusion Tech -->
+          <div class="course-card-detail" style="border-left-color: #dc2626;">
+            <div class="course-title-row">
+              <span class="course-name-tamil">1. B.Sc. Cardio-Pulmonary Perfusion Care Technology</span>
+              <span class="course-meta-pill" style="background: #fef2f2; color: #b91c1c; border-color: #fecaca;">அரிதான இதய அறுவை அரங்கு படிப்பு</span>
+            </div>
+            <p class="course-desc-text">
+              திறந்த இதய அறுவை சிகிச்சையின் போது இதய-நுரையீரல் கருவியை (Heart-Lung Machine) இயக்கும் உயரிய பணி.
+            </p>
+            <div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #dc2626; font-size: 0.88rem; color: #334155;">
+              <strong>வழங்கும் அரசு கல்லூரிகள்:</strong> மெட்ராஸ் மெடிக்கல் காலேஜ் (MMC சென்னை), மதுரை அரசு மருத்துவக் கல்லூரி, திருநெல்வேலி அரசு மருத்துவக் கல்லூரி.<br>
+              <strong>இடங்கள்:</strong> கல்லூரிக்கு <strong>5 முதல் 10 இடங்கள் மட்டுமே!</strong> (தமிழ்நாடு முழுமைக்கும் விரல்விட்டு எண்ணக்கூடிய மிகக் குறைந்த இடங்கள்).
+            </div>
+          </div>
+
+          <!-- Rare Course 2: Nuclear Medicine -->
+          <div class="course-card-detail" style="border-left-color: #7c3aed;">
+            <div class="course-title-row">
+              <span class="course-name-tamil">2. B.Sc. Nuclear Medicine Technology (அணுக்கரு மருத்துவம்)</span>
+              <span class="course-meta-pill" style="background: #f5f3ff; color: #6d28d9; border-color: #ddd6fe;">அதிநவீன அணுக்கதிர்வீச்சு படிப்பு</span>
+            </div>
+            <p class="course-desc-text">
+              கதிரியக்க ஐசோடோப்புகள், காமா கேமரா மற்றும் PET-CT / SPECT ஸ்கேனர் மூலம் புற்றுநோய் செல்களை மூலக்கூறு அளவில் கண்டறிதல்.
+            </p>
+            <div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #7c3aed; font-size: 0.88rem; color: #334155;">
+              <strong>வழங்கும் முதன்மை நிறுவனங்கள்:</strong> அடையாறு கேன்சர் இன்ஸ்டிடியூட் (Cancer Institute WIA, சென்னை), கிறிஸ்டியன் மெடிக்கல் காலேஜ் (CMC வேலூர்), ஸ்ரீ ராமச்சந்திரா (SRMC சென்னை).<br>
+              <strong>இடங்கள்:</strong> நிறுவனம் ஒன்றுக்கு <strong>10 முதல் 15 இடங்கள் மட்டுமே!</strong>
+            </div>
+          </div>
+
+          <!-- Rare Course 3: Neuro Electro Physiology -->
+          <div class="course-card-detail" style="border-left-color: #0284c7;">
+            <div class="course-title-row">
+              <span class="course-name-tamil">3. B.Sc. Neuro Electro Physiology (நரம்பியல் மின் உடலியங்கியல்)</span>
+              <span class="course-meta-pill blue">நரம்பியல் சிறப்புப் படிப்பு</span>
+            </div>
+            <p class="course-desc-text">
+              மூளை மின் வரைபடம் (EEG), தசை நரம்பு மின் வரைபடம் (EMG), நரம்பு கடத்தல் வேகம் (NCV) மற்றும் வலிப்பு/தூக்க குறைபாடு பரிசோதனைகள்.
+            </p>
+            <div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #0284c7; font-size: 0.88rem; color: #334155;">
+              <strong>வழங்கும் அரசு கல்லூரிகள்:</strong> மெட்ராஸ் மெடிக்கல் காலேஜ் - நரம்பியல் நிறுவனம் (Institute of Neurology, MMC சென்னை), மதுரை அரசு மருத்துவக் கல்லூரி நரம்பியல் பிரிவு.<br>
+              <strong>இடங்கள்:</strong> <strong>5 முதல் 10 இடங்கள் மட்டுமே!</strong>
+            </div>
+          </div>
+
+          <!-- Rare Course 4: Radio Therapy -->
+          <div class="course-card-detail" style="border-left-color: #d97706;">
+            <div class="course-title-row">
+              <span class="course-name-tamil">4. B.Sc. Radio Therapy Technology (RTT - புற்றுநோய் கதிர்வீச்சு)</span>
+              <span class="course-meta-pill amber">புற்றுநோய் கதிர்வீச்சு தொழில்நுட்பம்</span>
+            </div>
+            <p class="course-desc-text">
+              புற்றுநோய் கட்டிகளை அழிக்க லீனியர் ஆக்ஸிலரேட்டர் (Linac) இயந்திரம் மூலம் துல்லியமான கதிர்வீச்சு செலுத்தும் உயர் பணி.
+            </p>
+            <div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #d97706; font-size: 0.88rem; color: #334155;">
+              <strong>வழங்கும் அரசு நிறுவனங்கள்:</strong> மெட்ராஸ் மெடிக்கல் காலேஜ் (MMC சென்னை), அரசு அறிஞர் அண்ணா நினைவு புற்றுநோய் ஆராய்ச்சி மருத்துவமனை (காஞ்சிபுரம்), மதுரை அரசு ராஜாஜி மருத்துவமனை.<br>
+              <strong>இடங்கள்:</strong> <strong>10 முதல் 15 இடங்கள் மட்டுமே!</strong>
+            </div>
+          </div>
+
+          <!-- Rare Course 5: Prosthetics and Orthotics -->
+          <div class="course-card-detail" style="border-left-color: #475569;">
+            <div class="course-title-row">
+              <span class="course-name-tamil">5. B.P.O (செயற்கை உறுப்பு & மூட்டு உபகரணப் பொறியியல்)</span>
+              <span class="course-meta-pill" style="background: #f1f5f9; color: #334155; border-color: #cbd5e1;">மருத்துவப் பொறியியல் துறை</span>
+            </div>
+            <p class="course-desc-text">
+              செயற்கை கால்கள், கைகள் மற்றும் முதுகெலும்பு தாங்கு உபகரணங்கள் (Braces) தயாரித்து நோயாளிகளுக்குப் பொருத்துதல்.
+            </p>
+            <div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #475569; font-size: 0.88rem; color: #334155;">
+              <strong>வழங்கும் முதன்மை நிறுவனங்கள்:</strong> அரசு மறுவாழ்வு மருத்துவமனை (GIRM), கே.கே. நகர், சென்னை (MMC) & மத்திய அரசு நிறுவனம் NIEPMD முட்டுக்காடு, சென்னை.<br>
+              <strong>இடங்கள்:</strong> <strong>10 முதல் 20 இடங்கள் மட்டுமே!</strong>
+            </div>
+          </div>
+
+          <!-- Rare Course 6: Respiratory Therapy -->
+          <div class="course-card-detail" style="border-left-color: #059669;">
+            <div class="course-title-row">
+              <span class="course-name-tamil">6. B.Sc. Respiratory Therapy (சுவாச நோய் சிகிச்சை)</span>
+              <span class="course-meta-pill" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0;">நுரையீரல் & ICU சிறப்புப் படிப்பு</span>
+            </div>
+            <p class="course-desc-text">
+              தீவிர ஆஸ்துமா, நுரையீரல் முடக்கம், சுவாசக் கோளாறுகளுக்கு வென்டிலேட்டர் மற்றும் ஆக்ஸிஜன் சுவாச சிகிச்சை அளித்தல்.
+            </p>
+            <div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #059669; font-size: 0.88rem; color: #334155;">
+              <strong>வழங்கும் அரசு கல்லூரிகள்:</strong> அரசு ஸ்டான்லி மருத்துவக் கல்லூரி (Stanley சென்னை), மதுரை அரசு மருத்துவக் கல்லூரி, கோயம்புத்தூர் அரசு மருத்துவக் கல்லூரி.<br>
+              <strong>இடங்கள்:</strong> கல்லூரிக்கு <strong>10 முதல் 15 இடங்கள் மட்டுமே!</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="portal-footer">
+      <div style="font-size: 1.25rem; font-weight: 900; color: #ffffff; margin-bottom: 6px;">
+        தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்
+      </div>
+      <div style="font-size: 0.96rem; font-weight: 700; color: #a7f3d0; margin-bottom: 16px;">
+        மாணவர் உயர்கல்வி வழிகாட்டுதல் மற்றும் வேலைவாய்ப்பு விழிப்புணர்வு முயற்சி
+      </div>
+
+      <div style="max-width: 850px; margin: 0 auto; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 10px; padding: 12px 20px; margin-bottom: 18px; font-size: 0.92rem; color: #ffffff; line-height: 1.6;">
+        Website designed and developed by <strong>Poovalingam K</strong>, Deputy Inspector of Schools, Chief Educational Office, Sivagangai - Mobile : <a href="tel:9626471035" style="color: #fef08a; text-decoration: none; font-weight: 800;">9626471035</a>
+      </div>
+
+      <div class="footer-links" style="margin-bottom: 16px;">
+        <a href="https://tanuvas.ac.in" target="_blank" rel="noopener noreferrer" class="footer-link-pill">🌐 TANUVAS Portal</a>
+        <a href="https://tnmedicalselection.net" target="_blank" rel="noopener noreferrer" class="footer-link-pill">🌐 TN Medical Selection</a>
+        <a href="https://tnhealth.tn.gov.in" target="_blank" rel="noopener noreferrer" class="footer-link-pill">🌐 TN Health (BNYS)</a>
+        <a href="02_00_direct_admissions.html" class="footer-link-pill">🏠 நேரடிச் சேர்க்கை மெனு</a>
+      </div>
+
+      <div style="font-size: 0.82rem; color: #6ee7b7; border-top: 1px solid rgba(255, 255, 255, 0.12); padding-top: 14px; margin-top: 10px;">
+        © 2026 Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    // Live Cut-off Calculator Logic
+    const bioInput = document.getElementById('biology');
+    const phyInput = document.getElementById('physics');
+    const chemInput = document.getElementById('chemistry');
+    const cutoffResult = document.getElementById('cutoffResult');
+    const cutoffStatusText = document.getElementById('cutoffStatusText');
+    const chanceBadge = document.getElementById('chanceBadge');
+
+    function calculateCutoff() {
+      let bio = parseFloat(bioInput.value) || 0;
+      let phy = parseFloat(phyInput.value) || 0;
+      let chem = parseFloat(chemInput.value) || 0;
+
+      // Cap at 100
+      bio = Math.min(100, Math.max(0, bio));
+      phy = Math.min(100, Math.max(0, phy));
+      chem = Math.min(100, Math.max(0, chem));
+
+      // Cut-off = Bio + (Phy + Chem)/2
+      const cutoff = bio + ((phy + chem) / 2);
+      cutoffResult.textContent = cutoff.toFixed(2) + " / 200";
+
+      // Dynamic Feedback
+      if (cutoff >= 190) {
+        cutoffStatusText.textContent = "🌟 உச்சபட்ச கட்-ஆஃப்! அரசு கால்நடை மருத்துவக் கல்லூரிகளில் (B.V.Sc & A.H.) மற்றும் அரசு மருத்துவக் கல்லூரிகளில் B.Sc Nursing / B.Pharm இடங்கள் கிடைக்க 100% பிரகாசமான வாய்ப்புள்ளது.";
+        chanceBadge.textContent = "Top Tier / B.V.Sc Sure";
+        chanceBadge.style.background = "#fef08a";
+        chanceBadge.style.color = "#713f12";
+      } else if (cutoff >= 175) {
+        cutoffStatusText.textContent = "🎯 மிகச் சிறந்த கட்-ஆஃப்! B.Sc Nursing, B.Pharm, BPT மற்றும் உயர்தர Paramedical பிரிவுகளில் (Radiography, Cardiac Tech) அரசு இடங்கள் கிடைக்க அதிக வாய்ப்புள்ளது.";
+        chanceBadge.textContent = "High Chance / Paramedical";
+        chanceBadge.style.background = "#d1fae5";
+        chanceBadge.style.color = "#065f46";
+      } else if (cutoff >= 155) {
+        cutoffStatusText.textContent = "👍 நல்ல கட்-ஆஃப் மதிப்பெண்! B.Sc MLT, Operation Theatre Tech, Dialysis Tech, Optometry மற்றும் BNYS படிப்புகளில் நல்ல அரசு / சுயநிதி அரசு ஒதுக்கீட்டு இடங்கள் கிடைக்கும்.";
+        chanceBadge.textContent = "Moderate to High";
+        chanceBadge.style.background = "#e0f2fe";
+        chanceBadge.style.color = "#0369a1";
+      } else {
+        cutoffStatusText.textContent = "💡 மிகச் சிறந்த வாய்ப்புகள் காத்திருக்கின்றன! அரசு மருத்துவக் கல்லூரிகளில் 2 ஆண்டு டிப்ளமோ (D.Pharm, GNM நர்சிங், DMLT, DRT எக்ஸ்ரே) அல்லது 1 ஆண்டு சான்றிதழ் (ECG, கேத் லேப், டயாலிசிஸ்) மற்றும் TANUVAS கால்நடை உதவியாளர் (VLDA) டிப்ளமோ படிப்புகளில் சேர்ந்து 1 அல்லது 2 ஆண்டுகளில் உடனடி வேலைவாய்ப்பைப் பெறலாம்!";
+        chanceBadge.textContent = "Diploma & Certificate Focus";
+        chanceBadge.style.background = "#ede9fe";
+        chanceBadge.style.color = "#5b21b6";
+      }
+    }
+
+    bioInput.addEventListener('input', calculateCutoff);
+    phyInput.addEventListener('input', calculateCutoff);
+    chemInput.addEventListener('input', calculateCutoff);
+
+    // Initial calculation
+    calculateCutoff();
+
+    // Colleges Table Filter and Search
+    const collegeSearchInput = document.getElementById('collegeSearchInput');
+    const collegePills = document.querySelectorAll('.college-pill');
+    const tableRows = document.querySelectorAll('#collegesTable tbody tr');
+
+    let currentType = 'all';
+
+    function filterTable() {
+      const query = collegeSearchInput.value.toLowerCase().trim();
+
+      tableRows.forEach(row => {
+        const rowType = row.getAttribute('data-type');
+        const text = row.innerText.toLowerCase();
+
+        const matchesType = (currentType === 'all' || rowType === currentType);
+        const matchesQuery = (query === '' || text.includes(query));
+
+        if (matchesType && matchesQuery) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    collegePills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        collegePills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        currentType = pill.getAttribute('data-type');
+        filterTable();
+      });
+    });
+
+    collegeSearchInput.addEventListener('input', filterTable);
+  </script>
+
+</body>
+</html>

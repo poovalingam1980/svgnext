@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>நுழைவுத் தேர்வு இல்லாத நேரடிச் சேர்க்கைப் படிப்புகள் | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
+  
+  <!-- Google Fonts: Inter & Noto Sans Tamil -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #1e3a8a;
+      --primary-light: #2563eb;
+      --primary-hover: #1d4ed8;
+      --home-btn-bg: #0f172a;
+      --home-btn-hover: #1e293b;
+      --bg-color: #f1f5f9;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-sub: #334155;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 26px;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 14px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 10px 25px rgba(15, 23, 42, 0.12);
+    }
+  
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+  
+    body {
+      font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+  
+    .portal-container {
+      width: 96%;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+  
+    /* Top Bar Navigation */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+  
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      background-color: var(--home-btn-bg);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 2px 5px rgba(15, 23, 42, 0.2);
+      transition: all 0.2s ease;
+    }
+  
+    .home-btn:hover {
+      background-color: var(--home-btn-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.3);
+    }
+  
+    .home-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+  
+    .district-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #0369a1;
+      background: #e0f2fe;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid #bae6fd;
+    }
+  
+    /* Hero Header */
+    .hero-header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #0369a1 100%);
+      border-radius: var(--radius-xl);
+      padding: 40px 32px;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+  
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      color: #fef08a;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      margin-bottom: 14px;
+    }
+  
+    .portal-title {
+      font-size: 2.1rem;
+      font-weight: 900;
+      line-height: 1.3;
+      color: #ffffff;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+    }
+  
+    .portal-subtitle {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      max-width: 950px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  
+    /* Search & Filter Section */
+    .controls-wrapper {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #f8fafc;
+      border: 2px solid #cbd5e1;
+      border-radius: var(--radius-sm);
+      padding: 10px 16px;
+      transition: all 0.2s ease;
+    }
+  
+    .search-box:focus-within {
+      border-color: var(--primary-light);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+  
+    .search-box svg {
+      width: 20px;
+      height: 20px;
+      fill: #64748b;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+  
+    .search-input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      font-size: 0.96rem;
+      font-family: inherit;
+      color: var(--text-main);
+      outline: none;
+    }
+  
+    /* Category Filter Pills */
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+  
+    .filter-pill {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      padding: 7px 15px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #334155;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+  
+    .filter-pill:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+  
+    .filter-pill.active {
+      background: var(--primary-light);
+      color: #ffffff;
+      border-color: var(--primary-light);
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+    }
+  
+    /* Grid Layout: Symmetrical 3x3 on Desktops */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+  
+    /* Card Styling */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: var(--shadow-sm);
+      border-top: 6px solid var(--primary-light);
+    }
+  
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: #cbd5e1;
+    }
+  
+    /* Category specific border colors */
+    .card.cat-engineering { border-top-color: #2563eb; }
+    .card.cat-allied-health { border-top-color: #e11d48; }
+    .card.cat-agriculture { border-top-color: #16a34a; }
+    .card.cat-law { border-top-color: #d97706; }
+    .card.cat-pure-science { border-top-color: #0284c7; }
+    .card.cat-computer-it { border-top-color: #7c3aed; }
+    .card.cat-arts { border-top-color: #ea580c; }
+    .card.cat-commerce { border-top-color: #059669; }
+    .card.cat-diploma-vocational { border-top-color: #475569; }
+  
+    .card-top-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      gap: 8px;
+    }
+  
+    .card-number {
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+  
+    .card-mode-badge {
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      white-space: nowrap;
+    }
+  
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+  
+    .icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.45rem;
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      flex-shrink: 0;
+    }
+  
+    .card-title-group {
+      flex-grow: 1;
+    }
+  
+    .card-title {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.35;
+      display: block;
+    }
+  
+    .card-title small {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+  
+    .card-summary {
+      font-size: 0.91rem;
+      color: var(--text-sub);
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+  
+    .course-details {
+      background: #f8fafc;
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border-color);
+    }
+  
+    .detail-section-title {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #1e3a8a;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 6px;
+    }
+  
+    .course-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .course-list li {
+      font-size: 0.86rem;
+      color: #334155;
+      margin-bottom: 4px;
+      line-height: 1.45;
+      position: relative;
+      padding-left: 14px;
+    }
+  
+    .course-list li::before {
+      content: "•";
+      color: var(--primary-light);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+  
+    .tag {
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid #dbeafe;
+    }
+  
+    /* Action Button linked to direct dedicated sub-page */
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 11px 16px;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border-radius: 10px;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
+    }
+  
+    .btn-link:hover {
+      background: linear-gradient(135deg, #1e293b, #1e3a8a);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 12px rgba(15, 23, 42, 0.25);
+    }
+  
+    .btn-link svg {
+      width: 16px;
+      height: 16px;
+      stroke-width: 2.5;
+      transition: transform 0.2s ease;
+    }
+
+    .btn-link:hover svg {
+      transform: translateX(3px);
+    }
+  
+    /* Motivational Thirukkural Box */
+    .kural-box {
+      background: linear-gradient(135deg, #fefce8 0%, #fffbeb 50%, #fef3c7 100%);
+      border: 1px solid #fde047;
+      border-left: 5px solid #d97706;
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      margin: 32px 0 24px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(217, 119, 6, 0.08);
+    }
+  
+    .kural-header {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #b45309;
+      letter-spacing: 0.4px;
+      margin-bottom: 8px;
+      background: rgba(254, 240, 138, 0.7);
+      padding: 3px 12px;
+      border-radius: 999px;
+      border: 1px solid #fde68a;
+    }
+  
+    .kural-text {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #78350f;
+      line-height: 1.6;
+      margin-bottom: 6px;
+    }
+  
+    .kural-meaning {
+      font-size: 0.88rem;
+      color: #92400e;
+      line-height: 1.5;
+    }
+  
+    /* Footer */
+    .portal-footer {
+      text-align: center;
+      padding: 24px 16px 20px;
+      margin-top: 36px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-sub);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+  
+    .portal-footer a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  
+    @media (max-width: 1200px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+      .portal-title {
+        font-size: 1.65rem;
+      }
+      .hero-header {
+        padding: 28px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="portal-container">
+    
+    <!-- Top Navigation Bar -->
+    <div class="top-bar">
+      <a href="index.html" class="home-btn" title="முகப்பு பக்கம்">
+        <svg viewBox="0 0 20 20">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+        </svg>
+        முகப்பு (HOME)
+      </a>
+  
+      <div class="district-badge">
+        <span>🏛️ தமிழ்நாடு பள்ளிக் கல்வித்துறை | சிவகங்கை மாவட்டம்</span>
+      </div>
+    </div>
+  
+    <!-- Hero Header Banner -->
+    <header class="hero-header">
+      <div class="header-badge">
+        <span>🎯 உயர்கல்வி வழிகாட்டி 2026</span>
+      </div>
+      <h1 class="portal-title">
+        நுழைவுத் தேர்வு இல்லாத நேரடிச் சேர்க்கைப் படிப்புகள்
+      </h1>
+      <p class="portal-subtitle">
+        12-ஆம் வகுப்பு (+2) பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் மட்டும் தமிழ்நாட்டின் தலைசிறந்த அரசு, அரசு உதவிபெறும் மற்றும் முன்னணிப் பல்கலைக்கழகங்களில் நேரடியாகச் சேரக்கூடிய 9 முதன்மையான உயர்கல்வித் துறைகளின் முழுமையான வழிகாட்டி.
+      </p>
+    </header>
+  
+    <!-- Search & Filter Controls -->
+    <div class="controls-wrapper">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="படிப்பு, துறை, பல்கலைக்கழகம் அல்லது சிறப்புப் பிரிவுகள் கொண்டு தேடவும் (எ.கா: TNEA, Nursing, Agri, Law, BCA, B.Com, CSIR)...">
+      </div>
+  
+      <div class="filter-pills">
+        <button class="filter-pill active" data-filter="all">அனைத்துப் படிப்புகள் (All)</button>
+        <button class="filter-pill" data-filter="engineering">⚙️ 01. பொறியியல் (TNEA)</button>
+        <button class="filter-pill" data-filter="allied-health">🩺 02. கால்நடை, துணை மருத்துவம் & இயற்கை</button>
+        <button class="filter-pill" data-filter="agriculture">🌾 03. வேளாண்மை & மீன்வளம்</button>
+        <button class="filter-pill" data-filter="law">⚖️ 04. சட்டப் படிப்புகள் (TNDALU)</button>
+        <button class="filter-pill" data-filter="pure-science">🔬 05. அறிவியல் படிப்புகள் (B.Sc)</button>
+        <button class="filter-pill" data-filter="computer-it">💻 06. கணினி & IT (BCA / B.Sc)</button>
+        <button class="filter-pill" data-filter="arts">📚 07. கலை & மானுடவியல் (B.A)</button>
+        <button class="filter-pill" data-filter="commerce">📊 08. வணிகவியல் & மேலாண்மை</button>
+        <button class="filter-pill" data-filter="diploma-vocational">🛠️ 09. டிப்ளமோ & தொழிற்கல்வி</button>
+      </div>
+    </div>
+  
+    <!-- Symmetrical 9 Container Cards Grid (3x3 Layout) -->
+    <div class="grid-container" id="cardsGrid">
+  
+      <!-- 01. பொறியியல் நேரடிச் சேர்க்கை (TNEA) -->
+      <div class="card cat-engineering" data-category="engineering">
+        <div>
+          <div class="card-top-meta">
+            <span class="card-number">01 / ENGINEERING</span>
+            <span class="card-mode-badge">+2 PCM Cutoff /200</span>
+          </div>
+          <div class="card-header">
+            <div class="icon-box">⚙️</div>
+            <div class="card-title-group">
+              <span class="card-title">
+                பொறியியல் நேரடிச் சேர்க்கை
+                <small>Direct Engineering Admissions (TNEA)</small>
+              </span>
+            </div>
+          </div>
+          <p class="card-summary">
+            அண்ணா பல்கலைக்கழக முதன்மை வளாகங்கள், அரசு & முன்னணி தனியார் கல்லூரிகள் மற்றும் காரைக்குடி CSIR-CECRI உள்ளிட்ட 400+ கல்லூரிகளில் ஒற்றைச் சாளர சேர்க்கை.
+          </p>
+          <div class="course-details">
+            <div class="detail-section-title">முக்கியப் படிப்புகள் (Specializations):</div>
+            <ul class="course-list">
+              <li><strong>கம்ப்யூட்டர் & IT:</strong> CSE, AI & Data Science, Cybersecurity, IT</li>
+              <li><strong>சர்க்யூட் & கோர்:</strong> ECE, EEE, Mechanical, Civil Engineering</li>
+              <li><strong>வளர்ந்துவரும் துறைகள்:</strong> CSIR-CECRI (காரைக்குடி), Biotech, Chemical, Robotics</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">TNEA Code: 5012/0001</span>
+            <span class="tag">Anna University</span>
+            <span class="tag">B.E / B.Tech</span>
+            <span class="tag">7.5% அரசுப் பள்ளி ஒதுக்கீடு</span>
+          </div>
+        </div>
+        <a href="02_01_tnea_engineering.html" class="btn-link">
+          பொறியியல் முழு வழிகாட்டி & கல்லூரிகள் காண்க
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+  
+      <!-- 02. கால்நடை மருத்துவம், துணை மருத்துவம் & இயற்கை மருத்துவம் -->
+      <div class="card cat-allied-health" data-category="allied-health">
+        <div>
+          <div class="card-top-meta">
+            <span class="card-number">02 / VETERINARY, ALLIED HEALTH & BNYS</span>
+            <span class="card-mode-badge">+2 PCB Cutoff /200 (Non-NEET)</span>
+          </div>
+          <div class="card-header">
+            <div class="icon-box">🩺</div>
+            <div class="card-title-group">
+              <span class="card-title">
+                கால்நடை மருத்துவம், துணை மருத்துவம் & இயற்கை மருத்துவம்
+                <small>Veterinary Science (B.V.Sc & A.H.), Paramedical & BNYS (Non-NEET)</small>
+              </span>
+            </div>
+          </div>
+          <p class="card-summary">
+            நீட் (NEET) தேர்வு இல்லாமல், +2 பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் தமிழ்நாடு கால்நடை மருத்துவ அறிவியல் பல்கலைக்கழகம் (TANUVAS) மற்றும் மருத்துவக் கல்வி இயக்ககம் (DME) நடத்தும் நேரடி சேர்க்கை.
+          </p>
+          <div class="course-details">
+            <div class="detail-section-title">முக்கிய மருத்துவப் படிப்புகள்:</div>
+            <ul class="course-list">
+              <li><strong>கால்நடை மருத்துவம் (Veterinary Doctor):</strong> B.V.Sc. & A.H. (5½ ஆண்டுகள்) — TANUVAS சென்னை, நாமக்கல், நெல்லை, ஒரத்தநாடு, சேலம், தேனி, உடுமலைப்பேட்டை அரசு கல்லூரிகள் (7.5% ஒதுக்கீடு உண்டு).</li>
+              <li><strong>இயற்கை மருத்துவம் (Naturopathy Doctor):</strong> BNYS (Bachelor of Naturopathy & Yogic Sciences - 5½ ஆண்டுகள் மருத்துவர் படிப்பு).</li>
+              <li><strong>செவிலியர் & மருந்தியல்:</strong> B.Sc. Nursing, B.Pharm, BPT (பிசியோதெரபி), BOT (ஆக்குபேஷனல் தெரபி).</li>
+              <li><strong>உயர் மருத்துவத் தொழில்நுட்பம்:</strong> B.Sc. Radiography, Cardiac Tech, Dialysis Tech, Operation Theatre Tech, MLT.</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">TANUVAS (B.V.Sc & A.H.)</span>
+            <span class="tag">DME Paramedical</span>
+            <span class="tag">Non-NEET</span>
+            <span class="tag">BNYS டாக்டர்</span>
+            <span class="tag">B.Sc Nursing</span>
+            <span class="tag">7.5% அரசுப் பள்ளி இடஒதுக்கீடு</span>
+          </div>
+        </div>
+        <a href="02_02_veterinary_allied_health.html" class="btn-link" style="background: linear-gradient(135deg, #9f1239, #e11d48);">
+          கால்நடை & துணை மருத்துவ முழு வழிகாட்டி காண்க
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+  
+      <!-- 03. வேளாண்மை, தோட்டக்கலை & மீன்வளம் -->
+      <div class="card cat-agriculture" data-category="agriculture">
+        <div>
+          <div class="card-top-meta">
+            <span class="card-number">03 / AGRICULTURE & ALLIED</span>
+            <span class="card-mode-badge">+2 PCB/PCA Cutoff /200</span>
+          </div>
+          <div class="card-header">
+            <div class="icon-box">🌾</div>
+            <div class="card-title-group">
+              <span class="card-title">
+                வேளாண்மை, தோட்டக்கலை & மீன்வளம்
+                <small>Agriculture, Horticulture, Forestry & Fisheries</small>
+              </span>
+            </div>
+          </div>
+          <p class="card-summary">
+            தமிழ்நாடு வேளாண்மைப் பல்கலைக்கழகம் (TNAU), தமிழ்நாடு மீன்வளப் பல்கலைக்கழகம் (TNJFU) மற்றும் கால்நடை மருத்துவ அறிவியல் கழகம் (TANUVAS) நேரடிச் சேர்க்கை.
+          </p>
+          <div class="course-details">
+            <div class="detail-section-title">முக்கியப் படிப்புகள்:</div>
+            <ul class="course-list">
+              <li><strong>வேளாண் படிப்புகள்:</strong> B.Sc (Hons) Agriculture, B.Sc (Hons) Horticulture, Forestry</li>
+              <li><strong>தொழில்நுட்பப் பிரிவுகள்:</strong> B.Tech Agricultural Engg, Food Tech, Biotechnology</li>
+              <li><strong>மீன்வளம் & கால்நடை:</strong> B.F.Sc (மீன்வள அறிவியல்), B.Tech Dairy & Poultry Tech</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">TNAU கோவை</span>
+            <span class="tag">TNJFU நாகை</span>
+            <span class="tag">TANUVAS</span>
+            <span class="tag">7.5% இடஒதுக்கீடு</span>
+          </div>
+        </div>
+        <a href="02_03_agriculture_fisheries.html" class="btn-link" style="background: linear-gradient(135deg, #14532d, #16a34a);">
+          வேளாண்மை & மீன்வள வழிகாட்டி காண்க
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+  
+      <!-- 04. சட்டப் படிப்புகள் (Law Admissions - TNDALU) -->
+      <div class="card cat-law" data-category="law">
+        <div>
+          <div class="card-top-meta">
+            <span class="card-number">04 / LAW ADMISSIONS</span>
+            <span class="card-mode-badge">+2 Marks Merit / 7.5% Quota</span>
+          </div>
+          <div class="card-header">
+            <div class="icon-box">⚖️</div>
+            <div class="card-title-group">
+              <span class="card-title">
+                சட்டப் படிப்புகள் (5 ஆண்டு LL.B.)
+                <small>Direct Law Admissions (5-Year Integrated LL.B.)</small>
+              </span>
+            </div>
+          </div>
+          <p class="card-summary">
+            தமிழ்நாடு டாக்டர் அம்பேத்கர் சட்டப் பல்கலைக்கழகம் (TNDALU) மற்றும் தமிழகத்தின் 15 அரசு சட்டக் கல்லூரிகளில் நுழைவுத் தேர்வின்றி +2 மதிப்பெண் மூலம் நேரடிச் சேர்க்கை.
+          </p>
+          <div class="course-details">
+            <div class="detail-section-title">முக்கியப் படிப்புகள் (5-Year Law):</div>
+            <ul class="course-list">
+              <li><strong>ஒருங்கிணைந்த சட்டப் படிப்புகள்:</strong> B.A. LL.B., B.Com. LL.B., B.B.A. LL.B., B.C.A. LL.B.</li>
+              <li><strong>அரசு சட்டக் கல்லூரிகள்:</strong> சென்னை, மதுரை, திருச்சி, கோவை, நெல்லை, காரைக்குடி அருகில்</li>
+              <li><strong>தகுதிகள்:</strong> +2 அனைத்துப் பாடப்பிரிவு மாணவர்களும் தகுதியானவர்கள்; 7.5% முன்னுரிமை உண்டு</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">TNDALU சென்னை</span>
+            <span class="tag">5-Year LL.B.</span>
+            <span class="tag">அரசு சட்டக் கல்லூரிகள்</span>
+            <span class="tag">நீதித்துறை & வழக்கறிஞர்</span>
+          </div>
+        </div>
+        <a href="02_04_law_admissions.html" class="btn-link" style="background: linear-gradient(135deg, #78350f, #d97706);">
+          சட்டப் படிப்புகள் முழு வழிகாட்டி காண்க
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+  
+      <!-- 05. தூய & பயன்பாட்டு அறிவியல் (Pure & Applied Sciences - B.Sc) -->
+      <div class="card cat-pure-science" data-category="pure-science">
+        <div>
+          <div class="card-top-meta">
+            <span class="card-number">05 / PURE & APPLIED SCIENCE</span>
+            <span class="card-mode-badge">+2 Subject Marks Merit</span>
+          </div>
+          <div class="card-header">
+            <div class="icon-box">🔬</div>
+            <div class="card-title-group">
+              <span class="card-title">
+                தூய & பயன்பாட்டு அறிவியல் (B.Sc)
+                <small>Pure & Applied Sciences (TNGASA)</small>
+              </span>
+            </div>
+          </div>
+          <p class="card-summary">
+            அரசு மற்றும் அரசு உதவிபெறும் கலை அறிவியல் கல்லூரிகளில் (TNGASA) அடிப்படை அறிவியல் மற்றும் ஆராய்ச்சித் துறைகளுக்கான 3 ஆண்டு இளநிலைப் படிப்புகள்.
+          </p>
+          <div class="course-details">
+            <div class="detail-section-title">முக்கியப் படிப்புகள் (B.Sc):</div>
+            <ul class="course-list">
+              <li><strong>இயற்பியல் & கணிதம்:</strong> B.Sc Mathematics, B.Sc Physics, B.Sc Chemistry, Statistics</li>
+              <li><strong>உயிரியல் அறிவியல்:</strong> B.Sc Botany (தாவரவியல்), B.Sc Zoology (விலங்கியல்)</li>
+              <li><strong>பயன்பாட்டு அறிவியல்:</strong> Biotechnology, Microbiology, Biochemistry, Nutrition</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">TNGASA</span>
+            <span class="tag">B.Sc Pure Science</span>
+            <span class="tag">CSIR-NET / GATE</span>
+            <span class="tag">ஆராய்ச்சி & ஆய்வகங்கள்</span>
+          </div>
+        </div>
+        <a href="02_05_pure_applied_sciences.html" class="btn-link" style="background: linear-gradient(135deg, #075985, #0284c7);">
+          அறிவியல் படிப்புகள் முழு வழிகாட்டி காண்க
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+  
+      <!-- 06. கணினிப் பயன்பாட்டியல் & IT (BCA / B.Sc CS) -->
+      <div class="card cat-computer-it" data-category="computer-it">
+        <div>
+          <div class="card-top-meta">
+            <span class="card-number">06 / COMPUTER & IT</span>
+            <span class="card-mode-badge">+2 Maths / CS Merit</span>
+          </div>
+          <div class="card-header">
+            <div class="icon-box">💻</div>
+            <div class="card-title-group">
+              <span class="card-title">
+                கணினிப் பயன்பாட்டியல் & IT (BCA / B.Sc)
+                <small>Computer Applications, IT & Data Science</small>
+              </span>
+            </div>
+          </div>
+          <p class="card-summary">
+            குறைந்த செலவில் மென்பொருள் துறையில் நுழைய விரும்பும் மாணவர்களுக்கான முதன்மையான 3 ஆண்டு இளநிலைக் கணினிப் பயன்பாட்டியல் படிப்புகள்.
+          </p>
+          <div class="course-details">
+            <div class="detail-section-title">முக்கியப் படிப்புகள்:</div>
+            <ul class="course-list">
+              <li><strong>கணினிப் பயன்பாட்டியல்:</strong> BCA (Bachelor of Computer Applications)</li>
+              <li><strong>கணினி அறிவியல்:</strong> B.Sc Computer Science, B.Sc Information Technology</li>
+              <li><strong>நவீன IT துறைகள்:</strong> Data Science, AI & Machine Learning, Cyber Security</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">BCA</span>
+            <span class="tag">B.Sc Computer Science</span>
+            <span class="tag">Data Science</span>
+            <span class="tag">IT நிறுவன கேம்பஸ் தேர்வுகள்</span>
+          </div>
+        </div>
+        <a href="02_06_computer_applications_it.html" class="btn-link" style="background: linear-gradient(135deg, #581c87, #7c3aed);">
+          கணினி & IT முழு வழிகாட்டி காண்க
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+  
+      <!-- 07. கலை & மானுடவியல் படிப்புகள் (TNGASA) -->
+      <div class="card cat-arts" data-category="arts">
+        <div>
+          <div class="card-top-meta">
+            <span class="card-number">07 / ARTS & HUMANITIES</span>
+            <span class="card-mode-badge">+2 Aggregate Marks Merit</span>
+          </div>
+          <div class="card-header">
+            <div class="icon-box">📚</div>
+            <div class="card-title-group">
+              <span class="card-title">
+                கலை & மானுடவியல் படிப்புகள்
+                <small>Arts & Humanities (TNGASA)</small>
+              </span>
+            </div>
+          </div>
+          <p class="card-summary">
+            தமிழ்நாடு அரசு கலை மற்றும் அறிவியல் கல்லூரிகள் சேர்க்கை (TNGASA) மூலம் குறைந்த அரசு கட்டணத்தில் வழங்கப்படும் கலை & சமூகவியல் படிப்புகள்.
+          </p>
+          <div class="course-details">
+            <div class="detail-section-title">முக்கியப் படிப்புகள் (B.A.):</div>
+            <ul class="course-list">
+              <li><strong>மொழிகள் & ஊடகம்:</strong> B.A. தமிழ், B.A. ஆங்கிலம், B.A. இதழியல் (Journalism)</li>
+              <li><strong>குடிமைப் பணிகள் அடித்தளம்:</strong> B.A. வரலாறு (History), B.A. பொருளியல் (Economics)</li>
+              <li><strong>சமூக அறிவியல்:</strong> B.A. அரசியல் அறிவியல், பொது நிர்வாகம், சமூகவியல் (Sociology)</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">TNGASA</span>
+            <span class="tag">B.A. Arts</span>
+            <span class="tag">UPSC / TNPSC அடித்தளம்</span>
+            <span class="tag">புதுமைப் பெண் திட்டம்</span>
+          </div>
+        </div>
+        <a href="02_07_arts_humanities.html" class="btn-link" style="background: linear-gradient(135deg, #9a3412, #ea580c);">
+          கலை & மானுடவியல் முழு வழிகாட்டி காண்க
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+  
+      <!-- 08. வணிகவியல் & மேலாண்மைப் படிப்புகள் -->
+      <div class="card cat-commerce" data-category="commerce">
+        <div>
+          <div class="card-top-meta">
+            <span class="card-number">08 / COMMERCE & MANAGEMENT</span>
+            <span class="card-mode-badge">+2 Commerce / Accountancy Merit</span>
+          </div>
+          <div class="card-header">
+            <div class="icon-box">📊</div>
+            <div class="card-title-group">
+              <span class="card-title">
+                வணிகவியல் & மேலாண்மைப் படிப்புகள்
+                <small>Commerce, Finance & Management (B.Com / BBA)</small>
+              </span>
+            </div>
+          </div>
+          <p class="card-summary">
+            வங்கி, கார்ப்பரேட் நிதி, பங்குச்சந்தை மற்றும் பெருநிறுவன வணிக மேலாண்மை பணிகளுக்கான முதன்மையான 3 ஆண்டு இளநிலைப் படிப்புகள்.
+          </p>
+          <div class="course-details">
+            <div class="detail-section-title">முக்கியப் படிப்புகள்:</div>
+            <ul class="course-list">
+              <li><strong>வணிகவியல்:</strong> B.Com General, B.Com Computer Applications (CA)</li>
+              <li><strong>கார்ப்பரேட் & நிதி:</strong> B.Com Corporate Secretaryship, Accounting & Finance</li>
+              <li><strong>மேலாண்மை:</strong> BBA (Bachelor of Business Administration), BBM, FinTech</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">B.Com</span>
+            <span class="tag">BBA</span>
+            <span class="tag">TNGASA</span>
+            <span class="tag">வங்கி & கார்ப்பரேட் நிதி</span>
+          </div>
+        </div>
+        <a href="02_08_commerce_management.html" class="btn-link" style="background: linear-gradient(135deg, #065f46, #059669);">
+          வணிகவியல் & மேலாண்மை வழிகாட்டி காண்க
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+  
+      <!-- 09. டிப்ளமோ, தொழிற்கல்வி & தொழில்முறைத் தணிக்கை -->
+      <div class="card cat-diploma-vocational" data-category="diploma-vocational">
+        <div>
+          <div class="card-top-meta">
+            <span class="card-number">09 / DIPLOMA & VOCATIONAL</span>
+            <span class="card-mode-badge">+2 Direct 2nd Year Lateral / Merit</span>
+          </div>
+          <div class="card-header">
+            <div class="icon-box">🛠️</div>
+            <div class="card-title-group">
+              <span class="card-title">
+                டிப்ளமோ, தொழிற்கல்வி & தொழில்முறை (CA)
+                <small>Diploma, Polytechnic, Vocational & CA Foundation</small>
+              </span>
+            </div>
+          </div>
+          <p class="card-summary">
+            +2 முடித்தவுடன் உடனடி வேலைவாய்ப்பு வழங்கும் தொழில்நுட்ப பாலிடெக்னிக் டிப்ளமோ, மத்திய அரசு ITI மற்றும் பட்டயக் கணக்காளர் அறக்கட்டளைத் தேர்வுகள்.
+          </p>
+          <div class="course-details">
+            <div class="detail-section-title">முக்கியப் படிப்புகள்:</div>
+            <ul class="course-list">
+              <li><strong>நேரடி 2-ஆம் ஆண்டு பாலிடெக்னிக்:</strong> Mechanical, Electrical, Civil, Auto, Computer (DOTE)</li>
+              <li><strong>தொழில்முறைத் தணிக்கை:</strong> CA Foundation (ICAI), CMA Foundation, CS / CSEET</li>
+              <li><strong>மத்திய அரசு தொழிற்பயிற்சி:</strong> ITI தொழிற்பயிற்சிகள் & நேரடி தொழிற்சாலை அப்ரண்டிஸ்</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">DOTE Lateral Entry</span>
+            <span class="tag">Polytechnic</span>
+            <span class="tag">CA / CMA / CS</span>
+            <span class="tag">உடனடி வேலைவாய்ப்பு</span>
+          </div>
+        </div>
+        <a href="02_09_polytechnic_iti.html" class="btn-link" style="background: linear-gradient(135deg, #1e293b, #475569);">
+          டிப்ளமோ & தொழிற்கல்வி வழிகாட்டி காண்க
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+  
+    </div>
+  
+    <!-- Thirukkural Motivational Box -->
+    <div class="kural-box">
+      <div class="kural-header">
+        <span>📜</span>
+        <span>திருக்குறள் — அதிகாரம்: அறிவுடைமை (குறள்: 423)</span>
+      </div>
+      <div class="kural-text">
+        “எப்பொருள் யார்யார்வாய்க் கேட்பினும் அப்பொருள்<br>
+        மெய்ப்பொருள் காண்ப தறிவு.”
+      </div>
+      <div class="kural-meaning">
+        <strong>பொருள்:</strong> எந்தவொரு பொருளை யார் சொல்லக் கேட்டாலும், அச் சொல்லின் உண்மையான மெய்ப்பொருளை ஆராய்ந்து அறிவதே அறிவாகும்.
+      </div>
+    </div>
+  
+    <!-- Official Footer Credit -->
+    <footer class="portal-footer">
+      <p>
+        Website designed and developed by <strong>Poovalingam K</strong>, Deputy Inspector of Schools, Chief Educational Office, Sivagangai - Mobile : <a href="tel:9626471035">9626471035</a>
+      </p>
+    </footer>
+  
+  </div>
+  
+  <!-- Interactive Search & Category Filter Script -->
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const cards = document.querySelectorAll('.card');
+
+    let currentFilter = 'all';
+
+    function filterCards() {
+      const query = searchInput.value.toLowerCase().trim();
+
+      cards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        const textContent = card.innerText.toLowerCase();
+
+        const matchesCategory = (currentFilter === 'all' || category === currentFilter);
+        const matchesQuery = (query === '' || textContent.includes(query));
+
+        if (matchesCategory && matchesQuery) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Filter pill click event
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        currentFilter = pill.getAttribute('data-filter');
+        filterCards();
+      });
+    });
+
+    // Search input typing event
+    searchInput.addEventListener('input', filterCards);
+  </script>
+
+</body>
+</html>

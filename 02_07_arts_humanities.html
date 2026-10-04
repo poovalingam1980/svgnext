@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+
+<html lang="ta">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>கலை &amp; மானுடவியல் படிப்புகள் சேர்க்கை வழிகாட்டி (TNGASA B.A.) | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
+<!-- Google Fonts: Inter & Noto Sans Tamil -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+   --primary: #c2410c;     /* Arts Terracotta Orange */
+   --primary-dark: #9a3412;   /* Deep Rust Mahogany */
+   --primary-light: #ea580c;  /* Warm Amber Orange */
+   --primary-accent: #f97316;  /* Bright Orange */
+   --secondary: #1e3a8a;    /* Royal Administrative Navy */
+   --secondary-dark: #0f172a;  /* Midnight Slate */
+   --accent: #b45309;      /* Ochre Gold */
+   --accent-gold: #f59e0b;
+   --danger: #dc2626;
+   --success: #15803d;
+   --bg-main: #f8fafc;
+   --card-bg: #ffffff;
+   --text-main: #0f172a;
+   --text-sub: #334155;
+   --text-muted: #64748b;
+   --border: #e2e8f0;
+   --border-accent: #cbd5e1;
+   --badge-bg: #fff7ed;
+   --badge-text: #c2410c;
+   --radius-sm: 8px;
+   --radius-md: 14px;
+   --radius-lg: 20px;
+   --radius-xl: 28px;
+   --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+   --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+   --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.12);
+  }
+ 
+  * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+  }
+ 
+  html {
+   scroll-behavior: smooth;
+  }
+ 
+  body {
+   font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+   background-color: #f1f5f9;
+   color: var(--text-main);
+   line-height: 1.7;
+   padding: 16px;
+   -webkit-font-smoothing: antialiased;
+  }
+ 
+  .portal-container {
+   max-width: 1260px;
+   margin: 0 auto;
+  }
+ 
+  /* Top Navigation Bar */
+  .top-bar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 12px;
+   margin-bottom: 16px;
+  }
+ 
+  .home-btn {
+   display: inline-flex;
+   align-items: center;
+   gap: 8px;
+   padding: 9px 18px;
+   background-color: var(--primary-dark);
+   color: #ffffff;
+   text-decoration: none;
+   font-size: 0.92rem;
+   font-weight: 600;
+   border-radius: var(--radius-sm);
+   box-shadow: 0 2px 5px rgba(15, 23, 42, 0.2);
+   transition: all 0.2s ease;
+  }
+ 
+  .home-btn:hover {
+   background-color: #7c2d12;
+   transform: translateY(-1px);
+   box-shadow: 0 4px 10px rgba(15, 23, 42, 0.3);
+  }
+ 
+  .home-btn svg {
+   width: 18px;
+   height: 18px;
+   fill: currentColor;
+  }
+ 
+  .district-badge {
+   display: inline-flex;
+   align-items: center;
+   gap: 6px;
+   font-size: 0.88rem;
+   font-weight: 700;
+   color: #9a3412;
+   background: #ffedd5;
+   padding: 6px 16px;
+   border-radius: 999px;
+   border: 1px solid #fed7aa;
+  }
+ 
+  /* Portal Header */
+  .portal-header {
+   background: linear-gradient(135deg, #7c2d12 0%, #9a3412 40%, #c2410c 80%, #ea580c 100%);
+   border-radius: var(--radius-xl);
+   padding: 36px 32px 30px;
+   color: #ffffff;
+   box-shadow: var(--shadow-lg);
+   border: 1px solid rgba(255, 255, 255, 0.15);
+   margin-bottom: 24px;
+   text-align: center;
+   position: relative;
+   overflow: hidden;
+  }
+ 
+  .portal-header::after {
+   content: '';
+   position: absolute;
+   top: -50%;
+   right: -20%;
+   width: 400px;
+   height: 400px;
+   background: radial-gradient(circle, rgba(254, 215, 170, 0.25) 0%, transparent 70%);
+   pointer-events: none;
+  }
+ 
+  .header-badge-row {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+   flex-wrap: wrap;
+   margin-bottom: 12px;
+  }
+ 
+  .header-tag {
+   padding: 5px 14px;
+   border-radius: 999px;
+   font-size: 0.82rem;
+   font-weight: 800;
+   letter-spacing: 0.4px;
+   text-transform: uppercase;
+   border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+ 
+  .header-tag.primary {
+   background-color: #fef08a;
+   color: #713f12;
+   border-color: #fde047;
+  }
+ 
+  .header-tag.secondary {
+   background-color: rgba(255, 255, 255, 0.18);
+   color: #fff7ed;
+   backdrop-filter: blur (8px);
+  }
+ 
+  .portal-title {
+   font-size: 2.1rem;
+   font-weight: 900;
+   line-height: 1.35;
+   margin-bottom: 12px;
+   color: #ffffff;
+   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+ 
+  .accent-gold {
+   color: #fde047;
+  }
+ 
+  .portal-subtitle {
+   font-size: 1.02rem;
+   color: #ffedd5;
+   max-width: 960px;
+   margin: 0 auto;
+   line-height: 1.65;
+  }
+ 
+  /* Quick Navigation Pills */
+  .quick-nav-pills {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 8px;
+   margin-top: 22px;
+  }
+ 
+  .quick-nav-pill {
+   display: inline-flex;
+   align-items: center;
+   gap: 6px;
+   padding: 8px 16px;
+   background: rgba(255, 255, 255, 0.15);
+   color: #ffffff;
+   text-decoration: none;
+   border-radius: 999px;
+   font-size: 0.88rem;
+   font-weight: 600;
+   border: 1px solid rgba(255, 255, 255, 0.25);
+   backdrop-filter: blur (6px);
+   transition: all 0.2s ease;
+  }
+ 
+  .quick-nav-pill:hover {
+   background: #ffffff;
+   color: var(--primary-dark);
+   transform: translateY(-2px);
+   box-shadow: var(--shadow-sm);
+  }
+ 
+  /* Card Styles */
+  .info-card {
+   background: var(--card-bg);
+   border-radius: var(--radius-lg);
+   border: 1px solid var(--border);
+   padding: 28px;
+   margin-bottom: 24px;
+   box-shadow: var(--shadow-sm);
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+ 
+  .info-card:hover {
+   box-shadow: var(--shadow-md);
+  }
+ 
+  .card-header-flex {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 12px;
+   margin-bottom: 20px;
+   border-bottom: 2px solid #ffedd5;
+   padding-bottom: 14px;
+  }
+ 
+  .card-title-main {
+   font-size: 1.35rem;
+   font-weight: 800;
+   color: var(--primary-dark);
+   display: flex;
+   align-items: center;
+   gap: 10px;
+  }
+ 
+  .section-badge {
+   display: inline-block;
+   padding: 4px 12px;
+   background: #ffedd5;
+   color: #9a3412;
+   border-radius: 999px;
+   font-size: 0.82rem;
+   font-weight: 700;
+   border: 1px solid #fed7aa;
+  }
+ 
+  /* Grid Layouts */
+  .grid-2 {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+   gap: 20px;
+  }
+ 
+  .grid-3 {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 20px;
+  }
+ 
+  /* Feature Box */
+  .feature-box {
+   background: #fafaf9;
+   border: 1px solid var(--border);
+   border-radius: var(--radius-md);
+   padding: 20px;
+   transition: all 0.2s ease;
+  }
+ 
+  .feature-box:hover {
+   border-color: var(--primary-light);
+   background: #fff7ed;
+   transform: translateY(-2px);
+  }
+ 
+  .feature-box.highlight {
+   border-left: 5px solid var(--primary);
+   background: #fff7ed;
+  }
+ 
+  .feature-box.keezhadi {
+   border-left: 5px solid #d97706;
+   background: #fefce8;
+  }
+ 
+  .feature-box.quota {
+   border-left: 5px solid #16a34a;
+   background: #f0fdf4;
+  }
+ 
+  .feature-title {
+   font-size: 1.08rem;
+   font-weight: 700;
+   color: var(--text-main);
+   margin-bottom: 8px;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+  }
+ 
+  .feature-desc {
+   font-size: 0.92rem;
+   color: var(--text-sub);
+   line-height: 1.6;
+  }
+ 
+  /* Calculator Section */
+  .calc-container {
+   background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+   border: 2px solid #fed7aa;
+   border-radius: var(--radius-lg);
+   padding: 28px;
+   margin-bottom: 24px;
+  }
+ 
+  .calc-title {
+   font-size: 1.4rem;
+   font-weight: 800;
+   color: #9a3412;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   margin-bottom: 16px;
+  }
+ 
+  .calc-inputs-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 16px;
+   margin-bottom: 20px;
+  }
+ 
+  .input-group label {
+   display: block;
+   font-size: 0.88rem;
+   font-weight: 700;
+   color: #9a3412;
+   margin-bottom: 6px;
+  }
+ 
+  .input-group input {
+   width: 100%;
+   padding: 10px 14px;
+   border: 1.5px solid #cbd5e1;
+   border-radius: var(--radius-sm);
+   font-size: 1rem;
+   font-weight: 700;
+   color: #0f172a;
+   background: #ffffff;
+   transition: border-color 0.2s ease;
+  }
+ 
+  .input-group input:focus {
+   outline: none;
+   border-color: var(--primary);
+   box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.2);
+  }
+ 
+  .calc-result-box {
+   background: #ffffff;
+   border: 2px solid #ea580c;
+   border-radius: var(--radius-md);
+   padding: 20px;
+   text-align: center;
+   box-shadow: var(--shadow-sm);
+  }
+ 
+  .cutoff-score {
+   font-size: 2.8rem;
+   font-weight: 900;
+   color: #c2410c;
+   line-height: 1;
+   margin: 8px 0;
+  }
+ 
+  .cutoff-badge {
+   display: inline-block;
+   padding: 6px 16px;
+   border-radius: 999px;
+   font-size: 0.95rem;
+   font-weight: 800;
+   background: #ffedd5;
+   color: #9a3412;
+   margin-top: 6px;
+  }
+ 
+  /* Table Styling */
+  .table-container {
+   overflow-x: auto;
+   border: 1px solid var(--border);
+   border-radius: var(--radius-md);
+   background: #ffffff;
+   margin-top: 16px;
+  }
+ 
+  table {
+   width: 100%;
+   border-collapse: collapse;
+   text-align: left;
+   font-size: 0.92rem;
+  }
+ 
+  th {
+   background: #9a3412;
+   color: #ffffff;
+   padding: 14px 16px;
+   font-weight: 700;
+   white-space: nowrap;
+  }
+ 
+  td {
+   padding: 13px 16px;
+   border-bottom: 1px solid #f1f5f9;
+   color: var(--text-sub);
+   vertical-align: middle;
+  }
+ 
+  tr:hover td {
+   background: #fff7ed;
+  }
+ 
+  .college-tag {
+   display: inline-block;
+   padding: 3px 10px;
+   border-radius: 999px;
+   font-size: 0.78rem;
+   font-weight: 700;
+   margin-right: 4px;
+  }
+ 
+  .tag-govt { background: #dcfce7; color: #166534; }
+  .tag-aided { background: #fef3c7; color: #92400e; }
+  .tag-svg { background: #ffedd5; color: #9a3412; }
+ 
+  /* Search Box */
+  .search-row {
+   display: flex;
+   gap: 12px;
+   margin-bottom: 16px;
+   flex-wrap: wrap;
+  }
+ 
+  .search-input {
+   flex: 1;
+   min-width: 250px;
+   padding: 10px 16px;
+   border: 1.5px solid var(--border-accent);
+   border-radius: var(--radius-sm);
+   font-size: 0.94rem;
+  }
+ 
+  .filter-pills {
+   display: flex;
+   gap: 8px;
+   flex-wrap: wrap;
+  }
+ 
+  .college-pill {
+   padding: 8px 16px;
+   background: #f1f5f9;
+   border: 1px solid var(--border);
+   border-radius: 999px;
+   font-size: 0.85rem;
+   font-weight: 600;
+   cursor: pointer;
+   transition: all 0.2s;
+  }
+ 
+  .college-pill.active {
+   background: var(--primary);
+   color: #ffffff;
+   border-color: var(--primary);
+  }
+ 
+  /* Notice Box */
+  .notice-box {
+   border-radius: var(--radius-md);
+   padding: 16px 20px;
+   margin-bottom: 20px;
+   display: flex;
+   align-items: flex-start;
+   gap: 14px;
+  }
+ 
+  .notice-orange {
+   background: #fff7ed;
+   border: 1px solid #fed7aa;
+   color: #9a3412;
+  }
+ 
+  /* Footer */
+  .portal-footer {
+   background: #1e293b;
+   color: #f8fafc;
+   padding: 32px 24px;
+   border-radius: var(--radius-xl);
+   text-align: center;
+   margin-top: 36px;
+   border-top: 4px solid var(--primary);
+  }
+ 
+  .footer-dept {
+   font-size: 1.15rem;
+   font-weight: 800;
+   color: #fde68a;
+   margin-bottom: 6px;
+  }
+ 
+  .footer-initiative {
+   font-size: 0.95rem;
+   color: #94a3b8;
+   margin-bottom: 16px;
+  }
+ 
+  .footer-author {
+   background: rgba(255, 255, 255, 0.06);
+   padding: 12px 24px;
+   border-radius: var(--radius-md);
+   display: inline-block;
+   font-size: 0.95rem;
+   font-weight: 600;
+   color: #ffffff;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   margin-bottom: 12px;
+  }
+ 
+  .footer-copy {
+   font-size: 0.82rem;
+   color: #64748b;
+  }
+ 
+  @media (max-width: 768px) {
+   .portal-title { font-size: 1.6rem; }
+   .portal-header { padding: 24px 16px; }
+   .info-card { padding: 18px 14px; }
+   .calc-container { padding: 18px 14px; }
+   .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  }
+ 
+  #backToTopBtn {
+   display: none;
+   position: fixed;
+   bottom: 24px;
+   right: 24px;
+   z-index: 9999;
+   background-color: #9a3412;
+   color: #ffffff;
+   border: 2px solid #f59e0b;
+   border-radius: 999px;
+   padding: 10px 18px;
+   font-size: 0.88rem;
+   font-weight: 700;
+   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+   cursor: pointer;
+   transition: all 0.25s ease;
+  }
+  #backToTopBtn:hover {
+   background-color: #f59e0b;
+   color: #7c2d12;
+   transform: translateY(-3px);
+   box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
+  }
+  .quick-nav-pill {
+   cursor: pointer;
+   user-select: none;
+  }
+
+</style>
+</head>
+<body>
+<div class="portal-container">
+<!-- Top Navigation Bar -->
+<div class="top-bar">
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+  <a href="index.html" class="home-btn" title="முதன்மை முகப்பு">
+    <svg viewBox="0 0 20 20" style="width:16px;height:16px;fill:currentColor;"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+    முகப்பு (HOME)
+  </a>
+  <a href="02_00_direct_admissions.html" class="home-btn" style="background-color:#1e293b;" title="நேரடிச் சேர்க்கைப் படிப்புகள் முதன்மைப் பக்கம்">
+    <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor;"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    நேரடிச் சேர்க்கை கையேடு
+  </a>
+</div>
+<div class="district-badge">
+<span>🏛️ தமிழ்நாடு பள்ளிக் கல்வித்துறை | சிவகங்கை மாவட்டம்</span>
+</div>
+</div>
+<!-- Portal Header -->
+<header class="portal-header">
+<div class="header-badge-row">
+<span class="header-tag primary">பிரிவு 07 / ARTS &amp; HUMANITIES</span>
+<span class="header-tag secondary">TNGASA அரசு கலை &amp; அறிவியல் கல்லூரிகள்</span>
+<span class="header-tag secondary">குடிமைப் பணிகள் &amp; TNPSC வழிகாட்டல்</span>
+</div>
+<h1 class="portal-title">கலை &amp; மானுடவியல் படிப்புகள் சேர்க்கை வழிகாட்டி <span class="accent-gold"> (B.A.)</span></h1>
+<p class="portal-subtitle">தமிழ்நாடு அரசு கல்லூரிகளில் தமிழ், ஆங்கிலம், வரலாறு, பொருளியல், அரசியல் அறிவியல், இதழியல் பட்டப் படிப்புகள் சேர்க்கை, 7.5% அரசுப் பள்ளி இடஒதுக்கீடு, தமிழ் வழிக் கல்விக்கான 20% PSTM இடஒதுக்கீடு, கீழடி அகழ்வாராய்ச்சி வரலாற்றுச் சிறப்பு மற்றும் UPSC / TNPSC குடிமைப் பணிகளுக்கான வழிகாட்டல்.</p>
+<!-- Quick Nav Pills -->
+<div class="quick-nav-pills">
+<a class="quick-nav-pill" href="#calculator" onclick="scrollToSection ('calculator', event); return false;">🧮 கலைக் கட்-ஆஃப் கால்குலேட்டர்</a>
+<a class="quick-nav-pill" href="#courses" onclick="scrollToSection ('courses', event); return false;">📚 கலைப் படிப்புகள் (B.A.)</a>
+<a class="quick-nav-pill" href="#sociology-social" onclick="scrollToSection ('sociology-social', event); return false;" style="background:#fef3c7; color:#92400e; font-weight:700; border:1px solid #fde047;">🌍 சமூகவியல் (Sociology) &amp; சமூக அறிவியல்</a>
+<a class="quick-nav-pill" href="#keezhadi" onclick="scrollToSection ('keezhadi', event); return false;">🏺 கீழடி தொல்லியல் &amp; வரலாறு</a>
+<a class="quick-nav-pill" href="#civil-services" onclick="scrollToSection ('civil-services', event); return false;">🎯 UPSC &amp; TNPSC சிவில் சர்வீசஸ்</a>
+<a class="quick-nav-pill" href="#colleges" onclick="scrollToSection ('colleges', event); return false;">🏆 சிவகங்கை &amp; சமூகவியல் கல்லூரிகள்</a>
+</div>
+</header>
+<!-- Notice -->
+<div class="notice-box notice-orange">
+<span style="font-size: 1.5rem;">🏛️</span>
+<div>
+<strong>அரசு நிர்வாகப் பணிகளுக்கான அடித்தளம்:</strong> IAS, IPS, TNPSC குரூப் 1, குரூப் 2 போன்ற உயர் பதவிகளில் வெற்றி பெற்றவர்களில் பெரும்பாலோர் கலை மற்றும் மானுடவியல் படிப்புகளைத் தேர்ந்தெடுத்து கல்லூரி நூலகங்களைப் பயனுள்ள முறையில் பயன்படுத்தியவர்களே ஆவர்!
+  </div>
+</div>
+<!-- SECTION: CALCULATOR -->
+<section class="calc-container" id="calculator">
+<div class="calc-title">
+<span>🧮</span>
+<span>கலைப் படிப்பு கட்-ஆஃப் கால்குலேட்டர் (Arts Cut-off Calculator out of 400)</span>
+</div>
+<p style="font-size: 0.94rem; color: #9a3412; margin-bottom: 18px;">
+   கலைப் படிப்புகளுக்கு முதன்மைப் பாடங்களின் அடிப்படையில் தரவரிசை நிர்ணயிக்கப்படும். (B.A. தமிழுக்கு தமிழ் மதிப்பெண், B.A. ஆங்கிலத்திற்கு ஆங்கில மதிப்பெண், பிற கலைப் படிப்புகளுக்கு முதன்மை 4 பாடங்களின் கூட்டுத்தொகை). உங்களின் பாட மதிப்பெண்களை உள்ளிடவும்:
+  </p>
+<div class="calc-inputs-grid">
+<div class="input-group">
+<label for="sub1">தமிழ் / மொழிப்பாடம்:</label>
+<input id="sub1" max="100" min="0" placeholder="100-க்கு" type="number" value="90"/>
+</div>
+<div class="input-group">
+<label for="sub2">ஆங்கிலம் (English):</label>
+<input id="sub2" max="100" min="0" placeholder="100-க்கு" type="number" value="82"/>
+</div>
+<div class="input-group">
+<label for="sub3">முதன்மைப் பாடம் 1 (History / Commerce / Science):</label>
+<input id="sub3" max="100" min="0" placeholder="100-க்கு" type="number" value="85"/>
+</div>
+<div class="input-group">
+<label for="sub4">முதன்மைப் பாடம் 2 (Economics / Accountancy / Arts):</label>
+<input id="sub4" max="100" min="0" placeholder="100-க்கு" type="number" value="88"/>
+</div>
+</div>
+<div class="calc-result-box">
+<div style="font-size: 0.92rem; font-weight: 700; color: #64748b; text-transform: uppercase;">உங்கள் கலைப் படிப்பு கட்-ஆஃப் மதிப்பெண் (Total out of 400)</div>
+<div class="cutoff-score" id="cutoffValue">345 / 400</div>
+<div id="cutoffPercent" style="font-size: 1.1rem; font-weight: 700; color: #c2410c; margin-bottom: 6px;">சதவீதம்: 86.25 %</div>
+<div class="cutoff-badge" id="cutoffStatus">முன்னணி அரசுக் கல்லூரிகளில் விரும்பிய கலைத்துறை கிடைக்க மிகச் சிறந்த வாய்ப்பு!</div>
+</div>
+</section>
+<!-- SECTION 1: COURSES -->
+<section class="info-card" id="courses">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>📚</span> 1. கலை &amp; மானுடவியல் முதன்மைப் படிப்புகள்</h2>
+<span class="section-badge">B.A. Degrees (3 Years)</span>
+</div>
+<div class="grid-3">
+<div class="feature-box highlight">
+<h4 class="feature-title">📜 B.A. தமிழ் இலக்கியம்</h4>
+<p class="feature-desc">
+     தொன்மையான சங்க இலக்கியம், இலக்கணம், உரைநடை மற்றும் படைப்பிலக்கியம். TNPSC அரசுப் பணிகளில் <strong>20% PSTM முன்னுரிமை</strong>, பள்ளி &amp; கல்லூரி ஆசிரியர் பணி, மற்றும் செய்தி ஊடகத் துறைகளில் சிறப்பான வாய்ப்புகள்.
+    </p>
+</div>
+<div class="feature-box">
+<h4 class="feature-title">📖 B.A. English Literature</h4>
+<p class="feature-desc">
+     ஆங்கில மொழிப் புலமை, இலக்கியத் திறனாய்வு, தகவல்தொடர்பு நுட்பங்கள். கார்ப்பரேட் நிறுவனங்களில் கன்டென்ட் ரைட்டர், எடிட்டர், மொழிபெயர்ப்பாளர் (Translator) மற்றும் பன்னாட்டு நிறுவன வேலைவாய்ப்புகள்.
+    </p>
+</div>
+<div class="feature-box keezhadi">
+<h4 class="feature-title">🏺 B.A. வரலாறு (History)</h4>
+<p class="feature-desc">
+     இந்திய வரலாறு, தமிழக வரலாறு, உலக நாகரிகங்கள் மற்றும் தொல்லியல் (Archaeology). UPSC சிவில் சர்வீசஸ் மற்றும் TNPSC குரூப் 1 முதன்மைத் தேர்வுகளுக்கு அதிகபட்ச மதிப்பெண் ஈட்டித் தரும் பாடம்.
+    </p>
+</div>
+<div class="feature-box">
+<h4 class="feature-title">📈 B.A. பொருளியல் (Economics)</h4>
+<p class="feature-desc">
+     பொருளாதாரக் கொள்கைகள், வங்கித் துறை, பொது நிதி மற்றும் சர்வதேச வர்த்தகம். இந்தியப் பொருளாதாரப் பணி (IES), நிதி ஆலோசகர், புள்ளியியல் ஆய்வாளர் மற்றும் கார்ப்பரேட் நிறுவனப் பணிகள்.
+    </p>
+</div>
+<div class="feature-box">
+<h4 class="feature-title">🏛️ B.A. அரசியல் அறிவியல் (Political Science)</h4>
+<p class="feature-desc">
+     இந்திய அரசியலமைப்பு, சர்வதேச உறவுகள், அரசியல் சிந்தனைகள். சட்டக் கல்விக்கும், சர்வதேச தூதரகப் பணிகளுக்கும் (IFS), பத்திரிகை மற்றும் அரசியல் பகுப்பாய்வாளர் பணிகளுக்கும் சிறந்தது.
+    </p>
+</div>
+<div class="feature-box">
+<h4 class="feature-title">🎙️ B.A. இதழியல் &amp; மக்கள் தொடர்பியல்</h4>
+<p class="feature-desc">
+     செய்தியாளர், தொலைக்காட்சி நெறியாளர், சமூக ஊடக மேலாளர், மற்றும் அரசு மக்கள் தொடர்பு அலுவலர் (PRO) பணிகளுக்கான பிரத்யேகப் படிப்பு.
+    </p>
+</div>
+<!-- Sociology -->
+<div class="feature-box highlight" style="border-top: 4px solid #b45309; background: #fffdf5;">
+<h4 class="feature-title" style="color: #78350f;">🌍 B.A. சமூகவியல் (Sociology)</h4>
+<p class="feature-desc">
+<strong>சமூகக் கட்டமைப்பு &amp; மானுட உறவுகள்:</strong> சமூகவியல் அடிப்படைக் கோட்பாடுகள், இந்திய சமூக அமைப்பு, குடும்பம் &amp; திருமண மாற்றங்கள், சாதி-பாலினம்-வகுப்பு இயக்கங்கள், கிராமப்புற மற்றும் நகர்ப்புற சமூகவியல், சமூகப் பிரச்சனைகள் (Social Problems in India).<br/>
+<strong>UPSC &amp; TNPSC முதன்மைத் தேர்வு விருப்பப்பாடம்:</strong> சிவில் சர்வீசஸ் தேர்வில் மிக அதிக வெற்றி விகிதம் மற்றும் அதிக மதிப்பெண் பெற்றுத்தரும் முதன்மை விருப்பப்பாடம் (High-Scoring Optional)!<br/>
+<strong>வேலைவாய்ப்புகள்:</strong> சமூக நலத்துறை (Social Welfare), பெண்கள் &amp; குழந்தைகள் மேம்பாட்டுத் துறை, தன்னார்வத் தொண்டு நிறுவனங்கள் (UNICEF, UNESCO, NGOs), கார்ப்பரேட் சமூகப் பொறுப்புணர்வு (CSR மேலாளர்), மற்றும் சமூகக் கொள்கை ஆய்வாளர் (Social Policy Analyst).
+    </p>
+</div>
+<!-- Social Work (BSW) -->
+<div class="feature-box" style="border-top: 4px solid #0284c7; background: #f0f9ff;">
+<h4 class="feature-title" style="color: #0369a1;">🤝 BSW - சமூகப் பணி (Social Work)</h4>
+<p class="feature-desc">
+<strong>சமூக நலன் &amp; களப்பணி:</strong> சமுதாய ஒருங்கிணைப்பு, குடும்ப நல ஆலோசனை, களப்பணி (Fieldwork &amp; Community Visits), சமூக விழிப்புணர்வு மற்றும் நலிவடைந்தோர் மேம்பாடு.<br/>
+<strong>வேலைவாய்ப்புகள்:</strong> மருத்துவமனை மனநல சமூகப் பணியாளர் (Medical &amp; Psychiatric Social Worker), ஆலைகளில் தொழிலாளர் நல அலுவலர் (Labour Welfare Officer), புனர்வாழ்வு மையங்கள், மனிதவள மேம்பாடு (HR) மற்றும் சர்வதேச உதவி நிறுவனங்கள்.
+    </p>
+</div>
+<!-- Psychology -->
+<div class="feature-box" style="border-top: 4px solid #7c3aed; background: #faf5ff;">
+<h4 class="feature-title" style="color: #6d28d9;">🧠 B.A. / B.Sc. உளவியல் (Psychology)</h4>
+<p class="feature-desc">
+<strong>மனித மன இயல் &amp; நடத்தை அறிவியல்:</strong> பொது உளவியல், அறிவாற்றல் செயல்முறைகள், குழந்தை வளர்ச்சி உளவியல், சமூக உளவியல் மற்றும் ஆளுமை மேம்பாடு.<br/>
+<strong>வேலைவாய்ப்புகள்:</strong> பள்ளி &amp; கல்லூரி மாணவர் வழிகாட்டுதல் ஆலோசகர் (Educational Counselor), மருத்துவமனை கிளினிக்கல் சைக்காலஜிஸ்ட், கார்ப்பரேட் பணியாளர் நல்வாழ்வு ஆலோசகர் மற்றும் மனிதவள ஆட்சேர்ப்பு (HR Recruiter).
+    </p>
+</div>
+<!-- Public Administration -->
+<div class="feature-box" style="border-top: 4px solid #15803d; background: #f0fdf4;">
+<h4 class="feature-title" style="color: #166534;">🏛️ B.A. பொது நிர்வாகம் (Public Administration)</h4>
+<p class="feature-desc">
+<strong>அரசு நிருவாகக் கட்டமைப்பு &amp; கொள்கைகள்:</strong> நிர்வாகக் கோட்பாடுகள், இந்திய அரசியலமைப்பு &amp; ஆட்சிமுறை, மாவட்ட நிர்வாகம், உள்ளாட்சி அமைப்புகள் மற்றும் நிதி நிருவாகம்.<br/>
+<strong>வேலைவாய்ப்புகள்:</strong> UPSC சிவில் சர்வீசஸ் மற்றும் TNPSC குரூப் 1, 2 தேர்வுகளுக்கு நேரடி பாடத்திட்ட அடித்தளம்; தலைமைச் செயலகப் பணிகள், நகராட்சி நிர்வாகம் மற்றும் சிந்தனைக் குழாம்கள் (Public Policy Think Tanks).
+    </p>
+</div>
+<!-- Criminology -->
+<div class="feature-box" style="border-top: 4px solid #dc2626; background: #fef2f2;">
+<h4 class="feature-title" style="color: #991b1b;">👮 B.A. குற்றவியல் &amp; காவல் நிர்வாகம் (Criminology)</h4>
+<p class="feature-desc">
+<strong>குற்றவியல் அறிவியல் &amp; தடயவியல்:</strong> குற்ற நடத்தை ஆய்வுகள், குற்ற உளவியல் (Criminal Psychology), சிறைத்துறை மேலாண்மை, மனித உரிமைகள் மற்றும் காவல் நிர்வாக நடைமுறைகள்.<br/>
+<strong>வேலைவாய்ப்புகள்:</strong> சீருடைப் பணியாளர் தேர்வு (TNUSRB SI / DSP தேர்வுகள்), சிறைத்துறை நன்னடத்தை அலுவலர் (Probation Officer), புலனாய்வு அமைப்புகள் (CBI, IB), சைபர் க்ரைம் ஆய்வு மற்றும் தனியார் பாதுகாப்பு நிறுவனங்கள்.
+    </p>
+</div>
+<!-- Anthropology -->
+<div class="feature-box" style="border-top: 4px solid #d97706; background: #fffbeb;">
+<h4 class="feature-title" style="color: #b45309;">🦴 B.A. மானிடவியல் (Anthropology)</h4>
+<p class="feature-desc">
+<strong>மனித இனம் &amp; பண்பாட்டு பரிணாமம்:</strong> சமூக-பண்பாட்டு மானிடவியல், பழங்குடியினர் ஆய்வு (Tribal Studies), உடற்கூறு மானிடவியல், தொல்லியல் மானிடவியல்.<br/>
+<strong>வேலைவாய்ப்புகள்:</strong> இந்திய மானிடவியல் கணக்கெடுப்பு மையம் (Anthropological Survey of India), தொல்லியல் ஆய்வு மையங்கள், அருங்காட்சியகக் காப்பாட்சியர் மற்றும் UPSC முதன்மைத் தேர்வில் அதிக மதிப்பெண் தரும் விருப்பப்பாடம்.
+    </p>
+</div>
+<!-- Philosophy -->
+<div class="feature-box" style="border-top: 4px solid #475569; background: #f8fafc;">
+<h4 class="feature-title" style="color: #1e293b;">⚖️ B.A. தத்துவம் (Philosophy)</h4>
+<p class="feature-desc">
+<strong>தர்க்கவியல் &amp; மெய்யியல் அறநெறிகள்:</strong> தர்க்க சிந்தனை (Logic &amp; Reasoning), இந்திய மற்றும் மேலைநாட்டு மெய்யியல், அறவியல் கோட்பாடுகள் (Ethics &amp; Morality).<br/>
+<strong>முக்கியத்துவம்:</strong> UPSC சிவில் சர்வீசஸ் தேர்வு தாள் 4 (General Studies Paper IV - Ethics, Integrity &amp; Aptitude) மற்றும் கட்டுரைத் தாளில் (Essay Paper) அதிக மதிப்பெண்களை உறுதி செய்யும் பாடப்பிரிவு.
+    </p>
+</div>
+</div>
+</section>
+<!-- SECTION 2: KEEZHADI SPECIAL -->
+<!-- SECTION: SOCIOLOGY & SOCIAL SCIENCES SPECIAL -->
+<section class="info-card" id="sociology-social">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>🌍</span> சமூகவியல் (Sociology) &amp; சமூக அறிவியல் படிப்புகளின் தனித்துவ நன்மைகள்</h2>
+<span class="section-badge" style="background:#fef3c7; color:#92400e; font-weight:800;">High Career Scope</span>
+</div>
+<div class="notice-box notice-gold">
+<span style="font-size: 1.8rem;">💡</span>
+<div>
+<strong>ஏன் சமூகவியல் (Sociology) மற்றும் சமூக அறிவியல் படிப்புகள் மிகச் சிறந்த தேர்வு?</strong><br/>
+    சமூகவியல் என்பது வெறும் ஏட்டுக்கல்வி மட்டுமல்ல; சமூக மாற்றங்கள், மனித உறவுகள், கலாச்சாரங்கள் மற்றும் சமூகப் பிரச்சனைகளை ஆழமாகப் பகுத்தாயும் ஒரு புரட்சிகரமான அறிவியல் துறையாகும். மத்திய-மாநில அரசுகளின் சமூக நலத் திட்டங்களை வகுப்பதற்கும், களத்தில் செயல்படுத்துவதற்கும் சமூகவியல் பட்டதாரிகள் இன்றியமையாதவர்கள்.
+   </div>
+</div>
+<div class="grid-3" style="margin-top: 18px;">
+<div class="feature-box" style="background:#ffffff; border-top:4px solid #b45309;">
+<h4 class="feature-title">🏆 1. UPSC / TNPSC சிவில் சர்வீசஸ் வெற்றி</h4>
+<p class="feature-desc">
+     UPSC குடிமைப்பணித் தேர்வில் மிக அதிகமான வெற்றியாளர்களை உருவாக்கும் விருப்பப்பாடம் (Optional Subject) <strong>Sociology</strong> ஆகும்! மேலும் பொது அறிவுத் தாள்களான General Studies Paper 1 (Indian Society), Paper 2 (Social Justice), Paper 4 (Ethics) மற்றும் கட்டுரைத் தாளில் (Essay) அதிக மதிப்பெண்களைப் பெற இது நேரடி அடித்தளம் அமைக்கிறது.
+    </p>
+</div>
+<div class="feature-box" style="background:#ffffff; border-top:4px solid #0284c7;">
+<h4 class="feature-title">🏛️ 2. அரசு சமூக நலத் துறைப் பணிகள்</h4>
+<p class="feature-desc">
+     தமிழ்நாடு அரசின் சமூக நலன் மற்றும் மகளிர் உரிமைத் துறை, குழந்தைகள் பாதுகாப்பு அலகு (DCPU), நன்னடத்தை அலுவலர் (Probation Officer), சமூகப் பாதுகாப்புத் துறை மற்றும் மகளிர் உதவி மையங்களில் (One Stop Centres) சமூகவியல் மற்றும் BSW பட்டதாரிகளுக்கு நேரடி முன்னுரிமை அளிக்கப்படுகிறது.
+    </p>
+</div>
+<div class="feature-box" style="background:#ffffff; border-top:4px solid #15803d;">
+<h4 class="feature-title">🌐 3. உலகளாவிய NGO &amp; CSR வாய்ப்புகள்</h4>
+<p class="feature-desc">
+     யுனிசெப் (UNICEF), யுனெஸ்கோ (UNESCO), ஆக்ஸ்பாம் (Oxfam), கிராமப்புற வளர்ச்சி முகமைகள், மற்றும் டாடா, விப்ரோ, ரிலையன்ஸ் போன்ற முன்னணி கார்ப்பரேட் நிறுவனங்களின் <strong>CSR (Corporate Social Responsibility)</strong> துறைகளில் சமூக மேம்பாட்டு ஆலோசகர்களாக கைநிறைய ஊதியத்துடன் பணியாற்றலாம்.
+    </p>
+</div>
+</div>
+</section>
+<section class="info-card" id="keezhadi">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>🏺</span> 2. சிவகங்கை கீழடி அகழ்வாராய்ச்சியும் வரலாற்றுப் படிப்பும்</h2>
+<span class="section-badge" style="background:#fefce8; color:#854d0e;">சிவகங்கையின் வரலாற்றுப் பெருமை</span>
+</div>
+<div class="notice-box notice-orange">
+<span style="font-size: 1.5rem;">🏺</span>
+<div>
+<strong>வைகை நாகரிகத்தின் மையம் - சிவகங்கை:</strong> சிவகங்கை மாவட்டம் திருப்புவனம் வட்டம் கீழடியில் கண்டறியப்பட்டுள்ள 2600 ஆண்டுகள் பழமையான நகர நாகரிகம் மற்றும் கீழடி அருங்காட்சியகம், சிவகங்கை மாவட்ட மாணவர்களுக்கு வரலாறு, தொல்லியல் (Archaeology) மற்றும் கல்வெட்டியல் (Epigraphy) துறைகளில் வரலாற்றுச் சிறப்புமிக்க வேலைவாய்ப்புகளையும் ஆராய்ச்சி வாய்ப்புகளையும் திறந்துவிட்டுள்ளது!
+   </div>
+</div>
+</section>
+<!-- SECTION 3: CIVIL SERVICES ROADMAP -->
+<section class="info-card" id="civil-services">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>🎯</span> 3. கல்லூரி 3 ஆண்டுகளில் UPSC &amp; TNPSC-க்குத் தயாராகும் வழிமுறை</h2>
+<span class="section-badge">Success Roadmap</span>
+</div>
+<div class="grid-3">
+<div class="feature-box">
+<h4 class="feature-title">1️⃣ முதல் ஆண்டு (Year 1)</h4>
+<p class="feature-desc">
+     தினசரி தமிழ் மற்றும் ஆங்கில நாளிதழ்கள் வாசித்தல், 6 முதல் 12-ஆம் வகுப்பு வரையிலான சமச்சீர் கல்வி மற்றும் NCERT சமூக அறிவியல் புத்தகங்களை முழுமையாகக் குறிப்பெடுத்துப் படித்தல்.
+    </p>
+</div>
+<div class="feature-box">
+<h4 class="feature-title">2️⃣ இரண்டாம் ஆண்டு (Year 2)</h4>
+<p class="feature-desc">
+     இந்திய அரசியலமைப்பு (Laxmikanth), நவீன இந்திய வரலாறு, தமிழகப் பண்பாடு மற்றும் நடப்பு நிகழ்வுகளுக்கான வினா-விடைப் பயிற்சிகளைத் தொடங்குதல்.
+    </p>
+</div>
+<div class="feature-box">
+<h4 class="feature-title">3️⃣ மூன்றாம் ஆண்டு (Year 3)</h4>
+<p class="feature-desc">
+     மாதிரித் தேர்வுகள் (Mock Tests) எழுதுதல். பட்டம் முடித்த உடனேயே 21 வயதில் TNPSC குரூப் 1, குரூப் 2, மற்றும் UPSC முதல்நிலைத் தேர்வுகளை எழுதி முதல் முயற்சியிலேயே தேர்ச்சி பெறுதல்!
+    </p>
+</div>
+</div>
+</section>
+<!-- SECTION 4: COLLEGES DIRECTORY -->
+<section class="info-card" id="colleges">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>🏆</span> 4. சிவகங்கை மாவட்டம் &amp; அருகாமை அரசு கலைக்கல்லூரிகள்</h2>
+<span class="section-badge">Directory</span>
+</div>
+<!-- Search and Filter -->
+<div class="search-row">
+<input class="search-input" id="collegeSearchInput" placeholder="கல்லூரி பெயர் அல்லது ஊரைத் தட்டச்சு செய்க..." type="text"/>
+<div class="filter-pills">
+<button class="college-pill active" data-type="all">அனைத்தும் (All)</button>
+<button class="college-pill" data-type="svg">சிவகங்கை மாவட்டம்</button>
+<button class="college-pill" data-type="soc" style="background:#fef3c7; color:#92400e; font-weight:700;">🌍 சமூகவியல் &amp; சமூகப் பணி (Sociology / BSW)</button>
+<button class="college-pill" data-type="govt">அரசு கல்லூரிகள்</button>
+<button class="college-pill" data-type="aided">அரசு உதவிபெறும் / பல்கலை</button>
+</div>
+</div>
+<!-- Colleges Table -->
+<div class="table-container">
+<table id="collegesTable">
+<thead>
+<tr>
+<th>வ.எண்</th>
+<th>கல்லூரியின் பெயர் &amp; அமைவிடம்</th>
+<th>வழங்கப்படும் கலைப் படிப்புகள் (B.A.)</th>
+<th>பயிற்று மொழி</th>
+<th>மாவட்டம் / வகை</th>
+</tr>
+</thead>
+<tbody><tr data-type="svg govt" style="background:#fff7ed;">
+<td>1</td>
+<td><strong>ராஜா துரைசிங்கம் அரசு கலைக்கல்லூரி, சிவகங்கை</strong><br/><small>மன்னர் கல்லூரி, சிவகங்கை</small></td>
+<td>B.A. தமிழ், ஆங்கிலம், வரலாறு, பொருளியல்</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-svg">சிவகங்கை</span><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
+<tr data-type="svg govt" style="background:#fff7ed;">
+<td>2</td>
+<td><strong>அழகப்பா அரசு கலைக்கல்லூரி, காரைக்குடி</strong><br/><small>காரைக்குடி</small></td>
+<td>B.A. தமிழ் இலக்கியம், B.A. பொருளியல்</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-svg">காரைக்குடி</span><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
+<tr data-type="svg govt">
+<td>3</td>
+<td><strong>அரசு மகளிர் கலைக்கல்லூரி, காரைக்குடி</strong><br/><small>காரைக்குடி (மகளிர் கல்லூரி)</small></td>
+<td>B.A. தமிழ், B.A. ஆங்கிலம், B.A. வரலாறு</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-svg">காரைக்குடி</span><span class="college-tag tag-govt">மகளிர் அரசு</span></td>
+</tr>
+<tr data-type="svg govt">
+<td>4</td>
+<td><strong>அரசு கலை மற்றும் அறிவியல் கல்லூரி, திருப்பத்தூர்</strong><br/><small>திருப்பத்தூர், சிவகங்கை</small></td>
+<td>B.A. தமிழ், B.A. ஆங்கிலம்</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-svg">திருப்பத்தூர்</span><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
+<tr data-type="svg govt">
+<td>5</td>
+<td><strong>அரசு கலை மற்றும் அறிவியல் கல்லூரி, மானாமதுரை</strong><br/><small>மானாமதுரை, சிவகங்கை</small></td>
+<td>B.A. தமிழ், B.A. ஆங்கிலம்</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-svg">மானாமதுரை</span><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
+<tr data-type="svg govt">
+<td>6</td>
+<td><strong>அரசு கலை மற்றும் அறிவியல் கல்லூரி, சிங்கம்புணரி</strong><br/><small>சிங்கம்புணரி, சிவகங்கை</small></td>
+<td>B.A. தமிழ், B.A. வரலாறு</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-svg">சிங்கம்புணரி</span><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
+<tr data-type="svg aided">
+<td>7</td>
+<td><strong>டாக்டர் ஜாகீர் உசேன் கல்லூரி, இளையான்குடி</strong><br/><small>இளையான்குடி, சிவகங்கை</small></td>
+<td>B.A. தமிழ், B.A. ஆங்கிலம், B.A. அரபி</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-svg">இளையான்குடி</span><span class="college-tag tag-aided">அரசு உதவிபெறும்</span></td>
+</tr>
+<tr data-type="svg aided">
+<td>8</td>
+<td><strong>ஸ்ரீ சேவுகன் அண்ணாமலை கல்லூரி, தேவகோட்டை</strong><br/><small>தேவகோட்டை, சிவகங்கை</small></td>
+<td>B.A. தமிழ், B.A. பொருளியல்</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-svg">தேவகோட்டை</span><span class="college-tag tag-aided">அரசு உதவிபெறும்</span></td>
+</tr>
+<tr data-type="svg soc aided" style="background:#fffbeb; border-left:4px solid #b45309;">
+<td>9</td>
+<td><strong>அழகப்பா பல்கலைக்கழகம் - சமூகப் பணித் துறை (Alagappa University, Karaikudi)</strong><br/><small>காரைக்குடி, சிவகங்கை மாவட்டம் (மத்திய/மாநில அங்கீகாரம் பெற்ற முதன்மைப் பல்கலைக்கழகம்)</small></td>
+<td><strong>BSW (Bachelor of Social Work), MSW, சமூகவியல் ஆய்வுகள்</strong></td>
+<td>ஆங்கிலம் &amp; தமிழ்</td>
+<td><span class="college-tag tag-svg">காரைக்குடி</span><span class="college-tag tag-govt">பல்கலைக்கழகம்</span></td>
+</tr>
+<tr data-type="soc aided" style="background:#fffdf5;">
+<td>10</td>
+<td><strong>மதுரை காமராஜர் பல்கலைக்கழகம் (Madurai Kamaraj University - MKU)</strong><br/><small>பல்கலைநகர், மதுரை (School of Historical &amp; Social Sciences)</small></td>
+<td><strong>Department of Sociology - B.A. / M.A. சமூகவியல்</strong></td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">மாநிலப் பல்கலை</span><span class="college-tag tag-tamil">தென் மண்டலம்</span></td>
+</tr>
+<tr data-type="soc aided" style="background:#fffdf5;">
+<td>11</td>
+<td><strong>ஃபாத்திமா கல்லூரி (Fatima College - Autonomous), மதுரை</strong><br/><small>மேரி லேண்ட், மதுரை (மகளிருக்கான புகழ்பெற்ற தன்னாட்சிக் கல்லூரி)</small></td>
+<td><strong>B.A. Sociology (சமூகவியல்), B.A. வரலாறு, பொருளியல்</strong></td>
+<td>ஆங்கிலம் &amp; தமிழ்</td>
+<td><span class="college-tag tag-aided">அரசு உதவிபெறும் மகளிர்</span></td>
+</tr>
+<tr data-type="soc aided" style="background:#fffdf5;">
+<td>12</td>
+<td><strong>மதுரா கல்லூரி (The Madura College - Autonomous), மதுரை</strong><br/><small>வித்யா நகர், மதுரை (135 ஆண்டுகள் பழமைவாய்ந்த கல்வி நிறுவனம்)</small></td>
+<td><strong>B.A. Sociology, B.A. Philosophy (தத்துவம் &amp; சமூகவியல்)</strong></td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-aided">அரசு உதவிபெறும்</span></td>
+</tr>
+<tr data-type="soc aided" style="background:#fffdf5;">
+<td>13</td>
+<td><strong>லேடி டோக் கல்லூரி (Lady Doak College), மதுரை</strong><br/><small>தல்லாகுளம், மதுரை (NAAC A+ தன்னாட்சி மகளிர் கல்லூரி)</small></td>
+<td><strong>B.A. Sociology with Social Work, B.A. பொருளியல்</strong></td>
+<td>ஆங்கிலம்</td>
+<td><span class="college-tag tag-aided">மகளிர் தன்னாட்சி</span></td>
+</tr>
+<tr data-type="soc govt" style="background:#f0fdf4;">
+<td>14</td>
+<td><strong>ராணி மேரி கல்லூரி (Queen Mary's College), சென்னை</strong><br/><small>காமராஜர் சாலை, சென்னை (தமிழ்நாட்டின் முன்னோடி அரசு மகளிர் கல்லூரி)</small></td>
+<td><strong>B.A. Sociology (சமூகவியல்), B.A. வரலாறு, பொருளியல்</strong></td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">அரசு மகளிர் கல்லூரி</span></td>
+</tr>
+<tr data-type="soc aided" style="background:#f0f9ff;">
+<td>15</td>
+<td><strong>லயோலா கல்லூரி (Loyola College - Autonomous), சென்னை</strong><br/><small>ஸ்டெர்லிங் ரோடு, நுங்கம்பாக்கம், சென்னை</small></td>
+<td><strong>B.A. Sociology, BSW (Social Work), B.A. History</strong></td>
+<td>ஆங்கிலம்</td>
+<td><span class="college-tag tag-aided">தன்னாட்சிக் கல்லூரி</span></td>
+</tr>
+<tr data-type="soc aided" style="background:#f8fafc;">
+<td>16</td>
+<td><strong>சென்னை பல்கலைக்கழகம் (University of Madras - Chepauk Campus)</strong><br/><small>சேப்பாக்கம் வளாகம், சென்னை (தென்னிந்தியாவின் மிகப்பழமையான சமூகவியல் துறை - 1946)</small></td>
+<td><strong>Department of Sociology, Department of Criminology (குற்றவியல்)</strong></td>
+<td>ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">மாநில முதன்மை பல்கலை</span></td>
+</tr>
+<tr data-type="soc aided" style="background:#fefce8;">
+<td>17</td>
+<td><strong>பி.எஸ்.ஜி. கலை மற்றும் அறிவியல் கல்லூரி (PSG CAS), கோயம்புத்தூர்</strong><br/><small>அவிநாசி ரோடு, பீளமேடு, கோயம்புத்தூர்</small></td>
+<td><strong>B.A. Sociology, BSW Social Work, B.A. Psychology</strong></td>
+<td>ஆங்கிலம்</td>
+<td><span class="college-tag tag-aided">தன்னாட்சி நிறுவனம்</span></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<!-- Portal Footer -->
+<footer class="portal-footer" style="text-align: center; padding: 30px 20px; font-size: 0.88rem; border-top: 1px solid var(--border, #e2e8f0); margin-top: 24px; color: var(--text-muted, #64748b); line-height: 1.8;">
+    <div class="footer-dept" style="font-weight: 700; color: var(--text-main, #0f172a); font-size: 0.95rem;">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</div>
+    <div class="footer-initiative">மாணவர் உயர்கல்வி வழிகாட்டுதல் மற்றும் வேலைவாய்ப்பு விழிப்புணர்வு முயற்சி</div>
+    <div class="footer-author" style="margin-top: 4px;">Website designed and developed by <strong>Poovalingam K</strong>, Deputy Inspector of Schools, Chief Educational Office, Sivagangai - Mobile : 9626471035</div>
+    <div class="footer-update" style="margin-top: 8px; font-weight: 800; color: var(--primary, #0f766e); font-size: 0.92rem;">Updated on: 22-09-2026</div>
+    <div class="footer-copy" style="font-size: 0.8rem; margin-top: 4px; color: var(--text-muted, #64748b);">© Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.</div>
+  </footer>
+</div>
+<!-- JavaScript for Calculator & Filter -->
+<script>
+ const s1 = document.getElementById ('sub1');
+ const s2 = document.getElementById ('sub2');
+ const s3 = document.getElementById ('sub3');
+ const s4 = document.getElementById ('sub4');
+ const cutoffVal = document.getElementById ('cutoffValue');
+ const cutoffPercent = document.getElementById ('cutoffPercent');
+ const cutoffStatus = document.getElementById ('cutoffStatus');
+
+ function calculateArtsCutoff {
+  let v1 = parseFloat (s1.value) || 0;
+  let v2 = parseFloat (s2.value) || 0;
+  let v3 = parseFloat (s3.value) || 0;
+  let v4 = parseFloat (s4.value) || 0;
+
+  v1 = Math.min (100, Math.max (0, v1));
+  v2 = Math.min (100, Math.max (0, v2));
+  v3 = Math.min (100, Math.max (0, v3));
+  v4 = Math.min (100, Math.max (0, v4));
+
+  const total = v1 + v2 + v3 + v4;
+  const pct = (total / 400) * 100;
+
+  cutoffVal.textContent = total.toFixed (0) + ' / 400';
+  cutoffPercent.textContent = 'சதவீதம்: ' + pct.toFixed (2) + ' %';
+
+  if (total >= 320) {
+   cutoffStatus.textContent = 'முன்னணி அரசுக் கல்லூரிகளில் விரும்பிய கலைத்துறை கிடைக்க மிகச் சிறந்த வாய்ப்பு!';
+   cutoffStatus.style.background = '#dcfce7';
+   cutoffStatus.style.color = '#166534';
+  } else if (total >= 250) {
+   cutoffStatus.textContent = 'அரசு மற்றும் அரசு உதவிபெறும் கல்லூரிகளில் சேர்க்கைக்கு நல்ல வாய்ப்பு!';
+   cutoffStatus.style.background = '#ffedd5';
+   cutoffStatus.style.color = '#9a3412';
+  } else {
+   cutoffStatus.textContent = 'அருகாமை அரசுக் கல்லூரிகளில் சேர்க்கை பெறலாம்.';
+   cutoffStatus.style.background = '#fef3c7';
+   cutoffStatus.style.color = '#92400e';
+  }
+ }
+
+ s1.addEventListener ('input', calculateArtsCutoff);
+ s2.addEventListener ('input', calculateArtsCutoff);
+ s3.addEventListener ('input', calculateArtsCutoff);
+ s4.addEventListener ('input', calculateArtsCutoff);
+ calculateArtsCutoff;
+
+ // Table Filter
+ const searchInput = document.getElementById ('collegeSearchInput');
+ const pills = document.querySelectorAll ('.college-pill');
+ const rows = document.querySelectorAll ('#collegesTable tbody tr');
+
+ let activeType = 'all';
+
+ function filterColleges {
+  const q = searchInput.value.toLowerCase.trim;
+
+  rows.forEach (row => {
+   const type = row.getAttribute ('data-type');
+   const text = row.innerText.toLowerCase;
+
+   const matchesType = (activeType === 'all' || (type && type.includes (activeType)));
+   const matchesText = (q === '' || text.includes (q));
+
+   if (matchesType && matchesText) {
+    row.style.display = '';
+   } else {
+    row.style.display = 'none';
+   }
+  });
+ }
+
+ pills.forEach (p => {
+  p.addEventListener ('click', => {
+   pills.forEach (item => item.classList.remove ('active'));
+   p.classList.add ('active');
+   activeType = p.getAttribute ('data-type');
+   filterColleges;
+  });
+ });
+
+ searchInput.addEventListener ('input', filterColleges);
+</script>
+<!-- Floating Back to Top Button -->
+<button id="backToTopBtn" onclick="scrollToTop (event);" title="மேலே செல்க (Back to Top)">
+ ↑ மேலே
+</button>
+</body>
+</html>

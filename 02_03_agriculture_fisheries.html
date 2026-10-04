@@ -1,0 +1,2105 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>வேளாண்மை, தோட்டக்கலை, வனவியல் & மீன்வள அறிவியல் சேர்க்கை வழிகாட்டி (TNAU & TNJFU 2026) | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
+  
+  <!-- Google Fonts: Inter & Noto Sans Tamil -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #15803d;          /* Forest Agri Green */
+      --primary-dark: #14532d;     /* Deep Harvest Pine */
+      --primary-light: #16a34a;    /* Vibrant Plant Green */
+      --primary-accent: #22c55e;   /* Lush Sprout Green */
+      --secondary: #0284c7;        /* Fisheries Aqua Blue */
+      --secondary-dark: #0369a1;   /* Deep Marine Blue */
+      --accent: #d97706;           /* Harvest Amber */
+      --accent-gold: #f59e0b;      /* Golden Grain Gold */
+      --danger: #dc2626;           /* Crimson Alert */
+      --success: #15803d;          /* Success Green */
+      --bg-main: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-sub: #334155;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --border-accent: #cbd5e1;
+      --badge-bg: #f0fdf4;
+      --badge-text: #166534;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.12);
+    }
+  
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+  
+    html {
+      scroll-behavior: smooth;
+    }
+  
+    body {
+      font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f1f5f9;
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+  
+    .portal-container {
+      max-width: 1260px;
+      margin: 0 auto;
+    }
+  
+    /* Top Navigation Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+  
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      background-color: var(--primary-dark);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 2px 5px rgba(15, 23, 42, 0.2);
+      transition: all 0.2s ease;
+    }
+  
+    .home-btn:hover {
+      background-color: #052e16;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.3);
+    }
+  
+    .home-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+  
+    .district-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #166534;
+      background: #f0fdf4;
+      padding: 6px 16px;
+      border-radius: 999px;
+      border: 1px solid #bbf7d0;
+    }
+  
+    /* Portal Header */
+    .portal-header {
+      background: linear-gradient(135deg, #14532d 0%, #15803d 50%, #166534 100%);
+      border-radius: var(--radius-xl);
+      padding: 36px 32px 30px;
+      color: #ffffff;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      margin-bottom: 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portal-header::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(34, 197, 94, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+  
+    .header-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+  
+    .header-tag {
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+  
+    .header-tag.primary {
+      background-color: #fef08a;
+      color: #713f12;
+      border-color: #fde047;
+    }
+  
+    .header-tag.secondary {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #f0fdf4;
+      backdrop-filter: blur(8px);
+    }
+  
+    .portal-title {
+      font-size: 2.1rem;
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 12px;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+  
+    .accent-gold {
+      color: #fde047;
+    }
+  
+    .portal-subtitle {
+      font-size: 1.02rem;
+      color: #dcfce7;
+      max-width: 960px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+  
+    /* Quick Navigation Pills */
+    .quick-nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 22px;
+    }
+  
+    .quick-nav-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transition: all 0.2s ease;
+      backdrop-filter: blur(4px);
+    }
+  
+    .quick-nav-pill:hover {
+      background: #ffffff;
+      color: #15803d;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+  
+    .quick-nav-pill.highlight-pill {
+      background: #fef08a;
+      color: #713f12;
+      font-weight: 800;
+      border-color: #fde047;
+    }
+  
+    .quick-nav-pill.highlight-pill:hover {
+      background: #ffffff;
+      color: #15803d;
+    }
+  
+    /* Highlights Grid */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+  
+    .highlight-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 14px;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      border-top: 4px solid var(--primary-light);
+      transition: transform 0.2s ease;
+    }
+  
+    .highlight-box:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+  
+    .highlight-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+  
+    .highlight-val {
+      font-size: 1.28rem;
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+  
+    .highlight-desc {
+      font-size: 0.80rem;
+      color: var(--text-sub);
+      line-height: 1.4;
+    }
+  
+    /* Common Content Card */
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 26px 28px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+  
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 10px;
+    }
+  
+    .section-title .icon {
+      font-size: 1.5rem;
+    }
+  
+    /* Calculator Card */
+    .calculator-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+      border: 2px solid #86efac;
+      border-radius: var(--radius-lg);
+      padding: 24px 26px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-md);
+    }
+  
+    .calc-header {
+      margin-bottom: 18px;
+      text-align: center;
+    }
+  
+    .calc-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #166534;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+  
+    .calc-subtitle {
+      font-size: 0.90rem;
+      color: #15803d;
+      margin-top: 4px;
+    }
+  
+    .calc-inputs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+  
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+  
+    .input-group label {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--text-sub);
+    }
+  
+    .input-group input {
+      padding: 10px 14px;
+      border: 2px solid #cbd5e1;
+      border-radius: var(--radius-sm);
+      font-size: 1.05rem;
+      font-weight: 700;
+      font-family: inherit;
+      color: var(--text-main);
+      outline: none;
+      transition: all 0.2s ease;
+      background: #ffffff;
+    }
+  
+    .input-group input:focus {
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.18);
+    }
+  
+    .calc-result-box {
+      background: #14532d;
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #ffffff;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  
+    .calc-result-label {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #bbf7d0;
+    }
+  
+    .calc-result-val {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #fef08a;
+      letter-spacing: 0.5px;
+    }
+
+    .calc-guidance {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 8px;
+      margin-top: 4px;
+      font-size: 0.84rem;
+      color: #dcfce7;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .guidance-badge {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+  
+    /* Sub Grid & Cards */
+    .sub-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 14px;
+    }
+
+    .sub-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 14px;
+    }
+  
+    .sub-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      transition: all 0.2s ease;
+    }
+
+    .sub-card:hover {
+      border-color: #cbd5e1;
+      background: #ffffff;
+      box-shadow: var(--shadow-sm);
+    }
+  
+    .sub-card-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  
+    .styled-list {
+      list-style: none;
+      padding: 0;
+    }
+  
+    .styled-list li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 10px;
+      font-size: 0.93rem;
+      color: var(--text-sub);
+      line-height: 1.55;
+    }
+  
+    .styled-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--primary-light);
+      font-weight: 900;
+      font-size: 1rem;
+    }
+
+    .styled-list.bullet-star li::before {
+      content: '★';
+      color: var(--accent);
+    }
+  
+    /* Steps Container */
+    .steps-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+  
+    .step-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      position: relative;
+      border-top: 4px solid var(--primary-light);
+      box-shadow: var(--shadow-sm);
+    }
+  
+    .step-number {
+      position: absolute;
+      top: -12px;
+      right: 14px;
+      background: var(--primary);
+      color: #ffffff;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 900;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+  
+    .step-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      padding-right: 20px;
+    }
+  
+    .step-desc {
+      font-size: 0.86rem;
+      color: var(--text-sub);
+      line-height: 1.5;
+    }
+  
+    /* Course Cards */
+    .course-card-detail {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      margin-bottom: 14px;
+      border-left: 5px solid var(--primary-light);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }
+
+    .course-card-detail:hover {
+      transform: translateX(4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .course-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .course-name-tamil {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .course-name-eng {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-left: 6px;
+    }
+
+    .course-meta-pill {
+      background: #f0fdf4;
+      color: #166534;
+      border: 1px solid #bbf7d0;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .course-meta-pill.blue {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border-color: #bfdbfe;
+    }
+
+    .course-meta-pill.amber {
+      background: #fffbeb;
+      color: #b45309;
+      border-color: #fde68a;
+    }
+
+    .course-desc-text {
+      font-size: 0.92rem;
+      color: var(--text-sub);
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .career-scope {
+      background: #f8fafc;
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      font-size: 0.88rem;
+      color: var(--text-sub);
+      border-left: 3px solid var(--accent);
+    }
+
+    .career-scope strong {
+      color: var(--text-main);
+    }
+  
+    /* Banner Quota 7.5% */
+    .quota-banner {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      border: 2px solid #f59e0b;
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
+      margin-bottom: 20px;
+      color: #78350f;
+    }
+
+    .quota-banner-title {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #92400e;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .quota-banner-text {
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: #78350f;
+    }
+
+    .quota-features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .quota-feature-item {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      border: 1px solid #fcd34d;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #92400e;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  
+    /* Search Box */
+    .college-search-box {
+      display: flex;
+      align-items: center;
+      background: #f8fafc;
+      border: 2px solid #cbd5e1;
+      border-radius: var(--radius-sm);
+      padding: 10px 16px;
+      margin-bottom: 16px;
+      transition: all 0.2s ease;
+    }
+  
+    .college-search-box:focus-within {
+      border-color: var(--primary-light);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+    }
+  
+    .college-search-box svg {
+      width: 20px;
+      height: 20px;
+      fill: #64748b;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+  
+    .college-search-input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      font-size: 0.96rem;
+      font-family: inherit;
+      color: var(--text-main);
+      outline: none;
+    }
+  
+    /* College Filter Pills */
+    .college-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+  
+    .college-pill {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 7px 16px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--text-sub);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+  
+    .college-pill:hover {
+      background: #f0fdf4;
+      color: var(--primary);
+      border-color: #86efac;
+    }
+  
+    .college-pill.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 2px 6px rgba(21, 128, 61, 0.3);
+    }
+  
+    /* Colleges Data Table */
+    .table-container {
+      overflow-x: auto;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      margin-top: 10px;
+    }
+  
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.90rem;
+      text-align: left;
+      background: #ffffff;
+    }
+  
+    .styled-table thead tr {
+      background-color: #14532d;
+      color: #ffffff;
+      text-align: left;
+      font-weight: 700;
+    }
+  
+    .styled-table th, 
+    .styled-table td {
+      padding: 13px 15px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: middle;
+    }
+  
+    .styled-table tbody tr {
+      transition: background 0.15s ease;
+    }
+  
+    .styled-table tbody tr:hover {
+      background-color: #f0fdf4;
+    }
+  
+    .code-badge {
+      display: inline-block;
+      font-family: 'Inter', monospace;
+      font-weight: 800;
+      font-size: 0.82rem;
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid #cbd5e1;
+    }
+
+    .highlight-row {
+      background-color: #fefce8 !important;
+    }
+  
+    .type-badge {
+      display: inline-block;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 3px 9px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  
+    .type-badge.tnau { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+    .type-badge.tnjfu { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    .type-badge.hort { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+    .type-badge.diploma { background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe; }
+    .type-badge.affil { background: #f8fafc; color: #475569; border: 1px solid #cbd5e1; }
+  
+    .link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.80rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+  
+    .link-btn:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+  
+    /* Footer */
+    .portal-footer {
+      background: #14532d;
+      color: #cbd5e1;
+      padding: 32px 24px;
+      border-radius: var(--radius-lg);
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.90rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      line-height: 1.8;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .footer-link-pill {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 6px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.2s ease;
+    }
+
+    .footer-link-pill:hover {
+      background: #fef08a;
+      color: #713f12;
+    }
+  
+    /* Responsive Breakpoints */
+    @media (max-width: 992px) {
+      .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .steps-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .sub-grid, .sub-grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .quota-features-grid {
+        grid-template-columns: 1fr;
+      }
+      .calc-inputs {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  
+    @media (max-width: 640px) {
+      body {
+        padding: 10px 8px;
+      }
+      .portal-header {
+        padding: 26px 16px 22px;
+      }
+      .portal-title {
+        font-size: 1.55rem;
+      }
+      .highlights-grid {
+        grid-template-columns: 1fr;
+      }
+      .calc-inputs {
+        grid-template-columns: 1fr;
+      }
+      .steps-container {
+        grid-template-columns: 1fr;
+      }
+      .content-card {
+        padding: 18px 14px;
+      }
+      .styled-table th, 
+      .styled-table td {
+        padding: 10px 8px;
+        font-size: 0.82rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="portal-container">
+
+    <!-- Top Navigation Bar -->
+    <div class="top-bar">
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+  <a href="index.html" class="home-btn" title="முதன்மை முகப்பு">
+    <svg viewBox="0 0 20 20" style="width:16px;height:16px;fill:currentColor;"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+    முகப்பு (HOME)
+  </a>
+  <a href="02_00_direct_admissions.html" class="home-btn" style="background-color:#1e293b;" title="நேரடிச் சேர்க்கைப் படிப்புகள் முதன்மைப் பக்கம்">
+    <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor;"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    நேரடிச் சேர்க்கை கையேடு
+  </a>
+</div>
+      <div class="district-badge">
+        <span>🌾</span> முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்
+      </div>
+    </div>
+
+    <!-- Portal Hero Header Banner -->
+    <header class="portal-header">
+      <div class="header-badge-row">
+        <span class="header-tag primary">பிரிவு 03</span>
+        <span class="header-tag secondary">TNAU கோவை &amp; TNJFU நாகப்பட்டினம்</span>
+        <span class="header-tag secondary">இளநிலைப் பட்டங்கள் (Degree) • டிப்ளமோ (Diploma) • சான்றிதழ்</span>
+        <span class="header-tag secondary">நுழைவுத் தேர்வு இல்லாத நேரடிச் சேர்க்கை (Non-NEET)</span>
+      </div>
+
+      <h1 class="portal-title">
+        வேளாண்மை, தோட்டக்கலை, வனவியல் &amp; <span class="accent-gold">மீன்வள அறிவியல்</span> சேர்க்கை வழிகாட்டி
+      </h1>
+      <p class="portal-subtitle">
+        +2 பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் தமிழ்நாடு வேளாண்மைப் பல்கலைக்கழகம் (TNAU) மற்றும் தமிழ்நாடு டாக்டர் ஜெ. ஜெயலலிதா மீன்வளப் பல்கலைக்கழகம் (TNJFU) நடத்தும் அரசு ஒற்றைச் சாளர நேரடிச் சேர்க்கை மற்றும் வேலைவாய்ப்புகளுக்கான முழுமையான வழிகாட்டி.
+      </p>
+
+      <!-- Quick Navigation Jump Pills -->
+      <div class="quick-nav-pills">
+        <a href="#calculator" class="quick-nav-pill">🧮 அக்ரி கட்-ஆஃப் கால்குலேட்டர்</a>
+        <a href="#overview" class="quick-nav-pill">📌 சேர்க்கை அமைப்புகள் &amp; தகுதிகள்</a>
+        <a href="#quota" class="quick-nav-pill">🎯 7.5% அரசுப் பள்ளி முன்னுரிமை</a>
+        <a href="#tnau-courses" class="quick-nav-pill">🌾 TNAU இளநிலைப் பட்டங்கள் (14 படிப்புகள்)</a>
+        <a href="#tamil-medium" class="quick-nav-pill" style="background: #fef08a; color: #713f12; border-color: #fde047; font-weight: 800;">🇮🇳 தமிழ் வழி வேளாண்மை &amp; தோட்டக்கலை</a>
+        <a href="#tnjfu-courses" class="quick-nav-pill">🐟 TNJFU மீன்வள அறிவியல் (B.F.Sc &amp; B.Tech)</a>
+        <a href="#diploma-certificate" class="quick-nav-pill highlight-pill">📜 டிப்ளமோ &amp; சான்றிதழ் படிப்புகள்</a>
+        <a href="#counselling" class="quick-nav-pill">🔄 கலந்தாய்வு 6 முக்கிய நிலைகள்</a>
+        <a href="#documents" class="quick-nav-pill">📑 தேவையான ஆவணங்கள்</a>
+        <a href="#choice-filling" class="quick-nav-pill">💡 சாய்ஸ் ஃபில்லிங் உத்திகள்</a>
+        <a href="#colleges" class="quick-nav-pill">🏆 அரசு வேளாண்மை &amp; மீன்வளக் கல்லூரிகள்</a>
+      </div>
+    </header>
+
+    <!-- Key Metrics Highlight Bar -->
+    <div class="highlights-grid">
+      <div class="highlight-box">
+        <div class="highlight-label">சேர்க்கை முறை</div>
+        <div class="highlight-val">நேரடி மதிப்பெண்</div>
+        <div class="highlight-desc">+2 அறிவியல் பொதுத்தேர்வு மதிப்பெண் அடிப்படையில் மட்டுமே சேர்க்கை (No Entrance Exam)</div>
+      </div>
+      <div class="highlight-box">
+        <div class="highlight-label">கட்-ஆஃப் அளவீடு</div>
+        <div class="highlight-val">200 மதிப்பெண்கள்</div>
+        <div class="highlight-desc">உயிரியல்/கணிதம் (50) + இயற்பியல் (50) + வேதியியல் (50) + தாவரவியல்/விலங்கியல் (50)</div>
+      </div>
+      <div class="highlight-box">
+        <div class="highlight-label">அரசுப் பள்ளி முன்னுரிமை</div>
+        <div class="highlight-val">7.5% இடஒதுக்கீடு</div>
+        <div class="highlight-desc">கல்விக் கட்டணம், விடுதிக் கட்டணம் மற்றும் உணவுக் கட்டணங்களை அரசே முழுமையாக ஏற்கும்</div>
+      </div>
+      <div class="highlight-box">
+        <div class="highlight-label">முதன்மைப் பல்கலைக்கழகங்கள்</div>
+        <div class="highlight-val">TNAU &amp; TNJFU</div>
+        <div class="highlight-desc">tnau.ac.in மற்றும் tnjfu.ac.in ஒற்றைச் சாளர இணையவழி கலந்தாய்வு</div>
+      </div>
+    </div>
+
+    <!-- Section: Interactive Live Cut-off Calculator Widget -->
+    <section class="calculator-card" id="calculator">
+      <div class="calc-header">
+        <h2 class="calc-title">🧮 TNAU &amp; TNJFU வேளாண்மை / மீன்வள கட்-ஆஃப் கால்குலேட்டர்</h2>
+        <p class="calc-subtitle">உங்கள் +2 மதிப்பெண்களை உள்ளிட்டவுடன் அதிகாரப்பூர்வ சூத்திரத்தின்படி கட்-ஆஃப் உடனுக்குடன் கணக்கிடப்படும்</p>
+      </div>
+
+      <!-- Mode Selector -->
+      <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap;">
+        <label style="display: inline-flex; align-items: center; gap: 6px; font-weight: 700; color: #166534; font-size: 0.90rem; cursor: pointer;">
+          <input type="radio" name="calcMode" value="bio_maths" checked onchange="toggleCalcMode()"> உயிரியல் / கணிதப் பிரிவு (Physics + Chemistry + Biology + Maths /200)
+        </label>
+        <label style="display: inline-flex; align-items: center; gap: 6px; font-weight: 700; color: #166534; font-size: 0.90rem; cursor: pointer;">
+          <input type="radio" name="calcMode" value="pure_sci" onchange="toggleCalcMode()"> தூய அறிவியல் பிரிவு (Physics + Chemistry + Botany + Zoology /200)
+        </label>
+      </div>
+
+      <div class="calc-inputs" id="inputContainer">
+        <div class="input-group">
+          <label for="sub1" id="lblSub1">இயற்பியல் (Physics /100):</label>
+          <input type="number" id="sub1" min="0" max="100" placeholder="எ.கா: 85" value="88">
+        </div>
+        <div class="input-group">
+          <label for="sub2" id="lblSub2">வேதியியல் (Chemistry /100):</label>
+          <input type="number" id="sub2" min="0" max="100" placeholder="எ.கா: 88" value="90">
+        </div>
+        <div class="input-group">
+          <label for="sub3" id="lblSub3">உயிரியல் (Biology /100):</label>
+          <input type="number" id="sub3" min="0" max="100" placeholder="எ.கா: 92" value="94">
+        </div>
+        <div class="input-group" id="grpSub4">
+          <label for="sub4" id="lblSub4">கணிதம் (Maths /100):</label>
+          <input type="number" id="sub4" min="0" max="100" placeholder="எ.கா: 80" value="84">
+        </div>
+      </div>
+
+      <div class="calc-result-box">
+        <div>
+          <div class="calc-result-label">கணக்கிடப்பட்ட வேளாண்மை / மீன்வள கட்-ஆஃப் மதிப்பெண்:</div>
+          <div style="font-size: 0.85rem; color: #bbf7d0; margin-top: 2px;" id="formulaDesc">சூத்திரம்: (Physics/2) + (Chemistry/2) + Biology (அல்லது 4 பாடங்களின் சராசரி /200)</div>
+        </div>
+        <div class="calc-result-val" id="cutoffResult">183.00 / 200</div>
+
+        <div class="calc-guidance">
+          <div id="cutoffStatusText">🎯 சிறப்பான கட்-ஆஃப் மதிப்பெண்! அரசு வேளாண்மைக் கல்லூரிகளில் B.Sc (Hons) Agriculture மற்றும் B.F.Sc மீன்வள அறிவியல் சேர்க்கைக்கு அதிக வாய்ப்புள்ளது.</div>
+          <span class="guidance-badge" id="chanceBadge">High Potential</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: Overview & Eligibility -->
+    <section class="content-card" id="overview">
+      <h2 class="section-title">
+        <span class="icon">📌</span> 1. சேர்க்கை அமைப்புகள் &amp; கல்வித் தகுதிகள்
+      </h2>
+      <p style="margin-bottom: 14px; font-size: 0.98rem; color: #334155;">
+        தமிழ்நாட்டில் வேளாண்மை, தோட்டக்கலை, வனவியல் மற்றும் மீன்வளத் துறைகளில் உயர்கல்வி பயில விரும்பும் மாணவர்களுக்கு எந்தவித நுழைவுத் தேர்வும் இன்றி, +2 பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் மட்டுமே சேர்க்கை நடத்தப்படுகிறது.
+      </p>
+
+      <div class="sub-grid">
+        <div class="sub-card" style="border-top: 4px solid #16a34a;">
+          <h3 class="sub-card-title">🌾 1. தமிழ்நாடு வேளாண்மைப் பல்கலைக்கழகம் (TNAU)</h3>
+          <p style="font-size: 0.88rem; color: #475569; margin-bottom: 8px;"><strong>தலைமையகம்: கோயம்புத்தூர் (Established 1971)</strong></p>
+          <ul class="styled-list">
+            <li>இந்தியாவின் முதன்மை வேளாண்மைப் பல்கலைக்கழகங்களில் ஒன்று (ICAR Accredited).</li>
+            <li>14 அரசு உறுப்புக் கல்லூரிகள் மற்றும் 28-க்கும் மேற்பட்ட இணைப்புக் கல்லூரிகளில் 14 பட்டப் படிப்புகள்.</li>
+            <li><strong>அதிகாரப்பூர்வ தளம்:</strong> <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" style="color: #15803d; font-weight: 700;">tnau.ac.in</a> / <a href="https://tnauucadmission.in" target="_blank" rel="noopener noreferrer" style="color: #15803d; font-weight: 700;">tnauucadmission.in</a></li>
+          </ul>
+        </div>
+
+        <div class="sub-card" style="border-top: 4px solid #0284c7;">
+          <h3 class="sub-card-title">🐟 2. தமிழ்நாடு டாக்டர் ஜெ. ஜெயலலிதா மீன்வளப் பல்கலைக்கழகம் (TNJFU)</h3>
+          <p style="font-size: 0.88rem; color: #475569; margin-bottom: 8px;"><strong>தலைமையகம்: நாகப்பட்டினம் (Established 2012)</strong></p>
+          <ul class="styled-list">
+            <li>மீன்வள அறிவியல், நீர்வாழ் உயிரின வளர்ப்பு (Aquaculture) மற்றும் கடல்சார் தொழில்நுட்பக் கல்வி.</li>
+            <li>நாகப்பட்டினம், தூத்துக்குடி, பொன்னேரி, மாதவரம் ஆகிய வளாகங்களில் B.F.Sc மற்றும் B.Tech படிப்புகள்.</li>
+            <li><strong>அதிகாரப்பூர்வ தளம்:</strong> <a href="https://tnjfu.ac.in" target="_blank" rel="noopener noreferrer" style="color: #0369a1; font-weight: 700;">tnjfu.ac.in</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sub-grid" style="margin-top: 18px;">
+        <div class="sub-card">
+          <h3 class="sub-card-title">கல்வித் தகுதிகள் (Eligibility Criteria)</h3>
+          <ul class="styled-list">
+            <li><strong>குரூப் 1 (Biology + Maths):</strong> இயற்பியல், வேதியியல், உயிரியல், கணிதம் பயின்ற மாணவர்கள் அனைத்து வேளாண்மை, தோட்டக்கலை, வனவியல் மற்றும் பி.டெக் பொறியியல் படிப்புகளுக்கும் விண்ணப்பிக்கலாம்.</li>
+            <li><strong>குரூப் 2 (Pure Science):</strong> இயற்பியல், வேதியியல், தாவரவியல், விலங்கியல் பயின்ற மாணவர்கள் B.Sc வேளாண்மை, தோட்டக்கலை, வனவியல் மற்றும் மீன்வளப் படிப்புகளுக்கு முழுத் தகுதி உடையவர்கள்.</li>
+            <li><strong>குரூப் 3 (Computer Science):</strong> இயற்பியல், வேதியியல், கணிதம், கணினி அறிவியல் மாணவர்கள் B.Tech (Agri Engg, Food Tech, Biotechnology, Energy & Enviro Engg) படிப்புகளுக்கு விண்ணப்பிக்கலாம்.</li>
+            <li><strong>தொழிற்கல்விப் பிரிவு (Vocational Agri):</strong> தொழிற்கல்வி வேளாண்மை பயின்ற மாணவர்களுக்கு 5% தனி இடஒதுக்கீடு உண்டு.</li>
+          </ul>
+        </div>
+
+        <div class="sub-card">
+          <h3 class="sub-card-title">குறைந்தபட்ச தேர்ச்சி சதவிகிதம் (Minimum Qualifying Marks)</h3>
+          <ul class="styled-list">
+            <li><strong>பொதுப் பிரிவு (OC):</strong> அறிவியல் பாடங்களில் சராசரியாக 55% மதிப்பெண்கள்.</li>
+            <li><strong>பிற்படுத்தப்பட்டோர் (BC / BCM):</strong> அறிவியல் பாடங்களில் சராசரியாக 50% மதிப்பெண்கள்.</li>
+            <li><strong>மிகவும் பிற்படுத்தப்பட்டோர் (MBC / DNC):</strong> சராசரியாக 45% மதிப்பெண்கள்.</li>
+            <li><strong>ஆதிதிராவிடர் &amp; பழங்குடியினர் (SC / SCA / ST):</strong> +2 தேர்வில் தேர்ச்சி பெற்றிருந்தாலே போதுமானது (Pass in +2).</li>
+            <li><strong>வயது வரம்பு:</strong> சேர்க்கை ஆண்டின் ஜூலை 1-ஆம் தேதியன்று 21 வயது மிகாமல் இருக்க வேண்டும் (SC/ST/SCA பிரிவினருக்கு வயது வரம்பு இல்லை).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: 7.5% Govt School Quota -->
+    <section class="content-card" id="quota" style="border-top: 5px solid #d97706;">
+      <h2 class="section-title" style="color: #b45309;">
+        <span class="icon">🎯</span> 2. அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு &amp; 100% இலவசக் கல்வி
+      </h2>
+      
+      <div class="quota-banner">
+        <div class="quota-banner-title">
+          <span>🏛️</span> தமிழ்நாடு அரசின் வரலாற்றுச் சிறப்புமிக்க நலத்திட்டம்!
+        </div>
+        <p class="quota-banner-text">
+          தமிழ்நாடு அரசுப் பள்ளிகளில் (ஊராட்சி ஒன்றியம், நகராட்சி, மாநகராட்சி, ஆதிதிராவிடர் நலப்பள்ளி, கள்ளர் சீரமைப்பு, வனத்துறை பள்ளிகள்) <strong>6-ஆம் வகுப்பு முதல் 12-ஆம் வகுப்பு வரை தொடர்ந்து பயின்ற மாணவச் செல்வங்களுக்கு</strong> வேளாண்மை (B.Sc Agri), தோட்டக்கலை, வனவியல், B.Tech தொழினுட்பம் மற்றும் மீன்வள அறிவியல் (B.F.Sc) படிப்புகளில் <strong>7.5% கிடைமட்ட முன்னுரிமை இடஒதுக்கீடு (Horizontal Reservation)</strong> சட்டப்பூர்வமாக வழங்கப்படுகிறது.
+        </p>
+
+        <div class="quota-features-grid">
+          <div class="quota-feature-item">
+            <span>🎓</span> 100% முழுக் கல்விக் கட்டண விலக்கு (Full Tuition Fee Free)
+          </div>
+          <div class="quota-feature-item">
+            <span>🏢</span> அரசு &amp; பல்கலைக்கழக விடுதிக் கட்டணம் அரசே முழுமையாக ஏற்பு
+          </div>
+          <div class="quota-feature-item">
+            <span>🍲</span> உணவுக் கட்டணம் (Mess Fees) முழுமையாக அரசே செலுத்தும்
+          </div>
+          <div class="quota-feature-item">
+            <span>📚</span> புத்தகங்கள், ஆய்வகக் கட்டணங்கள் மற்றும் தேர்வுக் கட்டணங்கள் இலவசம்
+          </div>
+          <div class="quota-feature-item">
+            <span>📑</span> தனித் தரவரிசைப் பட்டியல் (Dedicated 7.5% Rank List)
+          </div>
+          <div class="quota-feature-item">
+            <span>💰</span> புதுமைப் பெண் &amp; தமிழ்ப் புதல்வன் திட்டம் (மாதம் ₹1,000)
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-grid">
+        <div class="sub-card">
+          <h3 class="sub-card-title">சுயநிதி கல்லூரிகளிலும் இலவசக் கல்வி!</h3>
+          <p style="font-size: 0.90rem; color: #475569; margin-bottom: 8px;">
+            அரசு கல்லூரிகள் மட்டுமின்றி, ஒற்றைச் சாளரக் கலந்தாய்வு மூலம் தனியார் சுயநிதி வேளாண் கல்லூரிகளில் அரசு ஒதுக்கீட்டு இடங்களில் (Govt Quota in Private Agri Colleges) சேரும் 7.5% அரசுப் பள்ளி மாணவர்களின் அனைத்து கல்விக் கட்டணம், தங்குமிடம் மற்றும் உணவுக் கட்டணங்களையும் தமிழ்நாடு அரசே நேரடியாக கல்லூரிக்குச் செலுத்துகிறது.
+          </p>
+        </div>
+
+        <div class="sub-card">
+          <h3 class="sub-card-title">தேவையான உறுதிப்படுத்தல் சான்றிதழ்</h3>
+          <p style="font-size: 0.90rem; color: #475569; margin-bottom: 8px;">
+            6 முதல் 12-ஆம் வகுப்பு வரை அரசுப் பள்ளியில் படித்ததற்கான <strong>இருப்பிடப் பள்ளித் தலைமை ஆசிரியர் (HM) சான்றொப்பமிட்டு, வட்டாரக் கல்வி அலுவலர் (BEO) / மாவட்டக் கல்வி அலுவலர் (DEO) / முதன்மைக் கல்வி அலுவலர் (CEO)</strong> அவர்களால் மேலொப்பம் இடப்பட்ட <strong>போனஃபைட் சான்றிதழ் (Bonafide Certificate)</strong> சமர்ப்பிக்க வேண்டும்.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: TNAU Undergraduate Degree Courses -->
+    <section class="content-card" id="tnau-courses">
+      <h2 class="section-title">
+        <span class="icon">🌾</span> 3. தமிழ்நாடு வேளாண்மைப் பல்கலைக்கழகம் (TNAU) வழங்கும் 14 இளநிலைப் பட்டப் படிப்புகள்
+      </h2>
+      <p style="margin-bottom: 16px; font-size: 0.98rem; color: #334155;">
+        TNAU-வில் 4 ஆண்டுகள் கால அளவு கொண்ட அறிவியல் சார்ந்த மற்றும் தொழில்நுட்பப் பட்டப் படிப்புகள் உலகத்தரம் வாய்ந்த செய்முறைப் பயிற்சிகளுடன் கற்பிக்கப்படுகின்றன:
+      </p>
+
+      <!-- Course 1: BSc Agri -->
+      <div class="course-card-detail" style="border-left-color: #16a34a;">
+        <div class="course-title-row">
+          <div>
+            <span class="course-name-tamil">1. B.Sc. (Hons.) Agriculture (வேளாண்மை அறிவியல் பட்டப்படிப்பு)</span>
+            <span class="course-name-eng">Bachelor of Science (Honours) in Agriculture</span>
+          </div>
+          <span class="course-meta-pill">4 ஆண்டுகள் (8 செமஸ்டர்கள்)</span>
+        </div>
+        <p class="course-desc-text">
+          பயிர் சாகுபடி முறைகள், மண் வள மேலாண்மை, பயிர் நோயியல், பூச்சியியல், மரபியல் &amp; தாவர இனப்பெருக்கம், விதைத் தொழில்நுட்பம், வேளாண் பொருளாதாரம் மற்றும் விரிவாக்கக் கல்வி. இறுதி ஆண்டில் ஊரக வேளாண்மை பணி அனுபவத் திட்டம் (RAWE) மூலம் கிராமங்களில் தங்கி விவசாயிகளுடன் நேரடிப் பயிற்சி.
+        </p>
+        <div class="career-scope">
+          <strong>வேலைவாய்ப்புகள்:</strong> தமிழ்நாடு அரசு வேளாண்மை அலுவலர் (Agriculture Officer - AO), உதவி இயக்குநர், வங்கி வேளாண் அலுவலர் (IBPS AFO), ICAR விஞ்ஞானி, சிவில் சர்வீசஸ் (IAS, IPS, IFS - முதன்மைப் பாடமாக அக்ரி), உரம் &amp; பூச்சிக்கொல்லி நிறுவனங்கள், விதை உற்பத்தி நிறுவனங்கள்.
+        </div>
+      </div>
+
+      <!-- Course 2 & 3: Tamil Medium Courses Special Banner -->
+      <div class="course-card-detail" id="tamil-medium" style="border-left-color: #f59e0b; background: #fffbeb;">
+        <div class="course-title-row">
+          <div>
+            <span class="course-name-tamil" style="color: #92400e;">2. B.Sc. (Hons.) Agriculture &amp; Horticulture — தமிழ் வழிக் கல்வி (Tamil Medium)</span>
+            <span class="course-name-eng">தமிழ் வழியில் பயிலும் பட்டப் படிப்புகள்</span>
+          </div>
+          <span class="course-meta-pill amber">கோயம்புத்தூர் &amp; மதுரை வளாகங்கள்</span>
+        </div>
+        <p class="course-desc-text" style="color: #78350f;">
+          தமிழ்நாடு அரசால் தாய்மொழி வழிக் கல்வியை ஊக்குவிக்க <strong>கோயம்புத்தூர் முதன்மை வளாகம் மற்றும் மதுரை வேளாண்மைக் கல்லூரி வளாகத்தில்</strong> தமிழ் வழியில் B.Sc. (Hons.) Agriculture மற்றும் தோட்டக்கலை பட்டப்படிப்புகள் வெற்றிகரமாக நடத்தப்படுகின்றன.
+        </p>
+        <div class="career-scope" style="background: #fef3c7; border-left-color: #d97706; color: #92400e;">
+          <strong>தமிழ் வழிக் கல்வியின் பிரத்யேக நன்மை (PSTM Reservation):</strong> இப்பாடப்பிரிவில் பயிலும் மாணவர்களுக்குத் தமிழ்நாடு அரசுப் பணியாளர் தேர்வாணையம் (TNPSC) நடத்தும் குரூப் 1, குரூப் 2, AO மற்றும் அரசுத் தேர்வுகளில் <strong>தமிழ் வழியில் பயின்றோருக்கான 20% முன்னுரிமை இடஒதுக்கீடு (PSTM Quota)</strong> நேரடியாகக் கிடைக்கிறது!
+        </div>
+      </div>
+
+      <!-- Course 4: Horticulture -->
+      <div class="course-card-detail" style="border-left-color: #ea580c;">
+        <div class="course-title-row">
+          <div>
+            <span class="course-name-tamil">3. B.Sc. (Hons.) Horticulture (தோட்டக்கலை அறிவியல்)</span>
+            <span class="course-name-eng">Bachelor of Science (Honours) in Horticulture</span>
+          </div>
+          <span class="course-meta-pill" style="background: #fff7ed; color: #c2410c; border-color: #ffedd5;">4 ஆண்டுகள்</span>
+        </div>
+        <p class="course-desc-text">
+          பழங்கள், காய்கறிகள், வாசனைப் பயிர்கள், மூலிகைத் தாவரங்கள், மலர்கள் சாகுபடி, பசுமைக்குடில் விவசாயம் (Greenhouse/Polyhouse Farming), நில எழிலூட்டுதல் (Landscape Designing) மற்றும் அறுவடைக்குப் பிந்தைய பதப்படுத்துதல்.
+        </p>
+        <div class="career-scope">
+          <strong>வேலைவாய்ப்புகள்:</strong> தோட்டக்கலை அலுவலர் (Horticulture Officer - HO), பூங்காக்கள் கண்காணிப்பாளர், மலர் ஏற்றுமதி நிறுவனங்கள், மாடித் தோட்டம் &amp; லேண்ட்ஸ்கேப் ஆலோசகர், அரசு தோட்டக்கலை பண்ணைகள்.
+        </div>
+      </div>
+
+      <!-- Course 5: Forestry -->
+      <div class="course-card-detail" style="border-left-color: #047857;">
+        <div class="course-title-row">
+          <div>
+            <span class="course-name-tamil">4. B.Sc. (Hons.) Forestry (வனவியல் அறிவியல் பட்டப்படிப்பு)</span>
+            <span class="course-name-eng">வனக் கல்லூரி &amp; ஆராய்ச்சி நிலையம், மேட்டுப்பாளையம்</span>
+          </div>
+          <span class="course-meta-pill" style="background: #ecfdf5; color: #047857; border-color: #a7f3d0;">4 ஆண்டுகள்</span>
+        </div>
+        <p class="course-desc-text">
+          காடுகள் பாதுகாப்பு, வனவிலங்கு மேலாண்மை, மர உற்பத்தி, பல்லுயிர் பாதுகாப்பு, காடுகள் அளவீடு மற்றும் வனப்பகுதிகள் சூழலியல் சமநிலை.
+        </p>
+        <div class="career-scope">
+          <strong>வேலைவாய்ப்புகள்:</strong> இந்திய வனப்பணி (Indian Forest Service - IFS), வனச்சரக அலுவலர் (Forest Range Officer - FRO), வனவர், வனவிலங்கு சரணாலய மேலாளர், காகித ஆலைகள் மற்றும் மர சார்ந்த பெருநிறுவனங்கள்.
+        </div>
+      </div>
+
+      <!-- Grid for remaining TNAU Courses -->
+      <h3 style="font-size: 1.15rem; font-weight: 800; color: #15803d; margin: 22px 0 12px;">
+        🔬 TNAU-வின் பிற சிறப்பு அறிவியல் &amp; B.Tech தொழில்நுட்பப் படிப்புகள்:
+      </h3>
+
+      <div class="sub-grid">
+        <div class="sub-card" style="border-top: 3px solid #2563eb;">
+          <h4 style="font-size: 1rem; font-weight: 800; color: #1d4ed8; margin-bottom: 6px;">5. B.Tech. (Agricultural Engineering)</h4>
+          <p style="font-size: 0.84rem; color: #64748b; margin-bottom: 6px;">வேளாண் பொறியியல் கல்லூரி, கோவை &amp; குமுளூர் (திருச்சி)</p>
+          <p style="font-size: 0.88rem; color: #334155;">டிராக்டர் மற்றும் நவீன அறுவடை இயந்திரங்கள், சொட்டுநீர்ப் பாசன வடிவமைப்பு, சோலார் பம்புகள், தானிய சேமிப்புக் கிடங்கு அமைப்புகள்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #059669;">
+          <h4 style="font-size: 1rem; font-weight: 800; color: #065f46; margin-bottom: 6px;">6. B.Sc. (Hons.) Food, Nutrition &amp; Dietetics</h4>
+          <p style="font-size: 0.84rem; color: #64748b; margin-bottom: 6px;">சமூக அறிவியல் கல்லூரி, மதுரை வளாகம்</p>
+          <p style="font-size: 0.88rem; color: #334155;">உணவுத் தரம், மனித ஊட்டச்சத்து, மருத்துவ உணவு மேலாண்மை, FSSAI உணவு ஆய்வாளர் மற்றும் மருத்துவமனை டயட்டீசியன் வாய்ப்புகள்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #7c3aed;">
+          <h4 style="font-size: 1rem; font-weight: 800; color: #6d28d9; margin-bottom: 6px;">7. B.Tech. (Biotechnology)</h4>
+          <p style="font-size: 0.84rem; color: #64748b; margin-bottom: 6px;">பயிர் மரபியல் மையம், கோயம்புத்தூர்</p>
+          <p style="font-size: 0.88rem; color: #334155;">திசு வளர்ப்பு (Tissue Culture), மரபணு மாற்றுப் பயிர்கள், நோய் எதிர்ப்பு விதைகள் உருவாக்கம், பயோடெக் மருந்து நிறுவனங்கள்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #d97706;">
+          <h4 style="font-size: 1rem; font-weight: 800; color: #b45309; margin-bottom: 6px;">8. B.Tech. (Food Technology)</h4>
+          <p style="font-size: 0.84rem; color: #64748b; margin-bottom: 6px;">உணவு பதப்படுத்துதல் பொறியியல் மையம், கோவை</p>
+          <p style="font-size: 0.88rem; color: #334155;">பழங்கள், காய்கறிகள் மற்றும் தானியங்களை மதிப்புக்கூட்டுதல், பதப்படுத்துதல் ஆலைகள், பேக்கேஜிங் மற்றும் ஏற்றுமதி நிறுவனங்கள்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #0891b2;">
+          <h4 style="font-size: 1rem; font-weight: 800; color: #0e7490; margin-bottom: 6px;">9. B.Sc. (Hons.) Agri-Business Management</h4>
+          <p style="font-size: 0.84rem; color: #64748b; margin-bottom: 6px;">வேளாண் வணிக மேலாண்மை மையம், கோவை</p>
+          <p style="font-size: 0.88rem; color: #334155;">வேளாண் விளைபொருட்கள் சந்தைப்படுத்துதல், சப்ளை செயின் மேலாண்மை, வேளாண் ஏற்றுமதி &amp; இறக்குமதி மற்றும் நிதி மேலாண்மை.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #ca8a04;">
+          <h4 style="font-size: 1rem; font-weight: 800; color: #854d0e; margin-bottom: 6px;">10. B.Sc. (Hons.) Sericulture (பட்டுப்புழு வளர்ப்பு)</h4>
+          <p style="font-size: 0.84rem; color: #64748b; margin-bottom: 6px;">மேட்டுப்பாளையம் வனக்கல்லூரி வளாகம்</p>
+          <p style="font-size: 0.88rem; color: #334155;">மல்பெரி சாகுபடி, பட்டுப்புழு வளர்ப்பு, பட்டுநூல் தயாரிப்பு மற்றும் மத்திய/மாநில பட்டு வளர்ச்சி வாரியங்களில் ஆய்வாளர் பணி.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: TNJFU Fisheries Science -->
+    <section class="content-card" id="tnjfu-courses" style="border-top: 5px solid #0284c7;">
+      <h2 class="section-title" style="color: #0369a1;">
+        <span class="icon">🐟</span> 4. தமிழ்நாடு டாக்டர் ஜெ. ஜெயலலிதா மீன்வளப் பல்கலைக்கழகம் (TNJFU)
+      </h2>
+      <p style="margin-bottom: 16px; font-size: 0.98rem; color: #334155;">
+        இந்தியாவின் நீண்ட கடற்கரையைக் கொண்ட தமிழ்நாட்டில் கடல் மற்றும் நன்னீர் மீன்வளத் துறையில் மாபெரும் வேலைவாய்ப்புகளை வழங்கும் அரசு மீன்வளப் பல்கலைக்கழகப் படிப்புகள்:
+      </p>
+
+      <!-- Course 1: BFSc -->
+      <div class="course-card-detail" style="border-left-color: #0284c7;">
+        <div class="course-title-row">
+          <div>
+            <span class="course-name-tamil">1. B.F.Sc. (Bachelor of Fisheries Science - மீன்வள அறிவியல்)</span>
+            <span class="course-name-eng">நாகப்பட்டினம், தூத்துக்குடி, பொன்னேரி வளாகங்கள்</span>
+          </div>
+          <span class="course-meta-pill blue">4 ஆண்டுகள்</span>
+        </div>
+        <p class="course-desc-text">
+          மீன் வளர்ப்பு முறைகள் (Aquaculture), கடல் மீன்பிடித் தொழில்நுட்பம் (Oceanography), மீன் நோயியல் மற்றும் நுண்ணுயிரியல், மீன் பதப்படுத்துதல் மற்றும் கடல் உணவு ஏற்றுமதி மேலாண்மை.
+        </p>
+        <div class="career-scope" style="border-left-color: #0284c7;">
+          <strong>வேலைவாய்ப்புகள்:</strong> தமிழ்நாடு மீன்வளத்துறை உதவி ஆய்வாளர் (Sub-Inspector of Fisheries), மீன்வள அலுவலர், மத்திய கடல் மீன்வள வாரியம் (MPEDA/NFDB/EIA), கடல் உணவு ஏற்றுமதி ஆலைகளில் குவாலிட்டி கண்ட்ரோலர் (QC Inspector), வணிக இறால் மற்றும் மீன் பண்ணை ஆலோசகர்.
+        </div>
+      </div>
+
+      <!-- TNJFU B.Tech Courses -->
+      <div class="sub-grid-3" style="margin-top: 14px;">
+        <div class="sub-card" style="border-top: 3px solid #0369a1;">
+          <h4 style="font-size: 0.98rem; font-weight: 800; color: #075985; margin-bottom: 6px;">B.Tech. (Fisheries Engineering)</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">மீன்வளப் பொறியியல் கல்லூரி, நாகப்பட்டினம்</p>
+          <p style="font-size: 0.86rem; color: #334155;">மீன்பிடி படகுகள் வடிவமைப்பு, மீன்பிடி வலை எந்திரவியல், குளிர்பதனக் கிடங்குகள் மற்றும் கடல்சார் பொறியியல் சாதனங்கள்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #0891b2;">
+          <h4 style="font-size: 0.98rem; font-weight: 800; color: #0e7490; margin-bottom: 6px;">B.Tech. (Food Technology - Fish)</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">மீன் ஊட்டச்சத்து கல்லூரி, மாதவரம் (சென்னை)</p>
+          <p style="font-size: 0.86rem; color: #334155;">கடல் உணவுப் பதப்படுத்துதல், கேனிங் (Canning), மீன் எண்ணெய் மற்றும் மதிப்புக்கூட்டப்பட்ட கடல் உணவுத் தயாரிப்பு ஆலைகள்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #16a34a;">
+          <h4 style="font-size: 0.98rem; font-weight: 800; color: #15803d; margin-bottom: 6px;">B.B.A. (Fisheries Business)</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">மீன்வள வணிகப் பள்ளி, வன்னியஞ்சாவடி</p>
+          <p style="font-size: 0.86rem; color: #334155;">கடல் உணவு ஏற்றுமதி நிறுவன நிர்வாகம், மீன் சந்தைப்படுத்துதல் மற்றும் சர்வதேச மீன்வள வணிக வர்த்தகம்.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Diploma and Certificate Courses -->
+    <section class="content-card" id="diploma-certificate" style="border-top: 5px solid #7c3aed;">
+      <h2 class="section-title" style="color: #6d28d9;">
+        <span class="icon">📜</span> 5. வேளாண்மை &amp; மீன்வள டிப்ளமோ மற்றும் சான்றிதழ் படிப்புகள் (Diploma &amp; Certificate Courses)
+      </h2>
+      <p style="margin-bottom: 16px; font-size: 0.98rem; color: #334155;">
+        +2 முடித்தவுடன் குறுகிய காலத்தில் 2 ஆண்டுகளில் அரசு மற்றும் தனியார் துறைகளில் பணிபுரிய உதவும் TNAU மற்றும் TNJFU-வின் அங்கீகரிக்கப்பட்ட டிப்ளமோ படிப்புகள்:
+      </p>
+
+      <div class="sub-grid">
+        <!-- Diploma in Agriculture -->
+        <div class="course-card-detail" style="border-left-color: #16a34a;">
+          <div class="course-title-row">
+            <span class="course-name-tamil">வேளாண்மை டிப்ளமோ (Diploma in Agriculture)</span>
+            <span class="course-meta-pill" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">2 ஆண்டுகள் (தமிழ் &amp; ஆங்கில வழி)</span>
+          </div>
+          <p class="course-desc-text">
+            <strong>தகுதி:</strong> +2 தேர்ச்சி (அறிவியல் அல்லது தொழிற்கல்வி வேளாண்மை).<br>
+            <strong>பயிற்றுவிக்கப்படும் அரசு மையங்கள்:</strong> குடுமியான்மலை (புதுக்கோட்டை), வம்பன், ஆதி திராவிடர் நல வேளாண்மைப் பள்ளி மற்றும் TNAU ஆராய்ச்சி நிலையங்கள்.
+          </p>
+          <div class="career-scope">
+            <strong>நேரடி அரசுப் பணி:</strong> தமிழ்நாடு அரசு வேளாண்மைத் துறையில் <strong>உதவி வேளாண்மை அலுவலர் (Assistant Agricultural Officer - AAO)</strong> நேரடி அரசு வேலைவாய்ப்பு! மற்றும் உரம், பூச்சிக்கொல்லி, விதை நிறுவனப் பணிகள்.
+          </div>
+        </div>
+
+        <!-- Diploma in Horticulture -->
+        <div class="course-card-detail" style="border-left-color: #ea580c;">
+          <div class="course-title-row">
+            <span class="course-name-tamil">தோட்டக்கலை டிப்ளமோ (Diploma in Horticulture)</span>
+            <span class="course-meta-pill amber">2 ஆண்டுகள்</span>
+          </div>
+          <p class="course-desc-text">
+            <strong>தகுதி:</strong> +2 தேர்ச்சி (அறிவியல் பாடப்பிரிவுகள்).<br>
+            <strong>வளாகங்கள்:</strong> பெரியகுளம் தோட்டக்கலைக் கல்லூரி மற்றும் கன்னியாகுமரி பேச்சிப்பாறை வளாகம்.
+          </p>
+          <div class="career-scope">
+            <strong>நேரடி அரசுப் பணி:</strong> தமிழ்நாடு அரசு தோட்டக்கலைத் துறையில் <strong>உதவி தோட்டக்கலை அலுவலர் (Assistant Horticulture Officer - AHO)</strong> அரசுப் பணி வாய்ப்பு.
+          </div>
+        </div>
+
+        <!-- Diploma in Fisheries -->
+        <div class="course-card-detail" style="border-left-color: #0284c7;">
+          <div class="course-title-row">
+            <span class="course-name-tamil">மீன்வளத் தொழில்நுட்ப டிப்ளமோ (Diploma in Fisheries Tech)</span>
+            <span class="course-meta-pill blue">2 ஆண்டுகள் (TNJFU)</span>
+          </div>
+          <p class="course-desc-text">
+            <strong>தகுதி:</strong> +2 தேர்ச்சி (அறிவியல் பாடங்கள்).<br>
+            <strong>வளாகம்:</strong> மீன்வளத் தொழில்நுட்பப் பயிற்சி மையம், நாகப்பட்டினம்.
+          </p>
+          <div class="career-scope">
+            <strong>வேலைவாய்ப்புகள்:</strong> அரசு மீன் பண்ணை மேற்பார்வையாளர், தனியார் மீன்/இறால் குஞ்சு பொரிப்பகங்கள் (Hatcheries) மற்றும் பதப்படுத்தும் ஆலைகள்.
+          </div>
+        </div>
+
+        <!-- Agri Engineering Diploma -->
+        <div class="course-card-detail" style="border-left-color: #475569;">
+          <div class="course-title-row">
+            <span class="course-name-tamil">வேளாண் பொறியியல் டிப்ளமோ (Diploma in Agri Engg)</span>
+            <span class="course-meta-pill" style="background: #f1f5f9; color: #334155; border-color: #cbd5e1;">3 ஆண்டுகள் (குமுளூர், திருச்சி)</span>
+          </div>
+          <p class="course-desc-text">
+            <strong>தகுதி:</strong> 10-ஆம் வகுப்பு / +2 தேர்ச்சி.<br>
+            <strong>நோக்கம்:</strong> விவசாய இயந்திரங்கள் இயக்குதல், பழுதுபார்த்தல், சொட்டுநீர்ப் பாசனக் கட்டமைப்பு.
+          </p>
+          <div class="career-scope">
+            <strong>வேலைவாய்ப்புகள்:</strong> அரசு வேளாண் பொறியியல் துறை (AED) மெக்கானிக் / டெக்னீசியன், டிராக்டர் நிறுவனங்கள்.
+          </div>
+        </div>
+      </div>
+
+      <!-- 1-Year / Short Term Certificate Courses -->
+      <h3 style="font-size: 1.15rem; font-weight: 800; color: #6d28d9; margin: 22px 0 12px;">
+        🌱 TNAU &amp; KVK வழங்கும் சுயதொழில் சான்றிதழ் படிப்புகள் (Certificate Courses):
+      </h3>
+      <div class="sub-grid-3">
+        <div class="sub-card" style="border-top: 3px solid #16a34a;">
+          <h4 style="font-size: 0.96rem; font-weight: 800; color: #15803d; margin-bottom: 6px;">1. இயற்கை விவசாயச் சான்றிதழ்</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">Organic Farming &amp; Bio-fertilizers</p>
+          <p style="font-size: 0.86rem; color: #334155;">மண்புழு உரம், பஞ்சகாவ்யா, ஜீவாமிர்தம் மற்றும் இயற்கை பூச்சி விரட்டிகள் தயாரிப்பு தொழில்முறைப் பயிற்சி.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #d97706;">
+          <h4 style="font-size: 0.96rem; font-weight: 800; color: #b45309; margin-bottom: 6px;">2. தேனீ வளர்ப்புத் தொழில்நுட்பம்</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">Commercial Bee Keeping / Apiculture</p>
+          <p style="font-size: 0.86rem; color: #334155;">தேனீ பெட்டிகள் அமைத்தல், தேன் பிரித்தெடுத்தல், மெழுகு உற்பத்தி மற்றும் விற்பனை சந்தைப்படுத்தல்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #0284c7;">
+          <h4 style="font-size: 0.96rem; font-weight: 800; color: #0369a1; margin-bottom: 6px;">3. காளான் வளர்ப்பு &amp; ஸ்பான்</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">Mushroom Cultivation &amp; Processing</p>
+          <p style="font-size: 0.86rem; color: #334155;">சிப்பி காளான், பால் காளான் வளர்ப்பு, காளான் விதை (Spawn) தயாரிப்பு மற்றும் மதிப்புக்கூட்டுதல்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #e11d48;">
+          <h4 style="font-size: 0.96rem; font-weight: 800; color: #be123c; margin-bottom: 6px;">4. நாற்றுப்பண்ணை மேலாண்மை</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">Commercial Plant Nursery &amp; Grafting</p>
+          <p style="font-size: 0.86rem; color: #334155;">பழமரங்கள் ஒட்டுக்கட்டுதல் (Grafting), பூச்செடிகள் இனப்பெருக்கம் மற்றும் நவீன நாற்றுப்பண்ணை அமைத்தல்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #0891b2;">
+          <h4 style="font-size: 0.96rem; font-weight: 800; color: #0e7490; margin-bottom: 6px;">5. அலங்கார மீன் வளர்ப்பு</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">Ornamental Fish Farming (TNJFU)</p>
+          <p style="font-size: 0.86rem; color: #334155;">வண்ண மீன்கள் இனப்பெருக்கம், அக்குவாரியம் வடிவமைப்பு மற்றும் உள்நாட்டு/வெளிநாட்டு அலங்கார மீன் வர்த்தகம்.</p>
+        </div>
+
+        <div class="sub-card" style="border-top: 3px solid #7c3aed;">
+          <h4 style="font-size: 0.96rem; font-weight: 800; color: #6d28d9; margin-bottom: 6px;">6. பட்டுப்புழு வளர்ப்புப் பயிற்சி</h4>
+          <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 6px;">Sericulture &amp; Silk Reeling</p>
+          <p style="font-size: 0.86rem; color: #334155;">மல்பெரி சாகுபடி, பட்டுப்புழு முட்டை பொரித்தல் மற்றும் பட்டுக்கூடு அறுவடை தொழில்நுட்பங்கள்.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Counselling Process 6 Steps -->
+    <section class="content-card" id="counselling">
+      <h2 class="section-title">
+        <span class="icon">🔄</span> 6. ஒற்றைச் சாளரக் கலந்தாய்வு நடைமுறைகள் &amp; 6 முக்கிய நிலைகள்
+      </h2>
+      <p style="margin-bottom: 14px; font-size: 0.98rem; color: #334155;">
+        TNAU மற்றும் TNJFU ஆகிய இரண்டு பல்கலைக்கழகங்களும் மாணவர்களின் +2 பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் ஒற்றைச் சாளர முறையில் முழுமையான இணையவழி கலந்தாய்வை நடத்துகின்றன:
+      </p>
+
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-title">இணையவழி விண்ணப்பப் பதிவு</div>
+          <div class="step-desc">tnau.ac.in அல்லது tnjfu.ac.in தளத்தில் மாணவர் விவரங்கள், பயின்ற பள்ளி, +2 மதிப்பெண்கள், EMIS எண் உள்ளீடு செய்து விண்ணப்பக் கட்டணம் செலுத்துதல்.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-title">சான்றிதழ்கள் பதிவேற்றம்</div>
+          <div class="step-desc">10, 11, +2 மதிப்பெண் சான்றிதழ்கள், சாதிச் சான்றிதழ், 7.5% அரசுப் பள்ளி போனஃபைட் சான்றிதழ் ஆகியவற்றை ஸ்கேன் செய்து இணையத்தில் பதிவேற்றுதல்.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-title">தரவரிசைப் பட்டியல் வெளியீடு</div>
+          <div class="step-desc">விண்ணப்பப் பரிசீலனைக்குப் பின் பொதுத் தரவரிசைப் பட்டியல் (General Rank) மற்றும் அரசுப் பள்ளி மாணவர்களுக்கான 7.5% தனித் தரவரிசைப் பட்டியல் வெளியிடுதல்.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-title">கல்லூரி &amp; படிப்பு சாய்ஸ் ஃபில்லிங்</div>
+          <div class="step-desc">கலந்தாய்வு சுற்றில் தங்களுக்கு விருப்பமான அரசு மற்றும் சுயநிதி இணைப்புக் கல்லூரிகளையும், பாடப்பிரிவுகளையும் முன்னுரிமை வரிசையில் Lock செய்தல்.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <div class="step-title">தற்காலிக இட ஒதுக்கீடு &amp; Sliding</div>
+          <div class="step-desc">கட்-ஆஃப் மற்றும் இடஒதுக்கீடு அடிப்படையில் இட ஒதுக்கீட்டு ஆணை பிறப்பிக்கப்படும். அடுத்த சிறந்த கல்லூரிக்கு மாற விரும்பினால் Sliding வாய்ப்பைப் பயன்படுத்தலாம்.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">6</div>
+          <div class="step-title">கல்லூரியில் சேருதல்</div>
+          <div class="step-desc">ஒதுக்கீட்டு ஆணையைப் பதிவிறக்கம் செய்து, குறிப்பிட்ட தேதிக்குள் ஒதுக்கப்பட்ட கல்லூரிக்கு நேரில் சென்று அசல் சான்றிதழ்களைச் சமர்ப்பித்து சேர்க்கையை உறுதி செய்தல்.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Required Documents Checklist -->
+    <section class="content-card" id="documents">
+      <h2 class="section-title">
+        <span class="icon">📑</span> 7. தேவையான ஆவணங்கள் &amp; சரிபார்ப்புப் பட்டியல் (Document Checklist)
+      </h2>
+      <p style="margin-bottom: 14px; font-size: 0.98rem; color: #334155;">
+        விண்ணப்பிக்கும்போதும், கல்லூரியில் நேரில் சேரும்போதும் சமர்ப்பிக்க வேண்டிய அசல் மற்றும் நகல் சான்றிதழ்கள்:
+      </p>
+
+      <div class="sub-grid">
+        <div class="sub-card">
+          <h3 class="sub-card-title">அனைத்து மாணவர்களுக்கும் பொதுவானவை</h3>
+          <ul class="styled-list">
+            <li>10-ஆம் வகுப்பு மதிப்பெண் சான்றிதழ் (SSLC Mark Sheet - பிறந்த தேதி சான்று)</li>
+            <li>11-ஆம் வகுப்பு மதிப்பெண் சான்றிதழ் (+1 Mark Sheet)</li>
+            <li>12-ஆம் வகுப்பு தற்காலிக / அசல் மதிப்பெண் சான்றிதழ் (+2 Mark Sheet)</li>
+            <li>பள்ளி மாற்றுச் சான்றிதழ் (Transfer Certificate - TC)</li>
+            <li>நிரந்தர சாதிச் சான்றிதழ் (QR குறியீட்டுடன் கூடிய Community Certificate)</li>
+            <li>இருப்பிடச் சான்றிதழ் (Nativity Certificate - தேவைப்படும் மாணவர்களுக்கு மட்டும்)</li>
+            <li>மாணவர் மற்றும் பெற்றோர் ஆதார் அட்டை (Aadhaar Card)</li>
+            <li>பாஸ்போர்ட் அளவு புகைப்படங்கள் (சமீபத்திய வண்ணப் படங்கள்)</li>
+          </ul>
+        </div>
+
+        <div class="sub-card">
+          <h3 class="sub-card-title">சிறப்புச் சலுகை &amp; முன்னுரிமை பெறுபவர்களுக்கு</h3>
+          <ul class="styled-list bullet-star">
+            <li><strong>7.5% அரசுப் பள்ளி இடஒதுக்கீடு:</strong> 6 முதல் 12-ஆம் வகுப்பு வரை அரசுப் பள்ளியில் படித்ததற்கான தலைமை ஆசிரியர் மற்றும் BEO/DEO/CEO மேலொப்பமிட்ட போனஃபைட் சான்றிதழ்.</li>
+            <li><strong>முதல் பட்டதாரி சலுகை (FG Scheme):</strong> குடும்பத்தில் முதல் பட்டதாரி என்பதற்கான வட்டாட்சியர் (Tahsildar) வழங்கிய இ-சேவை சான்றிதழ் மற்றும் கூட்டுக் கையொப்ப உறுதிமொழிப் படிவம்.</li>
+            <li><strong>வருமானச் சான்றிதழ்:</strong> போஸ்ட்-மெட்ரிக் கல்வி உதவித்தொகை பெறும் SC/SCA/ST மற்றும் மதம் மாறிய கிறித்துவ ஆதிதிராவிடர் மாணவர்கள்.</li>
+            <li><strong>சிறப்புப் பிரிவுகள்:</strong> மாற்றுத்திறனாளிகள் (PwD), முன்னாள் படைவீரர் வாரிசுகள், மற்றும் சிறந்த விளையாட்டு வீரர்கள் (Sports Quota).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Choice Filling Guidelines & Strategies -->
+    <section class="content-card" id="choice-filling" style="border-top: 5px solid #d97706;">
+      <h2 class="section-title" style="color: #b45309;">
+        <span class="icon">💡</span> 8. சாய்ஸ் ஃபில்லிங் வழிகாட்டி &amp; வெற்றிக்கான முக்கிய உத்திகள் (Choice Filling Strategies)
+      </h2>
+      <p style="margin-bottom: 14px; font-size: 0.98rem; color: #334155;">
+        TNAU மற்றும் TNJFU கலந்தாய்வில் மாணவர்கள் சிறந்த கல்லூரிகள் மற்றும் விருப்பமான படிப்புகளைப் பெற உதவும் அவசியமான ஆலோசனைகள்:
+      </p>
+
+      <div class="sub-grid">
+        <div class="sub-card">
+          <h3 class="sub-card-title">🌾 TNAU சாய்ஸ் உத்திகள்</h3>
+          <ul class="styled-list">
+            <li><strong>அரசு கல்லூரிகளுக்கு முன்னுரிமை:</strong> கோயம்புத்தூர் முதன்மை வளாகம், மதுரை AC&amp;RI, திருச்சி ADAC&amp;RI, கிள்ளிகுளம், பெரியகுளம் போன்ற புகழ்பெற்ற அரசு வளாகங்களை முதல் விருப்பங்களாக அடுக்கவும்.</li>
+            <li><strong>தமிழ் வழிப் படிப்புகள்:</strong> PSTM 20% அரசு வேலை இடஒதுக்கீடு பெற விரும்பும் மாணவர்கள் கோவை மற்றும் மதுரையில் உள்ள தமிழ் வழி B.Sc (Hons) Agriculture படிப்பைத் தேர்வு செய்யலாம்.</li>
+            <li><strong>அதிகபட்ச விருப்பங்கள்:</strong> உங்கள் சாய்ஸ் பட்டியலில் 30 முதல் 40 விருப்பங்களையாவது சேர்க்கவும்; குறைவான விருப்பங்களை வைத்தால் வாய்ப்பு கைநழுவக்கூடும்.</li>
+            <li><strong>Sliding வாய்ப்பைப் பயன்படுத்துங்கள்:</strong> ஒதுக்கப்பட்ட கல்லூரியைவிட மேலான கல்லூரி கிடைக்க வாய்ப்பிருந்தால் 'Accept and Upward Movement (Sliding)' தேர்வு செய்யலாம்.</li>
+          </ul>
+        </div>
+
+        <div class="sub-card">
+          <h3 class="sub-card-title">🎯 அரசுப் பள்ளி 7.5% மாணவர்கள் கவனத்திற்கு</h3>
+          <ul class="styled-list">
+            <li><strong>சுயநிதி கல்லூரிகளையும் தேர்வு செய்க:</strong> அரசு கல்லூரிகள் மட்டுமின்றி, புகழ்பெற்ற தனியார் சுயநிதி வேளாண்மைக் கல்லூரிகளையும் உங்கள் விருப்பப் பட்டியலில் தயங்காமல் சேர்க்கலாம்; ஏனெனில் 100% முழுக் கட்டணத்தையும் அரசே செலுத்துகிறது!</li>
+            <li><strong>இடங்களை உறுதிப்படுத்துங்கள்:</strong> உங்களுக்கு விருப்பமான அரசு கல்லூரி இடம் கிடைத்தால் முதல் சுற்றிலேயே 'Accept &amp; Join' செய்து கல்லூரியில் சேர்ந்துவிடுவது மிகவும் பாதுகாப்பானது.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 9: Colleges Directory Table with Search & Filter -->
+    <section class="content-card" id="colleges" style="border-top: 5px solid #16a34a;">
+      <h2 class="section-title" style="color: #15803d;">
+        <span class="icon">🏆</span> 9. தமிழ்நாடு அரசு வேளாண்மை, தோட்டக்கலை, வனவியல் &amp; மீன்வளக் கல்லூரிகள் பட்டியல்
+      </h2>
+      <p style="margin-bottom: 16px; font-size: 0.98rem; color: #334155;">
+        TNAU மற்றும் TNJFU பல்கலைக்கழகங்களின் கீழ் செயல்படும் அனைத்து அரசு உறுப்புக் கல்லூரிகள், ஆராய்ச்சி நிலையங்கள் மற்றும் முதன்மை மையங்களின் விரிவான தகவல்கள் கீழே தரப்பட்டுள்ளன. கல்லூரி பெயர், மாவட்டம் அல்லது படிப்பு வாரியாகத் தேடலாம்:
+      </p>
+
+      <!-- Search & Filter Controls -->
+      <div class="college-search-box">
+        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        <input type="text" id="collegeSearchInput" class="college-search-input" placeholder="கல்லூரி பெயர், மாவட்டம் (எ.கா: சிவகங்கை, மதுரை, கோவை, திருச்சி, தூத்துக்குடி) அல்லது படிப்பு வாரியாகத் தேடவும்...">
+      </div>
+
+      <div class="college-pills">
+        <button class="college-pill active" data-type="all">அனைத்துக் கல்லூரிகள் (All)</button>
+        <button class="college-pill" data-type="tnau-agri">🌾 TNAU அரசு வேளாண்மை (Agri Colleges)</button>
+        <button class="college-pill" data-type="hort-forest">🍊 தோட்டக்கலை &amp; வனவியல் (Hort &amp; Forest)</button>
+        <button class="college-pill" data-type="tnjfu">🐟 TNJFU மீன்வளக் கல்லூரிகள் (Fisheries)</button>
+        <button class="college-pill" data-type="diploma">📜 டிப்ளமோ &amp; பயிற்சி மையங்கள்</button>
+      </div>
+
+      <!-- Colleges Table -->
+      <div class="table-container">
+        <table class="styled-table" id="collegesTable">
+          <thead>
+            <tr>
+              <th style="width: 7%;">குறியீடு</th>
+              <th style="width: 32%;">கல்லூரியின் பெயர் &amp; வகை</th>
+              <th style="width: 18%;">மாவட்டம் / அமைவிடம்</th>
+              <th style="width: 30%;">வழங்கப்படும் முக்கியப் படிப்புகள்</th>
+              <th style="width: 13%;">இணையதளம்</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Sivaganga Region: TNAU Dryland Research & College Chettinad -->
+            <tr data-type="tnau-agri" class="highlight-row">
+              <td><span class="code-badge">TNAU-SVG</span></td>
+              <td>
+                <strong>வேளாண்மை கல்லூரி மற்றும் ஆராய்ச்சி நிலையம், செட்டிநாடு</strong><br>
+                <small style="color: #64748b;">AC&amp;RI Chettinad, Karaikudi Taluk (Est. 2021)</small><br>
+                <span class="type-badge tnau">TNAU அரசு கல்லூரி</span>
+                <span class="type-badge" style="background: #fef3c7; color: #b45309; border: 1px solid #fde68a;">நமது மாவட்டம்</span>
+              </td>
+              <td><strong>சிவகங்கை (செட்டிநாடு)</strong></td>
+              <td>
+                <strong>B.Sc. (Hons.) Agriculture (60 இடங்கள்)</strong><br>
+                மானாவாரி விவசாயம் மற்றும் வறட்சி தாங்கும் பயிர் ஆராய்ச்சி
+              </td>
+              <td>
+                <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnau.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- Adjacent Region: AC&RI Madurai -->
+            <tr data-type="tnau-agri">
+              <td><span class="code-badge">TNAU-MDU</span></td>
+              <td>
+                <strong>வேளாண்மை கல்லூரி மற்றும் ஆராய்ச்சி நிலையம், மதுரை</strong><br>
+                <small style="color: #64748b;">Agricultural College &amp; Research Institute (AC&amp;RI), Madurai</small><br>
+                <span class="type-badge tnau">முதன்மை அரசு வளாகம்</span>
+              </td>
+              <td><strong>மதுரை (ஒத்தக்கடை)</strong></td>
+              <td>
+                <strong>B.Sc. (Hons.) Agriculture (ஆங்கில வழி &amp; தமிழ் வழி)</strong><br>
+                தென் தமிழகத்தின் மிகப்பழைமையான முன்னணி வேளாண் கல்வி மையம்
+              </td>
+              <td>
+                <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnau.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- CSC&RI Madurai (Home Science) -->
+            <tr data-type="tnau-agri">
+              <td><span class="code-badge">TNAU-CSC</span></td>
+              <td>
+                <strong>சமூக அறிவியல் கல்லூரி மற்றும் ஆராய்ச்சி நிலையம், மதுரை</strong><br>
+                <small style="color: #64748b;">Community Science College &amp; Research Institute, Madurai</small><br>
+                <span class="type-badge tnau">TNAU அரசு கல்லூரி</span>
+              </td>
+              <td><strong>மதுரை</strong></td>
+              <td>
+                <strong>B.Sc. (Hons.) Food, Nutrition and Dietetics</strong><br>
+                உணவு அறிவியல், ஊட்டச்சத்து மேலாண்மை சிறப்பு மையம்
+              </td>
+              <td>
+                <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnau.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- TNAU Coimbatore Main Campus -->
+            <tr data-type="tnau-agri">
+              <td><span class="code-badge">TNAU-CBE</span></td>
+              <td>
+                <strong>தமிழ்நாடு வேளாண்மைப் பல்கலைக்கழக முதன்மை வளாகம்</strong><br>
+                <small style="color: #64748b;">TNAU Main Campus, Coimbatore (Est. 1906)</small><br>
+                <span class="type-badge tnau">பல்கலைக்கழகத் தலைமையகம்</span>
+              </td>
+              <td><strong>கோயம்புத்தூர்</strong></td>
+              <td>
+                B.Sc. (Hons.) Agri (English &amp; Tamil), B.Tech Agri Engg, B.Tech Biotech, B.Tech Food Tech, B.Sc Agri-Business
+              </td>
+              <td>
+                <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnau.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- Trichy ADAC&RI -->
+            <tr data-type="tnau-agri">
+              <td><span class="code-badge">TNAU-TRY</span></td>
+              <td>
+                <strong>அன்பில் தர்மலிங்கம் வேளாண்மைக் கல்லூரி (ADAC&amp;RI)</strong><br>
+                <small style="color: #64748b;">Anbil Dharmalingam AC&amp;RI, Navalur Kuttapattu, Trichy</small><br>
+                <span class="type-badge tnau">TNAU அரசு கல்லூரி</span>
+              </td>
+              <td><strong>திருச்சிராப்பள்ளி</strong></td>
+              <td>
+                <strong>B.Sc. (Hons.) Agriculture</strong><br>
+                உவர் நில மேலாண்மை மற்றும் டெல்டா பாசன ஆராய்ச்சி மையம்
+              </td>
+              <td>
+                <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnau.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- Killikulam Thoothukudi -->
+            <tr data-type="tnau-agri">
+              <td><span class="code-badge">TNAU-KLK</span></td>
+              <td>
+                <strong>வேளாண்மை கல்லூரி &amp; ஆராய்ச்சி நிலையம், கிள்ளிகுளம்</strong><br>
+                <small style="color: #64748b;">AC&amp;RI Killikulam, Vallanadu, Thoothukudi</small><br>
+                <span class="type-badge tnau">TNAU அரசு கல்லூரி</span>
+              </td>
+              <td><strong>தூத்துக்குடி (வல்லநாடு)</strong></td>
+              <td>
+                <strong>B.Sc. (Hons.) Agriculture (120 இடங்கள்)</strong><br>
+                தென்மாவட்டங்களுக்கான முன்னணி வேளாண்மை ஆராய்ச்சி வளாகம்
+              </td>
+              <td>
+                <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnau.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- Kudumiyanmalai Pudukkottai -->
+            <tr data-type="tnau-agri">
+              <td><span class="code-badge">TNAU-KUD</span></td>
+              <td>
+                <strong>வேளாண்மை கல்லூரி &amp; ஆராய்ச்சி நிலையம், குடுமியான்மலை</strong><br>
+                <small style="color: #64748b;">AC&amp;RI Kudumiyanmalai, Pudukkottai</small><br>
+                <span class="type-badge tnau">TNAU அரசு கல்லூரி</span>
+              </td>
+              <td><strong>புதுக்கோட்டை</strong></td>
+              <td>
+                <strong>B.Sc. (Hons.) Agriculture (80 இடங்கள்)</strong><br>
+                வேளாண் பயிற்சி மற்றும் ஆராய்ச்சி முன்னோடி நிறுவனம்
+              </td>
+              <td>
+                <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnau.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- Eachangkottai Thanjavur -->
+            <tr data-type="tnau-agri">
+              <td><span class="code-badge">TNAU-TNJ</span></td>
+              <td>
+                <strong>வேளாண்மை கல்லூரி &amp; ஆராய்ச்சி நிலையம், ஈச்சங்கோட்டை</strong><br>
+                <small style="color: #64748b;">AC&amp;RI Eachangkottai, Thanjavur</small><br>
+                <span class="type-badge tnau">TNAU அரசு கல்லூரி</span>
+              </td>
+              <td><strong>தஞ்சாவூர் (டெல்டா)</strong></td>
+              <td>
+                <strong>B.Sc. (Hons.) Agriculture (100 இடங்கள்)</strong><br>
+                நெல் சாகுபடி மற்றும் காவிரி படுகை நீர் மேலாண்மை
+              </td>
+              <td>
+                <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnau.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- Vazhavachanur Tiruvannamalai -->
+            <tr data-type="tnau-agri">
+              <td><span class="code-badge">TNAU-TVM</span></td>
+              <td>
+                <strong>வேளாண்மை கல்லூரி &amp; ஆராய்ச்சி நிலையம், வாழவச்சனூர்</strong><br>
+                <small style="color: #64748b;">AC&amp;RI Vazhavachanur, Tiruvannamalai</small><br>
+                <span class="type-badge tnau">TNAU அரசு கல்லூரி</span>
+              </td>
+              <td><strong>திருவண்ணாமலை</strong></td>
+              <td>
+                <strong>B.Sc. (Hons.) Agriculture (80 இடங்கள்)</strong><br>
+                எண்ணெய்வித்து மற்றும் தானியப் பயிர்கள் ஆராய்ச்சி
+              </td>
+              <td>
+                <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnau.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- FCRI Mettupalayam (Forestry) -->
+            <tr data-type="hort-forest">
+              <td><span class="code-badge">TNAU-FCR</span></td>
+              <td>
+                <strong>வனக் கல்லூரி மற்றும் ஆராய்ச்சி நிலையம், மேட்டுப்பாளையம்</strong><br>
+                <small style="color: #64748b;">Forest College &amp; Research Institute (FCRI), Mettupalayam</small><br>
+                <span class="type-badge hort">முதன்மை வனவியல் கல்லூரி</span>
+              </td>
+              <td><strong>மேட்டுப்பாளையம் (கோவை)</strong></td>
+              <td>
+                <strong>B.Sc. (Hons.) Forestry (60 இடங்கள்)</strong><br>
+                <strong>B.Sc. (Hons.) Sericulture (பட்டுப்புழு வளர்ப்பு)</strong>
+              </td>
+              <td>
+                <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnau.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- HC&RI Periyakulam (Horticulture) -->
+            <tr data-type="hort-forest">
+              <td><span class="code-badge">TNAU-PKM</span></td>
+              <td>
+                <strong>தோட்டக்கலைக் கல்லூரி &amp; ஆராய்ச்சி நிலையம், பெரியகுளம்</strong><br>
+                <small style="color: #64748b;">Horticultural College &amp; Research Institute, Periyakulam</small><br>
+                <span class="type-badge hort">முதன்மை தோட்டக்கலை வளாகம்</span>
+              </td>
+              <td><strong>தேனி (பெரியகுளம்)</strong></td>
+              <td>
+                <strong>B.Sc. (Hons.) Horticulture (100 இடங்கள்)</strong><br>
+                பழங்கள், நறுமணப் பயிர்கள் மற்றும் நவீன பண்ணை ஆராய்ச்சி
+              </td>
+              <td>
+                <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnau.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- HC&RI Women Trichy -->
+            <tr data-type="hort-forest">
+              <td><span class="code-badge">TNAU-HCW</span></td>
+              <td>
+                <strong>தோட்டக்கலைக் கல்லூரி &amp; ஆராய்ச்சி நிலையம் (மகளிர்), திருச்சி</strong><br>
+                <small style="color: #64748b;">HC&amp;RI for Women, Navalur Kuttapattu, Trichy</small><br>
+                <span class="type-badge hort">அரசு மகளிர் கல்லூரி</span>
+              </td>
+              <td><strong>திருச்சிராப்பள்ளி</strong></td>
+              <td>
+                <strong>B.Sc. (Hons.) Horticulture (மகளிருக்கு மட்டும்)</strong><br>
+                பெண்களுக்கான பிரத்யேக தோட்டக்கலை ஆராய்ச்சி வளாகம்
+              </td>
+              <td>
+                <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnau.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- AEC&RI Kumulur Trichy -->
+            <tr data-type="tnau-agri">
+              <td><span class="code-badge">TNAU-KUM</span></td>
+              <td>
+                <strong>வேளாண் பொறியியல் கல்லூரி மற்றும் ஆராய்ச்சி நிலையம், குமுளூர்</strong><br>
+                <small style="color: #64748b;">Agricultural Engineering College &amp; Research Institute, Kumulur</small><br>
+                <span class="type-badge tnau">அரசு பொறியியல் கல்லூரி</span>
+              </td>
+              <td><strong>குமுளூர் (திருச்சி)</strong></td>
+              <td>
+                <strong>B.Tech. (Agricultural Engineering)</strong><br>
+                வேளாண் இயந்திரவியல், பாசன பொறியியல் சிறப்பு மையம்
+              </td>
+              <td>
+                <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnau.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- TNJFU FCRI Thoothukudi -->
+            <tr data-type="tnjfu">
+              <td><span class="code-badge">JFU-TUT</span></td>
+              <td>
+                <strong>மீன்வளக் கல்லூரி மற்றும் ஆராய்ச்சி நிலையம், தூத்துக்குடி</strong><br>
+                <small style="color: #64748b;">Fisheries College &amp; Research Institute (FCRI), Thoothukudi (Est. 1977)</small><br>
+                <span class="type-badge tnjfu">முன்னோடி மீன்வள மையம்</span>
+              </td>
+              <td><strong>தூத்துக்குடி</strong></td>
+              <td>
+                <strong>B.F.Sc. (Bachelor of Fisheries Science - 60 இடங்கள்)</strong><br>
+                ஆசியாவின் தலைசிறந்த கடல் மீன்வள ஆராய்ச்சி நிறுவனம்
+              </td>
+              <td>
+                <a href="https://tnjfu.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnjfu.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- TNJFU Nagapattinam Thalainayeru -->
+            <tr data-type="tnjfu">
+              <td><span class="code-badge">JFU-NGP</span></td>
+              <td>
+                <strong>டாக்டர் எம்.ஜி.ஆர் மீன்வளக் கல்லூரி, தலைஞாயிறு</strong><br>
+                <small style="color: #64748b;">Dr. M.G.R Fisheries College &amp; Research Institute, Nagapattinam</small><br>
+                <span class="type-badge tnjfu">பல்கலைக்கழக வளாகம்</span>
+              </td>
+              <td><strong>தலைஞாயிறு (நாகப்பட்டினம்)</strong></td>
+              <td>
+                <strong>B.F.Sc. (60 இடங்கள்) &amp; B.Tech Fisheries Engineering</strong><br>
+                மீன்பிடி துறைமுக மேலாண்மை மற்றும் கடலோர நீர்வாழ் உயிரின வளர்ப்பு
+              </td>
+              <td>
+                <a href="https://tnjfu.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnjfu.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- TNJFU Ponneri Chennai -->
+            <tr data-type="tnjfu">
+              <td><span class="code-badge">JFU-PON</span></td>
+              <td>
+                <strong>டாக்டர் எம்.ஜி.ஆர் மீன்வளக் கல்லூரி, பொன்னேரி</strong><br>
+                <small style="color: #64748b;">Dr. M.G.R Fisheries College &amp; Research Institute, Ponneri</small><br>
+                <span class="type-badge tnjfu">TNJFU அரசு கல்லூரி</span>
+              </td>
+              <td><strong>பொன்னேரி (திருவள்ளூர் / சென்னை)</strong></td>
+              <td>
+                <strong>B.F.Sc. (60 இடங்கள்)</strong><br>
+                உவர்நீர் மற்றும் நன்னீர் இறால்/மீன் வளர்ப்பு தொழில்நுட்பம்
+              </td>
+              <td>
+                <a href="https://tnjfu.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnjfu.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- TNJFU Madhavaram Food Tech -->
+            <tr data-type="tnjfu">
+              <td><span class="code-badge">JFU-MDV</span></td>
+              <td>
+                <strong>மீன் ஊட்டச்சத்து &amp; உணவுத் தொழில்நுட்பக் கல்லூரி, மாதவரம்</strong><br>
+                <small style="color: #64748b;">College of Fish Nutrition &amp; Food Technology, Madhavaram, Chennai</small><br>
+                <span class="type-badge tnjfu">TNJFU B.Tech மையம்</span>
+              </td>
+              <td><strong>மாதவரம் (சென்னை)</strong></td>
+              <td>
+                <strong>B.Tech. (Food Technology - Fish Processing)</strong><br>
+                கடல் உணவுப் பதப்படுத்துதல், தரச்சான்றிதழ் மற்றும் ஏற்றுமதி
+              </td>
+              <td>
+                <a href="https://tnjfu.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnjfu.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- Diploma Center 1: Kudumiyanmalai Agri Diploma -->
+            <tr data-type="diploma">
+              <td><span class="code-badge">DIP-AGR-01</span></td>
+              <td>
+                <strong>வேளாண்மை பாலிடெக்னிக் கல்லூரி, குடுமியான்மலை</strong><br>
+                <small style="color: #64748b;">Institute of Agriculture, Kudumiyanmalai, Pudukkottai</small><br>
+                <span class="type-badge diploma">அரசு டிப்ளமோ மையம்</span>
+              </td>
+              <td><strong>புதுக்கோட்டை (அருகாமை)</strong></td>
+              <td>
+                <strong>Diploma in Agriculture (2 ஆண்டுகள்)</strong><br>
+                உதவி வேளாண்மை அலுவலர் (AAO) நேரடி அரசு வேலைவாய்ப்பு
+              </td>
+              <td>
+                <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnau.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- Diploma Center 2: Kumulur Agri Engg Diploma -->
+            <tr data-type="diploma">
+              <td><span class="code-badge">DIP-ENG-02</span></td>
+              <td>
+                <strong>வேளாண் பொறியியல் பாலிடெக்னிக், குமுளூர்</strong><br>
+                <small style="color: #64748b;">Polytechnic of Agricultural Engineering, Kumulur, Trichy</small><br>
+                <span class="type-badge diploma">அரசு டிப்ளமோ மையம்</span>
+              </td>
+              <td><strong>குமுளூர் (திருச்சி)</strong></td>
+              <td>
+                <strong>Diploma in Agricultural Engineering (3 ஆண்டுகள்)</strong><br>
+                சொட்டுநீர் பாசனம், டிராக்டர் எந்திரவியல் தொழில்நுட்பப் பயிற்சி
+              </td>
+              <td>
+                <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnau.ac.in ↗</a>
+              </td>
+            </tr>
+
+            <!-- Diploma Center 3: Pechiparai Horti Diploma -->
+            <tr data-type="diploma">
+              <td><span class="code-badge">DIP-HOR-03</span></td>
+              <td>
+                <strong>தோட்டக்கலை பயிற்சி நிலையம், பேச்சிப்பாறை</strong><br>
+                <small style="color: #64748b;">Horticultural Research Station &amp; Polytechnic, Pechiparai</small><br>
+                <span class="type-badge diploma">அரசு டிப்ளமோ மையம்</span>
+              </td>
+              <td><strong>கன்னியாகுமரி (பேச்சிப்பாறை)</strong></td>
+              <td>
+                <strong>Diploma in Horticulture (2 ஆண்டுகள்)</strong><br>
+                உதவி தோட்டக்கலை அலுவலர் (AHO) அரசுப் பணி வாய்ப்பு
+              </td>
+              <td>
+                <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="link-btn">tnau.ac.in ↗</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="portal-footer">
+      <div style="font-size: 1.25rem; font-weight: 900; color: #ffffff; margin-bottom: 6px;">
+        தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்
+      </div>
+      <div style="font-size: 0.96rem; font-weight: 700; color: #bbf7d0; margin-bottom: 16px;">
+        மாணவர் உயர்கல்வி வழிகாட்டுதல் மற்றும் வேலைவாய்ப்பு விழிப்புணர்வு முயற்சி
+      </div>
+
+      <div style="max-width: 850px; margin: 0 auto; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 10px; padding: 12px 20px; margin-bottom: 18px; font-size: 0.92rem; color: #ffffff; line-height: 1.6;">
+        Website designed and developed by <strong>Poovalingam K</strong>, Deputy Inspector of Schools, Chief Educational Office, Sivagangai - Mobile : <a href="tel:9626471035" style="color: #fef08a; text-decoration: none; font-weight: 800;">9626471035</a>
+      </div>
+
+      <div class="footer-links" style="margin-bottom: 16px;">
+        <a href="https://tnau.ac.in" target="_blank" rel="noopener noreferrer" class="footer-link-pill">🌐 TNAU Portal</a>
+        <a href="https://tnauucadmission.in" target="_blank" rel="noopener noreferrer" class="footer-link-pill">🌐 TNAU Admission</a>
+        <a href="https://tnjfu.ac.in" target="_blank" rel="noopener noreferrer" class="footer-link-pill">🌐 TNJFU Fisheries</a>
+        <a href="02_00_direct_admissions.html" class="footer-link-pill">🏠 நேரடிச் சேர்க்கை மெனு</a>
+      </div>
+
+      <div style="font-size: 0.82rem; color: #86efac; border-top: 1px solid rgba(255, 255, 255, 0.12); padding-top: 14px; margin-top: 10px;">
+        © 2026 Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    // Live Cut-off Calculator Logic
+    const sub1Input = document.getElementById('sub1');
+    const sub2Input = document.getElementById('sub2');
+    const sub3Input = document.getElementById('sub3');
+    const sub4Input = document.getElementById('sub4');
+    const grpSub4 = document.getElementById('grpSub4');
+    const lblSub3 = document.getElementById('lblSub3');
+    const lblSub4 = document.getElementById('lblSub4');
+    const formulaDesc = document.getElementById('formulaDesc');
+    const cutoffResult = document.getElementById('cutoffResult');
+    const cutoffStatusText = document.getElementById('cutoffStatusText');
+    const chanceBadge = document.getElementById('chanceBadge');
+
+    let currentCalcMode = 'bio_maths';
+
+    function toggleCalcMode() {
+      const mode = document.querySelector('input[name="calcMode"]:checked').value;
+      currentCalcMode = mode;
+
+      if (mode === 'pure_sci') {
+        lblSub3.textContent = 'தாவரவியல் (Botany /100):';
+        lblSub4.textContent = 'விலங்கியல் (Zoology /100):';
+        formulaDesc.textContent = 'சூத்திரம்: (Physics/2) + (Chemistry/2) + ((Botany + Zoology)/2) out of 200';
+      } else {
+        lblSub3.textContent = 'உயிரியல் (Biology /100):';
+        lblSub4.textContent = 'கணிதம் (Maths /100):';
+        formulaDesc.textContent = 'சூத்திரம்: (Physics/2) + (Chemistry/2) + Biology (அல்லது 4 பாடங்களின் கூட்டுத்தொகை/2)';
+      }
+      calculateCutoff();
+    }
+
+    function calculateCutoff() {
+      let s1 = parseFloat(sub1Input.value) || 0;
+      let s2 = parseFloat(sub2Input.value) || 0;
+      let s3 = parseFloat(sub3Input.value) || 0;
+      let s4 = parseFloat(sub4Input.value) || 0;
+
+      s1 = Math.min(100, Math.max(0, s1));
+      s2 = Math.min(100, Math.max(0, s2));
+      s3 = Math.min(100, Math.max(0, s3));
+      s4 = Math.min(100, Math.max(0, s4));
+
+      let cutoff = 0;
+      if (currentCalcMode === 'pure_sci') {
+        // Pure Science: (Physics + Chemistry + Botany + Zoology) / 2
+        cutoff = (s1 + s2 + s3 + s4) / 2;
+      } else {
+        // Bio-Maths stream: (Physics + Chemistry)/2 + Biology (or 4 subjects/2 depending on course)
+        // Standard TNAU calculation: (Physics/2) + (Chemistry/2) + Biology (if bio stream) = 50 + 50 + 100 = 200
+        cutoff = (s1 / 2) + (s2 / 2) + s3;
+      }
+
+      cutoffResult.textContent = cutoff.toFixed(2) + " / 200";
+
+      // Dynamic Feedback
+      if (cutoff >= 185) {
+        cutoffStatusText.textContent = "🌟 உச்சபட்ச கட்-ஆஃப் மதிப்பெண்! TNAU கோயம்புத்தூர் முதன்மை வளாகம், மதுரை AC&RI மற்றும் TNJFU தூத்துக்குடி ஆகியவற்றில் B.Sc (Hons) Agriculture / B.F.Sc கிடைக்க 100% பிரகாசமான வாய்ப்புள்ளது.";
+        chanceBadge.textContent = "Top Tier / Govt Agri Sure";
+        chanceBadge.style.background = "#fef08a";
+        chanceBadge.style.color = "#713f12";
+      } else if (cutoff >= 170) {
+        cutoffStatusText.textContent = "🎯 மிகச் சிறந்த கட்-ஆஃப்! சிவகங்கை செட்டிநாடு, கிள்ளிகுளம், ஈச்சங்கோட்டை, குடுமியான்மலை அரசு வேளாண் கல்லூரிகள், B.Sc தோட்டக்கலை & வனவியல் படிப்புகளில் அரசு இடங்கள் கிடைக்க அதிக வாய்ப்புள்ளது.";
+        chanceBadge.textContent = "High Chance / Govt Agri";
+        chanceBadge.style.background = "#dcfce7";
+        chanceBadge.style.color = "#166534";
+      } else if (cutoff >= 150) {
+        cutoffStatusText.textContent = "👍 நல்ல கட்-ஆஃப் மதிப்பெண்! தமிழ் வழி B.Sc அக்ரி, B.Tech உணவுத் தொழில்நுட்பம், B.Tech வேளாண் பொறியியல் மற்றும் முன்னணி சுயநிதி வேளாண்மைக் கல்லூரிகளில் அரசு ஒதுக்கீட்டு இடங்கள் கிடைக்கும்.";
+        chanceBadge.textContent = "Moderate / Affiliated Agri";
+        chanceBadge.style.background = "#e0f2fe";
+        chanceBadge.style.color = "#0369a1";
+      } else {
+        cutoffStatusText.textContent = "💡 அருமையான வாய்ப்புகள் காத்திருக்கின்றன! 2 ஆண்டு அரசு வேளாண்மை டிப்ளமோ (Diploma in Agriculture), தோட்டக்கலை டிப்ளமோ அல்லது சான்றிதழ் படிப்புகளில் சேர்ந்து உதவி வேளாண்மை அலுவலர் (AAO) ஆகலாம்!";
+        chanceBadge.textContent = "Diploma / AAO Focus";
+        chanceBadge.style.background = "#ede9fe";
+        chanceBadge.style.color = "#5b21b6";
+      }
+    }
+
+    sub1Input.addEventListener('input', calculateCutoff);
+    sub2Input.addEventListener('input', calculateCutoff);
+    sub3Input.addEventListener('input', calculateCutoff);
+    sub4Input.addEventListener('input', calculateCutoff);
+
+    // Initial calculation
+    calculateCutoff();
+
+    // Colleges Table Filter and Search
+    const collegeSearchInput = document.getElementById('collegeSearchInput');
+    const collegePills = document.querySelectorAll('.college-pill');
+    const tableRows = document.querySelectorAll('#collegesTable tbody tr');
+
+    let currentType = 'all';
+
+    function filterTable() {
+      const query = collegeSearchInput.value.toLowerCase().trim();
+
+      tableRows.forEach(row => {
+        const rowType = row.getAttribute('data-type');
+        const text = row.innerText.toLowerCase();
+
+        const matchesType = (currentType === 'all' || rowType === currentType);
+        const matchesQuery = (query === '' || text.includes(query));
+
+        if (matchesType && matchesQuery) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    collegePills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        collegePills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        currentType = pill.getAttribute('data-type');
+        filterTable();
+      });
+    });
+
+    collegeSearchInput.addEventListener('input', filterTable);
+  </script>
+
+</body>
+</html>

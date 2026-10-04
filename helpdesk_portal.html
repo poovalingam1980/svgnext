@@ -1,0 +1,3301 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ஒருங்கிணைந்த உயர்கல்வி சேர்க்கை வழிகாட்டல், கட்-ஆஃப் & உதவி மையம் | தமிழ்நாடு பள்ளிக் கல்வித்துறை</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans, Inter & Noto Sans Tamil -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet"/>
+  
+  <style>
+    :root {
+      --font-main: 'Plus Jakarta Sans', 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      
+      /* Primary Executive Palette */
+      --primary-dark: #0f172a;       /* Slate 900 */
+      --primary-deep: #1e1b4b;       /* Midnight Indigo */
+      --primary: #312e81;            /* Deep Royal Indigo */
+      --primary-brand: #4338ca;      /* Brand Indigo */
+      --primary-light: #6366f1;      /* Bright Indigo */
+      --secondary: #0284c7;          /* Tech Sky Blue */
+      --secondary-dark: #0369a1;     /* Marine Blue */
+      
+      /* Vivid Accents */
+      --accent-rose: #f43f5e;
+      --accent-coral: #fb923c;
+      --accent-amber: #d97706;
+      --accent-gold: #f59e0b;
+      --accent-emerald: #10b981;
+      --accent-teal: #0d9488;
+      --accent-purple: #7e22ce;
+      
+      /* Gradients */
+      --grad-hero: linear-gradient(135deg, #090d16 0%, #1e1b4b 35%, #312e81 70%, #0369a1 100%);
+      --grad-aurora: linear-gradient(135deg, #fb7185 0%, #f43f5e 30%, #a855f7 70%, #38bdf8 100%);
+      --grad-mint: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+      --grad-gold: linear-gradient(135deg, #f59e0b 0%, #facc15 100%);
+      --grad-card: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+      
+      /* UI Neutral Colors */
+      --bg-page: #f1f5f9;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;          /* Slate 900 */
+      --text-sub: #334155;           /* Slate 700 */
+      --text-muted: #64748b;         /* Slate 500 */
+      --border-light: #e2e8f0;
+      --border-crisp: #cbd5e1;
+      --border-focus: #4338ca;
+      
+      /* Radii & Shadows */
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-full: 9999px;
+      
+      --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 8px 20px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 16px 36px rgba(15, 23, 42, 0.14);
+      --shadow-glow: 0 10px 30px rgba(67, 56, 202, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .portal-container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    /* Top Action Bar */
+    .top-action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .home-portal-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 20px;
+      background: #1e1b4b;
+      color: #ffffff !important;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .home-portal-btn:hover {
+      background: #312e81;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.35);
+    }
+
+    .home-portal-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .district-official-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #312e81;
+      background: #e0e7ff;
+      padding: 7px 18px;
+      border-radius: var(--radius-full);
+      border: 1.5px solid #c7d2fe;
+    }
+
+    /* Hero Header */
+    .hero-portal-card {
+      background: var(--grad-hero) !important;
+      border-radius: var(--radius-xl);
+      padding: 42px 32px 36px;
+      color: #ffffff !important;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      margin-bottom: 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-portal-card::after {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -15%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .header-badge {
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+    }
+
+    .header-badge.gold {
+      background-color: #fef08a !important;
+      color: #713f12 !important;
+      border: 1px solid #fde047;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-badge.glass {
+      background-color: rgba(255, 255, 255, 0.16) !important;
+      color: #ffffff !important;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .portal-main-title {
+      font-size: 2.25rem;
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 14px;
+      color: #ffffff !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    }
+
+    .accent-gold-text {
+      color: #fde047 !important;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .portal-main-desc {
+      font-size: 1.05rem;
+      color: #e0e7ff !important;
+      max-width: 1020px;
+      margin: 0 auto;
+      line-height: 1.75;
+      font-weight: 500;
+    }
+
+    /* Dual Stream Selection CTA */
+    .stream-switch-container {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .stream-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 24px;
+      border-radius: var(--radius-full);
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: 2px solid transparent;
+    }
+
+    .stream-btn.entrance {
+      background: #fde047;
+      color: #713f12;
+      box-shadow: 0 4px 14px rgba(253, 224, 71, 0.35);
+    }
+
+    .stream-btn.direct {
+      background: #38bdf8;
+      color: #0c4a6e;
+      box-shadow: 0 4px 14px rgba(56, 189, 248, 0.35);
+    }
+
+    .stream-btn.helpdesk {
+      background: #34d399;
+      color: #064e3b;
+      box-shadow: 0 4px 14px rgba(52, 211, 153, 0.35);
+    }
+
+    .stream-btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    /* Helplines Bento Grid */
+    .helpline-bento-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .bento-helpline-card {
+      background: #ffffff;
+      border: 1.5px solid var(--border-crisp);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bento-helpline-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .bento-helpline-card.mint {
+      border-left: 5px solid #10b981;
+      background: linear-gradient(145deg, #f0fdf4 0%, #ffffff 100%);
+    }
+
+    .bento-helpline-card.rose {
+      border-left: 5px solid #f43f5e;
+      background: linear-gradient(145deg, #fff1f2 0%, #ffffff 100%);
+    }
+
+    .bento-helpline-card.violet {
+      border-left: 5px solid #a855f7;
+      background: linear-gradient(145deg, #faf5ff 0%, #ffffff 100%);
+    }
+
+    .bento-helpline-card.gold {
+      border-left: 5px solid #f59e0b;
+      background: linear-gradient(145deg, #fffbeb 0%, #ffffff 100%);
+    }
+
+    .bento-head-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .bento-chip {
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .bento-chip.mint { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+    .bento-chip.rose { background: #ffe4e6; color: #be123c; border: 1px solid #fca5a5; }
+    .bento-chip.violet { background: #f3e8ff; color: #7e22ce; border: 1px solid #d8b4fe; }
+    .bento-chip.gold { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+
+    .bento-service-title {
+      font-size: 0.92rem;
+      color: #475569;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .bento-dial-num {
+      font-size: 1.75rem;
+      font-weight: 900;
+      color: #0f172a;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .bento-info-desc {
+      font-size: 0.88rem;
+      color: #334155;
+      line-height: 1.55;
+      margin-bottom: 14px;
+    }
+
+    .bento-action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      background: #1e1b4b;
+      color: #ffffff !important;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .bento-action-link:hover {
+      background: #4338ca;
+      transform: translateY(-1px);
+    }
+
+    /* Sticky Navigation Bar */
+    .sticky-portal-nav {
+      position: sticky;
+      top: 12px;
+      z-index: 100;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px 14px;
+      background: rgba(15, 23, 42, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: var(--radius-md);
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      margin-bottom: 24px;
+      scrollbar-width: thin;
+    }
+
+    .nav-anchor-pill {
+      white-space: nowrap;
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.1);
+      color: #f1f5f9;
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .nav-anchor-pill:hover, .nav-anchor-pill.active {
+      background: var(--grad-aurora);
+      color: #ffffff;
+      border-color: transparent;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(244, 63, 94, 0.4);
+    }
+
+    /* Standard Card Container */
+    .section-card {
+      background: #ffffff !important;
+      border-radius: var(--radius-lg);
+      border: 1.5px solid var(--border-crisp);
+      padding: 30px 28px;
+      margin-bottom: 26px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .section-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-top-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 22px;
+      border-bottom: 2px solid var(--border-light);
+      padding-bottom: 14px;
+    }
+
+    .card-top-title {
+      font-size: 1.38rem;
+      font-weight: 800;
+      color: #1e1b4b !important;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-tag-badge {
+      display: inline-block;
+      padding: 5px 14px;
+      background: #e0e7ff !important;
+      color: #3730a3 !important;
+      border-radius: var(--radius-full);
+      font-size: 0.84rem;
+      font-weight: 800;
+      border: 1px solid #c7d2fe;
+    }
+
+    .card-tag-badge.entrance {
+      background: #fef3c7 !important;
+      color: #92400e !important;
+      border-color: #fde68a !important;
+    }
+
+    .card-tag-badge.direct {
+      background: #e0f2fe !important;
+      color: #0369a1 !important;
+      border-color: #bae6fd !important;
+    }
+
+    .card-tag-badge.helpdesk {
+      background: #dcfce7 !important;
+      color: #166534 !important;
+      border-color: #86efac !important;
+    }
+
+    /* Grid Layouts */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 20px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    /* Feature Box */
+    .stream-box {
+      background: #ffffff !important;
+      border: 1.5px solid var(--border-crisp);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      transition: all 0.25s ease;
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .stream-box:hover {
+      border-color: #4338ca;
+      background: #f8fafc !important;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .stream-box.highlight {
+      border-left: 5px solid #4338ca !important;
+      background: #f5f3ff !important;
+    }
+
+    .stream-box.green {
+      border-left: 5px solid #16a34a !important;
+      background: #f0fdf4 !important;
+    }
+
+    .stream-box.amber {
+      border-left: 5px solid #d97706 !important;
+      background: #fffbeb !important;
+    }
+
+    .stream-box.blue {
+      border-left: 5px solid #0284c7 !important;
+      background: #f0f9ff !important;
+    }
+
+    .box-title {
+      font-size: 1.15rem !important;
+      font-weight: 800 !important;
+      color: #1e1b4b !important;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      line-height: 1.4;
+    }
+
+    .box-desc {
+      font-size: 0.94rem !important;
+      color: #334155 !important;
+      line-height: 1.65;
+    }
+
+    /* Interactive Calculator Tabs */
+    .calc-tabs-bar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--border-light);
+    }
+
+    .calc-btn-tab {
+      padding: 10px 18px;
+      background: #ffffff;
+      border: 1.5px solid var(--border-crisp);
+      border-radius: var(--radius-sm);
+      font-size: 0.90rem;
+      font-weight: 700;
+      color: #334155;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .calc-btn-tab.active {
+      background: #4338ca !important;
+      color: #ffffff !important;
+      border-color: #4338ca !important;
+      box-shadow: 0 4px 10px rgba(67, 56, 202, 0.3);
+    }
+
+    .calc-pane {
+      display: none;
+      animation: tabFadeIn 0.3s ease;
+    }
+
+    .calc-pane.active {
+      display: block;
+    }
+
+    @keyframes tabFadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .calc-card-shell {
+      background: linear-gradient(135deg, #f5f3ff 0%, #e0e7ff 100%) !important;
+      border: 2px solid #c7d2fe !important;
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      margin-bottom: 20px;
+    }
+
+    .calc-pane-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #1e1b4b !important;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .calc-formula-badge {
+      background: #ffffff;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #4338ca;
+      border: 1px dashed #a5b4fc;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .calc-inputs-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .field-wrap label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #1e1b4b !important;
+      margin-bottom: 6px;
+    }
+
+    .field-wrap input {
+      width: 100%;
+      padding: 11px 14px;
+      border: 2px solid var(--border-crisp);
+      border-radius: var(--radius-sm);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a !important;
+      background: #ffffff !important;
+      transition: all 0.2s ease;
+    }
+
+    .field-wrap input:focus {
+      outline: none;
+      border-color: #4338ca;
+      box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.25);
+    }
+
+    .calc-output-center {
+      background: #ffffff !important;
+      border: 2px solid #4338ca !important;
+      border-radius: var(--radius-md);
+      padding: 22px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      margin-top: 10px;
+    }
+
+    .computed-score {
+      font-size: 2.7rem;
+      font-weight: 900;
+      color: #4338ca !important;
+      line-height: 1.1;
+      margin: 6px 0;
+    }
+
+    .computed-tag {
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: var(--radius-full);
+      font-size: 0.92rem;
+      font-weight: 800;
+      background: #e0e7ff !important;
+      color: #3730a3 !important;
+      margin-top: 6px;
+      border: 1px solid #c7d2fe;
+    }
+
+    /* Tables */
+    .table-responsive-box {
+      overflow-x: auto;
+      border: 1.5px solid var(--border-crisp);
+      border-radius: var(--radius-md);
+      background: #ffffff !important;
+      margin-top: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.92rem;
+    }
+
+    th {
+      background: #1e1b4b !important;
+      color: #ffffff !important;
+      padding: 14px 16px;
+      font-weight: 800;
+      white-space: nowrap;
+      letter-spacing: 0.3px;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-light);
+      color: #334155 !important;
+      vertical-align: middle;
+      line-height: 1.55;
+    }
+
+    tr:hover td {
+      background: #f8fafc !important;
+    }
+
+    .badge-quota {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.80rem;
+      font-weight: 800;
+    }
+
+    .quota-oc { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+    .quota-bc { background: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; }
+    .quota-bcm { background: #ecfeff; color: #155e75; border: 1px solid #a5f3fc; }
+    .quota-mbc { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+    .quota-sc { background: #f3e8ff; color: #6b21a8; border: 1px solid #d8b4fe; }
+    .quota-sca { background: #fce7f3; color: #9d174d; border: 1px solid #fbcfe8; }
+    .quota-st { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+    .quota-ews { background: #ffedd5; color: #9a3412; border: 1px solid #fed7aa; }
+
+    /* Interactive Document Checklist */
+    .checklist-shell {
+      background: #ffffff;
+      border: 1.5px solid var(--border-crisp);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+
+    .checklist-meter-track {
+      background: #e2e8f0;
+      border-radius: var(--radius-full);
+      height: 16px;
+      overflow: hidden;
+      margin: 14px 0 20px;
+    }
+
+    .checklist-meter-fill {
+      background: linear-gradient(90deg, #10b981, #059669);
+      height: 100%;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .checklist-stats-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #1e1b4b;
+    }
+
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+    }
+
+    .doc-check-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 14px;
+      background: #f8fafc;
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .doc-check-card:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    .doc-check-card.checked {
+      background: #ecfdf5;
+      border-color: #a7f3d0;
+    }
+
+    .doc-check-card input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      accent-color: #059669;
+      margin-top: 2px;
+    }
+
+    .doc-check-card label {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #1e293b;
+      cursor: pointer;
+      line-height: 1.5;
+    }
+
+    /* Interactive Welfare & Scholarship Finder */
+    .finder-shell {
+      background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+      border: 2px solid #bbf7d0;
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-top: 20px;
+    }
+
+    .finder-head-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #065f46;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .finder-select-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .finder-input-box {
+      background: #ffffff;
+      border: 1.5px solid var(--border-crisp);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+    }
+
+    .finder-input-box label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 8px;
+    }
+
+    .finder-input-box select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1.5px solid var(--border-crisp);
+      border-radius: var(--radius-sm);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #0f172a;
+      background: #ffffff;
+    }
+
+    .finder-display-result {
+      background: #ffffff;
+      border: 2px solid #10b981;
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+
+    .chip-scheme {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 800;
+      margin: 4px;
+    }
+
+    .chip-green { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+    .chip-blue { background: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; }
+    .chip-gold { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+
+    /* Steps Timeline */
+    .counselling-step-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .step-card {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: #ffffff !important;
+      border: 1.5px solid var(--border-crisp);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+    }
+
+    .step-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #4338ca !important;
+      color: #ffffff !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 900;
+      flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(67, 56, 202, 0.35);
+    }
+
+    .step-body h4 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #1e1b4b !important;
+      margin-bottom: 6px;
+    }
+
+    .step-body p {
+      font-size: 0.93rem;
+      color: #334155 !important;
+      line-height: 1.62;
+    }
+
+    /* District Career Guidance Search & Cards */
+    .search-filter-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .search-input-field {
+      width: 100%;
+      background: #ffffff;
+      border: 2px solid var(--border-crisp);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px 12px 42px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #0f172a;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .search-input-field:focus {
+      border-color: #4338ca;
+      box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.2);
+    }
+
+    .search-wrapper-relative {
+      flex: 1;
+      min-width: 260px;
+      position: relative;
+    }
+
+    .search-glyph {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .district-card-item {
+      background: #ffffff;
+      border: 1.5px solid var(--border-crisp);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: all 0.25s ease;
+    }
+
+    .district-card-item:hover {
+      transform: translateY(-3px);
+      border-color: #4338ca;
+      box-shadow: var(--shadow-md);
+    }
+
+    .district-card-item.priority {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 50%, #ffffff 100%);
+      border: 2px solid #f59e0b;
+      box-shadow: 0 8px 24px rgba(245, 158, 11, 0.18);
+    }
+
+    .district-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .district-name-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .dist-row-info {
+      font-size: 0.90rem;
+      color: #334155;
+      margin-bottom: 6px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .dist-row-info b {
+      color: #64748b;
+      min-width: 85px;
+    }
+
+    /* Student Query Form */
+    .form-inputs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .form-control-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-control-item.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-label-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #1e1b4b;
+    }
+
+    .form-label-title span.required-star {
+      color: #dc2626;
+    }
+
+    .form-text-box, .form-select-box, .form-textarea-box {
+      width: 100%;
+      background: #ffffff;
+      border: 1.5px solid var(--border-crisp);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      font-size: 0.92rem;
+      font-family: inherit;
+      color: #0f172a;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .form-text-box:focus, .form-select-box:focus, .form-textarea-box:focus {
+      border-color: #4338ca;
+      box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.2);
+    }
+
+    .form-textarea-box {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .btn-submit-action {
+      background: linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%);
+      color: #ffffff;
+      border: none;
+      padding: 14px 32px;
+      font-size: 0.98rem;
+      font-weight: 800;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(67, 56, 202, 0.35);
+    }
+
+    .btn-submit-action:hover {
+      background: linear-gradient(135deg, #312e81 0%, #6366f1 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(67, 56, 202, 0.45);
+    }
+
+    .form-feedback-card {
+      display: none;
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      border: 2px solid #10b981;
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-top: 20px;
+      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+      animation: tabFadeIn 0.4s ease;
+    }
+
+    /* Accordion FAQs */
+    .faq-collection {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item-card {
+      background: #f8fafc;
+      border: 1.5px solid var(--border-crisp);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .faq-item-card:hover {
+      border-color: #4338ca;
+    }
+
+    .faq-header-btn {
+      width: 100%;
+      padding: 16px 20px;
+      background: transparent;
+      border: none;
+      color: #0f172a;
+      font-size: 0.98rem;
+      font-weight: 700;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .faq-header-btn.active {
+      background: #e0e7ff;
+      color: #312e81;
+    }
+
+    .faq-toggle-arrow {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: #475569;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-header-btn.active .faq-toggle-arrow {
+      transform: rotate(180deg);
+      background: #4338ca;
+      color: #ffffff;
+    }
+
+    .faq-drawer-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease-out, padding 0.3s ease;
+      padding: 0 20px;
+      font-size: 0.92rem;
+      color: #334155;
+      line-height: 1.75;
+      background: #ffffff;
+    }
+
+    .faq-drawer-panel.show {
+      padding: 16px 20px 22px;
+      max-height: 600px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    /* Launcher & Buttons */
+    .portal-launcher-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: #1e1b4b;
+      color: #ffffff !important;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      margin-top: 10px;
+      transition: all 0.2s;
+    }
+
+    .portal-launcher-link:hover {
+      background: #4338ca;
+      transform: translateY(-1px);
+    }
+
+    /* Notice Box */
+    .info-alert-box {
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      line-height: 1.65;
+    }
+
+    .info-alert-box.purple {
+      background: #f5f3ff !important;
+      border: 1.5px solid #c7d2fe !important;
+      color: #312e81 !important;
+    }
+
+    /* Footer */
+    .master-portal-footer {
+      background: #0f172a !important;
+      color: #f8fafc !important;
+      padding: 38px 24px;
+      border-radius: var(--radius-xl);
+      text-align: center;
+      margin-top: 36px;
+      border-top: 4px solid #4338ca;
+      line-height: 1.8;
+    }
+
+    .footer-heading-dept {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #fde047 !important;
+      margin-bottom: 6px;
+    }
+
+    .footer-sub-initiative {
+      font-size: 0.95rem;
+      color: #cbd5e1 !important;
+      margin-bottom: 16px;
+    }
+
+    .footer-officer-badge {
+      background: rgba(255, 255, 255, 0.08) !important;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      display: inline-block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      margin-bottom: 12px;
+    }
+
+    .footer-revision-date {
+      margin-top: 8px;
+      font-weight: 800;
+      color: #818cf8 !important;
+      font-size: 0.94rem;
+    }
+
+    .footer-copyright {
+      font-size: 0.82rem;
+      color: #94a3b8 !important;
+      margin-top: 4px;
+    }
+
+    /* Floating Scroll Button */
+    #masterBackTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      background-color: #1e1b4b;
+      color: #ffffff !important;
+      border: 2px solid #818cf8;
+      border-radius: var(--radius-full);
+      padding: 10px 18px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    #masterBackTopBtn:hover {
+      background-color: #4338ca;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(67, 56, 202, 0.45);
+    }
+
+    @media (max-width: 768px) {
+      body { padding: 12px 8px 30px; }
+      .portal-main-title { font-size: 1.65rem; }
+      .hero-portal-card { padding: 26px 18px; }
+      .section-card { padding: 20px 16px; }
+      .calc-card-shell { padding: 18px 14px; }
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    }
+  
+    /* ==================================================== */
+    /* Master Guide Animations & Royal Styles */
+    /* ==================================================== */
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes bannerRoyalGlow {
+      0%, 100% {
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7), 0 0 28px rgba(212, 175, 55, 0.35);
+      }
+      50% {
+        box-shadow: 0 14px 48px rgba(0, 0, 0, 0.85), 0 0 42px rgba(254, 240, 138, 0.6);
+      }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Top Bar matching Guide's Main Page */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      width: 100%;
+    }
+
+    .top-nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      background: linear-gradient(135deg, #0a0f1d 0%, #151f38 50%, #0a0f1d 100%);
+      color: #fef08a !important;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 800;
+      border-radius: var(--radius-sm);
+      border: 1.8px solid #d4af37;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45), 0 0 12px rgba(212, 175, 55, 0.25);
+      transition: all 0.25s ease;
+      letter-spacing: 0.3px;
+    }
+
+    .home-btn:hover {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      border-color: #fef08a;
+      color: #ffffff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+    }
+
+    .home-btn svg {
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
+    }
+
+    .quick-tools-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .quick-tool-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.86rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45), 0 0 12px rgba(212, 175, 55, 0.25);
+    }
+
+    .quick-tool-btn.btn-main-guide {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+      color: #fef08a !important;
+      border: 1.8px solid #a5b4fc;
+    }
+    .quick-tool-btn.btn-main-guide:hover {
+      background: linear-gradient(135deg, #312e81 0%, #4338ca 100%);
+      color: #ffffff !important;
+      border-color: #fef08a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(99, 102, 241, 0.5);
+    }
+
+    .quick-tool-btn.btn-cutoff {
+      background: linear-gradient(135deg, #091330 0%, #112255 100%);
+      color: #fef08a !important;
+      border: 1.8px solid #d4af37;
+    }
+    .quick-tool-btn.btn-cutoff:hover {
+      background: linear-gradient(135deg, #d4af37 0%, #fef08a 100%);
+      color: #070e22 !important;
+      border-color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(212, 175, 55, 0.55);
+    }
+
+    .quick-tool-btn.btn-helpdesk {
+      background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
+      color: #a7f3d0 !important;
+      border: 1.8px solid #34d399;
+    }
+    .quick-tool-btn.btn-helpdesk:hover {
+      background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+      color: #064e3b !important;
+      border-color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(52, 211, 153, 0.55);
+    }
+
+    .district-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 900;
+      color: #fef08a;
+      background: linear-gradient(135deg, #070e22 0%, #0f1d42 50%, #070e22 100%);
+      border: 2px solid #d4af37;
+      padding: 8px 20px;
+      border-radius: 999px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 18px rgba(212, 175, 55, 0.35);
+      letter-spacing: 0.3px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Master Guide Animated Header Banner */
+    .header-banner-wrap {
+      width: 100%;
+      border-radius: 16px;
+      padding: 3px;
+      background: linear-gradient(90deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c, #d4af37, #bf953f);
+      background-size: 300% 300%;
+      animation: gradientShift 6s ease infinite, bannerRoyalGlow 3.5s infinite ease-in-out;
+      margin-bottom: 20px;
+      position: relative;
+      box-sizing: border-box;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.65), 0 0 28px rgba(212, 175, 55, 0.35);
+    }
+
+    .header-banner-inner {
+      width: 100%;
+      border-radius: 13px;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #06382a 0%, #03241b 60%, #011610 100%);
+      display: block;
+      position: relative;
+    }
+
+    .banner-fallback {
+      padding: 22px 20px 18px 20px;
+      color: #ffffff;
+      text-align: center;
+      background: 
+        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.32) 0%, transparent 65%),
+        radial-gradient(circle at 10% 50%, rgba(16, 185, 129, 0.38) 0%, transparent 55%),
+        radial-gradient(circle at 90% 50%, rgba(5, 150, 105, 0.32) 0%, transparent 55%),
+        linear-gradient(145deg, #021e17 0%, #053b2d 45%, #085340 75%, #02241b 100%);
+      border: 1.8px solid rgba(212, 175, 55, 0.6);
+      border-radius: 13px;
+      position: relative;
+      box-shadow: inset 0 1px 0 rgba(255, 215, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .banner-fallback-dept {
+      font-size: 0.90rem;
+      font-weight: 800;
+      color: #fef08a;
+      letter-spacing: 0.6px;
+      margin-bottom: 4px;
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+
+    .banner-fallback-title {
+      font-size: 2.15rem;
+      font-weight: 900;
+      line-height: 1.25;
+      margin-bottom: 4px;
+      background: linear-gradient(135deg, #ffffff 0%, #fef08a 45%, #ffd700 75%, #dfb15b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8));
+      letter-spacing: -0.2px;
+    }
+
+    .banner-fallback-subtitle {
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: #fde047;
+      margin-bottom: 6px;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    .banner-fallback-en {
+      font-family: 'Cinzel', 'Noto Sans Tamil', serif;
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .banner-fallback-en-sub {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #cbd5e1;
+      letter-spacing: 1.2px;
+    }
+
+    /* Master Guide Creator Card with Typewriter Animation */
+    .creator-card {
+      background: rgba(255, 255, 255, 0.96);
+      border: 1.5px solid rgba(255, 255, 255, 0.9);
+      border-radius: var(--radius-md);
+      padding: 14px 22px;
+      margin: 28px 0 16px 0;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      text-align: center;
+      flex-wrap: wrap;
+      backdrop-filter: blur(14px);
+    }
+
+    .creator-name-ta, .creator-name-en {
+      font-weight: 800;
+      font-size: 1.05rem;
+      background: linear-gradient(135deg, #1e40af 0%, #7c3aed 50%, #db2777 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      letter-spacing: 0.3px;
+      padding: 0 2px;
+    }
+
+    .creator-label {
+      font-weight: 700;
+      color: #334155;
+      font-size: 0.94rem;
+    }
+
+    .creator-role {
+      font-weight: 600;
+      color: #1e293b;
+      font-size: 0.94rem;
+    }
+
+    .creator-phone-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      color: #065f46;
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 3px 12px;
+      border-radius: 999px;
+      border: 1px solid #6ee7b7;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 5px rgba(5, 150, 105, 0.12);
+      margin-left: 6px;
+    }
+
+    .creator-phone-badge:hover {
+      background: #059669;
+      color: #ffffff;
+      box-shadow: 0 4px 10px rgba(5, 150, 105, 0.3);
+      transform: translateY(-1px);
+    }
+
+    .typing-cursor {
+      color: #4338ca;
+      font-weight: 900;
+      animation: blink 0.8s infinite;
+      margin-left: 2px;
+    }
+
+    /* Master Guide Portal Footer */
+    .portal-footer {
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: var(--radius-md);
+      text-align: center;
+      padding: 24px 16px 20px;
+      font-size: 0.92rem;
+      border: 1.5px solid rgba(255, 255, 255, 0.9);
+      margin-top: 16px;
+      color: #475569;
+      line-height: 1.7;
+      width: 100%;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+      backdrop-filter: blur(14px);
+    }
+
+    .portal-footer a {
+      color: #0284c7;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .portal-footer a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="portal-container">
+    
+    <!-- Top Bar (Guide's Main Page Format) -->
+    <div class="top-bar">
+      <div class="top-nav-left">
+        <a class="home-btn" href="index.html" title="சிவகங்கை மாவட்ட முதன்மைக் கல்வி அலுவலக முகப்பு பக்கம்">
+          <svg viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+          முகப்பு (HOME)
+        </a>
+        <a class="home-btn" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை போர்ட்டல்">
+          🎓 முதன்மை போர்ட்டல் (Master Guide)
+        </a>
+        <div class="quick-tools-nav">
+          <a class="quick-tool-btn btn-cutoff" href="#cutoff-tools-sec" title="அனைத்து வகை படிப்புகளுக்கான கட்-ஆஃப் கால்குலேட்டர்">
+            🧮 கட்-ஆஃப் கால்குலேட்டர்
+          </a>
+          <a class="quick-tool-btn btn-helpdesk" href="#services-14417-sec" title="14417 உதவி மையம்">
+            📞 14417 உதவி மையம்
+          </a>
+        </div>
+      </div>
+      <div class="district-badge">
+        🏛️ முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்
+      </div>
+    </div>
+
+    <!-- தலைப்பு பேனர் பகுதி (Hero Banner with Animated Glowing Border) -->
+    <header class="header-banner-wrap">
+      <div class="header-banner-inner">
+        <div class="banner-fallback" id="headerTitleBanner">
+          <div class="banner-fallback-dept">🎓 தமிழ்நாடு பள்ளிக்கல்வித்துறை — சிவகங்கை மாவட்டம்</div>
+          <h1 class="banner-fallback-title">உயர்கல்வி வழிகாட்டல், கட்-ஆஃப் & உதவி மையம்</h1>
+          <p class="banner-fallback-subtitle">ஒருங்கிணைந்த சேர்க்கை நெறிமுறைகள், 7.5% சலுகை & 14417 மாணவர் உதவி தளம்</p>
+          <div class="banner-fallback-en">CAREER GUIDANCE, CUT-OFF & HELPDESK PORTAL 2026</div>
+          <div class="banner-fallback-en-sub">YOUR KEY TO A BRIGHT HIGHER EDUCATION FUTURE</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Portal Sub-Header -->
+    <header class="hero-portal-card">
+    <header class="hero-portal-card">
+      <div class="hero-badge-row">
+        <span class="header-badge gold">ஒருங்கிணைந்த உயர்கல்வி போர்ட்டல் 2026</span>
+        <span class="header-badge glass">நுழைவுத்தேர்வு & நேரடிச் சேர்க்கை</span>
+        <span class="header-badge glass">14417 உதவி மையம்</span>
+      </div>
+      <h1 class="portal-main-title">ஒருங்கிணைந்த உயர்கல்வி சேர்க்கை வழிகாட்டல், <span class="accent-gold-text">கட்-ஆஃப் & உதவி மையம்</span></h1>
+      <p class="portal-main-desc">
+        தேசிய அளவிலான நுழைவுத் தேர்வுகள் (NEET, JEE, CUET, IAT, CLAT, NIFT), தமிழ்நாடு அரசின் நேரடி ஒற்றைச் சாளர சேர்க்கைகள் (TNEA, TNGASA, TANUVAS, TNDALU, TNAU), 69% & மத்திய சமூக இடஒதுக்கீடு, 7.5% அரசுப் பள்ளி முன்னுரிமை, ஊடாடும் கட்-ஆஃப் கால்குலேட்டர்கள், ஆவண சரிபார்ப்பு, 14417 கல்வி உதவி மையம் மற்றும் மாவட்ட வழிகாட்டல் குழுக்களின் ஒருங்கிணைந்த தளம்.
+      </p>
+
+      <!-- Quick Action CTA -->
+      <div class="stream-switch-container">
+        <a href="#cutoff-tools-sec" class="stream-btn entrance">🧮 கட்-ஆஃப் கணக்கிடுக (Cut-off Tools)</a>
+        <a href="#helpline-bento-sec" class="stream-btn helpdesk">📞 14417 உதவி எண் & ஆலோசனைகள்</a>
+        <a href="#student-ask-sec" class="stream-btn direct">✍️ சந்தேகப் படிவம் (Ask a Question)</a>
+      </div>
+    </header>
+
+    <!-- HELPLINES BENTO SECTION -->
+    <div id="helpline-bento-sec" class="helpline-bento-grid">
+      <!-- Card 1: 14417 -->
+      <div class="bento-helpline-card mint">
+        <div>
+          <div class="bento-head-row">
+            <span class="bento-chip mint">Toll-Free 24x7</span>
+            <span style="font-size: 1.4rem;">📞</span>
+          </div>
+          <div class="bento-service-title">பள்ளிக் கல்வி உதவி மையம்</div>
+          <div class="bento-dial-num">14417</div>
+          <p class="bento-info-desc">அனைத்து நுழைவுத் தேர்வுகள், சேர்க்கை கலந்தாய்வு, உதவித்தொகை & அரசு நலத்திட்ட நேரடி ஆலோசனை.</p>
+        </div>
+        <a href="tel:14417" class="bento-action-link">📞 இப்போது அழைக்க (Call 14417)</a>
+      </div>
+
+      <!-- Card 2: 14416 / 104 -->
+      <div class="bento-helpline-card rose">
+        <div>
+          <div class="bento-head-row">
+            <span class="bento-chip rose">Mental Wellness</span>
+            <span style="font-size: 1.4rem;">🧠</span>
+          </div>
+          <div class="bento-service-title">மனநல & தேர்வு ஆலோசனை</div>
+          <div class="bento-dial-num">14416 / 104</div>
+          <p class="bento-info-desc">Tele-MANAS & நல்வாழ்வுத்துறை மூலம் பொதுத்தேர்வு அச்சம், மன அழுத்தம் மற்றும் தன்னம்பிக்கை வழிகாட்டல்.</p>
+        </div>
+        <a href="tel:14416" class="bento-action-link">🛡️ ஆலோசனையைப் பெற</a>
+      </div>
+
+      <!-- Card 3: 1098 -->
+      <div class="bento-helpline-card violet">
+        <div>
+          <div class="bento-head-row">
+            <span class="bento-chip violet">Childline National</span>
+            <span style="font-size: 1.4rem;">🛡️</span>
+          </div>
+          <div class="bento-service-title">குழந்தைகள் உதவி மையம்</div>
+          <div class="bento-dial-num">1098</div>
+          <p class="bento-info-desc">மாணவர் பாதுகாப்பு, குழந்தை உரிமைகள் மற்றும் பள்ளி இடைநிற்றல் தடுப்புக்கான இலவச உதவி மையம்.</p>
+        </div>
+        <a href="tel:1098" class="bento-action-link">📞 1098 தொடர்பு கொள்க</a>
+      </div>
+
+      <!-- Card 4: CEO Cell -->
+      <div class="bento-helpline-card gold">
+        <div>
+          <div class="bento-head-row">
+            <span class="bento-chip gold">District Cell</span>
+            <span style="font-size: 1.4rem;">🎓</span>
+          </div>
+          <div class="bento-service-title">7.5% அரசுப் பள்ளிப் பிரிவு</div>
+          <div class="bento-dial-num">CEO Cell</div>
+          <p class="bento-info-desc">சிவகங்கை முதன்மைக் கல்வி அலுவலக உயர்கல்வி வழிகாட்டல் & மாணவர் சேர்க்கை ஆதரவு மையம்.</p>
+        </div>
+        <button type="button" onclick="smoothScrollToAnchor('district-centers-sec');" class="bento-action-link">🏢 மைய விவரங்களைக் காண்க</button>
+      </div>
+    </div>
+
+    <!-- STICKY NAVIGATION BAR -->
+    <nav class="sticky-portal-nav" id="stickyPortalNavbar" aria-label="உயர்கல்வி வழிகாட்டல் வழிசெலுத்தல்">
+      <button type="button" class="nav-anchor-pill active" onclick="smoothScrollToAnchor('cutoff-tools-sec', this)">🧮 கட்-ஆஃப் கருவிகள்</button>
+      <button type="button" class="nav-anchor-pill" onclick="smoothScrollToAnchor('entrance-stream-sec', this)">✍️ நுழைவுத்தேர்வுகள்</button>
+      <button type="button" class="nav-anchor-pill" onclick="smoothScrollToAnchor('direct-stream-sec', this)">🎯 நேரடிச் சேர்க்கை</button>
+      <button type="button" class="nav-anchor-pill" onclick="smoothScrollToAnchor('reservation-sec', this)">🏛️ இடஒதுக்கீடு</button>
+      <button type="button" class="nav-anchor-pill" onclick="smoothScrollToAnchor('quota-7point5-sec', this)">🏫 7.5% சலுகை</button>
+      <button type="button" class="nav-anchor-pill" onclick="smoothScrollToAnchor('doc-checklist-sec', this)">📄 சான்றிதழ்கள் பட்டியல்</button>
+      <button type="button" class="nav-anchor-pill" onclick="smoothScrollToAnchor('counselling-flow-sec', this)">🔄 கலந்தாய்வு நிலைகள்</button>
+      <button type="button" class="nav-anchor-pill" onclick="smoothScrollToAnchor('district-centers-sec', this)">🏢 மாவட்ட மையங்கள்</button>
+      <button type="button" class="nav-anchor-pill" onclick="smoothScrollToAnchor('student-ask-sec', this)">✉️ சந்தேகப் படிவம்</button>
+      <button type="button" class="nav-anchor-pill" onclick="smoothScrollToAnchor('faqs-sec', this)">❓ வினா-விடை (FAQs)</button>
+      <button type="button" class="nav-anchor-pill" onclick="smoothScrollToAnchor('portals-sec', this)">🌐 கல்வி தளங்கள்</button>
+    </nav>
+
+    <!-- SECTION 1: INTERACTIVE CUT-OFF CALCULATORS (ALL 7 STREAMS) -->
+    <section id="cutoff-tools-sec" class="section-card">
+      <div class="card-top-header">
+        <h2 class="card-top-title">🧮 அனைத்துப் படிப்புகளுக்குமான ஒருங்கிணைந்த கட்-ஆஃப் & மதிப்பெண் கால்குலேட்டர்கள்</h2>
+        <span class="card-tag-badge">ஊடாடும் கணக்கீட்டுக் கருவிகள்</span>
+      </div>
+      
+      <p class="box-desc" style="margin-bottom: 20px;">
+        நீங்கள் விரும்பும் கல்விப் பிரிவைத் தேர்ந்தெடுத்து மதிப்பெண்களை உள்ளிட்டு உங்கள் துல்லியமான சேர்க்கை கட்-ஆஃப் மற்றும் வாய்ப்புகளை உடனுக்குடன் அறிந்துகொள்ளுங்கள்:
+      </p>
+
+      <!-- Calc Tab Buttons -->
+      <div class="calc-tabs-bar">
+        <button class="calc-btn-tab active" onclick="switchCalcPane('tnea')">📐 பொறியியல் (TNEA)</button>
+        <button class="calc-btn-tab" onclick="switchCalcPane('neet')">🩺 மருத்துவம் (NEET UG)</button>
+        <button class="calc-btn-tab" onclick="switchCalcPane('science')">🔬 அறிவியல் (B.Sc)</button>
+        <button class="calc-btn-tab" onclick="switchCalcPane('commerce')">💼 வணிகவியல் (B.Com/BBA)</button>
+        <button class="calc-btn-tab" onclick="switchCalcPane('law')">⚖️ சட்டம் (TNDALU / CLAT)</button>
+        <button class="calc-btn-tab" onclick="switchCalcPane('vet-paramed')">🐾 கால்நடை & பாராமெடிக்கல்</button>
+        <button class="calc-btn-tab" onclick="switchCalcPane('poly')">⚙️ பாலிடெக்னிக் (10th)</button>
+      </div>
+
+      <!-- Tab 1: TNEA -->
+      <div id="calc-pane-tnea" class="calc-pane active">
+        <div class="calc-card-shell">
+          <div class="calc-pane-title">📐 அண்ணா பல்கலைக்கழக பொறியியல் நேரடிச் சேர்க்கை (TNEA) கட்-ஆஃப்</div>
+          <div class="calc-formula-badge">சூத்திரம்: கணிதம் (100) + [இயற்பியல் ÷ 2 (50)] + [வேதியியல் ÷ 2 (50)] = 200 மதிப்பெண்கள்</div>
+          <div class="calc-inputs-row">
+            <div class="field-wrap">
+              <label for="tnea-maths">கணிதம் (Maths) / 100:</label>
+              <input type="number" id="tnea-maths" min="0" max="100" placeholder="0 - 100" oninput="computeTNEA()"/>
+            </div>
+            <div class="field-wrap">
+              <label for="tnea-physics">இயற்பியல் (Physics) / 100:</label>
+              <input type="number" id="tnea-physics" min="0" max="100" placeholder="0 - 100" oninput="computeTNEA()"/>
+            </div>
+            <div class="field-wrap">
+              <label for="tnea-chem">வேதியியல் (Chemistry) / 100:</label>
+              <input type="number" id="tnea-chem" min="0" max="100" placeholder="0 - 100" oninput="computeTNEA()"/>
+            </div>
+          </div>
+          <div class="calc-output-center">
+            <div style="font-size: 0.95rem; font-weight: 700; color: #475569;">உங்கள் பொறியியல் சேர்க்கை கட்-ஆஃப் (200-க்கு):</div>
+            <div class="computed-score" id="tnea-result">0.00</div>
+            <span class="computed-tag" id="tnea-status">மதிப்பெண்களை உள்ளிடவும்</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: NEET UG -->
+      <div id="calc-pane-neet" class="calc-pane">
+        <div class="calc-card-shell">
+          <div class="calc-pane-title">🩺 நீட் தேர்வு (NEET UG) மதிப்பெண் & தமிழ்நாடு மாநிலக் கலந்தாய்வு மதிப்பீடு</div>
+          <div class="calc-formula-badge">மொத்த மதிப்பெண்: இயற்பியல் (180) + வேதியியல் (180) + தாவரவியல் (180) + விலங்கியல் (180) = 720 மதிப்பெண்கள்</div>
+          <div class="calc-inputs-row">
+            <div class="field-wrap">
+              <label for="neet-phy">இயற்பியல் (Physics / 180):</label>
+              <input type="number" id="neet-phy" min="0" max="180" placeholder="0 - 180" oninput="computeNEET()"/>
+            </div>
+            <div class="field-wrap">
+              <label for="neet-chem">வேதியியல் (Chemistry / 180):</label>
+              <input type="number" id="neet-chem" min="0" max="180" placeholder="0 - 180" oninput="computeNEET()"/>
+            </div>
+            <div class="field-wrap">
+              <label for="neet-bio">உயிரியல் (Biology / 360):</label>
+              <input type="number" id="neet-bio" min="0" max="360" placeholder="0 - 360" oninput="computeNEET()"/>
+            </div>
+          </div>
+          <div class="calc-output-center">
+            <div style="font-size: 0.95rem; font-weight: 700; color: #475569;">உங்கள் நீட் மொத்த மதிப்பெண் (720-க்கு):</div>
+            <div class="computed-score" id="neet-result">0</div>
+            <span class="computed-tag" id="neet-status">மதிப்பெண்களை உள்ளிடவும்</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: B.Sc Science -->
+      <div id="calc-pane-science" class="calc-pane">
+        <div class="calc-card-shell">
+          <div class="calc-pane-title">🔬 அரசு கலை அறிவியல் கல்லூரி B.Sc அறிவியல் கட்-ஆஃப் (TNGASA)</div>
+          <div class="calc-formula-badge">சூத்திரம்: 4 முதன்மை பாடங்களின் கூட்டுத்தொகை (Core 4 Subjects Total) = 400 மதிப்பெண்கள்</div>
+          <div class="calc-inputs-row">
+            <div class="field-wrap">
+              <label for="sci-s1">கணிதம் / உயிரியல் / கணினி:</label>
+              <input type="number" id="sci-s1" min="0" max="100" placeholder="0 - 100" oninput="computeScience()"/>
+            </div>
+            <div class="field-wrap">
+              <label for="sci-s2">இயற்பியல் (Physics):</label>
+              <input type="number" id="sci-s2" min="0" max="100" placeholder="0 - 100" oninput="computeScience()"/>
+            </div>
+            <div class="field-wrap">
+              <label for="sci-s3">வேதியியல் (Chemistry):</label>
+              <input type="number" id="sci-s3" min="0" max="100" placeholder="0 - 100" oninput="computeScience()"/>
+            </div>
+            <div class="field-wrap">
+              <label for="sci-s4">தாவரவியல் / விலங்கியல் / பாடம் 4:</label>
+              <input type="number" id="sci-s4" min="0" max="100" placeholder="0 - 100" oninput="computeScience()"/>
+            </div>
+          </div>
+          <div class="calc-output-center">
+            <div style="font-size: 0.95rem; font-weight: 700; color: #475569;">உங்கள் B.Sc அறிவியல் கட்-ஆஃப் (400-க்கு):</div>
+            <div class="computed-score" id="sci-result">0.00</div>
+            <span class="computed-tag" id="sci-status">மதிப்பெண்களை உள்ளிடவும்</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 4: Commerce -->
+      <div id="calc-pane-commerce" class="calc-pane">
+        <div class="calc-card-shell">
+          <div class="calc-pane-title">💼 வணிகவியல் & மேலாண்மை கட்-ஆஃப் (B.Com, BBA)</div>
+          <div class="calc-formula-badge">சூத்திரம்: வணிகவியல் + கணக்குப்பதிவியல் + பொருளியல் + வணிகக் கணிதம்/கணினிப் பயன்பாடுகள் = 400 மதிப்பெண்கள்</div>
+          <div class="calc-inputs-row">
+            <div class="field-wrap">
+              <label for="com-sub1">வணிகவியல் (Commerce):</label>
+              <input type="number" id="com-sub1" min="0" max="100" placeholder="0 - 100" oninput="computeCommerce()"/>
+            </div>
+            <div class="field-wrap">
+              <label for="com-sub2">கணக்குப்பதிவியல் (Accountancy):</label>
+              <input type="number" id="com-sub2" min="0" max="100" placeholder="0 - 100" oninput="computeCommerce()"/>
+            </div>
+            <div class="field-wrap">
+              <label for="com-sub3">பொருளியல் (Economics):</label>
+              <input type="number" id="com-sub3" min="0" max="100" placeholder="0 - 100" oninput="computeCommerce()"/>
+            </div>
+            <div class="field-wrap">
+              <label for="com-sub4">வணிகக் கணிதம் / கணினிப் பயன்பாடுகள்:</label>
+              <input type="number" id="com-sub4" min="0" max="100" placeholder="0 - 100" oninput="computeCommerce()"/>
+            </div>
+          </div>
+          <div class="calc-output-center">
+            <div style="font-size: 0.95rem; font-weight: 700; color: #475569;">உங்கள் B.Com / BBA கட்-ஆஃப் (400-க்கு):</div>
+            <div class="computed-score" id="com-result">0.00</div>
+            <span class="computed-tag" id="com-status">மதிப்பெண்களை உள்ளிடவும்</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 5: Law -->
+      <div id="calc-pane-law" class="calc-pane">
+        <div class="calc-card-shell">
+          <div class="calc-pane-title">⚖️ 5 ஆண்டு ஒருங்கிணைந்த சட்டப் படிப்பு (TNDALU B.A. LL.B. / B.Com LL.B.)</div>
+          <div class="calc-formula-badge">சூத்திரம்: மொழிப்பாடங்கள் தவிர்த்த 4 முதன்மை பாடங்களின் கூட்டுத்தொகை = 400 மதிப்பெண்கள் (Aggregate %)</div>
+          <div class="calc-inputs-row">
+            <div class="field-wrap">
+              <label for="law-s1">முதன்மைப் பாடம் 1:</label>
+              <input type="number" id="law-s1" min="0" max="100" placeholder="0 - 100" oninput="computeLaw()"/>
+            </div>
+            <div class="field-wrap">
+              <label for="law-s2">முதன்மைப் பாடம் 2:</label>
+              <input type="number" id="law-s2" min="0" max="100" placeholder="0 - 100" oninput="computeLaw()"/>
+            </div>
+            <div class="field-wrap">
+              <label for="law-s3">முதன்மைப் பாடம் 3:</label>
+              <input type="number" id="law-s3" min="0" max="100" placeholder="0 - 100" oninput="computeLaw()"/>
+            </div>
+            <div class="field-wrap">
+              <label for="law-s4">முதன்மைப் பாடம் 4:</label>
+              <input type="number" id="law-s4" min="0" max="100" placeholder="0 - 100" oninput="computeLaw()"/>
+            </div>
+          </div>
+          <div class="calc-output-center">
+            <div style="font-size: 0.95rem; font-weight: 700; color: #475569;">உங்கள் சட்ட சேர்க்கை கட்-ஆஃப் (400-க்கு):</div>
+            <div class="computed-score" id="law-result">0.00</div>
+            <span class="computed-tag" id="law-status">மதிப்பெண்களை உள்ளிடவும்</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 6: Vet & Paramedical -->
+      <div id="calc-pane-vet-paramed" class="calc-pane">
+        <div class="calc-card-shell">
+          <div class="calc-pane-title">🐾 கால்நடை B.Tech & துணை மருத்துவப் படிப்புகள் (Paramedical Non-NEET)</div>
+          <div class="calc-formula-badge">சூத்திரம்: உயிரியல் (100) + [இயற்பியல் + வேதியியல் ÷ 2 (100)] = 200 மதிப்பெண்கள்</div>
+          <div class="calc-inputs-row">
+            <div class="field-wrap">
+              <label for="vp-bio">உயிரியல் (Biology / Bot+Zoo):</label>
+              <input type="number" id="vp-bio" min="0" max="100" placeholder="0 - 100" oninput="computeVetParamed()"/>
+            </div>
+            <div class="field-wrap">
+              <label for="vp-phy">இயற்பியல் (Physics):</label>
+              <input type="number" id="vp-phy" min="0" max="100" placeholder="0 - 100" oninput="computeVetParamed()"/>
+            </div>
+            <div class="field-wrap">
+              <label for="vp-chem">வேதியியல் (Chemistry):</label>
+              <input type="number" id="vp-chem" min="0" max="100" placeholder="0 - 100" oninput="computeVetParamed()"/>
+            </div>
+          </div>
+          <div class="calc-output-center">
+            <div style="font-size: 0.95rem; font-weight: 700; color: #475569;">உங்கள் கட்-ஆஃப் (200-க்கு):</div>
+            <div class="computed-score" id="vp-result">0.00</div>
+            <span class="computed-tag" id="vp-status">மதிப்பெண்களை உள்ளிடவும்</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 7: Polytechnic -->
+      <div id="calc-pane-poly" class="calc-pane">
+        <div class="calc-card-shell">
+          <div class="calc-pane-title">⚙️ பாலிடெக்னிக் டிப்ளமோ சேர்க்கை (10-ஆம் வகுப்பு அடிப்படையில்)</div>
+          <div class="calc-formula-badge">சூத்திரம்: 10-ஆம் வகுப்பு மொத்த மதிப்பெண் ÷ 5 = சதவீதம் (Percentage out of 100)</div>
+          <div class="calc-inputs-row">
+            <div class="field-wrap" style="grid-column: 1 / -1; max-width: 320px; margin: 0 auto;">
+              <label for="poly-total">10-ஆம் வகுப்பு மொத்த மதிப்பெண் (Total / 500):</label>
+              <input type="number" id="poly-total" min="0" max="500" placeholder="0 - 500" oninput="computePoly()"/>
+            </div>
+          </div>
+          <div class="calc-output-center">
+            <div style="font-size: 0.95rem; font-weight: 700; color: #475569;">உங்கள் டிப்ளமோ சேர்க்கை சதவீதம் (100%):</div>
+            <div class="computed-score" id="poly-result">0.00%</div>
+            <span class="computed-tag" id="poly-status">மதிப்பெண்ணை உள்ளிடவும்</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECTION 2: ENTRANCE EXAMS STREAM -->
+    <section id="entrance-stream-sec" class="section-card">
+      <div class="card-top-header">
+        <h2 class="card-top-title">✍️ 1. தேசிய & மாநில அளவிலான நுழைவுத் தேர்வு வழிகாட்டல் நெறிமுறைகள்</h2>
+        <span class="card-tag-badge entrance">நுழைவுத்தேர்வு வழிகாட்டல்</span>
+      </div>
+
+      <p class="box-desc" style="margin-bottom: 20px;">
+        அகில இந்திய அளவிலான உயர்தர மத்திய அரசு கல்வி நிறுவனங்கள் மற்றும் மருத்துவப் படிப்புகளில் சேருவதற்கான அனுமதி நெறிமுறைகள்:
+      </p>
+
+      <div class="grid-3">
+        <!-- 1. NEET UG -->
+        <div class="stream-box green">
+          <div class="box-title">🩺 NEET UG (மருத்துவம் & பல் மருத்துவம்)</div>
+          <div class="box-desc">
+            <strong>படிப்புகள்:</strong> MBBS, BDS, BSMS (சித்த மருத்துவம்), BAMS, BHMS, BUMS.<br/>
+            <strong>சேர்க்கை முறை:</strong> 15% அகில இந்திய ஒதுக்கீடு (MCC கலந்தாய்வு) மற்றும் 85% தமிழ்நாடு மாநில அரசு இடஒதுக்கீடு (TN Health கலந்தாய்வு).<br/>
+            <strong>7.5% சலுகை:</strong> அரசுப் பள்ளி மாணவர்களுக்குத் தனி 7.5% உள்ஒதுக்கீடு மற்றும் 100% முழு கட்டண விலக்கு.
+          </div>
+        </div>
+
+        <!-- 2. JEE Main & Adv -->
+        <div class="stream-box blue">
+          <div class="box-title">📐 JEE Main & Advanced (IIT, NIT, IIIT)</div>
+          <div class="box-desc">
+            <strong>படிப்புகள்:</strong> B.Tech, B.E., B.Arch, Integrated M.Tech.<br/>
+            <strong>நிறுவனங்கள்:</strong> 23 IITs (JEE Advanced மூலம்), 31 NITs, 26 IIITs மற்றும் மத்திய அரசு நிதியுதவி பெறும் 38+ கல்வி நிறுவனங்கள் (GFTIs).<br/>
+            <strong>கலந்தாய்வு:</strong> JoSAA (Joint Seat Allocation Authority) மற்றும் CSAB ஸ்பெஷல் ரவுண்டுகள்.
+          </div>
+        </div>
+
+        <!-- 3. CUET UG -->
+        <div class="stream-box highlight">
+          <div class="box-title">🏛️ CUET UG (மத்தியப் பல்கலைக்கழகங்கள்)</div>
+          <div class="box-desc">
+            <strong>படிப்புகள்:</strong> B.A., B.Sc, B.Com, Integrated M.A., B.Voc.<br/>
+            <strong>நிறுவனங்கள்:</strong> தமிழ்நாடு மத்தியப் பல்கலைக்கழகம் (CUTN - திருவாரூர்), டெல்லி பல்கலைக்கழகம் (DU), JNU, BHU உட்பட 45+ மத்தியப் பல்கலைக்கழகங்கள்.
+          </div>
+        </div>
+
+        <!-- 4. IAT & NEST -->
+        <div class="stream-box">
+          <div class="box-title">🔬 IAT & NEST (அறிவியல் ஆராய்ச்சி)</div>
+          <div class="box-desc">
+            <strong>படிப்புகள்:</strong> 5-Year BS-MS Dual Degree & Research Programs.<br/>
+            <strong>நிறுவனங்கள்:</strong> 7 IISER கல்வி நிறுவனங்கள் (திருவனந்தபுரம், திருப்பதி, புனே, போபால் போன்றவை), IISc பெங்களூரு (IAT மூலம்) மற்றும் NISER புவனேஸ்வர் (NEST மூலம்).
+          </div>
+        </div>
+
+        <!-- 5. CLAT -->
+        <div class="stream-box amber">
+          <div class="box-title">⚖️ CLAT (தேசிய சட்டப் பல்கலைக்கழகங்கள்)</div>
+          <div class="box-desc">
+            <strong>படிப்புகள்:</strong> B.A. LL.B. (Hons), B.B.A. LL.B. (Hons).<br/>
+            <strong>நிறுவனங்கள்:</strong> திருச்சி தமிழ்நாடு தேசிய சட்டப் பல்கலைக்கழகம் (TNNLU) உட்பட நாடு முழுவதும் உள்ள 26 தேசிய சட்டப் பல்கலைக்கழகங்கள் (NLUs).
+          </div>
+        </div>
+
+        <!-- 6. NIFT, NID & CA -->
+        <div class="stream-box">
+          <div class="box-title">💼 NIFT, NID & CA / CMA / CS</div>
+          <div class="box-desc">
+            <strong>வடிவமைப்பு:</strong> NIFT (சென்னை வளாகம் உட்பட 18 மையங்கள்), NID மற்றும் UCEED (IIT Design).<br/>
+            <strong>தொழில்முறை கணக்கியல்:</strong> ICAI - CA Foundation, ICMAI - CMA Foundation, ICSI - CSEET தேர்வுகள்.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: DIRECT ADMISSIONS STREAM -->
+    <section id="direct-stream-sec" class="section-card">
+      <div class="card-top-header">
+        <h2 class="card-top-title">🎯 2. தமிழ்நாடு அரசு நேரடிச் சேர்க்கைப் படிப்புகளின் வழிகாட்டல் நெறிமுறைகள்</h2>
+        <span class="card-tag-badge direct">நேரடிச் சேர்க்கை வழிகாட்டல்</span>
+      </div>
+
+      <p class="box-desc" style="margin-bottom: 20px;">
+        நுழைவுத் தேர்வுகள் எதுவுமின்றி, +2 பொதுத்தேர்வு மதிப்பெண்கள் அல்லது 10-ஆம் வகுப்பு மதிப்பெண்கள் அடிப்படையில் ஒற்றைச் சாளர முறையில் மாணவர் சேர்க்கை நடைபெறும் முக்கிய துறைகள்:
+      </p>
+
+      <div class="grid-3">
+        <!-- Direct 1: TNEA -->
+        <div class="stream-box highlight">
+          <div class="box-title">📐 பொறியியல் நேரடிச் சேர்க்கை (TNEA)</div>
+          <div class="box-desc">
+            கணிதம், இயற்பியல், வேதியியல் மதிப்பெண்களை 200-க்கு மாற்றி, அண்ணா பல்கலைக்கழக உறுப்புக் கல்லூரிகள், அரசு மற்றும் சுயநிதிப் பொறியியல் கல்லூரிகளில் B.E. / B.Tech சேர்க்கை.
+          </div>
+        </div>
+
+        <!-- Direct 2: TNGASA -->
+        <div class="stream-box blue">
+          <div class="box-title">🔬 அரசு கலை & அறிவியல் (TNGASA)</div>
+          <div class="box-desc">
+            தமிழ்நாட்டின் 164+ அரசு கலை மற்றும் அறிவியல் கல்லூரிகளில் B.Sc (அறிவியல்), B.Com, BBA, BCA, B.A. படிப்புகளுக்கான குறைந்த கட்டண ஒற்றைச் சாளர சேர்க்கை.
+          </div>
+        </div>
+
+        <!-- Direct 3: Paramedical & Vet -->
+        <div class="stream-box green">
+          <div class="box-title">🐾 கால்நடை, துணை மருத்துவம் & செவிலியர்</div>
+          <div class="box-desc">
+            TANUVAS B.Tech (உணவு/பால்/கோழிப்பண்ணை தொழில்நுட்பம்) மற்றும் அரசு மருத்துவக் கல்லூரிகளில் B.Sc நர்சிங், பார்மசி, BPT போன்ற 19 வகையான துணை மருத்துவப் படிப்புகள் நேரடிச் சேர்க்கை.
+          </div>
+        </div>
+
+        <!-- Direct 4: TNDALU -->
+        <div class="stream-box amber">
+          <div class="box-title">⚖️ டாக்டர் அம்பேத்கர் சட்டப் பல்கலைக்கழகம்</div>
+          <div class="box-desc">
+            சென்னை சீர்மிகு சட்டப் பள்ளி (SOEL) மற்றும் காரைக்குடி, மதுரை, திருச்சி உட்பட தமிழ்நாட்டின் 14+ அரசு சட்டக் கல்லூரிகளில் 5 ஆண்டு ஒருங்கிணைந்த LL.B. நேரடிச் சேர்க்கை.
+          </div>
+        </div>
+
+        <!-- Direct 5: Agri & Fishery -->
+        <div class="stream-box">
+          <div class="box-title">🌿 வேளாண்மை, தோட்டக்கலை & மீன்வளம்</div>
+          <div class="box-desc">
+            TNAU வழியே B.Sc (Hons) Agriculture, Horticulture, Forestry மற்றும் TNJFU வழியே B.F.Sc மீன்வள அறிவியல், B.Tech பிஷரிஸ் என்ஜினீயரிங் நேரடிச் சேர்க்கை.
+          </div>
+        </div>
+
+        <!-- Direct 6: Polytechnic & ITI -->
+        <div class="stream-box">
+          <div class="box-title">⚙️ பாலிடெக்னிக் டிப்ளமோ & அரசு ITI</div>
+          <div class="box-desc">
+            10-ஆம் வகுப்பு மதிப்பெண் அடிப்படையில் 3 ஆண்டு பாலிடெக்னிக் டிப்ளமோ (DOTE) மற்றும் 8th/10th தேர்ச்சி அடிப்படையில் வேலைவாய்ப்பை உறுதி செய்யும் அரசு ITI தொழிற்பயிற்சிகள்.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: RESERVATION SYSTEMS (STATE & CENTRAL) -->
+    <section id="reservation-sec" class="section-card">
+      <div class="card-top-header">
+        <h2 class="card-top-title">🏛️ தமிழ்நாடு அரசின் 69% & மத்திய கல்வி நிறுவனங்களின் இடஒதுக்கீட்டுக் கட்டமைப்பு</h2>
+        <span class="card-tag-badge">சமூக நீதி இடஒதுக்கீடு</span>
+      </div>
+
+      <div class="info-alert-box purple">
+        <span style="font-size: 1.6rem;">⚖️</span>
+        <div>
+          <strong>இடஒதுக்கீட்டு வேறுபாடுகள்:</strong> தமிழ்நாட்டின் மாநில அரசு சேர்க்கைகளில் (TNEA, TNGASA, TN Health) <strong>69% இடஒதுக்கீடு</strong> நடைமுறைப்படுத்தப்படுகிறது. அகில இந்திய மத்திய கல்வி நிறுவனங்களில் (IIT, NIT, AIIMS, Central Universities) மத்திய அரசின் <strong>EWS (10%), OBC-NCL (27%), SC (15%), ST (7.5%)</strong> இடஒதுக்கீட்டு முறை பின்பற்றப்படுகிறது.
+        </div>
+      </div>
+
+      <!-- State Reservation -->
+      <h3 style="font-size: 1.15rem; color: #1e1b4b; font-weight: 800; margin: 18px 0 10px;">A. தமிழ்நாடு அரசின் 69% சமூக இடஒதுக்கீடு (State Quota Admissions):</h3>
+      <div class="table-responsive-box">
+        <table>
+          <thead>
+            <tr>
+              <th>பிரிவு</th>
+              <th>சமூகப் பிரிவு (Community)</th>
+              <th>இடஒதுக்கீடு %</th>
+              <th>தகுதி & முக்கியக் குறிப்புகள்</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge-quota quota-oc">OC</span></td>
+              <td><strong>பொதுப் போட்டி (Open Competition)</strong></td>
+              <td><strong style="color: #991b1b; font-size: 1.1rem;">31.0%</strong></td>
+              <td>அனைத்துச் சமூகத்தினரும் தகுதி மதிப்பெண் அடிப்படையில் போட்டியிடலாம்.</td>
+            </tr>
+            <tr>
+              <td><span class="badge-quota quota-bc">BC</span></td>
+              <td><strong>பிற்படுத்தப்பட்ட வகுப்பினர் (Backward Classes)</strong></td>
+              <td><strong style="color: #3730a3; font-size: 1.1rem;">26.5%</strong></td>
+              <td>தமிழ்நாடு அரசின் அங்கீகரிக்கப்பட்ட பிற்படுத்தப்பட்ட வகுப்பினர் (முஸ்லிம் தவிர்த்து).</td>
+            </tr>
+            <tr>
+              <td><span class="badge-quota quota-bcm">BCM</span></td>
+              <td><strong>பிற்படுத்தப்பட்ட வகுப்பினர் - முஸ்லிம் (BC Muslims)</strong></td>
+              <td><strong style="color: #155e75; font-size: 1.1rem;">3.5%</strong></td>
+              <td>பிற்படுத்தப்பட்ட வகுப்பில் உள்ள முஸ்லிம் சமூக மாணவர்களுக்கான பிரத்யேக உள்ஒதுக்கீடு.</td>
+            </tr>
+            <tr>
+              <td><span class="badge-quota quota-mbc">MBC / DNC</span></td>
+              <td><strong>மிகவும் பிற்படுத்தப்பட்டோர் & சீர்மரபினர்</strong></td>
+              <td><strong style="color: #92400e; font-size: 1.1rem;">20.0%</strong></td>
+              <td>MBC மற்றும் சீர்மரபினர் (DNC) மாணவர்களுக்கான இடஒதுக்கீடு.</td>
+            </tr>
+            <tr>
+              <td><span class="badge-quota quota-sc">SC</span></td>
+              <td><strong>ஆதிதிராவிடர் (Scheduled Castes)</strong></td>
+              <td><strong style="color: #6b21a8; font-size: 1.1rem;">15.0%</strong></td>
+              <td>ஆதிதிராவிட மாணவர்களுக்கான இடஒதுக்கீடு (முழு கல்விக் கட்டண விலக்கு சலுகை உண்டு).</td>
+            </tr>
+            <tr>
+              <td><span class="badge-quota quota-sca">SCA</span></td>
+              <td><strong>அருந்ததியர் (SC - Arunthathiyar)</strong></td>
+              <td><strong style="color: #9d174d; font-size: 1.1rem;">3.0%</strong></td>
+              <td>ஆதிதிராவிடர் ஒதுக்கீட்டில் அருந்ததியர் சமூக மாணவர்களுக்கான பிரத்யேக உள்ஒதுக்கீடு.</td>
+            </tr>
+            <tr>
+              <td><span class="badge-quota quota-st">ST</span></td>
+              <td><strong>பழங்குடியினர் (Scheduled Tribes)</strong></td>
+              <td><strong style="color: #166534; font-size: 1.1rem;">1.0%</strong></td>
+              <td>வருவாய்க் கோட்டாட்சியர் (RDO) வழங்கிய நிரந்தர சாதிச் சான்றிதழ் கட்டாயம்.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Central Reservation -->
+      <h3 style="font-size: 1.15rem; color: #1e1b4b; font-weight: 800; margin: 28px 0 10px;">B. மத்திய அரசு கல்வி நிறுவனங்களின் இடஒதுக்கீட்டு முறை (Central Admissions - JoSAA, NEET AIQ, CUET):</h3>
+      <div class="table-responsive-box">
+        <table>
+          <thead>
+            <tr>
+              <th>பிரிவு</th>
+              <th>சமூகப் பிரிவு (Category)</th>
+              <th>ஒதுக்கீடு %</th>
+              <th>தேவையான சான்றிதழ் படிவம்</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge-quota quota-ews">GEN-EWS</span></td>
+              <td>பொருளாதாரத்தில் பின்தங்கிய பொதுப் பிரிவு</td>
+              <td><strong>10.0%</strong></td>
+              <td>மத்திய அரசு விதிகளின்படி வட்டாட்சியர் வழங்கிய EWS சான்றிதழ்.</td>
+            </tr>
+            <tr>
+              <td><span class="badge-quota quota-bc">OBC-NCL</span></td>
+              <td>இதர பிற்படுத்தப்பட்டோர் (Non-Creamy Layer)</td>
+              <td><strong>27.0%</strong></td>
+              <td>மத்தியப் பட்டியலில் உள்ள சாதிகளுக்கான Central OBC-NCL Certificate.</td>
+            </tr>
+            <tr>
+              <td><span class="badge-quota quota-sc">SC</span></td>
+              <td>ஆதிதிராவிடர் (Scheduled Castes)</td>
+              <td><strong>15.0%</strong></td>
+              <td>மத்திய அரசு பார்மட்டிலான SC Community Certificate.</td>
+            </tr>
+            <tr>
+              <td><span class="badge-quota quota-st">ST</span></td>
+              <td>பழங்குடியினர் (Scheduled Tribes)</td>
+              <td><strong>7.5%</strong></td>
+              <td>மத்திய அரசு பார்மட்டிலான ST Community Certificate.</td>
+            </tr>
+            <tr>
+              <td><span class="badge-quota" style="background: #e0f2fe; color: #0369a1;">PwD</span></td>
+              <td>மாற்றுத்திறனாளிகள் (Persons with Disabilities)</td>
+              <td><strong>5.0%</strong></td>
+              <td>அங்கீகரிக்கப்பட்ட மருத்துவ வாரியத்தால் வழங்கப்பட்ட 40%+ மாற்றுத்திறனாளி அட்டை.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 5: 7.5% GOVT SCHOOL RESERVATION & SCHOLARSHIP FINDER -->
+    <section id="quota-7point5-sec" class="section-card">
+      <div class="card-top-header">
+        <h2 class="card-top-title">🎯 அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு & சலுகைகள்</h2>
+        <span class="card-tag-badge">தமிழ்நாடு அரசின் புரட்சிகரத் திட்டம்</span>
+      </div>
+
+      <div class="grid-3" style="margin-bottom: 24px;">
+        <div class="stream-box green">
+          <div class="box-title">🩺 மருத்துவக் கல்வி (Act 34/2020)</div>
+          <div class="box-desc">
+            அரசுப் பள்ளி மாணவர்கள் நீட் தேர்வில் தேர்ச்சி பெற்று எளிய முறையில் அரசு மருத்துவக் கல்லூரிகளில் <strong>MBBS, BDS, ஆயுஷ் படிப்புகளில்</strong> சேர 7.5% பிரத்யேக இடஒதுக்கீடு.
+          </div>
+        </div>
+        <div class="stream-box highlight">
+          <div class="box-title">📐 தொழிற்கல்வி படிப்புகள் (Act 14/2021)</div>
+          <div class="box-desc">
+            பொறியியல் (Engineering), வேளாண்மை (Agriculture), சட்டம் (Law), கால்நடை மருத்துவம் மற்றும் மீன்வளப் படிப்புகளில் அரசுப் பள்ளி மாணவர்களுக்கு 7.5% தனி இடஒதுக்கீடு.
+          </div>
+        </div>
+        <div class="stream-box amber">
+          <div class="box-title">🎓 100% முழுக் கட்டண விலக்கு</div>
+          <div class="box-desc">
+            7.5% ஒதுக்கீட்டில் சேர்க்கை பெறும் மாணவர்களுக்கான <strong>முழு கல்விக் கட்டணம், சிறப்புக் கட்டணம், விடுதிக் கட்டணம் மற்றும் தேர்வுக் கட்டணத்தை</strong> அரசே நேரடியாக ஏற்கிறது.
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Scholarship Eligibility Finder -->
+      <div class="finder-shell">
+        <div class="finder-head-title">💰 நீங்கள் பெறக்கூடிய அரசு சலுகைகள் & உதவித்தொகையைக் கண்டறியும் கருவி</div>
+        <p class="box-desc" style="margin-bottom: 16px;">
+          கீழே உள்ள விவரங்களைத் தேர்வு செய்தால், நீங்கள் பெறத் தகுதியான தமிழ்நாடு அரசு நலத்திட்டங்கள் மற்றும் நிதியுதவிகள் உடனடியாகத் திரையில் பட்டியலிடப்படும்:
+        </p>
+
+        <div class="finder-select-grid">
+          <div class="finder-input-box">
+            <label for="finder-gender">மாணவர் / மாணவி (Gender):</label>
+            <select id="finder-gender" onchange="runSchemeEvaluator()">
+              <option value="female">மாணவி (Female)</option>
+              <option value="male">மாணவர் (Male)</option>
+            </select>
+          </div>
+          <div class="finder-input-box">
+            <label for="finder-school">6 முதல் 12 வரை அரசுப் பள்ளியா?</label>
+            <select id="finder-school" onchange="runSchemeEvaluator()">
+              <option value="yes">ஆம் (அரசுப் பள்ளி - Govt School)</option>
+              <option value="no">இல்லை (தனியார் / மெட்ரிக்)</option>
+            </select>
+          </div>
+          <div class="finder-input-box">
+            <label for="finder-fg">குடும்பத்தில் முதல் பட்டதாரியா?</label>
+            <select id="finder-fg" onchange="runSchemeEvaluator()">
+              <option value="yes">ஆம் (First Graduate)</option>
+              <option value="no">இல்லை (Already Graduate in Family)</option>
+            </select>
+          </div>
+          <div class="finder-input-box">
+            <label for="finder-comm">சமூகப் பிரிவு (Community):</label>
+            <select id="finder-comm" onchange="runSchemeEvaluator()">
+              <option value="sc_st">SC / SCA / ST</option>
+              <option value="mbc">MBC / DNC</option>
+              <option value="bc">BC / BCM</option>
+              <option value="oc">OC</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="finder-output" class="finder-display-result">
+          <h4 style="font-size: 1.1rem; color: #065f46; margin-bottom: 10px; font-weight: 800;">🎉 நீங்கள் பெறத் தகுதியான முக்கிய நலத்திட்டங்கள்:</h4>
+          <div id="finder-badges-list"></div>
+          <div id="finder-desc-text" style="font-size: 0.92rem; color: #334155; margin-top: 12px; line-height: 1.6;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: INTERACTIVE DOCUMENT CHECKLIST -->
+    <section id="doc-checklist-sec" class="section-card">
+      <div class="card-top-header">
+        <h2 class="card-top-title">📄 சேர்க்கைக்குத் தேவையான சான்றிதழ்கள் சரிபார்ப்பு பட்டியல் (14 ஆவணங்கள்)</h2>
+        <span class="card-tag-badge">சான்றிதழ்கள் தயார் நிலை</span>
+      </div>
+
+      <p class="box-desc" style="margin-bottom: 14px;">
+        நுழைவுத் தேர்வு அல்லது நேரடிச் சேர்க்கை கவுன்சிலிங்கிற்குச் செல்லும் முன் உங்களிடம் உள்ள ஆவணங்களை டிக் செய்து தயார் நிலையை உறுதிப்படுத்திக் கொள்ளுங்கள்:
+      </p>
+
+      <div class="checklist-shell">
+        <div class="checklist-stats-row">
+          <span>சான்றிதழ்கள் தயார் நிலை:</span>
+          <span id="check-counter" style="color: #059669; font-size: 1.15rem;">0 / 14 தயார் (0%)</span>
+        </div>
+        <div class="checklist-meter-track">
+          <div class="checklist-meter-fill" id="check-progress-bar"></div>
+        </div>
+
+        <div class="checklist-grid">
+          <div class="doc-check-card" onclick="toggleDocCheck(this)">
+            <input type="checkbox" id="doc1" onchange="calcDocProgress()"/>
+            <label for="doc1">1. 10-ஆம் வகுப்பு அசல் மதிப்பெண் சான்றிதழ் (SSLC Mark Sheet)</label>
+          </div>
+          <div class="doc-check-card" onclick="toggleDocCheck(this)">
+            <input type="checkbox" id="doc2" onchange="calcDocProgress()"/>
+            <label for="doc2">2. 12-ஆம் வகுப்பு மதிப்பெண் சான்றிதழ் (HSC Mark Sheet / Provisional)</label>
+          </div>
+          <div class="doc-check-card" onclick="toggleDocCheck(this)">
+            <input type="checkbox" id="doc3" onchange="calcDocProgress()"/>
+            <label for="doc3">3. பள்ளி மாற்றுச் சான்றிதழ் (Transfer Certificate - TC)</label>
+          </div>
+          <div class="doc-check-card" onclick="toggleDocCheck(this)">
+            <input type="checkbox" id="doc4" onchange="calcDocProgress()"/>
+            <label for="doc4">4. நன்னடத்தைச் சான்றிதழ் (Conduct Certificate)</label>
+          </div>
+          <div class="doc-check-card" onclick="toggleDocCheck(this)">
+            <input type="checkbox" id="doc5" onchange="calcDocProgress()"/>
+            <label for="doc5">5. நிரந்தர சாதிச் சான்றிதழ் (Digital Community Certificate with QR code)</label>
+          </div>
+          <div class="doc-check-card" onclick="toggleDocCheck(this)">
+            <input type="checkbox" id="doc6" onchange="calcDocProgress()"/>
+            <label for="doc6">6. 7.5% அரசுப் பள்ளி பயின்றதற்கான Bonafide சான்றிதழ் (HM & DEO மேலொப்பம்)</label>
+          </div>
+          <div class="doc-check-card" onclick="toggleDocCheck(this)">
+            <input type="checkbox" id="doc7" onchange="calcDocProgress()"/>
+            <label for="doc7">7. குடும்ப வருமானச் சான்றிதழ் (Income Certificate - உதவித்தொகைக்கு)</label>
+          </div>
+          <div class="doc-check-card" onclick="toggleDocCheck(this)">
+            <input type="checkbox" id="doc8" onchange="calcDocProgress()"/>
+            <label for="doc8">8. முதல் தலைமுறை பட்டதாரி சான்றிதழ் (First Graduate Certificate - இருந்தால்)</label>
+          </div>
+          <div class="doc-check-card" onclick="toggleDocCheck(this)">
+            <input type="checkbox" id="doc9" onchange="calcDocProgress()"/>
+            <label for="doc9">9. இருப்பிடச் சான்றிதழ் / ஸ்மார்ட் குடும்ப அட்டை (Nativity / Smart Ration Card)</label>
+          </div>
+          <div class="doc-check-card" onclick="toggleDocCheck(this)">
+            <input type="checkbox" id="doc10" onchange="calcDocProgress()"/>
+            <label for="doc10">10. மாணவரின் ஆதார் அட்டை நகல் (Aadhaar Card Copy)</label>
+          </div>
+          <div class="doc-check-card" onclick="toggleDocCheck(this)">
+            <input type="checkbox" id="doc11" onchange="calcDocProgress()"/>
+            <label for="doc11">11. வங்கி பாஸ்புக் நகல் (Aadhaar & DBT வசதியுடன் இணைக்கப்பட்டது)</label>
+          </div>
+          <div class="doc-check-card" onclick="toggleDocCheck(this)">
+            <input type="checkbox" id="doc12" onchange="calcDocProgress()"/>
+            <label for="doc12">12. நுழைவுத் தேர்வு அனுமதி அட்டை & மதிப்பெண் அட்டை (Admit Card & Score Card)</label>
+          </div>
+          <div class="doc-check-card" onclick="toggleDocCheck(this)">
+            <input type="checkbox" id="doc13" onchange="calcDocProgress()"/>
+            <label for="doc13">13. சிறப்பு ஒதுக்கீட்டுச் சான்றிதழ் (மாற்றுத்திறனாளி / விளையாட்டு / முன்னாள் ராணுவத்தினர்)</label>
+          </div>
+          <div class="doc-check-card" onclick="toggleDocCheck(this)">
+            <input type="checkbox" id="doc14" onchange="calcDocProgress()"/>
+            <label for="doc14">14. பாஸ்போர்ட் அளவு வண்ணப் புகைப்படங்கள் (Passport Photos - 6 பிரதிகள்)</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: COUNSELLING WORKFLOW (6 STEPS) -->
+    <section id="counselling-flow-sec" class="section-card">
+      <div class="card-top-header">
+        <h2 class="card-top-title">🔄 ஒற்றைச் சாளர கலந்தாய்வு 6 முக்கிய படிநிலைகள்</h2>
+        <span class="card-tag-badge">சேர்க்கை நடைமுறை வழிகாட்டல்</span>
+      </div>
+
+      <div class="counselling-step-list">
+        <div class="step-card">
+          <div class="step-circle">1</div>
+          <div class="step-body">
+            <h4>இணையவழி பதிவு & விண்ணப்பம் சமர்ப்பித்தல் (Online Registration)</h4>
+            <p>சம்பந்தப்பட்ட அதிகாரப்பூர்வ போர்ட்டலில் (TNEA, TNGASA, TN Medical, JoSAA போன்றவை) தனிப்பட்ட விவரங்கள், கல்வி மதிப்பெண்கள் மற்றும் இடஒதுக்கீட்டு விவரங்களை உள்ளிட்டு விண்ணப்பக் கட்டணம் செலுத்துதல்.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-circle">2</div>
+          <div class="step-body">
+            <h4>ரேண்டம் எண் ஒதுக்கீடு & சான்றிதழ் பதிவேற்றம் (Random Number & Upload)</h4>
+            <p>ஒரே மதிப்பெண் பெற்ற மாணவர்களுக்கு முன்னுரிமை வரிசை நிர்ணயிக்க சமவாய்ப்பு எண் (Random Number) ஒதுக்கப்படும். தொடர்ந்து அசல் சான்றிதழ்களை இணையத்தில் பதிவேற்றுதல் அல்லது சரிபார்த்தல் நடைபெறும்.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-circle">3</div>
+          <div class="step-body">
+            <h4>தரவரிசைப் பட்டியல் வெளியீடு (Rank List Publication)</h4>
+            <p>விண்ணப்பதாரர்களின் கட்-ஆஃப் மதிப்பெண் மற்றும் சமூக இடஒதுக்கீடு அடிப்படையில் மாநில அளவிலான பொதுத் தரவரிசை (Overall Rank) மற்றும் சமூகத் தரவரிசைப் பட்டியல் (Community Rank) வெளியிடப்படும்.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-circle">4</div>
+          <div class="step-body">
+            <h4>கலந்தாய்வு & விருப்பக் கல்லூரிகள் தேர்வு (Choice Filling)</h4>
+            <p>மாணவர்கள் தங்களுக்கு விருப்பமான கல்லூரிகள் மற்றும் பாடப்பிரிவுகளை முன்னுரிமை வரிசைப்படுத்தி (Priority 1, 2, 3...) தேர்வு செய்து குறித்த நேரத்திற்குள் லாக் (Lock Choices) செய்தல் வேண்டும்.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-circle">5</div>
+          <div class="step-body">
+            <h4>தற்காலிக & இறுதி இடஒதுக்கீடு ஆணை (Seat Allotment Order)</h4>
+            <p>மாணவரின் கட்-ஆஃப், இடஒதுக்கீடு மற்றும் முன்னுரிமை அடிப்படையில் கல்லூரி இடம் ஒதுக்கப்படும். மாணவர் ஒதுக்கீட்டை உறுதிசெய்து சேர்க்கை ஆணையைப் பதிவிறக்கம் செய்ய வேண்டும்.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-circle">6</div>
+          <div class="step-body">
+            <h4>கல்லூரியில் அசல் சான்றிதழ்களுடன் சேருதல் (College Reporting)</h4>
+            <p>ஒதுக்கீட்டு ஆணையில் குறிப்பிடப்பட்டுள்ள தேதிக்குள் சம்பந்தப்பட்ட கல்லூரிக்கு நேரில் சென்று அசல் சான்றிதழ்களைச் சமர்ப்பித்து சேர்க்கையை உறுதி செய்தல் வேண்டும்.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: 14417 SERVICES BREAKDOWN -->
+    <section id="services-14417-sec" class="section-card">
+      <div class="card-top-header">
+        <h2 class="card-top-title">📞 14417 இலவச உதவி மையத்தின் விரிவான வழிகாட்டல் சேவைகள்</h2>
+        <span class="card-tag-badge helpdesk">மாநில அளவிலான உதவி மையம்</span>
+      </div>
+
+      <p class="box-desc" style="margin-bottom: 20px;">
+        தலைமைச் செயலகக் கட்டுப்பாட்டு மையத்தின் கீழ் இயங்கும் 14417 இலவச உதவி எண் வாயிலாக தமிழக மாணவர்கள் மற்றும் பெற்றோருக்கு வழங்கப்படும் முக்கிய வழிகாட்டல் சேவைகள்:
+      </p>
+
+      <div class="grid-3">
+        <div class="stream-box highlight">
+          <div class="box-title">🎯 உயர்கல்வி சேர்க்கை ஆலோசனைகள்</div>
+          <div class="box-desc">
+            • NEET UG, JEE Main / Advanced, CUET UG, CLAT, NATA, IMU CET விண்ணப்ப முறைகள்.<br/>
+            • பொறியியல் (TNEA), மருத்துவம் (TN Medical), கால்நடை (TANUVAS), வேளாண்மை (TNAU) கலந்தாய்வு நெறிமுறைகள்.<br/>
+            • அரசு கலை மற்றும் அறிவியல் கல்லூரிகள் ஒற்றைச் சாளர சேர்க்கை (TNGASA).
+          </div>
+        </div>
+
+        <div class="stream-box green">
+          <div class="box-title">🎁 அரசு நலத்திட்டங்கள் & சலுகைகள்</div>
+          <div class="box-desc">
+            • <strong>7.5% முன்னுரிமை இடஒதுக்கீடு:</strong> 6-12 அரசுப் பள்ளி மாணவர்களுக்கான முழு கல்விக் கட்டண விலக்கு வழிகாட்டல்.<br/>
+            • <strong>மாதம் ₹1,000 உதவித்தொகை:</strong> மூவலூர் ராமாமிர்தம் அம்மையார் புதுமைப் பெண் மற்றும் தமிழ்ப் புதல்வன் திட்டப் பதிவு.<br/>
+            • முதல் தலைமுறை பட்டதாரி (First Graduate) சலுகை மற்றும் சான்றிதழ் வழிகாட்டுதல்.
+          </div>
+        </div>
+
+        <div class="stream-box blue">
+          <div class="box-title">💳 கல்விக் கடன் & உதவித்தொகை</div>
+          <div class="box-desc">
+            • மத்திய அரசின் <strong>PM-Vidyalaxmi</strong> போர்ட்டல் வழியாக பிணையில்லா கல்விக் கடன் பெறும் முறைகள்.<br/>
+            • போஸ்ட் மெட்ரிக் ஸ்காலர்ஷிப் (SC/ST/SCC/BC/MBC/Minority) விண்ணப்ப வழிமுறைகள்.<br/>
+            • மத்திய அரசு மற்றும் தனியார் தொண்டு நிறுவனங்களின் சிறப்பு உதவித்தொகைகள்.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: DISTRICT CAREER GUIDANCE DIRECTORY WITH LIVE SEARCH -->
+    <section id="district-centers-sec" class="section-card">
+      <div class="card-top-header">
+        <h2 class="card-top-title">🏢 மாவட்ட உயர்கல்வி வழிகாட்டல் மையங்கள் (District Cells)</h2>
+        <span class="card-tag-badge">மாவட்ட ஒருங்கிணைப்பு நெட்வொர்க்</span>
+      </div>
+
+      <p class="box-desc" style="margin-bottom: 18px;">
+        மாவட்ட முதன்மைக் கல்வி அலுவலகங்களில் (CEO Office) செயல்படும் வழிகாட்டல் ஒருங்கிணைப்பாளர்களின் தொடர்பு விவரங்கள் (பெயரைக் கொண்டு உடனடியாகத் தேடலாம்):
+      </p>
+
+      <!-- Search Input -->
+      <div class="search-filter-wrap">
+        <div class="search-wrapper-relative">
+          <span class="search-glyph">🔍</span>
+          <input type="text" id="districtSearchField" class="search-input-field" placeholder="மாவட்டத்தைத் தேடுக (எ.கா. சிவகங்கை, மதுரை, சென்னை, திருச்சி)..." onkeyup="searchDistrictsNow();"/>
+        </div>
+      </div>
+
+      <div class="grid-2" id="districtListContainer">
+        <!-- Sivagangai Priority Card -->
+        <div class="district-card-item priority">
+          <div class="district-card-head">
+            <span class="district-name-title">சிவகங்கை மாவட்டம் (Sivagangai)</span>
+            <span class="badge-quota quota-ews">முதன்மை மையம்</span>
+          </div>
+          <div class="dist-row-info"><b>அலுவலகம்:</b> <span>முதன்மைக் கல்வி அலுவலகம் (CEO Office), சிவகங்கை.</span></div>
+          <div class="dist-row-info"><b>பொறுப்பு:</b> <span>பள்ளித் துணை ஆய்வாளர் / உயர்கல்வி வழிகாட்டல் ஒருங்கிணைப்பாளர்.</span></div>
+          <div class="dist-row-info"><b>மின்னஞ்சல்:</b> <a href="mailto:ceosvg@nic.in" style="color: #0284c7; font-weight: 700; text-decoration: none;">ceosvg@nic.in</a></div>
+          <div class="dist-row-info"><b>பணி நேரம்:</b> <span>திங்கள் - வெள்ளி (காலை 10:00 - மாலை 5:45 வரை)</span></div>
+        </div>
+
+        <!-- Madurai -->
+        <div class="district-card-item">
+          <div class="district-card-head">
+            <span class="district-name-title">மதுரை மாவட்டம் (Madurai)</span>
+            <span class="badge-quota quota-bc">மண்டல மையம்</span>
+          </div>
+          <div class="dist-row-info"><b>அலுவலகம்:</b> <span>முதன்மைக் கல்வி அலுவலகம், தல்லாகுளம், மதுரை - 625002.</span></div>
+          <div class="dist-row-info"><b>பொறுப்பு:</b> <span>மாவட்ட தொழில் வழிகாட்டல் ஒருங்கிணைப்புக் குழு.</span></div>
+          <div class="dist-row-info"><b>மின்னஞ்சல்:</b> <a href="mailto:ceomdu@nic.in" style="color: #0284c7; font-weight: 700; text-decoration: none;">ceomdu@nic.in</a></div>
+          <div class="dist-row-info"><b>பணி நேரம்:</b> <span>வேலை நாட்களில் காலை 10:00 - மாலை 5:30</span></div>
+        </div>
+
+        <!-- Chennai -->
+        <div class="district-card-item">
+          <div class="district-card-head">
+            <span class="district-name-title">சென்னை மாவட்டம் (Chennai)</span>
+            <span class="badge-quota quota-bc">தலைமையகம்</span>
+          </div>
+          <div class="dist-row-info"><b>அலுவலகம்:</b> <span>முதன்மைக் கல்வி அலுவலகம், DPI வளாகம், நுங்கம்பாக்கம், சென்னை.</span></div>
+          <div class="dist-row-info"><b>பொறுப்பு:</b> <span>சென்னை மாவட்ட உயர்கல்வி ஒருங்கிணைப்புப் பிரிவு.</span></div>
+          <div class="dist-row-info"><b>மின்னஞ்சல்:</b> <a href="mailto:ceochennai@nic.in" style="color: #0284c7; font-weight: 700; text-decoration: none;">ceochennai@nic.in</a></div>
+          <div class="dist-row-info"><b>பணி நேரம்:</b> <span>வேலை நாட்களில் காலை 10:00 - மாலை 5:45</span></div>
+        </div>
+
+        <!-- Tiruchirappalli -->
+        <div class="district-card-item">
+          <div class="district-card-head">
+            <span class="district-name-title">திருச்சிராப்பள்ளி (Trichy)</span>
+            <span class="badge-quota quota-bc">மத்திய மண்டலம்</span>
+          </div>
+          <div class="dist-row-info"><b>அலுவலகம்:</b> <span>முதன்மைக் கல்வி அலுவலகம், பழைய நீதிமன்ற வளாகம், திருச்சி.</span></div>
+          <div class="dist-row-info"><b>பொறுப்பு:</b> <span>திருச்சி மாவட்ட தொழில் வழிகாட்டல் மையம்.</span></div>
+          <div class="dist-row-info"><b>மின்னஞ்சல்:</b> <a href="mailto:ceotry@nic.in" style="color: #0284c7; font-weight: 700; text-decoration: none;">ceotry@nic.in</a></div>
+          <div class="dist-row-info"><b>பணி நேரம்:</b> <span>வேலை நாட்களில் காலை 10:00 - மாலை 5:30</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: INTERACTIVE STUDENT QUERY FORM (ASK A QUESTION) -->
+    <section id="student-ask-sec" class="section-card">
+      <div class="card-top-header">
+        <h2 class="card-top-title">✍️ மாணவர் சந்தேகப் படிவம் (Ask a Question to Guidance Team)</h2>
+        <span class="card-tag-badge direct">நேரடி வினா சமர்ப்பிப்பு</span>
+      </div>
+
+      <p class="box-desc" style="margin-bottom: 20px;">
+        உங்கள் உயர்கல்வி சேர்க்கை, கட்-ஆஃப், கட்டண விலக்கு மற்றும் நுழைவுத் தேர்வு தொடர்பான சந்தேகங்களை இங்கே பதிவு செய்யலாம். வழிகாட்டல் குழுவினர் ஆய்வு செய்து வழிகாட்டுவர்:
+      </p>
+
+      <form id="masterGuidanceForm" onsubmit="handleQuerySubmit(event);">
+        <div class="form-inputs-grid">
+          <div class="form-control-item">
+            <label class="form-label-title">மாணவர் பெயர் <span class="required-star">*</span></label>
+            <input type="text" id="formStudentName" class="form-text-box" placeholder="உங்கள் முழுப் பெயர்" required/>
+          </div>
+
+          <div class="form-control-item">
+            <label class="form-label-title">வகுப்பு நிலை <span class="required-star">*</span></label>
+            <select id="formStudentClass" class="form-select-box" required>
+              <option value="">-- வகுப்பைத் தேர்வு செய்க --</option>
+              <option value="12th">12-ஆம் வகுப்பு (HSC)</option>
+              <option value="11th">11-ஆம் வகுப்பு</option>
+              <option value="10th">10-ஆம் வகுப்பு</option>
+              <option value="passed">+2 தேர்ச்சி பெற்றவர்</option>
+            </select>
+          </div>
+
+          <div class="form-control-item">
+            <label class="form-label-title">பள்ளி வகை <span class="required-star">*</span></label>
+            <select id="formSchoolCategory" class="form-select-box" required>
+              <option value="Govt">அரசுப் பள்ளி (7.5% தகுதி)</option>
+              <option value="Aided">அரசு உதவிபெறும் பள்ளி</option>
+              <option value="Private">சுயநிதி / தனியார் மெட்ரிக் பள்ளி</option>
+            </select>
+          </div>
+
+          <div class="form-control-item">
+            <label class="form-label-title">மாவட்டம் <span class="required-star">*</span></label>
+            <input type="text" id="formStudentDistrict" class="form-text-box" placeholder="எ.கா. சிவகங்கை" required/>
+          </div>
+
+          <div class="form-control-item">
+            <label class="form-label-title">அலைபேசி எண் <span class="required-star">*</span></label>
+            <input type="tel" id="formStudentPhone" class="form-text-box" placeholder="10 இலக்க மொபைல் எண்" pattern="[0-9]{10}" required/>
+          </div>
+
+          <div class="form-control-item">
+            <label class="form-label-title">சந்தேகப் பிரிவு <span class="required-star">*</span></label>
+            <select id="formSubjectCategory" class="form-select-box" required>
+              <option value="medical">மருத்துவம் & துணை மருத்துவம் (NEET / Nursing / BNYS)</option>
+              <option value="engineering">பொறியியல் சேர்க்கை (TNEA 7.5% / JEE)</option>
+              <option value="arts_science">கலை மற்றும் அறிவியல் (TNGASA)</option>
+              <option value="agri">வேளாண்மை & கால்நடை (TNAU / TANUVAS)</option>
+              <option value="reservation">7.5% அரசுப் பள்ளி இடஒதுக்கீடு</option>
+              <option value="scholarship">கல்வி உதவித்தொகை & கல்விக் கடன்</option>
+            </select>
+          </div>
+
+          <div class="form-control-item full-width">
+            <label class="form-label-title">உங்கள் கேள்வி / சந்தேகம் <span class="required-star">*</span></label>
+            <textarea id="formStudentQuery" class="form-textarea-box" placeholder="உங்கள் கட்-ஆஃப் அல்லது சந்தேகங்களை விரிவாக எழுதவும்..." required></textarea>
+          </div>
+        </div>
+
+        <button type="submit" id="masterSubmitBtn" class="btn-submit-action">
+          <span>✉️ கேள்வியைச் சமர்ப்பிக்க (Submit Query)</span>
+          <span>→</span>
+        </button>
+      </form>
+
+      <!-- Instant Student-Facing Confirmation Card -->
+      <div id="masterSuccessBox" class="form-feedback-card">
+        <h4 style="color: #065f46; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-weight: 800;">
+          <span>✅</span> தங்களின் கோரிக்கை வெற்றிகரமாகப் பதிவு செய்யப்பட்டது!
+        </h4>
+        <p style="font-size: 0.95rem; margin-bottom: 10px; color: #1e293b;">
+          தங்களின் கண்காணிப்பு எண் (Reference ID): <b id="generatedTicketId" style="color: #0284c7; font-size: 1.1rem; letter-spacing: 0.5px;">TN-CG-2026-XXXX</b>
+        </p>
+        <p style="font-size: 0.90rem; color: #334155; line-height: 1.65; margin: 0;">
+          மாவட்ட உயர்கல்வி வழிகாட்டல் குழுவினர் தங்கள் சந்தேகத்தை ஆய்வு செய்து, பதிவு செய்யப்பட்ட தொலைபேசி எண்ணிற்கு விரைவில் தொடர்புகொண்டு வழிகாட்டுதல் வழங்குவர். அவசர ஆலோசனைகளுக்கு <b>14417</b> என்ற பள்ளிக் கல்வி கட்டணமில்லா உதவி எண்ணை அழைக்கலாம்.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 11: ACCORDION FAQS WITH REALTIME FILTER -->
+    <section id="faqs-sec" class="section-card">
+      <div class="card-top-header">
+        <h2 class="card-top-title">❓ அடிக்கடி கேட்கப்படும் பொதுவான வினாக்கள் (FAQs)</h2>
+        <span class="card-tag-badge">அறிவுத் தொகுப்பு (Knowledge Base)</span>
+      </div>
+
+      <p class="box-desc" style="margin-bottom: 18px;">
+        7.5% இடஒதுக்கீடு, கட்டணச் சலுகைகள் மற்றும் கட்-ஆஃப் குறித்த மாணவர்களின் முக்கிய சந்தேகங்கள்:
+      </p>
+
+      <!-- Filter Box -->
+      <div class="search-filter-wrap">
+        <div class="search-wrapper-relative">
+          <span class="search-glyph">🔍</span>
+          <input type="text" id="faqSearchInput" class="search-input-field" placeholder="கேள்விகளைத் தேடுக (எ.கா. 7.5%, கட்-ஆஃப், நர்சிங், கல்விக் கடன்)..." onkeyup="filterFaqsNow();"/>
+        </div>
+      </div>
+
+      <div class="faq-collection" id="faqAccordionContainer">
+        <div class="faq-item-card">
+          <button type="button" class="faq-header-btn" onclick="toggleFaqDrawer(this);">
+            <span>1. அரசுப் பள்ளி மாணவர்களுக்கான 7.5% சிறப்பு ஒதுக்கீடு யாருக்குப் பொருந்தும்?</span>
+            <span class="faq-toggle-arrow">▼</span>
+          </button>
+          <div class="faq-drawer-panel">
+            ஆறாம் வகுப்பு முதல் பன்னிரண்டாம் வகுப்பு வரை (Classes 6 to 12) முழுமையாகத் தமிழ்நாட்டில் உள்ள அரசுப் பள்ளிகளில் பயின்ற மாணவர்களுக்கு மட்டுமே 7.5% முன்னுரிமை இடஒதுக்கீடு பொருந்தும். அரசு உதவிபெறும் (Govt Aided) பள்ளிகளில் பயின்ற மாணவர்களுக்கு இச்சலுகை பொருந்தாது. மருத்துவம், பொறியியல், வேளாண்மை, கால்நடை, சட்டம் மற்றும் துணை மருத்துவப் படிப்புகளுக்கு இது பொருந்தும்.
+          </div>
+        </div>
+
+        <div class="faq-item-card">
+          <button type="button" class="faq-header-btn" onclick="toggleFaqDrawer(this);">
+            <span>2. 7.5% இடஒதுக்கீட்டில் சேர்க்கை பெற்றால் கட்டணத்தை அரசே ஏற்குமா?</span>
+            <span class="faq-toggle-arrow">▼</span>
+          </button>
+          <div class="faq-drawer-panel">
+            ஆம்! 7.5% ஒதுக்கீட்டின் கீழ் சேர்க்கை பெறும் மாணவர்களின் <b>கல்விக் கட்டணம் (Tuition Fee), விடுதிக் கட்டணம் (Hostel Fee), உணவுக் கட்டணம் மற்றும் கலந்தாய்வுக் கட்டணம் ஆகிய அனைத்தையும் தமிழ்நாடு அரசே 100% முழுமையாக ஏற்கும்</b>.
+          </div>
+        </div>
+
+        <div class="faq-item-card">
+          <button type="button" class="faq-header-btn" onclick="toggleFaqDrawer(this);">
+            <span>3. புதுமைப் பெண் மற்றும் தமிழ்ப் புதல்வன் திட்டத்தின் கீழ் மாதம் ₹1,000 பெற என்ன தகுதி?</span>
+            <span class="faq-toggle-arrow">▼</span>
+          </button>
+          <div class="faq-drawer-panel">
+            அரசுப் பள்ளிகளில் 6 முதல் 12 வரை படித்து உயர்கல்வி (Degree / Diploma / ITI) பயிலும் மாணவிகளுக்கு 'புதுமைப் பெண்' திட்டத்தின் கீழும், மாணவர்களுக்கு 'தமிழ்ப் புதல்வன்' திட்டத்தின் கீழும் மாதம் ₹1,000 வங்கிக் கணக்கில் நேரடியாக வழங்கப்படுகிறது.
+          </div>
+        </div>
+
+        <div class="faq-item-card">
+          <button type="button" class="faq-header-btn" onclick="toggleFaqDrawer(this);">
+            <span>4. நீட் (NEET) தேர்வு இல்லாமல் சேரக்கூடிய மருத்துவப் படிப்புகள் எவை?</span>
+            <span class="faq-toggle-arrow">▼</span>
+          </button>
+          <div class="faq-drawer-panel">
+            • <b>BNYS:</b> இயற்கை மருத்துவம் & யோகா (5½ ஆண்டுகள்).<br/>
+            • <b>TANUVAS:</b> கால்நடை மருத்துவம் (B.V.Sc & A.H.) மற்றும் B.Tech உணவுத் தொழில்நுட்பம்.<br/>
+            • <b>துணை மருத்துவம்:</b> B.Sc Nursing, B.Pharm, BPT உடற்பயிற்சி மருத்துவம், B.Sc Radiography, B.Sc MLT போன்ற 19 படிப்புகள் +2 மதிப்பெண் அடிப்படையில் நேரடியாகச் சேர்க்கை செய்யப்படுகின்றன.
+          </div>
+        </div>
+
+        <div class="faq-item-card">
+          <button type="button" class="faq-header-btn" onclick="toggleFaqDrawer(this);">
+            <span>5. பொறியியல் சேர்க்கைக்கான கட்-ஆஃப் (Cut-off) எவ்வாறு கணக்கிடப்படுகிறது?</span>
+            <span class="faq-toggle-arrow">▼</span>
+          </button>
+          <div class="faq-drawer-panel">
+            TNEA பொறியியல் கட்-ஆஃப் மொத்தம் 200 மதிப்பெண்களுக்குக் கணக்கிடப்படுகிறது: கணிதம் (100) + [இயற்பியல் ÷ 2] (50) + [வேதியியல் ÷ 2] (50).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 12: INTEGRATED PORTALS DIRECTORY -->
+    <section id="portals-sec" class="section-card">
+      <div class="card-top-header">
+        <h2 class="card-top-title">🌐 அனைத்து முக்கிய உயர்கல்வி போர்ட்டல்களின் அதிகாரப்பூர்வ டைரக்டரி</h2>
+        <span class="card-tag-badge">அதிகாரப்பூர்வ தளங்கள்</span>
+      </div>
+
+      <h3 style="font-size: 1.15rem; color: #1e1b4b; font-weight: 800; margin-bottom: 12px;">A. நுழைவுத் தேர்வு சார்ந்த தேசிய போர்ட்டல்கள்:</h3>
+      <div class="grid-3" style="margin-bottom: 24px;">
+        <div class="stream-box green">
+          <div class="box-title">🩺 NTA NEET & MCC Medical</div>
+          <div class="box-desc">நீட் தேர்வு பதிவு மற்றும் அகில இந்திய 15% மருத்துவக் கலந்தாய்வு போர்ட்டல்.</div>
+          <a href="https://neet.nta.nic.in" target="_blank" rel="noopener" class="portal-launcher-link">🌐 neet.nta.nic.in ↗</a>
+        </div>
+        <div class="stream-box blue">
+          <div class="box-title">📐 NTA JEE & JoSAA IIT / NIT</div>
+          <div class="box-desc">JEE Main தேர்வு மற்றும் IIT, NIT, IIIT பொறியியல் இடஒதுக்கீட்டுக் கலந்தாய்வு.</div>
+          <a href="https://josaa.nic.in" target="_blank" rel="noopener" class="portal-launcher-link">🌐 josaa.nic.in ↗</a>
+        </div>
+        <div class="stream-box highlight">
+          <div class="box-title">🏛️ CUET UG மத்தியப் பல்கலைக்கழகங்கள்</div>
+          <div class="box-desc">திருவாரூர் தமிழ்நாடு மத்தியப் பல்கலைக்கழகம் உட்பட அனைத்து Central Universities சேர்க்கை.</div>
+          <a href="https://exams.nta.ac.in/CUET-UG" target="_blank" rel="noopener" class="portal-launcher-link">🌐 exams.nta.ac.in/CUET-UG ↗</a>
+        </div>
+        <div class="stream-box amber">
+          <div class="box-title">⚖️ CLAT தேசிய சட்டப் பல்கலைக்கழகங்கள்</div>
+          <div class="box-desc">Consortium of National Law Universities (NLUs) அகில இந்திய கலந்தாய்வு.</div>
+          <a href="https://consortiumofnlus.ac.in" target="_blank" rel="noopener" class="portal-launcher-link">🌐 consortiumofnlus.ac.in ↗</a>
+        </div>
+        <div class="stream-box">
+          <div class="box-title">🔬 IISER IAT அறிவியல் ஆராய்ச்சி</div>
+          <div class="box-desc">7 IISER நிறுவனங்கள் மற்றும் IISc பெங்களூரு ஆராய்ச்சி சேர்க்கை போர்ட்டல்.</div>
+          <a href="https://iiseradmission.in" target="_blank" rel="noopener" class="portal-launcher-link">🌐 iiseradmission.in ↗</a>
+        </div>
+        <div class="stream-box">
+          <div class="box-title">👗 NIFT தேசிய ஃபேஷன் டெக்னாலஜி</div>
+          <div class="box-desc">சென்னை உட்பட அனைத்து தேசிய ஃபேஷன் தொழில்நுட்பக் கல்வி வளாகங்கள் சேர்க்கை.</div>
+          <a href="https://nift.ac.in" target="_blank" rel="noopener" class="portal-launcher-link">🌐 nift.ac.in ↗</a>
+        </div>
+      </div>
+
+      <h3 style="font-size: 1.15rem; color: #1e1b4b; font-weight: 800; margin-bottom: 12px;">B. தமிழ்நாடு அரசு நேரடிச் சேர்க்கை போர்ட்டல்கள்:</h3>
+      <div class="grid-3">
+        <div class="stream-box highlight">
+          <div class="box-title">📐 TNEA பொறியியல் நேரடிச் சேர்க்கை</div>
+          <div class="box-desc">அண்ணா பல்கலைக்கழகம் மற்றும் உறுப்புக் கல்லூரிகள் பொறியியல் ஒற்றைச் சாளர சேர்க்கை.</div>
+          <a href="https://www.tneaonline.org" target="_blank" rel="noopener" class="portal-launcher-link">🌐 tneaonline.org ↗</a>
+        </div>
+        <div class="stream-box blue">
+          <div class="box-title">🔬 TNGASA அரசு கலை & அறிவியல்</div>
+          <div class="box-desc">தமிழ்நாட்டின் 164+ அரசு கலை அறிவியல் கல்லூரிகள் B.A., B.Sc, B.Com சேர்க்கை போர்ட்டல்.</div>
+          <a href="https://www.tngasa.in" target="_blank" rel="noopener" class="portal-launcher-link">🌐 tngasa.in ↗</a>
+        </div>
+        <div class="stream-box green">
+          <div class="box-title">🏥 TN Medical & Paramedical</div>
+          <div class="box-desc">அரசு மருத்துவக் கல்லூரிகள் 85% மாநில இடங்கள் மற்றும் பாராமெடிக்கல் சேர்க்கை.</div>
+          <a href="https://tnhealth.tn.gov.in" target="_blank" rel="noopener" class="portal-launcher-link">🌐 tnhealth.tn.gov.in ↗</a>
+        </div>
+        <div class="stream-box amber">
+          <div class="box-title">⚖️ TNDALU தமிழ்நாடு சட்டப் படிப்பு</div>
+          <div class="box-desc">அம்பேத்கர் சட்டப் பல்கலைக்கழகம் & அரசு சட்டக் கல்லூரிகள் 5 ஆண்டு LL.B. சேர்க்கை.</div>
+          <a href="https://www.tndalu.ac.in" target="_blank" rel="noopener" class="portal-launcher-link">🌐 tndalu.ac.in ↗</a>
+        </div>
+        <div class="stream-box">
+          <div class="box-title">🐾 TANUVAS கால்நடை சேர்க்கை</div>
+          <div class="box-desc">கால்நடை மருத்துவம் (BVSc & AH) மற்றும் உணவுத் தொழில்நுட்ப B.Tech படிப்புகள்.</div>
+          <a href="https://www.tanuvas.ac.in" target="_blank" rel="noopener" class="portal-launcher-link">🌐 tanuvas.ac.in ↗</a>
+        </div>
+        <div class="stream-box">
+          <div class="box-title">🌿 TNAU வேளாண்மை சேர்க்கை</div>
+          <div class="box-desc">தமிழ்நாடு வேளாண்மைப் பல்கலைக்கழகம் & தோட்டக்கலை இளநிலை அறிவியல் படிப்புகள்.</div>
+          <a href="https://tnau.ac.in" target="_blank" rel="noopener" class="portal-launcher-link">🌐 tnau.ac.in ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creator Card with Typewriter Effect (Guide's Main Page Format) -->
+    <div class="creator-card">
+      <div id="creatorTypewriterWrap" style="display: inline-flex; align-items: center; justify-content: center; flex-wrap: wrap; line-height: 1.8;">
+        <span id="creatorTypewriterTarget"></span><span class="typing-cursor" id="creatorCursor">|</span>
+      </div>
+    </div>
+
+    <!-- Portal Footer (Guide's Main Page Format) -->
+    <footer class="portal-footer">
+      <p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
+        தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
+      </p>
+      <p style="font-size: 0.85rem; color: #64748b;">
+        © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- Back to Top Floating Action Button -->
+  <button id="masterBackTopBtn" onclick="scrollToPageTop()" title="மேலே செல்ல">↑ மேல்நோக்கி</button>
+
+  <!-- Complete Vanilla JavaScript Interactive Logic -->
+  <script>
+    // 1. Smooth Scroll with Sticky Navbar Height Offset
+    function smoothScrollToAnchor(targetId, buttonElement) {
+      const target = document.getElementById(targetId);
+      if (!target) return;
+
+      const navBar = document.getElementById('stickyPortalNavbar');
+      const offset = navBar ? navBar.offsetHeight + 18 : 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = target.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+
+      if (buttonElement) {
+        document.querySelectorAll('.nav-anchor-pill').forEach(btn => btn.classList.remove('active'));
+        buttonElement.classList.add('active');
+      }
+    }
+
+    // ScrollSpy to highlight active nav pill
+    window.addEventListener('scroll', () => {
+      const navSections = [
+        'cutoff-tools-sec',
+        'entrance-stream-sec',
+        'direct-stream-sec',
+        'reservation-sec',
+        'quota-7point5-sec',
+        'doc-checklist-sec',
+        'counselling-flow-sec',
+        'district-centers-sec',
+        'student-ask-sec',
+        'faqs-sec',
+        'portals-sec'
+      ];
+      const scrollPos = window.pageYOffset + 140;
+
+      navSections.forEach((secId, idx) => {
+        const el = document.getElementById(secId);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPos >= top && scrollPos < top + height) {
+            const pills = document.querySelectorAll('.nav-anchor-pill');
+            pills.forEach(p => p.classList.remove('active'));
+            if (pills[idx]) pills[idx].classList.add('active');
+          }
+        }
+      });
+
+      // Back to top button visibility
+      const topBtn = document.getElementById('masterBackTopBtn');
+      if (window.scrollY > 350) {
+        topBtn.style.display = 'block';
+      } else {
+        topBtn.style.display = 'none';
+      }
+    });
+
+    function scrollToPageTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 2. Calculator Tab Switching
+    function switchCalcPane(paneId) {
+      document.querySelectorAll('.calc-pane').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.calc-btn-tab').forEach(btn => btn.classList.remove('active'));
+      
+      const targetPane = document.getElementById('calc-pane-' + paneId);
+      if (targetPane) targetPane.classList.add('active');
+
+      const activeBtn = Array.from(document.querySelectorAll('.calc-btn-tab')).find(btn => 
+        btn.getAttribute('onclick').includes(paneId)
+      );
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    // Calculators
+    function computeTNEA() {
+      let m = parseFloat(document.getElementById('tnea-maths').value) || 0;
+      let p = parseFloat(document.getElementById('tnea-physics').value) || 0;
+      let c = parseFloat(document.getElementById('tnea-chem').value) || 0;
+      m = Math.min(100, Math.max(0, m));
+      p = Math.min(100, Math.max(0, p));
+      c = Math.min(100, Math.max(0, c));
+      
+      const cutoff = m + (p / 2) + (c / 2);
+      document.getElementById('tnea-result').innerText = cutoff.toFixed(2);
+      
+      const badge = document.getElementById('tnea-status');
+      if (cutoff >= 190) {
+        badge.innerText = '🌟 மிகச் சிறந்த கட்-ஆஃப் (Top Engineering Colleges / Tier 1)';
+      } else if (cutoff >= 170) {
+        badge.innerText = '👍 சிறந்த கட்-ஆஃப் (Government / Top Aided Institutions)';
+      } else if (cutoff >= 140) {
+        badge.innerText = '✅ நல்ல கட்-ஆஃப் (Good Engineering Colleges)';
+      } else if (cutoff > 0) {
+        badge.innerText = '📋 அனுமதிக்கான கட்-ஆஃப் (Qualifying Score)';
+      } else {
+        badge.innerText = 'மதிப்பெண்களை உள்ளிடவும்';
+      }
+    }
+
+    function computeNEET() {
+      let p = parseFloat(document.getElementById('neet-phy').value) || 0;
+      let c = parseFloat(document.getElementById('neet-chem').value) || 0;
+      let b = parseFloat(document.getElementById('neet-bio').value) || 0;
+      p = Math.min(180, Math.max(0, p));
+      c = Math.min(180, Math.max(0, c));
+      b = Math.min(360, Math.max(0, b));
+      
+      const total = p + c + b;
+      document.getElementById('neet-result').innerText = total + ' / 720';
+      
+      const badge = document.getElementById('neet-status');
+      if (total >= 600) {
+        badge.innerText = '🌟 அரசு மருத்துவக் கல்லூரி MBBS சேர்க்கைக்கு மிகச் சிறந்த வாய்ப்பு!';
+      } else if (total >= 500) {
+        badge.innerText = '👍 அரசு / சுயநிதி கல்லூரிகள் அரசு ஒதுக்கீடு MBBS / BDS வாய்ப்பு';
+      } else if (total >= 400) {
+        badge.innerText = '✅ BDS & ஆயுஷ் (BSMS/BAMS) மற்றும் 7.5% பிரிவில் MBBS வாய்ப்பு';
+      } else if (total > 0) {
+        badge.innerText = '📋 நீட் தகுதி மதிப்பெண் வரம்பு (Category Qualifying Score)';
+      } else {
+        badge.innerText = 'மதிப்பெண்களை உள்ளிடவும்';
+      }
+    }
+
+    function computeScience() {
+      let s1 = parseFloat(document.getElementById('sci-s1').value) || 0;
+      let s2 = parseFloat(document.getElementById('sci-s2').value) || 0;
+      let s3 = parseFloat(document.getElementById('sci-s3').value) || 0;
+      let s4 = parseFloat(document.getElementById('sci-s4').value) || 0;
+      
+      const total = Math.min(400, s1 + s2 + s3 + s4);
+      document.getElementById('sci-result').innerText = total.toFixed(2);
+      
+      const badge = document.getElementById('sci-status');
+      if (total >= 360) {
+        badge.innerText = '🌟 மிகச் சிறந்த கட்-ஆஃப் (முன்னணி அரசு கல்லூரிகளில் வாய்ப்பு)';
+      } else if (total >= 300) {
+        badge.innerText = '👍 சிறந்த கட்-ஆஃப் (அரசு மற்றும் உதவிபெறும் கல்லூரிகள்)';
+      } else if (total > 0) {
+        badge.innerText = '✅ சேர்க்கைக்கான தகுதி கட்-ஆஃப்';
+      } else {
+        badge.innerText = 'மதிப்பெண்களை உள்ளிடவும்';
+      }
+    }
+
+    function computeCommerce() {
+      let c1 = parseFloat(document.getElementById('com-sub1').value) || 0;
+      let c2 = parseFloat(document.getElementById('com-sub2').value) || 0;
+      let c3 = parseFloat(document.getElementById('com-sub3').value) || 0;
+      let c4 = parseFloat(document.getElementById('com-sub4').value) || 0;
+      
+      const total = Math.min(400, c1 + c2 + c3 + c4);
+      document.getElementById('com-result').innerText = total.toFixed(2);
+      
+      const badge = document.getElementById('com-status');
+      if (total >= 370) {
+        badge.innerText = '🌟 B.Com General / Banking முன்னணி வாய்ப்பு';
+      } else if (total >= 310) {
+        badge.innerText = '👍 B.Com / BBA சேர்க்கைக்கான சிறந்த வாய்ப்பு';
+      } else if (total > 0) {
+        badge.innerText = '✅ வணிகவியல் படிப்பு சேர்க்கை தகுதி';
+      } else {
+        badge.innerText = 'மதிப்பெண்களை உள்ளிடவும்';
+      }
+    }
+
+    function computeLaw() {
+      let l1 = parseFloat(document.getElementById('law-s1').value) || 0;
+      let l2 = parseFloat(document.getElementById('law-s2').value) || 0;
+      let l3 = parseFloat(document.getElementById('law-s3').value) || 0;
+      let l4 = parseFloat(document.getElementById('law-s4').value) || 0;
+      
+      const total = Math.min(400, l1 + l2 + l3 + l4);
+      const percentage = (total / 4).toFixed(2);
+      document.getElementById('law-result').innerText = total.toFixed(1) + ' (' + percentage + '%)';
+      
+      const badge = document.getElementById('law-status');
+      if (percentage >= 85) {
+        badge.innerText = '🌟 SOEL (சென்னை) & அரசு சட்டக் கல்லூரிகளில் அதிக வாய்ப்பு';
+      } else if (percentage >= 70) {
+        badge.innerText = '👍 அரசு சட்டக் கல்லூரிகளில் சேர்க்கைக்கான சிறந்த வாய்ப்பு';
+      } else if (total > 0) {
+        badge.innerText = '✅ சட்டப் படிப்பு கலந்தாய்வு தகுதி';
+      } else {
+        badge.innerText = 'மதிப்பெண்களை உள்ளிடவும்';
+      }
+    }
+
+    function computeVetParamed() {
+      let bio = parseFloat(document.getElementById('vp-bio').value) || 0;
+      let phy = parseFloat(document.getElementById('vp-phy').value) || 0;
+      let chem = parseFloat(document.getElementById('vp-chem').value) || 0;
+      
+      const cutoff = Math.min(200, bio + ((phy + chem) / 2));
+      document.getElementById('vp-result').innerText = cutoff.toFixed(2);
+      
+      const badge = document.getElementById('vp-status');
+      if (cutoff >= 185) {
+        badge.innerText = '🌟 B.Sc நர்சிங் & அரசு துணை மருத்துவக் கல்லூரிகளில் வாய்ப்பு';
+      } else if (cutoff >= 160) {
+        badge.innerText = '👍 சிறந்த துணை மருத்துவப் படிப்புகள் & TANUVAS B.Tech';
+      } else if (cutoff > 0) {
+        badge.innerText = '✅ கலந்தாய்வு தகுதி மதிப்பெண்';
+      } else {
+        badge.innerText = 'மதிப்பெண்களை உள்ளிடவும்';
+      }
+    }
+
+    function computePoly() {
+      let total = parseFloat(document.getElementById('poly-total').value) || 0;
+      total = Math.min(500, Math.max(0, total));
+      const pct = (total / 5).toFixed(2);
+      document.getElementById('poly-result').innerText = pct + '% (' + total + '/500)';
+      
+      const badge = document.getElementById('poly-status');
+      if (pct >= 80) {
+        badge.innerText = '🌟 அரசு பாலிடெக்னிக் கல்லூரிகளில் முன்னணி கிளைகளில் வாய்ப்பு';
+      } else if (pct >= 50) {
+        badge.innerText = '👍 அரசு & உதவிபெறும் பாலிடெக்னிக் டிப்ளமோ சேர்க்கை';
+      } else if (total > 0) {
+        badge.innerText = '✅ டிப்ளமோ & ITI சேர்க்கை தகுதி';
+      } else {
+        badge.innerText = 'மதிப்பெண்ணை உள்ளிடவும்';
+      }
+    }
+
+    // 3. Document Checklist Progress
+    function calcDocProgress() {
+      const checkboxes = document.querySelectorAll('.doc-check-card input[type="checkbox"]');
+      let checkedCount = 0;
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          checkedCount++;
+          cb.closest('.doc-check-card').classList.add('checked');
+        } else {
+          cb.closest('.doc-check-card').classList.remove('checked');
+        }
+      });
+      const total = checkboxes.length;
+      const pct = Math.round((checkedCount / total) * 100);
+      document.getElementById('check-counter').innerText = `${checkedCount} / ${total} தயார் (${pct}%)`;
+      document.getElementById('check-progress-bar').style.width = pct + '%';
+    }
+
+    function toggleDocCheck(wrapper) {
+      const cb = wrapper.querySelector('input[type="checkbox"]');
+      if (event.target !== cb) {
+        cb.checked = !cb.checked;
+        calcDocProgress();
+      }
+    }
+
+    // 4. Welfare Schemes & Scholarship Evaluator
+    function runSchemeEvaluator() {
+      const gender = document.getElementById('finder-gender').value;
+      const school = document.getElementById('finder-school').value;
+      const fg = document.getElementById('finder-fg').value;
+      const comm = document.getElementById('finder-comm').value;
+      
+      const chips = [];
+      const desc = [];
+      
+      if (school === 'yes') {
+        chips.push('<span class="chip-scheme chip-green">🎯 7.5% அரசுப் பள்ளி முன்னுரிமை இடஒதுக்கீடு</span>');
+        chips.push('<span class="chip-scheme chip-green">🎓 100% முழுக் கல்விக் கட்டண விலக்கு</span>');
+        desc.push('• 6 முதல் 12 வரை அரசுப் பள்ளியில் பயின்றதால் மருத்துவம் (NEET), பொறியியல் (TNEA), வேளாண்மை, சட்டம் ஆகியவற்றில் <strong>7.5% முன்னுரிமை</strong> மற்றும் முழு கட்டண விலக்கு உண்டு.');
+        
+        if (gender === 'female') {
+          chips.push('<span class="chip-scheme chip-gold">👩 புதுமைப் பெண் திட்டம் (மாதம் ₹1,000)</span>');
+          desc.push('• அரசுப் பள்ளியில் பயின்ற மாணவிகளுக்கு உயர்கல்வி காலம் முழுவதும் நேரடியாக வங்கி கணக்கில் <strong>மாதம் ₹1,000</strong> உதவித்தொகை.');
+        } else {
+          chips.push('<span class="chip-scheme chip-gold">👦 தமிழ்ப் புதல்வன் திட்டம் (மாதம் ₹1,000)</span>');
+          desc.push('• அரசுப் பள்ளியில் பயின்ற மாணவர்களுக்கு உயர்கல்வி காலம் முழுவதும் நேரடியாக வங்கி கணக்கில் <strong>மாதம் ₹1,000</strong> உதவித்தொகை.');
+        }
+      }
+      
+      if (fg === 'yes') {
+        chips.push('<span class="chip-scheme chip-blue">📜 முதல் பட்டதாரி கல்விக் கட்டணச் சலுகை (First Graduate)</span>');
+        desc.push('• குடும்பத்தில் முதல் பட்டதாரி என்பதால் தொழிற்கல்வி கவுன்சிலிங்கில் அரசால் ஆண்டிற்கு ₹25,000 வரை கட்டணக் குறைப்பு கிடைக்கும்.');
+      }
+      
+      if (comm === 'sc_st') {
+        chips.push('<span class="chip-scheme chip-green">💰 போஸ்ட்-மெட்ரிக் கல்வி உதவித்தொகை (Post-Matric)</span>');
+        desc.push('• SC / SCA / ST சமூக மாணவர்களுக்கு அரசு மற்றும் அரசு உதவிபெறும் கல்லூரிகளில் முழு கல்விக் கட்டண விலக்கு மற்றும் விடுதி உதவித்தொகை உண்டு.');
+      } else if (comm === 'mbc' || comm === 'bc') {
+        chips.push('<span class="chip-scheme chip-blue">🏷️ BC / MBC கல்வி உதவித்தொகை</span>');
+        desc.push('• குடும்ப ஆண்டு வருமானம் ₹2.5 லட்சத்திற்குள் இருக்கும் பட்சத்தில் அரசு பிற்படுத்தப்பட்டோர் நலத்துறை கல்வி உதவித்தொகை பெறலாம்.');
+      }
+      
+      chips.push('<span class="chip-scheme chip-blue">🚌 கல்லூரி மாணவர்களுக்கான இலவசப் பேருந்து பயண அட்டை</span>');
+      desc.push('• கல்லூரிக்குச் சென்றுவர தமிழ்நாடு அரசுப் போக்குவரத்துக் கழகத்தின் <strong>இலவசப் பேருந்து பாஸ்</strong> பெறலாம்.');
+
+      document.getElementById('finder-badges-list').innerHTML = chips.join(' ');
+      document.getElementById('finder-desc-text').innerHTML = desc.join('<br/>');
+    }
+
+    // 5. District Guidance Directory Live Search
+    function searchDistrictsNow() {
+      const q = document.getElementById('districtSearchField').value.toLowerCase().trim();
+      document.querySelectorAll('.district-card-item').forEach(card => {
+        card.style.display = card.innerText.toLowerCase().includes(q) ? 'block' : 'none';
+      });
+    }
+
+    // 6. Student Query Form Submission
+    const APPS_SCRIPT_ENDPOINT = "https://script.google.com/macros/s/AKfycbw6JT5M-sr-6vz96-dKK00Xema0v3--HXkHJp0jX-Tvx_LeWvIuV6VPCOn-U76HjbAcxg/exec";
+
+    async function handleQuerySubmit(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('masterSubmitBtn');
+      const originalText = submitBtn.innerHTML;
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>⏳ பதிவு செய்யப்படுகிறது (Submitting)...</span>';
+
+      const ticketId = 'TN-CG-2026-' + Math.floor(1000 + Math.random() * 9000);
+      const formData = {
+        ticketId: ticketId,
+        name: document.getElementById('formStudentName').value.trim(),
+        studentClass: document.getElementById('formStudentClass').value,
+        schoolType: document.getElementById('formSchoolCategory').value,
+        district: document.getElementById('formStudentDistrict').value.trim(),
+        phone: document.getElementById('formStudentPhone').value.trim(),
+        category: document.getElementById('formSubjectCategory').value,
+        query: document.getElementById('formStudentQuery').value.trim()
+      };
+
+      try {
+        await fetch(APPS_SCRIPT_ENDPOINT, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8'
+          },
+          body: JSON.stringify(formData)
+        });
+
+        document.getElementById('generatedTicketId').innerText = ticketId;
+        const successBox = document.getElementById('masterSuccessBox');
+        successBox.style.display = 'block';
+        successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        document.getElementById('masterGuidanceForm').reset();
+      } catch (err) {
+        console.error("Submission status:", err);
+        document.getElementById('generatedTicketId').innerText = ticketId;
+        const successBox = document.getElementById('masterSuccessBox');
+        successBox.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }
+    }
+
+    // 7. Accordion FAQs Toggle & Live Filter
+    function toggleFaqDrawer(btn) {
+      const panel = btn.nextElementSibling;
+      const isCurrentlyActive = btn.classList.contains('active');
+      document.querySelectorAll('.faq-drawer-panel').forEach(p => p.classList.remove('show'));
+      document.querySelectorAll('.faq-header-btn').forEach(b => b.classList.remove('active'));
+      if (!isCurrentlyActive) {
+        btn.classList.add('active');
+        panel.classList.add('show');
+      }
+    }
+
+    function filterFaqsNow() {
+      const q = document.getElementById('faqSearchInput').value.toLowerCase().trim();
+      document.querySelectorAll('.faq-item-card').forEach(card => {
+        card.style.display = card.innerText.toLowerCase().includes(q) ? 'block' : 'none';
+      });
+    }
+
+    // Initialize defaults on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      calcDocProgress();
+      runSchemeEvaluator();
+      computeTNEA();
+    });
+  
+    // ==========================================
+    // Creator Single-Line Typewriter Animation (from Master Guide)
+    // Types once and stays permanently static
+    // ==========================================
+    const creatorSegments = [
+      { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
+      { text: "கூ. பூவலிங்கம்", tag: "span", class: "creator-name-ta" },
+      { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
+      { text: "K. Poovalingam", tag: "span", class: "creator-name-en" },
+      { text: ", Deputy Inspector of Schools  ", tag: "span", class: "creator-role" },
+      { text: "📱 9626471035", tag: "a", class: "creator-phone-badge", href: "tel:9626471035" }
+    ];
+
+    const creatorContainer = document.getElementById('creatorTypewriterTarget');
+    const creatorCursor = document.getElementById('creatorCursor');
+
+    let creatorSegIdx = 0;
+    let creatorCharIdx = 0;
+    let creatorCurrentElem = null;
+    let creatorHasStarted = false;
+
+    function typeCreatorDetails() {
+      if (!creatorContainer || creatorHasStarted) return;
+      creatorHasStarted = true;
+
+      function step() {
+        if (creatorSegIdx >= creatorSegments.length) {
+          if (creatorCursor) {
+            creatorCursor.style.animation = 'none';
+            creatorCursor.style.opacity = '0';
+            setTimeout(() => creatorCursor.remove(), 400);
+          }
+          return;
+        }
+
+        const currentSeg = creatorSegments[creatorSegIdx];
+        if (creatorCharIdx === 0) {
+          creatorCurrentElem = document.createElement(currentSeg.tag);
+          creatorCurrentElem.className = currentSeg.class;
+          if (currentSeg.href) {
+            creatorCurrentElem.href = currentSeg.href;
+            creatorCurrentElem.title = "அழைக்க கிளிக் செய்யவும் (Call: 9626471035)";
+          }
+          creatorContainer.appendChild(creatorCurrentElem);
+        }
+
+        creatorCurrentElem.textContent += currentSeg.text.charAt(creatorCharIdx);
+        creatorCharIdx++;
+
+        if (creatorCharIdx >= currentSeg.text.length) {
+          creatorSegIdx++;
+          creatorCharIdx = 0;
+        }
+
+        setTimeout(step, 35);
+      }
+      step();
+    }
+
+    if ('IntersectionObserver' in window) {
+      const cardElem = document.querySelector('.creator-card');
+      if (cardElem) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              typeCreatorDetails();
+              observer.disconnect();
+            }
+          });
+        }, { threshold: 0.2 });
+        observer.observe(cardElem);
+      } else {
+        typeCreatorDetails();
+      }
+    } else {
+      typeCreatorDetails();
+    }
+
+  </script>
+
+</body>
+</html>

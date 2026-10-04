@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>தனியார் துறை, திறன் பயிற்சிகள் & சுயதொழில் வழிகாட்டி | ceosvg.in</title>
+  
+  <!-- Google Fonts: Inter & Noto Sans Tamil -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-dark: #0f172a;
+      --primary-light: #eff6ff;
+      --secondary: #7c3aed;
+      --secondary-dark: #5b21b6;
+      --secondary-light: #f5f3ff;
+      --accent-green: #059669;
+      --accent-green-light: #ecfdf5;
+      --accent-amber: #d97706;
+      --accent-amber-light: #fffbeb;
+      --accent-rose: #e11d48;
+      --accent-rose-light: #fff1f2;
+      --bg-main: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-sub: #334155;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 6px 20px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 14px 35px -5px rgba(15, 23, 42, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: radial-gradient(at 0% 0%, rgba(224, 242, 254, 0.65) 0px, transparent 50%),
+                  radial-gradient(at 100% 0%, rgba(243, 232, 255, 0.65) 0px, transparent 50%),
+                  radial-gradient(at 50% 50%, rgba(254, 243, 199, 0.45) 0px, transparent 50%),
+                  radial-gradient(at 100% 100%, rgba(220, 252, 231, 0.5) 0px, transparent 50%),
+                  #f8fafc;
+      background-attachment: fixed;
+      color: var(--text-main);
+      line-height: 1.75;
+      padding: 16px;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    .portal-container {
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* Top Navigation Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .nav-buttons-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .top-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    }
+
+    .top-nav-btn.main-site { background-color: #0f172a; color: #ffffff; }
+    .top-nav-btn.main-site:hover { background-color: #1e293b; transform: translateY(-1px); }
+
+    .top-nav-btn.career-home { background-color: #0284c7; color: #ffffff; }
+    .top-nav-btn.career-home:hover { background-color: #0369a1; transform: translateY(-1px); }
+
+    .top-nav-btn svg { width: 16px; height: 16px; fill: currentColor; }
+
+    .district-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: #0369a1;
+      background: rgba(224, 242, 254, 0.85);
+      border: 1px solid #bae6fd;
+      padding: 7px 16px;
+      border-radius: 999px;
+      box-shadow: var(--shadow-sm);
+      backdrop-filter: blur(6px);
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb-bar {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 8px 16px;
+      margin-bottom: 20px;
+      font-size: 0.86rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: var(--text-muted);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .breadcrumb-bar a {
+      color: #0284c7;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .breadcrumb-bar a:hover { text-decoration: underline; color: #0369a1; }
+    .breadcrumb-separator { color: #94a3b8; font-size: 0.75rem; }
+    .breadcrumb-current { color: #1e3a8a; font-weight: 800; }
+
+    /* Portal Header */
+    .portal-header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 35%, #4338ca 70%, #6d28d9 100%);
+      border-radius: var(--radius-xl);
+      padding: 38px 30px;
+      color: #ffffff;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      margin-bottom: 26px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .header-tag {
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .header-tag.primary { background-color: #fef08a; color: #713f12; border-color: #fde047; }
+    .header-tag.thiran { background-color: #ecfdf5; color: #065f46; border-color: #6ee7b7; font-weight: 900; }
+    .header-tag.secondary { background-color: rgba(255, 255, 255, 0.18); color: #f8fafc; backdrop-filter: blur(8px); }
+
+    .portal-title {
+      font-size: 2.1rem;
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 12px;
+      color: #ffffff;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+
+    .accent-gold { color: #fde047; }
+
+    .portal-subtitle {
+      font-size: 1.02rem;
+      color: #e2e8f0;
+      max-width: 950px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    /* Quick Navigation Pills Box */
+    .quick-nav-box {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .quick-nav-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .quick-nav-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .quick-nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 14px;
+      background: #f1f5f9;
+      color: #334155;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      text-decoration: none;
+      border: 1px solid #cbd5e1;
+      transition: all 0.2s ease;
+    }
+
+    .quick-nav-link:hover {
+      background: var(--secondary);
+      color: #ffffff;
+      border-color: var(--secondary);
+      transform: translateY(-1px);
+    }
+
+    /* Content Section Wrapper */
+    .guide-section {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 30px 28px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.25s ease;
+    }
+
+    .guide-section:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #f1f5f9;
+    }
+
+    .section-icon-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .badge-indigo { background: #eef2ff; color: #4338ca; }
+    .badge-green { background: #ecfdf5; color: #059669; }
+    .badge-purple { background: #f5f3ff; color: #7c3aed; }
+    .badge-amber { background: #fffbeb; color: #d97706; }
+    .badge-rose { background: #fff1f2; color: #e11d48; }
+
+    .section-title {
+      font-size: 1.38rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .section-desc {
+      font-size: 0.98rem;
+      color: var(--text-sub);
+      margin-bottom: 18px;
+    }
+
+    /* Feature Grid / Cards inside sections */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-top: 16px;
+    }
+
+    .feature-card {
+      background: #faf5ff;
+      border: 1.5px solid #e9d5ff;
+      border-radius: var(--radius-md);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(124, 58, 237, 0.15);
+      border-color: #c084fc;
+    }
+
+    .feature-card.green-theme {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+    }
+    .feature-card.green-theme:hover {
+      box-shadow: 0 10px 25px rgba(5, 150, 105, 0.15);
+      border-color: #86efac;
+    }
+
+    .feature-card.blue-theme {
+      background: #f0f9ff;
+      border-color: #bae6fd;
+    }
+    .feature-card.blue-theme:hover {
+      box-shadow: 0 10px 25px rgba(2, 132, 199, 0.15);
+      border-color: #7dd3fc;
+    }
+
+    .feature-card.amber-theme {
+      background: #fffbeb;
+      border-color: #fde68a;
+    }
+    .feature-card.amber-theme:hover {
+      box-shadow: 0 10px 25px rgba(217, 119, 6, 0.15);
+      border-color: #fcd34d;
+    }
+
+    .feature-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .feature-badge {
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.4px;
+    }
+
+    .feature-title {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .feature-subtitle {
+      font-size: 0.86rem;
+      color: #64748b;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin-bottom: 16px;
+      font-size: 0.92rem;
+      color: #334155;
+    }
+
+    .feature-list li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 8px;
+    }
+
+    .feature-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #7c3aed;
+      font-weight: 900;
+    }
+
+    .feature-card.green-theme .feature-list li::before { color: #059669; }
+    .feature-card.blue-theme .feature-list li::before { color: #0284c7; }
+    .feature-card.amber-theme .feature-list li::before { color: #d97706; }
+
+    .feature-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 10px 16px;
+      background: var(--primary);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+      margin-top: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .feature-btn:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Highlight Notice Banner */
+    .notice-banner {
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      border: 1.5px solid #6ee7b7;
+      border-left: 6px solid #059669;
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      margin: 18px 0 24px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .notice-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .notice-content h4 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #065f46;
+      margin-bottom: 4px;
+    }
+
+    .notice-content p {
+      font-size: 0.92rem;
+      color: #047857;
+      line-height: 1.55;
+    }
+
+    /* Data Table Styling */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin: 20px 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      text-align: left;
+      background: #ffffff;
+    }
+
+    .custom-table th {
+      background: #f1f5f9;
+      color: #1e293b;
+      padding: 14px 16px;
+      font-weight: 800;
+      border-bottom: 2px solid #cbd5e1;
+      white-space: nowrap;
+    }
+
+    .custom-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #334155;
+      vertical-align: middle;
+    }
+
+    .custom-table tr:hover {
+      background: #f8fafc;
+    }
+
+    /* FAQ Accordion Styling */
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .faq-question {
+      padding: 14px 18px;
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: #0f172a;
+      background: #f8fafc;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    .faq-answer {
+      padding: 14px 18px;
+      font-size: 0.92rem;
+      color: #475569;
+      line-height: 1.65;
+      border-top: 1px solid var(--border);
+      background: #ffffff;
+    }
+
+    /* Motivational Thirukkural Section */
+    .kural-section {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 45%, #fefce8 100%);
+      border: 1.5px solid #fde047;
+      border-left: 6px solid #d97706;
+      border-radius: var(--radius-md);
+      padding: 22px 28px;
+      margin: 28px 0;
+      box-shadow: 0 6px 18px rgba(217, 119, 6, 0.1);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .kural-header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.84rem;
+      font-weight: 800;
+      color: #b45309;
+      background: rgba(254, 240, 138, 0.85);
+      border: 1px solid #fde68a;
+      padding: 4px 14px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      letter-spacing: 0.4px;
+    }
+
+    .kural-verse {
+      font-size: 1.32rem;
+      font-weight: 800;
+      color: #78350f;
+      line-height: 1.65;
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+
+    .kural-meaning {
+      font-size: 0.94rem;
+      color: #92400e;
+      font-weight: 600;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Creator & Administrator Details */
+    .creator-card {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 14px 22px;
+      margin: 26px 0 16px 0;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+
+    .creator-name-ta, .creator-name-en {
+      font-weight: 800;
+      font-size: 1.05rem;
+      background: linear-gradient(135deg, #1e40af 0%, #7c3aed 50%, #db2777 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      letter-spacing: 0.3px;
+      padding: 0 2px;
+    }
+
+    .creator-label {
+      font-weight: 700;
+      color: #334155;
+      font-size: 0.94rem;
+    }
+
+    .creator-role {
+      font-weight: 600;
+      color: #1e293b;
+      font-size: 0.94rem;
+    }
+
+    .creator-phone-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      color: #065f46;
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 3px 12px;
+      border-radius: 999px;
+      border: 1px solid #6ee7b7;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 5px rgba(5, 150, 105, 0.12);
+      margin-left: 6px;
+    }
+
+    .creator-phone-badge:hover {
+      background: #059669;
+      color: #ffffff;
+      box-shadow: 0 4px 10px rgba(5, 150, 105, 0.3);
+      transform: translateY(-1px);
+    }
+
+    .typing-cursor {
+      display: inline-block;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: #ec4899;
+      margin-left: 2px;
+      animation: blinkCursor 0.8s infinite;
+    }
+
+    @keyframes blinkCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Footer Section */
+    .portal-footer {
+      text-align: center;
+      padding: 24px 16px 20px;
+      margin-top: 20px;
+      border-top: 1px solid rgba(226, 232, 240, 0.9);
+      color: var(--text-sub);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .portal-footer a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      .portal-title { font-size: 1.65rem; }
+      .portal-header { padding: 28px 18px; }
+      .guide-section { padding: 22px 18px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .kural-verse { font-size: 1.15rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="portal-container">
+
+  <!-- Top Navigation Bar -->
+  <div class="top-bar">
+    <div class="nav-buttons-group">
+      <a href="index.html" class="top-nav-btn main-site" title="முதன்மை இணையதளம்">
+        <svg viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+        ceosvg.in முகப்பு
+      </a>
+      <a href="index.html" class="top-nav-btn career-home" title="உயர்கல்வி வழிகாட்டி முதன்மைப் பக்கம்">
+        🎓 உயர்கல்வி முகப்பு
+      </a>
+    </div>
+
+    <div class="district-badge">
+      <span>🏛️ தமிழ்நாடு பள்ளிக் கல்வித்துறை | சிவகங்கை மாவட்டம்</span>
+    </div>
+  </div>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumb-bar">
+    <a href="index.html">ceosvg.in</a>
+    <span class="breadcrumb-separator">/</span>
+    <a href="index.html">உயர்கல்வி வழிகாட்டி</a>
+    <span class="breadcrumb-separator">/</span>
+    <span class="breadcrumb-current">பிரிவு 05: தனியார் துறை, திறன் பயிற்சிகள் & சுயதொழில்</span>
+  </div>
+
+  <!-- Portal Header -->
+  <header class="portal-header">
+    <div class="header-badge-row">
+      <span class="header-tag primary">பிரிவு 05 | DIRECT CAREERS</span>
+      <span class="header-tag secondary">போட்டித்தேர்வு இல்லாத வேலைவாய்ப்புகள்</span>
+      <span class="header-tag thiran">🌟 திறன் தமிழ்நாடு (முன்னர் நான் முதல்வன்)</span>
+    </div>
+    <h1 class="portal-title">தனியார் துறை பணிகள், திறன் பயிற்சிகள் & <span class="accent-gold">சுயதொழில் வழிகாட்டி</span></h1>
+    <p class="portal-subtitle">
+      12-ஆம் வகுப்பு, ஐடிஐ, டிப்ளமோ மற்றும் பட்டப்படிப்பு முடித்த மாணவ, மாணவியருக்கான உடனடி வேலைவாய்ப்புகள், படித்துக்கொண்டே சம்பாதிக்கும் நிறுவனத் திட்டங்கள், தமிழக அரசின் திறன் பயிற்சிகள் மற்றும் அரசு மானியத் தொழில்முனைவோர் கடன் வாய்ப்புகள்.
+    </p>
+  </header>
+
+  <!-- Quick Navigation Pills -->
+  <div class="quick-nav-box">
+    <div class="quick-nav-title">
+      <span>⚡ விரைவு வழிசெலுத்தல் (Quick Links):</span>
+    </div>
+    <div class="quick-nav-grid">
+      <a href="#intro" class="quick-nav-link">📖 முன்னுரை & நோக்கம்</a>
+      <a href="#work-learn" class="quick-nav-link">💼 Zoho & HCL படிப்பு+வேலை</a>
+      <a href="#thiran-tn" class="quick-nav-link">🌟 திறன் தமிழ்நாடு (நான் முதல்வன்)</a>
+      <a href="#short-term-courses" class="quick-nav-link">⏱️ குறுகிய காலப் பயிற்சிகள் (1-6 மாதங்கள்)</a>
+      <a href="#apprenticeship" class="quick-nav-link">⚙️ தொழிற்பழகுநர் பயிற்சி (NAPS)</a>
+      <a href="#job-fairs" class="quick-nav-link">🏢 மாவட்ட வேலைவாய்ப்பு முகாம்கள்</a>
+      <a href="#self-employment" class="quick-nav-link">💰 சுயதொழில் மானியக் கடன்கள்</a>
+      <a href="#comparison" class="quick-nav-link">📊 ஒப்பீட்டு அட்டவணை</a>
+      <a href="#faq" class="quick-nav-link">❓ அடிக்கடி கேட்கப்படும் கேள்விகள்</a>
+      <a href="#portals" class="quick-nav-link">🌐 அதிகாரப்பூர்வ தளங்கள்</a>
+    </div>
+  </div>
+
+  <!-- Section 1: முன்னுரை -->
+  <section id="intro" class="guide-section">
+    <div class="section-header">
+      <div class="section-icon-badge badge-indigo">📖</div>
+      <div>
+        <h2 class="section-title">1. முன்னுரை & வழிகாட்டி நோக்கம்</h2>
+      </div>
+    </div>
+    <p class="section-desc">
+      பள்ளிக் கல்வியை முடிக்கும் அனைத்து மாணவர்களாலும் உயர்கல்விக் கட்டணம் செலுத்தி கல்லூரிகளுக்குச் செல்ல முடிவதில்லை அல்லது குடும்பச் சூழல் காரணமாக உடனடியாக வேலைவாய்ப்பைப் பெற வேண்டிய தேவை இருக்கலாம். போட்டித் தேர்வுகள் எழுதி அரசுப் பணிகளுக்காகக் காத்திருக்காமல், தங்களின் தனிப்பட்ட ஆர்வம், திறமை மற்றும் நேர்முகத் தேர்வு (Interview) மூலம் உடனடியாகக் கைநிறைய ஊதியம் பெறவும், சுயமாகத் தொழில் தொடங்கவும் எண்ணற்ற வாய்ப்புகள் காத்திருக்கின்றன.
+    </p>
+    <div class="notice-banner">
+      <div class="notice-icon">💡</div>
+      <div class="notice-content">
+        <h4>மாணவர்கள் அறிய வேண்டிய முக்கிய உண்மை:</h4>
+        <p>
+          இன்றைய நவீன உலகில் பட்டப்படிப்பை விட மாணவர்களின் <strong>செயல்முறைத் திறன் (Practical Skills), தகவல் தொடர்புத் திறன் (Communication) மற்றும் தொழில்நுட்ப அறிவே (Tech Skills)</strong> நேரடி வேலைவாய்ப்பைத் தீர்மானிக்கின்றன. 12-ஆம் வகுப்பிற்குப் பிறகே சம்பளத்துடன் கூடிய உயர்கல்வியை வழங்கும் முன்னணி கார்ப்பரேட் நிறுவனங்களும், இலவச திறன் பயிற்சிகளும் தமிழ்நாட்டில் தாராளமாக உள்ளன!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Work-Integrated Programs (Zoho & HCL) -->
+  <section id="work-learn" class="guide-section">
+    <div class="section-header">
+      <div class="section-icon-badge badge-purple">💼</div>
+      <div>
+        <h2 class="section-title">2. 12-ஆம் வகுப்பிற்குப் பிந்தைய நேரடி வேலை + பட்டப்படிப்பு திட்டங்கள் (Work & Learn Programs)</h2>
+      </div>
+    </div>
+    <p class="section-desc">
+      கல்லூரிக்குச் செல்லாமல், முன்னணி பன்னாட்டுத் தகவல் தொழில்நுட்ப (IT) நிறுவனங்களில் பயிற்சி பெற்று, மாதந்தோறும் உதவித்தொகையும் (Stipend) பெற்று, முடிவில் நிரந்தர மென்பொருள் பொறியாளராகப் பணியில் சேரும் அரிய வாய்ப்புகள்:
+    </p>
+
+    <div class="features-grid">
+      <!-- Zoho Schools -->
+      <div class="feature-card">
+        <div>
+          <div class="feature-card-header">
+            <span class="feature-badge" style="background: #eef2ff; color: #4338ca;">கட்டணம் இல்லை | ₹0 FEE</span>
+            <span style="font-weight: 800; font-size: 0.88rem; color: #7c3aed;">Zoho Corporation</span>
+          </div>
+          <h3 class="feature-title">Zoho Schools of Learning (ZSL)</h3>
+          <div class="feature-subtitle">மென்பொருள் & தொழில்நுட்பப் பயிற்சி</div>
+          <ul class="feature-list">
+            <li><strong>🏛️ பயிற்சி வழங்கும் நிறுவனம் & வளாகங்கள்:</strong> Zoho கார்ப்பரேஷன் (தென்காசி வல்லம் வளாகம் & சென்னை எஸ்டான்சியா வளாகம்).</li>
+            <li><strong>🎓 கல்வித்தகுதி:</strong> 12-ஆம் வகுப்பு தேர்ச்சி (கலை, அறிவியல், வணிகவியல் என எந்தப் பாடப்பிரிவும் விண்ணப்பிக்கலாம்; வயது வரம்பு: 17-20).</li>
+            <li><strong>🎯 சேர்க்கை முறை (Admission Process):</strong> 
+              <br>• நிலை 1: ஆன்லைன் விண்ணப்பப் பதிவு (zohoschools.com).
+              <br>• நிலை 2: பொது நுண்ணறிவு & தர்க்க சிந்தனைத் தேர்வு (General Aptitude & Math).
+              <br>• நிலை 3: அடிப்படை கணினி தர்க்கம் / படைப்பாற்றல் தேர்வு (Logic & Programming Aptitude).
+              <br>• நிலை 4: இறுதிக் கட்ட நேர்முகத் தேர்வு (Personal Interview).
+            </li>
+            <li><strong>💰 கல்விக் கட்டணம்:</strong> <strong>முற்றிலும் இலவசம் (ரூபாய் 0)</strong>. புத்தகம், கணினி ஆய்வகம், உணவு அனைத்தும் இலவசம்.</li>
+            <li><strong>💵 மாத உதவித்தொகை (Stipend):</strong> பயிற்சி காலத்தில் மாணவருக்கே மாதம் <strong>₹10,000 முதல் ₹12,000 வரை</strong> வழங்கப்படுகிறது.</li>
+            <li><strong>💼 வேலைவாய்ப்பு & ஊதியம்:</strong> பயிற்சி முடித்தவுடன் Zoho நிறுவனத்தில் முழுநேர சாப்ட்வேர் டெவலப்பர் / QA / டிசைனர் பணி (தொடக்க ஆண்டு ஊதியம்: <strong>₹4,50,000 - ₹8,00,000</strong>).</li>
+          </ul>
+        </div>
+        <a href="https://www.zohoschools.com/" target="_blank" rel="noopener noreferrer" class="feature-btn">
+          ZSL சேர்க்கை போர்ட்டல் ➔
+        </a>
+      </div>
+
+      <!-- HCL TechBee -->
+      <div class="feature-card blue-theme">
+        <div>
+          <div class="feature-card-header">
+            <span class="feature-badge" style="background: #e0f2fe; color: #0369a1;">படிப்பு + IT வேலை</span>
+            <span style="font-weight: 800; font-size: 0.88rem; color: #0284c7;">HCL Technologies</span>
+          </div>
+          <h3 class="feature-title">HCL TechBee (Early Career Program)</h3>
+          <div class="feature-subtitle">12-ஆம் வகுப்பு கணித மாணவர்களுக்கான தொழில்நுட்பப் பயிற்சி</div>
+          <ul class="feature-list">
+            <li><strong>🏛️ பயிற்சி வழங்கும் நிறுவனம்:</strong> HCL டெக்னாலஜிஸ் (சென்னை, மதுரை, திருச்சி, பெங்களூரு, நொய்டா மையங்கள்).</li>
+            <li><strong>🎓 கல்வித்தகுதி:</strong> 12-ஆம் வகுப்பில் கணிதம் அல்லது வணிகக் கணிதம் (Maths / Business Maths) பயின்று 60% மதிப்பெண்கள் பெற்றிருத்தல் வேண்டும்.</li>
+            <li><strong>🎯 சேர்க்கை முறை (Admission Process):</strong>
+              <br>• நிலை 1: இணையதளப் பதிவு (hcltechbee.com).
+              <br>• நிலை 2: HCL தொழில் திறனறித் தேர்வு (H-CAT ஆன்லைன் தேர்வு - கணிதம், தர்க்கம் & ஆங்கிலம்).
+              <br>• நிலை 3: தொழில்நுட்ப மற்றும் மனிதவள நேர்முகத் தேர்வு (Technical & HR Interview).
+            </li>
+            <li><strong>💰 பயிற்சிக் கட்டணம் & கடன் சலுகை:</strong> பயிற்சிக் கட்டணம் உண்டு (ரூ. 1,00,000 - ரூ. 1,40,000 + GST). <strong>முக்கிய சலுகை:</strong> 100% கல்விக் கடன் வங்கியின் வழியே (Axis Bank / IDBI) எவ்வித அடமானமும் இன்றி பெற்றுத்தரப்படும்; வேலையில் சேர்ந்த பிறகே சம்பளத்தில் இருந்து எளிய தவணையில் பிடித்தம் செய்யப்படும். 90% மேல் மதிப்பெண் பெறும் மாணவர்களுக்கு <strong>100% கட்டண விலக்கு / உதவித்தொகை</strong> உண்டு!</li>
+            <li><strong>💵 மாத உதவித்தொகை:</strong> இன்டர்ன்ஷிப் காலத்தில் மாதம் <strong>₹10,000</strong>.</li>
+            <li><strong>💼 வேலை + உயர்கல்வி:</strong> HCL-ல் முழுநேர IT Engineer பணி (ஆண்டு ஊதியம்: <strong>₹2,20,000 - ₹3,00,000</strong>) மற்றும் BITS Pilani, SASTRA பல்கலைக்கழகங்களில் B.Sc/BCA பட்டப்படிப்பு.</li>
+          </ul>
+        </div>
+        <a href="https://www.hcltechbee.com/" target="_blank" rel="noopener noreferrer" class="feature-btn" style="background: #0284c7;">
+          HCL TechBee சேர்க்கை போர்ட்டல் ➔
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: திறன் தமிழ்நாடு -->
+  <section id="thiran-tn" class="guide-section">
+    <div class="section-header">
+      <div class="section-icon-badge badge-green">🌟</div>
+      <div>
+        <h2 class="section-title">3. 'திறன் தமிழ்நாடு' (முன்னர் நான் முதல்வன்) & TNSDC இலவச திறன் பயிற்சிகள்</h2>
+      </div>
+    </div>
+    
+    <div class="notice-banner" style="background: #ecfdf5; border-color: #a7f3d0; border-left-color: #059669;">
+      <div class="notice-icon">📢</div>
+      <div class="notice-content">
+        <h4>முக்கியப் பெயர் மாற்றம் அறிவிப்பு:</h4>
+        <p>
+          தமிழ்நாடு அரசால் பள்ளி மற்றும் கல்லூரி மாணவர்களுக்காகத் தொடங்கப்பட்ட முதன்மைத் திட்டமான <strong>'நான் முதல்வன்'</strong> தற்போது <strong>'திறன் தமிழ்நாடு' (Thiran Tamil Nadu - Thiran TN)</strong> என மறுபெயரிடப்பட்டு, அதிநவீன தொழில்நுட்பம் மற்றும் வேலைவாய்ப்பு இணைப்புகளுடன் விரிவுபடுத்தப்பட்டுள்ளது!
+        </p>
+      </div>
+    </div>
+
+    <p class="section-desc">
+      தமிழ்நாடு திறன் மேம்பாட்டுக் கழகம் (TNSDC) மற்றும் திறன் தமிழ்நாடு இணைந்து பள்ளி/கல்லூரி முடித்த இளைஞர்களுக்கு முற்றிலும் இலவசமாக சர்வதேசத் தரம் வாய்ந்த குறுகிய கால திறன் பயிற்சிகளையும், அதனைத் தொடர்ந்து நேரடி வேலைவாய்ப்பு முகாம்களையும் நடத்துகிறது:
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-card green-theme">
+        <h3 class="feature-title">பயிற்சி வழங்கும் மையங்கள் & சேர்க்கை முறை</h3>
+        <ul class="feature-list">
+          <li><strong>🏛️ பயிற்சி வழங்கும் நிறுவனங்கள்:</strong> தமிழ்நாடு திறன் மேம்பாட்டுக் கழகத்தின் (TNSDC) அங்கீகரிக்கப்பட்ட தொழிற்கல்வி நிறுவனங்கள், அரசு ஐடிஐ (ITI), அரசு கலை & அறிவியல் கல்லூரிகள் மற்றும் மாவட்ட திறன் பயிற்சி மையங்கள் (சிவகங்கை, காரைக்குடி, தேவகோட்டை).</li>
+          <li><strong>🎓 தகுதிகள்:</strong> 10-ஆம் வகுப்பு, 12-ஆம் வகுப்பு, ஐடிஐ, பாலிடெக்னிக் அல்லது பட்டப்படிப்பு முடித்த / பயிலும் மாணவர்கள்.</li>
+          <li><strong>🎯 சேர்க்கை முறை (Admission Process):</strong>
+            <br>• நிலை 1: <strong>thiran.tn.gov.in</strong> அல்லது <strong>naanmudhalvan.tn.gov.in</strong> போர்ட்டலில் ஆதார் எண் மற்றும் கல்வி விவரங்களுடன் பதிவு.
+            <br>• நிலை 2: விருப்பமான பாடப்பிரிவு மற்றும் அருகிலுள்ள மாவட்ட பயிற்சி மையத்தைத் தேர்ந்தெடுத்தல்.
+            <br>• நிலை 3: சேர்க்கை அறிவிப்பு வரப்பெற்றவுடன் அசல் சான்றிதழ்களுடன் பயிற்சி மையத்தில் நேரடிச் சேர்க்கை.
+          </li>
+          <li><strong>💰 கல்விக் கட்டணம்:</strong> <strong>100% முற்றிலும் இலவசம் (ரூபாய் 0 கட்டணம்)</strong>. பயிற்சி, ஆய்வுக்கூடப் பயன்பாடு மற்றும் சான்றிதழ் கட்டணம் முழுவதையும் தமிழ்நாடு அரசே ஏற்கிறது.</li>
+        </ul>
+        <a href="https://www.naanmudhalvan.tn.gov.in" target="_blank" rel="noopener noreferrer" class="feature-btn" style="background: #059669;">
+          திறன் தமிழ்நாடு பதிவு போர்ட்டல் ➔
+        </a>
+      </div>
+
+      <div class="feature-card green-theme">
+        <h3 class="feature-title">முன்னணித் துறைகள் & வேலைவாய்ப்பு இணைப்புகள்</h3>
+        <ul class="feature-list">
+          <li><strong>தொழில்நுட்பப் பாடப்பிரிவுகள்:</strong> செயற்கை நுண்ணறிவு (AI), Data Analytics, சைபர் செக்யூரிட்டி, Full Stack Web Development, கிளவுட் கம்ப்யூட்டிங்.</li>
+          <li><strong>தொழில்துறை பாடப்பிரிவுகள்:</strong> எலக்ட்ரிக் வாகனம் (EV) பராமரிப்பு, தளவாடங்கள் (Logistics & Supply Chain), CNC ஆபரேட்டிங்.</li>
+          <li><strong>வணிகம் & மருத்துவம்:</strong> வங்கி மற்றும் நிதிச் சேவைகள் (BFSI), Tally/GST, மருத்துவமனை உதவியாளர் (Healthcare Support).</li>
+          <li><strong>💼 வேலைவாய்ப்பு உத்தரவாதம்:</strong> Google, Microsoft, IBM, Infosys நிறுவனங்களின் உலகளாவிய சான்றிதழுடன், சிவகங்கை மற்றும் தமிழக தொழிற்பேட்டைகளில் பிரத்யேக வேலைவாய்ப்பு முகாம்கள் (Job Fairs) வழியே நேரடி நியமனம்.</li>
+        </ul>
+        <a href="https://www.tnsdc.tn.gov.in" target="_blank" rel="noopener noreferrer" class="feature-btn" style="background: #047857;">
+          TNSDC அதிகாரப்பூர்வ தளம் ➔
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Short-Term Job-Oriented Courses -->
+  <section id="short-term-courses" class="guide-section">
+    <div class="section-header">
+      <div class="section-icon-badge badge-rose">⏱️</div>
+      <div>
+        <h2 class="section-title">4. குறுகிய கால தொழிற்பயிற்சிகள் & உடனடி வேலைவாய்ப்புள்ள பாடப்பிரிவுகள் (1 முதல் 6 மாதங்கள்)</h2>
+      </div>
+    </div>
+    <p class="section-desc">
+      நீண்ட காலப் பட்டப்படிப்புகள் படிக்க இயலாத அல்லது 1 முதல் 6 மாதங்களுக்குள் ஒரு தொழில்முறைத் திறனைக் (Skill Certification) கற்றுக்கொண்டு உடனே வேலைவாய்ப்பு பெற விரும்பும் மாணவ, மாணவியருக்கான தலைசிறந்த குறுகிய காலப் பயிற்சிகள்:
+    </p>
+
+    <!-- 4.1 Healthcare Support -->
+    <div style="margin-top: 18px; margin-bottom: 22px;">
+      <h3 style="font-size: 1.18rem; font-weight: 800; color: #0f172a; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-flex; justify-content: center; align-items: center; width: 28px; height: 28px; background: #fee2e2; color: #dc2626; border-radius: 6px; font-size: 14px;">🩺</span>
+        அ) மருத்துவம் & அவசர சிகிச்சைப் பிரிவுகள் (Healthcare Short-Term Courses)
+      </h3>
+      <div class="features-grid">
+        <div class="feature-card" style="background: #fff1f2; border-color: #fecdd3;">
+          <h4 class="feature-title">Emergency Medical Technician (EMT)</h4>
+          <div class="feature-subtitle">108 ஆம்புலன்ஸ் & அவசர சிகிச்சைப் பிரிவு</div>
+          <ul class="feature-list">
+            <li><strong>🏛️ பயிற்சி வழங்கும் நிறுவனங்கள்:</strong> GVK EMRI (108 ஆம்புலன்ஸ் பயிற்சி மையம், சென்னை/மதுரை), அப்பல்லோ மெட்ஸ்கில்ஸ், இந்திய செஞ்சிலுவை சங்கம் (Red Cross).</li>
+            <li><strong>🎓 தகுதி & காலம்:</strong> 10 / 12-ஆம் வகுப்பு தேர்ச்சி | 3 முதல் 6 மாதங்கள்.</li>
+            <li><strong>🎯 சேர்க்கை முறை:</strong> கல்விச் சான்றிதழ் சரிபார்ப்பு மற்றும் எளிய உடற்தகுதி / நேர்முகத் தேர்வு.</li>
+            <li><strong>💰 பயிற்சிக் கட்டணம்:</strong> GVK EMRI மற்றும் அரசு திறன் திட்டங்களில் <strong>100% இலவசம் (₹0)</strong>; தனியார் நிறுவனங்களில் ₹15,000 - ₹25,000 வரை.</li>
+            <li><strong>💼 வேலை & ஊதியம்:</strong> 108 ஆம்புலன்ஸ் & தனியார் தீவிர சிகிச்சைப் பிரிவுகளில் உடனடிப் பணி (மாதம் <strong>₹14,000 - ₹22,000</strong>).</li>
+          </ul>
+        </div>
+
+        <div class="feature-card" style="background: #fff1f2; border-color: #fecdd3;">
+          <h4 class="feature-title">மருந்தக உதவியாளர் (Pharmacy Assistant)</h4>
+          <div class="feature-subtitle">மருந்து விநியோகம் & இருப்பு மேலாண்மை</div>
+          <ul class="feature-list">
+            <li><strong>🏛️ பயிற்சி வழங்கும் நிறுவனங்கள்:</strong> TNSDC திறன் தமிழ்நாடு அங்கீகரிக்கப்பட்ட மருத்துவ மையங்கள், ரெட்கிராஸ், முன்னணி பார்மசி நிறுவனங்கள்.</li>
+            <li><strong>🎓 தகுதி & காலம்:</strong> 10 / 12-ஆம் வகுப்பு | 3 மாதங்கள்.</li>
+            <li><strong>🎯 சேர்க்கை முறை:</strong> நேரடி விண்ணப்பம் / திறன் தமிழ்நாடு இணையதளப் பதிவு.</li>
+            <li><strong>💰 பயிற்சிக் கட்டணம்:</strong> அரசுத் திட்டங்களில் <strong>முற்றிலும் இலவசம்</strong>; தனியார் பயிற்சி நிலையங்களில் ₹8,000 - ₹15,000.</li>
+            <li><strong>💼 வேலை & ஊதியம்:</strong> அப்பல்லோ பார்மசி, மெட்ப்ளஸ், உள்ளூர் மருந்தகங்களில் உடனடி வேலை (மாதம் <strong>₹12,000 - ₹18,000</strong>).</li>
+          </ul>
+        </div>
+
+        <div class="feature-card" style="background: #fff1f2; border-color: #fecdd3;">
+          <h4 class="feature-title">ரத்த மாதிரி சேகரிப்பாளர் (Phlebotomist) & Lab Asst.</h4>
+          <div class="feature-subtitle">மருத்துவப் பரிசோதனை ஆய்வகப் பணிகள்</div>
+          <ul class="feature-list">
+            <li><strong>🏛️ பயிற்சி வழங்கும் நிறுவனங்கள்:</strong> அரசு மருத்துவக் கல்லூரி துணை மையங்கள், Thyrocare, Metropolis, Neuberg அகாடமிகள்.</li>
+            <li><strong>🎓 தகுதி & காலம்:</strong> 12-ஆம் வகுப்பு (உயிரியல்/அறிவியல் பிரிவு முன்னுரிமை) | 3 முதல் 4 மாதங்கள்.</li>
+            <li><strong>🎯 சேர்க்கை முறை:</strong> 12-ஆம் வகுப்பு மதிப்பெண் அடிப்படையில் நேரடிச் சேர்க்கை.</li>
+            <li><strong>💰 பயிற்சிக் கட்டணம்:</strong> அரசு மையங்களில் <strong>இலவசம்</strong>; தனியார் அமைப்புகளில் ₹10,000 - ₹20,000.</li>
+            <li><strong>💼 வேலை & ஊதியம்:</strong> டயக்னாஸ்டிக் லேப்கள், ரத்த வங்கிகள் மற்றும் மருத்துவமனைகளில் உடனடி வேலை (மாதம் <strong>₹13,000 - ₹20,000</strong>).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4.2 IT & Accounting -->
+    <div style="margin-top: 24px; margin-bottom: 22px;">
+      <h3 style="font-size: 1.18rem; font-weight: 800; color: #0f172a; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-flex; justify-content: center; align-items: center; width: 28px; height: 28px; background: #e0f2fe; color: #0284c7; border-radius: 6px; font-size: 14px;">💻</span>
+        ஆ) தகவல் தொழில்நுட்பம் & கணக்கியல் மேலாண்மை (IT, Tally & Office Admin)
+      </h3>
+      <div class="features-grid">
+        <div class="feature-card blue-theme">
+          <h4 class="feature-title">Tally Prime with GST & E-Filing</h4>
+          <div class="feature-subtitle">நவீன வர்த்தகக் கணக்காளர் பயிற்சி</div>
+          <ul class="feature-list">
+            <li><strong>🏛️ பயிற்சி வழங்கும் நிறுவனங்கள்:</strong> தமிழ்நாடு அரசு இ-சேவை / எல்காட் (ELCOT) மையங்கள், Tally Academy, முன்னணி உள்ளூர் கணினி மையங்கள்.</li>
+            <li><strong>🎓 தகுதி & காலம்:</strong> 12-ஆம் வகுப்பு (வணிகவியல் அல்லது எந்தப் பிரிவும்) | 2 முதல் 3 மாதங்கள்.</li>
+            <li><strong>🎯 சேர்க்கை முறை:</strong> நேரடிச் சேர்க்கை (எந்தவித நுழைவுத் தேர்வும் இல்லை).</li>
+            <li><strong>💰 பயிற்சிக் கட்டணம்:</strong> திறன் தமிழ்நாடு மற்றும் RSETI மையங்களில் <strong>முற்றிலும் இலவசம் (₹0)</strong>; தனியார் கணினி மையங்களில் ₹4,000 - ₹8,000.</li>
+            <li><strong>💼 வேலை & ஊதியம்:</strong> ஆடிட்டர் அலுவலகங்கள் (CA Firms), நிறுவனங்கள், கடைகளில் உடனடி கணக்காளர் (Junior Accountant) பணி (மாதம் <strong>₹12,000 - ₹22,000</strong>).</li>
+          </ul>
+        </div>
+
+        <div class="feature-card blue-theme">
+          <h4 class="feature-title">DTP & கிராபிக் டிசைனிங் (Canva / Photoshop)</h4>
+          <div class="feature-subtitle">டிஜிட்டல் மீடியா & அச்சு வடிவமைப்பு</div>
+          <ul class="feature-list">
+            <li><strong>🏛️ பயிற்சி வழங்கும் நிறுவனங்கள்:</strong> அரசு தொழில் பயிற்சி நிலையங்கள் (ITI குறுகிய காலப் பிரிவு), RSETI சிவகங்கை, உள்ளூர் மல்டிமீடியா மையங்கள்.</li>
+            <li><strong>🎓 தகுதி & காலம்:</strong> 10 / 12-ஆம் வகுப்பு | 2 மாதங்கள்.</li>
+            <li><strong>🎯 சேர்க்கை முறை:</strong> கணினி அடிப்படைக் கணிப்புடன் நேரடிச் சேர்க்கை.</li>
+            <li><strong>💰 பயிற்சிக் கட்டணம்:</strong> RSETI-ல் <strong>100% இலவசம்</strong>; தனியார் பயிற்சி மையங்களில் ₹5,000 - ₹10,000.</li>
+            <li><strong>💼 வேலை & ஊதியம்:</strong> அச்சகங்கள் (Flex Printing, Digital Press), போட்டோ ஸ்டுடியோக்கள், நாளிதழ் அலுவலகங்களில் உடனடி வேலை அல்லது சொந்தமாக டிசைனிங் சென்டர் (மாதம் <strong>₹14,000 - ₹25,000</strong>).</li>
+          </ul>
+        </div>
+
+        <div class="feature-card blue-theme">
+          <h4 class="feature-title">CCTV கேமரா பொருத்துதல் & நெட்வொர்க்கிங்</h4>
+          <div class="feature-subtitle">பாதுகாப்பு சாதனங்கள் நிறுவுதல் & பராமரிப்பு</div>
+          <ul class="feature-list">
+            <li><strong>🏛️ பயிற்சி வழங்கும் நிறுவனங்கள்:</strong> IOB RSETI சிவகங்கை, அரசு ஐடிஐ குறுகிய கால தொழிற்பிரிவு, சிபி பிளஸ் / ஹிக்விஷன் அங்கீகரிக்கப்பட்ட அகாடமிகள்.</li>
+            <li><strong>🎓 தகுதி & காலம்:</strong> 10-ஆம் வகுப்பு தேர்ச்சி | 1 மாதம் (30 நாட்கள்).</li>
+            <li><strong>🎯 சேர்க்கை முறை:</strong> RSETI சிவகங்கை மையத்தில் நேரடிப் பதிவு மற்றும் சேர்க்கை.</li>
+            <li><strong>💰 பயிற்சிக் கட்டணம்:</strong> RSETI-ல் <strong>இலவச உணவு & தங்குமிடத்துடன் 100% இலவசம்</strong>; தனியாரில் ₹6,000 - ₹10,000.</li>
+            <li><strong>💼 வேலை & ஊதியம்:</strong> வீடுகள், பள்ளிகள், வங்கிகளில் சிசிடிவி கேமரா பொருத்துதல்; உடனடி சுயதொழிலாகச் செய்து மாதம் <strong>₹18,000 - ₹35,000</strong> வரை வருமானம் ஈட்டலாம்.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4.3 Technical & Industrial Trades -->
+    <div style="margin-top: 24px; margin-bottom: 22px;">
+      <h3 style="font-size: 1.18rem; font-weight: 800; color: #0f172a; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-flex; justify-content: center; align-items: center; width: 28px; height: 28px; background: #fef3c7; color: #d97706; border-radius: 6px; font-size: 14px;">🔧</span>
+        இ) தொழில்நுட்பம் & தொழில்துறை பழுதுநீக்கும் பணிகள் (Technical & Service Trades)
+      </h3>
+      <div class="features-grid">
+        <div class="feature-card amber-theme">
+          <h4 class="feature-title">ஸ்மார்ட்போன் பழுதுபார்த்தல் & சர்வீசிங்</h4>
+          <div class="feature-subtitle">ஹார்டுவேர், சிப் லெவல் & சாப்ட்வேர் சர்வீஸ்</div>
+          <ul class="feature-list">
+            <li><strong>🏛️ பயிற்சி வழங்கும் நிறுவனங்கள்:</strong> IOB RSETI சிவகங்கை, அரசு ஐடிஐ குறுகிய காலப் பிரிவு, Advanced Training Institute (ATI, சென்னை).</li>
+            <li><strong>🎓 தகுதி & காலம்:</strong> 8-ஆம் / 10-ஆம் / 12-ஆம் வகுப்பு | 30 முதல் 45 நாட்கள்.</li>
+            <li><strong>🎯 சேர்க்கை முறை:</strong> நேரடி விண்ணப்பம் / RSETI சிவகங்கை அலுவலகத்தில் சேர்க்கை.</li>
+            <li><strong>💰 பயிற்சிக் கட்டணம்:</strong> RSETI-ல் <strong>முற்றிலும் இலவசம் (₹0)</strong> (இலவச உணவு & தங்குமிடம் உண்டு); தனியார் இன்ஸ்டிடியூட்களில் ₹8,000 - ₹15,000.</li>
+            <li><strong>💼 வேலை & ஊதியம்:</strong> முன்னணி பிராண்டுகளின் சர்வீஸ் சென்டர்களில் வேலை அல்லது வெறும் ₹20,000 உதிரிபாக முதலீட்டில் சொந்த சர்வீஸ் கடை (மாத வருமானம்: <strong>₹18,000 - ₹40,000+</strong>).</li>
+          </ul>
+        </div>
+
+        <div class="feature-card amber-theme">
+          <h4 class="feature-title">ஏசி & குளிர்சாதனப் பெட்டி மெக்கானிக் (HVAC)</h4>
+          <div class="feature-subtitle">குளிரூட்டும் சாதனங்கள் நிறுவுதல் & பழுதுநீக்குதல்</div>
+          <ul class="feature-list">
+            <li><strong>🏛️ பயிற்சி வழங்கும் நிறுவனங்கள்:</strong> அரசு ஐடிஐ, திறன் தமிழ்நாடு (Thiran TN) மையங்கள், Daikin / Voltas தொழில் கூட்டமைப்பு மையங்கள்.</li>
+            <li><strong>🎓 தகுதி & காலம்:</strong> 10-ஆம் / 12-ஆம் வகுப்பு / ITI | 2 முதல் 3 மாதங்கள்.</li>
+            <li><strong>🎯 சேர்க்கை முறை:</strong> திறன் தமிழ்நாடு போர்ட்டல் அல்லது அரசு ஐடிஐ வழியாக நேரடிச் சேர்க்கை.</li>
+            <li><strong>💰 பயிற்சிக் கட்டணம்:</strong> அரசு திறன் திட்டங்களில் <strong>முற்றிலும் இலவசம்</strong>; தனியார் தொழில்நுட்ப மையங்களில் ₹10,000 - ₹18,000.</li>
+            <li><strong>💼 வேலை & ஊதியம்:</strong> Voltas, Blue Star, LG நிறுவனங்களின் டீலர் சர்வீஸ் சென்டர்கள் மற்றும் சுயதொழில் (மாதம் <strong>₹18,000 - ₹35,000</strong>).</li>
+          </ul>
+        </div>
+
+        <div class="feature-card amber-theme">
+          <h4 class="feature-title">சூரிய ஒளி மின்சார டெக்னீசியன் (Solar Rooftop)</h4>
+          <div class="feature-subtitle">சூர்யமித்ரா (Suryamitra) திறன் பயிற்சி</div>
+          <ul class="feature-list">
+            <li><strong>🏛️ பயிற்சி வழங்கும் நிறுவனங்கள்:</strong> தேசிய சூரிய ஆற்றல் நிறுவனம் (NISE) மற்றும் தமிழ்நாடு எரிசக்தி முகமை (TEDA) அங்கீகரித்த பயிற்சி மையங்கள்.</li>
+            <li><strong>🎓 தகுதி & காலம்:</strong> 10-ஆம் வகுப்பு / ITI (Electrician/Wireman) / 12-ஆம் வகுப்பு | 3 மாதங்கள் (600 மணி நேரம்).</li>
+            <li><strong>🎯 சேர்க்கை முறை:</strong> <strong>suryamitra.nise.res.in</strong> இணையதளப் பதிவு / மாவட்ட TEDA மையம் வழியாகத் தேர்வு.</li>
+            <li><strong>💰 பயிற்சிக் கட்டணம்:</strong> மத்திய புதிய மற்றும் புதுப்பிக்கத்தக்க எரிசக்தி அமைச்சகத்தின் (MNRE) முழு நிதியுதவியுடன் <strong>100% இலவசப் பயிற்சி</strong>.</li>
+            <li><strong>💼 வேலை & ஊதியம்:</strong> பிரதமர் சூர்ய கர் (PM Surya Ghar) திட்டத்தால் சோலார் பேனல் அமைக்கும் முன்னணி நிறுவனங்களில் உடனடி வேலை (மாதம் <strong>₹16,000 - ₹26,000</strong>).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4.4 Where to Study Free in Sivagangai -->
+    <div class="notice-banner" style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border-color: #86efac; border-left-color: #059669; margin-top: 24px;">
+      <div class="notice-icon">🏛️</div>
+      <div class="notice-content">
+        <h4 style="font-size: 1.05rem; color: #065f46;">இப்பயிற்சிகளை சிவகங்கை மாவட்டத்தில் 100% இலவசமாகப் பெறுவது எப்படி?</h4>
+        <p style="color: #047857; margin-bottom: 8px;">
+          சிவகங்கை மாவட்ட கிராமப்புற மாணவ, மாணவியருக்கு மத்திய/மாநில அரசும் இந்தியன் ஓவர்சீஸ் வங்கியும் இணைந்து நடத்தும் <strong>IOB RSETI (கிராமப்புற சுயவேலைவாய்ப்பு பயிற்சி நிறுவனம்)</strong> மூலம் முற்றிலும் <strong>இலவச உணவு, தங்குமிடம் மற்றும் சான்றிதழுடன்</strong> 15 முதல் 30 நாட்கள் வரை இப்பயிற்சிகள் இலவசமாக வழங்கப்படுகின்றன!
+        </p>
+        <p style="color: #047857; font-weight: 700;">
+          📍 அணுக வேண்டிய முகவரி: IOB RSETI, மாவட்ட ஆட்சியர் வளாகம் அருகில், சிவகங்கை. | 📞 உதவிக்கு: 04575-240258 / 14417.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Apprenticeship -->
+  <section id="apprenticeship" class="guide-section">
+    <div class="section-header">
+      <div class="section-icon-badge badge-amber">⚙️</div>
+      <div>
+        <h2 class="section-title">5. தேசிய தொழிற்பழகுநர் பயிற்சித் திட்டம் (NAPS / NATS Apprenticeship)</h2>
+      </div>
+    </div>
+    <p class="section-desc">
+      மத்திய திறன் மேம்பாட்டு அமைச்சகம் மற்றும் கல்வி அமைச்சகம் இணைந்து நடத்தும் தேசிய தொழிற்பழகுநர் திட்டம். 10-ஆம் வகுப்பு, 12-ஆம் வகுப்பு, ஐடிஐ மற்றும் டிப்ளமோ முடித்தவர்களுக்கு இந்தியாவின் மிகப்பெரிய பொதுத்துறை மற்றும் தனியார் துறை நிறுவனங்களில் நேரடித் தொழிற்பயிற்சி வழங்கப்படுகிறது.
+    </p>
+
+    <!-- Apprenticeship Admission & Fee Details -->
+    <div style="background: #fffbeb; border: 1.5px solid #fde68a; border-radius: var(--radius-md); padding: 18px 22px; margin-bottom: 20px;">
+      <h4 style="font-size: 1.05rem; font-weight: 800; color: #92400e; margin-bottom: 8px;">🎯 தொழிற்பழகுநர் சேர்க்கை முறை & கட்டண விவரங்கள்:</h4>
+      <ul style="list-style: none; font-size: 0.92rem; color: #78350f; line-height: 1.7;">
+        <li><strong>🏛️ பயிற்சி வழங்கும் நிறுவனங்கள்:</strong> Southern Railway, TVS Motors, Ashok Leyland, BHEL திருச்சி, Hyundai ஒரகடம், L&T, Neyveli Lignite Corporation (NLC).</li>
+        <li><strong>🎯 சேர்க்கை முறை:</strong> <strong>apprenticeshipindia.gov.in</strong> (NAPS) அல்லது <strong>nats.education.gov.in</strong> (NATS) போர்ட்டலில் ஆன்லைனில் பதிவு செய்ய வேண்டும் ➔ நிறுவனங்களின் காலிப்பணியிட அறிவிப்புகளுக்கு விண்ணப்பிக்க வேண்டும் ➔ மதிப்பெண் மெரிட் மற்றும் சான்றிதழ் சரிபார்ப்பு மூலம் தேர்வு.</li>
+        <li><strong>💰 பயிற்சிக் கட்டணம்:</strong> <strong>ரூபாய் 0 (கட்டணம் எதுவும் கிடையாது)</strong>. மாறாக, மத்திய அரசும் நிறுவனமும் இணைந்து மாணவருக்கு <strong>மாதந்தோறும் ₹8,000 முதல் ₹15,000 வரை உதவித்தொகை (Stipend)</strong> வழங்குகின்றன!</li>
+      </ul>
+    </div>
+
+    <div class="table-container">
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>திட்டம்</th>
+            <th>கல்வித்தகுதி</th>
+            <th>பயிற்சி காலம்</th>
+            <th>மாத உதவித்தொகை (Stipend)</th>
+            <th>பங்கேற்கும் முன்னணி நிறுவனங்கள்</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>NAPS (National Apprenticeship Promotion Scheme)</strong></td>
+            <td>10-ஆம் வகுப்பு / 12-ஆம் வகுப்பு / ITI</td>
+            <td>12 முதல் 24 மாதங்கள்</td>
+            <td>₹7,000 - ₹12,000/மாதம்</td>
+            <td>TVS Motors, Ashok Leyland, Hyundai, L&T, BHEL, Tata Motors</td>
+          </tr>
+          <tr>
+            <td><strong>NATS (National Apprenticeship Training Scheme)</strong></td>
+            <td>டிப்ளமோ (Polytechnic) / பட்டப்படிப்பு</td>
+            <td>1 வருடம்</td>
+            <td>₹9,000 - ₹15,000/மாதம்</td>
+            <td>Southern Railway, ONGC, NLC, IOCL, ISRO, முன்னணி வங்கிகள்</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size: 0.92rem; color: #64748b; margin-top: 8px;">
+      * பயிற்சி நிறைவடைந்தவுடன் வழங்கப்படும் <strong>National Apprenticeship Certificate (NAC)</strong> அரசு மற்றும் தனியார் தொழிற்சாலைகளில் நிரந்தரப் பணிகளுக்கு முதன்மைத் தகுதியாகக் கருதப்படுகிறது.
+    </p>
+  </section>
+
+  <!-- Section 5: Job Fairs -->
+  <section id="job-fairs" class="guide-section">
+    <div class="section-header">
+      <div class="section-icon-badge badge-indigo">🏢</div>
+      <div>
+        <h2 class="section-title">6. மாவட்ட வேலைவாய்ப்பு அலுவலகத் தனியார் துறை வேலைவாய்ப்பு முகாம்கள்</h2>
+      </div>
+    </div>
+    <p class="section-desc">
+      தமிழ்நாடு அரசு வேலைவாய்ப்பு மற்றும் பயிற்சித் துறையின் கீழ் சிவகங்கை மாவட்ட வேலைவாய்ப்பு மற்றும் தொழில்நெறி வழிகாட்டும் மையம் நடத்தும் இலவச தனியார் துறை வேலைவாய்ப்பு முகாம்கள்:
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-card blue-theme">
+        <h3 class="feature-title">வாராந்திர & மாதாந்திர முகாம்கள் (Job Drives)</h3>
+        <ul class="feature-list">
+          <li><strong>சிறு வேலைவாய்ப்பு முகாம்:</strong> சிவகங்கை மாவட்ட வேலைவாய்ப்பு அலுவலகத்தில் <strong>ஒவ்வொரு மாதத்தின் 2-வது மற்றும் 4-வது வெள்ளிக்கிழமைகளில்</strong> தவறாமல் நடைபெறுகிறது.</li>
+          <li><strong>தனியார் நிறுவனங்கள்:</strong> 20 முதல் 50-க்கும் மேற்பட்ட உற்பத்தி ஆலைகள், ஜவுளி நிறுவனங்கள், நிதி நிறுவனங்கள், மருத்துவமனைகள் நேரில் பங்கேற்பு.</li>
+          <li><strong>தேர்வு முறை:</strong> எவ்விதத் தேர்வும் இல்லை; நேர்முகத் தேர்வு (Interview) மூலம் அன்றே பணி நியமன ஆணை (Spot Offer Letter) வழங்கப்படுகிறது.</li>
+        </ul>
+        <a href="https://www.tnprivatejobs.tn.gov.in" target="_blank" rel="noopener noreferrer" class="feature-btn" style="background: #0284c7;">
+          TN Private Jobs போர்ட்டலில் பதிவு செய்க ➔
+        </a>
+      </div>
+
+      <div class="feature-card blue-theme">
+        <h3 class="feature-title">முகாமில் கலந்து கொள்ளத் தேவையானவை</h3>
+        <ul class="feature-list">
+          <li>10, 12, ஐடிஐ அல்லது கல்லூரி மதிப்பெண் சான்றிதழ்கள் (அசல் மற்றும் நகல்கள்)</li>
+          <li>சுயவிவரக் குறிப்பு (Biodata / Resume - குறைந்தது 5 நகல்கள்)</li>
+          <li>ஆதார் அட்டை நகல் & பாஸ்போர்ட் அளவு புகைப்படங்கள்</li>
+          <li>வயது வரம்பு: 18 முதல் 35 வரை உள்ள ஆண், பெண் இருபாலரும் பங்கேற்கலாம்.</li>
+        </ul>
+        <div style="margin-top: 14px; font-size: 0.88rem; color: #0369a1; font-weight: 700;">
+          📍 இடம்: மாவட்ட வேலைவாய்ப்பு மற்றும் தொழில்நெறி வழிகாட்டும் மையம், ஆட்சியர் வளாகம் அருகில், சிவகங்கை.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Self-Employment & Loans -->
+  <section id="self-employment" class="guide-section">
+    <div class="section-header">
+      <div class="section-icon-badge badge-rose">💰</div>
+      <div>
+        <h2 class="section-title">7. சுயதொழில் மற்றும் அரசு மானியக் கடன் திட்டங்கள் (Self-Employment & Startups)</h2>
+      </div>
+    </div>
+    <p class="section-desc">
+      பிறரிடம் வேலைக்குச் செல்லாமல், சுயமாகத் தொழில் தொடங்கி மற்றவர்களுக்கும் வேலைவாய்ப்பு அளிக்க விரும்பும் இளைஞர்களுக்கு தமிழ்நாடு அரசு மற்றும் மத்திய அரசு வழங்கும் மானியக் கடன்கள்:
+    </p>
+
+    <!-- Loan Application Process & Fee Details Banner -->
+    <div style="background: #fdf2f8; border: 1.5px solid #fbcfe8; border-radius: var(--radius-md); padding: 18px 22px; margin-bottom: 20px;">
+      <h4 style="font-size: 1.05rem; font-weight: 800; color: #9d174d; margin-bottom: 8px;">🎯 சுயதொழில் கடன்களுக்கான சேர்க்கை / விண்ணப்ப முறை & கட்டணம்:</h4>
+      <ul style="list-style: none; font-size: 0.92rem; color: #831843; line-height: 1.7;">
+        <li><strong>🏛️ அணுக வேண்டிய அலுவலகம்:</strong> சிவகங்கை மாவட்ட ஆட்சியர் வளாகத்தில் உள்ள <strong>மாவட்ட தொழில் மையம் (District Industries Centre - DIC)</strong> அல்லது தேசியமயமாக்கப்பட்ட வங்கிகள்.</li>
+        <li><strong>🎯 விண்ணப்பிக்கும் முறை:</strong> <strong>msmeonline.tn.gov.in</strong> (UYEGP/NEEDS திட்டங்களுக்கு) அல்லது <strong>kviconline.gov.in</strong> (PMEGP திட்டத்திற்கு) ஆன்லைனில் விண்ணப்பம் மற்றும் திட்ட அறிக்கை (Project Report) சமர்ப்பிக்க வேண்டும் ➔ மாவட்ட தேர்வுக் குழுவின் நேர்முகத் தேர்வு ➔ இலவச தொழில்முனைவோர் பயிற்சி (EDP Training) ➔ வங்கி வழியே கடன் மற்றும் அரசு மானியம் விடுவிப்பு.</li>
+        <li><strong>💰 விண்ணப்பக் கட்டணம்:</strong> <strong>முற்றிலும் இலவசம் (₹0)</strong>. அரசு மானியத் திட்டங்களுக்கு விண்ணப்பிக்க எந்தவித கட்டணமும் செலுத்தத் தேவையில்லை.</li>
+      </ul>
+    </div>
+
+    <div class="features-grid">
+      <!-- UYEGP -->
+      <div class="feature-card amber-theme">
+        <div class="feature-card-header">
+          <span class="feature-badge" style="background: #fef3c7; color: #b45309;">25% அரசு மானியம்</span>
+          <span style="font-weight: 800; font-size: 0.85rem; color: #d97706;">தமிழ்நாடு அரசு</span>
+        </div>
+        <h3 class="feature-title">UYEGP (வேலையில்லா இளைஞர் திட்டம்)</h3>
+        <div class="feature-subtitle">சிறு தொழில் மற்றும் வணிகக் கடனுதவி</div>
+        <ul class="feature-list">
+          <li><strong>கல்வித்தகுதி:</strong> குறைந்தபட்சம் 8-ஆம் வகுப்பு தேர்ச்சி.</li>
+          <li><strong>வயது வரம்பு:</strong> 18 முதல் 35 ஆண்டுகள் (தாழ்த்தப்பட்டோர்/பிற்படுத்தப்பட்டோர்/பெண்கள்/மாற்றுத்திறனாளிகளுக்கு 45 வரை).</li>
+          <li><strong>அதிகபட்சக் கடன்:</strong> உற்பத்தித் துறைக்கு <strong>₹15 லட்சம்</strong>; சேவை/வணிகத்திற்கு <strong>₹5 லட்சம்</strong>.</li>
+          <li><strong>மானியம்:</strong> திட்ட மதிப்பில் <strong>25% அரசு மானியம்</strong> (அதிகபட்சம் ₹1.25 லட்சம் வரை).</li>
+        </ul>
+        <a href="https://www.msmeonline.tn.gov.in" target="_blank" rel="noopener noreferrer" class="feature-btn" style="background: #d97706;">
+          UYEGP விண்ணப்பிக்க ➔
+        </a>
+      </div>
+
+      <!-- NEEDS -->
+      <div class="feature-card amber-theme">
+        <div class="feature-card-header">
+          <span class="feature-badge" style="background: #fef3c7; color: #b45309;">₹75 லட்சம் வரை மானியம்</span>
+          <span style="font-weight: 800; font-size: 0.85rem; color: #d97706;">தமிழ்நாடு அரசு</span>
+        </div>
+        <h3 class="feature-title">NEEDS திட்டம் (முதல் தலைமுறை தொழில்முனைவோர்)</h3>
+        <div class="feature-subtitle">பட்டதாரிகளுக்கான பெருந்தொழில் திட்டம்</div>
+        <ul class="feature-list">
+          <li><strong>தகுதி:</strong> பட்டம் அல்லது பாலிடெக்னிக் டிப்ளமோ முடித்த முதல் தலைமுறை தொழில்முனைவோர்.</li>
+          <li><strong>திட்ட மதிப்பு:</strong> <strong>₹10 லட்சம் முதல் ₹5 கோடி வரை</strong>.</li>
+          <li><strong>மானியம்:</strong> <strong>25% மூலதன மானியம் (அதிகபட்சம் ₹75 லட்சம் வரை)</strong> மற்றும் 3% வட்டி மானியம்.</li>
+          <li><strong>சிறப்பு:</strong> தொழில் திட்ட அறிக்கை தயாரிப்பு மற்றும் இலவச தொழில்முனைவோர் பயிற்சி உண்டு.</li>
+        </ul>
+        <a href="https://www.msmeonline.tn.gov.in" target="_blank" rel="noopener noreferrer" class="feature-btn" style="background: #b45309;">
+          NEEDS திட்டம் காண்க ➔
+        </a>
+      </div>
+
+      <!-- PMEGP -->
+      <div class="feature-card amber-theme">
+        <div class="feature-card-header">
+          <span class="feature-badge" style="background: #fef3c7; color: #b45309;">35% ஊரக மானியம்</span>
+          <span style="font-weight: 800; font-size: 0.85rem; color: #d97706;">மத்திய அரசு (KVIC)</span>
+        </div>
+        <h3 class="feature-title">PMEGP (பிரதமரின் வேலைவாய்ப்பு உருவாக்கம்)</h3>
+        <div class="feature-subtitle">உற்பத்தி மற்றும் சேவைத் தொழில் கடன்கள்</div>
+        <ul class="feature-list">
+          <li><strong>திட்ட மதிப்பு:</strong> உற்பத்திக்கு ₹50 லட்சம் வரை; சேவைக்கு ₹20 லட்சம் வரை.</li>
+          <li><strong>மானியம்:</strong> கிராமப்புறங்களில் <strong>35% மானியம்</strong>; நகர்ப்புறங்களில் <strong>25% மானியம்</strong>.</li>
+          <li><strong>தகுதி:</strong> 18 வயது பூர்த்தி, 8-ஆம் வகுப்பு தேர்ச்சி.</li>
+          <li><strong>வழங்குபவர்:</strong> KVIC, KVIB மற்றும் மாவட்ட தொழில் மையம் (DIC).</li>
+        </ul>
+        <a href="https://www.kviconline.gov.in/pmegpeportal/" target="_blank" rel="noopener noreferrer" class="feature-btn" style="background: #92400e;">
+          PMEGP ஆன்லைன் போர்ட்டல் ➔
+        </a>
+      </div>
+
+      <!-- MUDRA -->
+      <div class="feature-card amber-theme">
+        <div class="feature-card-header">
+          <span class="feature-badge" style="background: #fef3c7; color: #b45309;">பிணையம் இல்லை | No Collateral</span>
+          <span style="font-weight: 800; font-size: 0.85rem; color: #d97706;">அனைத்து வங்கிகள்</span>
+        </div>
+        <h3 class="feature-title">பிரதமர் முத்ரா கடன் திட்டம் (MUDRA Loan)</h3>
+        <div class="feature-subtitle">சிறு வணிகர்களுக்கான உடனடிக் கடன்</div>
+        <ul class="feature-list">
+          <li><strong>சிஷு (Shishu):</strong> ₹50,000 வரை (தொடக்க சிறு தொழில்களுக்கு).</li>
+          <li><strong>கிஷோர் (Kishor):</strong> ₹50,000 முதல் ₹5,00,000 வரை.</li>
+          <li><strong>தருண் (Tarun):</strong> ₹5,00,000 முதல் ₹10,00,000 வரை.</li>
+          <li><strong>விசேஷம்:</strong> சொத்து அடமானம் எதுவும் தேவையில்லை; எந்தவொரு தேசியமயமாக்கப்பட்ட வங்கியிலும் விண்ணப்பிக்கலாம்.</li>
+        </ul>
+        <a href="https://www.mudra.org.in/" target="_blank" rel="noopener noreferrer" class="feature-btn" style="background: #78350f;">
+          MUDRA போர்ட்டல் ➔
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Master Comparison Table -->
+  <section id="comparison" class="guide-section">
+    <div class="section-header">
+      <div class="section-icon-badge badge-indigo">📊</div>
+      <div>
+        <h2 class="section-title">8. நேரடி வேலைவாய்ப்பு, குறுகிய காலப் பயிற்சிகள் & சுயதொழில் ஒப்பீட்டு அட்டவணை</h2>
+      </div>
+    </div>
+    <p class="section-desc">
+      மாணவர்கள் தங்களின் தகுதி மற்றும் தேவைகளுக்கு ஏற்ப எளிதாகத் தேர்ந்தெடுப்பதற்கான ஒட்டுமொத்த ஒப்பீடு:
+    </p>
+
+    <div class="table-container">
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>வாய்ப்பு / திட்டம்</th>
+            <th>வழங்குபவர்</th>
+            <th>குறைந்தபட்சத் தகுதி</th>
+            <th>வருமானம் / உதவித்தொகை</th>
+            <th>முக்கிய பலன்</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Zoho Schools (ZSL)</strong></td>
+            <td>Zoho கார்ப்பரேஷன்</td>
+            <td>12-ஆம் வகுப்பு (எந்தப் பிரிவும்)</td>
+            <td>₹10,000 - ₹12,000/மாதம் உதவித்தொகை</td>
+            <td>கட்டணம் இல்லை; பயிற்சிக்குப் பின் ₹4.5 - ₹8 லட்சம் ஆண்டு ஊதியத்தில் நேரடி IT பணி.</td>
+          </tr>
+          <tr>
+            <td><strong>HCL TechBee</strong></td>
+            <td>HCL டெக்னாலஜிஸ்</td>
+            <td>12-ஆம் வகுப்பு கணிதம் (60%)</td>
+            <td>₹10,000/மாதம் இன்டர்ன்ஷிப்</td>
+            <td>முழுநேர வேலை + BITS Pilani/SASTRA பட்டம்; ஆண்டுக்கு ₹2.2 - ₹3 லட்சம் ஊதியம்.</td>
+          </tr>
+          <tr>
+            <td><strong>குறுகிய கால அவசர சிகிச்சை (EMT)</strong></td>
+            <td>தனியார் மருத்துவமனைகள் & 108</td>
+            <td>10-ஆம் / 12-ஆம் வகுப்பு</td>
+            <td>₹14,000 - ₹20,000/மாதம்</td>
+            <td>3-6 மாதப் பயிற்சி; ஆம்புலன்ஸ் & ICU அவசர சிகிச்சைப் பிரிவுகளில் உடனடி வேலை.</td>
+          </tr>
+          <tr>
+            <td><strong>Tally Prime & GST கணக்கியல்</strong></td>
+            <td>வணிக நிறுவனங்கள் & ஆடிட்டர்கள்</td>
+            <td>12-ஆம் வகுப்பு (வணிகவியல்/எந்தப் பிரிவும்)</td>
+            <td>₹12,000 - ₹22,000/மாதம்</td>
+            <td>2-3 மாதப் பயிற்சி; ஆடிட்டர் மற்றும் கார்ப்பரேட் அலுவலகங்களில் உடனடி அக்கவுண்டன்ட் பணி.</td>
+          </tr>
+          <tr>
+            <td><strong>சோலார் டெக்னீசியன் (Suryamitra)</strong></td>
+            <td>சூரிய ஒளி மின் உற்பத்தி ஆலைகள்</td>
+            <td>10-ஆம் வகுப்பு / ITI</td>
+            <td>₹15,000 - ₹25,000/மாதம்</td>
+            <td>பிரதமர் சூர்ய கர் சோலார் பேனல் பொருத்தும் பணிகளில் மிகப்பெரிய தேவை.</td>
+          </tr>
+          <tr>
+            <td><strong>திறன் தமிழ்நாடு (Thiran TN)</strong></td>
+            <td>தமிழ்நாடு அரசு (TNSDC)</td>
+            <td>10 / 12 / ITI / பட்டம்</td>
+            <td>இலவசப் பயிற்சி + வேலைவாய்ப்பு</td>
+            <td>AI, Cloud, EV துறைகளில் உலகத் தரச் சான்றிதழ்; தொழில் வளாக வேலைவாய்ப்பு.</td>
+          </tr>
+          <tr>
+            <td><strong>NAPS Apprenticeship</strong></td>
+            <td>மத்திய திறன் அமைச்சகம்</td>
+            <td>10-ஆம் வகுப்பு / ITI</td>
+            <td>₹7,000 - ₹12,000/மாதம் உதவித்தொகை</td>
+            <td>TVS, Ashok Leyland ஆலைகளில் நேரடித் தொழில்முறைப் பயிற்சி & NAC சான்றிதழ்.</td>
+          </tr>
+          <tr>
+            <td><strong>மாவட்ட வேலைவாய்ப்பு முகாம்</strong></td>
+            <td>சிவகங்கை வேலைவாய்ப்பு மையம்</td>
+            <td>8-ஆம் வகுப்பு முதல் பட்டம் வரை</td>
+            <td>₹12,000 - ₹25,000/மாத ஊதியம்</td>
+            <td>எவ்விதத் தேர்வும் இல்லை; ஒரே நாளில் நேர்முகத் தேர்வில் நேரடிப் பணி நியமனம்.</td>
+          </tr>
+          <tr>
+            <td><strong>UYEGP அரசு மானியக் கடன்</strong></td>
+            <td>மாவட்ட தொழில் மையம் (DIC)</td>
+            <td>8-ஆம் வகுப்பு தேர்ச்சி</td>
+            <td>₹5 லட்சம் முதல் ₹15 லட்சம் கடன்</td>
+            <td><strong>25% அரசு மானியம் (Subsidy)</strong>; சொந்தமாகத் தொழில் தொடங்கலாம்.</td>
+          </tr>
+          <tr>
+            <td><strong>பிரதமர் முத்ரா கடன்</strong></td>
+            <td>வங்கிகள்</td>
+            <td>தொழில் ஆர்வம்</td>
+            <td>₹50,000 முதல் ₹10 லட்சம் வரை</td>
+            <td>பிணையம் (அடமானம்) இன்றி எளிதான சிறுதொழில் மூலதனக் கடன்.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Section 8: FAQ -->
+  <section id="faq" class="guide-section">
+    <div class="section-header">
+      <div class="section-icon-badge badge-purple">❓</div>
+      <div>
+        <h2 class="section-title">9. அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQs)</h2>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">1. நான் முதல்வன் திட்டத்திற்கும் திறன் தமிழ்நாடு திட்டத்திற்கும் என்ன தொடர்பு? ▾</div>
+      <div class="faq-answer">
+        தமிழ்நாடு அரசால் தொடங்கப்பட்ட 'நான் முதல்வன்' திட்டமே தற்போது <strong>'திறன் தமிழ்நாடு' (Thiran Tamil Nadu - Thiran TN)</strong> என அதிகாரப்பூர்வமாகப் பெயர் மாற்றம் செய்யப்பட்டுள்ளது. இத்திட்டம் பள்ளி, கல்லூரி மாணவர்கள் மற்றும் வேலைதேடும் இளைஞர்களுக்கு உலகத்தரம் வாய்ந்த இலவசத் தொழில்நுட்பப் பயிற்சிகளை வழங்கி வேலைவாய்ப்புகளை உறுதி செய்கிறது.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">2. 12-ஆம் வகுப்பில் கலை/வணிகவியல் (Arts/Commerce) படித்தவர்கள் Zoho-வில் சேரலாமா? ▾</div>
+      <div class="faq-answer">
+        ஆம், நிச்சயமாக! Zoho Schools of Learning திட்டத்திற்கு 12-ஆம் வகுப்பில் எந்தப் பாடம் படித்திருந்தாலும் விண்ணப்பிக்கலாம். மாணவர்களுக்குக் கணிதம், தர்க்க அறிவு (Aptitude) மற்றும் கற்கும் ஆர்வம் இருந்தால் போதுமானது.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">3. சிவகங்கை மாவட்டத்தில் தனியார் துறை வேலைவாய்ப்பு முகாம்கள் எங்கு நடைபெறும்? ▾</div>
+      <div class="faq-answer">
+        சிவகங்கை மாவட்ட ஆட்சியர் வளாகம் அருகில் அமைந்துள்ள 'மாவட்ட வேலைவாய்ப்பு மற்றும் தொழில்நெறி வழிகாட்டும் மையத்தில்' மாதத்தின் 2-வது மற்றும் 4-வது வெள்ளிக்கிழமைகளில் தவறாமல் சிறு வேலைவாய்ப்பு முகாம்கள் நடைபெறுகின்றன. மேலும் பெரிய அளவிலான மெகா வேலைவாய்ப்பு முகாம்களும் மாவட்ட அளவில் குறிப்பிட்ட கால இடைவெளிகளில் நடத்தப்படுகின்றன.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">4. UYEGP மற்றும் NEEDS தொழில் கடன்களுக்கு யாரை அணுக வேண்டும்? ▾</div>
+      <div class="faq-answer">
+        சிவகங்கை மாவட்ட ஆட்சியர் அலுவலக வளாகத்தில் இயங்கும் <strong>மாவட்ட தொழில் மையத்தின் (District Industries Centre - DIC)</strong> பொது மேலாளரை நேரில் அணுகலாம் அல்லது `https://www.msmeonline.tn.gov.in` என்ற அதிகாரப்பூர்வ இணையதளம் வழியே விண்ணப்பிக்கலாம்.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">5. HCL TechBee திட்டத்தில் படிக்கும் பட்டப்படிப்பு செல்லுபடியாகுமா? ▾</div>
+      <div class="faq-answer">
+        ஆம், முற்றிலும் செல்லுபடியாகும். BITS Pilani, SASTRA போன்ற UGC அங்கீகாரம் பெற்ற முதன்மைப் பல்கலைக்கழகங்களால் இப்பயிற்சிக்குரிய பட்டங்கள் வழங்கப்படுவதால், இவை உயர் கல்விக்கும் பிற பணிகளுக்கும் 100% செல்லுபடியாகும்.
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9: Official Portals -->
+  <section id="portals" class="guide-section">
+    <div class="section-header">
+      <div class="section-icon-badge badge-green">🌐</div>
+      <div>
+        <h2 class="section-title">10. அதிகாரப்பூர்வ இணையதளங்கள் & உதவி எண்கள்</h2>
+      </div>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3 class="feature-title">வேலைவாய்ப்பு & திறன் தளங்கள்</h3>
+        <ul class="feature-list">
+          <li><strong>திறன் தமிழ்நாடு:</strong> <a href="https://thiran.tn.gov.in" target="_blank" rel="noopener noreferrer">thiran.tn.gov.in</a></li>
+          <li><strong>தமிழ்நாடு தனியார் வேலைவாய்ப்பு:</strong> <a href="https://www.tnprivatejobs.tn.gov.in" target="_blank" rel="noopener noreferrer">tnprivatejobs.tn.gov.in</a></li>
+          <li><strong>Zoho Schools:</strong> <a href="https://www.zohoschools.com" target="_blank" rel="noopener noreferrer">zohoschools.com</a></li>
+          <li><strong>HCL TechBee:</strong> <a href="https://www.hcltechbee.com" target="_blank" rel="noopener noreferrer">hcltechbee.com</a></li>
+          <li><strong>Apprenticeship Portal:</strong> <a href="https://www.apprenticeshipindia.gov.in" target="_blank" rel="noopener noreferrer">apprenticeshipindia.gov.in</a></li>
+        </ul>
+      </div>
+
+      <div class="feature-card amber-theme">
+        <h3 class="feature-title">சுயதொழில் & மாவட்டத் தொடர்புகள்</h3>
+        <ul class="feature-list">
+          <li><strong>தமிழ்நாடு MSME போர்ட்டல் (UYEGP/NEEDS):</strong> <a href="https://www.msmeonline.tn.gov.in" target="_blank" rel="noopener noreferrer">msmeonline.tn.gov.in</a></li>
+          <li><strong>முத்ரா கடன் தளம்:</strong> <a href="https://www.mudra.org.in" target="_blank" rel="noopener noreferrer">mudra.org.in</a></li>
+          <li><strong>மாவட்ட தொழில் மையம் (DIC):</strong> ஆட்சியர் வளாகம், சிவகங்கை. (தொலைபேசி: 04575-240258)</li>
+          <li><strong>மாவட்ட வேலைவாய்ப்பு மையம்:</strong> சிவகங்கை. (தொலைபேசி: 04575-240435)</li>
+          <li><strong>மாணவர் இலவச உதவி எண்:</strong> <strong>14417</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Motivational Thirukkural Section -->
+  <section class="kural-section">
+    <div class="kural-header-badge">
+      <span>📖 திருக்குறள் — அதிகாரம்: ஆள்வினையுடைமை (குறள் 619)</span>
+    </div>
+    <div class="kural-verse">
+      "தெய்வத்தான் ஆகா தெனினும் முயற்சிதன்<br>
+      மெய்வருத்தக் கூலி தரும்."
+    </div>
+    <p class="kural-meaning">
+      <strong>தெளிவுரை:</strong> விதியினால் ஒரு செயல் கை கூடாமல் போனாலும், ஒருவன் தன் உடலை வருத்திச் செய்யும் முயற்சிக்கு ஏற்ப அதற்கான கூலி நிச்சயமாகக் கிடைக்கும்! (திறன் பயிற்சிகளிலும், சுயதொழிலிலும் விடாமுயற்சியே ஒரு மாணவனை வெற்றியாளனாக்கும்!)
+    </p>
+  </section>
+
+  <!-- Creator & Administrator Details (Single Line Animated Typewriter Bar) -->
+  <div class="creator-card">
+    <div id="creatorTypewriterWrap" style="display: inline-flex; align-items: center; justify-content: center; flex-wrap: wrap; line-height: 1.8;">
+      <span id="creatorTypewriterTarget"></span><span id="creatorCursor" class="typing-cursor">|</span>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="portal-footer">
+    <p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
+      தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
+    </p>
+    <p style="font-size: 0.85rem; color: #64748b;">
+      © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+    </p>
+  </footer>
+
+</div>
+
+<!-- JavaScript for Single Line Typewriter Animation -->
+<script>
+  // Creator Single-Line Typewriter Animation (Types once and stays permanently static)
+  const creatorSegments = [
+    { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
+    { text: "கூ. பூவலிங்கம்", tag: "span", class: "creator-name-ta" },
+    { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
+    { text: "K. Poovalingam", tag: "span", class: "creator-name-en" },
+    { text: ", Deputy Inspector of Schools  ", tag: "span", class: "creator-role" },
+    { text: "📱 9626471035", tag: "a", class: "creator-phone-badge", href: "tel:9626471035" }
+  ];
+
+  const creatorContainer = document.getElementById('creatorTypewriterTarget');
+  const creatorCursor = document.getElementById('creatorCursor');
+
+  let creatorSegIdx = 0;
+  let creatorCharIdx = 0;
+  let creatorCurrentElem = null;
+  let creatorHasStarted = false;
+
+  function typeCreatorDetails() {
+    if (!creatorContainer || creatorHasStarted) return;
+    creatorHasStarted = true;
+
+    function step() {
+      if (creatorSegIdx >= creatorSegments.length) {
+        if (creatorCursor) {
+          creatorCursor.style.animation = 'none';
+          creatorCursor.style.opacity = '0';
+          setTimeout(() => creatorCursor.remove(), 400);
+        }
+        return;
+      }
+
+      const currentSeg = creatorSegments[creatorSegIdx];
+      if (creatorCharIdx === 0) {
+        creatorCurrentElem = document.createElement(currentSeg.tag);
+        creatorCurrentElem.className = currentSeg.class;
+        if (currentSeg.href) {
+          creatorCurrentElem.href = currentSeg.href;
+          creatorCurrentElem.title = "அழைக்க கிளிக் செய்யவும் (Call: 9626471035)";
+        }
+        creatorContainer.appendChild(creatorCurrentElem);
+      }
+
+      creatorCurrentElem.textContent += currentSeg.text.charAt(creatorCharIdx);
+      creatorCharIdx++;
+
+      if (creatorCharIdx >= currentSeg.text.length) {
+        creatorSegIdx++;
+        creatorCharIdx = 0;
+      }
+
+      setTimeout(step, 35);
+    }
+    step();
+  }
+
+  // Trigger when scrolled into view or immediately
+  if ('IntersectionObserver' in window) {
+    const cardElem = document.querySelector('.creator-card');
+    if (cardElem) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            typeCreatorDetails();
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.2 });
+      observer.observe(cardElem);
+    } else {
+      typeCreatorDetails();
+    }
+  } else {
+    typeCreatorDetails();
+  }
+</script>
+
+</body>
+</html>

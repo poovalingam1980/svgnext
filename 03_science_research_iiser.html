@@ -1,78 +1,1241 @@
 <!DOCTYPE html>
+
 <html lang="ta">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>அறிவியல், ஆராய்ச்சி &amp; B.S. பொறியியல் படிப்புகள் (IISER / IISc)</title>
+<title>அறிவியல், ஆராய்ச்சி &amp; B.S. பொறியியல் படிப்புகள் (Pure Sciences, IISER B.Tech, IISc &amp; IIT Madras BS) முழுமையான வழிகாட்டி | ceosvg.in</title>
+<!-- Google Fonts: Inter & Noto Sans Tamil -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <style>
   :root {
-    --primary: #064e3b;
-    --primary-light: #065f46;
-    --secondary: #059669;
-    --secondary-dark: #047857;
-    --accent: #10b981;
-    --dark: #0f172a;
+    --primary: #0f172a;       /* Midnight Slate */
+    --primary-green: #064e3b; /* Deep Forest Green */
+    --primary-light: #065f46; /* Deep Emerald */
+    --secondary: #059669;     /* Emerald Green */
+    --secondary-dark: #047857;/* Rich Forest Green */
+    --accent: #10b981;        /* Bright Green */
+    --accent-light: #ecfdf5;  /* Soft Green Tint */
+    --accent-gold: #f59e0b;   /* Research Gold / Amber */
+    --warning: #d97706;       /* Precision Amber */
+    --warning-light: #fffbeb;  /* Warm Pale Amber */
+    --dark: #1e293b;
     --bg-main: #f8fafc;
     --card-bg: #ffffff;
     --text-main: #0f172a;
     --text-sub: #334155;
+    --text-muted: #64748b;
     --border: #e2e8f0;
+    --border-accent: #cbd5e1;
+    --green-border: #a7f3d0;
     --radius-sm: 8px;
     --radius-md: 14px;
     --radius-lg: 20px;
     --radius-xl: 28px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.12);
   }
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  html, body { width: 100% !important; margin: 0 !important; padding: 0 !important; box-sizing: border-box; overflow-x: hidden; }
-  body { font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.75; color: var(--text-main); background-color: #f1f5f9; padding: 12px 16px; -webkit-font-smoothing: antialiased; }
-  .portal-container { width: 100% !important; max-width: 100% !important; margin: 0 auto; }
-  .nav-button-menu-bar { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); }
-  .nav-button-menu-container { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
-  .menu-btn-pill { display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; border: 1px solid transparent; }
-  .menu-btn-pill svg { width: 15px; height: 15px; flex-shrink: 0; }
-  .btn-main-site { background: #f1f5f9; color: #0f172a; border-color: #cbd5e1; }
-  .btn-entrance { background: #fef3c7; color: #92400e; border-color: #fde68a; }
-  .btn-current-page { background: linear-gradient(135deg, #065f46 0%, #059669 100%); color: #ffffff; box-shadow: 0 2px 6px rgba(5, 150, 105, 0.3); }
-  .menu-arrow { color: #94a3b8; font-weight: 800; font-size: 14px; user-select: none; }
-  .portal-header { background: linear-gradient(135deg, #064e3b 0%, #065f46 40%, #059669 75%, #0284c7 100%) !important; border-radius: 22px !important; padding: 38px 30px 30px !important; color: #ffffff !important; box-shadow: 0 10px 30px rgba(5, 150, 105, 0.28) !important; border: 1px solid rgba(255, 255, 255, 0.18) !important; border-bottom: 3px solid #10b981 !important; margin-bottom: 24px !important; text-align: center !important; }
-  .portal-title { font-size: 2.1rem; font-weight: 900; line-height: 1.35; margin: 0 0 10px 0; color: #ffffff; }
+  body {
+    font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.75;
+    color: var(--text-main);
+    background-color: #f1f5f9;
+    margin: 0;
+    padding: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .portal-container {
+    width: 98%;
+    max-width: 1680px;
+    margin: 0 auto;
+  }
+
+  /* ==================================================== */
+/* Segmented Breadcrumb Navigation Bar (Matching Section 01 & Pilot Guide) */
+/* ==================================================== */
+.nav-button-menu-bar {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+.nav-button-menu-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.menu-btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+.menu-btn-pill svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+.btn-main-site {
+  background: #f1f5f9;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+.btn-main-site:hover {
+  background: #e2e8f0;
+  color: #1e3a8a;
+}
+.btn-career {
+  background: #eff6ff;
+  color: #1e40af;
+  border-color: #bfdbfe;
+}
+.btn-career:hover {
+  background: #dbeafe;
+}
+.btn-entrance {
+  background: #fef3c7;
+  color: #92400e;
+  border-color: #fde68a;
+}
+.btn-entrance:hover {
+  background: #fde68a;
+}
+.btn-current-page {
+  background: linear-gradient(135deg, #065f46 0%, #059669 100%);
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(5, 150, 105, 0.3);
+}
+.menu-arrow {
+  color: #94a3b8;
+  font-weight: 800;
+  font-size: 14px;
+  user-select: none;
+}
+
+  .portal-header {
+    background: linear-gradient(135deg, #064e3b 0%, #065f46 40%, #059669 80%, #0284c7 100%);
+    border-radius: var(--radius-xl);
+    padding: 38px 32px 32px;
+    color: #ffffff;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin-bottom: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .header-badge-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .header-tag {
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+  .header-tag.primary { background-color: #fef08a; color: #713f12; border-color: #fde047; }
+  .header-tag.secondary { background-color: rgba(255, 255, 255, 0.18); color: #f8fafc; backdrop-filter: blur(8px); }
+  .header-tag.amber { background-color: #d97706; color: #ffffff; border-color: #f59e0b; }
+  
+  .portal-title {
+    font-size: 2.15rem;
+    font-weight: 900;
+    line-height: 1.35;
+    margin-bottom: 12px;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.35);
+  }
   .accent-gold { color: #fde047; }
-  .portal-subtitle { font-size: 1.02rem; color: #e2e8f0; max-width: 1050px; margin: 0 auto; line-height: 1.62; }
-  .card { background: #ffffff; border-radius: var(--radius-lg); padding: 32px 28px; margin-bottom: 24px; box-shadow: var(--shadow-md); border: 1px solid var(--border); border-top: 4px solid var(--primary); }
-  .card-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 2px solid var(--border); }
-  .card-title { margin: 0; font-size: 1.35rem; color: var(--primary); font-weight: 800; }
-  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0; }
-  .stat-item { background: #f8fafc; border-radius: var(--radius-md); padding: 16px 14px; text-align: center; border: 1px solid var(--border); border-left: 4px solid var(--secondary); }
-  .stat-num { font-size: 1.65rem; font-weight: 900; color: var(--primary); margin-bottom: 4px; }
+  .portal-subtitle {
+    font-size: 1.04rem;
+    color: #e2e8f0;
+    max-width: 1150px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+
+  /* Search & Filter Bar */
+  .search-filter-box {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+  }
+  .search-input {
+    flex: 1;
+    min-width: 260px;
+    padding: 10px 16px;
+    border: 1.5px solid var(--border-accent);
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  .search-input:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15);
+  }
+  .filter-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .filter-chip {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    background: #f1f5f9;
+    color: var(--text-sub);
+    border: 1px solid var(--border-accent);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .filter-chip:hover, .filter-chip.active {
+    background: var(--primary-green);
+    color: #ffffff;
+    border-color: var(--primary-green);
+  }
+
+  /* Quick Navigation Card */
+  .quick-nav-card {
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    padding: 20px 22px;
+    margin-bottom: 24px;
+    border: 1.5px solid var(--green-border);
+    background-color: #f0fdf4;
+    box-shadow: var(--shadow-sm);
+  }
+  .quick-nav-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--primary-green);
+    margin-bottom: 14px;
+    border-bottom: 1.5px solid var(--green-border);
+    padding-bottom: 10px;
+  }
+  .quick-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px;
+  }
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: #ffffff;
+    border: 1px solid #bbf7d0;
+    border-radius: var(--radius-sm);
+    color: var(--primary-light);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    width: 100%;
+    font-family: inherit;
+  }
+  .nav-btn:hover, .nav-btn.active {
+    background: var(--secondary);
+    color: #ffffff;
+    border-color: var(--secondary);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(5, 150, 105, 0.25);
+  }
+  .nav-btn .badge-no {
+    background: #dcfce7;
+    color: #15803d;
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  .nav-btn:hover .badge-no, .nav-btn.active .badge-no {
+    background: #ffffff;
+    color: var(--secondary);
+  }
+
+  /* Content Cards */
+  .card {
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    padding: 26px;
+    margin-bottom: 26px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary-green);
+    scroll-margin-top: 24px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  .card.highlight-pulse {
+    animation: pulseBorder 1.5s ease-out;
+  }
+  @keyframes pulseBorder {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    50% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0.2); }
+    100% { box-shadow: var(--shadow-sm); }
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f1f5f9;
+  }
+  .card-title { margin: 0; font-size: 1.28rem; color: var(--primary-green); font-weight: 800; }
+  .card-sub { font-size: 1.05rem; color: var(--secondary-dark); font-weight: 800; margin: 20px 0 10px 0; border-left: 4px solid var(--secondary); padding-left: 10px; }
+
+  /* Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin: 18px 0;
+  }
+  .stat-item {
+    background: #f8fafc;
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-left-width: 4px;
+    border-left-color: var(--secondary);
+  }
+  .stat-num { font-size: 1.45rem; font-weight: 900; color: var(--primary-green); margin-bottom: 4px; }
   .stat-label { font-size: 0.84rem; color: #64748b; font-weight: 700; }
-  .table-responsive { overflow-x: auto; margin: 18px 0; border-radius: var(--radius-md); border: 1px solid var(--border); }
-  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left; }
-  th { background-color: var(--primary); color: #ffffff; padding: 14px 16px; font-weight: 700; }
-  td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; vertical-align: top; color: var(--text-sub); }
+
+  /* Tables */
+  .table-responsive { overflow-x: auto; margin: 16px 0; border-radius: var(--radius-sm); border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; text-align: left; }
+  th { background-color: var(--primary-green); color: #ffffff; padding: 12px 14px; font-weight: 700; }
+  td { padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
   tr:nth-child(even) { background-color: #f8fafc; }
-  .traditional-kural-card { width: 100% !important; box-sizing: border-box !important; margin: 22px 0 18px 0 !important; padding: 16px 24px 15px !important; border-radius: 16px !important; text-align: center !important; background: linear-gradient(135deg, #180033 0%, #2e1065 50%, #4c1d95 100%) !important; border: 2px solid #c084fc !important; color: #ffffff; }
-  .kural-first-line, .kural-second-line { font-size: 1.32rem !important; font-weight: 800 !important; line-height: 1.55 !important; margin: 3px 0 !important; color: #fef08a !important; }
-  .portal-footer { background: rgba(255, 255, 255, 0.96); border-radius: 12px; text-align: center; padding: 24px 16px 20px; font-size: 0.92rem; border: 1.5px solid rgba(255, 255, 255, 0.9); margin-top: 16px; color: #475569; }
+  tr:hover { background-color: #f1f5f9; }
+
+  /* Badges */
+  .badge { display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 0.78rem; font-weight: 800; }
+  .badge-green { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+  .badge-teal { background: #ccfbf1; color: #0f766e; border: 1px solid #99f6e4; }
+  .badge-gold { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+  .badge-blue { background: #e0f2fe; color: #0369a1; border: 1px solid #7dd3fc; }
+  .badge-purple { background: #f3e8ff; color: #7e22ce; border: 1px solid #d8b4fe; }
+  .badge-rose { background: #ffe4e6; color: #be123c; border: 1px solid #fecdd3; }
+
+  /* Alert / Highlight Boxes */
+  .alert-box {
+    background: #f0fdf4;
+    border: 1px solid var(--green-border);
+    border-left: 5px solid var(--secondary);
+    padding: 18px 20px;
+    border-radius: var(--radius-sm);
+    margin: 18px 0;
+  }
+  .alert-box h4 { margin: 0 0 6px 0; color: #065f46; font-size: 1.02rem; font-weight: 800; }
+  .alert-box p { margin: 0; font-size: 0.92rem; color: #064e3b; line-height: 1.7; }
+
+  .adv-box {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-left: 5px solid #0f766e;
+    padding: 18px 20px;
+    border-radius: var(--radius-sm);
+    margin: 18px 0;
+  }
+  .adv-box h4 { margin: 0 0 8px 0; color: #0f766e; font-size: 1.02rem; font-weight: 800; }
+  .adv-box ul { margin: 0; padding-left: 20px; font-size: 0.9rem; color: #334155; }
+  .adv-box li { margin-bottom: 6px; }
+
+  .info-box-blue {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-left: 5px solid #0284c7;
+    padding: 18px 20px;
+    border-radius: var(--radius-sm);
+    margin: 18px 0;
+  }
+  .info-box-blue h4 { margin: 0 0 6px 0; color: #0369a1; font-size: 1.02rem; font-weight: 800; }
+  .info-box-blue p { margin: 0; font-size: 0.92rem; color: #0c4a6e; line-height: 1.7; }
+
+  /* Feature Highlight Cards */
+  .feature-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin: 18px 0;
+  }
+  .feature-box {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: var(--radius-sm);
+    padding: 18px;
+    border-top: 4px solid var(--secondary);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .feature-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  }
+  .feature-box h4 { margin: 0 0 6px 0; color: var(--primary-green); font-size: 1.02rem; display: flex; align-items: center; justify-content: space-between; }
+  .feature-box .feat-sub { font-size: 0.8rem; color: #64748b; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; }
+  .feature-box ul { margin: 0; padding-left: 18px; font-size: 0.88rem; color: #334155; }
+  .feature-box li { margin-bottom: 5px; }
+
+  /* Curriculum Timeline Box */
+  .curriculum-wrap {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 18px;
+    margin: 18px 0;
+  }
+  .curr-year-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid var(--primary-light);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+  }
+  .curr-year-title {
+    font-size: 0.98rem;
+    font-weight: 800;
+    color: var(--primary-green);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .curr-year-desc {
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.65;
+  }
+
+  /* Grid of Exams (Cards) */
+  .exam-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 18px;
+    margin: 18px 0;
+  }
+  .exam-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-top: 3.5px solid var(--secondary);
+    border-radius: var(--radius-sm);
+    padding: 18px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .exam-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0,0,0,0.08);
+  }
+  .exam-card h4 { margin: 0 0 6px 0; color: var(--primary-green); font-size: 1.05rem; display: flex; align-items: center; justify-content: space-between; }
+  .exam-card .exam-inst { font-size: 0.84rem; color: #64748b; font-weight: 700; margin-bottom: 10px; }
+  .exam-card ul { margin: 0; padding-left: 18px; font-size: 0.88rem; color: #334155; }
+  .exam-card li { margin-bottom: 5px; }
+
+  /* Roadmap Grid */
+  .roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 18px 0;
+  }
+  .roadmap-card {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 18px;
+    border-top: 3.5px solid var(--secondary);
+  }
+  .roadmap-badge {
+    background: var(--secondary);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 3px 12px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+  .roadmap-card h5 { margin: 0 0 8px 0; font-size: 0.98rem; color: var(--primary-green); font-weight: 800; }
+  .roadmap-card ul { margin: 0; padding-left: 18px; font-size: 0.86rem; color: #475569; }
+  .roadmap-card li { margin-bottom: 6px; }
+
+  /* Checklist Grid */
+  .checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .check-item {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    padding: 12px 14px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .check-icon { color: var(--accent); font-weight: bold; font-size: 1.1rem; }
+
+  .portal-btn {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #15803d !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .portal-btn:hover { background: #dcfce7; }
+
+  /* Floating Back to Top Button */
+  .back-to-top {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    background: var(--primary-green);
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 30px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(6, 78, 59, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 1000;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .back-to-top:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(5, 150, 105, 0.45);
+  }
+
+  /* Bottom Print Button Styling */
+  .bottom-print-wrap {
+    text-align: center;
+    margin: 32px 0 20px 0;
+  }
+  .btn-bottom-print {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary) 100%);
+    color: #ffffff;
+    border: none;
+    padding: 13px 34px;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 14px rgba(6, 78, 59, 0.25);
+    transition: all 0.25s ease;
+    font-family: inherit;
+  }
+  .btn-bottom-print:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent) 100%);
+  }
+
+  /* Enhanced Standard Portal Footer */
+  /* ==================================================== */
+/* சுருக்கப்பட்ட மையப்படுத்திய திருக்குறள் பகுதி (Compact Centered Kural Box with Animated Verses) */
+/* ==================================================== */
+.kural-box-container {
+  background: linear-gradient(135deg, #fefce8 0%, #fffbeb 50%, #fef3c7 100%);
+  border: 1px solid #fde047;
+  border-left: 5px solid #d97706;
+  border-radius: 14px;
+  padding: 12px 18px;
+  margin: 0 auto 20px;
+  max-width: 900px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.kural-box-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.16);
+}
+.kural-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #b45309;
+  letter-spacing: 0.3px;
+  margin-bottom: 6px;
+  background: rgba(254, 240, 138, 0.8);
+  padding: 3px 12px;
+  border-radius: 999px;
+  border: 1px solid #fde68a;
+}
+.kural-pill-badge .feather-icon {
+  display: inline-block;
+  animation: quillFloat 3s ease-in-out infinite;
+}
+@keyframes quillFloat {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(-10deg) scale(1.1); }
+}
+.kural-text-animated {
+  font-size: 1.14rem;
+  font-weight: 800;
+  line-height: 1.55;
+  margin-bottom: 5px;
+  letter-spacing: 0.25px;
+  display: inline-block;
+  background: linear-gradient(90deg, #78350f 0%, #b45309 25%, #d97706 50%, #b45309 75%, #78350f 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: kuralVerseShimmer 4s ease-in-out infinite alternate;
+}
+@keyframes kuralVerseShimmer {
+  0% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 1px rgba(217, 119, 6, 0.2));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 6px rgba(217, 119, 6, 0.4));
+    transform: scale(1.015);
+  }
+  100% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 1px rgba(217, 119, 6, 0.2));
+    transform: scale(1);
+  }
+}
+.kural-explanation {
+  font-size: 0.86rem;
+  color: #92400e;
+  line-height: 1.5;
+}
+.kural-explanation b {
+  font-weight: 800;
+}
+
+/* Creator Card & Footer (Matching Section 01 & Pilot Guide) */
+.creator-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 14px 22px;
+  margin: 28px 0 16px 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  text-align: center;
+  flex-wrap: wrap;
+  backdrop-filter: blur(14px);
+  box-sizing: border-box;
+}
+
+.creator-name-ta, .creator-name-en {
+  font-weight: 800;
+  font-size: 1.05rem;
+  background: linear-gradient(135deg, #065f46 0%, #0d9488 50%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  letter-spacing: 0.3px;
+  padding: 0 2px;
+}
+
+.creator-label {
+  font-weight: 700;
+  color: #334155;
+  font-size: 0.94rem;
+}
+
+.creator-role {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.94rem;
+}
+
+.creator-phone-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  color: #065f46;
+  font-weight: 800;
+  font-size: 0.92rem;
+  padding: 3px 12px;
+  border-radius: 999px;
+  border: 1px solid #6ee7b7;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(5, 150, 105, 0.12);
+  margin-left: 6px;
+}
+
+.creator-phone-badge:hover {
+  background: #059669;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(5, 150, 105, 0.3);
+  transform: translateY(-1px);
+}
+
+.typing-cursor {
+  color: #059669;
+  font-weight: 900;
+  animation: blinkCursor 0.8s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.portal-footer {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 12px;
+  text-align: center;
+  padding: 24px 16px 20px;
+  font-size: 0.92rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  margin-top: 16px;
+  color: #475569;
+  line-height: 1.7;
+  width: 100%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(14px);
+  box-sizing: border-box;
+}
+
+.portal-footer a {
+  color: #0284c7;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.portal-footer a:hover {
+  text-decoration: underline;
+}
+
+  
+
+  @media (max-width: 768px) {
+    .portal-title { font-size: 1.65rem; }
+    .portal-header { padding: 26px 18px; }
+    .card { padding: 20px 16px; }
+    .top-bar { flex-direction: column; align-items: stretch; }
+    .nav-buttons-group { justify-content: center; }
+  }
+
+  @media print {
+    @page {
+      size: A4 portrait;
+      margin: 12mm 10mm 12mm 10mm;
+    }
+    body {
+      background: #ffffff !important;
+      color: #000000 !important;
+      padding: 0 !important;
+      font-size: 10pt;
+      line-height: 1.45;
+    }
+    .portal-container {
+      max-width: 100% !important;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .top-bar,
+    .breadcrumb-bar,
+    .quick-nav-card,
+    .search-filter-box,
+    .bottom-print-wrap,
+    .back-to-top,
+    .no-print {
+      display: none !important;
+    }
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    .portal-header {
+      background: #064e3b !important;
+      color: #ffffff !important;
+      box-shadow: none !important;
+      border: 1px solid #064e3b;
+      padding: 16px 12px !important;
+      margin-bottom: 14px !important;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .portal-title { font-size: 16pt !important; color: #ffffff !important; text-shadow: none !important; }
+    .portal-subtitle { font-size: 9.5pt !important; color: #e2e8f0 !important; }
+    .card {
+      box-shadow: none !important;
+      border: 1px solid #cbd5e1 !important;
+      border-top: 3.5px solid #064e3b !important;
+      margin-bottom: 16px !important;
+      padding: 14px !important;
+    }
+    .card-title { font-size: 13pt !important; }
+    .alert-box,
+    .adv-box,
+    .info-box-blue,
+    .stat-item,
+    .feature-box,
+    .curr-year-item,
+    .exam-card,
+    .roadmap-card,
+    .check-item,
+    tr {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .table-responsive {
+      overflow-x: visible !important;
+    }
+    table {
+      font-size: 8.5pt !important;
+    }
+    th, td {
+      padding: 5px 7px !important;
+    }
+    th {
+      background-color: #064e3b !important;
+      color: #ffffff !important;
+    }
+    a {
+      text-decoration: none !important;
+      color: inherit !important;
+    }
+  }
+
+/* ============================================================
+   Section 03 Full-Width Unique Animated Thirukkural & Standard Header
+   ============================================================ */
+.portal-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 45%, #1e293b 100%);
+  border-radius: 20px;
+  padding: 34px 28px 28px;
+  color: #ffffff;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.header-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.header-tag {
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+}
+.header-tag.primary { background-color: #fef08a; color: #713f12; border-color: #fde047; }
+.header-tag.secondary { background-color: rgba(255, 255, 255, 0.18); color: #f8fafc; backdrop-filter: blur(8px); }
+.header-tag.amber { background-color: #d97706; color: #ffffff; border-color: #f59e0b; }
+.portal-title {
+  font-size: 2.1rem;
+  font-weight: 900;
+  line-height: 1.35;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+.accent-gold { color: #fde047; }
+.portal-subtitle {
+  font-size: 1.02rem;
+  color: #e2e8f0;
+  max-width: 1050px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* FULL-WIDTH THIRUKKURAL COMPONENT */
+.full-width-kural-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 36px 0 26px 0 !important;
+  padding: 30px 28px !important;
+  border-radius: 18px !important;
+  text-align: center !important;
+  background: linear-gradient(135deg, #180033 0%, #2e1065 50%, #4c1d95 100%) !important;
+  color: #ffffff !important;
+  border: 2px solid #c084fc !important;
+  box-shadow: 0 8px 24px rgba(192, 132, 252, 0.25) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  animation: kuralCosmicShimmer 4s ease-in-out infinite alternate !important;
+}
+
+@keyframes kuralCosmicShimmer {
+  0%, 100% { border-color: #c084fc; box-shadow: 0 8px 24px rgba(192, 132, 252, 0.22); }
+  50% { border-color: #e879f9; box-shadow: 0 12px 34px rgba(232, 121, 249, 0.44); }
+}
+
+.kural-header-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  margin-bottom: 16px;
+  color: #fef08a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.kural-badge-icon { font-size: 1.1rem; }
+.kural-badge-title { font-weight: 900; color: #ffffff; }
+.kural-badge-dot { color: rgba(255, 255, 255, 0.6); }
+.kural-badge-chapter { color: #fde047; font-weight: 700; }
+
+.kural-verse-box {
+  margin: 10px auto 16px auto;
+  max-width: 900px;
+}
+.kural-verse-line {
+  font-family: 'Nirmala UI', 'Latha', 'Mukta Malar', 'Georgia', serif;
+  font-size: 1.38rem;
+  font-weight: 800;
+  line-height: 1.6;
+  margin: 4px 0;
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+  letter-spacing: 0.2px;
+}
+
+.kural-explanation-box {
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 14px 20px;
+  max-width: 950px;
+  margin: 12px auto 0 auto;
+  line-height: 1.65;
+  font-size: 0.96rem;
+  color: #f1f5f9;
+}
+.kural-exp-label {
+  font-weight: 800;
+  color: #fde047;
+  margin-right: 6px;
+}
+.kural-exp-text {
+  color: #f8fafc;
+}
+
+@media (max-width: 768px) {
+  .portal-header { padding: 24px 16px; }
+  .portal-title { font-size: 1.6rem; }
+  .portal-subtitle { font-size: 0.92rem; }
+  .full-width-kural-container { padding: 22px 16px !important; margin: 26px 0 20px 0 !important; }
+  .kural-verse-line { font-size: 1.14rem; }
+  .kural-explanation-box { font-size: 0.88rem; padding: 10px 14px; }
+}
+
 </style>
-</head>
+<style id="distinct-theme-css">
+/* ============================================================
+   Section 03: அறிவியல் & ஆராய்ச்சி (IISER / IISc) - DISTINCT HERO THEME & TRADITIONAL 2-LINE KURAL
+   ============================================================ */
+.portal-header {
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 40%, #059669 75%, #0284c7 100%) !important;
+  border-radius: 22px !important;
+  padding: 38px 30px 30px !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(5, 150, 105, 0.28) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-bottom: 3px solid #10b981 !important;
+  margin-bottom: 24px !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.header-badge-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 14px !important;
+}
+
+.header-tag {
+  padding: 5px 14px !important;
+  border-radius: 999px !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.3px !important;
+  text-transform: uppercase !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  display: inline-block !important;
+}
+.header-tag.primary { background-color: #fef08a !important; color: #713f12 !important; border-color: #fde047 !important; }
+.header-tag.secondary { background-color: rgba(255, 255, 255, 0.18) !important; color: #f8fafc !important; backdrop-filter: blur(8px) !important; }
+.header-tag.amber { background-color: #d97706 !important; color: #ffffff !important; border-color: #f59e0b !important; }
+
+.portal-title {
+  font-size: 2.1rem !important;
+  font-weight: 900 !important;
+  line-height: 1.35 !important;
+  margin: 0 0 10px 0 !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4) !important;
+}
+.accent-gold { color: #fde047 !important; }
+
+.portal-subtitle {
+  font-size: 1.02rem !important;
+  color: #e2e8f0 !important;
+  max-width: 1050px !important;
+  margin: 0 auto !important;
+  line-height: 1.62 !important;
+}
+
+/* TRADITIONAL 2-LINE ANIMATED THIRUKKURAL COMPONENT */
+.traditional-kural-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 22px 0 18px 0 !important;
+  padding: 16px 24px 15px !important;
+  border-radius: 16px !important;
+  text-align: center !important;
+  background: linear-gradient(135deg, #180033 0%, #2e1065 50%, #4c1d95 100%) !important;
+  border: 2px solid #c084fc !important;
+  box-shadow: 0 6px 22px rgba(192, 132, 252, 0.28) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  animation: kuralCardAura_03 4s ease-in-out infinite alternate !important;
+}
+
+.traditional-kural-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 30px rgba(192, 132, 252, 0.45) !important;
+}
+
+@keyframes kuralCardAura_03 {
+  0% {
+    box-shadow: 0 4px 18px rgba(192, 132, 252, 0.25), inset 0 0 12px rgba(192, 132, 252, 0.12);
+    border-color: #c084fc;
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(192, 132, 252, 0.48), inset 0 0 20px rgba(192, 132, 252, 0.22);
+    border-color: #fde047;
+  }
+  100% {
+    box-shadow: 0 4px 18px rgba(192, 132, 252, 0.25), inset 0 0 12px rgba(192, 132, 252, 0.12);
+    border-color: #c084fc;
+  }
+}
+
+.kural-top-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-bottom: 8px !important;
+  padding-bottom: 6px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
+}
+
+.kural-chip-wrap {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.kural-feather-icon {
+  font-size: 1.1rem !important;
+  display: inline-block !important;
+  animation: kuralFeatherFloat 3s ease-in-out infinite alternate !important;
+}
+
+@keyframes kuralFeatherFloat {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-3px) rotate(-10deg); }
+}
+
+.kural-chip-text {
+  font-size: 0.84rem !important;
+  font-weight: 800 !important;
+  color: #f5d0fe !important;
+  letter-spacing: 0.3px !important;
+}
+
+.kural-topic-badge {
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+  padding: 3px 12px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
+}
+
+/* STRICT TRADITIONAL TWO-LINE FORMAT */
+.kural-couplet-lines {
+  margin: 6px auto 8px auto !important;
+  text-align: center !important;
+}
+
+.kural-first-line,
+.kural-second-line {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  font-family: 'Nirmala UI', 'Latha', 'Mukta Malar', 'Georgia', serif !important;
+  font-size: 1.32rem !important;
+  font-weight: 800 !important;
+  line-height: 1.55 !important;
+  margin: 3px 0 !important;
+  letter-spacing: 0.25px !important;
+  color: #ffffff !important;
+  animation: kuralVerseGlow_03 4s ease-in-out infinite alternate !important;
+}
+
+@keyframes kuralVerseGlow_03 {
+  0%, 100% {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(254, 240, 138, 0.7), 0 0 22px rgba(234, 179, 8, 0.45);
+  }
+  50% {
+    color: #fef08a;
+    text-shadow: 0 0 16px rgba(253, 224, 71, 0.95), 0 0 32px rgba(245, 158, 11, 0.8), 0 0 45px rgba(192, 132, 252, 0.6);
+  }
+}
+
+.kural-meaning-row {
+  background: rgba(0, 0, 0, 0.24) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-radius: 10px !important;
+  padding: 8px 16px !important;
+  max-width: 950px !important;
+  margin: 6px auto 0 auto !important;
+  line-height: 1.55 !important;
+  font-size: 0.91rem !important;
+  color: #f1f5f9 !important;
+}
+
+.kural-meaning-label {
+  font-weight: 800 !important;
+  color: #fde047 !important;
+  margin-right: 5px !important;
+}
+
+.kural-meaning-text {
+  color: #f8fafc !important;
+}
+
+@media (max-width: 768px) {
+  .portal-header { padding: 24px 16px !important; }
+  .portal-title { font-size: 1.6rem !important; }
+  .portal-subtitle { font-size: 0.92rem !important; }
+  .traditional-kural-card { padding: 14px 14px 12px !important; margin: 18px 0 !important; }
+  .kural-first-line, .kural-second-line { font-size: 1.12rem !important; line-height: 1.5 !important; }
+  .kural-meaning-row { font-size: 0.84rem !important; padding: 7px 12px !important; }
+}
+</style></head>
 <body>
 <div class="portal-container" id="top">
-
+<!-- Segmented Breadcrumb Navigation Bar (Matching Section 01 & Pilot Guide) -->
 <nav aria-label="Breadcrumb Navigation" class="nav-button-menu-bar">
 <div class="nav-button-menu-container">
-<a class="menu-btn-pill btn-main-site" href="index.html" title="இணையதள முகப்பு">
-<svg fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
-<span>இணையதள முகப்பு</span>
+<a class="menu-btn-pill btn-main-site" href="index.html" title="சிவகங்கை முதன்மைக் கல்வி அலுவலக முகப்பு">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+<span>ceosvg.in முகப்பு</span>
 </a>
 <span class="menu-arrow">›</span>
-<a class="menu-btn-pill btn-entrance" href="00_entrance_exams.html" title="நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம்">
-<svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
-<span>📝 நுழைவுத்தேர்வுகள் மெனு</span>
+<a class="menu-btn-pill btn-career" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மைப் பக்கம்">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"></path></svg>
+<span>🎓 உயர்கல்வி</span>
+</a>
+<span class="menu-arrow">›</span>
+<a class="menu-btn-pill btn-entrance" href="00_entrance_exams.html" title="உயர்கல்வி நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம்">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
+<span>📝 நுழைவுத்தேர்வுகள்</span>
 </a>
 <span class="menu-arrow">›</span>
 <span class="menu-btn-pill btn-current-page" title="தற்போதைய வழிகாட்டிப் பக்கம்">
@@ -80,63 +1243,1624 @@
 </span>
 </div>
 </nav>
-
+<!-- Portal Header Hero Banner -->
 <header class="portal-header">
+<div class="header-badge-row">
+<span class="header-tag primary">பிரிவு 03 (Section 03)</span>
+<span class="header-tag secondary">அறிவியல், ஆராய்ச்சி &amp; B.S. பொறியியல் (Pure Sciences &amp; Research)</span>
+<span class="header-tag amber">7 IISERs | IISc பெங்களூரு | NISER புவனேஸ்வர் | IIT மெட்ராஸ் (BS) | ISI &amp; CMI</span>
+</div>
 <h1 class="portal-title">
     அறிவியல், ஆராய்ச்சி &amp; B.S. பொறியியல் நுழைவுத்தேர்வுகள் <span class="accent-gold">(IISER, IISc, NISER)</span>
 </h1>
 <p class="portal-subtitle">
-    12-ஆம் வகுப்பு பள்ளி மாணவர்களுக்கான 7 இந்திய அறிவியல் கல்வி மற்றும் ஆராய்ச்சி நிறுவனங்கள் (IISERs), IISc பெங்களூரு, NISER, CEBS, ISI, CMI, IIT மெட்ராஸ் B.S. படிப்புகள், IAT &amp; NEST நுழைவுத்தேர்வுகள் வழிகாட்டல் தொகுப்பு.
-</p>
+    12-ஆம் வகுப்பு பள்ளி மாணவர்களுக்கான 7 இந்திய அறிவியல் கல்வி மற்றும் ஆராய்ச்சி நிறுவனங்கள் (IISERs), IISc பெங்களூரு, NISER, CEBS, ISI, CMI, IIT மெட்ராஸ் B.S. படிப்புகள், IAT &amp; NEST நுழைவுத்தேர்வுகள் மற்றும் விஞ்ஞானி பணிக்கான விரிவான வழிகாட்டல் தொகுப்பு.
+  </p>
 </header>
-
-<div class="card">
+<!-- Search and Tag Filter (Web only) -->
+<!-- Quick Navigation Bar / பொருளடக்கம் (Web only) -->
+<div class="quick-nav-card no-print" id="quickNavCard">
+<div class="quick-nav-title">
+<span>🧭 <b>விரைவு வழிசெலுத்தல் (Quick Navigation):</b></span>
+<a href="https://docs.google.com/spreadsheets/d/1Xo1ccPqcYC8he6yXRm6me17MKbp_7Pv8B3gWwsdxg08/edit?usp=sharing" rel="noopener noreferrer" style="background:#059669; color:#ffffff; padding:4px 12px; border-radius:6px; font-size:0.8rem; font-weight:bold; text-decoration:none; display:inline-flex; align-items:center; gap:4px;" target="_blank">📊 35 நிறுவனங்கள் விரிதாள்</a>
+<span style="font-size:0.82rem; color:#059669; font-weight:normal;">(தேவையான பகுதிக்கு உடனடியாகச் செல்ல கிளிக் செய்க)</span>
+</div>
+<div class="quick-nav-grid">
+<button class="nav-btn" onclick="scrollToSection('section-1', event);" type="button"><span class="badge-no">1</span> 🔬 அறிவியல் &amp; ஆராய்ச்சி - முழுப்பார்வை &amp; வாய்ப்புகள்</button>
+<button class="nav-btn" onclick="scrollToSection('section-2', event);" type="button"><span class="badge-no">2</span> 🧪 IAT (IISER Aptitude Test) - முழுமையான வழிகாட்டி</button>
+<button class="nav-btn" onclick="scrollToSection('section-2a', event);" style="background:#ecfdf5; border-color:#6ee7b7; color:#065f46; font-weight:bold;" type="button"><span class="badge-no" style="background:#059669; color:#ffffff;">2A</span> 💻 IISER போபால் B.Tech &amp; B.S. படிப்புகள் </button>
+<button class="nav-btn" onclick="scrollToSection('section-2b', event);" style="background:#eff6ff; border-color:#93c5fd; color:#1e40af; font-weight:bold;" type="button"><span class="badge-no" style="background:#2563eb; color:#ffffff;">2B</span> 🏥 IIT மெட்ராஸ் B.S. Medical Sciences (IAT சேர்க்கை)</button>
+<button class="nav-btn" onclick="scrollToSection('section-3', event);" type="button"><span class="badge-no">3</span> ⚛️ NEST (NISER &amp; UM-DAE CEBS) - அணுசக்தி நிறுவனங்கள்</button>
+<button class="nav-btn" onclick="scrollToSection('section-4', event);" type="button"><span class="badge-no">4</span> 📐 ISI கொல்கத்தா - புள்ளியியல் &amp; கணிதவியல் உச்சம்</button>
+<button class="nav-btn" onclick="scrollToSection('section-5', event);" type="button"><span class="badge-no">5</span> 🧮 CMI சென்னை - கணிதம் &amp; கணினி அறிவியல்</button>
+<button class="nav-btn" onclick="scrollToSection('section-6', event);" style="background:#fffbeb; border-color:#fde68a; color:#b45309; font-weight:bold;" type="button"><span class="badge-no" style="background:#d97706; color:#ffffff;">6</span> 🏛️ IISc பெங்களூரு B.S. &amp; B.Tech சேர்க்கை வழிமுறைகள்</button>
+<button class="nav-btn" onclick="scrollToSection('section-6a', event);" style="background:#f0fdf4; border-color:#86efac; color:#166534; font-weight:bold;" type="button"><span class="badge-no" style="background:#15803d; color:#ffffff;">6A</span> 🚀 IIST திருவனந்தபுரம் — நேரடி இஸ்ரோ விஞ்ஞானி பணி</button>
+<button class="nav-btn" onclick="scrollToSection('section-7', event);" type="button"><span class="badge-no">7</span> 💰 இளம் விஞ்ஞானிகளுக்கான மத்திய அரசு உதவித்தொகைகள்</button>
+<button class="nav-btn" onclick="scrollToSection('section-8', event);" type="button"><span class="badge-no">8</span> 📊 அறிவியல் &amp; பொறியியல் தேர்வுகள் ஒப்பீட்டு அட்டவணை</button>
+<button class="nav-btn" onclick="scrollToSection('section-9', event);" type="button"><span class="badge-no">9</span> 🚀 9 முதல் 12-ஆம் வகுப்பு வரை தயாரிப்பு வழிகாட்டி</button>
+<button class="nav-btn" onclick="scrollToSection('section-10', event);" type="button"><span class="badge-no">10</span> 📑 சேர்க்கை ஆவணங்கள் &amp; அரசு நலத்திட்டங்கள்</button>
+<button class="nav-btn" onclick="scrollToSection('section-research-directory', event);" style="background:#f0fdf4; border-color:#86efac; color:#166534; font-weight:bold;" type="button"><span class="badge-no" style="background:#15803d; color:#ffffff;">📊</span> 35 நிறுவனங்கள் அடைவு &amp; பதிவிறக்கம்</button>
+</div>
+</div>
+<!-- Section 1: Overview (முழுப்பார்வை - Enhanced like Medical & Engineering Portals) -->
+<div class="card filterable-section" data-tags="all intro research opportunities overview pure-science" id="section-1">
 <div class="card-header">
-<h3 class="card-title">🔬 1. அறிவியல், ஆராய்ச்சி &amp; B.S. பொறியியல் படிப்புகள் — முழுப்பார்வை</h3>
+<h3 class="card-title">🔬 1. அறிவியல், ஆராய்ச்சி &amp; B.S. பொறியியல் படிப்புகள் — முழுப்பார்வை &amp; உலகளாவிய வாய்ப்புகள் (Master Overview)</h3>
+<!-- Spreadsheet Callout in Section 1 -->
+<div style="background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%); border: 1.5px solid #059669; border-radius: 14px; padding: 18px 22px; margin: 18px 0; box-shadow: 0 3px 12px rgba(5, 150, 105, 0.08); display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
+<div style="flex: 1; min-width: 280px;">
+<h4 style="color: #064e3b; font-size: 1.05rem; font-weight: 800; margin: 0 0 6px 0; display: flex; align-items: center; gap: 8px;">
+<span>📢 தேசிய அறிவியல் &amp; ஆராய்ச்சி நிறுவனங்கள் அடைவு (Google Sheet) வெளியிடப்பட்டுள்ளது:</span>
+</h4>
+<p style="font-size: 0.9rem; color: #334155; line-height: 1.65; margin: 0;">
+          7 IISERs, IISc பெங்களூரு, IIST திருவனந்தபுரம் (ISRO), NISER புவனேஸ்வர் (BARC), UM-DAE CEBS, ISI, CMI, IIT B.S. படிப்புகள் அடங்கிய <b>35 தலைசிறந்த கல்வி நிறுவனங்களின் முழு விவரங்கள்</b> கூகுள் விரிதாளில் வரிசைப்படுத்தப்பட்டுள்ளன.
+        </p>
 </div>
-<p>வழக்கமான பொறியியல் மற்றும் மருத்துவப் படிப்புகளைத் தாண்டி, புதிய அறிவியலைக் கண்டறிதல், பிரபஞ்சத்தின் புதிர்களை விடுவித்தல், அணுசக்தி, விண்வெளி ஆய்வு, குவாண்டம் கம்ப்யூட்டிங், அதிநவீன தரவு அறிவியல் (Data Science) ஆகியவற்றில் ஆர்வம் கொண்ட மாணவர்களுக்கு மத்திய அறிவியல் தொழில்நுட்ப அமைச்சகம் (DST) மற்றும் அணுசக்தித் துறை (DAE) கீழ் இயங்கும் தேசிய ஆராய்ச்சி நிறுவனங்கள் உலகத்தரம் வாய்ந்த படிப்புகளை வழங்குகின்றன.</p>
+<a href="https://docs.google.com/spreadsheets/d/1Xo1ccPqcYC8he6yXRm6me17MKbp_7Pv8B3gWwsdxg08/edit?usp=sharing" rel="noopener noreferrer" style="background-color: #059669; color: #ffffff; padding: 10px 20px; font-weight: 800; font-size: 0.88rem; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(5,150,105,0.25);" target="_blank">
+<span>📊 விரிதாள் காண்க</span> ➔
+      </a>
+</div>
+<span class="badge badge-green">நாட்டின் எதிர்கால விஞ்ஞானிகள் &amp; உயர் தொழில்நுட்ப வல்லுநர்களுக்கான களம்</span>
+</div>
+<p>வழக்கமான பொறியியல் மற்றும் மருத்துவப் படிப்புகளைத் தாண்டி, புதிய அறிவியலைக் கண்டறிதல், பிரபஞ்சத்தின் புதிர்களை விடுவித்தல், அணுசக்தி, விண்வெளி ஆய்வு, குவாண்டம் கம்ப்யூட்டிங், மரபணு சிகிச்சை, அதிநவீன தரவு அறிவியல் (Data Science) மற்றும் உயர் தொழில்நுட்பப் பொறியியல் ஆராய்ச்சியில் ஆர்வம் கொண்ட மாணவர்களுக்கு இந்தியாவில் மிக உயரிய வாய்ப்புகள் காத்திருக்கின்றன. மத்திய அறிவியல் தொழில்நுட்ப அமைச்சகம் (DST) மற்றும் அணுசக்தித் துறை (DAE) ஆகியவற்றின் கீழ் இயங்கும் தேசிய ஆராய்ச்சி நிறுவனங்கள் உலகத்தரம் வாய்ந்த இளநிலை மற்றும் ஒருங்கிணைந்த முதுநிலைப் படிப்புகளை (BS-MS, B.Tech. in Engineering Sciences, B.S. Economic Sciences, B.Stat, B.Math, B.S. Medical Sciences) வழங்குகின்றன.</p>
 <div class="stats-grid">
-<div class="stat-item"><div class="stat-num">7 IISERs</div><div class="stat-label">மத்திய அறிவியல் கல்வி &amp; ஆராய்ச்சி நிறுவனங்கள்</div></div>
-<div class="stat-item"><div class="stat-num">B.Tech DSE/EECS</div><div class="stat-label">போபாலில் 4-ஆண்டு B.Tech பொறியியல் படிப்புகள்</div></div>
-<div class="stat-item"><div class="stat-num">IISc பெங்களூரு</div><div class="stat-label">நாட்டின் #1 ஆராய்ச்சிப் பல்கலைக்கழகம்</div></div>
-<div class="stat-item"><div class="stat-num">₹80,000 /ஆண்டு</div><div class="stat-label">மத்திய அரசின் INSPIRE SHE கல்வி உதவித்தொகை</div></div>
+<div class="stat-item">
+<div class="stat-num">7 IISERs</div>
+<div class="stat-label">தேசிய முக்கியத்துவம் வாய்ந்த மத்திய அறிவியல் கல்வி &amp; ஆராய்ச்சி நிறுவனங்கள்</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">B.Tech DSE/EECS</div>
+<div class="stat-label">போபாலில் 4-ஆண்டு B.Tech பொறியியல் படிப்புகள் (IAT வழி சேர்க்கை)</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">IIT மெட்ராஸ் B.S.</div>
+<div class="stat-label">மருத்துவமும் பொறியியலும் இணையும் B.S. Medical Sciences (IAT சேர்க்கை)</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">IISc பெங்களூரு</div>
+<div class="stat-label">நாட்டின் #1 NIRF &amp; உலகத்தரம் வாய்ந்த ஆராய்ச்சிப் பல்கலைக்கழகம்</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">₹80,000 /ஆண்டு</div>
+<div class="stat-label">மத்திய அரசின் INSPIRE SHE &amp; DAE DISHA கல்வி உதவித்தொகை</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">BARC &amp; ISRO</div>
+<div class="stat-label">நேரடி விஞ்ஞானி (Scientific Officer) மற்றும் பொறியாளர் பணி நியமனம்!</div>
 </div>
 </div>
-
+<!-- 4 Major Pillars of Research & Advanced Education -->
+<div class="card-sub">அறிவியல், ஆராய்ச்சி மற்றும் தொழில்நுட்பக் கல்வியின் 4 முதன்மைத் தூண்கள் (Core Domains):</div>
+<div class="feature-grid-4">
+<div class="feature-box" style="border-top-color: #059669;">
+<h4><span>1. தூய அறிவியல் &amp; ஆராய்ச்சி</span> <span class="badge badge-green">Pure Science</span></h4>
+<div class="feat-sub">இயற்பியல், வேதியியல், உயிரியல், கணிதம்</div>
+<ul>
+<li><b>கல்வி நிறுவனங்கள்:</b> 7 IISERs (திருப்பதி, திருவனந்தபுரம், புனே, போபால், கொல்கத்தா, மொஹாலி, பெர்ஹாம்பூர்), NISER புவனேஸ்வர், CEBS மும்பை.</li>
+<li><b>வழங்கும் பட்டங்கள்:</b> 5-ஆண்டு ஒருங்கிணைந்த BS-MS Dual Degree, 5-ஆண்டு M.Sc.</li>
+<li><b>இலக்கு:</b> பிரபஞ்ச அறிவியல், குவாண்டம் இயற்பியல், புற்றுநோய் உயிரியல், மூலக்கூறு வேதியியல் ஆராய்ச்சி.</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color: #2563eb;">
+<h4><span>2. புதிய தலைமுறை B.Tech &amp; B.S.</span> <span class="badge badge-blue">Tech &amp; AI</span></h4>
+<div class="feat-sub">Data Science, EECS, Chemical Engg</div>
+<ul>
+<li><b>கல்வி நிறுவனங்கள்:</b> IISER போபால் (IAT வழி), IISc பெங்களூரு (B.Tech Math &amp; Computing).</li>
+<li><b>வழங்கும் பட்டங்கள்:</b> 4-ஆண்டு B.Tech in DSE, EECS, Chemical &amp; B.S. Economic Sciences.</li>
+<li><b>இலக்கு:</b> AI/ML அல்காரிதம்கள், செமிகண்டக்டர் சிப் வடிவமைப்பு, கார்ப்பரேட் மற்றும் ஃபின்டெக் உச்சபட்ச வேலைவாய்ப்புகள்.</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color: #7c3aed;">
+<h4><span>3. கணிதம், புள்ளியியல் &amp; குவாண்ட்</span> <span class="badge badge-purple">Maths &amp; Stats</span></h4>
+<div class="feat-sub">ISI கொல்கத்தா &amp; CMI சென்னை</div>
+<ul>
+<li><b>கல்வி நிறுவனங்கள்:</b> இந்தியப் புள்ளியியல் கழகம் (ISI கொல்கத்தா/பெங்களூரு), சென்னை கணிதவியல் நிறுவனம் (CMI).</li>
+<li><b>வழங்கும் பட்டங்கள்:</b> 3-ஆண்டு B.Stat (Hons), B.Math (Hons), B.Sc. Maths &amp; CS.</li>
+<li><b>இலக்கு:</b> 100% இலவசக் கல்வி + மாதாந்திர உதவித்தொகை; குவாண்டிடேடிவ் ஃபைனான்ஸ் மற்றும் அல்காரிதமிக் டிரேடிங்.</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color: #d97706;">
+<h4><span>4. மருத்துவம் &amp; பொறியியல் இணைப்பு</span> <span class="badge badge-gold">Med-Tech</span></h4>
+<div class="feat-sub">IIT மெட்ராஸ் DMST துறை</div>
+<ul>
+<li><b>கல்வி நிறுவனங்கள்:</b> இந்திய தொழில்நுட்பக் கழகம் மெட்ராஸ் (IIT Madras).</li>
+<li><b>வழங்கும் பட்டங்கள்:</b> 4-ஆண்டு B.S. in Medical Sciences &amp; Engineering (IAT மதிப்பெண் வழி!).</li>
+<li><b>இலக்கு:</b> உயிர்காக்கும் மருத்துவக் கருவிகள் உருவாக்கம், AI மெடிக்கல் இமேஜிங், 1 ஆண்டு மருத்துவமனை உள்ளிருப்புப் பயிற்சி.</li>
+</ul>
+</div>
+</div>
+<!-- Quick Master Overview Table of the 5 Research Streams -->
+<div class="card-sub">ஒரே பார்வையில் தேசிய முதன்மை அறிவியல் &amp; ஆராய்ச்சி நுழைவுத்தேர்வுகள் (Quick Comparison):</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th style="width: 14%;">நுழைவுத்தேர்வு</th>
+<th style="width: 20%;">சேர்க்கை நிறுவனங்கள்</th>
+<th style="width: 24%;">வழங்கும் பட்டப்படிப்புகள்</th>
+<th style="width: 18%;">தேர்வு முறை &amp; தகுதி</th>
+<th style="width: 14%;">மாதாந்திர உதவித்தொகை</th>
+<th style="width: 10%;">அதிகாரப்பூர்வ தளம்</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#ecfdf5;">
+<td><b>IAT</b><br/><small>IISER Aptitude Test</small></td>
+<td><b>7 IISERs</b>, IISc பெங்களூரு, IIT மெட்ராஸ்</td>
+<td>5-ஆண்டு BS-MS, 4-ஆண்டு B.Tech (DSE/EECS/Chem), B.S. Economics, B.S. Medical Sciences</td>
+<td>CBT கணினித் தேர்வு (60 வினாக்கள்: PCMB). 12-ல் Science பயின்றிருக்க வேண்டும்.</td>
+<td>₹80,000 /ஆண்டு (INSPIRE SHE தகுதிப்படி)</td>
+<td><a class="portal-btn" href="https://iiseradmission.in/" rel="noopener noreferrer" target="_blank">iiseradmission.in</a></td>
+</tr>
+<tr>
+<td><b>NEST</b><br/><small>National Screening Test</small></td>
+<td><b>NISER புவனேஸ்வர்</b> &amp; <b>UM-DAE CEBS மும்பை</b></td>
+<td>5-ஆண்டு ஒருங்கிணைந்த M.Sc. (Physics, Chem, Bio, Math)</td>
+<td>CBT கணினித் தேர்வு (சிறந்த 3 பாடங்கள் - 150 மதிப்பெண்). சமவாய்ப்பு விதி!</td>
+<td>₹80,000 /ஆண்டு (DISHA - அனைவருக்கும்!)</td>
+<td><a class="portal-btn" href="https://www.nestexam.in/" rel="noopener noreferrer" target="_blank">nestexam.in</a></td>
+</tr>
+<tr>
+<td><b>ISI Test</b><br/><small>Indian Statistical Institute</small></td>
+<td><b>ISI கொல்கத்தா</b>, பெங்களூரு, டெல்லி</td>
+<td>3-ஆண்டு B.Stat (Hons), B.Math (Hons)</td>
+<td>கணித புறவய (UGA) + விளக்கமுறை (UGB) தேர்வு + நேர்காணல்.</td>
+<td>100% இலவசக் கல்வி + மாதம் ₹5,000 ஸ்டைபண்ட்!</td>
+<td><a class="portal-btn" href="https://www.isical.ac.in/" rel="noopener noreferrer" target="_blank">isical.ac.in</a></td>
+</tr>
+<tr>
+<td><b>CMI Exam</b><br/><small>Chennai Mathematical Inst.</small></td>
+<td><b>CMI சென்னை</b> (சிறுசேரி சிப்காட்)</td>
+<td>3-ஆண்டு B.Sc. (Hons) Mathematics &amp; Computer Science / Physics</td>
+<td>ஆழ்ந்த கணித எழுத்துத் தேர்வு (ஒலிம்பியாட் சாதனையாளர்களுக்கு நேரடிச் சேர்க்கை).</td>
+<td>முழுக் கட்டண விலக்கு + மாதம் ₹4,000 ஸ்டைபண்ட்</td>
+<td><a class="portal-btn" href="https://www.cmi.ac.in/" rel="noopener noreferrer" target="_blank">cmi.ac.in</a></td>
+</tr>
+<tr>
+<td><b>IISc B.S.</b><br/><small>Indian Inst. of Science</small></td>
+<td><b>IISc பெங்களூரு</b></td>
+<td>4-ஆண்டு B.S. (Research) &amp; B.Tech Mathematics and Computing</td>
+<td>IAT மதிப்பெண் / JEE Advanced / JEE Main / NEET-UG வழியாக நேரடிச் சேர்க்கை.</td>
+<td>ஆண்டுக்கு ₹80,000 வரை (INSPIRE SHE)</td>
+<td><a class="portal-btn" href="https://admissions.iisc.ac.in/" rel="noopener noreferrer" target="_blank">admissions.iisc.ac.in</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="alert-box">
+<h4>💡 ஆராய்ச்சி &amp; B.S. பொறியியல் படிப்புகளை முடிப்பவர்களுக்கான முக்கியப் பணிவாய்ப்புகள் &amp; களங்கள்:</h4>
+<p>
+        • <b>விஞ்ஞானி &amp; ஆய்வாளர் (Scientist / Researcher):</b> இஸ்ரோ (ISRO), பாபா அணு ஆராய்ச்சி மையம் (BARC), DRDO, CSIR ஆய்வகங்கள், TIFR, டாடா மெமோரியல் மையம் மற்றும் பன்னாட்டு ஆராய்ச்சி நிறுவனங்கள்.<br/>
+        • <b>உயர் தொழில்நுட்ப கார்ப்பரேட் வேலைவாய்ப்புகள் (High-Tech Industry):</b> Google, Microsoft, Amazon, NVIDIA, Intel, Qualcomm ஆகியவற்றில் Data Scientist, AI/ML Engineer, SDE பணிகளில் ஆண்டுக்கு ₹15 லட்சம் முதல் ₹42 லட்சம் வரை தொடக்க ஊதியம்!<br/>
+        • <b>சர்வதேச உயர்கல்வி (Global MS / PhDs):</b> அமெரிக்காவின் MIT, ஹார்வர்டு, ஸ்டான்ஃபோர்ட், கார்னகி மெலன், பிரிட்டனின் கேம்பிரிட்ஜ், ஆக்ஸ்போர்டு மற்றும் ஜெர்மனியின் மேக்ஸ் பிளாங்க் நிறுவனங்களில் முழு கல்வி உதவித்தொகையுடன் (Fully Funded Fellowship) முனைவர் பட்ட ஆய்வு வாய்ப்புகள்.<br/>
+        • <b>நிதி &amp; பகுப்பாய்வு (Quantitative Finance):</b> ISI, CMI மற்றும் IISER பொருளாதார/தரவு அறிவியல் முடிக்கும் மாணவர்கள் குவாண்டிடேடிவ் அனலிஸ்ட் (Quant Analyst), Risk Modeler, அல்காரிதமிக் டிரேடிங் பணிகளில் மிக உயர்ந்த ஊதியத்துடன் நியமிக்கப்படுகின்றனர்.
+      </p>
+</div>
+</div>
+<!-- Section 2: IAT (IISER) -->
+<div class="card filterable-section" data-tags="iiser all iat iisc iit-madras" id="section-2">
+<div class="card-header">
+<h3 class="card-title">🧪 2. IAT (IISER Aptitude Test) — முழுமையான வழிகாட்டி</h3>
+<span class="badge badge-teal">7 IISERs, IISc &amp; IIT Madras சேர்க்கை</span>
+</div>
+<p>இந்திய மத்திய அரசால் தொடங்கப்பட்ட <b>IISER (Indian Institutes of Science Education and Research)</b> கல்வி நிறுவனங்கள் மற்றும் உலகின் முன்னணி ஆராய்ச்சி நிறுவனமான <b>IISc பெங்களூரு</b> ஆகியவற்றில் அறிவியல் ஆராய்ச்சி மற்றும் தொழில்நுட்பப் படிப்புகளில் சேருவதற்கு <b>IAT (IISER Aptitude Test)</b> எழுத வேண்டும்.</p>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th style="width: 25%;">அம்சம்</th>
+<th style="width: 75%;">விவரம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>சேர்க்கை நிறுவனங்கள்</b></td>
+<td><b>7 IISERs:</b> திருப்பதி (ஆந்திரா), திருவனந்தபுரம் (கேரளா), புனே, போபால், கொல்கத்தா, மொஹாலி, பெர்ஹாம்பூர்.<br/><b>கூடுதல் நிறுவனங்கள்:</b> <a href="https://admissions.iisc.ac.in/" rel="noopener noreferrer" style="color:var(--secondary);font-weight:bold;" target="_blank">IISc பெங்களூரு</a> (4-ஆண்டு B.S. Research) மற்றும் <a href="https://www.iitm.ac.in/" rel="noopener noreferrer" style="color:var(--secondary);font-weight:bold;" target="_blank">IIT மெட்ராஸ்</a> (B.S. Medical Sciences &amp; Engineering).</td>
+</tr>
+<tr>
+<td><b>வழங்கும் படிப்புகள்</b></td>
+<td>
+              • <b>5-ஆண்டு ஒருங்கிணைந்த BS-MS இரட்டைப் பட்டம் (7 IISER-களிலும்):</b> இயற்பியல், வேதியியல், கணிதம், உயிரியல், பூமி மற்றும் சுற்றுச்சூழல் அறிவியல்.<br/>
+              • <b>4-ஆண்டு B.Tech. in Engineering Sciences (IISER போபால்):</b> Data Science &amp; Engineering (DSE), Electrical Engineering &amp; Computer Science (EECS), Chemical Engineering (ChE). <i>(மறு ஆய்வின்படி: முன்னர் B.S. என வழங்கப்பட்டவை தற்போது அதிகாரப்பூர்வமாக B.Tech பட்டமாகவே வழங்கப்படுகின்றன!)</i><br/>
+              • <b>4-ஆண்டு B.S. in Economic Sciences (IISER போபால்):</b> பொருளாதார அறிவியல், நிதிப் பொறியியல் &amp; கணிதப் பொருளாதாரம்.<br/>
+              • <b>4-ஆண்டு B.S. Medical Sciences &amp; Engineering (<a href="https://mst.iitm.ac.in/" rel="noopener noreferrer" style="color:var(--secondary); font-weight:bold;" target="_blank">IIT மெட்ராஸ்</a>):</b> IAT தேர்வு மதிப்பெண் மூலம் நேரடி சேர்க்கை!<br/>
+              • <b>4-ஆண்டு B.S. Research &amp; B.Tech (<a href="https://admissions.iisc.ac.in/" rel="noopener noreferrer" style="color:var(--secondary); font-weight:bold;" target="_blank">IISc பெங்களூரு</a>):</b> IAT மற்றும் JEE வழியே சேர்க்கை.
+            </td>
+</tr>
+<tr>
+<td><b>தேர்வு முறை &amp; கால அளவு</b></td>
+<td>கணினி வழித் தேர்வு (CBT) - 3 மணி நேரம் (180 நிமிடங்கள்). ஆண்டுதோறும் ஜூன் மாதத்தில் நடைபெறும்.</td>
+</tr>
+<tr>
+<td><b>வினாக்கள் &amp; மதிப்பெண்கள்</b></td>
+<td>மொத்தம் <b>60 வினாக்கள்</b> (240 மதிப்பெண்கள்):<br/>
+            • கணிதம்: 15 வினாக்கள் (60 மதிப்பெண்)<br/>
+            • இயற்பியல்: 15 வினாக்கள் (60 மதிப்பெண்)<br/>
+            • வேதியியல்: 15 வினாக்கள் (60 மதிப்பெண்)<br/>
+            • உயிரியல்: 15 வினாக்கள் (60 மதிப்பெண்)</td>
+</tr>
+<tr>
+<td><b>மதிப்பெண் விதிகள்</b></td>
+<td>சரியான விடைக்கு <b>+4 மதிப்பெண்கள்</b>; தவறான விடைக்கு <b>-1 எதிர்மறை மதிப்பெண்</b> (Negative Mark); விடையளிக்காத வினாவுக்கு 0 மதிப்பெண்.</td>
+</tr>
+<tr>
+<td><b>தகுதி வரம்பு</b></td>
+<td>12-ஆம் வகுப்பில் Science Stream (PCM, PCB அல்லது PCMB) பயின்று ஒட்டுமொத்தமாக குறைந்தது 60% மதிப்பெண்கள் (SC, ST, PwD பிரிவினருக்கு 55%) பெற்றிருக்க வேண்டும். (குறிப்பு: B.S. Engineering Sciences மற்றும் Economic Sciences படிப்புகளுக்கு 12-ஆம் வகுப்பில் கணிதம் கட்டாயம்).</td>
+</tr>
+<tr>
+<td><b>அதிகாரப்பூர்வ தளம்</b></td>
+<td><a class="portal-btn" href="https://iiseradmission.in/" rel="noopener noreferrer" target="_blank">iiseradmission.in</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="info-box-blue">
+<h4>🎯 IAT தேர்வில் எளிதில் வெல்வதற்கான உத்தி:</h4>
+<p>
+        • <b>கணிதப் பிரிவு மாணவர்கள் (PCM):</b> 11 மற்றும் 12-ஆம் வகுப்பு NCERT உயிரியல் புத்தகங்களில் உள்ள அடிப்படைப் பாடங்களை (Genetics, Cell Biology, Ecology) மேலோட்டமாகப் படித்தாலே உயிரியலில் 8-10 வினாக்களுக்குச் சரியாக விடையளித்து அகில இந்திய தரவரிசையை உயர்த்திக் கொள்ள முடியும்!<br/>
+        • <b>உயிரியல் பிரிவு மாணவர்கள் (PCB):</b> கணிதத்தில் எளிமையான அணிகள் (Matrices), நிகழ்தகவு (Probability), தொடர்புகள் (Relations &amp; Functions) போன்ற அடிப்படைகளைப் பயிற்சி செய்தால் மிகச் சிறந்த இடத்தைப் பெறலாம்.
+      </p>
+</div>
+<!-- Comprehensive Listing of All 7 IISERs and their Offered Courses -->
+<div class="card-sub" style="font-size:1.15rem; color:var(--primary-green); margin-top:28px;">🏛️ அனைத்து 7 IISER கல்வி நிறுவனங்களும் &amp; அவற்றில் வழங்கப்படும் படிப்புகளின் முழுமையான பட்டியல் (All 7 IISERs &amp; Programs Offered):</div>
+<p>இந்தியாவில் தற்போது 7 தேசிய அறிவியல் கல்வி மற்றும் ஆராய்ச்சி நிறுவனங்கள் (IISERs) செயல்பட்டு வருகின்றன. இவை மத்திய அரசின் கல்வி அமைச்சகத்தால் (MoE) <i>"தேசிய முக்கியத்துவம் வாய்ந்த நிறுவனங்களாக" (Institutes of National Importance)</i> அங்கீகரிக்கப்பட்டு செயல்படுகின்றன. இவற்றில் வழங்கப்படும் இளநிலை, தொழில்முறைப் பொறியியல் மற்றும் முதுநிலைப் படிப்புகளின் முழுமையான விவரம் கீழே தொகுக்கப்பட்டுள்ளது:</p>
+<!-- Master Table of 7 IISERs -->
+<div class="table-responsive" style="margin: 18px 0;">
+<table>
+<thead>
+<tr>
+<th style="width: 5%;">வ.எண்</th>
+<th style="width: 22%;">IISER கல்வி நிறுவனம் &amp; அமைவிடம்</th>
+<th style="width: 48%;">வழங்கப்படும் இளநிலை &amp; ஒருங்கிணைந்த பட்டப்படிப்புகள்</th>
+<th style="width: 25%;">தனித்துவச் சிறப்பம்சங்கள் &amp; ஆய்வுக் களங்கள்</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#ffffff;">
+<td style="text-align:center; font-weight:bold;">1</td>
+<td>
+<b>IISER புனே (IISER Pune)</b><br/>
+<small>மகாராஷ்டிரா (தொடக்கம்: 2006)</small><br/>
+<a class="portal-btn" href="https://www.iiserpune.ac.in/" rel="noopener noreferrer" style="margin-top:4px;" target="_blank">iiserpune.ac.in</a>
+</td>
+<td>
+<b>5-ஆண்டு ஒருங்கிணைந்த BS-MS Dual Degree:</b><br/>
+              • Biological Sciences (உயிரியல் அறிவியல்)<br/>
+              • Chemical Sciences (வேதியியல் அறிவியல்)<br/>
+              • Earth and Climate Sciences (பூமி &amp; காலநிலை அறிவியல்)<br/>
+              • Mathematical Sciences (கணித அறிவியல்)<br/>
+              • Physical Sciences (இயற்பியல் அறிவியல்)<br/>
+<i>(கூடுதலாக Integrated Ph.D. மற்றும் Ph.D. ஆய்வுப் படிப்புகள்)</i>
+</td>
+<td>
+              • நாட்டின் முதன்மையான IISER வளாகம் (NIRF Rank #1 among IISERs).<br/>
+              • அதிநவீன குவாண்டம் தொழில்நுட்ப மையம் (Quantum Technologies) மற்றும் தேசிய சூப்பர் கம்ப்யூட்டிங் மையம்.<br/>
+              • உலகப் புகழ்பெற்ற உயிரி மூலக்கூறு ஆய்வகங்கள்.
+            </td>
+</tr>
+<tr style="background:#f8fafc;">
+<td style="text-align:center; font-weight:bold;">2</td>
+<td>
+<b>IISER கொல்கத்தா (IISER Kolkata)</b><br/>
+<small>மோகன்பூர், மேற்கு வங்கம் (தொடக்கம்: 2006)</small><br/>
+<a class="portal-btn" href="https://www.iiserkol.ac.in/" rel="noopener noreferrer" style="margin-top:4px;" target="_blank">iiserkol.ac.in</a>
+</td>
+<td>
+<b>5-ஆண்டு ஒருங்கிணைந்த BS-MS Dual Degree:</b><br/>
+              • Biological Sciences (உயிரியல் அறிவியல்)<br/>
+              • Chemical Sciences (வேதியியல் அறிவியல்)<br/>
+              • Geological Sciences (புவியியல் அறிவியல்)<br/>
+              • Mathematical Sciences (கணித அறிவியல்)<br/>
+              • Physical Sciences (இயற்பியல் அறிவியல்)<br/>
+<i>(மற்றும் விண்வெளி அறிவியலில் CESSI சிறப்பு ஆய்வு)</i>
+</td>
+<td>
+              • <b>CESSI விண்வெளி ஆய்வு மையம்:</b> இஸ்ரோவின் <b>ஆதித்யா-L1</b>, சூரிய இயற்பியல் மற்றும் விண்வெளி வானிலை ஆராய்ச்சியில் முக்கியப் பங்கு.<br/>
+              • வலுவான புவியியல் மற்றும் சுற்றுச்சூழல் ஆராய்ச்சிப் பிரிவுகள்.
+            </td>
+</tr>
+<tr style="background:#ffffff;">
+<td style="text-align:center; font-weight:bold;">3</td>
+<td>
+<b>IISER மொஹாலி (IISER Mohali)</b><br/>
+<small>பஞ்சாப் (சண்டிகர் அருகில் - தொடக்கம்: 2007)</small><br/>
+<a class="portal-btn" href="https://www.iisermohali.ac.in/" rel="noopener noreferrer" style="margin-top:4px;" target="_blank">iisermohali.ac.in</a>
+</td>
+<td>
+<b>5-ஆண்டு ஒருங்கிணைந்த BS-MS Dual Degree:</b><br/>
+              • Biological Sciences (உயிரியல் அறிவியல்)<br/>
+              • Chemical Sciences (வேதியியல் அறிவியல்)<br/>
+              • Earth &amp; Environmental Sciences (சுற்றுச்சூழல் அறிவியல்)<br/>
+              • Mathematical Sciences (கணித அறிவியல்)<br/>
+              • Physical Sciences (இயற்பியல் அறிவியல்)
+            </td>
+<td>
+              • அதிநவீன அணு காந்த அதிர்வு (NMR) ஆராய்ச்சி வசதிகள்.<br/>
+              • கிரிஸ்டலோகிராபி (Crystallography), புரத கட்டமைப்பு மற்றும் செல்லுலார் உயிரியலில் சர்வதேச முன்னணி ஆராய்ச்சி.
+            </td>
+</tr>
+<tr style="background:#ecfdf5; font-weight:500;">
+<td style="text-align:center; font-weight:bold; color:#065f46;">4</td>
+<td>
+<b style="color:#065f46;">IISER போபால் (IISER Bhopal)</b><br/>
+<small>மத்திய பிரதேசம் (தொடக்கம்: 2008)</small><br/>
+<span class="badge badge-green" style="margin-top:3px;">பொறியியல் B.Tech &amp; B.S.</span><br/>
+<a class="portal-btn" href="https://www.iiserb.ac.in/" rel="noopener noreferrer" style="margin-top:4px;" target="_blank">iiserb.ac.in</a>
+</td>
+<td>
+<b>1. Natural Sciences (5-ஆண்டு BS-MS):</b><br/>
+              • Biological Sciences • Chemistry • Earth &amp; Environmental Sciences • Mathematics • Physics.<br/><br/>
+<b>2. Engineering Sciences (4-ஆண்டு B.Tech):</b><br/>
+              • <b>B.Tech. in Chemical Engineering</b><br/>
+              • <b>B.Tech. in Data Science and Engineering (DSE)</b><br/>
+              • <b>B.Tech. in Electrical Engineering &amp; Computer Science (EECS)</b><br/>
+<i>(விரும்பினால் 5-ஆம் ஆண்டில் B.Tech - M.Tech Dual Degree)</i><br/><br/>
+<b>3. Economic Sciences (4-ஆண்டு B.S.):</b><br/>
+              • <b>B.S. in Economic Sciences</b> <i>(விரும்பினால் BS-MS Dual Degree)</i>
+</td>
+<td>
+              • <b>3 தனித்தனி துறைகளில் பட்டங்கள் வழங்கும் ஒரே IISER!</b><br/>
+              • பொறியியல் (B.Tech) &amp; தரவு அறிவியல் பட்டங்கள்.<br/>
+              • ஐடி மற்றும் குவாண்ட் நிறுவனங்களில் ஆண்டுக்கு ₹15 - ₹42 லட்சம் வரை நேரடி கார்ப்பரேட் கேம்பஸ் வேலைவாய்ப்புகள் (Placements).
+            </td>
+</tr>
+<tr style="background:#ffffff;">
+<td style="text-align:center; font-weight:bold;">5</td>
+<td>
+<b>IISER திருவனந்தபுரம் (IISER TVM)</b><br/>
+<small>விதுரா, கேரளா (தொடக்கம்: 2008)</small><br/>
+<span class="badge badge-blue" style="margin-top:3px;">தமிழ்நாட்டுக்கு அருகில்</span><br/>
+<a class="portal-btn" href="https://www.iisertvm.ac.in/" rel="noopener noreferrer" style="margin-top:4px;" target="_blank">iisertvm.ac.in</a>
+</td>
+<td>
+<b>1. 5-ஆண்டு ஒருங்கிணைந்த BS-MS Dual Degree:</b><br/>
+              • Biology • Chemistry • Mathematics • Physics.<br/><br/>
+<b>2. 5-ஆண்டு i2 Sciences (Interdisciplinary BS-MS):</b><br/>
+              • <b>i2 Biological Sciences</b> (Bioinformatics &amp; System Biology)<br/>
+              • <b>i2 Chemical Sciences</b> (Chemical Energy &amp; Smart Materials)<br/>
+              • <b>i2 Mathematical Sciences</b> (Data Science &amp; Scientific Computing)<br/>
+              • <b>i2 Physical Sciences</b> (Materials Science &amp; Quantum Devices)
+            </td>
+<td>
+              • தமிழக மாணவர்களுக்கு மிக அருகில் அமைந்துள்ள சர்வதேசத் தரத்திலான பசுமை வளாகம்.<br/>
+              • பல்துறை ஒருங்கிணைந்த <b>i2 Sciences</b> பட்டங்கள் மூலம் அதிநவீன தரவு அறிவியல் &amp; பொருட்கள் அறிவியல் ஆராய்ச்சி வசதிகள்.
+            </td>
+</tr>
+<tr style="background:#f8fafc;">
+<td style="text-align:center; font-weight:bold;">6</td>
+<td>
+<b>IISER திருப்பதி (IISER Tirupati)</b><br/>
+<small>ஆந்திரப் பிரதேசம் (தொடக்கம்: 2015)</small><br/>
+<span class="badge badge-teal" style="margin-top:3px;">சென்னை/தமிழக எல்லை</span><br/>
+<a class="portal-btn" href="https://www.iisertirupati.ac.in/" rel="noopener noreferrer" style="margin-top:4px;" target="_blank">iisertirupati.ac.in</a>
+</td>
+<td>
+<b>5-ஆண்டு ஒருங்கிணைந்த BS-MS Dual Degree:</b><br/>
+              • Biological Sciences (உயிரியல் அறிவியல்)<br/>
+              • Chemical Sciences (வேதியியல் அறிவியல்)<br/>
+              • Earth and Climate Sciences (பூமி &amp; காலநிலை அறிவியல்)<br/>
+              • Mathematical Sciences (கணித அறிவியல்)<br/>
+              • Physical Sciences (இயற்பியல் அறிவியல்)
+            </td>
+<td>
+              • தமிழக எல்லைக்கு மிக அருகில் அமைந்துள்ள நவீன ஆராய்ச்சி நிறுவனம்.<br/>
+              • IIT திருப்பதிக்கு அருகாமையில் கூட்டுத் தொழில்சார் திட்டங்கள் (Joint Interdisciplinary Projects).<br/>
+              • அணுக்கரு இயற்பியல், புற்றுநோய் உயிரியல் ஆய்வகங்கள்.
+            </td>
+</tr>
+<tr style="background:#ffffff;">
+<td style="text-align:center; font-weight:bold;">7</td>
+<td>
+<b>IISER பெர்ஹாம்பூர் (IISER Berhampur)</b><br/>
+<small>ஒடிசா (தொடக்கம்: 2016)</small><br/>
+<a class="portal-btn" href="https://www.iiserbpr.ac.in/" rel="noopener noreferrer" style="margin-top:4px;" target="_blank">iiserbpr.ac.in</a>
+</td>
+<td>
+<b>5-ஆண்டு ஒருங்கிணைந்த BS-MS Dual Degree:</b><br/>
+              • Biological Sciences (உயிரியல் அறிவியல்)<br/>
+              • Chemical Sciences (வேதியியல் அறிவியல்)<br/>
+              • Earth &amp; Environmental Sciences (சுற்றுச்சூழல் அறிவியல்)<br/>
+              • Mathematical Sciences (கணித அறிவியல்)<br/>
+              • Physical Sciences (இயற்பியல் அறிவியல்)
+            </td>
+<td>
+              • கிழக்குக் கடற்கரை பகுதியில் வளர்ந்து வரும் முன்னணி மத்திய ஆராய்ச்சி நிறுவனம்.<br/>
+              • கடலோர சூழலியல், பொருட்கள் அறிவியல் (Materials) மற்றும் உயிரிமருத்துவக் கணிப்பீடு உயர் ஆய்வுகள்.
+            </td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- 7 Detailed Cards for each IISER -->
+<div class="card-sub" style="font-size:1.02rem; color:var(--secondary-dark); margin-top:20px;">ஒவ்வொரு IISER கல்வி நிறுவனத்தின் விரிவான துறைசார் கண்ணோட்டம் (Detailed Institutional Highlights):</div>
+<div class="feature-grid-4">
+<div class="feature-box" style="border-top-color:#059669;">
+<h4><span>1. IISER புனே (மகாராஷ்டிரா)</span> <span class="badge badge-green">NIRF Top</span></h4>
+<div class="feat-sub">BS-MS (5 ஆண்டுகள்)</div>
+<ul>
+<li><b>படிப்புகள்:</b> Biology, Chemistry, Earth &amp; Climate, Mathematics, Physics.</li>
+<li><b>சிறப்பம்சம்:</b> நாட்டின் முதல் தலைமுறை IISER; உலகளாவிய ஜெர்மன் மேக்ஸ் பிளாங்க் மற்றும் அமெரிக்க MIT கூட்டு ஆய்வுத் திட்டங்கள்.</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color:#0284c7;">
+<h4><span>2. IISER கொல்கத்தா (மேற்கு வங்கம்)</span> <span class="badge badge-blue">விண்வெளி ஆய்வு</span></h4>
+<div class="feat-sub">BS-MS (5 ஆண்டுகள்)</div>
+<ul>
+<li><b>படிப்புகள்:</b> Biological, Chemical, Geological, Mathematical, Physical Sciences.</li>
+<li><b>சிறப்பம்சம்:</b> CESSI விண்வெளி மையம் — சூரியக் கதிர்வீச்சு மற்றும் விண்வெளி வானிலை முன்கணிப்பில் உலகத் தரம் வாய்ந்த ஆய்வுகள்.</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color:#7c3aed;">
+<h4><span>3. IISER மொஹாலி (பஞ்சாப்)</span> <span class="badge badge-purple">அணு &amp; மூலக்கூறு</span></h4>
+<div class="feat-sub">BS-MS (5 ஆண்டுகள்)</div>
+<ul>
+<li><b>படிப்புகள்:</b> Biology, Chemistry, Mathematics, Physics, Environmental Science.</li>
+<li><b>சிறப்பம்சம்:</b> NMR ஸ்பெக்ட்ரோஸ்கோபி மற்றும் நானோ அறிவியல் ஆய்வகங்கள்; சண்டிகர் அறிவியல் மையங்களின் கூட்டு கட்டமைப்பு.</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color:#d97706; background:#fffdf5;">
+<h4><span>4. IISER போபால் (மத்திய பிரதேசம்)</span> <span class="badge badge-gold">B.Tech &amp; B.S.</span></h4>
+<div class="feat-sub">B.Tech (4 Yrs) &amp; BS-MS</div>
+<ul>
+<li><b>படிப்புகள்:</b> B.Tech in DSE (Data Science), B.Tech in EECS, B.Tech Chemical, B.S. Economic Sciences மற்றும் 5-ஆண்டு BS-MS Natural Sciences.</li>
+<li><b>சிறப்பம்சம்:</b> 4-ஆண்டு பொறியியல் மற்றும் பொருளாதாரப் பட்டங்களை வழங்கும் ஒரே IISER!</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color:#059669;">
+<h4><span>5. IISER திருவனந்தபுரம் (கேரளா)</span> <span class="badge badge-green">i2 Sciences</span></h4>
+<div class="feat-sub">BS-MS &amp; i2 Sciences</div>
+<ul>
+<li><b>படிப்புகள்:</b> வழக்கமான BS-MS மற்றும் பல்துறை 5-ஆண்டு <b>i2 Sciences</b> (Data Science, Chemical Energy Materials, Bio-systems).</li>
+<li><b>சிறப்பம்சம்:</b> மேற்குத் தொடர்ச்சி மலையடிவாரத்தில் அமைந்த விதுரா அதிநவீன பசுமை வளாகம்; தமிழக மாணவர்களுக்கு மிக அருகில்.</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color:#0284c7;">
+<h4><span>6. IISER திருப்பதி (ஆந்திரா)</span> <span class="badge badge-blue">தமிழக எல்லை</span></h4>
+<div class="feat-sub">BS-MS (5 ஆண்டுகள்)</div>
+<ul>
+<li><b>படிப்புகள்:</b> Biology, Chemistry, Earth &amp; Climate Sciences, Mathematics, Physics.</li>
+<li><b>சிறப்பம்சம்:</b> சென்னை மற்றும் திருப்பதி தொழில் நிறுவனங்களுக்கு அருகாமையில் பயோ-இன்குபேஷன் மற்றும் நானோ மருந்து தயாரிப்பு மையங்கள்.</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color:#475569;">
+<h4><span>7. IISER பெர்ஹாம்பூர் (ஒடிசா)</span> <span class="badge badge-teal">கடலோர ஆய்வு</span></h4>
+<div class="feat-sub">BS-MS (5 ஆண்டுகள்)</div>
+<ul>
+<li><b>படிப்புகள்:</b> Biological, Chemical, Mathematical, Physical, Earth &amp; Environmental Sciences.</li>
+<li><b>சிறப்பம்சம்:</b> கடலோர மற்றும் கடல்சார் புவி அறிவியல், புத்தாக்கப் பொருட்கள் மற்றும் சூரிய ஆற்றல் ஆராய்ச்சி மையம்.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Section 2A: IISER Engineering, Data Science & Non-BS-MS Programs -->
+<div class="card filterable-section" data-tags="iiser all btech engineering data-science economics bhopal career placement curriculum syllabus" id="section-2a">
+<div class="card-header">
+<h3 class="card-title">💻 2(அ). IISER போபால் B.Tech பொறியியல் &amp; B.S. பொருளாதாரப் படிப்புகள் (Bhopal Engineering &amp; Economic Sciences)</h3>
+<span class="badge badge-gold">4-ஆண்டு B.Tech &amp; B.S. தொழில்முறைப் பட்டங்கள் — IAT சேர்க்கை</span>
+</div>
+<div class="card-sub">1. IISER போபாலில் வழங்கப்படும் 4 முதன்மைத் தொழில்முறைப் படிப்புகள் (Specializations):</div>
+<div class="feature-grid-4">
+<div class="feature-box" style="border-top-color: #2563eb;">
+<h4><span>1. B.Tech Data Science &amp; Engineering</span> <span class="badge badge-blue">B.Tech DSE</span></h4>
+<div class="feat-sub">தரவு அறிவியல் &amp; செயற்கை நுண்ணறிவு (AI)</div>
+<ul>
+<li><b>கற்கும் முக்கியத் தளங்கள்:</b> Artificial Intelligence (AI), Machine Learning (ML), Deep Learning, Big Data Analytics, Cloud Computing, Natural Language Processing (NLP), Computer Vision.</li>
+<li><b>தொழில்நுட்பப் பயன்பாடு:</b> பெருந்தரவுகளை ஆராய்தல், தானியங்கி அல்காரிதம்கள், ஜெனரேட்டிவ் AI, சுகாதார மற்றும் நிதித் தரவு பகுப்பாய்வு.</li>
+<li><b>தகுதி:</b> 12-ல் கணிதம் பயின்றிருக்க வேண்டும் (IAT தேர்வு வழி).</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color: #7c3aed;">
+<h4><span>2. B.Tech Electrical Engg &amp; CS</span> <span class="badge badge-purple">B.Tech EECS</span></h4>
+<div class="feat-sub">மின் &amp; கணினி அறிவியல் பொறியியல்</div>
+<ul>
+<li><b>கற்கும் முக்கியத் தளங்கள்:</b> Software Engineering, Data Structures &amp; Algorithms, Computer Systems Architecture, VLSI சிப் வடிவமைப்பு, Cyber Security, Quantum Computing, IoT.</li>
+<li><b>தொழில்நுட்பப் பயன்பாடு:</b> செமிகண்டக்டர் சிப் தயாரிப்பு, ஹை-ஸ்பீட் கம்ப்யூட்டிங், வன்பொருள்-மென்பொருள் வடிவமைப்பு (Hardware &amp; Software).</li>
+<li><b>தகுதி:</b> 12-ல் கணிதம் பயின்றிருக்க வேண்டும் (IAT தேர்வு வழி).</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color: #059669;">
+<h4><span>3. B.Tech Chemical Engineering</span> <span class="badge badge-green">B.Tech ChE</span></h4>
+<div class="feat-sub">பசுமை ஆற்றல் &amp; இரசாயனப் பொறியியல்</div>
+<ul>
+<li><b>கற்கும் முக்கியத் தளங்கள்:</b> Green &amp; Sustainable Technology, பேட்டரி தொழில்நுட்பம் (EV Battery Storage), நானோ பொருட்கள் (Nanomaterials), உயிர்வேதியியல் மருந்து உற்பத்தி, ஹைட்ரஜன் ஆற்றல்.</li>
+<li><b>தொழில்நுட்பப் பயன்பாடு:</b> புதுப்பிக்கத்தக்க ஆற்றல், மருந்து ஆராய்ச்சி, பெட்ரோகெமிக்கல், சுற்றுச்சூழல் கழிவு சுத்திகரிப்பு.</li>
+<li><b>தகுதி:</b> 12-ல் கணிதம் பயின்றிருக்க வேண்டும் (IAT தேர்வு வழி).</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color: #d97706;">
+<h4><span>4. B.S. Economic Sciences</span> <span class="badge badge-gold">B.S. Econ</span></h4>
+<div class="feat-sub">கணினி &amp; கணித வழிப் பொருளாதாரம்</div>
+<ul>
+<li><b>கற்கும் முக்கியத் தளங்கள்:</b> Quantitative Economics, Econometrics, Financial Engineering, Game Theory, அல்காரிதமிக் டிரேடிங் (Algorithmic Trading), பெருந்தரவு பொருளாதார பகுப்பாய்வு.</li>
+<li><b>தொழில்நுட்பப் பயன்பாடு:</b> முதலீட்டு வங்கிகள், நிதிச் சந்தை முன்கணிப்பு, ரிசர்வ் வங்கி மற்றும் உலக வங்கி கொள்கை வகுத்தல்.</li>
+<li><b>தகுதி:</b> 12-ல் கணிதம் பயின்றிருக்க வேண்டும் (IAT தேர்வு வழி).</li>
+</ul>
+</div>
+</div>
+<div class="card-sub">2. பிற IISER-களில் உள்ள புதிய மற்றும் பல்துறைப் படிப்புகள் (Interdisciplinary Tracks):</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>நிறுவனம்</th>
+<th>பாடப்பிரிவு / சிறப்புத் தளம்</th>
+<th>முக்கிய அம்சங்கள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>IISER திருவனந்தபுரம்</b></td>
+<td><b>5-ஆண்டு i2 Sciences (Interdisciplinary BS-MS)</b></td>
+<td>Data Sciences, Chemical Energy Materials, Biological Physics ஆகிய நவீன தொழில்நுட்பக் களங்களில் பல்துறை ஒருங்கிணைந்த ஆராய்ச்சிப் பட்டம்.</td>
+</tr>
+<tr>
+<td><b>IISER கொல்கத்தா</b></td>
+<td><b>Space Physics &amp; Planetary Sciences</b> (CESSI மையம்)</td>
+<td>சூரிய இயற்பியல், விண்வெளி வானிலை மற்றும் கோள் அறிவியல். இஸ்ரோவின் <b>ஆதித்யா-L1</b> மற்றும் நாசா விண்கல திட்டங்களில் நேரடிப் பங்களிப்பு!</td>
+</tr>
+<tr>
+<td><b>IISER புனே &amp; மொஹாலி</b></td>
+<td><b>Earth &amp; Climate Sciences / Computational Biology</b></td>
+<td>பூமி மற்றும் காலநிலை மாற்ற முன்கணிப்பு, கம்ப்யூட்டேஷனல் பயாலஜி மற்றும் பயோ-இன்பர்மேட்டிக்ஸ் உயர் ஆய்வுப் பிரிவுகள்.</td>
+</tr>
+<tr>
+<td><b>IIT மெட்ராஸ்</b><br/><small>(IAT தேர்வு மூலம் சேர்க்கை)</small></td>
+<td><b>4-ஆண்டு B.S. Medical Sciences &amp; Engineering</b></td>
+<td>மருத்துவமும் பொறியியலும் இணைந்த அதிநவீன படிப்பு. செயற்கை உறுப்புகள், மருத்துவக் கருவிகள் வடிவமைப்பு மற்றும் நானோ மெடிசின்.</td>
+</tr>
+<tr>
+<td><b>IISc பெங்களூரு</b><br/><small>(IAT / JEE வழி சேர்க்கை)</small></td>
+<td><b>4-ஆண்டு B.Tech in Mathematics and Computing</b></td>
+<td>அதிநவீன கணிதம், ஏஐ, குவாண்டம் அல்காரிதம் மற்றும் கணினி அறிவியல் இணைந்த நாட்டின் உச்சபட்ச பொறியியல் படிப்பு.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="card-sub">3. B.S. Engineering Sciences செமஸ்டர் வாரியான பாடத்திட்டம் (Curriculum Structure):</div>
+<div class="curriculum-wrap">
+<div class="curr-year-item">
+<div class="curr-year-title">
+<span>முதலாம் ஆண்டு (செமஸ்டர் 1 &amp; 2) — பொது அடித்தள அறிவியல் &amp; நிரலாக்கம் (STEM Foundation)</span>
+<span class="badge badge-teal">அனைவருக்கும் பொதுவானது</span>
+</div>
+<div class="curr-year-desc">
+          • <b>கணிதம்:</b> Advanced Calculus, Linear Algebra, Ordinary Differential Equations.<br/>
+          • <b>அடிப்படை அறிவியல்:</b> Classical Mechanics, Electromagnetism, General Chemistry, Cellular Biology.<br/>
+          • <b>கணினி &amp; பொறியியல்:</b> Python &amp; C++ நிரலாக்கப் பயிற்சிகள், Algorithms அடிப்படைகள், Engineering Drawing, Design Thinking &amp; Workshop Practice, ஆங்கிலத் தகவல் தொடர்பியல்.
+        </div>
+</div>
+<div class="curr-year-item">
+<div class="curr-year-title">
+<span>இரண்டாம் ஆண்டு (செமஸ்டர் 3 &amp; 4) — பொறியியல் / பொருளாதார அடிப்படைக் கோட்பாடுகள் (Pre-major Core)</span>
+<span class="badge badge-blue">துறைசார் அறிமுகம்</span>
+</div>
+<div class="curr-year-desc">
+          • <b>DSE (தரவு அறிவியல்):</b> Data Structures &amp; Algorithms, Probability and Statistics for Data Science, Discrete Mathematics, Database Systems.<br/>
+          • <b>EECS (மின் &amp; கணினி):</b> Digital Logic Design, Circuit Theory, Signals &amp; Systems, Object-Oriented Programming (Java/C++).<br/>
+          • <b>Chemical Engg:</b> Fluid Mechanics, Chemical Thermodynamics, Material &amp; Energy Balances, Process Heat Transfer.<br/>
+          • <b>Economic Sciences:</b> Microeconomic Theory, Macroeconomics, Mathematical Methods for Economics, Statistical Inference.
+        </div>
+</div>
+<div class="curr-year-item">
+<div class="curr-year-title">
+<span>மூன்றாம் ஆண்டு (செமஸ்டர் 5 &amp; 6) — உயர்நிலைப் பாடங்கள் &amp; அதிநவீன ஆய்வகங்கள் (Advanced Core &amp; Labs)</span>
+<span class="badge badge-purple">ஆழ்ந்த துறை நிபுணத்துவம்</span>
+</div>
+<div class="curr-year-desc">
+          • <b>DSE:</b> Machine Learning, Deep Learning &amp; Neural Networks, Big Data Computing, Artificial Intelligence, Optimization Techniques, Data Mining Lab.<br/>
+          • <b>EECS:</b> Operating Systems, Computer Architecture, VLSI Design Lab, Microprocessors &amp; Embedded Systems, Communication Systems, Cyber Security.<br/>
+          • <b>Chemical Engg:</b> Chemical Reaction Engineering, Mass Transfer, Process Dynamics &amp; Control, Separation Processes, Green Technology Lab.<br/>
+          • <b>Economic Sciences:</b> Econometrics, Game Theory, Financial Modeling &amp; Risk Management, Time Series Analysis, Development Economics.
+        </div>
+</div>
+<div class="curr-year-item">
+<div class="curr-year-title">
+<span>நான்காம் ஆண்டு (செமஸ்டர் 7 &amp; 8) — முதன்மை ஆய்வுக் கட்டுரை &amp; தொழில்முறைப் பயிற்சி (Capstone Project &amp; Electives)</span>
+<span class="badge badge-gold">நேரடித் தொழில்முறை தகுதி</span>
+</div>
+<div class="curr-year-desc">
+          • <b>B.S. Capstone Major Research Project:</b> 1 ஆண்டு முழுவதும் முன்னணி பேராசிரியர் வழிகாட்டுதலில் புதிய தொழில்நுட்ப ஆராய்ச்சி அல்லது தொழில்துறை திட்டத்தை (Industry Project) சுயமாக முடித்தல்.<br/>
+          • <b>தொழில்துறை இன்டர்ன்ஷிப்:</b> கோடை அல்லது குளிர்காலத்தில் முன்னணி நிறுவனங்கள் / வெளிநாட்டுப் பல்கலைக்கழக ஆய்வகங்களில் நேரடி பயிற்சி.<br/>
+          • <b>விருப்பப் பாடங்கள் (Electives):</b> Generative AI, Quantum Computing, Algorithmic Trading, Battery Technology, Supply Chain Analytics, Autonomous Systems.
+        </div>
+</div>
+</div>
+<div class="card-sub">4. எதிர்கால வாய்ப்புகள், வேலைவாய்ப்புகள் (Placements) &amp; ஊதிய நிலவரம்:</div>
+<div class="adv-box">
+<h4>🚀 IISER B.S. பொறியியல் மற்றும் பொருளாதாரப் பட்டதாரிகளுக்கான பிரகாசமான எதிர்காலம்:</h4>
+<ul>
+<li>
+<b>1. உலகளாவிய முன்னணி தொழில்நுட்ப நிறுவனங்கள் (Tech Giants &amp; Product MNCs):</b><br/>
+          Google, Microsoft, Amazon, Adobe, Intel, NVIDIA, Qualcomm, AMD, Oracle, IBM, Infosys R&amp;D, TCS Innovation Labs போன்ற நிறுவனங்களில் <b>Data Scientist, Machine Learning Engineer, Software Development Engineer (SDE), Chip Design / Hardware Engineer</b> பணிகளுக்கு ஆண்டுக்கு <b>₹15 லட்சம் முதல் ₹42 லட்சம் வரை (CTC)</b> தொடக்க ஊதியத்துடன் தேர்வு செய்யப்படுகின்றனர்!
+        </li>
+<li>
+<b>2. முதலீட்டு வங்கிகள் &amp; நிதி நிறுவனங்கள் (FinTech &amp; Quantitative Finance):</b><br/>
+          Goldman Sachs, JPMorgan Chase, Morgan Stanley, Barclays, Deutsche Bank, World Bank, ரிசர்வ் வங்கி (RBI), McKinsey, BCG போன்ற உலகளாவிய அமைப்புகளில் <b>Quantitative Analyst (Quant), Risk Modeler, Algorithmic Trader, Economic Consultant</b> பணிகளில் உச்சபட்ச ஊதியத்துடன் வேலைவாய்ப்பு.
+        </li>
+<li>
+<b>3. பசுமை ஆற்றல், ரசாயனம் &amp; மருந்துத் துறை (Core Industry):</b><br/>
+          Shell, Reliance Industries, Tata Chemicals, Dr. Reddy's Laboratories, Biocon, Unilever R&amp;D ஆகியவற்றில் Process Engineer, Energy Specialist பணிகளில் நியமனம்.
+        </li>
+<li>
+<b>4. சர்வதேச உயர்கல்வி (Direct MS / PhD with Full Fellowship abroad):</b><br/>
+          IISER இந்தியாவின் தேசிய முக்கியத்துவம் வாய்ந்த கல்வி நிறுவனம் (Institute of National Importance) என்பதால், அமெரிக்காவின் <b>MIT, Stanford, Harvard, UC Berkeley, Carnegie Mellon (CMU)</b>, சுவிட்சர்லாந்தின் <b>ETH Zurich</b>, பிரிட்டனின் <b>Cambridge, Oxford</b> பல்கலைக்கழகங்களில் <b>100% இலவசக் கல்வி மற்றும் மாதம் ₹1.5 லட்சம் முதல் ₹2.5 லட்சம் வரை உதவித்தொகையுடன் (Full Fellowship)</b> நேரடி MS/PhD சேர்க்கை பெறுகின்றனர்!
+        </li>
+<li>
+<b>5. அரசு ஆராய்ச்சி நிறுவனங்கள் (ISRO &amp; DRDO):</b><br/>
+          இஸ்ரோ (ISRO), DRDO, BARC, C-DAC போன்ற நாட்டின் பாதுகாப்பு மற்றும் விண்வெளி அமைப்புகளில் விஞ்ஞானி/பொறியாளர் (Scientist/Engineer 'SC') தேர்வுகளில் நேரடி முன்னுரிமை.
+        </li>
+</ul>
+</div>
+<div class="info-box-blue">
+<h4>🎓 மாணவர்களுக்கு ஒரு முக்கிய வழிகாட்டுதல்: BS-MS அல்லது B.S. Engineering Sciences — எதைத் தேர்வு செய்வது?</h4>
+<p>
+        • <b>BS-MS (5 ஆண்டுகள்):</b> பிரபஞ்ச அறிவியல் கோட்பாடுகள், இயற்பியல், வேதியியல், உயிரியல், கணிதம் ஆகியவற்றில் அடிப்படை ஆராய்ச்சி செய்து பேராசிரியர் அல்லது தலைசிறந்த விஞ்ஞானியாக விரும்புவோருக்குப் பொருத்தமானது.<br/>
+        • <b>B.S. Engineering Sciences (4 ஆண்டுகள் - போபால்):</b> அதிநவீன கணினி மென்பொருள், AI, டேட்டா சயின்ஸ், செமிகண்டக்டர் சிப் டிசைன், கார்ப்பரேட் நிறுவனங்களில் லட்சங்களில் உடனடி வேலை அல்லது சொந்தமாக டெக் ஸ்டார்ட்-அப் (Startup) தொடங்க விரும்புவோருக்கு IIT B.Tech-க்கு நிகரான மிகச் சிறந்த மாற்றுப் பாதையாகும்!<br/>
+        • <b>B.S. Economic Sciences (4 ஆண்டுகள் - போபால்):</b> கணித அறிவோடு உலகப் பொருளாதாரத்தை ஆளும் நிதி ஆய்வாளர், பங்குச்சந்தை வல்லுநர் அல்லது பன்னாட்டு ஆலோசகராக விரும்புவோருக்கு இணையற்ற படிப்பு.
+      </p>
+</div>
+</div>
+<!-- Section 2B: IIT Madras BS Medical Sciences & Engineering -->
+<div class="card filterable-section" data-tags="iitm iat all medical-sciences engineering chennai admissions dmst" id="section-2b">
+<div class="card-header">
+<h3 class="card-title">🏥 2(ஆ). IIT மெட்ராஸ் B.S. Medical Sciences &amp; Engineering — IAT தேர்வு வழி நேரடிச் சேர்க்கை வழிகாட்டி</h3>
+<span class="badge badge-blue">JEE Advanced இன்றி IAT வழி IIT-ல் சேரும் வாய்ப்பு!</span>
+</div>
+<div class="alert-box" style="background:#f0f9ff; border-color:#bae6fd; border-left-color:#0284c7;">
+<h4 style="color:#0369a1;">★ IIT மெட்ராஸில் வரலாற்றுச் சிறப்புமிக்க இளநிலைப் படிப்பு — மருத்துவமும் பொறியியலும் இணையும் களம்!</h4>
+<p style="color:#0c4a6e;">
+        பொதுவாக ஐஐடி மெட்ராஸில் (IIT Madras) பி.டெக் படிக்க வேண்டுமென்றால் கடினமான JEE Advanced தேர்வில் அகில இந்திய ரேங்க் பெற வேண்டும். ஆனால், <b>IIT மெட்ராஸின் மருத்துவ அறிவியல் மற்றும் தொழில்நுட்பத் துறை (Department of Medical Sciences &amp; Technology - DMST)</b> வழங்கும் <b>4-ஆண்டு B.S. in Medical Sciences &amp; Engineering</b> என்ற புரட்சிகரமான இளநிலைப் படிப்பிற்கு <b>IAT (IISER Aptitude Test) மதிப்பெண் மூலமாகவே நேரடிச் சேர்க்கை நடத்தப்படுகிறது!</b>
+</p>
+</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th style="width: 25%;">அம்சம்</th>
+<th style="width: 75%;">முழு விவரங்கள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>நிறுவனம் &amp; துறை</b></td>
+<td><b>இந்திய தொழில்நுட்பக் கழகம் மெட்ராஸ் (IIT Madras)</b>, Department of Medical Sciences &amp; Technology (DMST), சென்னை.</td>
+</tr>
+<tr>
+<td><b>படிப்பு &amp; கால அளவு</b></td>
+<td><b>Bachelor of Science (B.S.) in Medical Sciences and Engineering</b> — 4 ஆண்டுகள் (8 செமஸ்டர்கள்).</td>
+</tr>
+<tr>
+<td><b>படிப்பின் நோக்கம்</b></td>
+<td><b>"Physician-Scientists &amp; Medical Technologists"</b> — எதிர்கால மருத்துவத் துறையில் மருத்துவர்களோடு இணைந்து உயிர்காக்கும் உயர் மருத்துவ உபகரணங்களை உருவாக்கும் பொறியியல் மற்றும் மருத்துவ ஆய்வாளர்களை உருவாக்குதல்.</td>
+</tr>
+<tr>
+<td><b>சேர்க்கை நுழைவு வாயில்</b></td>
+<td><b>IAT (IISER Aptitude Test)</b> மதிப்பெண் மற்றும் தரவரிசை மட்டுமே! <i>(JEE Advanced தேவையில்லை).</i></td>
+</tr>
+<tr>
+<td><b>கல்வித் தகுதி</b></td>
+<td>12-ஆம் வகுப்பு பொதுத்தேர்வில் <b>Physics, Chemistry, Mathematics (PCM)</b> பயின்று குறைந்தபட்சம் 60% மதிப்பெண்கள் (SC, ST, PwD பிரிவினருக்கு 55%) பெற்றிருக்க வேண்டும். (உயிரியல் - Biology கூடுதலாகப் படித்திருப்பது விரும்பத்தக்கது; எனினும் கணிதம் கட்டாயம்).</td>
+</tr>
+<tr>
+<td><b>நேரடி மருத்துவமனைப் பயிற்சி (Clinical Training)</b></td>
+<td>அப்பல்லோ மருத்துவமனைகள் (Apollo Hospitals), வேலூர் சி.எம்.சி (CMC Vellore), சங்கர நேத்ராலயா மற்றும் சென்னை ராஜீவ் காந்தி அரசு பொது மருத்துவமனை போன்ற முன்னணி மருத்துவமனைகளில் மருத்துவர்களுடன் அறுவை சிகிச்சை அரங்கு மற்றும் தீவிர சிகிச்சைப் பிரிவுகளில் (ICU) நேரடியாகப் பணியாற்றும் <b>1 ஆண்டு மருத்துவமனை உள்ளிருப்புப் பயிற்சி (Clinical Internship)!</b></td>
+</tr>
+<tr>
+<td><b>அதிகாரப்பூர்வ போர்டல்கள்</b></td>
+<td><a class="portal-btn" href="https://mst.iitm.ac.in/bs-in-medical-sciences-engineering/" rel="noopener noreferrer" target="_blank">mst.iitm.ac.in</a>  |  <a class="portal-btn" href="https://ugadmissions.iitm.ac.in/bsiat/" rel="noopener noreferrer" target="_blank">ugadmissions.iitm.ac.in/bsiat</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="card-sub">IIT மெட்ராஸ் B.S. Medical Sciences-ல் சேருவதற்கான 4 படிநிலைகள் (Admission Procedure):</div>
+<div class="adv-box">
+<h4>🎯 படிப்படியான விண்ணப்ப செயல்முறை (Step-by-Step Procedure):</h4>
+<ul>
+<li><b>படி 1 — IAT தேர்வுக்கு விண்ணப்பித்தல் (மார்ச் - ஏப்ரல்):</b> முதலில் <a href="https://iiseradmission.in/" rel="noopener noreferrer" style="color:#0f766e; font-weight:bold;" target="_blank">iiseradmission.in</a> போர்ட்டலில் IISER Aptitude Test (IAT) தேர்வுக்கு விண்ணப்பிக்க வேண்டும். ஜூன் மாதம் நடைபெறும் கணினித் தேர்வை (CBT) எழுத வேண்டும்.</li>
+<li><b>படி 2 — IIT மெட்ராஸ் போர்ட்டலில் தனியாகப் பதிவு செய்தல் (ஏப்ரல் - ஜூன்):</b> IAT தேர்வுக்கான விண்ணப்ப எண் அல்லது ஹால் டிக்கெட் எண்ணைக் கொண்டு, <b>IIT மெட்ராஸின் பிரத்யேக அட்மிஷன் போர்ட்டலில் (<a href="https://ugadmissions.iitm.ac.in/bsiat/" rel="noopener noreferrer" style="color:#0f766e; font-weight:bold;" target="_blank">ugadmissions.iitm.ac.in/bsiat</a>) தனியாகப் பதிவு செய்து விண்ணப்பக் கட்டணம் செலுத்த வேண்டும்.</b> <i>(IAT தேர்வெழுதி விட்டு IITM போர்ட்டலில் பதிவு செய்யாவிட்டால் சேர்க்கை கிடைக்காது).</i></li>
+<li><b>படி 3 — IAT மதிப்பெண் பதிவேற்றம் (ஜூன் இறுதி):</b> IAT தேர்வு முடிவுகள் வெளியானவுடன், தங்களின் மதிப்பெண் மற்றும் ரேங்க் கார்டை IIT மெட்ராஸ் போர்ட்டலில் பதிவேற்ற வேண்டும்.</li>
+<li><b>படி 4 — தகுதிப் பட்டியல் &amp; சேர்க்கை ஆணை (ஜூலை):</b> IIT மெட்ராஸ் DMST துறை IAT மதிப்பெண் அடிப்படையில் அகில இந்திய மெரிட் பட்டியலை வெளியிட்டு, ஆன்லைன் கவுன்சிலிங் மூலம் சேர்க்கை இடங்களை உறுதி செய்யும்.</li>
+</ul>
+</div>
+<div class="card-sub">கற்கும் அதிநவீனப் பாடங்கள் &amp; எதிர்கால வேலைவாய்ப்புகள்:</div>
+<div class="feature-grid-4">
+<div class="feature-box" style="border-top-color: #0284c7;">
+<h4><span>1. மருத்துவ உபகரண வடிவமைப்பு</span></h4>
+<div class="feat-sub">Medical Device Innovation</div>
+<ul>
+<li>செயற்கை உறுப்புகள் (Bionic Limbs), பேஸ்மேக்கர், செயற்கை சுவாசக் கருவிகள் (Ventilators), டயாலிசிஸ் இயந்திரங்கள் வடிவமைப்பு.</li>
+<li>பயோ-இன்ஸ்ட்ரூமென்டேஷன் மற்றும் நானோ சென்சார்கள்.</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color: #059669;">
+<h4><span>2. மருத்துவத்தில் AI &amp; இமேஜிங்</span></h4>
+<div class="feat-sub">AI &amp; Medical Imaging</div>
+<ul>
+<li>MRI, CT Scan, அல்ட்ராசவுண்ட் தரவுகளைப் பகுப்பாய்வு செய்யும் AI மற்றும் Deep Learning அல்காரிதம்கள்.</li>
+<li>முன்கூட்டியே புற்றுநோய் கண்டறியும் கம்ப்யூட்டர் விஷன் அல்காரிதம்கள்.</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color: #7c3aed;">
+<h4><span>3. உலகளாவிய வேலைவாய்ப்புகள்</span></h4>
+<div class="feat-sub">Placements &amp; High CTC</div>
+<ul>
+<li>Siemens Healthineers, GE Healthcare, Philips, Medtronic, Johnson &amp; Johnson போன்ற நிறுவனங்களில் <b>ஆண்டுக்கு ₹18 லட்சம் முதல் ₹40 லட்சம் வரை</b> தொடக்க ஊதியம்!</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color: #d97706;">
+<h4><span>4. சர்வதேச MD-PhD வாய்ப்புகள்</span></h4>
+<div class="feat-sub">Global Medical Research</div>
+<ul>
+<li>அமெரிக்கா (Harvard Medical, Johns Hopkins), பிரிட்டன் (Oxford), ஜெர்மனி மருத்துவப் பல்கலைக்கழகங்களில் 100% உதவித்தொகையுடன் நேரடி MD-PhD வாய்ப்புகள்!</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Section 3: NEST -->
+<div class="card filterable-section" data-tags="nest all niser cebs barc dae" id="section-3">
+<div class="card-header">
+<h3 class="card-title">⚛️ 3. NEST (National Entrance Screening Test) — அணுசக்தித் துறை கல்வி நிறுவனங்கள்</h3>
+<span class="badge badge-gold">NISER புவனேஸ்வர் &amp; UM-DAE CEBS மும்பை</span>
+</div>
+<p>இந்திய அணுசக்தித் துறையின் (Department of Atomic Energy - DAE) கீழ் நேரடியாக இயங்கும் நாட்டின் முதன்மை அறிவியல் நிறுவனங்களான <b>NISER (புவனேஸ்வர்)</b> மற்றும் <b>UM-DAE CEBS (மும்பை பல்கலைக்கழக வளாகம்)</b> ஆகியவற்றில் சேருவதற்கான தேசிய நுழைவுத்தேர்வு <b>NEST</b> ஆகும்.</p>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>நிறுவனம்</th>
+<th>அமைவிடம்</th>
+<th>வழங்கும் படிப்பு</th>
+<th>உதவித்தொகை &amp; பணி வாய்ப்புகள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>NISER</b><br/>(National Institute of Science Education and Research)</td>
+<td>புவனேஸ்வர், ஒடிசா</td>
+<td>5-ஆண்டு ஒருங்கிணைந்த M.Sc.<br/>(Biology, Chemistry, Mathematics, Physics)</td>
+<td rowspan="2">
+              • <b>மத்திய அரசின் DISHA உதவித்தொகை:</b> தகுதி பெறும் ஒவ்வொரு மாணவருக்கும் ஆண்டுக்கு <b>₹60,000/- கல்வி உதவித்தொகை</b> (மாதம் ₹5,000) + கோடைகால திட்ட ஆய்வுக்காக ஆண்டுக்கு <b>₹20,000/- மானியம்</b> (மொத்தம் ₹80,000/ஆண்டு).<br/>
+              • <b>நேரடி BARC விஞ்ஞானி பணி வாய்ப்பு:</b> 7.5 CGPA-க்கு மேல் பெற்று தேர்ச்சி பெறும் மாணவர்கள் எழுத்துத் தேர்வின்றி நேரடியாக <b>பாபா அணு ஆராய்ச்சி மையத்தின் (BARC)</b> Scientific Officer (Group-A Gazetted Officer) பணி நேர்காணலுக்கு அழைக்கப்படுகிறார்கள்!
+            </td>
+</tr>
+<tr>
+<td><b>UM-DAE CEBS</b><br/>(Centre for Excellence in Basic Sciences)</td>
+<td>மும்பை பல்கலைக்கழக கலினா வளாகம், மகாராஷ்டிரா</td>
+<td>5-ஆண்டு ஒருங்கிணைந்த M.Sc.<br/>(Chemical, Mathematical, Physical, Life Sciences)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="card-sub">அ) NEST தேர்வு கட்டமைப்பு &amp; விசித்திரமான மதிப்பெண் சாதகம் (Best 3 of 4 Subjects Rule):</div>
+<div class="alert-box">
+<h4>★ NEST தேர்வின் சிறப்பம்சம் — 4 பாடங்களில் சிறந்த 3 மட்டுமே கணக்கில் கொள்ளப்படும்!</h4>
+<p>
+        • NEST தேர்வில் உயிரியல், வேதியியல், கணிதம், இயற்பியல் ஆகிய 4 பாடங்களிலும் தலா 50 மதிப்பெண்களுக்கு வினாக்கள் கேட்கப்படும் (மொத்தம் 200 மதிப்பெண்கள்).<br/>
+        • <b>ஆனால் தரவரிசை கணக்கிடும் போது:</b> மாணவர் எழுதிய 4 பாடங்களில் எந்த 3 பாடங்களில் அதிக மதிப்பெண் பெற்றுள்ளாரோ, அந்த <b>சிறந்த 3 பாடங்களின் மதிப்பெண்கள் மட்டுமே (150 மதிப்பெண்களுக்கு) இறுதித் தரவரிசைக்கு எடுத்துக் கொள்ளப்படும்!</b><br/>
+        • <b>மாணவர்களுக்கான நன்மை:</b> கணிதம் படிக்காத உயிரியல் மாணவர்கள் கணிதத்தைத் தவிர்த்துவிடலாம்; உயிரியல் படிக்காத கணித மாணவர்கள் உயிரியலைத் தவிர்த்துவிடலாம்! இருவருக்கும் சமவாய்ப்பு உறுதி செய்யப்படுகிறது.<br/>
+        • <b>தேர்வு நேரம்:</b> 3.5 மணி நேரம் (CBT கணினி வழித் தேர்வு). ஆண்டுதோறும் ஜூன் மாதத்தில் நடைபெறும்.<br/>
+        • <b>இணையதளம்:</b> <a href="https://www.nestexam.in/" rel="noopener noreferrer" style="color:var(--secondary); font-weight:bold;" target="_blank">nestexam.in</a>
+</p>
+</div>
+</div>
+<!-- Section 4: ISI Kolkata -->
+<div class="card filterable-section" data-tags="isi all statistics mathematics kolkata" id="section-4">
+<div class="card-header">
+<h3 class="card-title">📐 4. ISI (Indian Statistical Institute) — கணிதம் &amp; புள்ளியியலின் உலகளாவிய உச்சம்</h3>
+<span class="badge badge-purple">100% இலவசக் கல்வி + மாதாந்திர உதவித்தொகை</span>
+</div>
+<p>இந்தியப் புள்ளியியல் கழகம் (ISI) என்பது புள்ளியியல், பயன்பாட்டுக் கணிதம் மற்றும் கணினி அறிவியலில் உலகின் மிக உயர்ந்த மற்றும் போற்றப்படும் கல்வி நிறுவனமாகும். பேராசிரியர் பி.சி. மகலனோபிஸ் அவர்களால் நிறுவப்பட்ட இந்நிறுவனம் கொல்கத்தாவைத் தலைமையிடமாகக் கொண்டும், டெல்லி, பெங்களூரு மற்றும் சென்னை வளாகங்களைக் கொண்டும் இயங்குகிறது.</p>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>படிப்பு</th>
+<th>வளாகம்</th>
+<th>கால அளவு</th>
+<th>உதவித்தொகை &amp; கட்டணம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>B.Stat (Hons)</b><br/>Bachelor of Statistics</td>
+<td>ISI கொல்கத்தா</td>
+<td>3 ஆண்டுகள்</td>
+<td rowspan="2">
+              • <b>கல்விக் கட்டணம்:</b> <b>முற்றிலும் இலவசம் (Zero Tuition Fee)!</b><br/>
+              • <b>மாதாந்திர உதவித்தொகை:</b> சேர்க்கை பெறும் ஒவ்வொரு மாணவருக்கும் மத்திய அரசு மாதம் <b>₹5,000/- உதவித்தொகை (Stipend)</b> மற்றும் ஆண்டுக்கு ₹5,000/- Contingency மானியம் வழங்குகிறது!<br/>
+              • விடுதி மற்றும் உணவக வசதிகள் குறைந்த கட்டணத்தில் வழங்கப்படுகின்றன.
+            </td>
+</tr>
+<tr>
+<td><b>B.Math (Hons)</b><br/>Bachelor of Mathematics</td>
+<td>ISI பெங்களூரு</td>
+<td>3 ஆண்டுகள்</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="adv-box">
+<h4>🎯 ISI சேர்க்கை தேர்வு நடைமுறை:</h4>
+<ul>
+<li><b>தாள் 1 (UGA - Multiple Choice Questions):</b> 30 கடினமான புறவய கணித வினாக்கள் (2 மணி நேரம்). இதில் தகுதி பெறுவோரின் தாள் 2 மட்டுமே திருத்தப்படும்.</li>
+<li><b>தாள் 2 (UGB - Descriptive / Subjective Math):</b> விரிவாக கணக்குகளை வருவித்துத் தீர்க்கும் 8 வினாக்கள் (2 மணி நேரம்). கணிதத்தின் ஆழமான சிந்தனையைச் சோதிக்கும் வினாக்கள்.</li>
+<li><b>நேர்காணல் (Interview):</b> எழுத்துத் தேர்வில் தேர்ச்சி பெறுவோருக்கு கொல்கத்தா அல்லது பெங்களூருவில் இறுதி நேர்காணல் நடைபெறும்.</li>
+<li><b>நேரடி சேர்க்கை:</b> இந்திய தேசிய கணித ஒலிம்பியாட் (INMO) விருது பெற்றவர்களுக்கு எழுத்துத் தேர்விலிருந்து விலக்கு அளிக்கப்பட்டு நேரடியாக நேர்காணலுக்கு அழைக்கப்படுவர்!</li>
+<li><b>வேலைவாய்ப்பு:</b> ISI பட்டதாரிகள் உலகளாவிய நிதி நிறுவனங்கள் (JPMorgan, Goldman Sachs), கூகிள், மைக்ரோசாப்ட் ஆகியவற்றில் Data Scientist, Quant Researcher பணிகளில் மிக உயர்ந்த ஊதியத்தில் பணியமர்த்தப்படுகிறார்கள்.</li>
+<li><b>இணையதளம்:</b> <a class="portal-btn" href="https://www.isical.ac.in/" rel="noopener noreferrer" target="_blank">isical.ac.in</a></li>
+</ul>
+</div>
+</div>
+<!-- Section 5: CMI Chennai -->
+<div class="card filterable-section" data-tags="cmi all chennai mathematics computer-science" id="section-5">
+<div class="card-header">
+<h3 class="card-title">🧮 5. CMI (Chennai Mathematical Institute) — சர்வதேச கணிதவியல் மையம்</h3>
+<span class="badge badge-teal">சென்னையில் உள்ள உலகத்தரம் வாய்ந்த நிறுவனம்</span>
+</div>
+<p>சென்னை சிறுசேரி சிப்காட் தகவல் தொழில்நுட்பப் பூங்காவில் அமைந்துள்ள <b>சென்னை கணிதவியல் நிறுவனம் (CMI)</b>, கோட்பாட்டு கணிதம், கணினி அறிவியல் மற்றும் இயற்பியல் ஆராய்ச்சியில் சர்வதேச அளவில் முதல் வரிசையில் உள்ள நிறுவனமாகும்.</p>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>வழங்கும் இளநிலைப் படிப்புகள்</th>
+<th>கால அளவு</th>
+<th>தகுதி &amp; கல்வி உதவித்தொகை</th>
+<th>தேர்வு அமைப்பு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>• <b>B.Sc. (Hons) in Mathematics and Computer Science</b><br/>• <b>B.Sc. (Hons) in Mathematics and Physics</b></td>
+<td>3 ஆண்டுகள்</td>
+<td>• 12-ஆம் வகுப்புத் தேர்ச்சி (கணிதம் கட்டாயம்).<br/>• தகுதியுள்ள பெரும்பாலான மாணவர்களுக்கு <b>முழுக் கட்டண விலக்கு மற்றும் மாதம் ₹4,000/- உதவித்தொகை</b> வழங்கப்படுகிறது.</td>
+<td>ஆண்டுதோறும் மே மாதத்தில் நடைபெறும் கணினி வழி அல்லது மையத் தேர்வு. (பகுதி A: புறவய வினாக்கள், பகுதி B: ஆழ்ந்த கணித விளக்க வினாக்கள்).</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="info-box-blue">
+<h4>💡 CMI-ன் தனித்துவச் சிறப்பு:</h4>
+<p>
+        • உலகளவில் கணினி அறிவியலின் தத்துவார்த்த அடித்தளம் (Theoretical Computer Science), அல்காரிதம் வடிவமைப்பு மற்றும் கிரிப்டோகிராஃபி (Cryptography) துறைகளில் CMI முதலிடம் வகிக்கிறது.<br/>
+        • சர்வதேச கணித ஒலிம்பியாட் (IMO) மற்றும் இந்திய தேசிய கணித ஒலிம்பியாட் (INMO) தேர்ச்சி பெற்ற மாணவர்கள் CMI நுழைவுத்தேர்வு எழுதாமலேயே நேரடியாகச் சேர்க்கை பெறலாம்!<br/>
+        • <b>இணையதளம்:</b> <a href="https://www.cmi.ac.in/" rel="noopener noreferrer" style="color:#0284c7; font-weight:bold;" target="_blank">cmi.ac.in</a>
+</p>
+</div>
+</div>
+<!-- Section 6: IISc Bangalore -->
+<div class="card filterable-section" data-tags="iisc all bangalore bs-research premier engineering admissions btech" id="section-6">
+<div class="card-header">
+<h3 class="card-title">🏛️ 6. IISc பெங்களூரு (Indian Institute of Science) — 4-ஆண்டு B.S. (Research) &amp; B.Tech சேர்க்கை முழு வழிகாட்டி</h3>
+<span class="badge badge-gold">நாட்டின் #1 உயர்கல்வி &amp; உலகத் தரம் வாய்ந்த ஆராய்ச்சி நிறுவனம்</span>
+</div>
+<p>1909-ஆம் ஆண்டு சுவாமி விவேகானந்தரின் தொலைநோக்குப் பார்வையாலும், ஜாம்ஷெட்ஜி டாடாவின் பெருங்கொடையாலும் தொடங்கப்பட்ட <b>இந்திய அறிவியல் கழகம் (IISc பெங்களூரு)</b>, உலகப் பல்கலைக்கழகத் தரவரிசைகளில் இந்தியாவின் முதன்மை ஆராய்ச்சி நிறுவனமாகத் திகழ்கிறது. இங்கு இளநிலை அளவில் <b>4-ஆண்டு B.S. (Research)</b> மற்றும் <b>4-ஆண்டு B.Tech in Mathematics and Computing</b> படிப்புகள் வழங்கப்படுகின்றன.</p>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>படிப்பு</th>
+<th>சிறப்புப் பாடப்பிரிவுகள்</th>
+<th>சேர்க்கை நுழைவு வாயில்கள்</th>
+<th>உதவித்தொகை &amp; சிறப்பம்சங்கள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>Bachelor of Science (Research) - B.S.</b><br/>(4 ஆண்டுகள்)</td>
+<td>
+              • Physics (இயற்பியல்)<br/>
+              • Chemistry (வேதியியல்)<br/>
+              • Mathematics (கணிதம்)<br/>
+              • Biology (உயிரியல்)<br/>
+              • Earth &amp; Environmental Science<br/>
+              • Materials Science (பொருளறிவியல்)
+            </td>
+<td>
+<b>3 முக்கிய நுழைவு வாயில்கள்:</b><br/>
+              1. <b>IAT (IISER Aptitude Test)</b> மதிப்பெண்<br/>
+              2. <b>JEE (Advanced)</b> தரவரிசை<br/>
+              3. <b>JEE (Main)</b> 99.5+ Percentile
+            </td>
+<td rowspan="2">
+              • <b>மத்திய அரசு உதவித்தொகை:</b> தகுதி பெறும் மாணவர்களுக்கு மத்திய அரசின் <b>INSPIRE SHE மூலம் ஆண்டுக்கு ₹80,000/- உதவித்தொகை</b> வழங்கப்படுகிறது.<br/>
+              • <b>ஆய்வுப் பெருமை:</b> உலகின் தலைசிறந்த பேராசிரியர்கள் மற்றும் விஞ்ஞானிகளுடன் நேரடியாக அதிநவீன ஆய்வகங்களில் ஆராய்ச்சி.<br/>
+              • <b>4-ஆம் ஆண்டில் முதுநிலைப் பட்டம் (M.S.):</b> 4 ஆண்டுகள் B.S. முடித்த மாணவர்கள் கூடுதல் ஒரு வருடம் படித்து Master of Science (M.S.) பட்டமும் பெறலாம்.
+            </td>
+</tr>
+<tr>
+<td><b>B.Tech in Mathematics and Computing</b><br/>(4 ஆண்டுகள்)</td>
+<td>கணிதம், கணினி அறிவியல், செயற்கை நுண்ணறிவு (AI), குவாண்டம் அல்காரிதம்கள் மற்றும் தரவு அறிவியல்.</td>
+<td><b>JEE (Advanced)</b> சிறந்த தரவரிசை</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="card-sub">IISc பெங்களூருவில் சேர்க்கை பெறுவதற்கான 4 கட்டாய படிநிலைகள் (How to Apply):</div>
+<div class="adv-box">
+<h4>🎯 மிக முக்கியமான நடைமுறை — வெறும் IAT அல்லது JEE எழுதினால் மட்டும் போதாது!</h4>
+<ul>
+<li><b>படி 1 — நுழைவுத்தேர்வு எழுதுதல்:</b> IAT (IISER Aptitude Test), JEE Advanced அல்லது JEE Main ஆகிய ஏதேனும் ஒரு தேர்வில் சிறந்த மதிப்பெண் / தரவரிசை பெற வேண்டும்.</li>
+<li><b>படி 2 — IISc சேர்க்கை போர்ட்டலில் தனியாகப் பதிவு செய்தல் (மார்ச் - மே):</b> 
+          தேர்வெழுதிய மாணவர்கள் <b>IISc-ன் அதிகாரப்பூர்வ அட்மிஷன் போர்ட்டலில் (<a href="https://admissions.iisc.ac.in/" rel="noopener noreferrer" style="color:#0f766e; font-weight:bold;" target="_blank">admissions.iisc.ac.in</a>) மார்ச் / ஏப்ரல் முதல் மே மாதத்திற்குள் தனியாகப் பதிவு செய்து விண்ணப்பக் கட்டணம் செலுத்தி விண்ணப்பிக்க வேண்டும்!</b> IISc போர்ட்டலில் விண்ணப்பிக்கத் தவறினால், IAT/JEE-ல் எவ்வளவு அதிக மதிப்பெண் எடுத்திருந்தாலும் IISc-ல் இடம் கிடைக்காது!
+        </li>
+<li><b>படி 3 — மதிப்பெண்கள் மற்றும் ரேங்க் அப்டேட் செய்தல் (ஜூன்):</b> IAT / JEE தேர்வு முடிவுகள் வெளியானவுடன், தங்களின் பதிவு எண் மற்றும் மதிப்பெண் அட்டையை IISc போர்ட்டலில் லாக்-இன் செய்து புதுப்பிக்க வேண்டும்.</li>
+<li><b>படி 4 — கட்-ஆப் பட்டியல் &amp; கவுன்சிலிங் (ஜூலை):</b> IISc நிறுவனம் IAT மற்றும் JEE தேர்வுகளுக்கான தனித்தனி கட்-ஆப் ரேங்க் பட்டியலை வெளியிட்டு மாணவர்களுக்கு நேரடியாக சேர்க்கை அழைப்பு (Admission Offer) வழங்கும்.</li>
+<li><b>அடிப்படைத் தகுதி:</b> 12-ஆம் வகுப்பில் Physics, Chemistry, Mathematics (PCM) பயின்று ஒட்டுமொத்தமாக குறைந்தது 60% மதிப்பெண்கள் (SC/ST பிரிவினருக்கு தேர்ச்சி போதுமானது).</li>
+</ul>
+</div>
+</div>
+<!-- Section 6A: IIST Thiruvananthapuram (ISRO) -->
+<div class="card filterable-section" data-tags="iist all isro space-science aerospace avionics astronomy physics thiruvananthapuram jee-advanced" id="section-6a">
+<div class="card-header">
+<h3 class="card-title">🚀 6(அ). IIST திருவனந்தபுரம் (Indian Institute of Space Science and Technology) — விண்வெளி அறிவியல், தொழில்நுட்பம் &amp; நேரடி இஸ்ரோ விஞ்ஞானி பணி வழிகாட்டி</h3>
+<span class="badge badge-green">மத்திய விண்வெளித் துறை (DOS) / ISRO சொந்த நிறுவனம்</span>
+</div>
+<p>இந்திய விண்வெளி ஆராய்ச்சி நிறுவனத்தின் (ISRO) மாபெரும் தேவைகளுக்காக, பாரத ரத்னா டாக்டர் ஏ.பி.ஜே. அப்துல் கலாம் அவர்களின் தொலைநோக்குப் பார்வையில் 2007-ஆம் ஆண்டு கேரள மாநிலம் திருவனந்தபுரம் வலியமலையில் தொடங்கப்பட்ட ஆசியாவின் முதல் பிரத்யேக விண்வெளிப் பல்கலைக்கழகம் <b>IIST (Indian Institute of Space Science and Technology)</b> ஆகும். மத்திய அரசின் விண்வெளித் துறையின் (Department of Space - DOS) கீழ் தன்னாட்சி அதிகாரத்துடன் செயல்படும் இந்நிறுவனம், விண்வெளி அறிவியல் (Space Science), ராக்கெட் தொழில்நுட்பம் (Aerospace) மற்றும் விண்கல எலக்ட்ரானிக்ஸ் (Avionics) துறைகளில் உலகளாவிய ஆராய்ச்சி மற்றும் கல்வியை வழங்குகிறது.</p>
+<!-- Key Stats Grid -->
+<div class="stats-grid">
+<div class="stat-item">
+<div class="stat-num">ISRO Scientist 'SC'</div>
+<div class="stat-label">7.5 CGPA பெற்றால் எழுத்துத் தேர்வின்றி நேரடி இஸ்ரோ விஞ்ஞானி (Group-A) பணி நியமனம்!</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">100% கல்விக் கட்டண உதவி</div>
+<div class="stat-label">தகுதி பெறும் மாணவர்களுக்கு மத்திய விண்வெளித் துறையின் முழு கல்வி &amp; விடுதி உதவித்தொகை</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">JEE (Advanced)</div>
+<div class="stat-label">அகில இந்திய ஐஐடி நுழைவுத்தேர்வு மதிப்பெண் மூலம் மட்டுமே நேரடிச் சேர்க்கை</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">தமிழகத்திற்கு அருகில்</div>
+<div class="stat-label">திருவனந்தபுரம் வலியமலையில் அமைந்துள்ள அதிநவீன விண்வெளி வளாகம்</div>
+</div>
+</div>
+<!-- Section 6A.1: Degree Programs Offered -->
+<div class="card-sub">1. IIST-ல் வழங்கப்படும் இளநிலை &amp; ஒருங்கிணைந்த இரட்டைப் பட்டப்படிப்புகள் (Degree Programs):</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th style="width: 28%;">பட்டப்படிப்பு &amp; கால அளவு</th>
+<th style="width: 44%;">கற்கும் முக்கியத் தொழில்நுட்பங்கள் (Curriculum Focus)</th>
+<th style="width: 28%;">இஸ்ரோவில் நேரடிப் பணி வாய்ப்பு</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#ffffff;">
+<td>
+<b>B.Tech in Aerospace Engineering</b><br/>
+<small>(4 ஆண்டுகள் - 8 செமஸ்டர்கள்)</small><br/>
+<span class="badge badge-blue" style="margin-top:4px;">ராக்கெட் &amp; விண்கலப் பொறியியல்</span>
+</td>
+<td>
+              • Rocket &amp; Spacecraft Propulsion (திரவ, திட மற்றும் கிரையோஜெனிக் ராக்கெட் எஞ்சின்கள்).<br/>
+              • Aerodynamics &amp; Flight Mechanics, Spacecraft Structures, Orbital Mechanics.<br/>
+              • இஸ்ரோவின் PSLV, GSLV, LVM3 மற்றும் எதிர்கால மனித விண்வெளிப் பயணத் திட்டமான <b>ககன்யான் (Gaganyaan)</b> விண்கல வடிவமைப்புப் பயிற்சிகள்.
+            </td>
+<td>
+              விண்வெளி ஏவுதளங்கள், ராக்கெட் உந்துவிசை மற்றும் விண்கல கட்டுமான மையங்களில் <b>Aerospace Engineer</b> பணி.
+            </td>
+</tr>
+<tr style="background:#f8fafc;">
+<td>
+<b>B.Tech in Electronics and Communication Engineering (Avionics)</b><br/>
+<small>(4 ஆண்டுகள் - 8 செமஸ்டர்கள்)</small><br/>
+<span class="badge badge-purple" style="margin-top:4px;">விண்கல எலக்ட்ரானிக்ஸ் &amp; கம்யூனிகேஷன்</span>
+</td>
+<td>
+              • Satellite Telemetry, Tracking and Telecommand (TTC).<br/>
+              • Navigation Systems (இந்தியாவின் NavIC செயற்கைக்கோள் வழிசெலுத்தல் அமைப்பு, GPS).<br/>
+              • Spacecraft Power Systems, VLSI சிப் வடிவமைப்பு, ரேடார் மற்றும் மைக்ரோவேவ் பொறியியல், ஆட்டோமேஷன் மற்றும் ரோபோட்டிக்ஸ்.
+            </td>
+<td>
+              செயற்கைக்கோள் கட்டுப்பாடு, தொலைத்தொடர்பு மற்றும் விண்கல கணினி அமைப்புகளில் <b>Avionics Engineer</b> பணி.
+            </td>
+</tr>
+<tr style="background:#ecfdf5; font-weight:500;">
+<td>
+<b>5-Year Dual Degree (B.Tech + M.S. / M.Tech)</b><br/>
+<small>(5 ஆண்டுகள் - 10 செமஸ்டர்கள்)</small><br/>
+<span class="badge badge-green" style="margin-top:4px;">விண்வெளி அறிவியல் &amp; இயற்பியல்</span>
+</td>
+<td>
+              முதல் 4 ஆண்டுகள் <b>B.Tech in Engineering Physics</b> பயின்று, 5-ஆம் ஆண்டில் கீழ்க்கண்ட உயரிய ஆராய்ச்சிப் பிரிவுகளில் ஒன்றைத் தேர்வு செய்தல்:<br/>
+              1. <b>M.S. in Astronomy and Astrophysics:</b> விண்மீன்கள், கருந்துளைகள் (Black Holes), பிரபஞ்சவியல் மற்றும் விண்வெளி தொலைநோக்கி ஆய்வுகள்.<br/>
+              2. <b>M.S. in Earth System Science:</b> பூமி மற்றும் பிற கோள்களின் வளிமண்டலம், காலநிலை முன்கணிப்பு, தொலை உணர்வு (Remote Sensing).<br/>
+              3. <b>M.S. in Solid State Physics:</b> விண்வெளி உபகரணங்களுக்கான மேம்பட்ட நானோ பொருட்கள் மற்றும் குறைக்கடத்திகள்.<br/>
+              4. <b>M.Tech in Optical Engineering:</b> விண்வெளி கேமராக்கள், லென்சுகள், லேசர் மற்றும் ஆப்டிகல் சென்சார்கள் வடிவமைப்பு.
+            </td>
+<td>
+              இஸ்ரோவின் விண்வெளி இயற்பியல் ஆய்வகம் (SPL), அகமதாபாத் விண்வெளி பயன்பாட்டு மையம் (SAC) ஆகியவற்றில் <b>Space Scientist</b> பணி.
+            </td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Section 6A.2: ISRO Direct Absorption Policy -->
+<div class="card-sub">2. இஸ்ரோவில் நேரடி விஞ்ஞானி பணி நியமன விதிமுறை (ISRO Absorption Policy — The 7.5 CGPA Rule):</div>
+<div class="alert-box" style="background:#f0fdf4; border-color:#86efac; border-left-color:#15803d;">
+<h4 style="color:#166534; font-size:1.06rem;">★ அரசு அரசிதழ் பதிவுபெற்ற குரூப்-A விண்வெளி விஞ்ஞானி பணி (Group-A Gazetted Scientist 'SC'):</h4>
+<p style="color:#14532d; font-size:0.94rem; line-height:1.75;">
+        • <b>அதிகாரப்பூர்வ விதிமுறை (Official Absorption Rule):</b> IIST-ல் B.Tech அல்லது 5-ஆண்டு Dual Degree பயிலும் மாணவர்கள், தங்களின் பட்டப்படிப்பை <b>குறைந்தபட்சம் 7.5 CGPA (10-க்கு 7.5 புள்ளிகள்) பெற்று வெற்றிகரமாக முடித்தால், அவர்கள் எவ்விதக் கூடுதல் எழுத்துத் தேர்வுகளும் இன்றி நேரடியாக இந்திய விண்வெளி ஆராய்ச்சி நிறுவனத்தின் (ISRO) பல்வேறு மையங்களில் "Scientist / Engineer 'SC'" (மத்திய அரசு நிலை 10 ஊதியக் கட்டமைப்பு - 7th Pay Commission Level 10)</b> என்ற உயரிய பதவியில் உடனடியாகப் பணி நியமனம் செய்யப்படுகிறார்கள்!<br/>
+        • <b>தொடக்க ஊதியம்:</b> அனைத்து மத்திய அரசு படிகள், வீட்டு வாடகைப்படி, போக்குவரத்து படிகளுடன் சேர்த்து தொடக்க மாத ஊதியம் சுமார் <b>₹95,000/- முதல் ₹1,15,000/- வரை</b> வழங்கப்படுகிறது.<br/>
+        • <b>பணிபுரியும் முதன்மை இஸ்ரோ மையங்கள் (Placement Centers):</b><br/>
+          1) <b>விக்ரம் சாராபாய் விண்வெளி மையம் (VSSC)</b>, திருவனந்தபுரம் — ராக்கெட் ஏவுவாகன ஆராய்ச்சி.<br/>
+          2) <b>திரவ உந்துவிசை அமைப்புகள் மையம் (LPSC)</b>, மகேந்திரகிரி (திருநெல்வேலி மாவட்டம், தமிழ்நாடு — தமிழக எல்லைக்கு அருகில்!).<br/>
+          3) <b>சதீஷ் தவான் விண்வெளி மையம் (SDSC - SHAR)</b>, ஸ்ரீஹரிகோட்டா — இந்தியாவின் முதன்மை ராக்கெட் ஏவுதளம்.<br/>
+          4) <b>யு.ஆர். ராவ் செயற்கைக்கோள் மையம் (URSC)</b>, பெங்களூரு — செயற்கைக்கோள் தயாரிப்பு மையம்.<br/>
+          5) <b>விண்வெளி பயன்பாட்டு மையம் (SAC)</b>, அகமதாபாத் &amp; <b>தேசிய தொலை உணர்வு மையம் (NRSC)</b>, ஹைதராபாத்.<br/>
+          6) <b>குலசேகரப்பட்டினம் புதிய ராக்கெட் ஏவுதளம்</b> (தூத்துக்குடி மாவட்டம், தமிழ்நாடு).
+      </p>
+</div>
+<!-- Section 6A.3: Admission Procedure & Separate Portal Registration -->
+<div class="card-sub">3. IIST சேர்க்கை நடைமுறை &amp; மிக முக்கியமான விண்ணப்ப எச்சரிக்கை (How to Apply):</div>
+<div class="adv-box">
+<h4>🎯 மிக முக்கியமான சேர்க்கை வழிமுறைகள் (Admission Process):</h4>
+<ul>
+<li>
+<b>படி 1 — JEE (Advanced) தேர்வு எழுதுதல்:</b><br/>
+          IIST சேர்க்கைக்கு <b>JEE (Advanced)</b> தேர்வு மதிப்பெண் மட்டுமே ஏற்றுக்கொள்ளப்படுகிறது. JEE Advanced தேர்வில் பொதுப் பிரிவினர், OBC-NCL, EWS, SC, ST, PwD பிரிவினருக்கான குறைந்தபட்ச கட்-ஆப் மதிப்பெண்களைப் பெற்றிருக்க வேண்டும்.
+        </li>
+<li>
+<b>படி 2 — IIST சேர்க்கை போர்ட்டலில் தனியாக விண்ணப்பித்தல் (கட்டாயம்!):</b><br/>
+<b>★ மாணவர்கள் மற்றும் பெற்றோர்கள் கவனிக்க வேண்டிய மிக முக்கியமான எச்சரிக்கை:</b><br/>
+<b>IIST நிறுவனம் ஐஐடி மற்றும் என்.ஐ.டி சேர்க்கைக்கான JoSAA / CSAB பொது கலந்தாய்வில் பங்கேற்பதில்லை!</b><br/>
+          எனவே, JEE Advanced எழுதிய மாணவர்கள் <b>IIST-ன் பிரத்யேக இணையதளத்தில் (<a href="https://admission.iist.ac.in/" rel="noopener noreferrer" style="color:#0f766e; font-weight:bold;" target="_blank">admission.iist.ac.in</a>) மே - ஜூன் மாதங்களில் தனியாகப் பதிவு செய்து விண்ணப்பிக்க வேண்டும்!</b> IIST போர்ட்டலில் பதிவு செய்யாவிட்டால், JEE Advanced-ல் எவ்வளவு உயர்ந்த ரேங்க் பெற்றிருந்தாலும் IIST-ல் இடம் கிடைக்காது!
+        </li>
+<li>
+<b>படி 3 — IIST அகில இந்திய தரவரிசைப் பட்டியல் (IIST Rank List):</b><br/>
+          விண்ணப்பித்த மாணவர்களின் JEE Advanced மதிப்பெண்களை மட்டுமே அடிப்படையாகக் கொண்டு, IIST தனியாக அகில இந்திய தரவரிசைப் பட்டியலை வெளியிடும்.
+        </li>
+<li>
+<b>படி 4 — ஆன்லைன் சேர்க்கை கலந்தாய்வு:</b><br/>
+          IIST இணையவழிக் கலந்தாய்வு மூலம் B.Tech Aerospace, Avionics மற்றும் Dual Degree இடங்கள் இடஒதுக்கீட்டு விதிகளின்படி ஒதுக்கீடு செய்யப்படும்.
+        </li>
+</ul>
+</div>
+<!-- Section 6A.4: Full Financial Assistance / Scholarships -->
+<div class="card-sub">4. மத்திய விண்வெளித் துறையின் முழுக் கல்விக் கட்டண உதவித்தொகை திட்டம் (DOS Financial Assistance):</div>
+<div class="info-box-blue">
+<h4>💰 மாணவர்களுக்கு அரசு வழங்கும் முழு நிதி ஆதரவு:</h4>
+<p>
+        • IIST-ல் சேர்க்கை பெறும் மாணவர்கள் ஒவ்வொரு செமஸ்டரிலும் சிறந்த கல்வித்திறனை (7.5 CGPA அல்லது அதற்கு மேல்) பராமரித்தால், அவர்களுக்கு <b>முழுக் கல்விக் கட்டணம் (100% Tuition Fee), விடுதி தங்குமிடம் மற்றும் உணவுக் கட்டணம் அனைத்தும் மத்திய விண்வெளித் துறையாலேயே (Department of Space) முழுமையாக ஏற்றுக்கொள்ளப்படுகிறது!</b><br/>
+        • கூடுதலாக, புத்தகங்கள் வாங்குவதற்காக செமஸ்டருக்கு <b>₹3,000/- புத்தக மானியம்</b> வழங்கப்படுகிறது.<br/>
+        • இதன் மூலம், திறமையான மாணவர்கள் தங்கள் குடும்பப் பொருளாதாரச் சுமையின்றி நாட்டின் மிக உயரிய விண்வெளி விஞ்ஞானியாக உருவெடுக்க முடிகிறது!
+      </p>
+</div>
+<!-- Section 6A.5: Advantages for Tamil Nadu Students -->
+<div class="card-sub">5. தமிழக பள்ளி மாணவர்களுக்கான தனித்துவ அனுகூலங்கள் (Special Advantages for Tamil Nadu):</div>
+<div class="feature-grid-4">
+<div class="feature-box" style="border-top-color:#059669;">
+<h4><span>1. சொந்த மாநிலத்திற்கு மிக அருகில்</span></h4>
+<div class="feat-sub">வலியமலை, திருவனந்தபுரம்</div>
+<ul>
+<li>தென் தமிழக மாவட்டங்களான சிவகங்கை, மதுரை, திருநெல்வேலி, கன்னியாகுமரி ஆகியவற்றிலிருந்து சில மணி நேரப் பயண தொலைவில் அமைந்துள்ள உலகத்தரம் வாய்ந்த பசுமை வளாகம்.</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color:#0284c7;">
+<h4><span>2. மகேந்திரகிரி &amp; தூத்துக்குடி பணி வாய்ப்பு</span></h4>
+<div class="feat-sub">தமிழகத்தில் இஸ்ரோ மையங்கள்</div>
+<ul>
+<li>நெல்லை மாவட்டம் மகேந்திரகிரியில் உள்ள திரவ உந்துவிசை மையம் (LPSC) மற்றும் தூத்துக்குடி குலசேகரப்பட்டினம் ராக்கெட் ஏவுதளத்தில் சொந்த மாநிலத்திலேயே விஞ்ஞானியாகப் பணிபுரியும் வாய்ப்பு.</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color:#7c3aed;">
+<h4><span>3. ககன்யான் &amp; விண்வெளி திட்டங்கள்</span></h4>
+<div class="feat-sub">National Space Mission</div>
+<ul>
+<li>இந்தியாவின் மனித விண்வெளிப் பயணத் திட்டம் (Gaganyaan), சந்திரயான் தொடர் ஆய்வுகள் மற்றும் விண்வெளி நிலைய (Bharatiya Antariksh Station) பணிகளில் இளம் வயதிலேயே நேரடிப் பங்களிப்பு.</li>
+</ul>
+</div>
+<div class="feature-box" style="border-top-color:#d97706;">
+<h4><span>4. சர்வதேச விண்வெளி ஏஜென்சி கூட்டு</span></h4>
+<div class="feat-sub">NASA, ESA, JAXA Collaboration</div>
+<ul>
+<li>அமெரிக்காவின் நாசா (NASA - Caltech), ஐரோப்பிய விண்வெளி ஏஜென்சி (ESA) மற்றும் சர்வதேச விண்வெளி பல்கலைக்கழகங்களுடன் இணைந்து கல்வி மற்றும் இன்டர்ன்ஷிப் பரிமாற்ற வாய்ப்புகள்.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Section 7: Scholarships -->
+<div class="card filterable-section" data-tags="scholarship all inspire disha dst" id="section-7">
+<div class="card-header">
+<h3 class="card-title">💰 7. இளம் விஞ்ஞானிகளுக்கான மத்திய அரசு கல்வி உதவித்தொகைகள் (Scholarships &amp; Fellowships)</h3>
+<span class="badge badge-green">ஆராய்ச்சிக்கு அரசு தரும் முழு நிதி ஆதரவு</span>
+</div>
+<p>அறிவியல் ஆராய்ச்சிப் படிப்புகளில் சேரும் பள்ளி மாணவர்களுக்கு குடும்பச் சுமையின்றி பயில மத்திய அரசு தாராளமான கல்வி உதவித்தொகைகளை வழங்குகிறது:</p>
+<div class="exam-grid">
+<div class="exam-card">
+<h4><span>INSPIRE - SHE திட்டம்</span> <span class="badge badge-green">மத்திய DST</span></h4>
+<div class="exam-inst">மத்திய அறிவியல் மற்றும் தொழில்நுட்பத் துறை (DST)</div>
+<ul>
+<li><b>உதவித்தொகை தொகை:</b> ஆண்டுக்கு <b>₹80,000/-</b> (மாதம் ₹5,000 உதவித்தொகை = ₹60,000 + கோடைகால ஆராய்ச்சி திட்ட மானியம் ₹20,000).</li>
+<li><b>தகுதி:</b> 12-ஆம் வகுப்பு பொதுத்தேர்வில் மாநில/மத்திய வாரியத்தில் முதல் 1% இடங்களுக்குள் மதிப்பெண் பெற்று B.Sc, B.S., ஒருங்கிணைந்த M.Sc படிப்புகளில் சேருவோர் அல்லது IAT/JEE/NEET தேர்வுகளில் தகுதி பெறுவோர்.</li>
+<li><b>கால அளவு:</b> இளநிலை மற்றும் முதுநிலை படிக்கும் 5 ஆண்டுகள் வரை தொடர்ந்து வழங்கப்படும்.</li>
+</ul>
+</div>
+<div class="exam-card">
+<h4><span>DISHA உதவித்தொகை</span> <span class="badge badge-gold">அணுசக்தித் துறை (DAE)</span></h4>
+<div class="exam-inst">NISER புவனேஸ்வர் &amp; UM-DAE CEBS மும்பை மாணவர்களுக்கு</div>
+<ul>
+<li><b>உதவித்தொகை தொகை:</b> ஆண்டுக்கு <b>₹60,000/-</b> (மாதம் ₹5,000) + கோடைகால இன்டர்ன்ஷிப் மானியம் <b>₹20,000/-</b> (மொத்தம் ₹80,000).</li>
+<li><b>தகுதி:</b> NEST நுழைவுத்தேர்வு மூலம் NISER அல்லது CEBS-ல் சேரும் அனைத்து மாணவர்களுக்கும் நிபந்தனையின்றி வழங்கப்படுகிறது.</li>
+<li><b>கால அளவு:</b> 5 ஆண்டு ஒருங்கிணைந்த M.Sc படிப்பு முழுவதும்.</li>
+</ul>
+</div>
+<div class="exam-card">
+<h4><span>ISI &amp; CMI மாதாந்திர ஸ்டைபண்ட்</span> <span class="badge badge-purple">நிறுவன உதவித்தொகை</span></h4>
+<div class="exam-inst">இந்தியப் புள்ளியியல் கழகம் &amp; சென்னை கணிதவியல் நிறுவனம்</div>
+<ul>
+<li><b>ISI உதவித்தொகை:</b> B.Stat / B.Math மாணவர்களுக்கு மாதம் <b>₹5,000/-</b> + ஆண்டுக்கு ₹5,000 Contingency மானியம் (கல்விக் கட்டணமும் 100% இலவசம்!).</li>
+<li><b>CMI உதவித்தொகை:</b> தகுதியான மாணவர்களுக்கு 100% கல்விக் கட்டண விலக்கு + மாதம் <b>₹4,000/-</b> உதவித்தொகை.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Section 8: Master Comparison Table -->
+<div class="card filterable-section" data-tags="all comparison table summary pure-science engineering" id="section-8">
+<div class="card-header">
+<h3 class="card-title">📊 8. அறிவியல், ஆராய்ச்சி &amp; பொறியியல் நுழைவுத்தேர்வுகளின் முழுமையான ஒப்பீட்டு அட்டவணை</h3>
+<span class="badge badge-gold">ஒரே பார்வையில் அனைத்துத் தேர்வுகள்</span>
+</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>தேர்வு பெயர்</th>
+<th>சேர்க்கை நிறுவனங்கள்</th>
+<th>வழங்கும் படிப்புகள்</th>
+<th>தேர்வு முறை &amp; பாடங்கள்</th>
+<th>உதவித்தொகை (Stipend)</th>
+<th>விண்ணப்பிக்கும் காலம்</th>
+<th>அதிகாரப்பூர்வ தளம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>IAT (BS-MS)</b><br/><small>(IISER Aptitude Test)</small></td>
+<td>7 IISERs, IISc பெங்களூரு</td>
+<td>5-ஆண்டு BS-MS Dual Degree (Physics, Chem, Bio, Math, Earth Sciences)</td>
+<td>CBT (60 வினாக்கள் - 240 மதிப்பெண்: PCMB) (+4, -1)</td>
+<td>ஆண்டுக்கு ₹80,000 (INSPIRE தகுதிப்படி)</td>
+<td>மார்ச் - மே</td>
+<td><a class="portal-btn" href="https://iiseradmission.in/" rel="noopener noreferrer" target="_blank">iiseradmission.in</a></td>
+</tr>
+<tr style="background-color: #ecfdf5; font-weight: 600;">
+<td><b>IAT (B.Tech &amp; B.S.)</b><br/><small>(IISER Bhopal)</small></td>
+<td><b>IISER போபால்</b></td>
+<td><b>4-ஆண்டு B.Tech. in Engineering Sciences</b> (Data Science &amp; Engg, EECS, Chemical) &amp; <b>B.S. Economic Sciences</b></td>
+<td>CBT (PCMB வினாக்கள் - 12-ல் கணிதம் கட்டாயம்) (+4, -1)</td>
+<td>மெரிட் உதவித்தொகை &amp; நிறுவன உதவித்தொகைகள்</td>
+<td>மார்ச் - மே</td>
+<td><a class="portal-btn" href="https://www.iiserb.ac.in/" rel="noopener noreferrer" target="_blank">iiserb.ac.in</a></td>
+</tr>
+<tr style="background-color: #eff6ff; font-weight: 600;">
+<td><b>IAT (IIT Madras)</b><br/><small>(Medical Sciences)</small></td>
+<td><b>IIT மெட்ராஸ்</b> (DMST)</td>
+<td><b>4-ஆண்டு B.S. in Medical Sciences &amp; Engineering</b> (மருத்துவ உபகரணங்கள் &amp; AI)</td>
+<td>IAT மதிப்பெண் வழி நேரடிச் சேர்க்கை (JEE Advanced தேவையில்லை!)</td>
+<td>நிறுவன உதவித்தொகை &amp; மருத்துவமனை இன்டர்ன்ஷிப்</td>
+<td>மார்ச் - ஜூன்</td>
+<td><a class="portal-btn" href="https://mst.iitm.ac.in/" rel="noopener noreferrer" target="_blank">mst.iitm.ac.in</a></td>
+</tr>
+<tr>
+<td><b>NEST</b></td>
+<td>NISER புவனேஸ்வர், UM-DAE CEBS மும்பை</td>
+<td>5-ஆண்டு ஒருங்கிணைந்த M.Sc. (அணுசக்தி ஆராய்ச்சி)</td>
+<td>CBT (சிறந்த 3 பாடங்கள் - 150 மதிப்பெண்) (+3, -1)</td>
+<td>ஆண்டுக்கு ₹80,000 (DAE DISHA - அனைவருக்கும்!)</td>
+<td>பிப்ரவரி - மே</td>
+<td><a class="portal-btn" href="https://www.nestexam.in/" rel="noopener noreferrer" target="_blank">nestexam.in</a></td>
+</tr>
+<tr>
+<td><b>ISI Admission Test</b></td>
+<td>ISI கொல்கத்தா, பெங்களூரு, டெல்லி, சென்னை</td>
+<td>B.Stat (Hons), B.Math (Hons), B.S. Data &amp; AI</td>
+<td>Objective (UGA) + Subjective (UGB) Maths + நேர்காணல்</td>
+<td>100% இலவசக் கல்வி + மாதம் ₹5,000 ஸ்டைபண்ட்</td>
+<td>பிப்ரவரி - ஏப்ரல்</td>
+<td><a class="portal-btn" href="https://www.isical.ac.in/" rel="noopener noreferrer" target="_blank">isical.ac.in</a></td>
+</tr>
+<tr>
+<td><b>CMI Entrance Exam</b></td>
+<td>சென்னை கணிதவியல் நிறுவனம் (CMI)</td>
+<td>B.Sc. (Hons) Mathematics &amp; Computer Science / Physics</td>
+<td>புறவய + விளக்கமுறை கணிதத் தேர்வு</td>
+<td>100% கட்டண விலக்கு + மாதம் ₹4,000 ஸ்டைபண்ட்</td>
+<td>மார்ச் - மே</td>
+<td><a class="portal-btn" href="https://www.cmi.ac.in/" rel="noopener noreferrer" target="_blank">cmi.ac.in</a></td>
+</tr>
+<tr>
+<td><b>IISc B.S. Admissions</b></td>
+<td>இந்திய அறிவியல் கழகம் (IISc பெங்களூரு)</td>
+<td>4-ஆண்டு B.S. Research &amp; B.Tech Mathematics &amp; Computing</td>
+<td>IAT / JEE Advanced / JEE Main / NEET-UG வழியாக</td>
+<td>ஆண்டுக்கு ₹80,000 வரை உதவித்தொகை</td>
+<td>ஏப்ரல் - ஜூன்</td>
+<td><a class="portal-btn" href="https://admissions.iisc.ac.in/" rel="noopener noreferrer" target="_blank">admissions.iisc.ac.in</a></td>
+</tr>
+<tr style="background-color: #f0fdf4; font-weight: 600;">
+<td><b>IIST Admission</b><br/><small>(ISRO Own Institute)</small></td>
+<td><b>IIST திருவனந்தபுரம்</b><br/><small>(விண்வெளித் துறை - DOS / ISRO)</small></td>
+<td><b>4-ஆண்டு B.Tech Aerospace, Avionics</b> &amp; <b>5-ஆண்டு Dual Degree (Astronomy/Astrophysics)</b></td>
+<td><b>JEE (Advanced)</b> தரவரிசை (IIST போர்ட்டலில் தனிப் பதிவு கட்டாயம்!)</td>
+<td><b>100% முழுக் கட்டண விலக்கு + 7.5 CGPA பெற்றால் நேரடி ISRO Scientist 'SC' பணி நியமனம்!</b></td>
+<td>மே - ஜூன்</td>
+<td><a class="portal-btn" href="https://admission.iist.ac.in/" rel="noopener noreferrer" target="_blank">admission.iist.ac.in</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Section 9: Class-wise Roadmap -->
+<div class="card filterable-section" data-tags="all roadmap study guide 9 10 11 12 research engineering" id="section-9">
+<div class="card-header">
+<h3 class="card-title">🚀 9. 9 முதல் 12-ஆம் வகுப்பு வரை அறிவியல் ஆராய்ச்சி &amp; B.S. பொறியியல் தயாரிப்பு வழிகாட்டி (Roadmap)</h3>
+<span class="badge badge-green">ஆராய்ச்சி &amp; தொழில்முறை சிந்தனையை வளர்க்கும் வழிகள்</span>
+</div>
+<div class="roadmap-grid">
+<div class="roadmap-card">
+<span class="roadmap-badge">வகுப்பு 9</span>
+<h5>அறிவியல் ஆர்வமும் தேடலும்</h5>
+<ul>
+<li>அறிவியல் விதிகளை மனப்பாடம் செய்யாமல், 'ஏன்?', 'எப்படி?' என்ற கேள்விகளுடன் பரிசோதனைகளை அறிதல்.</li>
+<li>கணிதத்தில் இயற்கணிதம், முக்கோணவியல் மற்றும் வடிவியல் தேற்றங்களின் நிரூபணங்களை சுயமாக எழுதிப் பழகுதல்.</li>
+<li>NMMS மற்றும் பள்ளி அறிவியல் கண்காட்சிகளில் புத்தாக்கப் படைப்புகளை உருவாக்குதல்.</li>
+<li>கணினி நிரலாக்கத்தின் அடிப்படைகள் (Python/Scratch) கற்கத் தொடங்குதல்.</li>
+</ul>
+</div>
+<div class="roadmap-card">
+<span class="roadmap-badge">வகுப்பு 10</span>
+<h5>அடிப்படைகள் &amp; ஒலிம்பியாட் பயிற்சிகள்</h5>
+<ul>
+<li>10-ஆம் வகுப்பு அறிவியல் &amp; கணிதப் பொதுத்தேர்வில் 100% தேர்ச்சி பெற முழு முயற்சி.</li>
+<li>11-ஆம் வகுப்பில் <b>PCMB (Physics, Chemistry, Maths, Biology)</b> அல்லது <b>PCM-Computer</b> பிரிவைத் தேர்வு செய்தல்.</li>
+<li>கணித ஒலிம்பியாட் (IOQM / PRMO) மற்றும் அறிவியல் திறனாய்வுத் தேர்வுகளுக்குத் தயாராதல்.</li>
+<li>விடுமுறைக் காலத்தில் 11-ஆம் வகுப்பு NCERT அறிவியல் பாடங்களை முன்கூட்டியே வாசித்து அறிதல்.</li>
+</ul>
+</div>
+<div class="roadmap-card">
+<span class="roadmap-badge">வகுப்பு 11</span>
+<h5>ஆழ்ந்த கோட்பாட்டுப் பயிற்சி</h5>
+<ul>
+<li>IAT மற்றும் NEST தேர்வுகளில் 11-ஆம் வகுப்புப் பாடங்களிலிருந்து 50% வினாக்கள் கேட்கப்படுகின்றன.</li>
+<li>இயற்பியல் இயக்கவியல் (Mechanics), அணு அமைப்பு (Atomic Structure), வேதிப் பிணைப்பு, கணித கால்குலஸ் ஆகியவற்றில் அடிப்படைக் கோட்பாடுகளை ஆழமாகக் கற்றல்.</li>
+<li>ISI மற்றும் CMI தேர்வுகளுக்குத் தயாராக முந்தைய ஆண்டுகளின் கடினமான கணிதக் கணக்குகளைத் தீர்த்துப் பழகுதல்.</li>
+<li>முந்தைய 10 ஆண்டுகளின் IAT, NEST வினாத்தாள்களைப் பாடவாரியாகப் பயிற்சி செய்தல்.</li>
+</ul>
+</div>
+<div class="roadmap-card">
+<span class="roadmap-badge">வகுப்பு 12</span>
+<h5>மாதிரித் தேர்வுகள் &amp; சேர்க்கை விண்ணப்பம்</h5>
+<ul>
+<li>12-ஆம் வகுப்பு போர்டு தேர்வையும் ஆராய்ச்சி நுழைவுத்தேர்வுகளையும் திட்டமிட்டு ஒருங்கிணைத்துப் படித்தல்.</li>
+<li>பிப்ரவரி - ஏப்ரல் மாதங்களில் வெளியாகும் IAT, NEST, ISI, CMI விண்ணப்பங்களைச் சரியான நேரத்தில் பதிவு செய்தல்.</li>
+<li>கணினி வழி மாதிரித் தேர்வுகளை (CBT Mock Tests) இணையத்தில் எழுதி வேகத்தையும் துல்லியத்தையும் மேம்படுத்துதல்.</li>
+<li>12-ஆம் வகுப்பு பொதுத்தேர்வில் அதிக மதிப்பெண் பெற்று மத்திய அரசின் INSPIRE SHE உதவித்தொகைத் தகுதியைப் பெறுதல்.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Section 10: Document Checklist & Government Schemes -->
+<div class="card filterable-section" data-tags="all documents schemes scholarships pure-science" id="section-10">
+<div class="card-header">
+<h3 class="card-title">📑 10. சேர்க்கைக்குத் தேவையான சான்றிதழ்கள் &amp; அரசு நலத்திட்டங்கள் (Certificates &amp; Schemes)</h3>
+<span class="badge badge-teal">ஆவணங்கள் சரிபார்ப்பு &amp; உதவித்தொகைகள்</span>
+</div>
+<div class="card-sub">அ) அறிவியல் ஆராய்ச்சி நுழைவுத்தேர்வுகள் மற்றும் சேர்க்கைக்குத் தேவையான அத்தியாவசிய சான்றிதழ்கள்:</div>
+<div class="checklist-grid">
+<div class="check-item"><span class="check-icon">✓</span> 10-ஆம் வகுப்பு மதிப்பெண் சான்றிதழ் (பிறந்த தேதி சரிபார்ப்பிற்கு)</div>
+<div class="check-item"><span class="check-icon">✓</span> 11 மற்றும் 12-ஆம் வகுப்பு பொதுத்தேர்வு மதிப்பெண் சான்றிதழ்கள்</div>
+<div class="check-item"><span class="check-icon">✓</span> IAT / NEST / ISI / CMI நுழைவுச் சீட்டு &amp; மதிப்பெண் அட்டை (Score Card / Rank Card)</div>
+<div class="check-item"><span class="check-icon">✓</span> மாற்றுச் சான்றிதழ் (Transfer Certificate) &amp; நடத்தைச் சான்றிதழ்</div>
+<div class="check-item"><span class="check-icon">✓</span> சாதிச் சான்றிதழ் (Community Certificate - மத்திய அரசுப் படிவத்தில் OBC-NCL / EWS / SC / ST)</div>
+<div class="check-item"><span class="check-icon">✓</span> இருப்பிடச் சான்றிதழ் (Nativity Certificate) &amp; குடும்ப வருமானச் சான்றிதழ்</div>
+<div class="check-item"><span class="check-icon">✓</span> செல்லுபடியாகும் அரசு புகைப்பட அடையாள அட்டை (Aadhaar / Passport) &amp; பாஸ்போர்ட் அளவு வண்ணப் புகைப்படங்கள்</div>
+<div class="check-item"><span class="check-icon">✓</span> வங்கி கணக்குப் புத்தக நகல் (உதவித்தொகை பெறுவதற்கு மாணவரின் பெயரில் உள்ள வங்கிக் கணக்கு)</div>
+</div>
+<div class="card-sub">ஆ) தமிழ்நாடு அரசின் உயர்கல்வி நலத்திட்டங்கள்:</div>
+<div class="alert-box">
+<h4>💡 மாணவ, மாணவியர் பயன்பெறக்கூடிய தமிழ்நாடு அரசு திட்டங்கள்:</h4>
+<p>
+        • <b>புதுமைப் பெண் திட்டம் &amp; தமிழ்ப் புதல்வன் திட்டம்:</b> அரசுப் பள்ளிகளில் 6 முதல் 12-ஆம் வகுப்பு வரை பயின்று அறிவியல், கணிதம், B.S. பொறியியல் மற்றும் ஆராய்ச்சிப் படிப்புகளில் சேரும் மாணவிகளுக்கு (புதுமைப் பெண்) மற்றும் மாணவர்களுக்கு (தமிழ்ப் புதல்வன்) மாதம் <b>₹1,000/-</b> வங்கிக் கணக்கில் நேரடியாக வழங்கும் தமிழ்நாடு அரசின் முன்னோடித் திட்டம்.<br/>
+        • <b>நான் முதல்வன் திட்டம் (Naan Mudhalvan):</b> அறிவியல் மற்றும் தொழில்நுட்ப மாணவர்களுக்கு நவீன ஆய்வகப் பயிற்சிகள், உயர் கல்வி வழிகாட்டுதல் மற்றும் ஆராய்ச்சி உதவித்தொகை பெறுவதற்கான வழிகாட்டல்களை வழங்கும் சிறப்புத் திட்டம்.
+      </p>
+</div>
+</div>
+<!-- Enhanced Standard Portal Footer (Matching Medical & Engineering Portals) -->
+<!-- All-India Science & Research Directory Announcement Box (கீழ்ப்பகுதியில் கடைசியாக வைக்கப்பட்டது) -->
+<div class="card filterable-section no-print" data-tags="all directory spreadsheet download excel pdf" id="section-research-directory" style="margin-top: 32px; margin-bottom: 36px; border: 2px solid #a7f3d0; border-top: 6px solid #059669; background: linear-gradient(180deg, #ecfdf5 0%, #ffffff 100%); border-radius: var(--radius-lg); padding: 28px 32px; box-shadow: 0 8px 24px rgba(6, 78, 59, 0.09); scroll-margin-top: 30px;">
+<div class="card-header" style="border-bottom: 2px solid #bbf7d0; padding-bottom: 12px; margin-bottom: 16px;">
+<h3 class="card-title" style="color: #064e3b; font-size: 1.35rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; width: 100%;">
+<span style="display:flex; align-items:center; gap:10px;">🏛️ அகில இந்திய அறிவியல், ஆராய்ச்சி &amp; விண்வெளி நிறுவனங்கள் முழு அடைவு (Directory)</span>
+<span class="badge badge-green" style="font-size: 0.84rem; padding: 5px 14px; border-radius: 999px;">அதிகாரப்பூர்வ விரிதாள் &amp; கோப்புகள்</span>
+</h3>
+</div>
+<p style="font-size: 0.95rem; color: #334155; line-height: 1.75; margin-bottom: 20px;">
+      இந்தியாவின் <b>7 IISERs</b> (புனே, போபால், கொல்கத்தா, மொஹாலி, திருவனந்தபுரம், திருப்பதி, பெர்ஹாம்பூர்), <b>IISc பெங்களூரு</b>, <b>IIST திருவனந்தபுரம் (விண்வெளித் துறை / இஸ்ரோ நேரடிப் பணி - வரிசை 9)</b>, <b>NISER புவனேஸ்வர் (BARC விஞ்ஞானி பணி)</b>, <b>UM-DAE CEBS மும்பை</b>, <b>ISI கொல்கத்தா &amp; பெங்களூரு</b>, <b>CMI சென்னை</b>, <b>IIT மெட்ராஸ் B.S. Medical Sciences</b>, ஆராய்ச்சி B.S. வழங்கும் பிற ஐஐடிக்கள் மற்றும் முன்னணி மத்திய பல்கலைக்கழகங்கள் உட்பட <b>35 தலைசிறந்த தேசிய அறிவியல் நிறுவனங்களின்</b> பட்டப்படிப்புகள், சேர்க்கை நுழைவுத்தேர்வுகள் (IAT, NEST, JEE Advanced, ISI, CMI, CUET), மாதாந்திர உதவித்தொகைகள் மற்றும் அதிகாரப்பூர்வ இணையதள இணைப்புகள் அடங்கிய முழுமையான அடைவுத் தொகுப்பு கூகுள் விரிதாள், எக்செல் (Excel) மற்றும் கிடைமட்ட (Landscape) PDF வடிவங்களில் பதிவிறக்கத்திற்குக் கீழே வழங்கப்பட்டுள்ளது.
+    </p>
+<!-- 3 Action Buttons Requested by User -->
+<div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-top: 10px;">
+<!-- Button 1: View Google Sheet -->
+<a class="dir-btn" href="https://docs.google.com/spreadsheets/d/1Xo1ccPqcYC8he6yXRm6me17MKbp_7Pv8B3gWwsdxg08/edit?usp=sharing" rel="noopener noreferrer" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #ffffff; padding: 13px 24px; font-weight: 800; font-size: 0.95rem; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(5,150,105,0.28); transition: all 0.25s ease;" target="_blank">
+<span>📊 View Google Sheet</span> ➔
+      </a>
+<!-- Button 2: Download Excel -->
+<a class="dir-btn" href="https://docs.google.com/spreadsheets/d/1Xo1ccPqcYC8he6yXRm6me17MKbp_7Pv8B3gWwsdxg08/export?format=xlsx" rel="noopener noreferrer" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff; padding: 13px 24px; font-weight: 800; font-size: 0.95rem; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(2,132,199,0.28); transition: all 0.25s ease;" target="_blank">
+<span>📥 Download Excel</span> ➔
+      </a>
+<!-- Button 3: Download Landscape PDF -->
+<a class="dir-btn" href="https://docs.google.com/spreadsheets/d/1Xo1ccPqcYC8he6yXRm6me17MKbp_7Pv8B3gWwsdxg08/export?format=pdf&amp;portrait=false&amp;size=a4&amp;fitw=true&amp;gridlines=true" rel="noopener noreferrer" style="background: linear-gradient(135deg, #d97706 0%, #b45309 100%); color: #ffffff; padding: 13px 24px; font-weight: 800; font-size: 0.95rem; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(217,119,6,0.28); transition: all 0.25s ease;" target="_blank">
+<span>📑 Download PDF</span> ➔
+      </a>
+</div>
+<!-- Supplementary Note & Drive Alternative Links -->
+<div style="margin-top: 18px; padding-top: 12px; border-top: 1px dashed #a7f3d0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+<span style="font-size: 0.86rem; color: #065f46; font-weight: 600;">
+        💡 PDF கோப்பானது 11 நெடுவரிசைகளும் முழுமையாகப் பொருந்தும் வகையில் <b>கிடைமட்டத் தாளில் (Landscape A4)</b> பதிவிறக்கம் ஆகும்.
+      </span>
+<div style="display:flex; gap:10px; font-size:0.83rem;">
+<a href="https://drive.google.com/file/d/1k71tInGMatH0HjlRa19UsATrQGFutMTU/view?usp=drivesdk" rel="noopener noreferrer" style="color:#0369a1; text-decoration:none; font-weight:bold;" target="_blank">[மாற்று PDF டிரைவ் இணைப்பு]</a>
+<span style="color:#94a3b8;">|</span>
+<a href="https://drive.google.com/file/d/1UKdZPG9VGYmgrHzyqh1F5-1kEqL8v4Te/view?usp=drivesdk" rel="noopener noreferrer" style="color:#059669; text-decoration:none; font-weight:bold;" target="_blank">[மாற்று Excel டிரைவ் இணைப்பு]</a>
+</div>
+</div>
+</div>
+<!-- Floating Back to Top Button -->
+<button class="back-to-top no-print" onclick="scrollToTop(event);" title="மேலே செல்ல" type="button">
+    ▲ மேலே செல்ல
+  </button>
+<!-- ==============================================
+       சுருக்கப்பட்ட & அனிமேஷன் செய்யப்பட்ட திருக்குறள் பகுதி (குறள் 355)
+       ============================================== -->
+<!-- ==================================================== -->
+<!-- இணையதள வடிவமைப்பு விவரம் (Single Line Animated Creator Details) -->
+<!-- ==================================================== -->
 <div class="traditional-kural-card no-print">
+<div class="kural-top-row">
+<div class="kural-chip-wrap">
+<span class="kural-feather-icon">🪶</span>
+<span class="kural-chip-text">திருக்குறள் • அதிகாரம் 36: மெய்யுணர்தல் (குறள்: 355)</span>
+</div>
+<span class="kural-topic-badge">🔬 அறிவியல் உண்மை</span>
+</div>
+<div class="kural-couplet-lines">
 <p class="kural-first-line">“எப்பொருள் எத்தன்மைத் தாயினும் அப்பொருள்</p>
 <p class="kural-second-line">மெய்ப்பொருள் காண்ப தறிவு.”</p>
-<p style="font-size: 0.88rem; color: #fef08a; margin-top: 6px;">💡 குறள் விளக்கம்: எந்தவொரு பொருள் எத்தகைய தோற்றத்தோடு தோன்றினாலும், அதன் ஆழமான உண்மைத் தன்மையைக் கண்டறிவதே அறிவியல் ஆராய்ச்சியின் அடிப்படை அறிவாகும்.</p>
 </div>
-
-<div class="portal-bottom-nav no-print" style="margin: 30px auto 20px auto; padding: 18px; background: #ffffff; border-radius: 14px; border: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-<div>
-<a class="portal-nav-btn prev-btn" href="02_engineering_jee.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1;">
+<div class="kural-meaning-row">
+<span class="kural-meaning-label">💡 குறள் விளக்கம்:</span>
+<span class="kural-meaning-text">எந்தவொரு பொருள் எத்தகைய தோற்றத்தோடு தோன்றினாலும், அதன் ஆழமான உண்மைத் தன்மையைக் கண்டறிவதே அறிவியல் ஆராய்ச்சியின் அடிப்படை அறிவாகும்.</span>
+</div>
+</div><div class="creator-card">
+<div id="creatorTypewriterWrap" style="display: inline-flex; align-items: center; justify-content: center; flex-wrap: wrap; line-height: 1.8;">
+<span id="creatorTypewriterTarget"></span><span class="typing-cursor" id="creatorCursor">|</span>
+</div>
+</div>
+<!-- Footer Section (matching Section 01 & Pilot Guide) -->
+<div class="portal-bottom-nav no-print" style="margin: 40px auto 25px auto; padding: 20px; background: #ffffff; border-radius: 14px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+<div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+<a class="portal-nav-btn prev-btn" href="02_engineering_jee.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1; box-shadow:0 2px 4px rgba(0,0,0,0.04);">
 <span>← முந்தைய பிரிவு: 02 (பொறியியல் (JEE))</span>
 </a>
 </div>
 <div>
-<a class="portal-nav-btn home-btn" href="00_entrance_exams.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#1e1b4b; color:#ffffff; text-decoration:none; font-weight:700; font-size:14px;">
+<a class="portal-nav-btn home-btn" href="00_entrance_exams.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#1e1b4b; color:#ffffff; text-decoration:none; font-weight:700; font-size:14px; box-shadow:0 3px 8px rgba(30,27,75,0.25);">
 <span>🏠 நுழைவுத்தேர்வுகள் முதன்மை மெனு</span>
 </a>
 </div>
-<div>
-<a class="portal-nav-btn next-btn" href="04_central_universities_cuet.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1;">
+<div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+<a class="portal-nav-btn next-btn" href="04_central_universities_cuet.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1; box-shadow:0 2px 4px rgba(0,0,0,0.04);">
 <span>அடுத்த பிரிவு: 04 (மத்தியப் பல்கலை. (CUET UG)) →</span>
 </a>
 </div>
-</div>
-
-<footer class="portal-footer no-print">
-<p style="margin-bottom: 6px; font-weight: 700; color: #1e293b; font-size: 0.95rem;">
-தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, 
-<a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 800;">☎️ 04575240408</a>
+</div><footer class="portal-footer no-print">
+<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
+      தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
 </p>
 <p style="font-size: 0.85rem; color: #64748b; margin-top: 6px;">
-© Chief Educational Office, Sivagangai. All Rights Reserved. மாணவ வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே வெளியிடப்பட்டது.
-</p>
+      © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+    </p>
 </footer>
-
 </div>
+<!-- Robust JavaScript for Navigation, Print and Interactive Filtering -->
+<script>
+  function scrollToSection(sectionId, event) {
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    var target = document.getElementById(sectionId);
+    if (target) {
+      try {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } catch (e) {
+        target.scrollIntoView();
+      }
+
+      try {
+        var rect = target.getBoundingClientRect();
+        var absTop = window.pageYOffset + rect.top - 15;
+        window.scrollTo({ top: absTop, behavior: 'smooth' });
+      } catch (e) {}
+
+      try {
+        if (history.pushState) {
+          history.pushState(null, null, '#' + sectionId);
+        } else {
+          window.location.hash = sectionId;
+        }
+      } catch(e) {}
+
+      target.classList.add('highlight-pulse');
+      setTimeout(function() {
+        target.classList.remove('highlight-pulse');
+      }, 1500);
+
+      updateActiveNav(sectionId);
+    }
+  }
+
+  function scrollToTop(event) {
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function updateActiveNav(activeId) {
+    var btns = document.querySelectorAll('.nav-btn');
+    btns.forEach(function(b) {
+      b.classList.remove('active');
+      var onclickAttr = b.getAttribute('onclick') || '';
+      if (onclickAttr.indexOf(activeId) !== -1) {
+        b.classList.add('active');
+      }
+    });
+  }
+
+  function filterContent() {
+    var query = (document.getElementById('examSearchInput').value || '').toLowerCase().trim();
+    var sections = document.querySelectorAll('.filterable-section');
+
+    sections.forEach(function(sec) {
+      var text = sec.innerText.toLowerCase();
+      if (!query || text.indexOf(query) !== -1) {
+        sec.style.display = '';
+      } else {
+        sec.style.display = 'none';
+      }
+    });
+  }
+
+  function filterByTag(tag, el) {
+    var chips = document.querySelectorAll('.filter-chip');
+    chips.forEach(function(c) { c.classList.remove('active'); });
+    if (el) el.classList.add('active');
+
+    var searchBox = document.getElementById('examSearchInput');
+    if (searchBox) searchBox.value = '';
+
+    var sections = document.querySelectorAll('.filterable-section');
+    sections.forEach(function(sec) {
+      var tags = (sec.getAttribute('data-tags') || '').toLowerCase();
+      if (tag === 'all' || tags.indexOf(tag.toLowerCase()) !== -1) {
+        sec.style.display = '';
+      } else {
+        sec.style.display = 'none';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', function() {
+    var sections = document.querySelectorAll('.filterable-section');
+    var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+    sections.forEach(function(sec) {
+      var top = sec.offsetTop - 120;
+      var height = sec.offsetHeight;
+      var id = sec.getAttribute('id');
+      if (scrollPos >= top && scrollPos < top + height) {
+        updateActiveNav(id);
+      }
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        var targetId = this.getAttribute('href').substring(1);
+        if (targetId && document.getElementById(targetId)) {
+          scrollToSection(targetId, e);
+        }
+      });
+    });
+  });
+
+// ==========================================
+// Creator Single-Line Typewriter Animation (Matching Pilot Guide & Master Portal)
+// ==========================================
+const creatorSegments = [
+  { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
+  { text: "கூ. பூவலிங்கம்", tag: "span", class: "creator-name-ta" },
+  { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
+  { text: "K. Poovalingam", tag: "span", class: "creator-name-en" },
+  { text: ", Deputy Inspector of Schools  ", tag: "span", class: "creator-role" },
+  { text: "📱 9626471035", tag: "a", class: "creator-phone-badge", href: "tel:9626471035" }
+];
+
+const creatorContainer = document.getElementById('creatorTypewriterTarget');
+const creatorCursor = document.getElementById('creatorCursor');
+
+let creatorSegIdx = 0;
+let creatorCharIdx = 0;
+let creatorCurrentElem = null;
+let creatorHasStarted = false;
+
+function typeCreatorDetails() {
+  if (!creatorContainer || creatorHasStarted) return;
+  creatorHasStarted = true;
+
+  function step() {
+    if (creatorSegIdx >= creatorSegments.length) {
+      if (creatorCursor) {
+        creatorCursor.style.animation = 'none';
+        creatorCursor.style.opacity = '0';
+        setTimeout(() => creatorCursor.remove(), 400);
+      }
+      return;
+    }
+
+    const seg = creatorSegments[creatorSegIdx];
+
+    if (creatorCharIdx === 0) {
+      creatorCurrentElem = document.createElement(seg.tag);
+      if (seg.class) creatorCurrentElem.className = seg.class;
+      if (seg.href) {
+        creatorCurrentElem.href = seg.href;
+        creatorCurrentElem.target = '_blank';
+        creatorCurrentElem.rel = 'noopener noreferrer';
+      }
+      creatorContainer.appendChild(creatorCurrentElem);
+    }
+
+    creatorCurrentElem.textContent += seg.text.charAt(creatorCharIdx);
+    creatorCharIdx++;
+
+    if (creatorCharIdx < seg.text.length) {
+      setTimeout(step, 24);
+    } else {
+      creatorSegIdx++;
+      creatorCharIdx = 0;
+      setTimeout(step, 50);
+    }
+  }
+
+  step();
+}
+
+// Use IntersectionObserver or fallback on page load
+if ('IntersectionObserver' in window) {
+  const cardElem = document.querySelector('.creator-card');
+  if (cardElem) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          typeCreatorDetails();
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.1 });
+    observer.observe(cardElem);
+  } else {
+    setTimeout(typeCreatorDetails, 500);
+  }
+} else {
+  setTimeout(typeCreatorDetails, 500);
+}
+
+</script>
 </body>
 </html>

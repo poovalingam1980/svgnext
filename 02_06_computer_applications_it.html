@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+
+<html lang="ta">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>கணினிப் பயன்பாட்டியல் &amp; IT சேர்க்கை வழிகாட்டி (BCA, B.Sc CS &amp; Data Science) | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
+<!-- Google Fonts: Inter & Noto Sans Tamil -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+   --primary: #6d28d9;     /* Tech Violet */
+   --primary-dark: #4c1d95;   /* Deep Cyber Purple */
+   --primary-light: #7c3aed;  /* Bright Violet */
+   --primary-accent: #a855f7;  /* Neon Tech Accent */
+   --secondary: #0284c7;    /* Tech Sky Blue */
+   --secondary-dark: #0f172a;  /* Cyber Night */
+   --accent: #d97706;
+   --accent-gold: #f59e0b;
+   --danger: #dc2626;
+   --success: #15803d;
+   --bg-main: #f8fafc;
+   --card-bg: #ffffff;
+   --text-main: #0f172a;
+   --text-sub: #334155;
+   --text-muted: #64748b;
+   --border: #e2e8f0;
+   --border-accent: #cbd5e1;
+   --badge-bg: #f5f3ff;
+   --badge-text: #6d28d9;
+   --radius-sm: 8px;
+   --radius-md: 14px;
+   --radius-lg: 20px;
+   --radius-xl: 28px;
+   --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+   --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+   --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.12);
+  }
+ 
+  * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+  }
+ 
+  html {
+   scroll-behavior: smooth;
+  }
+ 
+  body {
+   font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+   background-color: #f1f5f9;
+   color: var(--text-main);
+   line-height: 1.7;
+   padding: 16px;
+   -webkit-font-smoothing: antialiased;
+  }
+ 
+  .portal-container {
+   max-width: 1260px;
+   margin: 0 auto;
+  }
+ 
+  /* Top Navigation Bar */
+  .top-bar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 12px;
+   margin-bottom: 16px;
+  }
+ 
+  .home-btn {
+   display: inline-flex;
+   align-items: center;
+   gap: 8px;
+   padding: 9px 18px;
+   background-color: var(--primary-dark);
+   color: #ffffff;
+   text-decoration: none;
+   font-size: 0.92rem;
+   font-weight: 600;
+   border-radius: var(--radius-sm);
+   box-shadow: 0 2px 5px rgba(15, 23, 42, 0.2);
+   transition: all 0.2s ease;
+  }
+ 
+  .home-btn:hover {
+   background-color: #2e1065;
+   transform: translateY(-1px);
+   box-shadow: 0 4px 10px rgba(15, 23, 42, 0.3);
+  }
+ 
+  .home-btn svg {
+   width: 18px;
+   height: 18px;
+   fill: currentColor;
+  }
+ 
+  .district-badge {
+   display: inline-flex;
+   align-items: center;
+   gap: 6px;
+   font-size: 0.88rem;
+   font-weight: 700;
+   color: #6d28d9;
+   background: #f5f3ff;
+   padding: 6px 16px;
+   border-radius: 999px;
+   border: 1px solid #ddd6fe;
+  }
+ 
+  /* Portal Header */
+  .portal-header {
+   background: linear-gradient(135deg, #4c1d95 0%, #5b21b6 40%, #6d28d9 80%, #7c3aed 100%);
+   border-radius: var(--radius-xl);
+   padding: 36px 32px 30px;
+   color: #ffffff;
+   box-shadow: var(--shadow-lg);
+   border: 1px solid rgba(255, 255, 255, 0.15);
+   margin-bottom: 24px;
+   text-align: center;
+   position: relative;
+   overflow: hidden;
+  }
+ 
+  .portal-header::after {
+   content: '';
+   position: absolute;
+   top: -50%;
+   right: -20%;
+   width: 400px;
+   height: 400px;
+   background: radial-gradient(circle, rgba(168, 85, 247, 0.25) 0%, transparent 70%);
+   pointer-events: none;
+  }
+ 
+  .header-badge-row {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+   flex-wrap: wrap;
+   margin-bottom: 12px;
+  }
+ 
+  .header-tag {
+   padding: 5px 14px;
+   border-radius: 999px;
+   font-size: 0.82rem;
+   font-weight: 800;
+   letter-spacing: 0.4px;
+   text-transform: uppercase;
+   border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+ 
+  .header-tag.primary {
+   background-color: #fef08a;
+   color: #713f12;
+   border-color: #fde047;
+  }
+ 
+  .header-tag.secondary {
+   background-color: rgba(255, 255, 255, 0.15);
+   color: #f5f3ff;
+   backdrop-filter: blur (8px);
+  }
+ 
+  .portal-title {
+   font-size: 2.1rem;
+   font-weight: 900;
+   line-height: 1.35;
+   margin-bottom: 12px;
+   color: #ffffff;
+   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+ 
+  .accent-gold {
+   color: #fde047;
+  }
+ 
+  .portal-subtitle {
+   font-size: 1.02rem;
+   color: #ede9fe;
+   max-width: 960px;
+   margin: 0 auto;
+   line-height: 1.65;
+  }
+ 
+  /* Quick Navigation Pills */
+  .quick-nav-pills {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 8px;
+   margin-top: 22px;
+  }
+ 
+  .quick-nav-pill {
+   display: inline-flex;
+   align-items: center;
+   gap: 6px;
+   padding: 8px 16px;
+   background: rgba(255, 255, 255, 0.15);
+   color: #ffffff;
+   text-decoration: none;
+   border-radius: 999px;
+   font-size: 0.88rem;
+   font-weight: 600;
+   border: 1px solid rgba(255, 255, 255, 0.25);
+   backdrop-filter: blur (6px);
+   transition: all 0.2s ease;
+  }
+ 
+  .quick-nav-pill:hover {
+   background: #ffffff;
+   color: var(--primary-dark);
+   transform: translateY(-2px);
+   box-shadow: var(--shadow-sm);
+  }
+ 
+  /* Card Styles */
+  .info-card {
+   background: var(--card-bg);
+   border-radius: var(--radius-lg);
+   border: 1px solid var(--border);
+   padding: 28px;
+   margin-bottom: 24px;
+   box-shadow: var(--shadow-sm);
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+ 
+  .info-card:hover {
+   box-shadow: var(--shadow-md);
+  }
+ 
+  .card-header-flex {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 12px;
+   margin-bottom: 20px;
+   border-bottom: 2px solid #ede9fe;
+   padding-bottom: 14px;
+  }
+ 
+  .card-title-main {
+   font-size: 1.35rem;
+   font-weight: 800;
+   color: var(--primary-dark);
+   display: flex;
+   align-items: center;
+   gap: 10px;
+  }
+ 
+  .section-badge {
+   display: inline-block;
+   padding: 4px 12px;
+   background: #ede9fe;
+   color: #6d28d9;
+   border-radius: 999px;
+   font-size: 0.82rem;
+   font-weight: 700;
+   border: 1px solid #ddd6fe;
+  }
+ 
+  /* Grid Layouts */
+  .grid-2 {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+   gap: 20px;
+  }
+ 
+  .grid-3 {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 20px;
+  }
+ 
+  .grid-4 {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+   gap: 16px;
+  }
+ 
+  /* Feature Box */
+  .feature-box {
+   background: #f8fafc;
+   border: 1px solid var(--border);
+   border-radius: var(--radius-md);
+   padding: 20px;
+   transition: all 0.2s ease;
+  }
+ 
+  .feature-box:hover {
+   border-color: var(--primary-light);
+   background: #f5f3ff;
+   transform: translateY(-2px);
+  }
+ 
+  .feature-box.highlight {
+   border-left: 5px solid var(--primary);
+   background: #f5f3ff;
+  }
+ 
+  .feature-box.tcs {
+   border-left: 5px solid #0284c7;
+   background: #f0f9ff;
+  }
+ 
+  .feature-box.quota {
+   border-left: 5px solid #16a34a;
+   background: #f0fdf4;
+  }
+ 
+  .feature-title {
+   font-size: 1.08rem;
+   font-weight: 700;
+   color: var(--text-main);
+   margin-bottom: 8px;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+  }
+ 
+  .feature-desc {
+   font-size: 0.92rem;
+   color: var(--text-sub);
+   line-height: 1.6;
+  }
+ 
+  /* Calculator Section */
+  .calc-container {
+   background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+   border: 2px solid #ddd6fe;
+   border-radius: var(--radius-lg);
+   padding: 28px;
+   margin-bottom: 24px;
+  }
+ 
+  .calc-title {
+   font-size: 1.4rem;
+   font-weight: 800;
+   color: #4c1d95;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   margin-bottom: 16px;
+  }
+ 
+  .calc-inputs-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 16px;
+   margin-bottom: 20px;
+  }
+ 
+  .input-group label {
+   display: block;
+   font-size: 0.88rem;
+   font-weight: 700;
+   color: #5b21b6;
+   margin-bottom: 6px;
+  }
+ 
+  .input-group input {
+   width: 100%;
+   padding: 10px 14px;
+   border: 1.5px solid #cbd5e1;
+   border-radius: var(--radius-sm);
+   font-size: 1rem;
+   font-weight: 700;
+   color: #0f172a;
+   background: #ffffff;
+   transition: border-color 0.2s ease;
+  }
+ 
+  .input-group input:focus {
+   outline: none;
+   border-color: var(--primary);
+   box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.2);
+  }
+ 
+  .calc-result-box {
+   background: #ffffff;
+   border: 2px solid #6d28d9;
+   border-radius: var(--radius-md);
+   padding: 20px;
+   text-align: center;
+   box-shadow: var(--shadow-sm);
+  }
+ 
+  .cutoff-score {
+   font-size: 2.8rem;
+   font-weight: 900;
+   color: #6d28d9;
+   line-height: 1;
+   margin: 8px 0;
+  }
+ 
+  .cutoff-badge {
+   display: inline-block;
+   padding: 6px 16px;
+   border-radius: 999px;
+   font-size: 0.95rem;
+   font-weight: 800;
+   background: #ede9fe;
+   color: #5b21b6;
+   margin-top: 6px;
+  }
+ 
+  /* Table Styling */
+  .table-container {
+   overflow-x: auto;
+   border: 1px solid var(--border);
+   border-radius: var(--radius-md);
+   background: #ffffff;
+   margin-top: 16px;
+  }
+ 
+  table {
+   width: 100%;
+   border-collapse: collapse;
+   text-align: left;
+   font-size: 0.92rem;
+  }
+ 
+  th {
+   background: #4c1d95;
+   color: #ffffff;
+   padding: 14px 16px;
+   font-weight: 700;
+   white-space: nowrap;
+  }
+ 
+  td {
+   padding: 13px 16px;
+   border-bottom: 1px solid #f1f5f9;
+   color: var(--text-sub);
+   vertical-align: middle;
+  }
+ 
+  tr:hover td {
+   background: #f5f3ff;
+  }
+ 
+  .college-tag {
+   display: inline-block;
+   padding: 3px 10px;
+   border-radius: 999px;
+   font-size: 0.78rem;
+   font-weight: 700;
+   margin-right: 4px;
+  }
+ 
+  .tag-govt { background: #dcfce7; color: #166534; }
+  .tag-aided { background: #fef3c7; color: #92400e; }
+  .tag-svg { background: #ede9fe; color: #5b21b6; }
+ 
+  /* Search Box */
+  .search-row {
+   display: flex;
+   gap: 12px;
+   margin-bottom: 16px;
+   flex-wrap: wrap;
+  }
+ 
+  .search-input {
+   flex: 1;
+   min-width: 250px;
+   padding: 10px 16px;
+   border: 1.5px solid var(--border-accent);
+   border-radius: var(--radius-sm);
+   font-size: 0.94rem;
+  }
+ 
+  .filter-pills {
+   display: flex;
+   gap: 8px;
+   flex-wrap: wrap;
+  }
+ 
+  .college-pill {
+   padding: 8px 16px;
+   background: #f1f5f9;
+   border: 1px solid var(--border);
+   border-radius: 999px;
+   font-size: 0.85rem;
+   font-weight: 600;
+   cursor: pointer;
+   transition: all 0.2s;
+  }
+ 
+  .college-pill.active {
+   background: var(--primary);
+   color: #ffffff;
+   border-color: var(--primary);
+  }
+ 
+  /* Notice Box */
+  .notice-box {
+   border-radius: var(--radius-md);
+   padding: 16px 20px;
+   margin-bottom: 20px;
+   display: flex;
+   align-items: flex-start;
+   gap: 14px;
+  }
+ 
+  .notice-violet {
+   background: #f5f3ff;
+   border: 1px solid #ddd6fe;
+   color: #5b21b6;
+  }
+ 
+  .notice-blue {
+   background: #f0f9ff;
+   border: 1px solid #bae6fd;
+   color: #0369a1;
+  }
+ 
+  /* Footer */
+  .portal-footer {
+   background: #1e293b;
+   color: #f8fafc;
+   padding: 32px 24px;
+   border-radius: var(--radius-xl);
+   text-align: center;
+   margin-top: 36px;
+   border-top: 4px solid var(--primary);
+  }
+ 
+  .footer-dept {
+   font-size: 1.15rem;
+   font-weight: 800;
+   color: #fde68a;
+   margin-bottom: 6px;
+  }
+ 
+  .footer-initiative {
+   font-size: 0.95rem;
+   color: #94a3b8;
+   margin-bottom: 16px;
+  }
+ 
+  .footer-author {
+   background: rgba(255, 255, 255, 0.06);
+   padding: 12px 24px;
+   border-radius: var(--radius-md);
+   display: inline-block;
+   font-size: 0.95rem;
+   font-weight: 600;
+   color: #ffffff;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   margin-bottom: 12px;
+  }
+ 
+  .footer-copy {
+   font-size: 0.82rem;
+   color: #64748b;
+  }
+ 
+  @media (max-width: 768px) {
+   .portal-title { font-size: 1.6rem; }
+   .portal-header { padding: 24px 16px; }
+   .info-card { padding: 18px 14px; }
+   .calc-container { padding: 18px 14px; }
+   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  }
+ 
+  #backToTopBtn {
+   display: none;
+   position: fixed;
+   bottom: 24px;
+   right: 24px;
+   z-index: 9999;
+   background-color: #4c1d95;
+   color: #ffffff;
+   border: 2px solid #a855f7;
+   border-radius: 999px;
+   padding: 10px 18px;
+   font-size: 0.88rem;
+   font-weight: 700;
+   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+   cursor: pointer;
+   transition: all 0.25s ease;
+  }
+  #backToTopBtn:hover {
+   background-color: #a855f7;
+   color: #2e1065;
+   transform: translateY(-3px);
+   box-shadow: 0 6px 20px rgba(168, 85, 247, 0.45);
+  }
+  .quick-nav-pill {
+   cursor: pointer;
+   user-select: none;
+  }
+
+</style>
+</head>
+<body>
+<div class="portal-container">
+<!-- Top Navigation Bar -->
+<div class="top-bar">
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+  <a href="index.html" class="home-btn" title="முதன்மை முகப்பு">
+    <svg viewBox="0 0 20 20" style="width:16px;height:16px;fill:currentColor;"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+    முகப்பு (HOME)
+  </a>
+  <a href="02_00_direct_admissions.html" class="home-btn" style="background-color:#1e293b;" title="நேரடிச் சேர்க்கைப் படிப்புகள் முதன்மைப் பக்கம்">
+    <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor;"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    நேரடிச் சேர்க்கை கையேடு
+  </a>
+</div>
+<div class="district-badge">
+<span>🏛️ தமிழ்நாடு பள்ளிக் கல்வித்துறை | சிவகங்கை மாவட்டம்</span>
+</div>
+</div>
+<!-- Portal Header -->
+<header class="portal-header">
+<div class="header-badge-row">
+<span class="header-tag primary">பிரிவு 06 / COMPUTER &amp; IT CAREERS</span>
+<span class="header-tag secondary">BCA / B.Sc CS / B.Sc IT / Data Science</span>
+<span class="header-tag secondary">3-ஆண்டு நேரடி ஐடி பட்டப்படிப்புகள்</span>
+</div>
+<h1 class="portal-title">கணினிப் பயன்பாட்டியல் &amp; IT சேர்க்கை வழிகாட்டி </h1>
+<p class="portal-subtitle">பொறியியல் படிப்புக்கு மாற்றாக 3 ஆண்டுகளில் குறைந்த செலவில் IT துறையில் மென்பொருள் பொறியாளர் (Software Engineer) ஆக வழிகாட்டும் BCA, B.Sc Computer Science, IT மற்றும் நவீன Data Science, AI படிப்புகள், கல்லூரிப் பட்டியல் மற்றும் TCS / Wipro உடனான வேலைவாய்ப்புத் திட்டங்கள்.</p>
+<!-- Quick Nav Pills -->
+<div class="quick-nav-pills">
+<a class="quick-nav-pill" href="#calculator" onclick="scrollToSection (\'calculator\', event); return false;">🧮 ஐடி கட்-ஆஃப் கால்குலேட்டர்</a>
+<a class="quick-nav-pill" href="#comparison" onclick="scrollToSection (\'comparison\', event); return false;">💻 படிப்புகள் ஒப்பீடு (BCA vs B.Sc)</a>
+<a class="quick-nav-pill" href="#courses" onclick="scrollToSection (\'courses\', event); return false;">📱 கணினிப் படிப்புகள் விவரம்</a>
+<a class="quick-nav-pill" href="#work-study" onclick="scrollToSection (\'work-study\', event); return false;">🎓 படித்துக்கொண்டே M.Tech / MCA</a>
+<a class="quick-nav-pill" href="#colleges" onclick="scrollToSection (\'colleges\', event); return false;">🏆 சிவகங்கை &amp; அரசு கல்லூரிகள்</a>
+<a class="quick-nav-pill" href="#careers" onclick="scrollToSection (\'careers\', event); return false;">💼 IT வேலைவாய்ப்பு &amp; சம்பளம்</a>
+</div>
+</header>
+<!-- Notice -->
+<div class="notice-box notice-violet">
+<span style="font-size: 1.5rem;">💡</span>
+<div>
+<strong>அறிவியல் &amp; வர்த்தக மாணவர்களுக்கான வாய்ப்பு:</strong> BCA படிப்பில் கணிதம் படித்த அறிவியல் மாணவர்கள் மட்டுமின்றி, கணினி பயன்பாட்டியல் (Computer Applications) அல்லது வணிகக் கணிதம் (Business Maths) பயின்ற வணிகவியல் மாணவர்களும் நேரடியாகச் சேரலாம்!
+  </div>
+</div>
+<!-- SECTION: CALCULATOR -->
+<section class="calc-container" id="calculator">
+<div class="calc-title">
+<span>🧮</span>
+<span>கணினி &amp; ஐடி படிப்பு கட்-ஆஃப் கால்குலேட்டர் (IT Cut-off Calculator)</span>
+</div>
+<p style="font-size: 0.94rem; color: #4c1d95; margin-bottom: 18px;">
+   கணினி அறிவியல் / கணினி பயன்பாட்டியல், கணிதம் மற்றும் பிற 2 முதன்மைப் பாடங்களின் மதிப்பெண்களை உள்ளிட்டு உங்கள் ஐடி சேர்க்கை சதவீதத்தைக் கணக்கிடவும்:
+  </p>
+<div class="calc-inputs-grid">
+<div class="input-group">
+<label for="sub1">கணினி அறிவியல் / பயன்பாட்டியல்:</label>
+<input id="sub1" max="100" min="0" placeholder="100-க்கு" type="number" value="92"/>
+</div>
+<div class="input-group">
+<label for="sub2">கணிதம் / வணிகக் கணிதம்:</label>
+<input id="sub2" max="100" min="0" placeholder="100-க்கு" type="number" value="85"/>
+</div>
+<div class="input-group">
+<label for="sub3">பாடம் 3 (Physics / Commerce):</label>
+<input id="sub3" max="100" min="0" placeholder="100-க்கு" type="number" value="80"/>
+</div>
+<div class="input-group">
+<label for="sub4">பாடம் 4 (Chemistry / Accountancy):</label>
+<input id="sub4" max="100" min="0" placeholder="100-க்கு" type="number" value="86"/>
+</div>
+</div>
+<div class="calc-result-box">
+<div style="font-size: 0.92rem; font-weight: 700; color: #64748b; text-transform: uppercase;">உங்கள் கணினிப் படிப்பு கட்-ஆஃப் சதவீதம்</div>
+<div class="cutoff-score" id="cutoffValue">85.75 %</div>
+<div class="cutoff-badge" id="cutoffStatus">முன்னணி அரசுக் கல்லூரிகளில் BCA / B.Sc CS கிடைக்க மிகச் சிறந்த வாய்ப்பு!</div>
+</div>
+</section>
+<!-- SECTION 1: COMPARISON -->
+<section class="info-card" id="comparison">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>💻</span> 1. கணினிப் படிப்புகள் ஒப்பீடு: எது உங்களுக்கு ஏற்றது?</h2>
+<span class="section-badge">BCA vs B.Sc CS vs B.Sc IT</span>
+</div>
+<div class="grid-3">
+<div class="feature-box highlight">
+<h3 class="feature-title">📱 1. BCA (Bachelor of Computer Applications)</h3>
+<p class="feature-desc">
+     மென்பொருள் பயன்பாடுகள், ஆப் டெவலப்மெண்ட், வெப் டிசைனிங், டேட்டாபேஸ் மேனேஜ்மெண்ட் மற்றும் UI/UX டிசைன் ஆகியவற்றில் முழுமையான செய்முறைப் பயிற்சி.
+    </p>
+<p style="font-size: 0.85rem; color: #6d28d9; font-weight: 700; margin-top: 6px;">
+     🎯 மென்பொருள் புரோகிராமர், ஃபுல் ஸ்டேக் டெவலப்பர் பணிகளுக்குச் சிறந்தது.
+    </p>
+</div>
+<div class="feature-box">
+<h3 class="feature-title">⚙️ 2. B.Sc Computer Science</h3>
+<p class="feature-desc">
+     கணினி அல்காரிதம்கள், கணக்கீட்டுக் கோட்பாடுகள் (Theory of Computation), தரவு கட்டமைப்புகள் (Data Structures), சிஸ்டம் புரோகிராமிங் மற்றும் ஆப்பரேட்டிங் சிஸ்டம்ஸ்.
+    </p>
+<p style="font-size: 0.85rem; color: #6d28d9; font-weight: 700; margin-top: 6px;">
+     🎯 சிஸ்டம் ஆர்க்கிடெக்ட், ஆராய்ச்சி, அல்காரிதம் வடிவமைப்புக்கு ஏற்றது.
+    </p>
+</div>
+<div class="feature-box">
+<h3 class="feature-title">🌐 3. B.Sc Information Technology (IT)</h3>
+<p class="feature-desc">
+     நெட்வொர்க்கிங், கிளவுட் கம்ப்யூட்டிங் (AWS/Azure), சர்வர் மேனேஜ்மெண்ட், சைபர் பாதுகாப்பு மற்றும் கார்ப்பரேட் ஐடி உள்கட்டமைப்பு மேலாண்மை.
+    </p>
+<p style="font-size: 0.85rem; color: #6d28d9; font-weight: 700; margin-top: 6px;">
+     🎯 நெட்வொர்க் இன்ஜினியர், கிளவுட் அட்மினிஸ்ட்ரேட்டர் பணிகளுக்கு உகந்தது.
+    </p>
+</div>
+</div>
+</section>
+<!-- SECTION 2: MODERN COURSES -->
+<section class="info-card" id="courses">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>🤖</span> 2. புதிய நவீனத் தலைமுறை கணினிப் படிப்புகள்</h2>
+<span class="section-badge">Next-Gen Tech Degrees</span>
+</div>
+<div class="grid-3">
+<div class="feature-box">
+<h4 class="feature-title">📈 B.Sc Data Science</h4>
+<p class="feature-desc">
+     பெரிய அளவிலான தரவுகளைப் பகுப்பாய்வு செய்து வணிக முடிவுகளை எடுக்கும் டேட்டா சயின்ஸ். பைதான், ஆர் (R), மெஷின் லேர்னிங் மற்றும் பிக் டேட்டா நுட்பங்கள்.
+    </p>
+</div>
+<div class="feature-box">
+<h4 class="feature-title">🧠 B.Sc Artificial Intelligence (AI &amp; ML)</h4>
+<p class="feature-desc">
+     செயற்கை நுண்ணறிவு, ரோபோடிக்ஸ், தானியங்கி அமைப்புகள் மற்றும் டீப் லேர்னிங் தொழில்நுட்பங்கள். தற்காலத்தில் சர்வதேச அளவில் அதிக ஊதியம் தரும் துறை.
+    </p>
+</div>
+<div class="feature-box">
+<h4 class="feature-title">🛡️ B.Sc Cyber Security &amp; Digital Forensics</h4>
+<p class="feature-desc">
+     இணையதளப் பாதுகாப்பு, ஹேக்கிங் தடுப்பு, வங்கிப் பாதுகாப்பு, டிஜிட்டல் தடயவியல் மற்றும் பாதுகாப்பு தணிக்கையாளர் (Security Analyst) பணிகள்.
+    </p>
+</div>
+<!-- Cloud Computing & IoT -->
+<div class="feature-box" style="border-top: 4px solid #0284c7; background: #f0f9ff;">
+<h4 class="feature-title" style="color: #0369a1;">☁️ B.Sc Cloud Computing &amp; IoT</h4>
+<p class="feature-desc">
+     மேகக்கணிமைக் கட்டமைப்பு (AWS, Microsoft Azure, Google Cloud), மெய்நிகராக்கம் (Virtualization), மற்றும் இன்டர்நெட் ஆஃப் திங்ஸ் (IoT) ஸ்மார்ட் சாதன நெட்வொர்க்கிங். கிளவுட் ஆர்க்கிடெக்ட், கிளவுட் செக்யூரிட்டி இன்ஜினியர் மற்றும் IoT சொல்யூஷன்ஸ் டெவலப்பர் பணிகள்.
+    </p>
+</div>
+<!-- Software Systems -->
+<div class="feature-box" style="border-top: 4px solid #10b981; background: #ecfdf5;">
+<h4 class="feature-title" style="color: #047857;">⚙️ B.Sc Software Systems</h4>
+<p class="feature-desc">
+     எண்டர்பிரைஸ் மென்பொருள் கட்டமைப்பு, மென்பொருள் சோதனை (Testing &amp; QA), ஆட்டோமேஷன், DevOps மற்றும் சாப்ட்வேர் லைஃப்சைக்கிள் மேலாண்மை. முன்னணி தகவல் தொழில்நுட்ப நிறுவனங்களில் சிஸ்டம்ஸ் என்ஜினியர் மற்றும் அப்ளிகேஷன் டெவலப்பர் பணிகள்.
+    </p>
+</div>
+<!-- Multimedia, Web Tech & Animation -->
+<div class="feature-box" style="border-top: 4px solid #f59e0b; background: #fffbeb;">
+<h4 class="feature-title" style="color: #b45309;">🎨 B.Sc Multimedia &amp; Web Technology</h4>
+<p class="feature-desc">
+     வலைத்தள வடிவமைப்பு (UI/UX Design), ஃபுல் ஸ்டேக் வெப் டெவலப்மென்ட், 2D/3D அனிமேஷன், விசுவல் எஃபெக்ட்ஸ் (VFX), வீடியோ கேமிங் தொழில்நுட்பம் மற்றும் டிஜிட்டல் ஊடக மேலாண்மை. மீடியா ஹவுஸ்கள், கேமிங் ஸ்டுடியோக்கள் மற்றும் ஐடி கிரியேட்டிவ் ஏஜென்சிகளில் உயர் வேலைவாய்ப்புகள்.
+    </p>
+</div>
+<!-- Information Security & Networking -->
+<div class="feature-box" style="border-top: 4px solid #6366f1; background: #eef2ff;">
+<h4 class="feature-title" style="color: #4338ca;">📡 B.Sc Information Security &amp; Networking</h4>
+<p class="feature-desc">
+     கணினி நெட்வொர்க்கிங் (Cisco CCNA/CCNP), சர்வர் நிர்வாகம் (Linux/Windows Server), ஃபயர்வால் பாதுகாப்பு, தகவல் கசிவு தடுப்பு (DLP) மற்றும் நெட்வொர்க் ஆப்பரேஷன்ஸ் சென்டர் (NOC) இன்ஜினியர் பணிகள்.
+    </p>
+</div>
+</div>
+<!-- Cross-Reference to Guide 05 & Guide 07 -->
+<div class="notice-box notice-blue" style="margin-top: 22px;">
+<span style="font-size: 1.8rem;">📚</span>
+<div>
+<strong>பிற பாடப்பிரிவுகள் குறித்த வழிகாட்டல்:</strong><br/>
+    • கணிதம், இயற்பியல், வேதியியல் உள்ளிட்ட தூய &amp; பயன்பாட்டு அறிவியல் படிப்புகளுக்கு <strong>பிரிவு 5 (அறிவியல் சேர்க்கை வழிகாட்டி)</strong> இணையப்பக்கத்தைக் காண்க.<br/>
+    • தமிழ், ஆங்கிலம், வரலாறு, பொருளியல், சமூகவியல் மற்றும் தமிழ்க் கல்லூரிப் படிப்புகளுக்கு <strong>பிரிவு 7 (கலை &amp; மானுடவியல் வழிகாட்டி)</strong> இணையப்பக்கத்தைக் காண்க.
+   </div>
+</div>
+</section>
+<!-- SECTION 3: WORK & STUDY PROGRAMMES -->
+<section class="info-card" id="work-study">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>🎓</span> 3. படித்துக்கொண்டே வேலை: இலவச M.Tech / MCA திட்டங்கள்!</h2>
+<span class="section-badge" style="background:#e0f2fe; color:#0369a1;">MNC Career Programmes</span>
+</div>
+<div class="notice-box notice-blue">
+<span style="font-size: 1.5rem;">🌟</span>
+<div>
+<strong>3 ஆண்டுகள் BCA / B.Sc முடித்த மாணவர்களுக்கு அரிய வாய்ப்பு:</strong> பன்னாட்டு IT நிறுவனங்கள் இளநிலைப் பட்டதாரிகளை வேலைக்கு எடுத்து, மாதச் சம்பளத்துடன் பிட்ஸ் பிலானி (BITS Pilani) அல்லது சாஸ்த்ரா (SASTRA) போன்ற புகழ்பெற்ற பல்கலைக்கழகங்களில் இலவசமாக M.Tech அல்லது MCA படிக்க வைக்கின்றன!
+   </div>
+</div>
+<div class="grid-3">
+<div class="feature-box tcs">
+<h4 class="feature-title">🏢 TCS Ignite / Smart Hiring</h4>
+<p class="feature-desc">
+     டாடா கன்சல்டன்சி சர்வீசஸ் நிறுவனம் BCA மற்றும் B.Sc அறிவியல் மாணவர்களை நேரடியாகத் தேர்வு செய்து மென்பொருள் பயிற்சியுடன் உயர்கல்வி வாய்ப்பை வழங்குகிறது.
+    </p>
+</div>
+<div class="feature-box tcs">
+<h4 class="feature-title">💼 Wipro WIMS / WILP</h4>
+<p class="feature-desc">
+     விப்ரோ நிறுவனத்தின் Work Integrated Learning Program. 4 ஆண்டுகள் விப்ரோவில் பணிபுரிந்து கொண்டே BITS Pilani-யில் M.Tech பட்டத்தை முற்றிலும் இலவசமாகப் பெறலாம்.
+    </p>
+</div>
+<div class="feature-box tcs">
+<h4 class="feature-title">🚀 Zoho Schools &amp; Freshers Hiring</h4>
+<p class="feature-desc">
+     ஜோஹோ நிறுவனம் சிவகங்கை, மதுரை மற்றும் தென்காசி கிளைகளில் BCA / B.Sc மாணவர்களைத் திறமையின் அடிப்படையில் தேர்வு செய்து உயரிய தொழில்நுட்ப வேலைவாய்ப்புகளை வழங்குகிறது.
+    </p>
+</div>
+</div>
+</section>
+<!-- SECTION 4: COLLEGES DIRECTORY -->
+<section class="info-card" id="colleges">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>🏆</span> 4. சிவகங்கை மாவட்டம் &amp; அருகாமை கல்லூரிகள் (BCA / B.Sc CS)</h2>
+<span class="section-badge">Directory</span>
+</div>
+<!-- Search and Filter -->
+<div class="search-row">
+<input class="search-input" id="collegeSearchInput" placeholder="கல்லூரி பெயர் அல்லது ஊரைத் தட்டச்சு செய்க..." type="text"/>
+<div class="filter-pills">
+<button class="college-pill active" data-type="all">அனைத்தும் (All)</button>
+<button class="college-pill" data-type="svg">சிவகங்கை மாவட்டம்</button>
+<button class="college-pill" data-type="govt">அரசு கல்லூரிகள்</button>
+<button class="college-pill" data-type="aided">அரசு உதவிபெறும்</button>
+</div>
+</div>
+<!-- Colleges Table -->
+<div class="table-container">
+<table id="collegesTable">
+<thead>
+<tr>
+<th>வ.எண்</th>
+<th>கல்லூரியின் பெயர் &amp; அமைவிடம்</th>
+<th>வழங்கப்படும் கணினிப் படிப்புகள்</th>
+<th>ஆய்வக வசதிகள்</th>
+<th>மாவட்டம் / வகை</th>
+</tr>
+</thead>
+<tbody>
+<tr data-type="svg govt" style="background:#f5f3ff;">
+<td>1</td>
+<td><strong>ராஜா துரைசிங்கம் அரசு கலைக்கல்லூரி, சிவகங்கை</strong><br/><small>அரசு கலைக்கல்லூரி, சிவகங்கை</small></td>
+<td>B.Sc Computer Science, BCA</td>
+<td>அதிநவீன கணினி ஆய்வகம் &amp; இணைய வசதி</td>
+<td><span class="college-tag tag-svg">சிவகங்கை</span><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
+<tr data-type="svg govt" style="background:#f5f3ff;">
+<td>2</td>
+<td><strong>அழகப்பா அரசு கலைக்கல்லூரி, காரைக்குடி</strong><br/><small>காரைக்குடி</small></td>
+<td>B.Sc Computer Science, B.Sc IT</td>
+<td>பல்கலைக்கழக தரத்திலான ஆய்வகம்</td>
+<td><span class="college-tag tag-svg">காரைக்குடி</span><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
+<tr data-type="svg govt" style="background:#f5f3ff;">
+<td>3</td>
+<td><strong>அரசு மகளிர் கலைக்கல்லூரி, காரைக்குடி</strong><br/><small>காரைக்குடி</small></td>
+<td>BCA, B.Sc Computer Science</td>
+<td>மகளிர் கணினி மையம்</td>
+<td><span class="college-tag tag-svg">காரைக்குடி</span><span class="college-tag tag-govt">மகளிர் அரசு</span></td>
+</tr>
+<tr data-type="svg govt">
+<td>4</td>
+<td><strong>அரசு கலை மற்றும் அறிவியல் கல்லூரி, திருப்பத்தூர்</strong><br/><small>திருப்பத்தூர், சிவகங்கை</small></td>
+<td>B.Sc Computer Science</td>
+<td>அரசு கணினி ஆய்வகம்</td>
+<td><span class="college-tag tag-svg">திருப்பத்தூர்</span><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
+<tr data-type="svg govt">
+<td>5</td>
+<td><strong>அரசு கலை மற்றும் அறிவியல் கல்லூரி, மானாமதுரை</strong><br/><small>மானாமதுரை, சிவகங்கை</small></td>
+<td>B.Sc Computer Science</td>
+<td>அரசு கணினி மையம்</td>
+<td><span class="college-tag tag-svg">மானாமதுரை</span><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
+<tr data-type="svg aided">
+<td>6</td>
+<td><strong>டாக்டர் ஜாகீர் உசேன் கல்லூரி, இளையான்குடி</strong><br/><small>இளையான்குடி, சிவகங்கை</small></td>
+<td>BCA, B.Sc Computer Science, B.Sc IT</td>
+<td>முழுமையான வளாக வைஃபை &amp; லேப்</td>
+<td><span class="college-tag tag-svg">இளையான்குடி</span><span class="college-tag tag-aided">அரசு உதவிபெறும்</span></td>
+</tr>
+<tr data-type="svg aided">
+<td>7</td>
+<td><strong>ஸ்ரீ சேவுகன் அண்ணாமலை கல்லூரி, தேவகோட்டை</strong><br/><small>தேவகோட்டை, சிவகங்கை</small></td>
+<td>B.Sc Computer Science, BCA</td>
+<td>கணினி ஆய்வகம்</td>
+<td><span class="college-tag tag-svg">தேவகோட்டை</span><span class="college-tag tag-aided">அரசு உதவிபெறும்</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- SECTION 5: CAREERS & SALARY -->
+<section class="info-card" id="careers">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>💼</span> 5. IT வேலைவாய்ப்புகள் &amp; ஆரம்ப ஊதிய விவரங்கள்</h2>
+<span class="section-badge">Career Horizons</span>
+</div>
+<div class="grid-3">
+<div class="feature-box">
+<h4 class="feature-title">💻 மென்பொருள் உருவாக்குநர் (Software Developer)</h4>
+<p class="feature-desc">
+     ஜாவா, பைதான், சி++, ரியாக்ட் (React) போன்ற மொழிகளில் புரோகிராமிங் செய்து புதிய செயலிகளை உருவாக்குதல். ஆரம்ப ஊதியம்: ₹3.5 முதல் ₹6 லட்சம் / ஆண்டு.
+    </p>
+</div>
+<div class="feature-box">
+<h4 class="feature-title">🌐 இணையதள உருவாக்குநர் (Full Stack Web Developer)</h4>
+<p class="feature-desc">
+     Frontend, Backend மற்றும் Database மேலாண்மை மூலம் ஈ-காமர்ஸ் மற்றும் வர்த்தக இணையதளங்களை வடிவமைத்தல். ஆரம்ப ஊதியம்: ₹3 முதல் ₹5.5 லட்சம் / ஆண்டு.
+    </p>
+</div>
+<div class="feature-box">
+<h4 class="feature-title">☁️ கிளவுட் &amp; சிஸ்டம் அட்மின் (Cloud Admin)</h4>
+<p class="feature-desc">
+     நெட்வொர்க், லினக்ஸ் சர்வர் மற்றும் அமேசான் AWS / மைக்ரோசாப்ட் Azure மேலாண்மை. ஆரம்ப ஊதியம்: ₹3.5 முதல் ₹7 லட்சம் / ஆண்டு.
+    </p>
+</div>
+</div>
+</section>
+<!-- Portal Footer -->
+<footer class="portal-footer" style="text-align: center; padding: 30px 20px; font-size: 0.88rem; border-top: 1px solid var(--border, #e2e8f0); margin-top: 24px; color: var(--text-muted, #64748b); line-height: 1.8;">
+    <div class="footer-dept" style="font-weight: 700; color: var(--text-main, #0f172a); font-size: 0.95rem;">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</div>
+    <div class="footer-initiative">மாணவர் உயர்கல்வி வழிகாட்டுதல் மற்றும் வேலைவாய்ப்பு விழிப்புணர்வு முயற்சி</div>
+    <div class="footer-author" style="margin-top: 4px;">Website designed and developed by <strong>Poovalingam K</strong>, Deputy Inspector of Schools, Chief Educational Office, Sivagangai - Mobile : 9626471035</div>
+    <div class="footer-update" style="margin-top: 8px; font-weight: 800; color: var(--primary, #0f766e); font-size: 0.92rem;">Updated on: 22-09-2026</div>
+    <div class="footer-copy" style="font-size: 0.8rem; margin-top: 4px; color: var(--text-muted, #64748b);">© Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.</div>
+  </footer>
+</div>
+<!-- JavaScript for Calculator & Filter -->
+<script>
+
+ // Smooth Section Navigation
+ function scrollToSection (sectionId, event) {
+  if (event) {
+   if (typeof event.preventDefault === 'function') event.preventDefault;
+   if (typeof event.stopPropagation === 'function') event.stopPropagation;
+  }
+  const targetEl = document.getElementById (sectionId);
+  if (!targetEl) return false;
+
+  try {
+   targetEl.scrollIntoView ({ behavior: 'smooth', block: 'start' });
+  } catch (e) {
+   targetEl.scrollIntoView (true);
+  }
+
+  setTimeout ( => {
+   try {
+    const rect = targetEl.getBoundingClientRect;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    window.scrollTo ({ top: rect.top + scrollTop - 20, behavior: 'smooth' });
+   } catch (err) {}
+  }, 15);
+
+  try {
+   targetEl.style.transition = 'box-shadow 0.4s ease, transform 0.3s ease';
+   targetEl.style.boxShadow = '0 0 0 4px #a855f7, 0 12px 30px rgba(168, 85, 247, 0.25)';
+   targetEl.style.transform = 'translateY(-2px)';
+   setTimeout ( => {
+    targetEl.style.boxShadow = '';
+    targetEl.style.transform = '';
+   }, 1600);
+  } catch (e) {}
+
+  return false;
+ }
+
+ function scrollToTop (event) {
+  if (event) {
+   if (typeof event.preventDefault === 'function') event.preventDefault;
+   if (typeof event.stopPropagation === 'function') event.stopPropagation;
+  }
+  window.scrollTo ({ top: 0, behavior: 'smooth' });
+  return false;
+ }
+
+ // Toggle Back to Top Button
+ window.addEventListener ('scroll', function {
+  const btn = document.getElementById ('backToTopBtn');
+  if (!btn) return;
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  btn.style.display = (currentScroll > 350) ? 'block' : 'none';
+ });
+
+ const s1 = document.getElementById ('sub1');
+ const s2 = document.getElementById ('sub2');
+ const s3 = document.getElementById ('sub3');
+ const s4 = document.getElementById ('sub4');
+ const cutoffVal = document.getElementById ('cutoffValue');
+ const cutoffStatus = document.getElementById ('cutoffStatus');
+
+ function calculateITCutoff {
+  let v1 = parseFloat (s1.value) || 0;
+  let v2 = parseFloat (s2.value) || 0;
+  let v3 = parseFloat (s3.value) || 0;
+  let v4 = parseFloat (s4.value) || 0;
+
+  v1 = Math.min (100, Math.max (0, v1));
+  v2 = Math.min (100, Math.max (0, v2));
+  v3 = Math.min (100, Math.max (0, v3));
+  v4 = Math.min (100, Math.max (0, v4));
+
+  const total = v1 + v2 + v3 + v4;
+  const pct = (total / 400) * 100;
+
+  cutoffVal.textContent = pct.toFixed (2) + ' %';
+
+  if (pct >= 85) {
+   cutoffStatus.textContent = 'முன்னணி அரசுக் கல்லூரிகளில் BCA / B.Sc CS கிடைக்க மிகச் சிறந்த வாய்ப்பு!';
+   cutoffStatus.style.background = '#ede9fe';
+   cutoffStatus.style.color = '#5b21b6';
+  } else if (pct >= 70) {
+   cutoffStatus.textContent = 'அரசு மற்றும் அரசு உதவிபெறும் கல்லூரிகளில் சேர்க்கைக்கு நல்ல வாய்ப்பு!';
+   cutoffStatus.style.background = '#dcfce7';
+   cutoffStatus.style.color = '#166534';
+  } else {
+   cutoffStatus.textContent = 'சுயநிதிப் பிரிவுகள் & அருகாமை கல்லூரிகளில் சேர்க்கை பெறலாம்.';
+   cutoffStatus.style.background = '#fef3c7';
+   cutoffStatus.style.color = '#92400e';
+  }
+ }
+
+ s1.addEventListener ('input', calculateITCutoff);
+ s2.addEventListener ('input', calculateITCutoff);
+ s3.addEventListener ('input', calculateITCutoff);
+ s4.addEventListener ('input', calculateITCutoff);
+ calculateITCutoff;
+
+ // Table Filter
+ const searchInput = document.getElementById ('collegeSearchInput');
+ const pills = document.querySelectorAll ('.college-pill');
+ const rows = document.querySelectorAll ('#collegesTable tbody tr');
+
+ let activeType = 'all';
+
+ function filterColleges {
+  const q = searchInput.value.toLowerCase.trim;
+
+  rows.forEach (row => {
+   const type = row.getAttribute ('data-type');
+   const text = row.innerText.toLowerCase;
+
+   const matchesType = (activeType === 'all' || (type && type.includes (activeType)));
+   const matchesText = (q === '' || text.includes (q));
+
+   if (matchesType && matchesText) {
+    row.style.display = '';
+   } else {
+    row.style.display = 'none';
+   }
+  });
+ }
+
+ pills.forEach (p => {
+  p.addEventListener ('click', => {
+   pills.forEach (item => item.classList.remove ('active'));
+   p.classList.add ('active');
+   activeType = p.getAttribute ('data-type');
+   filterColleges;
+  });
+ });
+
+ searchInput.addEventListener ('input', filterColleges);
+</script>
+<!-- Floating Back to Top Button -->
+<button id="backToTopBtn" onclick="scrollToTop (event);" title="மேலே செல்க (Back to Top)">
+ ↑ மேலே
+</button>
+</body>
+</html>

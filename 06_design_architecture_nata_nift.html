@@ -1,76 +1,1289 @@
 <!DOCTYPE html>
+
 <html lang="ta">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>வடிவமைப்பு மற்றும் கட்டிடக்கலை (Design &amp; Architecture)</title>
+<title>வடிவமைப்பு மற்றும் கட்டிடக்கலை (Design &amp; Architecture - NATA, JEE Paper 2, UCEED, NIFT, NID) முழுமையான வழிகாட்டி - முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
+<!-- Google Fonts: Inter & Noto Sans Tamil -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <style>
   :root {
-    --primary: #0e3a53;
+    --primary: #0e3a53; /* Blueprint Prussian Blue */
     --primary-dark: #071f2d;
-    --secondary: #d97706;
-    --accent: #c84b31;
-    --bg-main: #f8fafc;
-    --card-bg: #ffffff;
-    --text-main: #0f172a;
-    --text-sub: #475569;
+    --primary-light: #1b4965;
+    --secondary: #d97706; /* Drafting Compass Gold */
+    --secondary-hover: #b45309;
+    --accent: #c84b31; /* Architectural Terracotta */
+    --accent-teal: #0d9488; /* Design Teal */
+    --accent-purple: #7c3aed; /* Creative Violet */
+    --gold: #d97706;
+    --gold-light: #fef3c7;
+    --dark: #1e293b;
+    --text-muted: #475569;
+    --light-bg: #f8fafc;
     --border: #e2e8f0;
-    --radius-sm: 8px;
-    --radius-md: 14px;
-    --radius-lg: 20px;
-    --radius-xl: 28px;
-    --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+    --card-border: #cbd5e1;
+    --blue-bg: #f0f9ff;
+    --blue-border: #bae6fd;
+    --terracotta-bg: #fff7ed;
+    --terracotta-border: #ffedd5;
+    --teal-bg: #f0fdfa;
+    --teal-border: #ccfbf1;
+    --purple-bg: #faf5ff;
+    --purple-border: #f3e8ff;
+    --green-bg: #f0fdf4;
+    --green-border: #bbf7d0;
   }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Nirmala UI', sans-serif;
+    line-height: 1.75;
+    color: var(--dark);
+    background-color: var(--light-bg);
+    margin: 0;
+    padding: 12px;
+  }
+
+  .portal-container, .container {
+  width: 98% !important;
+  max-width: 1680px !important;
+  margin: 0 auto !important;
+  position: relative;
+  box-sizing: border-box;
+}
+
+  /* Hero Banner */
+  .hero-banner {
+    background: linear-gradient(135deg, #071f2d 0%, #0e3a53 50%, #1b4965 100%);
+    color: #ffffff;
+    padding: 34px 24px;
+    border-radius: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 20px rgba(14, 58, 83, 0.3);
+    position: relative;
+    border-bottom: 4px solid var(--secondary);
+  }
+  .hero-dept {
+    background: rgba(255, 255, 255, 0.2);
+    color: #e0f2fe;
+    padding: 5px 18px;
+    border-radius: 20px;
+    font-size: 13.5px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+  .hero-category {
+    background: #fef3c7;
+    color: #92400e;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 4px 14px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .hero-banner h1 { margin: 0 0 10px 0; font-size: 24.5px; font-weight: 800; line-height: 1.35; }
+  .hero-banner h2 { margin: 0 0 12px 0; font-size: 16.5px; font-weight: 600; opacity: 0.95; color: #fde68a; }
+  .hero-banner p { margin: 0 auto; font-size: 14px; opacity: 0.92; max-width: 920px; line-height: 1.65; }
+
+  /* Action Buttons in Hero Banner (NO print button as instructed) */
+  .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+  .btn-action-outline {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1.5px solid #ffffff;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  .btn-action-outline:hover {
+    background-color: #ffffff;
+    color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Bottom Print Section */
+  .bottom-print-wrapper { text-align: center; margin: 28px 0 20px 0; }
+  .btn-print-bottom {
+    background: linear-gradient(135deg, #0e3a53 0%, #1b4965 100%);
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 14.5px;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(14, 58, 83, 0.35);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+  }
+  .btn-print-bottom:hover {
+    background: linear-gradient(135deg, #071f2d 0%, #0e3a53 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(14, 58, 83, 0.45);
+  }
+
+  /* Footer Styling */
+  .site-footer {
+    background: #ffffff;
+    border-top: 2px solid var(--blue-border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.03);
+  }
+  .footer-dev {
+    font-size: 13.5px;
+    color: #1e293b;
+    font-weight: 600;
+    line-height: 1.7;
+    margin: 0;
+  }
+  .footer-dev strong { color: var(--primary); }
+
+  /* Search & Filter Bar */
+  .search-filter-box {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .search-input {
+    flex: 1;
+    min-width: 240px;
+    padding: 9px 14px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13.5px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  .search-input:focus { border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.2); }
+  .filter-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .filter-chip {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .filter-chip:hover, .filter-chip.active { background: var(--primary); color: #ffffff; border-color: var(--primary); }
+
+  /* Quick Navigation Card */
+  .quick-nav-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 24px;
+    border: 1.5px solid var(--blue-border);
+    background-color: #f0f9ff;
+    box-shadow: 0 2px 8px rgba(14, 58, 83, 0.06);
+  }
+  .quick-nav-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 14px;
+    border-bottom: 1.5px solid var(--blue-border);
+    padding-bottom: 8px;
+  }
+  .quick-nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 9px; }
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #ffffff;
+    border: 1px solid var(--blue-border);
+    border-radius: 6px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .nav-btn:hover {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(14, 58, 83, 0.25);
+  }
+  .nav-btn .badge-no {
+    background: #e0f2fe;
+    color: var(--primary);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 11px;
+    font-weight: 800;
+  }
+  .nav-btn:hover .badge-no { background: #ffffff; color: var(--primary); }
+
+  /* Content Cards */
+  .card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary);
+    scroll-margin-top: 20px;
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1f5f9;
+  }
+  .card-title { margin: 0; font-size: 18.5px; color: var(--primary); font-weight: 700; }
+  .card-sub {
+    font-size: 15px;
+    color: var(--secondary-hover);
+    font-weight: 700;
+    margin: 18px 0 8px 0;
+    border-left: 3.5px solid var(--secondary);
+    padding-left: 8px;
+  }
+
+  /* Stats Grid */
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 16px 0; }
+  .stat-item {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 14px;
+    text-align: center;
+    border-left: 4px solid var(--secondary);
+  }
+  .stat-num { font-size: 22px; font-weight: 800; color: var(--primary); margin-bottom: 3px; }
+  .stat-label { font-size: 12.5px; color: #64748b; font-weight: 600; }
+
+  /* Tables */
+  .table-responsive { overflow-x: auto; margin: 14px 0; border-radius: 8px; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+  th { background-color: var(--primary); color: #ffffff; padding: 11px 12px; font-weight: 600; }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) { background-color: #f8fafc; }
+  tr:hover { background-color: #f1f5f9; }
+
+  /* Badges */
+  .badge { display: inline-block; padding: 4px 9px; border-radius: 4px; font-size: 11.5px; font-weight: 700; }
+  .badge-navy { background: #e0f2fe; color: #0369a1; }
+  .badge-gold { background: #fef3c7; color: #b45309; }
+  .badge-terracotta { background: #ffedd5; color: #c2410c; }
+  .badge-teal { background: #ccfbf1; color: #0f766e; }
+  .badge-purple { background: #f3e8ff; color: #7e22ce; }
+  .badge-green { background: #dcfce7; color: #15803d; }
+
+  /* Alert & Highlight Boxes */
+  .alert-box {
+    background: #fffaf0;
+    border: 1px solid #fde68a;
+    border-left: 5px solid var(--secondary);
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+  .info-box-blue {
+    background: #f0f9ff;
+    border: 1px solid var(--blue-border);
+    border-left: 5px solid var(--primary);
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+  .adv-box {
+    background: #f0fdf4;
+    border: 1px solid var(--green-border);
+    border-left: 5px solid #059669;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+  .highlight-arch-box {
+    background: #fff7ed;
+    border: 1.5px solid #fed7aa;
+    border-left: 5px solid var(--accent);
+    padding: 18px;
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+
+  /* Two Column Grid */
+  .grid-2col { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 16px 0; }
+  .univ-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .univ-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(14, 58, 83, 0.1); }
+  .univ-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; }
+
+  /* Step List */
+  .step-list { display: flex; flex-direction: column; gap: 14px; margin: 16px 0; }
+  .step-item {
+    display: flex;
+    gap: 14px;
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 14px;
+    border: 1px solid var(--border);
+  }
+  .step-num {
+    background: var(--primary);
+    color: #ffffff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  /* Checklist Grid */
+  .checklist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 16px 0; }
+  .check-item {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+  }
+  .check-icon { color: #0d9488; font-weight: bold; font-size: 16px; flex-shrink: 0; }
+
+  /* Roadmap Grid */
+  .roadmap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 16px 0; }
+  .roadmap-card {
+    background: #ffffff;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+    border-top: 4px solid var(--secondary);
+  }
+  .roadmap-badge {
+    background: #fef3c7;
+    color: #92400e;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  /* FAQ Accordion Item */
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: #ffffff;
+  }
+  .faq-question {
+    background: #f8fafc;
+    padding: 14px 16px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--primary);
+    border-bottom: 1px solid var(--border);
+  }
+  .faq-answer {
+    padding: 14px 16px;
+    font-size: 13.5px;
+    color: #334155;
+    line-height: 1.7;
+  }
+
+  /* Closing Card */
+  .closing-card {
+    background: linear-gradient(135deg, #f0f9ff 0%, #fff7ed 100%);
+    border: 1.5px solid var(--blue-border);
+    border-radius: 10px;
+    padding: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .closing-card h4 { margin: 0 0 8px 0; color: var(--primary); font-size: 17px; font-weight: 800; }
+  .closing-card p { margin: 0 auto; max-width: 850px; font-size: 13.5px; color: #475569; }
+
+  /* Back to Top Floating Button */
+  .back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--primary);
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 9999;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    outline: none;
+  }
+  .back-to-top:hover {
+    background: var(--secondary);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  }
+
+  .portal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: var(--primary);
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .portal-btn:hover { background: var(--secondary); }
+
+  @media print {
+    .no-print, .search-filter-box, .hero-actions, .back-to-top, .bottom-print-wrapper { display: none !important; }
+    body { background-color: #ffffff; color: #000000; padding: 0; font-size: 12pt; }
+    .card { box-shadow: none; border: 1px solid #ccc; page-break-inside: avoid; }
+    .hero-banner { background: #0e3a53 !important; color: #ffffff !important; -webkit-print-color-adjust: exact; }
+    th { background: #0e3a53 !important; color: #ffffff !important; -webkit-print-color-adjust: exact; }
+  }
+
+  /* ==================================================== */
+  /* Fluid Full-Width Layout & Medical/Engineering/Science Header/Footer Styles */
+  /* ==================================================== */
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  html, body { width: 100% !important; margin: 0 !important; padding: 0 !important; box-sizing: border-box; overflow-x: hidden; }
-  body { font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.75; color: var(--text-main); background-color: var(--bg-main); padding: 12px 16px; -webkit-font-smoothing: antialiased; }
-  .portal-container { width: 100% !important; max-width: 100% !important; margin: 0 auto; }
-  .nav-button-menu-bar { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); }
-  .nav-button-menu-container { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
-  .menu-btn-pill { display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; border: 1px solid transparent; }
-  .menu-btn-pill svg { width: 15px; height: 15px; flex-shrink: 0; }
-  .btn-main-site { background: #f1f5f9; color: #0f172a; border-color: #cbd5e1; }
-  .btn-entrance { background: #fef3c7; color: #92400e; border-color: #fde68a; }
-  .btn-current-page { background: linear-gradient(135deg, #0e3a53 0%, #1b4965 100%); color: #ffffff; box-shadow: 0 2px 6px rgba(14, 58, 83, 0.3); }
-  .menu-arrow { color: #94a3b8; font-weight: 800; font-size: 14px; user-select: none; }
-  .portal-header { background: linear-gradient(135deg, #3b0764 0%, #701a75 45%, #9d174d 75%, #f43f5e 100%) !important; border-radius: 22px !important; padding: 38px 30px 30px !important; color: #ffffff !important; box-shadow: 0 10px 30px rgba(157, 23, 77, 0.35) !important; border: 1px solid rgba(255, 255, 255, 0.18) !important; border-bottom: 3px solid #fb7185 !important; margin-bottom: 24px !important; text-align: center !important; }
-  .portal-title { font-size: 2.1rem; font-weight: 900; line-height: 1.35; margin: 0 0 10px 0; color: #ffffff; }
-  .accent-gold { color: #fde047; }
-  .portal-subtitle { font-size: 1.02rem; color: #e2e8f0; max-width: 1050px; margin: 0 auto; line-height: 1.62; }
-  .card { background: #ffffff; border-radius: var(--radius-lg); padding: 32px 28px; margin-bottom: 24px; box-shadow: var(--shadow-md); border: 1px solid var(--border); border-top: 4px solid var(--primary); }
-  .card-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 2px solid var(--border); }
-  .card-title { margin: 0; font-size: 1.35rem; color: var(--primary); font-weight: 800; }
-  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0; }
-  .stat-item { background: #f8fafc; border-radius: var(--radius-md); padding: 16px 14px; text-align: center; border: 1px solid var(--border); border-left: 4px solid var(--secondary); }
-  .stat-num { font-size: 1.65rem; font-weight: 900; color: var(--primary); margin-bottom: 4px; }
-  .stat-label { font-size: 0.84rem; color: #64748b; font-weight: 700; }
-  .table-responsive { overflow-x: auto; margin: 18px 0; border-radius: var(--radius-md); border: 1px solid var(--border); }
-  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left; }
-  th { background-color: var(--primary); color: #ffffff; padding: 14px 16px; font-weight: 700; }
-  td { padding: 12px 16px; border-bottom: 1px solid #e2e8f0; vertical-align: top; color: var(--text-sub); }
-  tr:nth-child(even) { background-color: #f8fafc; }
-  .traditional-kural-card { width: 100% !important; box-sizing: border-box !important; margin: 22px 0 18px 0 !important; padding: 16px 24px 15px !important; border-radius: 16px !important; text-align: center !important; background: linear-gradient(135deg, #451a03 0%, #701a75 50%, #831843 100%) !important; border: 2px solid #fb923c !important; color: #ffffff; }
-  .kural-first-line, .kural-second-line { font-size: 1.32rem !important; font-weight: 800 !important; line-height: 1.55 !important; margin: 3px 0 !important; color: #fef08a !important; }
-  .portal-footer { background: rgba(255, 255, 255, 0.96); border-radius: 12px; text-align: center; padding: 24px 16px 20px; font-size: 0.92rem; border: 1.5px solid rgba(255, 255, 255, 0.9); margin-top: 16px; color: #475569; }
-</style>
-</head>
-<body>
-<div class="portal-container" id="top">
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  body {
+    font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.75;
+    color: var(--dark);
+    background-color: var(--light-bg);
+    padding: 12px 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .portal-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
 
+  /* Segmented Breadcrumb Navigation Bar (Matching Section 01, 02, 03) */
+  .nav-button-menu-bar {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+  }
+  .nav-button-menu-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .menu-btn-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+  .menu-btn-pill svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+  .btn-main-site {
+    background: #f1f5f9;
+    color: var(--dark);
+    border-color: #cbd5e1;
+  }
+  .btn-main-site:hover {
+    background: #e2e8f0;
+    color: var(--primary);
+  }
+  .btn-career {
+    background: #eff6ff;
+    color: #1e40af;
+    border-color: #bfdbfe;
+  }
+  .btn-career:hover {
+    background: #dbeafe;
+  }
+  .btn-entrance {
+    background: #fef3c7;
+    color: #92400e;
+    border-color: #fde68a;
+  }
+  .btn-entrance:hover {
+    background: #fde68a;
+  }
+  .btn-current-page {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(14, 58, 83, 0.25);
+  }
+  .menu-arrow {
+    color: #94a3b8;
+    font-weight: 800;
+    font-size: 14px;
+    user-select: none;
+  }
+
+  /* Portal Header (Matching Section 01, 02, 03) */
+  .portal-header {
+    background: linear-gradient(135deg, #071f2d 0%, #0e3a53 45%, #1b4965 80%, #0284c7 100%);
+    border-radius: 24px;
+    padding: 38px 32px 32px;
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(14, 58, 83, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 4px solid var(--secondary, #d97706);
+    margin-bottom: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .portal-header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(2, 132, 199, 0.25) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-badge-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+    position: relative;
+    z-index: 1;
+  }
+  .header-tag {
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+  .header-tag.primary { background-color: #fef08a; color: #713f12; border-color: #fde047; }
+  .header-tag.secondary { background-color: rgba(255, 255, 255, 0.18); color: #f8fafc; backdrop-filter: blur(8px); }
+  .header-tag.amber { background-color: #d97706; color: #ffffff; border-color: #f59e0b; }
+  .portal-title {
+    font-size: 2.15rem;
+    font-weight: 900;
+    line-height: 1.35;
+    margin-bottom: 12px;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 1;
+  }
+  .accent-gold { color: #fde047; }
+  .portal-subtitle {
+    font-size: 1.04rem;
+    color: #e0f2fe;
+    max-width: 1050px;
+    margin: 0 auto;
+    line-height: 1.65;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Quick Navigation Card (Matching Section 01, 02, 03) */
+  .quick-nav-card {
+    background: #f0f9ff;
+    border: 1.5px solid #bae6fd;
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.08);
+  }
+  .quick-nav-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 14px;
+    border-bottom: 1.5px solid #bae6fd;
+    padding-bottom: 10px;
+  }
+  .quick-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+  }
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  .nav-btn:hover {
+    background: #f8fafc;
+    border-color: var(--secondary);
+    color: var(--primary);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+  .badge-no {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    background: #e2e8f0;
+    color: #334155;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  .nav-btn:hover .badge-no {
+    background: var(--primary);
+    color: #ffffff;
+  }
+
+  /* Full-Width Thirukkural Box Container (Matching Section 01, 02, 03) */
+  .kural-box-container {
+    background: linear-gradient(135deg, #fefce8 0%, #fffbeb 50%, #fef3c7 100%);
+    border: 1.5px solid #fde047;
+    border-left: 6px solid #d97706;
+    border-radius: 16px;
+    padding: 18px 24px;
+    margin: 24px 0 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(217, 119, 6, 0.08);
+  }
+  .kural-pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fef08a;
+    color: #854d0e;
+    font-weight: 800;
+    font-size: 12.5px;
+    padding: 4px 14px;
+    border-radius: 999px;
+    border: 1px solid #facc15;
+    margin-bottom: 12px;
+  }
+  .kural-text-animated {
+    font-size: 1.12rem;
+    font-weight: 800;
+    line-height: 1.75;
+    background: linear-gradient(90deg, #92400e, #d97706, #b45309, #92400e);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: kuralVerseShimmer 6s linear infinite;
+    margin-bottom: 10px;
+  }
+  @keyframes kuralVerseShimmer {
+    to { background-position: 200% center; }
+  }
+  .kural-explanation {
+    font-size: 0.92rem;
+    color: #78350f;
+    line-height: 1.6;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* Single-Line Animated Typewriter Creator Card (Matching Medical & Master Portal) */
+  .creator-card {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1.5px solid rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 14px 22px;
+    margin: 28px 0 16px 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    text-align: center;
+    flex-wrap: wrap;
+    backdrop-filter: blur(14px);
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .creator-name-ta, .creator-name-en {
+    font-weight: 800;
+    font-size: 1.05rem;
+    background: linear-gradient(135deg, #1e40af 0%, #7c3aed 50%, #db2777 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    letter-spacing: 0.3px;
+    padding: 0 2px;
+  }
+
+  .creator-label {
+    font-weight: 700;
+    color: #334155;
+    font-size: 0.94rem;
+  }
+
+  .creator-role {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 0.94rem;
+  }
+
+  .creator-phone-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    color: #065f46;
+    font-weight: 800;
+    font-size: 0.92rem;
+    padding: 3px 12px;
+    border-radius: 999px;
+    border: 1px solid #6ee7b7;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(5, 150, 105, 0.12);
+    margin-left: 6px;
+  }
+
+  .creator-phone-badge:hover {
+    background: #059669;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(5, 150, 105, 0.3);
+    transform: translateY(-1px);
+  }
+
+  .typing-cursor {
+    color: #4338ca;
+    font-weight: 900;
+    animation: blinkCursor 0.8s infinite;
+    margin-left: 2px;
+  }
+
+  @keyframes blinkCursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+    50% { opacity: 0; }
+  }
+
+  /* Clean Portal Footer (Matching Section 01, 02, 03) */
+  .portal-footer {
+    background: #ffffff;
+    border-top: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 24px;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.02);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Floating Back to Top Button */
+  .back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(14, 58, 83, 0.35);
+    z-index: 1000;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .back-to-top:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(14, 58, 83, 0.45);
+  }
+  @media (max-width: 768px) {
+    .portal-header { padding: 26px 16px 22px; }
+    .portal-title { font-size: 1.5rem; }
+    .portal-subtitle { font-size: 0.92rem; }
+    .quick-nav-grid { grid-template-columns: 1fr; }
+  }
+
+
+/* ============================================================
+   Section 06 Full-Width Unique Animated Thirukkural & Standard Header
+   ============================================================ */
+.portal-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 45%, #1e293b 100%);
+  border-radius: 20px;
+  padding: 34px 28px 28px;
+  color: #ffffff;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.header-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.header-tag {
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+}
+.header-tag.primary { background-color: #fef08a; color: #713f12; border-color: #fde047; }
+.header-tag.secondary { background-color: rgba(255, 255, 255, 0.18); color: #f8fafc; backdrop-filter: blur(8px); }
+.header-tag.amber { background-color: #d97706; color: #ffffff; border-color: #f59e0b; }
+.portal-title {
+  font-size: 2.1rem;
+  font-weight: 900;
+  line-height: 1.35;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+.accent-gold { color: #fde047; }
+.portal-subtitle {
+  font-size: 1.02rem;
+  color: #e2e8f0;
+  max-width: 1050px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* FULL-WIDTH THIRUKKURAL COMPONENT */
+.full-width-kural-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 36px 0 26px 0 !important;
+  padding: 30px 28px !important;
+  border-radius: 18px !important;
+  text-align: center !important;
+  background: linear-gradient(135deg, #451a03 0%, #701a75 50%, #831843 100%) !important;
+  color: #ffffff !important;
+  border: 2px solid #fb923c !important;
+  box-shadow: 0 8px 24px rgba(251, 146, 60, 0.25) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  animation: kuralDesignHarmony 4s ease-in-out infinite alternate !important;
+}
+
+@keyframes kuralDesignHarmony {
+  0%, 100% { border-color: #fb923c; box-shadow: 0 8px 24px rgba(251, 146, 60, 0.22); }
+  50% { border-color: #f43f5e; box-shadow: 0 12px 34px rgba(244, 63, 94, 0.44); }
+}
+
+.kural-header-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  margin-bottom: 16px;
+  color: #fef08a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.kural-badge-icon { font-size: 1.1rem; }
+.kural-badge-title { font-weight: 900; color: #ffffff; }
+.kural-badge-dot { color: rgba(255, 255, 255, 0.6); }
+.kural-badge-chapter { color: #fde047; font-weight: 700; }
+
+.kural-verse-box {
+  margin: 10px auto 16px auto;
+  max-width: 900px;
+}
+.kural-verse-line {
+  font-family: 'Nirmala UI', 'Latha', 'Mukta Malar', 'Georgia', serif;
+  font-size: 1.38rem;
+  font-weight: 800;
+  line-height: 1.6;
+  margin: 4px 0;
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+  letter-spacing: 0.2px;
+}
+
+.kural-explanation-box {
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 14px 20px;
+  max-width: 950px;
+  margin: 12px auto 0 auto;
+  line-height: 1.65;
+  font-size: 0.96rem;
+  color: #f1f5f9;
+}
+.kural-exp-label {
+  font-weight: 800;
+  color: #fde047;
+  margin-right: 6px;
+}
+.kural-exp-text {
+  color: #f8fafc;
+}
+
+@media (max-width: 768px) {
+  .portal-header { padding: 24px 16px; }
+  .portal-title { font-size: 1.6rem; }
+  .portal-subtitle { font-size: 0.92rem; }
+  .full-width-kural-container { padding: 22px 16px !important; margin: 26px 0 20px 0 !important; }
+  .kural-verse-line { font-size: 1.14rem; }
+  .kural-explanation-box { font-size: 0.88rem; padding: 10px 14px; }
+}
+
+</style>
+<style id="distinct-theme-css">
+/* ============================================================
+   Section 06: வடிவமைப்பு & கட்டிடக்கலை (NATA/NIFT) - DISTINCT HERO THEME & TRADITIONAL 2-LINE KURAL
+   ============================================================ */
+.portal-header {
+  background: linear-gradient(135deg, #3b0764 0%, #701a75 45%, #9d174d 75%, #f43f5e 100%)!important;
+  border-radius: 22px !important;
+  padding: 38px 30px 30px !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(157, 23, 77, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-bottom: 3px solid #fb7185 !important;
+  margin-bottom: 24px !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.header-badge-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 14px !important;
+}
+
+.header-tag {
+  padding: 5px 14px !important;
+  border-radius: 999px !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.3px !important;
+  text-transform: uppercase !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  display: inline-block !important;
+}
+.header-tag.primary { background-color: #fef08a !important; color: #713f12 !important; border-color: #fde047 !important; }
+.header-tag.secondary { background-color: rgba(255, 255, 255, 0.18) !important; color: #f8fafc !important; backdrop-filter: blur(8px) !important; }
+.header-tag.amber { background-color: #d97706 !important; color: #ffffff !important; border-color: #f59e0b !important; }
+
+.portal-title {
+  font-size: 2.1rem !important;
+  font-weight: 900 !important;
+  line-height: 1.35 !important;
+  margin: 0 0 10px 0 !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4) !important;
+}
+.accent-gold { color: #fde047 !important; }
+
+.portal-subtitle {
+  font-size: 1.02rem !important;
+  color: #e2e8f0 !important;
+  max-width: 1050px !important;
+  margin: 0 auto !important;
+  line-height: 1.62 !important;
+}
+
+/* TRADITIONAL 2-LINE ANIMATED THIRUKKURAL COMPONENT */
+.traditional-kural-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 22px 0 18px 0 !important;
+  padding: 16px 24px 15px !important;
+  border-radius: 16px !important;
+  text-align: center !important;
+  background: linear-gradient(135deg, #451a03 0%, #701a75 50%, #831843 100%) !important;
+  border: 2px solid #fb923c !important;
+  box-shadow: 0 6px 22px rgba(251, 146, 60, 0.28) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  animation: kuralCardAura_06 4s ease-in-out infinite alternate !important;
+}
+
+.traditional-kural-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 30px rgba(251, 146, 60, 0.45) !important;
+}
+
+@keyframes kuralCardAura_06 {
+  0% {
+    box-shadow: 0 4px 18px rgba(251, 146, 60, 0.25), inset 0 0 12px rgba(251, 146, 60, 0.12);
+    border-color: #fb923c;
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(251, 146, 60, 0.48), inset 0 0 20px rgba(251, 146, 60, 0.22);
+    border-color: #fde047;
+  }
+  100% {
+    box-shadow: 0 4px 18px rgba(251, 146, 60, 0.25), inset 0 0 12px rgba(251, 146, 60, 0.12);
+    border-color: #fb923c;
+  }
+}
+
+.kural-top-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-bottom: 8px !important;
+  padding-bottom: 6px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
+}
+
+.kural-chip-wrap {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.kural-feather-icon {
+  font-size: 1.1rem !important;
+  display: inline-block !important;
+  animation: kuralFeatherFloat 3s ease-in-out infinite alternate !important;
+}
+
+@keyframes kuralFeatherFloat {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-3px) rotate(-10deg); }
+}
+
+.kural-chip-text {
+  font-size: 0.84rem !important;
+  font-weight: 800 !important;
+  color: #ffedd5 !important;
+  letter-spacing: 0.3px !important;
+}
+
+.kural-topic-badge {
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+  padding: 3px 12px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
+}
+
+/* STRICT TRADITIONAL TWO-LINE FORMAT */
+.kural-couplet-lines {
+  margin: 6px auto 8px auto !important;
+  text-align: center !important;
+}
+
+.kural-first-line,
+.kural-second-line {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  font-family: 'Nirmala UI', 'Latha', 'Mukta Malar', 'Georgia', serif !important;
+  font-size: 1.32rem !important;
+  font-weight: 800 !important;
+  line-height: 1.55 !important;
+  margin: 3px 0 !important;
+  letter-spacing: 0.25px !important;
+  color: #ffffff !important;
+  animation: kuralVerseGlow_06 4s ease-in-out infinite alternate !important;
+}
+
+@keyframes kuralVerseGlow_06 {
+  0%, 100% {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(254, 240, 138, 0.7), 0 0 22px rgba(234, 179, 8, 0.45);
+  }
+  50% {
+    color: #fef08a;
+    text-shadow: 0 0 16px rgba(253, 224, 71, 0.95), 0 0 32px rgba(245, 158, 11, 0.8), 0 0 45px rgba(251, 146, 60, 0.6);
+  }
+}
+
+.kural-meaning-row {
+  background: rgba(0, 0, 0, 0.24) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-radius: 10px !important;
+  padding: 8px 16px !important;
+  max-width: 950px !important;
+  margin: 6px auto 0 auto !important;
+  line-height: 1.55 !important;
+  font-size: 0.91rem !important;
+  color: #f1f5f9 !important;
+}
+
+.kural-meaning-label {
+  font-weight: 800 !important;
+  color: #fde047 !important;
+  margin-right: 5px !important;
+}
+
+.kural-meaning-text {
+  color: #f8fafc !important;
+}
+
+@media (max-width: 768px) {
+  .portal-header { padding: 24px 16px !important; }
+  .portal-title { font-size: 1.6rem !important; }
+  .portal-subtitle { font-size: 0.92rem !important; }
+  .traditional-kural-card { padding: 14px 14px 12px !important; margin: 18px 0 !important; }
+  .kural-first-line, .kural-second-line { font-size: 1.12rem !important; line-height: 1.5 !important; }
+  .kural-meaning-row { font-size: 0.84rem !important; padding: 7px 12px !important; }
+}
+</style></head>
+<body id="top">
+<div class="portal-container" id="top">
+<!-- Hero Header Banner -->
+<!-- Segmented Navigation Menu Bar (ceosvg.in standard) -->
 <nav aria-label="Breadcrumb Navigation" class="nav-button-menu-bar">
 <div class="nav-button-menu-container">
-<a class="menu-btn-pill btn-main-site" href="index.html" title="இணையதள முகப்பு">
-<svg fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
-<span>இணையதள முகப்பு</span>
+<a class="menu-btn-pill btn-main-site" href="index.html" title="சிவகங்கை முதன்மைக் கல்வி அலுவலக முகப்பு">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+<span>ceosvg.in முகப்பு</span>
 </a>
 <span class="menu-arrow">›</span>
-<a class="menu-btn-pill btn-entrance" href="00_entrance_exams.html" title="நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம்">
-<svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
-<span>📝 நுழைவுத்தேர்வுகள் மெனு</span>
+<a class="menu-btn-pill btn-career" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மைப் பக்கம்">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"></path></svg>
+<span>🎓 உயர்கல்வி</span>
+</a>
+<span class="menu-arrow">›</span>
+<a class="menu-btn-pill btn-entrance" href="00_entrance_exams.html" title="உயர்கல்வி நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம்">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
+<span>📝 நுழைவுத்தேர்வுகள்</span>
 </a>
 <span class="menu-arrow">›</span>
 <span class="menu-btn-pill btn-current-page" title="தற்போதைய வழிகாட்டிப் பக்கம்">
@@ -78,63 +1291,1029 @@
 </span>
 </div>
 </nav>
-
+<!-- Portal Header (Matching Section 01, 02, 03) -->
 <header class="portal-header">
+<div class="header-badge-row">
+<span class="header-tag primary">பிரிவு 06 (Section 06)</span>
+<span class="header-tag secondary">வடிவமைப்பு &amp; கட்டிடக்கலை (Design &amp; Architecture)</span>
+<span class="header-tag amber">NATA • JEE Main Paper 2A &amp; 2B • UCEED (IITs) • NIFT • NID DAT</span>
+</div>
 <h1 class="portal-title">
     தேசிய கட்டிடக்கலை &amp; வடிவமைப்பு <span class="accent-gold">(Design &amp; Architecture)</span>
 </h1>
 <p class="portal-subtitle">
-    12-ஆம் வகுப்பு பள்ளி மாணவர்களுக்கான B.Arch (கட்டடக்கலை), B.Planning (திட்டமிடல்), B.Des (வடிவமைப்பு) பட்டப்படிப்புகள், தேசியத் தேர்வுகள் வழிகாட்டல் தொகுப்பு.
-</p>
+    12-ஆம் வகுப்பு பள்ளி மாணவர்களுக்கான B.Arch (கட்டடக்கலை), B.Planning (நகரத் திட்டமிடல்), B.Des (ஃபேஷன் &amp; தொழில்துறை வடிவமைப்பு) பட்டப்படிப்புகள், தேசியத் தேர்வுகள், போர்ட்ஃபோலியோ வழிகாட்டல் &amp; சேர்க்கை விவரங்கள் அடங்கிய விரிவான தகவல் தொகுப்பு.
+  </p>
 </header>
-
-<div class="card">
+<!-- Quick Navigation Card (Matching Section 01, 02, 03) -->
+<div class="quick-nav-card no-print">
+<div class="quick-nav-title">
+<span>🧭 <b>விரைவு வழிசெலுத்தல் (Quick Navigation):</b></span>
+<span style="font-size:12px; color:#0369a1; font-weight:normal;">(தேவையான பகுதிக்கு உடனடியாகச் செல்ல கிளிக் செய்க)</span>
+</div>
+<div class="quick-nav-grid">
+<a class="nav-btn" href="#section-intro"><span class="badge-no">1</span> 📐 கட்டிடக்கலை &amp; வடிவமைப்பு அறிமுகம்</a>
+<a class="nav-btn" href="#section-arch-focus"><span class="badge-no">2</span> 🏛️ B.Arch கட்டிடக்கலை சிறப்பு வழிகாட்டி</a>
+<a class="nav-btn" href="#section-nata"><span class="badge-no">3</span> 📐 NATA தேர்வு கட்டமைப்பு &amp; நுணுக்கங்கள்</a>
+<a class="nav-btn" href="#section-jeepaper2"><span class="badge-no">4</span> 🏛️ JEE Main Paper 2A &amp; 2B (NIT/SPA)</a>
+<a class="nav-btn" href="#section-aat"><span class="badge-no">5</span> 🌟 IIT AAT தேர்வு - விண்ணப்பம் &amp; தகுதி</a>
+<a class="nav-btn" href="#section-tndalu-tnea"><span class="badge-no">6</span> 🎓 தமிழ்நாடு B.Arch சேர்க்கை (TNEA)</a>
+<a class="nav-btn" href="#section-uceed"><span class="badge-no">7</span> 🎨 IIT UCEED - இளநிலை வடிவமைப்பு (B.Des)</a>
+<a class="nav-btn" href="#section-nift"><span class="badge-no">8</span> 🧵 NIFT ஃபேஷன் &amp; ஆடை வடிவமைப்பு</a>
+<a class="nav-btn" href="#section-nid"><span class="badge-no">9</span> 💡 NID DAT - தேசிய வடிவமைப்பு நிறுவனம்</a>
+<a class="nav-btn" href="#section-institutes"><span class="badge-no">10</span> 🏛️ SPAs, CEPT &amp; சிற்பக்கலை</a>
+<a class="nav-btn" href="#section-drawing-prep"><span class="badge-no">11</span> 🎯 வரைதல் &amp; நுண்ணறிவு தயாரிப்பு உத்திகள்</a>
+<a class="nav-btn" href="#section-scholarships"><span class="badge-no">12</span> 💰 கட்டணம், 7.5% சலுகை &amp; கல்விக் கடன்கள்</a>
+<a class="nav-btn" href="#section-careers"><span class="badge-no">13</span> 💼 வேலைவாய்ப்புகள் &amp; தொழில் உரிமம் (COA)</a>
+<a class="nav-btn" href="#section-portals"><span class="badge-no">14</span> 🌐 அதிகாரப்பூர்வ இணையதளங்கள் &amp; அட்டவணை</a>
+<a class="nav-btn" href="#section-faqs"><span class="badge-no">15</span> ❓ அடிக்கடி கேட்கப்படும் வினாக்கள் (FAQs)</a>
+</div>
+</div>
+<!-- SECTION 1: Introduction -->
+<div class="card filter-item" data-cat="intro arch design" id="section-intro">
 <div class="card-header">
-<h3 class="card-title">📐 1. கட்டிடக்கலை மற்றும் வடிவமைப்புப் படிப்புகள் அறிமுகம்</h3>
+<h3 class="card-title">📐 1. கட்டிடக்கலை மற்றும் வடிவமைப்புப் படிப்புகள் - நவீன முக்கியத்துவமும் வாய்ப்புகளும்</h3>
+<span class="badge badge-navy">அறிமுகம் &amp; களங்கள்</span>
 </div>
-<p>கலை, அழகியல் உணர்வு மற்றும் அறிவியல் தொழில்நுட்பத்தை ஒருங்கிணைக்கும் துறைகளாக கட்டிடக்கலை (Architecture) மற்றும் வடிவமைப்பு (Design) திகழ்கின்றன. B.Arch, B.Planning, B.Des போன்ற பட்டப்படிப்புகள் மூலம் உலகளாவிய தொழில்வாய்ப்புகள் பெறலாம்.</p>
-<div class="stats-grid">
-<div class="stat-item"><div class="stat-num">NATA</div><div class="stat-label">கட்டடக்கலை கவுன்சில் தேர்வு</div></div>
-<div class="stat-item"><div class="stat-num">UCEED</div><div class="stat-label">IIT இளநிலை வடிவமைப்பு (B.Des)</div></div>
-<div class="stat-item"><div class="stat-num">NIFT</div><div class="stat-label">தேசிய ஃபேஷன் தொழில்நுட்ப நிறுவனம்</div></div>
-<div class="stat-item"><div class="stat-num">7.5% சலுகை</div><div class="stat-label">தமிழக அண்ணா பல்கலை B.Arch 100% இலவசம்</div></div>
+<p>
+      கலை, அழகியல் உணர்வு மற்றும் அறிவியல் தொழில்நுட்பத்தை ஒருங்கிணைக்கும் மிக உன்னதமான துறைகளாக <b>கட்டிடக்கலை (Architecture)</b> மற்றும் <b>வடிவமைப்பு (Design)</b> திகழ்கின்றன. இன்றைய அதிவேக நகரமயமாக்கல், பசுமை மற்றும் சுற்றுச்சூழல் விழிப்புணர்வு (Green Buildings), ஸ்மார்ட் சிட்டி திட்டங்கள் மற்றும் அதிநவீன மென்பொருள்-தயாரிப்பு வடிவமைப்பு (Product &amp; UI/UX Design) உலகெங்கும் இத்துறைகளுக்கு மாபெரும் தேவையை உருவாக்கியுள்ளன.
+    </p>
+<div class="grid-2col">
+<div class="adv-box">
+<strong style="color:#0f766e;">🌟 ஏன் கட்டிடக்கலை &amp; வடிவமைப்புத் துறை?</strong>
+<ul style="margin: 8px 0 0 0; padding-left: 18px; font-size: 13.5px;">
+<li><b>அழகியலும் அறிவியலும்:</b> மனப்பாடக் கல்வியின்றி படைப்பாற்றல், புதுமை சிந்தனை மற்றும் வரைதல் திறனுக்கு முதன்மை இடம்.</li>
+<li><b>சுயதொழில் மற்றும் தொழில் முனைவு:</b> பட்டப்படிப்பு முடித்தவுடன் கவுன்சில் ஆஃப் ஆர்க்கிடெக்சர் (COA) உரிமம் பெற்று சொந்தமாக ஆர்க்கிடெக்சர் நிறுவனம் தொடங்கலாம்.</li>
+<li><b>சுற்றுச்சூழல் &amp; ஸ்மார்ட் நகரங்கள்:</b> காலநிலை மாற்றத்தைத் தாங்கும் பசுமைக் கட்டிடங்கள் மற்றும் நவீன நகரக் கட்டமைப்பில் தலைமைப் பங்கு.</li>
+<li><b>சர்வதேச அங்கீகாரம்:</b> துபாய், சிங்கப்பூர், ஐரோப்பிய நாடுகளில் உலகளாவிய கட்டடக் கலை நிறுவனங்களில் லட்சங்களில் ஊதியம்.</li>
+</ul>
+</div>
+<div class="info-box-blue">
+<strong style="color:var(--primary);">🎯 வழங்கப்படும் முதன்மைப் பட்டப்படிப்புகள்:</strong>
+<ul style="margin: 8px 0 0 0; padding-left: 18px; font-size: 13.5px;">
+<li><b>B.Arch (Bachelor of Architecture):</b> 5 ஆண்டு கால தொழில்முறை கட்டடக் கலைப் பட்டப்படிப்பு. (COA உரிமம்).</li>
+<li><b>B.Planning (Bachelor of Planning):</b> 4 ஆண்டு கால நகர்ப்புற மற்றும் பிராந்திய திட்டமிடல் படிப்பு (NITs &amp; SPAs).</li>
+<li><b>B.Des (Bachelor of Design):</b> 4 ஆண்டு கால தயாரிப்பு, தகவல் தொடர்பு, அனிமேஷன், ஃபேஷன் வடிவமைப்பு (IITs, NIFT, NID).</li>
+<li><b>B.F.Tech (Bachelor of Fashion Technology):</b> 4 ஆண்டு கால ஆடை உற்பத்தி தொழில்நுட்பப் படிப்பு (NIFT).</li>
+</ul>
 </div>
 </div>
-
+</div>
+<!-- SECTION 2: Architecture Special In-depth Guidance (As requested by user) -->
+<div class="card filter-item" data-cat="arch nata jeep2 tnea" id="section-arch-focus">
+<div class="card-header">
+<h3 class="card-title">🏛️ 2. கட்டிடக்கலை (B.Arch) சிறப்பு வழிகாட்டி - பெரும்பாலான மாணவர்களின் கனவுப் பாதை!</h3>
+<span class="badge badge-terracotta">சிறப்பு வழிகாட்டுதல்</span>
+</div>
+<p>
+      பெரும்பாலான பள்ளி மாணவர்கள் மற்றும் பெற்றோர்கள் கட்டிடக்கலைஞர் (Architect) ஆவதை மிக விருப்பமான இலக்காகக் கொண்டுள்ளனர். இவர்களுக்காக B.Arch படிப்பின் நுணுக்கங்கள், தகுதிகள், பாடத்திட்டம் மற்றும் கவுன்சில் ஆஃப் ஆர்க்கிடெக்சர் (COA) விதிகள் கீழே முழுமையாகத் தரப்பட்டுள்ளன:
+    </p>
+<div class="highlight-arch-box">
+<h4 style="margin:0 0 8px 0; color:var(--accent); font-size:16px;">★ சிவில் இன்ஜினியரிங் (Civil Engineering) vs கட்டிடக்கலை (Architecture - B.Arch) - உள்ள வேறுபாடு என்ன?</h4>
+<p style="margin:0; font-size:13.5px; color:#334155; line-height:1.7;">
+<b>சிவில் இன்ஜினியரிங் (B.E. Civil):</b> ஒரு கட்டிடத்தின் கட்டமைப்பு உறுதித்தன்மை, கான்கிரீட், எஃகு வலிமை, அடித்தளம், நீடித்துழைக்கும் தன்மை மற்றும் கட்டுமானப் பொருட்களை ஆய்வு செய்து நிர்வகிப்பது சிவில் பொறியாளரின் பணி.<br/>
+<b>கட்டிடக்கலை (B.Arch):</b> ஒரு கட்டிடத்தின் அடிப்படை யோசனை, அழகியல் தோற்றம் (Aesthetics), இடப்பயன்பாடு (Spatial Planning), வெளிச்சம் மற்றும் காற்று சுழற்சி, சுற்றுச்சூழல் பாதுகாப்பு, நவீன உள்துறை வடிவமைப்பு (Interiors) ஆகியவற்றைத் திட்டமிட்டு வடிவமைத்து முழு வரைபடத்தை உருவாக்குவது கட்டிடக் கலைஞரின் (Architect) பணியாகும்.
+      </p>
+</div>
+<div class="card-sub">B.Arch படிக்கத் தேவையான 12-ஆம் வகுப்பு கல்வித் தகுதி (COA திருத்தப்பட்ட விதிகள்)</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>கல்வித் தகுதி வகை</th>
+<th>படித்திருக்க வேண்டிய பாடங்கள்</th>
+<th>குறைந்தபட்ச மதிப்பெண் தகுதி</th>
+<th>எழுத வேண்டிய நுழைவுத்தேர்வு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>12-ஆம் வகுப்பு மேல்நிலை (Higher Secondary)</b></td>
+<td><b>இயற்பியல், வேதியியல் மற்றும் கணிதம் (PCM)</b> கட்டாயப் பாடங்களாகப் படித்திருக்க வேண்டும்.</td>
+<td>இயற்பியல், வேதியியல், கணிதத்தில் தனித்தனியாகவும், மொத்தத்திலும் <b>குறைந்தபட்சம் 50% மதிப்பெண்கள்</b> (SC/ST/OBC பிரிவினருக்கு தளர்வு உண்டு).</td>
+<td><b>NATA</b> அல்லது <b>JEE Main Paper 2A</b> இரண்டில் ஏதேனும் ஒன்றில் கட்டாயம் தேர்ச்சி பெற்றிருக்க வேண்டும்.</td>
+</tr>
+<tr>
+<td><b>10 + 3 ஆண்டுகள் பாலிடெக்னிக் டிப்ளமோ (Diploma)</b></td>
+<td>அரசு அங்கீகாரம் பெற்ற பாலிடெக்னிக்கில் எந்தப் பிரிவிலும் 3 ஆண்டு டிப்ளமோ, இதில் <b>கணிதம் ஒரு பாடமாகப்</b> பயின்றிருக்க வேண்டும்.</td>
+<td>டிப்ளமோ இறுதித் தேர்வில் <b>குறைந்தபட்சம் 50% மதிப்பெண்கள்</b> பெற்றிருக்க வேண்டும்.</td>
+<td><b>NATA</b> நுழைவுத்தேர்வில் தேர்ச்சி பெற்றிருக்க வேண்டும்.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="card-sub">5 ஆண்டு B.Arch படிப்பில் என்னென்ன பாடங்கள் பயிற்றுவிக்கப்படும்?</div>
+<div class="grid-2col">
+<div class="univ-card">
+<h4 style="color:var(--primary);">🏛️ முக்கிய தத்துவார்த்த &amp; தொழில்நுட்பப் பாடங்கள்:</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; color:#334155;">
+<li><b>Architectural Design Studio:</b> ஒவ்வொரு பருவத்திலும் நேரடி வடிவமைப்புப் பயிற்சி (வீடுகள், பள்ளிகள், மருத்துவமனைகள், வணிக வளாகங்கள்).</li>
+<li><b>Building Materials &amp; Construction:</b> செங்கல், மரம், கண்ணாடி, எஃகு மற்றும் நவீன சுற்றுச்சூழல் கட்டுமானப் பொருட்கள்.</li>
+<li><b>History of Architecture:</b> சிந்து சமவெளி, திராவிட கோயில் கட்டடக்கலை, இஸ்லாமிய, கிரேக்க மற்றும் நவீன மேற்கத்திய கட்டடக்கலை வரலாறு.</li>
+<li><b>Climatology &amp; Green Architecture:</b> சூரிய வெப்பம், காற்று திசைக்கேற்ப சூழல் சார் கட்டிட வடிவமைப்பு.</li>
+</ul>
+</div>
+<div class="univ-card">
+<h4 style="color:var(--accent);">📐 செய்முறை, கணினி மென்பொருள் &amp; தொழிற்பயிற்சி:</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; color:#334155;">
+<li><b>CAD &amp; 3D BIM Software:</b> AutoCAD, Revit, SketchUp, Rhino, Lumion மற்றும் 3D மாடலிங் மென்பயிற்சி.</li>
+<li><b>Model Making Studio:</b> போர்டு, அக்ரிலிக் மற்றும் மரத்தைக் கொண்டு நேரடி சிறு மாதிரி கட்டடங்கள் (Scale Models) உருவாக்குதல்.</li>
+<li><b>Practical Training (Internship):</b> 4-ஆம் அல்லது 5-ஆம் ஆண்டில் 6 மாதம் முதல் 1 வருடம் வரை முன்னணி ஆர்க்கிடெக்சர் நிறுவனங்களில் நேரடி பயிற்சி.</li>
+<li><b>Thesis / Final Project:</b> 5-ஆம் ஆண்டு இறுதியில் மாணவர் ஒரு பிரம்மாண்ட பொதுத் திட்டத்தை (Airport, Museum, Eco-resort) சொந்தமாக வடிவமைத்தல்.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- SECTION 3: NATA Examination -->
+<div class="card filter-item" data-cat="arch nata" id="section-nata">
+<div class="card-header">
+<h3 class="card-title">📐 3. NATA (National Aptitude Test in Architecture) - விரிவான தேர்வு கட்டமைப்பு</h3>
+<span class="badge badge-gold">Council of Architecture (COA)</span>
+</div>
+<p>
+<b>NATA (தேசிய கட்டிடக்கலை திறன் தேர்வு)</b> என்பது இந்திய அரசின் கட்டிடக்கலைக் கவுன்சிலால் (Council of Architecture - COA) நடத்தப்படும் முதன்மையான அகில இந்திய நுழைவுத் தேர்வாகும். நாடு முழுவதும் உள்ள ஐஐடி, என்.ஐ.டி தவிர்த்த 450-க்கும் மேற்பட்ட அரசு, அரசு உதவிபெறும், அண்ணா பல்கலைக்கழகம் மற்றும் அனைத்து தனியார் கட்டிடக்கலைக் கல்லூரிகளில் B.Arch சேர்க்கை பெறுவதற்கு NATA மதிப்பெண் கட்டாயமாகும்!
+    </p>
+<div class="alert-box">
+<strong>📌 NATA தேர்வின் தனித்துவ அம்சம்:</strong> NATA தேர்வு ஆண்டுதோறும் <b>ஏப்ரல் முதல் ஜூலை வரை ஒவ்வொரு வார இறுதியிலும் (சனி மற்றும் ஞாயிறு)</b> பல கட்டங்களாக நடத்தப்படுகிறது! ஒரு மாணவர் அதிகபட்சமாக <b>3 முறை</b> இத்தேர்வை எழுதலாம். இவற்றில் <b>மிகச்சிறந்த மதிப்பெண் (Best of Attempts)</b> சேர்க்கைக்கு எடுத்துக்கொள்ளப்படும்!
+    </div>
+<div class="card-sub">NATA தேர்வுத் திட்டம் &amp; மதிப்பெண் பங்கீடு (200 மதிப்பெண்கள் - 3 மணி நேரம்)</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>பிரிவு (Section)</th>
+<th>கேட்கப்படும் தலைப்புகள்</th>
+<th>வினா முறை (Question Type)</th>
+<th>மதிப்பெண்கள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>பகுதி 1: வரைதல் மற்றும் காட்சித் திறன் (Drawing &amp; Visual Composition)</b></td>
+<td>
+              • 1-புள்ளி மற்றும் 2-புள்ளி பெர்ஸ்பெக்டிவ் வரைபடங்கள் (1-Point &amp; 2-Point Perspective Drawing).<br/>
+              • 3D வடிவங்களை 2D-ஆக மாற்றுதல் மற்றும் வண்ணக் கலவை (Color Harmony).<br/>
+              • ஒளி, நிழல் (Light &amp; Shade) மற்றும் அளவீட்டு விகிதங்கள் (Proportion &amp; Scale).<br/>
+              • அன்றாட வாழ்க்கைக் காட்சி வரைதல் (Urban Street, Market, Room Interior).
+            </td>
+<td>காகிதத்தில் பென்சில் / வண்ணங்களால் வரையும் ஆஃப்லைன் தேர்வு (A4 Drawing Sheet)</td>
+<td><b>80 மதிப்பெண்கள்</b> (2 அல்லது 3 வினாக்கள்)</td>
+</tr>
+<tr>
+<td><b>பகுதி 2: பொது நுண்ணறிவு &amp; கட்டடக்கலை விழிப்புணர்வு (Aptitude &amp; Architectural Awareness)</b></td>
+<td>
+              • புகழ்பெற்ற இந்திய &amp; சர்வதேச கட்டிடங்கள் மற்றும் கட்டிடக் கலைஞர்கள்.<br/>
+              • உலகப் பாரம்பரிய சின்னங்கள், கட்டடக்கலை கலைச்சொற்கள்.<br/>
+              • காட்சி நுண்ணறிவு (Visual Reasoning), சுழலும் உருவங்கள், மறைந்துள்ள வடிவங்கள்.<br/>
+              • அழகியல் உணர்வு மற்றும் கட்டடக்கலை பாணிகள்.
+            </td>
+<td>கணினி வழித் தேர்வு (CBT - MCQ, MSQ, Match the Following)</td>
+<td><b>80 மதிப்பெண்கள்</b></td>
+</tr>
+<tr>
+<td><b>பகுதி 3: அடிப்படை கணிதம் &amp; இயற்பியல் (Basic Mathematics &amp; Physics)</b></td>
+<td>
+              • 10 மற்றும் 12-ஆம் வகுப்பு தரத்திலான அடிப்படை வடிவியல் (Geometry), முக்கோணவியல் (Trigonometry), பரப்பளவு மற்றும் கனஅளவு.<br/>
+              • இயற்பியலின் அடிப்படை ஒளியியல் மற்றும் எந்திரவியல் கருத்துக்கள்.
+            </td>
+<td>கணினி வழித் தேர்வு (CBT - MCQs)</td>
+<td><b>40 மதிப்பெண்கள்</b></td>
+</tr>
+<tr style="background:#f0fdfa; font-weight:bold;">
+<td colspan="3" style="text-align:right;">மொத்தம்:</td>
+<td><b>200 மதிப்பெண்கள் (180 நிமிடங்கள்)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="grid-2col" style="margin-top:14px;">
+<div class="info-box-blue">
+<strong>🎯 தகுதி மதிப்பெண் (Qualifying Marks):</strong>
+<p style="margin:6px 0 0 0; font-size:13px;">
+          NATA தேர்வில் தகுதிபெற மொத்த 200 மதிப்பெண்களுக்கு <b>குறைந்தபட்சம் 70 மதிப்பெண்கள்</b> பெற வேண்டும். மேலும் வரைதல் பகுதி மற்றும் கணினித் திறன் பகுதி இரண்டிலும் தனித்தனி குறைந்தபட்ச தகுதி வரம்பை எட்ட வேண்டும்.
+        </p>
+</div>
+<div class="adv-box">
+<strong>📅 விண்ணப்பக் காலம்:</strong>
+<p style="margin:6px 0 0 0; font-size:13px;">
+          விண்ணப்பப் பதிவு வழக்கமாக <b>பிப்ரவரி/மார்ச் மாதத்தில்</b> தொடங்கும். தேர்வுகள் ஏப்ரல் மாதம் முதல் ஜூலை மாதம் வரை நடைபெறும். அதிகாரப்பூர்வ இணையதளம்: <b>nata.in</b>.
+        </p>
+</div>
+</div>
+</div>
+<!-- SECTION 4: JEE Main Paper 2A & 2B -->
+<div class="card filter-item" data-cat="arch jeep2" id="section-jeepaper2">
+<div class="card-header">
+<h3 class="card-title">🏛️ 4. JEE Main Paper 2A (B.Arch) &amp; Paper 2B (B.Planning) - NITs &amp; SPAs</h3>
+<span class="badge badge-navy">தேசியத் தேர்வுகள் முகமை (NTA)</span>
+</div>
+<p>
+      இந்தியாவின் மிக உயரிய தேசியக் கல்வி நிறுவனங்களான <b>NITs, SPAs (School of Planning and Architecture), IIEST ஷிப்பூர் மற்றும் மத்திய அரசு நிதி பெறும் நிறுவனங்களில் (GFTIs)</b> B.Arch மற்றும் B.Planning படிப்புகளில் சேருவதற்கு தேசியத் தேர்வுகள் முகமை (NTA) நடத்தும் <b>JEE Main Paper 2</b> எழுத வேண்டும்.
+    </p>
+<div class="card-sub">JEE Main Paper 2A (B.Arch) தேர்வு கட்டமைப்பு - மொத்தம் 400 மதிப்பெண்கள்</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>பிரிவு (Section)</th>
+<th>பாடத் தலைப்புகள்</th>
+<th>வினாக்கள் எண்ணிக்கை</th>
+<th>மதிப்பெண்கள் &amp; கால அளவு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>பகுதி 1: கணிதம் (Mathematics)</b></td>
+<td>11 &amp; 12-ஆம் வகுப்பு கணிதம் (வடிவியல், முக்கோணவியல், கால்குலஸ், மேட்ரிஸ்)</td>
+<td>20 MCQs + 5 Numerical (25 வினாக்கள்)</td>
+<td><b>100 மதிப்பெண்கள்</b> (சரியான விடைக்கு +4, தவறான விடைக்கு -1)</td>
+</tr>
+<tr>
+<td><b>பகுதி 2: கட்டடக்கலை மனத்திறன் (Aptitude Test)</b></td>
+<td>கட்டமைப்புகள், 3D வடிவங்களை மனதால் உருவாக்குதல், கட்டட விழிப்புணர்வு, காட்சிப் பகுப்பாய்வு</td>
+<td>50 MCQs</td>
+<td><b>200 மதிப்பெண்கள்</b> (அதிக மதிப்பெண் கொண்ட முக்கியப் பகுதி!)</td>
+</tr>
+<tr>
+<td><b>பகுதி 3: வரைதல் தேர்வு (Drawing Test)</b></td>
+<td>பொருட்களின் அளவீடு, உருவ அமைப்பு, 2D/3D பெர்ஸ்பெக்டிவ் மற்றும் வடிவமைப்பு வரைதல்</td>
+<td>2 வினாக்கள் (காகித வடிவம்)</td>
+<td><b>100 மதிப்பெண்கள்</b></td>
+</tr>
+<tr style="background:#e0f2fe; font-weight:bold;">
+<td colspan="2" style="text-align:right;">மொத்தம்:</td>
+<td>77 வினாக்கள்</td>
+<td><b>400 மதிப்பெண்கள் (3 மணி நேரம்)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="card-sub">JEE Main Paper 2B (B.Planning) - வரைதல் தேர்வு இல்லை!</div>
+<p style="font-size:13.5px;">
+      B.Planning படிப்பிற்கு வரைதல் தேர்வு கிடையாது! இதில் கணிதம் (100 மதிப்பெண்கள்) + Aptitude (200 மதிப்பெண்கள்) + <b>திட்டமிடல் வினாக்கள் (Planning Based Questions - 100 மதிப்பெண்கள்)</b> என மொத்தம் 400 மதிப்பெண்களுக்கு முழு கணினி வழித் தேர்வாக (CBT) மட்டுமே நடைபெறும்.
+    </p>
+<div class="highlight-arch-box">
+<h4 style="margin:0 0 8px 0; color:var(--primary); font-size:15px;">🌟 ஐஐடிகளில் (IITs) B.Arch படிப்பது எப்படி? (AAT - Architecture Aptitude Test):</h4>
+<p style="margin:0; font-size:13px; color:#334155; line-height:1.7;">
+        இந்தியாவின் முதன்மை ஐஐடிகளான <b>IIT காரக்பூர், IIT ரூர்க்கி மற்றும் IIT வாரணாசி (BHU)</b> ஆகியவற்றில் 5 ஆண்டு B.Arch படிக்க விரும்பும் மாணவர்கள்:<br/>
+        1) முதலில் JEE Main Paper 1 எழுதி தகுதிபெற வேண்டும்.<br/>
+        2) பின்னர் <b>JEE Advanced</b> எழுதி அதில் அகில இந்திய தரவரிசை பெற வேண்டும்.<br/>
+        3) JEE Advanced முடிவுகளுக்குப் பின் நடத்தப்படும் <b>AAT (Architecture Aptitude Test)</b> தேர்வில் 'Pass' செய்ய வேண்டும். AAT மதிப்பெண்களுக்கு தனி ரேங்க் கிடையாது; JEE Advanced ரேங்க் அடிப்படையில் JoSAA கலந்தாய்வில் ஐஐடி B.Arch இடங்கள் ஒதுக்கப்படும்!
+      </p>
+</div>
+</div>
+<!-- SECTION 5: Dedicated Comprehensive Guide for AAT (IITs) -->
+<div class="card filter-item" data-cat="arch aat jeep2" id="section-aat">
+<div class="card-header">
+<h3 class="card-title">🌟 5. AAT (Architecture Aptitude Test) - ஐஐடிகளில் (IITs) B.Arch சேர்க்கைக்கான பிரத்யேக வழிகாட்டி</h3>
+<span class="badge badge-gold">IIT Kharagpur, Roorkee &amp; BHU</span>
+</div>
+<p>
+      இந்தியாவின் தலைசிறந்த தொழில்நுட்பக் கல்வி நிறுவனங்களான <b>IIT காரக்பூர் (IIT Kharagpur), IIT ரூர்க்கி (IIT Roorkee) மற்றும் IIT வாரணாசி (IIT-BHU)</b> ஆகிய மூன்று முதன்மை ஐஐடிகளில் 5 ஆண்டு கால <b>B.Arch (Bachelor of Architecture)</b> பட்டப்படிப்பில் சேருவதற்காக பிரத்யேகமாக நடத்தப்படும் நுழைவுத் தேர்வே <b>AAT (Architecture Aptitude Test)</b> ஆகும்.
+    </p>
+<div class="highlight-arch-box">
+<h4 style="margin:0 0 8px 0; color:var(--primary); font-size:16px;">★ மிக முக்கியமான தெளிவுரை - JEE Main Paper 2 மதிப்பெண் ஐஐடிகளுக்குப் பொருந்தாது!</h4>
+<p style="margin:0; font-size:13.5px; color:#334155; line-height:1.7;">
+        பொதுவாக என்.ஐ.டி (NITs) மற்றும் எஸ்பிஏ (SPAs) கல்வி நிறுவனங்களுக்கு JEE Main Paper 2 மதிப்பெண் போதுமானது. ஆனால், <b>ஐஐடிகளில் (IITs) B.Arch சேர்வதற்கு JEE Main Paper 2 செல்லுபடியாகாது!</b><br/>
+        மாணவர்கள் கட்டாயமாக <b>JEE Main Paper 1 (B.E./B.Tech)</b> எழுதி தேர்ச்சி பெற்று, அதன் பின்னர் <b>JEE (Advanced)</b> தேர்வு எழுதி அதில் தகுதி பெற்ற பிறகே AAT தேர்வை எழுத முடியும்!
+      </p>
+</div>
+<div class="card-sub">1. AAT தேர்வுக்கு யார் தகுதியானவர்கள்? (Eligibility Criteria)</div>
+<div class="checklist-grid">
+<div class="check-item"><span class="check-icon">✔</span> <b>JEE Advanced தேர்ச்சி:</b> அதே ஆண்டில் நடைபெற்ற JEE (Advanced) தேர்வில் குறைந்தபட்ச கட்-ஆஃப் மதிப்பெண்களைப் பெற்று அகில இந்திய அளவில் தகுதி (Qualified) பெற்றிருக்க வேண்டும்.</div>
+<div class="check-item"><span class="check-icon">✔</span> <b>12-ஆம் வகுப்பு பாடத் தகுதி:</b> 12-ஆம் வகுப்பு பொதுத்தேர்வில் இயற்பியல், வேதியியல் மற்றும் கணிதம் (PCM) கட்டாயப் பாடங்களாகப் படித்திருக்க வேண்டும்.</div>
+<div class="check-item"><span class="check-icon">✔</span> <b>வயது மற்றும் வாய்ப்பு வரம்புகள்:</b> JEE (Advanced) தேர்வுக்குரிய அதே வயது வரம்பு மற்றும் முயற்சிகளின் வரம்பே AAT-க்கும் பொருந்தும்.</div>
+</div>
+<div class="card-sub" style="margin-top:16px;">2. AAT தேர்வுக்கு எப்படி விண்ணப்பிப்பது? (Application &amp; Registration Process)</div>
+<div class="step-list">
+<div class="step-item">
+<div class="step-num">1</div>
+<div>
+<b>JEE Advanced முடிவு அறிவிப்பு:</b> ஜூன் மாதத்தில் JEE (Advanced) முடிவுகள் அதிகாரப்பூர்வ இணையதளத்தில் (<b>jeeadv.ac.in</b>) வெளியாகும்.
+        </div>
+</div>
+<div class="step-item">
+<div class="step-num">2</div>
+<div>
+<b>AAT ஆன்லைன் விண்ணப்பப் பதிவு (மிகக் குறுகிய கால அவகாசம்!):</b> JEE Advanced முடிவுகள் வெளியான அன்றோ அல்லது மறுநாளோ AAT-க்கான இணையவழி பதிவு தொடங்கும். <b>விண்ணப்பிக்க 2 முதல் 3 நாட்கள் மட்டுமே கால அவகாசம் வழங்கப்படும்!</b> எனவே மாணவர்கள் முடிவுகள் வந்தவுடன் உடனே விண்ணப்பிக்க வேண்டும்.
+        </div>
+</div>
+<div class="step-item">
+<div class="step-num">3</div>
+<div>
+<b>விண்ணப்பக் கட்டணம் முற்றிலும் இலவசம் (Zero Application Fee):</b> AAT தேர்வுக்கு விண்ணப்பிக்க தனியாக எந்தவித விண்ணப்பக் கட்டணமும் (No registration fee) செலுத்தத் தேவையில்லை!
+        </div>
+</div>
+<div class="step-item">
+<div class="step-num">4</div>
+<div>
+<b>தேர்வு மையம் தேர்வு செய்தல்:</b> பதிவு செய்யும் போது, நாடு முழுவதும் உள்ள 23 ஐஐடி மையங்களில் தங்களுக்கு விருப்பமான ஏதேனும் ஓர் ஐஐடி மையத்தைத் தேர்ந்தெடுக்கலாம் (எ.கா: தமிழக மாணவர்கள் <b>IIT Madras</b> தேர்வு மையத்தைத் தேர்ந்தெடுக்கலாம்).
+        </div>
+</div>
+<div class="step-item">
+<div class="step-num">5</div>
+<div>
+<b>ஹால் டிக்கெட் (Admit Card):</b> AAT தேர்வுக்குத் தனி ஹால் டிக்கெட் வழங்கப்பட மாட்டாது. மாணவர்கள் தங்களின் அசல் <b>JEE (Advanced) Admit Card</b> மற்றும் அசல் அரசு புகைப்பட அடையாள அட்டையைக் (Aadhaar/ID) கொண்டு சென்றால் போதுமானது.
+        </div>
+</div>
+</div>
+<div class="card-sub" style="margin-top:16px;">3. தேர்வு முறை &amp; மதிப்பெண் மதிப்பீட்டு அளவுகோல் (Exam Pattern &amp; Marking Scheme)</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>கூறு (Component)</th>
+<th>விவரம் &amp; நெறிமுறைகள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>தேர்வு நடைபெறும் முறை</b></td>
+<td>ஆஃப்லைன் காகிதம் மற்றும் பேனா/பென்சில் முறை (Pen-and-Paper Offline Examination). வினாத்தாள் ஆங்கிலத்தில் மட்டுமே அமைந்திருக்கும்.</td>
+</tr>
+<tr>
+<td><b>தேர்வு கால அளவு</b></td>
+<td><b>3 மணி நேரம் (180 நிமிடங்கள்)</b> - காலை 09:00 மணி முதல் மதியம் 12:00 மணி வரை நடைபெறும்.</td>
+</tr>
+<tr>
+<td><b>தேவைப்படும் வரைதல் பொருட்கள்</b></td>
+<td>மாணவர்கள் தங்களின் சொந்த பேனா, பென்சில்கள் (HB, 2B, 4B, 6B), அழிப்பான் (Eraser), அளவுகோல் (Scale/Ruler), வண்ண பென்சில்கள் (Color Pencils) மற்றும் வரைபலகை (Drawing Clipboard) கொண்டு வர வேண்டும். வாட்டர் கலர் அல்லது கிரேயான்கள் பயன்படுத்தக் கூடாது.</td>
+</tr>
+<tr>
+<td><b>மதிப்பெண் முறை &amp; தகுதி வரம்பு (Pass/Fail)</b></td>
+<td>
+              AAT தேர்வில் மதிப்பெண்களோ அல்லது தனியான அகில இந்திய தரவரிசையோ (No separate rank or numerical marks) வழங்கப்பட மாட்டாது!<br/>
+              JEE Advanced கூட்டுச் செயலாக்கக் குழு (JIC) நிர்ணயிக்கும் குறைந்தபட்ச தகுதி மதிப்பெண்களை எட்டும் மாணவர்களின் முடிவுகள் வெறும் <b>"PASS" (தகுதி பெற்றார்)</b> அல்லது <b>"FAIL" (தகுதி பெறவில்லை)</b> என்று மட்டுமே அறிவிக்கப்படும்!
+            </td>
+</tr>
+<tr>
+<td><b>ஐஐடி B.Arch சேர்க்கை இடஒதுக்கீடு (Seat Allotment)</b></td>
+<td>
+              AAT தேர்வில் 'PASS' செய்த மாணவர்களுக்கு, JoSAA கலந்தாய்வில் அவர்களின் <b>JEE (Advanced) அகில இந்திய தரவரிசை (CRL / Category Rank) அடிப்படையில் மட்டுமே</b> ஐஐடி B.Arch இடங்கள் ஒதுக்கீடு செய்யப்படும்!
+            </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="card-sub" style="margin-top:16px;">4. AAT விரிவான பாடத்திட்டம் (Official Syllabus Breakdown)</div>
+<div class="grid-2col">
+<div class="univ-card">
+<h4 style="color:var(--primary);">1. கட்டற்ற கைவண்ண வரைதல் (Freehand Drawing):</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7; color:#334155;">
+<li>அன்றாடப் பொருட்கள், வீட்டு உபகரணங்கள், தாவரங்கள், மரங்கள் மற்றும் இயற்கை கூறுகளை சரியான விகிதத்தில் (Proportion and Scale) வரைதல்.</li>
+<li>கோட்டுச் சித்திரங்கள் (Line drawing), மேற்பரப்பு அமைப்புகள் (Surface texture), பொருட்கள் மீது விழும் ஒளி-நிழல் (Light &amp; Shade) மற்றும் நிழல் விளைவுகள் (Cast shadows) வரைதல்.</li>
+</ul>
+</div>
+<div class="univ-card">
+<h4 style="color:var(--secondary-hover);">2. வடிவியல் வரைபடங்கள் (Geometrical Drawing):</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7; color:#334155;">
+<li>கோடுகள், கோணங்கள், முக்கோணங்கள், நாற்கரங்கள், பலகோணங்கள் மற்றும் வட்டங்களின் வடிவியல் பண்புகள்.</li>
+<li>சமச்சீர்மை (Symmetry), உருவ அமைப்புகள், 3D திடப்பொருட்களின் (Prisms, Cones, Cylinders, Pyramids, Cubes) பிளான் (Plan), எலிவேஷன் (Elevation) மற்றும் குறுக்குவெட்டுத் தோற்றம் (Sectional views).</li>
+</ul>
+</div>
+<div class="univ-card">
+<h4 style="color:var(--accent);">3. முப்பரிமாண பார்வை &amp; உணர்திறன் (3D Perception):</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7; color:#334155;">
+<li>2D வரைபடங்களின் அடிப்படையில் 3D திடப்பொருட்களின் முப்பரிமாண வடிவத்தை மனக்கண்ணில் உணர்தல்.</li>
+<li>பொருட்களின் மனச் சுழற்சி (Mental Rotation), பல்வேறு கோணங்களில் இருந்து பார்க்கும்போது தோன்றும் அமைப்பு.</li>
+<li>மடிந்த தாள்களை விரித்தல் மற்றும் பிரிந்த மேற்பரப்புகளை மடித்து 3D வடிவங்களை உருவாக்குதல் (Surfaces folding &amp; unfolding).</li>
+</ul>
+</div>
+<div class="univ-card">
+<h4 style="color:var(--accent-teal);">4. கற்பனைத்திறன் &amp; அழகியல் உணர்வு (Aesthetic Sensitivity):</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7; color:#334155;">
+<li>வடிவியல் உருவங்கள் அல்லது இயற்கைக் கூறுகளைக் கொண்டு கண்கவர் கலவை (Composition) உருவாக்குதல்.</li>
+<li>வண்ணக் கலவை கோட்பாடுகள் (Color Harmony, Contrast, Balance and Rhythm).</li>
+<li>அன்றாடப் பயன்பாட்டுப் பொருட்களைப் புதுமையான வழிகளில் ஒருங்கிணைத்து புதிய வடிவை உருவாக்குதல்.</li>
+</ul>
+</div>
+</div>
+<div class="alert-box" style="margin-top:14px;">
+<h4 style="margin:0 0 6px 0; color:var(--primary); font-size:15px;">5. கட்டடக்கலை விழிப்புணர்வு (Architectural Awareness):</h4>
+<p style="margin:0; font-size:13px; color:#334155; line-height:1.7;">
+        • <b>இந்திய மற்றும் உலகப் பாரம்பரிய சின்னங்கள்:</b> தாஜ்மஹால், தஞ்சைப் பெருவுடையார் கோயில், செங்கோட்டை, குதுப்மினார், மீனாட்சியம்மன் கோயில், சாஞ்சி ஸ்தூபி, எஃபிள் டவர், சிட்னி ஓபரா ஹவுஸ், லூவர் மியூசியம், கொலோசியம்.<br/>
+        • <b>புகழ்பெற்ற கட்டிடக் கலைஞர்கள்:</b> லீ கார்பூசியர் (Le Corbusier - சண்டிகர் நகரம்), லாரி பேக்கர் (Laurie Baker - குறைந்த செலவு சூழல் கட்டடங்கள்), சார்லஸ் கொரியா (Charles Correa), பி.வி. தோஷி (B.V. Doshi - பிரிட்ஸ்கர் பரிசு பெற்ற இந்தியர்), ஜஹா ஹதீத் (Zaha Hadid).<br/>
+        • <b>கட்டுமானப் பொருட்கள் &amp; கலைச்சொற்கள்:</b> செங்கல், கான்கிரீட், கண்ணாடி, எஃகு, சுண்ணக்கலவை, மரம், தூண்கள், வளைவுகள் (Arches), குவிமாடங்கள் (Domes), பீம்கள்.
+      </p>
+</div>
+<div class="adv-box" style="margin-top:14px;">
+<strong>🌟 AAT சேர்க்கை வழங்கும் 3 உலகத்தரம் வாய்ந்த ஐஐடிகள் (IITs):</strong>
+<ul style="margin:6px 0 0 0; padding-left:18px; font-size:13px; line-height:1.7;">
+<li><b>IIT Roorkee:</b> ஆசியாவின் மிகப் பழமையான பொறியியல் &amp; கட்டிடக்கலைக் கல்லூரி (1847-இல் தொடங்கப்பட்டது; NIRF தரவரிசையில் முன்னணி).</li>
+<li><b>IIT Kharagpur:</b> இந்தியாவின் முதல் ஐஐடி வளாகம்; 5 ஆண்டு B.Arch மற்றும் ஆராய்ச்சி வசதிகளில் சர்வதேச அங்கீகாரம்.</li>
+<li><b>IIT (BHU) Varanasi:</b> பனாரஸ் இந்து பல்கலைக்கழக வளாகத்தில் அமைந்த புகழ்பெற்ற ஐஐடி கட்டடக் கலை மையம்.</li>
+</ul>
+</div>
+</div>
+<!-- SECTION 5: TNEA Architecture Counseling (Tamil Nadu) -->
+<div class="card filter-item" data-cat="arch tnea scholarship" id="section-tndalu-tnea">
+<div class="card-header">
+<h3 class="card-title">🎓 6. தமிழ்நாட்டில் B.Arch சேர்க்கை - TNEA &amp; அண்ணா பல்கலைக்கழக ஒற்றைச் சாளர கலந்தாய்வு</h3>
+<span class="badge badge-green">தமிழக அரசு சேர்க்கை</span>
+</div>
+<p>
+      தமிழ்நாட்டில் உள்ள அரசு, அரசு உதவிபெறும் மற்றும் சுயநிதி பொறியியல் கல்லூரிகளில் உள்ள B.Arch இடங்களில் சேருவதற்கு அண்ணா பல்கலைக்கழகத்தின் வழிகாட்டுதலில் தமிழ்நாடு பொறியியல் சேர்க்கைக் குழு (TNEA) ஆண்டுதோறும் ஒற்றைச் சாளர இணையவழிக் கலந்தாய்வை நடத்துகிறது.
+    </p>
+<div class="alert-box">
+<strong>🎯 தமிழக B.Arch கட்-ஆஃப் கணக்கீடு முறை (Total 400 Marks):</strong><br/>
+      தமிழ்நாடு B.Arch சேர்க்கைக்கான தரவரிசைப் பட்டியல் (Rank List) <b>மொத்தம் 400 மதிப்பெண்களுக்கு</b> தயார் செய்யப்படுகிறது:<br/>
+      • <b>12-ஆம் வகுப்பு பொதுத்தேர்வு மதிப்பெண்கள்:</b> 200 மதிப்பெண்களுக்கு மாற்றப்படுகிறது (பொதுத்தேர்வு % × 2).<br/>
+      • <b>NATA தேர்வு மதிப்பெண்கள்:</b> 200 மதிப்பெண்களுக்கு எடுக்கப்படுகிறது.<br/>
+      • <b>மொத்த கட்-ஆஃப் = (12-ஆம் வகுப்பு 200-க்கு) + (NATA மதிப்பெண் 200-க்கு) = 400 மதிப்பெண்கள்.</b>
+</div>
+<div class="card-sub">தமிழ்நாட்டின் முன்னணி அரசு &amp; சீர்மிகு கட்டிடக்கலைக் கல்லூரிகள்</div>
+<div class="grid-2col">
+<div class="univ-card">
+<h4 style="color:var(--primary);">🏛️ அரசு &amp; அரசு உதவிபெறும் முன்னணி கல்லூரிகள்:</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7;">
+<li><b>SAP Campus, அண்ணா பல்கலைக்கழகம் (கிண்டி, சென்னை):</b> School of Architecture and Planning - தமிழகத்தின் உச்சபட்ச தரவரிசை நிறுவனம்.</li>
+<li><b>தியாகராஜர் பொறியியல் கல்லூரி (TCE, மதுரை):</b> தென் தமிழகத்தின் மிகப்புகழ்பெற்ற அரசு உதவிபெறும் B.Arch நிறுவனம்.</li>
+<li><b>கோயம்புத்தூர் இன்ஸ்டிடியூட் ஆஃப் டெக்னாலஜி (CIT, கோயம்புத்தூர்):</b> மேற்கு மண்டல முன்னணி நிறுவனம்.</li>
+<li><b>அரசு கட்டடக் கலை மற்றும் சிற்பக் கலைக் கல்லூரி (மாமல்லபுரம்):</b> திராவிட மரபுசார் கட்டிடக்கலை மற்றும் சிற்பக் கலைப் பட்டப்படிப்புகள்.</li>
+</ul>
+</div>
+<div class="univ-card">
+<h4 style="color:var(--secondary-hover);">🏛️ முன்னணி தன்னாட்சி &amp; தனியார் ஆர்க்கிடெக்சர் கல்வி நிறுவனங்கள்:</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7;">
+<li><b>Measi Academy of Architecture (சென்னை):</b> வரலாற்றுப் புகழ்பெற்ற தனியார் ஆர்க்கிடெக்சர் கல்லூரி.</li>
+<li><b>CARE School of Architecture (திருச்சிராப்பள்ளி):</b> சிறந்த ஆய்வகங்கள் மற்றும் நவீன கட்டட வடிவமைப்பு.</li>
+<li><b>McGAN'S Ooty School of Architecture (ஊட்டி):</b> சர்வதேச அமைவிட சூழல்.</li>
+<li><b>BMS, SRM, சவீதா, சாஸ்த்ரா மற்றும் கலசலிங்கம் நிகர்நிலைப் பல்கலைக்கழகங்கள்.</b></li>
+</ul>
+</div>
+</div>
+<div class="adv-box" style="margin-top:16px;">
+<h4 style="margin:0 0 6px 0; color:#065f46;">🌟 7.5% அரசுப் பள்ளி மாணவர் முன்னுரிமை இடஒதுக்கீடு (100% இலவசம்!):</h4>
+<p style="margin:0; font-size:13.5px; color:#1e293b; line-height:1.7;">
+        6 முதல் 12-ஆம் வகுப்பு வரை அரசுப் பள்ளிகளில் பயின்ற மாணவ-மாணவிகளுக்கு அண்ணா பல்கலைக்கழக B.Arch கலந்தாய்வில் <b>7.5% தனி இடஒதுக்கீடு</b> வழங்கப்படுகிறது. இதன் மூலம் தேர்வு செய்யப்படும் அரசுப் பள்ளி மாணவர்களுக்கான <b>5 ஆண்டுகால முழுக் கல்விக் கட்டணம், பயிற்சிக் கட்டணம், விடுதிக் கட்டணம் மற்றும் உணவுக் கட்டணம் அனைத்தையும் தமிழக அரசே முழுமையாக ஏற்றுக்கொள்கிறது!</b>
+</p>
+</div>
+</div>
+<!-- SECTION 6: UCEED (IITs) -->
+<div class="card filter-item" data-cat="design uceed" id="section-uceed">
+<div class="card-header">
+<h3 class="card-title">🎨 7. UCEED (Undergraduate Common Entrance Examination for Design) - IITs B.Des</h3>
+<span class="badge badge-purple">IIT Bombay ஒருங்கிணைப்பு</span>
+</div>
+<p>
+<b>UCEED</b> என்பது இந்தியத் தொழில்நுட்பக் கழகங்களால் (IITs) இளநிலை வடிவமைப்புப் பட்டப்படிப்பான <b>B.Des (Bachelor of Design - 4 ஆண்டுகள்)</b> சேர்க்கைக்காக ஆண்டுதோறும் நடத்தப்படும் புகழ்பெற்ற தேசிய நுழைவுத் தேர்வாகும்.
+    </p>
+<div class="card-sub">UCEED வழியே சேர்க்கை வழங்கும் முன்னணி கல்வி நிறுவனங்கள்</div>
+<div class="checklist-grid">
+<div class="check-item"><span class="check-icon">✔</span> <b>IIT Bombay</b> (Industrial Design Centre - IDC)</div>
+<div class="check-item"><span class="check-icon">✔</span> <b>IIT Delhi</b> (Department of Design)</div>
+<div class="check-item"><span class="check-icon">✔</span> <b>IIT Guwahati</b> (Department of Design - DoD)</div>
+<div class="check-item"><span class="check-icon">✔</span> <b>IIT Hyderabad</b> (Department of Design)</div>
+<div class="check-item"><span class="check-icon">✔</span> <b>IIITDM Jabalpur</b> (Design Discipline)</div>
+<div class="check-item"><span class="check-icon">✔</span> <b>BITS Design School, CEPT, RV Univ</b> (UCEED Result Sharing)</div>
+</div>
+<div class="card-sub" style="margin-top:14px;">UCEED தேர்வு கட்டமைப்பு (300 மதிப்பெண்கள் - 3 மணி நேரம்)</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>பிரிவு</th>
+<th>வடிவம்</th>
+<th>கேட்கப்படும் தலைப்புகள்</th>
+<th>மதிப்பெண்கள் &amp; காலம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>Part-A (கணினி வழி - CBT)</b></td>
+<td>NAT (Numerical), MSQ, MCQ (சுமார் 57 வினாக்கள்)</td>
+<td>காட்சி மற்றும் இடவெளி திறன் (Visualization &amp; Spatial Ability), சுற்றுச்சூழல் விழிப்புணர்வு, வடிவமைப்பு பகுப்பாய்வு, வண்ணக் கோட்பாடுகள்</td>
+<td><b>200 மதிப்பெண்கள்</b> (120 நிமிடங்கள்)</td>
+</tr>
+<tr>
+<td><b>Part-B (காகித வழி - Drawing)</b></td>
+<td>வரைதல் &amp; வடிவமைப்பு திறன் (Drawing &amp; Design)</td>
+<td>கொடுக்கப்பட்ட சூழலுக்கேற்ப ஒரு மனித உருவம் அல்லது பொருளை பெர்ஸ்பெக்டிவ் முறையில் வரைதல்; தயாரிப்பு வடிவமைப்பு யோசனை</td>
+<td><b>100 மதிப்பெண்கள்</b> (60 நிமிடங்கள்)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="info-box-blue" style="margin-top:12px;">
+<strong>🎯 தகுதி வரம்பு:</strong> 12-ஆம் வகுப்பில் <b>அறிவியல், வணிகவியல், கலை (Arts/Humanities)</b> என எந்தப் பாடப்பிரிவு பயின்ற மாணவர்களும் UCEED எழுதலாம்! (IIT Bombay, IIT Delhi, IIT Hyderabad மற்றும் IIT Guwahati-யில் சேர கலை/வணிகவியல் மாணவர்களும் தகுதியுடையவர்கள்).
+    </div>
+</div>
+<!-- SECTION 7: NIFT Entrance Exam -->
+<div class="card filter-item" data-cat="design nift" id="section-nift">
+<div class="card-header">
+<h3 class="card-title">🧵 8. NIFT Entrance Exam - ஃபேஷன் மற்றும் ஆடை வடிவமைப்புத் தொழில்நுட்பம்</h3>
+<span class="badge badge-terracotta">தேசிய ஃபேஷன் தொழில்நுட்ப நிறுவனம்</span>
+</div>
+<p>
+      மத்திய ஜவுளித் துறை அமைச்சகத்தின் கீழ் இயங்கும் <b>NIFT (National Institute of Fashion Technology)</b> இந்தியாவின் ஃபேஷன் மற்றும் லைஃப்ஸ்டைல் வடிவமைப்புத் துறையின் முதன்மையான உச்ச கல்வி நிறுவனமாகும். சென்னை தரமணி உட்பட நாடு முழுவதும் 18 வளாகங்கள் செயல்பட்டு வருகின்றன.
+    </p>
+<div class="grid-2col">
+<div class="univ-card">
+<h4 style="color:var(--primary);">👗 B.Des (Bachelor of Design - 4 ஆண்டுகள்):</h4>
+<div class="univ-sub">தகுதி: அனைத்து 12-ஆம் வகுப்பு பாடப்பிரிவுகளும் (Arts/Com/Sci)</div>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7;">
+<li><b>Fashion Design (FD):</b> நவீன ஆடை வடிவமைப்பு மற்றும் சர்வதேச பேஷன் பாணிகள்.</li>
+<li><b>Textile Design (TD):</b> துணி நெசவு, பிரிண்டிங் மற்றும் நவீன இழைகள் வடிவமைப்பு.</li>
+<li><b>Accessory Design (AD):</b> நகைகள், கைக்கடிகாரங்கள், காலணிகள், பைகள் வடிவமைப்பு.</li>
+<li><b>Fashion Communication (FC):</b> ஃபேஷன் போட்டோகிராபி, பத்திரிகைகள், PR &amp; பிராண்டிங்.</li>
+<li><b>Knitwear &amp; Leather Design:</b> தோல் பொருட்கள் மற்றும் பின்னலாடை தொழில்நுட்பம்.</li>
+</ul>
+</div>
+<div class="univ-card">
+<h4 style="color:var(--accent);">⚙️ B.F.Tech (Fashion Technology - 4 ஆண்டுகள்):</h4>
+<div class="univ-sub">தகுதி: 12-ஆம் வகுப்பில் இயற்பியல், வேதியியல், கணிதம் (PCM) கட்டாயம்</div>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7;">
+<li><b>Apparel Production:</b> பெருமளவிலான ஆடை உற்பத்தி ஆலைகளின் உற்பத்தி மேலாண்மை.</li>
+<li><b>Garment Machinery &amp; Automation:</b> தானியங்கி தையல் மற்றும் துணி வெட்டும் எந்திரங்கள்.</li>
+<li><b>Quality Control &amp; Supply Chain:</b> சர்வதேச ஆடை ஏற்றுமதி மற்றும் தர உத்தரவாதம்.</li>
+<li><b>கார்ப்பரேட் வேலைவாய்ப்புகள்:</b> Shahi Exports, Arvind Mills, Raymond, Madura Garments, Zara, H&amp;M.</li>
+</ul>
+</div>
+</div>
+<div class="card-sub" style="margin-top:14px;">NIFT தேர்வு நிலைகள்: CAT + GAT + Situation Test</div>
+<div class="checklist-grid">
+<div class="check-item"><span class="check-icon">1</span> <b>CAT (Creative Ability Test - 50%):</b> மாணவர்களின் உள்ளுணர்வு, கற்பனைத்திறன், ஓவியத் திறன் மற்றும் வண்ணப் பயன்பாட்டை சோதிக்கும் வரைதல் தேர்வு.</div>
+<div class="check-item"><span class="check-icon">2</span> <b>GAT (General Ability Test - 30%):</b> ஆங்கிலம், பொது அறிவு, தர்க்கவியல், அடிப்படைக் கணிதம் அடங்கிய கணினி வழித் தேர்வு.</div>
+<div class="check-item"><span class="check-icon">3</span> <b>Situation Test (20%):</b> முதல் இரு நிலைகளில் தேர்ச்சி பெற்றவர்களுக்கு NIFT வளாகத்தில் காகிதம், களிமண், கம்பி, துணிகளைக் கொண்டு 3D மாடல் செய்யும் நேரடித் தேர்வு.</div>
+</div>
+</div>
+<!-- SECTION 8: NID DAT -->
+<div class="card filter-item" data-cat="design nid" id="section-nid">
+<div class="card-header">
+<h3 class="card-title">💡 9. NID DAT (Design Aptitude Test) - தேசிய வடிவமைப்பு நிறுவனம்</h3>
+<span class="badge badge-teal">தேசிய முக்கியத்துவம் வாய்ந்த நிறுவனம்</span>
+</div>
+<p>
+      மத்திய வர்த்தகம் மற்றும் தொழில் அமைச்சகத்தின் கீழ் இயங்கும் <b>NID (National Institute of Design)</b> இந்தியாவில் தொழில்துறை வடிவமைப்பு (Industrial Design) மற்றும் தகவல் தொடர்பு வடிவமைப்பில் தலைசிறந்த சர்வதேச தரம் கொண்ட நிறுவனமாகும்.
+    </p>
+<div class="grid-2col">
+<div class="univ-card">
+<h4 style="color:var(--primary);">🏛️ 5 முதன்மை NID வளாகங்கள்:</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7;">
+<li><b>NID Ahmedabad (முதன்மை வளாகம் - குஜராத்):</b> இந்தியாவின் முதல் மற்றும் வரலாற்றுச் சிறப்புமிக்க வடிவமைப்பு மையம்.</li>
+<li><b>NID Andhra Pradesh (அமராவதி)</b></li>
+<li><b>NID Haryana (குருக்ஷேத்ரா)</b></li>
+<li><b>NID Madhya Pradesh (போபால்)</b></li>
+<li><b>NID Assam (ஜோர்ஹாட்)</b></li>
+</ul>
+</div>
+<div class="univ-card">
+<h4 style="color:var(--accent-teal);">🎨 B.Des சிறப்புப் பாடப்பிரிவுகள் (4 ஆண்டுகள்):</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7;">
+<li><b>Industrial Design:</b> Product Design, Furniture &amp; Interior Design, Ceramic &amp; Glass.</li>
+<li><b>Communication Design:</b> Graphic Design, Animation Film Design, Film &amp; Video, Exhibition Design.</li>
+<li><b>Textile &amp; Apparel:</b> Textile Design.</li>
+<li><b>தகுதி:</b> எந்த 12-ஆம் வகுப்பு பாடப்பிரிவு மாணவர்களும் (Arts/Science/Commerce) சமவாய்ப்புடன் எழுதலாம்!</li>
+</ul>
+</div>
+</div>
+<div class="alert-box" style="margin-top:14px;">
+<strong>🎯 NID DAT தேர்வு கட்டமைப்பு:</strong><br/>
+      • <b>NID DAT Prelims (டிசம்பர்/ஜனவரி):</b> அப்ஜெக்டிவ் மற்றும் விரிவான ஓவியத் திறன் தேர்வு (100 மதிப்பெண்கள் - 3 மணி நேரம்).<br/>
+      • <b>NID DAT Mains (ஏப்ரல்/மே):</b> பிரிலிம்ஸில் தேர்ச்சி பெற்றவர்களுக்கு ஸ்டுடியோ டெஸ்ட் (Studio Test - கைகளால் பொருட்களை உருவாக்குதல், மாதிரி செய்தல்) மற்றும் தனிநபர் நேர்காணல்.
+    </div>
+</div>
+<!-- SECTION 9: Other Elite Institutes (SPAs, CEPT, Mamallapuram) -->
+<div class="card filter-item" data-cat="arch design univ" id="section-institutes">
+<div class="card-header">
+<h3 class="card-title">🏛️ 10. சிறப்பு நிறுவனங்கள்: SPAs, CEPT மற்றும் மாமல்லபுரம் பாரம்பரிய சிற்பக்கலைக் கல்லூரி</h3>
+<span class="badge badge-navy">புகழ்பெற்ற மையங்கள்</span>
+</div>
+<div class="grid-2col">
+<div class="univ-card">
+<h4 style="color:var(--primary);">🏛️ SPAs (School of Planning and Architecture):</h4>
+<div class="univ-sub">புதுதில்லி | போபால் | விஜயவாடா (மத்திய அரசு நிறுவனங்கள்)</div>
+<p style="font-size:13px; color:#334155; line-height:1.6;">
+          மருத்துவத்திற்கு எய்ம்ஸ் (AIIMS), பொறியியலுக்கு ஐஐடி (IIT) போன்று <b>கட்டிடக்கலை மற்றும் திட்டமிடலுக்கு இந்தியாவின் உச்சபட்ச கல்வி நிறுவனம் SPA ஆகும்!</b> இங்கும் B.Arch மற்றும் B.Planning படிப்புகள் மட்டுமே கற்பிக்கப்படுகின்றன. சேர்க்கை: JEE Main Paper 2 மற்றும் JoSAA கலந்தாய்வு.
+        </p>
+</div>
+<div class="univ-card">
+<h4 style="color:var(--secondary-hover);">🏛️ CEPT பல்கலைக்கழகம் (அகமதாபாத், குஜராத்):</h4>
+<div class="univ-sub">Center for Environmental Planning and Technology</div>
+<p style="font-size:13px; color:#334155; line-height:1.6;">
+          நோபல் பரிசுக்கு இணையான பிரிட்ஸ்கர் பரிசு வென்ற டாக்டர் பி.வி. தோஷி அவர்களால் வழிநடத்தப்பட்ட ஆசியாவின் முதன்மை கட்டிடக்கலைப் பள்ளி. B.Arch சேர்க்கைக்கு NATA மதிப்பெண்களும், B.Des சேர்க்கைக்கு UCEED மதிப்பெண்களும் ஏற்றுக்கொள்ளப்படுகின்றன.
+        </p>
+</div>
+<div class="univ-card">
+<h4 style="color:#047857;">🏛️ அரசு கட்டடக் கலை மற்றும் சிற்பக் கலைக் கல்லூரி (மாமல்லபுரம்):</h4>
+<div class="univ-sub">செங்கல்பட்டு மாவட்டம், தமிழ்நாடு அரசு கல்லூரி</div>
+<p style="font-size:13px; color:#334155; line-height:1.6;">
+          பண்டைய திராவிடக் கோயில்கள் மற்றும் பாரம்பரிய சிற்பக்கலையைப் பாதுகாக்கும் உலகப்புகழ்பெற்ற கல்லூரி. இங்கு <b>B.Tech Traditional Architecture (பாரம்பரியக் கட்டடக்கலை)</b>, கற்சிற்பக்கலை, சுதை மற்றும் மரச்சிற்பக்கலை பட்டப்படிப்புகள் வழங்கப்படுகின்றன.
+        </p>
+</div>
+<div class="univ-card">
+<h4 style="color:#b45309;">🏛️ சர் ஜே.ஜே. காலேஜ் ஆஃப் ஆர்க்கிடெக்சர் (Sir J.J. College, மும்பை):</h4>
+<div class="univ-sub">மும்பை பல்கலைக்கழகம் | 1913-இல் நிறுவப்பட்டது</div>
+<p style="font-size:13px; color:#334155; line-height:1.6;">
+          இந்தியாவின் மிகப் பழமையான மற்றும் வரலாற்றுச் சிறப்புமிக்க அரசு கட்டிடக்கலைக் கல்லூரி. மகாராஷ்டிரா மாநில CET மற்றும் NATA மதிப்பெண் அடிப்படையில் சேர்க்கை நடைபெறுகிறது.
+        </p>
+</div>
+</div>
+</div>
+<!-- SECTION 10: Drawing & Aptitude Preparation Strategy -->
+<div class="card filter-item" data-cat="prep arch design" id="section-drawing-prep">
+<div class="card-header">
+<h3 class="card-title">🎯 11. பள்ளி மாணவர்களுக்கான வரைதல் &amp; நுண்ணறிவு தயாரிப்பு உத்திகள் (Roadmap)</h3>
+<span class="badge badge-gold">வெற்றி உத்திகள்</span>
+</div>
+<p>
+      கட்டிடக்கலை மற்றும் வடிவமைப்புத் தேர்வுகளில் வெற்றி பெறுவதற்கு மனப்பாடம் தேவையில்லை; அன்றாட உலகைக் கவனிக்கும் கூர்நோக்கும், காட்சித் திறனும், பென்சில் கட்டுப்பாடும் போதுமானது. 9 முதல் 12-ஆம் வகுப்பு வரை மாணவர்கள் பின்பற்ற வேண்டிய படிநிலைகள்:
+    </p>
+<div class="roadmap-grid">
+<div class="roadmap-card">
+<span class="roadmap-badge">9-ஆம் வகுப்பு</span>
+<h5 style="margin:0 0 6px 0; color:var(--primary);">அடிப்படை ஓவியத் திறன்</h5>
+<ul style="margin:0; padding-left:16px; font-size:12.5px; color:#475569; line-height:1.6;">
+<li>தினசரி 30 நிமிடம் பென்சில் ஸ்கெட்ச் (Sketching) பழக்கம்.</li>
+<li>அடிப்படை 2D வடிவங்கள் (வட்டம், சதுரம், முக்கோணம்) மற்றும் 3D வடிவங்கள் (சிலிண்டர், கூம்பு, கனசதுரம்) வரைதல்.</li>
+<li>வீட்டுப் பொருட்கள், மரங்கள், மனித முகங்களை அளவோடு வரையப் பழகுதல்.</li>
+</ul>
+</div>
+<div class="roadmap-card">
+<span class="roadmap-badge">10-ஆம் வகுப்பு</span>
+<h5 style="margin:0 0 6px 0; color:var(--primary);">வடிவியல் &amp; ஒளிரமைப்பு</h5>
+<ul style="margin:0; padding-left:16px; font-size:12.5px; color:#475569; line-height:1.6;">
+<li>10-ஆம் வகுப்பு வடிவியல் (Geometry) மற்றும் பரப்பளவுக் கருத்துக்களை நன்கு புரிதல்.</li>
+<li>ஒளி மற்றும் நிழல் (Light, Shade, Shadows) நுணுக்கங்களைப் பயிலுதல்.</li>
+<li>சுற்றுப்புறத்தில் உள்ள புகழ்பெற்ற பழைய கட்டடங்கள், பாலங்கள், கோபுரங்களை உற்றுநோக்குதல்.</li>
+</ul>
+</div>
+<div class="roadmap-card">
+<span class="roadmap-badge">11-ஆம் வகுப்பு</span>
+<h5 style="margin:0 0 6px 0; color:var(--primary);">பெர்ஸ்பெக்டிவ் &amp; பழைய தாள்கள்</h5>
+<ul style="margin:0; padding-left:16px; font-size:12.5px; color:#475569; line-height:1.6;">
+<li><b>1-Point &amp; 2-Point Perspective:</b> ரயில் தண்டவாளம், தெருக் காட்சி, அறையின் உட்புறக் காட்சிகளைத் துல்லியமாக வரைதல்.</li>
+<li>NATA, JEE Paper 2 பழைய வினாத்தாள்களைப் பதிவிறக்கி Aptitude வினாக்களைத் தீர்த்தல்.</li>
+<li>இந்திய கட்டடக் கலை வரலாறு மற்றும் முன்னணி கட்டிடக் கலைஞர்கள் பற்றிய பொது அறிவை வளர்த்தல்.</li>
+</ul>
+</div>
+<div class="roadmap-card">
+<span class="roadmap-badge">12-ஆம் வகுப்பு</span>
+<h5 style="margin:0 0 6px 0; color:var(--primary);">மாதிரித் தேர்வுகள் &amp; சேர்க்கை</h5>
+<ul style="margin:0; padding-left:16px; font-size:12.5px; color:#475569; line-height:1.6;">
+<li>ஜனவரியில் JEE Main Paper 2 (அமர்வு 1) எழுதுதல்.</li>
+<li>மார்ச் பொதுத்தேர்வுக்குப் பின் ஏப்ரல் முதல் ஜூன் வரை NATA தேர்வுகளைத் திட்டமிட்டு எழுதுதல்.</li>
+<li>நேரக் கட்டுப்பாட்டுடன் முழு நீள மாதிரித் தேர்வுகளை (Mock Tests) பயிற்சி செய்தல்.</li>
+<li>ஜூலையில் அண்ணா பல்கலைக்கழக TNEA B.Arch கலந்தாய்வுக்குத் தவறாமல் விண்ணப்பித்தல்.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- SECTION 11: Scholarships, 7.5% Quota & Education Loans -->
+<div class="card filter-item" data-cat="scholarship arch design" id="section-scholarships">
+<div class="card-header">
+<h3 class="card-title">💰 12. கல்விக் கட்டணம், 7.5% அரசுப் பள்ளி இடஒதுக்கீடு &amp; கல்விக் கடன்கள்</h3>
+<span class="badge badge-gold">நிதி ஆதரவு வழிகாட்டி</span>
+</div>
+<p>
+      கட்டிடக்கலைப் படிப்புக்கான கட்டண விவரங்கள் மற்றும் எளிய குடும்பத்து மாணவர்களுக்கான அரசு உதவித்தொகைகள்:
+    </p>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>நிறுவன வகை</th>
+<th>சராசரி ஆண்டுக் கட்டணம்</th>
+<th>உதவித்தொகை / சலுகைகள்</th>
+<th>முக்கிய விவரம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>தமிழக அரசு &amp; அரசு உதவிபெறும் பொறியியல் கல்லூரிகள் (SAP, TCE, CIT)</b></td>
+<td>ஆண்டுக்கு ₹15,000 முதல் ₹35,000 வரை மட்டுமே</td>
+<td><b>7.5% இடஒதுக்கீட்டில் 100% இலவசம்!</b></td>
+<td>அரசுப் பள்ளி மாணவர்களுக்குக் கல்விக் கட்டணம், விடுதி, உணவுக் கட்டணங்கள் அனைத்தும் இலவசம். SC/ST மாணவர்களுக்கும் முழு கட்டண விலக்கு.</td>
+</tr>
+<tr>
+<td><b>SPAs (புதுதில்லி, போபால், விஜயவாடா) &amp; NITs</b></td>
+<td>ஆண்டுக்கு சுமார் ₹1.5 லட்சம் முதல் ₹2 லட்சம் வரை (விடுதி உட்பட)</td>
+<td>மத்திய அரசு வருமான சலுகை + SC/ST கட்டண விலக்கு</td>
+<td>குடும்ப ஆண்டு வருமானம் ₹1 லட்சத்திற்கும் கீழ் உள்ளவர்களுக்கு முழுக் கல்விக் கட்டண விலக்கு; ₹1-5 லட்சம் உள்ளவர்களுக்கு 2/3 பங்கு தள்ளுபடி. SC/ST/PwD மாணவர்களுக்கு 100% கல்விக் கட்டண விலக்கு.</td>
+</tr>
+<tr>
+<td><b>NIFTs &amp; NIDs</b></td>
+<td>ஆண்டுக்கு சுமார் ₹2.5 லட்சம் முதல் ₹3 லட்சம் வரை</td>
+<td>NIFT 'SARTHAK' மற்றும் NID நிதி உதவித் திட்டங்கள்</td>
+<td>வருமான வரம்பிற்குட்பட்ட தகுதியான மாணவர்களுக்கு 25% முதல் 100% வரை கல்விக் கட்டணத் தள்ளுபடி உண்டு.</td>
+</tr>
+<tr>
+<td><b>சுயநிதி தனியார் கல்லூரிகள் (B.Arch)</b></td>
+<td>அரசு ஒதுக்கீட்டில் ஆண்டுக்கு சுமார் ₹85,000; நிர்வாக ஒதுக்கீட்டில் ₹1.5 லட்சம் முதல் ₹2 லட்சம் வரை</td>
+<td>முதல் பட்டதாரி (First Graduate) சலுகை + 7.5% சலுகை</td>
+<td>அரசு ஒதுக்கீட்டில் சேரும் முதல் தலைமுறை பட்டதாரி மாணவர்களுக்கு ₹25,000 கட்டணக் குறைப்பு.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="adv-box" style="margin-top:14px;">
+<strong>💡 வங்கிக் கல்விக் கடன் வசதி (SBI Scholar Loan Scheme):</strong>
+<p style="margin:6px 0 0 0; font-size:13px; line-height:1.7;">
+        SPAs, NITs, IITs, NIFTs மற்றும் NIDs ஆகிய அனைத்து நிறுவனங்களும் பாரத ஸ்டேட் வங்கியின் (SBI) உயர் கல்வி நிறுவனப் பட்டியலில் உள்ளதால், சேர்க்கை கடிதம் பெற்ற உடனேயே <b>எவ்வித சொத்துப் பிணையமும் இன்றி (Without any Collateral/Security) ₹20 லட்சம் முதல் ₹30 லட்சம் வரை முழுக் கல்விக் கடன்</b> மிகக் குறைந்த வட்டியில் வழங்கப்படுகிறது. படித்து முடித்து வேலைக்குச் சேர்ந்த பிறகே கடனைத் திருப்பிச் செலுத்த வேண்டும்.
+      </p>
+</div>
+</div>
+<!-- SECTION 12: Careers & COA License -->
+<div class="card filter-item" data-cat="careers arch design" id="section-careers">
+<div class="card-header">
+<h3 class="card-title">💼 13. வேலைவாய்ப்புகள் மற்றும் தொழில் உரிமம் (COA Registration)</h3>
+<span class="badge badge-navy">எதிர்காலப் பாதைகள்</span>
+</div>
+<p>
+      கட்டிடக்கலை மற்றும் வடிவமைப்புப் படிப்புகளை முடிக்கும் பட்டதாரிகளுக்கு அரசு, தனியார் மற்றும் சர்வதேச அளவில் காத்துக் கிடக்கும் உயரிய வேலைவாய்ப்புகள்:
+    </p>
+<div class="grid-2col">
+<div class="univ-card">
+<h4 style="color:var(--primary);">🏛️ கட்டிடக்கலைத் துறை வேலைவாய்ப்புகள்:</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7;">
+<li><b>பதிவுபெற்ற கட்டிடக் கலைஞர் (Licensed Architect):</b> B.Arch முடித்தவுடன் Council of Architecture (COA)-வில் பதிவு எண் (CA/XXXXX) பெற்று சொந்தமாக ஆர்க்கிடெக்சர் அலுவலகம் தொடங்கி கட்டிட வரைபடங்களுக்கு ஒப்புதல் அளிக்கும் அதிகாரம்.</li>
+<li><b>உட்புற வடிவமைப்பு நிபுணர் (Interior Designer):</b> வீடுகள், பன்னாட்டு அலுவலகங்கள், மால்கள், ஹோட்டல்களின் உள் அலங்கார வடிவமைப்பு.</li>
+<li><b>நில அமைப்பாளர் (Landscape Architect):</b> பூங்காக்கள், கடற்கரை மேம்பாடுகள், பசுமை வளாகங்களை வடிவமைத்தல்.</li>
+<li><b>அரசுப் பணிகள்:</b> CPWD (மத்திய பொதுப்பணித்துறை), மாநில PWD, நகர்ப்புற வளர்ச்சி முகமைகள் (CMDA, DTCP, DDA), மெட்ரோ ரயில் திட்டங்கள், பாதுகாப்பு அமைச்சகம் (MES).</li>
+</ul>
+</div>
+<div class="univ-card">
+<h4 style="color:var(--accent-teal);">🎨 வடிவமைப்புத் துறை (Design) வேலைவாய்ப்புகள்:</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7;">
+<li><b>UI/UX Designer (Product Designer):</b> கூகுள், ஆப்பிள், மைக்ரோசாப்ட், ஸ்விகி, அமேசான் போன்ற நிறுவனங்களில் செயலிகள் மற்றும் வலைத்தள வடிவமைப்பு (ஆரம்ப ஊதியம் ₹12 முதல் ₹25 லட்சம் வரை).</li>
+<li><b>Industrial &amp; Automobile Designer:</b> டாடா, மஹிந்திரா, ஹூண்டாய், டெஸ்லா நிறுவனங்களில் கார்கள், பைக்குகள் மற்றும் எலக்ட்ரானிக் உபகரணங்கள் வடிவமைப்பு.</li>
+<li><b>அனிமேஷன் &amp; கேமிங் டிசைனர்:</b> சர்வதேச திரைப்பட மற்றும் கேமிங் நிறுவனங்களில் 3D மாடலிங் மற்றும் கேம் வடிவமைப்பு.</li>
+<li><b>ஃபேஷன் டிசைனர் &amp; ஸ்டைலிஸ்ட்:</b> பிரபல ஆடை நிறுவனங்கள், திரைப்படத்துறை மற்றும் சர்வதேச பேஷன் பிராண்டுகளில் முதன்மை ஆலோசகர்.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- SECTION 13: Official Portals & Schedule -->
+<div class="card filter-item" data-cat="portals arch design" id="section-portals">
+<div class="card-header">
+<h3 class="card-title">🌐 14. முக்கிய அதிகாரப்பூர்வ இணையதளங்கள் &amp; கால அட்டவணை</h3>
+<span class="badge badge-navy">அதிகாரப்பூர்வ தளங்கள்</span>
+</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>நுழைவுத்தேர்வு / அமைப்பு</th>
+<th>அதிகாரப்பூர்வ இணையதளம்</th>
+<th>விண்ணப்ப காலம்</th>
+<th>தேர்வு நடைபெறும் காலம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>NATA (Council of Architecture)</b></td>
+<td><a class="portal-btn" href="https://www.nata.in/" rel="noopener noreferrer" target="_blank">nata.in</a></td>
+<td>பிப்ரவரி - ஜூன்</td>
+<td><b>ஏப்ரல் முதல் ஜூலை வரை (பல அமர்வுகள்)</b></td>
+</tr>
+<tr>
+<td><b>JEE Main Paper 2A &amp; 2B (NTA)</b></td>
+<td><a class="portal-btn" href="https://jeemain.nta.nic.in/" rel="noopener noreferrer" target="_blank">jeemain.nta.nic.in</a></td>
+<td>நவம்பர் - டிசம்பர்</td>
+<td><b>ஜனவரி &amp; ஏப்ரல் (2 அமர்வுகள்)</b></td>
+</tr>
+<tr>
+<td><b>AAT (JEE Advanced - IITs)</b></td>
+<td><a class="portal-btn" href="https://jeeadv.ac.in/" rel="noopener noreferrer" target="_blank">jeeadv.ac.in</a></td>
+<td>JEE Advanced முடிவுக்குப் பின் (ஜூன் - 2/3 நாட்கள் மட்டும்)</td>
+<td><b>ஜூன் மாதம் (IIT வளாகங்கள்)</b></td>
+</tr>
+<tr>
+<td><b>தமிழ்நாடு B.Arch சேர்க்கை (TNEA)</b></td>
+<td><a class="portal-btn" href="https://www.tneaonline.org/" rel="noopener noreferrer" target="_blank">tneaonline.org</a></td>
+<td>12-ஆம் வகுப்பு பொதுத்தேர்வு முடிவுகளுக்குப் பின் (மே/ஜூன்)</td>
+<td>தேர்வு இல்லை (கலந்தாய்வு ஜூலை/ஆகஸ்ட்)</td>
+</tr>
+<tr>
+<td><b>UCEED (IIT Bombay)</b></td>
+<td><a class="portal-btn" href="https://www.uceed.iitb.ac.in/" rel="noopener noreferrer" target="_blank">uceed.iitb.ac.in</a></td>
+<td>அக்டோபர் - நவம்பர்</td>
+<td><b>ஜனவரி மாதம் (3-வது ஞாயிறு)</b></td>
+</tr>
+<tr>
+<td><b>NIFT Entrance Exam (NTA)</b></td>
+<td><a class="portal-btn" href="https://nift.ac.in/" rel="noopener noreferrer" target="_blank">nift.ac.in</a></td>
+<td>டிசம்பர் - ஜனவரி</td>
+<td><b>பிப்ரவரி மாதம்</b></td>
+</tr>
+<tr>
+<td><b>NID DAT (National Institute of Design)</b></td>
+<td><a class="portal-btn" href="https://admissions.nid.edu/" rel="noopener noreferrer" target="_blank">admissions.nid.edu</a></td>
+<td>செப்டம்பர் - டிசம்பர்</td>
+<td><b>டிசம்பர்/ஜனவரி (Prelims), ஏப்ரல் (Mains)</b></td>
+</tr>
+<tr>
+<td><b>கட்டிடக்கலை கவுன்சில் (COA India)</b></td>
+<td><a class="portal-btn" href="https://www.coa.gov.in/" rel="noopener noreferrer" target="_blank">coa.gov.in</a></td>
+<td colspan="2">அங்கீகரிக்கப்பட்ட கல்லூரிகள் பட்டியல் &amp; விதிகள் வழிகாட்டி</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- SECTION 14: Frequently Asked Questions (FAQs) -->
+<div class="card filter-item" data-cat="faqs arch design" id="section-faqs">
+<div class="card-header">
+<h3 class="card-title">❓ 15. அடிக்கடி கேட்கப்படும் வினா-விடைகள் (FAQs for Teachers &amp; Students)</h3>
+<span class="badge badge-gold">சந்தேகங்களும் விளக்கங்களும்</span>
+</div>
+<div class="faq-item">
+<div class="faq-question">1. எனக்கு இயல்பாகவே பெரிய அளவில் ஓவியம் வரையத் தெரியாது; என்னால் B.Arch அல்லது வடிவமைப்புத் தேர்வுகளில் வெற்றிபெற முடியுமா?</div>
+<div class="faq-answer">
+        கண்டிப்பாக முடியும்! B.Arch தேர்வுகளில் கேட்கப்படுவது நுண்கலை (Fine Arts) போன்ற உருவ ஓவியங்கள் அல்ல; மாறாக வடிவியல் வரைபடங்கள் (Geometric shapes), கட்டிட அமைப்புகள், பொருட்களின் விகிதங்கள் (Proportions) மற்றும் பெர்ஸ்பெக்டிவ் (Perspective) காட்சிகளே ஆகும். முறையான பயிற்சி மற்றும் அளவுகோல் உபயோகத்தின் மூலம் எவரும் 2 முதல் 3 மாதங்களில் இந்த வரைதல் உத்திகளை முழுமையாகக் கற்றுக்கொண்டு அதிக மதிப்பெண்களைப் பெற முடியும்.
+      </div>
+</div>
+<div class="faq-item">
+<div class="faq-question">2. கலை அல்லது வணிகவியல் (Arts/Commerce) படித்த மாணவர்கள் B.Arch படிக்க முடியுமா?</div>
+<div class="faq-answer">
+        கவுன்சில் ஆஃப் ஆர்க்கிடெக்சர் (COA) விதிகளின்படி, <b>B.Arch படிப்பதற்கு 12-ஆம் வகுப்பில் இயற்பியல், வேதியியல் மற்றும் கணிதம் (PCM) கட்டாயம் படித்திருக்க வேண்டும்.</b> எனவே கணிதப் பாடம் இல்லாத வணிகவியல் அல்லது கலைப் பிரிவு மாணவர்கள் B.Arch படிக்க இயலாது. ஆனால், அவர்கள் ஐஐடிகளில் <b>B.Des (UCEED), NIFT-ல் B.Des, NID-ல் B.Des</b> போன்ற இந்தியாவின் தலைசிறந்த வடிவமைப்புப் பட்டப்படிப்புகளில் தாராளமாகச் சேரலாம்!
+      </div>
+</div>
+<div class="faq-item">
+<div class="faq-question">3. NATA தேர்வில் எத்தனை முறை எழுதலாம்? எந்த மதிப்பெண் கலந்தாய்வுக்குப் பயன்படுத்தப்படும்?</div>
+<div class="faq-answer">
+        ஒரு கல்வி ஆண்டில் NATA தேர்வை அதிகபட்சமாக <b>3 முறை</b> எழுதலாம். ஒரு மாணவர் ஒன்றுக்கும் மேற்பட்ட முறை தேர்வு எழுதினால், அவற்றில் அவர் பெற்ற <b>மிகச்சிறந்த மதிப்பெண் (Best Score)</b> மட்டுமே தரவரிசைக்கும் சேர்க்கைக்கும் தானாக எடுத்துக்கொள்ளப்படும்.
+      </div>
+</div>
+<div class="faq-item">
+<div class="faq-question">4. அண்ணா பல்கலைக்கழக B.Arch கலந்தாய்வில் அரசுப் பள்ளி மாணவர்களுக்கு 7.5% சலுகை உண்டா?</div>
+<div class="faq-answer">
+        ஆம்! 6 முதல் 12-ஆம் வகுப்பு வரை அரசுப் பள்ளிகளில் பயின்ற மாணவர்களுக்கு B.Arch சேர்க்கையிலும் <b>7.5% முன்னுரிமை இடஒதுக்கீடு</b> முழுமையாகப் பொருந்தும். அரசு ஒதுக்கீட்டில் இடம் பெறும் மாணவர்களுக்கான 5 ஆண்டுகால முழுக் கல்விக் கட்டணம், சிறப்புக் கட்டணம், விடுதிக் கட்டணம் மற்றும் உணவுக் கட்டணங்களை அரசே நேரடியாக ஏற்கும்.
+      </div>
+</div>
+<div class="faq-item">
+<div class="faq-question">5. NATA மற்றும் JEE Main Paper 2 - இரண்டிற்கும் உள்ள முக்கிய வேறுபாடு என்ன?</div>
+<div class="faq-answer">
+        NITs, SPAs (School of Planning and Architecture) போன்ற மத்திய அரசு நிறுவனங்களில் சேர <b>JEE Main Paper 2A</b> மட்டுமே செல்லுபடியாகும். தமிழ்நாடு அண்ணா பல்கலைக்கழக கலந்தாய்வு மற்றும் நாட்டின் பிற அனைத்து மாநில மற்றும் தனியார் கல்லூரிகளில் சேர <b>NATA</b> மதிப்பெண் அவசியமாகும். எனவே கணிதப் பிரிவு மாணவர்கள் இவ்விரண்டு தேர்வுகளையுமே எழுதுவது மிகச் சிறந்த வாய்ப்புகளை உருவாக்கும்.
+      </div>
+</div>
+<div class="faq-item">
+<div class="faq-question">6. ஐஐடிகளில் (IITs) B.Arch படிக்க விரும்பும் மாணவர்களுக்கு AAT தேர்வு எவ்வாறு கைகொடுக்கிறது?</div>
+<div class="faq-answer">
+        ஐஐடிகளில் B.Arch படிக்க விரும்பினால் மாணவர்கள் JEE Advanced தேர்ச்சி பெற்ற பின்னர் AAT (Architecture Aptitude Test) எழுத வேண்டும். இதற்கு தனிக் கட்டணம் கிடையாது. AAT தேர்வில் 'PASS' மதிப்பெண் பெற்றால் போதுமானது; அவர்களின் JEE Advanced அகில இந்திய தரவரிசை (AIR) அடிப்படையில் IIT காரக்பூர், IIT ரூர்க்கி மற்றும் IIT-BHU வாரணாசியில் JoSAA கலந்தாய்வு மூலம் B.Arch இடங்கள் வழங்கப்படும்.
+      </div>
+</div>
+</div>
+<!-- Closing Motivation Card -->
+<div class="closing-card">
+<h4>🏛️ "கட்டிடக்கலை என்பது கல்லிலும் கண்ணாடியிலும் செதுக்கப்படும் கவிதை!"</h4>
+<p>
+      எதிர்கால நகரங்களை நிர்மாணிக்கும் ஆற்றலும், மக்களின் வாழ்க்கை முறையை அழகுபடுத்தும் படைப்பாற்றலும் நமது அரசு மற்றும் அரசு உதவிபெறும் பள்ளி மாணவர்களிடம் கொட்டிக்கிடக்கிறது.<br/>
+      சிவகங்கை மாவட்ட மாணவர்கள் தேசியக் கல்வி நிறுவனங்களான SPAs, NITs, IITs, NIFTs மற்றும் NIDs-ல் தடம் பதித்து, உலகத்தரம் வாய்ந்த தலைமை கட்டடக் கலைஞர்களாகவும் வடிவமைப்பு மேதைகளாகவும் மிளிர முதன்மைக் கல்வி அலுவலகம் தனது உளமார்ந்த வாழ்த்துகளைத் தெரிவித்துக் கொள்கிறது!
+    </p>
+<div style="margin-top:14px; font-weight:700; color:var(--primary); font-size:14px;">
+      முதன்மைக் கல்வி அலுவலர் அலுவலகம், சிவகங்கை மாவட்டம்.
+    </div>
+</div>
+<!-- Bottom Print Trigger Button (Dedicated Print Button at the Bottom as instructed) -->
+<div class="bottom-print-wrapper no-print">
+<button class="btn-print-bottom" onclick="window.print();" title="அச்சிட அல்லது PDF ஆக சேமிக்க" type="button">
+<span>🖨️</span> அச்சிடுக / PDF ஆகச் சேமிக்க
+    </button>
+</div>
+<!-- Footer Section -->
+<!-- ==================================================== -->
+<!-- திருக்குறள் ஊக்கப் பகுதி (Full-Width Responsive Shimmer) -->
+<!-- ==================================================== -->
+<!-- ==================================================== -->
+<!-- இணையதள வடிவமைப்பு விவரம் (Single Line Animated Creator Details) -->
+<!-- ==================================================== -->
 <div class="traditional-kural-card no-print">
+<div class="kural-top-row">
+<div class="kural-chip-wrap">
+<span class="kural-feather-icon">🪶</span>
+<span class="kural-chip-text">திருக்குறள் • அதிகாரம் 68: வினைசெயல்வகை (குறள்: 675)</span>
+</div>
+<span class="kural-topic-badge">🎨 திட்டமிடல் கலை</span>
+</div>
+<div class="kural-couplet-lines">
 <p class="kural-first-line">“பொருள்கருவி காலம் வினைஇடனொடு ஐந்தும்</p>
 <p class="kural-second-line">இருள்தீர எண்ணிச் செயல்.”</p>
-<p style="font-size: 0.88rem; color: #fef08a; margin-top: 6px;">💡 குறள் விளக்கம்: வேண்டிய பொருள், ஏற்ற கருவி, தகுந்த காலம், செய்யும் செயல், அதற்குரிய இடம் ஆகிய ஐந்தையும் சிறிதும் ஐயமின்றித் தீர ஆராய்ந்து வடிவமைத்துச் செயலாற்ற வேண்டும்.</p>
 </div>
-
-<div class="portal-bottom-nav no-print" style="margin: 30px auto 20px auto; padding: 18px; background: #ffffff; border-radius: 14px; border: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-<div>
-<a class="portal-nav-btn prev-btn" href="05_law_clat_nlu.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1;">
-<span>← முந்தைய பிரிவு: 05 (சட்டக் கல்வி (CLAT))</span>
+<div class="kural-meaning-row">
+<span class="kural-meaning-label">💡 குறள் விளக்கம்:</span>
+<span class="kural-meaning-text">வேண்டிய பொருள், ஏற்ற கருவி, தகுந்த காலம், செய்யும் செயல், அதற்குரிய இடம் ஆகிய ஐந்தையும் சிறிதும் ஐயமின்றித் தீர ஆராய்ந்து வடிவமைத்துச் செயலாற்ற வேண்டும்.</span>
+</div>
+</div><div class="creator-card">
+<div id="creatorTypewriterWrap" style="display: inline-flex; align-items: center; justify-content: center; flex-wrap: wrap; line-height: 1.8;">
+<span id="creatorTypewriterTarget"></span>
+<span class="typing-cursor" id="creatorCursor">|</span>
+</div>
+</div>
+<!-- ==================================================== -->
+<!-- அதிகாரப்பூர்வ அடிக்குறிப்பு (Official Footer Credit) -->
+<!-- ==================================================== -->
+<div class="portal-bottom-nav no-print" style="margin: 40px auto 25px auto; padding: 20px; background: #ffffff; border-radius: 14px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+<div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+<a class="portal-nav-btn prev-btn" href="05_law_clat_nlu.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1; box-shadow:0 2px 4px rgba(0,0,0,0.04);">
+<span>← முந்தைய பிரிவு: 05 (சட்டக் கல்வி (CLAT / NLUs))</span>
 </a>
 </div>
 <div>
-<a class="portal-nav-btn home-btn" href="00_entrance_exams.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#1e1b4b; color:#ffffff; text-decoration:none; font-weight:700; font-size:14px;">
+<a class="portal-nav-btn home-btn" href="00_entrance_exams.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#1e1b4b; color:#ffffff; text-decoration:none; font-weight:700; font-size:14px; box-shadow:0 3px 8px rgba(30,27,75,0.25);">
 <span>🏠 நுழைவுத்தேர்வுகள் முதன்மை மெனு</span>
 </a>
 </div>
-<div>
-<a class="portal-nav-btn next-btn" href="07_management_iim_ipm.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1;">
+<div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+<a class="portal-nav-btn next-btn" href="07_management_iim_ipm.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1; box-shadow:0 2px 4px rgba(0,0,0,0.04);">
 <span>அடுத்த பிரிவு: 07 (மேலாண்மை (IIM IPM)) →</span>
 </a>
 </div>
-</div>
-
-<footer class="portal-footer no-print">
-<p style="margin-bottom: 6px; font-weight: 700; color: #1e293b; font-size: 0.95rem;">
-தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, 
-<a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 800;">☎️ 04575240408</a>
+</div><footer class="portal-footer no-print">
+<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
+      தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
 </p>
 <p style="font-size: 0.85rem; color: #64748b; margin-top: 6px;">
-© Chief Educational Office, Sivagangai. All Rights Reserved. மாணவ வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே வெளியிடப்பட்டது.
-</p>
+      © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+    </p>
 </footer>
+<!-- மிதக்கும் மேலே செல்லும் பட்டன் (Floating Back to Top) -->
+<button class="back-to-top no-print" onclick="window.scrollTo({top:0, behavior:'smooth'});" title="மேலே செல்ல" type="button">
+    ▲ மேலே செல்க
+  </button>
+<script>
+    // ==========================================
+    // Creator Single-Line Typewriter Animation (Matching Medical & Master Portal)
+    // ==========================================
+    const creatorSegments = [
+      { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
+      { text: "கூ. பூவலிங்கம்", tag: "span", class: "creator-name-ta" },
+      { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
+      { text: "K. Poovalingam", tag: "span", class: "creator-name-en" },
+      { text: ", Deputy Inspector of Schools  ", tag: "span", class: "creator-role" },
+      { text: "📱 9626471035", tag: "a", class: "creator-phone-badge", href: "tel:9626471035" }
+    ];
 
+    const creatorContainer = document.getElementById('creatorTypewriterTarget');
+    const creatorCursor = document.getElementById('creatorCursor');
+
+    let creatorSegIdx = 0;
+    let creatorCharIdx = 0;
+    let creatorCurrentElem = null;
+    let creatorHasStarted = false;
+
+    function typeCreatorDetails() {
+      if (!creatorContainer || creatorHasStarted) return;
+      creatorHasStarted = true;
+
+      function step() {
+        if (creatorSegIdx >= creatorSegments.length) {
+          if (creatorCursor) {
+            creatorCursor.style.animation = 'none';
+            creatorCursor.style.opacity = '0';
+            setTimeout(() => creatorCursor.remove(), 400);
+          }
+          return;
+        }
+
+        const seg = creatorSegments[creatorSegIdx];
+
+        if (creatorCharIdx === 0) {
+          creatorCurrentElem = document.createElement(seg.tag);
+          if (seg.class) creatorCurrentElem.className = seg.class;
+          if (seg.href) {
+            creatorCurrentElem.href = seg.href;
+            creatorCurrentElem.target = '_blank';
+            creatorCurrentElem.rel = 'noopener noreferrer';
+          }
+          creatorContainer.appendChild(creatorCurrentElem);
+        }
+
+        creatorCurrentElem.textContent += seg.text.charAt(creatorCharIdx);
+        creatorCharIdx++;
+
+        if (creatorCharIdx < seg.text.length) {
+          setTimeout(step, 24);
+        } else {
+          creatorSegIdx++;
+          creatorCharIdx = 0;
+          setTimeout(step, 50);
+        }
+      }
+
+      step();
+    }
+
+    // Use IntersectionObserver or fallback on page load
+    if ('IntersectionObserver' in window) {
+      const cardElem = document.querySelector('.creator-card');
+      if (cardElem) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              typeCreatorDetails();
+              observer.disconnect();
+            }
+          });
+        }, { threshold: 0.1 });
+        observer.observe(cardElem);
+      } else {
+        setTimeout(typeCreatorDetails, 500);
+      }
+    } else {
+      setTimeout(typeCreatorDetails, 500);
+    }
+  </script>
 </div>
 </body>
 </html>

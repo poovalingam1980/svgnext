@@ -1,134 +1,1961 @@
 <!DOCTYPE html>
+
 <html lang="ta">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>ஒருங்கிணைந்த மேலாண்மை படிப்புகள் (IIM IPM - BBA+MBA)</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<title>மேலாண்மை 5 ஆண்டு ஒருங்கிணைந்த படிப்புகள் (Management IPM - IPMAT, JIPMAT, IIMs) முழுமையான வழிகாட்டி - முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
 <style>
   :root {
-    --primary: #0f172a;
-    --secondary: #ea580c;
-    --accent: #d97706;
-    --bg-main: #f8fafc;
-    --card-bg: #ffffff;
-    --text-main: #0f172a;
-    --text-sub: #475569;
+    --primary: #0f172a; /* Executive Midnight Slate */
+    --primary-dark: #020617;
+    --primary-light: #1e293b;
+    --secondary: #ea580c; /* Corporate Sunset Flame / Amber */
+    --secondary-hover: #c2410c;
+    --accent: #d97706; /* IIM Leadership Gold */
+    --accent-blue: #0284c7; /* Global Business Blue */
+    --accent-emerald: #059669; /* Strategic Green */
+    --gold: #f59e0b;
+    --gold-light: #fef3c7;
+    --dark: #0f172a;
+    --text-muted: #475569;
+    --light-bg: #f8fafc;
     --border: #e2e8f0;
-    --radius-sm: 8px;
-    --radius-md: 14px;
-    --radius-lg: 20px;
-    --radius-xl: 28px;
-    --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+    --card-border: #cbd5e1;
+    --amber-bg: #fff7ed;
+    --amber-border: #ffedd5;
+    --slate-bg: #f1f5f9;
+    --slate-border: #cbd5e1;
+    --blue-bg: #f0f9ff;
+    --blue-border: #bae6fd;
+    --green-bg: #f0fdf4;
+    --green-border: #bbf7d0;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  html, body { width: 100% !important; margin: 0 !important; padding: 0 !important; box-sizing: border-box; overflow-x: hidden; }
-  body { font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.75; color: var(--text-main); background-color: var(--bg-main); padding: 12px 16px; -webkit-font-smoothing: antialiased; }
-  .portal-container { width: 100% !important; max-width: 100% !important; margin: 0 auto; }
-  .nav-button-menu-bar { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 10px 14px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); }
-  .nav-button-menu-container { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
-  .menu-btn-pill { display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; border: 1px solid transparent; }
-  .menu-btn-pill svg { width: 15px; height: 15px; flex-shrink: 0; }
-  .btn-main-site { background: #f1f5f9; color: #0f172a; border-color: #cbd5e1; }
-  .btn-entrance { background: #fef3c7; color: #92400e; border-color: #fde68a; }
-  .btn-current-page { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #ffffff; box-shadow: 0 2px 6px rgba(15, 23, 42, 0.3); }
-  .menu-arrow { color: #94a3b8; font-weight: 800; font-size: 14px; user-select: none; }
-  .portal-header { background: linear-gradient(135deg, #020617 0%, #0f172a 45%, #1e293b 80%, #312e81 100%) !important; border-radius: 22px !important; padding: 38px 30px 30px !important; color: #ffffff !important; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35) !important; border: 1px solid rgba(255, 255, 255, 0.18) !important; border-bottom: 3px solid #eab308 !important; margin-bottom: 24px !important; text-align: center !important; }
-  .portal-title { font-size: 2.1rem; font-weight: 900; line-height: 1.35; margin: 0 0 10px 0; color: #ffffff; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Nirmala UI', sans-serif;
+    line-height: 1.75;
+    color: var(--dark);
+    background-color: var(--light-bg);
+    margin: 0;
+    padding: 12px;
+  }
+
+  
+
+  /* Hero Banner with Executive Theme (Midnight Slate & Sunset Flame) */
+  
+
+  /* Bottom Print Section */
+  .bottom-print-wrapper { text-align: center; margin: 28px 0 20px 0; }
+  .btn-print-bottom {
+    background: linear-gradient(135deg, #0f172a 0%, #ea580c 100%);
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 14.5px;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.35);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+  }
+  .btn-print-bottom:hover {
+    background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(234, 88, 12, 0.45);
+  }
+
+  /* Footer Styling */
+  
+  
+  .footer-dev strong { color: var(--secondary); }
+
+  /* Search & Filter Bar */
+  
+  
+  .search-input:focus { border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.2); }
+  
+  
+  .filter-chip:hover, .filter-chip.active { background: var(--secondary); color: #ffffff; border-color: var(--secondary); }
+
+  /* Quick Navigation Card */
+  .quick-nav-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 24px;
+    border: 1.5px solid var(--amber-border);
+    background-color: #fffaf5;
+    box-shadow: 0 2px 8px rgba(234, 88, 12, 0.05);
+  }
+  .quick-nav-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 14px;
+    border-bottom: 1.5px solid var(--amber-border);
+    padding-bottom: 8px;
+  }
+  .quick-nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 9px; }
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #ffffff;
+    border: 1px solid var(--amber-border);
+    border-radius: 6px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .nav-btn:hover {
+    background: var(--secondary);
+    color: #ffffff;
+    border-color: var(--secondary);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(234, 88, 12, 0.25);
+  }
+  .nav-btn .badge-no {
+    background: #fed7aa;
+    color: #9a3412;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 11px;
+    font-weight: 800;
+  }
+  .nav-btn:hover .badge-no { background: #ffffff; color: var(--secondary); }
+
+  /* Content Cards */
+  .card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary);
+    scroll-margin-top: 20px;
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1f5f9;
+  }
+  .card-title { margin: 0; font-size: 18.5px; color: var(--primary); font-weight: 700; }
+  .card-sub {
+    font-size: 15px;
+    color: var(--secondary);
+    font-weight: 700;
+    margin: 18px 0 8px 0;
+    border-left: 3.5px solid var(--secondary);
+    padding-left: 8px;
+  }
+
+  /* Stats Grid */
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 16px 0; }
+  .stat-item {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 14px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--secondary);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  }
+  .stat-num { font-size: 22px; font-weight: 800; color: var(--primary); margin-bottom: 3px; }
+  .stat-label { font-size: 12.5px; color: #64748b; font-weight: 600; }
+
+  /* Tables */
+  .table-responsive { overflow-x: auto; margin: 14px 0; border-radius: 8px; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+  th { background-color: var(--primary); color: #ffffff; padding: 11px 12px; font-weight: 600; }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) { background-color: #f8fafc; }
+  tr:hover { background-color: #fff7ed; }
+
+  /* Badges */
+  .badge { display: inline-block; padding: 4px 9px; border-radius: 4px; font-size: 11.5px; font-weight: 700; }
+  .badge-slate { background: #e2e8f0; color: #1e293b; }
+  .badge-orange { background: #ffedd5; color: #c2410c; }
+  .badge-gold { background: #fef3c7; color: #b45309; }
+  .badge-blue { background: #e0f2fe; color: #0369a1; }
+  .badge-emerald { background: #dcfce7; color: #15803d; }
+
+  /* Alert & Highlight Boxes */
+  .alert-box {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-left: 5px solid var(--secondary);
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+  .info-box-blue {
+    background: #f0f9ff;
+    border: 1px solid var(--blue-border);
+    border-left: 5px solid var(--accent-blue);
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+  .adv-box {
+    background: #f0fdf4;
+    border: 1px solid var(--green-border);
+    border-left: 5px solid var(--accent-emerald);
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+  .exec-box {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 16px 0;
+    border-left: 5px solid var(--secondary);
+  }
+
+  /* Two Column Grid */
+  .grid-2col { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 16px 0; }
+  .univ-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .univ-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1); }
+  .univ-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; }
+
+  /* Step List */
+  .step-list { display: flex; flex-direction: column; gap: 14px; margin: 16px 0; }
+  .step-item {
+    display: flex;
+    gap: 14px;
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 14px;
+    border: 1px solid var(--border);
+  }
+  .step-num {
+    background: var(--secondary);
+    color: #ffffff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  /* Checklist Grid */
+  .checklist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 16px 0; }
+  .check-item {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+  }
+  .check-icon { color: var(--secondary); font-weight: bold; font-size: 16px; flex-shrink: 0; }
+
+  /* Roadmap Grid */
+  .roadmap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 16px 0; }
+  .roadmap-card {
+    background: #ffffff;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+    border-top: 4px solid var(--secondary);
+  }
+  .roadmap-badge {
+    background: #ffedd5;
+    color: #9a3412;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  /* FAQ Accordion Item */
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: #ffffff;
+  }
+  .faq-question {
+    background: #f8fafc;
+    padding: 14px 16px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--primary);
+    border-bottom: 1px solid var(--border);
+  }
+  .faq-answer {
+    padding: 14px 16px;
+    font-size: 13.5px;
+    color: #334155;
+    line-height: 1.7;
+  }
+
+  /* Closing Card */
+  .closing-card {
+    background: linear-gradient(135deg, #fff7ed 0%, #f1f5f9 100%);
+    border: 1.5px solid var(--amber-border);
+    border-radius: 10px;
+    padding: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .closing-card h4 { margin: 0 0 8px 0; color: var(--primary); font-size: 17px; font-weight: 800; }
+  .closing-card p { margin: 0 auto; max-width: 850px; font-size: 13.5px; color: #475569; }
+
+  /* Back to Top Floating Button */
+  .back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--primary);
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.35);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 9999;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    outline: none;
+  }
+  .back-to-top:hover {
+    background: var(--secondary);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(234, 88, 12, 0.45);
+  }
+
+  .portal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: var(--primary);
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .portal-btn:hover { background: var(--secondary); }
+
+  @media print {
+    .no-print, .search-filter-box, .hero-actions, .back-to-top, .bottom-print-wrapper { display: none !important; }
+    body { background-color: #ffffff; color: #000000; padding: 0; font-size: 12pt; }
+    .card { box-shadow: none; border: 1px solid #ccc; page-break-inside: avoid; }
+    .hero-banner { background: #0f172a !important; color: #ffffff !important; -webkit-print-color-adjust: exact; }
+    th { background: #0f172a !important; color: #ffffff !important; -webkit-print-color-adjust: exact; }
+  }
+
+  /* ============================================================ */
+  /* Monitor Auto-Expanding Fluid Layout (மானிட்டர் முழு அகல பார்வை) */
+  /* ============================================================ */
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  body {
+    font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.75;
+    color: var(--dark);
+    background-color: var(--light-bg);
+    padding: 10px 16px !important;
+    -webkit-font-smoothing: antialiased;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  .portal-container, .container {
+  width: 98% !important;
+  max-width: 1680px !important;
+  margin: 0 auto !important;
+  position: relative;
+  box-sizing: border-box;
+}
+  .card {
+    width: 100% !important;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary);
+    scroll-margin-top: 20px;
+  }
+
+  /* Compact & High-Impact Portal Header */
+  .portal-header {
+    background: linear-gradient(135deg, #020617 0%, #0f172a 45%, #1e293b 80%, #ea580c 100%);
+    border-radius: 24px;
+    padding: 38px 32px 32px;
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 4px solid var(--secondary, #ea580c);
+    margin-bottom: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .portal-title { font-size: 2.15rem !important; font-weight: 900 !important; margin-bottom: 12px !important; }
+  .portal-subtitle { font-size: 1.04rem !important; max-width: 1050px !important; margin: 0 auto !important; }
+  .header-badge-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+  .header-tag {
+    padding: 2px 10px;
+    border-radius: 14px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    display: inline-block;
+  }
+  .header-tag.primary { background-color: #fef08a; color: #713f12; border: 1px solid #fde047; }
+  .header-tag.secondary { background-color: rgba(255, 255, 255, 0.18); color: #f0f9ff; border: 1px solid rgba(255, 255, 255, 0.25); }
+  .header-tag.amber { background-color: rgba(234, 88, 12, 0.35); color: #fed7aa; border: 1px solid #ea580c; }
+  .portal-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 0 0 4px 0;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
   .accent-gold { color: #fde047; }
-  .portal-subtitle { font-size: 1.02rem; color: #e2e8f0; max-width: 1050px; margin: 0 auto; line-height: 1.62; }
-  .card { background: #ffffff; border-radius: var(--radius-lg); padding: 32px 28px; margin-bottom: 24px; box-shadow: var(--shadow-md); border: 1px solid var(--border); border-top: 4px solid var(--primary); }
-  .card-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 2px solid var(--border); }
-  .card-title { margin: 0; font-size: 1.35rem; color: var(--primary); font-weight: 800; }
-  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0; }
-  .stat-item { background: #f8fafc; border-radius: var(--radius-md); padding: 16px 14px; text-align: center; border: 1px solid var(--border); border-left: 4px solid var(--secondary); }
-  .stat-num { font-size: 1.65rem; font-weight: 900; color: var(--primary); margin-bottom: 4px; }
-  .stat-label { font-size: 0.84rem; color: #64748b; font-weight: 700; }
-  .traditional-kural-card { width: 100% !important; box-sizing: border-box !important; margin: 22px 0 18px 0 !important; padding: 16px 24px 15px !important; border-radius: 16px !important; text-align: center !important; background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%) !important; border: 2px solid #eab308 !important; color: #ffffff; }
-  .kural-first-line, .kural-second-line { font-size: 1.32rem !important; font-weight: 800 !important; line-height: 1.55 !important; margin: 3px 0 !important; color: #fef08a !important; }
-  .portal-footer { background: rgba(255, 255, 255, 0.96); border-radius: 12px; text-align: center; padding: 24px 16px 20px; font-size: 0.92rem; border: 1.5px solid rgba(255, 255, 255, 0.9); margin-top: 16px; color: #475569; }
+  .portal-subtitle {
+    font-size: 0.85rem;
+    color: #fdba74;
+    max-width: 950px;
+    margin: 0 auto;
+    line-height: 1.4;
+    opacity: 0.95;
+  }
+
+  /* Segmented Breadcrumb Menu Bar */
+  .nav-button-menu-bar {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .nav-button-menu-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .menu-btn-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+  .menu-btn-pill svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    fill: currentColor;
+  }
+  .btn-main-site { background: #f1f5f9; color: var(--dark); border-color: #cbd5e1; }
+  .btn-main-site:hover { background: #e2e8f0; color: var(--primary); }
+  .btn-career { background: #eff6ff; color: #1e40af; border-color: #bfdbfe; }
+  .btn-career:hover { background: #dbeafe; }
+  .btn-entrance { background: #fef3c7; color: #92400e; border-color: #fde68a; }
+  .btn-entrance:hover { background: #fde68a; }
+  .btn-current-page {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.25);
+  }
+  .menu-arrow {
+    color: #94a3b8;
+    font-weight: 800;
+    font-size: 14px;
+    user-select: none;
+  }
+
+  /* Quick Navigation Card */
+  .quick-nav-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 24px;
+    border: 1.5px solid var(--amber-border);
+    background-color: #fff7ed;
+    box-shadow: 0 2px 8px rgba(234, 88, 12, 0.08);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .quick-nav-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 14px;
+    border-bottom: 1.5px solid var(--amber-border);
+    padding-bottom: 8px;
+  }
+  .quick-nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 9px; }
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #ffffff;
+    border: 1px solid var(--amber-border);
+    border-radius: 6px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .nav-btn:hover {
+    background: var(--secondary);
+    color: #ffffff;
+    border-color: var(--secondary);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(234, 88, 12, 0.25);
+  }
+  .nav-btn .badge-no {
+    background: #ffedd5;
+    color: var(--secondary);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .nav-btn:hover .badge-no {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+  }
+
+  /* Thirukkural Card */
+  .kural-card {
+    background: #fffbeb;
+    border: 1.5px solid #fde68a;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 28px 0 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.08);
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .kural-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+    border-bottom: 1px dashed #fcd34d;
+    padding-bottom: 8px;
+  }
+  .kural-badge {
+    background: #d97706;
+    color: #ffffff;
+    font-size: 11.5px;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.3px;
+  }
+  .kural-number {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #92400e;
+  }
+  .kural-text {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #78350f;
+    line-height: 1.7;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.2px;
+  }
+  .kural-explanation {
+    font-size: 0.92rem;
+    color: #78350f;
+    line-height: 1.6;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* Creator Single-Line Card */
+  .creator-card {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1.5px solid rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 14px 22px;
+    margin: 28px 0 16px 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    text-align: center;
+    flex-wrap: wrap;
+    backdrop-filter: blur(14px);
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .creator-name-ta, .creator-name-en {
+    font-weight: 800;
+    font-size: 1.05rem;
+    background: linear-gradient(135deg, #1e40af 0%, #7c3aed 50%, #db2777 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    letter-spacing: 0.3px;
+    padding: 0 2px;
+  }
+  .creator-label {
+    font-size: 0.96rem;
+    color: #475569;
+    font-weight: 600;
+  }
+  .creator-role {
+    font-size: 0.92rem;
+    color: #475569;
+    font-weight: 500;
+  }
+  .creator-phone-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+    color: #ffffff !important;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(5, 150, 105, 0.3);
+    margin-left: 8px;
+    transition: all 0.2s ease;
+  }
+  .creator-phone-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(5, 150, 105, 0.45);
+  }
+  .typing-cursor {
+    display: inline-block;
+    color: #3b82f6;
+    font-weight: 700;
+    font-size: 1.1rem;
+    animation: blink 0.75s infinite;
+    margin-left: 2px;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* Portal Footer */
+  .portal-footer {
+    text-align: center;
+    padding: 20px 24px;
+    margin-top: 14px;
+    margin-bottom: 24px;
+    border-top: 1.5px solid var(--border);
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  /* Floating Back to Top */
+  .back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    font-size: 13.5px;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.35);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .back-to-top:hover {
+    background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(234, 88, 12, 0.45);
+  }
+  @media print {
+    .no-print, .nav-button-menu-bar, .quick-nav-card, .back-to-top, .portal-footer, .creator-card { display: none !important; }
+    body { padding: 0 !important; background: #ffffff !important; }
+    .card { box-shadow: none !important; border: 1px solid #ccc !important; page-break-inside: avoid; }
+  }
+
+/* ============================================================
+   Section 07 Full-Width Unique Animated Thirukkural & Standard Header
+   ============================================================ */
+.portal-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 45%, #1e293b 100%);
+  border-radius: 20px;
+  padding: 34px 28px 28px;
+  color: #ffffff;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.header-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.header-tag {
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+}
+.header-tag.primary { background-color: #fef08a; color: #713f12; border-color: #fde047; }
+.header-tag.secondary { background-color: rgba(255, 255, 255, 0.18); color: #f8fafc; backdrop-filter: blur(8px); }
+.header-tag.amber { background-color: #d97706; color: #ffffff; border-color: #f59e0b; }
+.portal-title {
+  font-size: 2.1rem;
+  font-weight: 900;
+  line-height: 1.35;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+.accent-gold { color: #fde047; }
+.portal-subtitle {
+  font-size: 1.02rem;
+  color: #e2e8f0;
+  max-width: 1050px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* FULL-WIDTH THIRUKKURAL COMPONENT */
+.full-width-kural-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 36px 0 26px 0 !important;
+  padding: 30px 28px !important;
+  border-radius: 18px !important;
+  text-align: center !important;
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%) !important;
+  color: #ffffff !important;
+  border: 2px solid #eab308 !important;
+  box-shadow: 0 8px 24px rgba(234, 179, 8, 0.25) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  animation: kuralLeadershipAura 4s ease-in-out infinite alternate !important;
+}
+
+@keyframes kuralLeadershipAura {
+  0%, 100% { border-color: #eab308; box-shadow: 0 8px 24px rgba(234, 179, 8, 0.22); }
+  50% { border-color: #fde047; box-shadow: 0 12px 34px rgba(253, 224, 71, 0.44); }
+}
+
+.kural-header-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  margin-bottom: 16px;
+  color: #fef08a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.kural-badge-icon { font-size: 1.1rem; }
+.kural-badge-title { font-weight: 900; color: #ffffff; }
+.kural-badge-dot { color: rgba(255, 255, 255, 0.6); }
+.kural-badge-chapter { color: #fde047; font-weight: 700; }
+
+.kural-verse-box {
+  margin: 10px auto 16px auto;
+  max-width: 900px;
+}
+.kural-verse-line {
+  font-family: 'Nirmala UI', 'Latha', 'Mukta Malar', 'Georgia', serif;
+  font-size: 1.38rem;
+  font-weight: 800;
+  line-height: 1.6;
+  margin: 4px 0;
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+  letter-spacing: 0.2px;
+}
+
+.kural-explanation-box {
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 14px 20px;
+  max-width: 950px;
+  margin: 12px auto 0 auto;
+  line-height: 1.65;
+  font-size: 0.96rem;
+  color: #f1f5f9;
+}
+.kural-exp-label {
+  font-weight: 800;
+  color: #fde047;
+  margin-right: 6px;
+}
+.kural-exp-text {
+  color: #f8fafc;
+}
+
+@media (max-width: 768px) {
+  .portal-header { padding: 24px 16px; }
+  .portal-title { font-size: 1.6rem; }
+  .portal-subtitle { font-size: 0.92rem; }
+  .full-width-kural-container { padding: 22px 16px !important; margin: 26px 0 20px 0 !important; }
+  .kural-verse-line { font-size: 1.14rem; }
+  .kural-explanation-box { font-size: 0.88rem; padding: 10px 14px; }
+}
+
 </style>
-</head>
+<style id="distinct-theme-css">
+/* ============================================================
+   Section 07: ஒருங்கிணைந்த மேலாண்மை (IIM IPM) - DISTINCT HERO THEME & TRADITIONAL 2-LINE KURAL
+   ============================================================ */
+.portal-header {
+  background: linear-gradient(135deg, #020617 0%, #0f172a 45%, #1e293b 80%, #312e81 100%) !important;
+  border-radius: 22px !important;
+  padding: 38px 30px 30px !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-bottom: 3px solid #eab308 !important;
+  margin-bottom: 24px !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.header-badge-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 14px !important;
+}
+
+.header-tag {
+  padding: 5px 14px !important;
+  border-radius: 999px !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.3px !important;
+  text-transform: uppercase !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  display: inline-block !important;
+}
+.header-tag.primary { background-color: #fef08a !important; color: #713f12 !important; border-color: #fde047 !important; }
+.header-tag.secondary { background-color: rgba(255, 255, 255, 0.18) !important; color: #f8fafc !important; backdrop-filter: blur(8px) !important; }
+.header-tag.amber { background-color: #d97706 !important; color: #ffffff !important; border-color: #f59e0b !important; }
+
+.portal-title {
+  font-size: 2.1rem !important;
+  font-weight: 900 !important;
+  line-height: 1.35 !important;
+  margin: 0 0 10px 0 !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4) !important;
+}
+.accent-gold { color: #fde047 !important; }
+
+.portal-subtitle {
+  font-size: 1.02rem !important;
+  color: #e2e8f0 !important;
+  max-width: 1050px !important;
+  margin: 0 auto !important;
+  line-height: 1.62 !important;
+}
+
+/* TRADITIONAL 2-LINE ANIMATED THIRUKKURAL COMPONENT */
+.traditional-kural-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 22px 0 18px 0 !important;
+  padding: 16px 24px 15px !important;
+  border-radius: 16px !important;
+  text-align: center !important;
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%) !important;
+  border: 2px solid #eab308 !important;
+  box-shadow: 0 6px 22px rgba(234, 179, 8, 0.28) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  animation: kuralCardAura_07 4s ease-in-out infinite alternate !important;
+}
+
+.traditional-kural-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 30px rgba(234, 179, 8, 0.45) !important;
+}
+
+@keyframes kuralCardAura_07 {
+  0% {
+    box-shadow: 0 4px 18px rgba(234, 179, 8, 0.25), inset 0 0 12px rgba(234, 179, 8, 0.12);
+    border-color: #eab308;
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(234, 179, 8, 0.48), inset 0 0 20px rgba(234, 179, 8, 0.22);
+    border-color: #fde047;
+  }
+  100% {
+    box-shadow: 0 4px 18px rgba(234, 179, 8, 0.25), inset 0 0 12px rgba(234, 179, 8, 0.12);
+    border-color: #eab308;
+  }
+}
+
+.kural-top-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-bottom: 8px !important;
+  padding-bottom: 6px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
+}
+
+.kural-chip-wrap {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.kural-feather-icon {
+  font-size: 1.1rem !important;
+  display: inline-block !important;
+  animation: kuralFeatherFloat 3s ease-in-out infinite alternate !important;
+}
+
+@keyframes kuralFeatherFloat {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-3px) rotate(-10deg); }
+}
+
+.kural-chip-text {
+  font-size: 0.84rem !important;
+  font-weight: 800 !important;
+  color: #fef08a !important;
+  letter-spacing: 0.3px !important;
+}
+
+.kural-topic-badge {
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+  padding: 3px 12px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
+}
+
+/* STRICT TRADITIONAL TWO-LINE FORMAT */
+.kural-couplet-lines {
+  margin: 6px auto 8px auto !important;
+  text-align: center !important;
+}
+
+.kural-first-line,
+.kural-second-line {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  font-family: 'Nirmala UI', 'Latha', 'Mukta Malar', 'Georgia', serif !important;
+  font-size: 1.32rem !important;
+  font-weight: 800 !important;
+  line-height: 1.55 !important;
+  margin: 3px 0 !important;
+  letter-spacing: 0.25px !important;
+  color: #ffffff !important;
+  animation: kuralVerseGlow_07 4s ease-in-out infinite alternate !important;
+}
+
+@keyframes kuralVerseGlow_07 {
+  0%, 100% {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(254, 240, 138, 0.7), 0 0 22px rgba(234, 179, 8, 0.45);
+  }
+  50% {
+    color: #fef08a;
+    text-shadow: 0 0 16px rgba(253, 224, 71, 0.95), 0 0 32px rgba(245, 158, 11, 0.8), 0 0 45px rgba(234, 179, 8, 0.6);
+  }
+}
+
+.kural-meaning-row {
+  background: rgba(0, 0, 0, 0.24) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-radius: 10px !important;
+  padding: 8px 16px !important;
+  max-width: 950px !important;
+  margin: 6px auto 0 auto !important;
+  line-height: 1.55 !important;
+  font-size: 0.91rem !important;
+  color: #f1f5f9 !important;
+}
+
+.kural-meaning-label {
+  font-weight: 800 !important;
+  color: #fde047 !important;
+  margin-right: 5px !important;
+}
+
+.kural-meaning-text {
+  color: #f8fafc !important;
+}
+
+@media (max-width: 768px) {
+  .portal-header { padding: 24px 16px !important; }
+  .portal-title { font-size: 1.6rem !important; }
+  .portal-subtitle { font-size: 0.92rem !important; }
+  .traditional-kural-card { padding: 14px 14px 12px !important; margin: 18px 0 !important; }
+  .kural-first-line, .kural-second-line { font-size: 1.12rem !important; line-height: 1.5 !important; }
+  .kural-meaning-row { font-size: 0.84rem !important; padding: 7px 12px !important; }
+}
+</style></head>
 <body>
 <div class="portal-container" id="top">
-
-<nav aria-label="Breadcrumb Navigation" class="nav-button-menu-bar">
+<!-- Hero Header Banner -->
+<!-- Compact & High-Impact Portal Header -->
+<nav class="nav-button-menu-bar no-print">
 <div class="nav-button-menu-container">
-<a class="menu-btn-pill btn-main-site" href="index.html" title="இணையதள முகப்பு">
-<svg fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
-<span>இணையதள முகப்பு</span>
+<a class="menu-btn-pill btn-main-site" href="index.html" title="சிவகங்கை மாவட்ட முதன்மைக் கல்வி இணையதளம்">
+<svg viewbox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+<span>ceosvg.in முகப்பு</span>
 </a>
 <span class="menu-arrow">›</span>
-<a class="menu-btn-pill btn-entrance" href="00_entrance_exams.html" title="நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம்">
-<svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
-<span>📝 நுழைவுத்தேர்வுகள் மெனு</span>
+<a class="menu-btn-pill btn-career" href="index.html" title="உயர்கல்வி வழிகாட்டல்">
+<svg viewbox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"></path></svg>
+<span>🎓 உயர்கல்வி</span>
 </a>
 <span class="menu-arrow">›</span>
-<span class="menu-btn-pill btn-current-page" title="தற்போதைய வழிகாட்டிப் பக்கம்">
-<span>📊 பிரிவு 07: மேலாண்மை (IIM IPM)</span>
+<a class="menu-btn-pill btn-entrance" href="00_entrance_exams.html" title="தேசிய அளவிலான நுழைவுத்தேர்வுகள்">
+<svg viewbox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
+<span>📝 நுழைவுத்தேர்வுகள்</span>
+</a>
+<span class="menu-arrow">›</span>
+<span class="menu-btn-pill btn-current-page">
+<svg viewbox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"></path></svg>
+<span>💼 பிரிவு 07: ஒருங்கிணைந்த மேலாண்மை (IIM IPM)</span>
 </span>
 </div>
-</nav>
-
-<header class="portal-header">
+</nav><header class="portal-header">
+<div class="header-badge-row">
+<span class="header-tag primary">பிரிவு 07 (Section 07)</span>
+<span class="header-tag secondary">ஐ.ஐ.எம் மேலாண்மை (5-Year Integrated Management - IPM)</span>
+<span class="header-tag amber">IPMAT • JIPMAT • IIMs • IIFT • NALSAR</span>
+</div>
 <h1 class="portal-title">
     ஐ.ஐ.எம் (IIMs) 5 ஆண்டு ஒருங்கிணைந்த மேலாண்மை <span class="accent-gold">(IPM - BBA + MBA)</span>
 </h1>
 <p class="portal-subtitle">
-    12-ஆம் வகுப்புக்குப் பின் IIM இந்தூர், ரோத்தக், ராஞ்சி, போத்கயா, ஜம்மு ஆகிய 5 ஐ.ஐ.எம் நிறுவனங்களில் BBA+MBA படிப்பதற்கான IPMAT மற்றும் JIPMAT வழிகாட்டல் தொகுப்பு.
-</p>
+    12-ஆம் வகுப்புக்குப் பின் IIM இந்தூர், ரோத்தக், ராஞ்சி, போத்கயா, ஜம்மு ஆகிய புகழ்பெற்ற 5 ஐ.ஐ.எம் நிறுவனங்களில் இளநிலை + முதுநிலை மேலாண்மை படிப்பதற்கான IPMAT மற்றும் JIPMAT நுழைவுத்தேர்வுகளின் தேர்வு முறை, கட்டணம் மற்றும் வாய்ப்புகள் குறித்த வழிகாட்டல் தொகுப்பு.
+  </p>
 </header>
-
-<div class="card">
-<div class="card-header">
-<h3 class="card-title">💼 1. ஐ.ஐ.எம் (IIM) ஒருங்கிணைந்த மேலாண்மைப் படிப்பு (IPM) - ஓர் அறிமுகம்</h3>
+<!-- Button-Style Segmented Navigation Menu (வழிசெலுத்துதல் பட்டன் மெனு) -->
+<!-- Button-Style Quick Navigation Bar (விரைவு வழிசெலுத்துதல் பட்டன் அட்டை) -->
+<div class="quick-nav-card no-print" id="quick-nav">
+<div class="quick-nav-title">
+<span>🚀 முக்கியப் பிரிவுகள் &amp; தலைப்புகள் (Quick Navigation)</span>
+<span style="font-size: 12px; color: var(--text-muted); font-weight: normal;">நேரடியாகச் செல்ல விரும்பும் பிரிவை கிளிக் செய்யவும்</span>
 </div>
-<p>CAT தேர்வின் அழுத்தமின்றி 12-ஆம் வகுப்பிலேயே IIM இருக்கை உறுதி செய்யப்படுகிறது! முதல் 3 ஆண்டுகள் BBA + அடுத்த 2 ஆண்டுகள் முழுநேர MBA பட்டம். ஐ.ஐ.எம்-களில் படித்து முடித்தவுடன் ஆண்டுக்கு ₹25-30 லட்சம் சராசரி ஊதியத்துடன் கார்ப்பரேட் தலைமைப் பொறுப்புகள் பெறலாம்.</p>
+<div class="quick-nav-grid">
+<a class="nav-btn" href="#section-intro"><span class="badge-no">01</span><span>💼 IPM திட்டம் அறிமுகம்</span></a>
+<a class="nav-btn" href="#section-ipmat-indore"><span class="badge-no">02</span><span>🏛️ IPMAT Indore தேர்வு</span></a>
+<a class="nav-btn" href="#section-ipmat-rohtak"><span class="badge-no">03</span><span>🏛️ IPMAT Rohtak தேர்வு</span></a>
+<a class="nav-btn" href="#section-jipmat"><span class="badge-no">04</span><span>🎯 JIPMAT (போத்கயா/ஜம்மு)</span></a>
+<a class="nav-btn" href="#section-other-iims"><span class="badge-no">05</span><span>🌍 IIM Ranchi &amp; IIFT</span></a>
+<a class="nav-btn" href="#section-eligibility"><span class="badge-no">06</span><span>📋 கல்வித் தகுதிகள்</span></a>
+<a class="nav-btn" href="#section-syllabus"><span class="badge-no">07</span><span>📚 முழுப் பாடத்திட்டம்</span></a>
+<a class="nav-btn" href="#section-interview"><span class="badge-no">08</span><span>🎯 நேர்காணல் (PI) உத்திகள்</span></a>
+<a class="nav-btn" href="#section-roadmap"><span class="badge-no">09</span><span>🚀 9th-12th வழிகாட்டல்</span></a>
+<a class="nav-btn" href="#section-fees-loans"><span class="badge-no">10</span><span>💰 கட்டணம் &amp; கல்விக் கடன்</span></a>
+<a class="nav-btn" href="#section-placements"><span class="badge-no">11</span><span>📈 வேலைவாய்ப்பு &amp; ஊதியம்</span></a>
+<a class="nav-btn" href="#section-portals"><span class="badge-no">12</span><span>🌐 அதிகாரப்பூர்வ தளங்கள்</span></a>
+<a class="nav-btn" href="#section-faqs"><span class="badge-no">13</span><span>❓ அடிக்கடி கேட்கப்படும் வினாக்கள்</span></a>
+</div>
+</div>
+<!-- Search & Filter Controls -->
+<!-- Quick Navigation Section -->
+<!-- Key Statistics Highlights -->
 <div class="stats-grid">
-<div class="stat-item"><div class="stat-num">5 IIMs</div><div class="stat-label">IIM இந்தூர், ரோத்தக், ராஞ்சி, போத்கயா, ஜம்மு</div></div>
-<div class="stat-item"><div class="stat-num">BBA + MBA</div><div class="stat-label">5-ஆண்டு இரட்டைப் பட்டம்</div></div>
-<div class="stat-item"><div class="stat-num">₹25-30 LPA</div><div class="stat-label">சராசரி வளாக வேலைவாய்ப்பு ஊதியம்</div></div>
-<div class="stat-item"><div class="stat-num">100% கடன்</div><div class="stat-label">SBI Scholar Loan பிணையமில்லாக் கடன்</div></div>
+<div class="stat-item">
+<div class="stat-num">5 IIMs</div>
+<div class="stat-label">5 முன்னணி இந்திய மேலாண்மைக் கழகங்கள் (IPM)</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">BBA + MBA</div>
+<div class="stat-label">5 ஆண்டுகள் ஒருங்கிணைந்த பட்டப்படிப்பு (CAT தேவையில்லை)</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">₹25 - ₹35 L</div>
+<div class="stat-label">சராசரி ஆரம்ப ஆண்டு ஊதியம் (Average CTC)</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">100% Loan</div>
+<div class="stat-label">பிணையமின்றி ₹40 லட்சம் வரை SBI Scholar கல்விக் கடன்</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">அனைத்து குரூப்</div>
+<div class="stat-label">கலை, அறிவியல், வணிகவியல் பயிலும் மாணவர்கள் தகுதி</div>
 </div>
 </div>
-
+<!-- SECTION 1: Introduction to IPM -->
+<div class="card" id="section-intro">
+<div class="card-header">
+<h3 class="card-title">💼 1. ஐ.ஐ.எம் (IIM) 5 ஆண்டு ஒருங்கிணைந்த மேலாண்மைப் படிப்பு (IPM) - ஓர் அறிமுகம்</h3>
+<span class="badge badge-orange">புரட்சிகர திட்டம்</span>
+</div>
+<p>
+      இந்தியாவின் மிக உயரிய வணிகக் கல்வி நிறுவனங்களான <b>இந்திய மேலாண்மைக் கழகங்கள் (Indian Institutes of Management - IIMs)</b> பொதுவாக ஏதேனும் ஒரு இளநிலைப் பட்டப்படிப்பு முடித்த பிறகு CAT தேர்வு எழுதி முதுநிலை மேலாண்மை (MBA) பயிலும் இடமாகவே அறியப்பட்டு வந்தன. ஆனால், 2011-ஆம் ஆண்டில் IIM இந்தூர் நிறுவனம் 12-ஆம் வகுப்பு முடித்த உடனேயே பள்ளி மாணவர்கள் சேரும் வகையிலான <b>5 ஆண்டு ஒருங்கிணைந்த மேலாண்மைப் படிப்பை (IPM - Integrated Programme in Management)</b> முதன்முதலாக அறிமுகப்படுத்தியது.
+    </p>
+<div class="exec-box">
+<h4 style="margin:0 0 8px 0; color:#fdba74; font-size:16px;">★ ஏன் IPM திட்டம் 12-ஆம் வகுப்பு மாணவர்களுக்கு ஒரு வரப்பிரசாதம்?</h4>
+<ul style="margin:0; padding-left:18px; font-size:13.5px; line-height:1.7;">
+<li><b>CAT தேர்வின் அழுத்தமின்றி நேரடி IIM MBA:</b> கல்லூரிப் படிப்பு முடித்து லட்சக்கணக்கான பட்டதாரிகளோடு CAT நுழைவுத்தேர்வு எழுதிப் போராட வேண்டிய அவசியமின்றி, 12-ஆம் வகுப்பிலேயே IIM இருக்கை உறுதி செய்யப்படுகிறது!</li>
+<li><b>இரட்டைப் பட்டம் (Dual Degree):</b> முதல் 3 ஆண்டுகள் BBA (அடித்தள மேலாண்மை மற்றும் சமூகவியல்) + அடுத்த 2 ஆண்டுகள் முழுநேர MBA / PGP பட்டம்.</li>
+<li><b>NEP 2020 வெளியேறும் வசதி (Exit Option):</b> 3 ஆண்டுகள் முடித்தவுடன் ஒரு மாணவர் விரும்பினால் BBA பட்டத்துடன் வெளியேறி பிற வாய்ப்புகளை நாடலாம்; அல்லது எவ்வித நுழைவுத்தேர்வும் இன்றி நேரடியாக MBA படிப்பைத் தொடரலாம்!</li>
+<li><b>உலகளாவிய கார்ப்பரேட் ஆளுமை:</b> 17-18 வயதிலேயே IIM வளாக சூழல், கேஸ்-ஸ்டடி பயிற்சிகள், வெளிநாட்டுப் பல்கலைக்கழக பரிமாற்றங்கள் மற்றும் கார்ப்பரேட் பயிற்சிகள் கிடைப்பதால் தலைமைப் பண்பு அபரிமிதமாக வளர்கிறது.</li>
+</ul>
+</div>
+<div class="grid-2col">
+<div class="adv-box">
+<strong style="color:var(--accent-emerald);">🌟 யார் இந்தத் தேர்வுகளை எழுதலாம்?</strong>
+<p style="margin:6px 0 0 0; font-size:13px; line-height:1.6;">
+          12-ஆம் வகுப்பில் <b>வணிகவியல் (Commerce), அறிவியல் (Biology/Maths/Computer) அல்லது கலை (Arts/Humanities)</b> என எந்தப் பாடப்பிரிவு பயின்ற மாணவர்களும் சமவாய்ப்புடன் எழுதலாம்! கணிதம் படிக்காத மாணவர்களும் முறையான பயிற்சியால் இதில் எளிதில் தேர்ச்சி பெறலாம்.
+        </p>
+</div>
+<div class="info-box-blue">
+<strong style="color:var(--accent-blue);">🏛️ IPM வழங்கும் 5 முன்னணி IIM-கள்:</strong>
+<p style="margin:6px 0 0 0; font-size:13px; line-height:1.6;">
+          1) <b>IIM Indore</b> (முதன்மை வளாகம்)<br/>
+          2) <b>IIM Rohtak</b> (டெல்லி-NCR)<br/>
+          3) <b>IIM Ranchi</b> (ஜார்க்கண்ட்)<br/>
+          4) <b>IIM Bodh Gaya</b> (பீகார்)<br/>
+          5) <b>IIM Jammu</b> (ஜம்மு காஷ்மீர்)
+        </p>
+</div>
+</div>
+</div>
+<!-- SECTION 2: IPMAT Indore -->
+<div class="card" id="section-ipmat-indore">
+<div class="card-header">
+<h3 class="card-title">🏛️ 2. IPMAT Indore - IIM இந்தூர் &amp; IIM ராஞ்சி நுழைவுத்தேர்வு</h3>
+<span class="badge badge-gold">NIRF Rank 8 IIM</span>
+</div>
+<p>
+<b>IPMAT Indore (Integrated Program in Management Aptitude Test)</b> என்பது IIM இந்தூர் நிறுவனத்தால் ஆண்டுதோறும் நடத்தப்படும் மிகப்புகழ்பெற்ற தேசிய அளவிலான கணினி வழி நுழைவுத் தேர்வாகும் (CBT). இத்தேர்வின் மதிப்பெண்கள் IIM இந்தூர் மட்டுமின்றி <b>IIM ராஞ்சி, IIFT காக்கிநாடா</b> மற்றும் முன்னணி பல்கலைக்கழகங்களால் ஏற்றுக்கொள்ளப்படுகின்றன.
+    </p>
+<div class="card-sub">IPMAT Indore தேர்வு கட்டமைப்பு &amp; மதிப்பெண் பங்கீடு (120 நிமிடங்கள்)</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>பிரிவு (Section)</th>
+<th>வினா முறை (Question Type)</th>
+<th>வினாக்கள் எண்ணிக்கை</th>
+<th>கால அளவு (Sectional Timing)</th>
+<th>மதிப்பெண்கள் &amp; நெகட்டிவ் மார்க்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>பகுதி 1: Quantitative Ability (Short Answer - SA)</b></td>
+<td>கணித வினாக்களுக்கு விடைகளை கணினியில் தட்டச்சு செய்யும் முறை (Numerical Type)</td>
+<td>15 வினாக்கள்</td>
+<td>40 நிமிடங்கள்</td>
+<td><b>60 மதிப்பெண்கள்</b><br/><span style="color:#15803d; font-weight:bold;">★ நெகட்டிவ் மார்க் கிடையாது! (No Negative Marking)</span></td>
+</tr>
+<tr>
+<td><b>பகுதி 2: Quantitative Ability (MCQ)</b></td>
+<td>பல்வேறு தெரிவு வினாக்கள் (Multiple Choice Questions)</td>
+<td>30 வினாக்கள்</td>
+<td>40 நிமிடங்கள்</td>
+<td><b>120 மதிப்பெண்கள்</b><br/>(சரியான விடைக்கு +4, தவறான விடைக்கு -1)</td>
+</tr>
+<tr>
+<td><b>பகுதி 3: Verbal Ability (MCQ)</b></td>
+<td>ஆங்கில வாசிப்பு, இலக்கணம், சொல்லகராதி (English Language)</td>
+<td>45 வினாக்கள்</td>
+<td>40 நிமிடங்கள்</td>
+<td><b>180 மதிப்பெண்கள்</b><br/>(சரியான விடைக்கு +4, தவறான விடைக்கு -1)</td>
+</tr>
+<tr style="background:#fff7ed; font-weight:bold;">
+<td colspan="2" style="text-align:right;">மொத்தம்:</td>
+<td><b>90 வினாக்கள்</b></td>
+<td><b>120 நிமிடங்கள் (2 மணி நேரம்)</b></td>
+<td><b>360 மதிப்பெண்கள்</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="alert-box">
+<strong>📌 IIM Indore இறுதிச் சேர்க்கை அளவுகோல் (Final Selection Weightage):</strong><br/>
+      • <b>IPMAT Indore தேர்வு மதிப்பெண்:</b> 65% வெயிட்டேஜ்.<br/>
+      • <b>தனிநபர் நேர்காணல் (Personal Interview - PI):</b> 35% வெயிட்டேஜ்.<br/>
+      (எழுத்துத் தேர்வில் கட்-ஆஃப் எடுக்கும் மாணவர்கள் இணையவழி அல்லது நேரடி நேர்காணலுக்கு அழைக்கப்பட்டு இறுதித் தகுதிப் பட்டியல் வெளியிடப்படும்).
+    </div>
+</div>
+<!-- SECTION 3: IPMAT Rohtak -->
+<div class="card" id="section-ipmat-rohtak">
+<div class="card-header">
+<h3 class="card-title">🏛️ 3. IPMAT Rohtak - IIM ரோத்தக் பிரத்யேக நுழைவுத்தேர்வு</h3>
+<span class="badge badge-slate">டெல்லி-NCR மண்டலம்</span>
+</div>
+<p>
+      ஹரியானா மாநிலம் ரோத்தக்கில் டெல்லி சர்வதேச விமான நிலையத்திற்கு மிக அருகில் அமைந்துள்ள <b>IIM Rohtak</b> தனது 5 ஆண்டு IPM திட்டத்திற்காகத் தனியாக நடத்தும் தேசிய அளவிலான நுழைவுத் தேர்வே <b>IPMAT Rohtak</b> ஆகும்.
+    </p>
+<div class="card-sub">IPMAT Rohtak தேர்வு கட்டமைப்பு (120 வினாக்கள் - 480 மதிப்பெண்கள்)</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>பிரிவு (Section)</th>
+<th>பாடத் தலைப்புகள்</th>
+<th>வினாக்கள்</th>
+<th>கால அளவு</th>
+<th>மதிப்பெண்கள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>பகுதி 1: Quantitative Ability</b></td>
+<td>எண்கணிதம், இயற்கணிதம், நவீன கணிதம்</td>
+<td>40 வினாக்கள்</td>
+<td>40 நிமிடங்கள்</td>
+<td>160 மதிப்பெண்கள் (+4, -1)</td>
+</tr>
+<tr>
+<td><b>பகுதி 2: Logical Reasoning</b></td>
+<td>தர்க்கவியல், தரவு பகுப்பாய்வு, புதிர்கள், தொடர்புகள்</td>
+<td>40 வினாக்கள்</td>
+<td>40 நிமிடங்கள்</td>
+<td>160 மதிப்பெண்கள் (+4, -1)</td>
+</tr>
+<tr>
+<td><b>பகுதி 3: Verbal Ability</b></td>
+<td>ஆங்கிலப் புரிதல், இலக்கணம், சொல்லாட்சி</td>
+<td>40 வினாக்கள்</td>
+<td>40 நிமிடங்கள்</td>
+<td>160 மதிப்பெண்கள் (+4, -1)</td>
+</tr>
+<tr style="background:#f1f5f9; font-weight:bold;">
+<td colspan="2" style="text-align:right;">மொத்தம்:</td>
+<td><b>120 வினாக்கள்</b></td>
+<td><b>120 நிமிடங்கள் (2 மணி நேரம்)</b></td>
+<td><b>480 மதிப்பெண்கள்</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="info-box-blue">
+<strong>🎯 IIM Rohtak இறுதி சேர்க்கை சூத்திரம்:</strong><br/>
+      • <b>IPMAT Rohtak மதிப்பெண்:</b> 45% பங்கு<br/>
+      • <b>ஆன்லைன் நேர்காணல் (Personal Interview):</b> 45% பங்கு<br/>
+      • <b>கல்வி மற்றும் பாலின பன்முகத்தன்மை (Academic &amp; Gender Diversity):</b> 10% பங்கு (பெண் மாணவர்களுக்கு கூடுதல் வாய்ப்பு!).
+    </div>
+</div>
+<!-- SECTION 4: JIPMAT (NTA) -->
+<div class="card" id="section-jipmat">
+<div class="card-header">
+<h3 class="card-title">🎯 4. JIPMAT (Joint IPM Aptitude Test) - IIM போத்கயா &amp; IIM ஜம்மு</h3>
+<span class="badge badge-orange">தேசியத் தேர்வுகள் முகமை (NTA)</span>
+</div>
+<p>
+<b>JIPMAT</b> என்பது மத்திய கல்வி அமைச்சகத்தின் கீழ் இயங்கும் <b>தேசியத் தேர்வுகள் முகமையால் (NTA)</b> ஆண்டுதோறும் கணினி வழித் தேர்வாக (CBT) நடத்தப்படும் அகில இந்திய நுழைவுத் தேர்வாகும். இத்தேர்வின் மூலம் பீகாரில் உள்ள <b>IIM Bodh Gaya</b> மற்றும் <b>IIM Jammu</b> ஆகிய இரண்டு புகழ்பெற்ற ஐ.ஐ.எம் நிறுவனங்களில் 5 ஆண்டு BBA+MBA சேர்க்கை வழங்கப்படுகிறது.
+    </p>
+<div class="card-sub">JIPMAT தேர்வு கட்டமைப்பு - மொத்தம் 100 வினாக்கள் (400 மதிப்பெண்கள்)</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>பிரிவு (Section)</th>
+<th>கேட்கப்படும் தலைப்புகள்</th>
+<th>வினாக்கள் எண்ணிக்கை</th>
+<th>மதிப்பெண்கள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>பகுதி 1: Quantitative Aptitude (QA)</b></td>
+<td>10 மற்றும் 12-ஆம் வகுப்பு தரத்திலான அடிப்படை எண்கணிதம், சதவீதங்கள், இயற்கணிதம், வடிவியல்</td>
+<td>33 வினாக்கள்</td>
+<td>132 மதிப்பெண்கள் (+4, -1)</td>
+</tr>
+<tr>
+<td><b>பகுதி 2: Data Interpretation &amp; Logical Reasoning (DILR)</b></td>
+<td>விளக்கப்படங்கள் (Charts, Graphs), அட்டவணைகள், எண் தொடர்கள், தர்க்க முடிவுகள், இரத்த உறவுகள்</td>
+<td>33 வினாக்கள்</td>
+<td>132 மதிப்பெண்கள் (+4, -1)</td>
+</tr>
+<tr>
+<td><b>பகுதி 3: Verbal Ability &amp; Reading Comprehension (VARC)</b></td>
+<td>பத்திகளைப் படித்து விடையளித்தல், பிழை திருத்தம், ஒத்த சொற்கள், வாக்கிய அமைப்பு</td>
+<td>34 வினாக்கள்</td>
+<td>136 மதிப்பெண்கள் (+4, -1)</td>
+</tr>
+<tr style="background:#fff7ed; font-weight:bold;">
+<td colspan="2" style="text-align:right;">மொத்தம்:</td>
+<td><b>100 வினாக்கள்</b></td>
+<td><b>400 மதிப்பெண்கள்</b> (கால அளவு: 150 நிமிடங்கள் / 2.5 மணி நேரம்)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="adv-box">
+<h4 style="margin:0 0 6px 0; color:var(--accent-emerald);">★ JIPMAT தேர்வின் மகத்தான சிறப்பம்சங்கள்:</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7;">
+<li><b>பிரிவு நேரக் கட்டுப்பாடு கிடையாது (No Sectional Time Limit):</b> மாணவர்கள் தங்களுக்கு விருப்பமான பகுதியை (எ.கா: ஆங்கிலம் அல்லது தர்க்கம்) முதலில் தொடங்கி எழுதலாம்!</li>
+<li><b>நேர்காணல் தேர்வு இல்லை (No Personal Interview):</b> IIM போத்கயா மற்றும் IIM ஜம்முவில் கடினமான நேர்காணல் தேர்வு கிடையாது! 100% JIPMAT மதிப்பெண் மற்றும் 10, 12-ஆம் வகுப்பு பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் மட்டுமே சேர்க்கை வழங்கப்படுகிறது.</li>
+</ul>
+</div>
+</div>
+<!-- SECTION 5: Other Premier Institutes offering IPM -->
+<div class="card" id="section-other-iims">
+<div class="card-header">
+<h3 class="card-title">🌍 5. IIM ராஞ்சி, IIFT காக்கிநாடா &amp; பிற முதன்மை நிறுவனங்கள்</h3>
+<span class="badge badge-blue">கூடுதல் வாய்ப்புகள்</span>
+</div>
+<div class="grid-2col">
+<div class="univ-card">
+<h4 style="color:var(--primary);">🏛️ IIM Ranchi (ஐ.ஐ.எம் ராஞ்சி - ஜார்க்கண்ட்):</h4>
+<div class="univ-sub">IPMAT Indore ஸ்கோர் + தனிநபர் நேர்காணல்</div>
+<p style="font-size:13px; color:#334155; line-height:1.6;">
+          IIM ராஞ்சியில் வழங்கப்படும் 5 ஆண்டு IPM படிப்புக்குத் தனியாக எழுத்துத் தேர்வு இல்லை. <b>IPMAT Indore தேர்வில் மாணவர்கள் பெறும் மதிப்பெண்களை அடிப்படையாக வைத்தே</b> விண்ணப்பங்கள் ஏற்கப்பட்டு, ஆன்லைன் நேர்காணல் மூலம் மாணவர்கள் தேர்வு செய்யப்படுகின்றனர்.
+        </p>
+</div>
+<div class="univ-card">
+<h4 style="color:var(--secondary);">🏛️ IIFT Kakinada (இந்திய வெளிநாட்டு வர்த்தக நிறுவனம்):</h4>
+<div class="univ-sub">மத்திய வர்த்தக அமைச்சகம் | ஆந்திரப் பிரதேசம்</div>
+<p style="font-size:13px; color:#334155; line-height:1.6;">
+          சர்வதேச வர்த்தகத்தில் உலகப்புகழ்பெற்ற IIFT நிறுவனம் <b>5-Year Integrated Management (BBA in Business Analytics + MBA in International Business)</b> படிப்பை வழங்குகிறது. சேர்க்கை: IPMAT Indore தேர்வு மதிப்பெண் அடிப்படையில் மட்டுமே.
+        </p>
+</div>
+<div class="univ-card">
+<h4 style="color:var(--accent-blue);">🏛️ NALSAR University of Law (ஹைதராபாத்):</h4>
+<div class="univ-sub">சட்டம் மற்றும் மேலாண்மை ஒருங்கிணைப்பு</div>
+<p style="font-size:13px; color:#334155; line-height:1.6;">
+          நாட்டின் தலைசிறந்த சட்டப் பல்கலைக்கழகமான NALSAR, 5 ஆண்டு கால <b>IPM (BBA + MBA)</b> படிப்பை வழங்குகிறது. கார்ப்பரேட் சட்டமும் மேலாண்மையும் இணைந்து கற்பிக்கப்படுவதால் பன்னாட்டு நிறுவனங்களில் பெரும் வரவேற்பு உள்ளது.
+        </p>
+</div>
+<div class="univ-card">
+<h4 style="color:var(--accent-emerald);">🏛️ NFSU (தேசிய தடயவியல் அறிவியல் பல்கலைக்கழகம்):</h4>
+<div class="univ-sub">மத்திய உள்துறை அமைச்சகம் | காந்திநகர், டெல்லி</div>
+<p style="font-size:13px; color:#334155; line-height:1.6;">
+<b>5-Year Integrated BBA-MBA in Cyber Security Management &amp; Forensic Accounting</b>. சைபர் குற்றங்கள், நிதி மோசடிகளைத் தடுக்கும் நவீன மேலாண்மைப் படிப்பு.
+        </p>
+</div>
+</div>
+</div>
+<!-- SECTION 6: Eligibility Criteria -->
+<div class="card" id="section-eligibility">
+<div class="card-header">
+<h3 class="card-title">📋 6. 12-ஆம் வகுப்பு கல்வித் தகுதிகள் &amp; வயது வரம்பு</h3>
+<span class="badge badge-slate">அனைத்துப் பாடப்பிரிவினரும் தகுதி</span>
+</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>நுழைவுத்தேர்வு</th>
+<th>குறைந்தபட்ச கல்வித் தகுதி (10th &amp; 12th)</th>
+<th>உச்ச வயது வரம்பு (Age Limit)</th>
+<th>பாடப்பிரிவு வரம்பு</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>IPMAT Indore (IIM Indore &amp; Ranchi)</b></td>
+<td>10 மற்றும் 12-ஆம் வகுப்பில் <b>குறைந்தபட்சம் 60% மதிப்பெண்கள்</b> (SC/ST/PwD பிரிவினருக்கு <b>55% மதிப்பெண்கள்</b>)</td>
+<td>சேர்க்கை ஆண்டின் ஆகஸ்ட் 1 அன்று <b>20 வயதுக்குள்</b> இருக்க வேண்டும் (SC/ST பிரிவினருக்கு <b>25 வயது வரை</b> தளர்வு உண்டு)</td>
+<td>அறிவியல், வணிகவியல், கலை - <b>எந்த குரூப் மாணவர்களும் தகுதியுடையவர்கள்</b></td>
+</tr>
+<tr>
+<td><b>IPMAT Rohtak (IIM Rohtak)</b></td>
+<td>10 மற்றும் 12-ஆம் வகுப்பில் <b>குறைந்தபட்சம் 60% மதிப்பெண்கள்</b> (SC/ST/PwD பிரிவினருக்கு <b>55% மதிப்பெண்கள்</b>)</td>
+<td>சேர்க்கை ஆண்டின் ஜூன் 30 அன்று <b>20 வயதுக்குள்</b> இருக்க வேண்டும் (SC/ST பிரிவினருக்கு 5 ஆண்டுகள் தளர்வு)</td>
+<td>அனைத்து 12-ஆம் வகுப்பு பாடப்பிரிவுகளும் தகுதி</td>
+</tr>
+<tr>
+<td><b>JIPMAT (IIM Bodh Gaya &amp; Jammu)</b></td>
+<td>10 மற்றும் 12-ஆம் வகுப்பில் <b>குறைந்தபட்சம் 60% மதிப்பெண்கள்</b> (SC/ST/PwD பிரிவினருக்கு <b>55% மதிப்பெண்கள்</b>)</td>
+<td>சேர்க்கை ஆண்டில் 12-ஆம் வகுப்பு முடித்த அல்லது முந்தைய 2 ஆண்டுகளில் முடித்த மாணவர்கள் தகுதி</td>
+<td>அனைத்து 12-ஆம் வகுப்பு பாடப்பிரிவுகளும் தகுதி</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="alert-box">
+<strong>💡 பொதுவான சந்தேகம்:</strong> 12-ஆம் வகுப்பில் வணிகவியலில் கணிதம் படிக்காதவர்கள் அல்லது அறிவியல் பாடத்தில் உயிரியல் மட்டும் படித்தவர்கள் விண்ணப்பிக்கலாமா?<br/>
+<b>விடை: தாராளமாக விண்ணப்பிக்கலாம்!</b> பள்ளிப் படிப்பில் கணிதம் ஒரு விருப்பப் பாடமாக இருக்க வேண்டும் என்ற எந்தக் கட்டாயமும் IIM விதிகளில் இல்லை. நுழைவுத்தேர்வில் கேட்கப்படும் கணிதத்தை பயிற்சி செய்து எழுதினால் போதுமானது.
+    </div>
+</div>
+<!-- SECTION 7: Comprehensive Syllabus -->
+<div class="card" id="section-syllabus">
+<div class="card-header">
+<h3 class="card-title">📚 7. முழுமையான தேர்வுப் பாடத்திட்டம் (IPMAT &amp; JIPMAT Syllabus Breakdown)</h3>
+<span class="badge badge-orange">பாடவாரியான விவரம்</span>
+</div>
+<p>
+      IPMAT மற்றும் JIPMAT தேர்வுகள் மாணவர்களின் தர்க்கவியல் சிந்தனை, முடிவெடுக்கும் வேகம் மற்றும் ஆங்கிலத் தொடர்பாடல் திறனை சோதிக்கும் வகையில் வடிவமைக்கப்பட்டுள்ளன:
+    </p>
+<div class="grid-2col">
+<div class="univ-card">
+<h4 style="color:var(--secondary);">1. கணிதத் திறன் (Quantitative Ability):</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7; color:#334155;">
+<li><b>அடிப்படை எண்கணிதம் (Arithmetic - 40% வினாக்கள்):</b> சதவீதங்கள் (Percentages), விகிதம் &amp; விகிதாச்சாரம் (Ratio &amp; Proportion), லாப-நட்டம் (Profit &amp; Loss), எளிய மற்றும் கூட்டு வட்டி (Simple &amp; Compound Interest), நேரம் மற்றும் வேலை (Time &amp; Work), வேகம்-தூரம் (Time, Speed &amp; Distance), சராசரி (Averages).</li>
+<li><b>எண் அமைப்பு (Number System):</b> காரணிகள், மீப்பெரு பொது வகுத்தி (HCF/LCM), வகுபடும் தன்மை.</li>
+<li><b>இயற்கணிதம் (Algebra):</b> சமன்பாடுகள், மடக்கை (Logarithms), அணிகள் (Matrices).</li>
+<li><b>நவீன கணிதம் (Modern Math):</b> வரிசைமாற்றம் &amp; சேர்வு (Permutation &amp; Combination), நிகழ்தகவு (Probability), கணங்கள் (Set Theory).</li>
+</ul>
+</div>
+<div class="univ-card">
+<h4 style="color:var(--primary);">2. ஆங்கில மொழித்திறன் (Verbal Ability):</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7; color:#334155;">
+<li><b>வாசித்துப் புரிதல் (Reading Comprehension):</b> பொருளாதாரம், தத்துவம், அறிவியல் மற்றும் வணிகம் சார்ந்த நவீன கட்டுரைகளைப் படித்து விடையளித்தல்.</li>
+<li><b>சொல்லகராதி (Vocabulary):</b> ஒத்த சொற்கள் (Synonyms), எதிர்ச்சொற்கள் (Antonyms), மரபுத்தொடர்கள் (Idioms &amp; Phrases), பொருத்தமான சொல்லை நிரப்புதல் (Fillers).</li>
+<li><b>இலக்கணம் &amp; வாக்கிய அமைப்பு:</b> வாக்கியப் பிழை திருத்தம் (Spotting Errors), வாக்கியங்களை வரிசைப்படுத்துதல் (Para Jumbles), வாக்கிய நிறைவு (Sentence Completion).</li>
+</ul>
+</div>
+<div class="univ-card">
+<h4 style="color:var(--accent-blue);">3. தர்க்கவியல் அறிவு (Logical Reasoning - Rohtak &amp; JIPMAT):</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7; color:#334155;">
+<li>இருக்கை அமைப்புகள் (Seating Arrangements), சுழல் புதிர்கள் (Circular &amp; Linear Puzzles).</li>
+<li>இரத்த உறவுகள் (Blood Relations), திசை உணர்வு (Direction Sense).</li>
+<li>குறியீட்டு முறைகள் (Coding-Decoding), எண் தொடர்கள் (Series Completion).</li>
+<li>தர்க்க நியாயங்கள் (Syllogisms), காரணம் மற்றும் விளைவு (Cause and Effect).</li>
+</ul>
+</div>
+<div class="univ-card">
+<h4 style="color:var(--accent-emerald);">4. தரவு பகுப்பாய்வு (Data Interpretation - JIPMAT):</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7; color:#334155;">
+<li>அட்டவணை விவரங்கள் (Tables) மற்றும் சதவீத மாற்றங்கள்.</li>
+<li>பட்டை வரைபடங்கள் (Bar Charts), வரி வரைபடங்கள் (Line Graphs).</li>
+<li>பை விளக்கப்படங்கள் (Pie Charts) மற்றும் ரேடார் வரைபடங்கள்.</li>
+<li>தகவல் போதுமான தன்மை (Data Sufficiency).</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- SECTION 8: Personal Interview Preparation -->
+<div class="card" id="section-interview">
+<div class="card-header">
+<h3 class="card-title">🎯 8. தனிநபர் நேர்காணல் (Personal Interview - PI) தயாரிப்பு உத்திகள்</h3>
+<span class="badge badge-gold">நேர்காணல் வழிகாட்டி</span>
+</div>
+<p>
+      IIM Indore மற்றும் IIM Rohtak தேர்வுகளில் இறுதி சேர்க்கையில் <b>35% முதல் 45% மதிப்பெண்கள் தனிநபர் நேர்காணலுக்கு</b> ஒதுக்கப்பட்டுள்ளன. அரசு மற்றும் அரசு உதவிபெறும் பள்ளி மாணவர்கள் இதில் தன்னம்பிக்கையுடன் சிறந்து விளங்க சில முக்கிய வழிகாட்டுதல்கள்:
+    </p>
+<div class="step-list">
+<div class="step-item">
+<div class="step-num">1</div>
+<div>
+<b>சுய அறிமுகம் &amp; தெளிவான நோக்கம் (Why IPM?):</b> "பொறியியல் அல்லது கலைப் படிப்பு படிக்காமல் 12-ஆம் வகுப்பிலேயே ஏன் மேலாண்மைத் துறையைத் தேர்வு செய்கிறீர்கள்?" என்ற கேள்விக்கு உங்கள் சொந்த ஆர்வம், தலைமைப் பண்பு அனுபவங்களை இணைத்து உண்மையாகப் பதிலளிக்க வேண்டும்.
+        </div>
+</div>
+<div class="step-item">
+<div class="step-num">2</div>
+<div>
+<b>நடப்பு நிகழ்வுகள் &amp; வர்த்தக விழிப்புணர்வு (Current Affairs):</b> தினசரி The Hindu அல்லது The Indian Express நாளிதழ்களை வாசித்து, இந்தியப் பொருளாதாரம், பட்ஜெட், ஸ்டார்ட்-அப்கள், பங்குச் சந்தை மற்றும் உலக வர்த்தக நிகழ்வுகளைக் கூர்ந்து கவனிக்க வேண்டும்.
+        </div>
+</div>
+<div class="step-item">
+<div class="step-num">3</div>
+<div>
+<b>11 மற்றும் 12-ஆம் வகுப்பு பாடங்களின் அடிப்படைகள்:</b> நீங்கள் பள்ளியில் படித்த முதன்மைப் பாடங்களில் (கணக்கியல், வணிகவியல், இயற்பியல் அல்லது கணிதம்) உள்ள அடிப்படைக் கருத்துக்களில் இருந்து கேள்விகள் கேட்கப்படும்.
+        </div>
+</div>
+<div class="step-item">
+<div class="step-num">4</div>
+<div>
+<b>உடனுக்குடன் பேசும் திறன் (Extempore Speaking):</b> IIM Indore நேர்காணலில் ஒரு பொதுவான தலைப்பு (எ.கா: "Social Media: Boon or Bane" அல்லது "Renewable Energy in India") தரப்பட்டு 1 நிமிடம் யோசித்து 2 நிமிடங்கள் பேசச் சொல்வார்கள். இதற்கு வீட்டில் தினமும் ஏதேனும் ஒரு தலைப்பில் பேசிப் பழக வேண்டும்.
+        </div>
+</div>
+</div>
+</div>
+<!-- SECTION 9: Roadmap for 9th-12th Students -->
+<div class="card" id="section-roadmap">
+<div class="card-header">
+<h3 class="card-title">🚀 9. பள்ளி மாணவர்களுக்கான படிப்படியான வழிகாட்டல் திட்டம் (9th-12th Roadmap)</h3>
+<span class="badge badge-orange">வெற்றிப் பாதை</span>
+</div>
+<div class="roadmap-grid">
+<div class="roadmap-card">
+<span class="roadmap-badge">9-ஆம் வகுப்பு</span>
+<h5 style="margin:0 0 6px 0; color:var(--primary);">ஆங்கில வாசிப்பு &amp; பொது அறிவு</h5>
+<ul style="margin:0; padding-left:16px; font-size:12.5px; color:#475569; line-height:1.6;">
+<li>தினசரி ஆங்கில நாளிதழ் வாசிப்புப் பழக்கம்.</li>
+<li>புதிய ஆங்கில வார்த்தைகளைக் குறித்து வைத்து சொல்லகராதியை (Vocabulary) பெருக்குதல்.</li>
+<li>பள்ளியில் விவாத மேடைகள், குழு செயல்பாடுகளில் பங்கேற்று பேச்சாற்றலை வளர்த்தல்.</li>
+</ul>
+</div>
+<div class="roadmap-card">
+<span class="roadmap-badge">10-ஆம் வகுப்பு</span>
+<h5 style="margin:0 0 6px 0; color:var(--primary);">கணித வேகம் &amp; நுண்ணறிவு</h5>
+<ul style="margin:0; padding-left:16px; font-size:12.5px; color:#475569; line-height:1.6;">
+<li>10-ஆம் வகுப்பு பொதுத்தேர்வில் சிறந்த மதிப்பெண்களைப் பெறுதல் (குறைந்தபட்சம் 60% அவசியம்).</li>
+<li>மனக்கணக்கு வேகம் (Mental Math), சதவீதங்கள், வாய்ப்பாடுகள் மற்றும் விகிதங்களை வலுப்படுத்துதல்.</li>
+<li>சுடோகு, சதுரங்கம் மற்றும் தர்க்கவியல் புதிர்களைத் தீர்க்கப் பழகுதல்.</li>
+</ul>
+</div>
+<div class="roadmap-card">
+<span class="roadmap-badge">11-ஆம் வகுப்பு</span>
+<h5 style="margin:0 0 6px 0; color:var(--primary);">பாடத்திட்டப் பயிற்சி &amp; தாள்கள்</h5>
+<ul style="margin:0; padding-left:16px; font-size:12.5px; color:#475569; line-height:1.6;">
+<li>IPMAT மற்றும் JIPMAT முந்தைய ஆண்டு வினாத்தாள்களைப் பதிவிறக்கம் செய்து பகுப்பாய்வு செய்தல்.</li>
+<li>எண்கணிதம் மற்றும் தர்க்கவியல் பகுதிகளை அத்தியாயம் வாரியாகத் தீர்த்துப் பழகுதல்.</li>
+<li>பொருளாதாரம் மற்றும் வர்த்தக உலகின் சமகால மாற்றங்களைத் தொடர்ந்து கவனித்தல்.</li>
+</ul>
+</div>
+<div class="roadmap-card">
+<span class="roadmap-badge">12-ஆம் வகுப்பு</span>
+<h5 style="margin:0 0 6px 0; color:var(--primary);">மாதிரித் தேர்வுகள் &amp; நேர்காணல்</h5>
+<ul style="margin:0; padding-left:16px; font-size:12.5px; color:#475569; line-height:1.6;">
+<li>பிப்ரவரி/மார்ச் மாதத்தில் IPMAT Indore, Rohtak மற்றும் JIPMAT தேர்வுகளுக்கு ஆன்லைனில் விண்ணப்பித்தல்.</li>
+<li>பொதுத்தேர்வுக்குப் பின் நேரக் கட்டுப்பாட்டுடன் கூடிய முழு நீள மாதிரித் தேர்வுகள் (Mock Tests) எழுதுதல்.</li>
+<li>மே/ஜூன் மாதங்களில் எழுத்துத் தேர்வெழுதி, நேர்காணலுக்குத் தயாராகுதல்.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- SECTION 10: Fees, 100% Collateral-Free Loans & Scholarships -->
+<div class="card" id="section-fees-loans">
+<div class="card-header">
+<h3 class="card-title">💰 10. கல்விக் கட்டணம், 100% பிணையமில்லா கல்விக் கடன்கள் &amp; உதவித்தொகைகள்</h3>
+<span class="badge badge-emerald">நிதி ஆதரவு வழிகாட்டி</span>
+</div>
+<p>
+      ஐ.ஐ.எம் நிறுவனங்களில் கட்டணம் அதிகம் என்ற எண்ணத்தால் ஏழை எளிய மற்றும் அரசுப் பள்ளி மாணவர்கள் தயங்க வேண்டிய அவசியமே இல்லை. சேர்க்கை பெறும் ஒவ்வொரு மாணவருக்கும் வங்கிகளும் அரசும் முழுமையான நிதி ஆதரவை வழங்குகின்றன:
+    </p>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>நிறுவனம்</th>
+<th>முதல் 3 ஆண்டுகள் (BBA பிரிவு)</th>
+<th>கடைசி 2 ஆண்டுகள் (MBA பிரிவு)</th>
+<th>நிதி உதவி &amp; சலுகைகள்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>IIM Indore</b></td>
+<td>ஆண்டுக்கு சுமார் ₹5.5 லட்சம் (விடுதி உட்பட)</td>
+<td>வழக்கமான IIM MBA கட்டணம் (சுமார் ₹10 லட்சம்/ஆண்டு)</td>
+<td>Need Based Financial Assistance (NBFA) மூலம் 100% வரை கட்டணத் தள்ளுபடி உண்டு.</td>
+</tr>
+<tr>
+<td><b>IIM Rohtak</b></td>
+<td>ஆண்டுக்கு சுமார் ₹5.2 லட்சம்</td>
+<td>வழக்கமான PGP கட்டணம்</td>
+<td>தகுதி மற்றும் வருமான அடிப்படையிலான உதவித்தொகைகள்.</td>
+</tr>
+<tr>
+<td><b>IIM Bodh Gaya &amp; Jammu</b></td>
+<td>ஆண்டுக்கு சுமார் ₹4.5 லட்சம் முதல் ₹5 லட்சம் வரை</td>
+<td>வழக்கமான MBA கட்டணம்</td>
+<td>மத்திய அரசு கல்வி உதவித்தொகைகள் மற்றும் குறைந்த வட்டிக் கடன்கள்.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="exec-box" style="margin-top:14px;">
+<h4 style="margin:0 0 8px 0; color:#fdba74; font-size:16px;">★ பாரத ஸ்டேட் வங்கியின் SBI Scholar Loan (100% பிணையமில்லா கடன்):</h4>
+<p style="margin:0; font-size:13.5px; line-height:1.7; color:#f1f5f9;">
+        நாட்டின் அனைத்து ஐ.ஐ.எம் நிறுவனங்களும் எஸ்பிஐ வங்கியின் உயர் கல்விப் பட்டியலில் (List-A) முதலிடத்தில் உள்ளன. இதன் மூலம் சேர்க்கை கடிதம் (Admission Letter) பெற்ற எந்தவொரு மாணவனுக்கும்:<br/>
+        • <b>எந்தவித சொத்து அடமானமும் இன்றி (No Collateral Security)</b><br/>
+        • <b>எந்தவித மூன்றாம் நபர் உத்தரவாதமும் இன்றி (No Third-Party Guarantor)</b><br/>
+        • <b>₹40 லட்சம் வரை முழுக் கல்விக் கடன் (கல்விக் கட்டணம், விடுதி, உணவு, லேப்டாப் உட்பட)</b> உடனடியாக ஒப்புதல் அளிக்கப்படுகிறது!<br/>
+        • <b>படித்து முடித்து சிறந்த நிறுவனத்தில் வேலைக்குச் சேர்ந்த ஒரு வருடத்திற்குப் பிறகே</b> இக்கடனைத் தவணை முறையில் திருப்பிச் செலுத்தத் தொடங்க வேண்டும்!
+      </p>
+</div>
+<div class="adv-box" style="margin-top:14px;">
+<strong style="color:var(--accent-emerald);">🌟 மத்திய அரசு இடஒதுக்கீடு &amp; உதவித்தொகைகள்:</strong>
+<p style="margin:6px 0 0 0; font-size:13px; line-height:1.7;">
+        அனைத்து ஐ.ஐ.எம்-களிலும் மத்திய அரசின் இடஒதுக்கீட்டுக் கொள்கை முழுமையாகப் பின்பற்றப்படுகிறது: <b>OBC-NCL 27%, SC 15%, ST 7.5%, EWS 10%, PwD 5%</b>. மேலும் மத்திய அரசின் <b>Top Class Education Scheme for SC/ST Students</b> திட்டத்தின் கீழ் சேர்க்கை பெறும் மாணவர்களின் கல்விக் கட்டணத்தை மத்திய அரசே முழுமையாக ஏற்கிறது.
+      </p>
+</div>
+</div>
+<!-- SECTION 11: Corporate Placements & Careers -->
+<div class="card" id="section-placements">
+<div class="card-header">
+<h3 class="card-title">📈 11. பன்னாட்டு வேலைவாய்ப்புகள் &amp; ஊதிய நிலவரம் (Placements &amp; Career Tracks)</h3>
+<span class="badge badge-orange">உச்சபட்ச ஊதியம்</span>
+</div>
+<p>
+      IPM முடிக்கும் பட்டதாரிகள் வழக்கமான பட்டதாரிகளோடு போட்டியிடாமல், 22-23 வயதிலேயே இந்தியாவின் முன்னணி மேலாண்மை அதிகாரிகளாக (Management Executives) கார்ப்பரேட் உலகில் அடியெடுத்து வைக்கின்றனர்:
+    </p>
+<div class="grid-2col">
+<div class="univ-card">
+<h4 style="color:var(--primary);">💼 முன்னணி வேலைவாய்ப்புத் துறைகள் (Domains):</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7; color:#334155;">
+<li><b>முதலீட்டு வங்கிகள் (Investment Banking):</b> Goldman Sachs, J.P. Morgan, Morgan Stanley, Barclays, Deutsche Bank.</li>
+<li><b>மேலாண்மை ஆலோசனை (Management Consulting):</b> McKinsey &amp; Company, Boston Consulting Group (BCG), Bain &amp; Company, Deloitte, PwC, EY.</li>
+<li><b>தொழில்நுட்ப தயாரிப்பு மேலாண்மை (Product Management):</b> Google, Microsoft, Amazon, Apple, Salesforce.</li>
+<li><b>விற்பனை &amp; சந்தைப்படுத்தல் (Sales &amp; Marketing):</b> Hindustan Unilever (HUL), P&amp;G, ITC, Nestlé, Johnson &amp; Johnson, Tata Group.</li>
+</ul>
+</div>
+<div class="univ-card">
+<h4 style="color:var(--secondary);">💰 வளாக வேலைவாய்ப்பு ஊதிய விவரங்கள் (Campus Placements):</h4>
+<ul style="margin:0; padding-left:18px; font-size:13px; line-height:1.7; color:#334155;">
+<li><b>சராசரி ஆண்டு ஊதியம் (Average CTC):</b> ஆண்டுக்கு <b>₹25.68 லட்சம் முதல் ₹30.21 லட்சம் வரை!</b></li>
+<li><b>மத்திய ஊதியம் (Median CTC):</b> ஆண்டுக்கு ₹24.50 லட்சம்.</li>
+<li><b>உள்நாட்டு உச்சபட்ச ஊதியம் (Highest Domestic CTC):</b> ஆண்டுக்கு <b>₹70 லட்சத்திற்கும் மேல்!</b></li>
+<li><b>சர்வதேச வேலைவாய்ப்பு (International Package):</b> ஆண்டுக்கு <b>₹1.14 கோடி வரை!</b></li>
+<li><b>100% வேலைவாய்ப்பு உத்தரவாதம்:</b> பயிலும் அனைத்து மாணவர்களுக்கும் உலகளாவிய நிறுவனங்களில் வளாக வேலைவாய்ப்பு உறுதி செய்யப்படுகிறது.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- SECTION 12: Official Portals & Schedule -->
+<div class="card" id="section-portals">
+<div class="card-header">
+<h3 class="card-title">🌐 12. அதிகாரப்பூர்வ இணையதளங்கள் &amp; ஆண்டுக் கால அட்டவணை</h3>
+<span class="badge badge-slate">அதிகாரப்பூர்வ இணைப்புகள்</span>
+</div>
+<div class="table-responsive">
+<table>
+<thead>
+<tr>
+<th>நுழைவுத்தேர்வு / நிறுவனம்</th>
+<th>அதிகாரப்பூர்வ இணையதளம்</th>
+<th>விண்ணப்பப் பதிவு காலம்</th>
+<th>தேர்வு நடைபெறும் மாதம்</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>IPMAT Indore (IIM Indore &amp; Ranchi)</b></td>
+<td><a class="portal-btn" href="https://www.iimidr.ac.in/" rel="noopener noreferrer" target="_blank">iimidr.ac.in</a></td>
+<td>பிப்ரவரி முதல் ஏப்ரல் வரை</td>
+<td><b>மே மாதம்</b></td>
+</tr>
+<tr>
+<td><b>IPMAT Rohtak (IIM Rohtak)</b></td>
+<td><a class="portal-btn" href="https://www.iimrohtak.ac.in/" rel="noopener noreferrer" target="_blank">iimrohtak.ac.in</a></td>
+<td>பிப்ரவரி முதல் ஏப்ரல் வரை</td>
+<td><b>மே மாதம்</b></td>
+</tr>
+<tr>
+<td><b>JIPMAT (NTA - IIM Bodh Gaya &amp; Jammu)</b></td>
+<td><a class="portal-btn" href="https://jipmat.nta.ac.in/" rel="noopener noreferrer" target="_blank">jipmat.nta.ac.in</a></td>
+<td>மார்ச் முதல் ஏப்ரல் வரை</td>
+<td><b>ஜூன் மாதம் முதல் வாரம்</b></td>
+</tr>
+<tr>
+<td><b>IIFT (Integrated MBA in IB)</b></td>
+<td><a class="portal-btn" href="https://www.iift.ac.in/" rel="noopener noreferrer" target="_blank">iift.ac.in</a></td>
+<td>மார்ச் - ஏப்ரல் (IPMAT Indore வழி)</td>
+<td>நேரடித் தேர்வு இல்லை</td>
+</tr>
+<tr>
+<td><b>IIM Bodh Gaya</b></td>
+<td><a class="portal-btn" href="https://iimbg.ac.in/" rel="noopener noreferrer" target="_blank">iimbg.ac.in</a></td>
+<td colspan="2">JIPMAT முடிவுகளுக்குப் பின் சேர்க்கை போர்ட்டல்</td>
+</tr>
+<tr>
+<td><b>IIM Jammu</b></td>
+<td><a class="portal-btn" href="https://www.iimj.ac.in/" rel="noopener noreferrer" target="_blank">iimj.ac.in</a></td>
+<td colspan="2">JIPMAT முடிவுகளுக்குப் பின் சேர்க்கை போர்ட்டல்</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- SECTION 13: Frequently Asked Questions (FAQs) -->
+<div class="card" id="section-faqs">
+<div class="card-header">
+<h3 class="card-title">❓ 13. அடிக்கடி கேட்கப்படும் வினா-விடைகள் (FAQs for Teachers &amp; Students)</h3>
+<span class="badge badge-gold">சந்தேகங்களும் விளக்கங்களும்</span>
+</div>
+<div class="faq-item">
+<div class="faq-question">1. நான் வணிகவியல் (Commerce) அல்லது கலை (Arts) குரூப்; என்னால் கணிதப் பிரிவில் வெற்றி பெற முடியுமா?</div>
+<div class="faq-answer">
+        கண்டிப்பாக முடியும்! IPMAT மற்றும் JIPMAT தேர்வுகளில் கேட்கப்படும் கணித வினாக்களில் 70%-க்கும் அதிகமானவை 10-ஆம் வகுப்பு வரையிலான அடிப்படை எண்கணிதக் கருத்துக்களே (சதவீதங்கள், விகிதங்கள், லாப-நட்டம், சராசரி போன்றவை). வணிகவியல் மற்றும் கலைப் பிரிவு மாணவர்கள் தொடர் மாதிரித் தேர்வுகள் மூலம் இந்த எண்கணிதப் பகுதியிலும், தங்களின் பலமான ஆங்கில மொழித்திறனிலும் அதிக மதிப்பெண்கள் பெற்று எளிதில் வெற்றி பெற்று வருகின்றனர்.
+      </div>
+</div>
+<div class="faq-item">
+<div class="faq-question">2. 3 ஆண்டுகள் BBA முடித்த பிறகு IIM-ல் இருந்து வெளியேற முடியுமா? (Exit Option உண்டா?)</div>
+<div class="faq-answer">
+        ஆம்! புதிய தேசியக் கல்விக் கொள்கையின்படி (NEP 2020), IIM Indore, Bodh Gaya, Jammu உள்ளிட்ட நிறுவனங்கள் 3 ஆண்டுகள் வெற்றிகரமாக முடிக்கும் மாணவர்களுக்கு BBA பட்டத்தை வழங்குகின்றன. ஒரு மாணவர் விரும்பினால் BBA பட்டத்துடன் வெளியேறி கார்ப்பரேட் வேலைக்கோ அல்லது வெளிநாட்டு உயர்கல்விக்கோ செல்லலாம். விரும்பும் மாணவர்கள் CAT தேர்வின்றி நேரடியாக MBA படிப்பைத் தொடரலாம்.
+      </div>
+</div>
+<div class="faq-item">
+<div class="faq-question">3. கல்லூரிப் படிப்பு முடித்து CAT எழுதுவதற்கும், 12-ஆம் வகுப்பிலேயே IPM நுழைவுத்தேர்வு எழுதுவதற்கும் என்ன வேறுபாடு?</div>
+<div class="faq-answer">
+        கல்லூரி முடித்து எழுதும் CAT தேர்வில் ஆண்டுதோறும் 3 லட்சத்திற்கும் மேற்பட்ட பட்டதாரிகள், பொறியாளர்கள் மற்றும் பல வருட அனுபவம் வாய்ந்தவர்கள் மோதுகிறார்கள்; போட்டி மிகக் கடுமையாக இருக்கும். ஆனால் IPMAT / JIPMAT தேர்வுகளில் 12-ஆம் வகுப்பு பள்ளி மாணவர்கள் மட்டுமே போட்டியிடுகிறார்கள். இதனால் 12-ஆம் வகுப்பிலேயே ஐ.ஐ.எம் இருக்கையை மிக எளிதாக உறுதி செய்துவிடலாம்!
+      </div>
+</div>
+<div class="faq-item">
+<div class="faq-question">4. ஐ.ஐ.எம் கட்டணம் அதிகம் என்பதால் ஏழை மற்றும் கிராமப்புற அரசுப் பள்ளி மாணவர்கள் விண்ணப்பிக்கலாமா?</div>
+<div class="faq-answer">
+        தாராளமாக விண்ணப்பிக்க வேண்டும்! IIM-ல் இடம் கிடைக்கும் எந்தவொரு மாணவருக்கும் பாரத ஸ்டேட் வங்கி (SBI Scholar Loan) உள்ளிட்ட அரசு வங்கிகள் எவ்வித சொத்து அடமானமும் இன்றி 100% முழுக் கல்விக் கடனை (₹40 லட்சம் வரை) வழங்குகின்றன. மேலும் எளிய குடும்பத்து மாணவர்களுக்கு IIM-களே கல்விக் கட்டணத் தள்ளுபடி (NBFA) வழங்குகின்றன. படித்து முடித்தவுடன் ஆண்டுக்கு ₹25-30 லட்சம் ஊதியத்தில் வேலை கிடைப்பதால் கடனை சுலபமாகத் திருப்பிச் செலுத்திவிடலாம்.
+      </div>
+</div>
+<div class="faq-item">
+<div class="faq-question">5. IPMAT மற்றும் JIPMAT இரண்டையும் ஒரே நேரத்தில் எழுதலாமா?</div>
+<div class="faq-answer">
+        ஆம், எழுதலாம்! IPMAT Indore, IPMAT Rohtak மற்றும் JIPMAT ஆகிய மூன்று தேர்வுகளும் வெவ்வேறு தேதிகளில் நடைபெறும். மூன்றிற்கும் ஒரே விதமான கணிதம், ஆங்கிலம் மற்றும் தர்க்கவியல் பாடத்திட்டமே உள்ளதால், ஒரே தயாரிப்பில் இந்த மூன்று தேர்வுகளையும் எழுதி ஏதேனும் ஒரு ஐ.ஐ.எம்-ல் இடம்பிடிக்கலாம்.
+      </div>
+</div>
+</div>
+<!-- Closing Motivation Card -->
+<div class="closing-card">
+<h4>💼 "மேலாண்மை என்பது வெறும் நிர்வாகம் அல்ல; அது மனித வளத்தையும் சமூகத்தையும் வழிநடத்தும் ஆற்றல்!"</h4>
+<p>
+      இந்தியாவின் வணிக மற்றும் பொருளாதார வளர்ச்சியை வழிநடத்தும் தலைமை நிர்வாகிகளாக (CEOs &amp; Directors) நமது அரசு மற்றும் அரசு உதவிபெறும் பள்ளி மாணவர்கள் உருவெடுக்க வேண்டும்.<br/>
+      சிவகங்கை மாவட்ட பள்ளி மாணவர்கள் தேசிய மேலாண்மைக் கல்வி நிறுவனங்களான ஐ.ஐ.எம்-களில் (IIMs) தடம் பதித்து, பன்னாட்டு நிறுவனங்களின் முதன்மை வழிகாட்டிகளாகவும் சாதனையாளர்களாகவும் மிளிர முதன்மைக் கல்வி அலுவலகம் தனது உளமார்ந்த வாழ்த்துகளைத் தெரிவித்துக் கொள்கிறது!
+    </p>
+<div style="margin-top:14px; font-weight:700; color:var(--secondary); font-size:14px;">
+      முதன்மைக் கல்வி அலுவலர் அலுவலகம், சிவகங்கை மாவட்டம்.
+    </div>
+</div>
+<!-- Bottom Print Trigger Button (Dedicated Print Button at the Bottom as strictly instructed) -->
+<!-- Footer Section -->
+<!-- Back to Top Floating Button -->
+<!-- ==================================================== -->
+<!-- மேலாண்மை திருக்குறள் வழிகாட்டல் (Thirukkural for Management & Leadership) -->
+<!-- ==================================================== -->
+<!-- ==================================================== -->
+<!-- தட்டச்சு அனிமேஷன் அட்டை (Creator Single-Line Typewriter Card) -->
+<!-- ==================================================== -->
 <div class="traditional-kural-card no-print">
+<div class="kural-top-row">
+<div class="kural-chip-wrap">
+<span class="kural-feather-icon">🪶</span>
+<span class="kural-chip-text">திருக்குறள் • அதிகாரம் 52: தெரிந்து வினையாடல் (குறள்: 517)</span>
+</div>
+<span class="kural-topic-badge">💼 தலைமைத்துவ ஆளுகை</span>
+</div>
+<div class="kural-couplet-lines">
 <p class="kural-first-line">“இதனை இதனால் இவன்முடிக்கும் என்றுஆய்ந்து</p>
 <p class="kural-second-line">அதனை அவன்கண் விடல்.”</p>
-<p style="font-size: 0.88rem; color: #fef08a; margin-top: 6px;">💡 குறள் விளக்கம்: இந்தச் செயலை இந்தக் காரணத்தால் இவன் சிறப்பாக முடிப்பான் என்பதைத் தீர ஆராய்ந்து, அச்செயலை அவனிடம் ஒப்படைப்பதே மிகச் சிறந்த தலைமைத்துவ நிர்வாக நெறியாகும்.</p>
 </div>
-
-<div class="portal-bottom-nav no-print" style="margin: 30px auto 20px auto; padding: 18px; background: #ffffff; border-radius: 14px; border: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-<div>
-<a class="portal-nav-btn prev-btn" href="06_design_architecture_nata_nift.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1;">
+<div class="kural-meaning-row">
+<span class="kural-meaning-label">💡 குறள் விளக்கம்:</span>
+<span class="kural-meaning-text">இந்தச் செயலை இந்தக் காரணத்தால் இவன் சிறப்பாக முடிப்பான் என்பதைத் தீர ஆராய்ந்து, அச்செயலை அவனிடம் ஒப்படைப்பதே மிகச் சிறந்த தலைமைத்துவ நிர்வாக நெறியாகும்.</span>
+</div>
+</div><div class="creator-card">
+<div id="creatorTypewriterWrap" style="display: inline-flex; align-items: center; justify-content: center; flex-wrap: wrap; line-height: 1.8;">
+<span id="creatorTypewriterTarget"></span>
+<span class="typing-cursor" id="creatorCursor">|</span>
+</div>
+</div>
+<!-- ==================================================== -->
+<!-- அதிகாரப்பூர்வ அடிக்குறிப்பு (Official Footer Credit) -->
+<!-- ==================================================== -->
+<div class="portal-bottom-nav no-print" style="margin: 40px auto 25px auto; padding: 20px; background: #ffffff; border-radius: 14px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+<div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+<a class="portal-nav-btn prev-btn" href="06_design_architecture_nata_nift.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1; box-shadow:0 2px 4px rgba(0,0,0,0.04);">
 <span>← முந்தைய பிரிவு: 06 (வடிவமைப்பு &amp; கட்டிடக்கலை (NATA/NIFT))</span>
 </a>
 </div>
 <div>
-<a class="portal-nav-btn home-btn" href="00_entrance_exams.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#1e1b4b; color:#ffffff; text-decoration:none; font-weight:700; font-size:14px;">
+<a class="portal-nav-btn home-btn" href="00_entrance_exams.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#1e1b4b; color:#ffffff; text-decoration:none; font-weight:700; font-size:14px; box-shadow:0 3px 8px rgba(30,27,75,0.25);">
 <span>🏠 நுழைவுத்தேர்வுகள் முதன்மை மெனு</span>
 </a>
 </div>
-<div>
-<a class="portal-nav-btn next-btn" href="08_hotel_management_nchmct.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1;">
-<span>அடுத்த பிரிவு: 08 (உணவக மேலாண்மை (NCHMCT)) →</span>
+<div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+<a class="portal-nav-btn next-btn" href="08_hotel_management_nchmct.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1; box-shadow:0 2px 4px rgba(0,0,0,0.04);">
+<span>அடுத்த பிரிவு: 08 (உணவக மேலாண்மை (NCHMCT JEE)) →</span>
 </a>
 </div>
-</div>
-
-<footer class="portal-footer no-print">
-<p style="margin-bottom: 6px; font-weight: 700; color: #1e293b; font-size: 0.95rem;">
-தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, 
-<a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 800;">☎️ 04575240408</a>
+</div><footer class="portal-footer no-print">
+<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
+      தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #ea580c; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
 </p>
 <p style="font-size: 0.85rem; color: #64748b; margin-top: 6px;">
-© Chief Educational Office, Sivagangai. All Rights Reserved. மாணவ வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே வெளியிடப்பட்டது.
-</p>
+      © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+    </p>
 </footer>
-
+<!-- மிதக்கும் மேலே செல்லும் பட்டன் (Floating Back to Top) -->
+<button class="back-to-top no-print" onclick="window.scrollTo({top:0, behavior:'smooth'});" title="மேலே செல்ல" type="button">
+    ▲ மேலே செல்க
+  </button>
 </div>
-</body>
+<script>
+  // ==========================================
+  // Creator Single-Line Typewriter Animation (Matching Medical & Master Portal)
+  // ==========================================
+  const creatorSegments = [
+    { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
+    { text: "கூ. பூவலிங்கம்", tag: "span", class: "creator-name-ta" },
+    { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
+    { text: "K. Poovalingam", tag: "span", class: "creator-name-en" },
+    { text: ", Deputy Inspector of Schools  ", tag: "span", class: "creator-role" },
+    { text: "📱 9626471035", tag: "a", class: "creator-phone-badge", href: "tel:9626471035" }
+  ];
+
+  const creatorContainer = document.getElementById('creatorTypewriterTarget');
+  const creatorCursor = document.getElementById('creatorCursor');
+
+  let creatorSegIdx = 0;
+  let creatorCharIdx = 0;
+  let creatorCurrentElem = null;
+  let creatorHasStarted = false;
+
+  function typeCreatorDetails() {
+    if (!creatorContainer || creatorHasStarted) return;
+    creatorHasStarted = true;
+
+    function step() {
+      if (creatorSegIdx >= creatorSegments.length) {
+        if (creatorCursor) {
+          creatorCursor.style.animation = 'none';
+          creatorCursor.style.opacity = '0';
+          setTimeout(() => creatorCursor.remove(), 400);
+        }
+        return;
+      }
+
+      const seg = creatorSegments[creatorSegIdx];
+
+      if (creatorCharIdx === 0) {
+        creatorCurrentElem = document.createElement(seg.tag);
+        if (seg.class) creatorCurrentElem.className = seg.class;
+        if (seg.href) {
+          creatorCurrentElem.href = seg.href;
+          creatorCurrentElem.target = '_blank';
+          creatorCurrentElem.rel = 'noopener noreferrer';
+        }
+        creatorContainer.appendChild(creatorCurrentElem);
+      }
+
+      creatorCurrentElem.textContent += seg.text.charAt(creatorCharIdx);
+      creatorCharIdx++;
+
+      if (creatorCharIdx < seg.text.length) {
+        setTimeout(step, 24);
+      } else {
+        creatorSegIdx++;
+        creatorCharIdx = 0;
+        setTimeout(step, 80);
+      }
+    }
+
+    step();
+  }
+
+  // Back to Top button show/hide
+  window.addEventListener('scroll', function() {
+    const btn = document.querySelector('.back-to-top');
+    if (btn) {
+      if (window.scrollY > 300) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(typeCreatorDetails, 400);
+  });
+</script></body>
 </html>
