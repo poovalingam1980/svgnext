@@ -7,7 +7,7 @@
 <!-- Google Fonts: Inter & Noto Sans Tamil -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&amp;family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <style>
     :root {
       --primary-color: #1a56db;
@@ -43,7 +43,6 @@
       overflow-x: hidden;
     }
 
-    /* Royal Imperial Slate & 24K Gold Ambient Mesh */
     body {
       font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: 
@@ -528,7 +527,7 @@
       transform: scale(1.1);
     }
 
-    /* 6 Macro Portal Cards - Ultra-Modern Responsive Fluid Grid */
+    /* 6 Macro Portal Cards */
     .grid-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -875,353 +874,11 @@
     .card:hover .btn-link svg {
       transform: translateX(5px);
     }
-
-    /* Compact Centered Thirukkural Box */
-    .kural-box {
-      background: linear-gradient(135deg, #fefce8 0%, #fffbeb 50%, #fef3c7 100%);
-      border: 1px solid #fde047;
-      border-left: 5px solid #d97706;
-      border-radius: var(--radius-md);
-      padding: 14px 20px;
-      margin-top: 24px;
-      margin-bottom: 24px;
-      text-align: center;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
-      width: 100%;
-    }
-
-    .kural-header {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #b45309;
-      letter-spacing: 0.4px;
-      margin-bottom: 8px;
-      background: rgba(254, 240, 138, 0.75);
-      padding: 3px 14px;
-      border-radius: 999px;
-      border: 1px solid #fde68a;
-    }
-
-    .kural-text-animated {
-      font-size: 1.18rem;
-      font-weight: 800;
-      line-height: 1.6;
-      margin-bottom: 6px;
-      letter-spacing: 0.25px;
-      display: inline-block;
-      background: linear-gradient(90deg, #78350f 0%, #b45309 25%, #d97706 50%, #b45309 75%, #78350f 100%);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: kuralVerseShimmer 4s ease-in-out infinite alternate;
-    }
-
-    @keyframes kuralVerseShimmer {
-      0% {
-        background-position: 0% 50%;
-        filter: drop-shadow(0 0 1px rgba(217, 119, 6, 0.2));
-        transform: scale(1);
-      }
-      50% {
-        filter: drop-shadow(0 0 6px rgba(217, 119, 6, 0.4));
-        transform: scale(1.015);
-      }
-      100% {
-        background-position: 100% 50%;
-        filter: drop-shadow(0 0 1px rgba(217, 119, 6, 0.2));
-        transform: scale(1);
-      }
-    }
-
-    .kural-meaning {
-      font-size: 0.88rem;
-      color: #92400e;
-      line-height: 1.55;
-    }
-
-    /* Feedback Section */
-    .feedback-section {
-      width: 100%;
-      margin: 24px 0;
-      background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 35%, #faf5ff 70%, #fff7ed 100%);
-      border-radius: 16px;
-      padding: 22px 26px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-      position: relative;
-      overflow: hidden;
-      border: 1px solid #e0e7ff;
-      box-sizing: border-box;
-    }
-
-    .animated-top-bar {
-      position: absolute;
-      top: 0; left: 0; right: 0; height: 6px;
-      background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899, #f59e0b, #10b981, #06b6d4, #2563eb);
-      background-size: 300% 300%;
-      animation: gradientShift 4s ease infinite;
-    }
-
-    .sparkle-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: linear-gradient(135deg, #eff6ff 0%, #f3e8ff 100%);
-      color: #6d28d9;
-      padding: 5px 14px;
-      border-radius: 999px;
-      font-size: 0.84rem;
-      font-weight: 800;
-      border: 1.5px solid #c4b5fd;
-      cursor: pointer;
-      animation: sparklePulse 3s infinite ease-in-out;
-    }
-
-    .sparkle-icon {
-      display: inline-block;
-      animation: rotateSparkle 4s linear infinite;
-    }
-
-    @keyframes sparklePulse {
-      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.4); }
-      50% { transform: scale(1.05); box-shadow: 0 0 18px 4px rgba(236, 72, 153, 0.45); }
-      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(124, 58, 237, 0); }
-    }
-
-    @keyframes rotateSparkle {
-      0% { transform: rotate(0deg) scale(1); }
-      50% { transform: rotate(180deg) scale(1.2); }
-      100% { transform: rotate(360deg) scale(1); }
-    }
-
-    #fb_submitBtn {
-      animation: btnBlingGlow 2.5s infinite ease-in-out;
-      transition: all 0.25s ease;
-    }
-
-    #fb_submitBtn:hover {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 8px 28px rgba(236, 72, 153, 0.7) !important;
-    }
-
-    @keyframes btnBlingGlow {
-      0% { box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35); }
-      50% { box-shadow: 0 6px 25px rgba(236, 72, 153, 0.6), 0 0 15px rgba(37, 99, 235, 0.45); }
-      100% { box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35); }
-    }
-
-    /* All-in-One Cut-off Calculator Modal */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(2, 44, 34, 0.82);
-      backdrop-filter: blur(8px);
-      z-index: 1000;
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-    }
-
-    .modal-content {
-      background: #ffffff;
-      border-radius: var(--radius-lg);
-      max-width: 580px;
-      width: 100%;
-      padding: 24px 26px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-      border: 1.5px solid var(--border-color);
-      position: relative;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      background: #f1f5f9;
-      border: none;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      font-size: 16px;
-      font-weight: 700;
-      color: #64748b;
-      cursor: pointer;
-    }
-
-    .modal-close:hover { background: #e2e8f0; color: #0f172a; }
-
-    .calc-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 16px;
-    }
-
-    .calc-tab-btn {
-      background: #f1f5f9;
-      border: 1px solid #cbd5e1;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: #334155;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .calc-tab-btn.active {
-      background: #1e3a8a;
-      color: #ffffff;
-      border-color: #1e3a8a;
-      box-shadow: 0 2px 6px rgba(30, 58, 138, 0.3);
-    }
-
-    /* Creator Profile Card */
-    .creator-card {
-      background: rgba(255, 255, 255, 0.96);
-      border: 1.5px solid rgba(255, 255, 255, 0.9);
-      border-radius: var(--radius-md);
-      padding: 14px 22px;
-      margin: 28px 0 16px 0;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      text-align: center;
-      flex-wrap: wrap;
-      backdrop-filter: blur(14px);
-    }
-
-    .creator-name-ta, .creator-name-en {
-      font-weight: 800;
-      font-size: 1.05rem;
-      background: linear-gradient(135deg, #1e40af 0%, #7c3aed 50%, #db2777 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
-      letter-spacing: 0.3px;
-      padding: 0 2px;
-    }
-
-    .creator-label {
-      font-weight: 700;
-      color: #334155;
-      font-size: 0.94rem;
-    }
-
-    .creator-role {
-      font-weight: 600;
-      color: #1e293b;
-      font-size: 0.94rem;
-    }
-
-    .creator-phone-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
-      color: #065f46;
-      font-weight: 800;
-      font-size: 0.92rem;
-      padding: 3px 12px;
-      border-radius: 999px;
-      border: 1px solid #6ee7b7;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      box-shadow: 0 2px 5px rgba(5, 150, 105, 0.12);
-      margin-left: 6px;
-    }
-
-    .creator-phone-badge:hover {
-      background: #059669;
-      color: #ffffff;
-      box-shadow: 0 4px 10px rgba(5, 150, 105, 0.3);
-      transform: translateY(-1px);
-    }
-
-    /* Footer Section */
-    .portal-footer {
-      background: rgba(255, 255, 255, 0.96);
-      border-radius: var(--radius-md);
-      text-align: center;
-      padding: 24px 16px 20px;
-      font-size: 0.9rem;
-      border: 1.5px solid rgba(255, 255, 255, 0.9);
-      margin-top: 16px;
-      color: #475569;
-      line-height: 1.7;
-      width: 100%;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
-      backdrop-filter: blur(14px);
-    }
-
-    .portal-footer a {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    .portal-footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Mobile Responsive Breakpoints */
-    @media (max-width: 1100px) {
-      .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-      .metrics-bar {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-      }
-    }
-
-    @media (max-width: 960px) {
-      #guidanceFeedbackForm {
-        grid-template-columns: 1fr 1fr !important;
-      }
-      .fb-field-name, .fb-field-place, .fb-field-phone, .fb-field-email {
-        grid-column: span 1 !important;
-      }
-      .fb-field-file, .fb-field-link, .fb-field-msg, .fb-field-submit {
-        grid-column: span 2 !important;
-      }
-    }
-
-    @media (max-width: 768px) {
-      body { padding: 8px 10px; }
-      .top-bar { flex-direction: column; align-items: stretch; gap: 8px; margin-bottom: 12px; }
-      .top-nav-left { flex-direction: column; width: 100%; gap: 8px; }
-      .home-btn { width: 100%; justify-content: center; padding: 10px 16px; }
-      .quick-tools-nav { width: 100%; }
-      .quick-tool-btn { width: 100%; justify-content: center; }
-      .district-badge { width: 100%; justify-content: center; text-align: center; }
-      .metrics-bar { grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 16px; }
-      .grid-container { grid-template-columns: 1fr; gap: 16px; }
-    }
-
-    @media (max-width: 480px) {
-      body { padding: 6px 8px; }
-      .metrics-bar { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-      #guidanceFeedbackForm { grid-template-columns: 1fr !important; }
-      .fb-field-name, .fb-field-place, .fb-field-phone, .fb-field-email, 
-      .fb-field-file, .fb-field-link, .fb-field-msg, .fb-field-submit {
-        grid-column: span 1 !important;
-      }
-    }
 </style>
 </head>
 <body>
 <div class="container">
-<!-- முகப்புப் பொத்தான், விரைவுக் கருவிகள் & மாவட்ட அடையாளம் -->
+<!-- Top Bar with relative Home link -->
 <div class="top-bar">
 <div class="top-nav-left">
 <a class="home-btn" href="index.html" title="முகப்பு பக்கம்">
@@ -1235,7 +892,8 @@
 </div>
 </div>
 </div>
-<!-- தலைப்பு பேனர் இமேஜ் பகுதி -->
+
+<!-- Header Banner -->
 <header class="header-banner-wrap">
 <div class="header-banner-inner">
 <div class="banner-fallback" id="headerTitleBanner">
@@ -1247,7 +905,8 @@
 </div>
 </div>
 </header>
-<!-- முக்கிய வழிகாட்டல் புள்ளிவிவரங்கள் -->
+
+<!-- Metrics Bar -->
 <div class="metrics-bar">
 <div class="metric-card">
 <div class="metric-icon" style="background: rgba(30, 58, 138, 0.6); color: #93c5fd; border: 1.5px solid #d4af37;">🎯</div>
@@ -1278,7 +937,8 @@
 </div>
 </div>
 </div>
-<!-- வழிகாட்டுதல் தலைப்பு & 3D Flip விரைவு இலக்கு வழிகாட்டி -->
+
+<!-- Control Panel -->
 <div class="control-panel">
 <div class="lead-text-wrap">
 <div class="typing-container">
@@ -1288,7 +948,8 @@
 <h2 class="lead-title">12-ஆம் வகுப்பிற்குப் பிந்தைய உயர்கல்வி, வேலைவாய்ப்புகள் &amp; வழிகாட்டல் போர்டல்</h2>
 <p class="lead-subtitle">பள்ளிப் படிப்பை முடிக்கும் மாணவ, மாணவியர் தங்களுக்குப் பொருத்தமான உயர் கல்வி மற்றும் சிறந்த தொழில்முறை எதிர்காலத்தைத் தேர்ந்தெடுக்க உதவும் 6 முதன்மை வழிகாட்டி வாயில்கள்.</p>
 </div>
-<!-- விரைவான 3D Flip அனிமேஷன் இலக்கு வழிகாட்டி -->
+
+<!-- 3D Flip Ribbon -->
 <div class="compass-flip-strip">
 <button class="btn-flip-nav" onclick="prevFlipGateway(event)" title="முந்தைய வழிகாட்டல் செய்தி" type="button">◀</button>
 <div class="compass-flip-viewport" id="compassFlipViewport" onclick="triggerCurrentGateway()" title="இவ்வாயிலைக் காண கிளிக் செய்யவும்">
@@ -1302,171 +963,171 @@
 </div>
 </div>
 
-<!-- ==================================================== -->
-<!-- 6 பிரதான போர்டல் கார்டுகள் -->
-<!-- ==================================================== -->
+<!-- 6 Macro Portal Cards -->
 <div class="grid-container" id="cardsGrid">
-<!-- 1. நுழைவுத் தேர்வுகள் வாயிலாக உயர்கல்வி (00_entrance_exams.html மற்றும் அனைத்து துணைப் பக்க இணைப்புகளுடன்) -->
-<div class="card cat-entrance" id="gateway-entrance" onclick="window.location.href='00_entrance_exams.html';" style="cursor: pointer;">
-<div>
-<div class="card-top-meta">
-<span class="card-number">👑 01 / ENTRANCE EXAMS</span>
-<span class="pillar-badge">தேசிய நுழைவுத்தேர்வுகள்</span>
-</div>
-<div class="card-header">
-<div class="icon-box">🎯</div>
-<div class="card-title-group">
-<a class="card-title" href="00_entrance_exams.html">
-                நுழைவுத் தேர்வுகள் வாயிலாக உயர்கல்வி
-                <small>National &amp; State Entrance Examinations</small>
-</a>
-</div>
-</div>
-<p class="card-summary">அகில இந்திய மற்றும் முன்னணி மாநில அரசு கல்வி நிறுவனங்களில் மருத்துவம், பொறியியல், அறிவியல் ஆராய்ச்சி, சட்டம், வடிவமைப்பு, மேலாண்மை, உணவக நிர்வாகம் மற்றும் கடல்சார் படிப்புகளுக்கான தேசிய நுழைவுத்தேர்வுகள்.</p>
 
-<!-- ஒவ்வொரு தேர்வுக்கும் பிரத்யேக நேரடி இணைப்புகள் -->
-<div class="tags" onclick="event.stopPropagation();">
-  <a class="tag" href="01_medical_neet_ug.html" style="text-decoration: none;" title="மருத்துவ நுழைவுத்தேர்வு">🩺 NEET (மருத்துவம்)</a>
-  <a class="tag" href="02_engineering_jee.html" style="text-decoration: none;" title="பொறியியல் நுழைவுத்தேர்வு">⚙️ JEE (IIT/NIT)</a>
-  <a class="tag" href="03_science_research_iiser.html" style="text-decoration: none;" title="அறிவியல் & ஆராய்ச்சி">🔬 IISER / NISER</a>
-  <a class="tag" href="04_central_universities_cuet.html" style="text-decoration: none;" title="மத்தியப் பல்கலைக்கழகங்கள்">🏛️ CUET (மத்திய பல்கலை)</a>
-  <a class="tag" href="05_law_clat_nlu.html" style="text-decoration: none;" title="தேசிய சட்டப் பல்கலைக்கழகங்கள்">⚖️ CLAT (சட்டம்)</a>
-  <a class="tag" href="06_design_architecture_nata_nift.html" style="text-decoration: none;" title="கட்டிடக்கலை & ஆடை வடிவமைப்பு">📐 NATA / NIFT</a>
-  <a class="tag" href="07_management_iim_ipm.html" style="text-decoration: none;" title="ஒருங்கிணைந்த மேலாண்மை">📊 IIM IPMAT</a>
-  <a class="tag" href="08_hotel_management_nchmct.html" style="text-decoration: none;" title="உணவக மேலாண்மை">🏨 NCHMCT (IHM)</a>
-  <a class="tag" href="09_maritime_merchant_navy.html" style="text-decoration: none;" title="கடல்சார் கல்வி & வணிகக் கப்பல்">⚓ IMU-CET (கடற்படை)</a>
-</div>
-</div>
-<a class="btn-link" href="00_entrance_exams.html" style="margin-top: 10px;">
-          <span>அனைத்து 11 தேர்வுகள் விவரம் காண்க</span>
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
-</a>
-</div>
+  <!-- 1. நுழைவுத் தேர்வுகள் வாயிலாக உயர்கல்வி (00_entrance_exams.html மற்றும் அனைத்து துணைப் பக்க இணைப்புகளுடன்) -->
+  <div class="card cat-entrance" id="gateway-entrance" onclick="window.location.href='00_entrance_exams.html';" style="cursor: pointer;">
+    <div>
+      <div class="card-top-meta">
+        <span class="card-number">👑 01 / ENTRANCE EXAMS</span>
+        <span class="pillar-badge">தேசிய நுழைவுத்தேர்வுகள்</span>
+      </div>
+      <div class="card-header">
+        <div class="icon-box">🎯</div>
+        <div class="card-title-group">
+          <a class="card-title" href="00_entrance_exams.html">
+            நுழைவுத் தேர்வுகள் வாயிலாக உயர்கல்வி
+            <small>National &amp; State Entrance Examinations</small>
+          </a>
+        </div>
+      </div>
+      <p class="card-summary">அகில இந்திய மற்றும் முன்னணி மாநில அரசு கல்வி நிறுவனங்களில் மருத்துவம், பொறியியல், அறிவியல் ஆராய்ச்சி, சட்டம், வடிவமைப்பு, மேலாண்மை, உணவக நிர்வாகம் மற்றும் கடல்சார் படிப்புகளுக்கான தேசிய நுழைவுத்தேர்வுகள்.</p>
 
-<!-- 2. நேரடிச் சேர்க்கைப் படிப்புகள் (தேர்வு இல்லாதவை) -->
-<div class="card cat-merit" id="gateway-merit">
-<div>
-<div class="card-top-meta">
-<span class="card-number">👑 02 / DIRECT MERIT</span>
-<span class="pillar-badge">+2 மதிப்பெண் சேர்க்கை</span>
-</div>
-<div class="card-header">
-<div class="icon-box">📈</div>
-<div class="card-title-group">
-<a class="card-title" href="https://www.ceosvg.in/career-guidance/direct-admission-courses" rel="noopener noreferrer" target="_blank">
-                நேரடிச் சேர்க்கைப் படிப்புகள்
-                <small>Direct Merit Admissions (No Entrance Exam)</small>
-</a>
-</div>
-</div>
-<p class="card-summary">எந்தவித நுழைவுத்தேர்வும் இன்றி, 12-ஆம் வகுப்பு பொதுத்தேர்வு மதிப்பெண் மற்றும் கட்-ஆஃப் அடிப்படையில் ஒற்றைச் சாளர கலந்தாய்வு மூலம் நேரடியாகச் சேர்க்கப்படும் பட்டப்படிப்புகள்.</p>
-<div class="tags"><span class="tag" title="TNEA தமிழ்நாடு பொறியியல் கலந்தாய்வு">TNEA பொறியியல்</span><span class="tag" title="TNGASA அரசு கலை &amp; அறிவியல் கல்லூரிகள்">TNGASA கலை &amp; அறிவியல்</span><span class="tag" title="TNAU வேளாண்மை &amp; தோட்டக்கலை">TNAU வேளாண்மை</span><span class="tag" title="TANUVAS கால்நடை மருத்துவக் கலந்தாய்வு">TANUVAS கால்நடை</span><span class="tag" title="துணை மருத்துவம் (Nursing / B.Pharm / BPT)">துணை மருத்துவம் (Nursing)</span><span class="tag" title="பாலிடெக்னிக் லேட்டரல் என்ட்ரி &amp; தொழிற்கல்வி">பாலிடெக்னிக் / ITI</span></div>
-</div>
-<a class="btn-link" href="https://www.ceosvg.in/career-guidance/direct-admission-courses" rel="noopener noreferrer" target="_blank">
-          சேர்க்கை விவரங்கள் காண்க
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</a>
-</div>
+      <!-- ஒவ்வொரு தேர்வுக்கும் பிரத்யேக நேரடி இணைப்புகள் -->
+      <div class="tags" onclick="event.stopPropagation();">
+        <a class="tag" href="01_medical_neet_ug.html" style="text-decoration: none;" title="மருத்துவ நுழைவுத்தேர்வு">🩺 NEET (மருத்துவம்)</a>
+        <a class="tag" href="02_engineering_jee.html" style="text-decoration: none;" title="பொறியியல் நுழைவுத்தேர்வு">⚙️ JEE (IIT/NIT)</a>
+        <a class="tag" href="03_science_research_iiser.html" style="text-decoration: none;" title="அறிவியல் & ஆராய்ச்சி">🔬 IISER / NISER</a>
+        <a class="tag" href="04_central_universities_cuet.html" style="text-decoration: none;" title="மத்தியப் பல்கலைக்கழகங்கள்">🏛️ CUET (மத்திய பல்கலை)</a>
+        <a class="tag" href="05_law_clat_nlu.html" style="text-decoration: none;" title="தேசிய சட்டப் பல்கலைக்கழகங்கள்">⚖️ CLAT (சட்டம்)</a>
+        <a class="tag" href="06_design_architecture_nata_nift.html" style="text-decoration: none;" title="கட்டிடக்கலை & ஆடை வடிவமைப்பு">📐 NATA / NIFT</a>
+        <a class="tag" href="07_management_iim_ipm.html" style="text-decoration: none;" title="ஒருங்கிணைந்த மேலாண்மை">📊 IIM IPMAT</a>
+        <a class="tag" href="08_hotel_management_nchmct.html" style="text-decoration: none;" title="உணவக மேலாண்மை">🏨 NCHMCT (IHM)</a>
+        <a class="tag" href="09_maritime_merchant_navy.html" style="text-decoration: none;" title="கடல்சார் கல்வி & வணிகக் கப்பல்">⚓ IMU-CET (கடற்படை)</a>
+      </div>
+    </div>
+    <a class="btn-link" href="00_entrance_exams.html" style="margin-top: 10px;">
+      <span>அனைத்து 11 தேர்வுகள் விவரம் காண்க</span>
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+    </a>
+  </div>
 
-<!-- 3. கல்லூரிகள் & கல்வி நிறுவனங்கள் வழிகாட்டி -->
-<div class="card cat-colleges" id="gateway-colleges">
-<div>
-<div class="card-top-meta">
-<span class="card-number">👑 03 / INSTITUTES</span>
-<span class="pillar-badge">கல்லூரிகள் விவரக் குறிப்பேடு</span>
-</div>
-<div class="card-header">
-<div class="icon-box">🏛️</div>
-<div class="card-title-group">
-<a class="card-title" href="https://www.ceosvg.in/career-guidance/institutes" rel="noopener noreferrer" target="_blank">
-                கல்லூரிகள் &amp; கல்வி நிறுவனங்கள் வழிகாட்டி
-                <small>Colleges &amp; Universities Directory</small>
-</a>
-</div>
-</div>
-<p class="card-summary">அகில இந்திய மற்றும் தமிழக அளவிலான தலைசிறந்த மத்திய/மாநில அரசு நிறுவனங்கள், அரசு மருத்துவ, பொறியியல் மற்றும் மாவட்ட வாரியான அரசு கலை மற்றும் அறிவியல் கல்லூரிகள் பட்டியல்.</p>
-<div class="tags"><span class="tag" title="IITs / NITs / AIIMS தேசிய நிறுவனங்கள்">IIT / NIT / AIIMS</span><span class="tag" title="36 தமிழக அரசு மருத்துவக் கல்லூரிகள்">36 அரசு மருத்துவக் கல்லூரிகள்</span><span class="tag" title="அண்ணா பல்கலைக்கழக உறுப்புக் கல்லூரிகள்">அண்ணா பல்கலைக் கல்லூரிகள்</span><span class="tag" title="அரசு கலை, அறிவியல் &amp; பாலிடெக்னிக்">அரசு கலை &amp; பாலிடெக்னிக்</span><span class="tag" onclick="openPilotModal('cpl')" style="background: rgba(120, 53, 15, 0.55); color: #fde68a; border: 1.2px solid #f59e0b; font-weight: 800; cursor: pointer;" title="IGRUA &amp; DGCA விமானப் பயிற்சிப் பள்ளிகள்">✈️ விமானப் பயிற்சிப் பள்ளிகள்</span><span class="tag" title="மத்தியப் பல்கலைக்கழகங்கள் (CUTN)">மத்தியப் பல்கலைக்கழகங்கள்</span></div>
-</div>
-<a class="btn-link" href="https://www.ceosvg.in/career-guidance/institutes" rel="noopener noreferrer" target="_blank">
-          கல்லூரிகள் பட்டியல் காண்க
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</a>
-</div>
+  <!-- 2. நேரடிச் சேர்க்கைப் படிப்புகள் -->
+  <div class="card cat-merit" id="gateway-merit">
+    <div>
+      <div class="card-top-meta">
+        <span class="card-number">👑 02 / DIRECT MERIT</span>
+        <span class="pillar-badge">+2 மதிப்பெண் சேர்க்கை</span>
+      </div>
+      <div class="card-header">
+        <div class="icon-box">📈</div>
+        <div class="card-title-group">
+          <a class="card-title" href="https://www.ceosvg.in/career-guidance/direct-admission-courses" rel="noopener noreferrer" target="_blank">
+            நேரடிச் சேர்க்கைப் படிப்புகள்
+            <small>Direct Merit Admissions (No Entrance Exam)</small>
+          </a>
+        </div>
+      </div>
+      <p class="card-summary">எந்தவித நுழைவுத்தேர்வும் இன்றி, 12-ஆம் வகுப்பு பொதுத்தேர்வு மதிப்பெண் மற்றும் கட்-ஆஃப் அடிப்படையில் ஒற்றைச் சாளர கலந்தாய்வு மூலம் நேரடியாகச் சேர்க்கப்படும் பட்டப்படிப்புகள்.</p>
+      <div class="tags"><span class="tag" title="TNEA தமிழ்நாடு பொறியியல் கலந்தாய்வு">TNEA பொறியியல்</span><span class="tag" title="TNGASA அரசு கலை &amp; அறிவியல் கல்லூரிகள்">TNGASA கலை &amp; அறிவியல்</span><span class="tag" title="TNAU வேளாண்மை &amp; தோட்டக்கலை">TNAU வேளாண்மை</span><span class="tag" title="TANUVAS கால்நடை மருத்துவக் கலந்தாய்வு">TANUVAS கால்நடை</span><span class="tag" title="துணை மருத்துவம் (Nursing / B.Pharm / BPT)">துணை மருத்துவம் (Nursing)</span><span class="tag" title="பாலிடெக்னிக் லேட்டரல் என்ட்ரி &amp; தொழிற்கல்வி">பாலிடெக்னிக் / ITI</span></div>
+    </div>
+    <a class="btn-link" href="https://www.ceosvg.in/career-guidance/direct-admission-courses" rel="noopener noreferrer" target="_blank">
+      <span>சேர்க்கை விவரங்கள் காண்க</span>
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+    </a>
+  </div>
 
-<!-- 4. அரசுப் பணி & சீருடைப் போட்டித் தேர்வுகள் -->
-<div class="card cat-competitive" id="gateway-competitive">
-<div>
-<div class="card-top-meta">
-<span class="card-number">👑 04 / GOVT EXAMS</span>
-<span class="pillar-badge">அரசுப் பணி &amp; சீருடைத் தேர்வுகள்</span>
-</div>
-<div class="card-header">
-<div class="icon-box">🏆</div>
-<div class="card-title-group">
-<a class="card-title" href="https://www.ceosvg.in/career-guidance/govt-exams" rel="noopener noreferrer" target="_blank">
-                அரசுப் பணி &amp; சீருடைப் போட்டித் தேர்வுகள்
-                <small>Government &amp; Uniformed Services Competitive Exams</small>
-</a>
-</div>
-</div>
-<p class="card-summary">12-ஆம் வகுப்பு முடித்தவுடன் எழுதக்கூடிய தமிழ்நாடு அரசுப் பணியாளர் தேர்வாணையம் (TNPSC), மத்திய பணியாளர் தேர்வாணையம் (SSC), ரயில்வே (RRB), சீருடைப் பணியாளர் (காவலர்) மற்றும் முப்படை அக்னிவீர் நேரடிப் பணிகளுக்கான போட்டித் தேர்வுகள்.</p>
-<div class="tags"><span class="tag" title="TNPSC (குரூப் 4, VAO, குரூப் 2)">TNPSC (குரூப் 4 / VAO)</span><span class="tag" title="மத்திய பணியாளர் தேர்வாணையம் (SSC CHSL, MTS)">SSC (CHSL / MTS)</span><span class="tag" title="ரயில்வே பணித் தேர்வுகள் (RRB NTPC, ALP)">ரயில்வே (RRB NTPC)</span><span class="tag" title="TNUSRB இரண்டாம் நிலை காவலர்">TNUSRB காவலர்</span><span class="tag" onclick="openPilotModal('iaf')" style="background: rgba(76, 29, 149, 0.55); color: #ddd6fe; border: 1.2px solid #a78bfa; font-weight: 800; cursor: pointer;" title="முப்படை அக்னிவீர் நேரடிப் பணி (Army / Navy / Air Force)">🎖️ முப்படை அக்னிவீர்</span><span class="tag" title="மத்திய துணை ராணுவம் (CRPF, BSF, CISF)">துணை ராணுவம் (CRPF/CISF)</span><span class="tag" title="வங்கித் தேர்வுகள் (IBPS / SBI Clerk)">வங்கித் தேர்வுகள் (IBPS)</span></div>
-</div>
-<a class="btn-link" href="https://www.ceosvg.in/career-guidance/govt-exams" rel="noopener noreferrer" target="_blank">
-          போட்டித் தேர்வுகள் விவரம்
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</a>
-</div>
+  <!-- 3. கல்லூரிகள் & கல்வி நிறுவனங்கள் வழிகாட்டி -->
+  <div class="card cat-colleges" id="gateway-colleges">
+    <div>
+      <div class="card-top-meta">
+        <span class="card-number">👑 03 / INSTITUTES</span>
+        <span class="pillar-badge">கல்லூரிகள் விவரக் குறிப்பேடு</span>
+      </div>
+      <div class="card-header">
+        <div class="icon-box">🏛️</div>
+        <div class="card-title-group">
+          <a class="card-title" href="https://www.ceosvg.in/career-guidance/institutes" rel="noopener noreferrer" target="_blank">
+            கல்லூரிகள் &amp; கல்வி நிறுவனங்கள் வழிகாட்டி
+            <small>Colleges &amp; Universities Directory</small>
+          </a>
+        </div>
+      </div>
+      <p class="card-summary">அகில இந்திய மற்றும் தமிழக அளவிலான தலைசிறந்த மத்திய/மாநில அரசு நிறுவனங்கள், அரசு மருத்துவ, பொறியியல் மற்றும் மாவட்ட வாரியான அரசு கலை மற்றும் அறிவியல் கல்லூரிகள் பட்டியல்.</p>
+      <div class="tags"><span class="tag" title="IITs / NITs / AIIMS தேசிய நிறுவனங்கள்">IIT / NIT / AIIMS</span><span class="tag" title="36 தமிழக அரசு மருத்துவக் கல்லூரிகள்">36 அரசு மருத்துவக் கல்லூரிகள்</span><span class="tag" title="அண்ணா பல்கலைக்கழக உறுப்புக் கல்லூரிகள்">அண்ணா பல்கலைக் கல்லூரிகள்</span><span class="tag" title="அரசு கலை, அறிவியல் &amp; பாலிடெக்னிக்">அரசு கலை &amp; பாலிடெக்னிக்</span><span class="tag" onclick="openPilotModal('cpl')" style="background: rgba(120, 53, 15, 0.55); color: #fde68a; border: 1.2px solid #f59e0b; font-weight: 800; cursor: pointer;" title="IGRUA &amp; DGCA விமானப் பயிற்சிப் பள்ளிகள்">✈️ விமானப் பயிற்சிப் பள்ளிகள்</span><span class="tag" title="மத்தியப் பல்கலைக்கழகங்கள் (CUTN)">மத்தியப் பல்கலைக்கழகங்கள்</span></div>
+    </div>
+    <a class="btn-link" href="https://www.ceosvg.in/career-guidance/institutes" rel="noopener noreferrer" target="_blank">
+      <span>கல்லூரிகள் பட்டியல் காண்க</span>
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+    </a>
+  </div>
 
-<!-- 5. திறன்சார் பணிகள், தனியார் வேலைகள் & சுயதொழில் -->
-<div class="card cat-skills" id="gateway-skills">
-<div>
-<div class="card-top-meta">
-<span class="card-number">👑 05 / DIRECT CAREERS</span>
-<span class="pillar-badge">தேர்வில்லா வேலை &amp; சுயதொழில்</span>
-</div>
-<div class="card-header">
-<div class="icon-box">💼</div>
-<div class="card-title-group">
-<a class="card-title" href="https://www.ceosvg.in/career-guidance/direct-careers" rel="noopener noreferrer" target="_blank">
-                திறன்சார் பணிகள், தனியார் வேலைகள் &amp; சுயதொழில்
-                <small>Skill Training, Private Jobs &amp; Self-Employment</small>
-</a>
-</div>
-</div>
-<p class="card-summary">போட்டித்தேர்வு இல்லாத நேரடி வேலைவாய்ப்புகள், படித்துக்கொண்டே சம்பாதிக்கும் Work &amp; Learn திட்டங்கள், தொழில் முனைவோர் கடன் திட்டங்கள் மற்றும் தனியார் வேலைவாய்ப்பு முகாம்கள்.</p>
-<div class="tags"><span class="tag" title="Zoho Schools (கட்டணமில்லா படிப்பு + வேலை)">Zoho Schools (படிப்பு+வேலை)</span><span class="tag" title="HCL TechBee Early Career Programme">HCL TechBee</span><span class="tag" title="நான் முதல்வன் &amp; TNSDC இலவச திறன் பயிற்சி">நான் முதல்வன் &amp; TNSDC</span><span class="tag" title="மாவட்ட வேலைவாய்ப்பு முகாம்கள்">வேலைவாய்ப்பு முகாம்கள்</span><span class="tag" title="UYEGP &amp; PMEGP அரசு மானியக் கடன்">UYEGP / PMEGP மானியக் கடன்</span><span class="tag" title="முத்ரா சிறுதொழில் கடன் திட்டம் (PMMY)">முத்ரா சிறுதொழில் கடன்</span></div>
-</div>
-<a class="btn-link" href="https://www.ceosvg.in/career-guidance/direct-careers" rel="noopener noreferrer" target="_blank">
-          வேலைவாய்ப்புகள் காண்க
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</a>
-</div>
+  <!-- 4. அரசுப் பணி & சீருடைப் போட்டித் தேர்வுகள் -->
+  <div class="card cat-competitive" id="gateway-competitive">
+    <div>
+      <div class="card-top-meta">
+        <span class="card-number">👑 04 / GOVT EXAMS</span>
+        <span class="pillar-badge">அரசுப் பணி &amp; சீருடைத் தேர்வுகள்</span>
+      </div>
+      <div class="card-header">
+        <div class="icon-box">🏆</div>
+        <div class="card-title-group">
+          <a class="card-title" href="https://www.ceosvg.in/career-guidance/govt-exams" rel="noopener noreferrer" target="_blank">
+            அரசுப் பணி &amp; சீருடைப் போட்டித் தேர்வுகள்
+            <small>Government &amp; Uniformed Services Competitive Exams</small>
+          </a>
+        </div>
+      </div>
+      <p class="card-summary">12-ஆம் வகுப்பு முடித்தவுடன் எழுதக்கூடிய தமிழ்நாடு அரசுப் பணியாளர் தேர்வாணையம் (TNPSC), மத்திய பணியாளர் தேர்வாணையம் (SSC), ரயில்வே (RRB), சீருடைப் பணியாளர் (காவலர்) மற்றும் முப்படை அக்னிவீர் நேரடிப் பணிகளுக்கான போட்டித் தேர்வுகள்.</p>
+      <div class="tags"><span class="tag" title="TNPSC (குரூப் 4, VAO, குரூப் 2)">TNPSC (குரூப் 4 / VAO)</span><span class="tag" title="மத்திய பணியாளர் தேர்வாணையம் (SSC CHSL, MTS)">SSC (CHSL / MTS)</span><span class="tag" title="ரயில்வே பணித் தேர்வுகள் (RRB NTPC, ALP)">ரயில்வே (RRB NTPC)</span><span class="tag" title="TNUSRB இரண்டாம் நிலை காவலர்">TNUSRB காவலர்</span><span class="tag" onclick="openPilotModal('iaf')" style="background: rgba(76, 29, 149, 0.55); color: #ddd6fe; border: 1.2px solid #a78bfa; font-weight: 800; cursor: pointer;" title="முப்படை அக்னிவீர் நேரடிப் பணி (Army / Navy / Air Force)">🎖️ முப்படை அக்னிவீர்</span><span class="tag" title="மத்திய துணை ராணுவம் (CRPF, BSF, CISF)">துணை ராணுவம் (CRPF/CISF)</span><span class="tag" title="வங்கித் தேர்வுகள் (IBPS / SBI Clerk)">வங்கித் தேர்வுகள் (IBPS)</span></div>
+    </div>
+    <a class="btn-link" href="https://www.ceosvg.in/career-guidance/govt-exams" rel="noopener noreferrer" target="_blank">
+      <span>போட்டித் தேர்வுகள் விவரம்</span>
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+    </a>
+  </div>
 
-<!-- 6. மாணவர் நலத்திட்டங்கள், கட்-ஆஃப் கருவிகள் & உதவி மையம் -->
-<div class="card cat-support" id="gateway-support">
-<div>
-<div class="card-top-meta">
-<span class="card-number">👑 06 / STUDENT SUPPORT</span>
-<span class="pillar-badge">சலுகைகள், கருவிகள் &amp; உதவி</span>
-</div>
-<div class="card-header">
-<div class="icon-box">🤝</div>
-<div class="card-title-group">
-<a class="card-title" href="https://www.ceosvg.in/career-guidance/help-desk" rel="noopener noreferrer" target="_blank">
-                மாணவர் நலத்திட்டங்கள், கருவிகள் &amp; உதவி மையம்
-                <small>Scholarships, Cut-off Tools &amp; Helpdesk 14417</small>
-</a>
-</div>
-</div>
-<p class="card-summary">அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு, அரசின் கல்வி உதவித்தொகைகள், கட்-ஆஃப் கணக்கீட்டுக் கருவிகள், வழிகாட்டிக் கையேடுகள் பதிவிறக்கம் மற்றும் உதவி மையம்.</p>
-<div class="tags"><span class="tag" title="அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு">7.5% அரசுப்பள்ளி இடஒதுக்கீடு</span><span class="tag" title="புதுமைப் பெண் &amp; தமிழ்ப் புதல்வன் திட்டம்">புதுமைப் பெண் &amp; புதல்வன்</span><span class="tag" title="முதல் தலைமுறை பட்டதாரி முழு கட்டணச் சலுகை">முதல் பட்டதாரி சலுகை</span><span class="tag" onclick="openCutoffModal()" style="background: rgba(136, 19, 55, 0.55); color: #fecdd3; border: 1.2px solid #fb7185; font-weight: 800; cursor: pointer;" title="பொறியியல், வேளாண்மை, கலை &amp; அறிவியல் நேரடி சேர்க்கை கட்-ஆஃப் கணக்கீடு">🧮 கட்-ஆஃப் கால்குலேட்டர்</span><span class="tag" title="உயர்கல்வி வழிகாட்டிக் கையேடு (PDF பதிவிறக்கம்)">வழிகாட்டிக் கையேடு (PDF)</span><span class="tag" title="பள்ளிக்கல்வித்துறை 24/7 மாணவர் உதவி எண் 14417">மாணவர் உதவி எண் 14417</span></div>
-</div>
-<a class="btn-link" href="https://www.ceosvg.in/career-guidance/help-desk" rel="noopener noreferrer" target="_blank">
-          உதவிகள் &amp; கருவிகள் பெற
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</a>
-</div>
+  <!-- 5. திறன்சார் பணிகள், தனியார் வேலைகள் & சுயதொழில் -->
+  <div class="card cat-skills" id="gateway-skills">
+    <div>
+      <div class="card-top-meta">
+        <span class="card-number">👑 05 / DIRECT CAREERS</span>
+        <span class="pillar-badge">தேர்வில்லா வேலை &amp; சுயதொழில்</span>
+      </div>
+      <div class="card-header">
+        <div class="icon-box">💼</div>
+        <div class="card-title-group">
+          <a class="card-title" href="https://www.ceosvg.in/career-guidance/direct-careers" rel="noopener noreferrer" target="_blank">
+            திறன்சார் பணிகள், தனியார் வேலைகள் &amp; சுயதொழில்
+            <small>Skill Training, Private Jobs &amp; Self-Employment</small>
+          </a>
+        </div>
+      </div>
+      <p class="card-summary">போட்டித்தேர்வு இல்லாத நேரடி வேலைவாய்ப்புகள், படித்துக்கொண்டே சம்பாதிக்கும் Work &amp; Learn திட்டங்கள், தொழில் முனைவோர் கடன் திட்டங்கள் மற்றும் தனியார் வேலைவாய்ப்பு முகாம்கள்.</p>
+      <div class="tags"><span class="tag" title="Zoho Schools (கட்டணமில்லா படிப்பு + வேலை)">Zoho Schools (படிப்பு+வேலை)</span><span class="tag" title="HCL TechBee Early Career Programme">HCL TechBee</span><span class="tag" title="நான் முதல்வன் &amp; TNSDC இலவச திறன் பயிற்சி">நான் முதல்வன் &amp; TNSDC</span><span class="tag" title="மாவட்ட வேலைவாய்ப்பு முகாம்கள்">வேலைவாய்ப்பு முகாம்கள்</span><span class="tag" title="UYEGP &amp; PMEGP அரசு மானியக் கடன்">UYEGP / PMEGP மானியக் கடன்</span><span class="tag" title="முத்ரா சிறுதொழில் கடன் திட்டம் (PMMY)">முத்ரா சிறுதொழில் கடன்</span></div>
+    </div>
+    <a class="btn-link" href="https://www.ceosvg.in/career-guidance/direct-careers" rel="noopener noreferrer" target="_blank">
+      <span>வேலைவாய்ப்புகள் காண்க</span>
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+    </a>
+  </div>
+
+  <!-- 6. மாணவர் நலத்திட்டங்கள், கட்-ஆஃப் கருவிகள் & உதவி மையம் -->
+  <div class="card cat-support" id="gateway-support">
+    <div>
+      <div class="card-top-meta">
+        <span class="card-number">👑 06 / STUDENT SUPPORT</span>
+        <span class="pillar-badge">சலுகைகள், கருவிகள் &amp; உதவி</span>
+      </div>
+      <div class="card-header">
+        <div class="icon-box">🤝</div>
+        <div class="card-title-group">
+          <a class="card-title" href="https://www.ceosvg.in/career-guidance/help-desk" rel="noopener noreferrer" target="_blank">
+            மாணவர் நலத்திட்டங்கள், கருவிகள் &amp; உதவி மையம்
+            <small>Scholarships, Cut-off Tools &amp; Helpdesk 14417</small>
+          </a>
+        </div>
+      </div>
+      <p class="card-summary">அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு, அரசின் கல்வி உதவித்தொகைகள், கட்-ஆஃப் கணக்கீட்டுக் கருவிகள், வழிகாட்டிக் கையேடுகள் பதிவிறக்கம் மற்றும் உதவி மையம்.</p>
+      <div class="tags"><span class="tag" title="அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு">7.5% அரசுப்பள்ளி இடஒதுக்கீடு</span><span class="tag" title="புதுமைப் பெண் &amp; தமிழ்ப் புதல்வன் திட்டம்">புதுமைப் பெண் &amp; புதல்வன்</span><span class="tag" title="முதல் தலைமுறை பட்டதாரி முழு கட்டணச் சலுகை">முதல் பட்டதாரி சலுகை</span><span class="tag" onclick="openCutoffModal()" style="background: rgba(136, 19, 55, 0.55); color: #fecdd3; border: 1.2px solid #fb7185; font-weight: 800; cursor: pointer;" title="பொறியியல், வேளாண்மை, கலை &amp; அறிவியல் நேரடி சேர்க்கை கட்-ஆஃப் கணக்கீடு">🧮 கட்-ஆஃப் கால்குலேட்டர்</span><span class="tag" title="உயர்கல்வி வழிகாட்டிக் கையேடு (PDF பதிவிறக்கம்)">வழிகாட்டிக் கையேடு (PDF)</span><span class="tag" title="பள்ளிக்கல்வித்துறை 24/7 மாணவர் உதவி எண் 14417">மாணவர் உதவி எண் 14417</span></div>
+    </div>
+    <a class="btn-link" href="https://www.ceosvg.in/career-guidance/help-desk" rel="noopener noreferrer" target="_blank">
+      <span>உதவிகள் &amp; கருவிகள் பெற</span>
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+    </a>
+  </div>
+
 </div>
 
 <!-- திருக்குறள் பகுதி -->
@@ -1483,7 +1144,7 @@
 </div>
 <div class="kural-meaning">
 <strong>பொருள்:</strong> எண்ணியவர் (செயலை முடிப்பதில்) உறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே அடைவர்.
-      </div>
+</div>
 </div>
 
 <!-- ஆலோசனை மற்றும் கருத்துப் பதிவுப் பகுதி -->
@@ -1666,7 +1327,7 @@
     }
     document.addEventListener('DOMContentLoaded', typeEffect);
 
-    // 2. Fast 3D Flip Card Effect for Gateway Target Navigation
+    // 2. Fast 3D Flip Card Effect
     const gatewayItems = [
       { text: "🩺 மருத்துவர், ஐஐடி & விமானி ➔ வாயில் 01 (தேசிய நுழைவுத்தேர்வுகள்)", target: "cat-entrance" },
       { text: "📈 நுழைவுத்தேர்வின்றி +2 மதிப்பெண் சேர்க்கை ➔ வாயில் 02 (நேரடிச் சேர்க்கை)", target: "cat-merit" },
