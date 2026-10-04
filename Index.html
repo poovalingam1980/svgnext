@@ -1,0 +1,3014 @@
+<!DOCTYPE html>
+
+<html lang="ta">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>உயர்கல்வி வழிகாட்டி | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்</title>
+<!-- Google Fonts: Inter & Noto Sans Tamil -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&amp;family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --primary-color: #1a56db;
+      --primary-hover: #1e429f;
+      --home-btn-bg: #0f172a;
+      --home-btn-hover: #1e293b;
+      --card-bg: rgba(255, 255, 255, 0.96);
+      --text-main: #0f172a;
+      --text-sub: #334155;
+      --text-muted: #64748b;
+      --border-color: rgba(226, 232, 240, 0.85);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 26px;
+      --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.16);
+      --shadow-lg: 0 16px 36px -6px rgba(0, 0, 0, 0.28);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Monitor Auto-Expanding Fluid Layout (திரையின் முழு அகலத்திற்கு ஏற்ப தானாக விரிவடையும் கட்டமைப்பு) */
+    html, body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    /* ==================================================== */
+    /* Royal Imperial Slate & 24K Gold Ambient Mesh (அரசு கம்பீர அடர் சிலேட் & பொன் மேஷ் பின்னணி) */
+    /* ==================================================== */
+    body {
+      font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: 
+        radial-gradient(at 0% 0%, rgba(212, 175, 55, 0.16) 0px, transparent 45%),
+        radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.14) 0px, transparent 45%),
+        radial-gradient(at 50% 45%, rgba(212, 175, 55, 0.08) 0px, transparent 60%),
+        radial-gradient(at 0% 100%, rgba(14, 165, 233, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(212, 175, 55, 0.15) 0px, transparent 45%),
+        linear-gradient(160deg, #090d16 0%, #0d131f 35%, #111827 65%, #080c14 100%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 12px 18px;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      position: relative;
+      padding: 0 !important;
+      box-sizing: border-box;
+    }
+
+    /* Top Navigation Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      width: 100%;
+    }
+
+    .top-nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      background: linear-gradient(135deg, #0a0f1d 0%, #151f38 50%, #0a0f1d 100%);
+      color: #fef08a;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 800;
+      border-radius: var(--radius-sm);
+      border: 1.8px solid #d4af37;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45), 0 0 12px rgba(212, 175, 55, 0.25);
+      transition: all 0.25s ease;
+      letter-spacing: 0.3px;
+    }
+
+    .home-btn:hover {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      border-color: #fef08a;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+    }
+
+    .home-btn svg {
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
+    }
+
+    .quick-tools-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .quick-tool-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 0.86rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45), 0 0 12px rgba(212, 175, 55, 0.25);
+    }
+
+    .quick-tool-btn.btn-cutoff {
+      background: linear-gradient(135deg, #091330 0%, #112255 100%);
+      color: #fef08a;
+      border: 1.8px solid #d4af37;
+    }
+    .quick-tool-btn.btn-cutoff:hover {
+      background: linear-gradient(135deg, #d4af37 0%, #fef08a 100%);
+      color: #070e22;
+      border-color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(212, 175, 55, 0.55);
+    }
+
+    .district-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 900;
+      color: #fef08a;
+      background: linear-gradient(135deg, #070e22 0%, #0f1d42 50%, #070e22 100%);
+      border: 2px solid #d4af37;
+      padding: 8px 20px;
+      border-radius: 999px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 18px rgba(212, 175, 55, 0.35);
+      letter-spacing: 0.3px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Animated Header Banner Container with 24K Gold Frame */
+    .header-banner-wrap {
+      width: 100%;
+      border-radius: 16px;
+      padding: 3px;
+      background: linear-gradient(90deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c, #d4af37, #bf953f);
+      background-size: 300% 300%;
+      animation: gradientShift 6s ease infinite, bannerRoyalGlow 3.5s infinite ease-in-out;
+      margin-bottom: 12px;
+      position: relative;
+      box-sizing: border-box;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.65), 0 0 28px rgba(212, 175, 55, 0.35);
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes bannerRoyalGlow {
+      0%, 100% {
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7), 0 0 28px rgba(212, 175, 55, 0.35);
+      }
+      50% {
+        box-shadow: 0 14px 48px rgba(0, 0, 0, 0.85), 0 0 42px rgba(254, 240, 138, 0.6);
+      }
+    }
+
+    .header-banner-inner {
+      width: 100%;
+      border-radius: 13px;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #06382a 0%, #03241b 60%, #011610 100%);
+      display: block;
+      position: relative;
+    }
+
+    
+
+    .banner-fallback {
+      padding: 16px 20px 14px 20px;
+      color: #ffffff;
+      text-align: center;
+      background: 
+        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.32) 0%, transparent 65%),
+        radial-gradient(circle at 10% 50%, rgba(16, 185, 129, 0.38) 0%, transparent 55%),
+        radial-gradient(circle at 90% 50%, rgba(5, 150, 105, 0.32) 0%, transparent 55%),
+        linear-gradient(145deg, #021e17 0%, #053b2d 45%, #085340 75%, #02241b 100%);
+      border: 1.8px solid rgba(212, 175, 55, 0.6);
+      border-radius: 13px;
+      position: relative;
+      box-shadow: inset 0 1px 0 rgba(255, 215, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .banner-fallback-dept {
+      font-size: 0.86rem;
+      font-weight: 800;
+      color: #fef08a;
+      letter-spacing: 0.6px;
+      margin-bottom: 3px;
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+
+    .banner-fallback-title {
+      font-size: 1.85rem;
+      font-weight: 900;
+      line-height: 1.25;
+      margin-bottom: 3px;
+      background: linear-gradient(135deg, #ffffff 0%, #fef08a 45%, #ffd700 75%, #dfb15b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8));
+      letter-spacing: -0.2px;
+    }
+
+    .banner-fallback-subtitle {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: #fde047;
+      margin-bottom: 5px;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    .banner-fallback-en {
+      font-family: 'Cinzel', 'Noto Sans Tamil', serif;
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .banner-fallback-en-sub {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: #cbd5e1;
+      letter-spacing: 1.2px;
+    }
+
+    /* Key Impact Stats Bar - Imperial Royal Treasury Cards */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 12px;
+      width: 100%;
+    }
+
+    .metric-card {
+      background: 
+        radial-gradient(circle at 100% 0%, rgba(212, 175, 55, 0.22) 0%, transparent 60%),
+        linear-gradient(145deg, #0a0f1d 0%, #131b2e 50%, #0a0f1d 100%);
+      border: 1.8px solid #d4af37;
+      border-radius: 12px;
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5), 0 0 14px rgba(212, 175, 55, 0.2), inset 0 1px 0 rgba(255, 215, 0, 0.25);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      backdrop-filter: blur(12px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-card:hover {
+      transform: translateY(-2px) scale(1.015);
+      border-color: #fef08a;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65), 0 0 20px rgba(212, 175, 55, 0.4);
+    }
+
+    .metric-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+      flex-shrink: 0;
+      border: 1.8px solid #d4af37;
+      background: rgba(0, 0, 0, 0.45);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(212, 175, 55, 0.3);
+    }
+
+    .metric-info h4 {
+      font-size: 1.12rem;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 1px;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+      letter-spacing: -0.2px;
+    }
+
+    .metric-card:hover .metric-info h4 {
+      color: #fef08a;
+    }
+
+    .metric-info p {
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin: 0;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Control Panel: Imperial Royal Guidance Pavilion (அரச வழிகாட்டல் அரங்கம்) */
+    .control-panel {
+      background: 
+        radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.24) 0%, transparent 65%),
+        radial-gradient(circle at 10% 20%, rgba(30, 58, 138, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(217, 119, 6, 0.20) 0%, transparent 50%),
+        linear-gradient(150deg, #090e1a 0%, #111827 45%, #162035 75%, #080d17 100%);
+      border-radius: 16px;
+      padding: 12px 18px 10px 18px;
+      margin-bottom: 14px;
+      border: 1.8px solid #d4af37;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 24px rgba(212, 175, 55, 0.28), inset 0 1px 0 rgba(255, 215, 0, 0.3);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .control-panel::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c, #d4af37, #bf953f);
+      background-size: 200% auto;
+      animation: gradientShift 5s linear infinite;
+    }
+
+    .lead-text-wrap {
+      text-align: center;
+    }
+
+    .typing-container {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(254, 240, 138, 0.12) 100%);
+      border: 1.5px solid #d4af37;
+      padding: 4px 16px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3), 0 0 10px rgba(212, 175, 55, 0.25);
+      text-align: center;
+    }
+
+    .typing-badge {
+      font-size: 0.78rem;
+      font-weight: 900;
+      color: #fef08a;
+      letter-spacing: 0.5px;
+      text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+    }
+
+    .typing-text {
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: #ffffff;
+      min-height: 1.35em;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+      letter-spacing: 0.2px;
+      text-align: center;
+    }
+
+    .typing-cursor {
+      color: #fde047;
+      font-weight: 900;
+      animation: blink 0.8s infinite;
+      text-shadow: 0 0 8px #fde047;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .lead-title {
+      font-size: 1.35rem;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 3px;
+      letter-spacing: -0.2px;
+      background: linear-gradient(135deg, #ffffff 0%, #fef08a 45%, #ffd700 75%, #dfb15b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8));
+    }
+
+    .lead-subtitle {
+      font-size: 0.84rem;
+      color: #f1f5f9;
+      max-width: 980px;
+      margin: 0 auto 6px auto;
+      line-height: 1.45;
+      font-weight: 500;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    }
+
+    /* 3D Flip Ribbon (அரச பொற்பட்டை - Royal Golden Sash) */
+    .compass-flip-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: linear-gradient(90deg, #030712 0%, #0f172a 50%, #030712 100%);
+      border: 1.8px solid #d4af37;
+      border-radius: 999px;
+      padding: 4px 12px;
+      margin-top: 8px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55), 0 0 16px rgba(212, 175, 55, 0.35), inset 0 1px 0 rgba(255, 215, 0, 0.2);
+      width: 100%;
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 40px;
+      box-sizing: border-box;
+    }
+
+    .compass-flip-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.88rem;
+      font-weight: 900;
+      color: #fef08a;
+      white-space: nowrap;
+      flex-shrink: 0;
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+    }
+
+    .compass-pulse-icon {
+      display: inline-block;
+      animation: pulseCompass 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseCompass {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.25) rotate(15deg); }
+    }
+
+    /* 3D Flip Viewport & Card */
+    .compass-flip-viewport {
+      flex: 1;
+      height: 32px;
+      perspective: 700px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .compass-flip-card {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+      transform-style: preserve-3d;
+    }
+
+    .compass-flip-card.flip-out {
+      transform: rotateX(-90deg);
+      opacity: 0;
+    }
+
+    .compass-flip-card.flip-in {
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+
+    .compass-flip-content {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.94rem;
+      font-weight: 800;
+      color: #ffffff;
+      white-space: nowrap;
+      text-decoration: none;
+      padding: 5px 18px;
+      border-radius: 999px;
+      background: rgba(4, 38, 29, 0.9);
+      border: 1.2px solid rgba(212, 175, 55, 0.6);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      transition: all 0.25s ease;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+      text-align: center;
+    }
+
+    .flip-part-title {
+      display: inline;
+    }
+
+    .flip-gateway-badge {
+      display: inline;
+      color: #fef08a;
+      font-weight: 800;
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+
+    .compass-flip-viewport:hover .compass-flip-content {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.94rem;
+      font-weight: 800;
+      color: #ffffff;
+      white-space: nowrap;
+      text-decoration: none;
+      padding: 5px 18px;
+      border-radius: 999px;
+      background: rgba(4, 38, 29, 0.9);
+      border: 1.2px solid rgba(212, 175, 55, 0.6);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      transition: all 0.25s ease;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+      text-align: center;
+    }
+
+    .compass-flip-controls {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .btn-flip-nav {
+      background: rgba(4, 38, 29, 0.9);
+      border: 1.5px solid #d4af37;
+      color: #fef08a;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn-flip-nav:hover {
+      background: #d4af37;
+      color: #070e22;
+      border-color: #fef08a;
+      transform: scale(1.1);
+    }
+
+    /* 6 Macro Portal Cards - Ultra-Modern Responsive Fluid Grid */
+    /* ==================================================== */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    /* Base Card Layout with Rich Dark Blend & Goldish Accents */
+    .card {
+      border-radius: 14px;
+      padding: 13px 16px 11px 16px;
+      border: 1.8px solid rgba(212, 175, 55, 0.7);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(212, 175, 55, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      cursor: pointer;
+    }
+
+    /* Ambient Corner Light Mesh */
+    .card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 120px;
+      height: 120px;
+      pointer-events: none;
+      opacity: 0.6;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px) scale(1.015);
+      border-color: #fef08a !important;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65), 0 0 26px rgba(212, 175, 55, 0.4) !important;
+    }
+
+    .card:hover::after {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    @keyframes targetCardGlow {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+      50% { transform: scale(1.03); box-shadow: 0 0 35px 10px rgba(254, 240, 138, 0.7); }
+      100% { transform: scale(1); box-shadow: 0 16px 38px rgba(0, 0, 0, 0.55); }
+    }
+
+    .card.highlighted-card {
+      animation: targetCardGlow 1.2s ease-in-out 2;
+    }
+
+    /* Top Accent Line - 24K Gold with expansion on hover */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      transition: height 0.3s ease;
+    }
+
+    .card:hover::before {
+      height: 7px;
+    }
+
+    /* ==================================================== */
+    /* 6 Dark Goldish Category Themes (அடர் வண்ணக்கலவை & தங்கப் பொலிவு பின்னணி) */
+    /* ==================================================== */
+
+    /* 1. Entrance Exams - Blue Goldish (அடர் ராஜ நீலமும் தங்கமும் - Deep Imperial Sapphire & Gold) */
+    .cat-entrance {
+      background: 
+        radial-gradient(circle at 100% 0%, rgba(212, 175, 55, 0.25) 0%, transparent 60%),
+        radial-gradient(circle at 0% 100%, rgba(37, 99, 235, 0.35) 0%, transparent 60%),
+        linear-gradient(150deg, #050d24 0%, #0c1a40 45%, #132759 75%, #081129 100%);
+      border: 2px solid #d4af37;
+    }
+    .cat-entrance::before { background: linear-gradient(90deg, #3b82f6, #fef08a, #d4af37); }
+    .cat-entrance::after { background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.3), transparent 70%); }
+    .cat-entrance:hover {
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.7), 0 0 35px rgba(37, 99, 235, 0.5), 0 0 20px rgba(212, 175, 55, 0.35);
+    }
+    .cat-entrance .card-number { color: #fef08a; background: rgba(30, 58, 138, 0.5); border: 1.5px solid #d4af37; }
+    .cat-entrance .pillar-badge { background: rgba(30, 58, 138, 0.45); color: #93c5fd; border: 1.2px solid #60a5fa; }
+    .cat-entrance .icon-box { background: rgba(12, 26, 64, 0.7); border: 2px solid #d4af37; color: #93c5fd; }
+
+    /* 2. Direct Merit - Green Goldish (அடர் மரகதப் பச்சையும் தங்கமும் - Deep Royal Emerald & Gold) */
+    .cat-merit {
+      background: 
+        radial-gradient(circle at 100% 0%, rgba(212, 175, 55, 0.28) 0%, transparent 60%),
+        radial-gradient(circle at 0% 100%, rgba(16, 185, 129, 0.32) 0%, transparent 60%),
+        linear-gradient(150deg, #021a13 0%, #063829 45%, #0a4f3b 75%, #032218 100%);
+      border: 2px solid #d4af37;
+    }
+    .cat-merit::before { background: linear-gradient(90deg, #10b981, #fef08a, #d4af37); }
+    .cat-merit::after { background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.3), transparent 70%); }
+    .cat-merit:hover {
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.7), 0 0 35px rgba(16, 185, 129, 0.5), 0 0 20px rgba(212, 175, 55, 0.35);
+    }
+    .cat-merit .card-number { color: #fef08a; background: rgba(6, 78, 59, 0.5); border: 1.5px solid #d4af37; }
+    .cat-merit .pillar-badge { background: rgba(6, 78, 59, 0.45); color: #a7f3d0; border: 1.2px solid #34d399; }
+    .cat-merit .icon-box { background: rgba(6, 56, 41, 0.7); border: 2px solid #d4af37; color: #a7f3d0; }
+
+    /* 3. Colleges & Institutes - Amber Goldish (அடர் பொன் மாணிக்கமும் தங்கமும் - Deep Imperial Amber & Gold) */
+    .cat-colleges {
+      background: 
+        radial-gradient(circle at 100% 0%, rgba(254, 240, 138, 0.28) 0%, transparent 60%),
+        radial-gradient(circle at 0% 100%, rgba(217, 119, 6, 0.35) 0%, transparent 60%),
+        linear-gradient(150deg, #1f0d02 0%, #3d1b05 45%, #572708 75%, #241003 100%);
+      border: 2px solid #d4af37;
+    }
+    .cat-colleges::before { background: linear-gradient(90deg, #f59e0b, #fef08a, #d4af37); }
+    .cat-colleges::after { background: radial-gradient(circle at top right, rgba(254, 240, 138, 0.35), transparent 70%); }
+    .cat-colleges:hover {
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.7), 0 0 35px rgba(245, 158, 11, 0.5), 0 0 20px rgba(212, 175, 55, 0.35);
+    }
+    .cat-colleges .card-number { color: #fef08a; background: rgba(120, 53, 15, 0.5); border: 1.5px solid #d4af37; }
+    .cat-colleges .pillar-badge { background: rgba(120, 53, 15, 0.45); color: #fde68a; border: 1.2px solid #f59e0b; }
+    .cat-colleges .icon-box { background: rgba(61, 27, 5, 0.7); border: 2px solid #d4af37; color: #fde68a; }
+
+    /* 4. Govt Competitive Exams - Purple Goldish (அடர் ராஜ ஊதாவும் பொன்னிறமும் - Deep Velvet Amethyst & Gold) */
+    .cat-competitive {
+      background: 
+        radial-gradient(circle at 100% 0%, rgba(212, 175, 55, 0.25) 0%, transparent 60%),
+        radial-gradient(circle at 0% 100%, rgba(124, 58, 237, 0.35) 0%, transparent 60%),
+        linear-gradient(150deg, #140526 0%, #2a0c4f 45%, #3d126e 75%, #18062e 100%);
+      border: 2px solid #d4af37;
+    }
+    .cat-competitive::before { background: linear-gradient(90deg, #8b5cf6, #fef08a, #d4af37); }
+    .cat-competitive::after { background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.3), transparent 70%); }
+    .cat-competitive:hover {
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.7), 0 0 35px rgba(124, 58, 237, 0.5), 0 0 20px rgba(212, 175, 55, 0.35);
+    }
+    .cat-competitive .card-number { color: #fef08a; background: rgba(76, 29, 149, 0.5); border: 1.5px solid #d4af37; }
+    .cat-competitive .pillar-badge { background: rgba(76, 29, 149, 0.45); color: #ddd6fe; border: 1.2px solid #a78bfa; }
+    .cat-competitive .icon-box { background: rgba(42, 12, 79, 0.7); border: 2px solid #d4af37; color: #ddd6fe; }
+
+    /* 5. Direct Careers & Skills - Teal Cyan Goldish (அடர் கடல்நீலப் பச்சையும் தங்கமும் - Deep Oceanic Teal & Gold) */
+    .cat-skills {
+      background: 
+        radial-gradient(circle at 100% 0%, rgba(212, 175, 55, 0.25) 0%, transparent 60%),
+        radial-gradient(circle at 0% 100%, rgba(2, 132, 199, 0.35) 0%, transparent 60%),
+        linear-gradient(150deg, #021722 0%, #053147 45%, #084666 75%, #021f2e 100%);
+      border: 2px solid #d4af37;
+    }
+    .cat-skills::before { background: linear-gradient(90deg, #0284c7, #fef08a, #d4af37); }
+    .cat-skills::after { background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.3), transparent 70%); }
+    .cat-skills:hover {
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.7), 0 0 35px rgba(2, 132, 199, 0.5), 0 0 20px rgba(212, 175, 55, 0.35);
+    }
+    .cat-skills .card-number { color: #fef08a; background: rgba(12, 74, 110, 0.5); border: 1.5px solid #d4af37; }
+    .cat-skills .pillar-badge { background: rgba(12, 74, 110, 0.45); color: #bae6fd; border: 1.2px solid #38bdf8; }
+    .cat-skills .icon-box { background: rgba(5, 49, 71, 0.7); border: 2px solid #d4af37; color: #bae6fd; }
+
+    /* 6. Student Support & Scholarships - Ruby Crimson Goldish (அடர் சிவப்பு மாணிக்கமும் தங்கமும் - Deep Velvet Ruby & Gold) */
+    .cat-support {
+      background: 
+        radial-gradient(circle at 100% 0%, rgba(212, 175, 55, 0.25) 0%, transparent 60%),
+        radial-gradient(circle at 0% 100%, rgba(225, 29, 72, 0.35) 0%, transparent 60%),
+        linear-gradient(150deg, #21030b 0%, #420616 45%, #5e0a20 75%, #29040e 100%);
+      border: 2px solid #d4af37;
+    }
+    .cat-support::before { background: linear-gradient(90deg, #e11d48, #fef08a, #d4af37); }
+    .cat-support::after { background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.3), transparent 70%); }
+    .cat-support:hover {
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.7), 0 0 35px rgba(225, 29, 72, 0.5), 0 0 20px rgba(212, 175, 55, 0.35);
+    }
+    .cat-support .card-number { color: #fef08a; background: rgba(136, 19, 55, 0.5); border: 1.5px solid #d4af37; }
+    .cat-support .pillar-badge { background: rgba(136, 19, 55, 0.45); color: #fecdd3; border: 1.2px solid #fb7185; }
+    .cat-support .icon-box { background: rgba(66, 6, 22, 0.7); border: 2px solid #d4af37; color: #fecdd3; }
+
+    /* Card Top Meta */
+    .card-top-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .card-number {
+      font-family: 'Cinzel', 'Noto Sans Tamil', serif;
+      font-size: 0.70rem;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1.2px solid #d4af37;
+      text-transform: uppercase;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), inset 0 0 4px rgba(212, 175, 55, 0.2);
+    }
+
+    .pillar-badge {
+      font-size: 0.70rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    /* 3D Frosted Icon Box with Golden Bezel & Smooth Tilt on Card Hover */
+    .icon-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+      flex-shrink: 0;
+      border: 1.8px solid #d4af37;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(212, 175, 55, 0.35);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover .icon-box {
+      transform: scale(1.12) rotate(-5deg);
+      box-shadow: 0 6px 18px rgba(212, 175, 55, 0.6), inset 0 0 10px rgba(254, 240, 138, 0.6);
+    }
+
+    .card-title-group {
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* High-Legibility Royal Typography for Dark Goldish Cards */
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.25;
+      text-decoration: none;
+      display: block;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+      letter-spacing: -0.2px;
+      transition: color 0.25s ease, text-shadow 0.25s ease;
+    }
+
+    .card:hover .card-title {
+      color: #fef08a;
+      text-shadow: 0 0 12px rgba(254, 240, 138, 0.6);
+    }
+
+    .card-title small {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #fde047;
+      margin-top: 2px;
+      letter-spacing: 0.2px;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card-summary {
+      font-size: 0.78rem;
+      color: #f1f5f9;
+      line-height: 1.38;
+      margin-bottom: 7px;
+      font-weight: 500;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-height: 2.15em;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 5px;
+      margin-bottom: 7px;
+      line-height: 1.2;
+    }
+
+    /* Royal Seal Tag Badges */
+    .tag {
+      background: rgba(10, 20, 45, 0.65);
+      border: 1px solid rgba(212, 175, 55, 0.55);
+      color: #f8fafc;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2.5px 7px;
+      border-radius: 5px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      line-height: 1.35;
+    }
+
+    .tag:hover {
+      background: linear-gradient(135deg, #d4af37 0%, #fef08a 100%);
+      color: #070e22;
+      border-color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(212, 175, 55, 0.5);
+    }
+
+    /* 24K Royal Gold Seal Button */
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 6.5px 14px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 900;
+      color: #070e22 !important;
+      background: linear-gradient(135deg, #d4af37 0%, #fef08a 50%, #aa771c 100%) !important;
+      border: 1.5px solid #fef08a !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 0 12px rgba(212, 175, 55, 0.35) !important;
+      transition: all 0.25s ease;
+      margin-top: 6px;
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.2px;
+    }
+
+    .btn-link::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+      transform: skewX(-20deg);
+      transition: all 0.6s ease;
+    }
+
+    .card:hover .btn-link {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5), 0 0 25px rgba(254, 240, 138, 0.65) !important;
+      background: linear-gradient(135deg, #fef08a 0%, #ffffff 50%, #d4af37 100%) !important;
+      color: #000000 !important;
+    }
+
+    .card:hover .btn-link::after {
+      left: 140%;
+    }
+
+    .btn-link svg {
+      width: 17px;
+      height: 17px;
+      transition: transform 0.25s ease;
+    }
+
+    .card:hover .btn-link svg {
+      transform: translateX(5px);
+    }
+/* ==================================================== */
+    /* Compact Centered Thirukkural Box with Animated Verses */
+    /* ==================================================== */
+    .kural-box {
+      background: linear-gradient(135deg, #fefce8 0%, #fffbeb 50%, #fef3c7 100%);
+      border: 1px solid #fde047;
+      border-left: 5px solid #d97706;
+      border-radius: var(--radius-md);
+      padding: 14px 20px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+      width: 100%;
+    }
+
+    .kural-header {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #b45309;
+      letter-spacing: 0.4px;
+      margin-bottom: 8px;
+      background: rgba(254, 240, 138, 0.75);
+      padding: 3px 14px;
+      border-radius: 999px;
+      border: 1px solid #fde68a;
+    }
+
+    /* Breathing Golden Shimmer Animation ONLY on Kural Verses */
+    .kural-text-animated {
+      font-size: 1.18rem;
+      font-weight: 800;
+      line-height: 1.6;
+      margin-bottom: 6px;
+      letter-spacing: 0.25px;
+      display: inline-block;
+      background: linear-gradient(90deg, #78350f 0%, #b45309 25%, #d97706 50%, #b45309 75%, #78350f 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: kuralVerseShimmer 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes kuralVerseShimmer {
+      0% {
+        background-position: 0% 50%;
+        filter: drop-shadow(0 0 1px rgba(217, 119, 6, 0.2));
+        transform: scale(1);
+      }
+      50% {
+        filter: drop-shadow(0 0 6px rgba(217, 119, 6, 0.4));
+        transform: scale(1.015);
+      }
+      100% {
+        background-position: 100% 50%;
+        filter: drop-shadow(0 0 1px rgba(217, 119, 6, 0.2));
+        transform: scale(1);
+      }
+    }
+
+    .kural-meaning {
+      font-size: 0.88rem;
+      color: #92400e;
+      line-height: 1.55;
+    }
+
+    /* ==================================================== */
+    /* தங்களின் மேலான ஆலோசனை/கருத்துகளை பதிவு செய்க (Wide & Compact from Entrance.html) */
+    /* ==================================================== */
+    .feedback-section {
+      width: 100%;
+      margin: 24px 0;
+      background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 35%, #faf5ff 70%, #fff7ed 100%);
+      border-radius: 16px;
+      padding: 22px 26px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #e0e7ff;
+      box-sizing: border-box;
+    }
+
+    .animated-top-bar {
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 6px;
+      background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899, #f59e0b, #10b981, #06b6d4, #2563eb);
+      background-size: 300% 300%;
+      animation: gradientShift 4s ease infinite;
+    }
+
+    .sparkle-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #eff6ff 0%, #f3e8ff 100%);
+      color: #6d28d9;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 800;
+      border: 1.5px solid #c4b5fd;
+      cursor: pointer;
+      animation: sparklePulse 3s infinite ease-in-out;
+    }
+
+    .sparkle-icon {
+      display: inline-block;
+      animation: rotateSparkle 4s linear infinite;
+    }
+
+    @keyframes sparklePulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.4); }
+      50% { transform: scale(1.05); box-shadow: 0 0 18px 4px rgba(236, 72, 153, 0.45); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(124, 58, 237, 0); }
+    }
+
+    @keyframes rotateSparkle {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(180deg) scale(1.2); }
+      100% { transform: rotate(360deg) scale(1); }
+    }
+
+    #fb_submitBtn {
+      animation: btnBlingGlow 2.5s infinite ease-in-out;
+      transition: all 0.25s ease;
+    }
+
+    #fb_submitBtn:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 28px rgba(236, 72, 153, 0.7) !important;
+    }
+
+    @keyframes btnBlingGlow {
+      0% { box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35); }
+      50% { box-shadow: 0 6px 25px rgba(236, 72, 153, 0.6), 0 0 15px rgba(37, 99, 235, 0.45); }
+      100% { box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35); }
+    }
+
+    /* ==================================================== */
+    /* All-in-One Direct Admission Cut-off Calculator Modal */
+    /* அனைத்து வகை நேரடி சேர்க்கைப் படிப்புகளுக்கான கட்-ஆஃப் கால்குலேட்டர் */
+    /* ==================================================== */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(2, 44, 34, 0.82);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal-content {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      max-width: 580px;
+      width: 100%;
+      padding: 24px 26px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      border: 1.5px solid var(--border-color);
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: #f1f5f9;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 16px;
+      font-weight: 700;
+      color: #64748b;
+      cursor: pointer;
+    }
+
+    .modal-close:hover { background: #e2e8f0; color: #0f172a; }
+
+    .calc-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .calc-tab-btn {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #334155;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .calc-tab-btn.active {
+      background: #1e3a8a;
+      color: #ffffff;
+      border-color: #1e3a8a;
+      box-shadow: 0 2px 6px rgba(30, 58, 138, 0.3);
+    }
+
+    /* ==================================================== */
+    /* Creator & Administrator Profile Card (as in old.html) */
+    /* ==================================================== */
+    .creator-card {
+      background: rgba(255, 255, 255, 0.96);
+      border: 1.5px solid rgba(255, 255, 255, 0.9);
+      border-radius: var(--radius-md);
+      padding: 14px 22px;
+      margin: 28px 0 16px 0;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      text-align: center;
+      flex-wrap: wrap;
+      backdrop-filter: blur(14px);
+    }
+
+    .creator-name-ta, .creator-name-en {
+      font-weight: 800;
+      font-size: 1.05rem;
+      background: linear-gradient(135deg, #1e40af 0%, #7c3aed 50%, #db2777 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      letter-spacing: 0.3px;
+      padding: 0 2px;
+    }
+
+    .creator-label {
+      font-weight: 700;
+      color: #334155;
+      font-size: 0.94rem;
+    }
+
+    .creator-role {
+      font-weight: 600;
+      color: #1e293b;
+      font-size: 0.94rem;
+    }
+
+    /* Phone Number with Symbol */
+    .creator-phone-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      color: #065f46;
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 3px 12px;
+      border-radius: 999px;
+      border: 1px solid #6ee7b7;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 5px rgba(5, 150, 105, 0.12);
+      margin-left: 6px;
+    }
+
+    .creator-phone-badge:hover {
+      background: #059669;
+      color: #ffffff;
+      box-shadow: 0 4px 10px rgba(5, 150, 105, 0.3);
+      transform: translateY(-1px);
+    }
+
+    /* Footer Section (as in old.html) */
+    .portal-footer {
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: var(--radius-md);
+      text-align: center;
+      padding: 24px 16px 20px;
+      font-size: 0.9rem;
+      border: 1.5px solid rgba(255, 255, 255, 0.9);
+      margin-top: 16px;
+      color: #475569;
+      line-height: 1.7;
+      width: 100%;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+      backdrop-filter: blur(14px);
+    }
+
+    .portal-footer a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .portal-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ==================================================== */
+    /* Mobile-First Ultra-Responsive Breakpoints (மொபைல் போன் முழுமையான உகப்பாக்கம்) */
+    /* ==================================================== */
+
+    @media (max-width: 1100px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .metrics-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 960px) {
+      #guidanceFeedbackForm {
+        grid-template-columns: 1fr 1fr !important;
+      }
+      .fb-field-name, .fb-field-place, .fb-field-phone, .fb-field-email {
+        grid-column: span 1 !important;
+      }
+      .fb-field-file, .fb-field-link, .fb-field-msg, .fb-field-submit {
+        grid-column: span 2 !important;
+      }
+    }
+
+    /* Tablets & Standard Mobile Screens (≤ 768px) */
+    @media (max-width: 768px) {
+      body {
+        padding: 8px 10px;
+      }
+
+      /* Top Bar: Full Mobile Touch Adaptation */
+      .top-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .top-nav-left {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+      }
+
+      .home-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 16px;
+        font-size: 0.92rem;
+      }
+
+      /* Quick Tools full-width single action button */
+      .quick-tools-nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        width: 100%;
+      }
+
+      .quick-tool-btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        padding: 9px 8px;
+        font-size: 0.8rem;
+        line-height: 1.25;
+      }
+
+      .district-badge {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.78rem;
+        padding: 8px 12px;
+        line-height: 1.4;
+      }
+
+      /* Header Banner */
+      .header-banner-wrap {
+        margin-bottom: 14px;
+        border-radius: var(--radius-md);
+        padding: 3px;
+      }
+
+      .header-banner-inner {
+        border-radius: calc(var(--radius-md) - 2px);
+      }
+
+      /* Metrics Bar: 2x2 Clean App Dashboard Grid */
+      .metrics-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+
+      .metric-card {
+        padding: 12px 14px;
+        gap: 10px;
+      }
+
+      .metric-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+        border-radius: 10px;
+      }
+
+      .metric-info h4 {
+        font-size: 1.15rem;
+      }
+
+      .metric-info p {
+        font-size: 0.74rem;
+        line-height: 1.3;
+      }
+
+      /* Control Panel & Typing */
+      .control-panel {
+        padding: 16px 12px 14px 12px;
+        border-radius: var(--radius-md);
+        margin-bottom: 18px;
+      }
+
+      .typing-container {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(254, 240, 138, 0.12) 100%);
+        border: 1.5px solid #d4af37;
+        padding: 6px 16px;
+        border-radius: 999px;
+        margin-bottom: 12px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), 0 0 12px rgba(212, 175, 55, 0.25);
+        text-align: center;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      .typing-badge {
+        font-size: 0.76rem;
+      }
+
+      .typing-text {
+        font-size: 0.88rem;
+        font-weight: 800;
+        color: #ffffff;
+        min-height: 1.35em;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+        letter-spacing: 0.2px;
+        text-align: center;
+        line-height: 1.35;
+      }
+
+      .lead-title {
+        font-size: 1.35rem;
+        line-height: 1.35;
+        margin-bottom: 6px;
+      }
+
+      .lead-subtitle {
+        font-size: 0.86rem;
+        line-height: 1.55;
+        margin-bottom: 10px;
+      }
+
+      /* 3D Flip Ribbon: Streamlined Mobile Adaptation (முழுமையாகத் தெரியும் கட்டமைப்பு) */
+      .compass-flip-strip {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        background: linear-gradient(90deg, #030712 0%, #0c1738 50%, #030712 100%);
+        border: 1.8px solid #d4af37;
+        border-radius: 16px;
+        padding: 6px 8px;
+        margin-top: 14px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 16px rgba(212, 175, 55, 0.35), inset 0 1px 0 rgba(255, 215, 0, 0.2);
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 52px;
+        box-sizing: border-box;
+      }
+
+      .compass-flip-viewport {
+        flex: 1;
+        height: auto;
+        min-height: 44px;
+        perspective: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        overflow: hidden;
+        padding: 2px 0;
+      }
+
+      .compass-flip-card {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+        transform-style: preserve-3d;
+      }
+
+      .compass-flip-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        font-size: 0.82rem !important;
+        line-height: 1.35 !important;
+        font-weight: 800;
+        color: #ffffff;
+        white-space: normal !important;
+        word-break: normal;
+        padding: 5px 8px !important;
+        border-radius: 12px;
+        background: rgba(12, 26, 64, 0.9);
+        border: 1.2px solid rgba(212, 175, 55, 0.6);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .flip-part-title {
+        display: block;
+        line-height: 1.3;
+      }
+
+      .flip-gateway-badge {
+        display: block;
+        color: #fef08a;
+        font-size: 0.78rem;
+        font-weight: 800;
+        margin-top: 2px;
+        line-height: 1.3;
+        text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+      }
+
+      .btn-flip-nav {
+        width: 28px;
+        height: 28px;
+        font-size: 11px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* 6 Gateway Cards: Single Column & Touch Feedback */
+      .grid-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .card {
+        padding: 14px 16px 12px 16px;
+        border-radius: 12px;
+      }
+
+      /* Mobile touch feedback */
+      .card:active {
+        transform: scale(0.985);
+      }
+
+      .card-title {
+        font-size: 1.05rem;
+      }
+
+      .card-title small {
+        font-size: 0.72rem;
+      }
+
+      .card-summary {
+        font-size: 0.78rem;
+        line-height: 1.4;
+        margin-bottom: 8px;
+      }
+
+      .tags {
+        gap: 4px 5px;
+        margin-bottom: 8px;
+      }
+
+      .tag {
+        font-size: 0.70rem;
+        padding: 2.5px 7px;
+      }
+
+      .btn-link {
+        padding: 8px 14px;
+        font-size: 0.84rem;
+        min-height: 38px;
+      }
+
+      /* Compact Thirukkural Box */
+      .kural-box {
+        padding: 14px 14px;
+        margin: 18px 0;
+        border-radius: var(--radius-md);
+      }
+
+      .kural-text-animated {
+        font-size: 1.05rem;
+        line-height: 1.55;
+      }
+
+      .kural-meaning {
+        font-size: 0.84rem;
+        line-height: 1.5;
+      }
+
+      /* Feedback Section on Mobile */
+      .feedback-section {
+        padding: 18px 14px;
+        border-radius: var(--radius-md);
+        margin: 18px 0;
+      }
+
+      /* Modals on Mobile: Full-Screen Thumb-Friendly Design */
+      .modal-overlay {
+        padding: 10px;
+        align-items: flex-end; /* Bottom sheet feeling on mobile */
+      }
+
+      .modal-content {
+        max-width: 100%;
+        width: 100%;
+        max-height: 94vh;
+        padding: 20px 16px 16px 16px;
+        border-radius: 18px 18px 12px 12px;
+      }
+
+      .modal-close {
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+      }
+
+      /* Cutoff inputs on mobile */
+      #calcInputsContainer div[style*="grid-template-columns"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+      }
+
+      /* Creator Single Line Card */
+      .creator-card {
+        padding: 14px 12px;
+        min-height: 48px;
+        margin: 20px 0 14px 0;
+      }
+
+      #creatorTypewriterWrap {
+        font-size: 0.82rem;
+        line-height: 1.6;
+      }
+
+      .creator-name-ta, .creator-name-en {
+        font-size: 0.96rem;
+      }
+
+      .portal-footer {
+        padding: 18px 12px;
+        font-size: 0.82rem;
+        line-height: 1.7;
+      }
+    }
+
+    /* Small Mobile Phones (≤ 480px - iPhone SE, Galaxy A series, etc.) */
+    @media (max-width: 480px) {
+      body {
+        padding: 6px 8px;
+      }
+
+      .quick-tools-nav {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+
+      .metric-card {
+        padding: 10px 10px;
+        gap: 8px;
+      }
+
+      .metric-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 18px;
+      }
+
+      .metric-info h4 {
+        font-size: 1.05rem;
+      }
+
+      .metric-info p {
+        font-size: 0.7rem;
+      }
+
+      .lead-title {
+        font-size: 1.18rem;
+      }
+
+      .typing-text {
+        font-size: 0.82rem;
+      }
+
+      .compass-flip-strip {
+        padding: 5px 6px;
+        gap: 5px;
+        min-height: 50px;
+        border-radius: 14px;
+      }
+
+      .compass-flip-content {
+        font-size: 0.76rem !important;
+        line-height: 1.28 !important;
+        padding: 4px 6px !important;
+      }
+
+      .flip-gateway-badge {
+        font-size: 0.74rem !important;
+      }
+
+      .btn-flip-nav {
+        width: 26px;
+        height: 26px;
+        font-size: 10px;
+      }
+
+      /* Mobile Feedback Form 1-column stack */
+      #guidanceFeedbackForm {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+      }
+
+      .fb-field-name, .fb-field-place, .fb-field-phone, .fb-field-email, 
+      .fb-field-file, .fb-field-link, .fb-field-msg, .fb-field-submit {
+        grid-column: span 1 !important;
+      }
+
+      #guidanceFeedbackForm input, 
+      #guidanceFeedbackForm textarea {
+        font-size: 16px !important; /* Prevents iOS Safari unwanted auto-zoom */
+        padding: 9px 12px !important;
+      }
+
+      #fb_submitBtn {
+        height: 48px !important;
+        font-size: 0.96rem !important;
+      }
+
+      #calcInputsContainer div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  
+</style>
+</head>
+<body>
+<div class="container">
+<!-- முகப்புப் பொத்தான், விரைவுக் கருவிகள் & மாவட்ட அடையாளம் -->
+<div class="top-bar">
+<div class="top-nav-left">
+<a class="home-btn" href="https://www.ceosvg.in" rel="noopener noreferrer" target="_blank" title="சிவகங்கை மாவட்ட முதன்மைக் கல்வி அலுவலக முகப்பு பக்கம்">
+<svg viewbox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+          முகப்பு (HOME)
+        </a>
+<div class="quick-tools-nav">
+<button class="quick-tool-btn btn-cutoff" onclick="openCutoffModal()" title="அனைத்து வகை படிப்புகளுக்கான கட்-ஆஃப் கால்குலேட்டர்" type="button">
+            🧮 கட்-ஆஃப் கால்குலேட்டர்
+          </button>
+</div>
+</div>
+
+</div>
+<!-- தலைப்பு பேனர் இமேஜ் பகுதி (Hero Banner Section with Animated Glowing Border) -->
+<header class="header-banner-wrap">
+<div class="header-banner-inner">
+<!-- படம் லோட் ஆகாத போது தோன்றும் பிரத்யேக மாற்று பேனர் -->
+<div class="banner-fallback" id="headerTitleBanner">
+<div class="banner-fallback-dept">🎓 பள்ளிக்கல்வித்துறை, சிவகங்கை மாவட்டம்</div>
+<h1 class="banner-fallback-title">உயர்கல்வி வழிகாட்டி</h1>
+<p class="banner-fallback-subtitle">உங்கள் சிறந்த எதிர்காலத்திற்கான திறவுகோல்</p>
+<div class="banner-fallback-en">CAREER GUIDANCE</div>
+<div class="banner-fallback-en-sub">YOUR KEY TO A BRIGHT FUTURE</div>
+</div>
+</div>
+</header>
+<!-- முக்கிய வழிகாட்டல் புள்ளிவிவரங்கள் (Key Impact Stats - Full Width Fluid) -->
+<div class="metrics-bar">
+<div class="metric-card">
+<div class="metric-icon" style="background: rgba(30, 58, 138, 0.6); color: #93c5fd; border: 1.5px solid #d4af37;">🎯</div>
+<div class="metric-info">
+<h4>6 வாயில்கள்</h4>
+<p>முழுமையான வழிகாட்டிப் பிரிவுகள்</p>
+</div>
+</div>
+<div class="metric-card">
+<div class="metric-icon" style="background: rgba(6, 78, 59, 0.6); color: #a7f3d0; border: 1.5px solid #d4af37;">🏛️</div>
+<div class="metric-info">
+<h4>100+ நிறுவனங்கள்</h4>
+<p>தேசிய &amp; மாநிலக் கல்வி நிறுவனங்கள்</p>
+</div>
+</div>
+<div class="metric-card">
+<div class="metric-icon" style="background: rgba(120, 53, 15, 0.6); color: #fde68a; border: 1.5px solid #d4af37;">🌟</div>
+<div class="metric-info">
+<h4>7.5% சலுகை</h4>
+<p>அரசுப் பள்ளி கட்டணமில்லா கல்வி</p>
+</div>
+</div>
+<div class="metric-card">
+<div class="metric-icon" style="background: rgba(136, 19, 55, 0.6); color: #fecdd3; border: 1.5px solid #d4af37;">📞</div>
+<div class="metric-info">
+<h4>14417 உதவி</h4>
+<p>24/7 பள்ளிக்கல்வி உதவி மையம்</p>
+</div>
+</div>
+</div>
+<!-- வழிகாட்டுதல் தலைப்பு, தட்டச்சு அனிமேஷன் & 3D Flip விரைவு இலக்கு வழிகாட்டி (Control Panel) -->
+<div class="control-panel">
+<div class="lead-text-wrap">
+<!-- துடிப்பான தட்டச்சு வாசகம் (Dynamic Typing Effect) -->
+<div class="typing-container">
+<span class="typing-text" id="typingText"></span>
+<span class="typing-cursor">|</span>
+</div>
+<h2 class="lead-title">12-ஆம் வகுப்பிற்குப் பிந்தைய உயர்கல்வி, வேலைவாய்ப்புகள் &amp; வழிகாட்டல் போர்டல்</h2>
+<p class="lead-subtitle">பள்ளிப் படிப்பை முடிக்கும் மாணவ, மாணவியர் தங்களுக்குப் பொருத்தமான உயர் கல்வி மற்றும் சிறந்த தொழில்முறை எதிர்காலத்தைத் தேர்ந்தெடுக்க உதவும் 6 முதன்மை வழிகாட்டி வாயில்கள்.</p>
+</div>
+<!-- ==================================================== -->
+<!-- விரைவான 3D Flip அனிமேஷன் இலக்கு வழிகாட்டி (Fast 3D Flip Ribbon) -->
+<!-- ==================================================== -->
+<div class="compass-flip-strip">
+<button class="btn-flip-nav" onclick="prevFlipGateway(event)" title="முந்தைய வழிகாட்டல் செய்தி" type="button">◀</button>
+<div class="compass-flip-viewport" id="compassFlipViewport" onclick="triggerCurrentGateway()" title="இவ்வாயிலைக் காண கிளிக் செய்யவும்">
+<div class="compass-flip-card" id="compassFlipCard">
+<span class="compass-flip-content" id="flipContent">
+<span class="flip-part-title">🩺 மருத்துவர், ஐஐடி &amp; விமானி</span> <span class="flip-gateway-badge">➔ வாயில் 01 (தேசிய நுழைவுத்தேர்வுகள்)</span>
+</span>
+</div>
+</div>
+<button class="btn-flip-nav" onclick="nextFlipGateway(event)" title="அடுத்த வழிகாட்டல் செய்தி" type="button">▶</button>
+</div>
+</div>
+<!-- ==================================================== -->
+<!-- 6 பிரதான போர்டல் கார்டுகள் (6 Macro Portal Cards) -->
+<!-- ==================================================== -->
+<div class="grid-container" id="cardsGrid">
+<!-- 1. நுழைவுத் தேர்வுகள் வாயிலாக உயர்கல்வி -->
+<div class="card cat-entrance" id="gateway-entrance">
+<div>
+<div class="card-top-meta">
+<span class="card-number">👑 01 / ENTRANCE EXAMS</span>
+<span class="pillar-badge">தேசிய நுழைவுத்தேர்வுகள்</span>
+</div>
+<div class="card-header">
+<div class="icon-box">🎯</div>
+<div class="card-title-group">
+<a class="card-title" href="https://www.ceosvg.in/career-guidance/entrance-exams" rel="noopener noreferrer" target="_blank">
+                நுழைவுத் தேர்வுகள் வாயிலாக உயர்கல்வி
+                <small>National &amp; State Entrance Examinations</small>
+</a>
+</div>
+</div>
+<p class="card-summary">அகில இந்திய மற்றும் முன்னணி மாநில அரசு கல்வி நிறுவனங்களில் மருத்துவம், பொறியியல், அறிவியல் ஆராய்ச்சி, சட்டம், வடிவமைப்பு, முப்படை &amp; கடற்படை அதிகாரிகள் மற்றும் விமானப் போக்குவரத்து (விமானி) படிப்புகளுக்கான தேசிய நுழைவுத்தேர்வுகள்.</p>
+<div class="tags"><span class="tag" title="NEET UG (தேசிய மருத்துவ நுழைவுத்தேர்வு)">NEET (மருத்துவம்)</span><span class="tag" title="JEE Main &amp; Advanced (IIT / NIT பொறியியல்)">JEE (IIT/NIT)</span><span class="tag" title="CUET (மத்தியப் பல்கலைக்கழகங்கள் நுழைவுத்தேர்வு)">CUET (மத்திய பல்கலை)</span><span class="tag" title="IISER (IAT) &amp; NISER அறிவியல் ஆராய்ச்சி">IISER / NISER</span><span class="tag" onclick="openPilotModal('iaf')" style="background: rgba(30, 58, 138, 0.55); color: #93c5fd; border: 1.2px solid #60a5fa; font-weight: 800; cursor: pointer;" title="முப்படை &amp; கடற்படை அதிகாரி / விமானி நுழைவுத்தேர்வு (NDA &amp; NA)">🎖️ NDA &amp; NA (முப்படை)</span><span class="tag" onclick="openPilotModal('cpl')" style="background: rgba(12, 74, 110, 0.55); color: #7dd3fc; border: 1.2px solid #38bdf8; font-weight: 800; cursor: pointer;" title="வணிக விமானி பயிற்சி நுழைவுத்தேர்வு (IGRUA CPL)">✈️ IGRUA (விமானி CPL)</span><span class="tag" onclick="openPilotModal('navy')" style="background: rgba(6, 78, 59, 0.55); color: #86efac; border: 1.2px solid #34d399; font-weight: 800; cursor: pointer;" title="வணிகக் கடற்படை நுழைவுத்தேர்வு (IMU-CET)">⚓ IMU-CET (கடற்படை)</span><span class="tag" title="CLAT (தேசிய சட்டப் பல்கலைக்கழகங்கள்)">CLAT (சட்டம்)</span><span class="tag" title="NATA &amp; NIFT (கட்டடக்கலை &amp; ஆடை வடிவமைப்பு)">NATA / NIFT</span><span class="tag" title="IIM 5-Year IPMAT (ஒருங்கிணைந்த மேலாண்மை)">IIM IPMAT</span></div>
+</div>
+<a class="btn-link" href="https://www.ceosvg.in/career-guidance/entrance-exams" rel="noopener noreferrer" target="_blank">
+          தேர்வுகள் விவரம் காண்க
+          <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 2. நேரடிச் சேர்க்கைப் படிப்புகள் (தேர்வு இல்லாதவை) -->
+<div class="card cat-merit" id="gateway-merit">
+<div>
+<div class="card-top-meta">
+<span class="card-number">👑 02 / DIRECT MERIT</span>
+<span class="pillar-badge">+2 மதிப்பெண் சேர்க்கை</span>
+</div>
+<div class="card-header">
+<div class="icon-box">📈</div>
+<div class="card-title-group">
+<a class="card-title" href="https://www.ceosvg.in/career-guidance/direct-admission-courses" rel="noopener noreferrer" target="_blank">
+                நேரடிச் சேர்க்கைப் படிப்புகள்
+                <small>Direct Merit Admissions (No Entrance Exam)</small>
+</a>
+</div>
+</div>
+<p class="card-summary">எந்தவித நுழைவுத்தேர்வும் இன்றி, 12-ஆம் வகுப்பு பொதுத்தேர்வு மதிப்பெண் மற்றும் கட்-ஆஃப் அடிப்படையில் ஒற்றைச் சாளர கலந்தாய்வு மூலம் நேரடியாகச் சேர்க்கப்படும் பட்டப்படிப்புகள்.</p>
+<div class="tags"><span class="tag" title="TNEA தமிழ்நாடு பொறியியல் கலந்தாய்வு">TNEA பொறியியல்</span><span class="tag" title="TNGASA அரசு கலை &amp; அறிவியல் கல்லூரிகள்">TNGASA கலை &amp; அறிவியல்</span><span class="tag" title="TNAU வேளாண்மை &amp; தோட்டக்கலை">TNAU வேளாண்மை</span><span class="tag" title="TANUVAS கால்நடை மருத்துவக் கலந்தாய்வு">TANUVAS கால்நடை</span><span class="tag" title="துணை மருத்துவம் (Nursing / B.Pharm / BPT)">துணை மருத்துவம் (Nursing)</span><span class="tag" title="பாலிடெக்னிக் லேட்டரல் என்ட்ரி &amp; தொழிற்கல்வி">பாலிடெக்னிக் / ITI</span></div>
+</div>
+<a class="btn-link" href="https://www.ceosvg.in/career-guidance/direct-admission-courses" rel="noopener noreferrer" target="_blank">
+          சேர்க்கை விவரங்கள் காண்க
+          <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 3. கல்லூரிகள் & கல்வி நிறுவனங்கள் வழிகாட்டி -->
+<div class="card cat-colleges" id="gateway-colleges">
+<div>
+<div class="card-top-meta">
+<span class="card-number">👑 03 / INSTITUTES</span>
+<span class="pillar-badge">கல்லூரிகள் விவரக் குறிப்பேடு</span>
+</div>
+<div class="card-header">
+<div class="icon-box">🏛️</div>
+<div class="card-title-group">
+<a class="card-title" href="https://www.ceosvg.in/career-guidance/institutes" rel="noopener noreferrer" target="_blank">
+                கல்லூரிகள் &amp; கல்வி நிறுவனங்கள் வழிகாட்டி
+                <small>Colleges &amp; Universities Directory</small>
+</a>
+</div>
+</div>
+<p class="card-summary">அகில இந்திய மற்றும் தமிழக அளவிலான தலைசிறந்த மத்திய/மாநில அரசு நிறுவனங்கள், அரசு மருத்துவ, பொறியியல் மற்றும் மாவட்ட வாரியான அரசு கலை மற்றும் அறிவியல் கல்லூரிகள் பட்டியல்.</p>
+<div class="tags"><span class="tag" title="IITs / NITs / AIIMS தேசிய நிறுவனங்கள்">IIT / NIT / AIIMS</span><span class="tag" title="36 தமிழக அரசு மருத்துவக் கல்லூரிகள்">36 அரசு மருத்துவக் கல்லூரிகள்</span><span class="tag" title="அண்ணா பல்கலைக்கழக உறுப்புக் கல்லூரிகள்">அண்ணா பல்கலைக் கல்லூரிகள்</span><span class="tag" title="அரசு கலை, அறிவியல் &amp; பாலிடெக்னிக்">அரசு கலை &amp; பாலிடெக்னிக்</span><span class="tag" onclick="openPilotModal('cpl')" style="background: rgba(120, 53, 15, 0.55); color: #fde68a; border: 1.2px solid #f59e0b; font-weight: 800; cursor: pointer;" title="IGRUA &amp; DGCA விமானப் பயிற்சிப் பள்ளிகள்">✈️ விமானப் பயிற்சிப் பள்ளிகள்</span><span class="tag" title="மத்தியப் பல்கலைக்கழகங்கள் (CUTN)">மத்தியப் பல்கலைக்கழகங்கள்</span></div>
+</div>
+<a class="btn-link" href="https://www.ceosvg.in/career-guidance/institutes" rel="noopener noreferrer" target="_blank">
+          கல்லூரிகள் பட்டியல் காண்க
+          <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 4. அரசுப் பணி & சீருடைப் போட்டித் தேர்வுகள் -->
+<div class="card cat-competitive" id="gateway-competitive">
+<div>
+<div class="card-top-meta">
+<span class="card-number">👑 04 / GOVT EXAMS</span>
+<span class="pillar-badge">அரசுப் பணி &amp; சீருடைத் தேர்வுகள்</span>
+</div>
+<div class="card-header">
+<div class="icon-box">🏆</div>
+<div class="card-title-group">
+<a class="card-title" href="https://www.ceosvg.in/career-guidance/govt-exams" rel="noopener noreferrer" target="_blank">
+                அரசுப் பணி &amp; சீருடைப் போட்டித் தேர்வுகள்
+                <small>Government &amp; Uniformed Services Competitive Exams</small>
+</a>
+</div>
+</div>
+<p class="card-summary">12-ஆம் வகுப்பு முடித்தவுடன் எழுதக்கூடிய தமிழ்நாடு அரசுப் பணியாளர் தேர்வாணையம் (TNPSC), மத்திய பணியாளர் தேர்வாணையம் (SSC), ரயில்வே (RRB), சீருடைப் பணியாளர் (காவலர்) மற்றும் முப்படை அக்னிவீர் நேரடிப் பணிகளுக்கான போட்டித் தேர்வுகள்.</p>
+<div class="tags"><span class="tag" title="TNPSC (குரூப் 4, VAO, குரூப் 2)">TNPSC (குரூப் 4 / VAO)</span><span class="tag" title="மத்திய பணியாளர் தேர்வாணையம் (SSC CHSL, MTS)">SSC (CHSL / MTS)</span><span class="tag" title="ரயில்வே பணித் தேர்வுகள் (RRB NTPC, ALP)">ரயில்வே (RRB NTPC)</span><span class="tag" title="TNUSRB இரண்டாம் நிலை காவலர்">TNUSRB காவலர்</span><span class="tag" onclick="openPilotModal('iaf')" style="background: rgba(76, 29, 149, 0.55); color: #ddd6fe; border: 1.2px solid #a78bfa; font-weight: 800; cursor: pointer;" title="முப்படை அக்னிவீர் நேரடிப் பணி (Army / Navy / Air Force)">🎖️ முப்படை அக்னிவீர்</span><span class="tag" title="மத்திய துணை ராணுவம் (CRPF, BSF, CISF)">துணை ராணுவம் (CRPF/CISF)</span><span class="tag" title="வங்கித் தேர்வுகள் (IBPS / SBI Clerk)">வங்கித் தேர்வுகள் (IBPS)</span></div>
+</div>
+<a class="btn-link" href="https://www.ceosvg.in/career-guidance/govt-exams" rel="noopener noreferrer" target="_blank">
+          போட்டித் தேர்வுகள் விவரம்
+          <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 5. திறன்சார் பணிகள், தனியார் வேலைகள் & சுயதொழில் -->
+<div class="card cat-skills" id="gateway-skills">
+<div>
+<div class="card-top-meta">
+<span class="card-number">👑 05 / DIRECT CAREERS</span>
+<span class="pillar-badge">தேர்வில்லா வேலை &amp; சுயதொழில்</span>
+</div>
+<div class="card-header">
+<div class="icon-box">💼</div>
+<div class="card-title-group">
+<a class="card-title" href="https://www.ceosvg.in/career-guidance/direct-careers" rel="noopener noreferrer" target="_blank">
+                திறன்சார் பணிகள், தனியார் வேலைகள் &amp; சுயதொழில்
+                <small>Skill Training, Private Jobs &amp; Self-Employment</small>
+</a>
+</div>
+</div>
+<p class="card-summary">போட்டித்தேர்வு இல்லாத நேரடி வேலைவாய்ப்புகள், படித்துக்கொண்டே சம்பாதிக்கும் Work &amp; Learn திட்டங்கள், தொழில் முனைவோர் கடன் திட்டங்கள் மற்றும் தனியார் வேலைவாய்ப்பு முகாம்கள்.</p>
+<div class="tags"><span class="tag" title="Zoho Schools (கட்டணமில்லா படிப்பு + வேலை)">Zoho Schools (படிப்பு+வேலை)</span><span class="tag" title="HCL TechBee Early Career Programme">HCL TechBee</span><span class="tag" title="நான் முதல்வன் &amp; TNSDC இலவச திறன் பயிற்சி">நான் முதல்வன் &amp; TNSDC</span><span class="tag" title="மாவட்ட வேலைவாய்ப்பு முகாம்கள்">வேலைவாய்ப்பு முகாம்கள்</span><span class="tag" title="UYEGP &amp; PMEGP அரசு மானியக் கடன்">UYEGP / PMEGP மானியக் கடன்</span><span class="tag" title="முத்ரா சிறுதொழில் கடன் திட்டம் (PMMY)">முத்ரா சிறுதொழில் கடன்</span></div>
+</div>
+<a class="btn-link" href="https://www.ceosvg.in/career-guidance/direct-careers" rel="noopener noreferrer" target="_blank">
+          வேலைவாய்ப்புகள் காண்க
+          <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 6. மாணவர் நலத்திட்டங்கள், கட்-ஆஃப் கருவிகள் & உதவி மையம் -->
+<div class="card cat-support" id="gateway-support">
+<div>
+<div class="card-top-meta">
+<span class="card-number">👑 06 / STUDENT SUPPORT</span>
+<span class="pillar-badge">சலுகைகள், கருவிகள் &amp; உதவி</span>
+</div>
+<div class="card-header">
+<div class="icon-box">🤝</div>
+<div class="card-title-group">
+<a class="card-title" href="https://www.ceosvg.in/career-guidance/help-desk" rel="noopener noreferrer" target="_blank">
+                மாணவர் நலத்திட்டங்கள், கருவிகள் &amp; உதவி மையம்
+                <small>Scholarships, Cut-off Tools &amp; Helpdesk 14417</small>
+</a>
+</div>
+</div>
+<p class="card-summary">அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு, அரசின் கல்வி உதவித்தொகைகள், கட்-ஆஃப் கணக்கீட்டுக் கருவிகள், வழிகாட்டிக் கையேடுகள் பதிவிறக்கம் மற்றும் உதவி மையம்.</p>
+<div class="tags"><span class="tag" title="அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு">7.5% அரசுப்பள்ளி இடஒதுக்கீடு</span><span class="tag" title="புதுமைப் பெண் &amp; தமிழ்ப் புதல்வன் திட்டம்">புதுமைப் பெண் &amp; புதல்வன்</span><span class="tag" title="முதல் தலைமுறை பட்டதாரி முழு கட்டணச் சலுகை">முதல் பட்டதாரி சலுகை</span><span class="tag" onclick="openCutoffModal()" style="background: rgba(136, 19, 55, 0.55); color: #fecdd3; border: 1.2px solid #fb7185; font-weight: 800; cursor: pointer;" title="பொறியியல், வேளாண்மை, கலை &amp; அறிவியல் நேரடி சேர்க்கை கட்-ஆஃப் கணக்கீடு">🧮 கட்-ஆஃப் கால்குலேட்டர்</span><span class="tag" title="உயர்கல்வி வழிகாட்டிக் கையேடு (PDF பதிவிறக்கம்)">வழிகாட்டிக் கையேடு (PDF)</span><span class="tag" title="பள்ளிக்கல்வித்துறை 24/7 மாணவர் உதவி எண் 14417">மாணவர் உதவி எண் 14417</span></div>
+</div>
+<a class="btn-link" href="https://www.ceosvg.in/career-guidance/help-desk" rel="noopener noreferrer" target="_blank">
+          உதவிகள் &amp; கருவிகள் பெற
+          <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+<!-- ==================================================== -->
+<!-- சுருக்கப்பட்ட மையப்படுத்திய திருக்குறள் பகுதி (Compact Centered with Verse Animation) -->
+<!-- ==================================================== -->
+<div class="kural-box">
+<div class="kural-header">
+<span>📜</span>
+<span>திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
+</div>
+<div>
+<div class="kural-text-animated">
+          “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
+          திண்ணியர் ஆகப் பெறின்.”
+        </div>
+</div>
+<div class="kural-meaning">
+<strong>பொருள்:</strong> எண்ணியவர் (செயலை முடிப்பதில்) உறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே அடைவர்.
+      </div>
+</div>
+<!-- ==================================================== -->
+<!-- தங்களின் மேலான ஆலோசனை/கருத்துகளை பதிவு செய்க (Wide, Compact & Attachment Enabled - Entrance.html Style) -->
+<!-- ==================================================== -->
+<section class="feedback-section">
+<!-- Top Vibrant Decorative Gradient Bar -->
+<div class="animated-top-bar"></div>
+<canvas id="fb_crackers_canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 99; display: none;"></canvas>
+<!-- Compact Header Bar (Horizontal Alignment) -->
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(226, 232, 240, 0.8);">
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+<div class="sparkle-badge">
+<span class="sparkle-icon">✨</span>
+<span>கருத்துக் களம் &amp; வழிகாட்டல்</span>
+</div>
+<h2 style="font-size: 1.35rem; font-weight: 800; background: linear-gradient(135deg, #1e3a8a 0%, #6b21a8 50%, #9d174d 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0; letter-spacing: -0.2px;">
+            தங்களின் மேலான ஆலோசனை/கருத்துகளை பதிவு செய்க
+          </h2>
+</div>
+<p style="font-size: 0.86rem; color: #64748b; margin: 0;">
+          உயர்கல்வி வழிகாட்டல் குறித்து ஆலோசனைகள், கோப்புகள் (PDF/Word/Excel/PPT/படம்) அல்லது இணைப்புகளைப் பகிரலாம்
+        </p>
+</div>
+<!-- Wide Compact Form Grid -->
+<form id="guidanceFeedbackForm" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px 14px; align-items: start;">
+<!-- 1. பெயர் -->
+<div class="form-group fb-field-name" style="grid-column: span 1;">
+<label for="fb_name" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #e0f2fe; color: #0284c7; border-radius: 4px; font-size: 11px;">👤</span>
+<span>பெயர்</span>
+<span style="color: #ef4444;">*</span>
+</label>
+<input id="fb_name" placeholder="முழுப் பெயர்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="text"/>
+</div>
+<!-- 2. பள்ளி மற்றும் ஊர் -->
+<div class="form-group fb-field-place" style="grid-column: span 1;">
+<label for="fb_place" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #fef3c7; color: #d97706; border-radius: 4px; font-size: 11px;">🏫</span>
+<span>பள்ளி / ஊர்</span>
+<span style="color: #ef4444;">*</span>
+</label>
+<input id="fb_place" placeholder="பள்ளி பெயர் &amp; ஊர்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="text"/>
+</div>
+<!-- 3. தொலைபேசி எண் -->
+<div class="form-group fb-field-phone" style="grid-column: span 1;">
+<label for="fb_phone" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #dcfce7; color: #16a34a; border-radius: 4px; font-size: 11px;">📱</span>
+<span>தொலைபேசி எண்</span>
+<span style="color: #ef4444;">*</span>
+</label>
+<input id="fb_phone" pattern="[0-9]{10}" placeholder="10 இலக்க எண்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" title="10 இலக்க கைபேசி எண்" type="tel"/>
+</div>
+<!-- 4. மின்னஞ்சல் முகவரி (கட்டாயமில்லை) -->
+<div class="form-group fb-field-email" style="grid-column: span 1;">
+<label for="fb_email" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #f3e8ff; color: #9333ea; border-radius: 4px; font-size: 11px;">✉️</span>
+<span>மின்னஞ்சல்</span>
+<span style="font-size: 0.72rem; color: #64748b; background: #f1f5f9; padding: 1px 6px; border-radius: 999px;">விருப்பம்</span>
+</label>
+<input id="fb_email" placeholder="example@gmail.com" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="email"/>
+</div>
+<!-- 5. கோப்பு பதிவேற்றம் (PDF, Word, Excel, PPT அல்லது படம்) -->
+<div class="form-group fb-field-file" style="grid-column: span 2;">
+<label for="fb_file" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #fce7f3; color: #be185d; border-radius: 4px; font-size: 11px;">📎</span>
+<span>கோப்பு / ஆவணம் இணைக்க (விருப்பப்பட்டால்)</span>
+<span style="font-size: 0.72rem; color: #64748b; background: #f1f5f9; padding: 1px 6px; border-radius: 999px;">PDF, Image, Word, Excel, PPT (Max 10MB)</span>
+</label>
+<input accept=".pdf,image/*,.doc,.docx,.xls,.xlsx,.ppt,.pptx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation" id="fb_file" style="width: 100%; padding: 6px 10px; font-size: 0.84rem; font-family: inherit; border: 1.5px dashed #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box; cursor: pointer;" type="file"/>
+</div>
+<!-- 6. இணைய இணைப்பு / Web Link -->
+<div class="form-group fb-field-link" style="grid-column: span 2;">
+<label for="fb_link" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #ccfbf1; color: #0f766e; border-radius: 4px; font-size: 11px;">🔗</span>
+<span>இணைய இணைப்பு / Link (விருப்பப்பட்டால்)</span>
+<span style="font-size: 0.72rem; color: #64748b; background: #f1f5f9; padding: 1px 6px; border-radius: 999px;">Google Drive / Web URL</span>
+</label>
+<input id="fb_link" placeholder="https://drive.google.com/... அல்லது இணைய முகவரி" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="url"/>
+</div>
+<!-- 7. ஆலோசனைகள் / கருத்துகள் (3 நிரல்கள் அகலம்) -->
+<div class="form-group fb-field-msg" style="grid-column: span 3;">
+<label for="fb_message" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #ffe4e6; color: #e11d48; border-radius: 4px; font-size: 11px;">💡</span>
+<span>தங்களின் மேலான ஆலோசனைகள் / கருத்துகள்</span>
+<span style="color: #ef4444;">*</span>
+</label>
+<textarea id="fb_message" placeholder="உயர்கல்வி வழிகாட்டி மற்றும் இத்தளம் குறித்த தங்களின் மேலான ஆலோசனைகள்..." required="" rows="2" style="width: 100%; height: 50px; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; resize: vertical; box-sizing: border-box; line-height: 1.4;"></textarea>
+</div>
+<!-- 8. Submit பொத்தான் (4வது நிரல் - Textarea-க்கு இணையாக) -->
+<div class="form-group fb-field-submit" style="grid-column: span 1; display: flex; flex-direction: column; justify-content: flex-end;">
+<button id="fb_submitBtn" style="width: 100%; height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%); color: #ffffff; border: none; font-size: 0.96rem; font-weight: 800; font-family: inherit; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3); transition: all 0.25s ease; box-sizing: border-box;" type="submit">
+<span>பதிவு செய்க</span>
+<svg style="width: 16px; height: 16px; fill: none; stroke: currentColor;" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+</button>
+</div>
+</form>
+<div id="fb_status" style="margin-top: 10px; text-align: center; padding: 10px 16px; border-radius: 8px; font-size: 0.95rem; font-weight: 800; display: none;"></div>
+</section>
+<!-- ==================================================== -->
+<!-- இணையதள வடிவமைப்பு விவரம் (Single Line Animated Creator Details as in old.html) -->
+<!-- ==================================================== -->
+<div class="creator-card">
+<div id="creatorTypewriterWrap" style="display: inline-flex; align-items: center; justify-content: center; flex-wrap: wrap; line-height: 1.8;">
+<span id="creatorTypewriterTarget"></span><span class="typing-cursor" id="creatorCursor">|</span>
+</div>
+</div>
+<!-- Footer Section (as in old.html) -->
+<footer class="portal-footer">
+<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
+        தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
+</p>
+<p style="font-size: 0.85rem; color: #64748b;">
+        © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+      </p>
+</footer>
+</div>
+<!-- ==================================================== -->
+<!-- All-in-One Direct Admission Cut-off Calculator Modal -->
+<!-- அனைத்து வகை நேரடி சேர்க்கைப் படிப்புகளுக்கான கட்-ஆஃப் கால்குலேட்டர் -->
+<!-- ==================================================== -->
+<div class="modal-overlay" id="cutoffModal">
+<div class="modal-content" style="border: 2px solid #d4af37; box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(212, 175, 55, 0.3);">
+<button class="modal-close" onclick="closeCutoffModal()" type="button">✕</button>
+<h3 style="font-size: 1.3rem; font-weight: 900; color: #1e3a8a; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; border-bottom: 2px solid #fef08a; padding-bottom: 8px;">
+        👑 🧮 +2 கட்-ஆஃப் கால்குலேட்டர் 2026
+      </h3>
+<p style="font-size: 0.84rem; color: #64748b; margin-bottom: 14px;">
+        சேர விரும்பும் படிப்பைத் தேர்வு செய்து பாட மதிப்பெண்களை உள்ளிடவும்:
+      </p>
+<!-- Course Selection Tabs -->
+<div class="calc-tabs">
+<button class="calc-tab-btn active" onclick="switchCalcCourse('eng', this)" type="button">⚙️ பொறியியல் (TNEA)</button>
+<button class="calc-tab-btn" onclick="switchCalcCourse('agri', this)" type="button">🌾 வேளாண்மை (TNAU)</button>
+<button class="calc-tab-btn" onclick="switchCalcCourse('vet_para', this)" type="button">🩺 துணை மருத்துவம் &amp; கால்நடை</button>
+<button class="calc-tab-btn" onclick="switchCalcCourse('arts_sci', this)" type="button">💼 கலை, அறிவியல் &amp; வணிகவியல்</button>
+<button class="calc-tab-btn" onclick="switchCalcCourse('law', this)" type="button">⚖️ சட்டக் கல்வி (TNDALU)</button>
+</div>
+<!-- Dynamic Form Inputs Container -->
+<div id="calcInputsContainer">
+<!-- Rendered dynamically via switchCalcCourse -->
+</div>
+<button onclick="calculateUniversalCutoff()" style="width: 100%; margin-top: 14px; padding: 11px; background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); color: #ffffff; border: none; border-radius: 8px; font-size: 0.95rem; font-weight: 800; cursor: pointer; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);" type="button">
+        கட்-ஆஃப் மதிப்பெண் கணக்கிடுக
+      </button>
+<!-- Result Box -->
+<div id="cutoffResultBox" style="display: none; margin-top: 16px; padding: 16px; background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 10px; text-align: center;">
+<div id="cutoffCourseTitle" style="font-size: 0.88rem; font-weight: 800; color: #166534; margin-bottom: 4px;">தங்களின் கட்-ஆஃப் மதிப்பெண்:</div>
+<div id="cutoffScore" style="font-size: 2.2rem; font-weight: 900; color: #15803d; line-height: 1.2;">0 / 200</div>
+<div id="cutoffPercentage" style="font-size: 0.92rem; font-weight: 800; color: #047857; margin-top: 4px;"></div>
+<div id="cutoffFormula" style="font-size: 0.78rem; color: #64748b; margin-top: 6px;"></div>
+</div>
+</div>
+</div>
+<!-- ==================================================== -->
+<!-- JavaScript: Dynamic Typing, 3D Flip Gateway, All-in-One Calc & Crackers -->
+<!-- ==================================================== -->
+<script>
+    // 1. Dynamic Typing Effect
+    const typingPhrases = [
+      "12-ஆம் வகுப்பிற்குப் பின் என்ன படிக்கலாம்?",
+      "மருத்துவம் முதல் விண்வெளி ஆராய்ச்சி வரை...",
+      "அரசுப் பணிகள் முதல் நவீன தொழில்முனைவு வரை!",
+      "உங்கள் சிறந்த எதிர்காலத்திற்கான திறவுகோல் - உயர்கல்வி வழிகாட்டி!"
+    ];
+
+    const typingTarget = document.getElementById('typingText');
+    let phraseIdx = 0;
+    let charIdx = 0;
+    let isDeleting = false;
+    let typingSpeed = 80;
+
+    function typeEffect() {
+      if (!typingTarget) return;
+      const currentPhrase = typingPhrases[phraseIdx];
+
+      if (isDeleting) {
+        typingTarget.textContent = currentPhrase.substring(0, charIdx - 1);
+        charIdx--;
+        typingSpeed = 40;
+      } else {
+        typingTarget.textContent = currentPhrase.substring(0, charIdx + 1);
+        charIdx++;
+        typingSpeed = 80;
+      }
+
+      if (!isDeleting && charIdx === currentPhrase.length) {
+        typingSpeed = 2200;
+        isDeleting = true;
+      } else if (isDeleting && charIdx === 0) {
+        isDeleting = false;
+        phraseIdx = (phraseIdx + 1) % typingPhrases.length;
+        typingSpeed = 500;
+      }
+
+      setTimeout(typeEffect, typingSpeed);
+    }
+    document.addEventListener('DOMContentLoaded', typeEffect);
+
+    // ====================================================
+    // 2. Fast 3D Flip Card Effect for Gateway Target Navigation
+    // ====================================================
+    const gatewayItems = [
+      { text: "🩺 மருத்துவர், ஐஐடி & விமானி ➔ வாயில் 01 (தேசிய நுழைவுத்தேர்வுகள்)", target: "cat-entrance" },
+      { text: "📈 நுழைவுத்தேர்வின்றி +2 மதிப்பெண் சேர்க்கை ➔ வாயில் 02 (நேரடிச் சேர்க்கை)", target: "cat-merit" },
+      { text: "🏛️ சிறந்த மத்திய/மாநில அரசு கல்லூரிகள் ➔ வாயில் 03 (கல்லூரிகள் அடைவு)", target: "cat-colleges" },
+      { text: "👮 அரசுப் பணி & சீருடைப் பணிகள் ➔ வாயில் 04 (போட்டித் தேர்வுகள்)", target: "cat-competitive" },
+      { text: "💼 படித்துக்கொண்டே சம்பாதிக்க (Zoho/HCL) ➔ வாயில் 05 (திறன்சார் பணிகள்)", target: "cat-skills" },
+      { text: "🌟 7.5% சலுகை & உதவி எண் 14417 ➔ வாயில் 06 (மாணவர் நலத்திட்டங்கள்)", target: "cat-support" }
+    ];
+
+    let currentFlipIdx = 0;
+    let flipTimer = null;
+    let isFlipping = false;
+
+    const flipCard = document.getElementById('compassFlipCard');
+    const flipContent = document.getElementById('flipContent');
+
+    function renderFlipItem(index, direction) {
+      if (isFlipping) return;
+      isFlipping = true;
+
+      // Animate flip out
+      flipCard.classList.add('flip-out');
+
+      setTimeout(() => {
+        currentFlipIdx = (index + gatewayItems.length) % gatewayItems.length;
+        const itemText = gatewayItems[currentFlipIdx].text;
+        const arrowIdx = itemText.indexOf(' ➔ ');
+        if (arrowIdx !== -1) {
+          const mainPart = itemText.substring(0, arrowIdx).trim();
+          const targetPart = itemText.substring(arrowIdx + 3).trim();
+          flipContent.innerHTML = `<span class="flip-part-title">${mainPart}</span> <span class="flip-gateway-badge">➔ ${targetPart}</span>`;
+        } else {
+          flipContent.textContent = itemText;
+        }
+        
+        flipCard.classList.remove('flip-out');
+        flipCard.classList.add('flip-in');
+
+        // Trigger reflow
+        void flipCard.offsetWidth;
+
+        flipCard.classList.remove('flip-in');
+        isFlipping = false;
+      }, 220);
+    }
+
+    function nextFlipGateway(e) {
+      if (e) e.stopPropagation();
+      renderFlipItem(currentFlipIdx + 1, 'next');
+      resetFlipTimer();
+    }
+
+    function prevFlipGateway(e) {
+      if (e) e.stopPropagation();
+      renderFlipItem(currentFlipIdx - 1, 'prev');
+      resetFlipTimer();
+    }
+
+    function triggerCurrentGateway() {
+      const targetClass = gatewayItems[currentFlipIdx].target;
+      scrollToGateway(targetClass);
+    }
+
+    function resetFlipTimer() {
+      if (flipTimer) clearInterval(flipTimer);
+      // Fast Flip Interval: Every 2.4s (சற்று விரைவாக)
+      flipTimer = setInterval(() => {
+        renderFlipItem(currentFlipIdx + 1, 'next');
+      }, 2400);
+    }
+
+    // Pause on hover
+    const flipViewport = document.getElementById('compassFlipViewport');
+    if (flipViewport) {
+      flipViewport.addEventListener('mouseenter', () => clearInterval(flipTimer));
+      flipViewport.addEventListener('mouseleave', resetFlipTimer);
+    }
+
+    document.addEventListener('DOMContentLoaded', resetFlipTimer);
+
+    // Scroll and Highlight Gateway
+    function scrollToGateway(cardClass) {
+      const card = document.querySelector('.' + cardClass);
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        card.classList.remove('highlighted-card');
+        void card.offsetWidth; // trigger reflow
+        card.classList.add('highlighted-card');
+        setTimeout(() => {
+          card.classList.remove('highlighted-card');
+        }, 2500);
+      }
+    }
+
+    // ====================================================
+    // 3. All-in-One Direct Admission Cut-off Calculator
+    // ====================================================
+    let activeCourse = 'eng';
+    let activeBioStream = 'pure'; // Default to Pure Science for Agri/Veterinary/Paramedical
+
+    function openCutoffModal() {
+      document.getElementById('cutoffModal').style.display = 'flex';
+      switchCalcCourse('eng', document.querySelector('.calc-tab-btn'));
+    }
+
+    function closeCutoffModal() {
+      document.getElementById('cutoffModal').style.display = 'none';
+    }
+
+    function toggleBioStream(stream) {
+      activeBioStream = stream;
+      renderBioInputs();
+      document.getElementById('cutoffResultBox').style.display = 'none';
+    }
+
+    function renderBioInputs() {
+      const bioFieldsContainer = document.getElementById('bioFieldsArea');
+      if (!bioFieldsContainer) return;
+
+      if (activeBioStream === 'pure') {
+        bioFieldsContainer.innerHTML = `
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 12px;">
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 700; color: #1e293b; display: block; margin-bottom: 4px;">🌿 தாவரவியல் (Botany)</label>
+              <input type="number" id="calc_bot" min="0" max="100" placeholder="100க்கு" style="width: 100%; padding: 8px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; font-weight: 700;">
+            </div>
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 700; color: #1e293b; display: block; margin-bottom: 4px;">🐾 விலங்கியல் (Zoology)</label>
+              <input type="number" id="calc_zoo" min="0" max="100" placeholder="100க்கு" style="width: 100%; padding: 8px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; font-weight: 700;">
+            </div>
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 700; color: #1e293b; display: block; margin-bottom: 4px;">⚛️ இயற்பியல் (Physics)</label>
+              <input type="number" id="calc_p" min="0" max="100" placeholder="100க்கு" style="width: 100%; padding: 8px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; font-weight: 700;">
+            </div>
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 700; color: #1e293b; display: block; margin-bottom: 4px;">🧪 வேதியியல் (Chemistry)</label>
+              <input type="number" id="calc_c" min="0" max="100" placeholder="100க்கு" style="width: 100%; padding: 8px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; font-weight: 700;">
+            </div>
+          </div>
+          <div style="font-size: 0.78rem; color: #047857; background: #ecfdf5; padding: 6px 10px; border-radius: 6px; border: 1px solid #a7f3d0;">
+            * <strong>தூய அறிவியல் (Pure Science) கட்-ஆஃப் சூத்திரம்:</strong> [(தாவரவியல் + விலங்கியல்) ÷ 2] + (இயற்பியல் ÷ 2) + (வேதியியல் ÷ 2) = <strong>200க்கு</strong>
+          </div>
+        `;
+      } else {
+        bioFieldsContainer.innerHTML = `
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 12px;">
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 700; color: #1e293b; display: block; margin-bottom: 4px;">🧬 உயிரியல் (Biology)</label>
+              <input type="number" id="calc_b" min="0" max="100" placeholder="100க்கு" style="width: 100%; padding: 8px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; font-weight: 700;">
+            </div>
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 700; color: #1e293b; display: block; margin-bottom: 4px;">⚛️ இயற்பியல் (Physics)</label>
+              <input type="number" id="calc_p" min="0" max="100" placeholder="100க்கு" style="width: 100%; padding: 8px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; font-weight: 700;">
+            </div>
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 700; color: #1e293b; display: block; margin-bottom: 4px;">🧪 வேதியியல் (Chemistry)</label>
+              <input type="number" id="calc_c" min="0" max="100" placeholder="100க்கு" style="width: 100%; padding: 8px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; font-weight: 700;">
+            </div>
+          </div>
+          <div style="font-size: 0.78rem; color: #1e40af; background: #eff6ff; padding: 6px 10px; border-radius: 6px; border: 1px solid #bfdbfe;">
+            * <strong>பொது உயிரியல் (General Biology) கட்-ஆஃப் சூத்திரம்:</strong> உயிரியல் + (இயற்பியல் ÷ 2) + (வேதியியல் ÷ 2) = <strong>200க்கு</strong>
+          </div>
+        `;
+      }
+    }
+
+    function switchCalcCourse(courseKey, btn) {
+      activeCourse = courseKey;
+      document.querySelectorAll('.calc-tab-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const container = document.getElementById('calcInputsContainer');
+      document.getElementById('cutoffResultBox').style.display = 'none';
+
+      if (courseKey === 'eng') {
+        container.innerHTML = `
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 12px;">
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 700; color: #1e293b; display: block; margin-bottom: 4px;">கணிதம் (Maths)</label>
+              <input type="number" id="calc_m" min="0" max="100" placeholder="100க்கு" style="width: 100%; padding: 8px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; font-weight: 700;">
+            </div>
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 700; color: #1e293b; display: block; margin-bottom: 4px;">இயற்பியல் (Physics)</label>
+              <input type="number" id="calc_p" min="0" max="100" placeholder="100க்கு" style="width: 100%; padding: 8px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; font-weight: 700;">
+            </div>
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 700; color: #1e293b; display: block; margin-bottom: 4px;">வேதியியல் (Chemistry)</label>
+              <input type="number" id="calc_c" min="0" max="100" placeholder="100க்கு" style="width: 100%; padding: 8px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; font-weight: 700;">
+            </div>
+          </div>
+          <div style="font-size: 0.78rem; color: #64748b;">* TNEA பொறியியல் பார்முலா: கணிதம் + (இயற்பியல் ÷ 2) + (வேதியியல் ÷ 2) = 200க்கு</div>
+        `;
+      } else if (courseKey === 'agri' || courseKey === 'vet_para') {
+        container.innerHTML = `
+          <!-- Stream Selector Radio Toggle -->
+          <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 10px 14px; margin-bottom: 14px;">
+            <span style="font-size: 0.82rem; font-weight: 800; color: #1e293b; display: block; margin-bottom: 6px;">பயின்ற பாடப் பிரிவு (Stream):</span>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+              <label style="display: flex; align-items: center; gap: 6px; font-size: 0.86rem; font-weight: 700; color: #065f46; cursor: pointer;">
+                <input type="radio" name="bioStreamRadio" value="pure" checked onchange="toggleBioStream('pure')">
+                🌿 தூய அறிவியல் (தாவரவியல், விலங்கியல், இயற்பியல், வேதியியல்)
+              </label>
+              <label style="display: flex; align-items: center; gap: 6px; font-size: 0.86rem; font-weight: 700; color: #1e40af; cursor: pointer;">
+                <input type="radio" name="bioStreamRadio" value="general" onchange="toggleBioStream('general')">
+                🧬 பொது உயிரியல் (Biology, Physics, Chemistry)
+              </label>
+            </div>
+          </div>
+          <div id="bioFieldsArea"></div>
+        `;
+        activeBioStream = 'pure';
+        renderBioInputs();
+      } else if (courseKey === 'arts_sci' || courseKey === 'law') {
+        container.innerHTML = `
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 12px;">
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 700; color: #1e293b; display: block; margin-bottom: 4px;">பாடம் 1 (Sub 1)</label>
+              <input type="number" id="calc_s1" min="0" max="100" placeholder="100க்கு" style="width: 100%; padding: 8px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; font-weight: 700;">
+            </div>
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 700; color: #1e293b; display: block; margin-bottom: 4px;">பாடம் 2 (Sub 2)</label>
+              <input type="number" id="calc_s2" min="0" max="100" placeholder="100க்கு" style="width: 100%; padding: 8px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; font-weight: 700;">
+            </div>
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 700; color: #1e293b; display: block; margin-bottom: 4px;">பாடம் 3 (Sub 3)</label>
+              <input type="number" id="calc_s3" min="0" max="100" placeholder="100க்கு" style="width: 100%; padding: 8px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; font-weight: 700;">
+            </div>
+            <div>
+              <label style="font-size: 0.8rem; font-weight: 700; color: #1e293b; display: block; margin-bottom: 4px;">பாடம் 4 (Sub 4)</label>
+              <input type="number" id="calc_s4" min="0" max="100" placeholder="100க்கு" style="width: 100%; padding: 8px; border: 1.5px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; font-weight: 700;">
+            </div>
+          </div>
+          <div style="font-size: 0.78rem; color: #64748b;">* கலை, அறிவியல், வணிகவியல் (TNGASA) & சட்டப் படிப்புகள்: 4 முதன்மைப் பாடங்களின் கூட்டுத்தொகை (400க்கு) மற்றும் சதவீதத்தில் (%) கணக்கிடப்படுகிறது.</div>
+        `;
+      }
+    }
+
+    function calculateUniversalCutoff() {
+      let score = 0;
+      let maxScore = 200;
+      let title = "";
+      let formula = "";
+      let pct = "";
+
+      if (activeCourse === 'eng') {
+        const m = parseFloat(document.getElementById('calc_m')?.value) || 0;
+        const p = parseFloat(document.getElementById('calc_p')?.value) || 0;
+        const c = parseFloat(document.getElementById('calc_c')?.value) || 0;
+        score = m + (p / 2) + (c / 2);
+        maxScore = 200;
+        title = "பொறியியல் (TNEA Engineering) கட்-ஆஃப் மதிப்பெண்:";
+        formula = `கணிதம் (${m}) + இயற்பியல்/2 (${(p/2).toFixed(1)}) + வேதியியல்/2 (${(c/2).toFixed(1)}) = ${score.toFixed(2)}`;
+        pct = `சதவீதம்: ${((score / 200) * 100).toFixed(2)}%`;
+      } else if (activeCourse === 'agri' || activeCourse === 'vet_para') {
+        const p = parseFloat(document.getElementById('calc_p')?.value) || 0;
+        const c = parseFloat(document.getElementById('calc_c')?.value) || 0;
+        const courseName = activeCourse === 'agri' ? "வேளாண்மை (TNAU Agriculture)" : "துணை மருத்துவம் / கால்நடை (TANUVAS)";
+
+        if (activeBioStream === 'pure') {
+          const bot = parseFloat(document.getElementById('calc_bot')?.value) || 0;
+          const zoo = parseFloat(document.getElementById('calc_zoo')?.value) || 0;
+          const bioEq = (bot + zoo) / 2.0;
+          score = bioEq + (p / 2.0) + (c / 2.0);
+          maxScore = 200;
+          title = `${courseName} [தூய அறிவியல் பிரிவு] கட்-ஆஃப் மதிப்பெண்:`;
+          formula = `[(தாவரவியல் ${bot} + விலங்கியல் ${zoo}) ÷ 2 = ${bioEq.toFixed(1)}] + இயற்பியல்/2 (${(p/2).toFixed(1)}) + வேதியியல்/2 (${(c/2).toFixed(1)}) = ${score.toFixed(2)} / 200`;
+          pct = `சதவீதம்: ${((score / 200) * 100).toFixed(2)}%`;
+        } else {
+          const b = parseFloat(document.getElementById('calc_b')?.value) || 0;
+          score = b + (p / 2.0) + (c / 2.0);
+          maxScore = 200;
+          title = `${courseName} [பொது உயிரியல் பிரிவு] கட்-ஆஃப் மதிப்பெண்:`;
+          formula = `உயிரியல் (${b}) + இயற்பியல்/2 (${(p/2).toFixed(1)}) + வேதியியல்/2 (${(c/2).toFixed(1)}) = ${score.toFixed(2)} / 200`;
+          pct = `சதவீதம்: ${((score / 200) * 100).toFixed(2)}%`;
+        }
+      } else if (activeCourse === 'arts_sci') {
+        const s1 = parseFloat(document.getElementById('calc_s1')?.value) || 0;
+        const s2 = parseFloat(document.getElementById('calc_s2')?.value) || 0;
+        const s3 = parseFloat(document.getElementById('calc_s3')?.value) || 0;
+        const s4 = parseFloat(document.getElementById('calc_s4')?.value) || 0;
+        score = s1 + s2 + s3 + s4;
+        maxScore = 400;
+        title = "கலை, அறிவியல் & வணிகவியல் (TNGASA B.Com/B.Sc/BA) கட்-ஆஃப்:";
+        formula = `4 பாடங்களின் கூட்டுத்தொகை: ${s1} + ${s2} + ${s3} + ${s4} = ${score.toFixed(1)} / 400`;
+        pct = `சராசரி கட்-ஆஃப் (100க்கு): ${(score / 4).toFixed(2)}%`;
+      } else if (activeCourse === 'law') {
+        const s1 = parseFloat(document.getElementById('calc_s1')?.value) || 0;
+        const s2 = parseFloat(document.getElementById('calc_s2')?.value) || 0;
+        const s3 = parseFloat(document.getElementById('calc_s3')?.value) || 0;
+        const s4 = parseFloat(document.getElementById('calc_s4')?.value) || 0;
+        score = s1 + s2 + s3 + s4;
+        maxScore = 400;
+        title = "தமிழ்நாடு சட்டக் கல்வி (TNDALU 5-Year Law) கட்-ஆஃப்:";
+        formula = `4 முதன்மைப் பாடங்கள்: ${s1} + ${s2} + ${s3} + ${s4} = ${score.toFixed(1)} / 400`;
+        pct = `கட்-ஆஃப் சதவீதம்: ${(score / 4).toFixed(2)}%`;
+      }
+
+      document.getElementById('cutoffCourseTitle').textContent = title;
+      document.getElementById('cutoffScore').textContent = `${score.toFixed(2)} / ${maxScore}`;
+      document.getElementById('cutoffPercentage').textContent = pct;
+      document.getElementById('cutoffFormula').textContent = formula;
+      document.getElementById('cutoffResultBox').style.display = 'block';
+    }
+
+    // 4. Feedback Form Handler (Google Apps Script Web App - with Attachments from Entrance.html)
+    const fbForm = document.getElementById('guidanceFeedbackForm');
+    const fbSubmitBtn = document.getElementById('fb_submitBtn');
+    const fbStatus = document.getElementById('fb_status');
+    
+    const feedbackScriptURL = 'https://script.google.com/macros/s/AKfycbx87BcBrzGcVBqpWkKvyK4VBFwKqd8a1U-GuTQ9ouG-Ygn2A6SXsW97lSZxYb8PL_HUOA/exec';
+
+    if (fbForm) {
+      fbForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const fileInput = document.getElementById('fb_file');
+        const file = (fileInput && fileInput.files.length > 0) ? fileInput.files[0] : null;
+
+        // 10MB limit check
+        if (file && file.size > 10 * 1024 * 1024) {
+          fbStatus.style.display = 'block';
+          fbStatus.style.background = '#fef2f2';
+          fbStatus.style.color = '#991b1b';
+          fbStatus.style.border = '1.5px solid #fecaca';
+          fbStatus.innerHTML = '⚠️ இணைக்கப்பட்ட கோப்பு 10MB-க்குள் இருக்க வேண்டும்.';
+          return;
+        }
+
+        fbSubmitBtn.disabled = true;
+        fbSubmitBtn.style.opacity = '0.7';
+        fbSubmitBtn.style.cursor = 'not-allowed';
+        
+        fbStatus.style.display = 'block';
+        fbStatus.style.background = '#eff6ff';
+        fbStatus.style.color = '#1e40af';
+        fbStatus.style.border = '1px solid #bfdbfe';
+        fbStatus.innerHTML = file ? '⏳ கோப்பு மற்றும் விவரங்கள் பதிவேற்றப்படுகின்றன...' : '⏳ விவரங்கள் பதிவேற்றப்படுகின்றன, காத்திருக்கவும்...';
+
+        function sendData(fileBase64, fileName, fileType) {
+          const payload = {
+            name: document.getElementById('fb_name').value.trim(),
+            place: document.getElementById('fb_place').value.trim(),
+            phone: document.getElementById('fb_phone').value.trim(),
+            email: document.getElementById('fb_email').value.trim(),
+            link: document.getElementById('fb_link') ? document.getElementById('fb_link').value.trim() : '',
+            message: document.getElementById('fb_message').value.trim(),
+            fileData: fileBase64,
+            fileName: fileName,
+            fileType: fileType
+          };
+
+          fetch(feedbackScriptURL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(payload)
+          })
+          .then(() => {
+            fbStatus.style.background = 'linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%)';
+            fbStatus.style.color = '#065f46';
+            fbStatus.style.border = '2px solid #34d399';
+            fbStatus.style.boxShadow = '0 6px 20px rgba(16, 185, 129, 0.25)';
+            fbStatus.innerHTML = '🎉 ✨ தங்களின் மேலான ஆலோசனைக்கு நன்றி! ✨ 🎉';
+            
+            // Trigger Crackers / Fireworks Celebration Effect
+            try { fireCelebrationCrackers(); } catch(ce) {}
+
+            fbForm.reset();
+            fbSubmitBtn.disabled = false;
+            fbSubmitBtn.style.opacity = '1';
+            fbSubmitBtn.style.cursor = 'pointer';
+          })
+          .catch(err => {
+            fbStatus.style.background = '#fef2f2';
+            fbStatus.style.color = '#991b1b';
+            fbStatus.style.border = '1px solid #fecaca';
+            fbStatus.innerHTML = '⚠️ பதிவு செய்வதில் பிழை ஏற்பட்டது. தயவுசெய்து சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும்.';
+            fbSubmitBtn.disabled = false;
+            fbSubmitBtn.style.opacity = '1';
+            fbSubmitBtn.style.cursor = 'pointer';
+          });
+        }
+
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(evt) {
+            const base64 = evt.target.result.split(',')[1];
+            sendData(base64, file.name, file.type);
+          };
+          reader.onerror = function() {
+            sendData('', '', '');
+          };
+          reader.readAsDataURL(file);
+        } else {
+          sendData('', '', '');
+        }
+      });
+    }
+
+    // 5. Festive Crackers / Fireworks Animation (from Entrance.html)
+    function fireCelebrationCrackers() {
+      const canvas = document.getElementById('fb_crackers_canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      canvas.width = canvas.parentElement.offsetWidth;
+      canvas.height = canvas.parentElement.offsetHeight;
+      canvas.style.display = 'block';
+
+      const particles = [];
+      const colors = ['#f43f5e', '#ec4899', '#d946ef', '#a855f7', '#6366f1', '#3b82f6', '#06b6d4', '#10b981', '#eab308', '#f97316'];
+
+      // Spawn 120 colorful cracker particles from two burst points
+      const burstPoints = [
+        { x: canvas.width * 0.35, y: canvas.height * 0.5 },
+        { x: canvas.width * 0.65, y: canvas.height * 0.5 }
+      ];
+
+      burstPoints.forEach(pt => {
+        for (let i = 0; i < 60; i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const speed = Math.random() * 8 + 3;
+          particles.push({
+            x: pt.x,
+            y: pt.y,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed - 2,
+            radius: Math.random() * 3.5 + 2,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            gravity: 0.16,
+            alpha: 1,
+            decay: Math.random() * 0.012 + 0.01,
+            shape: Math.random() > 0.5 ? 'circle' : 'star'
+          });
+        }
+      });
+
+      let animId;
+      function render() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        let alive = false;
+
+        particles.forEach(p => {
+          if (p.alpha > 0) {
+            alive = true;
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vy += p.gravity;
+            p.alpha -= p.decay;
+
+            ctx.save();
+            ctx.globalAlpha = Math.max(p.alpha, 0);
+            ctx.fillStyle = p.color;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = p.color;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+          }
+        });
+
+        if (alive) {
+          animId = requestAnimationFrame(render);
+        } else {
+          cancelAnimationFrame(animId);
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          canvas.style.display = 'none';
+        }
+      }
+      render();
+    }
+  
+    // ==========================================
+    // 5. Creator Single-Line Typewriter Animation (from old.html)
+    // (Types once and stays permanently static)
+    // ==========================================
+    const creatorSegments = [
+      { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
+      { text: "கூ. பூவலிங்கம்", tag: "span", class: "creator-name-ta" },
+      { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
+      { text: "K. Poovalingam", tag: "span", class: "creator-name-en" },
+      { text: ", Deputy Inspector of Schools  ", tag: "span", class: "creator-role" },
+      { text: "📱 9626471035", tag: "a", class: "creator-phone-badge", href: "tel:9626471035" }
+    ];
+
+    const creatorContainer = document.getElementById('creatorTypewriterTarget');
+    const creatorCursor = document.getElementById('creatorCursor');
+
+    let creatorSegIdx = 0;
+    let creatorCharIdx = 0;
+    let creatorCurrentElem = null;
+    let creatorHasStarted = false;
+
+    function typeCreatorDetails() {
+      if (!creatorContainer || creatorHasStarted) return;
+      creatorHasStarted = true;
+
+      function step() {
+        if (creatorSegIdx >= creatorSegments.length) {
+          if (creatorCursor) {
+            creatorCursor.style.animation = 'none';
+            creatorCursor.style.opacity = '0';
+            setTimeout(() => creatorCursor.remove(), 400);
+          }
+          return;
+        }
+
+        const currentSeg = creatorSegments[creatorSegIdx];
+        if (creatorCharIdx === 0) {
+          creatorCurrentElem = document.createElement(currentSeg.tag);
+          creatorCurrentElem.className = currentSeg.class;
+          if (currentSeg.href) {
+            creatorCurrentElem.href = currentSeg.href;
+            creatorCurrentElem.title = "அழைக்க கிளிக் செய்யவும் (Call: 9626471035)";
+          }
+          creatorContainer.appendChild(creatorCurrentElem);
+        }
+
+        creatorCurrentElem.textContent += currentSeg.text.charAt(creatorCharIdx);
+        creatorCharIdx++;
+
+        if (creatorCharIdx >= currentSeg.text.length) {
+          creatorSegIdx++;
+          creatorCharIdx = 0;
+        }
+
+        setTimeout(step, 35);
+      }
+      step();
+    }
+
+    // Trigger when scrolled into view or immediately
+    if ('IntersectionObserver' in window) {
+      const cardElem = document.querySelector('.creator-card');
+      if (cardElem) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              typeCreatorDetails();
+              observer.disconnect();
+            }
+          });
+        }, { threshold: 0.2 });
+        observer.observe(cardElem);
+      } else {
+        typeCreatorDetails();
+      }
+    } else {
+      typeCreatorDetails();
+    }
+
+  
+    // ==========================================
+    // 6. Comprehensive Pilot Training Modal Handlers
+    // ==========================================
+    function openPilotModal(tabKey) {
+      const modal = document.getElementById('pilotModal');
+      if (modal) {
+        modal.style.display = 'flex';
+        if (tabKey === 'iaf' || tabKey === 'cpl' || tabKey === 'compare') {
+          switchPilotTab(tabKey);
+        } else {
+          switchPilotTab('iaf');
+        }
+      }
+    }
+
+    function closePilotModal() {
+      const modal = document.getElementById('pilotModal');
+      if (modal) modal.style.display = 'none';
+    }
+
+    function switchPilotTab(tab) {
+      document.getElementById('pilot_content_iaf').style.display = (tab === 'iaf') ? 'block' : 'none';
+      document.getElementById('pilot_content_cpl').style.display = (tab === 'cpl') ? 'block' : 'none';
+      if (document.getElementById('pilot_content_navy')) {
+        document.getElementById('pilot_content_navy').style.display = (tab === 'navy') ? 'block' : 'none';
+      }
+      document.getElementById('pilot_content_compare').style.display = (tab === 'compare') ? 'block' : 'none';
+
+      document.querySelectorAll('#pilotModal .calc-tab-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = document.getElementById('tab_pilot_' + tab);
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+  </script>
+<!-- ==================================================== -->
+<!-- ✈️ Comprehensive Pilot Training Guidance Modal 2026 -->
+<!-- 12-ஆம் வகுப்பிற்குப் பின் விமானி (Pilot) ஆவது எப்படி? — விரிவான வழிகாட்டி -->
+<!-- ==================================================== -->
+<div class="modal-overlay" id="pilotModal" style="display: none;">
+<div class="modal-content" style="max-width: 820px; max-height: 92vh; padding: 26px 28px;">
+<button class="modal-close" onclick="closePilotModal()" type="button">✕</button>
+<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px; border-bottom: 1.5px solid #e2e8f0; padding-bottom: 10px;">
+<span style="font-size: 28px;">✈️</span>
+<div>
+<h3 style="font-size: 1.35rem; font-weight: 900; color: #0f172a; margin: 0; line-height: 1.2;">
+            12-ஆம் வகுப்பிற்குப் பின் விமானி (Pilot) ஆவது எப்படி?
+          </h3>
+<p style="font-size: 0.82rem; color: #64748b; margin: 2px 0 0 0;">
+            இந்திய விமானப்படை மற்றும் வணிக விமானி (Commercial Pilot) பயிற்சிகளுக்கான விரிவான அதிகாரப்பூர்வ வழிகாட்டி
+          </p>
+</div>
+</div>
+<!-- Pilot & Maritime Tabs -->
+<div style="display: flex; gap: 8px; margin: 14px 0; flex-wrap: wrap;">
+<button class="calc-tab-btn active" id="tab_pilot_iaf" onclick="switchPilotTab('iaf')" style="font-size: 0.84rem; padding: 7px 14px;" type="button">
+          🎖️ 1. முப்படை &amp; கடற்படை அதிகாரி / விமானி (UPSC NDA &amp; NA)
+        </button>
+<button class="calc-tab-btn" id="tab_pilot_cpl" onclick="switchPilotTab('cpl')" style="font-size: 0.84rem; padding: 7px 14px;" type="button">
+          ✈️ 2. வணிக விமானி (Commercial Pilot - IGRUA)
+        </button>
+<button class="calc-tab-btn" id="tab_pilot_navy" onclick="switchPilotTab('navy')" style="font-size: 0.84rem; padding: 7px 14px;" type="button">
+          ⚓ 3. வணிகக் கடற்படை (Merchant Navy - IMU-CET)
+        </button>
+<button class="calc-tab-btn" id="tab_pilot_compare" onclick="switchPilotTab('compare')" style="font-size: 0.84rem; padding: 7px 14px;" type="button">
+          ⚖️ 4. ஒப்பீட்டு அட்டவணை
+        </button>
+</div>
+<!-- Tab 1: Indian Air Force Pilot (UPSC NDA) -->
+<div id="pilot_content_iaf" style="display: block;">
+<div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 1.5px solid #86efac; border-radius: 12px; padding: 14px 18px; margin-bottom: 14px;">
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
+<span style="font-size: 0.95rem; font-weight: 800; color: #166534;">🌟 சிறப்பு: மாணவர்களுக்கு ₹1 கூட செலவில்லை — முழு அரசுச் செலவு + உதவித்தொகை!</span>
+<span style="font-size: 0.76rem; background: #15803d; color: #ffffff; padding: 2px 10px; border-radius: 999px; font-weight: 700;">வாயில் 04 சார்ந்தது</span>
+</div>
+<p style="font-size: 0.85rem; color: #14532d; margin-top: 4px; line-height: 1.5;">
+            நடுத்தர மற்றும் எளிய குடும்பங்களைச் சேர்ந்த மாணவர்களுக்கு உலகின் அதிநவீன சுகோய் (Su-30MKI), ரஃபேல் (Rafale), தேஜாஸ் (Tejas) போன்ற போர் விமானங்களை இயக்கும் மாபெரும் கௌரவமிக்க வாய்ப்பு.
+          </p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 14px;">
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 16px;">
+<h4 style="font-size: 0.88rem; font-weight: 800; color: #1e3a8a; margin-bottom: 6px;">📋 கல்வி &amp; வயதுத் தகுதி:</h4>
+<ul style="font-size: 0.82rem; color: #334155; line-height: 1.6; padding-left: 18px; margin: 0;">
+<li><strong>கல்வி:</strong> 12-ஆம் வகுப்பில் <strong>இயற்பியல் (Physics)</strong> மற்றும் <strong>கணிதம் (Mathematics)</strong> படித்து தேர்ச்சி பெற்றிருக்க வேண்டும்.</li>
+<li><strong>வயது வரம்பு:</strong> <strong>16.5 முதல் 19.5 வயது வரை</strong>.</li>
+<li><strong>பாலினம்:</strong> திருமணமாகாத ஆண்கள் மற்றும் பெண்கள் இருபாலரும் விண்ணப்பிக்கலாம்.</li>
+</ul>
+</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 16px;">
+<h4 style="font-size: 0.88rem; font-weight: 800; color: #1e3a8a; margin-bottom: 6px;">🩺 உடற்தகுதி &amp; கண்பார்வை:</h4>
+<ul style="font-size: 0.82rem; color: #334155; line-height: 1.6; padding-left: 18px; margin: 0;">
+<li><strong>கண்பார்வை:</strong> 6/6 (நிறக்குருடு - Color Blindness முற்றிலும் இருக்கக்கூடாது).</li>
+<li><strong>குறைந்தபட்ச உயரம்:</strong> 162.5 செ.மீ (Leg length, Thigh length அளவீடுகள் காக்பிட்டுக்கு ஏற்ப இருக்க வேண்டும்).</li>
+<li>உடல் பருமன் மற்றும் எலும்பு குறைபாடுகள் இன்றி ஆரோக்கியமாக இருக்க வேண்டும்.</li>
+</ul>
+</div>
+</div>
+<div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 14px 18px; margin-bottom: 14px;">
+<h4 style="font-size: 0.9rem; font-weight: 800; color: #0f172a; margin-bottom: 8px;">🎯 தேர்வு மற்றும் பயிற்சி நிலைகள்:</h4>
+<ol style="font-size: 0.83rem; color: #334155; line-height: 1.7; padding-left: 18px; margin: 0;">
+<li><strong>UPSC NDA எழுத்துத் தேர்வு:</strong> ஆண்டுக்கு இரண்டு முறை (ஏப்ரல் &amp; செப்டம்பர்) நடைபெறும். தாள்-1: கணிதம் (300 மதிப்பெண்), தாள்-2: பொது அறிவு &amp; ஆங்கிலம் (600 மதிப்பெண்).</li>
+<li><strong>SSB நேர்காணல் (Services Selection Board):</strong> 5 நாட்கள் நடைபெறும் நுண்ணறிவு, குழு விவாதம் மற்றும் உளவியல் தேர்வுகள்.</li>
+<li><strong>CPSS கணினி வழி பைலட் தேர்வு (Computerised Pilot Selection System):</strong> விமான காக்பிட் சூழலில் வேகம், எதிர்வினை நேரம் மற்றும் ஒருங்கிணைப்பை சோதிக்கும் தேர்வு. (இத்தேர்வை ஒரு மாணவர் தன் <em>வாழ்நாளில் ஒரே ஒரு முறை மட்டுமே</em> எழுத முடியும்!).</li>
+<li><strong>விமானப்படை மருத்துவ வாரியம் (Air Force Medical Board):</strong> முழுமையான மருத்துவ தகுதிச் சான்றிதழ்.</li>
+<li><strong>பயிற்சி:</strong> தேசிய பாதுகாப்பு அகாடமி (NDA புனே) 3 ஆண்டுகள் பட்டப்படிப்பு + துண்டிகல் ஏர்ஃபோர்ஸ் அகாடமி (AFA Hyderabad) 1.5 ஆண்டுகள் பறக்கும் பயிற்சி.</li>
+</ol>
+</div>
+<div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 10px 14px; font-size: 0.82rem; color: #1e40af;">
+          💡 <strong>முக்கியப் பலன்:</strong> பயிற்சி முடித்தவுடன் இந்திய விமானப்படையில் <strong>Flying Officer</strong> பதவியுடன் தொடக்க ஊதியமாக மாதம் சுமார் ₹1,00,000/-க்கு மேல், இலவச அரசு குடியிருப்பு, மருத்துவ சலுகைகள் மற்றும் தேச சேவையாற்றும் மிகப்பெரிய கௌரவம் கிடைக்கும்.
+        </div>
+</div>
+<!-- Tab 2: Commercial Pilot License (CPL - IGRUA) -->
+<div id="pilot_content_cpl" style="display: none;">
+<div style="background: linear-gradient(135deg, #eff6ff 0%, #e0f2fe 100%); border: 1.5px solid #93c5fd; border-radius: 12px; padding: 14px 18px; margin-bottom: 14px;">
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
+<span style="font-size: 0.95rem; font-weight: 800; color: #1e40af;">🛫 பயணிகள் விமானி (Air India, IndiGo, SpiceJet உள்ளிட்ட உள்நாட்டு &amp; சர்வதேச நிறுவனங்கள்)</span>
+<span style="font-size: 0.76rem; background: #0284c7; color: #ffffff; padding: 2px 10px; border-radius: 999px; font-weight: 700;">வாயில் 01 &amp; 03 சார்ந்தது</span>
+</div>
+<p style="font-size: 0.85rem; color: #1e3a8a; margin-top: 4px; line-height: 1.5;">
+            வணிக ரீதியான பயணிகள் மற்றும் சரக்கு விமானங்களை இயக்கும் பைலட் உரிமம் (CPL - Commercial Pilot License) பெறுவதற்கான அதிகாரப்பூர்வ பயிற்சிப் பாதை.
+          </p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 14px;">
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 16px;">
+<h4 style="font-size: 0.88rem; font-weight: 800; color: #0f172a; margin-bottom: 6px;">📋 கல்வி &amp; வயதுத் தகுதி:</h4>
+<ul style="font-size: 0.82rem; color: #334155; line-height: 1.6; padding-left: 18px; margin: 0;">
+<li><strong>கல்வி:</strong> 12-ஆம் வகுப்பில் <strong>கணிதம் (Maths)</strong> மற்றும் <strong>இயற்பியல் (Physics)</strong> பாடங்களில் குறைந்தபட்சம் <strong>50% முதல் 55%</strong> மதிப்பெண்களுடன் தேர்ச்சி.</li>
+<li><strong>வயது வரம்பு:</strong> CPL தொடங்குவதற்கு குறைந்தபட்சம் <strong>17 வயது</strong> பூர்த்தியாகியிருக்க வேண்டும்.</li>
+<li><strong>ஆங்கிலப் புலமை:</strong> ICAO ஆங்கிலத் தொடர்புத் தேர்வில் தேர்ச்சி பெற்றிருக்க வேண்டும்.</li>
+</ul>
+</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 16px;">
+<h4 style="font-size: 0.88rem; font-weight: 800; color: #0f172a; margin-bottom: 6px;">🩺 DGCA மருத்துவப் பரிசோதனைகள்:</h4>
+<ul style="font-size: 0.82rem; color: #334155; line-height: 1.6; padding-left: 18px; margin: 0;">
+<li><strong>Class 2 Medicals:</strong> DGCA அங்கீகரித்த சிவில் மருத்துவர்களிடம் உடல் பரிசோதனை.</li>
+<li><strong>Class 1 Medicals:</strong> விமானப்படை சிறப்பு மருத்துவ மையங்களில் (IAM Bengaluru, AFCME Delhi) CPL-க்கான இறுதிப் பரிசோதனை.</li>
+<li>கண்ணாடி அணிந்திருந்தாலும் கண்பார்வை 6/6 நிலைக்கு சரிசெய்யப்பட்டிருக்க வேண்டும். நிறக்குருடு இருக்கக்கூடாது.</li>
+</ul>
+</div>
+</div>
+<div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 14px 18px; margin-bottom: 14px;">
+<h4 style="font-size: 0.9rem; font-weight: 800; color: #0f172a; margin-bottom: 8px;">🏛️ முன்னணி அரசு பயிற்சி நிறுவனம் &amp; சேர்க்கை முறை:</h4>
+<p style="font-size: 0.83rem; color: #334155; line-height: 1.6; margin-bottom: 8px;">
+            மத்திய சிவில் விமானப் போக்குவரத்து அமைச்சகத்தின் கீழ் இயங்கும் <strong>IGRUA (Indira Gandhi Rashtriya Uran Akademi - ரேபரேலி, உ.பி)</strong> இந்தியாவின் தலைசிறந்த அரசு விமானப் பயிற்சி நிறுவனமாகும்.
+          </p>
+<ul style="font-size: 0.82rem; color: #334155; line-height: 1.6; padding-left: 18px; margin: 0;">
+<li><strong>IGRUA நுழைவுத்தேர்வு:</strong> ஆங்கிலம், கணிதம், இயற்பியல், பகுத்தறிதல் (Reasoning) ஆகியவற்றை உள்ளடக்கிய அகில இந்திய ஆன்லைன் தேர்வு.</li>
+<li><strong>Pilot Aptitude Test (WOMBAT):</strong> காக்பிட் ஒருங்கிணைப்பு சோதனை &amp; தனிநபர் நேர்காணல்.</li>
+<li><strong>இதர DGCA அங்கீகரித்த பள்ளிகள்:</strong> National Flying Training Institute (NFTI Gondia), Madras Flying Club (சென்னை), Chimes Aviation Academy.</li>
+</ul>
+</div>
+<div style="background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 10px; padding: 12px 16px; margin-bottom: 12px;">
+<h4 style="font-size: 0.88rem; font-weight: 800; color: #b45309; margin-bottom: 4px;">💰 பயிற்சிச் செலவு &amp; வங்கிக் கல்விக் கடன் வழிகாட்டல்:</h4>
+<p style="font-size: 0.82rem; color: #78350f; line-height: 1.6; margin: 0;">
+            CPL (200 மணிநேரப் பறத்தல் பயிற்சி + DGCA 5 தேர்வுகள்) பெற சுமார் <strong>₹35 லட்சம் முதல் ₹50 லட்சம் வரை</strong> செலவாகும். இதற்கு பாரத ஸ்டேட் வங்கி (SBI Scholar/Global Ed-vantage) உள்ளிட்ட அனைத்து தேசியமயமாக்கப்பட்ட வங்கிகளிலும் சொத்துப் பிணையத்துடன் கூடிய <strong>முழு கல்விக் கடன் (Education Loan)</strong> பெற வசதி உள்ளது. தமிழக அரசின் ஆதிதிராவிடர் மற்றும் பழங்குடியினர் நலத்துறை மற்றும் சிறுபான்மையினர் நலத்துறைகளில் தகுதியான மாணவர்களுக்கு விமானி பயிற்சிக்கு சிறப்பு கல்வி நிதி மானியங்களும் வழங்கப்படுகின்றன.
+          </p>
+</div>
+</div>
+<!-- Tab: Merchant Navy (IMU-CET) -->
+<div id="pilot_content_navy" style="display: none;">
+<div style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border: 1.5px solid #a7f3d0; border-radius: 12px; padding: 14px 18px; margin-bottom: 14px;">
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
+<span style="font-size: 0.95rem; font-weight: 800; color: #065f46;">⚓ வணிகக் கடற்படை படிப்புகள் (Merchant Navy - B.Sc Nautical Science &amp; B.Tech Marine)</span>
+<span style="font-size: 0.76rem; background: #059669; color: #ffffff; padding: 2px 10px; border-radius: 999px; font-weight: 700;">வாயில் 01 சார்ந்தது</span>
+</div>
+<p style="font-size: 0.85rem; color: #064e3b; margin-top: 4px; line-height: 1.5;">
+            உலகளாவிய சரக்குக் கப்பல்களை இயக்கும் கப்பல் கேப்டன் (Captain / Deck Officer) மற்றும் கடல்சார் தலைமைப் பொறியாளர் (Marine Chief Engineer) ஆவதற்கான மத்திய அரசு நுழைவுத்தேர்வு.
+          </p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 14px;">
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 16px;">
+<h4 style="font-size: 0.88rem; font-weight: 800; color: #0f172a; margin-bottom: 6px;">📋 கல்வி &amp; வயதுத் தகுதி:</h4>
+<ul style="font-size: 0.82rem; color: #334155; line-height: 1.6; padding-left: 18px; margin: 0;">
+<li><strong>கல்வி:</strong> 12-ஆம் வகுப்பில் இயற்பியல், வேதியியல், கணிதம் (PCM) சராசரியாக <strong>குறைந்தபட்சம் 60%</strong> மதிப்பெண்களும், ஆங்கிலத்தில் 50% மதிப்பெண்களும் அவசியம்.</li>
+<li><strong>வயது வரம்பு:</strong> சேர்க்கையின்போது <strong>17 முதல் 25 வயது வரை</strong>.</li>
+<li><strong>தேசிய நுழைவுத்தேர்வு:</strong> இந்திய கடல்சார் பல்கலைக்கழகத்தின் <strong>IMU-CET (Indian Maritime University CET)</strong>.</li>
+</ul>
+</div>
+<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 16px;">
+<h4 style="font-size: 0.88rem; font-weight: 800; color: #0f172a; margin-bottom: 6px;">🩺 உடற்தகுதி &amp; கண்பார்வை (DG Shipping):</h4>
+<ul style="font-size: 0.82rem; color: #334155; line-height: 1.6; padding-left: 18px; margin: 0;">
+<li><strong>B.Sc Nautical Science:</strong> கண்பார்வை 6/6 (கண்ணாடி அணியக்கூடாது), எவ்வித நிறக்குருடும் இருக்கக்கூடாது.</li>
+<li><strong>B.Tech Marine Engineering:</strong> கண்ணாடி அணிந்து 6/6 அனுமதிக்கப்படும்.</li>
+<li>DG Shipping அங்கீகரித்த மருத்துவர்களிடம் மருத்துவ சான்றிதழ் பெற வேண்டும்.</li>
+</ul>
+</div>
+</div>
+<div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px;">
+<h4 style="font-size: 0.9rem; font-weight: 800; color: #0f172a; margin-bottom: 6px;">🏛️ முன்னணி அரசு கல்வி நிறுவனங்கள் &amp; வாய்ப்புகள்:</h4>
+<p style="font-size: 0.83rem; color: #334155; line-height: 1.6; margin: 0;">
+            மத்திய துறைமுகங்கள் &amp; கப்பல் போக்குவரத்து அமைச்சகத்தின் கீழ் இயங்கும் <strong>IMU கேம்பஸ்கள் (சென்னை, மும்பை, கொல்கத்தா, விசாகப்பட்டினம், கொச்சி)</strong>. படிப்பின் போதே முன்னணி சர்வதேச கப்பல் நிறுவனங்கள் ஸ்பான்சர்ஷிப் (Sponsorship) வழங்குகின்றன. உலக நாடுகள் முழுவதையும் சுற்றிப்பார்க்கும் வாய்ப்பும், ஆரம்பத்திலேயே மாதம் ₹1.5 லட்சம் முதல் ₹3 லட்சம் வரை அந்நியச் செலாவணி வருவாயும் பெறலாம்.
+          </p>
+</div>
+</div>
+<!-- Tab 3: Comparison Table -->
+<div id="pilot_content_compare" style="display: none;">
+<div style="overflow-x: auto; margin-bottom: 14px;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.84rem; text-align: left;">
+<thead>
+<tr style="background: #f1f5f9; border-bottom: 2px solid #cbd5e1; color: #0f172a;">
+<th style="padding: 10px 12px;">விவரம் / காரணிகள்</th>
+<th style="padding: 10px 12px; color: #166534;">🇮🇳 இந்திய விமானப்படை (IAF NDA)</th>
+<th style="padding: 10px 12px; color: #1e40af;">🛫 வணிக விமானி (CPL - IGRUA)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #e2e8f0;">
+<td style="padding: 10px 12px; font-weight: 700;">பயிற்சிக் கட்டணம்</td>
+<td style="padding: 10px 12px; color: #15803d; font-weight: 800;">ரூ. 0 (முற்றிலும் இலவசம்)</td>
+<td style="padding: 10px 12px; color: #b45309; font-weight: 700;">₹35 முதல் ₹50 லட்சம் (வங்கி கடன் உண்டு)</td>
+</tr>
+<tr style="border-bottom: 1px solid #e2e8f0; background: #fafafa;">
+<td style="padding: 10px 12px; font-weight: 700;">கல்வித் தகுதி</td>
+<td style="padding: 10px 12px;">12th கணிதம் + இயற்பியல் தேர்ச்சி</td>
+<td style="padding: 10px 12px;">12th கணிதம் + இயற்பியல் (50-55% மதிப்பெண்)</td>
+</tr>
+<tr style="border-bottom: 1px solid #e2e8f0;">
+<td style="padding: 10px 12px; font-weight: 700;">வயது வரம்பு</td>
+<td style="padding: 10px 12px;">16.5 முதல் 19.5 வயது வரை</td>
+<td style="padding: 10px 12px;">குறைந்தபட்சம் 17 வயது (உச்ச வரம்பில்லை)</td>
+</tr>
+<tr style="border-bottom: 1px solid #e2e8f0; background: #fafafa;">
+<td style="padding: 10px 12px; font-weight: 700;">சேர்க்கை நுழைவுத்தேர்வு</td>
+<td style="padding: 10px 12px;">UPSC NDA + SSB + CPSS</td>
+<td style="padding: 10px 12px;">IGRUA Written Test + Pilot Aptitude</td>
+</tr>
+<tr style="border-bottom: 1px solid #e2e8f0;">
+<td style="padding: 10px 12px; font-weight: 700;">இயக்கும் விமானங்கள்</td>
+<td style="padding: 10px 12px;">ரஃபேல், சுகோய், தேஜாஸ் போர் விமானங்கள்</td>
+<td style="padding: 10px 12px;">போயிங், ஏர்பஸ் பயணிகள் &amp; சரக்கு விமானங்கள்</td>
+</tr>
+<tr style="background: #fafafa;">
+<td style="padding: 10px 12px; font-weight: 700;">வேலை வாய்ப்பு &amp; பாதுகாப்பு</td>
+<td style="padding: 10px 12px; color: #166534; font-weight: 700;">100% நிரந்தர மத்திய அரசுப் பணி</td>
+<td style="padding: 10px 12px; color: #1e40af; font-weight: 700;">தனியார் &amp; அரசு விமான நிறுவனங்கள்</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 10px 14px; font-size: 0.82rem; color: #475569; text-align: center;">
+          📢 <strong>ஆசிரியர்கள் &amp; வழிகாட்டிகளுக்கான குறிப்பு:</strong> பொருளாதார ரீதியாக பின்தங்கிய ஏழை, எளிய அரசுப் பள்ளி மாணவர்களுக்கு <strong>UPSC NDA</strong> வழியினை முதலில் தீவிரமாகப் பரிந்துரைக்கலாம்!
+        </div>
+</div>
+<div style="margin-top: 16px; text-align: center;">
+<button onclick="closePilotModal()" style="padding: 8px 24px; background: #0f172a; color: #ffffff; border: none; border-radius: 6px; font-size: 0.88rem; font-weight: 700; cursor: pointer;" type="button">
+          சரி, மூடுக (Close)
+        </button>
+</div>
+</div>
+</div>
+</body>
+</html>
