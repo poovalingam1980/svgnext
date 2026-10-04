@@ -1110,11 +1110,285 @@
       }
     }
 
+
+    /* ========================================================
+       UNIFIED PORTAL-WIDE PERMANENT LEFT SIDEBAR NAVIGATION
+       ======================================================== */
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    .portal-layout-wrapper {
+      display: flex;
+      width: 100%;
+      min-height: 100vh;
+      position: relative;
+      align-items: stretch;
+    }
+
+    .desktop-left-sidebar {
+      width: 295px;
+      min-width: 295px;
+      max-width: 295px;
+      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%);
+      border-right: 1.8px solid rgba(212, 175, 55, 0.35);
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      box-sizing: border-box;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Custom Slim Gold Scrollbar for Sidebar */
+    .desktop-left-sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .desktop-left-sidebar::-webkit-scrollbar-track {
+      background: rgba(10, 15, 29, 0.95);
+    }
+    .desktop-left-sidebar::-webkit-scrollbar-thumb {
+      background: rgba(212, 175, 55, 0.45);
+      border-radius: 4px;
+    }
+    .desktop-left-sidebar::-webkit-scrollbar-thumb:hover {
+      background: rgba(212, 175, 55, 0.75);
+    }
+
+    .sidebar-header {
+      padding: 16px 14px 14px;
+      border-bottom: 1.5px solid rgba(212, 175, 55, 0.25);
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(15, 23, 42, 0.4) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .sidebar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .sidebar-emblem {
+      font-size: 1.65rem;
+      line-height: 1;
+      filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.5));
+    }
+    .sidebar-title-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar-main-title {
+      font-size: 0.92rem;
+      font-weight: 900;
+      color: #fef08a;
+      letter-spacing: 0.3px;
+      line-height: 1.25;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    }
+    .sidebar-sub-title {
+      font-size: 0.74rem;
+      color: #94a3b8;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .sidebar-close-btn {
+      display: none;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fef08a;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    .sidebar-close-btn:hover {
+      background: rgba(220, 38, 38, 0.6);
+      color: #ffffff;
+    }
+
+    .sidebar-nav-body {
+      padding: 14px 10px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex-grow: 1;
+    }
+
+    .sidebar-section {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .sidebar-section-header {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #fef08a;
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-left: 3px solid #d4af37;
+      background: rgba(212, 175, 55, 0.1);
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 3px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    }
+
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 11px;
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.83rem;
+      font-weight: 600;
+      border-radius: 7px;
+      transition: all 0.18s ease;
+      line-height: 1.35;
+      position: relative;
+    }
+    .sidebar-link:hover {
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.18) 0%, rgba(26, 86, 219, 0.16) 100%);
+      color: #fef08a;
+      transform: translateX(3px);
+    }
+    .sidebar-link.primary-hub {
+      background: rgba(255, 255, 255, 0.07);
+      font-weight: 800;
+      color: #f8fafc;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      margin-bottom: 3px;
+    }
+    .sidebar-link.primary-hub:hover {
+      border-color: #d4af37;
+      background: rgba(212, 175, 55, 0.25);
+      color: #ffffff;
+    }
+    .sidebar-link.active-page {
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.28) 0%, rgba(26, 86, 219, 0.22) 100%) !important;
+      color: #fef08a !important;
+      font-weight: 800 !important;
+      border-left: 3.5px solid #d4af37 !important;
+    }
+    .sidebar-link span.icon {
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      width: 18px;
+      text-align: center;
+    }
+    .sidebar-badge {
+      margin-left: auto;
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: rgba(212, 175, 55, 0.22);
+      color: #fef08a;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+    }
+
+    .portal-main-content {
+      flex-grow: 1;
+      min-width: 0;
+      padding: 12px 18px 40px;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    .sidebar-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 9998;
+    }
+
+    .mobile-menu-floating-btn {
+      display: none;
+    }
+
+    /* Responsive Mobile Rules */
+    @media (max-width: 1024px) {
+      .desktop-left-sidebar {
+        position: fixed;
+        left: -320px;
+        top: 0;
+        bottom: 0;
+        width: 295px;
+        height: 100vh;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 9999;
+        box-shadow: 6px 0 35px rgba(0,0,0,0.85);
+      }
+      .desktop-left-sidebar.sidebar-open {
+        left: 0;
+      }
+      .sidebar-close-btn {
+        display: inline-flex;
+      }
+      .portal-main-content {
+        padding: 8px 10px 30px;
+      }
+      .sidebar-backdrop.active {
+        display: block;
+      }
+      .mobile-menu-floating-btn {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        position: fixed;
+        bottom: 22px;
+        left: 20px;
+        background: linear-gradient(135deg, #091330 0%, #112255 100%);
+        color: #fef08a;
+        border: 1.8px solid #d4af37;
+        border-radius: 999px;
+        padding: 10px 18px;
+        font-size: 0.90rem;
+        font-weight: 800;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 14px rgba(212, 175, 55, 0.4);
+        z-index: 9990;
+        cursor: pointer;
+        font-family: inherit;
+        transition: all 0.2s ease;
+      }
+      .mobile-menu-floating-btn:hover {
+        background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        transform: scale(1.05);
+      }
+    }
+
 </style>
 </head>
 <body>
-
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
+
+<button id="mobileMenuFloatingBtn" class="mobile-menu-floating-btn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
+  <span style="font-size: 1.15rem; line-height: 1;">☰</span>
+  <span>மெனு</span>
+</button>
 
 <div class="portal-layout-wrapper">
 
@@ -1301,6 +1575,9 @@
 
   <!-- Main Portal Content Column -->
   <main class="portal-main-content">
+
+
+
 <div class="container">
 
 
@@ -2306,28 +2583,34 @@
     
 
 </script>
-</main>
+
+
+
+  </main>
 </div>
 
 <script>
 function toggleSidebarMenu() {
   var sidebar = document.getElementById('desktopLeftSidebar');
   var backdrop = document.getElementById('sidebarBackdrop');
-  if (sidebar) {
-    sidebar.classList.toggle('sidebar-open');
-  }
-  if (backdrop) {
-    backdrop.classList.toggle('active');
-  }
+  if (sidebar) sidebar.classList.toggle('sidebar-open');
+  if (backdrop) backdrop.classList.toggle('active');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+  var rawPath = window.location.pathname;
+  var currentPage = rawPath.substring(rawPath.lastIndexOf('/') + 1) || 'index.html';
   var links = document.querySelectorAll('.desktop-left-sidebar .sidebar-link');
   links.forEach(function(l) {
-    l.addEventListener('click', function() {
-      if (window.innerWidth <= 1024) {
-        toggleSidebarMenu();
+    var href = l.getAttribute('href');
+    if (href) {
+      var baseHref = href.split('#')[0];
+      if (baseHref === currentPage) {
+        l.classList.add('active-page');
       }
+    }
+    l.addEventListener('click', function() {
+      if (window.innerWidth <= 1024) toggleSidebarMenu();
     });
   });
 });

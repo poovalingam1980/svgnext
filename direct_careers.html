@@ -680,9 +680,472 @@
       .features-grid { grid-template-columns: 1fr; }
       .kural-verse { font-size: 1.15rem; }
     }
-  </style>
+  
+    /* ========================================================
+       UNIFIED PORTAL-WIDE PERMANENT LEFT SIDEBAR NAVIGATION
+       ======================================================== */
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    .portal-layout-wrapper {
+      display: flex;
+      width: 100%;
+      min-height: 100vh;
+      position: relative;
+      align-items: stretch;
+    }
+
+    .desktop-left-sidebar {
+      width: 295px;
+      min-width: 295px;
+      max-width: 295px;
+      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%);
+      border-right: 1.8px solid rgba(212, 175, 55, 0.35);
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      box-sizing: border-box;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Custom Slim Gold Scrollbar for Sidebar */
+    .desktop-left-sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .desktop-left-sidebar::-webkit-scrollbar-track {
+      background: rgba(10, 15, 29, 0.95);
+    }
+    .desktop-left-sidebar::-webkit-scrollbar-thumb {
+      background: rgba(212, 175, 55, 0.45);
+      border-radius: 4px;
+    }
+    .desktop-left-sidebar::-webkit-scrollbar-thumb:hover {
+      background: rgba(212, 175, 55, 0.75);
+    }
+
+    .sidebar-header {
+      padding: 16px 14px 14px;
+      border-bottom: 1.5px solid rgba(212, 175, 55, 0.25);
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(15, 23, 42, 0.4) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .sidebar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .sidebar-emblem {
+      font-size: 1.65rem;
+      line-height: 1;
+      filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.5));
+    }
+    .sidebar-title-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar-main-title {
+      font-size: 0.92rem;
+      font-weight: 900;
+      color: #fef08a;
+      letter-spacing: 0.3px;
+      line-height: 1.25;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    }
+    .sidebar-sub-title {
+      font-size: 0.74rem;
+      color: #94a3b8;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .sidebar-close-btn {
+      display: none;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fef08a;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    .sidebar-close-btn:hover {
+      background: rgba(220, 38, 38, 0.6);
+      color: #ffffff;
+    }
+
+    .sidebar-nav-body {
+      padding: 14px 10px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex-grow: 1;
+    }
+
+    .sidebar-section {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .sidebar-section-header {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #fef08a;
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-left: 3px solid #d4af37;
+      background: rgba(212, 175, 55, 0.1);
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 3px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    }
+
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 11px;
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.83rem;
+      font-weight: 600;
+      border-radius: 7px;
+      transition: all 0.18s ease;
+      line-height: 1.35;
+      position: relative;
+    }
+    .sidebar-link:hover {
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.18) 0%, rgba(26, 86, 219, 0.16) 100%);
+      color: #fef08a;
+      transform: translateX(3px);
+    }
+    .sidebar-link.primary-hub {
+      background: rgba(255, 255, 255, 0.07);
+      font-weight: 800;
+      color: #f8fafc;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      margin-bottom: 3px;
+    }
+    .sidebar-link.primary-hub:hover {
+      border-color: #d4af37;
+      background: rgba(212, 175, 55, 0.25);
+      color: #ffffff;
+    }
+    .sidebar-link.active-page {
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.28) 0%, rgba(26, 86, 219, 0.22) 100%) !important;
+      color: #fef08a !important;
+      font-weight: 800 !important;
+      border-left: 3.5px solid #d4af37 !important;
+    }
+    .sidebar-link span.icon {
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      width: 18px;
+      text-align: center;
+    }
+    .sidebar-badge {
+      margin-left: auto;
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: rgba(212, 175, 55, 0.22);
+      color: #fef08a;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+    }
+
+    .portal-main-content {
+      flex-grow: 1;
+      min-width: 0;
+      padding: 12px 18px 40px;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    .sidebar-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 9998;
+    }
+
+    .mobile-menu-floating-btn {
+      display: none;
+    }
+
+    /* Responsive Mobile Rules */
+    @media (max-width: 1024px) {
+      .desktop-left-sidebar {
+        position: fixed;
+        left: -320px;
+        top: 0;
+        bottom: 0;
+        width: 295px;
+        height: 100vh;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 9999;
+        box-shadow: 6px 0 35px rgba(0,0,0,0.85);
+      }
+      .desktop-left-sidebar.sidebar-open {
+        left: 0;
+      }
+      .sidebar-close-btn {
+        display: inline-flex;
+      }
+      .portal-main-content {
+        padding: 8px 10px 30px;
+      }
+      .sidebar-backdrop.active {
+        display: block;
+      }
+      .mobile-menu-floating-btn {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        position: fixed;
+        bottom: 22px;
+        left: 20px;
+        background: linear-gradient(135deg, #091330 0%, #112255 100%);
+        color: #fef08a;
+        border: 1.8px solid #d4af37;
+        border-radius: 999px;
+        padding: 10px 18px;
+        font-size: 0.90rem;
+        font-weight: 800;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 14px rgba(212, 175, 55, 0.4);
+        z-index: 9990;
+        cursor: pointer;
+        font-family: inherit;
+        transition: all 0.2s ease;
+      }
+      .mobile-menu-floating-btn:hover {
+        background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        transform: scale(1.05);
+      }
+    }
+
+</style>
 </head>
 <body>
+<div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
+
+<button id="mobileMenuFloatingBtn" class="mobile-menu-floating-btn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
+  <span style="font-size: 1.15rem; line-height: 1;">☰</span>
+  <span>மெனு</span>
+</button>
+
+<div class="portal-layout-wrapper">
+
+  <!-- Desktop Permanent Left Menu Frame -->
+  <aside class="desktop-left-sidebar" id="desktopLeftSidebar">
+    <div class="sidebar-header">
+      <a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
+        <span class="sidebar-emblem">🏛️</span>
+        <div class="sidebar-title-wrap">
+          <span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
+          <span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டல் 2026</span>
+        </div>
+      </a>
+      <button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
+    </div>
+
+    <nav class="sidebar-nav-body">
+      <!-- GATEWAY 01: ENTRANCE EXAMS -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">🎯 01 / நுழைவுத் தேர்வுகள்</div>
+        <a class="sidebar-link primary-hub" href="00_entrance_exams.html">
+          <span class="icon">📋</span>
+          <span>11 தேர்வுகள் வழிகாட்டி</span>
+          <span class="sidebar-badge">HUB</span>
+        </a>
+        <a class="sidebar-link" href="01_medical_neet_ug.html">
+          <span class="icon">🩺</span>
+          <span>NEET (மருத்துவம்)</span>
+        </a>
+        <a class="sidebar-link" href="01_A_tn_med_colleges.html">
+          <span class="icon">🏥</span>
+          <span>தமிழக மருத்துவ அடைவு</span>
+        </a>
+        <a class="sidebar-link" href="01_B_in_med_colleges.html">
+          <span class="icon">🏛️</span>
+          <span>அகில இந்திய மருத்துவ அடைவு</span>
+        </a>
+        <a class="sidebar-link" href="02_engineering_jee.html">
+          <span class="icon">⚙️</span>
+          <span>JEE Main / Adv (IIT/NIT)</span>
+        </a>
+        <a class="sidebar-link" href="02_aiq_eng_colleges.html">
+          <span class="icon">🏛️</span>
+          <span>AIQ பொறியியல் அடைவு</span>
+        </a>
+        <a class="sidebar-link" href="03_science_research_iiser.html">
+          <span class="icon">🔬</span>
+          <span>IISER / NISER (அறிவியல்)</span>
+        </a>
+        <a class="sidebar-link" href="04_central_universities_cuet.html">
+          <span class="icon">🏛️</span>
+          <span>CUET (மத்திய பல்கலை)</span>
+        </a>
+        <a class="sidebar-link" href="05_law_clat_nlu.html">
+          <span class="icon">⚖️</span>
+          <span>CLAT (தேசிய சட்டம்)</span>
+        </a>
+        <a class="sidebar-link" href="06_design_architecture_nata_nift.html">
+          <span class="icon">📐</span>
+          <span>NATA / NIFT (வடிவமைப்பு)</span>
+        </a>
+        <a class="sidebar-link" href="07_management_iim_ipm.html">
+          <span class="icon">📊</span>
+          <span>IIM IPMAT (மேலாண்மை)</span>
+        </a>
+        <a class="sidebar-link" href="08_hotel_management_nchmct.html">
+          <span class="icon">🏨</span>
+          <span>NCHMCT (உணவக நிர்வாகம்)</span>
+        </a>
+        <a class="sidebar-link" href="09_maritime_merchant_navy.html">
+          <span class="icon">⚓</span>
+          <span>IMU-CET (கடற்படை)</span>
+        </a>
+        <a class="sidebar-link" href="10_defence_armed_forces.html">
+          <span class="icon">🎖️</span>
+          <span>பாதுகாப்புப் படைகள் (NDA)</span>
+        </a>
+        <a class="sidebar-link" href="11_pilot_careers_cpl_and_iaf_fighter.html">
+          <span class="icon">✈️</span>
+          <span>விமானி (Commercial Pilot)</span>
+        </a>
+      </div>
+
+      <!-- GATEWAY 02: DIRECT ADMISSIONS -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">📈 02 / நேரடிச் சேர்க்கை</div>
+        <a class="sidebar-link primary-hub" href="02_00_direct_admissions.html">
+          <span class="icon">📑</span>
+          <span>நேரடிச் சேர்க்கை கையேடு</span>
+          <span class="sidebar-badge">HUB</span>
+        </a>
+        <a class="sidebar-link" href="02_01_tnea_engineering.html">
+          <span class="icon">⚙️</span>
+          <span>TNEA பொறியியல் சேர்க்கை</span>
+        </a>
+        <a class="sidebar-link" href="02_02_veterinary_allied_health.html">
+          <span class="icon">🩺</span>
+          <span>TANUVAS & துணை மருத்துவம்</span>
+        </a>
+        <a class="sidebar-link" href="02_03_agriculture_fisheries.html">
+          <span class="icon">🌾</span>
+          <span>TNAU வேளாண்மை & மீன்வளம்</span>
+        </a>
+        <a class="sidebar-link" href="02_04_law_admissions.html">
+          <span class="icon">⚖️</span>
+          <span>TNDALU 5 ஆண்டு சட்டம்</span>
+        </a>
+        <a class="sidebar-link" href="02_05_pure_applied_sciences.html">
+          <span class="icon">🔬</span>
+          <span>தூய அறிவியல் (B.Sc)</span>
+        </a>
+        <a class="sidebar-link" href="02_06_computer_applications_it.html">
+          <span class="icon">💻</span>
+          <span>கணினி & IT (BCA / B.Sc IT)</span>
+        </a>
+        <a class="sidebar-link" href="02_07_arts_humanities.html">
+          <span class="icon">📚</span>
+          <span>TNGASA கலை & மானுடவியல்</span>
+        </a>
+        <a class="sidebar-link" href="02_08_commerce_management.html">
+          <span class="icon">📊</span>
+          <span>வணிகவியல் (B.Com / BBA)</span>
+        </a>
+        <a class="sidebar-link" href="02_09_polytechnic_iti.html">
+          <span class="icon">🛠️</span>
+          <span>பாலிடெக்னிக் & அரசு ITI</span>
+        </a>
+      </div>
+
+      <!-- GATEWAY 03: INSTITUTES DIRECTORY -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">🏛️ 03 / கல்லூரிகள் அடைவு</div>
+        <a class="sidebar-link primary-hub" href="institutes_directory.html">
+          <span class="icon">🏫</span>
+          <span>கல்லூரிகள் & நிறுவனங்கள்</span>
+        </a>
+      </div>
+
+      <!-- GATEWAY 04: GOVT EXAMS -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">🏆 04 / அரசுத் தேர்வுகள்</div>
+        <a class="sidebar-link primary-hub" href="04_govt_exams.html">
+          <span class="icon">🏅</span>
+          <span>போட்டித் தேர்வுகள் போர்டல்</span>
+          <span class="sidebar-badge">PORTAL</span>
+        </a>
+        <a class="sidebar-link" href="04_govt_exams.html#sec-tnpsc-grp4">
+          <span class="icon">📝</span>
+          <span>TNPSC (குரூப் 4 / VAO)</span>
+        </a>
+        <a class="sidebar-link" href="04_govt_exams.html#sec-tnusrb-pc">
+          <span class="icon">👮</span>
+          <span>TNUSRB காவலர்</span>
+        </a>
+        <a class="sidebar-link" href="04_govt_exams.html#sec-ssc-chsl">
+          <span class="icon">🏢</span>
+          <span>SSC (CHSL / MTS / GD)</span>
+        </a>
+        <a class="sidebar-link" href="04_govt_exams.html#sec-rrb-ntpc-ug">
+          <span class="icon">🚆</span>
+          <span>ரயில்வே (RRB NTPC/Group D)</span>
+        </a>
+      </div>
+
+      <!-- GATEWAY 05: CAREERS & SKILLS -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">💼 05 / திறன் &amp; வேலைவாய்ப்பு</div>
+        <a class="sidebar-link primary-hub" href="direct_careers.html">
+          <span class="icon">💼</span>
+          <span>தனியார் பணிகள் &amp; சுயதொழில்</span>
+        </a>
+      </div>
+
+      <!-- GATEWAY 06: HELPDESK -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">☎️ 06 / உதவி மையம்</div>
+        <a class="sidebar-link primary-hub" href="helpdesk_portal.html">
+          <span class="icon">📞</span>
+          <span>மாணவர் வழிகாட்டல் &amp; தொடர்புகள்</span>
+        </a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Main Portal Content Column -->
+  <main class="portal-main-content">
+
 
 <div class="portal-container">
 
@@ -1539,6 +2002,37 @@
   } else {
     typeCreatorDetails();
   }
+</script>
+
+
+  </main>
+</div>
+
+<script>
+function toggleSidebarMenu() {
+  var sidebar = document.getElementById('desktopLeftSidebar');
+  var backdrop = document.getElementById('sidebarBackdrop');
+  if (sidebar) sidebar.classList.toggle('sidebar-open');
+  if (backdrop) backdrop.classList.toggle('active');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  var rawPath = window.location.pathname;
+  var currentPage = rawPath.substring(rawPath.lastIndexOf('/') + 1) || 'index.html';
+  var links = document.querySelectorAll('.desktop-left-sidebar .sidebar-link');
+  links.forEach(function(l) {
+    var href = l.getAttribute('href');
+    if (href) {
+      var baseHref = href.split('#')[0];
+      if (baseHref === currentPage) {
+        l.classList.add('active-page');
+      }
+    }
+    l.addEventListener('click', function() {
+      if (window.innerWidth <= 1024) toggleSidebarMenu();
+    });
+  });
+});
 </script>
 
 </body>
