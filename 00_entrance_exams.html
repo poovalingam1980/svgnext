@@ -392,11 +392,12 @@ body {
   
  /* Grid Layout for Cards */  
  .grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  width: 100%;
-  box-sizing: border-box;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 22px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }  
   
  /* Modern Glassmorphism Card Styling */
@@ -811,9 +812,13 @@ body {
 /* Responsive Breakpoints for Fluid Multi-Device Perfection */
 @media (max-width: 1100px) {
   .grid-container {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 18px !important;
-  }
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 22px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
 }
 
 @media (max-width: 768px) {
@@ -859,9 +864,13 @@ body {
     padding: 5px 11px !important;
   }
   .grid-container {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
-  }
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 22px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
   .card {
     padding: 20px 18px !important;
   }
@@ -2197,34 +2206,45 @@ textarea {
     }
 
     .grid-container {
-      display: grid !important;
-      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)) !important;
-      gap: 20px !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-      margin-top: 18px !important;
-    }
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 22px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
 
     @media (min-width: 1440px) {
       .grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
-        gap: 22px !important;
-      }
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 22px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
     }
 
     @media (min-width: 1800px) {
       .grid-container {
-        grid-template-columns: repeat(4, 1fr) !important;
-        gap: 24px !important;
-      }
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 22px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
     }
 
     @media (max-width: 768px) {
       .grid-container {
-        grid-template-columns: 1fr !important;
-        gap: 16px !important;
-      }
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 22px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
     }
 
 </style>
@@ -2234,9 +2254,11 @@ textarea {
    ============================================================ */
 .grid-container {
   display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
-  gap: 24px !important;
-  margin-top: 24px !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 22px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .card {
@@ -2408,13 +2430,13 @@ textarea {
    ============================================================ */
 @media (min-width: 992px) {
   .grid-container {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 24px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    margin-top: 24px !important;
-  }
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 22px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
 
   /* All 12 cards have 100% uniform equal 1-span width in the 3-col grid */
   .card {
@@ -2430,10 +2452,13 @@ textarea {
 /* Tablet view (2 columns balanced: 6 rows x 2 columns = 12 cards) */
 @media (min-width: 640px) and (max-width: 991px) {
   .grid-container {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 20px !important;
-  }
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 22px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
   .card {
     grid-column: span 1 !important;
   }
@@ -2498,11 +2523,11 @@ textarea {
    ============================================================ */
 .grid-container {
   display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 24px !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 22px !important;
   width: 100% !important;
+  max-width: 100% !important;
   box-sizing: border-box !important;
-  margin-top: 24px !important;
 }
 
 .dual-row-container {
@@ -2575,9 +2600,13 @@ textarea {
 /* Tablet view (2 columns: 6 rows x 2 columns = 12 cards) */
 @media (min-width: 640px) and (max-width: 991px) {
   .grid-container {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 20px !important;
-  }
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 22px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
 }
 
 /* Mobile view (1 clean column) */
@@ -2835,9 +2864,6 @@ textarea {
       </a>
     </nav>
   </aside>
-<main class="portal-main-content">
-
-
 <main class="portal-main-content">
 
 <div class="container">
@@ -3867,70 +3893,7 @@ textarea {
       if (activeBtn) activeBtn.classList.add('active');
     }
   </script>
-<script>
 
-  // ==========================================
-  
-
-    function step() {
-      if (creatorSegIdx >= creatorSegments.length) {
-        if (creatorCursor) {
-          creatorCursor.style.animation = 'none';
-          creatorCursor.style.opacity = '0';
-          setTimeout(() => creatorCursor.remove(), 400);
-        }
-        return;
-      }
-
-      const seg = creatorSegments[creatorSegIdx];
-
-      if (creatorCharIdx === 0) {
-        creatorCurrentElem = document.createElement(seg.tag);
-        if (seg.class) creatorCurrentElem.className = seg.class;
-        if (seg.href) {
-          creatorCurrentElem.href = seg.href;
-          creatorCurrentElem.target = '_blank';
-          creatorCurrentElem.rel = 'noopener noreferrer';
-        }
-        creatorContainer.appendChild(creatorCurrentElem);
-      }
-
-      creatorCurrentElem.textContent += seg.text.charAt(creatorCharIdx);
-      creatorCharIdx++;
-
-      if (creatorCharIdx < seg.text.length) {
-        setTimeout(step, 24);
-      } else {
-        creatorSegIdx++;
-        creatorCharIdx = 0;
-        setTimeout(step, 50);
-      }
-    }
-
-    step();
-  }
-
-  // Use IntersectionObserver or fallback on page load
-  if ('IntersectionObserver' in window) {
-    const cardElem = document.querySelector('.creator-card');
-    if (cardElem) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            typeCreatorDetails();
-            observer.disconnect();
-          }
-        });
-      }, { threshold: 0.1 });
-      observer.observe(cardElem);
-    } else {
-      setTimeout(typeCreatorDetails, 500);
-    }
-  } else {
-    setTimeout(typeCreatorDetails, 500);
-  }
-
-</script>
 <script>/**
  * சிவகங்கை மாவட்ட உயர்கல்வி போர்ட்டல் — தானியங்கி மொபைல் அட்டவணை ரேப்பர்
  * ஏதேனும் அட்டவணை wrapper இன்றி இருந்தால், தானாகவே .table-responsive மற்றும்
@@ -3966,105 +3929,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
-
-<script>
-// Standardized Creator Typewriter Animation (Triggered on Scroll / Intersection)
-(function() {
-  let hasTyped = false;
-  const creatorSegments = [
-    { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
-    { text: "கூ. ", tag: "span", class: "creator-name-ta-blue" },
-    { text: "பூவலிங்கம்", tag: "span", class: "creator-name-ta-purple" },
-    { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
-    { text: "K. ", tag: "span", class: "creator-name-en-blue" },
-    { text: "Poovalingam", tag: "span", class: "creator-name-en-purple" },
-    { text: ", Deputy Inspector of Schools", tag: "span", class: "creator-role" }
-  ];
-
-  function runCreatorTypewriter() {
-    if (hasTyped) return;
-    const container = document.getElementById('creatorTypewriterTarget');
-    const cursor = document.getElementById('creatorCursor');
-    const phonePill = document.getElementById('footerPhonePill');
-    if (!container) return;
-
-    hasTyped = true;
-    container.innerHTML = '';
-    if (cursor) cursor.style.display = 'inline-block';
-    if (phonePill) phonePill.style.display = 'none';
-
-    let segIdx = 0;
-    let charIdx = 0;
-    let currentElem = null;
-
-    function step() {
-      if (segIdx >= creatorSegments.length) {
-        if (cursor) {
-          cursor.style.animation = 'none';
-          cursor.style.opacity = '0';
-          setTimeout(() => { if (cursor) cursor.remove(); }, 300);
-        }
-        if (phonePill) {
-          phonePill.style.display = 'inline-flex';
-          phonePill.style.opacity = '1';
-        }
-        return;
-      }
-
-      const seg = creatorSegments[segIdx];
-      if (charIdx === 0) {
-        currentElem = document.createElement(seg.tag);
-        currentElem.className = seg.class;
-        container.appendChild(currentElem);
-      }
-
-      currentElem.textContent += seg.text.charAt(charIdx);
-      charIdx++;
-
-      if (charIdx >= seg.text.length) {
-        segIdx++;
-        charIdx = 0;
-      }
-
-      setTimeout(step, 28);
-    }
-
-    step();
-  }
-
-  function initCreatorObserver() {
-    const cardElem = document.querySelector('.creator-card');
-    if (!cardElem) {
-      setTimeout(runCreatorTypewriter, 1000);
-      return;
-    }
-
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            runCreatorTypewriter();
-            observer.disconnect();
-          }
-        });
-      }, { threshold: 0.1 });
-      observer.observe(cardElem);
-      setTimeout(runCreatorTypewriter, 7000);
-    } else {
-      setTimeout(runCreatorTypewriter, 1000);
-    }
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCreatorObserver);
-  } else {
-    initCreatorObserver();
-  }
-})();
-</script>
-
-</main>
-
 
 </main>
 <script>
@@ -4151,6 +4015,102 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+</script>
+<script>
+// Standardized Creator Typewriter Animation (Guaranteed Execution & Colors)
+(function() {
+  let hasTyped = false;
+  const creatorSegments = [
+    { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
+    { text: "கூ. ", tag: "span", class: "creator-name-ta-blue" },
+    { text: "பூவலிங்கம்", tag: "span", class: "creator-name-ta-purple" },
+    { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
+    { text: "K. ", tag: "span", class: "creator-name-en-blue" },
+    { text: "Poovalingam", tag: "span", class: "creator-name-en-purple" },
+    { text: ", Deputy Inspector of Schools", tag: "span", class: "creator-role" }
+  ];
+
+  function runCreatorTypewriter() {
+    if (hasTyped) return;
+    const container = document.getElementById('creatorTypewriterTarget');
+    const cursor = document.getElementById('creatorCursor');
+    const phonePill = document.getElementById('footerPhonePill');
+    if (!container) return;
+
+    hasTyped = true;
+    container.innerHTML = '';
+    if (cursor) cursor.style.display = 'inline-block';
+    if (phonePill) phonePill.style.display = 'none';
+
+    let segIdx = 0;
+    let charIdx = 0;
+    let currentElem = null;
+
+    function step() {
+      if (segIdx >= creatorSegments.length) {
+        if (cursor) {
+          cursor.style.animation = 'none';
+          cursor.style.opacity = '0';
+          setTimeout(() => { if (cursor) cursor.remove(); }, 300);
+        }
+        if (phonePill) {
+          phonePill.style.display = 'inline-flex';
+          phonePill.style.opacity = '1';
+        }
+        return;
+      }
+
+      const seg = creatorSegments[segIdx];
+      if (charIdx === 0) {
+        currentElem = document.createElement(seg.tag);
+        currentElem.className = seg.class;
+        container.appendChild(currentElem);
+      }
+
+      currentElem.textContent += seg.text.charAt(charIdx);
+      charIdx++;
+
+      if (charIdx >= seg.text.length) {
+        segIdx++;
+        charIdx = 0;
+      }
+
+      setTimeout(step, 25);
+    }
+
+    step();
+  }
+
+  function initCreatorObserver() {
+    const cardElem = document.querySelector('.creator-card');
+    if (!cardElem) {
+      setTimeout(runCreatorTypewriter, 500);
+      return;
+    }
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            runCreatorTypewriter();
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.1 });
+      observer.observe(cardElem);
+      // Fallback timer: guarantees execution even if scroll event is missed
+      setTimeout(runCreatorTypewriter, 3500);
+    } else {
+      setTimeout(runCreatorTypewriter, 500);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCreatorObserver);
+  } else {
+    initCreatorObserver();
+  }
+})();
 </script>
 </body>
 </html>

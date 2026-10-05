@@ -3716,7 +3716,7 @@
    targetEl.scrollIntoView (true);
   }
 
-  setTimeout ( => {
+  setTimeout (() => {
    try {
     const rect = targetEl.getBoundingClientRect;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -3728,7 +3728,7 @@
    targetEl.style.transition = 'box-shadow 0.4s ease, transform 0.3s ease';
    targetEl.style.boxShadow = '0 0 0 4px #0284c7, 0 12px 30px rgba(2, 132, 199, 0.25)';
    targetEl.style.transform = 'translateY(-2px)';
-   setTimeout ( => {
+   setTimeout (() => {
     targetEl.style.boxShadow = '';
     targetEl.style.transform = '';
    }, 1600);
@@ -3747,7 +3747,7 @@
  }
 
  // Toggle Back to Top Button
- window.addEventListener ('scroll', function {
+ window.addEventListener ('scroll', function() {
   const btn = document.getElementById ('backToTopBtn');
   if (!btn) return;
   const currentScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -3762,7 +3762,7 @@
  const cutoffPercent = document.getElementById ('cutoffPercent');
  const cutoffStatus = document.getElementById ('cutoffStatus');
 
- function calculateScienceCutoff {
+ function calculateScienceCutoff() {
   let v1 = parseFloat (s1.value) || 0;
   let v2 = parseFloat (s2.value) || 0;
   let v3 = parseFloat (s3.value) || 0;
@@ -3807,7 +3807,7 @@
 
  let activeType = 'all';
 
- function filterColleges {
+ function filterColleges() {
   const q = searchInput.value.toLowerCase.trim;
 
   rows.forEach (row => {
@@ -3826,11 +3826,11 @@
  }
 
  pills.forEach (p => {
-  p.addEventListener ('click', => {
+  p.addEventListener ('click', () => {
    pills.forEach (item => item.classList.remove ('active'));
    p.classList.add ('active');
    activeType = p.getAttribute ('data-type');
-   filterColleges;
+   filterColleges();
   });
  });
 
@@ -3937,7 +3937,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <script>
-// Standardized Creator Typewriter Animation (Triggered on Scroll / Intersection)
+// Standardized Creator Typewriter Animation (Guaranteed Execution & Colors)
 (function() {
   let hasTyped = false;
   const creatorSegments = [
@@ -3995,7 +3995,7 @@ document.addEventListener('DOMContentLoaded', function() {
         charIdx = 0;
       }
 
-      setTimeout(step, 28);
+      setTimeout(step, 25);
     }
 
     step();
@@ -4004,7 +4004,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function initCreatorObserver() {
     const cardElem = document.querySelector('.creator-card');
     if (!cardElem) {
-      setTimeout(runCreatorTypewriter, 1000);
+      setTimeout(runCreatorTypewriter, 500);
       return;
     }
 
@@ -4018,9 +4018,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       }, { threshold: 0.1 });
       observer.observe(cardElem);
-      setTimeout(runCreatorTypewriter, 7000);
+      // Fallback timer: guarantees execution even if scroll event is missed
+      setTimeout(runCreatorTypewriter, 3500);
     } else {
-      setTimeout(runCreatorTypewriter, 1000);
+      setTimeout(runCreatorTypewriter, 500);
     }
   }
 
@@ -4031,6 +4032,5 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
-
 </body>
 </html>

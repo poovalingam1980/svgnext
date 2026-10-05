@@ -4173,7 +4173,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <script>
-// Standardized Creator Typewriter Animation (Triggered on Scroll / Intersection)
+// Standardized Creator Typewriter Animation (Guaranteed Execution & Colors)
 (function() {
   let hasTyped = false;
   const creatorSegments = [
@@ -4231,7 +4231,7 @@ document.addEventListener('DOMContentLoaded', function() {
         charIdx = 0;
       }
 
-      setTimeout(step, 28);
+      setTimeout(step, 25);
     }
 
     step();
@@ -4240,7 +4240,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function initCreatorObserver() {
     const cardElem = document.querySelector('.creator-card');
     if (!cardElem) {
-      setTimeout(runCreatorTypewriter, 1000);
+      setTimeout(runCreatorTypewriter, 500);
       return;
     }
 
@@ -4254,9 +4254,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       }, { threshold: 0.1 });
       observer.observe(cardElem);
-      setTimeout(runCreatorTypewriter, 7000);
+      // Fallback timer: guarantees execution even if scroll event is missed
+      setTimeout(runCreatorTypewriter, 3500);
     } else {
-      setTimeout(runCreatorTypewriter, 1000);
+      setTimeout(runCreatorTypewriter, 500);
     }
   }
 
@@ -4267,6 +4268,5 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
-
 </body>
 </html>

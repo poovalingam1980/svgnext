@@ -3982,7 +3982,7 @@
 
   
   <!-- MAIN PORTAL CONTENT -->
-  <main id="mainContent">
+  <div id="mainContent">
 
     <!-- ==================================================================== -->
     <!-- பிரிவு 1: 10-ஆம் வகுப்பு (SSLC) கல்வித்தகுதிக்கான முக்கிய அரசுப் பணித் தேர்வுகள் -->
@@ -6412,7 +6412,7 @@
     <span class="phone-text">9626471035</span>
   </a>
 </div>
-</main>
+</div>
 
 <section class="page-section" id="sec-matrix">
       <div class="section-header-banner">
@@ -6809,73 +6809,7 @@
     let creatorCurrentElem = null;
     let creatorHasStarted = false;
 
-    function typeCreatorDetails() {
-      if (!creatorContainer || creatorHasStarted) return;
-      creatorHasStarted = true;
-
-      function step() {
-        if (creatorSegIdx >= creatorSegments.length) {
-          if (creatorCursor) {
-            creatorCursor.style.animation = 'none';
-            creatorCursor.style.opacity = '0';
-            setTimeout(() => {
-              if (creatorCursor) creatorCursor.remove();
-            }, 300);
-          }
-          if (footerPhoneBadge) {
-            footerPhoneBadge.classList.add('show-badge');
-          }
-          return;
-        }
-
-        const currentSeg = creatorSegments[creatorSegIdx];
-
-        if (creatorCharIdx === 0) {
-          creatorCurrentElem = document.createElement(currentSeg.tag);
-          if (currentSeg.class) {
-            creatorCurrentElem.className = currentSeg.class;
-          }
-          creatorContainer.appendChild(creatorCurrentElem);
-        }
-
-        creatorCurrentElem.textContent += currentSeg.text[creatorCharIdx];
-        creatorCharIdx++;
-
-        let nextDelay = 40; // exact speed matching video (4.5s for 95 chars)
-
-        if (creatorCharIdx >= currentSeg.text.length) {
-          creatorSegIdx++;
-          creatorCharIdx = 0;
-          creatorCurrentElem = null;
-          nextDelay = 80; // short pause between segments
-        }
-
-        setTimeout(step, nextDelay);
-      }
-
-      step();
-    }
-
-    // Trigger typewriter when footer enters view or on page load
-    if ('IntersectionObserver' in window) {
-      const footerObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            typeCreatorDetails();
-            footerObserver.disconnect();
-          }
-        });
-      }, { threshold: 0.1 });
-
-      if (creatorContainer) {
-        footerObserver.observe(creatorContainer);
-      } else {
-        typeCreatorDetails();
-      }
-    } else {
-      typeCreatorDetails();
-    }
-  </script>
+    </script>
 </div>
 
   </main>
@@ -6974,7 +6908,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <script>
-// Standardized Creator Typewriter Animation (Triggered on Scroll / Intersection)
+// Standardized Creator Typewriter Animation (Guaranteed Execution & Colors)
 (function() {
   let hasTyped = false;
   const creatorSegments = [
@@ -7032,7 +6966,7 @@ document.addEventListener('DOMContentLoaded', function() {
         charIdx = 0;
       }
 
-      setTimeout(step, 28);
+      setTimeout(step, 25);
     }
 
     step();
@@ -7041,7 +6975,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function initCreatorObserver() {
     const cardElem = document.querySelector('.creator-card');
     if (!cardElem) {
-      setTimeout(runCreatorTypewriter, 1000);
+      setTimeout(runCreatorTypewriter, 500);
       return;
     }
 
@@ -7055,9 +6989,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       }, { threshold: 0.1 });
       observer.observe(cardElem);
-      setTimeout(runCreatorTypewriter, 7000);
+      // Fallback timer: guarantees execution even if scroll event is missed
+      setTimeout(runCreatorTypewriter, 3500);
     } else {
-      setTimeout(runCreatorTypewriter, 1000);
+      setTimeout(runCreatorTypewriter, 500);
     }
   }
 
@@ -7068,6 +7003,5 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
-
 </body>
 </html>
