@@ -2841,6 +2841,83 @@
       }
     }
 
+
+    /* ========================================================
+       PERFECT FLUSH 0PX TOP FRAME (ZERO WHITE GAP AT TOP)
+       ======================================================== */
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    .portal-main-content {
+      margin-left: 295px !important;
+      width: calc(100% - 295px) !important;
+      min-height: 100vh;
+      padding-top: 0 !important; /* Absolutely ZERO empty space above top-frame */
+      padding-left: clamp(10px, 1.8vw, 24px) !important;
+      padding-right: clamp(10px, 1.8vw, 24px) !important;
+      padding-bottom: 40px !important;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    @media (max-width: 1024px) {
+      .portal-main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding-top: 0 !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        padding-bottom: 30px !important;
+      }
+    }
+
+    .container, .portal-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding-top: 0 !important;
+      box-sizing: border-box;
+    }
+
+    .portal-top-frame {
+      margin-top: 0 !important;
+      border-top: none !important;
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      margin-bottom: 16px !important;
+    }
+
+
+    /* ========================================================
+       ABSOLUTE FLUSH 0PX TOP FRAME (ZERO TOP WHITESPACE)
+       ======================================================== */
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .portal-main-content {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+    .container, .portal-container {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+    .portal-top-frame {
+      margin-top: 0 !important;
+      border-top: none !important;
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      position: sticky !important;
+      top: 0 !important;
+      z-index: 9999 !important;
+      margin-bottom: 16px !important;
+    }
+
 </style>
 </head>
 <body>
@@ -3117,7 +3194,7 @@
       <span>மெனு</span>
     </button>
     <!-- Official ceosvg.in Main District Portal Link -->
-    <a href="https://www.ceosvg.in" target="_blank" rel="noopener" class="top-frame-btn btn-ceosvg" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம் (ceosvg.in)">
+    <a href="https://www.ceosvg.in" target="_blank" rel="noopener" class="top-frame-btn btn-ceosvg" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம் (ceosvg.in)" target="_blank" rel="noopener">
       <span class="btn-icon">🌐</span>
       <span>ceosvg.in முதன்மை தளம்</span>
     </a>
