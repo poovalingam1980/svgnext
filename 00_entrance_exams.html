@@ -1035,6 +1035,380 @@
     }
 
     
+
+    /* ========================================================
+       UNIFIED PORTAL STYLING: BILINGUAL SIDEBAR, COMPACT KURAL,
+       FULL-WIDTH AURORA CREATOR CARD & PORTAL FOOTER
+       ======================================================== */
+    :root {
+      --clr-1: #00c2ff;
+      --clr-2: #33ff8c;
+      --clr-3: #ffc640;
+      --clr-4: #e54cff;
+    }
+
+    /* Streamlined Two-Line Bilingual Sidebar Menu */
+    .sidebar-nav-body {
+      padding: 12px 10px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 6px !important;
+    }
+
+    .desktop-left-sidebar .sidebar-main-btn {
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      padding: 10px 14px !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      border-radius: 10px !important;
+      color: #f1f5f9 !important;
+      text-decoration: none !important;
+      transition: all 0.22s ease !important;
+      box-sizing: border-box !important;
+      width: 100% !important;
+      margin-bottom: 4px !important;
+    }
+
+    .desktop-left-sidebar .sidebar-main-btn:hover {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(30, 58, 138, 0.35) 100%) !important;
+      border-color: #d4af37 !important;
+      transform: translateX(3px) !important;
+    }
+
+    .desktop-left-sidebar .sidebar-main-btn.active-page {
+      background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%) !important;
+      border: 1.5px solid #d4af37 !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 0 10px rgba(212, 175, 55, 0.25) !important;
+    }
+
+    .desktop-left-sidebar .sidebar-main-btn .icon {
+      font-size: 1.25rem !important;
+      flex-shrink: 0 !important;
+      line-height: 1 !important;
+    }
+
+    .desktop-left-sidebar .btn-text-group {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1px !important;
+      line-height: 1.25 !important;
+      text-align: left !important;
+    }
+
+    .desktop-left-sidebar .menu-ta {
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      color: #f8fafc !important;
+      letter-spacing: 0.2px !important;
+    }
+
+    .desktop-left-sidebar .menu-en {
+      font-size: 0.68rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.7px !important;
+      color: #94a3b8 !important;
+      text-transform: uppercase !important;
+    }
+
+    .desktop-left-sidebar .sidebar-main-btn:hover .menu-ta,
+    .desktop-left-sidebar .sidebar-main-btn.active-page .menu-ta {
+      color: #fef08a !important;
+    }
+
+    .desktop-left-sidebar .sidebar-main-btn:hover .menu-en,
+    .desktop-left-sidebar .sidebar-main-btn.active-page .menu-en {
+      color: #fde047 !important;
+    }
+
+    /* Compact Height Full-Width Animated Thirukkural Section (Adapts to Page Theme) */
+    .kural-box,
+    .traditional-kural-card,
+    .kural-section,
+    .full-width-kural-container,
+    .kural-box-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 16px 0 !important;
+      padding: 12px clamp(16px, 2.5vw, 28px) !important;
+      box-sizing: border-box !important;
+      position: relative !important;
+      overflow: hidden !important;
+      border-radius: 14px !important;
+      background: linear-gradient(135deg, #090e1a 0%, var(--primary-dark, var(--primary, #17153a)) 50%, #090e1a 100%) !important;
+      background-size: 250% 250% !important;
+      animation: kural-bg-pulse 10s ease-in-out infinite alternate !important;
+      border: 1.5px solid var(--secondary, #f59e0b) !important;
+      border-left: 6px solid var(--secondary, #f59e0b) !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+      text-align: center !important;
+    }
+
+    @keyframes kural-bg-pulse {
+      0% {
+        background-position: 0% 50%;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 16px rgba(217, 119, 6, 0.2);
+      }
+      50% {
+        background-position: 100% 50%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55), 0 0 24px rgba(245, 158, 11, 0.32);
+      }
+      100% {
+        background-position: 0% 50%;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 16px rgba(217, 119, 6, 0.2);
+      }
+    }
+
+    .kural-header,
+    .kural-top-row,
+    .kural-header-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      font-size: 0.78rem !important;
+      font-weight: 800 !important;
+      color: #fef08a !important;
+      letter-spacing: 0.3px !important;
+      margin-bottom: 8px !important;
+      background: linear-gradient(135deg, rgba(217, 119, 6, 0.3) 0%, rgba(245, 158, 11, 0.2) 100%) !important;
+      padding: 3px 14px !important;
+      border-radius: 999px !important;
+      border: 1.2px solid var(--secondary, #fbbf24) !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+    }
+
+    .kural-sparkle,
+    .kural-topic-badge {
+      background: rgba(254, 240, 138, 0.25) !important;
+      padding: 1px 8px !important;
+      border-radius: 10px !important;
+      font-size: 0.72rem !important;
+      border: 1px solid rgba(254, 240, 138, 0.4) !important;
+      color: #ffffff !important;
+    }
+
+    .kural-verse-text,
+    .kural-text-animated,
+    .kural-first-line,
+    .kural-second-line,
+    .kural-verse-line,
+    .kural-verse {
+      font-size: clamp(1.08rem, 1.45vw, 1.35rem) !important;
+      font-weight: 900 !important;
+      line-height: 1.55 !important;
+      margin: 4px auto 6px auto !important;
+      letter-spacing: 0.3px !important;
+      background: linear-gradient(
+        90deg,
+        #fef08a 0%,
+        #f59e0b 22%,
+        #ffffff 45%,
+        #fde047 65%,
+        #d97706 82%,
+        #fef08a 100%
+      ) !important;
+      background-size: 250% auto !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      animation: kural-gold-shimmer 6s linear infinite !important;
+      text-align: center !important;
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 12px rgba(245, 158, 11, 0.3)) !important;
+    }
+
+    @keyframes kural-gold-shimmer {
+      0% { background-position: 0% center; }
+      100% { background-position: 250% center; }
+    }
+
+    .kural-meaning,
+    .kural-meaning-row,
+    .kural-explanation-box,
+    .kural-explanation {
+      font-size: clamp(0.80rem, 0.95vw, 0.90rem) !important;
+      color: #e2e8f0 !important;
+      line-height: 1.45 !important;
+      font-weight: 500 !important;
+      border-top: 1px dashed rgba(245, 158, 11, 0.35) !important;
+      padding-top: 8px !important;
+      margin-top: 6px !important;
+      text-align: center !important;
+      max-width: 1000px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+      background: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      border-bottom: none !important;
+    }
+
+    .kural-meaning strong,
+    .kural-meaning-label,
+    .kural-exp-label {
+      color: #fde047 !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.2px !important;
+    }
+
+    /* Full-Width Aurora Creator Card */
+    .creator-card {
+      background: linear-gradient(135deg, #050811 0%, #0d1527 50%, #050811 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+      border-radius: 14px !important;
+      padding: 12px clamp(16px, 2vw, 32px) !important;
+      margin: 20px 0 16px 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.55), 0 0 20px rgba(0, 194, 255, 0.15) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex-wrap: nowrap !important;
+      gap: 16px !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+
+    .creator-typewriter-wrapper {
+      font-size: clamp(0.72rem, 0.95vw, 0.90rem) !important;
+      color: #f8fafc !important;
+      font-weight: 600 !important;
+      line-height: 1.4 !important;
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      flex: 1 1 auto !important;
+      min-width: 0 !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      gap: 0px !important;
+    }
+
+    .creator-typewriter-target {
+      display: inline !important;
+      white-space: nowrap !important;
+    }
+
+    .creator-label {
+      font-size: 80% !important;
+      font-weight: 700 !important;
+      color: #f1f5f9 !important;
+      white-space: nowrap !important;
+      opacity: 0.92 !important;
+    }
+
+    .creator-role {
+      font-size: 80% !important;
+      color: #94a3b8 !important;
+      font-weight: 600 !important;
+      white-space: nowrap !important;
+      opacity: 0.90 !important;
+    }
+
+    .creator-name-ta,
+    .creator-name-en,
+    .creator-name-ta-blue,
+    .creator-name-ta-purple,
+    .creator-name-en-blue,
+    .creator-name-en-purple {
+      background: linear-gradient(
+        90deg,
+        var(--clr-1, #00c2ff) 0%,
+        var(--clr-2, #33ff8c) 25%,
+        var(--clr-3, #ffc640) 50%,
+        var(--clr-4, #e54cff) 75%,
+        var(--clr-1, #00c2ff) 100%
+      ) !important;
+      background-size: 300% 100% !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      animation: aurora-text-flow 6s linear infinite !important;
+      font-weight: 900 !important;
+      letter-spacing: 0.3px !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      display: inline-block !important;
+      filter: drop-shadow(0 0 6px rgba(0, 194, 255, 0.45));
+    }
+
+    @keyframes aurora-text-flow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .creator-cursor {
+      display: inline-block !important;
+      font-weight: 300 !important;
+      color: var(--clr-1, #00c2ff) !important;
+      margin-left: 2px !important;
+      animation: blinkCreatorCursor 0.65s infinite !important;
+      text-shadow: 0 0 8px rgba(0, 194, 255, 0.8);
+      flex-shrink: 0 !important;
+    }
+
+    .footer-phone-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+      color: #ffffff !important;
+      padding: 7px 16px !important;
+      border-radius: 999px !important;
+      text-decoration: none !important;
+      font-weight: 800 !important;
+      font-size: clamp(0.76rem, 0.86vw, 0.88rem) !important;
+      box-shadow: 0 2px 10px rgba(16, 185, 129, 0.4) !important;
+      transition: all 0.2s ease !important;
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+    }
+
+    /* Portal Official Footer */
+    .portal-footer {
+      text-align: center;
+      padding: 24px 16px;
+      margin-top: 24px;
+      border-top: 1px solid rgba(226, 232, 240, 0.85);
+      color: #475569;
+      font-size: 0.88rem;
+      line-height: 1.8;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 768px) {
+      .kural-box,
+      .traditional-kural-card,
+      .kural-section,
+      .full-width-kural-container,
+      .kural-box-container {
+        padding: 10px 12px !important;
+        margin: 14px 0 !important;
+        border-radius: 12px !important;
+        border-left-width: 5px !important;
+      }
+      .creator-card {
+        padding: 12px 14px !important;
+        justify-content: center !important;
+        text-align: center !important;
+        flex-wrap: wrap !important;
+      }
+      .creator-typewriter-wrapper {
+        justify-content: center !important;
+        font-size: 0.82rem !important;
+        flex-wrap: wrap !important;
+        white-space: normal !important;
+      }
+      .creator-typewriter-target {
+        white-space: normal !important;
+      }
+    }
 </style>
 </head>
 
@@ -1062,222 +1436,67 @@
     </div>
 
     <nav class="sidebar-nav-body">
-      <!-- 00. முகப்புப் பக்கம் (Home) -->
+      <!-- 00. முதன்மை முகப்பு (Home) -->
       <a class="sidebar-main-btn" href="index.html">
         <span class="icon">🏠</span>
-        <span>முதன்மை முகப்பு (Home)</span>
+        <span class="btn-text-group">
+          <span class="menu-ta">முதன்மை முகப்பு</span>
+          <span class="menu-en">HOME</span>
+        </span>
       </a>
 
-      <!-- GATEWAY 01: ENTRANCE EXAMS (MAIN ACCORDION) -->
-      <div class="sidebar-accordion-group">
-        <button class="sidebar-accordion-header" id="acc-hdr-01" onclick="toggleAccordion('01')" type="button">
-          <div class="accordion-title-left">
-            <span class="icon">🎯</span>
-            <span>01. நுழைவுத் தேர்வுகள்</span>
-          </div>
-          <span class="accordion-arrow">▼</span>
-        </button>
-        <div class="sidebar-accordion-content" id="acc-cnt-01">
-          <a class="sidebar-link sub-link primary-hub" href="00_entrance_exams.html">
-            <span class="icon">📋</span>
-            <span>11 தேர்வுகள் முதன்மை வழிகாட்டி</span>
-            <span class="sidebar-badge">HUB</span>
-          </a>
+      <!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
+      <a class="sidebar-main-btn" href="00_entrance_exams.html">
+        <span class="icon">🎯</span>
+        <span class="btn-text-group">
+          <span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
+          <span class="menu-en">ENTRANCE EXAMS</span>
+        </span>
+      </a>
 
-          <!-- NESTED SUB-MENU: MEDICINE -->
-          <div class="sidebar-nested-group">
-            <button class="sidebar-nested-header" id="sub-hdr-med" onclick="toggleSubAccordion('med')" type="button">
-              <span class="nested-title-left">
-                <span class="icon">🩺</span>
-                <span>மருத்துவம் (NEET UG)</span>
-              </span>
-              <span class="nested-arrow">▼</span>
-            </button>
-            <div class="sidebar-nested-content" id="sub-cnt-med">
-              <a class="sidebar-link sub-nested-link" href="01_medical_neet_ug.html">
-                <span class="icon">📄</span>
-                <span>நீட் முதன்மை வழிகாட்டி</span>
-              </a>
-              <a class="sidebar-link sub-nested-link" href="01_A_tn_med_colleges.html">
-                <span class="icon">🏥</span>
-                <span>தமிழக மருத்துவ அடைவு</span>
-              </a>
-              <a class="sidebar-link sub-nested-link" href="01_B_in_med_colleges.html">
-                <span class="icon">🏛️</span>
-                <span>அகில இந்திய மருத்துவ அடைவு</span>
-              </a>
-            </div>
-          </div>
+      <!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
+      <a class="sidebar-main-btn" href="02_00_direct_admissions.html">
+        <span class="icon">📈</span>
+        <span class="btn-text-group">
+          <span class="menu-ta">நேரடிச் சேர்க்கை</span>
+          <span class="menu-en">DIRECT ADMISSIONS</span>
+        </span>
+      </a>
 
-          <!-- NESTED SUB-MENU: ENGINEERING -->
-          <div class="sidebar-nested-group">
-            <button class="sidebar-nested-header" id="sub-hdr-eng" onclick="toggleSubAccordion('eng')" type="button">
-              <span class="nested-title-left">
-                <span class="icon">⚙️</span>
-                <span>பொறியியல் (JEE / IIT)</span>
-              </span>
-              <span class="nested-arrow">▼</span>
-            </button>
-            <div class="sidebar-nested-content" id="sub-cnt-eng">
-              <a class="sidebar-link sub-nested-link" href="02_engineering_jee.html">
-                <span class="icon">📄</span>
-                <span>JEE பொறியியல் வழிகாட்டி</span>
-              </a>
-              <a class="sidebar-link sub-nested-link" href="02_aiq_eng_colleges.html">
-                <span class="icon">🏛️</span>
-                <span>AIQ பொறியியல் அடைவு (119)</span>
-              </a>
-              <a class="sidebar-link sub-nested-link" href="02_01_tnea_engineering.html">
-                <span class="icon">🏢</span>
-                <span>தமிழக TNEA பொறியியல்</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Other Entrance Exams -->
-          <a class="sidebar-link sub-link" href="03_science_research_iiser.html">
-            <span class="icon">🔬</span>
-            <span>IISER / NISER (அறிவியல்)</span>
-          </a>
-          <a class="sidebar-link sub-link" href="04_central_universities_cuet.html">
-            <span class="icon">🏛️</span>
-            <span>CUET (மத்திய பல்கலை)</span>
-          </a>
-          <a class="sidebar-link sub-link" href="05_law_clat_nlu.html">
-            <span class="icon">⚖️</span>
-            <span>CLAT (தேசிய சட்டம்)</span>
-          </a>
-          <a class="sidebar-link sub-link" href="06_design_architecture_nata_nift.html">
-            <span class="icon">📐</span>
-            <span>NATA / NIFT (வடிவமைப்பு)</span>
-          </a>
-          <a class="sidebar-link sub-link" href="07_management_iim_ipm.html">
-            <span class="icon">📊</span>
-            <span>IIM IPMAT (மேலாண்மை)</span>
-          </a>
-          <a class="sidebar-link sub-link" href="08_hotel_management_nchmct.html">
-            <span class="icon">🏨</span>
-            <span>NCHMCT (உணவக நிர்வாகம்)</span>
-          </a>
-          <a class="sidebar-link sub-link" href="09_maritime_merchant_navy.html">
-            <span class="icon">⚓</span>
-            <span>IMU-CET (கடற்படை)</span>
-          </a>
-          <a class="sidebar-link sub-link" href="10_defence_armed_forces.html">
-            <span class="icon">🎖️</span>
-            <span>பாதுகாப்புப் படைகள் (NDA)</span>
-          </a>
-          <a class="sidebar-link sub-link" href="11_pilot_careers_cpl_and_iaf_fighter.html">
-            <span class="icon">✈️</span>
-            <span>விமானி (Commercial Pilot)</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- GATEWAY 02: DIRECT ADMISSIONS (MAIN ACCORDION) -->
-      <div class="sidebar-accordion-group">
-        <button class="sidebar-accordion-header" id="acc-hdr-02" onclick="toggleAccordion('02')" type="button">
-          <div class="accordion-title-left">
-            <span class="icon">📈</span>
-            <span>02. நேரடிச் சேர்க்கை</span>
-          </div>
-          <span class="accordion-arrow">▼</span>
-        </button>
-        <div class="sidebar-accordion-content" id="acc-cnt-02">
-          <a class="sidebar-link sub-link primary-hub" href="02_00_direct_admissions.html">
-            <span class="icon">📑</span>
-            <span>நேரடிச் சேர்க்கை கையேடு</span>
-            <span class="sidebar-badge">HUB</span>
-          </a>
-          <a class="sidebar-link sub-link" href="02_01_tnea_engineering.html">
-            <span class="icon">⚙️</span>
-            <span>TNEA பொறியியல் சேர்க்கை</span>
-          </a>
-          <a class="sidebar-link sub-link" href="02_02_veterinary_allied_health.html">
-            <span class="icon">🩺</span>
-            <span>TANUVAS & துணை மருத்துவம்</span>
-          </a>
-          <a class="sidebar-link sub-link" href="02_03_agriculture_fisheries.html">
-            <span class="icon">🌾</span>
-            <span>TNAU வேளாண்மை & மீன்வளம்</span>
-          </a>
-          <a class="sidebar-link sub-link" href="02_04_law_admissions.html">
-            <span class="icon">⚖️</span>
-            <span>TNDALU 5 ஆண்டு சட்டம்</span>
-          </a>
-          <a class="sidebar-link sub-link" href="02_05_pure_applied_sciences.html">
-            <span class="icon">🔬</span>
-            <span>தூய அறிவியல் (B.Sc)</span>
-          </a>
-          <a class="sidebar-link sub-link" href="02_06_computer_applications_it.html">
-            <span class="icon">💻</span>
-            <span>கணினி & IT (BCA / B.Sc IT)</span>
-          </a>
-          <a class="sidebar-link sub-link" href="02_07_arts_humanities.html">
-            <span class="icon">📚</span>
-            <span>TNGASA கலை & மானுடவியல்</span>
-          </a>
-          <a class="sidebar-link sub-link" href="02_08_commerce_management.html">
-            <span class="icon">📊</span>
-            <span>வணிகவியல் (B.Com / BBA)</span>
-          </a>
-          <a class="sidebar-link sub-link" href="02_09_polytechnic_iti.html">
-            <span class="icon">🛠️</span>
-            <span>பாலிடெக்னிக் & அரசு ITI</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- GATEWAY 03: INSTITUTES DIRECTORY -->
+      <!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
       <a class="sidebar-main-btn" href="institutes_directory.html">
         <span class="icon">🏛️</span>
-        <span>03. கல்லூரிகள் அடைவு</span>
+        <span class="btn-text-group">
+          <span class="menu-ta">கல்லூரிகள் அடைவு</span>
+          <span class="menu-en">INSTITUTES DIRECTORY</span>
+        </span>
       </a>
 
-      <!-- GATEWAY 04: GOVT EXAMS (MAIN ACCORDION) -->
-      <div class="sidebar-accordion-group">
-        <button class="sidebar-accordion-header" id="acc-hdr-04" onclick="toggleAccordion('04')" type="button">
-          <div class="accordion-title-left">
-            <span class="icon">🏆</span>
-            <span>04. அரசுத் தேர்வுகள்</span>
-          </div>
-          <span class="accordion-arrow">▼</span>
-        </button>
-        <div class="sidebar-accordion-content" id="acc-cnt-04">
-          <a class="sidebar-link sub-link primary-hub" href="04_govt_exams.html">
-            <span class="icon">🏅</span>
-            <span>போட்டித் தேர்வுகள் போர்டல்</span>
-            <span class="sidebar-badge">PORTAL</span>
-          </a>
-          <a class="sidebar-link sub-link" href="04_govt_exams.html#sec-tnpsc-grp4">
-            <span class="icon">📝</span>
-            <span>TNPSC (குரூப் 4 / VAO)</span>
-          </a>
-          <a class="sidebar-link sub-link" href="04_govt_exams.html#sec-tnusrb-pc">
-            <span class="icon">👮</span>
-            <span>TNUSRB காவலர்</span>
-          </a>
-          <a class="sidebar-link sub-link" href="04_govt_exams.html#sec-ssc-chsl">
-            <span class="icon">🏢</span>
-            <span>SSC (CHSL / MTS / GD)</span>
-          </a>
-          <a class="sidebar-link sub-link" href="04_govt_exams.html#sec-rrb-ntpc-ug">
-            <span class="icon">🚆</span>
-            <span>ரயில்வே (RRB NTPC/Group D)</span>
-          </a>
-        </div>
-      </div>
+      <!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
+      <a class="sidebar-main-btn" href="04_govt_exams.html">
+        <span class="icon">🏆</span>
+        <span class="btn-text-group">
+          <span class="menu-ta">அரசுத் தேர்வுகள்</span>
+          <span class="menu-en">GOVT COMPETITIVE EXAMS</span>
+        </span>
+      </a>
 
-      <!-- GATEWAY 05: CAREERS & SKILLS -->
+      <!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
       <a class="sidebar-main-btn" href="direct_careers.html">
         <span class="icon">💼</span>
-        <span>05. திறன் &amp; வேலைவாய்ப்பு</span>
+        <span class="btn-text-group">
+          <span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
+          <span class="menu-en">SKILLS &amp; CAREERS</span>
+        </span>
       </a>
 
-      <!-- GATEWAY 06: HELPDESK -->
+      <!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
       <a class="sidebar-main-btn" href="helpdesk_portal.html">
         <span class="icon">☎️</span>
-        <span>06. உதவி மையம் &amp; தொடர்பு</span>
+        <span class="btn-text-group">
+          <span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
+          <span class="menu-en">HELPDESK &amp; SUPPORT</span>
+        </span>
       </a>
     </nav>
   </aside>
@@ -1672,41 +1891,42 @@
         </div>
       </div>
 
-      <!-- திருக்குறள் பகுதி -->
-      <div class="kural-box">
-        <div class="kural-header">
-          <span>📜</span>
-          <span>திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-        </div>
-        <div class="kural-verse-text">
-          “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
-          திண்ணியர் ஆகப் பெறின்.”
-        </div>
-        <div class="kural-meaning">
-          <strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
-        </div>
-      </div>
+      <!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
+<div class="kural-box">
+  <div class="kural-header">
+    <span class="kural-icon">📜</span>
+    <span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
+    <span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
+  </div>
+  <div class="kural-verse-text">
+    “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
+    திண்ணியர் ஆகப் பெறின்.”
+  </div>
+  <div class="kural-meaning">
+    <strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
+  </div>
 
-      <!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
-      <div class="creator-card">
-        <div class="creator-typewriter-wrapper">
-          <span id="creatorTypewriterTarget" class="creator-typewriter-target"></span><span id="creatorCursor" class="creator-cursor">|</span>
-        </div>
-        <a href="tel:9626471035" class="footer-phone-pill" id="footerPhonePill" title="அழைக்க">
-          <span class="phone-icon">📱</span>
-          <span class="phone-text">9626471035</span>
-        </a>
-      </div>
+<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
+<div class="creator-card">
+  <div class="creator-typewriter-wrapper">
+    <span id="creatorTypewriterTarget" class="creator-typewriter-target"></span><span id="creatorCursor" class="creator-cursor">|</span>
+  </div>
+  <a href="tel:9626471035" class="footer-phone-pill" id="footerPhonePill" title="அழைக்க">
+    <span class="phone-icon">📱</span>
+    <span class="phone-text">9626471035</span>
+  </a>
+</div>
 
       <!-- Footer -->
-      <footer class="portal-footer">
-        <p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
-          தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
-        </p>
-        <p style="font-size: 0.85rem; color: #64748b;">
-          © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
-        </p>
-      </footer>
+      <!-- Footer -->
+<footer class="portal-footer">
+  <p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
+    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
+  </p>
+  <p style="font-size: 0.85rem; color: #64748b;">
+    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+  </p>
+</footer>
 
     </div>
   </main>
@@ -1812,14 +2032,12 @@ function closePyqModal() {
   (function() {
     let hasTyped = false;
     const creatorSegments = [
-      { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
-      { text: "கூ. ", tag: "span", class: "creator-name-ta-blue" },
-      { text: "பூவலிங்கம்", tag: "span", class: "creator-name-ta-purple" },
-      { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
-      { text: "K. ", tag: "span", class: "creator-name-en-blue" },
-      { text: "Poovalingam", tag: "span", class: "creator-name-en-purple" },
-      { text: ", Deputy Inspector of Schools", tag: "span", class: "creator-role" }
-    ];
+    { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
+    { text: "கூ. பூவலிங்கம்", tag: "span", class: "creator-name-ta" },
+    { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
+    { text: "K. Poovalingam", tag: "span", class: "creator-name-en" },
+    { text: ", Deputy Inspector of Schools", tag: "span", class: "creator-role" }
+  ];
 
     function runCreatorTypewriter() {
       if (hasTyped) return;
