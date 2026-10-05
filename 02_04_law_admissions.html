@@ -1,16 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="ta">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>சட்டப் படிப்புகள் நேரடிச் சேர்க்கை வழிகாட்டி (TNDALU 5-Year LL.B.) | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
-  
-  <!-- Google Fonts: Inter & Noto Sans Tamil -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>சட்டப் படிப்புகள் நேரடிச் சேர்க்கை வழிகாட்டி (TNDALU 5-Year LL.B.) | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
+<!-- Google Fonts: Inter & Noto Sans Tamil -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --primary: #b45309;          /* Legal Amber / Deep Ochre */
       --primary-dark: #78350f;     /* Deep Mahogany Brown */
@@ -3418,737 +3417,655 @@
 </head>
 <body>
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
-
-<button id="mobileMenuFloatingBtn" class="mobile-menu-floating-btn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
-  <span style="font-size: 1.15rem; line-height: 1;">☰</span>
-  <span>மெனு</span>
+<button class="mobile-menu-floating-btn" id="mobileMenuFloatingBtn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
+<span style="font-size: 1.15rem; line-height: 1;">☰</span>
+<span>மெனு</span>
 </button>
-
 <div class="portal-layout-wrapper">
-
-  <!-- Desktop Permanent Left Menu Frame with Collapsible Accordion -->
-  <aside class="desktop-left-sidebar" id="desktopLeftSidebar">
-    <div class="sidebar-header">
-      <a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
-        <span class="sidebar-emblem">🏛️</span>
-        <div class="sidebar-title-wrap">
-          <span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
-          <span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
-        </div>
-      </a>
-      <button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
-    </div>
-
-    <nav class="sidebar-nav-body">
-      <!-- 00. முதன்மை முகப்பு (Home) -->
-      <a class="sidebar-main-btn" href="index.html">
-        <span class="icon">🏠</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">முதன்மை முகப்பு</span>
-          <span class="menu-en">HOME</span>
-        </span>
-      </a>
-
-      <!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
-      <a class="sidebar-main-btn" href="00_entrance_exams.html">
-        <span class="icon">🎯</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
-          <span class="menu-en">ENTRANCE EXAMS</span>
-        </span>
-      </a>
-
-      <!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
-      <a class="sidebar-main-btn" href="02_00_direct_admissions.html">
-        <span class="icon">📈</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">நேரடிச் சேர்க்கை</span>
-          <span class="menu-en">DIRECT ADMISSIONS</span>
-        </span>
-      </a>
-
-      <!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
-      <a class="sidebar-main-btn" href="institutes_directory.html">
-        <span class="icon">🏛️</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">கல்லூரிகள் அடைவு</span>
-          <span class="menu-en">INSTITUTES DIRECTORY</span>
-        </span>
-      </a>
-
-      <!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
-      <a class="sidebar-main-btn" href="04_govt_exams.html">
-        <span class="icon">🏆</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">அரசுத் தேர்வுகள்</span>
-          <span class="menu-en">GOVT COMPETITIVE EXAMS</span>
-        </span>
-      </a>
-
-      <!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
-      <a class="sidebar-main-btn" href="direct_careers.html">
-        <span class="icon">💼</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
-          <span class="menu-en">SKILLS &amp; CAREERS</span>
-        </span>
-      </a>
-
-      <!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
-      <a class="sidebar-main-btn" href="helpdesk_portal.html">
-        <span class="icon">☎️</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
-          <span class="menu-en">HELPDESK &amp; SUPPORT</span>
-        </span>
-      </a>
-    </nav>
-  </aside>
-
-  <!-- Main Portal Content Column -->
-  <main class="portal-main-content">
-
-
-
-
+<!-- Desktop Permanent Left Menu Frame with Collapsible Accordion -->
+<aside class="desktop-left-sidebar" id="desktopLeftSidebar">
+<div class="sidebar-header">
+<a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
+<span class="sidebar-emblem">🏛️</span>
+<div class="sidebar-title-wrap">
+<span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
+<span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
+</div>
+</a>
+<button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
+</div>
+<nav class="sidebar-nav-body">
+<!-- 00. முதன்மை முகப்பு (Home) -->
+<a class="sidebar-main-btn" href="index.html">
+<span class="icon">🏠</span>
+<span class="btn-text-group">
+<span class="menu-ta">முதன்மை முகப்பு</span>
+<span class="menu-en">HOME</span>
+</span>
+</a>
+<!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
+<a class="sidebar-main-btn" href="00_entrance_exams.html">
+<span class="icon">🎯</span>
+<span class="btn-text-group">
+<span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
+<span class="menu-en">ENTRANCE EXAMS</span>
+</span>
+</a>
+<!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
+<a class="sidebar-main-btn" href="02_00_direct_admissions.html">
+<span class="icon">📈</span>
+<span class="btn-text-group">
+<span class="menu-ta">நேரடிச் சேர்க்கை</span>
+<span class="menu-en">DIRECT ADMISSIONS</span>
+</span>
+</a>
+<!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
+<a class="sidebar-main-btn" href="institutes_directory.html">
+<span class="icon">🏛️</span>
+<span class="btn-text-group">
+<span class="menu-ta">கல்லூரிகள் அடைவு</span>
+<span class="menu-en">INSTITUTES DIRECTORY</span>
+</span>
+</a>
+<!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
+<a class="sidebar-main-btn" href="04_govt_exams.html">
+<span class="icon">🏆</span>
+<span class="btn-text-group">
+<span class="menu-ta">அரசுத் தேர்வுகள்</span>
+<span class="menu-en">GOVT COMPETITIVE EXAMS</span>
+</span>
+</a>
+<!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
+<a class="sidebar-main-btn" href="direct_careers.html">
+<span class="icon">💼</span>
+<span class="btn-text-group">
+<span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
+<span class="menu-en">SKILLS &amp; CAREERS</span>
+</span>
+</a>
+<!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
+<a class="sidebar-main-btn" href="helpdesk_portal.html">
+<span class="icon">☎️</span>
+<span class="btn-text-group">
+<span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
+<span class="menu-en">HELPDESK &amp; SUPPORT</span>
+</span>
+</a>
+</nav>
+</aside>
+<!-- Main Portal Content Column -->
+<main class="portal-main-content">
 <div class="portal-container">
-
-  <!-- Top Navigation Bar -->
-  <!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
+<!-- Top Navigation Bar -->
+<!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
 <!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
 <header class="portal-top-frame no-print">
-  <div class="top-frame-branding">
-    <div class="top-frame-badge">
-      <span class="govt-emblem">🏛️</span>
-      <span class="dept-text">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</span>
-    </div>
-    <div class="portal-main-heading">
-      <span class="portal-title-text">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
-      <span class="portal-subtitle-en">CAREER GUIDANCE PORTAL</span>
-    </div>
-  </div>
-
-  <div class="top-frame-actions">
-    <!-- Official ceosvg.in Main District Portal Link -->
-    <a href="https://www.ceosvg.in" target="_blank" rel="noopener" class="top-frame-btn btn-ceosvg" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
-      <span class="btn-icon">🌐</span>
-      <span>ceosvg.in முதன்மை தளம்</span>
-    </a>
-    <!-- Career Guidance Home Link -->
-    <a href="index.html" class="top-frame-btn btn-home" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
-      <span class="btn-icon">🎓</span>
-      <span>உயர்கல்வி முகப்பு</span>
-    </a>
-  </div>
+<div class="top-frame-branding">
+<div class="top-frame-badge">
+<span class="govt-emblem">🏛️</span>
+<span class="dept-text">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</span>
+</div>
+<div class="portal-main-heading">
+<span class="portal-title-text">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
+<span class="portal-subtitle-en">CAREER GUIDANCE PORTAL</span>
+</div>
+</div>
+<div class="top-frame-actions">
+<!-- Official ceosvg.in Main District Portal Link -->
+<a class="top-frame-btn btn-ceosvg" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
+<span class="btn-icon">🌐</span>
+<span>ceosvg.in முதன்மை தளம்</span>
+</a>
+<!-- Career Guidance Home Link -->
+<a class="top-frame-btn btn-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+<span class="btn-icon">🎓</span>
+<span>உயர்கல்வி முகப்பு</span>
+</a>
+</div>
 </header>
-
-
-
-
 <div class="district-badge">
-      <span>🏛️ தமிழ்நாடு பள்ளிக் கல்வித்துறை | சிவகங்கை மாவட்டம்</span>
-    </div>
+<span>🏛️ தமிழ்நாடு பள்ளிக் கல்வித்துறை | சிவகங்கை மாவட்டம்</span>
+</div>
+<div class="kural-box">
+<div class="kural-header">
+<span class="kural-icon">📜</span>
+<span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
+<span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
+</div>
+<div class="kural-verse-text">
+    “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
+    திண்ணியர் ஆகப் பெறின்.”
   </div>
-
-  <!-- Portal Header -->
-  <header class="portal-header">
-    <div class="header-badge-row">
-      <span class="header-tag primary">பிரிவு 04 / DIRECT LAW ADMISSIONS</span>
-      <span class="header-tag secondary">TNDALU & 15 அரசு சட்டக் கல்லூரிகள்</span>
-      <span class="header-tag secondary">நுழைவுத் தேர்வு இல்லை (Non-CLAT)</span>
-    </div>
-    <h1 class="portal-title">சட்டப் படிப்புகள் நேரடிச் சேர்க்கை வழிகாட்டி <span class="accent-gold">(5 ஆண்டு LL.B.)</span></h1>
-    <p class="portal-subtitle">தமிழ்நாடு டாக்டர் அம்பேத்கர் சட்டப் பல்கலைக்கழகம் (TNDALU) மற்றும் 15 அரசு சட்டக் கல்லூரிகளில் +2 மதிப்பெண் அடிப்படையில் மட்டுமே நடைபெறும் ஒற்றைச் சாளர நேரடிச் சேர்க்கை, 7.5% அரசுப் பள்ளி இடஒதுக்கீடு, தமிழ் வழிக் கல்வி (PSTM) மற்றும் முழுமையான சட்டக் கல்வி வழிகாட்டல்.</p>
-    
-    <!-- Quick Nav Pills -->
-    <div class="quick-nav-pills">
-      <a href="#calculator" onclick="scrollToSection('calculator', event); return false;" class="quick-nav-pill">🧮 கட்-ஆஃப் கால்குலேட்டர்</a>
-      <a href="#overview" onclick="scrollToSection('overview', event); return false;" class="quick-nav-pill">📌 சேர்க்கை அமைப்புகள்</a>
-      <a href="#quota" onclick="scrollToSection('quota', event); return false;" class="quick-nav-pill">🎯 7.5% அரசுப் பள்ளி இடஒதுக்கீடு</a>
-      <a href="#courses" onclick="scrollToSection('courses', event); return false;" class="quick-nav-pill">⚖️ 5 ஆண்டு சட்டப் படிப்புகள்</a>
-      <a href="#tamil-medium" onclick="scrollToSection('tamil-medium', event); return false;" class="quick-nav-pill">🇮🇳 தமிழ் வழிக் கல்வி & PSTM</a>
-      <a href="#counselling" onclick="scrollToSection('counselling', event); return false;" class="quick-nav-pill">🔄 கலந்தாய்வு நடைமுறைகள்</a>
-      <a href="#documents" onclick="scrollToSection('documents', event); return false;" class="quick-nav-pill">📑 தேவையான ஆவணங்கள்</a>
-      <a href="#colleges" onclick="scrollToSection('colleges', event); return false;" class="quick-nav-pill">🏆 15 அரசு சட்டக் கல்லூரிகள்</a>
-      <a href="#careers" onclick="scrollToSection('careers', event); return false;" class="quick-nav-pill">💼 சட்டத்துறை வேலைவாய்ப்புகள்</a>
-    </div>
-  </header>
-
-  <!-- Notice -->
-  <div class="notice-box notice-gold">
-    <span style="font-size: 1.5rem;">⚖️</span>
-    <div>
-      <strong>முக்கிய அறிவிப்பு:</strong> CLAT நுழைவுத் தேர்வின்றி, தமிழ்நாட்டில் உள்ள 15 அரசு சட்டக் கல்லூரிகளிலும் சீர்மிகு சட்டப் பள்ளியிலும் (SOEL) சேருவதற்கு +2 பொதுத்தேர்வில் பெற்ற மதிப்பெண்களே (Percentage of Marks) சேர்க்கைக்கான முழுத் தகுதியாகும்!
-    </div>
+<div class="kural-meaning">
+<strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
   </div>
-
-  <!-- SECTION: CALCULATOR -->
-  <section id="calculator" class="calc-container">
-    <div class="calc-title">
-      <span>🧮</span>
-      <span>சட்டப் படிப்பு கட்-ஆஃப் & சதவீதக் கணக்கீட்டுக் கருவி (Law Cut-off Calculator)</span>
+</div><div class="creator-card">
+<div class="creator-typewriter-wrapper">
+<span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
+</div>
+<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
+<span class="phone-icon">📱</span>
+<span class="phone-text">9626471035</span>
+</a>
+</div><footer class="portal-footer">
+<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
+    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
+</p>
+<p style="font-size: 0.85rem; color: #64748b;">
+    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+  </p>
+</footer></div>
+<!-- Portal Header -->
+<header class="portal-header">
+<div class="header-badge-row">
+<span class="header-tag primary">பிரிவு 04 / DIRECT LAW ADMISSIONS</span>
+<span class="header-tag secondary">TNDALU &amp; 15 அரசு சட்டக் கல்லூரிகள்</span>
+<span class="header-tag secondary">நுழைவுத் தேர்வு இல்லை (Non-CLAT)</span>
+</div>
+<h1 class="portal-title">சட்டப் படிப்புகள் நேரடிச் சேர்க்கை வழிகாட்டி <span class="accent-gold">(5 ஆண்டு LL.B.)</span></h1>
+<p class="portal-subtitle">தமிழ்நாடு டாக்டர் அம்பேத்கர் சட்டப் பல்கலைக்கழகம் (TNDALU) மற்றும் 15 அரசு சட்டக் கல்லூரிகளில் +2 மதிப்பெண் அடிப்படையில் மட்டுமே நடைபெறும் ஒற்றைச் சாளர நேரடிச் சேர்க்கை, 7.5% அரசுப் பள்ளி இடஒதுக்கீடு, தமிழ் வழிக் கல்வி (PSTM) மற்றும் முழுமையான சட்டக் கல்வி வழிகாட்டல்.</p>
+<!-- Quick Nav Pills -->
+<div class="quick-nav-pills">
+<a class="quick-nav-pill" href="#calculator" onclick="scrollToSection('calculator', event); return false;">🧮 கட்-ஆஃப் கால்குலேட்டர்</a>
+<a class="quick-nav-pill" href="#overview" onclick="scrollToSection('overview', event); return false;">📌 சேர்க்கை அமைப்புகள்</a>
+<a class="quick-nav-pill" href="#quota" onclick="scrollToSection('quota', event); return false;">🎯 7.5% அரசுப் பள்ளி இடஒதுக்கீடு</a>
+<a class="quick-nav-pill" href="#courses" onclick="scrollToSection('courses', event); return false;">⚖️ 5 ஆண்டு சட்டப் படிப்புகள்</a>
+<a class="quick-nav-pill" href="#tamil-medium" onclick="scrollToSection('tamil-medium', event); return false;">🇮🇳 தமிழ் வழிக் கல்வி &amp; PSTM</a>
+<a class="quick-nav-pill" href="#counselling" onclick="scrollToSection('counselling', event); return false;">🔄 கலந்தாய்வு நடைமுறைகள்</a>
+<a class="quick-nav-pill" href="#documents" onclick="scrollToSection('documents', event); return false;">📑 தேவையான ஆவணங்கள்</a>
+<a class="quick-nav-pill" href="#colleges" onclick="scrollToSection('colleges', event); return false;">🏆 15 அரசு சட்டக் கல்லூரிகள்</a>
+<a class="quick-nav-pill" href="#careers" onclick="scrollToSection('careers', event); return false;">💼 சட்டத்துறை வேலைவாய்ப்புகள்</a>
+</div>
+</header>
+<!-- Notice -->
+<div class="notice-box notice-gold">
+<span style="font-size: 1.5rem;">⚖️</span>
+<div>
+<strong>முக்கிய அறிவிப்பு:</strong> CLAT நுழைவுத் தேர்வின்றி, தமிழ்நாட்டில் உள்ள 15 அரசு சட்டக் கல்லூரிகளிலும் சீர்மிகு சட்டப் பள்ளியிலும் (SOEL) சேருவதற்கு +2 பொதுத்தேர்வில் பெற்ற மதிப்பெண்களே (Percentage of Marks) சேர்க்கைக்கான முழுத் தகுதியாகும்!
     </div>
-    <p style="font-size: 0.94rem; color: #78350f; margin-bottom: 18px;">
+</div>
+<!-- SECTION: CALCULATOR -->
+<section class="calc-container" id="calculator">
+<div class="calc-title">
+<span>🧮</span>
+<span>சட்டப் படிப்பு கட்-ஆஃப் &amp; சதவீதக் கணக்கீட்டுக் கருவி (Law Cut-off Calculator)</span>
+</div>
+<p style="font-size: 0.94rem; color: #78350f; margin-bottom: 18px;">
       சட்டப் படிப்புச் சேர்க்கைக்கு மொழிப்பாடங்கள் (தமிழ்/ஆங்கிலம்) தவிர்த்து, மீதமுள்ள 4 முக்கியப் பாடங்களின் மொத்த மதிப்பெண்களைக் (400-க்கு) கொண்டு சதவீதம் கணக்கிடப்படும். உங்களின் 4 பாட மதிப்பெண்களை உள்ளிடவும்:
     </p>
-
-    <div class="calc-inputs-grid">
-      <div class="input-group">
-        <label for="sub1">பாடம் 1 (Subject 1):</label>
-        <input type="number" id="sub1" min="0" max="100" value="85" placeholder="100-க்கு">
-      </div>
-      <div class="input-group">
-        <label for="sub2">பாடம் 2 (Subject 2):</label>
-        <input type="number" id="sub2" min="0" max="100" value="88" placeholder="100-க்கு">
-      </div>
-      <div class="input-group">
-        <label for="sub3">பாடம் 3 (Subject 3):</label>
-        <input type="number" id="sub3" min="0" max="100" value="82" placeholder="100-க்கு">
-      </div>
-      <div class="input-group">
-        <label for="sub4">பாடம் 4 (Subject 4):</label>
-        <input type="number" id="sub4" min="0" max="100" value="90" placeholder="100-க்கு">
-      </div>
-    </div>
-
-    <div class="calc-result-box">
-      <div style="font-size: 0.92rem; font-weight: 700; color: #64748b; text-transform: uppercase;">உங்கள் சட்டப் படிப்பு கட்-ஆஃப் சதவீதம் (Aggregate Percentage)</div>
-      <div id="cutoffValue" class="cutoff-score">86.25 %</div>
-      <div id="cutoffStatus" class="cutoff-badge">அரசு சட்டக் கல்லூரிகளில் B.A. LL.B. பெற மிகச் சிறந்த வாய்ப்பு!</div>
-      <p id="cutoffAdvice" style="font-size: 0.88rem; color: #64748b; margin-top: 10px;">
+<div class="calc-inputs-grid">
+<div class="input-group">
+<label for="sub1">பாடம் 1 (Subject 1):</label>
+<input id="sub1" max="100" min="0" placeholder="100-க்கு" type="number" value="85"/>
+</div>
+<div class="input-group">
+<label for="sub2">பாடம் 2 (Subject 2):</label>
+<input id="sub2" max="100" min="0" placeholder="100-க்கு" type="number" value="88"/>
+</div>
+<div class="input-group">
+<label for="sub3">பாடம் 3 (Subject 3):</label>
+<input id="sub3" max="100" min="0" placeholder="100-க்கு" type="number" value="82"/>
+</div>
+<div class="input-group">
+<label for="sub4">பாடம் 4 (Subject 4):</label>
+<input id="sub4" max="100" min="0" placeholder="100-க்கு" type="number" value="90"/>
+</div>
+</div>
+<div class="calc-result-box">
+<div style="font-size: 0.92rem; font-weight: 700; color: #64748b; text-transform: uppercase;">உங்கள் சட்டப் படிப்பு கட்-ஆஃப் சதவீதம் (Aggregate Percentage)</div>
+<div class="cutoff-score" id="cutoffValue">86.25 %</div>
+<div class="cutoff-badge" id="cutoffStatus">அரசு சட்டக் கல்லூரிகளில் B.A. LL.B. பெற மிகச் சிறந்த வாய்ப்பு!</div>
+<p id="cutoffAdvice" style="font-size: 0.88rem; color: #64748b; margin-top: 10px;">
         (பொதுப் பிரிவினர் அரசு கல்லூரிகளுக்கு 45%, SOEL கௌரவப் படிப்புகளுக்கு 70% குறைந்தபட்சத் தகுதி பெற வேண்டும். SC/ST மாணவர்களுக்கு 40% மற்றும் 60% போதுமானது).
       </p>
-    </div>
-  </section>
-
-  <!-- SECTION 1: OVERVIEW & ELIGIBILITY -->
-  <section id="overview" class="info-card">
-    <div class="card-header-flex">
-      <h2 class="card-title-main"><span>📌</span> 1. சேர்க்கை அமைப்புகள் & கல்வித் தகுதிகள்</h2>
-      <span class="section-badge">TNDALU சென்னை</span>
-    </div>
-    
-    <div class="grid-2">
-      <div class="feature-box soel">
-        <h3 class="feature-title">🏛️ 1. சீர்மிகு சட்டப் பள்ளி (SOEL - Chennai Campus)</h3>
-        <p class="feature-desc">
+</div>
+</section>
+<!-- SECTION 1: OVERVIEW & ELIGIBILITY -->
+<section class="info-card" id="overview">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>📌</span> 1. சேர்க்கை அமைப்புகள் &amp; கல்வித் தகுதிகள்</h2>
+<span class="section-badge">TNDALU சென்னை</span>
+</div>
+<div class="grid-2">
+<div class="feature-box soel">
+<h3 class="feature-title">🏛️ 1. சீர்மிகு சட்டப் பள்ளி (SOEL - Chennai Campus)</h3>
+<p class="feature-desc">
           டாக்டர் அம்பேத்கர் சட்டப் பல்கலைக்கழகத்தின் நேரடி சீர்மிகு சட்டப் பள்ளி (School of Excellence in Law, தரமணி, சென்னை). இங்கு 5 ஆண்டு கௌரவப் பட்டப் படிப்புகள் (Honours) ஆங்கில வழியில் மட்டும் கற்பிக்கப்படுகின்றன.
         </p>
-        <ul style="margin: 10px 0 0 20px; font-size: 0.88rem; color: #334155;">
-          <li>குறைந்தபட்ச மதிப்பெண்: பொதுப்பிரிவு (OC/BC/MBC) - 70%, SC/ST - 60%.</li>
-          <li>படிப்புகள்: B.A. LL.B. (Hons.), B.Com. LL.B. (Hons.), B.B.A. LL.B. (Hons.), B.C.A. LL.B. (Hons.).</li>
-          <li>தேசிய சட்டப் பல்கலைக்கழகங்களுக்கு (NLU) இணையான சர்வதேசத் தரம் மற்றும் மூட் கோர்ட் (Moot Court) பயிற்சி.</li>
-        </ul>
-      </div>
-
-      <div class="feature-box highlight">
-        <h3 class="feature-title">⚖️ 2. அரசு சட்டக் கல்லூரிகள் (15 Affiliated Govt Law Colleges)</h3>
-        <p class="feature-desc">
+<ul style="margin: 10px 0 0 20px; font-size: 0.88rem; color: #334155;">
+<li>குறைந்தபட்ச மதிப்பெண்: பொதுப்பிரிவு (OC/BC/MBC) - 70%, SC/ST - 60%.</li>
+<li>படிப்புகள்: B.A. LL.B. (Hons.), B.Com. LL.B. (Hons.), B.B.A. LL.B. (Hons.), B.C.A. LL.B. (Hons.).</li>
+<li>தேசிய சட்டப் பல்கலைக்கழகங்களுக்கு (NLU) இணையான சர்வதேசத் தரம் மற்றும் மூட் கோர்ட் (Moot Court) பயிற்சி.</li>
+</ul>
+</div>
+<div class="feature-box highlight">
+<h3 class="feature-title">⚖️ 2. அரசு சட்டக் கல்லூரிகள் (15 Affiliated Govt Law Colleges)</h3>
+<p class="feature-desc">
           தமிழ்நாடு அரசால் நடத்தப்படும் 15 அரசு சட்டக் கல்லூரிகள். இவற்றில் B.A. LL.B. 5 ஆண்டு படிப்பு வழங்கப்படுகிறது. இங்கு தமிழ் மற்றும் ஆங்கில வழிக் கல்வி உள்ளது.
         </p>
-        <ul style="margin: 10px 0 0 20px; font-size: 0.88rem; color: #334155;">
-          <li>குறைந்தபட்ச மதிப்பெண்: OC - 45%, BC/MBC/DNC - 42%, SC/ST - 40%.</li>
-          <li>பாடப்பிரிவு: +2-ல் கலை, அறிவியல், வணிகவியல் அல்லது தொழிற்கல்வி பயின்ற எவரும் விண்ணப்பிக்கலாம்!</li>
-          <li>ஆண்டு கல்விக் கட்டணம் அரசு கல்லூரிகளில் மிகக் குறைவு (சுமார் ₹2,500 - ₹3,500 மட்டுமே).</li>
-        </ul>
+<ul style="margin: 10px 0 0 20px; font-size: 0.88rem; color: #334155;">
+<li>குறைந்தபட்ச மதிப்பெண்: OC - 45%, BC/MBC/DNC - 42%, SC/ST - 40%.</li>
+<li>பாடப்பிரிவு: +2-ல் கலை, அறிவியல், வணிகவியல் அல்லது தொழிற்கல்வி பயின்ற எவரும் விண்ணப்பிக்கலாம்!</li>
+<li>ஆண்டு கல்விக் கட்டணம் அரசு கல்லூரிகளில் மிகக் குறைவு (சுமார் ₹2,500 - ₹3,500 மட்டுமே).</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- SECTION 2: 7.5% GOVT SCHOOL QUOTA -->
+<section class="info-card" id="quota">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>🎯</span> 2. அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு</h2>
+<span class="section-badge" style="background:#dcfce7; color:#166534; border-color:#bbf7d0;">100% இலவசக் கல்வி</span>
+</div>
+<div class="notice-box notice-green">
+<span style="font-size: 1.5rem;">🌟</span>
+<div>
+<strong>முழுக் கட்டணச் சலுகை:</strong> 7.5% அரசுப் பள்ளி ஒதுக்கீட்டின் கீழ் சேர்க்கை பெறும் மாணவர்களுக்குக் கல்விக் கட்டணம், பல்கலைக்கழகத் தேர்வுக் கட்டணம், மற்றும் விடுதிக் கட்டணம், உணவுக் கட்டணம் முழுவதையும் தமிழ்நாடு அரசே முழுமையாக ஏற்கும்!
       </div>
-    </div>
-  </section>
-
-  <!-- SECTION 2: 7.5% GOVT SCHOOL QUOTA -->
-  <section id="quota" class="info-card">
-    <div class="card-header-flex">
-      <h2 class="card-title-main"><span>🎯</span> 2. அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு</h2>
-      <span class="section-badge" style="background:#dcfce7; color:#166534; border-color:#bbf7d0;">100% இலவசக் கல்வி</span>
-    </div>
-
-    <div class="notice-box notice-green">
-      <span style="font-size: 1.5rem;">🌟</span>
-      <div>
-        <strong>முழுக் கட்டணச் சலுகை:</strong> 7.5% அரசுப் பள்ளி ஒதுக்கீட்டின் கீழ் சேர்க்கை பெறும் மாணவர்களுக்குக் கல்விக் கட்டணம், பல்கலைக்கழகத் தேர்வுக் கட்டணம், மற்றும் விடுதிக் கட்டணம், உணவுக் கட்டணம் முழுவதையும் தமிழ்நாடு அரசே முழுமையாக ஏற்கும்!
-      </div>
-    </div>
-
-    <div class="grid-3">
-      <div class="feature-box quota">
-        <h4 class="feature-title">🏫 தகுதி வரம்பு</h4>
-        <p class="feature-desc">
+</div>
+<div class="grid-3">
+<div class="feature-box quota">
+<h4 class="feature-title">🏫 தகுதி வரம்பு</h4>
+<p class="feature-desc">
           6-ஆம் வகுப்பு முதல் 12-ஆம் வகுப்பு வரை தொடர்ந்து தமிழ்நாட்டில் உள்ள அரசுப் பள்ளிகளில் பயின்ற மாணவர்கள் மட்டுமே இச்சலுகையைப் பெற முடியும்.
         </p>
-      </div>
-
-      <div class="feature-box quota">
-        <h4 class="feature-title">📑 போனஃபைட் சான்றிதழ்</h4>
-        <p class="feature-desc">
+</div>
+<div class="feature-box quota">
+<h4 class="feature-title">📑 போனஃபைட் சான்றிதழ்</h4>
+<p class="feature-desc">
           படித்த பள்ளியின் தலைமை ஆசிரியர் கையொப்பமிட்டு, வட்டாரக் கல்வி அலுவலர் (BEO) அல்லது மாவட்டக் கல்வி அலுவலரால் (DEO/CEO) மேலொப்பம் (Counter Sign) பெறப்பட்ட சிறப்பு போனஃபைட் சான்றிதழ் சமர்ப்பிக்க வேண்டும்.
         </p>
-      </div>
-
-      <div class="feature-box quota">
-        <h4 class="feature-title">💰 மாத உதவித்தொகை</h4>
-        <p class="feature-desc">
+</div>
+<div class="feature-box quota">
+<h4 class="feature-title">💰 மாத உதவித்தொகை</h4>
+<p class="feature-desc">
           அரசுப் பள்ளி மாணவிகளுக்கு <strong>புதுமைப் பெண் திட்டம்</strong> மூலமும், மாணவர்களுக்கு <strong>தமிழ்ப் புதல்வன் திட்டம்</strong> மூலமும் மாதந்தோறும் <strong>₹1,000</strong> வங்கிக் கணக்கில் நேரடியாக வழங்கப்படுகிறது.
         </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 3: 5-YEAR LAW COURSES BREAKDOWN -->
-  <section id="courses" class="info-card">
-    <div class="card-header-flex">
-      <h2 class="card-title-main"><span>⚖️</span> 3. ஐந்து ஆண்டு ஒருங்கிணைந்த சட்டப் படிப்புகள்</h2>
-      <span class="section-badge">Integrated Law Degrees</span>
-    </div>
-
-    <div class="grid-2">
-      <div class="feature-box">
-        <h3 class="feature-title" style="color: #b45309;">📜 B.A. LL.B. (Bachelor of Arts & Bachelor of Laws)</h3>
-        <p class="feature-desc">
+</div>
+</div>
+</section>
+<!-- SECTION 3: 5-YEAR LAW COURSES BREAKDOWN -->
+<section class="info-card" id="courses">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>⚖️</span> 3. ஐந்து ஆண்டு ஒருங்கிணைந்த சட்டப் படிப்புகள்</h2>
+<span class="section-badge">Integrated Law Degrees</span>
+</div>
+<div class="grid-2">
+<div class="feature-box">
+<h3 class="feature-title" style="color: #b45309;">📜 B.A. LL.B. (Bachelor of Arts &amp; Bachelor of Laws)</h3>
+<p class="feature-desc">
           அரசு சட்டக் கல்லூரிகளிலும் SOEL-லும் வழங்கப்படும் மிகவும் பிரபலமான சட்டப் படிப்பு. +2-ல் கலை, அறிவியல், வணிகவியல் என எந்தப் பிரிவு மாணவர்களும் இதில் சேரலாம். வரலாறு, அரசியல் அறிவியல், சமூகவியல் பாடங்களுடன் சட்டக் கோட்பாடுகள், குற்றவியல் சட்டம் (CrPC / BNS), உரிமையியல் சட்டம் (CPC) மற்றும் இந்திய அரசியலமைப்புச் சட்டம் கற்பிக்கப்படும்.
         </p>
-      </div>
-
-      <div class="feature-box">
-        <h3 class="feature-title" style="color: #b45309;">📊 B.Com. LL.B. (Hons.) - கார்ப்பரேட் & வர்த்தக சட்டம்</h3>
-        <p class="feature-desc">
+</div>
+<div class="feature-box">
+<h3 class="feature-title" style="color: #b45309;">📊 B.Com. LL.B. (Hons.) - கார்ப்பரேட் &amp; வர்த்தக சட்டம்</h3>
+<p class="feature-desc">
           வணிகவியல் (Commerce) மற்றும் கணக்கியல் பயின்ற மாணவர்களுக்கு மிகவும் ஏற்ற படிப்பு. SOEL-ல் வழங்கப்படுகிறது. நிறுவனச் சட்டம் (Company Law), வரிச் சட்டம் (Taxation / GST), வங்கிச் சட்டம், காப்புரிமை மற்றும் அறிவுசார் சொத்துரிமைச் சட்டங்களில் சிறப்புப் பயிற்சி பெற்று பெருநிறுவன சட்ட ஆலோசகராகப் பணியாற்றலாம்.
         </p>
-      </div>
-
-      <div class="feature-box">
-        <h3 class="feature-title" style="color: #b45309;">💼 B.B.A. LL.B. (Hons.) - வணிக மேலாண்மை & சட்டம்</h3>
-        <p class="feature-desc">
+</div>
+<div class="feature-box">
+<h3 class="feature-title" style="color: #b45309;">💼 B.B.A. LL.B. (Hons.) - வணிக மேலாண்மை &amp; சட்டம்</h3>
+<p class="feature-desc">
           வணிக மேலாண்மை (Management Studies) மற்றும் சட்டக் கல்வியை இணைக்கும் படிப்பு. தொழிலாளர் நலச் சட்டங்கள் (Labor Laws), சர்வதேச வர்த்தகச் சட்டம், கார்ப்பரேட் ஆளுகை (Corporate Governance) மற்றும் ஒப்பந்த மேலாண்மை ஆகியவற்றில் சிறந்த வேலைவாய்ப்புகளை வழங்குகிறது.
         </p>
-      </div>
-
-      <div class="feature-box">
-        <h3 class="feature-title" style="color: #b45309;">💻 B.C.A. LL.B. (Hons.) - சைபர் சட்டம் & தகவல் தொழில்நுட்பம்</h3>
-        <p class="feature-desc">
+</div>
+<div class="feature-box">
+<h3 class="feature-title" style="color: #b45309;">💻 B.C.A. LL.B. (Hons.) - சைபர் சட்டம் &amp; தகவல் தொழில்நுட்பம்</h3>
+<p class="feature-desc">
           கணினிப் பயன்பாட்டியல் மற்றும் சட்டக் கல்வியை இணைக்கும் நவீனப் படிப்பு. தற்காலத்தில் பெருகிவரும் சைபர் குற்றங்கள், டேட்டா பிரைவசி (Data Privacy Laws), டிஜிட்டல் தடயவியல் (Digital Forensics) மற்றும் செயற்கை நுண்ணறிவு ஒழுங்குமுறைச் சட்டங்களில் வல்லுநராக உருவாக்க SOEL-ல் பிரத்யேகமாக வழங்கப்படுகிறது.
         </p>
+</div>
+</div>
+</section>
+<!-- SECTION 4: TAMIL MEDIUM & PSTM -->
+<section class="info-card" id="tamil-medium">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>🇮🇳</span> 4. தமிழ் வழியில் சட்டப் படிப்பு &amp; PSTM முன்னுரிமை</h2>
+<span class="section-badge" style="background:#fef3c7; color:#92400e;">20% அரசு வேலைவாய்ப்பு இடஒதுக்கீடு</span>
+</div>
+<div class="notice-box notice-blue">
+<span style="font-size: 1.5rem;">🏛️</span>
+<div>
+<strong>நீதிபதி தேர்வில் முன்னுரிமை:</strong> B.A. LL.B. படிப்பைத் தமிழ் வழியில் பயிலும் மாணவர்களுக்கு, தமிழ்நாடு அரசுப் பணியாளர் தேர்வாணையம் (TNPSC) மற்றும் சென்னை உயர்நீதிமன்றம் நடத்தும் <strong>உரிமையியல் நீதிபதி (Civil Judge)</strong> நேரடித் தேர்வில் தமிழ் வழியில் பயின்றோருக்கான <strong>20% PSTM இடஒதுக்கீடு</strong> பொருந்தும்!
       </div>
-    </div>
-  </section>
-
-  <!-- SECTION 4: TAMIL MEDIUM & PSTM -->
-  <section id="tamil-medium" class="info-card">
-    <div class="card-header-flex">
-      <h2 class="card-title-main"><span>🇮🇳</span> 4. தமிழ் வழியில் சட்டப் படிப்பு & PSTM முன்னுரிமை</h2>
-      <span class="section-badge" style="background:#fef3c7; color:#92400e;">20% அரசு வேலைவாய்ப்பு இடஒதுக்கீடு</span>
-    </div>
-
-    <div class="notice-box notice-blue">
-      <span style="font-size: 1.5rem;">🏛️</span>
-      <div>
-        <strong>நீதிபதி தேர்வில் முன்னுரிமை:</strong> B.A. LL.B. படிப்பைத் தமிழ் வழியில் பயிலும் மாணவர்களுக்கு, தமிழ்நாடு அரசுப் பணியாளர் தேர்வாணையம் (TNPSC) மற்றும் சென்னை உயர்நீதிமன்றம் நடத்தும் <strong>உரிமையியல் நீதிபதி (Civil Judge)</strong> நேரடித் தேர்வில் தமிழ் வழியில் பயின்றோருக்கான <strong>20% PSTM இடஒதுக்கீடு</strong> பொருந்தும்!
-      </div>
-    </div>
-
-    <div class="grid-3">
-      <div class="feature-box highlight" style="border-left: 4px solid #b45309;">
-        <h4 class="feature-title">📚 தமிழ் வழிக் கல்லூரிகள் &amp; காரைக்குடி</h4>
-        <p class="feature-desc">
-          <strong>சிவகங்கை மாவட்டத்தின் காரைக்குடி அரசு சட்டக் கல்லூரி</strong>, மதுரை அரசு சட்டக் கல்லூரி, திருச்சி, திருநெல்வேலி மற்றும் செங்கல்பட்டு அரசு சட்டக் கல்லூரிகளில் <strong>B.A. LL.B. படிப்பு தமிழ் வழியில்</strong> சிறப்பாகப் பயிற்றுவிக்கப்படுகிறது.
+</div>
+<div class="grid-3">
+<div class="feature-box highlight" style="border-left: 4px solid #b45309;">
+<h4 class="feature-title">📚 தமிழ் வழிக் கல்லூரிகள் &amp; காரைக்குடி</h4>
+<p class="feature-desc">
+<strong>சிவகங்கை மாவட்டத்தின் காரைக்குடி அரசு சட்டக் கல்லூரி</strong>, மதுரை அரசு சட்டக் கல்லூரி, திருச்சி, திருநெல்வேலி மற்றும் செங்கல்பட்டு அரசு சட்டக் கல்லூரிகளில் <strong>B.A. LL.B. படிப்பு தமிழ் வழியில்</strong> சிறப்பாகப் பயிற்றுவிக்கப்படுகிறது.
         </p>
-      </div>
-      <div class="feature-box highlight">
-        <h4 class="feature-title">⚖️ நீதிமன்ற வாதாடல்</h4>
-        <p class="feature-desc">
+</div>
+<div class="feature-box highlight">
+<h4 class="feature-title">⚖️ நீதிமன்ற வாதாடல்</h4>
+<p class="feature-desc">
           தமிழ்நாட்டில் உள்ள மாவட்ட நீதிமன்றங்கள் மற்றும் சார்பு நீதிமன்றங்களில் தமிழில் வாதாடுவது அனுமதிக்கப்பட்டுள்ளதால் தமிழ் வழிச் சட்டக் கல்வி வழக்கறிஞர் தொழிலுக்குப் பெரும் பலம் சேர்க்கிறது.
         </p>
-      </div>
-      <div class="feature-box highlight">
-        <h4 class="feature-title">🏛️ அரசு உதவி வழக்கறிஞர் (APP)</h4>
-        <p class="feature-desc">
+</div>
+<div class="feature-box highlight">
+<h4 class="feature-title">🏛️ அரசு உதவி வழக்கறிஞர் (APP)</h4>
+<p class="feature-desc">
           குற்றவியல் நீதிமன்றங்களில் அரசுத் தரப்பில் வழக்குகளை நடத்தும் உதவி அரசு வழக்கறிஞர் (Assistant Public Prosecutor) பணியிடத் தேர்விலும் தமிழ் வழியில் படித்தவர்களுக்கு முன்னுரிமை உண்டு.
         </p>
-      </div>
-    </div>
-  
-    <!-- காரைக்குடி அரசு சட்டக் கல்லூரி சிறப்பு வழிகாட்டி அட்டை -->
-    <div style="margin-top: 24px; background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border: 2px solid #f59e0b; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(180, 83, 9, 0.1);">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; border-bottom: 1.5px dashed #d97706; padding-bottom: 10px;">
-        <h3 style="color: #78350f; font-size: 1.25rem; font-weight: 800; margin: 0; display: flex; align-items: center; gap: 8px;">
-          <span>🏛️</span> சிவகங்கை மாவட்டத்தின் முதன்மை நிறுவனம்: அரசு சட்டக் கல்லூரி, காரைக்குடி (GLC Karaikudi)
+</div>
+</div>
+<!-- காரைக்குடி அரசு சட்டக் கல்லூரி சிறப்பு வழிகாட்டி அட்டை -->
+<div style="margin-top: 24px; background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border: 2px solid #f59e0b; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(180, 83, 9, 0.1);">
+<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; border-bottom: 1.5px dashed #d97706; padding-bottom: 10px;">
+<h3 style="color: #78350f; font-size: 1.25rem; font-weight: 800; margin: 0; display: flex; align-items: center; gap: 8px;">
+<span>🏛️</span> சிவகங்கை மாவட்டத்தின் முதன்மை நிறுவனம்: அரசு சட்டக் கல்லூரி, காரைக்குடி (GLC Karaikudi)
         </h3>
-        <span class="college-tag tag-govt" style="background:#b45309; color:#ffffff; font-weight:700;">சிவகங்கை மாவட்ட அரசு கல்லூரி</span>
-      </div>
-
-      <div style="font-size: 0.94rem; color: #451a03; line-height: 1.8; margin-bottom: 14px;">
+<span class="college-tag tag-govt" style="background:#b45309; color:#ffffff; font-weight:700;">சிவகங்கை மாவட்ட அரசு கல்லூரி</span>
+</div>
+<div style="font-size: 0.94rem; color: #451a03; line-height: 1.8; margin-bottom: 14px;">
         சிவகங்கை மாவட்ட மாணவர்களின் நீண்டகால கனவை நனவாக்கும் வகையில், <strong>காரைக்குடி கழனிவாசல் பகுதியில் 19.15 ஏக்கர் பரப்பளவில் ரூ.100.45 கோடி மதிப்பீட்டில்</strong> அதிநவீன கட்டமைப்புடன் <strong>அரசு சட்டக் கல்லூரி (Government Law College, Karaikudi)</strong> உருவாக்கப்பட்டு செயல்பட்டு வருகிறது. தமிழ்நாடு டாக்டர் அம்பேத்கர் சட்டப் பல்கலைக்கழகத்தின் (TNDALU) கீழ் செயல்படும் இக்கல்லூரி பார் கவுன்சில் ஆஃப் இந்தியா (BCI) அங்கீகாரம் பெற்றது.
       </div>
-
-      <div class="grid-3" style="margin-top: 14px;">
-        <div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #fde68a;">
-          <h4 style="color: #92400e; font-size: 0.95rem; font-weight: 800; margin-bottom: 6px;">🎓 வழங்கப்படும் சட்டப் படிப்புகள்</h4>
-          <p style="font-size: 0.86rem; color: #334155; line-height: 1.6; margin: 0;">
+<div class="grid-3" style="margin-top: 14px;">
+<div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #fde68a;">
+<h4 style="color: #92400e; font-size: 0.95rem; font-weight: 800; margin-bottom: 6px;">🎓 வழங்கப்படும் சட்டப் படிப்புகள்</h4>
+<p style="font-size: 0.86rem; color: #334155; line-height: 1.6; margin: 0;">
             • <strong>5-Year B.A. LL.B.:</strong> +2 முடித்தவர்களுக்கான 5 ஆண்டு ஒருங்கிணைந்த பட்டப்படிப்பு.<br/>
             • <strong>3-Year LL.B.:</strong> ஏதேனும் ஒரு இளங்கலைப் பட்டம் (UG Degree) முடித்தவர்களுக்கான 3 ஆண்டு சட்டப்படிப்பு.
           </p>
-        </div>
-
-        <div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #fde68a;">
-          <h4 style="color: #92400e; font-size: 0.95rem; font-weight: 800; margin-bottom: 6px;">🗣️ பயிற்று மொழி &amp; சலுகைகள்</h4>
-          <p style="font-size: 0.86rem; color: #334155; line-height: 1.6; margin: 0;">
+</div>
+<div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #fde68a;">
+<h4 style="color: #92400e; font-size: 0.95rem; font-weight: 800; margin-bottom: 6px;">🗣️ பயிற்று மொழி &amp; சலுகைகள்</h4>
+<p style="font-size: 0.86rem; color: #334155; line-height: 1.6; margin: 0;">
             • <strong>தமிழ் &amp; ஆங்கில வழிப் பிரிவுகள்</strong> (Tamil &amp; English Medium).<br/>
             • தமிழ் வழியில் பயில்வோருக்கு TNPSC உரிமையியல் நீதிபதி (Civil Judge) தேர்வில் <strong>20% PSTM இடஒதுக்கீடு</strong> முன்னுரிமை.<br/>
             • அரசுப் பள்ளி <strong>7.5% இடஒதுக்கீடு</strong> &amp; மாதம் ₹1,000 உதவித்தொகை.
           </p>
-        </div>
-
-        <div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #fde68a;">
-          <h4 style="color: #92400e; font-size: 0.95rem; font-weight: 800; margin-bottom: 6px;">🏫 அதிநவீன வசதிகள் &amp; அமைவிடம்</h4>
-          <p style="font-size: 0.86rem; color: #334155; line-height: 1.6; margin: 0;">
+</div>
+<div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #fde68a;">
+<h4 style="color: #92400e; font-size: 0.95rem; font-weight: 800; margin-bottom: 6px;">🏫 அதிநவீன வசதிகள் &amp; அமைவிடம்</h4>
+<p style="font-size: 0.86rem; color: #334155; line-height: 1.6; margin: 0;">
             • மாதிரி நீதிமன்ற அரங்கம் (Moot Court Hall), டிஜிட்டல் நூலகம், இலவச இணையம்.<br/>
             • மாணவ, மாணவியருக்குத் தனித்தனி தங்கும் விடுதி வசதிகள்.<br/>
-            • அமைவிடம்: கழனிவாசல், காரைக்குடி. வலைதளம்: <a href="https://glckkdi.ac.in/" target="_blank" style="color:#b45309; font-weight:700;">glckkdi.ac.in</a>
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- SECTION 5: COUNSELLING PROCEDURE -->
-  <section id="counselling" class="info-card">
-    <div class="card-header-flex">
-      <h2 class="card-title-main"><span>🔄</span> 5. ஒற்றைச் சாளரக் கலந்தாய்வு நடைமுறைகள் (TNDALU Counselling)</h2>
-      <span class="section-badge">6 முக்கிய நிலைகள்</span>
-    </div>
-
-    <div class="steps-list">
-      <div class="step-item">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <h4>இணையவழி விண்ணப்பப் பதிவு (Online Registration)</h4>
-          <p>TNDALU அதிகாரப்பூர்வ இணையதளமான <a href="https://tndalu.ac.in" target="_blank" style="color: #b45309; font-weight:700;">tndalu.ac.in</a> வாயிலாக மாணவர்கள் SOEL அல்லது அரசு சட்டக் கல்லூரிகளுக்குத் தனித்தனியாகவோ அல்லது இரண்டிற்கும் சேர்த்தோ விண்ணப்பிக்கலாம்.</p>
-        </div>
-      </div>
-
-      <div class="step-item">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <h4>சான்றிதழ் பதிவேற்றம் & சரிபார்ப்பு (Certificate Verification)</h4>
-          <p>10-ஆம் வகுப்பு, 11-ஆம் வகுப்பு, 12-ஆம் வகுப்பு மதிப்பெண் சான்றிதழ்கள், சாதிச் சான்றிதழ், மாற்றுச் சான்றிதழ் (TC) மற்றும் 7.5% அரசுப் பள்ளி போனஃபைட் சான்றிதழ் ஆகியவற்றை இணையவழியில் ஸ்கேன் செய்து பதிவேற்ற வேண்டும்.</p>
-        </div>
-      </div>
-
-      <div class="step-item">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <h4>தரவரிசைப் பட்டியல் வெளியீடு (Rank List Publication)</h4>
-          <p>மொழிப்பாடங்கள் தவிர்த்த 4 முக்கியப் பாடங்களின் சதவீத மதிப்பெண் அடிப்படையில் பொதுத் தரவரிசைப் பட்டியல் மற்றும் சமூகப் பிரிவுவாரியான ரேங்க் பட்டியல் வெளியிடப்படும்.</p>
-        </div>
-      </div>
-
-      <div class="step-item">
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <h4>கலந்தாய்வு & கல்லூரி சாய்ஸ் ஃபில்லிங் (Choice Filling)</h4>
-          <p>கட்-ஆஃப் மதிப்பெண் அழைப்புக்கு ஏற்ப மாணவர்கள் தங்களுக்கு விருப்பமான அரசு சட்டக் கல்லூரிகள் மற்றும் தமிழ்/ஆங்கில வழிக் கல்வியை முன்னுரிமை வரிசையில் பதிவு செய்ய வேண்டும்.</p>
-        </div>
-      </div>
-
-      <div class="step-item">
-        <div class="step-num">5</div>
-        <div class="step-content">
-          <h4>தற்காலிக இடஒதுக்கீடு ஆணை (Allotment Order)</h4>
-          <p>மாணவரின் மதிப்பெண், வகுப்புவாரி இடஒதுக்கீடு மற்றும் விருப்ப வரிசை அடிப்படையில் கல்லூரி ஒதுக்கீடு செய்யப்பட்டு Allotment Order இணையத்தில் பதிவிறக்கம் செய்யக் கிடைக்கும்.</p>
-        </div>
-      </div>
-
-      <div class="step-item">
-        <div class="step-num">6</div>
-        <div class="step-content">
-          <h4>கல்லூரியில் சேருதல் & பார் கவுன்சில் பதிவு (BCI Norms)</h4>
-          <p>குறிப்பிட்ட தேதிக்குள் ஒதுக்கப்பட்ட அரசு சட்டக் கல்லூரியில் அசல் சான்றிதழ்களுடன் நேரில் சென்று சேர்ந்து சேர்க்கையை உறுதிப்படுத்திக் கொள்ள வேண்டும்.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 6: REQUIRED DOCUMENTS -->
-  <section id="documents" class="info-card">
-    <div class="card-header-flex">
-      <h2 class="card-title-main"><span>📑</span> 6. தேவையான ஆவணங்கள் & சரிபார்ப்புப் பட்டியல்</h2>
-      <span class="section-badge">Checklist</span>
-    </div>
-
-    <div class="grid-2">
-      <div class="feature-box">
-        <h4 class="feature-title">🎓 பொதுவான சான்றிதழ்கள்</h4>
-        <ul style="margin: 10px 0 0 20px; font-size: 0.9rem; color: #334155; line-height: 1.8;">
-          <li>10-ஆம் வகுப்பு மதிப்பெண் பட்டியல் (SSLC Marksheet).</li>
-          <li>11-ஆம் வகுப்பு மதிப்பெண் பட்டியல் (+1 Marksheet).</li>
-          <li>12-ஆம் வகுப்பு மதிப்பெண் பட்டியல் (+2 Marksheet).</li>
-          <li>மாற்றுச் சான்றிதழ் (Transfer Certificate - TC).</li>
-          <li>சாதிச் சான்றிதழ் (Community Certificate with QR Code).</li>
-          <li>இருப்பிடச் சான்றிதழ் (Nativity Certificate - தேவைப்பட்டால்).</li>
-          <li>வருமானச் சான்றிதழ் (Income Certificate - கட்டணச் சலுகைக்கு).</li>
-        </ul>
-      </div>
-
-      <div class="feature-box highlight">
-        <h4 class="feature-title">🎯 சிறப்பு இடஒதுக்கீட்டு ஆவணங்கள்</h4>
-        <ul style="margin: 10px 0 0 20px; font-size: 0.9rem; color: #334155; line-height: 1.8;">
-          <li><strong>7.5% அரசுப் பள்ளி போனஃபைட்:</strong> 6 முதல் 12 வரை அரசுப் பள்ளியில் படித்ததற்கான தலைமை ஆசிரியர் & DEO/CEO கையொப்பமிட்ட சான்றிதழ்.</li>
-          <li><strong>முதல் பட்டதாரி சான்றிதழ்:</strong> குடும்பத்தில் முதல் பட்டதாரி என்றால் தாசில்தார் வழங்கிய சான்றிதழ்.</li>
-          <li><strong>சிறப்புப் பிரிவினர்:</strong> மாற்றுத்திறனாளி, முன்னாள் ராணுவத்தினர் வாரிசு, சிறந்த விளையாட்டு வீரர் (Sports Quota) சான்றிதழ்கள்.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 7: COLLEGES DIRECTORY -->
-  <section id="colleges" class="info-card">
-    <div class="card-header-flex">
-      <h2 class="card-title-main"><span>🏆</span> 7. தமிழ்நாட்டில் உள்ள அரசு சட்டக் கல்லூரிகள் (Directory)</h2>
-      <span class="section-badge">15 அரசு கல்லூரிகள் + SOEL</span>
-    </div>
-
-    <!-- Search and Filter -->
-    <div class="search-row">
-      <input type="text" id="collegeSearchInput" class="search-input" placeholder="கல்லூரி பெயர் அல்லது ஊரைத் தட்டச்சு செய்க (எ.கா: மதுரை, காரைக்குடி, சென்னை)...">
-      <div class="filter-pills">
-        <button class="college-pill active" data-type="all">அனைத்தும் (All)</button>
-        <button class="college-pill" data-type="govt">அரசு கல்லூரிகள்</button>
-        <button class="college-pill" data-type="soel">SOEL சென்னை</button>
-        <button class="college-pill" data-type="south">தென் மண்டலம்</button>
-      </div>
-    </div>
-
-    <!-- Colleges Table -->
-    <div class="table-container">
-      <table id="collegesTable">
-        <thead>
-          <tr>
-            <th>வ.எண்</th>
-            <th>கல்லூரியின் பெயர் & அமைவிடம்</th>
-            <th>வழங்கப்படும் படிப்புகள்</th>
-            <th>பயிற்று மொழி</th>
-            <th>வகை / பகுதி</th>
-          </tr>
-        </thead>
-        <tbody><tr data-type="soel">
-            <td>1</td>
-            <td><strong>சீர்மிகு சட்டப் பள்ளி (SOEL), தரமணி, சென்னை</strong><br><small>The Tamil Nadu Dr. Ambedkar Law University Campus</small></td>
-            <td>B.A. LL.B. (Hons.), B.Com. LL.B. (Hons.), B.B.A. LL.B., B.C.A. LL.B.</td>
-            <td>ஆங்கிலம் மட்டும்</td>
-            <td><span class="college-tag tag-soel">பல்கலைக்கழக வளாகம்</span></td>
-          </tr>
+            • அமைவிடம்: கழனிவாசல், காரைக்குடி. வலைதளம்: <a href="https://glckkdi.ac.in/" style="color:#b45309; font-weight:700;" target="_blank">glckkdi.ac.in</a>
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: COUNSELLING PROCEDURE -->
+<section class="info-card" id="counselling">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>🔄</span> 5. ஒற்றைச் சாளரக் கலந்தாய்வு நடைமுறைகள் (TNDALU Counselling)</h2>
+<span class="section-badge">6 முக்கிய நிலைகள்</span>
+</div>
+<div class="steps-list">
+<div class="step-item">
+<div class="step-num">1</div>
+<div class="step-content">
+<h4>இணையவழி விண்ணப்பப் பதிவு (Online Registration)</h4>
+<p>TNDALU அதிகாரப்பூர்வ இணையதளமான <a href="https://tndalu.ac.in" style="color: #b45309; font-weight:700;" target="_blank">tndalu.ac.in</a> வாயிலாக மாணவர்கள் SOEL அல்லது அரசு சட்டக் கல்லூரிகளுக்குத் தனித்தனியாகவோ அல்லது இரண்டிற்கும் சேர்த்தோ விண்ணப்பிக்கலாம்.</p>
+</div>
+</div>
+<div class="step-item">
+<div class="step-num">2</div>
+<div class="step-content">
+<h4>சான்றிதழ் பதிவேற்றம் &amp; சரிபார்ப்பு (Certificate Verification)</h4>
+<p>10-ஆம் வகுப்பு, 11-ஆம் வகுப்பு, 12-ஆம் வகுப்பு மதிப்பெண் சான்றிதழ்கள், சாதிச் சான்றிதழ், மாற்றுச் சான்றிதழ் (TC) மற்றும் 7.5% அரசுப் பள்ளி போனஃபைட் சான்றிதழ் ஆகியவற்றை இணையவழியில் ஸ்கேன் செய்து பதிவேற்ற வேண்டும்.</p>
+</div>
+</div>
+<div class="step-item">
+<div class="step-num">3</div>
+<div class="step-content">
+<h4>தரவரிசைப் பட்டியல் வெளியீடு (Rank List Publication)</h4>
+<p>மொழிப்பாடங்கள் தவிர்த்த 4 முக்கியப் பாடங்களின் சதவீத மதிப்பெண் அடிப்படையில் பொதுத் தரவரிசைப் பட்டியல் மற்றும் சமூகப் பிரிவுவாரியான ரேங்க் பட்டியல் வெளியிடப்படும்.</p>
+</div>
+</div>
+<div class="step-item">
+<div class="step-num">4</div>
+<div class="step-content">
+<h4>கலந்தாய்வு &amp; கல்லூரி சாய்ஸ் ஃபில்லிங் (Choice Filling)</h4>
+<p>கட்-ஆஃப் மதிப்பெண் அழைப்புக்கு ஏற்ப மாணவர்கள் தங்களுக்கு விருப்பமான அரசு சட்டக் கல்லூரிகள் மற்றும் தமிழ்/ஆங்கில வழிக் கல்வியை முன்னுரிமை வரிசையில் பதிவு செய்ய வேண்டும்.</p>
+</div>
+</div>
+<div class="step-item">
+<div class="step-num">5</div>
+<div class="step-content">
+<h4>தற்காலிக இடஒதுக்கீடு ஆணை (Allotment Order)</h4>
+<p>மாணவரின் மதிப்பெண், வகுப்புவாரி இடஒதுக்கீடு மற்றும் விருப்ப வரிசை அடிப்படையில் கல்லூரி ஒதுக்கீடு செய்யப்பட்டு Allotment Order இணையத்தில் பதிவிறக்கம் செய்யக் கிடைக்கும்.</p>
+</div>
+</div>
+<div class="step-item">
+<div class="step-num">6</div>
+<div class="step-content">
+<h4>கல்லூரியில் சேருதல் &amp; பார் கவுன்சில் பதிவு (BCI Norms)</h4>
+<p>குறிப்பிட்ட தேதிக்குள் ஒதுக்கப்பட்ட அரசு சட்டக் கல்லூரியில் அசல் சான்றிதழ்களுடன் நேரில் சென்று சேர்ந்து சேர்க்கையை உறுதிப்படுத்திக் கொள்ள வேண்டும்.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: REQUIRED DOCUMENTS -->
+<section class="info-card" id="documents">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>📑</span> 6. தேவையான ஆவணங்கள் &amp; சரிபார்ப்புப் பட்டியல்</h2>
+<span class="section-badge">Checklist</span>
+</div>
+<div class="grid-2">
+<div class="feature-box">
+<h4 class="feature-title">🎓 பொதுவான சான்றிதழ்கள்</h4>
+<ul style="margin: 10px 0 0 20px; font-size: 0.9rem; color: #334155; line-height: 1.8;">
+<li>10-ஆம் வகுப்பு மதிப்பெண் பட்டியல் (SSLC Marksheet).</li>
+<li>11-ஆம் வகுப்பு மதிப்பெண் பட்டியல் (+1 Marksheet).</li>
+<li>12-ஆம் வகுப்பு மதிப்பெண் பட்டியல் (+2 Marksheet).</li>
+<li>மாற்றுச் சான்றிதழ் (Transfer Certificate - TC).</li>
+<li>சாதிச் சான்றிதழ் (Community Certificate with QR Code).</li>
+<li>இருப்பிடச் சான்றிதழ் (Nativity Certificate - தேவைப்பட்டால்).</li>
+<li>வருமானச் சான்றிதழ் (Income Certificate - கட்டணச் சலுகைக்கு).</li>
+</ul>
+</div>
+<div class="feature-box highlight">
+<h4 class="feature-title">🎯 சிறப்பு இடஒதுக்கீட்டு ஆவணங்கள்</h4>
+<ul style="margin: 10px 0 0 20px; font-size: 0.9rem; color: #334155; line-height: 1.8;">
+<li><strong>7.5% அரசுப் பள்ளி போனஃபைட்:</strong> 6 முதல் 12 வரை அரசுப் பள்ளியில் படித்ததற்கான தலைமை ஆசிரியர் &amp; DEO/CEO கையொப்பமிட்ட சான்றிதழ்.</li>
+<li><strong>முதல் பட்டதாரி சான்றிதழ்:</strong> குடும்பத்தில் முதல் பட்டதாரி என்றால் தாசில்தார் வழங்கிய சான்றிதழ்.</li>
+<li><strong>சிறப்புப் பிரிவினர்:</strong> மாற்றுத்திறனாளி, முன்னாள் ராணுவத்தினர் வாரிசு, சிறந்த விளையாட்டு வீரர் (Sports Quota) சான்றிதழ்கள்.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- SECTION 7: COLLEGES DIRECTORY -->
+<section class="info-card" id="colleges">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>🏆</span> 7. தமிழ்நாட்டில் உள்ள அரசு சட்டக் கல்லூரிகள் (Directory)</h2>
+<span class="section-badge">15 அரசு கல்லூரிகள் + SOEL</span>
+</div>
+<!-- Search and Filter -->
+<div class="search-row">
+<input class="search-input" id="collegeSearchInput" placeholder="கல்லூரி பெயர் அல்லது ஊரைத் தட்டச்சு செய்க (எ.கா: மதுரை, காரைக்குடி, சென்னை)..." type="text"/>
+<div class="filter-pills">
+<button class="college-pill active" data-type="all">அனைத்தும் (All)</button>
+<button class="college-pill" data-type="govt">அரசு கல்லூரிகள்</button>
+<button class="college-pill" data-type="soel">SOEL சென்னை</button>
+<button class="college-pill" data-type="south">தென் மண்டலம்</button>
+</div>
+</div>
+<!-- Colleges Table -->
+<div class="table-container">
+<table id="collegesTable">
+<thead>
+<tr>
+<th>வ.எண்</th>
+<th>கல்லூரியின் பெயர் &amp; அமைவிடம்</th>
+<th>வழங்கப்படும் படிப்புகள்</th>
+<th>பயிற்று மொழி</th>
+<th>வகை / பகுதி</th>
+</tr>
+</thead>
+<tbody><tr data-type="soel">
+<td>1</td>
+<td><strong>சீர்மிகு சட்டப் பள்ளி (SOEL), தரமணி, சென்னை</strong><br/><small>The Tamil Nadu Dr. Ambedkar Law University Campus</small></td>
+<td>B.A. LL.B. (Hons.), B.Com. LL.B. (Hons.), B.B.A. LL.B., B.C.A. LL.B.</td>
+<td>ஆங்கிலம் மட்டும்</td>
+<td><span class="college-tag tag-soel">பல்கலைக்கழக வளாகம்</span></td>
+</tr>
 <tr data-type="govt south" style="background:#fef3c7; border-left: 4px solid #b45309;">
-            <td>2</td>
-            <td><strong>அரசு சட்டக் கல்லூரி, காரைக்குடி (Sivagangai District)</strong><br><small>கழனிவாசல், காரைக்குடி - 630002 (19.15 ஏக்கர் புதிய வளாகம் - glckkdi.ac.in)</small></td>
-            <td><strong>B.A. LL.B. (5 ஆண்டுகள்) &amp; LL.B. (3 ஆண்டுகள்)</strong></td>
-            <td>தமிழ் &amp; ஆங்கிலம் (PSTM வசதி)</td>
-            <td><span class="college-tag tag-govt" style="background:#b45309; color:#fff;">சிவகங்கை சொந்த அரசு கல்லூரி</span></td>
-          </tr>
+<td>2</td>
+<td><strong>அரசு சட்டக் கல்லூரி, காரைக்குடி (Sivagangai District)</strong><br/><small>கழனிவாசல், காரைக்குடி - 630002 (19.15 ஏக்கர் புதிய வளாகம் - glckkdi.ac.in)</small></td>
+<td><strong>B.A. LL.B. (5 ஆண்டுகள்) &amp; LL.B. (3 ஆண்டுகள்)</strong></td>
+<td>தமிழ் &amp; ஆங்கிலம் (PSTM வசதி)</td>
+<td><span class="college-tag tag-govt" style="background:#b45309; color:#fff;">சிவகங்கை சொந்த அரசு கல்லூரி</span></td>
+</tr>
 <tr data-type="govt south" style="background:#fffbeb;">
-            <td>3</td>
-            <td><strong>அரசு சட்டக் கல்லூரி, ராமநாதபுரம்</strong><br><small>மாவட்ட ஆட்சியர் வளாகம் அருகில், ராமநாதபுரம்</small></td>
-            <td>B.A. LL.B. (5 ஆண்டுகள்)</td>
-            <td>தமிழ் &amp; ஆங்கிலம்</td>
-            <td><span class="college-tag tag-govt">அரசு கல்லூரி</span><span class="college-tag tag-tamil">தென் மண்டலம்</span></td>
-          </tr>
+<td>3</td>
+<td><strong>அரசு சட்டக் கல்லூரி, ராமநாதபுரம்</strong><br/><small>மாவட்ட ஆட்சியர் வளாகம் அருகில், ராமநாதபுரம்</small></td>
+<td>B.A. LL.B. (5 ஆண்டுகள்)</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">அரசு கல்லூரி</span><span class="college-tag tag-tamil">தென் மண்டலம்</span></td>
+</tr>
 <tr data-type="govt south" style="background:#fffbeb;">
-            <td>4</td>
-            <td><strong>அரசு சட்டக் கல்லூரி, மதுரை</strong><br><small>டாக்டர் அம்பேத்கர் சாலை, மதுரை (பாரம்பரியமிக்க முன்னணி வளாகம்)</small></td>
-            <td>B.A. LL.B. (5 ஆண்டுகள்)</td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="college-tag tag-govt">அரசு கல்லூரி</span><span class="college-tag tag-tamil">PSTM தமிழ் வழி</span></td>
-          </tr>
+<td>4</td>
+<td><strong>அரசு சட்டக் கல்லூரி, மதுரை</strong><br/><small>டாக்டர் அம்பேத்கர் சாலை, மதுரை (பாரம்பரியமிக்க முன்னணி வளாகம்)</small></td>
+<td>B.A. LL.B. (5 ஆண்டுகள்)</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">அரசு கல்லூரி</span><span class="college-tag tag-tamil">PSTM தமிழ் வழி</span></td>
+</tr>
 <tr data-type="govt south">
-            <td>5</td>
-            <td><strong>அரசு சட்டக் கல்லூரி, திருச்சிராப்பள்ளி</strong><br><small>ரேஸ் கோர்ஸ் சாலை, காஜாமலை, திருச்சி</small></td>
-            <td>B.A. LL.B. (5 ஆண்டுகள்)</td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
-          </tr>
+<td>5</td>
+<td><strong>அரசு சட்டக் கல்லூரி, திருச்சிராப்பள்ளி</strong><br/><small>ரேஸ் கோர்ஸ் சாலை, காஜாமலை, திருச்சி</small></td>
+<td>B.A. LL.B. (5 ஆண்டுகள்)</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
 <tr data-type="govt south">
-            <td>6</td>
-            <td><strong>அரசு சட்டக் கல்லூரி, திருநெல்வேலி</strong><br><small>பாளையங்கோட்டை, திருநெல்வேலி</small></td>
-            <td>B.A. LL.B. (5 ஆண்டுகள்)</td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="college-tag tag-govt">அரசு கல்லூரி</span><span class="college-tag tag-tamil">PSTM தமிழ் வழி</span></td>
-          </tr>
+<td>6</td>
+<td><strong>அரசு சட்டக் கல்லூரி, திருநெல்வேலி</strong><br/><small>பாளையங்கோட்டை, திருநெல்வேலி</small></td>
+<td>B.A. LL.B. (5 ஆண்டுகள்)</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">அரசு கல்லூரி</span><span class="college-tag tag-tamil">PSTM தமிழ் வழி</span></td>
+</tr>
 <tr data-type="govt">
-            <td>7</td>
-            <td><strong>டாக்டர் அம்பேத்கர் அரசு சட்டக் கல்லூரி, சென்னை</strong><br><small>புதுப்பாக்கம் வளாகம் (செங்கல்பட்டு மாவட்டம்)</small></td>
-            <td>B.A. LL.B. (5 ஆண்டுகள்)</td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
-          </tr>
+<td>7</td>
+<td><strong>டாக்டர் அம்பேத்கர் அரசு சட்டக் கல்லூரி, சென்னை</strong><br/><small>புதுப்பாக்கம் வளாகம் (செங்கல்பட்டு மாவட்டம்)</small></td>
+<td>B.A. LL.B. (5 ஆண்டுகள்)</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
 <tr data-type="govt">
-            <td>8</td>
-            <td><strong>டாக்டர் அம்பேத்கர் அரசு சட்டக் கல்லூரி, சென்னை</strong><br><small>பட்டரைப்பெரும்புதூர் வளாகம் (திருவள்ளூர் மாவட்டம்)</small></td>
-            <td>B.A. LL.B. (5 ஆண்டுகள்)</td>
-            <td>ஆங்கிலம் & தமிழ்</td>
-            <td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
-          </tr>
+<td>8</td>
+<td><strong>டாக்டர் அம்பேத்கர் அரசு சட்டக் கல்லூரி, சென்னை</strong><br/><small>பட்டரைப்பெரும்புதூர் வளாகம் (திருவள்ளூர் மாவட்டம்)</small></td>
+<td>B.A. LL.B. (5 ஆண்டுகள்)</td>
+<td>ஆங்கிலம் &amp; தமிழ்</td>
+<td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
 <tr data-type="govt">
-            <td>9</td>
-            <td><strong>அரசு சட்டக் கல்லூரி, கோயம்புத்தூர்</strong><br><small>மருதமலை மெயின் ரோடு, கோயம்புத்தூர்</small></td>
-            <td>B.A. LL.B. (5 ஆண்டுகள்)</td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
-          </tr>
+<td>9</td>
+<td><strong>அரசு சட்டக் கல்லூரி, கோயம்புத்தூர்</strong><br/><small>மருதமலை மெயின் ரோடு, கோயம்புத்தூர்</small></td>
+<td>B.A. LL.B. (5 ஆண்டுகள்)</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
 <tr data-type="govt">
-            <td>10</td>
-            <td><strong>அரசு சட்டக் கல்லூரி, சேலம்</strong><br><small>அஸ்தம்பட்டி அருகில், சேலம்</small></td>
-            <td>B.A. LL.B. (5 ஆண்டுகள்)</td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
-          </tr>
+<td>10</td>
+<td><strong>அரசு சட்டக் கல்லூரி, சேலம்</strong><br/><small>அஸ்தம்பட்டி அருகில், சேலம்</small></td>
+<td>B.A. LL.B. (5 ஆண்டுகள்)</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
 <tr data-type="govt">
-            <td>11</td>
-            <td><strong>அரசு சட்டக் கல்லூரி, வேலூர்</strong><br><small>காட்பாடி மெயின் ரோடு, வேலூர்</small></td>
-            <td>B.A. LL.B. (5 ஆண்டுகள்)</td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
-          </tr>
+<td>11</td>
+<td><strong>அரசு சட்டக் கல்லூரி, வேலூர்</strong><br/><small>காட்பாடி மெயின் ரோடு, வேலூர்</small></td>
+<td>B.A. LL.B. (5 ஆண்டுகள்)</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
 <tr data-type="govt">
-            <td>12</td>
-            <td><strong>அரசு சட்டக் கல்லூரி, செங்கல்பட்டு</strong><br><small>செங்கல்பட்டு</small></td>
-            <td>B.A. LL.B. (5 ஆண்டுகள்)</td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
-          </tr>
+<td>12</td>
+<td><strong>அரசு சட்டக் கல்லூரி, செங்கல்பட்டு</strong><br/><small>செங்கல்பட்டு</small></td>
+<td>B.A. LL.B. (5 ஆண்டுகள்)</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
 <tr data-type="govt">
-            <td>13</td>
-            <td><strong>அரசு சட்டக் கல்லூரி, விழுப்புரம்</strong><br><small>விழுப்புரம்</small></td>
-            <td>B.A. LL.B. (5 ஆண்டுகள்)</td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
-          </tr>
+<td>13</td>
+<td><strong>அரசு சட்டக் கல்லூரி, விழுப்புரம்</strong><br/><small>விழுப்புரம்</small></td>
+<td>B.A. LL.B. (5 ஆண்டுகள்)</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
 <tr data-type="govt">
-            <td>14</td>
-            <td><strong>அரசு சட்டக் கல்லூரி, தர்மபுரி</strong><br><small>தர்மபுரி</small></td>
-            <td>B.A. LL.B. (5 ஆண்டுகள்)</td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
-          </tr>
+<td>14</td>
+<td><strong>அரசு சட்டக் கல்லூரி, தர்மபுரி</strong><br/><small>தர்மபுரி</small></td>
+<td>B.A. LL.B. (5 ஆண்டுகள்)</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
 <tr data-type="govt south">
-            <td>15</td>
-            <td><strong>அரசு சட்டக் கல்லூரி, தேனி</strong><br><small>கம்பம் ரோடு, தேனி</small></td>
-            <td>B.A. LL.B. (5 ஆண்டுகள்)</td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
-          </tr>
+<td>15</td>
+<td><strong>அரசு சட்டக் கல்லூரி, தேனி</strong><br/><small>கம்பம் ரோடு, தேனி</small></td>
+<td>B.A. LL.B. (5 ஆண்டுகள்)</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
 <tr data-type="govt">
-            <td>16</td>
-            <td><strong>அரசு சட்டக் கல்லூரி, நாமக்கல்</strong><br><small>நாமக்கல்</small></td>
-            <td>B.A. LL.B. (5 ஆண்டுகள்)</td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
-          </tr>
+<td>16</td>
+<td><strong>அரசு சட்டக் கல்லூரி, நாமக்கல்</strong><br/><small>நாமக்கல்</small></td>
+<td>B.A. LL.B. (5 ஆண்டுகள்)</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">அரசு கல்லூரி</span></td>
+</tr>
 <tr data-type="govt">
-            <td>17</td>
-            <td><strong>மத்திய சட்டக் கல்லூரி (Central Law College), சேலம்</strong><br><small>அரசு ஒதுக்கீட்டு இடங்கள் (Govt Quota in Private College)</small></td>
-            <td>B.A. LL.B.</td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="college-tag tag-govt">அரசு ஒதுக்கீடு</span></td>
-          </tr></tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- SECTION 8: CAREERS -->
-  <section id="careers" class="info-card">
-    <div class="card-header-flex">
-      <h2 class="card-title-main"><span>💼</span> 8. சட்டப் படிப்பு முடித்தவர்களுக்கான உயர் வேலைவாய்ப்புகள்</h2>
-      <span class="section-badge">Career Roadmap</span>
-    </div>
-
-    <div class="grid-3">
-      <div class="feature-box">
-        <h4 class="feature-title">⚖️ சிவில் நீதிபதி (Civil Judge)</h4>
-        <p class="feature-desc">
+<td>17</td>
+<td><strong>மத்திய சட்டக் கல்லூரி (Central Law College), சேலம்</strong><br/><small>அரசு ஒதுக்கீட்டு இடங்கள் (Govt Quota in Private College)</small></td>
+<td>B.A. LL.B.</td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="college-tag tag-govt">அரசு ஒதுக்கீடு</span></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<!-- SECTION 8: CAREERS -->
+<section class="info-card" id="careers">
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>💼</span> 8. சட்டப் படிப்பு முடித்தவர்களுக்கான உயர் வேலைவாய்ப்புகள்</h2>
+<span class="section-badge">Career Roadmap</span>
+</div>
+<div class="grid-3">
+<div class="feature-box">
+<h4 class="feature-title">⚖️ சிவில் நீதிபதி (Civil Judge)</h4>
+<p class="feature-desc">
           LL.B. முடித்து தமிழ்நாடு பார் கவுன்சிலில் பதிவு செய்தவுடன் எந்தவித முன் அனுபவமும் இன்றி நேரடியாக <strong>Junior Civil Judge</strong> தேர்வு எழுதலாம்! நீதித்துறை நடுவராக 24 வயதிலேயே பணியில் சேரும் அரிய வாய்ப்பு.
         </p>
-      </div>
-
-      <div class="feature-box">
-        <h4 class="feature-title">🏛️ உயர்நீதிமன்ற வழக்கறிஞர்</h4>
-        <p class="feature-desc">
+</div>
+<div class="feature-box">
+<h4 class="feature-title">🏛️ உயர்நீதிமன்ற வழக்கறிஞர்</h4>
+<p class="feature-desc">
           சென்னை உயர்நீதிமன்றம், மதுரை உயர்நீதிமன்றக் கிளை மற்றும் உச்சநீதிமன்றத்தில் உரிமையியல், குற்றவியல் மற்றும் அரசியலமைப்புச் சட்ட வழக்குகளில் முன்னணி வழக்கறிஞராக வாதாடி வருமானம் ஈட்டலாம்.
         </p>
-      </div>
-
-      <div class="feature-box">
-        <h4 class="feature-title">💼 கார்ப்பரேட் சட்ட ஆலோசகர்</h4>
-        <p class="feature-desc">
-          டாடா, ரிலையன்ஸ், இன்ஃபோசிஸ், எல்&டி உள்ளிட்ட பன்னாட்டு நிறுவனங்கள் மற்றும் வங்கிகளில் (IBPS Law Officer) தொடக்க ஊதியமாக ஆண்டுக்கு ₹8 முதல் ₹18 லட்சம் வரை ஈட்டும் கார்ப்பரேட் ஆலோசகர் பணி.
+</div>
+<div class="feature-box">
+<h4 class="feature-title">💼 கார்ப்பரேட் சட்ட ஆலோசகர்</h4>
+<p class="feature-desc">
+          டாடா, ரிலையன்ஸ், இன்ஃபோசிஸ், எல்&amp;டி உள்ளிட்ட பன்னாட்டு நிறுவனங்கள் மற்றும் வங்கிகளில் (IBPS Law Officer) தொடக்க ஊதியமாக ஆண்டுக்கு ₹8 முதல் ₹18 லட்சம் வரை ஈட்டும் கார்ப்பரேட் ஆலோசகர் பணி.
         </p>
-      </div>
-
-      <div class="feature-box">
-        <h4 class="feature-title">🎖️ ராணுவ நீதிபதி (JAG Entry)</h4>
-        <p class="feature-desc">
+</div>
+<div class="feature-box">
+<h4 class="feature-title">🎖️ ராணுவ நீதிபதி (JAG Entry)</h4>
+<p class="feature-desc">
           இந்திய ராணுவத்தில் நீதிபதி அட்வகேட் ஜெனரல் (Judge Advocate General - JAG) பிரிவில் இந்திய ராணுவ அதிகாரியாக (Captain / Major) நேரடியாக இணையும் கௌரவப் பணி.
         </p>
-      </div>
-
-      <div class="feature-box">
-        <h4 class="feature-title">🏛️ அரசு தலைமை வழக்கறிஞர் பணி</h4>
-        <p class="feature-desc">
+</div>
+<div class="feature-box">
+<h4 class="feature-title">🏛️ அரசு தலைமை வழக்கறிஞர் பணி</h4>
+<p class="feature-desc">
           உதவி அரசு வழக்கறிஞர் (Assistant Public Prosecutor - APP), அரசு வழக்கறிஞர் (Government Pleader) மற்றும் அரசு சிறப்பு வழக்கறிஞர் பணி வாய்ப்புகள்.
         </p>
-      </div>
-
-      <div class="feature-box">
-        <h4 class="feature-title">📝 சிவில் சர்வீசஸ் (UPSC / TNPSC)</h4>
-        <p class="feature-desc">
+</div>
+<div class="feature-box">
+<h4 class="feature-title">📝 சிவில் சர்வீசஸ் (UPSC / TNPSC)</h4>
+<p class="feature-desc">
           சட்டக் கல்வி பயில்வது இந்திய அரசியலமைப்பு, நிர்வாகச் சட்டம் மற்றும் குற்றவியல் சட்டங்களை உள்ளடக்கியிருப்பதால் IAS, IPS, IRS மற்றும் TNPSC குரூப் 1 தேர்வுகளுக்குப் பெருமளவில் உதவும்.
         </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portal Footer -->
-    <!-- Footer -->
-  
-
-  </div>
-
-
-
-<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
-<div class="kural-box">
-  <div class="kural-header">
-    <span class="kural-icon">📜</span>
-    <span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-    <span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
-  </div>
-  <div class="kural-verse-text">
-    “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
-    திண்ணியர் ஆகப் பெறின்.”
-  </div>
-  <div class="kural-meaning">
-    <strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
-  </div>
-
-<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
-<div class="creator-card">
-  <div class="creator-typewriter-wrapper">
-    <span id="creatorTypewriterTarget" class="creator-typewriter-target"></span><span id="creatorCursor" class="creator-cursor">|</span>
-  </div>
-  <a href="tel:9626471035" class="footer-phone-pill" id="footerPhonePill" title="அழைக்க">
-    <span class="phone-icon">📱</span>
-    <span class="phone-text">9626471035</span>
-  </a>
 </div>
+</div>
+</section>
+<!-- Portal Footer -->
 <!-- Footer -->
-<footer class="portal-footer">
-  <p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
-    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
-  </p>
-  <p style="font-size: 0.85rem; color: #64748b;">
-    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
-  </p>
-</footer>
-
-</div>
+</main></div>
+<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
 
 <!-- JavaScript for Calculator & Table Filter -->
 <script>
@@ -4292,10 +4209,14 @@
 
   searchInput.addEventListener('input', filterColleges);
 </script>
+<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
 
+<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
 
-  </main>
-</div>
+<!-- Footer -->
+
+ <!-- /.container -->
+
 
 <script>
 function toggleSidebarMenu() {
@@ -4382,13 +4303,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
-
-
-
-
-
-
 <script>
 // Standardized Creator Typewriter Animation (Guaranteed Execution & Colors)
 (function() {

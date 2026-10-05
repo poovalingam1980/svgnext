@@ -3697,135 +3697,144 @@
 </head>
 <body>
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
-
-<button id="mobileMenuFloatingBtn" class="mobile-menu-floating-btn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
-  <span style="font-size: 1.15rem; line-height: 1;">☰</span>
-  <span>மெனு</span>
+<button class="mobile-menu-floating-btn" id="mobileMenuFloatingBtn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
+<span style="font-size: 1.15rem; line-height: 1;">☰</span>
+<span>மெனு</span>
 </button>
-
 <div class="portal-layout-wrapper">
-
-  <!-- Desktop Permanent Left Menu Frame with Collapsible Accordion -->
-  <aside class="desktop-left-sidebar" id="desktopLeftSidebar">
-    <div class="sidebar-header">
-      <a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
-        <span class="sidebar-emblem">🏛️</span>
-        <div class="sidebar-title-wrap">
-          <span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
-          <span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
-        </div>
-      </a>
-      <button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
-    </div>
-
-    <nav class="sidebar-nav-body">
-      <!-- 00. முதன்மை முகப்பு (Home) -->
-      <a class="sidebar-main-btn" href="index.html">
-        <span class="icon">🏠</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">முதன்மை முகப்பு</span>
-          <span class="menu-en">HOME</span>
-        </span>
-      </a>
-
-      <!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
-      <a class="sidebar-main-btn" href="00_entrance_exams.html">
-        <span class="icon">🎯</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
-          <span class="menu-en">ENTRANCE EXAMS</span>
-        </span>
-      </a>
-
-      <!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
-      <a class="sidebar-main-btn" href="02_00_direct_admissions.html">
-        <span class="icon">📈</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">நேரடிச் சேர்க்கை</span>
-          <span class="menu-en">DIRECT ADMISSIONS</span>
-        </span>
-      </a>
-
-      <!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
-      <a class="sidebar-main-btn" href="institutes_directory.html">
-        <span class="icon">🏛️</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">கல்லூரிகள் அடைவு</span>
-          <span class="menu-en">INSTITUTES DIRECTORY</span>
-        </span>
-      </a>
-
-      <!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
-      <a class="sidebar-main-btn" href="04_govt_exams.html">
-        <span class="icon">🏆</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">அரசுத் தேர்வுகள்</span>
-          <span class="menu-en">GOVT COMPETITIVE EXAMS</span>
-        </span>
-      </a>
-
-      <!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
-      <a class="sidebar-main-btn" href="direct_careers.html">
-        <span class="icon">💼</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
-          <span class="menu-en">SKILLS &amp; CAREERS</span>
-        </span>
-      </a>
-
-      <!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
-      <a class="sidebar-main-btn" href="helpdesk_portal.html">
-        <span class="icon">☎️</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
-          <span class="menu-en">HELPDESK &amp; SUPPORT</span>
-        </span>
-      </a>
-    </nav>
-  </aside>
-
-  <!-- Main Portal Content Column -->
-  <main class="portal-main-content">
-
-
-
+<!-- Desktop Permanent Left Menu Frame with Collapsible Accordion -->
+<aside class="desktop-left-sidebar" id="desktopLeftSidebar">
+<div class="sidebar-header">
+<a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
+<span class="sidebar-emblem">🏛️</span>
+<div class="sidebar-title-wrap">
+<span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
+<span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
+</div>
+</a>
+<button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
+</div>
+<nav class="sidebar-nav-body">
+<!-- 00. முதன்மை முகப்பு (Home) -->
+<a class="sidebar-main-btn" href="index.html">
+<span class="icon">🏠</span>
+<span class="btn-text-group">
+<span class="menu-ta">முதன்மை முகப்பு</span>
+<span class="menu-en">HOME</span>
+</span>
+</a>
+<!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
+<a class="sidebar-main-btn" href="00_entrance_exams.html">
+<span class="icon">🎯</span>
+<span class="btn-text-group">
+<span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
+<span class="menu-en">ENTRANCE EXAMS</span>
+</span>
+</a>
+<!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
+<a class="sidebar-main-btn" href="02_00_direct_admissions.html">
+<span class="icon">📈</span>
+<span class="btn-text-group">
+<span class="menu-ta">நேரடிச் சேர்க்கை</span>
+<span class="menu-en">DIRECT ADMISSIONS</span>
+</span>
+</a>
+<!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
+<a class="sidebar-main-btn" href="institutes_directory.html">
+<span class="icon">🏛️</span>
+<span class="btn-text-group">
+<span class="menu-ta">கல்லூரிகள் அடைவு</span>
+<span class="menu-en">INSTITUTES DIRECTORY</span>
+</span>
+</a>
+<!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
+<a class="sidebar-main-btn" href="04_govt_exams.html">
+<span class="icon">🏆</span>
+<span class="btn-text-group">
+<span class="menu-ta">அரசுத் தேர்வுகள்</span>
+<span class="menu-en">GOVT COMPETITIVE EXAMS</span>
+</span>
+</a>
+<!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
+<a class="sidebar-main-btn" href="direct_careers.html">
+<span class="icon">💼</span>
+<span class="btn-text-group">
+<span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
+<span class="menu-en">SKILLS &amp; CAREERS</span>
+</span>
+</a>
+<!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
+<a class="sidebar-main-btn" href="helpdesk_portal.html">
+<span class="icon">☎️</span>
+<span class="btn-text-group">
+<span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
+<span class="menu-en">HELPDESK &amp; SUPPORT</span>
+</span>
+</a>
+</nav>
+</aside>
+<!-- Main Portal Content Column -->
+<main class="portal-main-content">
 <div class="portal-container">
 <!-- Top Navigation Bar -->
 <!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
 <!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
 <header class="portal-top-frame no-print">
-  <div class="top-frame-branding">
-    <div class="top-frame-badge">
-      <span class="govt-emblem">🏛️</span>
-      <span class="dept-text">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</span>
-    </div>
-    <div class="portal-main-heading">
-      <span class="portal-title-text">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
-      <span class="portal-subtitle-en">CAREER GUIDANCE PORTAL</span>
-    </div>
-  </div>
-
-  <div class="top-frame-actions">
-    <!-- Official ceosvg.in Main District Portal Link -->
-    <a href="https://www.ceosvg.in" target="_blank" rel="noopener" class="top-frame-btn btn-ceosvg" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
-      <span class="btn-icon">🌐</span>
-      <span>ceosvg.in முதன்மை தளம்</span>
-    </a>
-    <!-- Career Guidance Home Link -->
-    <a href="index.html" class="top-frame-btn btn-home" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
-      <span class="btn-icon">🎓</span>
-      <span>உயர்கல்வி முகப்பு</span>
-    </a>
-  </div>
+<div class="top-frame-branding">
+<div class="top-frame-badge">
+<span class="govt-emblem">🏛️</span>
+<span class="dept-text">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</span>
+</div>
+<div class="portal-main-heading">
+<span class="portal-title-text">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
+<span class="portal-subtitle-en">CAREER GUIDANCE PORTAL</span>
+</div>
+</div>
+<div class="top-frame-actions">
+<!-- Official ceosvg.in Main District Portal Link -->
+<a class="top-frame-btn btn-ceosvg" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
+<span class="btn-icon">🌐</span>
+<span>ceosvg.in முதன்மை தளம்</span>
+</a>
+<!-- Career Guidance Home Link -->
+<a class="top-frame-btn btn-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+<span class="btn-icon">🎓</span>
+<span>உயர்கல்வி முகப்பு</span>
+</a>
+</div>
 </header>
-
-
-
-
 <div class="district-badge">
 <span>🏛️ தமிழ்நாடு பள்ளிக் கல்வித்துறை | சிவகங்கை மாவட்டம்</span>
 </div>
+<div class="kural-box">
+<div class="kural-header">
+<span class="kural-icon">📜</span>
+<span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
+<span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
 </div>
+<div class="kural-verse-text">
+    “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
+    திண்ணியர் ஆகப் பெறின்.”
+  </div>
+<div class="kural-meaning">
+<strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
+  </div>
+</div><div class="creator-card">
+<div class="creator-typewriter-wrapper">
+<span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
+</div>
+<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
+<span class="phone-icon">📱</span>
+<span class="phone-text">9626471035</span>
+</a>
+</div><footer class="portal-footer">
+<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
+    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
+</p>
+<p style="font-size: 0.85rem; color: #64748b;">
+    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+  </p>
+</footer></div>
 <!-- Portal Header -->
 <header class="portal-header">
 <div class="header-badge-row">
@@ -3836,15 +3845,13 @@
 <h1 class="portal-title">டிப்ளமோ, அரசு ITI &amp; பட்டயக் கணக்காளர் வழிகாட்டி <span class="accent-gold"></span></h1>
 <p class="portal-subtitle">10-ஆம் வகுப்பு முடித்தவர்களுக்கான 3 ஆண்டு பாலிடெக்னிக் டிப்ளமோ, +2 முடித்தவர்களுக்கான நேரடி 2-ஆம் ஆண்டு லேட்டரல் என்ட்ரி (Lateral Entry), அண்ணா பல்கலைக்கழகத்தில் B.E. சேர்க்கை, 8 &amp; 10-ஆம் வகுப்பு முடித்தவர்களுக்கான அரசு ITI தொழிற்பயிற்சிகள், பட்டயக் கணக்காளர் (CA / CMA / CS) தகுதிகள் மற்றும் அரசு வேலைவாய்ப்புகளின் முழுமையான வழிகாட்டி.</p>
 <!-- Quick Nav Pills -->
-
-    <!-- View Mode Switcher -->
-    <div class="view-mode-container">
-      <span class="view-mode-label">⚡ காட்சி முறை (View Mode):</span>
-      <button class="mode-toggle-btn active" id="modeBtnTabs" onclick="switchNavMode('tabs', event);">📑 பிரிவு வாரியாக (Tab View - நேரடிக் காட்சி)</button>
-      <button class="mode-toggle-btn" id="modeBtnAll" onclick="switchNavMode('all', event);">📜 முழுமையான பக்கம் (Show All Sections)</button>
-    </div>
-
-    <div class="quick-nav-pills" id="mainQuickNav">
+<!-- View Mode Switcher -->
+<div class="view-mode-container">
+<span class="view-mode-label">⚡ காட்சி முறை (View Mode):</span>
+<button class="mode-toggle-btn active" id="modeBtnTabs" onclick="switchNavMode('tabs', event);">📑 பிரிவு வாரியாக (Tab View - நேரடிக் காட்சி)</button>
+<button class="mode-toggle-btn" id="modeBtnAll" onclick="switchNavMode('all', event);">📜 முழுமையான பக்கம் (Show All Sections)</button>
+</div>
+<div class="quick-nav-pills" id="mainQuickNav">
 <a class="quick-nav-pill" href="#calculator" onclick="scrollToSection('calculator', event); return false;">🧮 தகுதி &amp; கட்-ஆஃப் கால்குலேட்டர்</a>
 <a class="quick-nav-pill" href="#poly-10th" onclick="scrollToSection('poly-10th', event); return false;">📘 10-ஆம் வகுப்பு பாலிடெக்னிக் (3 ஆண்டுகள்)</a>
 <a class="quick-nav-pill" href="#poly-branches" onclick="scrollToSection('poly-branches', event); return false;">⚙️ பாலிடெக்னிக் 20 தொழிற்பிரிவுகள்</a>
@@ -3862,20 +3869,18 @@
 <a class="quick-nav-pill" href="#documents" onclick="scrollToSection('documents', event); return false;">📑 தேவையான ஆவணங்கள்</a>
 </div>
 </header>
-
-  <!-- Tab Mode Active Indicator & Quick Switcher -->
-  <div class="tab-status-bar" id="tabStatusBar">
-    <div class="tab-status-title">
-      <span>📍</span> <span id="currentActiveSectionTitle">தற்போதைய பிரிவு: 🧮 தகுதி &amp; கட்-ஆஃப் கால்குலேட்டர்</span>
-    </div>
-    <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-      <button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-      <button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு</button>
-      <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
-      <button class="tab-nav-btn" onclick="switchNavMode('all', event);" style="background:#15803d;">📜 அனைத்தும் காட்டு</button>
-    </div>
-  </div>
-
+<!-- Tab Mode Active Indicator & Quick Switcher -->
+<div class="tab-status-bar" id="tabStatusBar">
+<div class="tab-status-title">
+<span>📍</span> <span id="currentActiveSectionTitle">தற்போதைய பிரிவு: 🧮 தகுதி &amp; கட்-ஆஃப் கால்குலேட்டர்</span>
+</div>
+<div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
+<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு</button>
+<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
+<button class="tab-nav-btn" onclick="switchNavMode('all', event);" style="background:#15803d;">📜 அனைத்தும் காட்டு</button>
+</div>
+</div>
 <!-- Notice -->
 <div class="notice-box notice-gold">
 <span style="font-size: 1.6rem;">⚡</span>
@@ -3929,11 +3934,10 @@
         💡 பரிந்துரை: மெக்கானிக்கல், சிவில், EEE, ECE, கம்ப்யூட்டர் இன்ஜினியரிங் அல்லது அரசு ITI எலக்ட்ரீஷியன் / ஃபிட்டர்.
       </p>
 </div>
-
 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-  <button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-  <button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-  <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
+<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
+<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
+<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <!-- SECTION 1: 10TH REGULAR POLYTECHNIC -->
@@ -3975,11 +3979,10 @@
         விரைவாக ஒரு தொழில்நுட்பப் பட்டயம் பெற்று 18 வயதிலேயே அரசு மற்றும் தனியார் நிறுவனங்களில் வேலைவாய்ப்பு பெற விரும்புபவர்களுக்கும், பின்னர் B.E. படிக்க விரும்புபவர்களுக்கும் பாலிடெக்னிக் மிகச் சிறந்த தெரிவாகும். பாலிடெக்னிக் முடித்தவுடன் நுழைவுத் தேர்வின்றி அண்ணா பல்கலைக்கழகத்தில் <strong>நேரடியாக 2-ஆம் ஆண்டு B.E. (Lateral Entry)</strong> சேர முடியும்!
       </div>
 </div>
-
 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-  <button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-  <button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-  <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
+<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
+<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
+<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <!-- SECTION 2: 20 POLYTECHNIC BRANCHES & CAREER OPPORTUNITIES -->
@@ -4157,11 +4160,10 @@
 <strong>💼 வேலைவாய்ப்புகள்:</strong> IOCL, BPCL, HPCL, ரிலையன்ஸ் பெட்ரோலியம், கேர்ன் இந்தியா மற்றும் மத்திய கிழக்கு எண்ணெய் சுத்திகரிப்பு ஆலைகள்.
         </div>
 </div></div>
-
 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-  <button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-  <button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-  <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
+<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
+<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
+<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <!-- SECTION 3: LATERAL ENTRY (+2 TO 2ND YEAR) -->
@@ -4199,11 +4201,10 @@
         </p>
 </div>
 </div>
-
 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-  <button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-  <button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-  <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
+<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
+<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
+<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <!-- SECTION 4: BE LATERAL ENTRY PATHWAY -->
@@ -4239,11 +4240,10 @@
         </p>
 </div>
 </div>
-
 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-  <button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-  <button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-  <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
+<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
+<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
+<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <!-- SECTION 5: ITI 8TH & 10TH ADMISSION OVERVIEW -->
@@ -4276,11 +4276,10 @@
         </p>
 </div>
 </div>
-
 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-  <button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-  <button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-  <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
+<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
+<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
+<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <!-- SECTION 6: ALL ITI TRADES (8TH & 10TH) -->
@@ -4481,11 +4480,10 @@
 </tr></tbody>
 </table>
 </div>
-
 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-  <button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-  <button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-  <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
+<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
+<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
+<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <!-- SECTION 7: 7.5% QUOTA & GOVT SCHEMES -->
@@ -4522,11 +4520,10 @@
 </ul>
 </div>
 </div>
-
 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-  <button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-  <button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-  <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
+<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
+<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
+<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <!-- SECTION 8: CA FOUNDATION & PROFESSIONAL FOUNDATION -->
@@ -4577,155 +4574,138 @@
 <p class="feature-desc">CA முடிக்கும் புதிய பட்டயக் கணக்காளர்களுக்குக் கார்ப்பரேட் நிறுவனங்களில் ஆரம்ப ஊதியமாக ஆண்டுக்கு <strong>₹10 லட்சம் முதல் ₹30 லட்சம் வரை</strong> வழங்கப்படுகிறது.</p>
 </div>
 </div>
-
-  <!-- CA Coaching Institutions & Methods -->
-  <div style="margin-top: 28px; background: #fffdf5; border-radius: 16px; padding: 22px; border: 1.5px solid #fde68a;">
-    <h3 style="font-size: 1.2rem; font-weight: 800; color: #854d0e; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
-      <span>🏫</span> பட்டயக் கணக்காளர் தொழில்சார் அடிப்படைக் கல்வி (CA Foundation) பயிற்றுவிக்கும் வழிகள் &amp; நிறுவனங்களின் பிரிவுகள்
+<!-- CA Coaching Institutions & Methods -->
+<div style="margin-top: 28px; background: #fffdf5; border-radius: 16px; padding: 22px; border: 1.5px solid #fde68a;">
+<h3 style="font-size: 1.2rem; font-weight: 800; color: #854d0e; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+<span>🏫</span> பட்டயக் கணக்காளர் தொழில்சார் அடிப்படைக் கல்வி (CA Foundation) பயிற்றுவிக்கும் வழிகள் &amp; நிறுவனங்களின் பிரிவுகள்
     </h3>
-    <div class="grid-3" style="margin-top: 14px;">
-      <div style="background: #ffffff; padding: 16px; border-radius: 12px; border: 1px solid #fed7aa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-        <h4 style="color: #c2410c; font-size: 1rem; margin-bottom: 8px; font-weight: 800;">1. ICAI நேரடிப் பயிற்சி &amp; BoS தளம்</h4>
-        <p style="font-size: 0.88rem; color: #431407; line-height: 1.65;">
+<div class="grid-3" style="margin-top: 14px;">
+<div style="background: #ffffff; padding: 16px; border-radius: 12px; border: 1px solid #fed7aa; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+<h4 style="color: #c2410c; font-size: 1rem; margin-bottom: 8px; font-weight: 800;">1. ICAI நேரடிப் பயிற்சி &amp; BoS தளம்</h4>
+<p style="font-size: 0.88rem; color: #431407; line-height: 1.65;">
           • ICAI மண்டலக் கிளைகளில் மிகக் குறைந்த கட்டணத்தில் நேரடி <strong>Oral Coaching Classes</strong>.<br/>
           • ICAI Board of Studies (BoS) மூலம் தேசிய அளவிலான முன்னணி பேராசிரியர்களின் <strong>100% இலவச நேரலை இணையவழி வகுப்புகள்</strong>, மாதிரித் தேர்வுகள் &amp; மென்பொருள் புத்தகங்கள்.
         </p>
-      </div>
-
-      <div style="background: #ffffff; padding: 16px; border-radius: 12px; border: 1px solid #bbf7d0; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-        <h4 style="color: #15803d; font-size: 1rem; margin-bottom: 8px; font-weight: 800;">2. தமிழக அரசு 'நான் முதல்வன்' திட்டம்</h4>
-        <p style="font-size: 0.88rem; color: #14532d; line-height: 1.65;">
+</div>
+<div style="background: #ffffff; padding: 16px; border-radius: 12px; border: 1px solid #bbf7d0; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+<h4 style="color: #15803d; font-size: 1rem; margin-bottom: 8px; font-weight: 800;">2. தமிழக அரசு 'நான் முதல்வன்' திட்டம்</h4>
+<p style="font-size: 0.88rem; color: #14532d; line-height: 1.65;">
           • தமிழ்நாடு அரசின் <strong>நான் முதல்வன் (Naan Mudhalvan)</strong> திட்டத்தின் கீழ் அரசு கலை &amp; அறிவியல் கல்லூரிகளில் மாணவர்களுக்கு <strong>கட்டணமில்லா CA Foundation / CMA பயிற்சி</strong>.<br/>
           • ஆடிட்டர்களைக் கொண்டு நடத்தப்படும் சிறப்பு வழிகாட்டல் மற்றும் விழிப்புணர்வு கருத்தரங்குகள்.
         </p>
-      </div>
-
-      <div style="background: #ffffff; padding: 16px; border-radius: 12px; border: 1px solid #bfdbfe; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
-        <h4 style="color: #0369a1; font-size: 1rem; margin-bottom: 8px; font-weight: 800;">3. கல்லூரிகளில் ஒருங்கிணைந்த பட்டப்படிப்பு</h4>
-        <p style="font-size: 0.88rem; color: #082f49; line-height: 1.65;">
+</div>
+<div style="background: #ffffff; padding: 16px; border-radius: 12px; border: 1px solid #bfdbfe; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
+<h4 style="color: #0369a1; font-size: 1rem; margin-bottom: 8px; font-weight: 800;">3. கல்லூரிகளில் ஒருங்கிணைந்த பட்டப்படிப்பு</h4>
+<p style="font-size: 0.88rem; color: #082f49; line-height: 1.65;">
           • தன்னாட்சிக் கல்லூரிகளில் <strong>B.Com (Professional Accounting)</strong> என்ற பெயரில் பட்டப்படிப்புடன் இணைந்த CA Foundation &amp; Intermediate பயிற்சி.<br/>
           • கல்லூரி நேரத்திலேயே CA தாள்களுக்கான தீவிர தேர்வுப் பயிற்சிகள் மற்றும் வழிகாட்டல்.
         </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Detailed Table of CA / CMA / CS Institutions -->
-  <div style="margin-top: 24px;">
-    <h3 style="font-size: 1.15rem; font-weight: 800; color: #1e293b; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-      <span>🏛️</span> CA / CMA / CS தொழில்சார் அடிப்படைக் கல்வி வழங்கும் முதன்மை நிறுவனங்கள் &amp; பயிற்சி மையங்கள் பட்டியல்
+</div>
+</div>
+</div>
+<!-- Detailed Table of CA / CMA / CS Institutions -->
+<div style="margin-top: 24px;">
+<h3 style="font-size: 1.15rem; font-weight: 800; color: #1e293b; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+<span>🏛️</span> CA / CMA / CS தொழில்சார் அடிப்படைக் கல்வி வழங்கும் முதன்மை நிறுவனங்கள் &amp; பயிற்சி மையங்கள் பட்டியல்
     </h3>
-    <div class="table-container">
-      <table>
-        <thead>
-          <tr style="background: #78350f; color: #ffffff;">
-            <th>வ.எண்</th>
-            <th>நிறுவனத்தின் பெயர் &amp; அமைவிடம்</th>
-            <th>பயிற்றுவிக்கப்படும் தொழில்சார் படிப்புகள்</th>
-            <th>பயிற்சி முறை &amp; கட்டமைப்பு</th>
-            <th>தொடர்பு &amp; மண்டலம்</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="background: #fffbeb;">
-            <td><strong>1</strong></td>
-            <td><strong>ICAI மதுரை கிளை வளாகம் (ICAI Bhawan, Madurai)</strong><br/><small>மீனாட்சி நகர் 1-வது தெரு, வில்லாபுரம், மதுரை - 625012 (0452-2674847 / 2674848)</small></td>
-            <td><strong>• CA Foundation நேரடிப் பயிற்சி வகுப்புகள்</strong><br/>• CA Intermediate பயிற்சி<br/>• தகவல் தொழினுட்பப் பயிற்சி (ICITSS) &amp; வாசிப்பரங்கம்</td>
-            <td><span class="college-tag tag-ca">அதிகாரப்பூர்வ ICAI கிளை</span><br/>குறைந்த அரசு கட்டணம், அனுபவமிக்க பட்டயக் கணக்காளர்கள் பாடம் கற்பித்தல், சொந்த நூலகம்.</td>
-            <td><strong>மதுரை &amp; சிவகங்கை மண்டலம்</strong><br/><a href="https://madurai-icai.org/" target="_blank" style="color:#b45309; font-weight:700;">madurai-icai.org</a></td>
-          </tr>
-
-          <tr style="background: #fffdf5;">
-            <td><strong>2</strong></td>
-            <td><strong>ICAI காரைக்குடி ஆய்வு வட்டம் &amp; தேர்வு மையம் (ICAI Karaikudi)</strong><br/><small>காரைக்குடி / தேவகோட்டை பகுதி (அழகப்பா பல்கலைக்கழக வட்டாரம், சிவகங்கை மாவட்டம்)</small></td>
-            <td><strong>• CA Foundation வழிகாட்டல் &amp; மாதிரித் தேர்வுகள்</strong><br/>• தேசிய அளவிலான ICAI தேர்வு மையம்<br/>• மாணவர் சேர்க்கை உதவி மையம்</td>
-            <td><span class="college-tag tag-svg">சிவகங்கை மாவட்டம்</span><br/>சிவகங்கை மாவட்ட மாணவர்கள் வெளியூர் செல்லாமல் காரைக்குடியிலேயே தேர்வு எழுதலாம்.</td>
-            <td><strong>சிவகங்கை மாவட்டம்</strong><br/><span style="color:#475569;">காரைக்குடி மையம்</span></td>
-          </tr>
-
-          <tr style="background: #fffbeb;">
-            <td><strong>3</strong></td>
-            <td><strong>ICAI தென்னிந்திய மண்டல தலைமை அலுவலகம் (SIRC of ICAI, Chennai)</strong><br/><small>ICAI பவன், 122, மகாத்மா காந்தி ரோடு, நுங்கம்பாக்கம், சென்னை - 600034 (044-39893989)</small></td>
-            <td><strong>• CA Foundation &amp; Inter முழுநேர வகுப்புகள்</strong><br/>• வார இறுதி நாட்கள் சிறப்புப் பயிற்சி<br/>• தென்மண்டல மாநாடுகள் &amp; கருத்தரங்குகள்</td>
-            <td><span class="college-tag tag-ca">மண்டல தலைமையகம்</span><br/>தென்னிந்தியாவின் மிகப்பெரிய CA வளாகம், அதிநவீன கணினி ஆய்வகம் மற்றும் வழிகாட்டல் மையம்.</td>
-            <td><strong>சென்னை தலைமையகம்</strong><br/><a href="https://sirc-icai.org/" target="_blank" style="color:#b45309; font-weight:700;">sirc-icai.org</a></td>
-          </tr>
-
-          <tr style="background: #fffdf5;">
-            <td><strong>4</strong></td>
-            <td><strong>ICAI வாரிய இணையவழி நேரலை வகுப்புகள் (ICAI BoS Knowledge Portal)</strong><br/><small>அனைத்து மாணவர்களுக்கான இலவச இணையவழித் தளம் (Online Portal)</small></td>
-            <td><strong>• CA Foundation 4 தாள்களுக்கும் நேரலை வகுப்புகள்</strong><br/>• பதிவு செய்யப்பட்ட வீடியோ விரிவுரைகள் (Recorded)<br/>• மாதிரி வினாத்தாள்கள் (MTP) &amp; திருப்புதல் வினாக்கள் (RTP)</td>
-            <td><span class="college-tag tag-govt">100% இலவசம் (Free)</span><br/>ICAI-ல் பதிவு செய்த மாணவர்கள் ஸ்மார்ட்போன் / கணினி மூலம் வீட்டிலிருந்தே படிக்கலாம்.</td>
-            <td><strong>அனைத்து பகுதிகள் (Online)</strong><br/><a href="https://boslive.icai.org/" target="_blank" style="color:#0369a1; font-weight:700;">boslive.icai.org</a></td>
-          </tr>
-
-          <tr style="background: #fffbeb;">
-            <td><strong>5</strong></td>
-            <td><strong>ICMAI மதுரை கிளை (The Institute of Cost Accountants of India - Madurai)</strong><br/><small>CMA பவன், 81, மேற்கு வெளி வீதி, மதுரை - 625001 (0452-2342080)</small></td>
-            <td><strong>• CMA Foundation நேரடிப் பயிற்சி</strong><br/>• CMA Intermediate &amp; Final வகுப்புகள்<br/>• செலவுக் கணக்கியல் நடைமுறைப் பயிற்சிகள்</td>
-            <td><span class="college-tag tag-ca">அதிகாரப்பூர்வ ICMAI மையம்</span><br/>தொழிற்சாலைகள் மற்றும் கார்ப்பரேட் நிறுவனங்களில் தலைமைச் செலவுக் கணக்காளர் பணி.</td>
-            <td><strong>மதுரை கிளை</strong><br/><a href="https://icmai.in/" target="_blank" style="color:#b45309; font-weight:700;">icmai.in</a></td>
-          </tr>
-
-          <tr style="background: #fffdf5;">
-            <td><strong>6</strong></td>
-            <td><strong>ICSI மதுரை கிளை (Institute of Company Secretaries of India - Madurai)</strong><br/><small>C-3, 3-வது தளம், A R பிளாசா, 16/17 வடக்கு வெளி வீதி, மதுரை - 625001 (0452-2341646)</small></td>
-            <td><strong>• CSEET (CS Foundation) நுழைவுத் தேர்வுப் பயிற்சி</strong><br/>• CS Executive &amp; Professional வழிகாட்டல்<br/>• நிறுவனச் சட்டங்கள் மற்றும் கார்ப்பரேட் ஆளுமை</td>
-            <td><span class="college-tag tag-ca">அதிகாரப்பூர்வ ICSI மையம்</span><br/>நிறுவனச் செயலாளர் (Company Secretary) பணிக்கான தென்மாவட்ட அதிகாரப்பூர்வ மையம்.</td>
-            <td><strong>மதுரை மண்டலம்</strong><br/><a href="https://icsi.edu/madurai/" target="_blank" style="color:#b45309; font-weight:700;">icsi.edu/madurai</a></td>
-          </tr>
-
-          <tr style="background: #fffbeb;">
-            <td><strong>7</strong></td>
-            <td><strong>அழகப்பா பல்கலைக்கழகம் - வணிகவியல் துறை (Alagappa University, Karaikudi)</strong><br/><small>காரைக்குடி, சிவகங்கை மாவட்டம்</small></td>
-            <td><strong>• B.Com / M.Com உடன் CA / CMA வழிகாட்டல்</strong><br/>• பட்டயக் கணக்காளர் தகுதித் தேர்வு விழிப்புணர்வு மையம்<br/>• சிறப்புப் பயிலரங்குகள் &amp; ஆடிட்டர் விரிவுரைகள்</td>
-            <td><span class="college-tag tag-svg">சிவகங்கை முதன்மை பல்கலை</span><br/>கிராமப்புற மாணவர்களுக்கு உயர்கல்வியுடன் தொழில்சார் பட்டயக் கணக்காளர் வழிகாட்டல்.</td>
-            <td><strong>சிவகங்கை மாவட்டம்</strong><br/><a href="https://alagappauniversity.ac.in/" target="_blank" style="color:#b45309; font-weight:700;">alagappauniversity.ac.in</a></td>
-          </tr>
-
-          <tr style="background: #fffdf5;">
-            <td><strong>8</strong></td>
-            <td><strong>தியாகராஜர் கல்லூரி &amp; அமெரிக்கன் கல்லூரி, மதுரை (Autonomous Colleges)</strong><br/><small>மதுரை மாநகரம்</small></td>
-            <td><strong>• B.Com (Professional Accounting)</strong><br/>• பட்டப்படிப்புடன் இணைந்த CA Foundation / Inter பயிற்சி<br/>• ஆடிட்டர் நிறுவனங்களுடன் கூட்டுப் பயிற்சி (MoU)</td>
-            <td><span class="college-tag tag-govt">NAAC A++ கல்லூரிகள்</span><br/>வகுப்பறை நேரத்திற்குப் பின் CA தாள்களுக்கான தொடர் பயிற்சி மற்றும் மாதிரித் தேர்வுகள்.</td>
-            <td><strong>மதுரை</strong><br/><span style="color:#475569;">கல்லூரி சேர்க்கை வாயிலாக</span></td>
-          </tr>
-
-          <tr style="background: #fffbeb;">
-            <td><strong>9</strong></td>
-            <td><strong>கே.எஸ். அகாடமி (KS Academy - KSA)</strong><br/><small>மதுரை மையம் (அண்ணா நகர் / கே.கே. நகர்) &amp; சென்னை மேற்கு மாம்பலம் மையம் (9884481553)</small></td>
-            <td><strong>• CA Foundation தீவிரப் பயிற்சி (Crash &amp; Regular)</strong><br/>• CA Intermediate &amp; Final தேர்வுகள்<br/>• வாராந்திர மாதிரித் தேர்வுகள் &amp; மெண்டார்ஷிப்</td>
-            <td><span class="college-tag tag-ca">பிரபல தனியார் CA அகாடமி</span><br/>தென்னிந்திய அளவில் அதிக அகில இந்திய தரவரிசைகளை (AIR) பெற்றுத் தரும் முன்னணி நிறுவனம்.</td>
-            <td><strong>மதுரை &amp; சென்னை</strong><br/><span style="color:#b45309; font-weight:700;">ksacademy.co.in</span></td>
-          </tr>
-
-          <tr style="background: #fffdf5;">
-            <td><strong>10</strong></td>
-            <td><strong>ப்ரைம் அகாடமி &amp; ஆர்.ஆர். அகாடமி (Prime Academy / RR Academy)</strong><br/><small>சென்னை (மைலாப்பூர் / கோடம்பாக்கம்) மற்றும் நேரலை இணையவழி வகுப்புகள்</small></td>
-            <td><strong>• CA Foundation நேரடி &amp; லைவ் ஆன்லைன் வகுப்புகள்</strong><br/>• CMA / CS ஒருங்கிணைந்த பயிற்சிகள்<br/>• தமிழ்வழி மாணவர்களுக்கான சிறப்பு ஆங்கிலப் பயிற்சி</td>
-            <td><span class="college-tag tag-ca">புகழ்பெற்ற பயிற்சி மையம்</span><br/>30 ஆண்டுகளுக்கும் மேலான பட்டயக் கணக்காளர் பயிற்றுவிப்பு அனுபவம் கொண்ட நிறுவனங்கள்.</td>
-            <td><strong>சென்னை &amp; தமிழ்நாடு முழுவதும்</strong></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-
+<div class="table-container">
+<table>
+<thead>
+<tr style="background: #78350f; color: #ffffff;">
+<th>வ.எண்</th>
+<th>நிறுவனத்தின் பெயர் &amp; அமைவிடம்</th>
+<th>பயிற்றுவிக்கப்படும் தொழில்சார் படிப்புகள்</th>
+<th>பயிற்சி முறை &amp; கட்டமைப்பு</th>
+<th>தொடர்பு &amp; மண்டலம்</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: #fffbeb;">
+<td><strong>1</strong></td>
+<td><strong>ICAI மதுரை கிளை வளாகம் (ICAI Bhawan, Madurai)</strong><br/><small>மீனாட்சி நகர் 1-வது தெரு, வில்லாபுரம், மதுரை - 625012 (0452-2674847 / 2674848)</small></td>
+<td><strong>• CA Foundation நேரடிப் பயிற்சி வகுப்புகள்</strong><br/>• CA Intermediate பயிற்சி<br/>• தகவல் தொழினுட்பப் பயிற்சி (ICITSS) &amp; வாசிப்பரங்கம்</td>
+<td><span class="college-tag tag-ca">அதிகாரப்பூர்வ ICAI கிளை</span><br/>குறைந்த அரசு கட்டணம், அனுபவமிக்க பட்டயக் கணக்காளர்கள் பாடம் கற்பித்தல், சொந்த நூலகம்.</td>
+<td><strong>மதுரை &amp; சிவகங்கை மண்டலம்</strong><br/><a href="https://madurai-icai.org/" style="color:#b45309; font-weight:700;" target="_blank">madurai-icai.org</a></td>
+</tr>
+<tr style="background: #fffdf5;">
+<td><strong>2</strong></td>
+<td><strong>ICAI காரைக்குடி ஆய்வு வட்டம் &amp; தேர்வு மையம் (ICAI Karaikudi)</strong><br/><small>காரைக்குடி / தேவகோட்டை பகுதி (அழகப்பா பல்கலைக்கழக வட்டாரம், சிவகங்கை மாவட்டம்)</small></td>
+<td><strong>• CA Foundation வழிகாட்டல் &amp; மாதிரித் தேர்வுகள்</strong><br/>• தேசிய அளவிலான ICAI தேர்வு மையம்<br/>• மாணவர் சேர்க்கை உதவி மையம்</td>
+<td><span class="college-tag tag-svg">சிவகங்கை மாவட்டம்</span><br/>சிவகங்கை மாவட்ட மாணவர்கள் வெளியூர் செல்லாமல் காரைக்குடியிலேயே தேர்வு எழுதலாம்.</td>
+<td><strong>சிவகங்கை மாவட்டம்</strong><br/><span style="color:#475569;">காரைக்குடி மையம்</span></td>
+</tr>
+<tr style="background: #fffbeb;">
+<td><strong>3</strong></td>
+<td><strong>ICAI தென்னிந்திய மண்டல தலைமை அலுவலகம் (SIRC of ICAI, Chennai)</strong><br/><small>ICAI பவன், 122, மகாத்மா காந்தி ரோடு, நுங்கம்பாக்கம், சென்னை - 600034 (044-39893989)</small></td>
+<td><strong>• CA Foundation &amp; Inter முழுநேர வகுப்புகள்</strong><br/>• வார இறுதி நாட்கள் சிறப்புப் பயிற்சி<br/>• தென்மண்டல மாநாடுகள் &amp; கருத்தரங்குகள்</td>
+<td><span class="college-tag tag-ca">மண்டல தலைமையகம்</span><br/>தென்னிந்தியாவின் மிகப்பெரிய CA வளாகம், அதிநவீன கணினி ஆய்வகம் மற்றும் வழிகாட்டல் மையம்.</td>
+<td><strong>சென்னை தலைமையகம்</strong><br/><a href="https://sirc-icai.org/" style="color:#b45309; font-weight:700;" target="_blank">sirc-icai.org</a></td>
+</tr>
+<tr style="background: #fffdf5;">
+<td><strong>4</strong></td>
+<td><strong>ICAI வாரிய இணையவழி நேரலை வகுப்புகள் (ICAI BoS Knowledge Portal)</strong><br/><small>அனைத்து மாணவர்களுக்கான இலவச இணையவழித் தளம் (Online Portal)</small></td>
+<td><strong>• CA Foundation 4 தாள்களுக்கும் நேரலை வகுப்புகள்</strong><br/>• பதிவு செய்யப்பட்ட வீடியோ விரிவுரைகள் (Recorded)<br/>• மாதிரி வினாத்தாள்கள் (MTP) &amp; திருப்புதல் வினாக்கள் (RTP)</td>
+<td><span class="college-tag tag-govt">100% இலவசம் (Free)</span><br/>ICAI-ல் பதிவு செய்த மாணவர்கள் ஸ்மார்ட்போன் / கணினி மூலம் வீட்டிலிருந்தே படிக்கலாம்.</td>
+<td><strong>அனைத்து பகுதிகள் (Online)</strong><br/><a href="https://boslive.icai.org/" style="color:#0369a1; font-weight:700;" target="_blank">boslive.icai.org</a></td>
+</tr>
+<tr style="background: #fffbeb;">
+<td><strong>5</strong></td>
+<td><strong>ICMAI மதுரை கிளை (The Institute of Cost Accountants of India - Madurai)</strong><br/><small>CMA பவன், 81, மேற்கு வெளி வீதி, மதுரை - 625001 (0452-2342080)</small></td>
+<td><strong>• CMA Foundation நேரடிப் பயிற்சி</strong><br/>• CMA Intermediate &amp; Final வகுப்புகள்<br/>• செலவுக் கணக்கியல் நடைமுறைப் பயிற்சிகள்</td>
+<td><span class="college-tag tag-ca">அதிகாரப்பூர்வ ICMAI மையம்</span><br/>தொழிற்சாலைகள் மற்றும் கார்ப்பரேட் நிறுவனங்களில் தலைமைச் செலவுக் கணக்காளர் பணி.</td>
+<td><strong>மதுரை கிளை</strong><br/><a href="https://icmai.in/" style="color:#b45309; font-weight:700;" target="_blank">icmai.in</a></td>
+</tr>
+<tr style="background: #fffdf5;">
+<td><strong>6</strong></td>
+<td><strong>ICSI மதுரை கிளை (Institute of Company Secretaries of India - Madurai)</strong><br/><small>C-3, 3-வது தளம், A R பிளாசா, 16/17 வடக்கு வெளி வீதி, மதுரை - 625001 (0452-2341646)</small></td>
+<td><strong>• CSEET (CS Foundation) நுழைவுத் தேர்வுப் பயிற்சி</strong><br/>• CS Executive &amp; Professional வழிகாட்டல்<br/>• நிறுவனச் சட்டங்கள் மற்றும் கார்ப்பரேட் ஆளுமை</td>
+<td><span class="college-tag tag-ca">அதிகாரப்பூர்வ ICSI மையம்</span><br/>நிறுவனச் செயலாளர் (Company Secretary) பணிக்கான தென்மாவட்ட அதிகாரப்பூர்வ மையம்.</td>
+<td><strong>மதுரை மண்டலம்</strong><br/><a href="https://icsi.edu/madurai/" style="color:#b45309; font-weight:700;" target="_blank">icsi.edu/madurai</a></td>
+</tr>
+<tr style="background: #fffbeb;">
+<td><strong>7</strong></td>
+<td><strong>அழகப்பா பல்கலைக்கழகம் - வணிகவியல் துறை (Alagappa University, Karaikudi)</strong><br/><small>காரைக்குடி, சிவகங்கை மாவட்டம்</small></td>
+<td><strong>• B.Com / M.Com உடன் CA / CMA வழிகாட்டல்</strong><br/>• பட்டயக் கணக்காளர் தகுதித் தேர்வு விழிப்புணர்வு மையம்<br/>• சிறப்புப் பயிலரங்குகள் &amp; ஆடிட்டர் விரிவுரைகள்</td>
+<td><span class="college-tag tag-svg">சிவகங்கை முதன்மை பல்கலை</span><br/>கிராமப்புற மாணவர்களுக்கு உயர்கல்வியுடன் தொழில்சார் பட்டயக் கணக்காளர் வழிகாட்டல்.</td>
+<td><strong>சிவகங்கை மாவட்டம்</strong><br/><a href="https://alagappauniversity.ac.in/" style="color:#b45309; font-weight:700;" target="_blank">alagappauniversity.ac.in</a></td>
+</tr>
+<tr style="background: #fffdf5;">
+<td><strong>8</strong></td>
+<td><strong>தியாகராஜர் கல்லூரி &amp; அமெரிக்கன் கல்லூரி, மதுரை (Autonomous Colleges)</strong><br/><small>மதுரை மாநகரம்</small></td>
+<td><strong>• B.Com (Professional Accounting)</strong><br/>• பட்டப்படிப்புடன் இணைந்த CA Foundation / Inter பயிற்சி<br/>• ஆடிட்டர் நிறுவனங்களுடன் கூட்டுப் பயிற்சி (MoU)</td>
+<td><span class="college-tag tag-govt">NAAC A++ கல்லூரிகள்</span><br/>வகுப்பறை நேரத்திற்குப் பின் CA தாள்களுக்கான தொடர் பயிற்சி மற்றும் மாதிரித் தேர்வுகள்.</td>
+<td><strong>மதுரை</strong><br/><span style="color:#475569;">கல்லூரி சேர்க்கை வாயிலாக</span></td>
+</tr>
+<tr style="background: #fffbeb;">
+<td><strong>9</strong></td>
+<td><strong>கே.எஸ். அகாடமி (KS Academy - KSA)</strong><br/><small>மதுரை மையம் (அண்ணா நகர் / கே.கே. நகர்) &amp; சென்னை மேற்கு மாம்பலம் மையம் (9884481553)</small></td>
+<td><strong>• CA Foundation தீவிரப் பயிற்சி (Crash &amp; Regular)</strong><br/>• CA Intermediate &amp; Final தேர்வுகள்<br/>• வாராந்திர மாதிரித் தேர்வுகள் &amp; மெண்டார்ஷிப்</td>
+<td><span class="college-tag tag-ca">பிரபல தனியார் CA அகாடமி</span><br/>தென்னிந்திய அளவில் அதிக அகில இந்திய தரவரிசைகளை (AIR) பெற்றுத் தரும் முன்னணி நிறுவனம்.</td>
+<td><strong>மதுரை &amp; சென்னை</strong><br/><span style="color:#b45309; font-weight:700;">ksacademy.co.in</span></td>
+</tr>
+<tr style="background: #fffdf5;">
+<td><strong>10</strong></td>
+<td><strong>ப்ரைம் அகாடமி &amp; ஆர்.ஆர். அகாடமி (Prime Academy / RR Academy)</strong><br/><small>சென்னை (மைலாப்பூர் / கோடம்பாக்கம்) மற்றும் நேரலை இணையவழி வகுப்புகள்</small></td>
+<td><strong>• CA Foundation நேரடி &amp; லைவ் ஆன்லைன் வகுப்புகள்</strong><br/>• CMA / CS ஒருங்கிணைந்த பயிற்சிகள்<br/>• தமிழ்வழி மாணவர்களுக்கான சிறப்பு ஆங்கிலப் பயிற்சி</td>
+<td><span class="college-tag tag-ca">புகழ்பெற்ற பயிற்சி மையம்</span><br/>30 ஆண்டுகளுக்கும் மேலான பட்டயக் கணக்காளர் பயிற்றுவிப்பு அனுபவம் கொண்ட நிறுவனங்கள்.</td>
+<td><strong>சென்னை &amp; தமிழ்நாடு முழுவதும்</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-  <button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-  <button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-  <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
+<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
+<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
+<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
-
 <!-- SECTION 8.5 / 10: DIPLOMA IN ELEMENTARY EDUCATION (D.El.Ed) -->
 <section class="info-card" id="deled-teacher-training" style="border-top: 5px solid #059669;">
 <div class="card-header-flex">
 <h2 class="card-title-main"><span>🍎</span> 8(A). தொடக்கக் கல்வி ஆசிரியர் பட்டயப் படிப்பு (D.El.Ed - Diploma in Elementary Education)</h2>
 <span class="section-badge" style="background:#ecfdf5; color:#065f46; border:1px solid #a7f3d0;">ஆசிரியர் பயிற்சி (DIET / TTI)</span>
 </div>
-
 <div class="notice-box notice-green" style="background:#ecfdf5; border-left:4px solid #059669; padding:14px 18px; margin-bottom:20px; border-radius:8px;">
 <div style="font-size:1.02rem; font-weight:800; color:#065f46; margin-bottom:6px;">
   🎓 +2 தேர்ச்சிக்குப்பின் அரசுப் பள்ளி இடைநிலை ஆசிரியர் (SGT) ஆவதற்கான நேரடிப் பாதை!
@@ -4734,61 +4714,56 @@
   1 முதல் 8-ஆம் வகுப்பு வரை பயிலும் தொடக்க மற்றும் நடுநிலைப் பள்ளி மாணவர்களுக்குக் கற்பிப்பதற்கான <strong>2 ஆண்டு தொழில்முறை ஆசிரியர் கல்விப் படிப்பே D.El.Ed</strong> ஆகும் (முன்னர் D.T.Ed). தமிழ்நாடு மாநில கல்வியியல் ஆராய்ச்சி மற்றும் பயிற்சி நிறுவனம் (SCERT / DTERT) வழிகாட்டுதலில், தேசிய ஆசிரியர் கல்விக் குழுமம் (NCTE) அங்கீகாரத்துடன் நடத்தப்படுகிறது.
 </p>
 </div>
-
 <!-- DIET Sivagangai Ground Reality & Nearby Govt / Private Options Notice -->
 <div style="background:#fff7ed; border:1.5px solid #fed7aa; border-left:5px solid #ea580c; padding:16px 18px; border-radius:8px; margin-bottom:20px;">
-  <div style="display:flex; align-items:center; gap:8px; font-size:1.02rem; font-weight:800; color:#c2410c; margin-bottom:6px;">
-    <span>⚠️</span> சிவகங்கை மாவட்ட ஆசிரியர் கல்வி நிறுவனம் (DIET) &amp; சேர்க்கை தற்போதைய களநிலவரம்:
+<div style="display:flex; align-items:center; gap:8px; font-size:1.02rem; font-weight:800; color:#c2410c; margin-bottom:6px;">
+<span>⚠️</span> சிவகங்கை மாவட்ட ஆசிரியர் கல்வி நிறுவனம் (DIET) &amp; சேர்க்கை தற்போதைய களநிலவரம்:
   </div>
-  <p style="margin:0 0 8px 0; font-size:0.89rem; color:#334155; line-height:1.65;">
+<p style="margin:0 0 8px 0; font-size:0.89rem; color:#334155; line-height:1.65;">
     • <strong>சிவகங்கை மாவட்ட DIET (காளையார்கோவில்):</strong> சிவகங்கை மாவட்டத்திற்கான அரசு DIET நிறுவனம் <strong>காளையார்கோவிலில்</strong> அமைந்துள்ளது. இங்கு தற்போது மாணவர்களுக்கான நேரடி D.El.Ed பட்டயப் படிப்பு (Pre-service Training) மாணவர் சேர்க்கை நடைபெறவில்லை. இந்நிறுவனம் முதன்மையாகப் பள்ளிக் கல்வித்துறை ஆசிரியர்களுக்கான <strong>பணியிடைப் பயிற்சிகள் (In-service Training)</strong>, கல்விசார் ஆராய்ச்சிகள் மற்றும் பாடத்திட்ட வழிகாட்டல் மையமாக மட்டுமே செயல்பட்டு வருகிறது.
   </p>
-  <p style="margin:0; font-size:0.89rem; color:#334155; line-height:1.65;">
+<p style="margin:0; font-size:0.89rem; color:#334155; line-height:1.65;">
     • <strong>மாணவர்கள் சேரக்கூடிய வழிகள்:</strong> எனவே, சிவகங்கை மாவட்ட மாணவர்கள் அரசு இடங்களில் D.El.Ed படிக்க விரும்பினால் அண்டை மாவட்டங்களில் உள்ள <strong>அரசு DIET நிறுவனங்கள் (மதுரை டி.கல்லுப்பட்டி, திண்டுக்கல் ஒட்டன்சத்திரம், புதுக்கோட்டை, அரசு மகளிர் ஆசிரியர் பயிற்சிப் பள்ளி மதுரை)</strong> அல்லது <strong>சிவகங்கை மாவட்டத்தில் இயங்கி வரும் அரசு அங்கீகரிக்கப்பட்ட தனியார் சுயநிதி ஆசிரியர் பயிற்சி நிறுவனங்களைத் (Private TTIs)</strong> தேர்வு செய்து பயிலலாம்.
   </p>
 </div>
-
 <div class="grid-2" style="margin-bottom:22px;">
 <div class="feature-card" style="border-left:4px solid #0284c7;">
 <h3 class="feature-title" style="color:#0369a1;">📋 கல்வித் தகுதி &amp; வயது வரம்பு</h3>
 <ul class="feature-desc" style="padding-left:18px; line-height:1.7;">
-  <li><strong>தகுதி:</strong> 12-ஆம் வகுப்பு (+2) பொதுத்தேர்வில் தேர்ச்சி பெற்றிருக்க வேண்டும்.</li>
-  <li><strong>பாடப்பிரிவு:</strong> அறிவியல், கலை, வணிகவியல், தொழிற்கல்வி என எந்தப் பிரிவு பயின்ற மாணவ, மாணவியரும் (இருபாலரும்) விண்ணப்பிக்கலாம்!</li>
-  <li><strong>மதிப்பெண் வரம்பு:</strong> பொதுப்பிரிவு (OC) - 50%; BC / BCM / MBC / DNC / SC / SCA / ST - 45% மதிப்பெண்கள்.</li>
-  <li><strong>குறைந்தபட்ச வயது:</strong> சேர்க்கை ஆண்டின் ஜூலை 31 அன்று 17 வயது பூர்த்தியாகியிருக்க வேண்டும். அதிகபட்ச வயது வரம்பு எதுவும் இல்லை!</li>
+<li><strong>தகுதி:</strong> 12-ஆம் வகுப்பு (+2) பொதுத்தேர்வில் தேர்ச்சி பெற்றிருக்க வேண்டும்.</li>
+<li><strong>பாடப்பிரிவு:</strong> அறிவியல், கலை, வணிகவியல், தொழிற்கல்வி என எந்தப் பிரிவு பயின்ற மாணவ, மாணவியரும் (இருபாலரும்) விண்ணப்பிக்கலாம்!</li>
+<li><strong>மதிப்பெண் வரம்பு:</strong> பொதுப்பிரிவு (OC) - 50%; BC / BCM / MBC / DNC / SC / SCA / ST - 45% மதிப்பெண்கள்.</li>
+<li><strong>குறைந்தபட்ச வயது:</strong> சேர்க்கை ஆண்டின் ஜூலை 31 அன்று 17 வயது பூர்த்தியாகியிருக்க வேண்டும். அதிகபட்ச வயது வரம்பு எதுவும் இல்லை!</li>
 </ul>
 </div>
-
 <div class="feature-card" style="border-left:4px solid #16a34a;">
 <h3 class="feature-title" style="color:#15803d;">🎯 100% நேரடிச் சேர்க்கை &amp; மிகக் குறைந்த கட்டணம்</h3>
 <ul class="feature-desc" style="padding-left:18px; line-height:1.7;">
-  <li><strong>நுழைவுத் தேர்வு இல்லை:</strong> 12-ஆம் வகுப்பு பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் மட்டுமே மாவட்ட / மாநில அளவிலான ஒற்றைச் சாளர நேரடி சேர்க்கை.</li>
-  <li><strong>விண்ணப்பிக்கும் தளம்:</strong> <a href="https://scert.tnschools.gov.in" target="_blank" style="color:#15803d; font-weight:700;">scert.tnschools.gov.in</a> / dtertonline.in வழியாக இணையவழி விண்ணப்பம்.</li>
-  <li><strong>அரசுக் கட்டணம்:</strong> அரசு DIET பயிற்சி நிறுவனங்களில் ஆண்டுக்கு சுமார் <strong>₹2,000 முதல் ₹3,000 மட்டுமே</strong>!</li>
-  <li><strong>உதவித்தொகை:</strong> SC/ST மற்றும் தகுதியுள்ள பிற்படுத்தப்பட்ட மாணவர்களுக்கு முழு கல்விக் கட்டண விலக்கு மற்றும் போஸ்ட்-மெட்ரிக் கல்வி உதவித்தொகை உண்டு.</li>
+<li><strong>நுழைவுத் தேர்வு இல்லை:</strong> 12-ஆம் வகுப்பு பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் மட்டுமே மாவட்ட / மாநில அளவிலான ஒற்றைச் சாளர நேரடி சேர்க்கை.</li>
+<li><strong>விண்ணப்பிக்கும் தளம்:</strong> <a href="https://scert.tnschools.gov.in" style="color:#15803d; font-weight:700;" target="_blank">scert.tnschools.gov.in</a> / dtertonline.in வழியாக இணையவழி விண்ணப்பம்.</li>
+<li><strong>அரசுக் கட்டணம்:</strong> அரசு DIET பயிற்சி நிறுவனங்களில் ஆண்டுக்கு சுமார் <strong>₹2,000 முதல் ₹3,000 மட்டுமே</strong>!</li>
+<li><strong>உதவித்தொகை:</strong> SC/ST மற்றும் தகுதியுள்ள பிற்படுத்தப்பட்ட மாணவர்களுக்கு முழு கல்விக் கட்டண விலக்கு மற்றும் போஸ்ட்-மெட்ரிக் கல்வி உதவித்தொகை உண்டு.</li>
 </ul>
 </div>
 </div>
-
 <!-- 2-Year Curriculum & Internship -->
 <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:18px 20px; margin-bottom:22px;">
 <h3 style="font-size:1.08rem; font-weight:800; color:#1e293b; margin:0 0 12px 0;">📚 2 ஆண்டு பாடத்திட்டம் &amp; பள்ளிக் கற்பித்தல் பயிற்சி (School Internship)</h3>
 <div class="grid-2">
-  <div style="background:#ffffff; padding:14px; border-radius:8px; border:1px solid #cbd5e1;">
-    <strong style="color:#0f172a;">முதலாம் ஆண்டு பாடங்கள்:</strong>
-    <p style="font-size:0.86rem; color:#475569; margin:6px 0 0 0; line-height:1.6;">
+<div style="background:#ffffff; padding:14px; border-radius:8px; border:1px solid #cbd5e1;">
+<strong style="color:#0f172a;">முதலாம் ஆண்டு பாடங்கள்:</strong>
+<p style="font-size:0.86rem; color:#475569; margin:6px 0 0 0; line-height:1.6;">
       குழந்தை மேம்பாடும் கற்றலும், தமிழ் கற்பித்தல் முறை, ஆங்கிலம் கற்பித்தல், கணிதம் கற்பித்தல், சூழ்நிலையியல் (EVS) கற்பித்தல், கல்வித் தகவல் தொழில்நுட்பம் மற்றும் கலைக்கல்வி.
     </p>
-  </div>
-  <div style="background:#ffffff; padding:14px; border-radius:8px; border:1px solid #cbd5e1;">
-    <strong style="color:#0f172a;">இரண்டாம் ஆண்டு பாடங்கள் &amp; பயிற்சி:</strong>
-    <p style="font-size:0.86rem; color:#475569; margin:6px 0 0 0; line-height:1.6;">
+</div>
+<div style="background:#ffffff; padding:14px; border-radius:8px; border:1px solid #cbd5e1;">
+<strong style="color:#0f172a;">இரண்டாம் ஆண்டு பாடங்கள் &amp; பயிற்சி:</strong>
+<p style="font-size:0.86rem; color:#475569; margin:6px 0 0 0; line-height:1.6;">
       இந்தியக் கல்விமுறை &amp; சமகாலக் கல்வி, அறிவியல் கற்பித்தல், சமூக அறிவியல் கற்பித்தல், உடல்நலம் &amp; யோகா. அத்துடன் அரசுப் பள்ளிகளில் <strong>40 நாட்கள் நேரடிப் பள்ளி கற்பித்தல் பயிற்சி (Practice Teaching)</strong> கட்டாயம்.
     </p>
-  </div>
 </div>
 </div>
-
+</div>
 <!-- Recruitment & Career Path -->
 <div style="background:linear-gradient(135deg, #fefce8 0%, #fffbeb 100%); border:1.5px solid #fde047; border-radius:12px; padding:18px 20px; margin-bottom:20px;">
 <h3 style="font-size:1.08rem; font-weight:800; color:#854d0e; margin:0 0 10px 0;">💼 அரசுப் பள்ளி இடைநிலை ஆசிரியர் பணி (TNTET Paper-1 &amp; TRB Recruitment)</h3>
@@ -4796,19 +4771,17 @@
   D.El.Ed பட்டயப் படிப்பை வெற்றிகரமாக முடிப்பவர்கள் <strong>ஆசிரியர் தேர்வு வாரியம் (TRB)</strong> நடத்தும் <strong>தமிழ்நாடு ஆசிரியர் தகுதித் தேர்வு தாள்-1 (TNTET Paper-1)</strong> எழுதத் தகுதி பெறுவர்:
 </p>
 <ul style="font-size:0.86rem; color:#334155; line-height:1.65; margin:0; padding-left:18px;">
-  <li><strong>பதவி:</strong> அரசு மற்றும் அரசு உதவிபெறும் தொடக்க/நடுநிலைப் பள்ளிகளில் <strong>இடைநிலை ஆசிரியர் (Secondary Grade Teacher - SGT)</strong> பணி நியமனம்.</li>
-  <li><strong>தொடக்க ஊதியம்:</strong> தமிழ்நாடு அரசு ஊதியக் குழு நிலை 10 (Level 10: <strong>₹20,600 - ₹65,500</strong> + அகவிலைப்படி, வீட்டு வாடகைப்படி).</li>
-  <li><strong>பதவி உயர்வு &amp; மேற்படிப்பு:</strong> இடைநிலை ஆசிரியராகப் பணியாற்றிக்கொண்டே தொலைதூரக் கல்வி வழியாக B.A. / B.Sc மற்றும் B.Ed படித்து, பட்டதாரி ஆசிரியர் (BT Assistant), தலைமை ஆசிரியர் மற்றும் வட்டாரக் கல்வி அலுவலர் (BEO) பதவிகளுக்கு உயர்வு பெறலாம்.</li>
+<li><strong>பதவி:</strong> அரசு மற்றும் அரசு உதவிபெறும் தொடக்க/நடுநிலைப் பள்ளிகளில் <strong>இடைநிலை ஆசிரியர் (Secondary Grade Teacher - SGT)</strong> பணி நியமனம்.</li>
+<li><strong>தொடக்க ஊதியம்:</strong> தமிழ்நாடு அரசு ஊதியக் குழு நிலை 10 (Level 10: <strong>₹20,600 - ₹65,500</strong> + அகவிலைப்படி, வீட்டு வாடகைப்படி).</li>
+<li><strong>பதவி உயர்வு &amp; மேற்படிப்பு:</strong> இடைநிலை ஆசிரியராகப் பணியாற்றிக்கொண்டே தொலைதூரக் கல்வி வழியாக B.A. / B.Sc மற்றும் B.Ed படித்து, பட்டதாரி ஆசிரியர் (BT Assistant), தலைமை ஆசிரியர் மற்றும் வட்டாரக் கல்வி அலுவலர் (BEO) பதவிகளுக்கு உயர்வு பெறலாம்.</li>
 </ul>
 </div>
-
 <div class="nav-buttons-container" style="display:flex; justify-content:space-between; margin-top:24px;">
-  <button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-  <button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-  <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
+<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
+<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
+<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
-
 <!-- SECTION 9: GOVT JOBS & SALARY MATRIX -->
 <section class="info-card" id="govt-jobs">
 <div class="card-header-flex">
@@ -4886,253 +4859,230 @@
 </tbody>
 </table>
 </div>
-
 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-  <button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-  <button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-  <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
+<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
+<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
+<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <!-- SECTION 10: COLLEGES DIRECTORY -->
-
 <!-- SECTION 10: RARE & SPECIALIZED COURSES DIRECTORY -->
 <section class="info-card" id="rare-courses">
-  <div class="card-header-flex">
-    <h2 class="card-title-main"><span>📐</span> 10. Draughtsman Civil, Surveyor உள்ளிட்ட அரிதான படிப்புகள் &amp; வழங்கும் அரசு நிறுவனங்கள் வழிகாட்டி</h2>
-    <span class="section-badge" style="background:#fef3c7; color:#92400e; font-weight:800;">High Demand Niche Courses</span>
-  </div>
-
-  <div class="notice-box notice-gold">
-    <span style="font-size: 1.8rem;">🌟</span>
-    <div>
-      <strong>ஏன் அரிதான தொழிற்பிரிவுகள் மிகச் சிறந்தது? (குறைந்த போட்டி — உடனடி அரசு &amp; தனியார் வேலைவாய்ப்பு!):</strong><br/>
+<div class="card-header-flex">
+<h2 class="card-title-main"><span>📐</span> 10. Draughtsman Civil, Surveyor உள்ளிட்ட அரிதான படிப்புகள் &amp; வழங்கும் அரசு நிறுவனங்கள் வழிகாட்டி</h2>
+<span class="section-badge" style="background:#fef3c7; color:#92400e; font-weight:800;">High Demand Niche Courses</span>
+</div>
+<div class="notice-box notice-gold">
+<span style="font-size: 1.8rem;">🌟</span>
+<div>
+<strong>ஏன் அரிதான தொழிற்பிரிவுகள் மிகச் சிறந்தது? (குறைந்த போட்டி — உடனடி அரசு &amp; தனியார் வேலைவாய்ப்பு!):</strong><br/>
       பெரும்பாலான மாணவர்கள் வழக்கமான ஃபிட்டர், எலக்ட்ரீஷியன் பிரிவுகளையே தேர்ந்தெடுக்கின்றனர். ஆனால் <strong>டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil), சர்வேயர் (Surveyor - நில அளவையர்), டிராப்ட்ஸ்மேன் மெக்கானிக்கல், டூல் &amp; டை மேக்கர், மற்றும் பிரிண்டிங் / செராமிக் / லெதர் டிப்ளமோ</strong> போன்ற அரிதான தொழிற்பிரிவுகளில் பயிலும் மாணவர்களின் எண்ணிக்கை மிகக்குறைவு. இதனால் தமிழ்நாடு அரசுப் பணியாளர் தேர்வாணையம் (TNPSC Field Surveyor / Draftsman), பொதுப்பணித்துறை (PWD), நெடுஞ்சாலைத்துறை (Highways), வருவாய்த்துறை மற்றும் முன்னணி உள்கட்டமைப்பு நிறுவனங்களில் இவர்களுக்கு போட்டி மிகவும் குறைவாக இருந்து <strong>உடனடி பணி நியமனம்</strong> எளிதில் கிடைக்கிறது!
     </div>
-  </div>
-
-  <!-- Key Niche Trades Breakdown -->
-  <div class="grid-3" style="margin-top: 20px;">
-    <!-- Draughtsman Civil -->
-    <div class="feature-box" style="border-top: 4px solid #d97706; background: #fffdfa;">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-        <h4 class="feature-title" style="margin-bottom:0;">🏛️ டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil)</h4>
-        <span class="college-tag tag-trade10">10th தேர்ச்சி • 2 ஆண்டுகள்</span>
-      </div>
-      <p class="feature-desc" style="font-size:0.9rem; line-height:1.7;">
-        <strong>கற்பிக்கப்படும் திறன்கள்:</strong> ஆட்டோகேட் (AutoCAD 2D &amp; 3D), ரிவிட் ஆர்க்கிடெக்சர் (Revit), கட்டிட வரைபடத் திட்டமிடல் (Building Planning), கட்டமைப்பு வரைபடங்கள் (Structural Drawings), மதிப்பீடு &amp; அளவீடு (Estimating &amp; Costing).<br/>
-        <strong>அரசு வேலைவாய்ப்புகள்:</strong> TNPSC வரைவாளர் (Draftsman), பொதுப்பணித்துறை (PWD), நெடுஞ்சாலைத்துறை (Highways), ஊரக வளர்ச்சி &amp; பஞ்சாயத்து ராஜ், நகராட்சி வரைவாளர், தமிழ்நாடு வீட்டுவசதி வாரியம் (TNHB).<br/>
-        <strong>தனியார் துறை:</strong> பெருநகர கட்டுமான நிறுவனங்கள் (L&amp;T, Sobha), ஆர்க்கிடெக்சர் மற்றும் இன்டீரியர் டிசைனிங் நிறுவனங்கள்.
+</div>
+<!-- Key Niche Trades Breakdown -->
+<div class="grid-3" style="margin-top: 20px;">
+<!-- Draughtsman Civil -->
+<div class="feature-box" style="border-top: 4px solid #d97706; background: #fffdfa;">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+<h4 class="feature-title" style="margin-bottom:0;">🏛️ டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil)</h4>
+<span class="college-tag tag-trade10">10th தேர்ச்சி • 2 ஆண்டுகள்</span>
+</div>
+<p class="feature-desc" style="font-size:0.9rem; line-height:1.7;">
+<strong>கற்பிக்கப்படும் திறன்கள்:</strong> ஆட்டோகேட் (AutoCAD 2D &amp; 3D), ரிவிட் ஆர்க்கிடெக்சர் (Revit), கட்டிட வரைபடத் திட்டமிடல் (Building Planning), கட்டமைப்பு வரைபடங்கள் (Structural Drawings), மதிப்பீடு &amp; அளவீடு (Estimating &amp; Costing).<br/>
+<strong>அரசு வேலைவாய்ப்புகள்:</strong> TNPSC வரைவாளர் (Draftsman), பொதுப்பணித்துறை (PWD), நெடுஞ்சாலைத்துறை (Highways), ஊரக வளர்ச்சி &amp; பஞ்சாயத்து ராஜ், நகராட்சி வரைவாளர், தமிழ்நாடு வீட்டுவசதி வாரியம் (TNHB).<br/>
+<strong>தனியார் துறை:</strong> பெருநகர கட்டுமான நிறுவனங்கள் (L&amp;T, Sobha), ஆர்க்கிடெக்சர் மற்றும் இன்டீரியர் டிசைனிங் நிறுவனங்கள்.
       </p>
-    </div>
-
-    <!-- Surveyor -->
-    <div class="feature-box" style="border-top: 4px solid #0284c7; background: #f8fafc;">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-        <h4 class="feature-title" style="margin-bottom:0;">🗺️ சர்வேயர் (Surveyor - நில அளவையர்)</h4>
-        <span class="college-tag tag-trade10">10th தேர்ச்சி • 2 ஆண்டுகள்</span>
-      </div>
-      <p class="feature-desc" style="font-size:0.9rem; line-height:1.7;">
-        <strong>கற்பிக்கப்படும் திறன்கள்:</strong> டோட்டல் ஸ்டேஷன் (Total Station Surveying), ஜிபிஎஸ் (GPS / DGPS), ஜிஐஎஸ் (GIS மேப்பிங்), நில எல்லை அளவீடு, சமதள அளவீடு (Levelling), டிஜிட்டல் நில வரைபடம் தயாரிப்பு.<br/>
-        <strong>அரசு வேலைவாய்ப்புகள்:</strong> தமிழ்நாடு வருவாய்த்துறை நில அளவையர் (TNPSC Field Surveyor - 1,000+ காலிப்பணியிடங்கள் நேரடித் தேர்வு!), தேசிய நெடுஞ்சாலைகள் ஆணையம் (NHAI), ரயில்வே சர்வே துறை.<br/>
-        <strong>தனியார் துறை:</strong> ரியல் எஸ்டேட் லே-அவுட் சர்வேயர், நில அளவீட்டு நிறுவனங்கள், சர்வதேச மெட்ரோ ரயில் திட்டங்கள்.
+</div>
+<!-- Surveyor -->
+<div class="feature-box" style="border-top: 4px solid #0284c7; background: #f8fafc;">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+<h4 class="feature-title" style="margin-bottom:0;">🗺️ சர்வேயர் (Surveyor - நில அளவையர்)</h4>
+<span class="college-tag tag-trade10">10th தேர்ச்சி • 2 ஆண்டுகள்</span>
+</div>
+<p class="feature-desc" style="font-size:0.9rem; line-height:1.7;">
+<strong>கற்பிக்கப்படும் திறன்கள்:</strong> டோட்டல் ஸ்டேஷன் (Total Station Surveying), ஜிபிஎஸ் (GPS / DGPS), ஜிஐஎஸ் (GIS மேப்பிங்), நில எல்லை அளவீடு, சமதள அளவீடு (Levelling), டிஜிட்டல் நில வரைபடம் தயாரிப்பு.<br/>
+<strong>அரசு வேலைவாய்ப்புகள்:</strong> தமிழ்நாடு வருவாய்த்துறை நில அளவையர் (TNPSC Field Surveyor - 1,000+ காலிப்பணியிடங்கள் நேரடித் தேர்வு!), தேசிய நெடுஞ்சாலைகள் ஆணையம் (NHAI), ரயில்வே சர்வே துறை.<br/>
+<strong>தனியார் துறை:</strong> ரியல் எஸ்டேட் லே-அவுட் சர்வேயர், நில அளவீட்டு நிறுவனங்கள், சர்வதேச மெட்ரோ ரயில் திட்டங்கள்.
       </p>
-    </div>
-
-    <!-- Draughtsman Mechanical & Tool/Die -->
-    <div class="feature-box" style="border-top: 4px solid #15803d; background: #fcfdfd;">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-        <h4 class="feature-title" style="margin-bottom:0;">⚙️ டிராப்ட்ஸ்மேன் மெக்கானிக்கல் &amp; டூல் டை</h4>
-        <span class="college-tag tag-trade10">10th தேர்ச்சி • 2-3 ஆண்டுகள்</span>
-      </div>
-      <p class="feature-desc" style="font-size:0.9rem; line-height:1.7;">
-        <strong>கற்பிக்கப்படும் திறன்கள்:</strong> இயந்திர பாகங்கள் வரைபடம் தயாரித்தல், SolidWorks, CATIA, GD&amp;T வடிவமைப்பு, பிரஸ் டூல்ஸ் (Press Tools), பிளாஸ்டிக் மற்றும் டை-காஸ்டிங் மோல்ட்ஸ் தயாரிப்பு.<br/>
-        <strong>அரசு வேலைவாய்ப்புகள்:</strong> BHEL திருச்சிராப்பள்ளி &amp; ராணிப்பேட்டை, ரயில்வே இணைப்புப் பெட்டித் தொழிற்சாலை (ICF ஆவடி), கனரக வாகன ஆலை (HVF ஆவடி), இஸ்ரோ (ISRO/VSSC).<br/>
-        <strong>தனியார் துறை:</strong> டிவிஎஸ், மாருதி, ஹூண்டாய் வாகன உதிரிபாக ஆலைகள் மற்றும் டூல் ரூம்கள் (Tool Rooms).
+</div>
+<!-- Draughtsman Mechanical & Tool/Die -->
+<div class="feature-box" style="border-top: 4px solid #15803d; background: #fcfdfd;">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+<h4 class="feature-title" style="margin-bottom:0;">⚙️ டிராப்ட்ஸ்மேன் மெக்கானிக்கல் &amp; டூல் டை</h4>
+<span class="college-tag tag-trade10">10th தேர்ச்சி • 2-3 ஆண்டுகள்</span>
+</div>
+<p class="feature-desc" style="font-size:0.9rem; line-height:1.7;">
+<strong>கற்பிக்கப்படும் திறன்கள்:</strong> இயந்திர பாகங்கள் வரைபடம் தயாரித்தல், SolidWorks, CATIA, GD&amp;T வடிவமைப்பு, பிரஸ் டூல்ஸ் (Press Tools), பிளாஸ்டிக் மற்றும் டை-காஸ்டிங் மோல்ட்ஸ் தயாரிப்பு.<br/>
+<strong>அரசு வேலைவாய்ப்புகள்:</strong> BHEL திருச்சிராப்பள்ளி &amp; ராணிப்பேட்டை, ரயில்வே இணைப்புப் பெட்டித் தொழிற்சாலை (ICF ஆவடி), கனரக வாகன ஆலை (HVF ஆவடி), இஸ்ரோ (ISRO/VSSC).<br/>
+<strong>தனியார் துறை:</strong> டிவிஎஸ், மாருதி, ஹூண்டாய் வாகன உதிரிபாக ஆலைகள் மற்றும் டூல் ரூம்கள் (Tool Rooms).
       </p>
-    </div>
-  </div>
-
-  <!-- Unique Polytechnic Diplomas Highlight -->
-  <div style="margin-top: 24px; background: #f8fafc; border-radius: 16px; padding: 22px; border: 1px solid #e2e8f0;">
-    <h3 style="font-size: 1.15rem; color: #1e293b; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
-      <span>🎓</span> தமிழ்நாட்டில் உள்ள அரிதான சிறப்பு பாலிடெக்னிக் டிப்ளமோ பட்டயப் படிப்புகள் (Specialized Government Diplomas)
+</div>
+</div>
+<!-- Unique Polytechnic Diplomas Highlight -->
+<div style="margin-top: 24px; background: #f8fafc; border-radius: 16px; padding: 22px; border: 1px solid #e2e8f0;">
+<h3 style="font-size: 1.15rem; color: #1e293b; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+<span>🎓</span> தமிழ்நாட்டில் உள்ள அரிதான சிறப்பு பாலிடெக்னிக் டிப்ளமோ பட்டயப் படிப்புகள் (Specialized Government Diplomas)
     </h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
-      <div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
-        <div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">🎨 கட்டிடக்கலை வரைபடவியல் (Architectural Assistantship)</div>
-        <div style="font-size: 0.85rem; color: #475569;">அழகப்பா அரசு பாலிடெக்னிக் காரைக்குடி, தியாகராஜர் பாலிடெக்னிக் சேலம் &amp; தரமணி CPT. கட்டிடக் கலைஞர்கள் (Architects) மற்றும் 3D மாடலிங் டிசைனர் பணி.</div>
-      </div>
-      <div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
-        <div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">🖨️ அச்சுக்கலை தொழினுட்பம் (Printing Technology)</div>
-        <div style="font-size: 0.85rem; color: #475569;">அரசு அச்சுக்கலை தொழினுட்பக் கல்லூரி (IPT தரமணி, சென்னை) &amp; சிவகாசி. அரசு அச்சகம், பத்திரிகைகள் மற்றும் சர்வதேச பேக்கேஜிங் ஆலைகளில் 100% வேலை.</div>
-      </div>
-      <div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
-        <div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">🏺 பீங்கான் &amp; கண்ணாடி தொழினுட்பம் (Ceramic Technology)</div>
-        <div style="font-size: 0.85rem; color: #475569;">அரசு பீங்கான் தொழினுட்ப நிறுவனம், விருத்தாசலம் (கடலூர்). டைல்ஸ், சானிட்டரிவேர், மின்சார இன்சுலேட்டர் மற்றும் உயர்வெப்ப பீங்கான் ஆலைகள்.</div>
-      </div>
-      <div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
-        <div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">👞 தோல் தொழினுட்பம் (Leather Technology)</div>
-        <div style="font-size: 0.85rem; color: #475569;">அரசு தோல் தொழினுட்பக் கல்லூரி (ILT தரமணி, சென்னை - CLRI அருகில்). காலணி மற்றும் தோல் ஏற்றுமதி நிறுவனங்களில் மேலாளர் &amp; மேற்பார்வையாளர் பணி.</div>
-      </div>
-      <div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
-        <div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">🧵 கைத்தறி &amp; ஜவுளி தொழினுட்பம் (Handloom &amp; Textile Technology)</div>
-        <div style="font-size: 0.85rem; color: #475569;">இந்திய கைத்தறி தொழில்நுட்ப நிறுவனம் (IIHT சேலம் - மத்திய அரசு). நூல் ஆலைகள், ஆயத்த ஆடை ஏற்றுமதி (திருப்பூர் / கோயம்புத்தூர்) மையங்களில் பணி.</div>
-      </div>
-      <div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
-        <div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">🎬 திரைப்பட &amp; தொலைக்காட்சி தயாரிப்பு (Film &amp; TV Production)</div>
-        <div style="font-size: 0.85rem; color: #475569;">எம்.ஜி.ஆர். அரசு திரைப்படம் மற்றும் தொலைக்காட்சி பயிற்சி நிறுவனம் (தரமணி, சென்னை). ஒளிப்பதிவு (Cinematography), ஒலிப்பதிவு, எடிட்டிங், அனிமேஷன்.</div>
-      </div>
-      <div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
-        <div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">⛏️ சுரங்கப் பொறியியல் (Mining Engineering)</div>
-        <div style="font-size: 0.85rem; color: #475569;">அரசு பாலிடெக்னிக் கல்லூரி, நெய்வேலி (NLC இந்தியா லிமிடெட் வளாகம் அருகில்). நிலக்கரி மற்றும் கனிமச் சுரங்கங்களில் ஜூனியர் என்ஜினியர் பணி.</div>
-      </div>
-      <div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
-        <div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">🧪 பிளாஸ்டிக் மோல்டு &amp; பாலிமர் (Plastics Mould Technology - DPMT)</div>
-        <div style="font-size: 0.85rem; color: #475569;">மத்திய பெட்ரோகெமிக்கல்ஸ் நிறுவனம் (CIPET - கிண்டி, சென்னை &amp; மதுரை மையம்). பிளாஸ்டிக் இன்ஜெக்ஷன் மோல்டிங், ஆட்டோமோட்டிவ் பிளாஸ்டிக் உதிரிபாக ஆலைகள்.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Detailed Institutional Directory Table for Rare Courses -->
-  <div style="margin-top: 24px;">
-    <h3 style="font-size: 1.15rem; color: #1e293b; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-      <span>🏫</span> Draughtsman Civil மற்றும் அரிதான தொழிற்பிரிவுகளை வழங்கும் முதன்மை அரசு கல்வி நிறுவனங்கள் பட்டியல்
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+<div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
+<div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">🎨 கட்டிடக்கலை வரைபடவியல் (Architectural Assistantship)</div>
+<div style="font-size: 0.85rem; color: #475569;">அழகப்பா அரசு பாலிடெக்னிக் காரைக்குடி, தியாகராஜர் பாலிடெக்னிக் சேலம் &amp; தரமணி CPT. கட்டிடக் கலைஞர்கள் (Architects) மற்றும் 3D மாடலிங் டிசைனர் பணி.</div>
+</div>
+<div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
+<div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">🖨️ அச்சுக்கலை தொழினுட்பம் (Printing Technology)</div>
+<div style="font-size: 0.85rem; color: #475569;">அரசு அச்சுக்கலை தொழினுட்பக் கல்லூரி (IPT தரமணி, சென்னை) &amp; சிவகாசி. அரசு அச்சகம், பத்திரிகைகள் மற்றும் சர்வதேச பேக்கேஜிங் ஆலைகளில் 100% வேலை.</div>
+</div>
+<div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
+<div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">🏺 பீங்கான் &amp; கண்ணாடி தொழினுட்பம் (Ceramic Technology)</div>
+<div style="font-size: 0.85rem; color: #475569;">அரசு பீங்கான் தொழினுட்ப நிறுவனம், விருத்தாசலம் (கடலூர்). டைல்ஸ், சானிட்டரிவேர், மின்சார இன்சுலேட்டர் மற்றும் உயர்வெப்ப பீங்கான் ஆலைகள்.</div>
+</div>
+<div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
+<div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">👞 தோல் தொழினுட்பம் (Leather Technology)</div>
+<div style="font-size: 0.85rem; color: #475569;">அரசு தோல் தொழினுட்பக் கல்லூரி (ILT தரமணி, சென்னை - CLRI அருகில்). காலணி மற்றும் தோல் ஏற்றுமதி நிறுவனங்களில் மேலாளர் &amp; மேற்பார்வையாளர் பணி.</div>
+</div>
+<div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
+<div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">🧵 கைத்தறி &amp; ஜவுளி தொழினுட்பம் (Handloom &amp; Textile Technology)</div>
+<div style="font-size: 0.85rem; color: #475569;">இந்திய கைத்தறி தொழில்நுட்ப நிறுவனம் (IIHT சேலம் - மத்திய அரசு). நூல் ஆலைகள், ஆயத்த ஆடை ஏற்றுமதி (திருப்பூர் / கோயம்புத்தூர்) மையங்களில் பணி.</div>
+</div>
+<div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
+<div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">🎬 திரைப்பட &amp; தொலைக்காட்சி தயாரிப்பு (Film &amp; TV Production)</div>
+<div style="font-size: 0.85rem; color: #475569;">எம்.ஜி.ஆர். அரசு திரைப்படம் மற்றும் தொலைக்காட்சி பயிற்சி நிறுவனம் (தரமணி, சென்னை). ஒளிப்பதிவு (Cinematography), ஒலிப்பதிவு, எடிட்டிங், அனிமேஷன்.</div>
+</div>
+<div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
+<div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">⛏️ சுரங்கப் பொறியியல் (Mining Engineering)</div>
+<div style="font-size: 0.85rem; color: #475569;">அரசு பாலிடெக்னிக் கல்லூரி, நெய்வேலி (NLC இந்தியா லிமிடெட் வளாகம் அருகில்). நிலக்கரி மற்றும் கனிமச் சுரங்கங்களில் ஜூனியர் என்ஜினியர் பணி.</div>
+</div>
+<div style="background: #ffffff; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
+<div style="font-weight: 700; color: #0f172a; margin-bottom: 4px;">🧪 பிளாஸ்டிக் மோல்டு &amp; பாலிமர் (Plastics Mould Technology - DPMT)</div>
+<div style="font-size: 0.85rem; color: #475569;">மத்திய பெட்ரோகெமிக்கல்ஸ் நிறுவனம் (CIPET - கிண்டி, சென்னை &amp; மதுரை மையம்). பிளாஸ்டிக் இன்ஜெக்ஷன் மோல்டிங், ஆட்டோமோட்டிவ் பிளாஸ்டிக் உதிரிபாக ஆலைகள்.</div>
+</div>
+</div>
+</div>
+<!-- Detailed Institutional Directory Table for Rare Courses -->
+<div style="margin-top: 24px;">
+<h3 style="font-size: 1.15rem; color: #1e293b; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+<span>🏫</span> Draughtsman Civil மற்றும் அரிதான தொழிற்பிரிவுகளை வழங்கும் முதன்மை அரசு கல்வி நிறுவனங்கள் பட்டியல்
     </h3>
-    <div class="table-container">
-      <table>
-        <thead>
-          <tr style="background: #0f172a; color: #ffffff;">
-            <th>வ.எண்</th>
-            <th>நிறுவனத்தின் பெயர் &amp; முகவரி</th>
-            <th>வழங்கப்படும் அரிதான / சிறப்புப் படிப்புகள்</th>
-            <th>தகுதி &amp; காலம்</th>
-            <th>அமைவிடம் &amp; வசதிகள்</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="background: #fefce8;">
-            <td><strong>1</strong></td>
-            <td><strong>அரசு தொழிற்பயிற்சி நிலையம் (Govt ITI), ராமநாதபுரம்</strong><br/><small>கலெக்டரேட் அஞ்சல், ராமேஸ்வரம் மெயின் ரோடு, ராமநாதபுரம் (04567-231214)</small></td>
-            <td><strong style="color:#b45309;">• டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil)</strong><br/>• டிராப்ட்ஸ்மேன் மெக்கானிக்கல் (Draughtsman Mech)<br/>• ரெஃப்ரிஜிரேஷன் &amp; ஏசி (RAC), MMV, COPA</td>
-            <td><span class="college-tag tag-trade10">10-ஆம் வகுப்பு</span><br/>2 ஆண்டுகள் (NCVT)</td>
-            <td><span class="college-tag tag-svg">சிவகங்கை அருகாமை</span><br/>தென்மாவட்ட மாணவர்களுக்கு மிகச் சிறந்த மையம், தங்கும் விடுதி வசதி உண்டு.</td>
-          </tr>
-
-          <tr style="background: #f0fdf4;">
-            <td><strong>2</strong></td>
-            <td><strong>அரசு தொழிற்பயிற்சி நிலையம் (Govt ITI), மதுரை</strong><br/><small>ரேஸ் கோர்ஸ் ரோடு, தொழிற்பேட்டை, K.புதூர், மதுரை (0452-2566183)</small></td>
-            <td><strong style="color:#15803d;">• சர்வேயர் (Surveyor - நில அளவையர்)</strong><br/><strong style="color:#b45309;">• டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil)</strong><br/>• இன்ஸ்ட்ரூமென்ட் மெக்கானிக், மெஷினிஸ்ட், டர்னர்</td>
-            <td><span class="college-tag tag-trade10">10-ஆம் வகுப்பு</span><br/>2 ஆண்டுகள் (NCVT)</td>
-            <td><span class="college-tag tag-govt">தென்மண்டல தலைமை ITI</span><br/>அதிநவீன டிஜிட்டல் சர்வே மற்றும் கேட் ஆய்வகங்கள், அரசு தங்கும் விடுதி வசதி.</td>
-          </tr>
-
-          <tr style="background: #f0f9ff;">
-            <td><strong>3</strong></td>
-            <td><strong>அரசு தொழிற்பயிற்சி நிலையம் (Govt ITI), கிண்டி, சென்னை</strong><br/><small>சிட்கோ தொழிற்பேட்டை, கிண்டி, சென்னை - 600032</small></td>
-            <td><strong style="color:#b45309;">• டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil)</strong><br/><strong style="color:#15803d;">• சர்வேயர் (Surveyor - நில அளவையர்)</strong><br/>• டிராப்ட்ஸ்மேன் மெக்கானிக்கல், டூல் &amp; டை மேக்கர்</td>
-            <td><span class="college-tag tag-trade10">10-ஆம் வகுப்பு</span><br/>2 &amp; 3 ஆண்டுகள்</td>
-            <td><span class="college-tag tag-govt">மாநில முதன்மை ITI</span><br/>சென்னை மெட்ரோ &amp; உள்கட்டமைப்பு நிறுவனங்களில் 100% வளாக வேலைவாய்ப்பு.</td>
-          </tr>
-
-          <tr style="background: #f8fafc;">
-            <td><strong>4</strong></td>
-            <td><strong>அரசு தொழிற்பயிற்சி நிலையம் (Govt ITI), வடசென்னை (North Chennai)</strong><br/><small>பழைய வண்ணாரப்பேட்டை, பேசின் பிரிட்ஜ் ரோடு, சென்னை - 600021</small></td>
-            <td><strong style="color:#b45309;">• டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil)</strong><br/>• டிராப்ட்ஸ்மேன் மெக்கானிக்கல் (Draughtsman Mech)<br/>• சிவில் என்ஜினியர் அசிஸ்டென்ட், இன்டீரியர் டிசைன், லிப்ட் மெக்கானிக்</td>
-            <td><span class="college-tag tag-trade10">10-ஆம் வகுப்பு</span><br/>2 ஆண்டுகள் (NCVT)</td>
-            <td><span class="college-tag tag-govt">அரசு ITI</span><br/>கட்டிடக் கலை வரைபடம் &amp; சிவில் கட்டுமானப் பிரிவுகளுக்குப் புகழ்பெற்ற பழமையான நிறுவனம்.</td>
-          </tr>
-
-          <tr style="background: #fefce8;">
-            <td><strong>5</strong></td>
-            <td><strong>அரசு தொழிற்பயிற்சி நிலையம் (Govt ITI), திருச்சிராப்பள்ளி</strong><br/><small>திருவெறும்பூர், திருச்சி (BHEL மற்றும் துப்பாக்கித் தொழிற்சாலை அருகில்)</small></td>
-            <td><strong style="color:#b45309;">• டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil)</strong><br/><strong style="color:#15803d;">• சர்வேயர் (Surveyor - நில அளவையர்)</strong><br/>• இன்ஸ்ட்ரூமென்ட் மெக்கானிக், மெஷினிஸ்ட்</td>
-            <td><span class="college-tag tag-trade10">10-ஆம் வகுப்பு</span><br/>2 ஆண்டுகள் (NCVT)</td>
-            <td><span class="college-tag tag-govt">மத்திய மண்டல ITI</span><br/>BHEL மற்றும் மத்திய பொதுத்துறை நிறுவனங்களின் தொழிற்பழகுநர் (Apprenticeship) முன்னுரிமை.</td>
-          </tr>
-
-          <tr style="background: #f0fdf4;">
-            <td><strong>6</strong></td>
-            <td><strong>அரசு தொழிற்பயிற்சி நிலையம் (Govt ITI), கோணம், நாகர்கோவில்</strong><br/><small>கோணம், நாகர்கோவில், கன்னியாகுமரி மாவட்டம் (04652-265463)</small></td>
-            <td><strong style="color:#b45309;">• டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil)</strong><br/>• டிராப்ட்ஸ்மேன் மெக்கானிக்கல் (Draughtsman Mech)<br/>• எலக்ட்ரானிக் மெக்கானிக், RAC</td>
-            <td><span class="college-tag tag-trade10">10-ஆம் வகுப்பு</span><br/>2 ஆண்டுகள் (NCVT)</td>
-            <td><span class="college-tag tag-govt">அரசு ITI</span><br/>தென்மாவட்ட மாணவர்களுக்கான பழமையான திறன் நிறுவனம். சிறந்த ஆய்வகக் கட்டமைப்பு.</td>
-          </tr>
-
-          <tr style="background: #f0f9ff;">
-            <td><strong>7</strong></td>
-            <td><strong>அரசு தொழிற்பயிற்சி நிலையம் (Govt ITI), கோயம்புத்தூர்</strong><br/><small>பாலக்காடு ரோடு, குனியமுத்தூர் அருகில், கோயம்புத்தூர்</small></td>
-            <td><strong style="color:#b45309;">• டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil)</strong><br/>• டூல் &amp; டை மேக்கர் (Tool &amp; Die Maker)<br/>• மெஷினிஸ்ட் கிரைண்டர் (Machinist Grinder)</td>
-            <td><span class="college-tag tag-trade10">10-ஆம் வகுப்பு</span><br/>2-3 ஆண்டுகள்</td>
-            <td><span class="college-tag tag-govt">மேற்கு மண்டல ITI</span><br/>கோவை மோட்டார், பம்ப் மற்றும் பொறியியல் உற்பத்தி ஆலைகளில் நேரடி வேலைவாய்ப்பு.</td>
-          </tr>
-
-          <tr style="background: #f8fafc;">
-            <td><strong>8</strong></td>
-            <td><strong>தேசிய திறன் பயிற்சி நிறுவனம் (NSTI - National Skill Training Institute), சென்னை</strong><br/><small>CTI வளாகம், ஆலந்தூர் ரோடு, கிண்டி, சென்னை (மத்திய திறன் மேம்பாட்டு அமைச்சகம் - DGT)</small></td>
-            <td><strong>• CITS - டிராப்ட்ஸ்மேன் சிவில் பயிற்றுநர் சான்றிதழ்</strong><br/>• அட்வான்ஸ்டு ஆட்டோகேட் &amp; 3D மாடலிங் மாஸ்டர் பயிற்சி<br/>• டிஜிட்டல் சர்வேயிங் டோட்டல் ஸ்டேஷன் சான்றிதழ்</td>
-            <td><span class="college-tag tag-ca">ITI / Diploma / BE</span><br/>1 ஆண்டு உயர்பயிற்சி</td>
-            <td><span class="college-tag tag-govt">மத்திய அரசு DGT நிறுவனம்</span><br/>ITI பயிற்றுநர் (Junior Training Officer - JTO) மற்றும் தலைமை வரைவாளர் பணிகளுக்கான உயர்தர தேசிய மையம்.</td>
-          </tr>
-
-          <tr style="background: #fefce8;">
-            <td><strong>9</strong></td>
-            <td><strong>அரசு அச்சுக்கலை தொழினுட்பக் கல்லூரி (Institute of Printing Technology - IPT)</strong><br/><small>மத்திய பாலிடெக்னிக் வளாகம், சி.பி.டி. அஞ்சல், தரமணி, சென்னை - 600113</small></td>
-            <td><strong style="color:#b45309;">• Diploma in Printing Technology (அச்சுக்கலை தொழினுட்பம்)</strong><br/>டிஜிட்டல் பிரின்டிங், பேக்கேஜிங் கிராபிக்ஸ், ஆஃப்செட் தொழினுட்பம்</td>
-            <td><span class="college-tag tag-govt">10th (3 Yrs) / +2 Lateral</span></td>
-            <td><span class="college-tag tag-govt">மாநில தனித்துவ அரசு கல்லூரி</span><br/>ஆசியாவின் முதன்மை அச்சுக்கலைக் கல்லூரி; தமிழ்நாடு அரசு பாடநூல் கழகம் &amp; பன்னாட்டு பேக்கேஜிங் வேலைகள்.</td>
-          </tr>
-
-          <tr style="background: #f0fdf4;">
-            <td><strong>10</strong></td>
-            <td><strong>அரசு பீங்கான் தொழினுட்பக் கல்லூரி (Govt Institute of Ceramic Technology)</strong><br/><small>விருத்தாசலம் - 606001, கடலூர் மாவட்டம்</small></td>
-            <td><strong style="color:#15803d;">• Diploma in Ceramic Technology (பீங்கான் &amp; கண்ணாடி தொழினுட்பம்)</strong><br/>ரெஃப்ராக்டரி செராமிக்ஸ், கிளாஸ் &amp; டைல்ஸ் வடிவமைப்பு</td>
-            <td><span class="college-tag tag-govt">10th (3 Yrs) / +2 Lateral</span></td>
-            <td><span class="college-tag tag-govt">தமிழ்நாட்டின் ஒரே பீங்கான் கல்லூரி</span><br/>நெய்வேலி NLC, செயிண்ட் கோபேன், டால்மியா சிமென்ட் மற்றும் பீங்கான் ஆலைகளில் 100% வேலைவாய்ப்பு.</td>
-          </tr>
-
-          <tr style="background: #f0f9ff;">
-            <td><strong>11</strong></td>
-            <td><strong>அரசு தோல் தொழினுட்பக் கல்லூரி (Institute of Leather Technology - ILT)</strong><br/><small>மத்திய பாலிடெக்னிக் வளாகம், தரமணி, சென்னை - 600113 (மத்திய தோல் ஆராய்ச்சி மையம் CLRI அருகில்)</small></td>
-            <td><strong style="color:#0284c7;">• Diploma in Leather Technology (தோல் தொழினுட்பம்)</strong><br/>தோல் பதனிடுதல், காலணி வடிவமைப்பு &amp; பொருட்கள் தயாரிப்பு</td>
-            <td><span class="college-tag tag-govt">10th (3 Yrs) / +2 Lateral</span></td>
-            <td><span class="college-tag tag-govt">சிறப்பு அரசு பாலிடெக்னிக்</span><br/>ராணிப்பேட்டை, ஆம்பூர் மற்றும் சென்னை தோல் ஏற்றுமதி ஆலைகளில் உற்பத்தி மேற்பார்வையாளர் பணி.</td>
-          </tr>
-
-          <tr style="background: #f8fafc;">
-            <td><strong>12</strong></td>
-            <td><strong>இந்திய கைத்தறி தொழில்நுட்ப நிறுவனம் (IIHT), சேலம்</strong><br/><small>பாலக்காடு மெயின் ரோடு, தாரமங்கலம் ரோடு, சேலம் (மத்திய ஜவுளி அமைச்சகம், இந்திய அரசு)</small></td>
-            <td><strong style="color:#b45309;">• Diploma in Handloom &amp; Textile Technology (DHTT)</strong><br/>விசைத்தறி &amp; தானியங்கி ஜவுளி வடிவமைப்பு, ஆடை தொழில்நுட்பம்</td>
-            <td><span class="college-tag tag-ca">10-ஆம் வகுப்பு (Maths &amp; Science)</span><br/>3 ஆண்டுகள்</td>
-            <td><span class="college-tag tag-govt">மத்திய அரசு IIHT நிறுவனம்</span><br/>மத்திய ஜவுளி அமைச்சக உதவித்தொகை, திருப்பூர் / கோயம்புத்தூர் / ஈரோடு சர்வதேச ஜவுளி ஆலைகளில் வேலை.</td>
-          </tr>
-
-          <tr style="background: #fefce8;">
-            <td><strong>13</strong></td>
-            <td><strong>எம்.ஜி.ஆர். அரசு திரைப்படம் மற்றும் தொலைக்காட்சி பயிற்சி நிறுவனம்</strong><br/><small>சிஐடி வளாகம், தரமணி, சென்னை - 600113 (செய்தி மற்றும் மக்கள் தொடர்புத்துறை)</small></td>
-            <td><strong style="color:#b45309;">• Diploma in Film Technology &amp; Television Production</strong><br/>ஒளிப்பதிவு (Cinematography), ஒலிப்பதிவு (Sound), இயக்கம் &amp; படத்தொகுப்பு</td>
-            <td><span class="college-tag tag-govt">+2 தேர்ச்சி / 10th</span><br/>3 ஆண்டுகள் தன்னாட்சி</td>
-            <td><span class="college-tag tag-govt">தென்னிந்தியாவின் புகழ்பெற்ற திரைப்பட கல்லூரி</span><br/>திரைப்படத்துறை, தொலைக்காட்சி சேனல்கள், ஓடிடி (OTT) மற்றும் விளம்பர நிறுவனங்களில் பணி.</td>
-          </tr>
-
-          <tr style="background: #f0fdf4;">
-            <td><strong>14</strong></td>
-            <td><strong>சிபெட் - மத்திய பெட்ரோகெமிக்கல்ஸ் நிறுவனம் (CIPET), சென்னை &amp; மதுரை</strong><br/><small>சென்னை கிண்டி வளாகம் &amp; மதுரை திருமங்கலம் தொழிற்பேட்டை மையம்</small></td>
-            <td><strong>• Diploma in Plastics Mould Technology (DPMT - 3 ஆண்டுகள்)</strong><br/>• Diploma in Plastics Technology (DPT - 3 ஆண்டுகள்)<br/>• ITI பிளாஸ்டிக் செயலாக்க ஆபரேட்டர் (PPO - 1 ஆண்டு)</td>
-            <td><span class="college-tag tag-ca">10-ஆம் வகுப்பு / +2</span><br/>மத்திய ரசாயன அமைச்சகம்</td>
-            <td><span class="college-tag tag-govt">மத்திய அரசு தன்னாட்சி நிறுவனம்</span><br/>வாகன பிளாஸ்டிக் உதிரிபாகங்கள், மொபைல் உறைகள், மோல்டிங் ஆலைகளில் 100% வளாக வேலைவாய்ப்பு.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
+<div class="table-container">
+<table>
+<thead>
+<tr style="background: #0f172a; color: #ffffff;">
+<th>வ.எண்</th>
+<th>நிறுவனத்தின் பெயர் &amp; முகவரி</th>
+<th>வழங்கப்படும் அரிதான / சிறப்புப் படிப்புகள்</th>
+<th>தகுதி &amp; காலம்</th>
+<th>அமைவிடம் &amp; வசதிகள்</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: #fefce8;">
+<td><strong>1</strong></td>
+<td><strong>அரசு தொழிற்பயிற்சி நிலையம் (Govt ITI), ராமநாதபுரம்</strong><br/><small>கலெக்டரேட் அஞ்சல், ராமேஸ்வரம் மெயின் ரோடு, ராமநாதபுரம் (04567-231214)</small></td>
+<td><strong style="color:#b45309;">• டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil)</strong><br/>• டிராப்ட்ஸ்மேன் மெக்கானிக்கல் (Draughtsman Mech)<br/>• ரெஃப்ரிஜிரேஷன் &amp; ஏசி (RAC), MMV, COPA</td>
+<td><span class="college-tag tag-trade10">10-ஆம் வகுப்பு</span><br/>2 ஆண்டுகள் (NCVT)</td>
+<td><span class="college-tag tag-svg">சிவகங்கை அருகாமை</span><br/>தென்மாவட்ட மாணவர்களுக்கு மிகச் சிறந்த மையம், தங்கும் விடுதி வசதி உண்டு.</td>
+</tr>
+<tr style="background: #f0fdf4;">
+<td><strong>2</strong></td>
+<td><strong>அரசு தொழிற்பயிற்சி நிலையம் (Govt ITI), மதுரை</strong><br/><small>ரேஸ் கோர்ஸ் ரோடு, தொழிற்பேட்டை, K.புதூர், மதுரை (0452-2566183)</small></td>
+<td><strong style="color:#15803d;">• சர்வேயர் (Surveyor - நில அளவையர்)</strong><br/><strong style="color:#b45309;">• டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil)</strong><br/>• இன்ஸ்ட்ரூமென்ட் மெக்கானிக், மெஷினிஸ்ட், டர்னர்</td>
+<td><span class="college-tag tag-trade10">10-ஆம் வகுப்பு</span><br/>2 ஆண்டுகள் (NCVT)</td>
+<td><span class="college-tag tag-govt">தென்மண்டல தலைமை ITI</span><br/>அதிநவீன டிஜிட்டல் சர்வே மற்றும் கேட் ஆய்வகங்கள், அரசு தங்கும் விடுதி வசதி.</td>
+</tr>
+<tr style="background: #f0f9ff;">
+<td><strong>3</strong></td>
+<td><strong>அரசு தொழிற்பயிற்சி நிலையம் (Govt ITI), கிண்டி, சென்னை</strong><br/><small>சிட்கோ தொழிற்பேட்டை, கிண்டி, சென்னை - 600032</small></td>
+<td><strong style="color:#b45309;">• டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil)</strong><br/><strong style="color:#15803d;">• சர்வேயர் (Surveyor - நில அளவையர்)</strong><br/>• டிராப்ட்ஸ்மேன் மெக்கானிக்கல், டூல் &amp; டை மேக்கர்</td>
+<td><span class="college-tag tag-trade10">10-ஆம் வகுப்பு</span><br/>2 &amp; 3 ஆண்டுகள்</td>
+<td><span class="college-tag tag-govt">மாநில முதன்மை ITI</span><br/>சென்னை மெட்ரோ &amp; உள்கட்டமைப்பு நிறுவனங்களில் 100% வளாக வேலைவாய்ப்பு.</td>
+</tr>
+<tr style="background: #f8fafc;">
+<td><strong>4</strong></td>
+<td><strong>அரசு தொழிற்பயிற்சி நிலையம் (Govt ITI), வடசென்னை (North Chennai)</strong><br/><small>பழைய வண்ணாரப்பேட்டை, பேசின் பிரிட்ஜ் ரோடு, சென்னை - 600021</small></td>
+<td><strong style="color:#b45309;">• டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil)</strong><br/>• டிராப்ட்ஸ்மேன் மெக்கானிக்கல் (Draughtsman Mech)<br/>• சிவில் என்ஜினியர் அசிஸ்டென்ட், இன்டீரியர் டிசைன், லிப்ட் மெக்கானிக்</td>
+<td><span class="college-tag tag-trade10">10-ஆம் வகுப்பு</span><br/>2 ஆண்டுகள் (NCVT)</td>
+<td><span class="college-tag tag-govt">அரசு ITI</span><br/>கட்டிடக் கலை வரைபடம் &amp; சிவில் கட்டுமானப் பிரிவுகளுக்குப் புகழ்பெற்ற பழமையான நிறுவனம்.</td>
+</tr>
+<tr style="background: #fefce8;">
+<td><strong>5</strong></td>
+<td><strong>அரசு தொழிற்பயிற்சி நிலையம் (Govt ITI), திருச்சிராப்பள்ளி</strong><br/><small>திருவெறும்பூர், திருச்சி (BHEL மற்றும் துப்பாக்கித் தொழிற்சாலை அருகில்)</small></td>
+<td><strong style="color:#b45309;">• டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil)</strong><br/><strong style="color:#15803d;">• சர்வேயர் (Surveyor - நில அளவையர்)</strong><br/>• இன்ஸ்ட்ரூமென்ட் மெக்கானிக், மெஷினிஸ்ட்</td>
+<td><span class="college-tag tag-trade10">10-ஆம் வகுப்பு</span><br/>2 ஆண்டுகள் (NCVT)</td>
+<td><span class="college-tag tag-govt">மத்திய மண்டல ITI</span><br/>BHEL மற்றும் மத்திய பொதுத்துறை நிறுவனங்களின் தொழிற்பழகுநர் (Apprenticeship) முன்னுரிமை.</td>
+</tr>
+<tr style="background: #f0fdf4;">
+<td><strong>6</strong></td>
+<td><strong>அரசு தொழிற்பயிற்சி நிலையம் (Govt ITI), கோணம், நாகர்கோவில்</strong><br/><small>கோணம், நாகர்கோவில், கன்னியாகுமரி மாவட்டம் (04652-265463)</small></td>
+<td><strong style="color:#b45309;">• டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil)</strong><br/>• டிராப்ட்ஸ்மேன் மெக்கானிக்கல் (Draughtsman Mech)<br/>• எலக்ட்ரானிக் மெக்கானிக், RAC</td>
+<td><span class="college-tag tag-trade10">10-ஆம் வகுப்பு</span><br/>2 ஆண்டுகள் (NCVT)</td>
+<td><span class="college-tag tag-govt">அரசு ITI</span><br/>தென்மாவட்ட மாணவர்களுக்கான பழமையான திறன் நிறுவனம். சிறந்த ஆய்வகக் கட்டமைப்பு.</td>
+</tr>
+<tr style="background: #f0f9ff;">
+<td><strong>7</strong></td>
+<td><strong>அரசு தொழிற்பயிற்சி நிலையம் (Govt ITI), கோயம்புத்தூர்</strong><br/><small>பாலக்காடு ரோடு, குனியமுத்தூர் அருகில், கோயம்புத்தூர்</small></td>
+<td><strong style="color:#b45309;">• டிராப்ட்ஸ்மேன் சிவில் (Draughtsman Civil)</strong><br/>• டூல் &amp; டை மேக்கர் (Tool &amp; Die Maker)<br/>• மெஷினிஸ்ட் கிரைண்டர் (Machinist Grinder)</td>
+<td><span class="college-tag tag-trade10">10-ஆம் வகுப்பு</span><br/>2-3 ஆண்டுகள்</td>
+<td><span class="college-tag tag-govt">மேற்கு மண்டல ITI</span><br/>கோவை மோட்டார், பம்ப் மற்றும் பொறியியல் உற்பத்தி ஆலைகளில் நேரடி வேலைவாய்ப்பு.</td>
+</tr>
+<tr style="background: #f8fafc;">
+<td><strong>8</strong></td>
+<td><strong>தேசிய திறன் பயிற்சி நிறுவனம் (NSTI - National Skill Training Institute), சென்னை</strong><br/><small>CTI வளாகம், ஆலந்தூர் ரோடு, கிண்டி, சென்னை (மத்திய திறன் மேம்பாட்டு அமைச்சகம் - DGT)</small></td>
+<td><strong>• CITS - டிராப்ட்ஸ்மேன் சிவில் பயிற்றுநர் சான்றிதழ்</strong><br/>• அட்வான்ஸ்டு ஆட்டோகேட் &amp; 3D மாடலிங் மாஸ்டர் பயிற்சி<br/>• டிஜிட்டல் சர்வேயிங் டோட்டல் ஸ்டேஷன் சான்றிதழ்</td>
+<td><span class="college-tag tag-ca">ITI / Diploma / BE</span><br/>1 ஆண்டு உயர்பயிற்சி</td>
+<td><span class="college-tag tag-govt">மத்திய அரசு DGT நிறுவனம்</span><br/>ITI பயிற்றுநர் (Junior Training Officer - JTO) மற்றும் தலைமை வரைவாளர் பணிகளுக்கான உயர்தர தேசிய மையம்.</td>
+</tr>
+<tr style="background: #fefce8;">
+<td><strong>9</strong></td>
+<td><strong>அரசு அச்சுக்கலை தொழினுட்பக் கல்லூரி (Institute of Printing Technology - IPT)</strong><br/><small>மத்திய பாலிடெக்னிக் வளாகம், சி.பி.டி. அஞ்சல், தரமணி, சென்னை - 600113</small></td>
+<td><strong style="color:#b45309;">• Diploma in Printing Technology (அச்சுக்கலை தொழினுட்பம்)</strong><br/>டிஜிட்டல் பிரின்டிங், பேக்கேஜிங் கிராபிக்ஸ், ஆஃப்செட் தொழினுட்பம்</td>
+<td><span class="college-tag tag-govt">10th (3 Yrs) / +2 Lateral</span></td>
+<td><span class="college-tag tag-govt">மாநில தனித்துவ அரசு கல்லூரி</span><br/>ஆசியாவின் முதன்மை அச்சுக்கலைக் கல்லூரி; தமிழ்நாடு அரசு பாடநூல் கழகம் &amp; பன்னாட்டு பேக்கேஜிங் வேலைகள்.</td>
+</tr>
+<tr style="background: #f0fdf4;">
+<td><strong>10</strong></td>
+<td><strong>அரசு பீங்கான் தொழினுட்பக் கல்லூரி (Govt Institute of Ceramic Technology)</strong><br/><small>விருத்தாசலம் - 606001, கடலூர் மாவட்டம்</small></td>
+<td><strong style="color:#15803d;">• Diploma in Ceramic Technology (பீங்கான் &amp; கண்ணாடி தொழினுட்பம்)</strong><br/>ரெஃப்ராக்டரி செராமிக்ஸ், கிளாஸ் &amp; டைல்ஸ் வடிவமைப்பு</td>
+<td><span class="college-tag tag-govt">10th (3 Yrs) / +2 Lateral</span></td>
+<td><span class="college-tag tag-govt">தமிழ்நாட்டின் ஒரே பீங்கான் கல்லூரி</span><br/>நெய்வேலி NLC, செயிண்ட் கோபேன், டால்மியா சிமென்ட் மற்றும் பீங்கான் ஆலைகளில் 100% வேலைவாய்ப்பு.</td>
+</tr>
+<tr style="background: #f0f9ff;">
+<td><strong>11</strong></td>
+<td><strong>அரசு தோல் தொழினுட்பக் கல்லூரி (Institute of Leather Technology - ILT)</strong><br/><small>மத்திய பாலிடெக்னிக் வளாகம், தரமணி, சென்னை - 600113 (மத்திய தோல் ஆராய்ச்சி மையம் CLRI அருகில்)</small></td>
+<td><strong style="color:#0284c7;">• Diploma in Leather Technology (தோல் தொழினுட்பம்)</strong><br/>தோல் பதனிடுதல், காலணி வடிவமைப்பு &amp; பொருட்கள் தயாரிப்பு</td>
+<td><span class="college-tag tag-govt">10th (3 Yrs) / +2 Lateral</span></td>
+<td><span class="college-tag tag-govt">சிறப்பு அரசு பாலிடெக்னிக்</span><br/>ராணிப்பேட்டை, ஆம்பூர் மற்றும் சென்னை தோல் ஏற்றுமதி ஆலைகளில் உற்பத்தி மேற்பார்வையாளர் பணி.</td>
+</tr>
+<tr style="background: #f8fafc;">
+<td><strong>12</strong></td>
+<td><strong>இந்திய கைத்தறி தொழில்நுட்ப நிறுவனம் (IIHT), சேலம்</strong><br/><small>பாலக்காடு மெயின் ரோடு, தாரமங்கலம் ரோடு, சேலம் (மத்திய ஜவுளி அமைச்சகம், இந்திய அரசு)</small></td>
+<td><strong style="color:#b45309;">• Diploma in Handloom &amp; Textile Technology (DHTT)</strong><br/>விசைத்தறி &amp; தானியங்கி ஜவுளி வடிவமைப்பு, ஆடை தொழில்நுட்பம்</td>
+<td><span class="college-tag tag-ca">10-ஆம் வகுப்பு (Maths &amp; Science)</span><br/>3 ஆண்டுகள்</td>
+<td><span class="college-tag tag-govt">மத்திய அரசு IIHT நிறுவனம்</span><br/>மத்திய ஜவுளி அமைச்சக உதவித்தொகை, திருப்பூர் / கோயம்புத்தூர் / ஈரோடு சர்வதேச ஜவுளி ஆலைகளில் வேலை.</td>
+</tr>
+<tr style="background: #fefce8;">
+<td><strong>13</strong></td>
+<td><strong>எம்.ஜி.ஆர். அரசு திரைப்படம் மற்றும் தொலைக்காட்சி பயிற்சி நிறுவனம்</strong><br/><small>சிஐடி வளாகம், தரமணி, சென்னை - 600113 (செய்தி மற்றும் மக்கள் தொடர்புத்துறை)</small></td>
+<td><strong style="color:#b45309;">• Diploma in Film Technology &amp; Television Production</strong><br/>ஒளிப்பதிவு (Cinematography), ஒலிப்பதிவு (Sound), இயக்கம் &amp; படத்தொகுப்பு</td>
+<td><span class="college-tag tag-govt">+2 தேர்ச்சி / 10th</span><br/>3 ஆண்டுகள் தன்னாட்சி</td>
+<td><span class="college-tag tag-govt">தென்னிந்தியாவின் புகழ்பெற்ற திரைப்பட கல்லூரி</span><br/>திரைப்படத்துறை, தொலைக்காட்சி சேனல்கள், ஓடிடி (OTT) மற்றும் விளம்பர நிறுவனங்களில் பணி.</td>
+</tr>
+<tr style="background: #f0fdf4;">
+<td><strong>14</strong></td>
+<td><strong>சிபெட் - மத்திய பெட்ரோகெமிக்கல்ஸ் நிறுவனம் (CIPET), சென்னை &amp; மதுரை</strong><br/><small>சென்னை கிண்டி வளாகம் &amp; மதுரை திருமங்கலம் தொழிற்பேட்டை மையம்</small></td>
+<td><strong>• Diploma in Plastics Mould Technology (DPMT - 3 ஆண்டுகள்)</strong><br/>• Diploma in Plastics Technology (DPT - 3 ஆண்டுகள்)<br/>• ITI பிளாஸ்டிக் செயலாக்க ஆபரேட்டர் (PPO - 1 ஆண்டு)</td>
+<td><span class="college-tag tag-ca">10-ஆம் வகுப்பு / +2</span><br/>மத்திய ரசாயன அமைச்சகம்</td>
+<td><span class="college-tag tag-govt">மத்திய அரசு தன்னாட்சி நிறுவனம்</span><br/>வாகன பிளாஸ்டிக் உதிரிபாகங்கள், மொபைல் உறைகள், மோல்டிங் ஆலைகளில் 100% வளாக வேலைவாய்ப்பு.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-  <button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-  <button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-  <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
+<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
+<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
+<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
-
 <section class="info-card" id="colleges">
 <div class="card-header-flex">
 <h2 class="card-title-main"><span>🏆</span> 11. சிவகங்கை மாவட்டம் &amp; தென்மண்டல அரசு பாலிடெக்னிக் மற்றும் ITI நிறுவனங்கள் பட்டியல்</h2>
@@ -5173,7 +5123,6 @@
 <td>+2 மதிப்பெண் நேரடி ஒற்றைச் சாளர சேர்க்கை (ஆண்டு கட்டணம் ~₹2,500)</td>
 <td>டி.கல்லுப்பட்டி, மதுரை மாவட்டம்</td>
 </tr>
-
 <tr data-type="diet" style="background:#ecfdf5;">
 <td><span class="code-badge" style="background:#059669; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:800;">TTI-MDU-W</span></td>
 <td><strong>அரசு மகளிர் ஆசிரியர் பயிற்சிப் பள்ளி (Govt TTI for Women)</strong><br/><small style="color:#065f46; font-weight:700;">ரிசர்வ் லைன் / தல்லாகுளம், மதுரை (மாணவிகளுக்கு மட்டும்)</small></td>
@@ -5181,7 +5130,6 @@
 <td>+2 மதிப்பெண் நேரடி ஒற்றைச் சாளர சேர்க்கை</td>
 <td>மதுரை மாநகர்</td>
 </tr>
-
 <tr data-type="diet" style="background:#ecfdf5;">
 <td><span class="code-badge" style="background:#059669; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:800;">DIET-DGL</span></td>
 <td><strong>அரசு மாவட்ட ஆசிரியர் கல்வி &amp; பயிற்சி நிறுவனம் (DIET), ஒட்டன்சத்திரம்</strong><br/><small style="color:#065f46; font-weight:700;">திண்டுக்கல் மாவட்ட முதன்மை அரசு ஆசிரியர் பயிற்சி மையம்</small></td>
@@ -5189,7 +5137,6 @@
 <td>+2 மதிப்பெண் நேரடி ஒற்றைச் சாளர சேர்க்கை</td>
 <td>ஒட்டன்சத்திரம், திண்டுக்கல்</td>
 </tr>
-
 <tr data-type="diet" style="background:#ecfdf5;">
 <td><span class="code-badge" style="background:#059669; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:800;">DIET-PDK</span></td>
 <td><strong>அரசு மாவட்ட ஆசிரியர் கல்வி &amp; பயிற்சி நிறுவனம் (DIET), புதுக்கோட்டை</strong><br/><small style="color:#065f46; font-weight:700;">அண்டை மாவட்ட முதன்மை அரசு பயிற்சி மையம்</small></td>
@@ -5197,7 +5144,6 @@
 <td>+2 மதிப்பெண் நேரடி சேர்க்கை</td>
 <td>புதுக்கோட்டை</td>
 </tr>
-
 <tr data-type="diet" style="background:#ecfdf5;">
 <td><span class="code-badge" style="background:#059669; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:800;">DIET-TRY</span></td>
 <td><strong>அரசு மாவட்ட ஆசிரியர் கல்வி &amp; பயிற்சி நிறுவனம் (DIET), குமுளூர்</strong><br/><small style="color:#065f46; font-weight:700;">லால்குடி வட்டம், திருச்சிராப்பள்ளி மாவட்டம்</small></td>
@@ -5205,7 +5151,6 @@
 <td>+2 மதிப்பெண் நேரடி சேர்க்கை</td>
 <td>குமுளூர், திருச்சி</td>
 </tr>
-
 <tr data-type="diet" style="background:#ecfdf5;">
 <td><span class="code-badge" style="background:#059669; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:800;">DIET-TUT</span></td>
 <td><strong>அரசு மாவட்ட ஆசிரியர் கல்வி &amp; பயிற்சி நிறுவனம் (DIET), வானரமுட்டி</strong><br/><small style="color:#065f46; font-weight:700;">தூத்துக்குடி / கோவில்பட்டி மண்டலம்</small></td>
@@ -5213,7 +5158,6 @@
 <td>+2 மதிப்பெண் நேரடி சேர்க்கை</td>
 <td>வானரமுட்டி, தூத்துக்குடி</td>
 </tr>
-
 <tr data-type="diet" style="background:#ecfdf5;">
 <td><span class="code-badge" style="background:#059669; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:800;">DIET-THI</span></td>
 <td><strong>அரசு மாவட்ட ஆசிரியர் கல்வி &amp; பயிற்சி நிறுவனம் (DIET), உத்தமபாளையம்</strong><br/><small style="color:#065f46; font-weight:700;">தேனி மாவட்டம்</small></td>
@@ -5221,7 +5165,6 @@
 <td>+2 மதிப்பெண் நேரடி சேர்க்கை</td>
 <td>உத்தமபாளையம், தேனி</td>
 </tr>
-
 <tr data-type="svg diet" style="background:#fef3c7;">
 <td><span class="code-badge" style="background:#d97706; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:800;">DIET-SVG-NOTE</span></td>
 <td><strong>அரசு மாவட்ட ஆசிரியர் கல்வி &amp; பயிற்சி நிறுவனம் (DIET), காளையார்கோவில்</strong><br/><small style="color:#b45309; font-weight:700;">சிவகங்கை மாவட்ட DIET (பணியிடைப் பயிற்சி மையம்)</small></td>
@@ -5229,7 +5172,6 @@
 <td>பள்ளிக் கல்வித்துறை பணியிடைப் பயிற்சிகள்</td>
 <td>காளையார்கோவில், சிவகங்கை</td>
 </tr>
-
 <!-- PRIVATE & SELF-FINANCING TEACHER TRAINING INSTITUTES (SIVAGANGAI & NEARBY) -->
 <tr data-type="svg pvt-deled" style="background:#fffbeb;">
 <td><span class="code-badge" style="background:#b45309; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:800;">PVT-SVG-1</span></td>
@@ -5238,7 +5180,6 @@
 <td>+2 மதிப்பெண் நேரடிச் சேர்க்கை &amp; மேனேஜ்மென்ட் ஒதுக்கீடு</td>
 <td>மானாமதுரை, சிவகங்கை மாவட்டம்</td>
 </tr>
-
 <tr data-type="svg pvt-deled" style="background:#fffbeb;">
 <td><span class="code-badge" style="background:#b45309; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:800;">PVT-SVG-2</span></td>
 <td><strong>விக்ரம் ஆசிரியர் பயிற்சி நிறுவனம் (Vickram Teacher Training Institute)</strong><br/><small style="color:#78350f; font-weight:700;">விக்ரம் கல்வி அறக்கட்டளை</small></td>
@@ -5246,7 +5187,6 @@
 <td>+2 மதிப்பெண் நேரடிச் சேர்க்கை</td>
 <td>ஏனாதி / திருமானஞ்சோலை, சிவகங்கை மாவட்டம்</td>
 </tr>
-
 <tr data-type="svg pvt-deled" style="background:#fffbeb;">
 <td><span class="code-badge" style="background:#b45309; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:800;">PVT-SVG-3</span></td>
 <td><strong>எஸ். பிரீத்தி ஆசிரியர் பயிற்சி நிறுவனம் (S. Preethi Teacher Training Institute)</strong><br/><small style="color:#78350f; font-weight:700;">பிரீத்தி கல்விக் குழுமம்</small></td>
@@ -5254,7 +5194,6 @@
 <td>+2 தேர்ச்சி அடிப்படையில் சேர்க்கை</td>
 <td>அரண்மனை வாசல் அருகில், சிவகங்கை நகர்</td>
 </tr>
-
 <tr data-type="svg pvt-deled" style="background:#fffbeb;">
 <td><span class="code-badge" style="background:#b45309; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:800;">PVT-SVG-4</span></td>
 <td><strong>அல்-அமீர் ஆசிரியர் பயிற்சி நிறுவனம் (Al-Amir Teacher Training Institute)</strong><br/><small style="color:#78350f; font-weight:700;">NCTE அங்கீகாரம் பெற்ற நிறுவனம்</small></td>
@@ -5262,7 +5201,6 @@
 <td>நேரடிச் சேர்க்கை</td>
 <td>வைரவன்பட்டி, திருப்பத்தூர் தாலுகா, சிவகங்கை</td>
 </tr>
-
 <tr data-type="svg pvt-deled" style="background:#fffbeb;">
 <td><span class="code-badge" style="background:#b45309; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:800;">PVT-SVG-5</span></td>
 <td><strong>டாக்டர் ஜாகீர் உசேன் ஆசிரியர் பயிற்சி நிறுவனம்</strong><br/><small style="color:#78350f; font-weight:700;">டாக்டர் ஜாகீர் உசேன் கல்வி அறக்கட்டளை</small></td>
@@ -5270,7 +5208,6 @@
 <td>+2 மதிப்பெண் நேரடிச் சேர்க்கை</td>
 <td>இளையான்குடி, சிவகங்கை மாவட்டம்</td>
 </tr>
-
 <tr data-type="svg pvt-deled" style="background:#fffbeb;">
 <td><span class="code-badge" style="background:#b45309; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:800;">PVT-SVG-6</span></td>
 <td><strong>ஸ்ரீ ராஜா ராஜன் ஆசிரியர் பயிற்சி நிறுவனம்</strong><br/><small style="color:#78350f; font-weight:700;">ஸ்ரீ ராஜா ராஜன் கல்விக் குழுமம்</small></td>
@@ -5278,7 +5215,6 @@
 <td>நேரடிச் சேர்க்கை</td>
 <td>அமராவதிபுதூர், காரைக்குடி, சிவகங்கை</td>
 </tr>
-
 <tr data-type="pvt-deled" style="background:#fffbeb;">
 <td><span class="code-badge" style="background:#b45309; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:800;">AID-MDU-1</span></td>
 <td><strong>புனித ஜஸ்டின் மகளிர் ஆசிரியர் பயிற்சி நிறுவனம் (St. Justin's Girls TTI)</strong><br/><small style="color:#78350f; font-weight:700;">அரசு உதவிபெறும் மகளிர் ஆசிரியர் பயிற்சி நிறுவனம் (Aided)</small></td>
@@ -5286,7 +5222,6 @@
 <td>அரசு ஒற்றைச் சாளர &amp; நிர்வாக ஒதுக்கீடு</td>
 <td>காமராஜர் சாலை, மதுரை மாநகர்</td>
 </tr>
-
 <tr data-type="pvt-deled" style="background:#fffbeb;">
 <td><span class="code-badge" style="background:#b45309; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.78rem; font-weight:800;">PVT-RMD-1</span></td>
 <td><strong>செய்யது அம்மாள் ஆசிரியர் பயிற்சி நிறுவனம் (Syed Ammal TTI)</strong><br/><small style="color:#78350f; font-weight:700;">செய்யது அம்மாள் அறக்கட்டளை</small></td>
@@ -5294,7 +5229,6 @@
 <td>நேரடிச் சேர்க்கை</td>
 <td>இராமநாதபுரம்</td>
 </tr>
-
 <tr data-type="svg poly" style="background:#f0f9ff;">
 <td>1</td>
 <td><strong>அழகப்பா அரசு பாலிடெக்னிக் கல்லூரி, காரைக்குடி</strong><br/><small>அழகப்பாரபுரம், காரைக்குடி - பழமைவாய்ந்த முதன்மை அரசு பாலிடெக்னிக்</small></td>
@@ -5400,7 +5334,6 @@
 <td><span class="college-tag tag-ca">+2 முடித்தவர்கள்</span></td>
 <td>மதுரை</td>
 </tr>
-
 <tr data-type="svg rare iti" style="background:#fefce8;">
 <td>16</td>
 <td><strong>அரசு தொழிற்பயிற்சி நிலையம் (Govt ITI), ராமநாதபுரம்</strong><br/><small>கலெக்டரேட் அஞ்சல், ராமநாதபுரம் (சிவகங்கை மாவட்ட எல்லைக்கு அருகில் - 04567-231214)</small></td>
@@ -5464,7 +5397,6 @@
 <td><span class="college-tag tag-ca">10th / +2 நேரடி சேர்க்கை</span></td>
 <td>சென்னை &amp; மதுரை</td>
 </tr>
-
 <tr data-type="ca" style="background:#fffbeb;">
 <td>25</td>
 <td><strong>ICAI தென்னிந்திய மண்டல தலைமையகம் (SIRC of ICAI, Chennai)</strong><br/><small>122, மகாத்மா காந்தி ரோடு, நுங்கம்பாக்கம், சென்னை - 600034 (044-39893989)</small></td>
@@ -5510,11 +5442,10 @@
 </tbody>
 </table>
 </div>
-
 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-  <button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-  <button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-  <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
+<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
+<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
+<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <!-- SECTION 11: FAQS -->
@@ -5586,11 +5517,10 @@
         ஆம்! +2 தேர்வில் வணிகவியல் படிக்காத மாணவர்களும் (அறிவியல், கணிதம், கலை, தொழிற்கல்வி பயின்றவர்கள்) ICAI-ல் CA Foundation தேர்வுக்குப் பதிவு செய்யலாம். தாள் 1 கணக்கியல் அடிப்படைகளை ஆர்வத்துடன் படித்தால் அறிவியல் மாணவர்களும் எளிதாக முதல் முயற்சியிலேயே தேர்ச்சி பெற முடியும்.
       </div>
 </div>
-
 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-  <button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-  <button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-  <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
+<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
+<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
+<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <!-- SECTION 12: DOCUMENTS CHECKLIST -->
@@ -5619,56 +5549,17 @@
 </ul>
 </div>
 </div>
-
 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-  <button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-  <button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-  <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
+<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
+<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
+<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <!-- Portal Footer -->
-  <!-- Footer -->
-  
-
-  </div>
-
-
-
-<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
-<div class="kural-box">
-  <div class="kural-header">
-    <span class="kural-icon">📜</span>
-    <span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-    <span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
-  </div>
-  <div class="kural-verse-text">
-    “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
-    திண்ணியர் ஆகப் பெறின்.”
-  </div>
-  <div class="kural-meaning">
-    <strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
-  </div>
-
-<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
-<div class="creator-card">
-  <div class="creator-typewriter-wrapper">
-    <span id="creatorTypewriterTarget" class="creator-typewriter-target"></span><span id="creatorCursor" class="creator-cursor">|</span>
-  </div>
-  <a href="tel:9626471035" class="footer-phone-pill" id="footerPhonePill" title="அழைக்க">
-    <span class="phone-icon">📱</span>
-    <span class="phone-text">9626471035</span>
-  </a>
-</div>
 <!-- Footer -->
-<footer class="portal-footer">
-  <p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
-    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
-  </p>
-  <p style="font-size: 0.85rem; color: #64748b;">
-    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
-  </p>
-</footer>
-</div>
+</main></div>
+<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
+
 <!-- JavaScript for Calculator, Stream Switch, Table Filter & FAQ -->
 <script>
 
@@ -6166,15 +6057,18 @@
 
   document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
 </script>
-
 <!-- Floating Back to Top Button -->
 <button id="backToTopBtn" onclick="scrollToTop(event);" title="மேலே செல்க (Back to Top)">
   ↑ மேலே
 </button>
+<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
 
+<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
 
-  </main>
-</div>
+<!-- Footer -->
+
+ <!-- /.container -->
+
 
 <script>
 function toggleSidebarMenu() {
@@ -6261,13 +6155,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
-
-
-
-
-
-
 <script>
 // Standardized Creator Typewriter Animation (Guaranteed Execution & Colors)
 (function() {

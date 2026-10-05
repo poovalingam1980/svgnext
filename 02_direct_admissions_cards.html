@@ -1,16 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="ta">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>நுழைவுத் தேர்வு இல்லாத நேரடிச் சேர்க்கைப் படிப்புகள் | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
-  
-  <!-- Google Fonts: Inter & Noto Sans Tamil -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>நுழைவுத் தேர்வு இல்லாத நேரடிச் சேர்க்கைப் படிப்புகள் | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
+<!-- Google Fonts: Inter & Noto Sans Tamil -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --primary-color: #1e3a8a;
       --primary-light: #2563eb;
@@ -3296,593 +3295,534 @@
 </head>
 <body>
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
-
-<button id="mobileMenuFloatingBtn" class="mobile-menu-floating-btn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
-  <span style="font-size: 1.15rem; line-height: 1;">☰</span>
-  <span>மெனு</span>
+<button class="mobile-menu-floating-btn" id="mobileMenuFloatingBtn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
+<span style="font-size: 1.15rem; line-height: 1;">☰</span>
+<span>மெனு</span>
 </button>
-
 <div class="portal-layout-wrapper">
-
-  <!-- Desktop Permanent Left Menu Frame with Collapsible Accordion -->
-  <aside class="desktop-left-sidebar" id="desktopLeftSidebar">
-    <div class="sidebar-header">
-      <a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
-        <span class="sidebar-emblem">🏛️</span>
-        <div class="sidebar-title-wrap">
-          <span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
-          <span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
-        </div>
-      </a>
-      <button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
-    </div>
-
-    <nav class="sidebar-nav-body">
-      <!-- 00. முதன்மை முகப்பு (Home) -->
-      <a class="sidebar-main-btn" href="index.html">
-        <span class="icon">🏠</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">முதன்மை முகப்பு</span>
-          <span class="menu-en">HOME</span>
-        </span>
-      </a>
-
-      <!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
-      <a class="sidebar-main-btn" href="00_entrance_exams.html">
-        <span class="icon">🎯</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
-          <span class="menu-en">ENTRANCE EXAMS</span>
-        </span>
-      </a>
-
-      <!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
-      <a class="sidebar-main-btn" href="02_00_direct_admissions.html">
-        <span class="icon">📈</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">நேரடிச் சேர்க்கை</span>
-          <span class="menu-en">DIRECT ADMISSIONS</span>
-        </span>
-      </a>
-
-      <!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
-      <a class="sidebar-main-btn" href="institutes_directory.html">
-        <span class="icon">🏛️</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">கல்லூரிகள் அடைவு</span>
-          <span class="menu-en">INSTITUTES DIRECTORY</span>
-        </span>
-      </a>
-
-      <!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
-      <a class="sidebar-main-btn" href="04_govt_exams.html">
-        <span class="icon">🏆</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">அரசுத் தேர்வுகள்</span>
-          <span class="menu-en">GOVT COMPETITIVE EXAMS</span>
-        </span>
-      </a>
-
-      <!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
-      <a class="sidebar-main-btn" href="direct_careers.html">
-        <span class="icon">💼</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
-          <span class="menu-en">SKILLS &amp; CAREERS</span>
-        </span>
-      </a>
-
-      <!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
-      <a class="sidebar-main-btn" href="helpdesk_portal.html">
-        <span class="icon">☎️</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
-          <span class="menu-en">HELPDESK &amp; SUPPORT</span>
-        </span>
-      </a>
-    </nav>
-  </aside>
-
-  <!-- Main Portal Content Column -->
-  <main class="portal-main-content">
-
-
-
-  
-  <div class="portal-container">
-    
-    <!-- Top Navigation Bar -->
-    <!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
+<!-- Desktop Permanent Left Menu Frame with Collapsible Accordion -->
+<aside class="desktop-left-sidebar" id="desktopLeftSidebar">
+<div class="sidebar-header">
+<a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
+<span class="sidebar-emblem">🏛️</span>
+<div class="sidebar-title-wrap">
+<span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
+<span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
+</div>
+</a>
+<button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
+</div>
+<nav class="sidebar-nav-body">
+<!-- 00. முதன்மை முகப்பு (Home) -->
+<a class="sidebar-main-btn" href="index.html">
+<span class="icon">🏠</span>
+<span class="btn-text-group">
+<span class="menu-ta">முதன்மை முகப்பு</span>
+<span class="menu-en">HOME</span>
+</span>
+</a>
+<!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
+<a class="sidebar-main-btn" href="00_entrance_exams.html">
+<span class="icon">🎯</span>
+<span class="btn-text-group">
+<span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
+<span class="menu-en">ENTRANCE EXAMS</span>
+</span>
+</a>
+<!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
+<a class="sidebar-main-btn" href="02_00_direct_admissions.html">
+<span class="icon">📈</span>
+<span class="btn-text-group">
+<span class="menu-ta">நேரடிச் சேர்க்கை</span>
+<span class="menu-en">DIRECT ADMISSIONS</span>
+</span>
+</a>
+<!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
+<a class="sidebar-main-btn" href="institutes_directory.html">
+<span class="icon">🏛️</span>
+<span class="btn-text-group">
+<span class="menu-ta">கல்லூரிகள் அடைவு</span>
+<span class="menu-en">INSTITUTES DIRECTORY</span>
+</span>
+</a>
+<!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
+<a class="sidebar-main-btn" href="04_govt_exams.html">
+<span class="icon">🏆</span>
+<span class="btn-text-group">
+<span class="menu-ta">அரசுத் தேர்வுகள்</span>
+<span class="menu-en">GOVT COMPETITIVE EXAMS</span>
+</span>
+</a>
+<!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
+<a class="sidebar-main-btn" href="direct_careers.html">
+<span class="icon">💼</span>
+<span class="btn-text-group">
+<span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
+<span class="menu-en">SKILLS &amp; CAREERS</span>
+</span>
+</a>
+<!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
+<a class="sidebar-main-btn" href="helpdesk_portal.html">
+<span class="icon">☎️</span>
+<span class="btn-text-group">
+<span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
+<span class="menu-en">HELPDESK &amp; SUPPORT</span>
+</span>
+</a>
+</nav>
+</aside>
+<!-- Main Portal Content Column -->
+<main class="portal-main-content">
+<div class="portal-container">
+<!-- Top Navigation Bar -->
+<!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
 <!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
 <header class="portal-top-frame no-print">
-  <div class="top-frame-branding">
-    <div class="top-frame-badge">
-      <span class="govt-emblem">🏛️</span>
-      <span class="dept-text">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</span>
-    </div>
-    <div class="portal-main-heading">
-      <span class="portal-title-text">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
-      <span class="portal-subtitle-en">CAREER GUIDANCE PORTAL</span>
-    </div>
-  </div>
-
-  <div class="top-frame-actions">
-    <!-- Official ceosvg.in Main District Portal Link -->
-    <a href="https://www.ceosvg.in" target="_blank" rel="noopener" class="top-frame-btn btn-ceosvg" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
-      <span class="btn-icon">🌐</span>
-      <span>ceosvg.in முதன்மை தளம்</span>
-    </a>
-    <!-- Career Guidance Home Link -->
-    <a href="index.html" class="top-frame-btn btn-home" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
-      <span class="btn-icon">🎓</span>
-      <span>உயர்கல்வி முகப்பு</span>
-    </a>
-  </div>
+<div class="top-frame-branding">
+<div class="top-frame-badge">
+<span class="govt-emblem">🏛️</span>
+<span class="dept-text">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</span>
+</div>
+<div class="portal-main-heading">
+<span class="portal-title-text">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
+<span class="portal-subtitle-en">CAREER GUIDANCE PORTAL</span>
+</div>
+</div>
+<div class="top-frame-actions">
+<!-- Official ceosvg.in Main District Portal Link -->
+<a class="top-frame-btn btn-ceosvg" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
+<span class="btn-icon">🌐</span>
+<span>ceosvg.in முதன்மை தளம்</span>
+</a>
+<!-- Career Guidance Home Link -->
+<a class="top-frame-btn btn-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+<span class="btn-icon">🎓</span>
+<span>உயர்கல்வி முகப்பு</span>
+</a>
+</div>
 </header>
-
-
-
-
-
-  
-    <!-- Hero Header Banner -->
-    <header class="hero-header">
-      <div class="header-badge">
-        <span>🎯 உயர்கல்வி வழிகாட்டி 2026</span>
-      </div>
-      <h1 class="portal-title">
+<!-- Hero Header Banner -->
+<header class="hero-header">
+<div class="header-badge">
+<span>🎯 உயர்கல்வி வழிகாட்டி 2026</span>
+</div>
+<h1 class="portal-title">
         நுழைவுத் தேர்வு இல்லாத நேரடிச் சேர்க்கைப் படிப்புகள்
       </h1>
-      <p class="portal-subtitle">
+<p class="portal-subtitle">
         12-ஆம் வகுப்பு (+2) பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் மட்டும் தமிழ்நாட்டின் தலைசிறந்த அரசு, அரசு உதவிபெறும் மற்றும் முன்னணிப் பல்கலைக்கழகங்களில் நேரடியாகச் சேரக்கூடிய 9 முதன்மையான உயர்கல்வித் துறைகளின் முழுமையான வழிகாட்டி.
       </p>
-    </header>
-  
-    <!-- Search & Filter Controls -->
-    <div class="controls-wrapper">
-      <div class="search-box">
-        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-        <input type="text" id="searchInput" class="search-input" placeholder="படிப்பு, துறை, பல்கலைக்கழகம் அல்லது சிறப்புப் பிரிவுகள் கொண்டு தேடவும் (எ.கா: TNEA, Nursing, Agri, Law, BCA, B.Com, CSIR)...">
-      </div>
-  
-      <div class="filter-pills">
-        <button class="filter-pill active" data-filter="all">அனைத்துப் படிப்புகள் (All)</button>
-        <button class="filter-pill" data-filter="engineering">⚙️ 01. பொறியியல் (TNEA)</button>
-        <button class="filter-pill" data-filter="allied-health">🩺 02. கால்நடை, துணை மருத்துவம் & இயற்கை</button>
-        <button class="filter-pill" data-filter="agriculture">🌾 03. வேளாண்மை & மீன்வளம்</button>
-        <button class="filter-pill" data-filter="law">⚖️ 04. சட்டப் படிப்புகள் (TNDALU)</button>
-        <button class="filter-pill" data-filter="pure-science">🔬 05. அறிவியல் படிப்புகள் (B.Sc)</button>
-        <button class="filter-pill" data-filter="computer-it">💻 06. கணினி & IT (BCA / B.Sc)</button>
-        <button class="filter-pill" data-filter="arts">📚 07. கலை & மானுடவியல் (B.A)</button>
-        <button class="filter-pill" data-filter="commerce">📊 08. வணிகவியல் & மேலாண்மை</button>
-        <button class="filter-pill" data-filter="diploma-vocational">🛠️ 09. டிப்ளமோ & தொழிற்கல்வி</button>
-      </div>
-    </div>
-  
-    <!-- Symmetrical 9 Container Cards Grid (3x3 Layout) -->
-    <div class="grid-container" id="cardsGrid">
-  
-      <!-- 01. பொறியியல் நேரடிச் சேர்க்கை (TNEA) -->
-      <div class="card cat-engineering" data-category="engineering">
-        <div>
-          <div class="card-top-meta">
-            <span class="card-number">01 / ENGINEERING</span>
-            <span class="card-mode-badge">+2 PCM Cutoff /200</span>
-          </div>
-          <div class="card-header">
-            <div class="icon-box">⚙️</div>
-            <div class="card-title-group">
-              <span class="card-title">
+</header>
+<!-- Search & Filter Controls -->
+<div class="controls-wrapper">
+<div class="search-box">
+<svg viewbox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+<input class="search-input" id="searchInput" placeholder="படிப்பு, துறை, பல்கலைக்கழகம் அல்லது சிறப்புப் பிரிவுகள் கொண்டு தேடவும் (எ.கா: TNEA, Nursing, Agri, Law, BCA, B.Com, CSIR)..." type="text"/>
+</div>
+<div class="filter-pills">
+<button class="filter-pill active" data-filter="all">அனைத்துப் படிப்புகள் (All)</button>
+<button class="filter-pill" data-filter="engineering">⚙️ 01. பொறியியல் (TNEA)</button>
+<button class="filter-pill" data-filter="allied-health">🩺 02. கால்நடை, துணை மருத்துவம் &amp; இயற்கை</button>
+<button class="filter-pill" data-filter="agriculture">🌾 03. வேளாண்மை &amp; மீன்வளம்</button>
+<button class="filter-pill" data-filter="law">⚖️ 04. சட்டப் படிப்புகள் (TNDALU)</button>
+<button class="filter-pill" data-filter="pure-science">🔬 05. அறிவியல் படிப்புகள் (B.Sc)</button>
+<button class="filter-pill" data-filter="computer-it">💻 06. கணினி &amp; IT (BCA / B.Sc)</button>
+<button class="filter-pill" data-filter="arts">📚 07. கலை &amp; மானுடவியல் (B.A)</button>
+<button class="filter-pill" data-filter="commerce">📊 08. வணிகவியல் &amp; மேலாண்மை</button>
+<button class="filter-pill" data-filter="diploma-vocational">🛠️ 09. டிப்ளமோ &amp; தொழிற்கல்வி</button>
+</div>
+</div>
+<!-- Symmetrical 9 Container Cards Grid (3x3 Layout) -->
+<div class="grid-container" id="cardsGrid">
+<!-- 01. பொறியியல் நேரடிச் சேர்க்கை (TNEA) -->
+<div class="card cat-engineering" data-category="engineering">
+<div>
+<div class="card-top-meta">
+<span class="card-number">01 / ENGINEERING</span>
+<span class="card-mode-badge">+2 PCM Cutoff /200</span>
+</div>
+<div class="card-header">
+<div class="icon-box">⚙️</div>
+<div class="card-title-group">
+<span class="card-title">
                 பொறியியல் நேரடிச் சேர்க்கை
                 <small>Direct Engineering Admissions (TNEA)</small>
-              </span>
-            </div>
-          </div>
-          <p class="card-summary">
-            அண்ணா பல்கலைக்கழக முதன்மை வளாகங்கள், அரசு & முன்னணி தனியார் கல்லூரிகள் மற்றும் காரைக்குடி CSIR-CECRI உள்ளிட்ட 400+ கல்லூரிகளில் ஒற்றைச் சாளர சேர்க்கை.
+</span>
+</div>
+</div>
+<p class="card-summary">
+            அண்ணா பல்கலைக்கழக முதன்மை வளாகங்கள், அரசு &amp; முன்னணி தனியார் கல்லூரிகள் மற்றும் காரைக்குடி CSIR-CECRI உள்ளிட்ட 400+ கல்லூரிகளில் ஒற்றைச் சாளர சேர்க்கை.
           </p>
-          <div class="course-details">
-            <div class="detail-section-title">முக்கியப் படிப்புகள் (Specializations):</div>
-            <ul class="course-list">
-              <li><strong>கம்ப்யூட்டர் & IT:</strong> CSE, AI & Data Science, Cybersecurity, IT</li>
-              <li><strong>சர்க்யூட் & கோர்:</strong> ECE, EEE, Mechanical, Civil Engineering</li>
-              <li><strong>வளர்ந்துவரும் துறைகள்:</strong> CSIR-CECRI (காரைக்குடி), Biotech, Chemical, Robotics</li>
-            </ul>
-          </div>
-          <div class="tags">
-            <span class="tag">TNEA Code: 5012/0001</span>
-            <span class="tag">Anna University</span>
-            <span class="tag">B.E / B.Tech</span>
-            <span class="tag">7.5% அரசுப் பள்ளி ஒதுக்கீடு</span>
-          </div>
-        </div>
-        <a href="02_01_tnea_engineering.html" class="btn-link">
-          பொறியியல் முழு வழிகாட்டி & கல்லூரிகள் காண்க
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-      <!-- 02. கால்நடை மருத்துவம், துணை மருத்துவம் & இயற்கை மருத்துவம் -->
-      <div class="card cat-allied-health" data-category="allied-health">
-        <div>
-          <div class="card-top-meta">
-            <span class="card-number">02 / VETERINARY, ALLIED HEALTH & BNYS</span>
-            <span class="card-mode-badge">+2 PCB Cutoff /200 (Non-NEET)</span>
-          </div>
-          <div class="card-header">
-            <div class="icon-box">🩺</div>
-            <div class="card-title-group">
-              <span class="card-title">
-                கால்நடை மருத்துவம், துணை மருத்துவம் & இயற்கை மருத்துவம்
-                <small>Veterinary Science (B.V.Sc & A.H.), Paramedical & BNYS (Non-NEET)</small>
-              </span>
-            </div>
-          </div>
-          <p class="card-summary">
+<div class="course-details">
+<div class="detail-section-title">முக்கியப் படிப்புகள் (Specializations):</div>
+<ul class="course-list">
+<li><strong>கம்ப்யூட்டர் &amp; IT:</strong> CSE, AI &amp; Data Science, Cybersecurity, IT</li>
+<li><strong>சர்க்யூட் &amp; கோர்:</strong> ECE, EEE, Mechanical, Civil Engineering</li>
+<li><strong>வளர்ந்துவரும் துறைகள்:</strong> CSIR-CECRI (காரைக்குடி), Biotech, Chemical, Robotics</li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">TNEA Code: 5012/0001</span>
+<span class="tag">Anna University</span>
+<span class="tag">B.E / B.Tech</span>
+<span class="tag">7.5% அரசுப் பள்ளி ஒதுக்கீடு</span>
+</div>
+</div>
+<a class="btn-link" href="02_01_tnea_engineering.html">
+          பொறியியல் முழு வழிகாட்டி &amp; கல்லூரிகள் காண்க
+          <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 02. கால்நடை மருத்துவம், துணை மருத்துவம் & இயற்கை மருத்துவம் -->
+<div class="card cat-allied-health" data-category="allied-health">
+<div>
+<div class="card-top-meta">
+<span class="card-number">02 / VETERINARY, ALLIED HEALTH &amp; BNYS</span>
+<span class="card-mode-badge">+2 PCB Cutoff /200 (Non-NEET)</span>
+</div>
+<div class="card-header">
+<div class="icon-box">🩺</div>
+<div class="card-title-group">
+<span class="card-title">
+                கால்நடை மருத்துவம், துணை மருத்துவம் &amp; இயற்கை மருத்துவம்
+                <small>Veterinary Science (B.V.Sc &amp; A.H.), Paramedical &amp; BNYS (Non-NEET)</small>
+</span>
+</div>
+</div>
+<p class="card-summary">
             நீட் (NEET) தேர்வு இல்லாமல், +2 பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் தமிழ்நாடு கால்நடை மருத்துவ அறிவியல் பல்கலைக்கழகம் (TANUVAS) மற்றும் மருத்துவக் கல்வி இயக்ககம் (DME) நடத்தும் நேரடி சேர்க்கை.
           </p>
-          <div class="course-details">
-            <div class="detail-section-title">முக்கிய மருத்துவப் படிப்புகள்:</div>
-            <ul class="course-list">
-              <li><strong>கால்நடை மருத்துவம் (Veterinary Doctor):</strong> B.V.Sc. & A.H. (5½ ஆண்டுகள்) — TANUVAS சென்னை, நாமக்கல், நெல்லை, ஒரத்தநாடு, சேலம், தேனி, உடுமலைப்பேட்டை அரசு கல்லூரிகள் (7.5% ஒதுக்கீடு உண்டு).</li>
-              <li><strong>இயற்கை மருத்துவம் (Naturopathy Doctor):</strong> BNYS (Bachelor of Naturopathy & Yogic Sciences - 5½ ஆண்டுகள் மருத்துவர் படிப்பு).</li>
-              <li><strong>செவிலியர் & மருந்தியல்:</strong> B.Sc. Nursing, B.Pharm, BPT (பிசியோதெரபி), BOT (ஆக்குபேஷனல் தெரபி).</li>
-              <li><strong>உயர் மருத்துவத் தொழில்நுட்பம்:</strong> B.Sc. Radiography, Cardiac Tech, Dialysis Tech, Operation Theatre Tech, MLT.</li>
-            </ul>
-          </div>
-          <div class="tags">
-            <span class="tag">TANUVAS (B.V.Sc & A.H.)</span>
-            <span class="tag">DME Paramedical</span>
-            <span class="tag">Non-NEET</span>
-            <span class="tag">BNYS டாக்டர்</span>
-            <span class="tag">B.Sc Nursing</span>
-            <span class="tag">7.5% அரசுப் பள்ளி இடஒதுக்கீடு</span>
-          </div>
-        </div>
-        <a href="02_02_veterinary_allied_health.html" class="btn-link" style="background: linear-gradient(135deg, #9f1239, #e11d48);">
-          கால்நடை & துணை மருத்துவ முழு வழிகாட்டி காண்க
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-      <!-- 03. வேளாண்மை, தோட்டக்கலை & மீன்வளம் -->
-      <div class="card cat-agriculture" data-category="agriculture">
-        <div>
-          <div class="card-top-meta">
-            <span class="card-number">03 / AGRICULTURE & ALLIED</span>
-            <span class="card-mode-badge">+2 PCB/PCA Cutoff /200</span>
-          </div>
-          <div class="card-header">
-            <div class="icon-box">🌾</div>
-            <div class="card-title-group">
-              <span class="card-title">
-                வேளாண்மை, தோட்டக்கலை & மீன்வளம்
-                <small>Agriculture, Horticulture, Forestry & Fisheries</small>
-              </span>
-            </div>
-          </div>
-          <p class="card-summary">
+<div class="course-details">
+<div class="detail-section-title">முக்கிய மருத்துவப் படிப்புகள்:</div>
+<ul class="course-list">
+<li><strong>கால்நடை மருத்துவம் (Veterinary Doctor):</strong> B.V.Sc. &amp; A.H. (5½ ஆண்டுகள்) — TANUVAS சென்னை, நாமக்கல், நெல்லை, ஒரத்தநாடு, சேலம், தேனி, உடுமலைப்பேட்டை அரசு கல்லூரிகள் (7.5% ஒதுக்கீடு உண்டு).</li>
+<li><strong>இயற்கை மருத்துவம் (Naturopathy Doctor):</strong> BNYS (Bachelor of Naturopathy &amp; Yogic Sciences - 5½ ஆண்டுகள் மருத்துவர் படிப்பு).</li>
+<li><strong>செவிலியர் &amp; மருந்தியல்:</strong> B.Sc. Nursing, B.Pharm, BPT (பிசியோதெரபி), BOT (ஆக்குபேஷனல் தெரபி).</li>
+<li><strong>உயர் மருத்துவத் தொழில்நுட்பம்:</strong> B.Sc. Radiography, Cardiac Tech, Dialysis Tech, Operation Theatre Tech, MLT.</li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">TANUVAS (B.V.Sc &amp; A.H.)</span>
+<span class="tag">DME Paramedical</span>
+<span class="tag">Non-NEET</span>
+<span class="tag">BNYS டாக்டர்</span>
+<span class="tag">B.Sc Nursing</span>
+<span class="tag">7.5% அரசுப் பள்ளி இடஒதுக்கீடு</span>
+</div>
+</div>
+<a class="btn-link" href="02_02_veterinary_allied_health.html" style="background: linear-gradient(135deg, #9f1239, #e11d48);">
+          கால்நடை &amp; துணை மருத்துவ முழு வழிகாட்டி காண்க
+          <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 03. வேளாண்மை, தோட்டக்கலை & மீன்வளம் -->
+<div class="card cat-agriculture" data-category="agriculture">
+<div>
+<div class="card-top-meta">
+<span class="card-number">03 / AGRICULTURE &amp; ALLIED</span>
+<span class="card-mode-badge">+2 PCB/PCA Cutoff /200</span>
+</div>
+<div class="card-header">
+<div class="icon-box">🌾</div>
+<div class="card-title-group">
+<span class="card-title">
+                வேளாண்மை, தோட்டக்கலை &amp; மீன்வளம்
+                <small>Agriculture, Horticulture, Forestry &amp; Fisheries</small>
+</span>
+</div>
+</div>
+<p class="card-summary">
             தமிழ்நாடு வேளாண்மைப் பல்கலைக்கழகம் (TNAU), தமிழ்நாடு மீன்வளப் பல்கலைக்கழகம் (TNJFU) மற்றும் கால்நடை மருத்துவ அறிவியல் கழகம் (TANUVAS) நேரடிச் சேர்க்கை.
           </p>
-          <div class="course-details">
-            <div class="detail-section-title">முக்கியப் படிப்புகள்:</div>
-            <ul class="course-list">
-              <li><strong>வேளாண் படிப்புகள்:</strong> B.Sc (Hons) Agriculture, B.Sc (Hons) Horticulture, Forestry</li>
-              <li><strong>தொழில்நுட்பப் பிரிவுகள்:</strong> B.Tech Agricultural Engg, Food Tech, Biotechnology</li>
-              <li><strong>மீன்வளம் & கால்நடை:</strong> B.F.Sc (மீன்வள அறிவியல்), B.Tech Dairy & Poultry Tech</li>
-            </ul>
-          </div>
-          <div class="tags">
-            <span class="tag">TNAU கோவை</span>
-            <span class="tag">TNJFU நாகை</span>
-            <span class="tag">TANUVAS</span>
-            <span class="tag">7.5% இடஒதுக்கீடு</span>
-          </div>
-        </div>
-        <a href="02_03_agriculture_fisheries.html" class="btn-link" style="background: linear-gradient(135deg, #14532d, #16a34a);">
-          வேளாண்மை & மீன்வள வழிகாட்டி காண்க
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-      <!-- 04. சட்டப் படிப்புகள் (Law Admissions - TNDALU) -->
-      <div class="card cat-law" data-category="law">
-        <div>
-          <div class="card-top-meta">
-            <span class="card-number">04 / LAW ADMISSIONS</span>
-            <span class="card-mode-badge">+2 Marks Merit / 7.5% Quota</span>
-          </div>
-          <div class="card-header">
-            <div class="icon-box">⚖️</div>
-            <div class="card-title-group">
-              <span class="card-title">
+<div class="course-details">
+<div class="detail-section-title">முக்கியப் படிப்புகள்:</div>
+<ul class="course-list">
+<li><strong>வேளாண் படிப்புகள்:</strong> B.Sc (Hons) Agriculture, B.Sc (Hons) Horticulture, Forestry</li>
+<li><strong>தொழில்நுட்பப் பிரிவுகள்:</strong> B.Tech Agricultural Engg, Food Tech, Biotechnology</li>
+<li><strong>மீன்வளம் &amp; கால்நடை:</strong> B.F.Sc (மீன்வள அறிவியல்), B.Tech Dairy &amp; Poultry Tech</li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">TNAU கோவை</span>
+<span class="tag">TNJFU நாகை</span>
+<span class="tag">TANUVAS</span>
+<span class="tag">7.5% இடஒதுக்கீடு</span>
+</div>
+</div>
+<a class="btn-link" href="02_03_agriculture_fisheries.html" style="background: linear-gradient(135deg, #14532d, #16a34a);">
+          வேளாண்மை &amp; மீன்வள வழிகாட்டி காண்க
+          <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 04. சட்டப் படிப்புகள் (Law Admissions - TNDALU) -->
+<div class="card cat-law" data-category="law">
+<div>
+<div class="card-top-meta">
+<span class="card-number">04 / LAW ADMISSIONS</span>
+<span class="card-mode-badge">+2 Marks Merit / 7.5% Quota</span>
+</div>
+<div class="card-header">
+<div class="icon-box">⚖️</div>
+<div class="card-title-group">
+<span class="card-title">
                 சட்டப் படிப்புகள் (5 ஆண்டு LL.B.)
                 <small>Direct Law Admissions (5-Year Integrated LL.B.)</small>
-              </span>
-            </div>
-          </div>
-          <p class="card-summary">
+</span>
+</div>
+</div>
+<p class="card-summary">
             தமிழ்நாடு டாக்டர் அம்பேத்கர் சட்டப் பல்கலைக்கழகம் (TNDALU) மற்றும் தமிழகத்தின் 15 அரசு சட்டக் கல்லூரிகளில் நுழைவுத் தேர்வின்றி +2 மதிப்பெண் மூலம் நேரடிச் சேர்க்கை.
           </p>
-          <div class="course-details">
-            <div class="detail-section-title">முக்கியப் படிப்புகள் (5-Year Law):</div>
-            <ul class="course-list">
-              <li><strong>ஒருங்கிணைந்த சட்டப் படிப்புகள்:</strong> B.A. LL.B., B.Com. LL.B., B.B.A. LL.B., B.C.A. LL.B.</li>
-              <li><strong>அரசு சட்டக் கல்லூரிகள்:</strong> சென்னை, மதுரை, திருச்சி, கோவை, நெல்லை, காரைக்குடி அருகில்</li>
-              <li><strong>தகுதிகள்:</strong> +2 அனைத்துப் பாடப்பிரிவு மாணவர்களும் தகுதியானவர்கள்; 7.5% முன்னுரிமை உண்டு</li>
-            </ul>
-          </div>
-          <div class="tags">
-            <span class="tag">TNDALU சென்னை</span>
-            <span class="tag">5-Year LL.B.</span>
-            <span class="tag">அரசு சட்டக் கல்லூரிகள்</span>
-            <span class="tag">நீதித்துறை & வழக்கறிஞர்</span>
-          </div>
-        </div>
-        <a href="02_04_law_admissions.html" class="btn-link" style="background: linear-gradient(135deg, #78350f, #d97706);">
+<div class="course-details">
+<div class="detail-section-title">முக்கியப் படிப்புகள் (5-Year Law):</div>
+<ul class="course-list">
+<li><strong>ஒருங்கிணைந்த சட்டப் படிப்புகள்:</strong> B.A. LL.B., B.Com. LL.B., B.B.A. LL.B., B.C.A. LL.B.</li>
+<li><strong>அரசு சட்டக் கல்லூரிகள்:</strong> சென்னை, மதுரை, திருச்சி, கோவை, நெல்லை, காரைக்குடி அருகில்</li>
+<li><strong>தகுதிகள்:</strong> +2 அனைத்துப் பாடப்பிரிவு மாணவர்களும் தகுதியானவர்கள்; 7.5% முன்னுரிமை உண்டு</li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">TNDALU சென்னை</span>
+<span class="tag">5-Year LL.B.</span>
+<span class="tag">அரசு சட்டக் கல்லூரிகள்</span>
+<span class="tag">நீதித்துறை &amp; வழக்கறிஞர்</span>
+</div>
+</div>
+<a class="btn-link" href="02_04_law_admissions.html" style="background: linear-gradient(135deg, #78350f, #d97706);">
           சட்டப் படிப்புகள் முழு வழிகாட்டி காண்க
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-      <!-- 05. தூய & பயன்பாட்டு அறிவியல் (Pure & Applied Sciences - B.Sc) -->
-      <div class="card cat-pure-science" data-category="pure-science">
-        <div>
-          <div class="card-top-meta">
-            <span class="card-number">05 / PURE & APPLIED SCIENCE</span>
-            <span class="card-mode-badge">+2 Subject Marks Merit</span>
-          </div>
-          <div class="card-header">
-            <div class="icon-box">🔬</div>
-            <div class="card-title-group">
-              <span class="card-title">
-                தூய & பயன்பாட்டு அறிவியல் (B.Sc)
-                <small>Pure & Applied Sciences (TNGASA)</small>
-              </span>
-            </div>
-          </div>
-          <p class="card-summary">
+          <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 05. தூய & பயன்பாட்டு அறிவியல் (Pure & Applied Sciences - B.Sc) -->
+<div class="card cat-pure-science" data-category="pure-science">
+<div>
+<div class="card-top-meta">
+<span class="card-number">05 / PURE &amp; APPLIED SCIENCE</span>
+<span class="card-mode-badge">+2 Subject Marks Merit</span>
+</div>
+<div class="card-header">
+<div class="icon-box">🔬</div>
+<div class="card-title-group">
+<span class="card-title">
+                தூய &amp; பயன்பாட்டு அறிவியல் (B.Sc)
+                <small>Pure &amp; Applied Sciences (TNGASA)</small>
+</span>
+</div>
+</div>
+<p class="card-summary">
             அரசு மற்றும் அரசு உதவிபெறும் கலை அறிவியல் கல்லூரிகளில் (TNGASA) அடிப்படை அறிவியல் மற்றும் ஆராய்ச்சித் துறைகளுக்கான 3 ஆண்டு இளநிலைப் படிப்புகள்.
           </p>
-          <div class="course-details">
-            <div class="detail-section-title">முக்கியப் படிப்புகள் (B.Sc):</div>
-            <ul class="course-list">
-              <li><strong>இயற்பியல் & கணிதம்:</strong> B.Sc Mathematics, B.Sc Physics, B.Sc Chemistry, Statistics</li>
-              <li><strong>உயிரியல் அறிவியல்:</strong> B.Sc Botany (தாவரவியல்), B.Sc Zoology (விலங்கியல்)</li>
-              <li><strong>பயன்பாட்டு அறிவியல்:</strong> Biotechnology, Microbiology, Biochemistry, Nutrition</li>
-            </ul>
-          </div>
-          <div class="tags">
-            <span class="tag">TNGASA</span>
-            <span class="tag">B.Sc Pure Science</span>
-            <span class="tag">CSIR-NET / GATE</span>
-            <span class="tag">ஆராய்ச்சி & ஆய்வகங்கள்</span>
-          </div>
-        </div>
-        <a href="02_05_pure_applied_sciences.html" class="btn-link" style="background: linear-gradient(135deg, #075985, #0284c7);">
+<div class="course-details">
+<div class="detail-section-title">முக்கியப் படிப்புகள் (B.Sc):</div>
+<ul class="course-list">
+<li><strong>இயற்பியல் &amp; கணிதம்:</strong> B.Sc Mathematics, B.Sc Physics, B.Sc Chemistry, Statistics</li>
+<li><strong>உயிரியல் அறிவியல்:</strong> B.Sc Botany (தாவரவியல்), B.Sc Zoology (விலங்கியல்)</li>
+<li><strong>பயன்பாட்டு அறிவியல்:</strong> Biotechnology, Microbiology, Biochemistry, Nutrition</li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">TNGASA</span>
+<span class="tag">B.Sc Pure Science</span>
+<span class="tag">CSIR-NET / GATE</span>
+<span class="tag">ஆராய்ச்சி &amp; ஆய்வகங்கள்</span>
+</div>
+</div>
+<a class="btn-link" href="02_05_pure_applied_sciences.html" style="background: linear-gradient(135deg, #075985, #0284c7);">
           அறிவியல் படிப்புகள் முழு வழிகாட்டி காண்க
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-      <!-- 06. கணினிப் பயன்பாட்டியல் & IT (BCA / B.Sc CS) -->
-      <div class="card cat-computer-it" data-category="computer-it">
-        <div>
-          <div class="card-top-meta">
-            <span class="card-number">06 / COMPUTER & IT</span>
-            <span class="card-mode-badge">+2 Maths / CS Merit</span>
-          </div>
-          <div class="card-header">
-            <div class="icon-box">💻</div>
-            <div class="card-title-group">
-              <span class="card-title">
-                கணினிப் பயன்பாட்டியல் & IT (BCA / B.Sc)
-                <small>Computer Applications, IT & Data Science</small>
-              </span>
-            </div>
-          </div>
-          <p class="card-summary">
+          <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 06. கணினிப் பயன்பாட்டியல் & IT (BCA / B.Sc CS) -->
+<div class="card cat-computer-it" data-category="computer-it">
+<div>
+<div class="card-top-meta">
+<span class="card-number">06 / COMPUTER &amp; IT</span>
+<span class="card-mode-badge">+2 Maths / CS Merit</span>
+</div>
+<div class="card-header">
+<div class="icon-box">💻</div>
+<div class="card-title-group">
+<span class="card-title">
+                கணினிப் பயன்பாட்டியல் &amp; IT (BCA / B.Sc)
+                <small>Computer Applications, IT &amp; Data Science</small>
+</span>
+</div>
+</div>
+<p class="card-summary">
             குறைந்த செலவில் மென்பொருள் துறையில் நுழைய விரும்பும் மாணவர்களுக்கான முதன்மையான 3 ஆண்டு இளநிலைக் கணினிப் பயன்பாட்டியல் படிப்புகள்.
           </p>
-          <div class="course-details">
-            <div class="detail-section-title">முக்கியப் படிப்புகள்:</div>
-            <ul class="course-list">
-              <li><strong>கணினிப் பயன்பாட்டியல்:</strong> BCA (Bachelor of Computer Applications)</li>
-              <li><strong>கணினி அறிவியல்:</strong> B.Sc Computer Science, B.Sc Information Technology</li>
-              <li><strong>நவீன IT துறைகள்:</strong> Data Science, AI & Machine Learning, Cyber Security</li>
-            </ul>
-          </div>
-          <div class="tags">
-            <span class="tag">BCA</span>
-            <span class="tag">B.Sc Computer Science</span>
-            <span class="tag">Data Science</span>
-            <span class="tag">IT நிறுவன கேம்பஸ் தேர்வுகள்</span>
-          </div>
-        </div>
-        <a href="02_06_computer_applications_it.html" class="btn-link" style="background: linear-gradient(135deg, #581c87, #7c3aed);">
-          கணினி & IT முழு வழிகாட்டி காண்க
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-      <!-- 07. கலை & மானுடவியல் படிப்புகள் (TNGASA) -->
-      <div class="card cat-arts" data-category="arts">
-        <div>
-          <div class="card-top-meta">
-            <span class="card-number">07 / ARTS & HUMANITIES</span>
-            <span class="card-mode-badge">+2 Aggregate Marks Merit</span>
-          </div>
-          <div class="card-header">
-            <div class="icon-box">📚</div>
-            <div class="card-title-group">
-              <span class="card-title">
-                கலை & மானுடவியல் படிப்புகள்
-                <small>Arts & Humanities (TNGASA)</small>
-              </span>
-            </div>
-          </div>
-          <p class="card-summary">
-            தமிழ்நாடு அரசு கலை மற்றும் அறிவியல் கல்லூரிகள் சேர்க்கை (TNGASA) மூலம் குறைந்த அரசு கட்டணத்தில் வழங்கப்படும் கலை & சமூகவியல் படிப்புகள்.
+<div class="course-details">
+<div class="detail-section-title">முக்கியப் படிப்புகள்:</div>
+<ul class="course-list">
+<li><strong>கணினிப் பயன்பாட்டியல்:</strong> BCA (Bachelor of Computer Applications)</li>
+<li><strong>கணினி அறிவியல்:</strong> B.Sc Computer Science, B.Sc Information Technology</li>
+<li><strong>நவீன IT துறைகள்:</strong> Data Science, AI &amp; Machine Learning, Cyber Security</li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">BCA</span>
+<span class="tag">B.Sc Computer Science</span>
+<span class="tag">Data Science</span>
+<span class="tag">IT நிறுவன கேம்பஸ் தேர்வுகள்</span>
+</div>
+</div>
+<a class="btn-link" href="02_06_computer_applications_it.html" style="background: linear-gradient(135deg, #581c87, #7c3aed);">
+          கணினி &amp; IT முழு வழிகாட்டி காண்க
+          <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 07. கலை & மானுடவியல் படிப்புகள் (TNGASA) -->
+<div class="card cat-arts" data-category="arts">
+<div>
+<div class="card-top-meta">
+<span class="card-number">07 / ARTS &amp; HUMANITIES</span>
+<span class="card-mode-badge">+2 Aggregate Marks Merit</span>
+</div>
+<div class="card-header">
+<div class="icon-box">📚</div>
+<div class="card-title-group">
+<span class="card-title">
+                கலை &amp; மானுடவியல் படிப்புகள்
+                <small>Arts &amp; Humanities (TNGASA)</small>
+</span>
+</div>
+</div>
+<p class="card-summary">
+            தமிழ்நாடு அரசு கலை மற்றும் அறிவியல் கல்லூரிகள் சேர்க்கை (TNGASA) மூலம் குறைந்த அரசு கட்டணத்தில் வழங்கப்படும் கலை &amp; சமூகவியல் படிப்புகள்.
           </p>
-          <div class="course-details">
-            <div class="detail-section-title">முக்கியப் படிப்புகள் (B.A.):</div>
-            <ul class="course-list">
-              <li><strong>மொழிகள் & ஊடகம்:</strong> B.A. தமிழ், B.A. ஆங்கிலம், B.A. இதழியல் (Journalism)</li>
-              <li><strong>குடிமைப் பணிகள் அடித்தளம்:</strong> B.A. வரலாறு (History), B.A. பொருளியல் (Economics)</li>
-              <li><strong>சமூக அறிவியல்:</strong> B.A. அரசியல் அறிவியல், பொது நிர்வாகம், சமூகவியல் (Sociology)</li>
-            </ul>
-          </div>
-          <div class="tags">
-            <span class="tag">TNGASA</span>
-            <span class="tag">B.A. Arts</span>
-            <span class="tag">UPSC / TNPSC அடித்தளம்</span>
-            <span class="tag">புதுமைப் பெண் திட்டம்</span>
-          </div>
-        </div>
-        <a href="02_07_arts_humanities.html" class="btn-link" style="background: linear-gradient(135deg, #9a3412, #ea580c);">
-          கலை & மானுடவியல் முழு வழிகாட்டி காண்க
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-      <!-- 08. வணிகவியல் & மேலாண்மைப் படிப்புகள் -->
-      <div class="card cat-commerce" data-category="commerce">
-        <div>
-          <div class="card-top-meta">
-            <span class="card-number">08 / COMMERCE & MANAGEMENT</span>
-            <span class="card-mode-badge">+2 Commerce / Accountancy Merit</span>
-          </div>
-          <div class="card-header">
-            <div class="icon-box">📊</div>
-            <div class="card-title-group">
-              <span class="card-title">
-                வணிகவியல் & மேலாண்மைப் படிப்புகள்
-                <small>Commerce, Finance & Management (B.Com / BBA)</small>
-              </span>
-            </div>
-          </div>
-          <p class="card-summary">
+<div class="course-details">
+<div class="detail-section-title">முக்கியப் படிப்புகள் (B.A.):</div>
+<ul class="course-list">
+<li><strong>மொழிகள் &amp; ஊடகம்:</strong> B.A. தமிழ், B.A. ஆங்கிலம், B.A. இதழியல் (Journalism)</li>
+<li><strong>குடிமைப் பணிகள் அடித்தளம்:</strong> B.A. வரலாறு (History), B.A. பொருளியல் (Economics)</li>
+<li><strong>சமூக அறிவியல்:</strong> B.A. அரசியல் அறிவியல், பொது நிர்வாகம், சமூகவியல் (Sociology)</li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">TNGASA</span>
+<span class="tag">B.A. Arts</span>
+<span class="tag">UPSC / TNPSC அடித்தளம்</span>
+<span class="tag">புதுமைப் பெண் திட்டம்</span>
+</div>
+</div>
+<a class="btn-link" href="02_07_arts_humanities.html" style="background: linear-gradient(135deg, #9a3412, #ea580c);">
+          கலை &amp; மானுடவியல் முழு வழிகாட்டி காண்க
+          <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 08. வணிகவியல் & மேலாண்மைப் படிப்புகள் -->
+<div class="card cat-commerce" data-category="commerce">
+<div>
+<div class="card-top-meta">
+<span class="card-number">08 / COMMERCE &amp; MANAGEMENT</span>
+<span class="card-mode-badge">+2 Commerce / Accountancy Merit</span>
+</div>
+<div class="card-header">
+<div class="icon-box">📊</div>
+<div class="card-title-group">
+<span class="card-title">
+                வணிகவியல் &amp; மேலாண்மைப் படிப்புகள்
+                <small>Commerce, Finance &amp; Management (B.Com / BBA)</small>
+</span>
+</div>
+</div>
+<p class="card-summary">
             வங்கி, கார்ப்பரேட் நிதி, பங்குச்சந்தை மற்றும் பெருநிறுவன வணிக மேலாண்மை பணிகளுக்கான முதன்மையான 3 ஆண்டு இளநிலைப் படிப்புகள்.
           </p>
-          <div class="course-details">
-            <div class="detail-section-title">முக்கியப் படிப்புகள்:</div>
-            <ul class="course-list">
-              <li><strong>வணிகவியல்:</strong> B.Com General, B.Com Computer Applications (CA)</li>
-              <li><strong>கார்ப்பரேட் & நிதி:</strong> B.Com Corporate Secretaryship, Accounting & Finance</li>
-              <li><strong>மேலாண்மை:</strong> BBA (Bachelor of Business Administration), BBM, FinTech</li>
-            </ul>
-          </div>
-          <div class="tags">
-            <span class="tag">B.Com</span>
-            <span class="tag">BBA</span>
-            <span class="tag">TNGASA</span>
-            <span class="tag">வங்கி & கார்ப்பரேட் நிதி</span>
-          </div>
-        </div>
-        <a href="02_08_commerce_management.html" class="btn-link" style="background: linear-gradient(135deg, #065f46, #059669);">
-          வணிகவியல் & மேலாண்மை வழிகாட்டி காண்க
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-      <!-- 09. டிப்ளமோ, தொழிற்கல்வி & தொழில்முறைத் தணிக்கை -->
-      <div class="card cat-diploma-vocational" data-category="diploma-vocational">
-        <div>
-          <div class="card-top-meta">
-            <span class="card-number">09 / DIPLOMA & VOCATIONAL</span>
-            <span class="card-mode-badge">+2 Direct 2nd Year Lateral / Merit</span>
-          </div>
-          <div class="card-header">
-            <div class="icon-box">🛠️</div>
-            <div class="card-title-group">
-              <span class="card-title">
-                டிப்ளமோ, தொழிற்கல்வி & தொழில்முறை (CA)
-                <small>Diploma, Polytechnic, Vocational & CA Foundation</small>
-              </span>
-            </div>
-          </div>
-          <p class="card-summary">
+<div class="course-details">
+<div class="detail-section-title">முக்கியப் படிப்புகள்:</div>
+<ul class="course-list">
+<li><strong>வணிகவியல்:</strong> B.Com General, B.Com Computer Applications (CA)</li>
+<li><strong>கார்ப்பரேட் &amp; நிதி:</strong> B.Com Corporate Secretaryship, Accounting &amp; Finance</li>
+<li><strong>மேலாண்மை:</strong> BBA (Bachelor of Business Administration), BBM, FinTech</li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">B.Com</span>
+<span class="tag">BBA</span>
+<span class="tag">TNGASA</span>
+<span class="tag">வங்கி &amp; கார்ப்பரேட் நிதி</span>
+</div>
+</div>
+<a class="btn-link" href="02_08_commerce_management.html" style="background: linear-gradient(135deg, #065f46, #059669);">
+          வணிகவியல் &amp; மேலாண்மை வழிகாட்டி காண்க
+          <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 09. டிப்ளமோ, தொழிற்கல்வி & தொழில்முறைத் தணிக்கை -->
+<div class="card cat-diploma-vocational" data-category="diploma-vocational">
+<div>
+<div class="card-top-meta">
+<span class="card-number">09 / DIPLOMA &amp; VOCATIONAL</span>
+<span class="card-mode-badge">+2 Direct 2nd Year Lateral / Merit</span>
+</div>
+<div class="card-header">
+<div class="icon-box">🛠️</div>
+<div class="card-title-group">
+<span class="card-title">
+                டிப்ளமோ, தொழிற்கல்வி &amp; தொழில்முறை (CA)
+                <small>Diploma, Polytechnic, Vocational &amp; CA Foundation</small>
+</span>
+</div>
+</div>
+<p class="card-summary">
             +2 முடித்தவுடன் உடனடி வேலைவாய்ப்பு வழங்கும் தொழில்நுட்ப பாலிடெக்னிக் டிப்ளமோ, மத்திய அரசு ITI மற்றும் பட்டயக் கணக்காளர் அறக்கட்டளைத் தேர்வுகள்.
           </p>
-          <div class="course-details">
-            <div class="detail-section-title">முக்கியப் படிப்புகள்:</div>
-            <ul class="course-list">
-              <li><strong>நேரடி 2-ஆம் ஆண்டு பாலிடெக்னிக்:</strong> Mechanical, Electrical, Civil, Auto, Computer (DOTE)</li>
-              <li><strong>தொழில்முறைத் தணிக்கை:</strong> CA Foundation (ICAI), CMA Foundation, CS / CSEET</li>
-              <li><strong>மத்திய அரசு தொழிற்பயிற்சி:</strong> ITI தொழிற்பயிற்சிகள் & நேரடி தொழிற்சாலை அப்ரண்டிஸ்</li>
-            </ul>
-          </div>
-          <div class="tags">
-            <span class="tag">DOTE Lateral Entry</span>
-            <span class="tag">Polytechnic</span>
-            <span class="tag">CA / CMA / CS</span>
-            <span class="tag">உடனடி வேலைவாய்ப்பு</span>
-          </div>
-        </div>
-        <a href="02_09_polytechnic_iti.html" class="btn-link" style="background: linear-gradient(135deg, #1e293b, #475569);">
-          டிப்ளமோ & தொழிற்கல்வி வழிகாட்டி காண்க
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-    </div>
-  
-    <!-- Thirukkural Motivational Box -->
-    <!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
+<div class="course-details">
+<div class="detail-section-title">முக்கியப் படிப்புகள்:</div>
+<ul class="course-list">
+<li><strong>நேரடி 2-ஆம் ஆண்டு பாலிடெக்னிக்:</strong> Mechanical, Electrical, Civil, Auto, Computer (DOTE)</li>
+<li><strong>தொழில்முறைத் தணிக்கை:</strong> CA Foundation (ICAI), CMA Foundation, CS / CSEET</li>
+<li><strong>மத்திய அரசு தொழிற்பயிற்சி:</strong> ITI தொழிற்பயிற்சிகள் &amp; நேரடி தொழிற்சாலை அப்ரண்டிஸ்</li>
+</ul>
+</div>
+<div class="tags">
+<span class="tag">DOTE Lateral Entry</span>
+<span class="tag">Polytechnic</span>
+<span class="tag">CA / CMA / CS</span>
+<span class="tag">உடனடி வேலைவாய்ப்பு</span>
+</div>
+</div>
+<a class="btn-link" href="02_09_polytechnic_iti.html" style="background: linear-gradient(135deg, #1e293b, #475569);">
+          டிப்ளமோ &amp; தொழிற்கல்வி வழிகாட்டி காண்க
+          <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+<!-- Thirukkural Motivational Box -->
+<!-- Official Footer Credit -->
 <div class="kural-box">
-  <div class="kural-header">
-    <span class="kural-icon">📜</span>
-    <span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-    <span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
-  </div>
-  <div class="kural-verse-text">
+<div class="kural-header">
+<span class="kural-icon">📜</span>
+<span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
+<span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
+</div>
+<div class="kural-verse-text">
     “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
     திண்ணியர் ஆகப் பெறின்.”
   </div>
-  <div class="kural-meaning">
-    <strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
+<div class="kural-meaning">
+<strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
   </div>
+</div><div class="creator-card">
+<div class="creator-typewriter-wrapper">
+<span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
 </div>
-      <div class="kural-text">
-        “எப்பொருள் யார்யார்வாய்க் கேட்பினும் அப்பொருள்<br>
-        மெய்ப்பொருள் காண்ப தறிவு.”
-      </div>
-      <div class="kural-meaning">
-        <strong>பொருள்:</strong> எந்தவொரு பொருளை யார் சொல்லக் கேட்டாலும், அச் சொல்லின் உண்மையான மெய்ப்பொருளை ஆராய்ந்து அறிவதே அறிவாகும்.
-      </div>
-    </div>
-  
-    <!-- Official Footer Credit -->
-    
-
-  </div>
-
-
-
-<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
-<div class="creator-card">
-  <div class="creator-typewriter-wrapper">
-    <span id="creatorTypewriterTarget" class="creator-typewriter-target"></span><span id="creatorCursor" class="creator-cursor">|</span>
-  </div>
-  <a href="tel:9626471035" class="footer-phone-pill" id="footerPhonePill" title="அழைக்க">
-    <span class="phone-icon">📱</span>
-    <span class="phone-text">9626471035</span>
-  </a>
-</div>
-<!-- Footer -->
-<footer class="portal-footer">
-  <p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
+<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
+<span class="phone-icon">📱</span>
+<span class="phone-text">9626471035</span>
+</a>
+</div><footer class="portal-footer">
+<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
     தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
-  </p>
-  <p style="font-size: 0.85rem; color: #64748b;">
+</p>
+<p style="font-size: 0.85rem; color: #64748b;">
     © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
-</footer>
-  
-  </div>
-  
-  <!-- Interactive Search & Category Filter Script -->
-  <script>
+</footer></div>
+</main></div>
+<!-- Interactive Search & Category Filter Script -->
+<script>
     const searchInput = document.getElementById('searchInput');
     const filterPills = document.querySelectorAll('.filter-pill');
     const cards = document.querySelectorAll('.card');
@@ -3920,10 +3860,14 @@
     // Search input typing event
     searchInput.addEventListener('input', filterCards);
   </script>
+<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
 
+<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
 
-  </main>
-</div>
+<!-- Footer -->
+
+ <!-- /.container -->
+
 
 <script>
 function toggleSidebarMenu() {
@@ -4010,13 +3954,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
-
-
-
-
-
-
 <script>
 // Standardized Creator Typewriter Animation (Guaranteed Execution & Colors)
 (function() {

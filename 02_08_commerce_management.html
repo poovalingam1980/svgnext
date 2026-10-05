@@ -1,16 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="ta">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>வணிகவியல் & மேலாண்மை சேர்க்கை வழிகாட்டி (B.Com, BBA & CA) | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
-  
-  <!-- Google Fonts: Inter & Noto Sans Tamil -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>வணிகவியல் &amp; மேலாண்மை சேர்க்கை வழிகாட்டி (B.Com, BBA &amp; CA) | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
+<!-- Google Fonts: Inter & Noto Sans Tamil -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --primary: #0f766e;          /* Commerce Deep Teal */
       --primary-dark: #134e4a;     /* Dark Teal Pine */
@@ -3428,858 +3427,757 @@
 </head>
 <body>
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
-
-<button id="mobileMenuFloatingBtn" class="mobile-menu-floating-btn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
-  <span style="font-size: 1.15rem; line-height: 1;">☰</span>
-  <span>மெனு</span>
+<button class="mobile-menu-floating-btn" id="mobileMenuFloatingBtn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
+<span style="font-size: 1.15rem; line-height: 1;">☰</span>
+<span>மெனு</span>
 </button>
-
 <div class="portal-layout-wrapper">
-
-  <!-- Desktop Permanent Left Menu Frame with Collapsible Accordion -->
-  <aside class="desktop-left-sidebar" id="desktopLeftSidebar">
-    <div class="sidebar-header">
-      <a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
-        <span class="sidebar-emblem">🏛️</span>
-        <div class="sidebar-title-wrap">
-          <span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
-          <span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
-        </div>
-      </a>
-      <button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
-    </div>
-
-    <nav class="sidebar-nav-body">
-      <!-- 00. முதன்மை முகப்பு (Home) -->
-      <a class="sidebar-main-btn" href="index.html">
-        <span class="icon">🏠</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">முதன்மை முகப்பு</span>
-          <span class="menu-en">HOME</span>
-        </span>
-      </a>
-
-      <!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
-      <a class="sidebar-main-btn" href="00_entrance_exams.html">
-        <span class="icon">🎯</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
-          <span class="menu-en">ENTRANCE EXAMS</span>
-        </span>
-      </a>
-
-      <!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
-      <a class="sidebar-main-btn" href="02_00_direct_admissions.html">
-        <span class="icon">📈</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">நேரடிச் சேர்க்கை</span>
-          <span class="menu-en">DIRECT ADMISSIONS</span>
-        </span>
-      </a>
-
-      <!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
-      <a class="sidebar-main-btn" href="institutes_directory.html">
-        <span class="icon">🏛️</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">கல்லூரிகள் அடைவு</span>
-          <span class="menu-en">INSTITUTES DIRECTORY</span>
-        </span>
-      </a>
-
-      <!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
-      <a class="sidebar-main-btn" href="04_govt_exams.html">
-        <span class="icon">🏆</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">அரசுத் தேர்வுகள்</span>
-          <span class="menu-en">GOVT COMPETITIVE EXAMS</span>
-        </span>
-      </a>
-
-      <!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
-      <a class="sidebar-main-btn" href="direct_careers.html">
-        <span class="icon">💼</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
-          <span class="menu-en">SKILLS &amp; CAREERS</span>
-        </span>
-      </a>
-
-      <!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
-      <a class="sidebar-main-btn" href="helpdesk_portal.html">
-        <span class="icon">☎️</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
-          <span class="menu-en">HELPDESK &amp; SUPPORT</span>
-        </span>
-      </a>
-    </nav>
-  </aside>
-
-  <!-- Main Portal Content Column -->
-  <main class="portal-main-content">
-
-
-
-
+<!-- Desktop Permanent Left Menu Frame with Collapsible Accordion -->
+<aside class="desktop-left-sidebar" id="desktopLeftSidebar">
+<div class="sidebar-header">
+<a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
+<span class="sidebar-emblem">🏛️</span>
+<div class="sidebar-title-wrap">
+<span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
+<span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
+</div>
+</a>
+<button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
+</div>
+<nav class="sidebar-nav-body">
+<!-- 00. முதன்மை முகப்பு (Home) -->
+<a class="sidebar-main-btn" href="index.html">
+<span class="icon">🏠</span>
+<span class="btn-text-group">
+<span class="menu-ta">முதன்மை முகப்பு</span>
+<span class="menu-en">HOME</span>
+</span>
+</a>
+<!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
+<a class="sidebar-main-btn" href="00_entrance_exams.html">
+<span class="icon">🎯</span>
+<span class="btn-text-group">
+<span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
+<span class="menu-en">ENTRANCE EXAMS</span>
+</span>
+</a>
+<!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
+<a class="sidebar-main-btn" href="02_00_direct_admissions.html">
+<span class="icon">📈</span>
+<span class="btn-text-group">
+<span class="menu-ta">நேரடிச் சேர்க்கை</span>
+<span class="menu-en">DIRECT ADMISSIONS</span>
+</span>
+</a>
+<!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
+<a class="sidebar-main-btn" href="institutes_directory.html">
+<span class="icon">🏛️</span>
+<span class="btn-text-group">
+<span class="menu-ta">கல்லூரிகள் அடைவு</span>
+<span class="menu-en">INSTITUTES DIRECTORY</span>
+</span>
+</a>
+<!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
+<a class="sidebar-main-btn" href="04_govt_exams.html">
+<span class="icon">🏆</span>
+<span class="btn-text-group">
+<span class="menu-ta">அரசுத் தேர்வுகள்</span>
+<span class="menu-en">GOVT COMPETITIVE EXAMS</span>
+</span>
+</a>
+<!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
+<a class="sidebar-main-btn" href="direct_careers.html">
+<span class="icon">💼</span>
+<span class="btn-text-group">
+<span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
+<span class="menu-en">SKILLS &amp; CAREERS</span>
+</span>
+</a>
+<!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
+<a class="sidebar-main-btn" href="helpdesk_portal.html">
+<span class="icon">☎️</span>
+<span class="btn-text-group">
+<span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
+<span class="menu-en">HELPDESK &amp; SUPPORT</span>
+</span>
+</a>
+</nav>
+</aside>
+<!-- Main Portal Content Column -->
+<main class="portal-main-content">
 <div class="portal-container">
-
-  <!-- Top Bar -->
-  <!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
+<!-- Top Bar -->
+<!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
 <!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
 <header class="portal-top-frame no-print">
-  <div class="top-frame-branding">
-    <div class="top-frame-badge">
-      <span class="govt-emblem">🏛️</span>
-      <span class="dept-text">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</span>
-    </div>
-    <div class="portal-main-heading">
-      <span class="portal-title-text">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
-      <span class="portal-subtitle-en">CAREER GUIDANCE PORTAL</span>
-    </div>
-  </div>
-
-  <div class="top-frame-actions">
-    <!-- Official ceosvg.in Main District Portal Link -->
-    <a href="https://www.ceosvg.in" target="_blank" rel="noopener" class="top-frame-btn btn-ceosvg" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
-      <span class="btn-icon">🌐</span>
-      <span>ceosvg.in முதன்மை தளம்</span>
-    </a>
-    <!-- Career Guidance Home Link -->
-    <a href="index.html" class="top-frame-btn btn-home" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
-      <span class="btn-icon">🎓</span>
-      <span>உயர்கல்வி முகப்பு</span>
-    </a>
-  </div>
+<div class="top-frame-branding">
+<div class="top-frame-badge">
+<span class="govt-emblem">🏛️</span>
+<span class="dept-text">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</span>
+</div>
+<div class="portal-main-heading">
+<span class="portal-title-text">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
+<span class="portal-subtitle-en">CAREER GUIDANCE PORTAL</span>
+</div>
+</div>
+<div class="top-frame-actions">
+<!-- Official ceosvg.in Main District Portal Link -->
+<a class="top-frame-btn btn-ceosvg" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
+<span class="btn-icon">🌐</span>
+<span>ceosvg.in முதன்மை தளம்</span>
+</a>
+<!-- Career Guidance Home Link -->
+<a class="top-frame-btn btn-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+<span class="btn-icon">🎓</span>
+<span>உயர்கல்வி முகப்பு</span>
+</a>
+</div>
 </header>
-
-
-
-
 <div class="district-badge">
       🏛️ முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்
     </div>
-  </div>
-
-  <!-- Header -->
-  <header class="portal-header">
-    <div class="header-badge-row">
-      <span class="header-tag primary">பிரிவு 8 (Section 08)</span>
-      <span class="header-tag secondary">TNGASA & சுயநிதி சேர்க்கை</span>
-      <span class="header-tag secondary">B.Com, BBA & CA வழிகாட்டி</span>
-    </div>
-    <h1 class="portal-title">வணிகவியல், நிதி & மேலாண்மை சேர்க்கை வழிகாட்டி <span class="accent-gold">(Commerce & Management)</span></h1>
-    <p class="portal-subtitle">சிவகங்கை மாவட்ட மற்றும் தமிழக அரசு, அரசு உதவிபெறும் கலை & அறிவியல் கல்லூரிகளில் வணிகவியல் (B.Com), மேலாண்மை (BBA), தொழில்முறை ஆடிட்டிங் (CA/CMA/CS), கூட்டுறவுத் துறை மற்றும் வங்கிப் பணிகளுக்கான விரிவான கையேடு.</p>
-    
-    <div class="quick-nav-pills">
-      <a href="#calculator" class="quick-nav-pill">🧮 கட்-ஆஃப் கால்குலேட்டர்</a>
-      <a href="#courses" class="quick-nav-pill">📊 16 வணிகப் படிப்புகள்</a>
-      <a href="#professional" class="quick-nav-pill">🏛️ CA / CMA / CS ஆடிட்டிங்</a>
-      <a href="#banking" class="quick-nav-pill">🏦 வங்கி & அரசுப் பணிகள்</a>
-      <a href="#cooperation" class="quick-nav-pill">🤝 கூட்டுறவுத் துறை பணிகள்</a>
-      <a href="#colleges" class="quick-nav-pill">🏫 கல்லூரிகள் பட்டியல்</a>
-      <a href="#four-sections" class="quick-nav-pill">🔄 4 பிரிவுகள் ஒப்பீடு</a>
-    </div>
-  </header>
-
-  <!-- Unified 4-Section Deduplication Guarantee Banner -->
-  <section class="unified-boundary-card" id="four-sections">
-    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-      <span style="font-size: 1.5rem;">⚖️</span>
-      <h3 style="font-size: 1.25rem; font-weight: 800; color: #134e4a;">பாடப்பிரிவுகள் வகைப்பாடு & இரட்டிப்புத் தவிர்ப்பு உத்தரவாதம் (Zero Course Overlap)</h3>
-    </div>
-    <p style="font-size: 0.92rem; color: #334155; line-height: 1.6;">
-      கலைக் கல்லூரிகள், கலை மற்றும் அறிவியல் கல்லூரிகள், தமிழ்க் கல்லூரிகளில் பயிற்றுவிக்கப்படும் அனைத்துப் பட்டப் படிப்புகளும் மாணவர்களின் வசதிக்காக **4 தனித்துவமான பிரிவுகளாகப் பிரிக்கப்பட்டுள்ளன**. ஒரு படிப்பு ஒன்றிற்கு மேற்பட்ட பக்கங்களில் இரட்டிப்பாக இடம்பெறாதவாறு மிகத் துல்லியமாக வகைப்படுத்தப்பட்டுள்ளது:
-    </p>
-
-    <div class="boundary-grid">
-      <div class="boundary-item">
-        <span class="boundary-tag" style="background: #e0f2fe; color: #0369a1;">பிரிவு 05</span>
-        <h4 style="color: #0369a1;">🔬 தூய & பயன்பாட்டு அறிவியல்</h4>
-        <p>கணிதம், இயற்பியல், வேதியியல், தாவரவியல், விலங்கியல், புள்ளியியல், பயோடெக்னாலஜி, நிலவியல் (Geology) உள்ளிட்ட <strong>B.Sc. அறிவியல் படிப்புகள்</strong> மட்டுமே.</p>
-      </div>
-
-      <div class="boundary-item">
-        <span class="boundary-tag" style="background: #f5f3ff; color: #6d28d9;">பிரிவு 06</span>
-        <h4 style="color: #6d28d9;">💻 கணினி & தகவல் தொழினுட்பம்</h4>
-        <p>BCA, B.Sc. Computer Science, B.Sc. IT, Data Science, AI & ML, Cyber Security, Cloud Computing உள்ளிட்ட <strong>கணினி மற்றும் மென்பொருள் படிப்புகள்</strong> மட்டுமே.</p>
-      </div>
-
-      <div class="boundary-item">
-        <span class="boundary-tag" style="background: #fff7ed; color: #c2410c;">பிரிவு 07</span>
-        <h4 style="color: #c2410c;">📜 கலை, மானுடவியல் & தமிழ்க் கல்லூரிகள்</h4>
-        <p>B.A. தமிழ், B.Lit. தமிழ் (தமிழ்க் கல்லூரிகள்), ஆங்கிலம், வரலாறு, பொருளியல், அரசியல் அறிவியல், சமூகவியல், BSW உள்ளிட்ட <strong>கலை மற்றும் சமூக அறிவியல் படிப்புகள்</strong> மட்டுமே.</p>
-      </div>
-
-      <div class="boundary-item active">
-        <span class="boundary-tag" style="background: #ccfbf1; color: #0f766e;">பிரிவு 08 (தற்போதைய பக்கம்)</span>
-        <h4 style="color: #0f766e;">📊 வணிகவியல், நிதி & மேலாண்மை</h4>
-        <p>B.Com General, B.Com PA, B.Com CS, B.Com CA, B.Com Co-operation, B.Com FinTech, BBA மற்றும் CA / CMA / CS உள்ளிட்ட <strong>வணிக & கார்ப்பரேட் படிப்புகள்</strong> மட்டுமே.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 1. Cut-off Calculator -->
-  <section class="calc-card" id="calculator">
-    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
-      <span style="font-size: 2rem;">🧮</span>
-      <div>
-        <h2 style="font-size: 1.45rem; font-weight: 800; color: #ffffff;">வணிகவியல் கட்-ஆஃப் கால்குலேட்டர் (Commerce Cut-off Calculator)</h2>
-        <p style="font-size: 0.9rem; color: #ccfbf1;">4 முதன்மைப் பாடங்களின் (Commerce, Accountancy, Economics, Business Maths/Comp.Apps) மதிப்பெண்களை உள்ளிடவும் (மொத்தம் 400-க்கு):</p>
-      </div>
-    </div>
-
-    <div class="calc-grid">
-      <div class="calc-field">
-        <label for="sub1">1. வணிகவியல் (Commerce):</label>
-        <input type="number" id="sub1" class="calc-input" placeholder="0 - 100" min="0" max="100" value="85">
-      </div>
-      <div class="calc-field">
-        <label for="sub2">2. கணக்குப்பதிவியல் (Accountancy):</label>
-        <input type="number" id="sub2" class="calc-input" placeholder="0 - 100" min="0" max="100" value="90">
-      </div>
-      <div class="calc-field">
-        <label for="sub3">3. பொருளியல் (Economics):</label>
-        <input type="number" id="sub3" class="calc-input" placeholder="0 - 100" min="0" max="100" value="82">
-      </div>
-      <div class="calc-field">
-        <label for="sub4">4. வணிகக் கணிதம் / Computer Apps:</label>
-        <input type="number" id="sub4" class="calc-input" placeholder="0 - 100" min="0" max="100" value="88">
-      </div>
-    </div>
-
-    <div class="calc-result-box">
-      <div style="font-size: 0.95rem; color: #ccfbf1; font-weight: 600;">உங்கள் வணிகவியல் கட்-ஆஃப் மதிப்பெண் (400-க்கு):</div>
-      <div class="calc-score-display" id="totalScore">345.00</div>
-      <div class="calc-tier-text" id="tierFeedback">🎉 சிறந்த மதிப்பெண்! அரசு மற்றும் முன்னணி அரசு உதவிபெறும் கல்லூரிகளில் B.Com சேர்க்கைக்கு பிரகாசமான வாய்ப்புள்ளது.</div>
-    </div>
-  </section>
-
-  <!-- 2. Commerce & Management Courses -->
-  <section class="content-section" id="courses">
-    <div class="section-header">
-      <h2 class="section-title">📊 1. B.Com & மேலாண்மைப் படிப்புகளின் விரிவான பட்டியல் (16 சிறப்புக் களங்கள்)</h2>
-      <span class="section-badge">16 தனித்துவப் படிப்புகள்</span>
-    </div>
-
-    <div class="notice-box notice-teal">
-      <span style="font-size: 1.5rem;">💡</span>
-      <div>
-        <strong>படிப்புகளின் கட்டமைப்பு & தொழிற்துறைத் தேவை:</strong> கலை மற்றும் அறிவியல் கல்லூரிகளில் வணிகவியல் (B.Com) மற்றும் மேலாண்மை (BBA) படிப்புகள் மாணவர்களுக்குப் பெருநிறுவனங்கள், வங்கிகள், நிதி நிறுவனங்கள் மற்றும் சொந்தத் தொழில் தொடங்குவதற்கான வலுவான நிர்வாகத் திறனை வழங்குகின்றன.
-      </div>
-    </div>
-
-    <!-- Core Commerce Group -->
-    <h3 style="font-size: 1.25rem; font-weight: 800; color: #134e4a; margin: 24px 0 16px; border-left: 4px solid var(--primary); padding-left: 10px;">
-      அ. முதன்மை வணிகவியல் படிப்புகள் (Core Commerce Degrees)
-    </h3>
-
-    <div class="courses-grid">
-      <!-- 1. B.Com General -->
-      <div class="course-card">
-        <span class="course-badge">அடித்தளப் படிப்பு</span>
-        <h3 class="course-title">1. B.Com General (பொது வணிகவியல்)</h3>
-        <p class="course-desc">வணிகக் கோட்பாடுகள், கணக்கியல் (Financial & Corporate Accounting), தணிக்கை, நிதி மேலாண்மை, வர்த்தகச் சட்டங்கள் மற்றும் வங்கி நடைமுறைகளின் ஆணிவேர் படிப்பு. அனைத்துத் துறைகளுக்கும் பொதுவான விரிவான வாய்ப்புகள்.</p>
-        <div class="course-meta-box">
-          <div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 வணிகவியல் & கணக்குப்பதிவியல்</span></div>
-          <div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">கணக்காளர், தணிக்கை உதவியாளர், வங்கி அலுவலர்</span></div>
-          <div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">M.Com, MBA, CA, CMA, CS, CFA</span></div>
-        </div>
-      </div>
-
-      <!-- 2. B.Com Professional Accounting (B.Com PA) -->
-      <div class="course-card">
-        <span class="course-badge" style="background: #fef08a; color: #713f12;">CA / CMA பிரத்யேகம்</span>
-        <h3 class="course-title">2. B.Com Professional Accounting (B.Com PA)</h3>
-        <p class="course-desc">ICAI-யின் பட்டயக் கணக்காளர் (CA) மற்றும் ICMAI-யின் அடக்கவிலைக் கணக்காளர் (CMA) பாடத்திட்டத்துடன் முழுமையாகப் பொருந்திப்போகும் வகையில் வடிவமைக்கப்பட்ட சிறப்புப் படிப்பு. ஆடிட்டிங் பயிற்சிக்கு அதிக முக்கியத்துவம் உண்டு.</p>
-        <div class="course-meta-box">
-          <div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Commerce with Accountancy (High Cut-off)</span></div>
-          <div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Audit Associate, Tax Consultant, Financial Analyst</span></div>
-          <div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">CA Inter / Final, CMA, ACCA Global</span></div>
-        </div>
-      </div>
-
-      <!-- 3. B.Com Corporate Secretaryship (B.Com CS) -->
-      <div class="course-card">
-        <span class="course-badge">நிறுவனச் சட்டங்கள்</span>
-        <h3 class="course-title">3. B.Com Corporate Secretaryship (B.Com CS)</h3>
-        <p class="course-desc">கார்ப்பரேட் நிறுவனச் சட்டங்கள் (Company Law 2013), இயக்குநர் குழு கூட்ட மேலாண்மை, பங்கு பரிவர்த்தனை விதிகள் (SEBI Guidelines), மற்றும் கார்ப்பரேட் ஆளுமை (Corporate Governance) சார்ந்த சிறப்புப் படிப்பு.</p>
-        <div class="course-meta-box">
-          <div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 வணிகவியல் பிரிவு</span></div>
-          <div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Assistant Company Secretary, Compliance Officer</span></div>
-          <div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">ACS (Company Secretary - ICSI), M.Com CS, MBA</span></div>
-        </div>
-      </div>
-
-      <!-- 4. B.Com Accounting & Finance (B.Com A&F) -->
-      <div class="course-card">
-        <span class="course-badge">நிதி & முதலீடு</span>
-        <h3 class="course-title">4. B.Com Accounting & Finance (A&F)</h3>
-        <p class="course-desc">கார்ப்பரேட் நிதி, முதலீட்டு வங்கி (Investment Banking), மூலதனச் சந்தை, பங்கு முதலீடு பகுப்பாய்வு மற்றும் போர்ட்ஃபோலியோ மேலாண்மை ஆகியவற்றில் ஆழமான பயிற்சியளிக்கும் உயர்தரப் படிப்பு.</p>
-        <div class="course-meta-box">
-          <div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 வணிகவியல் / வணிகக் கணிதம்</span></div>
-          <div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Equity Analyst, Investment Banker, Wealth Manager</span></div>
-          <div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">CFA (Chartered Financial Analyst), MBA Finance</span></div>
-        </div>
-      </div>
-
-      <!-- 5. B.Com Banking & Insurance -->
-      <div class="course-card">
-        <span class="course-badge">வங்கி & காப்பீடு</span>
-        <h3 class="course-title">5. B.Com Banking & Insurance</h3>
-        <p class="course-desc">வணிக வங்கிகளின் கடன் மேலாண்மை, வெளிநாட்டுச் செலாவணி (Forex), ஆயுள் மற்றும் பொதுக் காப்பீட்டுக் கொள்கைகள் (Life & Non-Life Insurance), இடர் மதிப்பீடு மற்றும் ஆக்சுவரியல் அறிவியல் அடிப்படைகள்.</p>
-        <div class="course-meta-box">
-          <div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 வணிகவியல் அல்லது பொருளியல்</span></div>
-          <div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Credit Officer, Insurance Underwriter, Risk Analyst</span></div>
-          <div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">M.Com Banking, MBA, Licentiate/Fellow (III)</span></div>
-        </div>
-      </div>
-
-      <!-- 6. B.Com Co-operation (கூட்டுறவு மேலாண்மை) -->
-      <div class="course-card" style="border-left-color: #d97706;">
-        <span class="course-badge" style="background: #fef3c7; color: #92400e;">அரசுப் பணி முன்னுரிமை</span>
-        <h3 class="course-title">6. B.Com Co-operation (கூட்டுறவு மேலாண்மை)</h3>
-        <p class="course-desc">தமிழ்நாடு கூட்டுறவுச் சங்கங்கள் சட்டம் 1983, கூட்டுறவுத் தணிக்கை, கிராமப்புற கடன் மேலாண்மை மற்றும் வேளாண் சந்தைப்படுத்தல். கூட்டுறவு சார்பதிவாளர் (CSR) மற்றும் மாவட்ட மத்திய கூட்டுறவு வங்கிப் பணிகளுக்கு நேரடி முன்னுரிமை!</p>
-        <div class="course-meta-box">
-          <div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 வணிகவியல் / அனைத்துப் பிரிவுகள்</span></div>
-          <div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">கூட்டுறவு சார்பதிவாளர், PACCS செயலாளர், கூட்டுறவு வங்கி உதவியாளர்</span></div>
-          <div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">M.Com Co-operation, HDCM டிப்ளமோ, MBA</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tech & Specialized Commerce -->
-    <h3 style="font-size: 1.25rem; font-weight: 800; color: #134e4a; margin: 32px 0 16px; border-left: 4px solid var(--primary); padding-left: 10px;">
-      ஆ. நவீன தொழினுட்ப & சிறப்பு வணிகவியல் (Tech & Specialized Commerce)
-    </h3>
-
-    <div class="courses-grid">
-      <!-- 7. B.Com Computer Applications (B.Com CA) -->
-      <div class="course-card">
-        <span class="course-badge" style="background: #f5f3ff; color: #6d28d9;">வணிகம் + கணினி</span>
-        <h3 class="course-title">7. B.Com Computer Applications (B.Com CA)</h3>
-        <p class="course-desc">முழுமையான வணிகவியல் பாடங்களுடன் TallyPrime, GST Billing மென்பொருள், மின்-வணிகம் (E-Commerce), SQL டேட்டாபேஸ் மற்றும் MS-Excel பயன்பாடுகள் இணைந்த முன்னணிப் படிப்பு. (கணினி துறை மாணவர்கள் பிரிவு 6-ஐ அணுகலாம்).</p>
-        <div class="course-meta-box">
-          <div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Commerce with Computer Apps / Maths</span></div>
-          <div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Tally Expert, Computerized Accountant, MIS Exec</span></div>
-          <div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">MCA, M.Com CA, MBA Systems, Data Analytics</span></div>
-        </div>
-      </div>
-
-      <!-- 8. B.Com Financial Technology (FinTech) -->
-      <div class="course-card">
-        <span class="course-badge">டிஜிட்டல் நிதிப் புரட்சி</span>
-        <h3 class="course-title">8. B.Com Financial Technology (FinTech)</h3>
-        <p class="course-desc">டிஜிட்டல் கட்டணக் கட்டமைப்பு (UPI/Payment Gateways), பிளாக்செயின் நிதி ஆவணங்கள், அல்காரிதமிக் டிரேடிங், ரோபோ-அட்வைசரி மற்றும் நியோ-பேங்கிங் (Neo-banking) தளங்களை இயக்கும் நவீன தொழினுட்பப் படிப்பு.</p>
-        <div class="course-meta-box">
-          <div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Commerce with Business Maths / Comp.Sci</span></div>
-          <div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">FinTech Product Specialist, Blockchain Analyst</span></div>
-          <div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">M.Sc FinTech, MBA Financial Technology</span></div>
-        </div>
-      </div>
-
-      <!-- 9. B.Com Business Analytics / Financial Analytics -->
-      <div class="course-card">
-        <span class="course-badge">வணிகத் தரவுப் பகுப்பாய்வு</span>
-        <h3 class="course-title">9. B.Com Business Analytics</h3>
-        <p class="course-desc">வணிக முடிவெடுத்தலுக்கான தரவுப் பகுப்பாய்வு, Power BI, Advanced Tableau, நிதி மாதிரியாக்கம் (Financial Modeling) மற்றும் கார்ப்பரேட் விற்பனை முன்கணிப்பு (Forecasting) நுட்பங்கள்.</p>
-        <div class="course-meta-box">
-          <div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Commerce with Maths / Statistics</span></div>
-          <div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Business Analyst, Financial Modeler, BI Associate</span></div>
-          <div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">MBA Business Analytics, M.Sc Data Science</span></div>
-        </div>
-      </div>
-
-      <!-- 10. B.Com International Business (B.Com IB) -->
-      <div class="course-card">
-        <span class="course-badge">ஏற்றுமதி & இறக்குமதி</span>
-        <h3 class="course-title">10. B.Com International Business (B.Com IB)</h3>
-        <p class="course-desc">வெளிநாட்டு வர்த்தகக் கொள்கைகள் (EXIM Policy), சுங்கச் சட்டம் & ஆவணங்கள் (Customs Clearance), லெட்டர் ஆஃப் கிரெடிட் (LC), பன்னாட்டு நாணய மாற்று மற்றும் கடல்வழி சரக்கு போக்குவரத்து மேலாண்மை.</p>
-        <div class="course-meta-box">
-          <div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Commerce / Any group</span></div>
-          <div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Export-Import Manager, Customs Agent, Freight Coordinator</span></div>
-          <div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">MBA International Business (IIFT), M.Com IB</span></div>
-        </div>
-      </div>
-
-      <!-- 11. B.Com Taxation (வரி விதிப்பு & சட்ட நடைமுறைகள்) -->
-      <div class="course-card">
-        <span class="course-badge">GST & வருமான வரி</span>
-        <h3 class="course-title">11. B.Com Taxation (Tax Procedure & Practice)</h3>
-        <p class="course-desc">நேரடி வரிகள் (Income Tax) மற்றும் மறைமுக வரிகள் (GST) தாக்கல், கார்ப்பரேட் வரி திட்டமிடல், வரி மேல்முறையீட்டு நடைமுறைகள் மற்றும் சட்டரீதியான தணிக்கை வழிகாட்டல் படிப்பு.</p>
-        <div class="course-meta-box">
-          <div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Commerce with Accountancy</span></div>
-          <div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">GST Practitioner, Tax Auditor, Corporate Tax Analyst</span></div>
-          <div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">LL.B (Tax Law), M.Com Taxation, CA / CMA</span></div>
-        </div>
-      </div>
-
-      <!-- 12. B.Com Information Systems Management (B.Com ISM) -->
-      <div class="course-card">
-        <span class="course-badge">MIS & ERP மேலாண்மை</span>
-        <h3 class="course-title">12. B.Com Information Systems Management (ISM)</h3>
-        <p class="course-desc">வணிக மேலாண்மைத் தகவல் அமைப்புகள் (MIS), கார்ப்பரேட் நிறுவனங்களுக்கான ERP மென்பொருட்கள் (SAP, Oracle Financials), வணிக இணையதள மேலாண்மை மற்றும் தகவல் கட்டமைப்பு ஒருங்கிணைப்பு.</p>
-        <div class="course-meta-box">
-          <div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Commerce with Maths / Computer Apps</span></div>
-          <div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">ERP Consultant, Systems Accountant, IT Auditor</span></div>
-          <div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">MBA Systems, MCA, MS in Information Systems</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Management Studies (BBA) -->
-    <h3 style="font-size: 1.25rem; font-weight: 800; color: #134e4a; margin: 32px 0 16px; border-left: 4px solid var(--primary); padding-left: 10px;">
-      இ. மேலாண்மைப் படிப்புகள் (Management Studies - BBA)
-    </h3>
-
-    <div class="courses-grid">
-      <!-- 13. BBA General -->
-      <div class="course-card">
-        <span class="course-badge">கார்ப்பரேட் மேலாண்மை</span>
-        <h3 class="course-title">13. BBA (Bachelor of Business Administration)</h3>
-        <p class="course-desc">நிறுவன மேலாண்மை, மனிதவள மேம்பாடு (HRM), சந்தைப்படுத்துதல் (Marketing), நிதி பகுப்பாய்வு மற்றும் தொழில் முனைவோர் (Entrepreneurship) பண்புகளை வளர்க்கும் முன்னணி நிர்வாகப் படிப்பு.</p>
-        <div class="course-meta-box">
-          <div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Any Stream (அனைத்துப் பிரிவினருக்கும் பொதுவானது)</span></div>
-          <div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Management Trainee, HR Executive, Marketing Officer</span></div>
-          <div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">MBA (IIMs via CAT / TANCET), PGDM</span></div>
-        </div>
-      </div>
-
-      <!-- 14. BBA Logistics & Supply Chain Management -->
-      <div class="course-card">
-        <span class="course-badge" style="background: #e0f2fe; color: #0369a1;">தளவாட & சரக்குப் போக்குவரத்து</span>
-        <h3 class="course-title">14. BBA Logistics & Supply Chain Management</h3>
-        <p class="course-desc">சரக்குக் கிடங்கு மேலாண்மை (Warehouse Operations), சரக்கு லொஜிஸ்டிக்ஸ், துறைமுக முனையப் போக்குவரத்து, மற்றும் அமேசான்/ஃபிளிப்கார்ட் போன்ற இ-காமர்ஸ் சப்ளை செயின் மேலாண்மை.</p>
-        <div class="course-meta-box">
-          <div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Any Stream</span></div>
-          <div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Logistics Coordinator, Warehouse Manager, Supply Planner</span></div>
-          <div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">MBA Logistics & SCM, Global Port Management</span></div>
-        </div>
-      </div>
-
-      <!-- 15. BBA Hospital & Healthcare Management -->
-      <div class="course-card">
-        <span class="course-badge">மருத்துவமனை நிர்வாகம்</span>
-        <h3 class="course-title">15. BBA Hospital & Healthcare Management</h3>
-        <p class="course-desc">பெரு மருத்துவமனைகளின் நிர்வாக இயக்கம், மருத்துவக் காப்பீடு தாக்கல், நோயாளிகள் வரவேற்பு சேவை, NABH தரக்கட்டுப்பாடுகள் மற்றும் மருத்துவப் பொருட்கள் கொள்முதல் மேலாண்மை.</p>
-        <div class="course-meta-box">
-          <div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Science or Commerce</span></div>
-          <div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Hospital Operations Executive, TPA Insurance Manager</span></div>
-          <div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">MHA (Master of Hospital Administration), MBA Healthcare</span></div>
-        </div>
-      </div>
-
-      <!-- 16. BBA Retail Management & E-Commerce -->
-      <div class="course-card">
-        <span class="course-badge">சில்லறை வணிக & மால் மேலாண்மை</span>
-        <h3 class="course-title">16. BBA Retail Management</h3>
-        <p class="course-desc">சூப்பர் மார்க்கெட் மற்றும் ஷாப்பிங் மால் மேலாண்மை, வாடிக்கையாளர் விசுவாசத் திட்டங்கள் (CRM), காட்சி வர்த்தகம் (Visual Merchandising) மற்றும் மின்-வணிக அங்காடி இயக்கம்.</p>
-        <div class="course-meta-box">
-          <div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Any Stream</span></div>
-          <div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Store Manager, Retail Merchandiser, E-Commerce Lead</span></div>
-          <div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">MBA Retail Management, International Brand Management</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. CA / CMA / CS Professional Courses Pathway -->
-  <section class="content-section" id="professional">
-    <div class="section-header">
-      <h2 class="section-title">🏛️ 2. B.Com படிக்கும்போதே CA / CMA / CS சாதிக்கும் வழிகாட்டல்</h2>
-      <span class="section-badge">உயர் வருவாய் தொழில்முறைத் தகுதிகள்</span>
-    </div>
-
-    <div class="notice-box notice-gold">
-      <span style="font-size: 1.5rem;">⭐</span>
-      <div>
-        <strong>முக்கிய ஆலோசனை:</strong> சிவகங்கை மாவட்ட அரசு மற்றும் அரசு உதவிபெறும் கல்லூரிகளில் B.Com படிக்கும் மாணவர்கள் கல்லூரி முதல் ஆண்டிலேயே ICAI / ICMAI / ICSI தேர்வுகளுக்குப் பதிவு செய்து கல்லூரிப் படிப்போடு இணையாகப் பயின்று வெற்றிபெற முடியும்.
-      </div>
-    </div>
-
-    <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
-      <!-- CA -->
-      <div style="background: #ffffff; border: 2px solid #0f766e; border-radius: var(--radius-md); padding: 22px; box-shadow: var(--shadow-sm);">
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-          <h3 style="font-size: 1.25rem; font-weight: 800; color: #0f766e;">1. CA (Chartered Accountant)</h3>
-          <span style="font-size: 0.8rem; font-weight: 800; background: #ccfbf1; color: #0f766e; padding: 4px 10px; border-radius: 999px;">ICAI அமைப்பு</span>
-        </div>
-        <p style="font-size: 0.88rem; color: #334155; margin-bottom: 12px; line-height: 1.6;">இந்தியப் பட்டயக் கணக்காளர்கள் நிறுவனம் நடத்தும் நாட்டின் மிக உயரிய நிதி மற்றும் தணிக்கைத் தகுதி. கார்ப்பரேட் மற்றும் தணிக்கை நிறுவனங்களில் கோடிக்கணக்கான ரூபாய் மதிப்புள்ள கையெழுத்திடும் அதிகாரம் கொண்ட பதவி.</p>
-        <ul style="font-size: 0.85rem; color: #0f172a; padding-left: 20px; line-height: 1.7; margin-bottom: 14px;">
-          <li><strong>படிநிலை 1:</strong> CA Foundation (+2 முடித்தவுடன் எழுதலாம்)</li>
-          <li><strong>படிநிலை 2:</strong> CA Intermediate (B.Com-ல் 55% அல்லது Foundation தேர்ச்சி)</li>
-          <li><strong>படிநிலை 3:</strong> 2 ஆண்டுகள் Articleship பயிற்சி (மாத உதவித்தொகை ₹10,000 - ₹25,000)</li>
-          <li><strong>படிநிலை 4:</strong> CA Final & ICAI உறுப்பினர் ஆதல்</li>
-        </ul>
-        <div style="background: #f0fdfa; padding: 10px; border-radius: 6px; font-size: 0.82rem; color: #115e59; font-weight: 600;">
-          📍 தேர்வு மையம்: காரைக்குடி, மதுரை & திருச்சி ICAI கிளைகள்
-        </div>
-      </div>
-
-      <!-- CMA -->
-      <div style="background: #ffffff; border: 2px solid #0369a1; border-radius: var(--radius-md); padding: 22px; box-shadow: var(--shadow-sm);">
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-          <h3 style="font-size: 1.25rem; font-weight: 800; color: #0369a1;">2. CMA (Cost & Management)</h3>
-          <span style="font-size: 0.8rem; font-weight: 800; background: #e0f2fe; color: #0369a1; padding: 4px 10px; border-radius: 999px;">ICMAI அமைப்பு</span>
-        </div>
-        <p style="font-size: 0.88rem; color: #334155; margin-bottom: 12px; line-height: 1.6;">உற்பத்தி ஆலைகள், தொழிற்சாலைகள் மற்றும் பன்னாட்டு நிறுவனங்களில் தயாரிப்பு அடக்கவிலை கட்டுப்பாடு, வரவுசெலவு திட்டமிடல் மற்றும் மேலாண்மைத் தணிக்கை செய்யும் நிபுணர்.</p>
-        <ul style="font-size: 0.85rem; color: #0f172a; padding-left: 20px; line-height: 1.7; margin-bottom: 14px;">
-          <li><strong>படிநிலை 1:</strong> CMA Foundation</li>
-          <li><strong>படிநிலை 2:</strong> CMA Intermediate (Group 1 & Group 2)</li>
-          <li><strong>படிநிலை 3:</strong> 15 மாத தொழிற்சாலை பயிற்சி (Practical Training)</li>
-          <li><strong>படிநிலை 4:</strong> CMA Final</li>
-        </ul>
-        <div style="background: #f0f9ff; padding: 10px; border-radius: 6px; font-size: 0.82rem; color: #0369a1; font-weight: 600;">
-          🏭 வாய்ப்புகள்: BHEL, ONGC, SAIL, IOCL, டாட்டா, எல் & டி நிறுவனங்கள்
-        </div>
-      </div>
-
-      <!-- CS -->
-      <div style="background: #ffffff; border: 2px solid #d97706; border-radius: var(--radius-md); padding: 22px; box-shadow: var(--shadow-sm);">
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-          <h3 style="font-size: 1.25rem; font-weight: 800; color: #d97706;">3. CS (Company Secretary)</h3>
-          <span style="font-size: 0.8rem; font-weight: 800; background: #fef3c7; color: #92400e; padding: 4px 10px; border-radius: 999px;">ICSI அமைப்பு</span>
-        </div>
-        <p style="font-size: 0.88rem; color: #334155; margin-bottom: 12px; line-height: 1.6;">பங்குச் சந்தையில் பட்டியலிடப்பட்ட ₹10 கோடிக்கு மேல் மூலதனம் கொண்ட அனைத்துப் பொது நிறுவனங்களிலும் தலைமைச் சட்ட ஆலோசகராக நியமிக்கப்பட வேண்டிய கட்டாயப் பதவி.</p>
-        <ul style="font-size: 0.85rem; color: #0f172a; padding-left: 20px; line-height: 1.7; margin-bottom: 14px;">
-          <li><strong>படிநிலை 1:</strong> CSEET நுழைவுத் தேர்வு (ஆண்டுக்கு 4 முறை)</li>
-          <li><strong>படிநிலை 2:</strong> CS Executive Program (2 தொகுதிகள்)</li>
-          <li><strong>படிநிலை 3:</strong> 21 மாத கார்ப்பரேட் மேலாண்மைப் பயிற்சி (EDP)</li>
-          <li><strong>படிநிலை 4:</strong> CS Professional Program</li>
-        </ul>
-        <div style="background: #fffbeb; padding: 10px; border-radius: 6px; font-size: 0.82rem; color: #92400e; font-weight: 600;">
-          ⚖️ வாய்ப்புகள்: கார்ப்பரேட் சட்ட ஆலோசகர், SEBI இணக்க அலுவலர்
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. Cooperative Department & Banking Jobs -->
-  <section class="content-section" id="cooperation">
-    <div class="section-header">
-      <h2 class="section-title">🤝 3. தமிழ்நாடு கூட்டுறவுத் துறை பணிகள் & B.Com Co-operation முன்னுரிமை</h2>
-      <span class="section-badge">அரசுப் பணி நேரடி வாய்ப்பு</span>
-    </div>
-
-    <div class="notice-box notice-teal">
-      <span style="font-size: 1.5rem;">🏛️</span>
-      <div>
-        <strong>தமிழ்நாடு கூட்டுறவுச் சங்கங்கள் சட்ட விதிகளின்படி முன்னுரிமை:</strong> B.Com Co-operation / M.Com Co-operation அல்லது கூட்டுறவுப் பயிற்சி பட்டயம் (HDCM / JDC) முடித்தவர்களுக்கு மட்டுமே கூட்டுறவு நிறுவனங்களின் முக்கியப் பதவிகளில் நேரடிப் பணி நியமனம் மற்றும் வயது வரம்பு தளர்வுகள் வழங்கப்படுகின்றன!
-      </div>
-    </div>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 16px;">
-      <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px;">
-        <h4 style="font-size: 1.05rem; font-weight: 800; color: #0f766e; margin-bottom: 8px;">1. மாவட்ட ஆள்சேர்ப்பு மையம் (DRB - Sivagangai)</h4>
-        <p style="font-size: 0.88rem; color: #334155; line-height: 1.6;">சிவகங்கை மாவட்ட மத்திய கூட்டுறவு வங்கி (Sivagangai DCCB), நகர கூட்டுறவு வங்கிகள், மற்றும் தொடக்க வேளாண்மைக் கூட்டுறவு கடன் சங்கங்களில் (PACCS) உதவியாளர் / எழுத்தர் பணிகள்.</p>
-      </div>
-
-      <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px;">
-        <h4 style="font-size: 1.05rem; font-weight: 800; color: #0f766e; margin-bottom: 8px;">2. கூட்டுறவு சார்பதிவாளர் (Cooperative Sub-Registrar)</h4>
-        <p style="font-size: 0.88rem; color: #334155; line-height: 1.6;">TNPSC குரூப் 2 தேர்வின் மூலம் நேரடி நியமனம். B.Com Co-operation பட்டதாரிகளுக்குத் தேர்வில் முதன்மை முன்னுரிமை ஒதுக்கீடு உண்டு.</p>
-      </div>
-
-      <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px;">
-        <h4 style="font-size: 1.05rem; font-weight: 800; color: #0f766e; margin-bottom: 8px;">3. கூட்டுறவு தணிக்கைத் துறை (Audit Department)</h4>
-        <p style="font-size: 0.88rem; color: #334155; line-height: 1.6;">அரசு கூட்டுறவு சங்கங்களின் கணக்குத் தணிக்கையாளர் (Junior Cooperative Auditor) பதவிகளுக்கு TNPSC குரூப் 4 & குரூப் 2A மூலம் நியமனம்.</p>
-      </div>
-
-      <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px;">
-        <h4 style="font-size: 1.05rem; font-weight: 800; color: #0f766e; margin-bottom: 8px;">4. ஆவின், நுகர்பொருள் வாணிபக் கழகம் (TNCSC & Aavin)</h4>
-        <p style="font-size: 0.88rem; color: #334155; line-height: 1.6;">பால் உற்பத்தியாளர்கள் கூட்டுறவு ஒன்றியம் (ஆவின்) மற்றும் தமிழ்நாடு நுகர்பொருள் வாணிபக் கழகத்தின் மேலாளர், கணக்காளர் பதவிகள்.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. Banking Sector Careers -->
-  <section class="content-section" id="banking">
-    <div class="section-header">
-      <h2 class="section-title">🏦 4. வங்கித் துறைத் தேர்வுகள் & கார்ப்பரேட் நிதி வாய்ப்புகள்</h2>
-      <span class="section-badge">IBPS, SBI, RBI & LIC</span>
-    </div>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
-      <div style="background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px; box-shadow: var(--shadow-sm); border-top: 4px solid #0369a1;">
-        <h4 style="font-size: 1.1rem; font-weight: 800; color: #0369a1; margin-bottom: 8px;">🏦 IBPS PO & Clerk</h4>
-        <p style="font-size: 0.86rem; color: #334155; line-height: 1.6; margin-bottom: 10px;">இந்தியன் வங்கி, கனரா வங்கி உள்ளிட்ட 11 தேசியமயமாக்கப்பட்ட வங்கிகளுக்கான பொதுத் தேர்வு. ஆண்டுதோறும் 15,000+ பணியிடங்கள் நிரப்பப்படுகின்றன.</p>
-        <span style="font-size: 0.8rem; font-weight: 700; color: #0369a1;">துவக்க ஊதியம்: ₹38,000 - ₹65,000/மாதம்</span>
-      </div>
-
-      <div style="background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px; box-shadow: var(--shadow-sm); border-top: 4px solid #134e4a;">
-        <h4 style="font-size: 1.1rem; font-weight: 800; color: #134e4a; margin-bottom: 8px;">🏛️ SBI PO & Specialist Officer</h4>
-        <p style="font-size: 0.86rem; color: #334155; line-height: 1.6; margin-bottom: 10px;">ஸ்டேட் பாங்க் ஆஃப் இந்தியா (SBI) நடத்தும் தனித் தேர்வு. B.Com/BBA பட்டதாரிகள் நிபுணர் அதிகாரிகளாக (Finance SO) தேர்வு செய்யப்படுகிறார்கள்.</p>
-        <span style="font-size: 0.8rem; font-weight: 700; color: #134e4a;">துவக்க ஊதியம்: ₹52,000 - ₹82,000/மாதம்</span>
-      </div>
-
-      <div style="background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px; box-shadow: var(--shadow-sm); border-top: 4px solid #d97706;">
-        <h4 style="font-size: 1.1rem; font-weight: 800; color: #d97706; margin-bottom: 8px;">📈 RBI Grade B Officer</h4>
-        <p style="font-size: 0.86rem; color: #334155; line-height: 1.6; margin-bottom: 10px;">ரிசர்வ் வங்கியின் உயர் அதிகாரி பதவி. இந்தியப் பணவியல் கொள்கை, அந்நியச் செலாவணி மற்றும் வங்கி மேற்பார்வை பணிகளில் சர்வதேச அந்தஸ்து.</p>
-        <span style="font-size: 0.8rem; font-weight: 700; color: #d97706;">துவக்க ஊதியம்: ₹1,10,000+/மாதம்</span>
-      </div>
-
-      <div style="background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px; box-shadow: var(--shadow-sm); border-top: 4px solid #dc2626;">
-        <h4 style="font-size: 1.1rem; font-weight: 800; color: #dc2626; margin-bottom: 8px;">📜 LIC AAO & TNPSC Commercial Taxes</h4>
-        <p style="font-size: 0.86rem; color: #334155; line-height: 1.6; margin-bottom: 10px;">ஆயுள் காப்பீட்டுக் கழகத்தின் உதவி நிர்வாக அலுவலர் (AAO) மற்றும் தமிழக வணிக வரித்துறையின் உதவி வணிக வரி அலுவலர் (ACTO) அரசுப் பணிகள்.</p>
-        <span style="font-size: 0.8rem; font-weight: 700; color: #dc2626;">அரசு கெசட்டட் & நிர்வாகப் பணிகள்</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. Colleges Directory -->
-  <section class="content-section" id="colleges">
-    <div class="section-header">
-      <h2 class="section-title">🏫 5. சிவகங்கை மாவட்டம் & அருகாமை வணிகவியல் கல்லூரிகள்</h2>
-      <span class="section-badge">அரசு & அரசு உதவிபெறும்</span>
-    </div>
-
-    <!-- Filter Bar -->
-    <div class="filter-bar">
-      <div class="filter-pills">
-        <button class="filter-pill active" data-type="all">அனைத்துக் கல்லூரிகள்</button>
-        <button class="filter-pill" data-type="govt">அரசு கல்லூரிகள்</button>
-        <button class="filter-pill" data-type="aided">அரசு உதவிபெறும்</button>
-        <button class="filter-pill" data-type="autonomous">மண்டல முன்னணி</button>
-      </div>
-      <input type="text" id="collegeSearch" class="search-input" placeholder="🔍 கல்லூரி / ஊர் தேடுக...">
-    </div>
-
-    <div class="table-container">
-      <table class="custom-table" id="collegesTable">
-        <thead>
-          <tr>
-            <th style="width: 60px;">வ.எண்</th>
-            <th>கல்லூரியின் பெயர் & அமைவிடம்</th>
-            <th>வழங்கப்படும் வணிகப் படிப்புகள்</th>
-            <th>பயிற்று மொழி</th>
-            <th>வகை & சிறப்பு</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- 1. Sivaganga Govt -->
-          <tr data-type="govt">
-            <td>1</td>
-            <td>
-              <span class="college-name">ராஜா துரைசிங்கம் அரசு கலைக்கல்லூரி, சிவகங்கை</span>
-              <span class="college-sub">மாவட்டத் தலைநகர் அரசு கல்லூரி | NAAC அங்கீகாரம்</span>
-            </td>
-            <td><strong>B.Com General, B.Com Corporate Secretaryship</strong></td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="boundary-tag" style="background: #ccfbf1; color: #0f766e;">அரசு கல்லூரி (TNGASA)</span></td>
-          </tr>
-
-          <!-- 2. Karaikudi Alagappa Govt -->
-          <tr data-type="govt">
-            <td>2</td>
-            <td>
-              <span class="college-name">அழகப்பா அரசு கலைக்கல்லூரி, காரைக்குடி</span>
-              <span class="college-sub">காரைக்குடி | அழகப்பா பல்கலைக்கழக இணைப்புக் கல்லூரி</span>
-            </td>
-            <td><strong>B.Com General, BBA, B.Com Co-operation</strong></td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="boundary-tag" style="background: #ccfbf1; color: #0f766e;">அரசு கல்லூரி (TNGASA)</span></td>
-          </tr>
-
-          <!-- 3. Karaikudi Govt Women -->
-          <tr data-type="govt">
-            <td>3</td>
-            <td>
-              <span class="college-name">அரசு மகளிர் கலைக்கல்லூரி, காரைக்குடி</span>
-              <span class="college-sub">காரைக்குடி (மகளிருக்கான பிரத்யேக அரசு கல்லூரி)</span>
-            </td>
-            <td><strong>B.Com General, B.Com CA</strong></td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="boundary-tag" style="background: #fce7f3; color: #9d174d;">மகளிர் அரசு (TNGASA)</span></td>
-          </tr>
-
-          <!-- 4. Tirupattur Govt -->
-          <tr data-type="govt">
-            <td>4</td>
-            <td>
-              <span class="college-name">அரசு கலை மற்றும் அறிவியல் கல்லூரி, திருப்பத்தூர்</span>
-              <span class="college-sub">திருப்பத்தூர், சிவகங்கை மாவட்டம்</span>
-            </td>
-            <td><strong>B.Com General</strong></td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="boundary-tag" style="background: #ccfbf1; color: #0f766e;">அரசு கல்லூரி (TNGASA)</span></td>
-          </tr>
-
-          <!-- 5. Manamadurai Govt -->
-          <tr data-type="govt">
-            <td>5</td>
-            <td>
-              <span class="college-name">அரசு கலை மற்றும் அறிவியல் கல்லூரி, மானாமதுரை</span>
-              <span class="college-sub">மானாமதுரை, சிவகங்கை மாவட்டம்</span>
-            </td>
-            <td><strong>B.Com General, BBA</strong></td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="boundary-tag" style="background: #ccfbf1; color: #0f766e;">அரசு கல்லூரி (TNGASA)</span></td>
-          </tr>
-
-          <!-- 6. Alagappa Univ Dept -->
-          <tr data-type="govt autonomous">
-            <td>6</td>
-            <td>
-              <span class="college-name">அழகப்பா பல்கலைக்கழக மேலாண்மை & வணிகவியல் புலம், காரைக்குடி</span>
-              <span class="college-sub">அழகப்பா பல்கலைக்கழக முதன்மை வளாகம் & மாலை நேரக் கல்லூரி</span>
-            </td>
-            <td><strong>B.Com General, B.Com Professional, BBA, B.Com Banking</strong></td>
-            <td>ஆங்கிலம்</td>
-            <td><span class="boundary-tag" style="background: #e0f2fe; color: #0369a1;">மாநிலப் பல்கலைக்கழகம்</span></td>
-          </tr>
-
-          <!-- 7. Arumugam Pillai Seethai Ammal -->
-          <tr data-type="aided">
-            <td>7</td>
-            <td>
-              <span class="college-name">ஆறுமுகம் பிள்ளை சீதை அம்மாள் கல்லூரி, திருப்பத்தூர்</span>
-              <span class="college-sub">திருப்பத்தூர் | பழமைவாய்ந்த அரசு உதவிபெறும் கல்லூரி</span>
-            </td>
-            <td><strong>B.Com General, B.Com CA, BBA</strong></td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="boundary-tag" style="background: #fef3c7; color: #92400e;">அரசு உதவிபெறும்</span></td>
-          </tr>
-
-          <!-- 8. Zakir Husain Ilayangudi -->
-          <tr data-type="aided">
-            <td>8</td>
-            <td>
-              <span class="college-name">டாக்டர் ஜாகீர் உசேன் கல்லூரி, இளையான்குடி</span>
-              <span class="college-sub">இளையான்குடி, சிவகங்கை மாவட்டம்</span>
-            </td>
-            <td><strong>B.Com General, B.Com CA, BBA</strong></td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="boundary-tag" style="background: #fef3c7; color: #92400e;">அரசு உதவிபெறும்</span></td>
-          </tr>
-
-          <!-- 9. Sevugan Annamalai Devakottai -->
-          <tr data-type="aided">
-            <td>9</td>
-            <td>
-              <span class="college-name">ஸ்ரீ சேவுகன் அண்ணாமலை கல்லூரி, தேவகோட்டை</span>
-              <span class="college-sub">தேவகோட்டை, சிவகங்கை மாவட்டம்</span>
-            </td>
-            <td><strong>B.Com General, B.Com CA</strong></td>
-            <td>தமிழ் & ஆங்கிலம்</td>
-            <td><span class="boundary-tag" style="background: #fef3c7; color: #92400e;">அரசு உதவிபெறும்</span></td>
-          </tr>
-
-          <!-- 10. Thiagarajar Madurai -->
-          <tr data-type="autonomous aided">
-            <td>10</td>
-            <td>
-              <span class="college-name">தியாகராஜர் கல்லூரி (தன்னாட்சி), மதுரை</span>
-              <span class="college-sub">தெப்பக்குளம், மதுரை | வரலாற்றுச் சிறப்புமிக்க A++ தன்னாட்சிக் கல்லூரி</span>
-            </td>
-            <td><strong>B.Com Professional Accounting, B.Com General, BBA, B.Com A&F</strong></td>
-            <td>ஆங்கிலம்</td>
-            <td><span class="boundary-tag" style="background: #e0e7ff; color: #3730a3;">மண்டலத் தன்னாட்சி</span></td>
-          </tr>
-
-          <!-- 11. American College Madurai -->
-          <tr data-type="autonomous aided">
-            <td>11</td>
-            <td>
-              <span class="college-name">அமெரிக்கன் கல்லூரி (தன்னாட்சி), மதுரை</span>
-              <span class="college-sub">கோரிப்பாளையம், மதுரை | 140+ ஆண்டுகள் பாரம்பரியம்</span>
-            </td>
-            <td><strong>B.Com General, B.Com CS, B.Com IT, BBA</strong></td>
-            <td>ஆங்கிலம்</td>
-            <td><span class="boundary-tag" style="background: #e0e7ff; color: #3730a3;">மண்டலத் தன்னாட்சி</span></td>
-          </tr>
-
-          <!-- 12. St. Joseph's Trichy -->
-          <tr data-type="autonomous aided">
-            <td>12</td>
-            <td>
-              <span class="college-name">புனித வளனார் கல்லூரி - St. Joseph's College (தன்னாட்சி), திருச்சி</span>
-              <span class="college-sub">திருச்சி | நூற்றாண்டுப் பாரம்பரியம் கொண்ட கல்வி மையம்</span>
-            </td>
-            <td><strong>B.Com General, B.Com Honors, BBA, B.Com CA</strong></td>
-            <td>ஆங்கிலம்</td>
-            <td><span class="boundary-tag" style="background: #e0e7ff; color: #3730a3;">மண்டலத் தன்னாட்சி</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- Cross-Reference Navigation Section -->
-  <section class="content-section" id="other-sections" style="border: 2px solid var(--primary); background: #f0fdfa;">
-    <div class="section-header" style="border-bottom: 1px solid #99f6e4;">
-      <h2 class="section-title" style="color: var(--primary-dark);">🔄 பிற வழிகாட்டிப் பக்கங்களுக்கான நேரடி இணைப்புகள்</h2>
-      <span class="section-badge" style="background: #ffffff; color: var(--primary);">4 பிரிவுகளும் தனித்தனியானவை</span>
-    </div>
-
-    <p style="font-size: 0.92rem; color: #334155; margin-bottom: 18px; line-height: 1.6;">
-      உங்கள் விருப்பத்திற்குரிய துறைக்கேற்ப பிற வழிகாட்டிப் பக்கங்களை இங்கிருந்தே நேரடியாக அணுகலாம். எந்தவொரு பாடப்பிரிவும் பக்கங்களுக்கிடையே இரட்டிப்பாக இடம்பெறாமல் முழுமையாகச் சீரமைக்கப்பட்டுள்ளது:
-    </p>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
-      <a href="02_05_pure_applied_sciences.html" style="text-decoration: none; background: #ffffff; border: 1px solid #bae6fd; border-radius: var(--radius-sm); padding: 14px; display: block; transition: all 0.2s ease;">
-        <span style="font-size: 0.8rem; font-weight: 800; color: #0369a1; display: block; margin-bottom: 4px;">பிரிவு 05</span>
-        <strong style="color: #0369a1; font-size: 1rem;">🔬 தூய & பயன்பாட்டு அறிவியல் வழிகாட்டி</strong>
-        <p style="font-size: 0.82rem; color: #64748b; margin-top: 4px;">B.Sc. கணிதம், இயற்பியல், வேதியியல், உயிரியல், நிலவியல் சேர்க்கை விவரங்கள்.</p>
-      </a>
-
-      <a href="02_06_computer_applications_it.html" style="text-decoration: none; background: #ffffff; border: 1px solid #ddd6fe; border-radius: var(--radius-sm); padding: 14px; display: block; transition: all 0.2s ease;">
-        <span style="font-size: 0.8rem; font-weight: 800; color: #6d28d9; display: block; margin-bottom: 4px;">பிரிவு 06</span>
-        <strong style="color: #6d28d9; font-size: 1rem;">💻 கணினிப் பயன்பாட்டியல் & IT வழிகாட்டி</strong>
-        <p style="font-size: 0.82rem; color: #64748b; margin-top: 4px;">BCA, B.Sc. Computer Science, IT, Data Science, AI & TCS/Wipro திட்டங்கள்.</p>
-      </a>
-
-      <a href="02_07_arts_humanities.html" style="text-decoration: none; background: #ffffff; border: 1px solid #fed7aa; border-radius: var(--radius-sm); padding: 14px; display: block; transition: all 0.2s ease;">
-        <span style="font-size: 0.8rem; font-weight: 800; color: #c2410c; display: block; margin-bottom: 4px;">பிரிவு 07</span>
-        <strong style="color: #c2410c; font-size: 1rem;">📜 கலை, மானுடவியல் & தமிழ்க் கல்லூரிகள்</strong>
-        <p style="font-size: 0.82rem; color: #64748b; margin-top: 4px;">B.A. தமிழ், B.Lit. புலவர் பட்டயம், வரலாறு, பொருளியல், UPSC/TNPSC பயிற்சி.</p>
-      </a>
-    </div>
-  </section>
-
-  <!-- Back to top -->
-  <a href="#" class="back-to-top">↑ மேலே செல்ல</a>
-
-  <!-- Footer -->
-    
-
-  </div>
-
-
-
-<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
 <div class="kural-box">
-  <div class="kural-header">
-    <span class="kural-icon">📜</span>
-    <span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-    <span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
-  </div>
-  <div class="kural-verse-text">
+<div class="kural-header">
+<span class="kural-icon">📜</span>
+<span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
+<span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
+</div>
+<div class="kural-verse-text">
     “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
     திண்ணியர் ஆகப் பெறின்.”
   </div>
-  <div class="kural-meaning">
-    <strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
+<div class="kural-meaning">
+<strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
   </div>
-
-<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
-<div class="creator-card">
-  <div class="creator-typewriter-wrapper">
-    <span id="creatorTypewriterTarget" class="creator-typewriter-target"></span><span id="creatorCursor" class="creator-cursor">|</span>
-  </div>
-  <a href="tel:9626471035" class="footer-phone-pill" id="footerPhonePill" title="அழைக்க">
-    <span class="phone-icon">📱</span>
-    <span class="phone-text">9626471035</span>
-  </a>
+</div><div class="creator-card">
+<div class="creator-typewriter-wrapper">
+<span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
 </div>
-<!-- Footer -->
-<footer class="portal-footer">
-  <p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
+<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
+<span class="phone-icon">📱</span>
+<span class="phone-text">9626471035</span>
+</a>
+</div><footer class="portal-footer">
+<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
     தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
-  </p>
-  <p style="font-size: 0.85rem; color: #64748b;">
+</p>
+<p style="font-size: 0.85rem; color: #64748b;">
     © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
-</footer>
-
+</footer></div>
+<!-- Header -->
+<header class="portal-header">
+<div class="header-badge-row">
+<span class="header-tag primary">பிரிவு 8 (Section 08)</span>
+<span class="header-tag secondary">TNGASA &amp; சுயநிதி சேர்க்கை</span>
+<span class="header-tag secondary">B.Com, BBA &amp; CA வழிகாட்டி</span>
 </div>
+<h1 class="portal-title">வணிகவியல், நிதி &amp; மேலாண்மை சேர்க்கை வழிகாட்டி <span class="accent-gold">(Commerce &amp; Management)</span></h1>
+<p class="portal-subtitle">சிவகங்கை மாவட்ட மற்றும் தமிழக அரசு, அரசு உதவிபெறும் கலை &amp; அறிவியல் கல்லூரிகளில் வணிகவியல் (B.Com), மேலாண்மை (BBA), தொழில்முறை ஆடிட்டிங் (CA/CMA/CS), கூட்டுறவுத் துறை மற்றும் வங்கிப் பணிகளுக்கான விரிவான கையேடு.</p>
+<div class="quick-nav-pills">
+<a class="quick-nav-pill" href="#calculator">🧮 கட்-ஆஃப் கால்குலேட்டர்</a>
+<a class="quick-nav-pill" href="#courses">📊 16 வணிகப் படிப்புகள்</a>
+<a class="quick-nav-pill" href="#professional">🏛️ CA / CMA / CS ஆடிட்டிங்</a>
+<a class="quick-nav-pill" href="#banking">🏦 வங்கி &amp; அரசுப் பணிகள்</a>
+<a class="quick-nav-pill" href="#cooperation">🤝 கூட்டுறவுத் துறை பணிகள்</a>
+<a class="quick-nav-pill" href="#colleges">🏫 கல்லூரிகள் பட்டியல்</a>
+<a class="quick-nav-pill" href="#four-sections">🔄 4 பிரிவுகள் ஒப்பீடு</a>
+</div>
+</header>
+<!-- Unified 4-Section Deduplication Guarantee Banner -->
+<section class="unified-boundary-card" id="four-sections">
+<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+<span style="font-size: 1.5rem;">⚖️</span>
+<h3 style="font-size: 1.25rem; font-weight: 800; color: #134e4a;">பாடப்பிரிவுகள் வகைப்பாடு &amp; இரட்டிப்புத் தவிர்ப்பு உத்தரவாதம் (Zero Course Overlap)</h3>
+</div>
+<p style="font-size: 0.92rem; color: #334155; line-height: 1.6;">
+      கலைக் கல்லூரிகள், கலை மற்றும் அறிவியல் கல்லூரிகள், தமிழ்க் கல்லூரிகளில் பயிற்றுவிக்கப்படும் அனைத்துப் பட்டப் படிப்புகளும் மாணவர்களின் வசதிக்காக **4 தனித்துவமான பிரிவுகளாகப் பிரிக்கப்பட்டுள்ளன**. ஒரு படிப்பு ஒன்றிற்கு மேற்பட்ட பக்கங்களில் இரட்டிப்பாக இடம்பெறாதவாறு மிகத் துல்லியமாக வகைப்படுத்தப்பட்டுள்ளது:
+    </p>
+<div class="boundary-grid">
+<div class="boundary-item">
+<span class="boundary-tag" style="background: #e0f2fe; color: #0369a1;">பிரிவு 05</span>
+<h4 style="color: #0369a1;">🔬 தூய &amp; பயன்பாட்டு அறிவியல்</h4>
+<p>கணிதம், இயற்பியல், வேதியியல், தாவரவியல், விலங்கியல், புள்ளியியல், பயோடெக்னாலஜி, நிலவியல் (Geology) உள்ளிட்ட <strong>B.Sc. அறிவியல் படிப்புகள்</strong> மட்டுமே.</p>
+</div>
+<div class="boundary-item">
+<span class="boundary-tag" style="background: #f5f3ff; color: #6d28d9;">பிரிவு 06</span>
+<h4 style="color: #6d28d9;">💻 கணினி &amp; தகவல் தொழினுட்பம்</h4>
+<p>BCA, B.Sc. Computer Science, B.Sc. IT, Data Science, AI &amp; ML, Cyber Security, Cloud Computing உள்ளிட்ட <strong>கணினி மற்றும் மென்பொருள் படிப்புகள்</strong> மட்டுமே.</p>
+</div>
+<div class="boundary-item">
+<span class="boundary-tag" style="background: #fff7ed; color: #c2410c;">பிரிவு 07</span>
+<h4 style="color: #c2410c;">📜 கலை, மானுடவியல் &amp; தமிழ்க் கல்லூரிகள்</h4>
+<p>B.A. தமிழ், B.Lit. தமிழ் (தமிழ்க் கல்லூரிகள்), ஆங்கிலம், வரலாறு, பொருளியல், அரசியல் அறிவியல், சமூகவியல், BSW உள்ளிட்ட <strong>கலை மற்றும் சமூக அறிவியல் படிப்புகள்</strong> மட்டுமே.</p>
+</div>
+<div class="boundary-item active">
+<span class="boundary-tag" style="background: #ccfbf1; color: #0f766e;">பிரிவு 08 (தற்போதைய பக்கம்)</span>
+<h4 style="color: #0f766e;">📊 வணிகவியல், நிதி &amp; மேலாண்மை</h4>
+<p>B.Com General, B.Com PA, B.Com CS, B.Com CA, B.Com Co-operation, B.Com FinTech, BBA மற்றும் CA / CMA / CS உள்ளிட்ட <strong>வணிக &amp; கார்ப்பரேட் படிப்புகள்</strong> மட்டுமே.</p>
+</div>
+</div>
+</section>
+<!-- 1. Cut-off Calculator -->
+<section class="calc-card" id="calculator">
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+<span style="font-size: 2rem;">🧮</span>
+<div>
+<h2 style="font-size: 1.45rem; font-weight: 800; color: #ffffff;">வணிகவியல் கட்-ஆஃப் கால்குலேட்டர் (Commerce Cut-off Calculator)</h2>
+<p style="font-size: 0.9rem; color: #ccfbf1;">4 முதன்மைப் பாடங்களின் (Commerce, Accountancy, Economics, Business Maths/Comp.Apps) மதிப்பெண்களை உள்ளிடவும் (மொத்தம் 400-க்கு):</p>
+</div>
+</div>
+<div class="calc-grid">
+<div class="calc-field">
+<label for="sub1">1. வணிகவியல் (Commerce):</label>
+<input class="calc-input" id="sub1" max="100" min="0" placeholder="0 - 100" type="number" value="85"/>
+</div>
+<div class="calc-field">
+<label for="sub2">2. கணக்குப்பதிவியல் (Accountancy):</label>
+<input class="calc-input" id="sub2" max="100" min="0" placeholder="0 - 100" type="number" value="90"/>
+</div>
+<div class="calc-field">
+<label for="sub3">3. பொருளியல் (Economics):</label>
+<input class="calc-input" id="sub3" max="100" min="0" placeholder="0 - 100" type="number" value="82"/>
+</div>
+<div class="calc-field">
+<label for="sub4">4. வணிகக் கணிதம் / Computer Apps:</label>
+<input class="calc-input" id="sub4" max="100" min="0" placeholder="0 - 100" type="number" value="88"/>
+</div>
+</div>
+<div class="calc-result-box">
+<div style="font-size: 0.95rem; color: #ccfbf1; font-weight: 600;">உங்கள் வணிகவியல் கட்-ஆஃப் மதிப்பெண் (400-க்கு):</div>
+<div class="calc-score-display" id="totalScore">345.00</div>
+<div class="calc-tier-text" id="tierFeedback">🎉 சிறந்த மதிப்பெண்! அரசு மற்றும் முன்னணி அரசு உதவிபெறும் கல்லூரிகளில் B.Com சேர்க்கைக்கு பிரகாசமான வாய்ப்புள்ளது.</div>
+</div>
+</section>
+<!-- 2. Commerce & Management Courses -->
+<section class="content-section" id="courses">
+<div class="section-header">
+<h2 class="section-title">📊 1. B.Com &amp; மேலாண்மைப் படிப்புகளின் விரிவான பட்டியல் (16 சிறப்புக் களங்கள்)</h2>
+<span class="section-badge">16 தனித்துவப் படிப்புகள்</span>
+</div>
+<div class="notice-box notice-teal">
+<span style="font-size: 1.5rem;">💡</span>
+<div>
+<strong>படிப்புகளின் கட்டமைப்பு &amp; தொழிற்துறைத் தேவை:</strong> கலை மற்றும் அறிவியல் கல்லூரிகளில் வணிகவியல் (B.Com) மற்றும் மேலாண்மை (BBA) படிப்புகள் மாணவர்களுக்குப் பெருநிறுவனங்கள், வங்கிகள், நிதி நிறுவனங்கள் மற்றும் சொந்தத் தொழில் தொடங்குவதற்கான வலுவான நிர்வாகத் திறனை வழங்குகின்றன.
+      </div>
+</div>
+<!-- Core Commerce Group -->
+<h3 style="font-size: 1.25rem; font-weight: 800; color: #134e4a; margin: 24px 0 16px; border-left: 4px solid var(--primary); padding-left: 10px;">
+      அ. முதன்மை வணிகவியல் படிப்புகள் (Core Commerce Degrees)
+    </h3>
+<div class="courses-grid">
+<!-- 1. B.Com General -->
+<div class="course-card">
+<span class="course-badge">அடித்தளப் படிப்பு</span>
+<h3 class="course-title">1. B.Com General (பொது வணிகவியல்)</h3>
+<p class="course-desc">வணிகக் கோட்பாடுகள், கணக்கியல் (Financial &amp; Corporate Accounting), தணிக்கை, நிதி மேலாண்மை, வர்த்தகச் சட்டங்கள் மற்றும் வங்கி நடைமுறைகளின் ஆணிவேர் படிப்பு. அனைத்துத் துறைகளுக்கும் பொதுவான விரிவான வாய்ப்புகள்.</p>
+<div class="course-meta-box">
+<div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 வணிகவியல் &amp; கணக்குப்பதிவியல்</span></div>
+<div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">கணக்காளர், தணிக்கை உதவியாளர், வங்கி அலுவலர்</span></div>
+<div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">M.Com, MBA, CA, CMA, CS, CFA</span></div>
+</div>
+</div>
+<!-- 2. B.Com Professional Accounting (B.Com PA) -->
+<div class="course-card">
+<span class="course-badge" style="background: #fef08a; color: #713f12;">CA / CMA பிரத்யேகம்</span>
+<h3 class="course-title">2. B.Com Professional Accounting (B.Com PA)</h3>
+<p class="course-desc">ICAI-யின் பட்டயக் கணக்காளர் (CA) மற்றும் ICMAI-யின் அடக்கவிலைக் கணக்காளர் (CMA) பாடத்திட்டத்துடன் முழுமையாகப் பொருந்திப்போகும் வகையில் வடிவமைக்கப்பட்ட சிறப்புப் படிப்பு. ஆடிட்டிங் பயிற்சிக்கு அதிக முக்கியத்துவம் உண்டு.</p>
+<div class="course-meta-box">
+<div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Commerce with Accountancy (High Cut-off)</span></div>
+<div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Audit Associate, Tax Consultant, Financial Analyst</span></div>
+<div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">CA Inter / Final, CMA, ACCA Global</span></div>
+</div>
+</div>
+<!-- 3. B.Com Corporate Secretaryship (B.Com CS) -->
+<div class="course-card">
+<span class="course-badge">நிறுவனச் சட்டங்கள்</span>
+<h3 class="course-title">3. B.Com Corporate Secretaryship (B.Com CS)</h3>
+<p class="course-desc">கார்ப்பரேட் நிறுவனச் சட்டங்கள் (Company Law 2013), இயக்குநர் குழு கூட்ட மேலாண்மை, பங்கு பரிவர்த்தனை விதிகள் (SEBI Guidelines), மற்றும் கார்ப்பரேட் ஆளுமை (Corporate Governance) சார்ந்த சிறப்புப் படிப்பு.</p>
+<div class="course-meta-box">
+<div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 வணிகவியல் பிரிவு</span></div>
+<div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Assistant Company Secretary, Compliance Officer</span></div>
+<div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">ACS (Company Secretary - ICSI), M.Com CS, MBA</span></div>
+</div>
+</div>
+<!-- 4. B.Com Accounting & Finance (B.Com A&F) -->
+<div class="course-card">
+<span class="course-badge">நிதி &amp; முதலீடு</span>
+<h3 class="course-title">4. B.Com Accounting &amp; Finance (A&amp;F)</h3>
+<p class="course-desc">கார்ப்பரேட் நிதி, முதலீட்டு வங்கி (Investment Banking), மூலதனச் சந்தை, பங்கு முதலீடு பகுப்பாய்வு மற்றும் போர்ட்ஃபோலியோ மேலாண்மை ஆகியவற்றில் ஆழமான பயிற்சியளிக்கும் உயர்தரப் படிப்பு.</p>
+<div class="course-meta-box">
+<div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 வணிகவியல் / வணிகக் கணிதம்</span></div>
+<div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Equity Analyst, Investment Banker, Wealth Manager</span></div>
+<div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">CFA (Chartered Financial Analyst), MBA Finance</span></div>
+</div>
+</div>
+<!-- 5. B.Com Banking & Insurance -->
+<div class="course-card">
+<span class="course-badge">வங்கி &amp; காப்பீடு</span>
+<h3 class="course-title">5. B.Com Banking &amp; Insurance</h3>
+<p class="course-desc">வணிக வங்கிகளின் கடன் மேலாண்மை, வெளிநாட்டுச் செலாவணி (Forex), ஆயுள் மற்றும் பொதுக் காப்பீட்டுக் கொள்கைகள் (Life &amp; Non-Life Insurance), இடர் மதிப்பீடு மற்றும் ஆக்சுவரியல் அறிவியல் அடிப்படைகள்.</p>
+<div class="course-meta-box">
+<div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 வணிகவியல் அல்லது பொருளியல்</span></div>
+<div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Credit Officer, Insurance Underwriter, Risk Analyst</span></div>
+<div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">M.Com Banking, MBA, Licentiate/Fellow (III)</span></div>
+</div>
+</div>
+<!-- 6. B.Com Co-operation (கூட்டுறவு மேலாண்மை) -->
+<div class="course-card" style="border-left-color: #d97706;">
+<span class="course-badge" style="background: #fef3c7; color: #92400e;">அரசுப் பணி முன்னுரிமை</span>
+<h3 class="course-title">6. B.Com Co-operation (கூட்டுறவு மேலாண்மை)</h3>
+<p class="course-desc">தமிழ்நாடு கூட்டுறவுச் சங்கங்கள் சட்டம் 1983, கூட்டுறவுத் தணிக்கை, கிராமப்புற கடன் மேலாண்மை மற்றும் வேளாண் சந்தைப்படுத்தல். கூட்டுறவு சார்பதிவாளர் (CSR) மற்றும் மாவட்ட மத்திய கூட்டுறவு வங்கிப் பணிகளுக்கு நேரடி முன்னுரிமை!</p>
+<div class="course-meta-box">
+<div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 வணிகவியல் / அனைத்துப் பிரிவுகள்</span></div>
+<div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">கூட்டுறவு சார்பதிவாளர், PACCS செயலாளர், கூட்டுறவு வங்கி உதவியாளர்</span></div>
+<div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">M.Com Co-operation, HDCM டிப்ளமோ, MBA</span></div>
+</div>
+</div>
+</div>
+<!-- Tech & Specialized Commerce -->
+<h3 style="font-size: 1.25rem; font-weight: 800; color: #134e4a; margin: 32px 0 16px; border-left: 4px solid var(--primary); padding-left: 10px;">
+      ஆ. நவீன தொழினுட்ப &amp; சிறப்பு வணிகவியல் (Tech &amp; Specialized Commerce)
+    </h3>
+<div class="courses-grid">
+<!-- 7. B.Com Computer Applications (B.Com CA) -->
+<div class="course-card">
+<span class="course-badge" style="background: #f5f3ff; color: #6d28d9;">வணிகம் + கணினி</span>
+<h3 class="course-title">7. B.Com Computer Applications (B.Com CA)</h3>
+<p class="course-desc">முழுமையான வணிகவியல் பாடங்களுடன் TallyPrime, GST Billing மென்பொருள், மின்-வணிகம் (E-Commerce), SQL டேட்டாபேஸ் மற்றும் MS-Excel பயன்பாடுகள் இணைந்த முன்னணிப் படிப்பு. (கணினி துறை மாணவர்கள் பிரிவு 6-ஐ அணுகலாம்).</p>
+<div class="course-meta-box">
+<div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Commerce with Computer Apps / Maths</span></div>
+<div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Tally Expert, Computerized Accountant, MIS Exec</span></div>
+<div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">MCA, M.Com CA, MBA Systems, Data Analytics</span></div>
+</div>
+</div>
+<!-- 8. B.Com Financial Technology (FinTech) -->
+<div class="course-card">
+<span class="course-badge">டிஜிட்டல் நிதிப் புரட்சி</span>
+<h3 class="course-title">8. B.Com Financial Technology (FinTech)</h3>
+<p class="course-desc">டிஜிட்டல் கட்டணக் கட்டமைப்பு (UPI/Payment Gateways), பிளாக்செயின் நிதி ஆவணங்கள், அல்காரிதமிக் டிரேடிங், ரோபோ-அட்வைசரி மற்றும் நியோ-பேங்கிங் (Neo-banking) தளங்களை இயக்கும் நவீன தொழினுட்பப் படிப்பு.</p>
+<div class="course-meta-box">
+<div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Commerce with Business Maths / Comp.Sci</span></div>
+<div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">FinTech Product Specialist, Blockchain Analyst</span></div>
+<div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">M.Sc FinTech, MBA Financial Technology</span></div>
+</div>
+</div>
+<!-- 9. B.Com Business Analytics / Financial Analytics -->
+<div class="course-card">
+<span class="course-badge">வணிகத் தரவுப் பகுப்பாய்வு</span>
+<h3 class="course-title">9. B.Com Business Analytics</h3>
+<p class="course-desc">வணிக முடிவெடுத்தலுக்கான தரவுப் பகுப்பாய்வு, Power BI, Advanced Tableau, நிதி மாதிரியாக்கம் (Financial Modeling) மற்றும் கார்ப்பரேட் விற்பனை முன்கணிப்பு (Forecasting) நுட்பங்கள்.</p>
+<div class="course-meta-box">
+<div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Commerce with Maths / Statistics</span></div>
+<div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Business Analyst, Financial Modeler, BI Associate</span></div>
+<div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">MBA Business Analytics, M.Sc Data Science</span></div>
+</div>
+</div>
+<!-- 10. B.Com International Business (B.Com IB) -->
+<div class="course-card">
+<span class="course-badge">ஏற்றுமதி &amp; இறக்குமதி</span>
+<h3 class="course-title">10. B.Com International Business (B.Com IB)</h3>
+<p class="course-desc">வெளிநாட்டு வர்த்தகக் கொள்கைகள் (EXIM Policy), சுங்கச் சட்டம் &amp; ஆவணங்கள் (Customs Clearance), லெட்டர் ஆஃப் கிரெடிட் (LC), பன்னாட்டு நாணய மாற்று மற்றும் கடல்வழி சரக்கு போக்குவரத்து மேலாண்மை.</p>
+<div class="course-meta-box">
+<div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Commerce / Any group</span></div>
+<div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Export-Import Manager, Customs Agent, Freight Coordinator</span></div>
+<div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">MBA International Business (IIFT), M.Com IB</span></div>
+</div>
+</div>
+<!-- 11. B.Com Taxation (வரி விதிப்பு & சட்ட நடைமுறைகள்) -->
+<div class="course-card">
+<span class="course-badge">GST &amp; வருமான வரி</span>
+<h3 class="course-title">11. B.Com Taxation (Tax Procedure &amp; Practice)</h3>
+<p class="course-desc">நேரடி வரிகள் (Income Tax) மற்றும் மறைமுக வரிகள் (GST) தாக்கல், கார்ப்பரேட் வரி திட்டமிடல், வரி மேல்முறையீட்டு நடைமுறைகள் மற்றும் சட்டரீதியான தணிக்கை வழிகாட்டல் படிப்பு.</p>
+<div class="course-meta-box">
+<div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Commerce with Accountancy</span></div>
+<div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">GST Practitioner, Tax Auditor, Corporate Tax Analyst</span></div>
+<div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">LL.B (Tax Law), M.Com Taxation, CA / CMA</span></div>
+</div>
+</div>
+<!-- 12. B.Com Information Systems Management (B.Com ISM) -->
+<div class="course-card">
+<span class="course-badge">MIS &amp; ERP மேலாண்மை</span>
+<h3 class="course-title">12. B.Com Information Systems Management (ISM)</h3>
+<p class="course-desc">வணிக மேலாண்மைத் தகவல் அமைப்புகள் (MIS), கார்ப்பரேட் நிறுவனங்களுக்கான ERP மென்பொருட்கள் (SAP, Oracle Financials), வணிக இணையதள மேலாண்மை மற்றும் தகவல் கட்டமைப்பு ஒருங்கிணைப்பு.</p>
+<div class="course-meta-box">
+<div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Commerce with Maths / Computer Apps</span></div>
+<div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">ERP Consultant, Systems Accountant, IT Auditor</span></div>
+<div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">MBA Systems, MCA, MS in Information Systems</span></div>
+</div>
+</div>
+</div>
+<!-- Management Studies (BBA) -->
+<h3 style="font-size: 1.25rem; font-weight: 800; color: #134e4a; margin: 32px 0 16px; border-left: 4px solid var(--primary); padding-left: 10px;">
+      இ. மேலாண்மைப் படிப்புகள் (Management Studies - BBA)
+    </h3>
+<div class="courses-grid">
+<!-- 13. BBA General -->
+<div class="course-card">
+<span class="course-badge">கார்ப்பரேட் மேலாண்மை</span>
+<h3 class="course-title">13. BBA (Bachelor of Business Administration)</h3>
+<p class="course-desc">நிறுவன மேலாண்மை, மனிதவள மேம்பாடு (HRM), சந்தைப்படுத்துதல் (Marketing), நிதி பகுப்பாய்வு மற்றும் தொழில் முனைவோர் (Entrepreneurship) பண்புகளை வளர்க்கும் முன்னணி நிர்வாகப் படிப்பு.</p>
+<div class="course-meta-box">
+<div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Any Stream (அனைத்துப் பிரிவினருக்கும் பொதுவானது)</span></div>
+<div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Management Trainee, HR Executive, Marketing Officer</span></div>
+<div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">MBA (IIMs via CAT / TANCET), PGDM</span></div>
+</div>
+</div>
+<!-- 14. BBA Logistics & Supply Chain Management -->
+<div class="course-card">
+<span class="course-badge" style="background: #e0f2fe; color: #0369a1;">தளவாட &amp; சரக்குப் போக்குவரத்து</span>
+<h3 class="course-title">14. BBA Logistics &amp; Supply Chain Management</h3>
+<p class="course-desc">சரக்குக் கிடங்கு மேலாண்மை (Warehouse Operations), சரக்கு லொஜிஸ்டிக்ஸ், துறைமுக முனையப் போக்குவரத்து, மற்றும் அமேசான்/ஃபிளிப்கார்ட் போன்ற இ-காமர்ஸ் சப்ளை செயின் மேலாண்மை.</p>
+<div class="course-meta-box">
+<div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Any Stream</span></div>
+<div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Logistics Coordinator, Warehouse Manager, Supply Planner</span></div>
+<div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">MBA Logistics &amp; SCM, Global Port Management</span></div>
+</div>
+</div>
+<!-- 15. BBA Hospital & Healthcare Management -->
+<div class="course-card">
+<span class="course-badge">மருத்துவமனை நிர்வாகம்</span>
+<h3 class="course-title">15. BBA Hospital &amp; Healthcare Management</h3>
+<p class="course-desc">பெரு மருத்துவமனைகளின் நிர்வாக இயக்கம், மருத்துவக் காப்பீடு தாக்கல், நோயாளிகள் வரவேற்பு சேவை, NABH தரக்கட்டுப்பாடுகள் மற்றும் மருத்துவப் பொருட்கள் கொள்முதல் மேலாண்மை.</p>
+<div class="course-meta-box">
+<div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Science or Commerce</span></div>
+<div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Hospital Operations Executive, TPA Insurance Manager</span></div>
+<div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">MHA (Master of Hospital Administration), MBA Healthcare</span></div>
+</div>
+</div>
+<!-- 16. BBA Retail Management & E-Commerce -->
+<div class="course-card">
+<span class="course-badge">சில்லறை வணிக &amp; மால் மேலாண்மை</span>
+<h3 class="course-title">16. BBA Retail Management</h3>
+<p class="course-desc">சூப்பர் மார்க்கெட் மற்றும் ஷாப்பிங் மால் மேலாண்மை, வாடிக்கையாளர் விசுவாசத் திட்டங்கள் (CRM), காட்சி வர்த்தகம் (Visual Merchandising) மற்றும் மின்-வணிக அங்காடி இயக்கம்.</p>
+<div class="course-meta-box">
+<div class="meta-row"><span class="meta-label">தகுதி:</span><span class="meta-val">+2 Any Stream</span></div>
+<div class="meta-row"><span class="meta-label">பணிகள்:</span><span class="meta-val">Store Manager, Retail Merchandiser, E-Commerce Lead</span></div>
+<div class="meta-row"><span class="meta-label">உயர் கல்வி:</span><span class="meta-val">MBA Retail Management, International Brand Management</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. CA / CMA / CS Professional Courses Pathway -->
+<section class="content-section" id="professional">
+<div class="section-header">
+<h2 class="section-title">🏛️ 2. B.Com படிக்கும்போதே CA / CMA / CS சாதிக்கும் வழிகாட்டல்</h2>
+<span class="section-badge">உயர் வருவாய் தொழில்முறைத் தகுதிகள்</span>
+</div>
+<div class="notice-box notice-gold">
+<span style="font-size: 1.5rem;">⭐</span>
+<div>
+<strong>முக்கிய ஆலோசனை:</strong> சிவகங்கை மாவட்ட அரசு மற்றும் அரசு உதவிபெறும் கல்லூரிகளில் B.Com படிக்கும் மாணவர்கள் கல்லூரி முதல் ஆண்டிலேயே ICAI / ICMAI / ICSI தேர்வுகளுக்குப் பதிவு செய்து கல்லூரிப் படிப்போடு இணையாகப் பயின்று வெற்றிபெற முடியும்.
+      </div>
+</div>
+<div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+<!-- CA -->
+<div style="background: #ffffff; border: 2px solid #0f766e; border-radius: var(--radius-md); padding: 22px; box-shadow: var(--shadow-sm);">
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+<h3 style="font-size: 1.25rem; font-weight: 800; color: #0f766e;">1. CA (Chartered Accountant)</h3>
+<span style="font-size: 0.8rem; font-weight: 800; background: #ccfbf1; color: #0f766e; padding: 4px 10px; border-radius: 999px;">ICAI அமைப்பு</span>
+</div>
+<p style="font-size: 0.88rem; color: #334155; margin-bottom: 12px; line-height: 1.6;">இந்தியப் பட்டயக் கணக்காளர்கள் நிறுவனம் நடத்தும் நாட்டின் மிக உயரிய நிதி மற்றும் தணிக்கைத் தகுதி. கார்ப்பரேட் மற்றும் தணிக்கை நிறுவனங்களில் கோடிக்கணக்கான ரூபாய் மதிப்புள்ள கையெழுத்திடும் அதிகாரம் கொண்ட பதவி.</p>
+<ul style="font-size: 0.85rem; color: #0f172a; padding-left: 20px; line-height: 1.7; margin-bottom: 14px;">
+<li><strong>படிநிலை 1:</strong> CA Foundation (+2 முடித்தவுடன் எழுதலாம்)</li>
+<li><strong>படிநிலை 2:</strong> CA Intermediate (B.Com-ல் 55% அல்லது Foundation தேர்ச்சி)</li>
+<li><strong>படிநிலை 3:</strong> 2 ஆண்டுகள் Articleship பயிற்சி (மாத உதவித்தொகை ₹10,000 - ₹25,000)</li>
+<li><strong>படிநிலை 4:</strong> CA Final &amp; ICAI உறுப்பினர் ஆதல்</li>
+</ul>
+<div style="background: #f0fdfa; padding: 10px; border-radius: 6px; font-size: 0.82rem; color: #115e59; font-weight: 600;">
+          📍 தேர்வு மையம்: காரைக்குடி, மதுரை &amp; திருச்சி ICAI கிளைகள்
+        </div>
+</div>
+<!-- CMA -->
+<div style="background: #ffffff; border: 2px solid #0369a1; border-radius: var(--radius-md); padding: 22px; box-shadow: var(--shadow-sm);">
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+<h3 style="font-size: 1.25rem; font-weight: 800; color: #0369a1;">2. CMA (Cost &amp; Management)</h3>
+<span style="font-size: 0.8rem; font-weight: 800; background: #e0f2fe; color: #0369a1; padding: 4px 10px; border-radius: 999px;">ICMAI அமைப்பு</span>
+</div>
+<p style="font-size: 0.88rem; color: #334155; margin-bottom: 12px; line-height: 1.6;">உற்பத்தி ஆலைகள், தொழிற்சாலைகள் மற்றும் பன்னாட்டு நிறுவனங்களில் தயாரிப்பு அடக்கவிலை கட்டுப்பாடு, வரவுசெலவு திட்டமிடல் மற்றும் மேலாண்மைத் தணிக்கை செய்யும் நிபுணர்.</p>
+<ul style="font-size: 0.85rem; color: #0f172a; padding-left: 20px; line-height: 1.7; margin-bottom: 14px;">
+<li><strong>படிநிலை 1:</strong> CMA Foundation</li>
+<li><strong>படிநிலை 2:</strong> CMA Intermediate (Group 1 &amp; Group 2)</li>
+<li><strong>படிநிலை 3:</strong> 15 மாத தொழிற்சாலை பயிற்சி (Practical Training)</li>
+<li><strong>படிநிலை 4:</strong> CMA Final</li>
+</ul>
+<div style="background: #f0f9ff; padding: 10px; border-radius: 6px; font-size: 0.82rem; color: #0369a1; font-weight: 600;">
+          🏭 வாய்ப்புகள்: BHEL, ONGC, SAIL, IOCL, டாட்டா, எல் &amp; டி நிறுவனங்கள்
+        </div>
+</div>
+<!-- CS -->
+<div style="background: #ffffff; border: 2px solid #d97706; border-radius: var(--radius-md); padding: 22px; box-shadow: var(--shadow-sm);">
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+<h3 style="font-size: 1.25rem; font-weight: 800; color: #d97706;">3. CS (Company Secretary)</h3>
+<span style="font-size: 0.8rem; font-weight: 800; background: #fef3c7; color: #92400e; padding: 4px 10px; border-radius: 999px;">ICSI அமைப்பு</span>
+</div>
+<p style="font-size: 0.88rem; color: #334155; margin-bottom: 12px; line-height: 1.6;">பங்குச் சந்தையில் பட்டியலிடப்பட்ட ₹10 கோடிக்கு மேல் மூலதனம் கொண்ட அனைத்துப் பொது நிறுவனங்களிலும் தலைமைச் சட்ட ஆலோசகராக நியமிக்கப்பட வேண்டிய கட்டாயப் பதவி.</p>
+<ul style="font-size: 0.85rem; color: #0f172a; padding-left: 20px; line-height: 1.7; margin-bottom: 14px;">
+<li><strong>படிநிலை 1:</strong> CSEET நுழைவுத் தேர்வு (ஆண்டுக்கு 4 முறை)</li>
+<li><strong>படிநிலை 2:</strong> CS Executive Program (2 தொகுதிகள்)</li>
+<li><strong>படிநிலை 3:</strong> 21 மாத கார்ப்பரேட் மேலாண்மைப் பயிற்சி (EDP)</li>
+<li><strong>படிநிலை 4:</strong> CS Professional Program</li>
+</ul>
+<div style="background: #fffbeb; padding: 10px; border-radius: 6px; font-size: 0.82rem; color: #92400e; font-weight: 600;">
+          ⚖️ வாய்ப்புகள்: கார்ப்பரேட் சட்ட ஆலோசகர், SEBI இணக்க அலுவலர்
+        </div>
+</div>
+</div>
+</section>
+<!-- 4. Cooperative Department & Banking Jobs -->
+<section class="content-section" id="cooperation">
+<div class="section-header">
+<h2 class="section-title">🤝 3. தமிழ்நாடு கூட்டுறவுத் துறை பணிகள் &amp; B.Com Co-operation முன்னுரிமை</h2>
+<span class="section-badge">அரசுப் பணி நேரடி வாய்ப்பு</span>
+</div>
+<div class="notice-box notice-teal">
+<span style="font-size: 1.5rem;">🏛️</span>
+<div>
+<strong>தமிழ்நாடு கூட்டுறவுச் சங்கங்கள் சட்ட விதிகளின்படி முன்னுரிமை:</strong> B.Com Co-operation / M.Com Co-operation அல்லது கூட்டுறவுப் பயிற்சி பட்டயம் (HDCM / JDC) முடித்தவர்களுக்கு மட்டுமே கூட்டுறவு நிறுவனங்களின் முக்கியப் பதவிகளில் நேரடிப் பணி நியமனம் மற்றும் வயது வரம்பு தளர்வுகள் வழங்கப்படுகின்றன!
+      </div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 16px;">
+<div style="background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px;">
+<h4 style="font-size: 1.05rem; font-weight: 800; color: #0f766e; margin-bottom: 8px;">1. மாவட்ட ஆள்சேர்ப்பு மையம் (DRB - Sivagangai)</h4>
+<p style="font-size: 0.88rem; color: #334155; line-height: 1.6;">சிவகங்கை மாவட்ட மத்திய கூட்டுறவு வங்கி (Sivagangai DCCB), நகர கூட்டுறவு வங்கிகள், மற்றும் தொடக்க வேளாண்மைக் கூட்டுறவு கடன் சங்கங்களில் (PACCS) உதவியாளர் / எழுத்தர் பணிகள்.</p>
+</div>
+<div style="background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px;">
+<h4 style="font-size: 1.05rem; font-weight: 800; color: #0f766e; margin-bottom: 8px;">2. கூட்டுறவு சார்பதிவாளர் (Cooperative Sub-Registrar)</h4>
+<p style="font-size: 0.88rem; color: #334155; line-height: 1.6;">TNPSC குரூப் 2 தேர்வின் மூலம் நேரடி நியமனம். B.Com Co-operation பட்டதாரிகளுக்குத் தேர்வில் முதன்மை முன்னுரிமை ஒதுக்கீடு உண்டு.</p>
+</div>
+<div style="background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px;">
+<h4 style="font-size: 1.05rem; font-weight: 800; color: #0f766e; margin-bottom: 8px;">3. கூட்டுறவு தணிக்கைத் துறை (Audit Department)</h4>
+<p style="font-size: 0.88rem; color: #334155; line-height: 1.6;">அரசு கூட்டுறவு சங்கங்களின் கணக்குத் தணிக்கையாளர் (Junior Cooperative Auditor) பதவிகளுக்கு TNPSC குரூப் 4 &amp; குரூப் 2A மூலம் நியமனம்.</p>
+</div>
+<div style="background: #f8fafc; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px;">
+<h4 style="font-size: 1.05rem; font-weight: 800; color: #0f766e; margin-bottom: 8px;">4. ஆவின், நுகர்பொருள் வாணிபக் கழகம் (TNCSC &amp; Aavin)</h4>
+<p style="font-size: 0.88rem; color: #334155; line-height: 1.6;">பால் உற்பத்தியாளர்கள் கூட்டுறவு ஒன்றியம் (ஆவின்) மற்றும் தமிழ்நாடு நுகர்பொருள் வாணிபக் கழகத்தின் மேலாளர், கணக்காளர் பதவிகள்.</p>
+</div>
+</div>
+</section>
+<!-- 5. Banking Sector Careers -->
+<section class="content-section" id="banking">
+<div class="section-header">
+<h2 class="section-title">🏦 4. வங்கித் துறைத் தேர்வுகள் &amp; கார்ப்பரேட் நிதி வாய்ப்புகள்</h2>
+<span class="section-badge">IBPS, SBI, RBI &amp; LIC</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+<div style="background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px; box-shadow: var(--shadow-sm); border-top: 4px solid #0369a1;">
+<h4 style="font-size: 1.1rem; font-weight: 800; color: #0369a1; margin-bottom: 8px;">🏦 IBPS PO &amp; Clerk</h4>
+<p style="font-size: 0.86rem; color: #334155; line-height: 1.6; margin-bottom: 10px;">இந்தியன் வங்கி, கனரா வங்கி உள்ளிட்ட 11 தேசியமயமாக்கப்பட்ட வங்கிகளுக்கான பொதுத் தேர்வு. ஆண்டுதோறும் 15,000+ பணியிடங்கள் நிரப்பப்படுகின்றன.</p>
+<span style="font-size: 0.8rem; font-weight: 700; color: #0369a1;">துவக்க ஊதியம்: ₹38,000 - ₹65,000/மாதம்</span>
+</div>
+<div style="background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px; box-shadow: var(--shadow-sm); border-top: 4px solid #134e4a;">
+<h4 style="font-size: 1.1rem; font-weight: 800; color: #134e4a; margin-bottom: 8px;">🏛️ SBI PO &amp; Specialist Officer</h4>
+<p style="font-size: 0.86rem; color: #334155; line-height: 1.6; margin-bottom: 10px;">ஸ்டேட் பாங்க் ஆஃப் இந்தியா (SBI) நடத்தும் தனித் தேர்வு. B.Com/BBA பட்டதாரிகள் நிபுணர் அதிகாரிகளாக (Finance SO) தேர்வு செய்யப்படுகிறார்கள்.</p>
+<span style="font-size: 0.8rem; font-weight: 700; color: #134e4a;">துவக்க ஊதியம்: ₹52,000 - ₹82,000/மாதம்</span>
+</div>
+<div style="background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px; box-shadow: var(--shadow-sm); border-top: 4px solid #d97706;">
+<h4 style="font-size: 1.1rem; font-weight: 800; color: #d97706; margin-bottom: 8px;">📈 RBI Grade B Officer</h4>
+<p style="font-size: 0.86rem; color: #334155; line-height: 1.6; margin-bottom: 10px;">ரிசர்வ் வங்கியின் உயர் அதிகாரி பதவி. இந்தியப் பணவியல் கொள்கை, அந்நியச் செலாவணி மற்றும் வங்கி மேற்பார்வை பணிகளில் சர்வதேச அந்தஸ்து.</p>
+<span style="font-size: 0.8rem; font-weight: 700; color: #d97706;">துவக்க ஊதியம்: ₹1,10,000+/மாதம்</span>
+</div>
+<div style="background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px; box-shadow: var(--shadow-sm); border-top: 4px solid #dc2626;">
+<h4 style="font-size: 1.1rem; font-weight: 800; color: #dc2626; margin-bottom: 8px;">📜 LIC AAO &amp; TNPSC Commercial Taxes</h4>
+<p style="font-size: 0.86rem; color: #334155; line-height: 1.6; margin-bottom: 10px;">ஆயுள் காப்பீட்டுக் கழகத்தின் உதவி நிர்வாக அலுவலர் (AAO) மற்றும் தமிழக வணிக வரித்துறையின் உதவி வணிக வரி அலுவலர் (ACTO) அரசுப் பணிகள்.</p>
+<span style="font-size: 0.8rem; font-weight: 700; color: #dc2626;">அரசு கெசட்டட் &amp; நிர்வாகப் பணிகள்</span>
+</div>
+</div>
+</section>
+<!-- 6. Colleges Directory -->
+<section class="content-section" id="colleges">
+<div class="section-header">
+<h2 class="section-title">🏫 5. சிவகங்கை மாவட்டம் &amp; அருகாமை வணிகவியல் கல்லூரிகள்</h2>
+<span class="section-badge">அரசு &amp; அரசு உதவிபெறும்</span>
+</div>
+<!-- Filter Bar -->
+<div class="filter-bar">
+<div class="filter-pills">
+<button class="filter-pill active" data-type="all">அனைத்துக் கல்லூரிகள்</button>
+<button class="filter-pill" data-type="govt">அரசு கல்லூரிகள்</button>
+<button class="filter-pill" data-type="aided">அரசு உதவிபெறும்</button>
+<button class="filter-pill" data-type="autonomous">மண்டல முன்னணி</button>
+</div>
+<input class="search-input" id="collegeSearch" placeholder="🔍 கல்லூரி / ஊர் தேடுக..." type="text"/>
+</div>
+<div class="table-container">
+<table class="custom-table" id="collegesTable">
+<thead>
+<tr>
+<th style="width: 60px;">வ.எண்</th>
+<th>கல்லூரியின் பெயர் &amp; அமைவிடம்</th>
+<th>வழங்கப்படும் வணிகப் படிப்புகள்</th>
+<th>பயிற்று மொழி</th>
+<th>வகை &amp; சிறப்பு</th>
+</tr>
+</thead>
+<tbody>
+<!-- 1. Sivaganga Govt -->
+<tr data-type="govt">
+<td>1</td>
+<td>
+<span class="college-name">ராஜா துரைசிங்கம் அரசு கலைக்கல்லூரி, சிவகங்கை</span>
+<span class="college-sub">மாவட்டத் தலைநகர் அரசு கல்லூரி | NAAC அங்கீகாரம்</span>
+</td>
+<td><strong>B.Com General, B.Com Corporate Secretaryship</strong></td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="boundary-tag" style="background: #ccfbf1; color: #0f766e;">அரசு கல்லூரி (TNGASA)</span></td>
+</tr>
+<!-- 2. Karaikudi Alagappa Govt -->
+<tr data-type="govt">
+<td>2</td>
+<td>
+<span class="college-name">அழகப்பா அரசு கலைக்கல்லூரி, காரைக்குடி</span>
+<span class="college-sub">காரைக்குடி | அழகப்பா பல்கலைக்கழக இணைப்புக் கல்லூரி</span>
+</td>
+<td><strong>B.Com General, BBA, B.Com Co-operation</strong></td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="boundary-tag" style="background: #ccfbf1; color: #0f766e;">அரசு கல்லூரி (TNGASA)</span></td>
+</tr>
+<!-- 3. Karaikudi Govt Women -->
+<tr data-type="govt">
+<td>3</td>
+<td>
+<span class="college-name">அரசு மகளிர் கலைக்கல்லூரி, காரைக்குடி</span>
+<span class="college-sub">காரைக்குடி (மகளிருக்கான பிரத்யேக அரசு கல்லூரி)</span>
+</td>
+<td><strong>B.Com General, B.Com CA</strong></td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="boundary-tag" style="background: #fce7f3; color: #9d174d;">மகளிர் அரசு (TNGASA)</span></td>
+</tr>
+<!-- 4. Tirupattur Govt -->
+<tr data-type="govt">
+<td>4</td>
+<td>
+<span class="college-name">அரசு கலை மற்றும் அறிவியல் கல்லூரி, திருப்பத்தூர்</span>
+<span class="college-sub">திருப்பத்தூர், சிவகங்கை மாவட்டம்</span>
+</td>
+<td><strong>B.Com General</strong></td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="boundary-tag" style="background: #ccfbf1; color: #0f766e;">அரசு கல்லூரி (TNGASA)</span></td>
+</tr>
+<!-- 5. Manamadurai Govt -->
+<tr data-type="govt">
+<td>5</td>
+<td>
+<span class="college-name">அரசு கலை மற்றும் அறிவியல் கல்லூரி, மானாமதுரை</span>
+<span class="college-sub">மானாமதுரை, சிவகங்கை மாவட்டம்</span>
+</td>
+<td><strong>B.Com General, BBA</strong></td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="boundary-tag" style="background: #ccfbf1; color: #0f766e;">அரசு கல்லூரி (TNGASA)</span></td>
+</tr>
+<!-- 6. Alagappa Univ Dept -->
+<tr data-type="govt autonomous">
+<td>6</td>
+<td>
+<span class="college-name">அழகப்பா பல்கலைக்கழக மேலாண்மை &amp; வணிகவியல் புலம், காரைக்குடி</span>
+<span class="college-sub">அழகப்பா பல்கலைக்கழக முதன்மை வளாகம் &amp; மாலை நேரக் கல்லூரி</span>
+</td>
+<td><strong>B.Com General, B.Com Professional, BBA, B.Com Banking</strong></td>
+<td>ஆங்கிலம்</td>
+<td><span class="boundary-tag" style="background: #e0f2fe; color: #0369a1;">மாநிலப் பல்கலைக்கழகம்</span></td>
+</tr>
+<!-- 7. Arumugam Pillai Seethai Ammal -->
+<tr data-type="aided">
+<td>7</td>
+<td>
+<span class="college-name">ஆறுமுகம் பிள்ளை சீதை அம்மாள் கல்லூரி, திருப்பத்தூர்</span>
+<span class="college-sub">திருப்பத்தூர் | பழமைவாய்ந்த அரசு உதவிபெறும் கல்லூரி</span>
+</td>
+<td><strong>B.Com General, B.Com CA, BBA</strong></td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="boundary-tag" style="background: #fef3c7; color: #92400e;">அரசு உதவிபெறும்</span></td>
+</tr>
+<!-- 8. Zakir Husain Ilayangudi -->
+<tr data-type="aided">
+<td>8</td>
+<td>
+<span class="college-name">டாக்டர் ஜாகீர் உசேன் கல்லூரி, இளையான்குடி</span>
+<span class="college-sub">இளையான்குடி, சிவகங்கை மாவட்டம்</span>
+</td>
+<td><strong>B.Com General, B.Com CA, BBA</strong></td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="boundary-tag" style="background: #fef3c7; color: #92400e;">அரசு உதவிபெறும்</span></td>
+</tr>
+<!-- 9. Sevugan Annamalai Devakottai -->
+<tr data-type="aided">
+<td>9</td>
+<td>
+<span class="college-name">ஸ்ரீ சேவுகன் அண்ணாமலை கல்லூரி, தேவகோட்டை</span>
+<span class="college-sub">தேவகோட்டை, சிவகங்கை மாவட்டம்</span>
+</td>
+<td><strong>B.Com General, B.Com CA</strong></td>
+<td>தமிழ் &amp; ஆங்கிலம்</td>
+<td><span class="boundary-tag" style="background: #fef3c7; color: #92400e;">அரசு உதவிபெறும்</span></td>
+</tr>
+<!-- 10. Thiagarajar Madurai -->
+<tr data-type="autonomous aided">
+<td>10</td>
+<td>
+<span class="college-name">தியாகராஜர் கல்லூரி (தன்னாட்சி), மதுரை</span>
+<span class="college-sub">தெப்பக்குளம், மதுரை | வரலாற்றுச் சிறப்புமிக்க A++ தன்னாட்சிக் கல்லூரி</span>
+</td>
+<td><strong>B.Com Professional Accounting, B.Com General, BBA, B.Com A&amp;F</strong></td>
+<td>ஆங்கிலம்</td>
+<td><span class="boundary-tag" style="background: #e0e7ff; color: #3730a3;">மண்டலத் தன்னாட்சி</span></td>
+</tr>
+<!-- 11. American College Madurai -->
+<tr data-type="autonomous aided">
+<td>11</td>
+<td>
+<span class="college-name">அமெரிக்கன் கல்லூரி (தன்னாட்சி), மதுரை</span>
+<span class="college-sub">கோரிப்பாளையம், மதுரை | 140+ ஆண்டுகள் பாரம்பரியம்</span>
+</td>
+<td><strong>B.Com General, B.Com CS, B.Com IT, BBA</strong></td>
+<td>ஆங்கிலம்</td>
+<td><span class="boundary-tag" style="background: #e0e7ff; color: #3730a3;">மண்டலத் தன்னாட்சி</span></td>
+</tr>
+<!-- 12. St. Joseph's Trichy -->
+<tr data-type="autonomous aided">
+<td>12</td>
+<td>
+<span class="college-name">புனித வளனார் கல்லூரி - St. Joseph's College (தன்னாட்சி), திருச்சி</span>
+<span class="college-sub">திருச்சி | நூற்றாண்டுப் பாரம்பரியம் கொண்ட கல்வி மையம்</span>
+</td>
+<td><strong>B.Com General, B.Com Honors, BBA, B.Com CA</strong></td>
+<td>ஆங்கிலம்</td>
+<td><span class="boundary-tag" style="background: #e0e7ff; color: #3730a3;">மண்டலத் தன்னாட்சி</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Cross-Reference Navigation Section -->
+<section class="content-section" id="other-sections" style="border: 2px solid var(--primary); background: #f0fdfa;">
+<div class="section-header" style="border-bottom: 1px solid #99f6e4;">
+<h2 class="section-title" style="color: var(--primary-dark);">🔄 பிற வழிகாட்டிப் பக்கங்களுக்கான நேரடி இணைப்புகள்</h2>
+<span class="section-badge" style="background: #ffffff; color: var(--primary);">4 பிரிவுகளும் தனித்தனியானவை</span>
+</div>
+<p style="font-size: 0.92rem; color: #334155; margin-bottom: 18px; line-height: 1.6;">
+      உங்கள் விருப்பத்திற்குரிய துறைக்கேற்ப பிற வழிகாட்டிப் பக்கங்களை இங்கிருந்தே நேரடியாக அணுகலாம். எந்தவொரு பாடப்பிரிவும் பக்கங்களுக்கிடையே இரட்டிப்பாக இடம்பெறாமல் முழுமையாகச் சீரமைக்கப்பட்டுள்ளது:
+    </p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+<a href="02_05_pure_applied_sciences.html" style="text-decoration: none; background: #ffffff; border: 1px solid #bae6fd; border-radius: var(--radius-sm); padding: 14px; display: block; transition: all 0.2s ease;">
+<span style="font-size: 0.8rem; font-weight: 800; color: #0369a1; display: block; margin-bottom: 4px;">பிரிவு 05</span>
+<strong style="color: #0369a1; font-size: 1rem;">🔬 தூய &amp; பயன்பாட்டு அறிவியல் வழிகாட்டி</strong>
+<p style="font-size: 0.82rem; color: #64748b; margin-top: 4px;">B.Sc. கணிதம், இயற்பியல், வேதியியல், உயிரியல், நிலவியல் சேர்க்கை விவரங்கள்.</p>
+</a>
+<a href="02_06_computer_applications_it.html" style="text-decoration: none; background: #ffffff; border: 1px solid #ddd6fe; border-radius: var(--radius-sm); padding: 14px; display: block; transition: all 0.2s ease;">
+<span style="font-size: 0.8rem; font-weight: 800; color: #6d28d9; display: block; margin-bottom: 4px;">பிரிவு 06</span>
+<strong style="color: #6d28d9; font-size: 1rem;">💻 கணினிப் பயன்பாட்டியல் &amp; IT வழிகாட்டி</strong>
+<p style="font-size: 0.82rem; color: #64748b; margin-top: 4px;">BCA, B.Sc. Computer Science, IT, Data Science, AI &amp; TCS/Wipro திட்டங்கள்.</p>
+</a>
+<a href="02_07_arts_humanities.html" style="text-decoration: none; background: #ffffff; border: 1px solid #fed7aa; border-radius: var(--radius-sm); padding: 14px; display: block; transition: all 0.2s ease;">
+<span style="font-size: 0.8rem; font-weight: 800; color: #c2410c; display: block; margin-bottom: 4px;">பிரிவு 07</span>
+<strong style="color: #c2410c; font-size: 1rem;">📜 கலை, மானுடவியல் &amp; தமிழ்க் கல்லூரிகள்</strong>
+<p style="font-size: 0.82rem; color: #64748b; margin-top: 4px;">B.A. தமிழ், B.Lit. புலவர் பட்டயம், வரலாறு, பொருளியல், UPSC/TNPSC பயிற்சி.</p>
+</a>
+</div>
+</section>
+<!-- Back to top -->
+<a class="back-to-top" href="#">↑ மேலே செல்ல</a>
+<!-- Footer -->
+</main></div>
+<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
 
 <!-- JavaScript for Interactive Controls -->
 <script>
@@ -4355,10 +4253,14 @@
 
   searchInput.addEventListener('input', filterTable);
 </script>
+<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
 
+<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
 
-  </main>
-</div>
+<!-- Footer -->
+
+ <!-- /.container -->
+
 
 <script>
 function toggleSidebarMenu() {
@@ -4445,13 +4347,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
-
-
-
-
-
-
 <script>
 // Standardized Creator Typewriter Animation (Guaranteed Execution & Colors)
 (function() {

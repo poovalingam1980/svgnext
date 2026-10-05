@@ -1,16 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="ta">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>நேரடிச் சேர்க்கைப் படிப்புகள் - வழிகாட்டி அட்டைகள் | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
-  
-  <!-- Google Fonts: Inter & Noto Sans Tamil -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>நேரடிச் சேர்க்கைப் படிப்புகள் - வழிகாட்டி அட்டைகள் | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
+<!-- Google Fonts: Inter & Noto Sans Tamil -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --bg-page: #f1f5f9;
       --bg-card: #ffffff;
@@ -3229,450 +3228,400 @@
 </head>
 <body>
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
-
-<button id="mobileMenuFloatingBtn" class="mobile-menu-floating-btn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
-  <span style="font-size: 1.15rem; line-height: 1;">☰</span>
-  <span>மெனு</span>
+<button class="mobile-menu-floating-btn" id="mobileMenuFloatingBtn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
+<span style="font-size: 1.15rem; line-height: 1;">☰</span>
+<span>மெனு</span>
 </button>
-
 <div class="portal-layout-wrapper">
-
-  <!-- Desktop Permanent Left Menu Frame with Collapsible Accordion -->
-  <aside class="desktop-left-sidebar" id="desktopLeftSidebar">
-    <div class="sidebar-header">
-      <a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
-        <span class="sidebar-emblem">🏛️</span>
-        <div class="sidebar-title-wrap">
-          <span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
-          <span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
-        </div>
-      </a>
-      <button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
-    </div>
-
-    <nav class="sidebar-nav-body">
-      <!-- 00. முதன்மை முகப்பு (Home) -->
-      <a class="sidebar-main-btn" href="index.html">
-        <span class="icon">🏠</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">முதன்மை முகப்பு</span>
-          <span class="menu-en">HOME</span>
-        </span>
-      </a>
-
-      <!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
-      <a class="sidebar-main-btn" href="00_entrance_exams.html">
-        <span class="icon">🎯</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
-          <span class="menu-en">ENTRANCE EXAMS</span>
-        </span>
-      </a>
-
-      <!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
-      <a class="sidebar-main-btn" href="02_00_direct_admissions.html">
-        <span class="icon">📈</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">நேரடிச் சேர்க்கை</span>
-          <span class="menu-en">DIRECT ADMISSIONS</span>
-        </span>
-      </a>
-
-      <!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
-      <a class="sidebar-main-btn" href="institutes_directory.html">
-        <span class="icon">🏛️</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">கல்லூரிகள் அடைவு</span>
-          <span class="menu-en">INSTITUTES DIRECTORY</span>
-        </span>
-      </a>
-
-      <!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
-      <a class="sidebar-main-btn" href="04_govt_exams.html">
-        <span class="icon">🏆</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">அரசுத் தேர்வுகள்</span>
-          <span class="menu-en">GOVT COMPETITIVE EXAMS</span>
-        </span>
-      </a>
-
-      <!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
-      <a class="sidebar-main-btn" href="direct_careers.html">
-        <span class="icon">💼</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
-          <span class="menu-en">SKILLS &amp; CAREERS</span>
-        </span>
-      </a>
-
-      <!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
-      <a class="sidebar-main-btn" href="helpdesk_portal.html">
-        <span class="icon">☎️</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
-          <span class="menu-en">HELPDESK &amp; SUPPORT</span>
-        </span>
-      </a>
-    </nav>
-  </aside>
-
-  <!-- Main Portal Content Column -->
-  <main class="portal-main-content">
-
-
-
-  
-  <div class="portal-container">
-    
-    <!-- Top Navigation Bar -->
-    <!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
+<!-- Desktop Permanent Left Menu Frame with Collapsible Accordion -->
+<aside class="desktop-left-sidebar" id="desktopLeftSidebar">
+<div class="sidebar-header">
+<a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
+<span class="sidebar-emblem">🏛️</span>
+<div class="sidebar-title-wrap">
+<span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
+<span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
+</div>
+</a>
+<button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
+</div>
+<nav class="sidebar-nav-body">
+<!-- 00. முதன்மை முகப்பு (Home) -->
+<a class="sidebar-main-btn" href="index.html">
+<span class="icon">🏠</span>
+<span class="btn-text-group">
+<span class="menu-ta">முதன்மை முகப்பு</span>
+<span class="menu-en">HOME</span>
+</span>
+</a>
+<!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
+<a class="sidebar-main-btn" href="00_entrance_exams.html">
+<span class="icon">🎯</span>
+<span class="btn-text-group">
+<span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
+<span class="menu-en">ENTRANCE EXAMS</span>
+</span>
+</a>
+<!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
+<a class="sidebar-main-btn" href="02_00_direct_admissions.html">
+<span class="icon">📈</span>
+<span class="btn-text-group">
+<span class="menu-ta">நேரடிச் சேர்க்கை</span>
+<span class="menu-en">DIRECT ADMISSIONS</span>
+</span>
+</a>
+<!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
+<a class="sidebar-main-btn" href="institutes_directory.html">
+<span class="icon">🏛️</span>
+<span class="btn-text-group">
+<span class="menu-ta">கல்லூரிகள் அடைவு</span>
+<span class="menu-en">INSTITUTES DIRECTORY</span>
+</span>
+</a>
+<!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
+<a class="sidebar-main-btn" href="04_govt_exams.html">
+<span class="icon">🏆</span>
+<span class="btn-text-group">
+<span class="menu-ta">அரசுத் தேர்வுகள்</span>
+<span class="menu-en">GOVT COMPETITIVE EXAMS</span>
+</span>
+</a>
+<!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
+<a class="sidebar-main-btn" href="direct_careers.html">
+<span class="icon">💼</span>
+<span class="btn-text-group">
+<span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
+<span class="menu-en">SKILLS &amp; CAREERS</span>
+</span>
+</a>
+<!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
+<a class="sidebar-main-btn" href="helpdesk_portal.html">
+<span class="icon">☎️</span>
+<span class="btn-text-group">
+<span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
+<span class="menu-en">HELPDESK &amp; SUPPORT</span>
+</span>
+</a>
+</nav>
+</aside>
+<!-- Main Portal Content Column -->
+<main class="portal-main-content">
+<div class="portal-container">
+<!-- Top Navigation Bar -->
+<!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
 <!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
 <header class="portal-top-frame no-print">
-  <div class="top-frame-branding">
-    <div class="top-frame-badge">
-      <span class="govt-emblem">🏛️</span>
-      <span class="dept-text">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</span>
-    </div>
-    <div class="portal-main-heading">
-      <span class="portal-title-text">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
-      <span class="portal-subtitle-en">CAREER GUIDANCE PORTAL</span>
-    </div>
-  </div>
-
-  <div class="top-frame-actions">
-    <!-- Official ceosvg.in Main District Portal Link -->
-    <a href="https://www.ceosvg.in" target="_blank" rel="noopener" class="top-frame-btn btn-ceosvg" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
-      <span class="btn-icon">🌐</span>
-      <span>ceosvg.in முதன்மை தளம்</span>
-    </a>
-    <!-- Career Guidance Home Link -->
-    <a href="index.html" class="top-frame-btn btn-home" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
-      <span class="btn-icon">🎓</span>
-      <span>உயர்கல்வி முகப்பு</span>
-    </a>
-  </div>
+<div class="top-frame-branding">
+<div class="top-frame-badge">
+<span class="govt-emblem">🏛️</span>
+<span class="dept-text">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</span>
+</div>
+<div class="portal-main-heading">
+<span class="portal-title-text">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
+<span class="portal-subtitle-en">CAREER GUIDANCE PORTAL</span>
+</div>
+</div>
+<div class="top-frame-actions">
+<!-- Official ceosvg.in Main District Portal Link -->
+<a class="top-frame-btn btn-ceosvg" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
+<span class="btn-icon">🌐</span>
+<span>ceosvg.in முதன்மை தளம்</span>
+</a>
+<!-- Career Guidance Home Link -->
+<a class="top-frame-btn btn-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+<span class="btn-icon">🎓</span>
+<span>உயர்கல்வி முகப்பு</span>
+</a>
+</div>
 </header>
-
-
-
-
-
-  
-    <!-- Hero Header Banner -->
-    <header class="hero-banner">
-      <div class="hero-badge">🎯 உயர்கல்வி நேரடிச் சேர்க்கை</div>
-      <h1 class="hero-title">12-ஆம் வகுப்பிற்குப் பிந்தைய நேரடி உயர்கல்வி வாய்ப்புகள்</h1>
-      <p class="hero-subtitle">
+<!-- Hero Header Banner -->
+<header class="hero-banner">
+<div class="hero-badge">🎯 உயர்கல்வி நேரடிச் சேர்க்கை</div>
+<h1 class="hero-title">12-ஆம் வகுப்பிற்குப் பிந்தைய நேரடி உயர்கல்வி வாய்ப்புகள்</h1>
+<p class="hero-subtitle">
         நுழைவுத் தேர்வு இல்லாத சேர்க்கை — +2 பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் மட்டும் தமிழ்நாட்டின் தலைசிறந்த அரசு மற்றும் பல்கலைக்கழகங்களில் நேரடியாகச் சேரக்கூடிய 9 முக்கியப் பிரிவுகளின் வழிகாட்டி.
       </p>
-    </header>
-  
-    <!-- Symmetrical 3x3 Grid of 9 Multi-Colored Cards -->
-    <div class="cards-grid">
-  
-      <!-- 01. ENGINEERING (Blue Button) -->
-      <div class="course-card border-eng">
-        <div>
-          <div class="card-badge badge-eng">01 / ENGINEERING</div>
-          <div class="card-header">
-            <div class="card-icon-box icon-eng">⚙️</div>
-            <div class="card-title-group">
-              <h2 class="card-title">பொறியியல் நேரடிச் சேர்க்கை</h2>
-              <div class="card-subtitle">Engineering Admissions (TNEA)</div>
-            </div>
-          </div>
-          <p class="card-desc">
+</header>
+<!-- Symmetrical 3x3 Grid of 9 Multi-Colored Cards -->
+<div class="cards-grid">
+<!-- 01. ENGINEERING (Blue Button) -->
+<div class="course-card border-eng">
+<div>
+<div class="card-badge badge-eng">01 / ENGINEERING</div>
+<div class="card-header">
+<div class="card-icon-box icon-eng">⚙️</div>
+<div class="card-title-group">
+<h2 class="card-title">பொறியியல் நேரடிச் சேர்க்கை</h2>
+<div class="card-subtitle">Engineering Admissions (TNEA)</div>
+</div>
+</div>
+<p class="card-desc">
             அண்ணா பல்கலைக்கழக முதன்மை வளாகங்கள், அரசு, உதவிபெறும் மற்றும் முன்னணி தனியார் கல்லூரிகளில் நேரடி ஒற்றைச் சாளர சேர்க்கை.
           </p>
-          <div class="card-tags">
-            <span class="card-tag tag-eng">TNEA</span>
-            <span class="card-tag tag-eng">B.E / B.Tech</span>
-            <span class="card-tag tag-eng">+2 PCM Cutoff</span>
-            <span class="card-tag tag-eng">7.5% அரசுப் பள்ளி</span>
-            <span class="card-tag tag-eng">CECRI சிக்ரி</span>
-          </div>
-        </div>
-        <a href="02_01_tnea_engineering.html" class="card-btn btn-01-eng">
-          <span>விவரங்கள் காண்க</span>
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-      <!-- 02. VETERINARY & ALLIED HEALTH (Emerald Green Button) -->
-      <div class="course-card border-med">
-        <div>
-          <div class="card-badge badge-med">02 / VETERINARY & ALLIED HEALTH</div>
-          <div class="card-header">
-            <div class="card-icon-box icon-med">🩺</div>
-            <div class="card-title-group">
-              <h2 class="card-title">கால்நடை & துணை மருத்துவம்</h2>
-              <div class="card-subtitle">Veterinary, Paramedical & BNYS (Non-NEET)</div>
-            </div>
-          </div>
-          <p class="card-desc">
+<div class="card-tags">
+<span class="card-tag tag-eng">TNEA</span>
+<span class="card-tag tag-eng">B.E / B.Tech</span>
+<span class="card-tag tag-eng">+2 PCM Cutoff</span>
+<span class="card-tag tag-eng">7.5% அரசுப் பள்ளி</span>
+<span class="card-tag tag-eng">CECRI சிக்ரி</span>
+</div>
+</div>
+<a class="card-btn btn-01-eng" href="02_01_tnea_engineering.html">
+<span>விவரங்கள் காண்க</span>
+<svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 02. VETERINARY & ALLIED HEALTH (Emerald Green Button) -->
+<div class="course-card border-med">
+<div>
+<div class="card-badge badge-med">02 / VETERINARY &amp; ALLIED HEALTH</div>
+<div class="card-header">
+<div class="card-icon-box icon-med">🩺</div>
+<div class="card-title-group">
+<h2 class="card-title">கால்நடை &amp; துணை மருத்துவம்</h2>
+<div class="card-subtitle">Veterinary, Paramedical &amp; BNYS (Non-NEET)</div>
+</div>
+</div>
+<p class="card-desc">
             நீட் தேர்வு இன்றி +2 மதிப்பெண் மூலம் கால்நடை மருத்துவம், இயற்கை மருத்துவம் (BNYS) மற்றும் அரசு துணை மருத்துவ சேர்க்கை.
           </p>
-          <div class="card-tags">
-            <span class="card-tag tag-med">B.V.Sc & A.H.</span>
-            <span class="card-tag tag-med">TANUVAS</span>
-            <span class="card-tag tag-med">BNYS டாக்டர்</span>
-            <span class="card-tag tag-med">B.Sc Nursing</span>
-            <span class="card-tag tag-med">B.Pharm</span>
-          </div>
-        </div>
-        <a href="02_02_veterinary_allied_health.html" class="card-btn btn-02-med">
-          <span>விவரங்கள் காண்க</span>
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-      <!-- 03. AGRICULTURE & FISHERIES (Forest Green Button) -->
-      <div class="course-card border-agri">
-        <div>
-          <div class="card-badge badge-agri">03 / AGRICULTURE & FISHERIES</div>
-          <div class="card-header">
-            <div class="card-icon-box icon-agri">🌾</div>
-            <div class="card-title-group">
-              <h2 class="card-title">வேளாண்மை & மீன்வள அறிவியல்</h2>
-              <div class="card-subtitle">Agriculture, Horticulture & Fisheries</div>
-            </div>
-          </div>
-          <p class="card-desc">
-            தமிழ்நாடு வேளாண்மைப் பல்கலை (TNAU) & மீன்வளப் பல்கலை (TNJFU) அரசு ஒற்றைச் சாளர நேரடி சேர்க்கைப் படிப்புகள்.
+<div class="card-tags">
+<span class="card-tag tag-med">B.V.Sc &amp; A.H.</span>
+<span class="card-tag tag-med">TANUVAS</span>
+<span class="card-tag tag-med">BNYS டாக்டர்</span>
+<span class="card-tag tag-med">B.Sc Nursing</span>
+<span class="card-tag tag-med">B.Pharm</span>
+</div>
+</div>
+<a class="card-btn btn-02-med" href="02_02_veterinary_allied_health.html">
+<span>விவரங்கள் காண்க</span>
+<svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 03. AGRICULTURE & FISHERIES (Forest Green Button) -->
+<div class="course-card border-agri">
+<div>
+<div class="card-badge badge-agri">03 / AGRICULTURE &amp; FISHERIES</div>
+<div class="card-header">
+<div class="card-icon-box icon-agri">🌾</div>
+<div class="card-title-group">
+<h2 class="card-title">வேளாண்மை &amp; மீன்வள அறிவியல்</h2>
+<div class="card-subtitle">Agriculture, Horticulture &amp; Fisheries</div>
+</div>
+</div>
+<p class="card-desc">
+            தமிழ்நாடு வேளாண்மைப் பல்கலை (TNAU) &amp; மீன்வளப் பல்கலை (TNJFU) அரசு ஒற்றைச் சாளர நேரடி சேர்க்கைப் படிப்புகள்.
           </p>
-          <div class="card-tags">
-            <span class="card-tag tag-agri">TNAU கோவை</span>
-            <span class="card-tag tag-agri">B.Sc (Hons) Agri</span>
-            <span class="card-tag tag-agri">B.F.Sc மீன்வளம்</span>
-            <span class="card-tag tag-agri">B.Tech Agri Engg</span>
-            <span class="card-tag tag-agri">7.5% ஒதுக்கீடு</span>
-          </div>
-        </div>
-        <a href="02_03_agriculture_fisheries.html" class="card-btn btn-03-agri">
-          <span>விவரங்கள் காண்க</span>
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-      <!-- 04. LAW ADMISSIONS (Amber Gold Button) -->
-      <div class="course-card border-law">
-        <div>
-          <div class="card-badge badge-law">04 / LAW ADMISSIONS</div>
-          <div class="card-header">
-            <div class="card-icon-box icon-law">⚖️</div>
-            <div class="card-title-group">
-              <h2 class="card-title">சட்டப் படிப்புகள் (5 ஆண்டு LL.B.)</h2>
-              <div class="card-subtitle">Direct Law Admissions (5-Year Integrated LL.B.)</div>
-            </div>
-          </div>
-          <p class="card-desc">
-            அம்பேத்கர் சட்டப் பல்கலை (TNDALU) & 15 அரசு சட்டக் கல்லூரிகளில் நுழைவுத் தேர்வின்றி +2 மதிப்பெண் மூலம் நேரடி சேர்க்கை.
+<div class="card-tags">
+<span class="card-tag tag-agri">TNAU கோவை</span>
+<span class="card-tag tag-agri">B.Sc (Hons) Agri</span>
+<span class="card-tag tag-agri">B.F.Sc மீன்வளம்</span>
+<span class="card-tag tag-agri">B.Tech Agri Engg</span>
+<span class="card-tag tag-agri">7.5% ஒதுக்கீடு</span>
+</div>
+</div>
+<a class="card-btn btn-03-agri" href="02_03_agriculture_fisheries.html">
+<span>விவரங்கள் காண்க</span>
+<svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 04. LAW ADMISSIONS (Amber Gold Button) -->
+<div class="course-card border-law">
+<div>
+<div class="card-badge badge-law">04 / LAW ADMISSIONS</div>
+<div class="card-header">
+<div class="card-icon-box icon-law">⚖️</div>
+<div class="card-title-group">
+<h2 class="card-title">சட்டப் படிப்புகள் (5 ஆண்டு LL.B.)</h2>
+<div class="card-subtitle">Direct Law Admissions (5-Year Integrated LL.B.)</div>
+</div>
+</div>
+<p class="card-desc">
+            அம்பேத்கர் சட்டப் பல்கலை (TNDALU) &amp; 15 அரசு சட்டக் கல்லூரிகளில் நுழைவுத் தேர்வின்றி +2 மதிப்பெண் மூலம் நேரடி சேர்க்கை.
           </p>
-          <div class="card-tags">
-            <span class="card-tag tag-law">TNDALU</span>
-            <span class="card-tag tag-law">5-Year LL.B.</span>
-            <span class="card-tag tag-law">B.A. LL.B.</span>
-            <span class="card-tag tag-law">B.Com. LL.B.</span>
-            <span class="card-tag tag-law">அரசு சட்டக் கல்லூரி</span>
-          </div>
-        </div>
-        <a href="02_04_law_admissions.html" class="card-btn btn-04-law">
-          <span>விவரங்கள் காண்க</span>
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-      <!-- 05. PURE & APPLIED SCIENCES (Sky Blue Button) -->
-      <div class="course-card border-sci">
-        <div>
-          <div class="card-badge badge-sci">05 / PURE SCIENCES</div>
-          <div class="card-header">
-            <div class="card-icon-box icon-sci">🔬</div>
-            <div class="card-title-group">
-              <h2 class="card-title">தூய & பயன்பாட்டு அறிவியல் (B.Sc)</h2>
-              <div class="card-subtitle">Pure & Applied Sciences (TNGASA)</div>
-            </div>
-          </div>
-          <p class="card-desc">
+<div class="card-tags">
+<span class="card-tag tag-law">TNDALU</span>
+<span class="card-tag tag-law">5-Year LL.B.</span>
+<span class="card-tag tag-law">B.A. LL.B.</span>
+<span class="card-tag tag-law">B.Com. LL.B.</span>
+<span class="card-tag tag-law">அரசு சட்டக் கல்லூரி</span>
+</div>
+</div>
+<a class="card-btn btn-04-law" href="02_04_law_admissions.html">
+<span>விவரங்கள் காண்க</span>
+<svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 05. PURE & APPLIED SCIENCES (Sky Blue Button) -->
+<div class="course-card border-sci">
+<div>
+<div class="card-badge badge-sci">05 / PURE SCIENCES</div>
+<div class="card-header">
+<div class="card-icon-box icon-sci">🔬</div>
+<div class="card-title-group">
+<h2 class="card-title">தூய &amp; பயன்பாட்டு அறிவியல் (B.Sc)</h2>
+<div class="card-subtitle">Pure &amp; Applied Sciences (TNGASA)</div>
+</div>
+</div>
+<p class="card-desc">
             அரசு மற்றும் அரசு உதவிபெறும் கலை அறிவியல் கல்லூரிகளில் அடிப்படை அறிவியல் மற்றும் ஆராய்ச்சித் துறைகளுக்கான படிப்புகள்.
           </p>
-          <div class="card-tags">
-            <span class="card-tag tag-sci">TNGASA</span>
-            <span class="card-tag tag-sci">B.Sc Maths / Physics</span>
-            <span class="card-tag tag-sci">Chemistry</span>
-            <span class="card-tag tag-sci">Botany / Zoology</span>
-            <span class="card-tag tag-sci">குறைந்த கட்டணம்</span>
-          </div>
-        </div>
-        <a href="02_05_pure_applied_sciences.html" class="card-btn btn-05-sci">
-          <span>விவரங்கள் காண்க</span>
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-      <!-- 06. COMPUTER APPLICATIONS & IT (Tech Violet Button) -->
-      <div class="course-card border-it">
-        <div>
-          <div class="card-badge badge-it">06 / COMPUTER & IT</div>
-          <div class="card-header">
-            <div class="card-icon-box icon-it">💻</div>
-            <div class="card-title-group">
-              <h2 class="card-title">கணினிப் பயன்பாட்டியல் & IT</h2>
-              <div class="card-subtitle">Computer Applications, IT & Data Science</div>
-            </div>
-          </div>
-          <p class="card-desc">
-            குறைந்த செலவில் 3 ஆண்டுகளில் மென்பொருள் & IT துறையில் உயர் வேலைவாய்ப்புகளை வழங்கும் முதன்மைக் கணினிப் படிப்புகள்.
+<div class="card-tags">
+<span class="card-tag tag-sci">TNGASA</span>
+<span class="card-tag tag-sci">B.Sc Maths / Physics</span>
+<span class="card-tag tag-sci">Chemistry</span>
+<span class="card-tag tag-sci">Botany / Zoology</span>
+<span class="card-tag tag-sci">குறைந்த கட்டணம்</span>
+</div>
+</div>
+<a class="card-btn btn-05-sci" href="02_05_pure_applied_sciences.html">
+<span>விவரங்கள் காண்க</span>
+<svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 06. COMPUTER APPLICATIONS & IT (Tech Violet Button) -->
+<div class="course-card border-it">
+<div>
+<div class="card-badge badge-it">06 / COMPUTER &amp; IT</div>
+<div class="card-header">
+<div class="card-icon-box icon-it">💻</div>
+<div class="card-title-group">
+<h2 class="card-title">கணினிப் பயன்பாட்டியல் &amp; IT</h2>
+<div class="card-subtitle">Computer Applications, IT &amp; Data Science</div>
+</div>
+</div>
+<p class="card-desc">
+            குறைந்த செலவில் 3 ஆண்டுகளில் மென்பொருள் &amp; IT துறையில் உயர் வேலைவாய்ப்புகளை வழங்கும் முதன்மைக் கணினிப் படிப்புகள்.
           </p>
-          <div class="card-tags">
-            <span class="card-tag tag-it">BCA</span>
-            <span class="card-tag tag-it">B.Sc Computer Science</span>
-            <span class="card-tag tag-it">Information Tech</span>
-            <span class="card-tag tag-it">Data Science</span>
-            <span class="card-tag tag-it">MNC IT Jobs</span>
-          </div>
-        </div>
-        <a href="02_06_computer_applications_it.html" class="card-btn btn-06-it">
-          <span>விவரங்கள் காண்க</span>
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-      <!-- 07. ARTS & HUMANITIES (Warm Orange Button) -->
-      <div class="course-card border-arts">
-        <div>
-          <div class="card-badge badge-arts">07 / ARTS & HUMANITIES</div>
-          <div class="card-header">
-            <div class="card-icon-box icon-arts">📚</div>
-            <div class="card-title-group">
-              <h2 class="card-title">கலை & மானுடவியல் படிப்புகள்</h2>
-              <div class="card-subtitle">Arts & Humanities (TNGASA)</div>
-            </div>
-          </div>
-          <p class="card-desc">
+<div class="card-tags">
+<span class="card-tag tag-it">BCA</span>
+<span class="card-tag tag-it">B.Sc Computer Science</span>
+<span class="card-tag tag-it">Information Tech</span>
+<span class="card-tag tag-it">Data Science</span>
+<span class="card-tag tag-it">MNC IT Jobs</span>
+</div>
+</div>
+<a class="card-btn btn-06-it" href="02_06_computer_applications_it.html">
+<span>விவரங்கள் காண்க</span>
+<svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 07. ARTS & HUMANITIES (Warm Orange Button) -->
+<div class="course-card border-arts">
+<div>
+<div class="card-badge badge-arts">07 / ARTS &amp; HUMANITIES</div>
+<div class="card-header">
+<div class="card-icon-box icon-arts">📚</div>
+<div class="card-title-group">
+<h2 class="card-title">கலை &amp; மானுடவியல் படிப்புகள்</h2>
+<div class="card-subtitle">Arts &amp; Humanities (TNGASA)</div>
+</div>
+</div>
+<p class="card-desc">
             அரசு கல்லூரிகளில் (TNGASA) மொழி, இலக்கியம், வரலாறு, பொருளியல் மற்றும் குடிமைப் பணிகளுக்கான முதன்மை கலைப் படிப்புகள்.
           </p>
-          <div class="card-tags">
-            <span class="card-tag tag-arts">TNGASA</span>
-            <span class="card-tag tag-arts">B.A. தமிழ் / English</span>
-            <span class="card-tag tag-arts">History</span>
-            <span class="card-tag tag-arts">Economics</span>
-            <span class="card-tag tag-arts">UPSC / TNPSC</span>
-          </div>
-        </div>
-        <a href="02_07_arts_humanities.html" class="card-btn btn-07-arts">
-          <span>விவரங்கள் காண்க</span>
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-      <!-- 08. COMMERCE & MANAGEMENT (Dark Cyan Button) -->
-      <div class="course-card border-comm">
-        <div>
-          <div class="card-badge badge-comm">08 / COMMERCE & MANAGEMENT</div>
-          <div class="card-header">
-            <div class="card-icon-box icon-comm">📊</div>
-            <div class="card-title-group">
-              <h2 class="card-title">வணிகவியல் & மேலாண்மை</h2>
-              <div class="card-subtitle">Commerce, Finance & Management (B.Com / BBA)</div>
-            </div>
-          </div>
-          <p class="card-desc">
+<div class="card-tags">
+<span class="card-tag tag-arts">TNGASA</span>
+<span class="card-tag tag-arts">B.A. தமிழ் / English</span>
+<span class="card-tag tag-arts">History</span>
+<span class="card-tag tag-arts">Economics</span>
+<span class="card-tag tag-arts">UPSC / TNPSC</span>
+</div>
+</div>
+<a class="card-btn btn-07-arts" href="02_07_arts_humanities.html">
+<span>விவரங்கள் காண்க</span>
+<svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 08. COMMERCE & MANAGEMENT (Dark Cyan Button) -->
+<div class="course-card border-comm">
+<div>
+<div class="card-badge badge-comm">08 / COMMERCE &amp; MANAGEMENT</div>
+<div class="card-header">
+<div class="card-icon-box icon-comm">📊</div>
+<div class="card-title-group">
+<h2 class="card-title">வணிகவியல் &amp; மேலாண்மை</h2>
+<div class="card-subtitle">Commerce, Finance &amp; Management (B.Com / BBA)</div>
+</div>
+</div>
+<p class="card-desc">
             வங்கி, கார்ப்பரேட் நிதி, தணிக்கை, பங்குச்சந்தை மற்றும் பெருநிறுவன மேலாண்மைப் பணிகளுக்கான முதன்மையான படிப்புகள்.
           </p>
-          <div class="card-tags">
-            <span class="card-tag tag-comm">B.Com General</span>
-            <span class="card-tag tag-comm">B.Com CA</span>
-            <span class="card-tag tag-comm">Corporate Sec</span>
-            <span class="card-tag tag-comm">BBA</span>
-            <span class="card-tag tag-comm">FinTech</span>
-          </div>
-        </div>
-        <a href="02_08_commerce_management.html" class="card-btn btn-08-comm">
-          <span>விவரங்கள் காண்க</span>
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-      <!-- 09. DIPLOMA & VOCATIONAL (Steel Slate Button) -->
-      <div class="course-card border-dip">
-        <div>
-          <div class="card-badge badge-dip">09 / DIPLOMA & VOCATIONAL</div>
-          <div class="card-header">
-            <div class="card-icon-box icon-dip">🛠️</div>
-            <div class="card-title-group">
-              <h2 class="card-title">பாலிடெக்னிக் டிப்ளமோ & அரசு ITI</h2>
-              <div class="card-subtitle">Polytechnic Diploma, Lateral Entry & Govt ITI Trades</div>
-            </div>
-          </div>
-          <p class="card-desc">
+<div class="card-tags">
+<span class="card-tag tag-comm">B.Com General</span>
+<span class="card-tag tag-comm">B.Com CA</span>
+<span class="card-tag tag-comm">Corporate Sec</span>
+<span class="card-tag tag-comm">BBA</span>
+<span class="card-tag tag-comm">FinTech</span>
+</div>
+</div>
+<a class="card-btn btn-08-comm" href="02_08_commerce_management.html">
+<span>விவரங்கள் காண்க</span>
+<svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- 09. DIPLOMA & VOCATIONAL (Steel Slate Button) -->
+<div class="course-card border-dip">
+<div>
+<div class="card-badge badge-dip">09 / DIPLOMA &amp; VOCATIONAL</div>
+<div class="card-header">
+<div class="card-icon-box icon-dip">🛠️</div>
+<div class="card-title-group">
+<h2 class="card-title">பாலிடெக்னிக் டிப்ளமோ &amp; அரசு ITI</h2>
+<div class="card-subtitle">Polytechnic Diploma, Lateral Entry &amp; Govt ITI Trades</div>
+</div>
+</div>
+<p class="card-desc">
             +2 முடித்தவர்களுக்கு நேரடி 2-ஆம் ஆண்டு பாலிடெக்னிக் டிப்ளமோ (DOTE), மத்திய அரசு ITI மற்றும் பட்டயக் கணக்காளர் அறக்கட்டளை.
           </p>
-          <div class="card-tags">
-            <span class="card-tag tag-dip">DOTE Lateral Entry</span>
-            <span class="card-tag tag-dip">Polytechnic</span>
-            <span class="card-tag tag-dip">அரசு ITI தொழிற்பிரிவுகள்</span>
-            <span class="card-tag tag-dip">B.E. 2-ஆம் ஆண்டு நேரடி வழி</span>
-            <span class="card-tag tag-dip">ITI தொழிற்கல்வி</span>
-          </div>
-        </div>
-        <a href="02_09_polytechnic_iti.html" class="card-btn btn-09-dip">
-          <span>விவரங்கள் காண்க</span>
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </a>
-      </div>
-  
-    </div>
-  
-    <!-- Official Footer Credit -->
-      <!-- Footer -->
-  
-
-  </div>
-
-
-
-<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
+<div class="card-tags">
+<span class="card-tag tag-dip">DOTE Lateral Entry</span>
+<span class="card-tag tag-dip">Polytechnic</span>
+<span class="card-tag tag-dip">அரசு ITI தொழிற்பிரிவுகள்</span>
+<span class="card-tag tag-dip">B.E. 2-ஆம் ஆண்டு நேரடி வழி</span>
+<span class="card-tag tag-dip">ITI தொழிற்கல்வி</span>
+</div>
+</div>
+<a class="card-btn btn-09-dip" href="02_09_polytechnic_iti.html">
+<span>விவரங்கள் காண்க</span>
+<svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+<!-- Official Footer Credit -->
+<!-- Footer -->
 <div class="kural-box">
-  <div class="kural-header">
-    <span class="kural-icon">📜</span>
-    <span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-    <span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
-  </div>
-  <div class="kural-verse-text">
+<div class="kural-header">
+<span class="kural-icon">📜</span>
+<span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
+<span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
+</div>
+<div class="kural-verse-text">
     “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
     திண்ணியர் ஆகப் பெறின்.”
   </div>
-  <div class="kural-meaning">
-    <strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
+<div class="kural-meaning">
+<strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
   </div>
-
-<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
-<div class="creator-card">
-  <div class="creator-typewriter-wrapper">
-    <span id="creatorTypewriterTarget" class="creator-typewriter-target"></span><span id="creatorCursor" class="creator-cursor">|</span>
-  </div>
-  <a href="tel:9626471035" class="footer-phone-pill" id="footerPhonePill" title="அழைக்க">
-    <span class="phone-icon">📱</span>
-    <span class="phone-text">9626471035</span>
-  </a>
+</div><div class="creator-card">
+<div class="creator-typewriter-wrapper">
+<span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
 </div>
-<!-- Footer -->
-<footer class="portal-footer">
-  <p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
+<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
+<span class="phone-icon">📱</span>
+<span class="phone-text">9626471035</span>
+</a>
+</div><footer class="portal-footer">
+<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
     தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
-  </p>
-  <p style="font-size: 0.85rem; color: #64748b;">
+</p>
+<p style="font-size: 0.85rem; color: #64748b;">
     © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
-</footer>
-  
-  </div>
-
-
-  </main>
+</footer></div>
+<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
+</main>
 </div>
-
 <script>
 function toggleSidebarMenu() {
   var sidebar = document.getElementById('desktopLeftSidebar');
@@ -3758,13 +3707,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
-
-
-
-
-
-
 <script>
 // Standardized Creator Typewriter Animation (Guaranteed Execution & Colors)
 (function() {
