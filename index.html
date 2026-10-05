@@ -3344,6 +3344,101 @@
       width: 100%;
       box-sizing: border-box;
     }
+
+    /* ========================================================
+       FULL-WIDTH SINGLE-LINE MONITOR-ADAPTIVE CREATOR CARD
+       ======================================================== */
+    .creator-card {
+      background: #ffffff !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-radius: 12px !important;
+      padding: 10px clamp(14px, 1.8vw, 24px) !important;
+      margin: 24px 0 16px 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex-wrap: nowrap !important;
+      gap: 12px !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+
+    .creator-typewriter-wrapper {
+      font-size: clamp(0.70rem, 0.90vw, 0.86rem) !important;
+      color: #1e293b !important;
+      font-weight: 600 !important;
+      line-height: 1.4 !important;
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      flex: 1 1 auto !important;
+      min-width: 0 !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      gap: 0px !important;
+    }
+
+    .creator-typewriter-target {
+      display: inline !important;
+      white-space: nowrap !important;
+    }
+
+    .creator-label,
+    .creator-name-ta-blue,
+    .creator-name-ta-purple,
+    .creator-role,
+    .creator-name-en-blue,
+    .creator-name-en-purple {
+      white-space: nowrap !important;
+    }
+
+    .creator-cursor {
+      display: inline-block !important;
+      font-weight: 300 !important;
+      color: #2563eb !important;
+      margin-left: 2px !important;
+      animation: blinkCreatorCursor 0.65s infinite !important;
+      flex-shrink: 0 !important;
+    }
+
+    .footer-phone-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+      color: #ffffff !important;
+      padding: 6px 14px !important;
+      border-radius: 999px !important;
+      text-decoration: none !important;
+      font-weight: 800 !important;
+      font-size: clamp(0.74rem, 0.84vw, 0.86rem) !important;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3) !important;
+      transition: all 0.2s ease !important;
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+    }
+
+    @media (max-width: 768px) {
+      .creator-card {
+        padding: 12px 14px !important;
+        justify-content: center !important;
+        text-align: center !important;
+        flex-wrap: wrap !important;
+      }
+      .creator-typewriter-wrapper {
+        justify-content: center !important;
+        font-size: 0.80rem !important;
+        flex-wrap: wrap !important;
+        white-space: normal !important;
+      }
+      .creator-typewriter-target {
+        white-space: normal !important;
+      }
+    }
 </style>
 </head>
 <body>
