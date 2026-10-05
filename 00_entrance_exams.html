@@ -391,7 +391,13 @@ body {
  }  
   
  /* Grid Layout for Cards */  
-   
+ .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  width: 100%;
+  box-sizing: border-box;
+}  
   
  /* Modern Glassmorphism Card Styling */
   .card {
@@ -804,7 +810,10 @@ body {
 
 /* Responsive Breakpoints for Fluid Multi-Device Perfection */
 @media (max-width: 1100px) {
-  
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -849,7 +858,10 @@ body {
     font-size: 0.78rem !important;
     padding: 5px 11px !important;
   }
-  
+  .grid-container {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
   .card {
     padding: 20px 18px !important;
   }
@@ -1304,1720 +1316,61 @@ textarea {
 }
 
     /* ========================================================
-       STANDARDIZED COLORFUL CREATOR CARD & VIBRANT TYPOGRAPHY
+       ENTRANCE EXAMS 12-CARD GRID: EXACTLY 3 BOXES PER ROW
+       (4 Rows x 3 Boxes = 12 Cards)
        ======================================================== */
-    .creator-card {
-      background: #ffffff !important;
-      border: 1.5px solid #cbd5e1 !important;
-      border-radius: 14px !important;
-      padding: 14px 22px !important;
-      margin: 28px auto 16px auto !important;
-      max-width: 940px !important;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06) !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      flex-wrap: wrap !important;
-      gap: 12px !important;
-      box-sizing: border-box !important;
-    }
-    .creator-typewriter-wrapper {
-      font-size: 0.94rem !important;
-      color: #1e293b !important;
-      font-weight: 600 !important;
-      line-height: 1.6 !important;
-      display: flex !important;
-      align-items: center !important;
-      flex-wrap: wrap !important;
-      flex: 1 1 auto !important;
-      gap: 0px !important;
-    }
-    .creator-typewriter-target {
-      display: inline !important;
-      white-space: pre-wrap !important;
-    }
-    .creator-label {
-      font-weight: 700 !important;
-      color: #1e293b !important;
-    }
-    .creator-name-ta-blue {
-      color: #1d4ed8 !important; /* Royal Blue for 'கூ. ' */
-      font-weight: 900 !important;
-    }
-    .creator-name-ta-purple {
-      color: #c026d3 !important; /* Bright Purple/Magenta with underline for Tamil name */
-      font-weight: 900 !important;
-      text-decoration: underline !important;
-      text-underline-offset: 3px !important;
-    }
-    .creator-role {
-      color: #334155 !important;
-      font-weight: 600 !important;
-    }
-    .creator-name-en-blue {
-      color: #1d4ed8 !important; /* Royal Blue for 'K. ' */
-      font-weight: 900 !important;
-    }
-    .creator-name-en-purple {
-      color: #c026d3 !important; /* Bright Purple for 'Poovalingam' */
-      font-weight: 900 !important;
-    }
-    .creator-cursor {
-      display: inline-block !important;
-      font-weight: 300 !important;
-      color: #2563eb !important;
-      margin-left: 2px !important;
-      animation: blinkCreatorCursor 0.65s infinite !important;
-    }
-    @keyframes blinkCreatorCursor {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-    .footer-phone-pill {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 6px !important;
-      background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
-      color: #ffffff !important;
-      padding: 6px 14px !important;
-      border-radius: 999px !important;
-      text-decoration: none !important;
-      font-weight: 800 !important;
-      font-size: 0.88rem !important;
-      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3) !important;
-      transition: all 0.2s ease !important;
-    }
-    .footer-phone-pill:hover {
-      background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
-      transform: translateY(-2px) !important;
-      color: #ffffff !important;
-    }
-
-    /* ========================================================
-       UNIVERSAL MOBILE-OPTIMIZED HEADER BANNER (100% VISIBLE)
-       ======================================================== */
-    @media (max-width: 680px) {
-      .portal-header,
-      .hero-banner,
-      .header-card,
-      .header-banner-wrap,
-      .banner-fallback,
-      .hero-portal-card,
-      .page-header,
-      .hero-header {
-        padding: 16px 12px 14px 12px !important;
-        margin-bottom: 14px !important;
-        border-radius: 12px !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        text-align: center !important;
-        overflow: visible !important;
-      }
-
-      .portal-title,
-      .hero-title,
-      .header-title,
-      .banner-fallback-title,
-      .header-banner-wrap h1,
-      .banner-fallback h1 {
-        font-size: 1.35rem !important;
-        line-height: 1.35 !important;
-        margin: 4px auto 8px auto !important;
-        word-break: normal !important;
-        overflow-wrap: break-word !important;
-        white-space: normal !important;
-        text-align: center !important;
-        max-width: 100% !important;
-      }
-
-      .portal-subtitle,
-      .hero-subtitle,
-      .header-sub,
-      .header-subtitle,
-      .banner-fallback-subtitle,
-      .banner-fallback-dept,
-      .banner-fallback-en,
-      .banner-fallback-en-sub,
-      .header-banner-wrap p,
-      .banner-fallback p {
-        font-size: 0.82rem !important;
-        line-height: 1.45 !important;
-        margin: 3px auto !important;
-        word-break: normal !important;
-        overflow-wrap: break-word !important;
-        white-space: normal !important;
-        text-align: center !important;
-        max-width: 100% !important;
-      }
-
-      .header-badge-row,
-      .badge-row,
-      .meta-pills,
-      .hero-badges-wrap {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 5px !important;
-        margin-bottom: 8px !important;
-        width: 100% !important;
-      }
-
-      .header-tag,
-      .header-badge,
-      .hero-badge,
-      .badge-pill {
-        font-size: 0.72rem !important;
-        padding: 3px 8px !important;
-        white-space: normal !important;
-        line-height: 1.3 !important;
-        text-align: center !important;
-      }
-
-      .top-bar {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 6px !important;
-        margin-bottom: 10px !important;
-        width: 100% !important;
-      }
-      .district-badge {
-        font-size: 0.78rem !important;
-        padding: 5px 8px !important;
-        text-align: center !important;
-        justify-content: center !important;
-      }
-      .top-nav-left {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 5px !important;
-      }
-      .nav-btn, .home-btn {
-        font-size: 0.78rem !important;
-        padding: 5px 10px !important;
-      }
-      .breadcrumb-bar {
-        font-size: 0.74rem !important;
-        padding: 6px 8px !important;
-        margin-bottom: 10px !important;
-        flex-wrap: wrap !important;
-      }
-
-      .creator-card {
-        padding: 12px 14px !important;
-        justify-content: center !important;
-        text-align: center !important;
-      }
-      .creator-typewriter-wrapper {
-        justify-content: center !important;
-        font-size: 0.86rem !important;
-      }
-    }
-
-
-    /* ========================================================
-       OFFICIAL DISTRICT PORTAL TOP FRAME (UNIFIED ACROSS ALL PAGES)
-       ======================================================== */
-    .portal-top-frame {
-      width: 100% !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
-      border: 1.8px solid #d4af37 !important;
-      border-radius: 14px !important;
-      padding: 12px 18px !important;
-      margin-bottom: 16px !important;
-      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.16) !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      flex-wrap: wrap !important;
-      gap: 12px !important;
-    }
-
-    .top-frame-branding {
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 2px !important;
-    }
-
-    .top-frame-badge {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 6px !important;
-      font-size: 0.82rem !important;
-      font-weight: 800 !important;
-      color: #fef08a !important;
-      letter-spacing: 0.3px !important;
-    }
-
-    .portal-main-heading {
-      display: flex !important;
-      align-items: baseline !important;
-      gap: 10px !important;
-      flex-wrap: wrap !important;
-    }
-
-    .portal-title-text {
-      font-size: 1.35rem !important;
-      font-weight: 900 !important;
-      color: #ffffff !important;
-      letter-spacing: -0.2px !important;
-    }
-
-    .portal-subtitle-en {
-      font-size: 0.76rem !important;
-      font-weight: 800 !important;
-      color: #93c5fd !important;
-      letter-spacing: 1px !important;
-    }
-
-    .top-frame-actions {
-      display: flex !important;
-      align-items: center !important;
-      flex-wrap: wrap !important;
-      gap: 8px !important;
-    }
-
-    .top-frame-btn {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 6px !important;
-      padding: 7px 13px !important;
-      border-radius: 8px !important;
-      font-size: 0.82rem !important;
-      font-weight: 700 !important;
-      text-decoration: none !important;
-      cursor: pointer !important;
-      border: 1px solid transparent !important;
-      transition: all 0.2s ease !important;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
-    }
-
-    .top-frame-btn.btn-menu {
-      display: none !important;
-      background: linear-gradient(135deg, #1e3a8a, #0284c7) !important;
-      color: #ffffff !important;
-      border-color: #38bdf8 !important;
-    }
-
-    .top-frame-btn.btn-ceosvg {
-      background: #0f172a !important;
-      color: #ffffff !important;
-      border-color: #334155 !important;
-    }
-    .top-frame-btn.btn-ceosvg:hover {
-      background: #1e293b !important;
-      border-color: #38bdf8 !important;
-      color: #93c5fd !important;
-      transform: translateY(-1px) !important;
-    }
-
-    .top-frame-btn.btn-home {
-      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
-      color: #ffffff !important;
-      border-color: #38bdf8 !important;
-    }
-    .top-frame-btn.btn-home:hover {
-      background: linear-gradient(135deg, #0369a1 0%, #0c4a6e 100%) !important;
-      transform: translateY(-1px) !important;
-    }
-
-    .top-frame-btn.btn-cutoff {
-      background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
-      color: #ffffff !important;
-      border-color: #fde68a !important;
-    }
-    .top-frame-btn.btn-cutoff:hover {
-      background: linear-gradient(135deg, #b45309 0%, #92400e 100%) !important;
-      transform: translateY(-1px) !important;
-    }
-
-    @media (max-width: 1024px) {
-      .top-frame-btn.btn-menu {
-        display: inline-flex !important;
-      }
-    }
-
-    @media (max-width: 680px) {
-      .portal-top-frame {
-        padding: 10px 12px !important;
-        gap: 10px !important;
-      }
-      .top-frame-branding {
-        text-align: center !important;
-        width: 100% !important;
-      }
-      .top-frame-badge {
-        justify-content: center !important;
-        font-size: 0.76rem !important;
-      }
-      .portal-main-heading {
-        justify-content: center !important;
-      }
-      .portal-title-text {
-        font-size: 1.15rem !important;
-      }
-      .portal-subtitle-en {
-        font-size: 0.70rem !important;
-      }
-      .top-frame-actions {
-        justify-content: center !important;
-        width: 100% !important;
-        gap: 6px !important;
-      }
-      .top-frame-btn {
-        font-size: 0.75rem !important;
-        padding: 6px 10px !important;
-      }
-    }
-
-    /* ========================================================
-       CREATOR CARD COLOR CLASSES (100% VIBRANT)
-       ======================================================== */
-    .creator-card {
-      background: #ffffff !important;
-      border: 1.5px solid #cbd5e1 !important;
-      border-radius: 14px !important;
-      padding: 14px 22px !important;
-      margin: 28px auto 16px auto !important;
-      max-width: 940px !important;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06) !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      flex-wrap: wrap !important;
-      gap: 12px !important;
-      box-sizing: border-box !important;
-    }
-    .creator-typewriter-wrapper {
-      font-size: 0.94rem !important;
-      color: #1e293b !important;
-      font-weight: 600 !important;
-      line-height: 1.6 !important;
-      display: flex !important;
-      align-items: center !important;
-      flex-wrap: wrap !important;
-      flex: 1 1 auto !important;
-      gap: 0px !important;
-    }
-    .creator-typewriter-target {
-      display: inline !important;
-      white-space: pre-wrap !important;
-    }
-    .creator-label {
-      font-weight: 700 !important;
-      color: #1e293b !important;
-    }
-    .creator-name-ta-blue {
-      color: #1d4ed8 !important; /* Royal Blue */
-      font-weight: 900 !important;
-    }
-    .creator-name-ta-purple {
-      color: #c026d3 !important; /* Bright Purple with underline */
-      font-weight: 900 !important;
-      text-decoration: underline !important;
-      text-underline-offset: 3px !important;
-    }
-    .creator-role {
-      color: #334155 !important;
-      font-weight: 600 !important;
-    }
-    .creator-name-en-blue {
-      color: #1d4ed8 !important;
-      font-weight: 900 !important;
-    }
-    .creator-name-en-purple {
-      color: #c026d3 !important;
-      font-weight: 900 !important;
-    }
-    .creator-cursor {
-      display: inline-block !important;
-      font-weight: 300 !important;
-      color: #2563eb !important;
-      margin-left: 2px !important;
-      animation: blinkCreatorCursor 0.65s infinite !important;
-    }
-    @keyframes blinkCreatorCursor {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-    .footer-phone-pill {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 6px !important;
-      background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
-      color: #ffffff !important;
-      padding: 6px 14px !important;
-      border-radius: 999px !important;
-      text-decoration: none !important;
-      font-weight: 800 !important;
-      font-size: 0.88rem !important;
-      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3) !important;
-      transition: all 0.2s ease !important;
-    }
-    .footer-phone-pill:hover {
-      background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
-      transform: translateY(-2px) !important;
-      color: #ffffff !important;
-    }
-
-/* Fixed Left Sidebar - Stays 100% permanently anchored to viewport */
-    .desktop-left-sidebar {
-      width: 295px;
-      min-width: 295px;
-      max-width: 295px;
-      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%);
-      border-right: 1.8px solid rgba(212, 175, 55, 0.35);
-      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
-      position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
-      bottom: 0 !important;
-      height: 100vh !important;
-      overflow-y: auto !important;
-      overflow-x: hidden !important;
-      z-index: 1000 !important;
-      display: flex;
-      flex-direction: column;
-      flex-shrink: 0;
-      box-sizing: border-box;
-      
-    }
-
-    /* Custom Slim Gold Scrollbar for Sidebar */
-    .desktop-left-sidebar::-webkit-scrollbar {
-      width: 6px;
-    }
-    .desktop-left-sidebar::-webkit-scrollbar-track {
-      background: rgba(10, 15, 29, 0.95);
-    }
-    .desktop-left-sidebar::-webkit-scrollbar-thumb {
-      background: rgba(212, 175, 55, 0.45);
-      border-radius: 4px;
-    }
-    .desktop-left-sidebar::-webkit-scrollbar-thumb:hover {
-      background: rgba(212, 175, 55, 0.75);
-    }
-
-    .sidebar-header {
-      padding: 16px 14px 14px;
-      border-bottom: 1.5px solid rgba(212, 175, 55, 0.25);
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(15, 23, 42, 0.4) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-    .sidebar-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-    .sidebar-emblem {
-      font-size: 1.65rem;
-      line-height: 1;
-      filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.5));
-    }
-    .sidebar-title-wrap {
-      display: flex;
-      flex-direction: column;
-    }
-    .sidebar-main-title {
-      font-size: 0.92rem;
-      font-weight: 900;
-      color: #fef08a;
-      letter-spacing: 0.3px;
-      line-height: 1.25;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
-    }
-    .sidebar-sub-title {
-      font-size: 0.74rem;
-      color: #94a3b8;
-      font-weight: 600;
-      margin-top: 2px;
-    }
-    .sidebar-close-btn {
-      display: none;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      color: #fef08a;
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      font-size: 1.15rem;
-      font-weight: 800;
-      cursor: pointer;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s ease;
-    }
-    .sidebar-close-btn:hover {
-      background: rgba(220, 38, 38, 0.6);
-      color: #ffffff;
-    }
-
-    .sidebar-nav-body {
-      padding: 14px 10px 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      flex-grow: 1;
-    }
-
-    .sidebar-section {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .sidebar-section-header {
-      font-size: 0.74rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      color: #fef08a;
-      padding: 6px 10px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      border-left: 3px solid #d4af37;
-      background: rgba(212, 175, 55, 0.1);
-      border-radius: 0 6px 6px 0;
-      margin-bottom: 3px;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.8);
-    }
-
-    .sidebar-link {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      padding: 7px 11px;
-      color: #cbd5e1;
-      text-decoration: none;
-      font-size: 0.83rem;
-      font-weight: 600;
-      border-radius: 7px;
-      transition: all 0.18s ease;
-      line-height: 1.35;
-      position: relative;
-    }
-    .sidebar-link:hover {
-      background: linear-gradient(90deg, rgba(212, 175, 55, 0.18) 0%, rgba(26, 86, 219, 0.16) 100%);
-      color: #fef08a;
-      transform: translateX(3px);
-    }
-    .sidebar-link.primary-hub {
-      background: rgba(255, 255, 255, 0.07);
-      font-weight: 800;
-      color: #f8fafc;
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      margin-bottom: 3px;
-    }
-    .sidebar-link.primary-hub:hover {
-      border-color: #d4af37;
-      background: rgba(212, 175, 55, 0.25);
-      color: #ffffff;
-    }
-    .sidebar-link.active-page {
-      background: linear-gradient(90deg, rgba(212, 175, 55, 0.28) 0%, rgba(26, 86, 219, 0.22) 100%) !important;
-      color: #fef08a !important;
-      font-weight: 800 !important;
-      border-left: 3.5px solid #d4af37 !important;
-    }
-    .sidebar-link span.icon {
-      font-size: 0.95rem;
-      flex-shrink: 0;
-      width: 18px;
-      text-align: center;
-    }
-    .sidebar-badge {
-      margin-left: auto;
-      font-size: 0.65rem;
-      font-weight: 800;
-      padding: 1px 6px;
-      border-radius: 999px;
-      background: rgba(212, 175, 55, 0.22);
-      color: #fef08a;
-      border: 1px solid rgba(212, 175, 55, 0.4);
-    }
-
-    /* Main Page Content - Offset by exactly 295px on desktop so fixed sidebar never covers it */
-    .portal-main-content {
-      margin-left: 295px !important;
-      width: calc(100% - 295px) !important;
-      min-height: 100vh;
-      padding: 16px 22px 40px;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
-
-    .sidebar-backdrop {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.65);
-      
-      z-index: 9998;
-    }
-
-    .mobile-menu-floating-btn {
-      display: none;
-    }
-
-    /* Responsive Mobile & Tablet Rules */
-    @media (max-width: 1024px) {
-      .desktop-left-sidebar {
-        position: fixed !important;
-        left: -320px !important;
-        top: 0 !important;
-        bottom: 0 !important;
-        width: 295px !important;
-        height: 100vh !important;
-        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 9999 !important;
-        box-shadow: 6px 0 35px rgba(0,0,0,0.85);
-      }
-      .desktop-left-sidebar.sidebar-open {
-        left: 0 !important;
-      }
-      .sidebar-close-btn {
-        display: inline-flex;
-      }
-      .portal-main-content {
-        margin-left: 0 !important;
-        width: 100% !important;
-        padding: 8px 10px 30px !important;
-      }
-      .sidebar-backdrop.active {
-        display: block;
-      }
-      .mobile-menu-floating-btn {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        position: fixed;
-        bottom: 22px;
-        left: 20px;
-        background: linear-gradient(135deg, #091330 0%, #112255 100%);
-        color: #fef08a;
-        border: 1.8px solid #d4af37;
-        border-radius: 999px;
-        padding: 10px 18px;
-        font-size: 0.90rem;
-        font-weight: 800;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 14px rgba(212, 175, 55, 0.4);
-        z-index: 9990;
-        cursor: pointer;
-        font-family: inherit;
-        transition: all 0.2s ease;
-      }
-      .mobile-menu-floating-btn:hover {
-        background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-        transform: scale(1.05);
-      }
-    }
-
-
-    /* ========================================================
-       STICKY TOP FRAME & FLUID MONITOR WIDTH (ALL PAGES)
-       ======================================================== */
-    .portal-top-frame {
-      position: sticky !important;
-      top: 0 !important;
-      z-index: 999 !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
-      border: 1.8px solid #d4af37 !important;
-      border-radius: 14px !important;
-      padding: 12px 18px !important;
-      margin-bottom: 16px !important;
-      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.22) !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      flex-wrap: wrap !important;
-      gap: 12px !important;
-    }
-
-    .top-frame-branding {
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 2px !important;
-    }
-
-    .top-frame-badge {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 6px !important;
-      font-size: 0.82rem !important;
-      font-weight: 800 !important;
-      color: #fef08a !important;
-      letter-spacing: 0.3px !important;
-    }
-
-    .portal-main-heading {
-      display: flex !important;
-      align-items: baseline !important;
-      gap: 10px !important;
-      flex-wrap: wrap !important;
-    }
-
-    .portal-title-text {
-      font-size: 1.35rem !important;
-      font-weight: 900 !important;
-      color: #ffffff !important;
-      letter-spacing: -0.2px !important;
-    }
-
-    .portal-subtitle-en {
-      font-size: 0.76rem !important;
-      font-weight: 800 !important;
-      color: #93c5fd !important;
-      letter-spacing: 1px !important;
-    }
-
-    .top-frame-actions {
-      display: flex !important;
-      align-items: center !important;
-      flex-wrap: wrap !important;
-      gap: 8px !important;
-    }
-
-    .top-frame-btn {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 6px !important;
-      padding: 7px 13px !important;
-      border-radius: 8px !important;
-      font-size: 0.82rem !important;
-      font-weight: 700 !important;
-      text-decoration: none !important;
-      cursor: pointer !important;
-      border: 1px solid transparent !important;
-      transition: all 0.2s ease !important;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
-    }
-
-    .top-frame-btn.btn-menu {
-      display: none !important;
-      background: linear-gradient(135deg, #1e3a8a, #0284c7) !important;
-      color: #ffffff !important;
-      border-color: #38bdf8 !important;
-    }
-
-    .top-frame-btn.btn-ceosvg {
-      background: #0f172a !important;
-      color: #ffffff !important;
-      border-color: #334155 !important;
-    }
-    .top-frame-btn.btn-ceosvg:hover {
-      background: #1e293b !important;
-      border-color: #38bdf8 !important;
-      color: #93c5fd !important;
-      transform: translateY(-1px) !important;
-    }
-
-    .top-frame-btn.btn-home {
-      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
-      color: #ffffff !important;
-      border-color: #38bdf8 !important;
-    }
-    .top-frame-btn.btn-home:hover {
-      background: linear-gradient(135deg, #0369a1 0%, #0c4a6e 100%) !important;
-      transform: translateY(-1px) !important;
-    }
-
-    @media (max-width: 1024px) {
-      .top-frame-btn.btn-menu {
-        display: inline-flex !important;
-      }
-    }
-
-    @media (max-width: 680px) {
-      .portal-top-frame {
-        padding: 10px 12px !important;
-        gap: 8px !important;
-        border-radius: 10px !important;
-      }
-      .top-frame-branding {
-        text-align: center !important;
-        width: 100% !important;
-      }
-      .top-frame-badge {
-        justify-content: center !important;
-        font-size: 0.74rem !important;
-      }
-      .portal-main-heading {
-        justify-content: center !important;
-      }
-      .portal-title-text {
-        font-size: 1.15rem !important;
-      }
-      .portal-subtitle-en {
-        font-size: 0.70rem !important;
-      }
-      .top-frame-actions {
-        justify-content: center !important;
-        width: 100% !important;
-        gap: 6px !important;
-      }
-      .top-frame-btn {
-        font-size: 0.75rem !important;
-        padding: 6px 10px !important;
-      }
-    }
-
-
-    /* ========================================================
-       00_ENTRANCE_EXAMS AUTO-EXPANDING FLUID MONITOR WIDTH
-       ======================================================== */
-    .container {
-      width: 100% !important;
-      max-width: 100% !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      box-sizing: border-box !important;
-    }
-
-    
-
-    @media (min-width: 1440px) {
-      
-    }
-
-    @media (min-width: 1800px) {
-      
-    }
-
-    @media (max-width: 768px) {
-      
-    }
-
-
-    /* ========================================================
-       TOP FRAME ZERO-GAP FLUSH MOUNT (மேற்பகுதி வெற்றிடம் நீக்கம்)
-       ======================================================== */
-    body {
-      padding-top: 0 !important;
-      margin-top: 0 !important;
-    }
-    .portal-main-content {
-      padding-top: 0 !important;
-      margin-top: 0 !important;
-    }
-    .container, .portal-container {
-      padding-top: 0 !important;
-      margin-top: 0 !important;
-    }
-    .portal-top-frame {
-      margin-top: 0 !important;
-      border-top-left-radius: 0 !important;
-      border-top-right-radius: 0 !important;
-      position: sticky !important;
-      top: 0 !important;
-      z-index: 9999 !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.22) !important;
-    }
-
-    /* ========================================================
-       GRID LAYOUT: ROWS 1-3 = 1x3, ROW 4 = 1x2 (FLUID MONITOR WIDTH)
-       ======================================================== */
-    
-
-    /* Rows 1, 2, 3: Exactly 3 cards per row (1x3), each taking 1/3 of monitor width */
-    .grid-container > .card:nth-child(1),
-    .grid-container > .card:nth-child(2),
-    .grid-container > .card:nth-child(3),
-    .grid-container > .card:nth-child(4),
-    .grid-container > .card:nth-child(5),
-    .grid-container > .card:nth-child(6),
-    .grid-container > .card:nth-child(7),
-    .grid-container > .card:nth-child(8),
-    .grid-container > .card:nth-child(9) {
-      grid-column: span 2 !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-    }
-
-    /* Row 4: Exactly 2 cards per row (1x2), expanding to 50% of monitor width each */
-    .grid-container > .card:nth-child(10),
-    .grid-container > .card:nth-child(11) {
-      grid-column: span 3 !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-    }
-
-    /* Tablet responsive (between 681px and 1024px): 2 cards per row */
-    @media (max-width: 1024px) and (min-width: 681px) {
-      
-      .grid-container > .card:nth-child(1),
-      .grid-container > .card:nth-child(2),
-      .grid-container > .card:nth-child(3),
-      .grid-container > .card:nth-child(4),
-      .grid-container > .card:nth-child(5),
-      .grid-container > .card:nth-child(6),
-      .grid-container > .card:nth-child(7),
-      .grid-container > .card:nth-child(8),
-      .grid-container > .card:nth-child(9),
-      .grid-container > .card:nth-child(10) {
-        grid-column: span 1 !important;
-        width: 100% !important;
-      }
-      .grid-container > .card:nth-child(11) {
-        grid-column: span 2 !important;
-        width: 100% !important;
-      }
-    }
-
-    /* Mobile responsive (<= 680px): 1 card per row */
-    @media (max-width: 680px) {
-      
-      .grid-container > .card:nth-child(n) {
-        grid-column: span 1 !important;
-        width: 100% !important;
-      }
-    }
-
-
-    /* ========================================================
-       MASTER DESKTOP & MOBILE RESPONSIVE STYLING (FLUSH TOP & EQUAL ROWS)
-       ======================================================== */
-    html, body {
-      margin: 0 !important;
-      padding: 0 !important;
-      background-color: #f1f5f9;
-      color: #0f172a;
-      overflow-x: hidden;
-      width: 100%;
-    }
-
-    .portal-main-content {
-      margin-left: 295px !important;
-      width: calc(100% - 295px) !important;
-      min-height: 100vh;
-      padding: 0 24px 40px 24px !important; /* ZERO top padding: eliminates white gap above top frame! */
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
-
-    @media (max-width: 1024px) {
-      .portal-main-content {
-        margin-left: 0 !important;
-        width: 100% !important;
-        padding: 0 12px 30px 12px !important;
-      }
-    }
-
-    .container {
-      width: 100% !important;
-      max-width: 100% !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      box-sizing: border-box;
-    }
-
-    /* Top Frame Flush 0px */
-    .portal-top-frame {
-      width: 100% !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
-      border: 1.8px solid #d4af37 !important;
-      border-top: none !important; /* Sits flush with browser top edge */
-      border-top-left-radius: 0 !important;
-      border-top-right-radius: 0 !important;
-      border-bottom-left-radius: 14px !important;
-      border-bottom-right-radius: 14px !important;
-      padding: 12px 20px !important;
-      margin: 0 0 16px 0 !important; /* Zero top margin: absolutely no gap! */
-      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.16) !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      flex-wrap: wrap !important;
-      gap: 12px !important;
-    }
-
-    .top-frame-branding {
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 2px !important;
-    }
-
-    .top-frame-badge {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 6px !important;
-      font-size: 0.82rem !important;
-      font-weight: 800 !important;
-      color: #fef08a !important;
-      letter-spacing: 0.3px !important;
-    }
-
-    .portal-main-heading {
-      display: flex !important;
-      align-items: baseline !important;
-      gap: 10px !important;
-      flex-wrap: wrap !important;
-    }
-
-    .portal-title-text {
-      font-size: 1.35rem !important;
-      font-weight: 900 !important;
-      color: #ffffff !important;
-      letter-spacing: -0.2px !important;
-    }
-
-    .portal-subtitle-en {
-      font-size: 0.76rem !important;
-      font-weight: 800 !important;
-      color: #93c5fd !important;
-      letter-spacing: 1px !important;
-    }
-
-    .top-frame-actions {
-      display: flex !important;
-      align-items: center !important;
-      flex-wrap: wrap !important;
-      gap: 8px !important;
-    }
-
-    .top-frame-btn {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 6px !important;
-      padding: 7px 13px !important;
-      border-radius: 8px !important;
-      font-size: 0.82rem !important;
-      font-weight: 700 !important;
-      text-decoration: none !important;
-      cursor: pointer !important;
-      border: 1px solid transparent !important;
-      transition: all 0.2s ease !important;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
-    }
-
-    .top-frame-btn.btn-menu {
-      display: none !important;
-      background: linear-gradient(135deg, #1e3a8a, #0284c7) !important;
-      color: #ffffff !important;
-      border-color: #38bdf8 !important;
-    }
-
-    .top-frame-btn.btn-ceosvg {
-      background: #0f172a !important;
-      color: #ffffff !important;
-      border-color: #334155 !important;
-    }
-    .top-frame-btn.btn-ceosvg:hover {
-      background: #1e293b !important;
-      border-color: #38bdf8 !important;
-      color: #93c5fd !important;
-      transform: translateY(-1px) !important;
-    }
-
-    .top-frame-btn.btn-home {
-      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
-      color: #ffffff !important;
-      border-color: #38bdf8 !important;
-    }
-    .top-frame-btn.btn-home:hover {
-      background: linear-gradient(135deg, #0369a1 0%, #0c4a6e 100%) !important;
-      transform: translateY(-1px) !important;
-    }
-
-    @media (max-width: 1024px) {
-      .top-frame-btn.btn-menu {
-        display: inline-flex !important;
-      }
-    }
-
-    /* ========================================================
-       PERFECT 6-COLUMN MASTER GRID FOR 11 ENTRANCE EXAM CARDS
-       Row 1-3: 3 Equal Cards per row (span 2)
-       Row 4:   2 Equal Cards in 4th row (span 3)
-       ======================================================== */
-    
-
-    /* Rows 1, 2, 3: 3 equal cards per row (Cards 1 to 9) */
-    .grid-container > .card:nth-child(1),
-    .grid-container > .card:nth-child(2),
-    .grid-container > .card:nth-child(3),
-    .grid-container > .card:nth-child(4),
-    .grid-container > .card:nth-child(5),
-    .grid-container > .card:nth-child(6),
-    .grid-container > .card:nth-child(7),
-    .grid-container > .card:nth-child(8),
-    .grid-container > .card:nth-child(9) {
-      grid-column: span 2 !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: space-between !important;
-    }
-
-    /* Row 4: 2 equal cards (Cards 10 and 11, each taking 50% width) */
-    .grid-container > .card:nth-child(10),
-    .grid-container > .card:nth-child(11) {
-      grid-column: span 3 !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: space-between !important;
-    }
-
-    /* Tablet Responsiveness */
-    @media (max-width: 1024px) {
-      
-      .grid-container > .card:nth-child(1),
-      .grid-container > .card:nth-child(2),
-      .grid-container > .card:nth-child(3),
-      .grid-container > .card:nth-child(4),
-      .grid-container > .card:nth-child(5),
-      .grid-container > .card:nth-child(6),
-      .grid-container > .card:nth-child(7),
-      .grid-container > .card:nth-child(8),
-      .grid-container > .card:nth-child(9),
-      .grid-container > .card:nth-child(10) {
-        grid-column: span 1 !important;
-      }
-      .grid-container > .card:nth-child(11) {
-        grid-column: span 2 !important;
-      }
-    }
-
-    /* Mobile Responsiveness */
-    @media (max-width: 680px) {
-      .portal-top-frame {
-        padding: 10px 12px !important;
-        gap: 10px !important;
-      }
-      .top-frame-branding {
-        text-align: center !important;
-        width: 100% !important;
-      }
-      .top-frame-badge {
-        justify-content: center !important;
-        font-size: 0.76rem !important;
-      }
-      .portal-main-heading {
-        justify-content: center !important;
-      }
-      .portal-title-text {
-        font-size: 1.15rem !important;
-      }
-      .portal-subtitle-en {
-        font-size: 0.70rem !important;
-      }
-      .top-frame-actions {
-        justify-content: center !important;
-        width: 100% !important;
-        gap: 6px !important;
-      }
-      .top-frame-btn {
-        font-size: 0.75rem !important;
-        padding: 6px 10px !important;
-      }
-
-      
-      .grid-container > .card:nth-child(n) {
-        grid-column: span 1 !important;
-        width: 100% !important;
-      }
-    }
-
-    /* ========================================================
-       FULL-WIDTH CLEAN SECTIONS (KURAL, FEEDBACK, CREATOR, FOOTER)
-       ======================================================== */
-    .kural-box {
-      width: 100% !important;
-      max-width: 100% !important;
-      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 50%, #fefce8 100%) !important;
-      border: 1.8px solid #fde047 !important;
-      border-left: 6px solid #d97706 !important;
-      border-radius: 14px !important;
-      padding: 20px 24px !important;
-      margin: 28px 0 20px 0 !important;
-      box-sizing: border-box !important;
-      text-align: center !important;
-      box-shadow: 0 4px 18px rgba(217, 119, 6, 0.10) !important;
-    }
-    .kural-header {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 8px !important;
-      font-size: 0.86rem !important;
-      font-weight: 800 !important;
-      color: #92400e !important;
-      background: rgba(254, 240, 138, 0.9) !important;
-      padding: 4px 16px !important;
-      border-radius: 999px !important;
-      border: 1.2px solid #fde68a !important;
-      margin-bottom: 10px !important;
-    }
-    .kural-verse-text {
-      font-size: 1.25rem !important;
-      font-weight: 900 !important;
-      line-height: 1.7 !important;
-      margin: 6px auto 10px auto !important;
-      color: #78350f !important;
-      text-align: center !important;
-    }
-    .kural-meaning {
-      font-size: 0.92rem !important;
-      color: #78350f !important;
-      line-height: 1.6 !important;
-      font-weight: 500 !important;
-      border-top: 1px dashed rgba(217, 119, 6, 0.35) !important;
-      padding-top: 10px !important;
-      margin-top: 10px !important;
-      text-align: center !important;
-    }
-
-    .feedback-section {
-      width: 100% !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-      padding: 24px 22px !important;
-      background: #ffffff !important;
-      border: 1.8px solid #cbd5e1 !important;
-      border-radius: 14px !important;
-      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
-      margin: 28px 0 !important;
-      position: relative !important;
-      overflow: hidden !important;
-    }
-
-    #guidanceFeedbackForm {
-      display: grid !important;
-      grid-template-columns: repeat(4, 1fr) !important;
-      gap: 14px 16px !important;
-      align-items: start !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-    }
-
-    @media (max-width: 900px) {
-      #guidanceFeedbackForm {
-        grid-template-columns: repeat(2, 1fr) !important;
-      }
-      .fb-field-name, .fb-field-place, .fb-field-phone, .fb-field-email {
-        grid-column: span 1 !important;
-      }
-      .fb-field-file, .fb-field-link, .fb-field-msg, .fb-field-submit {
-        grid-column: span 2 !important;
-      }
-    }
-
-    @media (max-width: 680px) {
-      .feedback-section {
-        padding: 16px 14px !important;
-      }
-      #guidanceFeedbackForm {
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
-      }
-      .fb-field-name, .fb-field-place, .fb-field-phone, .fb-field-email,
-      .fb-field-file, .fb-field-link, .fb-field-msg, .fb-field-submit {
-        grid-column: span 1 !important;
-        width: 100% !important;
-      }
-      #guidanceFeedbackForm input,
-      #guidanceFeedbackForm textarea,
-      #guidanceFeedbackForm button {
-        width: 100% !important;
-        box-sizing: border-box !important;
-        font-size: 0.90rem !important;
-      }
-      #fb_message {
-        height: 65px !important;
-      }
-      #fb_submitBtn {
-        height: 48px !important;
-        font-size: 0.95rem !important;
-      }
-    }
-
-    .creator-card {
-      width: 100% !important;
-      max-width: 100% !important;
-      background: #ffffff !important;
-      border: 1.5px solid #cbd5e1 !important;
-      border-radius: 14px !important;
-      padding: 14px 22px !important;
-      margin: 28px 0 16px 0 !important;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06) !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      flex-wrap: wrap !important;
-      gap: 12px !important;
-      box-sizing: border-box !important;
-    }
-    .creator-typewriter-wrapper {
-      font-size: 0.94rem !important;
-      color: #1e293b !important;
-      font-weight: 600 !important;
-      line-height: 1.6 !important;
-      display: flex !important;
-      align-items: center !important;
-      flex-wrap: wrap !important;
-      flex: 1 1 auto !important;
-      gap: 0px !important;
-    }
-    .creator-typewriter-target {
-      display: inline !important;
-      white-space: pre-wrap !important;
-    }
-    .creator-label {
-      font-weight: 700 !important;
-      color: #1e293b !important;
-    }
-    .creator-name-ta-blue {
-      color: #1d4ed8 !important; /* Royal Blue */
-      font-weight: 900 !important;
-    }
-    .creator-name-ta-purple {
-      color: #c026d3 !important; /* Bright Purple with underline */
-      font-weight: 900 !important;
-      text-decoration: underline !important;
-      text-underline-offset: 3px !important;
-    }
-    .creator-role {
-      color: #334155 !important;
-      font-weight: 600 !important;
-    }
-    .creator-name-en-blue {
-      color: #1d4ed8 !important;
-      font-weight: 900 !important;
-    }
-    .creator-name-en-purple {
-      color: #c026d3 !important;
-      font-weight: 900 !important;
-    }
-    .creator-cursor {
-      display: inline-block !important;
-      font-weight: 300 !important;
-      color: #2563eb !important;
-      margin-left: 2px !important;
-      animation: blinkCreatorCursor 0.65s infinite !important;
-    }
-    @keyframes blinkCreatorCursor {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-    .footer-phone-pill {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 6px !important;
-      background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
-      color: #ffffff !important;
-      padding: 6px 14px !important;
-      border-radius: 999px !important;
-      text-decoration: none !important;
-      font-weight: 800 !important;
-      font-size: 0.88rem !important;
-      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3) !important;
-      transition: all 0.2s ease !important;
-    }
-
-    .portal-footer {
-      width: 100% !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-      text-align: center !important;
-      padding: 24px 16px !important;
-      margin: 28px 0 16px 0 !important;
-      border-top: 1px solid #cbd5e1 !important;
-      color: #64748b !important;
-      font-size: 0.88rem !important;
-      line-height: 1.7 !important;
-    }
-
-
-    /* ========================================================
-       PERFECT FLUSH 0PX TOP FRAME (ZERO WHITE GAP AT TOP)
-       ======================================================== */
-    html, body {
-      margin: 0 !important;
-      padding: 0 !important;
-      width: 100%;
-      overflow-x: hidden;
-    }
-
-    .portal-main-content {
-      margin-left: 295px !important;
-      width: calc(100% - 295px) !important;
-      min-height: 100vh;
-      padding-top: 0 !important; /* Absolutely ZERO empty space above top-frame */
-      padding-left: clamp(10px, 1.8vw, 24px) !important;
-      padding-right: clamp(10px, 1.8vw, 24px) !important;
-      padding-bottom: 40px !important;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
-
-    @media (max-width: 1024px) {
-      .portal-main-content {
-        margin-left: 0 !important;
-        width: 100% !important;
-        padding-top: 0 !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-        padding-bottom: 30px !important;
-      }
-    }
-
-    .container, .portal-container {
-      width: 100% !important;
-      max-width: 100% !important;
-      margin: 0 !important;
-      padding-top: 0 !important;
-      box-sizing: border-box;
-    }
-
-    .portal-top-frame {
-      margin-top: 0 !important;
-      border-top: none !important;
-      border-top-left-radius: 0 !important;
-      border-top-right-radius: 0 !important;
-      margin-bottom: 16px !important;
-    }
-
-
-    /* ========================================================
-       ENTRANCE EXAMS MASTER 3x3+2 DESKTOP GRID (FLUID & COMPACT)
-       ======================================================== */
-    /* Portal Header Styling matching Medical & Engineering */
-    .portal-header {
-      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 40%, #1e3a8a 80%, #0369a1 100%) !important;
-      border-radius: 18px !important;
-      padding: 26px 24px 22px 24px !important;
-      color: #ffffff !important;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12) !important;
-      border: 1.5px solid rgba(255, 255, 255, 0.18) !important;
-      margin-top: 6px !important;
-      margin-bottom: 20px !important;
-      text-align: center !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-    }
-    .header-badge-row {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      gap: 8px !important;
-      flex-wrap: wrap !important;
-      margin-bottom: 10px !important;
-    }
-    .header-tag {
-      padding: 4px 12px !important;
-      border-radius: 999px !important;
-      font-size: 0.80rem !important;
-      font-weight: 800 !important;
-      letter-spacing: 0.3px !important;
-      border: 1px solid rgba(255, 255, 255, 0.25) !important;
-    }
-    .header-tag.primary { background-color: #fef08a !important; color: #713f12 !important; border-color: #fde047 !important; }
-    .header-tag.secondary { background-color: rgba(255, 255, 255, 0.18) !important; color: #f8fafc !important; }
-    .header-tag.amber { background-color: #d97706 !important; color: #ffffff !important; border-color: #f59e0b !important; }
-    
-    .portal-title {
-      font-size: 1.85rem !important;
-      font-weight: 900 !important;
-      line-height: 1.3 !important;
-      margin-bottom: 8px !important;
-      color: #ffffff !important;
-      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) !important;
-    }
-    .portal-subtitle {
-      font-size: 0.95rem !important;
-      color: #e2e8f0 !important;
-      max-width: 980px !important;
-      margin: 0 auto !important;
-      line-height: 1.55 !important;
-      font-weight: 500 !important;
-    }
-
-    /* 6-Column Base Grid System for 3x3 + 2 Cards */
-    .grid-container {
-      display: grid !important;
-      grid-template-columns: repeat(6, 1fr) !important;
-      gap: 20px 18px !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-      margin-top: 10px !important;
-      margin-bottom: 28px !important;
-    }
-
-    /* Base Card Card Styling */
-    .card {
-      background: #ffffff !important;
-      border: 1.5px solid #cbd5e1 !important;
-      border-radius: 16px !important;
-      padding: 22px 20px !important;
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: space-between !important;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06) !important;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
-      box-sizing: border-box !important;
-      position: relative !important;
-      overflow: hidden !important;
-      min-height: 290px !important;
-    }
-
-    .card:hover {
-      transform: translateY(-4px) !important;
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12) !important;
-      border-color: #94a3b8 !important;
-    }
-
-    /* Rows 1, 2, 3: 3 equal cards per row (Cards 1 to 9 each span 2 out of 6 columns = 33.33%) */
-    .grid-container > .card:nth-child(1),
-    .grid-container > .card:nth-child(2),
-    .grid-container > .card:nth-child(3),
-    .grid-container > .card:nth-child(4),
-    .grid-container > .card:nth-child(5),
-    .grid-container > .card:nth-child(6),
-    .grid-container > .card:nth-child(7),
-    .grid-container > .card:nth-child(8),
-    .grid-container > .card:nth-child(9) {
-      grid-column: span 2 !important;
-      width: 100% !important;
-    }
-
-    /* Row 4: 2 equal cards (Card 10 Defence & Card 11 Aviation each span 3 out of 6 columns = 50%) */
-    .grid-container > .card:nth-child(10),
-    .grid-container > .card:nth-child(11) {
-      grid-column: span 3 !important;
-      width: 100% !important;
-    }
-
-    /* Row 5: Card 12 Resources / Study Materials spans full width (all 6 columns) */
-    .grid-container > .card:nth-child(12) {
-      grid-column: span 6 !important;
-      width: 100% !important;
-    }
-
-    /* Tablet Responsiveness (681px - 1100px): 2 cards per row */
-    @media (min-width: 681px) and (max-width: 1100px) {
-      .grid-container {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 16px !important;
-      }
-      .grid-container > .card:nth-child(n) {
-        grid-column: span 1 !important;
-      }
-      .grid-container > .card:nth-child(11),
-      .grid-container > .card:nth-child(12) {
-        grid-column: span 2 !important;
-      }
-    }
-
-    /* Mobile Responsiveness (<= 680px): 1 card per row */
-    @media (max-width: 680px) {
-      .portal-header {
-        padding: 18px 14px !important;
-        margin-bottom: 14px !important;
-      }
-      .portal-title {
-        font-size: 1.30rem !important;
-        line-height: 1.35 !important;
-      }
-      .portal-subtitle {
-        font-size: 0.82rem !important;
-      }
-      .grid-container {
-        grid-template-columns: 1fr !important;
-        gap: 14px !important;
-      }
-      .grid-container > .card:nth-child(n) {
-        grid-column: span 1 !important;
-        width: 100% !important;
-        min-height: auto !important;
-        padding: 16px 14px !important;
-      }
-    }
-
-
-    /* ========================================================
-       4TH ROW 1x2 BALANCED GRID (DEFENCE & AVIATION)
-       ======================================================== */
-    .grid-container.grid-3x3 {
+    #examCardsGrid,
+    .grid-container,
+    .grid-container.grid-3-cols {
       display: grid !important;
       grid-template-columns: repeat(3, 1fr) !important;
-      gap: 20px !important;
+      gap: 22px 20px !important;
       width: 100% !important;
-      box-sizing: border-box !important;
-      margin-bottom: 20px !important;
-    }
-
-    .grid-row-1x2 {
-      display: grid !important;
-      grid-template-columns: repeat(2, 1fr) !important;
-      gap: 20px !important;
-      width: 100% !important;
+      max-width: 100% !important;
       box-sizing: border-box !important;
       margin-top: 14px !important;
       margin-bottom: 28px !important;
     }
 
+    /* EVERY SINGLE CARD TAKES EXACTLY 1 COLUMN (1/3 of row) */
+    #examCardsGrid > .card,
+    .grid-container > .card,
+    .grid-container > .card:nth-child(n) {
+      grid-column: span 1 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      min-height: 280px !important;
+    }
+
+    /* Tablet: 2 boxes per row */
     @media (max-width: 1024px) {
-      .grid-container.grid-3x3 {
+      #examCardsGrid,
+      .grid-container,
+      .grid-container.grid-3-cols {
         grid-template-columns: repeat(2, 1fr) !important;
-      }
-      .grid-row-1x2 {
-        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
       }
     }
 
-    @media (max-width: 768px) {
-      .grid-container.grid-3x3 {
+    /* Mobile: 1 box per row */
+    @media (max-width: 680px) {
+      #examCardsGrid,
+      .grid-container,
+      .grid-container.grid-3-cols {
         grid-template-columns: 1fr !important;
         gap: 14px !important;
       }
-      .grid-row-1x2 {
-        grid-template-columns: 1fr !important;
-        gap: 14px !important;
+      #examCardsGrid > .card,
+      .grid-container > .card,
+      .grid-container > .card:nth-child(n) {
+        grid-column: span 1 !important;
+        width: 100% !important;
+        min-height: auto !important;
       }
-    }
-
-
-    /* ========================================================
-       ABSOLUTE FLUSH 0PX TOP FRAME (ZERO TOP WHITESPACE)
-       ======================================================== */
-    html, body {
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-    .portal-main-content {
-      padding-top: 0 !important;
-      margin-top: 0 !important;
-    }
-    .container, .portal-container {
-      padding-top: 0 !important;
-      margin-top: 0 !important;
-    }
-    .portal-top-frame {
-      margin-top: 0 !important;
-      border-top: none !important;
-      border-top-left-radius: 0 !important;
-      border-top-right-radius: 0 !important;
-      position: sticky !important;
-      top: 0 !important;
-      z-index: 9999 !important;
-      margin-bottom: 16px !important;
     }
 
 </style>
@@ -3025,7 +1378,12 @@ textarea {
 /* ============================================================
    HERO BANNER MATCHING CARD BACKGROUNDS & VIBRANT STYLING
    ============================================================ */
-
+.grid-container {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+  gap: 24px !important;
+  margin-top: 24px !important;
+}
 
 .card {
   border-radius: 18px !important;
@@ -3190,12 +1548,78 @@ textarea {
   box-shadow: 0 6px 16px rgba(253, 224, 71, 0.45) !important;
   transform: translateY(-2px) !important;
 }
+
+    /* ========================================================
+       ENTRANCE EXAMS 12-CARD GRID: EXACTLY 3 BOXES PER ROW
+       (4 Rows x 3 Boxes = 12 Cards)
+       ======================================================== */
+    #examCardsGrid,
+    .grid-container,
+    .grid-container.grid-3-cols {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 22px 20px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      margin-top: 14px !important;
+      margin-bottom: 28px !important;
+    }
+
+    /* EVERY SINGLE CARD TAKES EXACTLY 1 COLUMN (1/3 of row) */
+    #examCardsGrid > .card,
+    .grid-container > .card,
+    .grid-container > .card:nth-child(n) {
+      grid-column: span 1 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      min-height: 280px !important;
+    }
+
+    /* Tablet: 2 boxes per row */
+    @media (max-width: 1024px) {
+      #examCardsGrid,
+      .grid-container,
+      .grid-container.grid-3-cols {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+      }
+    }
+
+    /* Mobile: 1 box per row */
+    @media (max-width: 680px) {
+      #examCardsGrid,
+      .grid-container,
+      .grid-container.grid-3-cols {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+      }
+      #examCardsGrid > .card,
+      .grid-container > .card,
+      .grid-container > .card:nth-child(n) {
+        grid-column: span 1 !important;
+        width: 100% !important;
+        min-height: auto !important;
+      }
+    }
+
 </style><style id="grid-balanced-css">
 /* ============================================================
    PERFECT 3x4 UNIFORM SYMMETRICAL GRID (12 CARDS)
    ============================================================ */
 @media (min-width: 992px) {
-  
+  .grid-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-top: 24px !important;
+  }
 
   /* All 12 cards have 100% uniform equal 1-span width in the 3-col grid */
   .card {
@@ -3210,7 +1634,11 @@ textarea {
 
 /* Tablet view (2 columns balanced: 6 rows x 2 columns = 12 cards) */
 @media (min-width: 640px) and (max-width: 991px) {
-  
+  .grid-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
   .card {
     grid-column: span 1 !important;
   }
@@ -3218,15 +1646,25 @@ textarea {
 
 /* Mobile view (1 clean column) */
 @media (max-width: 639px) {
-  
+  .grid-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+  }
   .card {
     width: 100% !important;
   }
 }
 
+/* Card 12 Theme: Knowledge Wisdom Violet & Golden Amber */
+.cat-resources {
+  background: linear-gradient(135deg, #1e1b4b 0%, #2e1065 45%, #4c1d95 75%, #b45309 100%) !important;
+  border-top: 5px solid #fbbf24 !important;
+}
 
-
-
+.cat-resources .card-title small {
+  color: #fde047 !important;
+}
 
 .coming-soon-badge {
   font-size: 0.74rem !important;
@@ -3259,11 +1697,77 @@ textarea {
   color: #ffffff !important;
   transform: translateY(-2px) !important;
 }
+
+    /* ========================================================
+       ENTRANCE EXAMS 12-CARD GRID: EXACTLY 3 BOXES PER ROW
+       (4 Rows x 3 Boxes = 12 Cards)
+       ======================================================== */
+    #examCardsGrid,
+    .grid-container,
+    .grid-container.grid-3-cols {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 22px 20px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      margin-top: 14px !important;
+      margin-bottom: 28px !important;
+    }
+
+    /* EVERY SINGLE CARD TAKES EXACTLY 1 COLUMN (1/3 of row) */
+    #examCardsGrid > .card,
+    .grid-container > .card,
+    .grid-container > .card:nth-child(n) {
+      grid-column: span 1 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      min-height: 280px !important;
+    }
+
+    /* Tablet: 2 boxes per row */
+    @media (max-width: 1024px) {
+      #examCardsGrid,
+      .grid-container,
+      .grid-container.grid-3-cols {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+      }
+    }
+
+    /* Mobile: 1 box per row */
+    @media (max-width: 680px) {
+      #examCardsGrid,
+      .grid-container,
+      .grid-container.grid-3-cols {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+      }
+      #examCardsGrid > .card,
+      .grid-container > .card,
+      .grid-container > .card:nth-child(n) {
+        grid-column: span 1 !important;
+        width: 100% !important;
+        min-height: auto !important;
+      }
+    }
+
 </style><style id="unified-grid-12-css">
 /* ============================================================
    PERFECT 3x4 UNIFIED GRID (12 EQUAL CARDS)
    ============================================================ */
-
+.grid-container {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-top: 24px !important;
+}
 
 .dual-row-container {
   display: none !important;
@@ -3290,9 +1794,15 @@ textarea {
   border-color: rgba(255, 255, 255, 0.45) !important;
 }
 
+/* Card 12 Theme: Knowledge Wisdom Violet & Golden Amber */
+.cat-resources {
+  background: linear-gradient(135deg, #1e1b4b 0%, #2e1065 45%, #4c1d95 75%, #b45309 100%) !important;
+  border-top: 5px solid #fbbf24 !important;
+}
 
-
-
+.cat-resources .card-title small {
+  color: #fde047 !important;
+}
 
 .coming-soon-badge {
   font-size: 0.74rem !important;
@@ -3328,17 +1838,84 @@ textarea {
 
 /* Tablet view (2 columns: 6 rows x 2 columns = 12 cards) */
 @media (min-width: 640px) and (max-width: 991px) {
-  
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
 }
 
 /* Mobile view (1 clean column) */
 @media (max-width: 639px) {
-  
+  .grid-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+  }
   .card {
     width: 100% !important;
   }
 }
-</style></head>
+
+    /* ========================================================
+       ENTRANCE EXAMS 12-CARD GRID: EXACTLY 3 BOXES PER ROW
+       (4 Rows x 3 Boxes = 12 Cards)
+       ======================================================== */
+    #examCardsGrid,
+    .grid-container,
+    .grid-container.grid-3-cols {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 22px 20px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      margin-top: 14px !important;
+      margin-bottom: 28px !important;
+    }
+
+    /* EVERY SINGLE CARD TAKES EXACTLY 1 COLUMN (1/3 of row) */
+    #examCardsGrid > .card,
+    .grid-container > .card,
+    .grid-container > .card:nth-child(n) {
+      grid-column: span 1 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      min-height: 280px !important;
+    }
+
+    /* Tablet: 2 boxes per row */
+    @media (max-width: 1024px) {
+      #examCardsGrid,
+      .grid-container,
+      .grid-container.grid-3-cols {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+      }
+    }
+
+    /* Mobile: 1 box per row */
+    @media (max-width: 680px) {
+      #examCardsGrid,
+      .grid-container,
+      .grid-container.grid-3-cols {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+      }
+      #examCardsGrid > .card,
+      .grid-container > .card,
+      .grid-container > .card:nth-child(n) {
+        grid-column: span 1 !important;
+        width: 100% !important;
+        min-height: auto !important;
+      }
+    }
+
+</style>
+</head>
 <body>
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
 
@@ -3582,10 +2159,11 @@ textarea {
       </a>
     </nav>
   </aside>
-<main class="portal-main-content">
 
+  <!-- Main Portal Content Column -->
+  <main class="portal-main-content">
 <div class="container">
-<!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages - Flush 0px Top) -->
+<!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
 <header class="portal-top-frame no-print">
   <div class="top-frame-branding">
     <div class="top-frame-badge">
@@ -3599,62 +2177,40 @@ textarea {
   </div>
 
   <div class="top-frame-actions">
+    <!-- Mobile Hamburger Menu Button -->
     <button id="mobileMenuToggleBtn" class="top-frame-btn btn-menu" onclick="toggleSidebarMenu()" type="button" title="வழிகாட்டல் பக்கப்பட்டை மெனு">
       <span class="btn-icon">☰</span>
       <span>மெனு</span>
     </button>
-    <a href="https://www.ceosvg.in" target="_blank" rel="noopener" class="top-frame-btn btn-ceosvg" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம் (ceosvg.in)" target="_blank" rel="noopener">
+    <!-- Official ceosvg.in Main District Portal Link -->
+    <a href="https://www.ceosvg.in" target="_blank" rel="noopener" class="top-frame-btn btn-ceosvg" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம் (ceosvg.in)">
       <span class="btn-icon">🌐</span>
       <span>ceosvg.in முதன்மை தளம்</span>
     </a>
+    <!-- Career Guidance Home Link -->
     <a href="index.html" class="top-frame-btn btn-home" title="உயர்கல்வி வழிகாட்டி முகப்புப் பக்கம்">
       <span class="btn-icon">🎓</span>
       <span>உயர்கல்வி முகப்பு</span>
     </a>
+    <!-- Universal Cut-off Calculator -->
+    <button class="top-frame-btn btn-cutoff" onclick="openCutoffModal()" type="button" title="கட்-ஆஃப் கால்குலேட்டர்">
+      <span class="btn-icon">🧮</span>
+      <span>கட்-ஆஃப் கால்குலேட்டர்</span>
+    </button>
   </div>
 </header>
 
-
-<!-- முகப்புப் பொத்தான் & மாவட்ட அடையாளம் -->
-
-
-
-
-
-
-<!-- தலைப்பு பேனர் இமேஜ் பகுதி (Hero Banner Section with Animated Glowing Border) -->
-<nav aria-label="Breadcrumb Navigation" class="nav-button-menu-bar no-print" style="margin-bottom: 18px;">
-<div class="nav-button-menu-container" style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
-<a class="menu-btn-pill btn-main-site" href="index.html" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; background: #f1f5f9; color: #0f172a; border: 1px solid #cbd5e1;" title="சிவகங்கை முதன்மைக் கல்வி அலுவலக முகப்பு">
-<svg fill="currentColor" style="width: 15px; height: 15px;" viewbox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
-<span>ceosvg.in முகப்பு</span>
-</a>
-<span class="menu-arrow" style="color: #94a3b8; font-weight: 800; font-size: 14px;">›</span>
-<a class="menu-btn-pill btn-career" href="index.html" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe;" title="உயர்கல்வி வழிகாட்டி முதன்மைப் பக்கம்">
-<svg fill="currentColor" style="width: 15px; height: 15px;" viewbox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"></path></svg>
-<span>🎓 உயர்கல்வி வழிகாட்டல்</span>
-</a>
-<span class="menu-arrow" style="color: #94a3b8; font-weight: 800; font-size: 14px;">›</span>
-<span class="menu-btn-pill btn-current-page" style="display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); color: #ffffff; box-shadow: 0 2px 6px rgba(30, 27, 75, 0.3);" title="தற்போதைய வழிகாட்டிப் பக்கம்">
-<svg fill="currentColor" style="width: 15px; height: 15px;" viewbox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
-<span>📝 தேசிய நுழைவுத்தேர்வுகள் (Master Portal)</span>
-</span>
+<header class="header-banner-wrap">
+<div class="header-banner-inner">
+<img alt="உயர்கல்வி நுழைவுத்தேர்வுகள் வழிகாட்டி - வெற்றியே நோக்கி ஒரு படி! உங்கள் கனவுப் படிப்பிற்கு தயாராகுங்கள்!" class="header-banner-img" id="heroBannerImg" loading="eager" onerror="if(this.src.indexOf('thumbnail')!==-1){this.src='https://lh3.googleusercontent.com/d/1hzzbJHxidsv5laoiGP7qQxlsdOFhmf6b';}else{this.style.display='none';document.getElementById('fallbackBanner').style.display='block';}" src="https://drive.google.com/thumbnail?id=1hzzbJHxidsv5laoiGP7qQxlsdOFhmf6b&amp;sz=w1600"/>
+<div class="banner-fallback" id="fallbackBanner" style="display: none;">
+<h1>உயர்கல்வி நுழைவுத்தேர்வுகள்</h1>
+<p>வெற்றியை நோக்கி ஒரு படி! | உங்கள் கனவுப் படிப்பிற்கு தயாராகுங்கள்!</p>
 </div>
-</nav><!-- முதன்மை நுழைவுத்தேர்வு தலைப்பு பேனர் (Clean CSS Gradient - 0px Blank Space) -->
-<header class="portal-header">
-  <div class="header-badge-row">
-    <span class="header-tag primary">வாயில் 01 (Gateway 01)</span>
-    <span class="header-tag secondary">தேசிய நுழைவுத்தேர்வுகள்</span>
-    <span class="header-tag amber">12-ஆம் வகுப்பிற்குப் பின்</span>
-  </div>
-  <h1 class="portal-title">12-ஆம் வகுப்பிற்குப் பிந்தைய தேசிய &amp; மாநில நுழைவுத்தேர்வுகள்</h1>
-  <p class="portal-subtitle">
-    மருத்துவம், பொறியியல், அறிவியல் ஆராய்ச்சி, மத்தியப் பல்கலைக்கழகங்கள், சட்டம், வடிவமைப்பு, மேலாண்மை, விருந்தோம்பல், கப்பல் துறை, பாதுகாப்புப் படைகள் மற்றும் விமானி உள்ளிட்ட 11 முதன்மை வழிகாட்டிகள்.
-  </p>
+</div>
 </header>
-<!-- 12 நுழைவுத்தேர்வு கார்டுகள் (3x3+2 Grid Layout) -->
-
-<div class="grid-container grid-3x3" id="examCardsGrid3x3">
+<!-- 12 Entrance Examination Cards Grid (Strict 3 Columns x 4 Rows = 12 Boxes) -->
+<div class="grid-container grid-3-cols" id="examCardsGrid">
 <div class="card cat-medical" data-category="medical" onclick="window.location.href='01_medical_neet_ug.html';" style="cursor: pointer;">
 <div>
 <div class="card-top-meta">
@@ -3663,7 +2219,7 @@ textarea {
 <div class="card-header">
 <div class="icon-box">🩺</div>
 <div class="card-title-group">
-<a class="card-title" href="01_medical_neet_ug.html" rel="noopener noreferrer">  
+<a class="card-title" href="01_medical_neet_ug.html" rel="noopener noreferrer" target="_blank">  
  மருத்துவம் &amp; துணை மருத்துவம்  
  <small>Medicine &amp; Allied Health Sciences</small>
 </a>
@@ -3677,12 +2233,11 @@ textarea {
 <span class="tag">BVSc &amp; AH</span>
 </div>
 </div>
-<a class="btn-link" href="01_medical_neet_ug.html" rel="noopener noreferrer">  
+<a class="btn-link" href="01_medical_neet_ug.html" rel="noopener noreferrer" target="_blank">  
  விவரங்கள் காண்க  
  <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </a>
-</div>
-<div class="card cat-engineering" data-category="engineering" onclick="window.location.href='02_engineering_jee.html';" style="cursor: pointer;">
+</div><div class="card cat-engineering" data-category="engineering" onclick="window.location.href='02_engineering_jee.html';" style="cursor: pointer;">
 <div>
 <div class="card-top-meta">
 <span class="card-number">02 / ENGINEERING</span>
@@ -3690,7 +2245,7 @@ textarea {
 <div class="card-header">
 <div class="icon-box">⚙️</div>
 <div class="card-title-group">
-<a class="card-title" href="02_engineering_jee.html" rel="noopener noreferrer">  
+<a class="card-title" href="02_engineering_jee.html" rel="noopener noreferrer" target="_blank">  
  பொறியியல் &amp; தொழில்நுட்பம்  
  <small>Engineering &amp; Technology</small>
 </a>
@@ -3704,12 +2259,11 @@ textarea {
 <span class="tag">B.Tech / B.E</span>
 </div>
 </div>
-<a class="btn-link" href="02_engineering_jee.html" rel="noopener noreferrer">  
+<a class="btn-link" href="02_engineering_jee.html" rel="noopener noreferrer" target="_blank">  
  விவரங்கள் காண்க  
  <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </a>
-</div>
-<div class="card cat-science" data-category="science" onclick="window.location.href='03_science_research_iiser.html';" style="cursor: pointer;">
+</div><div class="card cat-science" data-category="science" onclick="window.location.href='03_science_research_iiser.html';" style="cursor: pointer;">
 <div>
 <div class="card-top-meta">
 <span class="card-number">03 / SCIENCE &amp; RESEARCH</span>
@@ -3717,7 +2271,7 @@ textarea {
 <div class="card-header">
 <div class="icon-box">🔬</div>
 <div class="card-title-group">
-<a class="card-title" href="03_science_research_iiser.html" rel="noopener noreferrer">  
+<a class="card-title" href="03_science_research_iiser.html" rel="noopener noreferrer" target="_blank">  
  அறிவியல் &amp; ஆராய்ச்சி  
  <small>Pure Sciences &amp; Research</small>
 </a>
@@ -3731,12 +2285,11 @@ textarea {
 <span class="tag">CMI சென்னை</span>
 </div>
 </div>
-<a class="btn-link" href="03_science_research_iiser.html" rel="noopener noreferrer">  
+<a class="btn-link" href="03_science_research_iiser.html" rel="noopener noreferrer" target="_blank">  
  விவரங்கள் காண்க  
  <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </a>
-</div>
-<div class="card cat-central-uni" data-category="central-uni" onclick="window.location.href='04_central_universities_cuet.html';" style="cursor: pointer;">
+</div><div class="card cat-central-uni" data-category="central-uni" onclick="window.location.href='04_central_universities_cuet.html';" style="cursor: pointer;">
 <div>
 <div class="card-top-meta">
 <span class="card-number">04 / CENTRAL UNIVERSITIES</span>
@@ -3744,7 +2297,7 @@ textarea {
 <div class="card-header">
 <div class="icon-box">🏛️</div>
 <div class="card-title-group">
-<a class="card-title" href="04_central_universities_cuet.html" rel="noopener noreferrer">  
+<a class="card-title" href="04_central_universities_cuet.html" rel="noopener noreferrer" target="_blank">  
  மத்தியப் பல்கலைக்கழகங்கள்  
  <small>Central Universities (Arts, Science, Commerce)</small>
 </a>
@@ -3759,12 +2312,11 @@ textarea {
 <span class="tag">தமிழ் வழியில் தேர்வு</span>
 </div>
 </div>
-<a class="btn-link" href="04_central_universities_cuet.html" rel="noopener noreferrer">  
+<a class="btn-link" href="04_central_universities_cuet.html" rel="noopener noreferrer" target="_blank">  
  விவரங்கள் காண்க  
  <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </a>
-</div>
-<div class="card cat-law" data-category="law" onclick="window.location.href='05_law_clat_nlu.html';" style="cursor: pointer;">
+</div><div class="card cat-law" data-category="law" onclick="window.location.href='05_law_clat_nlu.html';" style="cursor: pointer;">
 <div>
 <div class="card-top-meta">
 <span class="card-number">05 / LAW</span>
@@ -3772,7 +2324,7 @@ textarea {
 <div class="card-header">
 <div class="icon-box">⚖️</div>
 <div class="card-title-group">
-<a class="card-title" href="05_law_clat_nlu.html" rel="noopener noreferrer">  
+<a class="card-title" href="05_law_clat_nlu.html" rel="noopener noreferrer" target="_blank">  
  சட்டக் கல்வி (NLUs)  
  <small>National Law Universities &amp; Legal Studies</small>
 </a>
@@ -3785,12 +2337,11 @@ textarea {
 <span class="tag">B.A LLB / BBA LLB</span>
 </div>
 </div>
-<a class="btn-link" href="05_law_clat_nlu.html" rel="noopener noreferrer">  
+<a class="btn-link" href="05_law_clat_nlu.html" rel="noopener noreferrer" target="_blank">  
  விவரங்கள் காண்க  
  <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </a>
-</div>
-<div class="card cat-design" data-category="design" onclick="window.location.href='06_design_architecture_nata_nift.html';" style="cursor: pointer;">
+</div><div class="card cat-design" data-category="design" onclick="window.location.href='06_design_architecture_nata_nift.html';" style="cursor: pointer;">
 <div>
 <div class="card-top-meta">
 <span class="card-number">06 / DESIGN &amp; ARCHITECTURE</span>
@@ -3798,7 +2349,7 @@ textarea {
 <div class="card-header">
 <div class="icon-box">📐</div>
 <div class="card-title-group">
-<a class="card-title" href="06_design_architecture_nata_nift.html" rel="noopener noreferrer">  
+<a class="card-title" href="06_design_architecture_nata_nift.html" rel="noopener noreferrer" target="_blank">  
  வடிவமைப்பு &amp; கட்டிடக்கலை  
  <small>Design, Fashion &amp; Architecture</small>
 </a>
@@ -3812,12 +2363,11 @@ textarea {
 <span class="tag">NID DAT</span>
 </div>
 </div>
-<a class="btn-link" href="06_design_architecture_nata_nift.html" rel="noopener noreferrer">  
+<a class="btn-link" href="06_design_architecture_nata_nift.html" rel="noopener noreferrer" target="_blank">  
  விவரங்கள் காண்க  
  <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </a>
-</div>
-<div class="card cat-management" data-category="management" onclick="window.location.href='07_management_iim_ipm.html';" style="cursor: pointer;">
+</div><div class="card cat-management" data-category="management" onclick="window.location.href='07_management_iim_ipm.html';" style="cursor: pointer;">
 <div>
 <div class="card-top-meta">
 <span class="card-number">07 / MANAGEMENT</span>
@@ -3825,7 +2375,7 @@ textarea {
 <div class="card-header">
 <div class="icon-box">📊</div>
 <div class="card-title-group">
-<a class="card-title" href="07_management_iim_ipm.html" rel="noopener noreferrer">  
+<a class="card-title" href="07_management_iim_ipm.html" rel="noopener noreferrer" target="_blank">  
  ஒருங்கிணைந்த மேலாண்மை (IIM)  
  <small>Integrated Programme in Management (IPM)</small>
 </a>
@@ -3838,7 +2388,7 @@ textarea {
 <span class="tag">IIM 5-Year IPM</span>
 </div>
 </div>
-<a class="btn-link" href="07_management_iim_ipm.html" rel="noopener noreferrer">  
+<a class="btn-link" href="07_management_iim_ipm.html" rel="noopener noreferrer" target="_blank">  
  விவரங்கள் காண்க  
  <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </a>
@@ -3851,7 +2401,7 @@ textarea {
 <div class="card-header">
 <div class="icon-box">🏨</div>
 <div class="card-title-group">
-<a class="card-title" href="08_hotel_management_nchmct.html" rel="noopener noreferrer">
+<a class="card-title" href="08_hotel_management_nchmct.html" rel="noopener noreferrer" target="_blank">
           உணவக மேலாண்மை
           <small>Hotel Management &amp; Catering Technology (NCHMCT JEE)</small>
 </a>
@@ -3867,7 +2417,7 @@ textarea {
 <span class="tag">Oberoi STEP</span>
 </div>
 </div>
-<a class="btn-link" href="08_hotel_management_nchmct.html" rel="noopener noreferrer">
+<a class="btn-link" href="08_hotel_management_nchmct.html" rel="noopener noreferrer" target="_blank">
     விவரங்கள் காண்க
     <svg fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
@@ -3882,7 +2432,7 @@ textarea {
 <div class="card-header">
 <div class="icon-box">⚓</div>
 <div class="card-title-group">
-<a class="card-title" href="09_maritime_merchant_navy.html" rel="noopener noreferrer">
+<a class="card-title" href="09_maritime_merchant_navy.html" rel="noopener noreferrer" target="_blank">
           கடல்சார் கல்வி &amp; வணிகக் கப்பல் துறை
           <small>Indian Maritime University (IMU CET) &amp; Merchant Navy</small>
 </a>
@@ -3898,17 +2448,13 @@ textarea {
 <span class="tag">Company Sponsorship</span>
 </div>
 </div>
-<a class="btn-link" href="09_maritime_merchant_navy.html" rel="noopener noreferrer">
+<a class="btn-link" href="09_maritime_merchant_navy.html" rel="noopener noreferrer" target="_blank">
     விவரங்கள் காண்க
     <svg fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </a>
 </div>
-</div> <!-- end examCardsGrid3x3 -->
-
-<!-- நான்காவது வரிசை கார்டுகள் (வரிசை 4: 1x2 Grid - பாதுகாப்புப் படைகள் & விமானி) -->
-<div class="grid-row-1x2" id="examCardsGrid1x2">
 <div class="card cat-defence" data-category="defence" onclick="window.location.href='10_defence_armed_forces.html';" style="cursor: pointer;">
 <div>
 <div class="card-top-meta">
@@ -3918,7 +2464,7 @@ textarea {
 <div class="card-header" style="margin-top: 6px;">
 <div class="icon-box" style="font-size: 1.7rem; width: 50px; height: 50px; flex-shrink: 0;">🛡️</div>
 <div class="card-title-group">
-<a class="card-title" href="10_defence_armed_forces.html" rel="noopener noreferrer">
+<a class="card-title" href="10_defence_armed_forces.html" rel="noopener noreferrer" target="_blank">
           இந்திய பாதுகாப்புப் படைகள் (முப்படைகள்)
           <small style="font-size: 0.86rem; color: #64748b; display: block; margin-top: 2px;">Armed Forces (Army, Navy, Air Force) &amp; UPSC NDA</small>
 </a>
@@ -3934,14 +2480,13 @@ textarea {
 <span class="tag">மாதம் ₹56,100 ஸ்டைபண்ட்</span>
 </div>
 </div>
-<a class="btn-link" href="10_defence_armed_forces.html" rel="noopener noreferrer" style="width: 100%; text-decoration: none; font-size: 0.92rem; padding: 11px 16px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-sizing: border-box; background: linear-gradient(135deg, #13335e 0%, #07162c 100%); color: #ffffff; border-radius: 8px; font-weight: 700; box-shadow: 0 4px 12px rgba(7, 22, 44, 0.25); transition: all 0.2s ease;">
+<a class="btn-link" href="10_defence_armed_forces.html" rel="noopener noreferrer" style="width: 100%; text-decoration: none; font-size: 0.92rem; padding: 11px 16px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-sizing: border-box; background: linear-gradient(135deg, #13335e 0%, #07162c 100%); color: #ffffff; border-radius: 8px; font-weight: 700; box-shadow: 0 4px 12px rgba(7, 22, 44, 0.25); transition: all 0.2s ease;" target="_blank">
 <span>விவரங்கள் காண்க</span>
 <svg fill="none" stroke="currentColor" style="width: 17px; height: 17px;" viewbox="0 0 24 24">
 <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
 </svg>
 </a>
-</div>
-<div class="card cat-aviation" data-category="aviation" id="card-aviation" onclick="window.location.href='11_pilot_careers_cpl_and_iaf_fighter.html';" style="cursor: pointer;">
+</div><div class="card cat-aviation" data-category="aviation" id="card-aviation" onclick="window.location.href='11_pilot_careers_cpl_and_iaf_fighter.html';" style="cursor: pointer;">
 <div>
 <div class="card-top-meta">
 <span class="card-number" style="background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; font-weight: 800; padding: 3px 10px; border-radius: 999px;">11 / PILOT CAREERS</span>
@@ -3950,7 +2495,7 @@ textarea {
 <div class="card-header" style="margin-top: 6px;">
 <div class="icon-box" style="font-size: 1.7rem; width: 50px; height: 50px; flex-shrink: 0;">✈️</div>
 <div class="card-title-group">
-<a class="card-title" href="11_pilot_careers_cpl_and_iaf_fighter.html" rel="noopener noreferrer">
+<a class="card-title" href="11_pilot_careers_cpl_and_iaf_fighter.html" rel="noopener noreferrer" target="_blank">
           விமானியாவது எப்படி? (வணிக விமானி &amp; போர் விமானி)
           <small style="font-size: 0.86rem; color: #64748b; display: block; margin-top: 2px;">How to Become a Pilot — Commercial Airline (CPL) &amp; IAF (NDA)</small>
 </a>
@@ -3966,33 +2511,46 @@ textarea {
 <span class="tag">CPSS சிமுலேட்டர்</span>
 </div>
 </div>
-<a class="btn-link" href="11_pilot_careers_cpl_and_iaf_fighter.html" rel="noopener noreferrer" style="width: 100%; text-decoration: none; font-size: 0.92rem; padding: 11px 16px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-sizing: border-box; background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff; border-radius: 8px; font-weight: 700; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3); transition: all 0.2s ease;">
+<a class="btn-link" href="11_pilot_careers_cpl_and_iaf_fighter.html" rel="noopener noreferrer" style="width: 100%; text-decoration: none; font-size: 0.92rem; padding: 11px 16px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-sizing: border-box; background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff; border-radius: 8px; font-weight: 700; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3); transition: all 0.2s ease;" target="_blank">
 <span>விவரங்கள் காண்க</span>
 <svg fill="none" stroke="currentColor" style="width: 17px; height: 17px;" viewbox="0 0 24 24">
 <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
 </svg>
 </a>
+</div><div class="card cat-resources" data-category="resources" onclick="alert('பாடக்குறிப்புகள், மாதிரி வினாத்தாள்கள் மற்றும் முந்தைய ஆண்டு வினாக்கள் (PYQs) தயாரிப்பில் உள்ளன. மிக விரைவில் இப்பகுதியில் பதிவேற்றப்படும்!');" style="cursor: pointer;">
+<div>
+<div class="card-top-meta">
+<span class="card-number">12 / STUDY MATERIALS</span>
+<span class="coming-soon-badge">🚀 விரைவில்</span>
+</div>
+<div class="card-header">
+<div class="icon-box">📚</div>
+<div class="card-title-group">
+<span class="card-title">
+          பாடக்குறிப்புகள் &amp; வினாத்தாள்கள்
+          <small>Study Materials, Question Banks &amp; PYQs</small>
+</span>
+</div>
+</div>
+<p class="card-summary">
+      அனைத்து 11 நுழைவுத்தேர்வுகளுக்குமான பாடக்குறிப்புகள், முந்தைய ஆண்டு வினாத்தாள்கள் (PYQs), மாதிரி வினாக்கள் மற்றும் தயாரிப்பு வழிகாட்டல்கள் விரைவில் பதிவேற்றப்படும்.
+    </p>
+<div class="tags">
+<span class="tag">பாடக்குறிப்புகள்</span>
+<span class="tag">PYQ Papers</span>
+<span class="tag">மாதிரித் தேர்வுகள்</span>
+<span class="tag">Question Bank</span>
+</div>
+</div>
+<div class="btn-link coming-soon-btn">
+<span>⏳ விரைவில் பதிவேற்றப்படும்</span>
+<span style="font-size: 1.15rem;">📥</span>
+</div>
 </div>
 </div>
 
-<!-- திருக்குறள் பகுதி -->
-<div class="kural-box">
-  <div class="kural-header">
-    <span>📜</span>
-    <span>திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-  </div>
-  <div class="kural-verse-text">
-    “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
-    திண்ணியர் ஆகப் பெறின்.”
-  </div>
-  <div class="kural-meaning">
-    <strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
-  </div>
-</div>
-<!-- ========================================== -->
-<!-- தங்களின் மேலான ஆலோசனை/கருத்துகளை பதிவு செய்க (Wide, Compact & Attachment Enabled) -->
-<!-- ========================================== -->
-<section class="feedback-section" class="feedback-section">
+
+<section class="feedback-section" style="width: 100%; max-width: 1200px; margin: 30px auto 24px auto; background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 35%, #faf5ff 70%, #fff7ed 100%); border-radius: 16px; padding: 22px 26px; box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05); position: relative; overflow: hidden; border: 1px solid #e0e7ff; box-sizing: border-box;">
 <!-- Top Vibrant Decorative Gradient Bar -->
 <div class="animated-top-bar"></div>
 <canvas id="fb_crackers_canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 99; display: none;"></canvas>
@@ -4097,15 +2655,18 @@ textarea {
   </a>
 </div>
 <footer class="portal-footer">
-  <p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
-    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
-  </p>
-  <p style="font-size: 0.85rem; color: #64748b;">
+<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
+    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" rel="noopener noreferrer" style="color: #0284c7; text-decoration: none; font-weight: 700;" target="_blank">☎️ 04575240408</a>
+</p>
+<p style="font-size: 0.85rem; color: #64748b; margin-top: 6px;">
     © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
 </footer>
-</div> <!-- end .container -->
-</main> <!-- end .portal-main-content -->
+</div>
+</main>
+</div>
+
+
 <script>
 // Standardized Creator Typewriter Animation (Triggered on Scroll / Intersection)
 (function() {
@@ -4201,5 +2762,6 @@ textarea {
   }
 })();
 </script>
+
 </body>
 </html>
