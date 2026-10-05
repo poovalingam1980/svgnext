@@ -3336,9 +3336,11 @@
 <style>
 /* Redesigned website designer footer */
 .creator-card.creator-card-redesigned {
-  max-width: 980px !important;
-  margin: 30px auto 18px !important;
-  padding: 16px 22px !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 30px 0 18px !important;
+  padding: 16px 28px !important;
+  box-sizing: border-box !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -3376,7 +3378,7 @@
 
 @media (max-width: 680px) {
   .creator-card.creator-card-redesigned {
-    margin: 20px 10px 14px !important; padding: 14px 12px !important;
+    width: 100% !important; margin: 20px 0 14px !important; padding: 14px 12px !important;
     flex-direction: column !important; gap: 10px !important;
   }
   .creator-heading { font-size: .72rem; }
