@@ -3352,6 +3352,467 @@
       }
     }
 
+
+    /* ========================================================
+       STANDARDIZED COLORFUL CREATOR CARD & VIBRANT TYPOGRAPHY
+       ======================================================== */
+    .creator-card {
+      background: #ffffff !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      padding: 14px 22px !important;
+      margin: 28px auto 16px auto !important;
+      max-width: 940px !important;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex-wrap: wrap !important;
+      gap: 12px !important;
+      box-sizing: border-box !important;
+    }
+    .creator-typewriter-wrapper {
+      font-size: 0.94rem !important;
+      color: #1e293b !important;
+      font-weight: 600 !important;
+      line-height: 1.6 !important;
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      flex: 1 1 auto !important;
+      gap: 0px !important;
+    }
+    .creator-typewriter-target {
+      display: inline !important;
+      white-space: pre-wrap !important;
+    }
+    .creator-label {
+      font-weight: 700 !important;
+      color: #1e293b !important;
+    }
+    .creator-name-ta-blue {
+      color: #1d4ed8 !important; /* Royal Blue for 'கூ. ' */
+      font-weight: 900 !important;
+    }
+    .creator-name-ta-purple {
+      color: #c026d3 !important; /* Bright Purple/Magenta with underline for Tamil name */
+      font-weight: 900 !important;
+      text-decoration: underline !important;
+      text-underline-offset: 3px !important;
+    }
+    .creator-role {
+      color: #334155 !important;
+      font-weight: 600 !important;
+    }
+    .creator-name-en-blue {
+      color: #1d4ed8 !important; /* Royal Blue for 'K. ' */
+      font-weight: 900 !important;
+    }
+    .creator-name-en-purple {
+      color: #c026d3 !important; /* Bright Purple for 'Poovalingam' */
+      font-weight: 900 !important;
+    }
+    .creator-cursor {
+      display: inline-block !important;
+      font-weight: 300 !important;
+      color: #2563eb !important;
+      margin-left: 2px !important;
+      animation: blinkCreatorCursor 0.65s infinite !important;
+    }
+    @keyframes blinkCreatorCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .footer-phone-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+      color: #ffffff !important;
+      padding: 6px 14px !important;
+      border-radius: 999px !important;
+      text-decoration: none !important;
+      font-weight: 800 !important;
+      font-size: 0.88rem !important;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3) !important;
+      transition: all 0.2s ease !important;
+    }
+    .footer-phone-pill:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+      transform: translateY(-2px) !important;
+      color: #ffffff !important;
+    }
+
+    /* ========================================================
+       UNIVERSAL MOBILE-OPTIMIZED HEADER BANNER (100% VISIBLE)
+       ======================================================== */
+    @media (max-width: 680px) {
+      .portal-header,
+      .hero-banner,
+      .header-card,
+      .header-banner-wrap,
+      .banner-fallback,
+      .hero-portal-card,
+      .page-header,
+      .hero-header {
+        padding: 16px 12px 14px 12px !important;
+        margin-bottom: 14px !important;
+        border-radius: 12px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+        overflow: visible !important;
+      }
+
+      .portal-title,
+      .hero-title,
+      .header-title,
+      .banner-fallback-title,
+      .header-banner-wrap h1,
+      .banner-fallback h1 {
+        font-size: 1.35rem !important;
+        line-height: 1.35 !important;
+        margin: 4px auto 8px auto !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+        text-align: center !important;
+        max-width: 100% !important;
+      }
+
+      .portal-subtitle,
+      .hero-subtitle,
+      .header-sub,
+      .header-subtitle,
+      .banner-fallback-subtitle,
+      .banner-fallback-dept,
+      .banner-fallback-en,
+      .banner-fallback-en-sub,
+      .header-banner-wrap p,
+      .banner-fallback p {
+        font-size: 0.82rem !important;
+        line-height: 1.45 !important;
+        margin: 3px auto !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+        text-align: center !important;
+        max-width: 100% !important;
+      }
+
+      .header-badge-row,
+      .badge-row,
+      .meta-pills,
+      .hero-badges-wrap {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 5px !important;
+        margin-bottom: 8px !important;
+        width: 100% !important;
+      }
+
+      .header-tag,
+      .header-badge,
+      .hero-badge,
+      .badge-pill {
+        font-size: 0.72rem !important;
+        padding: 3px 8px !important;
+        white-space: normal !important;
+        line-height: 1.3 !important;
+        text-align: center !important;
+      }
+
+      .top-bar {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 6px !important;
+        margin-bottom: 10px !important;
+        width: 100% !important;
+      }
+      .district-badge {
+        font-size: 0.78rem !important;
+        padding: 5px 8px !important;
+        text-align: center !important;
+        justify-content: center !important;
+      }
+      .top-nav-left {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 5px !important;
+      }
+      .nav-btn, .home-btn {
+        font-size: 0.78rem !important;
+        padding: 5px 10px !important;
+      }
+      .breadcrumb-bar {
+        font-size: 0.74rem !important;
+        padding: 6px 8px !important;
+        margin-bottom: 10px !important;
+        flex-wrap: wrap !important;
+      }
+
+      .creator-card {
+        padding: 12px 14px !important;
+        justify-content: center !important;
+        text-align: center !important;
+      }
+      .creator-typewriter-wrapper {
+        justify-content: center !important;
+        font-size: 0.86rem !important;
+      }
+    }
+
+
+    /* ========================================================
+       OFFICIAL DISTRICT PORTAL TOP FRAME (UNIFIED ACROSS ALL PAGES)
+       ======================================================== */
+    .portal-top-frame {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      border: 1.8px solid #d4af37 !important;
+      border-radius: 14px !important;
+      padding: 12px 18px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.16) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex-wrap: wrap !important;
+      gap: 12px !important;
+    }
+
+    .top-frame-branding {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 2px !important;
+    }
+
+    .top-frame-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 0.82rem !important;
+      font-weight: 800 !important;
+      color: #fef08a !important;
+      letter-spacing: 0.3px !important;
+    }
+
+    .portal-main-heading {
+      display: flex !important;
+      align-items: baseline !important;
+      gap: 10px !important;
+      flex-wrap: wrap !important;
+    }
+
+    .portal-title-text {
+      font-size: 1.35rem !important;
+      font-weight: 900 !important;
+      color: #ffffff !important;
+      letter-spacing: -0.2px !important;
+    }
+
+    .portal-subtitle-en {
+      font-size: 0.76rem !important;
+      font-weight: 800 !important;
+      color: #93c5fd !important;
+      letter-spacing: 1px !important;
+    }
+
+    .top-frame-actions {
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 8px !important;
+    }
+
+    .top-frame-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      padding: 7px 13px !important;
+      border-radius: 8px !important;
+      font-size: 0.82rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 1px solid transparent !important;
+      transition: all 0.2s ease !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .top-frame-btn.btn-menu {
+      display: none !important;
+      background: linear-gradient(135deg, #1e3a8a, #0284c7) !important;
+      color: #ffffff !important;
+      border-color: #38bdf8 !important;
+    }
+
+    .top-frame-btn.btn-ceosvg {
+      background: #0f172a !important;
+      color: #ffffff !important;
+      border-color: #334155 !important;
+    }
+    .top-frame-btn.btn-ceosvg:hover {
+      background: #1e293b !important;
+      border-color: #38bdf8 !important;
+      color: #93c5fd !important;
+      transform: translateY(-1px) !important;
+    }
+
+    .top-frame-btn.btn-home {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      border-color: #38bdf8 !important;
+    }
+    .top-frame-btn.btn-home:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #0c4a6e 100%) !important;
+      transform: translateY(-1px) !important;
+    }
+
+    .top-frame-btn.btn-cutoff {
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
+      color: #ffffff !important;
+      border-color: #fde68a !important;
+    }
+    .top-frame-btn.btn-cutoff:hover {
+      background: linear-gradient(135deg, #b45309 0%, #92400e 100%) !important;
+      transform: translateY(-1px) !important;
+    }
+
+    @media (max-width: 1024px) {
+      .top-frame-btn.btn-menu {
+        display: inline-flex !important;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .portal-top-frame {
+        padding: 10px 12px !important;
+        gap: 10px !important;
+      }
+      .top-frame-branding {
+        text-align: center !important;
+        width: 100% !important;
+      }
+      .top-frame-badge {
+        justify-content: center !important;
+        font-size: 0.76rem !important;
+      }
+      .portal-main-heading {
+        justify-content: center !important;
+      }
+      .portal-title-text {
+        font-size: 1.15rem !important;
+      }
+      .portal-subtitle-en {
+        font-size: 0.70rem !important;
+      }
+      .top-frame-actions {
+        justify-content: center !important;
+        width: 100% !important;
+        gap: 6px !important;
+      }
+      .top-frame-btn {
+        font-size: 0.75rem !important;
+        padding: 6px 10px !important;
+      }
+    }
+
+    /* ========================================================
+       CREATOR CARD COLOR CLASSES (100% VIBRANT)
+       ======================================================== */
+    .creator-card {
+      background: #ffffff !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      padding: 14px 22px !important;
+      margin: 28px auto 16px auto !important;
+      max-width: 940px !important;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex-wrap: wrap !important;
+      gap: 12px !important;
+      box-sizing: border-box !important;
+    }
+    .creator-typewriter-wrapper {
+      font-size: 0.94rem !important;
+      color: #1e293b !important;
+      font-weight: 600 !important;
+      line-height: 1.6 !important;
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      flex: 1 1 auto !important;
+      gap: 0px !important;
+    }
+    .creator-typewriter-target {
+      display: inline !important;
+      white-space: pre-wrap !important;
+    }
+    .creator-label {
+      font-weight: 700 !important;
+      color: #1e293b !important;
+    }
+    .creator-name-ta-blue {
+      color: #1d4ed8 !important; /* Royal Blue */
+      font-weight: 900 !important;
+    }
+    .creator-name-ta-purple {
+      color: #c026d3 !important; /* Bright Purple with underline */
+      font-weight: 900 !important;
+      text-decoration: underline !important;
+      text-underline-offset: 3px !important;
+    }
+    .creator-role {
+      color: #334155 !important;
+      font-weight: 600 !important;
+    }
+    .creator-name-en-blue {
+      color: #1d4ed8 !important;
+      font-weight: 900 !important;
+    }
+    .creator-name-en-purple {
+      color: #c026d3 !important;
+      font-weight: 900 !important;
+    }
+    .creator-cursor {
+      display: inline-block !important;
+      font-weight: 300 !important;
+      color: #2563eb !important;
+      margin-left: 2px !important;
+      animation: blinkCreatorCursor 0.65s infinite !important;
+    }
+    @keyframes blinkCreatorCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .footer-phone-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+      color: #ffffff !important;
+      padding: 6px 14px !important;
+      border-radius: 999px !important;
+      text-decoration: none !important;
+      font-weight: 800 !important;
+      font-size: 0.88rem !important;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3) !important;
+      transition: all 0.2s ease !important;
+    }
+    .footer-phone-pill:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+      transform: translateY(-2px) !important;
+      color: #ffffff !important;
+    }
+
 </style>
 </head>
 <body>
@@ -3607,24 +4068,46 @@
   <div class="portal-container">
     
     <!-- Top Bar (Guide's Main Page Format) -->
-    <div class="top-bar">
-      <div class="top-nav-left">
-        <a class="home-btn" href="index.html" title="சிவகங்கை மாவட்ட முதன்மைக் கல்வி அலுவலக முகப்பு பக்கம்">
-          <svg viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-          முகப்பு (HOME)
-        </a>
-        <a class="home-btn" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை போர்ட்டல்">
-          🎓 முதன்மை போர்ட்டல் (Master Guide)
-        </a>
-        <div class="quick-tools-nav">
-          <a class="quick-tool-btn btn-cutoff" href="#cutoff-tools-sec" title="அனைத்து வகை படிப்புகளுக்கான கட்-ஆஃப் கால்குலேட்டர்">
-            🧮 கட்-ஆஃப் கால்குலேட்டர்
-          </a>
-          <a class="quick-tool-btn btn-helpdesk" href="#services-14417-sec" title="14417 உதவி மையம்">
-            📞 14417 உதவி மையம்
-          </a>
-        </div>
-      </div>
+    <!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை -->
+<!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை -->
+<header class="portal-top-frame no-print">
+  <div class="top-frame-branding">
+    <div class="top-frame-badge">
+      <span class="govt-emblem">🏛️</span>
+      <span class="dept-text">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</span>
+    </div>
+    <div class="portal-main-heading">
+      <span class="portal-title-text">உயர்கல்வி வழிகாட்டி — 2026</span>
+      <span class="portal-subtitle-en">CAREER GUIDANCE PORTAL</span>
+    </div>
+  </div>
+
+  <div class="top-frame-actions">
+    <!-- Mobile Hamburger Menu Button -->
+    <button id="mobileMenuToggleBtn" class="top-frame-btn btn-menu" onclick="toggleSidebarMenu()" type="button" title="வழிகாட்டல் பக்கப்பட்டை மெனு">
+      <span class="btn-icon">☰</span>
+      <span>மெனு</span>
+    </button>
+    <!-- Official ceosvg.in Main District Portal Link (SAME WINDOW) -->
+    <a href="https://www.ceosvg.in" class="top-frame-btn btn-ceosvg" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம் (ceosvg.in)">
+      <span class="btn-icon">🌐</span>
+      <span>ceosvg.in முதன்மை தளம்</span>
+    </a>
+    <!-- Career Guidance Home Link (SAME WINDOW) -->
+    <a href="index.html" class="top-frame-btn btn-home" title="உயர்கல்வி வழிகாட்டி முகப்புப் பக்கம்">
+      <span class="btn-icon">🎓</span>
+      <span>உயர்கல்வி முகப்பு</span>
+    </a>
+    <!-- Universal Cut-off Calculator -->
+    <button class="top-frame-btn btn-cutoff" onclick="openCutoffModal()" type="button" title="கட்-ஆஃப் கால்குலேட்டர்">
+      <span class="btn-icon">🧮</span>
+      <span>கட்-ஆஃப் கால்குலேட்டர்</span>
+    </button>
+  </div>
+</header>
+
+
+
       <div class="district-badge">
         🏛️ முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்
       </div>
@@ -4758,6 +5241,8 @@
 
   </div>
 
+
+
 <!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
 <div class="creator-card">
   <div class="creator-typewriter-wrapper">
@@ -5171,20 +5656,7 @@
     });
   
     // ==========================================
-    // Creator Single-Line Typewriter Animation (from Master Guide)
-    // Types once and stays permanently static
-    // ==========================================
     
-    const creatorCursor = document.getElementById('creatorCursor');
-
-    let creatorSegIdx = 0;
-    let creatorCharIdx = 0;
-    let creatorCurrentElem = null;
-    let creatorHasStarted = false;
-
-    function typeCreatorDetails() {
-      if (!creatorContainer || creatorHasStarted) return;
-      creatorHasStarted = true;
 
       function step() {
         if (creatorSegIdx >= creatorSegments.length) {
@@ -5335,8 +5807,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
 <script>
-// Standardized Creator Typewriter Animation (Single Execution)
+// Standardized Creator Typewriter Animation (Triggered on Scroll / Intersection)
 (function() {
   let hasTyped = false;
   const creatorSegments = [
@@ -5358,6 +5832,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     hasTyped = true;
     container.innerHTML = '';
+    if (cursor) cursor.style.display = 'inline-block';
+    if (phonePill) phonePill.style.display = 'none';
 
     let segIdx = 0;
     let charIdx = 0;
@@ -5368,7 +5844,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (cursor) {
           cursor.style.animation = 'none';
           cursor.style.opacity = '0';
-          setTimeout(() => { if (cursor) cursor.remove(); }, 400);
+          setTimeout(() => { if (cursor) cursor.remove(); }, 300);
         }
         if (phonePill) {
           phonePill.style.display = 'inline-flex';
@@ -5392,16 +5868,39 @@ document.addEventListener('DOMContentLoaded', function() {
         charIdx = 0;
       }
 
-      setTimeout(step, 30);
+      setTimeout(step, 28);
     }
 
     step();
   }
 
+  function initCreatorObserver() {
+    const cardElem = document.querySelector('.creator-card');
+    if (!cardElem) {
+      setTimeout(runCreatorTypewriter, 1000);
+      return;
+    }
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            runCreatorTypewriter();
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.1 });
+      observer.observe(cardElem);
+      setTimeout(runCreatorTypewriter, 7000);
+    } else {
+      setTimeout(runCreatorTypewriter, 1000);
+    }
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', runCreatorTypewriter);
+    document.addEventListener('DOMContentLoaded', initCreatorObserver);
   } else {
-    runCreatorTypewriter();
+    initCreatorObserver();
   }
 })();
 </script>
