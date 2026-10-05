@@ -2479,6 +2479,160 @@ textarea {
         transform: scale(1.05);
       }
     }
+
+    /* ========================================================
+       STANDARDIZED UNIFIED CREATOR CARD & TYPOGRAPHY
+       ======================================================== */
+    .creator-card {
+      background: #ffffff !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      padding: 14px 22px !important;
+      margin: 28px auto 16px auto !important;
+      max-width: 940px !important;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      flex-wrap: wrap !important;
+      gap: 12px !important;
+      box-sizing: border-box !important;
+    }
+    .creator-typewriter-wrapper {
+      font-size: 0.94rem !important;
+      color: #1e293b !important;
+      font-weight: 600 !important;
+      line-height: 1.6 !important;
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      flex: 1 1 auto !important;
+      gap: 0px !important;
+    }
+    .creator-typewriter-target {
+      display: inline !important;
+      white-space: pre-wrap !important;
+    }
+    .creator-label {
+      font-weight: 700 !important;
+      color: #1e293b !important;
+    }
+    .creator-name-ta-blue {
+      color: #1d4ed8 !important; /* Royal Blue */
+      font-weight: 900 !important;
+    }
+    .creator-name-ta-purple {
+      color: #c026d3 !important; /* Bright Purple with underline */
+      font-weight: 900 !important;
+      text-decoration: underline !important;
+      text-underline-offset: 3px !important;
+    }
+    .creator-role {
+      color: #334155 !important;
+      font-weight: 600 !important;
+    }
+    .creator-name-en-blue {
+      color: #1d4ed8 !important;
+      font-weight: 900 !important;
+    }
+    .creator-name-en-purple {
+      color: #c026d3 !important;
+      font-weight: 900 !important;
+    }
+    .creator-cursor {
+      display: inline-block !important;
+      font-weight: 300 !important;
+      color: #2563eb !important;
+      margin-left: 2px !important;
+      animation: blinkCreatorCursor 0.65s infinite !important;
+    }
+    @keyframes blinkCreatorCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .footer-phone-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+      color: #ffffff !important;
+      padding: 6px 14px !important;
+      border-radius: 999px !important;
+      text-decoration: none !important;
+      font-weight: 800 !important;
+      font-size: 0.88rem !important;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3) !important;
+      transition: all 0.2s ease !important;
+    }
+    .footer-phone-pill:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+      transform: translateY(-2px) !important;
+      color: #ffffff !important;
+    }
+
+    @media (max-width: 680px) {
+      .creator-card {
+        padding: 12px 14px !important;
+        justify-content: center !important;
+        text-align: center !important;
+      }
+      .creator-typewriter-wrapper {
+        justify-content: center !important;
+        font-size: 0.86rem !important;
+      }
+    }
+
+
+    /* ========================================================
+       SCREEN-ADAPTIVE FLUID 100% MONITOR WIDTH (ALL MONITORS)
+       ======================================================== */
+    .container,
+    .portal-container,
+    .main-content-wrapper,
+    .content-wrapper,
+    .page-wrapper {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      box-sizing: border-box !important;
+      padding-left: clamp(10px, 1.8vw, 32px) !important;
+      padding-right: clamp(10px, 1.8vw, 32px) !important;
+    }
+
+    /* Auto-expanding Fluid Multi-Column Grid on Wide Monitors */
+    .grid-container,
+    .cards-grid,
+    .pathways-grid,
+    .courses-grid,
+    .departments-grid,
+    .career-grid {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    @media (min-width: 1400px) {
+      .grid-container,
+      .cards-grid,
+      .pathways-grid,
+      .courses-grid,
+      .departments-grid {
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)) !important;
+      }
+    }
+
+    /* 100% Full-Width Responsive Tables */
+    .table-container,
+    .table-responsive,
+    .directory-table-container,
+    .college-table-wrap {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      overflow-x: auto !important;
+    }
+
 </style>
 </head>
 <body>
@@ -8251,6 +8405,17 @@ textarea {
 </div>
 </div>
 <!-- Enhanced Portal Footer with ceosvg.in standard components -->
+<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
+<div class="creator-card">
+  <div class="creator-typewriter-wrapper">
+    <span id="creatorTypewriterTarget" class="creator-typewriter-target"></span><span id="creatorCursor" class="creator-cursor">|</span>
+  </div>
+  <a href="tel:9626471035" class="footer-phone-pill" id="footerPhonePill" title="அழைக்க">
+    <span class="phone-icon">📱</span>
+    <span class="phone-text">9626471035</span>
+  </a>
+</div>
+
 <footer class="portal-footer no-print">
 <div class="footer-nav-links">
 <a class="footer-link-pill" href="index.html">🌐 முதன்மை இணையதளம் (ceosvg.in)</a>
@@ -8588,6 +8753,73 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
+
+
+<script>
+// Standalone Creator Typewriter Animation
+(function() {
+  const creatorSegments = [
+    { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
+    { text: "கூ. ", tag: "span", class: "creator-name-ta-blue" },
+    { text: "பூவலிங்கம்", tag: "span", class: "creator-name-ta-purple" },
+    { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
+    { text: "K. ", tag: "span", class: "creator-name-en-blue" },
+    { text: "Poovalingam", tag: "span", class: "creator-name-en-purple" },
+    { text: ", Deputy Inspector of Schools", tag: "span", class: "creator-role" }
+  ];
+
+  function initCreatorTypewriter() {
+    const creatorContainer = document.getElementById('creatorTypewriterTarget');
+    const creatorCursor = document.getElementById('creatorCursor');
+    if (!creatorContainer) return;
+    
+    // Check if already populated
+    if (creatorContainer.getAttribute('data-typed') === 'true') return;
+    creatorContainer.setAttribute('data-typed', 'true');
+    creatorContainer.innerHTML = '';
+
+    let segIdx = 0;
+    let charIdx = 0;
+    let currentElem = null;
+
+    function step() {
+      if (segIdx >= creatorSegments.length) {
+        if (creatorCursor) {
+          creatorCursor.style.animation = 'none';
+          creatorCursor.style.opacity = '0';
+          setTimeout(() => { if (creatorCursor) creatorCursor.remove(); }, 400);
+        }
+        return;
+      }
+
+      const currentSeg = creatorSegments[segIdx];
+      if (charIdx === 0) {
+        currentElem = document.createElement(currentSeg.tag);
+        currentElem.className = currentSeg.class;
+        creatorContainer.appendChild(currentElem);
+      }
+
+      currentElem.textContent += currentSeg.text.charAt(charIdx);
+      charIdx++;
+
+      if (charIdx >= currentSeg.text.length) {
+        segIdx++;
+        charIdx = 0;
+      }
+
+      setTimeout(step, 30);
+    }
+
+    step();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCreatorTypewriter);
+  } else {
+    initCreatorTypewriter();
+  }
+})();
+</script>
 
 </body>
 </html>
