@@ -3279,6 +3279,112 @@
       margin-bottom: 16px !important;
     }
 
+
+
+    /* ========================================================
+       TOP BANNER FRAME VISIBILITY FIX
+       Keeps the complete gold frame visible on all screen sizes
+       ======================================================== */
+    .portal-main-content {
+      padding-top: 10px !important;
+    }
+
+    .container, .portal-container {
+      overflow: visible !important;
+    }
+
+    .portal-top-frame {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 16px 0 !important;
+      border: 1.8px solid #d4af37 !important;
+      border-radius: 14px !important;
+      box-sizing: border-box !important;
+      position: sticky !important;
+      top: 8px !important;
+      left: auto !important;
+      right: auto !important;
+      z-index: 999 !important;
+      overflow: visible !important;
+    }
+
+    @media (max-width: 1024px) {
+      .portal-main-content {
+        padding-top: 8px !important;
+      }
+      .portal-top-frame {
+        top: 6px !important;
+        width: 100% !important;
+        border: 1.8px solid #d4af37 !important;
+        border-radius: 12px !important;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .portal-main-content {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+      }
+      .portal-top-frame {
+        top: 5px !important;
+        border-radius: 10px !important;
+      }
+    }
+
+</style>
+
+<style>
+/* Redesigned website designer footer */
+.creator-card.creator-card-redesigned {
+  max-width: 980px !important;
+  margin: 30px auto 18px !important;
+  padding: 16px 22px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 22px !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 1px solid #d4af37 !important;
+  border-top: 4px solid #d4af37 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18) !important;
+  text-align: center !important;
+}
+.creator-info-block { flex: 1 1 auto; min-width: 0; }
+.creator-heading {
+  color: #475569; font-size: .78rem; font-weight: 800; letter-spacing: .3px;
+  margin-bottom: 5px; text-transform: none;
+}
+.creator-name-line {
+  display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap;
+  gap: 5px; line-height: 1.35; font-size: 1.02rem;
+}
+.creator-name-ta-purple { text-decoration: none !important; }
+.creator-divider { color: #d4af37; font-weight: 900; padding: 0 4px; }
+.creator-role-line { color: #475569; font-size: .78rem; font-weight: 650; margin-top: 3px; }
+.role-divider { color: #d4af37; font-weight: 900; padding: 0 6px; }
+.creator-card-redesigned .footer-phone-pill {
+  flex: 0 0 auto !important; min-width: 142px; justify-content: center !important;
+  padding: 8px 15px !important; font-size: .84rem !important;
+}
+.creator-card-redesigned .creator-typewriter-wrapper {
+  min-height: 2.2em; display:flex; align-items:center; justify-content:center; flex-wrap:wrap;
+  line-height:1.55; text-align:center;
+}
+.creator-card-redesigned .creator-typewriter-target { display:inline; font-size:.92rem; font-weight:750; }
+.creator-card-redesigned .creator-cursor { display:inline-block; margin-left:2px; color:#d4af37; font-weight:900; animation:blink .8s infinite; }
+
+@media (max-width: 680px) {
+  .creator-card.creator-card-redesigned {
+    margin: 20px 10px 14px !important; padding: 14px 12px !important;
+    flex-direction: column !important; gap: 10px !important;
+  }
+  .creator-heading { font-size: .72rem; }
+  .creator-name-line { font-size: .92rem; }
+  .creator-role-line { font-size: .72rem; line-height: 1.55; }
+  .role-divider { display: inline-block; }
+  .creator-card-redesigned .footer-phone-pill { width: auto !important; min-width: 150px; }
+}
 </style>
 </head>
 <body>
@@ -4400,12 +4506,16 @@
 
 
 <!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
-<div class="creator-card">
-  <div class="creator-typewriter-wrapper">
-    <span id="creatorTypewriterTarget" class="creator-typewriter-target"></span><span id="creatorCursor" class="creator-cursor">|</span>
+<div class="creator-card creator-card-redesigned">
+  <div class="creator-info-block">
+    <div class="creator-heading">இணையதள வடிவமைப்பு &amp; தொழில்நுட்ப ஒருங்கிணைப்பு</div>
+    <div class="creator-typewriter-wrapper" aria-label="இணையதள வடிவமைப்பாளர் விவரம்">
+      <div id="creatorTypewriterTarget" class="creator-typewriter-target"></div>
+      <span id="creatorCursor" class="creator-cursor">|</span>
+    </div>
   </div>
-  <a href="tel:9626471035" class="footer-phone-pill" id="footerPhonePill" title="அழைக்க">
-    <span class="phone-icon">📱</span>
+  <a id="footerPhonePill" href="tel:9626471035" class="footer-phone-pill" title="அழைக்க" style="display:none; opacity:0; transition:opacity .35s ease;">
+    <span class="phone-icon">☎</span>
     <span class="phone-text">9626471035</span>
   </a>
 </div>
