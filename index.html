@@ -51,7 +51,7 @@
         radial-gradient(at 0% 100%, rgba(14, 165, 233, 0.12) 0px, transparent 50%),
         radial-gradient(at 100% 100%, rgba(212, 175, 55, 0.15) 0px, transparent 45%),
         linear-gradient(160deg, #090d16 0%, #0d131f 35%, #111827 65%, #080c14 100%);
-      background-attachment: fixed;
+      background-attachment: scroll;
       color: var(--text-main);
       line-height: 1.6;
       padding: 12px 18px;
@@ -165,7 +165,7 @@
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 18px rgba(212, 175, 55, 0.35);
       letter-spacing: 0.3px;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
-      backdrop-filter: blur(8px);
+      
     }
 
     /* Animated Header Banner Container */
@@ -173,25 +173,19 @@
       width: 100%;
       border-radius: 16px;
       padding: 3px;
-      background: linear-gradient(90deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c, #d4af37, #bf953f);
-      background-size: 300% 300%;
-      animation: gradientShift 6s ease infinite, bannerRoyalGlow 3.5s infinite ease-in-out;
+      background: linear-gradient(135deg, #d4af37 0%, #fef08a 50%, #aa771c 100%);
       margin-bottom: 12px;
       position: relative;
       box-sizing: border-box;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.65), 0 0 28px rgba(212, 175, 55, 0.35);
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.12);
     }
 
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
+    
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
-    @keyframes bannerRoyalGlow {
-      0%, 100% {
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7), 0 0 28px rgba(212, 175, 55, 0.35);
-      }
+    
       50% {
         box-shadow: 0 14px 48px rgba(0, 0, 0, 0.85), 0 0 42px rgba(254, 240, 138, 0.6);
       }
@@ -287,7 +281,7 @@
       gap: 10px;
       box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5), 0 0 14px rgba(212, 175, 55, 0.2), inset 0 1px 0 rgba(255, 215, 0, 0.25);
       transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-      backdrop-filter: blur(12px);
+      
       position: relative;
       overflow: hidden;
     }
@@ -346,8 +340,8 @@
       margin-bottom: 14px;
       border: 1.8px solid #d4af37;
       box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 24px rgba(212, 175, 55, 0.28), inset 0 1px 0 rgba(255, 215, 0, 0.3);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      
+      
       width: 100%;
       position: relative;
       overflow: hidden;
@@ -357,9 +351,7 @@
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; height: 4px;
-      background: linear-gradient(90deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c, #d4af37, #bf953f);
-      background-size: 200% auto;
-      animation: gradientShift 5s linear infinite;
+      background: linear-gradient(90deg, #d4af37, #fef08a, #aa771c);
     }
 
     .lead-text-wrap {
@@ -367,17 +359,14 @@
     }
 
     .typing-container {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 4px;
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(254, 240, 138, 0.12) 100%);
-      border: 1.5px solid #d4af37;
-      padding: 4px 16px;
-      border-radius: 999px;
-      margin-bottom: 6px;
-      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3), 0 0 10px rgba(212, 175, 55, 0.25);
-      text-align: center;
+      height: 2.4em !important;
+      min-height: 2.4em !important;
+      max-height: 2.4em !important;
+      overflow: hidden !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin-bottom: 4px !important;
     }
 
     .typing-text {
@@ -545,8 +534,8 @@
       justify-content: space-between;
       position: relative;
       overflow: hidden;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      
+      
       transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
       cursor: pointer;
     }
@@ -804,8 +793,8 @@
       padding: 2.5px 7px;
       border-radius: 5px;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
+      
+      
       transition: all 0.2s ease;
       white-space: nowrap;
       line-height: 1.35;
@@ -930,7 +919,7 @@
       flex-direction: column;
       flex-shrink: 0;
       box-sizing: border-box;
-      backdrop-filter: blur(10px);
+      
     }
 
     /* Custom Slim Gold Scrollbar for Sidebar */
@@ -1285,7 +1274,7 @@
       position: fixed;
       inset: 0;
       background: rgba(0, 0, 0, 0.65);
-      backdrop-filter: blur(4px);
+      
       z-index: 9998;
     }
 
@@ -1849,11 +1838,10 @@
       background-size: 200% auto !important;
       -webkit-background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
-      animation: kuralGoldShimmer 4s linear infinite !important;
+      
       text-align: center !important;
     }
-    @keyframes kuralGoldShimmer {
-      0% { background-position: 0% 50%; }
+    
       100% { background-position: 200% 50%; }
     }
     .kural-meaning {
@@ -2203,7 +2191,10 @@
        ======================================================== */
     /* Fixed typing container height to eliminate vertical layout jumps */
     .typing-container {
+      height: 2.4em !important;
       min-height: 2.4em !important;
+      max-height: 2.4em !important;
+      overflow: hidden !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
@@ -2356,6 +2347,33 @@
         height: 48px !important;
         font-size: 0.95rem !important;
       }
+    }
+
+
+    /* ========================================================
+       100% FLICKER-FREE STABLE GPU RENDERING FOR MOBILE & DESKTOP
+       ======================================================== */
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body, .portal-main-content, .card, .banner-fallback, .control-panel {
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+
+    /* Solid High-Contrast Kural Text - Zero Transparency Glitches */
+    .kural-verse-text, .kural-text-animated {
+      color: #78350f !important;
+      -webkit-text-fill-color: #78350f !important;
+      font-size: 1.25rem !important;
+      font-weight: 900 !important;
+      line-height: 1.7 !important;
+      text-align: center !important;
+      background: none !important;
+      animation: none !important;
     }
 
 </style>
@@ -3128,7 +3146,7 @@
       if (flipTimer) clearInterval(flipTimer);
       flipTimer = setInterval(() => {
         renderFlipItem(currentFlipIdx + 1, 'next');
-      }, 4000);
+      }, 5000);
     }
 
     const flipViewport = document.getElementById('compassFlipViewport');
