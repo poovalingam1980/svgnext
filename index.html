@@ -3646,6 +3646,172 @@
         white-space: normal !important;
       }
     }
+
+    /* ========================================================
+       REDUCED FONT SIZE (80%) FOR LABEL & ROLES
+       (இணையதள வடிவமைப்பு, பள்ளித் துணை ஆய்வாளர், Deputy Inspector of Schools)
+       ======================================================== */
+    .creator-label {
+      font-size: 80% !important;
+      font-weight: 700 !important;
+      color: #f1f5f9 !important;
+      white-space: nowrap !important;
+      opacity: 0.92 !important;
+    }
+
+    .creator-role {
+      font-size: 80% !important;
+      color: #94a3b8 !important;
+      font-weight: 600 !important;
+      white-space: nowrap !important;
+      opacity: 0.90 !important;
+    }
+
+    .creator-name-ta,
+    .creator-name-en {
+      font-size: 100% !important;
+    }
+
+    /* ========================================================
+       MAGNIFICENT FULL-WIDTH ANIMATED THIRUKKURAL SECTION
+       (மாணவர்களைக் கவரும் முழு அகல எழில்மிகு திருக்குறள் பகுதி)
+       ======================================================== */
+    .kural-box {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 28px 0 24px 0 !important;
+      padding: clamp(20px, 2.5vw, 36px) clamp(20px, 3vw, 42px) !important;
+      box-sizing: border-box !important;
+      position: relative !important;
+      overflow: hidden !important;
+      border-radius: 18px !important;
+      background: linear-gradient(135deg, #090e1a 0%, #17153a 35%, #231133 70%, #090e1a 100%) !important;
+      background-size: 300% 300% !important;
+      animation: kural-bg-pulse 10s ease-in-out infinite alternate !important;
+      border: 1.8px solid #f59e0b !important;
+      border-left: 8px solid #f59e0b !important;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55), 0 0 28px rgba(245, 158, 11, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+      text-align: center !important;
+    }
+
+    @keyframes kural-bg-pulse {
+      0% {
+        background-position: 0% 50%;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55), 0 0 22px rgba(217, 119, 6, 0.2);
+      }
+      50% {
+        background-position: 100% 50%;
+        box-shadow: 0 16px 42px rgba(0, 0, 0, 0.65), 0 0 35px rgba(245, 158, 11, 0.38);
+      }
+      100% {
+        background-position: 0% 50%;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55), 0 0 22px rgba(217, 119, 6, 0.2);
+      }
+    }
+
+    .kural-header {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      font-size: clamp(0.78rem, 0.9vw, 0.92rem) !important;
+      font-weight: 800 !important;
+      color: #fef08a !important;
+      letter-spacing: 0.3px !important;
+      margin-bottom: 16px !important;
+      background: linear-gradient(135deg, rgba(217, 119, 6, 0.3) 0%, rgba(245, 158, 11, 0.2) 100%) !important;
+      padding: 6px 20px !important;
+      border-radius: 999px !important;
+      border: 1.5px solid rgba(251, 191, 36, 0.6) !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 12px rgba(245, 158, 11, 0.25) !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+    }
+
+    .kural-sparkle {
+      background: rgba(254, 240, 138, 0.25);
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.76rem;
+      border: 1px solid rgba(254, 240, 138, 0.4);
+      color: #ffffff;
+    }
+
+    .kural-verse-text,
+    .kural-text-animated {
+      font-size: clamp(1.22rem, 1.85vw, 1.75rem) !important;
+      font-weight: 900 !important;
+      line-height: 1.85 !important;
+      margin: 8px auto 14px auto !important;
+      letter-spacing: 0.4px !important;
+      background: linear-gradient(
+        90deg,
+        #fef08a 0%,
+        #f59e0b 22%,
+        #ffffff 45%,
+        #fde047 65%,
+        #d97706 82%,
+        #fef08a 100%
+      ) !important;
+      background-size: 250% auto !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      animation: kural-gold-shimmer 6s linear infinite !important;
+      text-align: center !important;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 18px rgba(245, 158, 11, 0.35)) !important;
+    }
+
+    @keyframes kural-gold-shimmer {
+      0% {
+        background-position: 0% center;
+      }
+      100% {
+        background-position: 250% center;
+      }
+    }
+
+    .kural-meaning {
+      font-size: clamp(0.86rem, 1.05vw, 1.02rem) !important;
+      color: #e2e8f0 !important;
+      line-height: 1.7 !important;
+      font-weight: 500 !important;
+      border-top: 1px dashed rgba(245, 158, 11, 0.4) !important;
+      padding-top: 14px !important;
+      margin-top: 12px !important;
+      text-align: center !important;
+      max-width: 1000px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+    }
+
+    .kural-meaning strong {
+      color: #fde047 !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.2px !important;
+    }
+
+    @media (max-width: 768px) {
+      .kural-box {
+        padding: 16px 14px !important;
+        margin: 20px 0 16px 0 !important;
+        border-radius: 14px !important;
+        border-left-width: 5px !important;
+      }
+      .kural-header {
+        font-size: 0.74rem !important;
+        padding: 4px 14px !important;
+      }
+      .kural-verse-text,
+      .kural-text-animated {
+        font-size: 1.12rem !important;
+        line-height: 1.65 !important;
+      }
+      .kural-meaning {
+        font-size: 0.82rem !important;
+        line-height: 1.55 !important;
+      }
+    }
 </style>
 </head>
 <body>
@@ -4153,11 +4319,12 @@
 
 </div>
 
-<!-- திருக்குறள் பகுதி (உயர் மாறுபட்ட வாசிப்புத்திறன் மற்றும் அலைன்மெண்டுடன்) -->
+<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
 <div class="kural-box">
   <div class="kural-header">
-    <span>📜</span>
-    <span>திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
+    <span class="kural-icon">📜</span>
+    <span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
+    <span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
   </div>
   <div class="kural-verse-text">
     “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
