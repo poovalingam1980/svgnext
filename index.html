@@ -3388,6 +3388,69 @@
   .creator-card-redesigned .footer-phone-pill { width: auto !important; min-width: 150px; }
 }
 </style>
+
+<style>
+/* FINAL FOOTER ALIGNMENT FIX — stay completely inside main content, never under desktop sidebar */
+.creator-card.creator-card-redesigned {
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 30px auto 18px !important;
+  padding: 16px 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  overflow: hidden !important;
+}
+.creator-card-redesigned .creator-info-block {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 1 auto !important;
+  text-align: center !important;
+  min-width: 0 !important;
+}
+.creator-card-redesigned .creator-heading,
+.creator-card-redesigned .creator-typewriter-wrapper,
+.creator-card-redesigned .creator-typewriter-target {
+  width: 100% !important;
+  max-width: 100% !important;
+  text-align: center !important;
+}
+.creator-card-redesigned .creator-typewriter-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+}
+.creator-card-redesigned .creator-typewriter-target {
+  display: inline !important;
+  white-space: pre-wrap !important;
+}
+.creator-card-redesigned .footer-phone-pill {
+  margin: 4px auto 0 !important;
+  align-self: center !important;
+}
+@media (min-width: 1025px) {
+  .portal-main-content .creator-card.creator-card-redesigned {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+@media (max-width: 680px) {
+  .creator-card.creator-card-redesigned {
+    padding: 14px 12px !important;
+  }
+}
+</style>
 </head>
 <body>
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
