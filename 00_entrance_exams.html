@@ -1,336 +1,1344 @@
 <!DOCTYPE html>
+
 <html lang="ta">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>உயர்கல்வி நுழைவுத்தேர்வுகள் வழிகாட்டி 2026 | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
-  <meta name="description" content="12-ஆம் வகுப்பிற்குப் பிந்தைய தேசிய மற்றும் மாநில அளவிலான 11 முதன்மை நுழைவுத்தேர்வுகள் வழிகாட்டி - சிவகங்கை மாவட்ட முதன்மைக் கல்வி அலுவலகம்"/>
-  <!-- Google Fonts: Inter & Noto Sans Tamil -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+<title>உயர்கல்வி நுழைவுத்தேர்வுகள் வழிகாட்டி | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
+<!-- Google Fonts: Inter & Noto Sans Tamil -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans+Tamil:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>  
+ :root {  
+ --primary-color: #1a56db;  
+ --primary-hover: #1e429f;  
+ --home-btn-bg: #0f172a;  
+ --home-btn-hover: #1e293b;  
+ --bg-color: #f8fafc;  
+ --card-bg: #ffffff;  
+ --text-main: #0f172a;  
+ --text-sub: #475569;  
+ --text-muted: #64748b;  
+ --border-color: #e2e8f0;  
+ --badge-bg: #eff6ff;  
+ --badge-text: #1e40af;  
+ --radius-sm: 8px;  
+ --radius-md: 12px;  
+ --radius-lg: 18px;  
+ --radius-xl: 24px;  
+ --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);  
+ --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.07);  
+ --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1);  
+ }  
+  
+ * {  
+ box-sizing: border-box;  
+ margin: 0;  
+ padding: 0;  
+ }  
+  
+ html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
 
-  <style>
-    :root {
-      --primary: #1a56db;
-      --primary-hover: #1e429f;
-      --dark: #0f172a;
-      --bg: #f8fafc;
-      --card-bg: #ffffff;
-      --text: #0f172a;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
-      --radius-sm: 8px;
-      --radius-md: 12px;
-      --radius-lg: 18px;
-      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-      --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.07);
-      --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-    }
+body {
+  font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  padding: 12px 18px;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+/* Monitor Auto-Expanding Fluid Layout (மானிட்டரின் அகலத்திற்கேற்ப தானாக விரிவடையும் முழு அகலக் கட்டமைப்பு) */
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative;
+  box-sizing: border-box;
+}  
+  
+ /* Top Navigation Bar */  
+ .top-bar {  
+ display: flex;  
+ justify-content: space-between;  
+ align-items: center;  
+ flex-wrap: wrap;  
+ gap: 12px;  
+ margin-bottom: 16px;  
+ }  
+  
+ .home-btn {  
+ display: inline-flex;  
+ align-items: center;  
+ gap: 8px;  
+ padding: 9px 18px;  
+ background-color: var(--home-btn-bg);  
+ color: #ffffff;  
+ text-decoration: none;  
+ font-size: 0.92rem;  
+ font-weight: 600;  
+ border-radius: var(--radius-sm);  
+ box-shadow: 0 2px 5px rgba(15, 23, 42, 0.15);  
+ transition: all 0.2s ease;  
+ }  
+  
+ .home-btn:hover {  
+ background-color: var(--home-btn-hover);  
+ transform: translateY(-1px);  
+ box-shadow: 0 4px 10px rgba(15, 23, 42, 0.25);  
+ }  
+  
+ .home-btn svg {  
+ width: 18px;  
+ height: 18px;  
+ fill: currentColor;  
+ }  
+  
+ .district-badge {  
+ display: inline-flex;  
+ align-items: center;  
+ gap: 6px;  
+ font-size: 0.88rem;  
+ font-weight: 700;  
+ color: #0369a1;  
+ background: #e0f2fe;  
+ padding: 6px 14px;  
+ border-radius: 999px;  
+ border: 1px solid #bae6fd;  
+ }  
+  
+ /* Header Banner Container with Animated Vibrant Gradient Border */  
+ .header-banner-wrap {  
+ width: 100%;  
+ border-radius: calc(var(--radius-lg) + 4px);  
+ padding: 4px;  
+ background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899, #f59e0b, #10b981, #06b6d4, #2563eb);  
+ background-size: 300% 300%;  
+ animation: gradientShift 5s ease infinite, bannerBlingGlow 3s infinite ease-in-out;  
+ margin-bottom: 24px;  
+ position: relative;  
+ box-sizing: border-box;  
+ }  
 
-    html, body {
-      width: 100%;
-      min-height: 100vh;
-      background-color: #f1f5f9;
-      color: var(--text);
-      font-family: 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
+ @keyframes bannerBlingGlow {  
+ 0% {  
+   box-shadow: 0 4px 18px rgba(37, 99, 235, 0.35), 0 0 12px rgba(124, 58, 237, 0.25);  
+ }  
+ 50% {  
+   box-shadow: 0 8px 30px rgba(236, 72, 153, 0.55), 0 0 22px rgba(245, 158, 11, 0.4);  
+ }  
+ 100% {  
+   box-shadow: 0 4px 18px rgba(37, 99, 235, 0.35), 0 0 12px rgba(124, 58, 237, 0.25);  
+ }  
+ }  
 
-    /* Layout Wrapper (Permanent Left Sidebar on Desktop + Full Width Content) */
-    .portal-layout-wrapper {
-      display: flex;
-      width: 100%;
-      min-height: 100vh;
-      position: relative;
-      align-items: stretch;
+ .header-banner-inner {  
+ width: 100%;  
+ border-radius: var(--radius-lg);  
+ overflow: hidden;  
+ background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%);  
+ display: block;  
+ position: relative;  
+ }  
+  
+ /* Banner Image with Perfect Responsive Scaling */  
+ .header-banner-img {  
+ width: 100%;  
+ height: auto;  
+ display: block;  
+ object-fit: contain;  
+ transition: transform 0.3s ease;  
+ }  
+  
+ /* Fallback banner styling if image link is pending */  
+ .banner-fallback {  
+ padding: 40px 24px;  
+ color: #ffffff;  
+ text-align: center;  
+ background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #0284c7 100%);  
+ }  
+  
+ .banner-fallback h1 {  
+ font-size: 2rem;  
+ font-weight: 800;  
+ margin-bottom: 8px;  
+ text-shadow: 0 2px 4px rgba(0,0,0,0.3);  
+ }  
+  
+ .banner-fallback p {  
+ font-size: 1.1rem;  
+ color: #fef08a;  
+ font-weight: 600;  
+ }  
+  
+ /* Thirukkural Motivational Box */  
+ .kural-box {  
+ background: linear-gradient(135deg, #fefce8 0%, #fffbeb 50%, #fef3c7 100%);  
+ border: 1px solid #fde047;  
+ border-left: 5px solid #d97706;  
+ border-radius: var(--radius-md);  
+ padding: 16px 20px;  
+ margin-bottom: 20px;  
+ text-align: center;  
+ box-shadow: 0 2px 6px rgba(217, 119, 6, 0.08);  
+ }  
+  
+ .kural-header {  
+ display: inline-flex;  
+ align-items: center;  
+ gap: 6px;  
+ font-size: 0.82rem;  
+ font-weight: 700;  
+ color: #b45309;  
+ letter-spacing: 0.4px;  
+ margin-bottom: 8px;  
+ background: rgba(254, 240, 138, 0.7);  
+ padding: 3px 12px;  
+ border-radius: 999px;  
+ border: 1px solid #fde68a;  
+ }  
+  
+ .kural-text {  
+ font-size: 1.15rem;  
+ font-weight: 800;  
+ color: #78350f;  
+ line-height: 1.6;  
+ margin-bottom: 6px;  
+ letter-spacing: 0.2px;  
+ }  
+  
+ .kural-meaning {  
+ font-size: 0.88rem;  
+ color: #92400e;  
+ line-height: 1.5;  
+ }  
+  
+ /* ==================================================== */
+ /* Dynamic Typing Effect Banner */
+ /* ==================================================== */
+ .typing-container {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+ background: linear-gradient(135deg, rgba(239, 246, 255, 0.92) 0%, rgba(243, 232, 255, 0.88) 100%);
+ border: 1.5px solid #c4b5fd;
+ padding: 7px 18px;
+ border-radius: 999px;
+ margin-bottom: 14px;
+ box-shadow: 0 4px 14px rgba(124, 58, 237, 0.12), inset 0 1px 2px #fff;
+ backdrop-filter: blur(8px);
+ -webkit-backdrop-filter: blur(8px);
+ min-height: 42px;
+ max-width: 95%;
+ }
+
+ .typing-badge {
+ display: inline-flex;
+ align-items: center;
+ gap: 5px;
+ font-size: 0.84rem;
+ font-weight: 800;
+ color: #6d28d9;
+ background: rgba(255, 255, 255, 0.95);
+ padding: 3px 10px;
+ border-radius: 999px;
+ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+ flex-shrink: 0;
+ }
+
+ .typing-text {
+ font-size: 0.98rem;
+ font-weight: 700;
+ color: #1e3a8a;
+ letter-spacing: 0.2px;
+ }
+
+ .typing-cursor {
+ display: inline-block;
+ font-weight: 800;
+ font-size: 1.1rem;
+ color: #ec4899;
+ margin-left: 2px;
+ animation: blinkCursor 0.8s infinite;
+ }
+
+ @keyframes blinkCursor {
+ 0%, 100% { opacity: 1; }
+ 50% { opacity: 0; }
+ }
+
+ @media (max-width: 640px) {
+ .typing-container {
+ padding: 6px 12px;
+ font-size: 0.88rem;
+ }
+ .typing-text {
+ font-size: 0.85rem;
+ }
+ .typing-badge {
+ font-size: 0.78rem;
+ padding: 2px 8px;
+ }
+ }
+
+ /* Sub-header & Filter Area */  
+ .control-panel {  
+ background: #ffffff;  
+ border-radius: var(--radius-md);  
+ padding: 18px 20px;  
+ margin-bottom: 24px;  
+ border: 1px solid var(--border-color);  
+ box-shadow: var(--shadow-sm);  
+ }  
+  
+ .lead-text-wrap {  
+ text-align: center;  
+ margin-bottom: 16px;  
+ }  
+  
+ .lead-title {  
+ font-size: 1.45rem;  
+ font-weight: 800;  
+ color: #0f172a;  
+ margin-bottom: 6px;  
+ }  
+  
+ .lead-subtitle {  
+ font-size: 0.96rem;  
+ color: var(--text-sub);  
+ max-width: 800px;  
+ margin: 0 auto;  
+ }  
+  
+ /* Live Search Input */  
+ .search-box {  
+ display: flex;  
+ align-items: center;  
+ background: #f8fafc;  
+ border: 2px solid #cbd5e1;  
+ border-radius: var(--radius-sm);  
+ padding: 8px 14px;  
+ margin-bottom: 14px;  
+ transition: all 0.2s ease;  
+ }  
+  
+ .search-box:focus-within {  
+ border-color: var(--primary-color);  
+ background: #ffffff;  
+ box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.15);  
+ }  
+  
+ .search-box svg {  
+ width: 18px;  
+ height: 18px;  
+ fill: #64748b;  
+ margin-right: 10px;  
+ flex-shrink: 0;  
+ }  
+  
+ .search-input {  
+ width: 100%;  
+ border: none;  
+ background: transparent;  
+ font-size: 0.95rem;  
+ font-family: inherit;  
+ color: var(--text-main);  
+ outline: none;  
+ }  
+  
+ /* Category Filter Pills */  
+ .filter-pills {  
+ display: flex;  
+ flex-wrap: wrap;  
+ gap: 8px;  
+ justify-content: center;  
+ }  
+  
+ .filter-pill {  
+ background: #f1f5f9;  
+ border: 1px solid #cbd5e1;  
+ padding: 6px 14px;  
+ border-radius: 999px;  
+ font-size: 0.84rem;  
+ font-weight: 600;  
+ color: #334155;  
+ cursor: pointer;  
+ transition: all 0.2s ease;  
+ user-select: none;  
+ }  
+  
+ .filter-pill:hover {  
+ background: #e2e8f0;  
+ color: #0f172a;  
+ }  
+  
+ .filter-pill.active {  
+ background: var(--primary-color);  
+ color: #ffffff;  
+ border-color: var(--primary-color);  
+ box-shadow: 0 2px 6px rgba(26, 86, 219, 0.25);  
+ }  
+  
+ /* Grid Layout for Cards */  
+ .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  width: 100%;
+  box-sizing: border-box;
+}  
+  
+ /* Modern Glassmorphism Card Styling */
+  .card {
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-top: 4px solid var(--primary-color);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.07), 0 2px 6px -1px rgba(15, 23, 42, 0.04), inset 0 1px 2px rgba(255, 255, 255, 0.95);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Glass Light Reflection Accent */
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.85), transparent 70%);
+    pointer-events: none;
+    opacity: 0.75;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.94);
+    border-color: rgba(255, 255, 255, 1);
+  }
+
+  /* Category Distinct Colors & Glassmorphic Neon Hover Glows */
+  .card.cat-medical { border-top-color: #059669; }
+  .card.cat-medical:hover { box-shadow: 0 20px 38px -5px rgba(5, 150, 105, 0.2), 0 0 22px rgba(5, 150, 105, 0.12), inset 0 1px 2px #fff; }
+
+  .card.cat-engineering { border-top-color: #2563eb; }
+  .card.cat-engineering:hover { box-shadow: 0 20px 38px -5px rgba(37, 99, 235, 0.2), 0 0 22px rgba(37, 99, 235, 0.12), inset 0 1px 2px #fff; }
+
+  .card.cat-science { border-top-color: #7c3aed; }
+  .card.cat-science:hover { box-shadow: 0 20px 38px -5px rgba(124, 58, 237, 0.2), 0 0 22px rgba(124, 58, 237, 0.12), inset 0 1px 2px #fff; }
+
+  .card.cat-central-uni { border-top-color: #0284c7; }
+  .card.cat-central-uni:hover { box-shadow: 0 20px 38px -5px rgba(2, 132, 199, 0.2), 0 0 22px rgba(2, 132, 199, 0.12), inset 0 1px 2px #fff; }
+
+  .card.cat-law { border-top-color: #d97706; }
+  .card.cat-law:hover { box-shadow: 0 20px 38px -5px rgba(217, 119, 6, 0.2), 0 0 22px rgba(217, 119, 6, 0.12), inset 0 1px 2px #fff; }
+
+  .card.cat-design { border-top-color: #e11d48; }
+  .card.cat-design:hover { box-shadow: 0 20px 38px -5px rgba(225, 29, 72, 0.2), 0 0 22px rgba(225, 29, 72, 0.12), inset 0 1px 2px #fff; }
+
+  .card.cat-management { border-top-color: #4f46e5; }
+  .card.cat-management:hover { box-shadow: 0 20px 38px -5px rgba(79, 70, 229, 0.2), 0 0 22px rgba(79, 70, 229, 0.12), inset 0 1px 2px #fff; }
+
+  .card.cat-defence { border-top-color: #15803d; }
+  .card.cat-defence:hover { box-shadow: 0 20px 38px -5px rgba(21, 128, 61, 0.2), 0 0 22px rgba(21, 128, 61, 0.12), inset 0 1px 2px #fff; }
+
+  .card.cat-hospitality { border-top-color: #ea580c; }
+  .card.cat-hospitality:hover { box-shadow: 0 20px 38px -5px rgba(234, 88, 12, 0.2), 0 0 22px rgba(234, 88, 12, 0.12), inset 0 1px 2px #fff; }
+
+  .card-top-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .card-number {
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    color: #64748b;
+    background: rgba(241, 245, 249, 0.8);
+    backdrop-filter: blur(4px);
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(226, 232, 240, 0.85);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  /* Frosted 3D Glass Icon Box */
+  .icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), inset 0 1px 2px rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .card:hover .icon-box {
+    transform: scale(1.08) rotate(3deg);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 1);
+  }
+
+  .card.cat-medical .icon-box { background: linear-gradient(135deg, rgba(236, 253, 245, 0.9), rgba(209, 250, 229, 0.65)); color: #059669; }
+  .card.cat-engineering .icon-box { background: linear-gradient(135deg, rgba(239, 246, 255, 0.9), rgba(219, 234, 254, 0.65)); color: #2563eb; }
+  .card.cat-science .icon-box { background: linear-gradient(135deg, rgba(245, 243, 255, 0.9), rgba(237, 233, 254, 0.65)); color: #7c3aed; }
+  .card.cat-central-uni .icon-box { background: linear-gradient(135deg, rgba(240, 249, 255, 0.9), rgba(224, 242, 254, 0.65)); color: #0284c7; }
+  .card.cat-law .icon-box { background: linear-gradient(135deg, rgba(255, 251, 235, 0.9), rgba(254, 243, 199, 0.65)); color: #d97706; }
+  .card.cat-design .icon-box { background: linear-gradient(135deg, rgba(255, 241, 242, 0.9), rgba(255, 228, 230, 0.65)); color: #e11d48; }
+  .card.cat-management .icon-box { background: linear-gradient(135deg, rgba(238, 242, 255, 0.9), rgba(224, 231, 255, 0.65)); color: #4f46e5; }
+  .card.cat-defence .icon-box { background: linear-gradient(135deg, rgba(240, 253, 244, 0.9), rgba(220, 252, 231, 0.65)); color: #15803d; }
+  .card.cat-hospitality .icon-box { background: linear-gradient(135deg, rgba(255, 247, 237, 0.9), rgba(254, 237, 213, 0.65)); color: #ea580c; }
+
+  .card-title-group {
+    flex: 1;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0f172a;
+    text-decoration: none;
+    line-height: 1.35;
+    display: inline-block;
+    transition: color 0.15s ease;
+  }
+
+  .card-title:hover {
+    color: var(--primary-color);
+  }
+
+  .card-title small {
+    display: block;
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: var(--text-sub);
+    margin-top: 2px;
+  }
+
+  .card-summary {
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+
+  /* Frosted Glass Tags */
+  .tag {
+    background: rgba(241, 245, 249, 0.8);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: #334155;
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 8px;
+    letter-spacing: 0.2px;
+    border: 1px solid rgba(226, 232, 240, 0.85);
+    transition: all 0.2s ease;
+  }
+
+  .tag:hover {
+    background: #ffffff;
+    color: var(--primary-color);
+    border-color: rgba(26, 86, 219, 0.35);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Modern Glassmorphic Action Buttons */
+  .btn-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 11px 18px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1e429f 100%);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 700;
+    border-radius: var(--radius-sm);
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(26, 86, 219, 0.25);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transform: skewX(-20deg);
+    transition: 0.5s;
+  }
+
+  .btn-link:hover::after {
+    left: 150%;
+  }
+
+  .btn-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(26, 86, 219, 0.4);
+  }
+
+  .btn-link svg {
+    margin-left: 8px;
+    width: 16px;
+    height: 16px;
+    transition: transform 0.25s ease;
+  }
+
+  .btn-link:hover svg {
+    transform: translateX(4px);
+  }
+
+  /* Category Specific Action Button Gradients */
+  .card.cat-medical .btn-link { background: linear-gradient(135deg, #059669, #047857); box-shadow: 0 4px 14px rgba(5, 150, 105, 0.25); }
+  .card.cat-medical .btn-link:hover { background: linear-gradient(135deg, #047857, #065f46); box-shadow: 0 6px 18px rgba(5, 150, 105, 0.4); }
+
+  .card.cat-engineering .btn-link { background: linear-gradient(135deg, #2563eb, #1d4ed8); box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25); }
+  .card.cat-engineering .btn-link:hover { background: linear-gradient(135deg, #1d4ed8, #1e40af); box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4); }
+
+  .card.cat-science .btn-link { background: linear-gradient(135deg, #7c3aed, #6d28d9); box-shadow: 0 4px 14px rgba(124, 58, 237, 0.25); }
+  .card.cat-science .btn-link:hover { background: linear-gradient(135deg, #6d28d9, #5b21b6); box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4); }
+
+  .card.cat-central-uni .btn-link { background: linear-gradient(135deg, #0284c7, #0369a1); box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25); }
+  .card.cat-central-uni .btn-link:hover { background: linear-gradient(135deg, #0369a1, #075985); box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4); }
+
+  .card.cat-law .btn-link { background: linear-gradient(135deg, #d97706, #b45309); box-shadow: 0 4px 14px rgba(217, 119, 6, 0.25); }
+  .card.cat-law .btn-link:hover { background: linear-gradient(135deg, #b45309, #92400e); box-shadow: 0 6px 18px rgba(217, 119, 6, 0.4); }
+
+  .card.cat-design .btn-link { background: linear-gradient(135deg, #e11d48, #be123c); box-shadow: 0 4px 14px rgba(225, 29, 72, 0.25); }
+  .card.cat-design .btn-link:hover { background: linear-gradient(135deg, #be123c, #9f1239); box-shadow: 0 6px 18px rgba(225, 29, 72, 0.4); }
+
+  .card.cat-management .btn-link { background: linear-gradient(135deg, #4f46e5, #4338ca); box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25); }
+  .card.cat-management .btn-link:hover { background: linear-gradient(135deg, #4338ca, #3730a3); box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4); }
+
+  .card.cat-defence .btn-link { background: linear-gradient(135deg, #15803d, #166534); box-shadow: 0 4px 14px rgba(21, 128, 61, 0.25); }
+  .card.cat-defence .btn-link:hover { background: linear-gradient(135deg, #166534, #14532d); box-shadow: 0 6px 18px rgba(21, 128, 61, 0.4); }
+
+  .card.cat-hospitality .btn-link { background: linear-gradient(135deg, #ea580c, #c2410c); box-shadow: 0 4px 14px rgba(234, 88, 12, 0.25); }
+  .card.cat-hospitality .btn-link:hover { background: linear-gradient(135deg, #c2410c, #9a3412); box-shadow: 0 6px 18px rgba(234, 88, 12, 0.4); }
+
+  
+/* Pilot Showcase Full-Width Horizontal Container */
+.pilot-showcase-container {
+  width: 100%;
+  margin: 24px 0 28px 0;
+  box-sizing: border-box;
+  clear: both;
+}
+
+.card.cat-aviation { 
+  border-top: 5px solid #0284c7; 
+}
+.card.cat-aviation:hover { 
+  box-shadow: 0 22px 45px -5px rgba(2, 132, 199, 0.28), 0 0 24px rgba(2, 132, 199, 0.16), inset 0 1px 2px #fff; 
+  transform: translateY(-6px) scale(1.015);
+}
+.card.cat-aviation .icon-box { 
+  background: linear-gradient(135deg, rgba(224, 242, 254, 0.95), rgba(186, 230, 253, 0.7)); 
+  color: #0284c7; 
+}
+.card.cat-aviation .btn-link { 
+  background: linear-gradient(135deg, #0284c7, #0369a1); 
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25); 
+}
+.card.cat-aviation .btn-link:hover { 
+  background: linear-gradient(135deg, #0369a1, #075985); 
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4); 
+}
+
+/* Wide Horizontal Showcase Card */
+.card.horizontal-card {
+  width: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.97) 0%, rgba(240, 249, 255, 0.94) 50%, rgba(254, 249, 195, 0.7) 100%);
+  border: 1.5px solid #bae6fd;
+  border-top: 5px solid #0284c7;
+  border-radius: var(--radius-lg);
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 24px;
+  align-items: center;
+  padding: 26px 28px;
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.12), inset 0 1px 2px #fff;
+  box-sizing: border-box;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  .card.horizontal-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+}
+
+/* Print Optimization */  
+ @media print {  
+ body { background: #ffffff !important; padding: 0; font-size: 11pt; }  
+ .home-btn, .search-box, .filter-pills { display: none !important; }  
+ .header-banner-wrap { box-shadow: none !important; border: 1px solid #ccc !important; padding: 0 !important; background: none !important; }  
+ .header-banner-inner { border-radius: 0 !important; }  
+ .card { box-shadow: none !important; border: 1px solid #ddd !important; page-break-inside: avoid; }  
+ .btn-link { background: #f1f5f9 !important; color: #000 !important; border: 1px solid #ccc; }  
+ }  
+ 
+  
+  
+  @media (max-width: 960px) {
+    #guidanceFeedbackForm {
+      grid-template-columns: 1fr 1fr !important;
     }
+    .fb-field-name, .fb-field-place, .fb-field-phone, .fb-field-email {
+      grid-column: span 1 !important;
+    }
+    .fb-field-file, .fb-field-link, .fb-field-msg, .fb-field-submit {
+      grid-column: span 2 !important;
+    }
+  }
+  @media (max-width: 600px) {
+    #guidanceFeedbackForm {
+      grid-template-columns: 1fr !important;
+    }
+    .fb-field-name, .fb-field-place, .fb-field-phone, .fb-field-email, .fb-field-file, .fb-field-link, .fb-field-msg, .fb-field-submit {
+      grid-column: span 1 !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #guidanceFeedbackForm {
+      grid-template-columns: 1fr !important;
+    }
+    .fb-field-name, .fb-field-place, .fb-field-phone, .fb-field-email, .fb-field-msg, .fb-field-submit {
+      grid-column: span 1 !important;
+    }
+  }
+
+
+ 
+  /* ========================================== */
+  /* Bling, Sparkle & Crackers Visual Animations */
+  /* ========================================== */
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  @keyframes sparklePulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 0 18px 4px rgba(236, 72, 153, 0.45); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(124, 58, 237, 0); }
+  }
+  @keyframes btnBlingGlow {
+    0% { box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35); }
+    50% { box-shadow: 0 6px 25px rgba(236, 72, 153, 0.6), 0 0 15px rgba(37, 99, 235, 0.45); }
+    100% { box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35); }
+  }
+  @keyframes rotateSparkle {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+  }
+  .animated-top-bar {
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 6px;
+    background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899, #f59e0b, #10b981, #06b6d4, #2563eb);
+    background-size: 300% 300%;
+    animation: gradientShift 4s ease infinite;
+  }
+  .sparkle-icon {
+    display: inline-block;
+    animation: rotateSparkle 4s linear infinite;
+  }
+  .sparkle-badge {
+    animation: sparklePulse 3s infinite ease-in-out;
+  }
+  #fb_submitBtn {
+    animation: btnBlingGlow 2.5s infinite ease-in-out;
+    transition: all 0.25s ease;
+  }
+  #fb_submitBtn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 28px rgba(236, 72, 153, 0.7) !important;
+  }
+
+
+/* Responsive Breakpoints for Fluid Multi-Device Perfection */
+@media (max-width: 1100px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 8px 10px !important;
+  }
+  .top-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+  }
+  .home-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 10px 14px !important;
+  }
+  .district-badge {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    font-size: 0.8rem !important;
+    padding: 7px 12px !important;
+  }
+  .header-banner-wrap {
+    margin-bottom: 16px !important;
+    border-radius: var(--radius-md) !important;
+  }
+  .control-panel {
+    padding: 16px 14px !important;
+    margin-bottom: 18px !important;
+  }
+  .lead-title {
+    font-size: 1.25rem !important;
+  }
+  .lead-subtitle {
+    font-size: 0.86rem !important;
+  }
+  .filter-pills {
+    gap: 6px !important;
+  }
+  .filter-pill {
+    font-size: 0.78rem !important;
+    padding: 5px 11px !important;
+  }
+  .grid-container {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .card {
+    padding: 20px 18px !important;
+  }
+  .card.horizontal-card {
+    grid-template-columns: 1fr !important;
+    padding: 20px 16px !important;
+    gap: 16px !important;
+  }
+  .btn-link {
+    padding: 12px 16px !important;
+    min-height: 46px !important;
+  }
+  .kural-box {
+    padding: 14px !important;
+    margin: 18px 0 !important;
+  }
+  .feedback-section {
+    padding: 18px 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 6px 8px !important;
+  }
+  #guidanceFeedbackForm input, 
+  #guidanceFeedbackForm textarea {
+    font-size: 16px !important; /* Prevents iOS auto-zoom */
+  }
+  .card-title {
+    font-size: 1.12rem !important;
+  }
+  .card-summary {
+    font-size: 0.86rem !important;
+  }
+}
+
+
+/* Standard Modern Creator Card & Footer Styles (Matching Career Guidance Master Portal) */
+.creator-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 14px 22px;
+  margin: 28px 0 16px 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  text-align: center;
+  flex-wrap: wrap;
+  backdrop-filter: blur(14px);
+  box-sizing: border-box;
+}
+
+.creator-name-ta, .creator-name-en {
+  font-weight: 800;
+  font-size: 1.05rem;
+  background: linear-gradient(135deg, #1e40af 0%, #7c3aed 50%, #db2777 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  letter-spacing: 0.3px;
+  padding: 0 2px;
+}
+
+.creator-label {
+  font-weight: 700;
+  color: #334155;
+  font-size: 0.94rem;
+}
+
+.creator-role {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.94rem;
+}
+
+.creator-phone-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  color: #065f46;
+  font-weight: 800;
+  font-size: 0.92rem;
+  padding: 3px 12px;
+  border-radius: 999px;
+  border: 1px solid #6ee7b7;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(5, 150, 105, 0.12);
+  margin-left: 6px;
+}
+
+.creator-phone-badge:hover {
+  background: #059669;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(5, 150, 105, 0.3);
+  transform: translateY(-1px);
+}
+
+.typing-cursor {
+  color: #4338ca;
+  font-weight: 900;
+  animation: blinkCursor 0.8s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.portal-footer {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 12px;
+  text-align: center;
+  padding: 24px 16px 20px;
+  font-size: 0.92rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  margin-top: 16px;
+  color: #475569;
+  line-height: 1.7;
+  width: 100%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(14px);
+  box-sizing: border-box;
+}
+
+.portal-footer a {
+  color: #0284c7;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.portal-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .creator-card {
+    padding: 14px 12px;
+    min-height: 48px;
+    margin: 20px 0 14px 0;
+  }
+  .creator-name-ta, .creator-name-en {
+    font-size: 0.96rem;
+  }
+  .portal-footer {
+    padding: 18px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+
+  .cat-marine {
+    border-top: 4px solid #0284c7 !important;
+  }
+  .cat-marine:hover {
+    border-color: #0284c7 !important;
+  }
+
+  /* 1x2 Dual Row Container for Sections 10 & 11 (ஒரே வரிசையில் 2 பிரிவுகள்) */
+  .dual-row-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 28px;
+    box-sizing: border-box;
+  }
+  .dual-row-container .card {
+    margin-bottom: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  @media (max-width: 900px) {
+    .dual-row-container {
+      grid-template-columns: 1fr !important;
+      gap: 18px !important;
+    }
+  }
+
+
+/* ==========================================================================
+   சிவகங்கை மாவட்ட உயர்கல்வி வழிகாட்டல் போர்ட்டல் — மொபைல் உகப்பாக்கம்
+   (Mobile-First Touch Responsiveness - பகுதி 3, பிரிவு 7)
+   அனைத்து 11/12 வழிகாட்டிகளுக்கும் பொருந்தக்கூடிய ஒருங்கிணைந்த CSS
+   ========================================================================== */
+
+/* 1. தொடு இலக்குகள் (44px Minimum Touch Targets - Apple & WCAG AAA Standard) */
+.top-nav-btn,
+.home-btn,
+.menu-btn-pill,
+.filter-chip,
+.nav-btn,
+.quick-nav-btn,
+.btn-action-outline,
+.btn-print-bottom,
+.accordion-trigger,
+.search-btn,
+.portal-card-btn,
+.back-to-top-btn,
+button,
+a.btn {
+  min-height: 44px !important;
+  min-width: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px 18px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  touch-action: manipulation !important; /* 300ms tap delay நீக்குதல் */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.08) !important;
+  box-sizing: border-box !important;
+}
+
+/* 2. அட்டவணைகள் பக்கவாட்டில் சீராக நகரும் கட்டமைப்பு (Responsive Tables) */
+.table-responsive {
+  width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important; /* iOS மென்மையான ஸ்க்ரோலிங் */
+  margin: 18px 0 !important;
+  border-radius: var(--radius-md, 12px) !important;
+  border: 1px solid var(--border, #e2e8f0) !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
+  position: relative !important;
+}
+
+/* மொபைல் திரையில் நெடுவரிசைகள் நசுங்காமல் இருக்க குறைந்தபட்ச அகலம் */
+.table-responsive table,
+table.responsive-table {
+  width: 100% !important;
+  min-width: 620px !important; /* மொபைலில் நசுங்காமல் இருக்க */
+  border-collapse: collapse !important;
+  font-size: 13.5px !important;
+}
+
+.table-responsive th {
+  white-space: nowrap !important;
+  padding: 12px 14px !important;
+  background-color: var(--primary-light, #f1f5f9) !important;
+  color: var(--primary, #0f172a) !important;
+  font-weight: 800 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.3px !important;
+  border-bottom: 2px solid var(--border, #cbd5e1) !important;
+}
+
+.table-responsive td {
+  padding: 11px 14px !important;
+  border-bottom: 1px solid var(--border, #e2e8f0) !important;
+  line-height: 1.55 !important;
+  vertical-align: middle !important;
+}
+
+.table-responsive tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* மொபைல் ஸ்வைப் வழிகாட்டல் குறிப்பு (Swipe Hint Bar) */
+.table-mobile-hint {
+  display: none; /* பெரிய திரைகளில் மறைக்கப்படும் */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #eff6ff;
+  color: #1e40af;
+  border: 1px dashed #93c5fd;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* 3. படிவங்கள் மற்றும் தேடல் பட்டைகள் (iOS Auto-Zoom Fix) */
+input[type="text"],
+input[type="search"],
+select,
+textarea {
+  font-size: 16px !important; /* 16px இருப்பதால் iPhone-ல் ஆட்டோ-ஜூம் ஆகாது */
+  min-height: 44px !important;
+  padding: 10px 14px !important;
+  border-radius: var(--radius-sm, 8px) !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+/* ==========================================================================
+   மொபைல் பிரேக் பாயிண்டுகள் (@media queries)
+   ========================================================================== */
+
+/* டேப்லெட் மற்றும் மொபைல் திரைகள் (≤ 768px) */
+@media (max-width: 768px) {
+  /* உடல் பகுதி பேடிங் குறைத்தல் */
+  body {
+    padding: 10px 12px !important;
+    font-size: 15px !important;
+  }
+
+  .portal-container,
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* மொபைலில் ஸ்வைப் குறிப்பை வெளிப்படுத்துதல் */
+  .table-mobile-hint {
+    display: flex !important;
+  }
+
+  /* பிரம்மாண்ட பேனர் மொபைல் அளவுகள் */
+  .hero-banner,
+  .portal-header {
+    padding: 26px 18px 22px !important;
+    border-radius: 18px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .hero-banner h1,
+  .portal-title {
+    font-size: 1.45rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .hero-banner h2,
+  .portal-subtitle {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* மேல் பட்டி மற்றும் வழிசெலுத்தல் மெனுக்கள் */
+  .top-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .nav-buttons-group,
+  .nav-button-menu-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .menu-btn-pill,
+  .top-nav-btn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 10px 8px !important;
+    font-size: 13px !important;
+  }
+
+  .menu-arrow {
+    display: none !important; /* மொபைலில் அம்பு குறிகள் மறைக்கப்படும் */
+  }
+
+  .breadcrumb-bar {
+    padding: 8px 12px !important;
+    font-size: 12.5px !important;
+    gap: 6px !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+  }
+
+  /* கார்டுகள் மற்றும் கிரிட்கள் ஒற்றை நெடுவரிசையாக மாறுதல் */
+  .metrics-grid,
+  .quick-nav-grid,
+  .stats-grid,
+  .cards-grid,
+  .portal-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* அக்கார்டியன் டச் பரப்பளவு */
+  .accordion-trigger {
+    padding: 14px 16px !important;
+    font-size: 14.5px !important;
+    gap: 10px !important;
+  }
+
+  /* ஃபில்டர் சிப்ஸ்கள் மொபைல் சுழற்சி */
+  .filter-chips-container,
+  .filter-group {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    justify-content: flex-start !important;
+  }
+
+  .filter-chip {
+    flex: 1 1 auto !important;
+    text-align: center !important;
+    padding: 10px 14px !important;
+  }
+}
+
+/* சிறிய ஸ்மார்ட்போன்கள் (≤ 480px - எ.கா: பட்ஜெட் ஸ்மார்ட்போன்கள்) */
+@media (max-width: 480px) {
+  body {
+    padding: 8px !important;
+  }
+
+  .hero-banner,
+  .portal-header {
+    padding: 22px 14px 18px !important;
+    border-radius: 14px !important;
+  }
+
+  .hero-banner h1,
+  .portal-title {
+    font-size: 1.3rem !important;
+  }
+
+  .nav-buttons-group,
+  .nav-button-menu-container {
+    grid-template-columns: 1fr !important; /* மிகச்சிறிய திரைகளில் முழு அகலம் */
+  }
+
+  .hero-badge-row {
+    gap: 4px !important;
+  }
+
+  .hero-dept,
+  .hero-category,
+  .hero-subbadge {
+    font-size: 10.5px !important;
+    padding: 3px 8px !important;
+  }
+
+  .content-section,
+  .card {
+    padding: 18px 14px !important;
+    border-radius: 12px !important;
+  }
+}
 
     /* ========================================================
-       PERMANENT LEFT SIDEBAR NAVIGATION
-       ======================================================== */
-    .desktop-left-sidebar {
-      width: 295px;
-      min-width: 295px;
-      max-width: 295px;
-      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 100%);
-      color: #ffffff;
-      border-right: 1.5px solid rgba(212, 175, 55, 0.35);
-      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.45);
-      display: flex;
-      flex-direction: column;
-      flex-shrink: 0;
-      position: sticky;
-      top: 0;
-      height: 100vh;
-      overflow-y: auto;
-      z-index: 999;
-      box-sizing: border-box;
-    }
-
-    .sidebar-header {
-      padding: 16px 14px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(0, 0, 0, 0.25);
-    }
-
-    .sidebar-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .sidebar-emblem {
-      font-size: 1.5rem;
-    }
-
-    .sidebar-title-wrap {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .sidebar-main-title {
-      font-size: 0.95rem;
-      font-weight: 800;
-      color: #fef08a;
-      letter-spacing: 0.2px;
-    }
-
-    .sidebar-sub-title {
-      font-size: 0.74rem;
-      color: #94a3b8;
-    }
-
-    /* Close button is strictly hidden on desktop */
-    .sidebar-close-btn {
-      display: none !important;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #fef08a;
-      width: 30px;
-      height: 30px;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: 800;
-      cursor: pointer;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .sidebar-nav-body {
-      padding: 14px 10px 30px 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .sidebar-main-btn {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 12px;
-      border-radius: 8px;
-      color: #e2e8f0;
-      text-decoration: none;
-      font-size: 0.88rem;
-      font-weight: 700;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      transition: all 0.2s ease;
-    }
-
-    .sidebar-main-btn:hover {
-      background: rgba(30, 58, 138, 0.45);
-      border-color: #38bdf8;
-      color: #ffffff;
-      transform: translateX(2px);
-    }
-
-    .sidebar-accordion-group {
-      display: flex;
-      flex-direction: column;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .sidebar-accordion-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      padding: 10px 12px;
-      background: none;
-      border: none;
-      color: #f8fafc;
-      font-size: 0.88rem;
-      font-weight: 800;
-      cursor: pointer;
-      font-family: inherit;
-      text-align: left;
-    }
-
-    .sidebar-accordion-header:hover {
-      background: rgba(255, 255, 255, 0.06);
-      color: #fef08a;
-    }
-
-    .accordion-title-left {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .accordion-arrow {
-      font-size: 0.72rem;
-      color: #94a3b8;
-      transition: transform 0.2s ease;
-    }
-
-    .sidebar-accordion-content {
-      display: flex;
-      flex-direction: column;
-      padding: 4px 6px 8px 14px;
-      gap: 4px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .sidebar-link {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 10px;
-      border-radius: 6px;
-      color: #cbd5e1;
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-
-    .sidebar-link:hover {
-      background: rgba(30, 58, 138, 0.4);
-      color: #fef08a;
-      transform: translateX(2px);
-    }
-
-    .sidebar-link.primary-hub {
-      background: rgba(212, 175, 55, 0.15);
-      color: #fef08a;
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      font-weight: 800;
-    }
-
-    .sidebar-badge {
-      margin-left: auto;
-      background: #d4af37;
-      color: #0f172a;
-      padding: 1px 6px;
-      border-radius: 4px;
-      font-size: 0.65rem;
-      font-weight: 900;
-    }
-
-    .sidebar-nested-group {
-      display: flex;
-      flex-direction: column;
-      margin: 2px 0;
-    }
-
-    .sidebar-nested-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      padding: 6px 8px;
-      background: rgba(255, 255, 255, 0.03);
-      border: none;
-      border-radius: 4px;
-      color: #93c5fd;
-      font-size: 0.80rem;
-      font-weight: 700;
-      cursor: pointer;
-      font-family: inherit;
-    }
-
-    .sidebar-nested-content {
-      display: flex;
-      flex-direction: column;
-      padding: 2px 0 2px 10px;
-      gap: 2px;
-    }
-
-    .sub-nested-link {
-      font-size: 0.78rem !important;
-      color: #94a3b8 !important;
-      padding: 5px 8px !important;
-    }
-
-    .sub-nested-link:hover {
-      color: #ffffff !important;
-    }
-
-    .sidebar-backdrop {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.65);
-      z-index: 9998;
-    }
-
-    /* Main Content Column */
-    .portal-main-content {
-      flex: 1 1 auto;
-      min-width: 0;
-      padding: 16px 24px 40px 24px;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
-
-    .main-content-inner {
-      width: 100%;
-      max-width: 100%;
-      margin: 0 auto;
-      box-sizing: border-box;
-    }
-
-    /* ========================================================
-       OFFICIAL DISTRICT PORTAL TOP FRAME (ROYAL NAVY & GOLD)
+       OFFICIAL DISTRICT PORTAL TOP FRAME (UNIFIED ACROSS ALL PAGES)
        ======================================================== */
     .portal-top-frame {
       width: 100% !important;
+      max-width: 100% !important;
       box-sizing: border-box !important;
       background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
       border: 1.8px solid #d4af37 !important;
       border-radius: 14px !important;
-      padding: 14px 20px !important;
-      margin-bottom: 20px !important;
+      padding: 12px 18px !important;
+      margin-bottom: 16px !important;
       box-shadow: 0 4px 18px rgba(15, 23, 42, 0.16) !important;
       display: flex !important;
       align-items: center !important;
       justify-content: space-between !important;
       flex-wrap: wrap !important;
-      gap: 14px !important;
+      gap: 12px !important;
     }
 
     .top-frame-branding {
       display: flex !important;
       flex-direction: column !important;
-      gap: 3px !important;
+      gap: 2px !important;
     }
 
     .top-frame-badge {
@@ -351,14 +1359,14 @@
     }
 
     .portal-title-text {
-      font-size: 1.38rem !important;
+      font-size: 1.35rem !important;
       font-weight: 900 !important;
       color: #ffffff !important;
       letter-spacing: -0.2px !important;
     }
 
     .portal-subtitle-en {
-      font-size: 0.78rem !important;
+      font-size: 0.76rem !important;
       font-weight: 800 !important;
       color: #93c5fd !important;
       letter-spacing: 1px !important;
@@ -368,26 +1376,24 @@
       display: flex !important;
       align-items: center !important;
       flex-wrap: wrap !important;
-      gap: 10px !important;
+      gap: 8px !important;
     }
 
     .top-frame-btn {
       display: inline-flex !important;
       align-items: center !important;
       gap: 6px !important;
-      padding: 8px 14px !important;
+      padding: 7px 13px !important;
       border-radius: 8px !important;
-      font-size: 0.84rem !important;
+      font-size: 0.82rem !important;
       font-weight: 700 !important;
       text-decoration: none !important;
       cursor: pointer !important;
       border: 1px solid transparent !important;
       transition: all 0.2s ease !important;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
-      font-family: inherit !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
     }
 
-    /* Mobile Menu Button - STRICTLY HIDDEN ON DESKTOP (> 1024px) */
     .top-frame-btn.btn-menu {
       display: none !important;
       background: linear-gradient(135deg, #1e3a8a, #0284c7) !important;
@@ -427,281 +1433,47 @@
       transform: translateY(-1px) !important;
     }
 
-    /* ========================================================
-       HERO BANNER CONTAINER
-       ======================================================== */
-    .hero-banner-container {
-      width: 100% !important;
-      border-radius: 16px !important;
-      border: 1.8px solid #cbd5e1 !important;
-      overflow: hidden !important;
-      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
-      margin-bottom: 22px !important;
-      background: #02241b !important;
+    @media (max-width: 1024px) {
+      .top-frame-btn.btn-menu {
+        display: inline-flex !important;
+      }
     }
 
-    .hero-banner-img {
-      width: 100% !important;
-      height: auto !important;
-      display: block !important;
-      object-fit: contain !important;
-    }
-
-    /* ========================================================
-       12 ENTRANCE EXAMINATION CARDS GRID (3x4 UNIFIED GRID)
-       ======================================================== */
-    .grid-container {
-      display: grid !important;
-      grid-template-columns: repeat(3, 1fr) !important;
-      gap: 20px !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-      margin-bottom: 30px !important;
-    }
-
-    .card {
-      background: #ffffff !important;
-      border-radius: 14px !important;
-      border: 1.5px solid #cbd5e1 !important;
-      padding: 20px 22px !important;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06) !important;
-      transition: all 0.25s ease !important;
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: space-between !important;
-      height: 100% !important;
-      box-sizing: border-box !important;
-      cursor: pointer !important;
-      position: relative !important;
-      overflow: hidden !important;
-    }
-
-    .card:hover {
-      transform: translateY(-4px) !important;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14) !important;
-      border-color: #38bdf8 !important;
-    }
-
-    /* Card Top Bar Indicator */
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 5px;
-      background: #3b82f6;
-    }
-
-    .cat-medical::before { background: #0284c7; }
-    .cat-engineering::before { background: #1e3a8a; }
-    .cat-science::before { background: #059669; }
-    .cat-central-uni::before { background: #7c3aed; }
-    .cat-law::before { background: #dc2626; }
-    .cat-design::before { background: #ea580c; }
-    .cat-management::before { background: #0891b2; }
-    .cat-hospitality::before { background: #b45309; }
-    .cat-marine::before { background: #0284c7; }
-    .cat-defence::before { background: #15803d; }
-    .cat-aviation::before { background: #0284c7; }
-    .cat-resources::before { background: #d97706; }
-
-    .card-top-meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 12px;
-    }
-
-    .card-number {
-      font-size: 0.76rem;
-      font-weight: 800;
-      color: #64748b;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    .pillar-badge {
-      background: #eff6ff;
-      color: #1d4ed8;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 0.70rem;
-      font-weight: 800;
-    }
-
-    .card-header {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-
-    .icon-box {
-      font-size: 1.8rem;
-      flex-shrink: 0;
-      line-height: 1;
-    }
-
-    .card-title-group {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .card-title {
-      font-size: 1.12rem !important;
-      font-weight: 800 !important;
-      color: #0f172a !important;
-      text-decoration: none !important;
-      line-height: 1.35 !important;
-    }
-
-    .card-subtitle {
-      font-size: 0.82rem !important;
-      color: #64748b !important;
-      font-weight: 600 !important;
-    }
-
-    .card-desc {
-      font-size: 0.86rem !important;
-      color: #334155 !important;
-      line-height: 1.55 !important;
-      margin-bottom: 14px !important;
-      flex-grow: 1 !important;
-    }
-
-    .tag-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      margin-bottom: 14px;
-    }
-
-    .tag {
-      background: #f1f5f9;
-      color: #334155;
-      padding: 3px 8px;
-      border-radius: 4px;
-      font-size: 0.74rem;
-      font-weight: 600;
-    }
-
-    .card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-top: 1px solid #f1f5f9;
-      padding-top: 12px;
-      margin-top: auto;
-    }
-
-    .exam-highlight {
-      font-size: 0.78rem;
-      font-weight: 800;
-      color: #0f766e;
-    }
-
-    .btn-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      padding: 6px 12px;
-      background: #f8fafc;
-      color: #1e40af;
-      border: 1px solid #bfdbfe;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 0.80rem;
-      font-weight: 800;
-      transition: all 0.2s;
-    }
-
-    .btn-link:hover {
-      background: #1e40af;
-      color: #ffffff;
+    @media (max-width: 680px) {
+      .portal-top-frame {
+        padding: 10px 12px !important;
+        gap: 10px !important;
+      }
+      .top-frame-branding {
+        text-align: center !important;
+        width: 100% !important;
+      }
+      .top-frame-badge {
+        justify-content: center !important;
+        font-size: 0.76rem !important;
+      }
+      .portal-main-heading {
+        justify-content: center !important;
+      }
+      .portal-title-text {
+        font-size: 1.15rem !important;
+      }
+      .portal-subtitle-en {
+        font-size: 0.70rem !important;
+      }
+      .top-frame-actions {
+        justify-content: center !important;
+        width: 100% !important;
+        gap: 6px !important;
+      }
+      .top-frame-btn {
+        font-size: 0.75rem !important;
+        padding: 6px 10px !important;
+      }
     }
 
     /* ========================================================
-       THIRUKKURAL MOTIVATIONAL BOX (GOLD PARCHMENT)
-       ======================================================== */
-    .kural-box {
-      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 50%, #fefce8 100%) !important;
-      border: 1.8px solid #fde047 !important;
-      border-left: 6px solid #d97706 !important;
-      border-radius: 14px !important;
-      padding: 20px 24px !important;
-      margin: 28px auto 20px auto !important;
-      max-width: 900px !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-      text-align: center !important;
-      box-shadow: 0 4px 18px rgba(217, 119, 6, 0.10) !important;
-    }
-
-    .kural-header {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 8px !important;
-      font-size: 0.86rem !important;
-      font-weight: 800 !important;
-      color: #92400e !important;
-      background: rgba(254, 240, 138, 0.9) !important;
-      padding: 4px 16px !important;
-      border-radius: 999px !important;
-      border: 1.2px solid #fde68a !important;
-      margin-bottom: 10px !important;
-    }
-
-    .kural-verse-text {
-      font-size: 1.28rem !important;
-      font-weight: 900 !important;
-      line-height: 1.7 !important;
-      margin: 6px auto 10px auto !important;
-      letter-spacing: 0.2px !important;
-      color: #78350f !important;
-      text-align: center !important;
-    }
-
-    .kural-meaning {
-      font-size: 0.92rem !important;
-      color: #78350f !important;
-      line-height: 1.6 !important;
-      font-weight: 500 !important;
-      border-top: 1px dashed rgba(217, 119, 6, 0.35) !important;
-      padding-top: 10px !important;
-      margin-top: 10px !important;
-      text-align: center !important;
-    }
-
-    /* ========================================================
-       FEEDBACK / CONSULTATION FORM
-       ======================================================== */
-    .feedback-section {
-      width: 100% !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-      padding: 24px 22px !important;
-      background: #ffffff !important;
-      border: 1.8px solid #cbd5e1 !important;
-      border-radius: 14px !important;
-      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
-      margin-bottom: 24px !important;
-      position: relative !important;
-      overflow: hidden !important;
-    }
-
-    #guidanceFeedbackForm {
-      display: grid !important;
-      grid-template-columns: repeat(4, 1fr) !important;
-      gap: 14px 16px !important;
-      align-items: start !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-    }
-
-    /* ========================================================
-       STANDARDIZED COLORFUL CREATOR CARD
+       STANDARDIZED COLORFUL CREATOR CARD & VIBRANT TYPOGRAPHY
        ======================================================== */
     .creator-card {
       background: #ffffff !important;
@@ -718,7 +1490,6 @@
       gap: 12px !important;
       box-sizing: border-box !important;
     }
-
     .creator-typewriter-wrapper {
       font-size: 0.94rem !important;
       color: #1e293b !important;
@@ -730,44 +1501,36 @@
       flex: 1 1 auto !important;
       gap: 0px !important;
     }
-
     .creator-typewriter-target {
       display: inline !important;
       white-space: pre-wrap !important;
     }
-
     .creator-label {
       font-weight: 700 !important;
       color: #1e293b !important;
     }
-
     .creator-name-ta-blue {
       color: #1d4ed8 !important; /* Royal Blue */
       font-weight: 900 !important;
     }
-
     .creator-name-ta-purple {
       color: #c026d3 !important; /* Bright Purple with underline */
       font-weight: 900 !important;
       text-decoration: underline !important;
       text-underline-offset: 3px !important;
     }
-
     .creator-role {
       color: #334155 !important;
       font-weight: 600 !important;
     }
-
     .creator-name-en-blue {
       color: #1d4ed8 !important;
       font-weight: 900 !important;
     }
-
     .creator-name-en-purple {
       color: #c026d3 !important;
       font-weight: 900 !important;
     }
-
     .creator-cursor {
       display: inline-block !important;
       font-weight: 300 !important;
@@ -775,12 +1538,10 @@
       margin-left: 2px !important;
       animation: blinkCreatorCursor 0.65s infinite !important;
     }
-
     @keyframes blinkCreatorCursor {
       0%, 100% { opacity: 1; }
       50% { opacity: 0; }
     }
-
     .footer-phone-pill {
       display: inline-flex !important;
       align-items: center !important;
@@ -795,136 +1556,380 @@
       box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3) !important;
       transition: all 0.2s ease !important;
     }
-
     .footer-phone-pill:hover {
       background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
       transform: translateY(-2px) !important;
       color: #ffffff !important;
     }
 
-    /* Official Footer */
-    .portal-footer {
-      text-align: center;
-      padding: 24px 16px;
-      margin-top: 30px;
-      border-top: 1px solid var(--border);
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      line-height: 1.8;
-    }
+</style>
+<style id="master-card-themes-css">
+/* ============================================================
+   HERO BANNER MATCHING CARD BACKGROUNDS & VIBRANT STYLING
+   ============================================================ */
+.grid-container {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+  gap: 24px !important;
+  margin-top: 24px !important;
+}
 
-    /* ========================================================
-       RESPONSIVE RULES (TABLETS & SMARTPHONES)
-       ======================================================== */
-    @media (max-width: 1024px) {
-      .desktop-left-sidebar {
-        position: fixed;
-        left: -320px;
-        top: 0;
-        bottom: 0;
-        width: 295px;
-        height: 100vh;
-        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 9999;
-        box-shadow: 6px 0 35px rgba(0,0,0,0.85);
-      }
+.card {
+  border-radius: 18px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  padding: 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18) !important;
+  color: #ffffff !important;
+}
 
-      .desktop-left-sidebar.sidebar-open {
-        left: 0;
-      }
+.card:hover {
+  transform: translateY(-6px) scale(1.015) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.32) !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
+}
 
-      .sidebar-close-btn {
-        display: inline-flex !important;
-      }
+/* Distinct Hero Gradient Backgrounds for Each Card */
+.cat-medical {
+  background: linear-gradient(135deg, #0f172a 0%, #1b365d 45%, #0369a1 80%, #0284c7 100%) !important;
+  border-top: 5px solid #0ea5e9 !important;
+}
 
-      .sidebar-backdrop.active {
-        display: block;
-      }
+.cat-engineering {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 45%, #1d4ed8 75%, #0284c7 100%) !important;
+  border-top: 5px solid #38bdf8 !important;
+}
 
-      .portal-main-content {
-        padding: 12px 14px 30px 12px;
-      }
+.cat-science {
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 40%, #059669 75%, #0284c7 100%) !important;
+  border-top: 5px solid #10b981 !important;
+}
 
-      .grid-container {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 16px !important;
-      }
+.cat-central-uni {
+  background: linear-gradient(135deg, #1e1060 0%, #311b92 50%, #4a148c 100%) !important;
+  border-top: 5px solid #f59e0b !important;
+}
 
-      #guidanceFeedbackForm {
-        grid-template-columns: repeat(2, 1fr) !important;
-      }
-    }
+.cat-law {
+  background: linear-gradient(135deg, #2d080e 0%, #4a0e17 50%, #6e1825 100%) !important;
+  border-top: 5px solid #d97706 !important;
+}
 
-    @media (max-width: 680px) {
-      .grid-container {
-        grid-template-columns: 1fr !important;
-        gap: 14px !important;
-      }
+.cat-design {
+  background: linear-gradient(135deg, #3b0764 0%, #701a75 45%, #9d174d 75%, #f43f5e 100%) !important;
+  border-top: 5px solid #fb7185 !important;
+}
 
-      .kural-box {
-        padding: 14px 14px !important;
-        margin: 18px auto 14px auto !important;
-        border-radius: 12px !important;
-      }
-      .kural-header {
-        font-size: 0.76rem !important;
-        padding: 3px 12px !important;
-        gap: 5px !important;
-      }
-      .kural-verse-text {
-        font-size: 1.05rem !important;
-        line-height: 1.55 !important;
-      }
-      .kural-meaning {
-        font-size: 0.82rem !important;
-        line-height: 1.5 !important;
-      }
+.cat-management {
+  background: linear-gradient(135deg, #020617 0%, #0f172a 45%, #1e293b 80%, #312e81 100%) !important;
+  border-top: 5px solid #eab308 !important;
+}
 
-      .feedback-section {
-        padding: 16px 14px !important;
-      }
-      #guidanceFeedbackForm {
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
-      }
-      .fb-field-name,
-      .fb-field-place,
-      .fb-field-phone,
-      .fb-field-email,
-      .fb-field-file,
-      .fb-field-link,
-      .fb-field-msg,
-      .fb-field-submit {
-        grid-column: span 1 !important;
-        width: 100% !important;
-      }
-      #guidanceFeedbackForm input,
-      #guidanceFeedbackForm textarea,
-      #guidanceFeedbackForm button {
-        width: 100% !important;
-        box-sizing: border-box !important;
-        font-size: 0.90rem !important;
-      }
+.cat-hospitality {
+  background: linear-gradient(135deg, #451a03 0%, #78350f 45%, #b45309 75%, #d97706 100%) !important;
+  border-top: 5px solid #facc15 !important;
+}
 
-      .creator-card {
-        padding: 12px 14px !important;
-        justify-content: center !important;
-        text-align: center !important;
-      }
-      .creator-typewriter-wrapper {
-        justify-content: center !important;
-        font-size: 0.86rem !important;
-      }
-    }
-  </style>
-</head>
+.cat-marine {
+  background: linear-gradient(135deg, #031e30 0%, #073854 50%, #0e7490 100%) !important;
+  border-top: 5px solid #06b6d4 !important;
+}
+
+.cat-defence {
+  background: linear-gradient(135deg, #111c14 0%, #1c2b1e 50%, #29382b 100%) !important;
+  border-top: 5px solid #eab308 !important;
+}
+
+.cat-aviation {
+  background: linear-gradient(135deg, #021a36 0%, #03346e 50%, #0284c7 100%) !important;
+  border-top: 5px solid #fde047 !important;
+}
+
+/* Card Internal Typography & Elements for Perfect Contrast */
+.card-number {
+  font-size: 0.76rem !important;
+  font-weight: 800 !important;
+  color: #fde047 !important;
+  background: rgba(255, 255, 255, 0.16) !important;
+  padding: 4px 12px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  display: inline-block !important;
+  letter-spacing: 0.5px !important;
+}
+
+.card-title {
+  color: #ffffff !important;
+  font-size: 1.28rem !important;
+  font-weight: 800 !important;
+  line-height: 1.4 !important;
+  text-decoration: none !important;
+  display: block !important;
+  margin-top: 4px !important;
+}
+
+.card-title small {
+  display: block !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  color: #93c5fd !important;
+  margin-top: 2px !important;
+}
+
+.cat-science .card-title small { color: #a7f3d0 !important; }
+.cat-central-uni .card-title small { color: #fde047 !important; }
+.cat-law .card-title small { color: #fcd34d !important; }
+.cat-design .card-title small { color: #fbcfe8 !important; }
+.cat-management .card-title small { color: #fde047 !important; }
+.cat-hospitality .card-title small { color: #fef08a !important; }
+.cat-marine .card-title small { color: #67e8f9 !important; }
+.cat-defence .card-title small { color: #fde047 !important; }
+.cat-aviation .card-title small { color: #fde047 !important; }
+
+.icon-box {
+  background: rgba(255, 255, 255, 0.18) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 12px !important;
+}
+
+.card-summary {
+  color: #f1f5f9 !important;
+  font-size: 0.92rem !important;
+  line-height: 1.58 !important;
+  margin: 12px 0 16px 0 !important;
+}
+
+.tags .tag {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
+  padding: 3px 9px !important;
+  border-radius: 6px !important;
+}
+
+.btn-link {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  font-weight: 800 !important;
+  padding: 10px 18px !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-top: 14px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+  transition: all 0.2s ease !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+.btn-link:hover {
+  background: #fde047 !important;
+  color: #713f12 !important;
+  box-shadow: 0 6px 16px rgba(253, 224, 71, 0.45) !important;
+  transform: translateY(-2px) !important;
+}
+</style><style id="grid-balanced-css">
+/* ============================================================
+   PERFECT 3x4 UNIFORM SYMMETRICAL GRID (12 CARDS)
+   ============================================================ */
+@media (min-width: 992px) {
+  .grid-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-top: 24px !important;
+  }
+
+  /* All 12 cards have 100% uniform equal 1-span width in the 3-col grid */
+  .card {
+    grid-column: span 1 !important;
+  }
+  .card:nth-child(10),
+  .card:nth-child(11),
+  .card:nth-child(12) {
+    grid-column: span 1 !important;
+  }
+}
+
+/* Tablet view (2 columns balanced: 6 rows x 2 columns = 12 cards) */
+@media (min-width: 640px) and (max-width: 991px) {
+  .grid-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+  .card {
+    grid-column: span 1 !important;
+  }
+}
+
+/* Mobile view (1 clean column) */
+@media (max-width: 639px) {
+  .grid-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+  }
+  .card {
+    width: 100% !important;
+  }
+}
+
+/* Card 12 Theme: Knowledge Wisdom Violet & Golden Amber */
+.cat-resources {
+  background: linear-gradient(135deg, #1e1b4b 0%, #2e1065 45%, #4c1d95 75%, #b45309 100%) !important;
+  border-top: 5px solid #fbbf24 !important;
+}
+
+.cat-resources .card-title small {
+  color: #fde047 !important;
+}
+
+.coming-soon-badge {
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  background: #fde047 !important;
+  color: #713f12 !important;
+  padding: 3px 11px !important;
+  border-radius: 999px !important;
+  border: 1px solid #facc15 !important;
+  box-shadow: 0 2px 6px rgba(253, 224, 71, 0.35) !important;
+  animation: pulseBadge 2s infinite alternate !important;
+}
+
+@keyframes pulseBadge {
+  0% { transform: scale(1); box-shadow: 0 2px 6px rgba(253, 224, 71, 0.35); }
+  100% { transform: scale(1.05); box-shadow: 0 4px 12px rgba(253, 224, 71, 0.6); }
+}
+
+.coming-soon-btn {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #fef08a !important;
+  border: 1px dashed rgba(254, 240, 138, 0.6) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  cursor: pointer !important;
+}
+
+.coming-soon-btn:hover {
+  background: rgba(255, 255, 255, 0.26) !important;
+  border-color: #fde047 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+}
+</style><style id="unified-grid-12-css">
+/* ============================================================
+   PERFECT 3x4 UNIFIED GRID (12 EQUAL CARDS)
+   ============================================================ */
+.grid-container {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-top: 24px !important;
+}
+
+.dual-row-container {
+  display: none !important;
+}
+
+.card {
+  border-radius: 18px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  padding: 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18) !important;
+  color: #ffffff !important;
+  min-height: 290px !important;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.015) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.32) !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
+}
+
+/* Card 12 Theme: Knowledge Wisdom Violet & Golden Amber */
+.cat-resources {
+  background: linear-gradient(135deg, #1e1b4b 0%, #2e1065 45%, #4c1d95 75%, #b45309 100%) !important;
+  border-top: 5px solid #fbbf24 !important;
+}
+
+.cat-resources .card-title small {
+  color: #fde047 !important;
+}
+
+.coming-soon-badge {
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  background: #fde047 !important;
+  color: #713f12 !important;
+  padding: 3px 11px !important;
+  border-radius: 999px !important;
+  border: 1px solid #facc15 !important;
+  box-shadow: 0 2px 6px rgba(253, 224, 71, 0.35) !important;
+  animation: pulseBadge 2s infinite alternate !important;
+}
+
+@keyframes pulseBadge {
+  0% { transform: scale(1); box-shadow: 0 2px 6px rgba(253, 224, 71, 0.35); }
+  100% { transform: scale(1.06); box-shadow: 0 4px 12px rgba(253, 224, 71, 0.6); }
+}
+
+.coming-soon-btn {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #fef08a !important;
+  border: 1px dashed rgba(254, 240, 138, 0.6) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  cursor: pointer !important;
+}
+
+.coming-soon-btn:hover {
+  background: rgba(255, 255, 255, 0.26) !important;
+  border-color: #fde047 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Tablet view (2 columns: 6 rows x 2 columns = 12 cards) */
+@media (min-width: 640px) and (max-width: 991px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+/* Mobile view (1 clean column) */
+@media (max-width: 639px) {
+  .grid-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+  }
+  .card {
+    width: 100% !important;
+  }
+}
+</style></head>
 <body>
-  <!-- Mobile Sidebar Backdrop Overlay -->
-  <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
-
-  <div class="portal-layout-wrapper">
-    <!-- Desktop Left Sidebar -->
-    <aside class="desktop-left-sidebar" id="desktopLeftSidebar">
+<div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
+<aside class="desktop-left-sidebar" id="desktopLeftSidebar">
     <div class="sidebar-header">
       <a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
         <span class="sidebar-emblem">🏛️</span>
@@ -1156,63 +2161,96 @@
       </a>
     </nav>
   </aside>
+<main class="portal-main-content">
 
-    <!-- Main Content Area -->
-    <main class="portal-main-content">
-      <div class="main-content-inner">
 
-        <!-- Official District Portal Top Frame (Unified Header) -->
-        <header class="portal-top-frame no-print">
-          <div class="top-frame-branding">
-            <div class="top-frame-badge">
-              <span class="govt-emblem">🏛️</span>
-              <span class="dept-text">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</span>
-            </div>
-            <div class="portal-main-heading">
-              <span class="portal-title-text">உயர்கல்வி நுழைவுத்தேர்வுகள் வழிகாட்டி — 2026</span>
-              <span class="portal-subtitle-en">ENTRANCE EXAMINATIONS PORTAL</span>
-            </div>
-          </div>
 
-          <div class="top-frame-actions">
-            <!-- Mobile Hamburger Menu Button -->
-            <button id="mobileMenuToggleBtn" class="top-frame-btn btn-menu" onclick="toggleSidebarMenu()" type="button" title="வழிகாட்டல் பக்கப்பட்டை மெனு">
-              <span class="btn-icon">☰</span>
-              <span>மெனு</span>
-            </button>
-            <!-- Official ceosvg.in Main District Portal Link -->
-            <a href="https://www.ceosvg.in" target="_blank" rel="noopener" class="top-frame-btn btn-ceosvg" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம் (ceosvg.in)">
-              <span class="btn-icon">🌐</span>
-              <span>ceosvg.in முதன்மை தளம்</span>
-            </a>
-            <!-- Career Guidance Home Link -->
-            <a href="index.html" class="top-frame-btn btn-home" title="உயர்கல்வி வழிகாட்டி முகப்புப் பக்கம்">
-              <span class="btn-icon">🎓</span>
-              <span>உயர்கல்வி முகப்பு</span>
-            </a>
-            <!-- Universal Cut-off Calculator -->
-            <button class="top-frame-btn btn-cutoff" onclick="openCutoffModal()" type="button" title="கட்-ஆஃப் கால்குலேட்டர்">
-              <span class="btn-icon">🧮</span>
-              <span>கட்-ஆஃப் கால்குலேட்டர்</span>
-            </button>
-          </div>
-        </header>
 
-        <!-- Hero Banner Container with Illustrated Image -->
-        <div class="hero-banner-container">
-          <img src="https://drive.google.com/thumbnail?id=1hzzbJHxidsv5laoiGP7qQxlsdOFhmf6b&sz=w1600"
-               alt="உயர்கல்வி நுழைவுத்தேர்வுகள் வழிகாட்டி - வெற்றியை நோக்கி ஒரு படி! உங்கள் கனவுப் படிப்பிற்கு தயாராகுங்கள்!"
-               class="hero-banner-img"
-               loading="eager"
-               onerror="if(this.src.indexOf('thumbnail')!==-1){this.src='https://lh3.googleusercontent.com/d/1hzzbJHxidsv5laoiGP7qQxlsdOFhmf6b';}else{this.style.display='none';document.getElementById('fallbackBanner').style.display='block';}"/>
-          <div class="banner-fallback" id="fallbackBanner" style="display: none; padding: 40px 24px; color: #ffffff; text-align: center; background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #0284c7 100%);">
-            <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 8px;">உயர்கல்வி நுழைவுத்தேர்வுகள்</h1>
-            <p style="font-size: 1.1rem; color: #fef08a; font-weight: 600;">வெற்றியை நோக்கி ஒரு படி! | உங்கள் கனவுப் படிப்பிற்கு தயாராகுங்கள்!</p>
-          </div>
-        </div>
 
-        <!-- 12 Entrance Examination Cards Grid (3 Columns x 4 Rows = 12 Boxes) -->
-        <div class="grid-container"><div class="card cat-medical" data-category="medical" onclick="window.location.href='01_medical_neet_ug.html';" style="cursor: pointer;">
+<div class="container">
+<!-- முகப்புப் பொத்தான் & மாவட்ட அடையாளம் -->
+<!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
+<header class="portal-top-frame no-print">
+  <div class="top-frame-branding">
+    <div class="top-frame-badge">
+      <span class="govt-emblem">🏛️</span>
+      <span class="dept-text">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</span>
+    </div>
+    <div class="portal-main-heading">
+      <span class="portal-title-text">உயர்கல்வி வழிகாட்டி — 2026</span>
+      <span class="portal-subtitle-en">CAREER GUIDANCE PORTAL</span>
+    </div>
+  </div>
+
+  <div class="top-frame-actions">
+    <!-- Mobile Hamburger Menu Button -->
+    <button id="mobileMenuToggleBtn" class="top-frame-btn btn-menu" onclick="toggleSidebarMenu()" type="button" title="வழிகாட்டல் பக்கப்பட்டை மெனு">
+      <span class="btn-icon">☰</span>
+      <span>மெனு</span>
+    </button>
+    <!-- Official ceosvg.in Main District Portal Link -->
+    <a href="https://www.ceosvg.in" target="_blank" rel="noopener" class="top-frame-btn btn-ceosvg" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம் (ceosvg.in)">
+      <span class="btn-icon">🌐</span>
+      <span>ceosvg.in முதன்மை தளம்</span>
+    </a>
+    <!-- Career Guidance Home Link -->
+    <a href="index.html" class="top-frame-btn btn-home" title="உயர்கல்வி வழிகாட்டி முகப்புப் பக்கம்">
+      <span class="btn-icon">🎓</span>
+      <span>உயர்கல்வி முகப்பு</span>
+    </a>
+    <!-- Universal Cut-off Calculator -->
+    <button class="top-frame-btn btn-cutoff" onclick="openCutoffModal()" type="button" title="கட்-ஆஃப் கால்குலேட்டர்">
+      <span class="btn-icon">🧮</span>
+      <span>கட்-ஆஃப் கால்குலேட்டர்</span>
+    </button>
+  </div>
+</header>
+
+<!-- தலைப்பு பேனர் இமேஜ் பகுதி (Hero Banner Section with Animated Glowing Border) -->
+<nav aria-label="Breadcrumb Navigation" class="nav-button-menu-bar no-print" style="margin-bottom: 18px;">
+<div class="nav-button-menu-container" style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
+<a class="menu-btn-pill btn-main-site" href="https://www.ceosvg.in" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; background: #f1f5f9; color: #0f172a; border: 1px solid #cbd5e1;" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலக முகப்பு" target="_blank" rel="noopener">
+<svg fill="currentColor" style="width: 15px; height: 15px;" viewbox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+<span>ceosvg.in முகப்பு</span>
+</a>
+<span class="menu-arrow" style="color: #94a3b8; font-weight: 800; font-size: 14px;">›</span>
+<a class="menu-btn-pill btn-career" href="index.html" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe;" target="_blank" title="உயர்கல்வி வழிகாட்டி முதன்மைப் பக்கம்">
+<svg fill="currentColor" style="width: 15px; height: 15px;" viewbox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"></path></svg>
+<span>🎓 உயர்கல்வி வழிகாட்டல்</span>
+</a>
+<span class="menu-arrow" style="color: #94a3b8; font-weight: 800; font-size: 14px;">›</span>
+<span class="menu-btn-pill btn-current-page" style="display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); color: #ffffff; box-shadow: 0 2px 6px rgba(30, 27, 75, 0.3);" title="தற்போதைய வழிகாட்டிப் பக்கம்">
+<svg fill="currentColor" style="width: 15px; height: 15px;" viewbox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
+<span>📝 தேசிய நுழைவுத்தேர்வுகள் (Master Portal)</span>
+</span>
+</div>
+</nav><header class="header-banner-wrap">
+<div class="header-banner-inner">
+<img alt="உயர்கல்வி நுழைவுத்தேர்வுகள் வழிகாட்டி - வெற்றியே நோக்கி ஒரு படி! உங்கள் கனவுப் படிப்பிற்கு தயாராகுங்கள்!" class="header-banner-img" id="heroBannerImg" loading="eager" onerror="if(this.src.indexOf('thumbnail')!==-1){this.src='https://lh3.googleusercontent.com/d/1hzzbJHxidsv5laoiGP7qQxlsdOFhmf6b';}else{this.style.display='none';document.getElementById('fallbackBanner').style.display='block';}" src="https://drive.google.com/thumbnail?id=1hzzbJHxidsv5laoiGP7qQxlsdOFhmf6b&amp;sz=w1600"/>
+<div class="banner-fallback" id="fallbackBanner" style="display: none;">
+<h1>உயர்கல்வி நுழைவுத்தேர்வுகள்</h1>
+<p>வெற்றியை நோக்கி ஒரு படி! | உங்கள் கனவுப் படிப்பிற்கு தயாராகுங்கள்!</p>
+</div>
+</div>
+</header>
+<!-- வழிகாட்டுதல் தலைப்பு, நேரடித் தேடல் & வகைப்பாடு வடிகட்டிகள் -->
+<div class="control-panel">
+<div class="lead-text-wrap">
+<!-- துடிப்பான தட்டச்சு வாசகம் (Dynamic Typing Effect) -->
+<div class="typing-container">
+<span class="typing-badge"><span class="sparkle-icon">✨</span> வழிகாட்டல்:</span>
+<span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
+</div>
+<h2 class="lead-title">12-ஆம் வகுப்பிற்குப் பிந்தைய தேசிய &amp; மாநில நுழைவுத்தேர்வுகள்</h2>
+<p class="lead-subtitle">  
+ பள்ளிப் படிப்பை முடிக்கும் மாணவ, மாணவியர் தங்களுக்குப் பொருத்தமான உயர் கல்வி மற்றும் தொழில்முறை படிப்புகளைத் தேர்ந்தெடுக்க வழிகாட்டும் 10 பிரதான பிரிவுகள்.  
+ </p>
+</div>
+<!-- நேரடி தேடல் பெட்டி (Live Search) -->
+<!-- வகைப்பாடு வடிகட்டிகள் (Category Filter Pills) -->
+</div>
+<!-- 9 நுழைவுத்தேர்வு கார்டுகள் (9 Exam Cards) -->
+<div class="grid-container"><div class="card cat-medical" data-category="medical" onclick="window.location.href='01_medical_neet_ug.html';" style="cursor: pointer;">
 <div>
 <div class="card-top-meta">
 <span class="card-number">01 / MEDICAL</span>
@@ -1664,9 +2702,16 @@
 </div>
 <!-- அதிகாரப்பூர்வ அடிக்குறிப்பு (Official Footer Credit) -->
 <!-- ==================================================== -->
-<!-- இணையதள வடிவமைப்பு விவரம் (Single Line Animated Creator Details) -->
-<!-- ==================================================== -->
-
+<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
+<div class="creator-card">
+  <div class="creator-typewriter-wrapper">
+    <span id="creatorTypewriterTarget" class="creator-typewriter-target"></span><span id="creatorCursor" class="creator-cursor">|</span>
+  </div>
+  <a href="tel:9626471035" class="footer-phone-pill" id="footerPhonePill" title="அழைக்க">
+    <span class="phone-icon">📱</span>
+    <span class="phone-text">9626471035</span>
+  </a>
+</div>
 <!-- Footer Section (matching Career Guidance Master Portal) -->
 <footer class="portal-footer">
 <p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
@@ -2121,237 +3166,314 @@
         </button>
 </div>
 </div>
-
-
-        <!-- Thirukkural Motivational Box -->
-        <div class="kural-box">
-          <div class="kural-header">
-            <span>📜</span>
-            <span>திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-          </div>
-          <div class="kural-verse-text">
-            “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
-            திண்ணியர் ஆகப் பெறின்.”
-          </div>
-          <div class="kural-meaning">
-            <strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
-          </div>
-        </div>
-
-        <!-- Feedback & Consultation Form Section -->
-        <section class="feedback-section">
-          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #e2e8f0;">
-            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-              <span style="background: #eff6ff; color: #1d4ed8; padding: 4px 10px; border-radius: 999px; font-size: 0.80rem; font-weight: 800;">✨ கருத்துக் களம் & வழிகாட்டல்</span>
-              <h2 style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin: 0;">தங்களின் மேலான ஆலோசனை/கருத்துகளை பதிவு செய்க</h2>
-            </div>
-            <p style="font-size: 0.84rem; color: #64748b; margin: 0;">உயர்கல்வி வழிகாட்டல் குறித்து ஆலோசனைகள், கோப்புகள் அல்லது இணைப்புகளைப் பகிரலாம்</p>
-          </div>
-
-          <form id="guidanceFeedbackForm">
-            <div class="fb-field-name">
-              <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">👤 பெயர் *</label>
-              <input type="text" id="fb_name" required placeholder="தங்களின் பெயர்" style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; font-size: 0.88rem;"/>
-            </div>
-            <div class="fb-field-place">
-              <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">🏫 பள்ளி / ஊர் *</label>
-              <input type="text" id="fb_place" required placeholder="பள்ளி அல்லது ஊர்" style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; font-size: 0.88rem;"/>
-            </div>
-            <div class="fb-field-phone">
-              <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">📱 தொலைபேசி எண் *</label>
-              <input type="tel" id="fb_phone" required placeholder="10 இலக்க எண்" style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; font-size: 0.88rem;"/>
-            </div>
-            <div class="fb-field-email">
-              <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">✉️ மின்னஞ்சல் (விருப்பம்)</label>
-              <input type="email" id="fb_email" placeholder="example@gmail.com" style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; font-size: 0.88rem;"/>
-            </div>
-            <div class="fb-field-file" style="grid-column: span 2;">
-              <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">📎 கோப்பு இணைக்க (விருப்பப்பட்டால்)</label>
-              <input type="file" id="fb_file" style="width: 100%; padding: 6px 10px; border: 1px dashed #cbd5e1; border-radius: 6px; font-family: inherit; font-size: 0.82rem; background: #f8fafc;"/>
-            </div>
-            <div class="fb-field-link" style="grid-column: span 2;">
-              <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">🔗 இணைய இணைப்பு (விருப்பப்பட்டால்)</label>
-              <input type="url" id="fb_link" placeholder="Google Drive / Web Link" style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; font-size: 0.88rem;"/>
-            </div>
-            <div class="fb-field-msg" style="grid-column: span 3;">
-              <label style="display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 4px;">💡 தங்களின் மேலான ஆலோசனைகள் / கருத்துகள் *</label>
-              <textarea id="fb_message" required placeholder="தங்களின் கருத்துகளை இங்கே விரிவாகப் பதிவு செய்யவும்..." rows="2" style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; font-size: 0.88rem; resize: vertical;"></textarea>
-            </div>
-            <div class="fb-field-submit" style="grid-column: span 1; display: flex; align-items: flex-end;">
-              <button type="submit" id="fb_submitBtn" style="width: 100%; height: 42px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; border: none; border-radius: 6px; font-weight: 800; font-size: 0.90rem; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);">
-                <span>பதிவு செய்க</span>
-                <span>➔</span>
-              </button>
-            </div>
-          </form>
-        </section>
-
-        <!-- Standardized Colorful Creator Card -->
-        <div class="creator-card">
-          <div class="creator-typewriter-wrapper">
-            <span id="creatorTypewriterTarget" class="creator-typewriter-target"></span><span id="creatorCursor" class="creator-cursor">|</span>
-          </div>
-          <a href="tel:9626471035" class="footer-phone-pill" id="footerPhonePill" title="அழைக்க" style="display: none;">
-            <span class="phone-icon">📱</span>
-            <span class="phone-text">9626471035</span>
-          </a>
-        </div>
-
-        <!-- Official Department Footer -->
-        <footer class="portal-footer">
-          <p style="font-weight: 700; color: #0f172a; font-size: 0.92rem; margin-bottom: 4px;">
-            தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம் | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை - 630562
-          </p>
-          <p style="color: #64748b; font-size: 0.84rem;">
-            தொலைபேசி: <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">04575-240408</a> | வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
-          </p>
-        </footer>
-
-      </div>
-    </main>
-  </div>
-
-  <!-- Sidebar Accordion & Menu Logic -->
-  <script>
-    function toggleSidebarMenu() {
-      var sidebar = document.getElementById('desktopLeftSidebar');
-      var backdrop = document.getElementById('sidebarBackdrop');
-      if (sidebar) sidebar.classList.toggle('sidebar-open');
-      if (backdrop) backdrop.classList.toggle('active');
-    }
-
-    function toggleAccordion(id) {
-      var content = document.getElementById('acc-cnt-' + id);
-      var header = document.getElementById('acc-hdr-' + id);
-      if (!content) return;
-      if (content.style.display === 'none' || !content.style.display) {
-        content.style.display = 'flex';
-        if (header) {
-          var arr = header.querySelector('.accordion-arrow');
-          if (arr) arr.style.transform = 'rotate(180deg)';
-        }
-      } else {
-        content.style.display = 'none';
-        if (header) {
-          var arr = header.querySelector('.accordion-arrow');
-          if (arr) arr.style.transform = 'rotate(0deg)';
-        }
+</div>
+<script>
+    function openPilotModal(tab) {
+      const modal = document.getElementById('pilotModal');
+      if (modal) {
+        modal.style.display = 'flex';
+        switchPilotTab(tab || 'cpl');
       }
     }
 
-    function toggleSubAccordion(id) {
-      var content = document.getElementById('sub-cnt-' + id);
-      var header = document.getElementById('sub-hdr-' + id);
-      if (!content) return;
-      if (content.style.display === 'none' || !content.style.display) {
-        content.style.display = 'flex';
-        if (header) {
-          var arr = header.querySelector('.nested-arrow');
-          if (arr) arr.style.transform = 'rotate(180deg)';
-        }
-      } else {
-        content.style.display = 'none';
-        if (header) {
-          var arr = header.querySelector('.nested-arrow');
-          if (arr) arr.style.transform = 'rotate(0deg)';
-        }
-      }
+    function closePilotModal() {
+      const modal = document.getElementById('pilotModal');
+      if (modal) modal.style.display = 'none';
+    }
+
+    function switchPilotTab(tab) {
+      document.getElementById('pilot_content_cpl').style.display = (tab === 'cpl') ? 'block' : 'none';
+      document.getElementById('pilot_content_iaf').style.display = (tab === 'iaf') ? 'block' : 'none';
+      document.getElementById('pilot_content_compare').style.display = (tab === 'compare') ? 'block' : 'none';
+
+      document.querySelectorAll('#pilotModal .filter-pill').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = document.getElementById('tab_pilot_' + tab);
+      if (activeBtn) activeBtn.classList.add('active');
     }
   </script>
+<script>
 
-  <!-- Creator Typewriter Animation (Triggered on Scroll / Viewport Intersection) -->
-  <script>
-    (function() {
-      let hasTyped = false;
-      const creatorSegments = [
-        { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
-        { text: "கூ. ", tag: "span", class: "creator-name-ta-blue" },
-        { text: "பூவலிங்கம்", tag: "span", class: "creator-name-ta-purple" },
-        { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
-        { text: "K. ", tag: "span", class: "creator-name-en-blue" },
-        { text: "Poovalingam", tag: "span", class: "creator-name-en-purple" },
-        { text: ", Deputy Inspector of Schools", tag: "span", class: "creator-role" }
-      ];
+  // ==========================================
+  
 
-      function runCreatorTypewriter() {
-        if (hasTyped) return;
-        const container = document.getElementById('creatorTypewriterTarget');
-        const cursor = document.getElementById('creatorCursor');
-        const phonePill = document.getElementById('footerPhonePill');
-        if (!container) return;
-
-        hasTyped = true;
-        container.innerHTML = '';
-        if (cursor) cursor.style.display = 'inline-block';
-
-        let segIdx = 0;
-        let charIdx = 0;
-        let currentElem = null;
-
-        function step() {
-          if (segIdx >= creatorSegments.length) {
-            if (cursor) {
-              cursor.style.animation = 'none';
-              cursor.style.opacity = '0';
-              setTimeout(() => { if (cursor) cursor.remove(); }, 300);
-            }
-            if (phonePill) {
-              phonePill.style.display = 'inline-flex';
-              phonePill.style.opacity = '1';
-            }
-            return;
-          }
-
-          const seg = creatorSegments[segIdx];
-          if (charIdx === 0) {
-            currentElem = document.createElement(seg.tag);
-            currentElem.className = seg.class;
-            container.appendChild(currentElem);
-          }
-
-          currentElem.textContent += seg.text.charAt(charIdx);
-          charIdx++;
-
-          if (charIdx >= seg.text.length) {
-            segIdx++;
-            charIdx = 0;
-          }
-
-          setTimeout(step, 28);
+    function step() {
+      if (creatorSegIdx >= creatorSegments.length) {
+        if (creatorCursor) {
+          creatorCursor.style.animation = 'none';
+          creatorCursor.style.opacity = '0';
+          setTimeout(() => creatorCursor.remove(), 400);
         }
-
-        step();
+        return;
       }
 
-      function initCreatorObserver() {
-        const cardElem = document.querySelector('.creator-card');
-        if (!cardElem) {
-          setTimeout(runCreatorTypewriter, 1000);
-          return;
-        }
+      const seg = creatorSegments[creatorSegIdx];
 
-        if ('IntersectionObserver' in window) {
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                runCreatorTypewriter();
-                observer.disconnect();
-              }
-            });
-          }, { threshold: 0.1 });
-          observer.observe(cardElem);
-          setTimeout(runCreatorTypewriter, 7000);
-        } else {
-          setTimeout(runCreatorTypewriter, 1000);
+      if (creatorCharIdx === 0) {
+        creatorCurrentElem = document.createElement(seg.tag);
+        if (seg.class) creatorCurrentElem.className = seg.class;
+        if (seg.href) {
+          creatorCurrentElem.href = seg.href;
+          creatorCurrentElem.target = '_blank';
+          creatorCurrentElem.rel = 'noopener noreferrer';
         }
+        creatorContainer.appendChild(creatorCurrentElem);
       }
 
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initCreatorObserver);
+      creatorCurrentElem.textContent += seg.text.charAt(creatorCharIdx);
+      creatorCharIdx++;
+
+      if (creatorCharIdx < seg.text.length) {
+        setTimeout(step, 24);
       } else {
-        initCreatorObserver();
+        creatorSegIdx++;
+        creatorCharIdx = 0;
+        setTimeout(step, 50);
       }
-    })();
-  </script>
+    }
+
+    step();
+  }
+
+  // Use IntersectionObserver or fallback on page load
+  if ('IntersectionObserver' in window) {
+    const cardElem = document.querySelector('.creator-card');
+    if (cardElem) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            typeCreatorDetails();
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.1 });
+      observer.observe(cardElem);
+    } else {
+      setTimeout(typeCreatorDetails, 500);
+    }
+  } else {
+    setTimeout(typeCreatorDetails, 500);
+  }
+
+</script>
+<script>/**
+ * சிவகங்கை மாவட்ட உயர்கல்வி போர்ட்டல் — தானியங்கி மொபைல் அட்டவணை ரேப்பர்
+ * ஏதேனும் அட்டவணை wrapper இன்றி இருந்தால், தானாகவே .table-responsive மற்றும்
+ * மொபைல் ஸ்வைப் குறிப்புப் பட்டையை இணைக்கும்.
+ */
+document.addEventListener("DOMContentLoaded", function () {
+  var tables = document.querySelectorAll("table");
+  tables.forEach(function (tbl) {
+    if (!tbl.parentElement.classList.contains("table-responsive")) {
+      // ரேப்பர் உருவாக்குதல்
+      var wrapper = document.createElement("div");
+      wrapper.className = "table-responsive";
+
+      // மொபைல் ஸ்வைப் குறிப்பு பட்டை உருவாக்குதல்
+      var hint = document.createElement("div");
+      hint.className = "table-mobile-hint";
+      hint.innerHTML = "<span>👉 விரலால் பக்கவாட்டில் நகர்த்தி முழு அட்டவணையையும் பார்க்கலாம் (Swipe ↔)</span>";
+
+      // அட்டவணைக்கு முன் ரேப்பரை அமைத்து அட்டவணையை உள்ளே நகர்த்துதல்
+      tbl.parentNode.insertBefore(wrapper, tbl);
+      wrapper.appendChild(tbl);
+      wrapper.parentNode.insertBefore(hint, wrapper);
+    } else {
+      // ஏற்கனவே ரேப்பர் இருந்தால், அதன் முன் ஸ்வைப் குறிப்பு இல்லாதபோது மட்டும் சேர்த்தல்
+      if (!tbl.parentElement.previousElementSibling || 
+          !tbl.parentElement.previousElementSibling.classList.contains("table-mobile-hint")) {
+        var hint = document.createElement("div");
+        hint.className = "table-mobile-hint";
+        hint.innerHTML = "<span>👉 விரலால் பக்கவாட்டில் நகர்த்தி முழு அட்டவணையையும் பார்க்கலாம் (Swipe ↔)</span>";
+        tbl.parentElement.parentNode.insertBefore(hint, tbl.parentElement);
+      }
+    }
+  });
+});
+</script>
+<script>
+// Standardized Creator Typewriter Animation (Triggered on Scroll / Intersection)
+(function() {
+  let hasTyped = false;
+  const creatorSegments = [
+    { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
+    { text: "கூ. ", tag: "span", class: "creator-name-ta-blue" },
+    { text: "பூவலிங்கம்", tag: "span", class: "creator-name-ta-purple" },
+    { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
+    { text: "K. ", tag: "span", class: "creator-name-en-blue" },
+    { text: "Poovalingam", tag: "span", class: "creator-name-en-purple" },
+    { text: ", Deputy Inspector of Schools", tag: "span", class: "creator-role" }
+  ];
+
+  function runCreatorTypewriter() {
+    if (hasTyped) return;
+    const container = document.getElementById('creatorTypewriterTarget');
+    const cursor = document.getElementById('creatorCursor');
+    const phonePill = document.getElementById('footerPhonePill');
+    if (!container) return;
+
+    hasTyped = true;
+    container.innerHTML = '';
+    if (cursor) cursor.style.display = 'inline-block';
+    if (phonePill) phonePill.style.display = 'none';
+
+    let segIdx = 0;
+    let charIdx = 0;
+    let currentElem = null;
+
+    function step() {
+      if (segIdx >= creatorSegments.length) {
+        if (cursor) {
+          cursor.style.animation = 'none';
+          cursor.style.opacity = '0';
+          setTimeout(() => { if (cursor) cursor.remove(); }, 300);
+        }
+        if (phonePill) {
+          phonePill.style.display = 'inline-flex';
+          phonePill.style.opacity = '1';
+        }
+        return;
+      }
+
+      const seg = creatorSegments[segIdx];
+      if (charIdx === 0) {
+        currentElem = document.createElement(seg.tag);
+        currentElem.className = seg.class;
+        container.appendChild(currentElem);
+      }
+
+      currentElem.textContent += seg.text.charAt(charIdx);
+      charIdx++;
+
+      if (charIdx >= seg.text.length) {
+        segIdx++;
+        charIdx = 0;
+      }
+
+      setTimeout(step, 28);
+    }
+
+    step();
+  }
+
+  function initCreatorObserver() {
+    const cardElem = document.querySelector('.creator-card');
+    if (!cardElem) {
+      setTimeout(runCreatorTypewriter, 1000);
+      return;
+    }
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            runCreatorTypewriter();
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.1 });
+      observer.observe(cardElem);
+      setTimeout(runCreatorTypewriter, 7000);
+    } else {
+      setTimeout(runCreatorTypewriter, 1000);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCreatorObserver);
+  } else {
+    initCreatorObserver();
+  }
+})();
+</script>
+
+
+
+<script>
+function toggleSidebarMenu() {
+  var sidebar = document.getElementById('desktopLeftSidebar');
+  var backdrop = document.getElementById('sidebarBackdrop');
+  if (sidebar) sidebar.classList.toggle('sidebar-open');
+  if (backdrop) backdrop.classList.toggle('active');
+}
+
+function toggleAccordion(id) {
+  var header = document.getElementById('acc-hdr-' + id);
+  var content = document.getElementById('acc-cnt-' + id);
+  if (header && content) {
+    var isOpen = content.classList.contains('open');
+    if (isOpen) {
+      content.classList.remove('open');
+      header.classList.remove('open');
+    } else {
+      content.classList.add('open');
+      header.classList.add('open');
+    }
+  }
+}
+
+function toggleSubAccordion(id) {
+  var header = document.getElementById('sub-hdr-' + id);
+  var content = document.getElementById('sub-cnt-' + id);
+  if (header && content) {
+    var isOpen = content.classList.contains('open');
+    if (isOpen) {
+      content.classList.remove('open');
+      header.classList.remove('open');
+    } else {
+      content.classList.add('open');
+      header.classList.add('open');
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  var rawPath = window.location.pathname;
+  var currentPage = rawPath.substring(rawPath.lastIndexOf('/') + 1) || 'index.html';
+  
+  // Highlight active main button
+  var mainBtns = document.querySelectorAll('.desktop-left-sidebar .sidebar-main-btn');
+  mainBtns.forEach(function(btn) {
+    var href = btn.getAttribute('href');
+    if (href && href.split('#')[0] === currentPage) {
+      btn.classList.add('active-page');
+    }
+  });
+
+  // Highlight active sub-link and auto-expand parent accordion & nested sub-accordion
+  var subLinks = document.querySelectorAll('.desktop-left-sidebar .sidebar-link');
+  subLinks.forEach(function(l) {
+    var href = l.getAttribute('href');
+    if (href) {
+      var baseHref = href.split('#')[0];
+      if (baseHref === currentPage) {
+        l.classList.add('active-page');
+        
+        // Open nested sub-accordion if inside one
+        var parentNested = l.closest('.sidebar-nested-content');
+        if (parentNested) {
+          parentNested.classList.add('open');
+          var subId = parentNested.id.replace('sub-cnt-', '');
+          var subHdr = document.getElementById('sub-hdr-' + subId);
+          if (subHdr) subHdr.classList.add('open');
+        }
+
+        // Open main accordion if inside one
+        var parentContent = l.closest('.sidebar-accordion-content');
+        if (parentContent) {
+          parentContent.classList.add('open');
+          var accId = parentContent.id.replace('acc-cnt-', '');
+          var header = document.getElementById('acc-hdr-' + accId);
+          if (header) header.classList.add('open');
+        }
+      }
+    }
+    l.addEventListener('click', function() {
+      if (window.innerWidth <= 1024) toggleSidebarMenu();
+    });
+  });
+});
+</script>
+
+</main>
 </body>
 </html>
