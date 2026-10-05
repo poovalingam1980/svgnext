@@ -2247,6 +2247,108 @@ textarea {
 }
     }
 
+
+    /* ========================================================
+       TOP FRAME ZERO-GAP FLUSH MOUNT (மேற்பகுதி வெற்றிடம் நீக்கம்)
+       ======================================================== */
+    body {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+    .portal-main-content {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+    .container, .portal-container {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+    .portal-top-frame {
+      margin-top: 0 !important;
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      position: sticky !important;
+      top: 0 !important;
+      z-index: 9999 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.22) !important;
+    }
+
+    /* ========================================================
+       GRID LAYOUT: ROWS 1-3 = 1x3, ROW 4 = 1x2 (FLUID MONITOR WIDTH)
+       ======================================================== */
+    .grid-container {
+      display: grid !important;
+      grid-template-columns: repeat(6, 1fr) !important;
+      gap: 22px 20px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      margin-top: 14px !important;
+      margin-bottom: 28px !important;
+    }
+
+    /* Rows 1, 2, 3: Exactly 3 cards per row (1x3), each taking 1/3 of monitor width */
+    .grid-container > .card:nth-child(1),
+    .grid-container > .card:nth-child(2),
+    .grid-container > .card:nth-child(3),
+    .grid-container > .card:nth-child(4),
+    .grid-container > .card:nth-child(5),
+    .grid-container > .card:nth-child(6),
+    .grid-container > .card:nth-child(7),
+    .grid-container > .card:nth-child(8),
+    .grid-container > .card:nth-child(9) {
+      grid-column: span 2 !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Row 4: Exactly 2 cards per row (1x2), expanding to 50% of monitor width each */
+    .grid-container > .card:nth-child(10),
+    .grid-container > .card:nth-child(11) {
+      grid-column: span 3 !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Tablet responsive (between 681px and 1024px): 2 cards per row */
+    @media (max-width: 1024px) and (min-width: 681px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+      }
+      .grid-container > .card:nth-child(1),
+      .grid-container > .card:nth-child(2),
+      .grid-container > .card:nth-child(3),
+      .grid-container > .card:nth-child(4),
+      .grid-container > .card:nth-child(5),
+      .grid-container > .card:nth-child(6),
+      .grid-container > .card:nth-child(7),
+      .grid-container > .card:nth-child(8),
+      .grid-container > .card:nth-child(9),
+      .grid-container > .card:nth-child(10) {
+        grid-column: span 1 !important;
+        width: 100% !important;
+      }
+      .grid-container > .card:nth-child(11) {
+        grid-column: span 2 !important;
+        width: 100% !important;
+      }
+    }
+
+    /* Mobile responsive (<= 680px): 1 card per row */
+    @media (max-width: 680px) {
+      .grid-container {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+      }
+      .grid-container > .card:nth-child(n) {
+        grid-column: span 1 !important;
+        width: 100% !important;
+      }
+    }
+
 </style>
 <style id="master-card-themes-css">
 /* ============================================================
@@ -2476,15 +2578,9 @@ textarea {
   }
 }
 
-/* Card 12 Theme: Knowledge Wisdom Violet & Golden Amber */
-.cat-resources {
-  background: linear-gradient(135deg, #1e1b4b 0%, #2e1065 45%, #4c1d95 75%, #b45309 100%) !important;
-  border-top: 5px solid #fbbf24 !important;
-}
 
-.cat-resources .card-title small {
-  color: #fde047 !important;
-}
+
+
 
 .coming-soon-badge {
   font-size: 0.74rem !important;
@@ -2555,15 +2651,9 @@ textarea {
   border-color: rgba(255, 255, 255, 0.45) !important;
 }
 
-/* Card 12 Theme: Knowledge Wisdom Violet & Golden Amber */
-.cat-resources {
-  background: linear-gradient(135deg, #1e1b4b 0%, #2e1065 45%, #4c1d95 75%, #b45309 100%) !important;
-  border-top: 5px solid #fbbf24 !important;
-}
 
-.cat-resources .card-title small {
-  color: #fde047 !important;
-}
+
+
 
 .coming-soon-badge {
   font-size: 0.74rem !important;
@@ -3255,36 +3345,7 @@ textarea {
 <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
 </svg>
 </a>
-</div><div class="card cat-resources" data-category="resources" onclick="alert('பாடக்குறிப்புகள், மாதிரி வினாத்தாள்கள் மற்றும் முந்தைய ஆண்டு வினாக்கள் (PYQs) தயாரிப்பில் உள்ளன. மிக விரைவில் இப்பகுதியில் பதிவேற்றப்படும்!');" style="cursor: pointer;">
-<div>
-<div class="card-top-meta">
-<span class="card-number">12 / STUDY MATERIALS</span>
-<span class="coming-soon-badge">🚀 விரைவில்</span>
 </div>
-<div class="card-header">
-<div class="icon-box">📚</div>
-<div class="card-title-group">
-<span class="card-title">
-          பாடக்குறிப்புகள் &amp; வினாத்தாள்கள்
-          <small>Study Materials, Question Banks &amp; PYQs</small>
-</span>
-</div>
-</div>
-<p class="card-summary">
-      அனைத்து 11 நுழைவுத்தேர்வுகளுக்குமான பாடக்குறிப்புகள், முந்தைய ஆண்டு வினாத்தாள்கள் (PYQs), மாதிரி வினாக்கள் மற்றும் தயாரிப்பு வழிகாட்டல்கள் விரைவில் பதிவேற்றப்படும்.
-    </p>
-<div class="tags">
-<span class="tag">பாடக்குறிப்புகள்</span>
-<span class="tag">PYQ Papers</span>
-<span class="tag">மாதிரித் தேர்வுகள்</span>
-<span class="tag">Question Bank</span>
-</div>
-</div>
-<div class="btn-link coming-soon-btn">
-<span>⏳ விரைவில் பதிவேற்றப்படும்</span>
-<span style="font-size: 1.15rem;">📥</span>
-</div>
-</div></div>
 <!-- ==================================================== -->
 <!-- 10. வணிக விமானி (Commercial Pilot) - பிரத்யேக முழு அகல கடைமட்டப் பெட்டி -->
 <!-- ==================================================== -->
@@ -4016,8 +4077,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+
 <script>
-// Standardized Creator Typewriter Animation (Guaranteed Execution & Colors)
+// Standardized Creator Typewriter Animation (Guaranteed Triggered on Scroll & Intersection)
 (function() {
   let hasTyped = false;
   const creatorSegments = [
@@ -4075,7 +4137,7 @@ document.addEventListener('DOMContentLoaded', function() {
         charIdx = 0;
       }
 
-      setTimeout(step, 25);
+      setTimeout(step, 28);
     }
 
     step();
@@ -4083,11 +4145,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function initCreatorObserver() {
     const cardElem = document.querySelector('.creator-card');
-    if (!cardElem) {
-      setTimeout(runCreatorTypewriter, 500);
-      return;
-    }
+    if (!cardElem) return;
 
+    // 1. IntersectionObserver (fires when card enters viewport)
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -4096,13 +4156,25 @@ document.addEventListener('DOMContentLoaded', function() {
             observer.disconnect();
           }
         });
-      }, { threshold: 0.1 });
+      }, { threshold: 0.05 });
       observer.observe(cardElem);
-      // Fallback timer: guarantees execution even if scroll event is missed
-      setTimeout(runCreatorTypewriter, 3500);
-    } else {
-      setTimeout(runCreatorTypewriter, 500);
     }
+
+    // 2. Scroll listener fallback (triggers as soon as card is near viewport)
+    function onScrollCheck() {
+      if (hasTyped) {
+        window.removeEventListener('scroll', onScrollCheck);
+        return;
+      }
+      const rect = cardElem.getBoundingClientRect();
+      if (rect.top <= (window.innerHeight || document.documentElement.clientHeight) + 120 && rect.bottom >= -50) {
+        runCreatorTypewriter();
+        window.removeEventListener('scroll', onScrollCheck);
+      }
+    }
+    window.addEventListener('scroll', onScrollCheck, { passive: true });
+    // Check once immediately on load
+    onScrollCheck();
   }
 
   if (document.readyState === 'loading') {
@@ -4112,5 +4184,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
+
 </body>
 </html>
