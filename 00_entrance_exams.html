@@ -1408,6 +1408,107 @@
         white-space: normal !important;
       }
     }
+
+
+    /* Feedback Form Responsive Layout */
+    .feedback-section {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      padding: 24px 22px !important;
+      background: #ffffff !important;
+      border: 1.8px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+      margin-bottom: 24px !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    #guidanceFeedbackForm {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 14px 16px !important;
+      align-items: start !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Responsive Rules for Tablet (< 900px) */
+    @media (max-width: 900px) {
+      #guidanceFeedbackForm {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      .fb-field-name,
+      .fb-field-place,
+      .fb-field-phone,
+      .fb-field-email {
+        grid-column: span 1 !important;
+      }
+      .fb-field-file,
+      .fb-field-link,
+      .fb-field-msg,
+      .fb-field-submit {
+        grid-column: span 2 !important;
+      }
+    }
+
+    /* Responsive Rules for Mobile Phones (< 680px) */
+    @media (max-width: 680px) {
+      /* Thirukkural Mobile Optimization */
+      .kural-box {
+        padding: 14px 14px !important;
+        margin: 18px auto 14px auto !important;
+        border-radius: 12px !important;
+      }
+      .kural-header {
+        font-size: 0.76rem !important;
+        padding: 3px 12px !important;
+        gap: 5px !important;
+      }
+      .kural-verse-text, .kural-text-animated {
+        font-size: 1.05rem !important;
+        line-height: 1.55 !important;
+      }
+      .kural-meaning {
+        font-size: 0.82rem !important;
+        line-height: 1.5 !important;
+      }
+
+      /* Feedback Section Full-Width Single Column on Mobile */
+      .feedback-section {
+        padding: 16px 14px !important;
+      }
+      #guidanceFeedbackForm {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+      .fb-field-name,
+      .fb-field-place,
+      .fb-field-phone,
+      .fb-field-email,
+      .fb-field-file,
+      .fb-field-link,
+      .fb-field-msg,
+      .fb-field-submit {
+        grid-column: span 1 !important;
+        width: 100% !important;
+      }
+      #guidanceFeedbackForm input,
+      #guidanceFeedbackForm textarea,
+      #guidanceFeedbackForm button {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        font-size: 0.90rem !important;
+      }
+      #fb_message {
+        height: 65px !important;
+      }
+      #fb_submitBtn {
+        height: 48px !important;
+        font-size: 0.95rem !important;
+      }
+    }
 </style>
 </head>
 <body>
@@ -1859,39 +1960,295 @@
 <button onclick="closePyqModal()" style="padding: 9px 24px; background: #0f172a; color: #ffffff; border: none; border-radius: 8px; font-size: 0.9rem; font-weight: 700; cursor: pointer;">சரி, மூடுக (Close)</button>
 </div>
 </div>
+
+
 <!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
- <!-- /.container -->
 <div class="kural-box">
-<div class="kural-header">
-<span class="kural-icon">📜</span>
-<span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-<span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
-</div>
-<div class="kural-verse-text">
+  <div class="kural-header">
+    <span class="kural-icon">📜</span>
+    <span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
+    <span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
+  </div>
+  <div class="kural-verse-text">
     “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
     திண்ணியர் ஆகப் பெறின்.”
   </div>
-<div class="kural-meaning">
-<strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
+  <div class="kural-meaning">
+    <strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
   </div>
-</div><div class="creator-card">
-<div class="creator-typewriter-wrapper">
-<span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
 </div>
-<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
-<span class="phone-icon">📱</span>
-<span class="phone-text">9626471035</span>
-</a>
-</div><footer class="portal-footer">
-<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
+
+<!-- ஆலோசனை மற்றும் கருத்துப் பதிவுப் பகுதி -->
+<section class="feedback-section">
+<div class="animated-top-bar"></div>
+<canvas id="fb_crackers_canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 99; display: none;"></canvas>
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(226, 232, 240, 0.8);">
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+<div class="sparkle-badge">
+<span class="sparkle-icon">✨</span>
+<span>கருத்துக் களம் &amp; வழிகாட்டல்</span>
+</div>
+<h2 style="font-size: 1.35rem; font-weight: 800; background: linear-gradient(135deg, #1e3a8a 0%, #6b21a8 50%, #9d174d 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0; letter-spacing: -0.2px;">
+            தங்களின் மேலான ஆலோசனை/கருத்துகளை பதிவு செய்க
+          </h2>
+</div>
+<p style="font-size: 0.86rem; color: #64748b; margin: 0;">
+          உயர்கல்வி வழிகாட்டல் குறித்து ஆலோசனைகள், கோப்புகள் (PDF/Word/Excel/PPT/படம்) அல்லது இணைப்புகளைப் பகிரலாம்
+        </p>
+</div>
+
+<form id="guidanceFeedbackForm" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px 14px; align-items: start;">
+<div class="form-group fb-field-name" style="grid-column: span 1;">
+<label for="fb_name" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #e0f2fe; color: #0284c7; border-radius: 4px; font-size: 11px;">👤</span>
+<span>பெயர்</span><span style="color: #ef4444;">*</span>
+</label>
+<input id="fb_name" placeholder="முழுப் பெயர்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="text"/>
+</div>
+
+<div class="form-group fb-field-place" style="grid-column: span 1;">
+<label for="fb_place" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #fef3c7; color: #d97706; border-radius: 4px; font-size: 11px;">🏫</span>
+<span>பள்ளி / ஊர்</span><span style="color: #ef4444;">*</span>
+</label>
+<input id="fb_place" placeholder="பள்ளி பெயர் &amp; ஊர்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="text"/>
+</div>
+
+<div class="form-group fb-field-phone" style="grid-column: span 1;">
+<label for="fb_phone" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #dcfce7; color: #16a34a; border-radius: 4px; font-size: 11px;">📱</span>
+<span>தொலைபேசி எண்</span><span style="color: #ef4444;">*</span>
+</label>
+<input id="fb_phone" pattern="[0-9]{10}" placeholder="10 இலக்க எண்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" title="10 இலக்க கைபேசி எண்" type="tel"/>
+</div>
+
+<div class="form-group fb-field-email" style="grid-column: span 1;">
+<label for="fb_email" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #f3e8ff; color: #9333ea; border-radius: 4px; font-size: 11px;">✉️</span>
+<span>மின்னஞ்சல்</span>
+<span style="font-size: 0.72rem; color: #64748b; background: #f1f5f9; padding: 1px 6px; border-radius: 999px;">விருப்பம்</span>
+</label>
+<input id="fb_email" placeholder="example@gmail.com" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="email"/>
+</div>
+
+<div class="form-group fb-field-file" style="grid-column: span 2;">
+<label for="fb_file" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #fce7f3; color: #be185d; border-radius: 4px; font-size: 11px;">📎</span>
+<span>கோப்பு / ஆவணம் இணைக்க (விருப்பப்பட்டால்)</span>
+<span style="font-size: 0.72rem; color: #64748b; background: #f1f5f9; padding: 1px 6px; border-radius: 999px;">PDF, Image, Word, Excel, PPT (Max 10MB)</span>
+</label>
+<input accept=".pdf,image/*,.doc,.docx,.xls,.xlsx,.ppt,.pptx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation" id="fb_file" style="width: 100%; padding: 6px 10px; font-size: 0.84rem; font-family: inherit; border: 1.5px dashed #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box; cursor: pointer;" type="file"/>
+</div>
+
+<div class="form-group fb-field-link" style="grid-column: span 2;">
+<label for="fb_link" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #ccfbf1; color: #0f766e; border-radius: 4px; font-size: 11px;">🔗</span>
+<span>இணைய இணைப்பு / Link (விருப்பப்பட்டால்)</span>
+<span style="font-size: 0.72rem; color: #64748b; background: #f1f5f9; padding: 1px 6px; border-radius: 999px;">Google Drive / Web URL</span>
+</label>
+<input id="fb_link" placeholder="https://drive.google.com/... அல்லது இணைய முகவரி" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="url"/>
+</div>
+
+<div class="form-group fb-field-msg" style="grid-column: span 3;">
+<label for="fb_message" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #ffe4e6; color: #e11d48; border-radius: 4px; font-size: 11px;">💡</span>
+<span>தங்களின் மேலான ஆலோசனைகள் / கருத்துகள்</span><span style="color: #ef4444;">*</span>
+</label>
+<textarea id="fb_message" placeholder="உயர்கல்வி வழிகாட்டி மற்றும் இத்தளம் குறித்த தங்களின் மேலான ஆலோசனைகள்..." required="" rows="2" style="width: 100%; height: 50px; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; resize: vertical; box-sizing: border-box; line-height: 1.4;"></textarea>
+</div>
+
+<div class="form-group fb-field-submit" style="grid-column: span 1; display: flex; flex-direction: column; justify-content: flex-end;">
+<button id="fb_submitBtn" style="width: 100%; height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%); color: #ffffff; border: none; font-size: 0.96rem; font-weight: 800; font-family: inherit; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3); transition: all 0.25s ease; box-sizing: border-box;" type="submit">
+<span>பதிவு செய்க</span>
+<svg style="width: 16px; height: 16px; fill: none; stroke: currentColor;" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+</button>
+</div>
+</form>
+<div id="fb_status" style="margin-top: 10px; text-align: center; padding: 10px 16px; border-radius: 8px; font-size: 0.95rem; font-weight: 800; display: none;"></div>
+</section>
+
+<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
+<div class="creator-card">
+  <div class="creator-typewriter-wrapper">
+    <span id="creatorTypewriterTarget" class="creator-typewriter-target"></span><span id="creatorCursor" class="creator-cursor">|</span>
+  </div>
+  <a href="tel:9626471035" class="footer-phone-pill" id="footerPhonePill" title="அழைக்க">
+    <span class="phone-icon">📱</span>
+    <span class="phone-text">9626471035</span>
+  </a>
+</div>
+
+<!-- Footer -->
+<footer class="portal-footer">
+  <p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
     தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
-</p>
-<p style="font-size: 0.85rem; color: #64748b;">
+  </p>
+  <p style="font-size: 0.85rem; color: #64748b;">
     © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
-</footer></div></main>
-</div> <!-- /portal-layout-wrapper -->
-<!-- SIDEBAR & UTILITY SCRIPT -->
+</footer>
+
+</div> <!-- /.portal-container -->
+</main> <!-- /.portal-main-content -->
+</div> <!-- /.portal-layout-wrapper -->
+
+
+
+<script>
+// Feedback Form Submission Script & Fireworks
+const fbForm = document.getElementById('guidanceFeedbackForm');
+    const fbSubmitBtn = document.getElementById('fb_submitBtn');
+    const fbStatus = document.getElementById('fb_status');
+    const feedbackScriptURL = 'https://script.google.com/macros/s/AKfycbx87BcBrzGcVBqpWkKvyK4VBFwKqd8a1U-GuTQ9ouG-Ygn2A6SXsW97lSZxYb8PL_HUOA/exec';
+
+    if (fbForm) {
+      fbForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const fileInput = document.getElementById('fb_file');
+        const file = (fileInput && fileInput.files.length > 0) ? fileInput.files[0] : null;
+
+        if (file && file.size > 10 * 1024 * 1024) {
+          fbStatus.style.display = 'block';
+          fbStatus.style.background = '#fef2f2';
+          fbStatus.style.color = '#991b1b';
+          fbStatus.style.border = '1.5px solid #fecaca';
+          fbStatus.innerHTML = '⚠️ இணைக்கப்பட்ட கோப்பு 10MB-க்குள் இருக்க வேண்டும்.';
+          return;
+        }
+
+        fbSubmitBtn.disabled = true;
+        fbSubmitBtn.style.opacity = '0.7';
+        fbSubmitBtn.style.cursor = 'not-allowed';
+        fbStatus.style.display = 'block';
+        fbStatus.style.background = '#eff6ff';
+        fbStatus.style.color = '#1e40af';
+        fbStatus.style.border = '1px solid #bfdbfe';
+        fbStatus.innerHTML = file ? '⏳ கோப்பு மற்றும் விவரங்கள் பதிவேற்றப்படுகின்றன...' : '⏳ விவரங்கள் பதிவேற்றப்படுகின்றன, காத்திருக்கவும்...';
+
+        function sendData(fileBase64, fileName, fileType) {
+          const payload = {
+            name: document.getElementById('fb_name').value.trim(),
+            place: document.getElementById('fb_place').value.trim(),
+            phone: document.getElementById('fb_phone').value.trim(),
+            email: document.getElementById('fb_email').value.trim(),
+            link: document.getElementById('fb_link') ? document.getElementById('fb_link').value.trim() : '',
+            message: document.getElementById('fb_message').value.trim(),
+            fileData: fileBase64,
+            fileName: fileName,
+            fileType: fileType
+          };
+
+          fetch(feedbackScriptURL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(payload)
+          })
+          .then(() => {
+            fbStatus.style.background = 'linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%)';
+            fbStatus.style.color = '#065f46';
+            fbStatus.style.border = '2px solid #34d399';
+            fbStatus.style.boxShadow = '0 6px 20px rgba(16, 185, 129, 0.25)';
+            fbStatus.innerHTML = '🎉 ✨ தங்களின் மேலான ஆலோசனைக்கு நன்றி! ✨ 🎉';
+            try { fireCelebrationCrackers(); } catch(ce) {}
+            fbForm.reset();
+            fbSubmitBtn.disabled = false;
+            fbSubmitBtn.style.opacity = '1';
+            fbSubmitBtn.style.cursor = 'pointer';
+          })
+          .catch(err => {
+            fbStatus.style.background = '#fef2f2';
+            fbStatus.style.color = '#991b1b';
+            fbStatus.style.border = '1px solid #fecaca';
+            fbStatus.innerHTML = '⚠️ பதிவு செய்வதில் பிழை ஏற்பட்டது. தயவுசெய்து சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும்.';
+            fbSubmitBtn.disabled = false;
+            fbSubmitBtn.style.opacity = '1';
+            fbSubmitBtn.style.cursor = 'pointer';
+          });
+        }
+
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(evt) {
+            const base64 = evt.target.result.split(',')[1];
+            sendData(base64, file.name, file.type);
+          };
+          reader.onerror = function() {
+            sendData('', '', '');
+          };
+          reader.readAsDataURL(file);
+        } else {
+          sendData('', '', '');
+        }
+      });
+    }
+
+    function fireCelebrationCrackers() {
+      const canvas = document.getElementById('fb_crackers_canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      canvas.width = canvas.parentElement.offsetWidth;
+      canvas.height = canvas.parentElement.offsetHeight;
+      canvas.style.display = 'block';
+
+      const particles = [];
+      const colors = ['#f43f5e', '#ec4899', '#d946ef', '#a855f7', '#6366f1', '#3b82f6', '#06b6d4', '#10b981', '#eab308', '#f97316'];
+      const burstPoints = [
+        { x: canvas.width * 0.35, y: canvas.height * 0.5 },
+        { x: canvas.width * 0.65, y: canvas.height * 0.5 }
+      ];
+
+      burstPoints.forEach(pt => {
+        for (let i = 0; i < 60; i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const speed = Math.random() * 8 + 3;
+          particles.push({
+            x: pt.x,
+            y: pt.y,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed - 2,
+            radius: Math.random() * 3.5 + 2,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            gravity: 0.16,
+            alpha: 1,
+            decay: Math.random() * 0.012 + 0.01
+          });
+        }
+      });
+
+      let animId;
+      function render() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        let alive = false;
+        particles.forEach(p => {
+          if (p.alpha > 0) {
+            alive = true;
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vy += p.gravity;
+            p.alpha -= p.decay;
+            ctx.save();
+            ctx.globalAlpha = Math.max(p.alpha, 0);
+            ctx.fillStyle = p.color;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+          }
+        });
+
+        if (alive) {
+          animId = requestAnimationFrame(render);
+        } else {
+          cancelAnimationFrame(animId);
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          canvas.style.display = 'none';
+        }
+      }
+      render();
+    }
+</script>
+
 <script>
 function toggleSidebarMenu() {
   var sidebar = document.getElementById('desktopLeftSidebar');
