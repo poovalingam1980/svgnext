@@ -2197,6 +2197,167 @@
       overflow-x: auto !important;
     }
 
+
+    /* ========================================================
+       SCREEN FLICKER FIX, THIRUKKURAL & MOBILE FEEDBACK FORM
+       ======================================================== */
+    /* Fixed typing container height to eliminate vertical layout jumps */
+    .typing-container {
+      min-height: 2.4em !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin-bottom: 4px !important;
+    }
+
+    /* Thirukkural - Solid Crisp Amber-Brown (Zero GPU Texture Glitches) */
+    .kural-box {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 50%, #fefce8 100%) !important;
+      border: 1.8px solid #fde047 !important;
+      border-left: 6px solid #d97706 !important;
+      border-radius: 14px !important;
+      padding: 20px 24px !important;
+      margin: 28px auto 20px auto !important;
+      max-width: 900px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      text-align: center !important;
+      box-shadow: 0 4px 18px rgba(217, 119, 6, 0.10) !important;
+    }
+    .kural-header {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      font-size: 0.86rem !important;
+      font-weight: 800 !important;
+      color: #92400e !important;
+      background: rgba(254, 240, 138, 0.9) !important;
+      padding: 4px 16px !important;
+      border-radius: 999px !important;
+      border: 1.2px solid #fde68a !important;
+      margin-bottom: 10px !important;
+    }
+    .kural-verse-text, .kural-text-animated {
+      font-size: 1.28rem !important;
+      font-weight: 900 !important;
+      line-height: 1.7 !important;
+      margin: 6px auto 10px auto !important;
+      letter-spacing: 0.2px !important;
+      color: #78350f !important;
+      -webkit-text-fill-color: #78350f !important;
+      text-align: center !important;
+    }
+    .kural-meaning {
+      font-size: 0.92rem !important;
+      color: #78350f !important;
+      line-height: 1.6 !important;
+      font-weight: 500 !important;
+      border-top: 1px dashed rgba(217, 119, 6, 0.35) !important;
+      padding-top: 10px !important;
+      margin-top: 10px !important;
+      text-align: center !important;
+    }
+
+    /* Feedback Form Responsive Layout */
+    .feedback-section {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      padding: 24px 22px !important;
+      background: #ffffff !important;
+      border: 1.8px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+      margin-bottom: 24px !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    #guidanceFeedbackForm {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 14px 16px !important;
+      align-items: start !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Responsive Rules for Tablet (< 900px) */
+    @media (max-width: 900px) {
+      #guidanceFeedbackForm {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      .fb-field-name,
+      .fb-field-place,
+      .fb-field-phone,
+      .fb-field-email {
+        grid-column: span 1 !important;
+      }
+      .fb-field-file,
+      .fb-field-link,
+      .fb-field-msg,
+      .fb-field-submit {
+        grid-column: span 2 !important;
+      }
+    }
+
+    /* Responsive Rules for Mobile Phones (< 680px) */
+    @media (max-width: 680px) {
+      /* Thirukkural Mobile Optimization */
+      .kural-box {
+        padding: 14px 14px !important;
+        margin: 18px auto 14px auto !important;
+        border-radius: 12px !important;
+      }
+      .kural-header {
+        font-size: 0.76rem !important;
+        padding: 3px 12px !important;
+        gap: 5px !important;
+      }
+      .kural-verse-text, .kural-text-animated {
+        font-size: 1.05rem !important;
+        line-height: 1.55 !important;
+      }
+      .kural-meaning {
+        font-size: 0.82rem !important;
+        line-height: 1.5 !important;
+      }
+
+      /* Feedback Section Full-Width Single Column on Mobile */
+      .feedback-section {
+        padding: 16px 14px !important;
+      }
+      #guidanceFeedbackForm {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+      .fb-field-name,
+      .fb-field-place,
+      .fb-field-phone,
+      .fb-field-email,
+      .fb-field-file,
+      .fb-field-link,
+      .fb-field-msg,
+      .fb-field-submit {
+        grid-column: span 1 !important;
+        width: 100% !important;
+      }
+      #guidanceFeedbackForm input,
+      #guidanceFeedbackForm textarea,
+      #guidanceFeedbackForm button {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        font-size: 0.90rem !important;
+      }
+      #fb_message {
+        height: 65px !important;
+      }
+      #fb_submitBtn {
+        height: 48px !important;
+        font-size: 0.95rem !important;
+      }
+    }
+
 </style>
 </head>
 <body>
@@ -2744,13 +2905,13 @@
 
 </div>
 
-<!-- திருக்குறள் பகுதி (சீரமைக்கப்பட்ட அலைன்மெண்ட் மற்றும் பொன் அலை அனிமேஷனுடன்) -->
+<!-- திருக்குறள் பகுதி (உயர் மாறுபட்ட வாசிப்புத்திறன் மற்றும் அலைன்மெண்டுடன்) -->
 <div class="kural-box">
   <div class="kural-header">
     <span>📜</span>
     <span>திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
   </div>
-  <div class="kural-text-animated">
+  <div class="kural-verse-text">
     “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
     திண்ணியர் ஆகப் பெறின்.”
   </div>
@@ -2923,10 +3084,11 @@
     const flipContent = document.getElementById('flipContent');
 
     function renderFlipItem(index, direction) {
-      if (isFlipping) return;
+      if (isFlipping || !flipCard || !flipContent) return;
       isFlipping = true;
 
-      flipCard.classList.add('flip-out');
+      flipCard.style.transition = 'opacity 0.22s ease';
+      flipCard.style.opacity = '0';
 
       setTimeout(() => {
         currentFlipIdx = (index + gatewayItems.length) % gatewayItems.length;
@@ -2940,12 +3102,9 @@
           flipContent.textContent = itemText;
         }
         
-        flipCard.classList.remove('flip-out');
-        flipCard.classList.add('flip-in');
-        void flipCard.offsetWidth;
-        flipCard.classList.remove('flip-in');
+        flipCard.style.opacity = '1';
         isFlipping = false;
-      }, 220);
+      }, 240);
     }
 
     function nextFlipGateway(e) {
@@ -2969,7 +3128,7 @@
       if (flipTimer) clearInterval(flipTimer);
       flipTimer = setInterval(() => {
         renderFlipItem(currentFlipIdx + 1, 'next');
-      }, 2400);
+      }, 4000);
     }
 
     const flipViewport = document.getElementById('compassFlipViewport');
@@ -3381,6 +3540,8 @@
             creatorCursor.style.opacity = '0';
             setTimeout(() => creatorCursor.remove(), 400);
           }
+          const pPill = document.getElementById('footerPhonePill');
+          if (pPill) { pPill.style.display = 'inline-flex'; pPill.style.opacity = '1'; }
           return;
         }
 
@@ -3524,72 +3685,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-<script>
-// Standalone Creator Typewriter Animation
-(function() {
-  const creatorSegments = [
-    { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
-    { text: "கூ. ", tag: "span", class: "creator-name-ta-blue" },
-    { text: "பூவலிங்கம்", tag: "span", class: "creator-name-ta-purple" },
-    { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
-    { text: "K. ", tag: "span", class: "creator-name-en-blue" },
-    { text: "Poovalingam", tag: "span", class: "creator-name-en-purple" },
-    { text: ", Deputy Inspector of Schools", tag: "span", class: "creator-role" }
-  ];
-
-  function initCreatorTypewriter() {
-    const creatorContainer = document.getElementById('creatorTypewriterTarget');
-    const creatorCursor = document.getElementById('creatorCursor');
-    if (!creatorContainer) return;
-    
-    // Check if already populated
-    if (creatorContainer.getAttribute('data-typed') === 'true') return;
-    creatorContainer.setAttribute('data-typed', 'true');
-    creatorContainer.innerHTML = '';
-
-    let segIdx = 0;
-    let charIdx = 0;
-    let currentElem = null;
-
-    function step() {
-      if (segIdx >= creatorSegments.length) {
-        if (creatorCursor) {
-          creatorCursor.style.animation = 'none';
-          creatorCursor.style.opacity = '0';
-          setTimeout(() => { if (creatorCursor) creatorCursor.remove(); }, 400);
-        }
-        return;
-      }
-
-      const currentSeg = creatorSegments[segIdx];
-      if (charIdx === 0) {
-        currentElem = document.createElement(currentSeg.tag);
-        currentElem.className = currentSeg.class;
-        creatorContainer.appendChild(currentElem);
-      }
-
-      currentElem.textContent += currentSeg.text.charAt(charIdx);
-      charIdx++;
-
-      if (charIdx >= currentSeg.text.length) {
-        segIdx++;
-        charIdx = 0;
-      }
-
-      setTimeout(step, 30);
-    }
-
-    step();
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCreatorTypewriter);
-  } else {
-    initCreatorTypewriter();
-  }
-})();
-</script>
 
 </body>
 </html>
