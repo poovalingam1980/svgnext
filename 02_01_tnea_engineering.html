@@ -3768,15 +3768,111 @@
   margin: 0 2px !important;
 }
 
+
+/* ========================================================
+   GALAXY EFFECT ANIMATION FOR HEADER BANNER
+   ======================================================== */
+@keyframes galaxyDrift {
+  0% {
+    background-position: 0% 20%, 100% 80%, 50% 50%, 0% 0%, 0 0, 0 0, 0 0, 0 0, 0 0;
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    background-position: 100% 80%, 0% 20%, 80% 30%, 100% 100%, 50px 30px, 80px 40px, 70px 20px, 90px 60px, 0 0;
+    filter: hue-rotate(18deg);
+  }
+  100% {
+    background-position: 0% 20%, 100% 80%, 50% 50%, 0% 0%, 0 0, 0 0, 0 0, 0 0, 0 0;
+    filter: hue-rotate(0deg);
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% { opacity: 0.65; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+
+.header-banner-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 0 16px 0 !important;
+  padding: 3px !important;
+  border-radius: 16px !important;
+  background: linear-gradient(115deg, #38bdf8, #818cf8, #c084fc, #f472b6, #fbbf24, #38bdf8) !important;
+  background-size: 300% 300% !important;
+  animation: flowingBorder 8s ease infinite !important;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.4), 0 0 20px rgba(56, 189, 248, 0.25) !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.header-banner {
+  border-radius: 13px !important;
+  padding: 22px 24px 20px 24px !important;
+  text-align: center !important;
+  color: #ffffff !important;
+  position: relative !important;
+  overflow: hidden !important;
+  background-color: #030712 !important;
+  background-image: 
+    radial-gradient(circle at 15% 25%, rgba(99, 102, 241, 0.5) 0%, transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(217, 70, 239, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.35) 0%, transparent 55%),
+    radial-gradient(circle at 75% 20%, rgba(250, 204, 21, 0.25) 0%, transparent 40%),
+    radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 120px 90px, #fef08a, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 200px 40px, #38bdf8, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 320px 110px, #ffffff, rgba(0,0,0,0)),
+    linear-gradient(145deg, #050816 0%, #0d1530 40%, #151b3d 70%, #030712 100%) !important;
+  background-size: 200% 200%, 200% 200%, 200% 200%, 200% 200%, 140px 140px, 180px 180px, 160px 160px, 200px 200px, 100% 100% !important;
+  animation: galaxyDrift 16s ease-in-out infinite alternate !important;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8), 0 8px 30px rgba(0, 0, 0, 0.6) !important;
+}
+
+.header-banner::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0; left: 0; right: 0; bottom: 0 !important;
+  background-image: 
+    radial-gradient(1.2px 1.2px at 45px 55px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 150px 120px, #fde047, rgba(0,0,0,0)),
+    radial-gradient(1.2px 1.2px at 240px 35px, #7dd3fc, rgba(0,0,0,0)),
+    radial-gradient(1.8px 1.8px at 330px 95px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1.2px 1.2px at 470px 45px, #c084fc, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 600px 115px, #ffffff, rgba(0,0,0,0)) !important;
+  background-size: 220px 220px !important;
+  opacity: 0.8 !important;
+  animation: starTwinkle 4s ease-in-out infinite alternate !important;
+  pointer-events: none !important;
+}
+
+/* Ensure CECRI 4 pillars form a balanced 2x2 grid without any empty gaps */
+#cecri-spotlight .sub-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 18px !important;
+  margin-top: 16px !important;
+  margin-bottom: 20px !important;
+}
+
+@media (max-width: 820px) {
+  #cecri-spotlight .sub-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 </style>
 </head>
 <body>
+
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
 <button class="mobile-menu-floating-btn" id="mobileMenuFloatingBtn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
 <span style="font-size: 1.15rem; line-height: 1;">☰</span>
 <span>மெனு</span>
 </button>
 <div class="portal-layout-wrapper">
+
 <aside class="desktop-left-sidebar" id="desktopLeftSidebar">
 <div class="sidebar-header">
 <a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
@@ -3849,29 +3945,34 @@
 </aside>
 <main class="portal-main-content">
 <div class="portal-container">
-<!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை -->
+
 <header class="portal-top-frame no-print">
-<div class="top-frame-branding">
-<div class="top-frame-badge">
-<span class="govt-emblem">🏛️</span>
-<span class="dept-text">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</span>
-</div>
-<div class="portal-main-heading">
-<span class="portal-title-text">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
-<span class="portal-subtitle-en">CAREER GUIDANCE PORTAL</span>
-</div>
-</div>
-<div class="top-frame-actions">
-<a class="top-frame-btn btn-ceosvg" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
+<!-- Left Side Button: ceosvg.in முதன்மை தளம் -->
+<a class="top-frame-side-btn btn-ceosvg" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
 <span class="btn-icon">🌐</span>
-<span>ceosvg.in முதன்மை தளம்</span>
+<span class="btn-text">ceosvg.in முதன்மை தளம்</span>
 </a>
-<a class="top-frame-btn btn-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
-<span class="btn-icon">🎓</span>
-<span>உயர்கல்வி முகப்பு</span>
-</a>
+<!-- Center Branding Stack: 3D Gold Title, Aurora Tagline & English Sub-branding -->
+<div class="top-frame-center-stack">
+<!-- 1. Main 3D Gold Tamil Title -->
+<h1 class="banner-title-tamil">உயர்கல்வி வழிகாட்டி</h1>
+<!-- 2. Aurora Animated Tamil Tagline -->
+<div class="banner-tagline-aurora">உங்கள் சிறந்த எதிர்காலத்திற்கான திறவுகோல்</div>
+<!-- 3. English Title & Slogan Row -->
+<div class="banner-english-row">
+<span class="banner-title-english">CAREER GUIDANCE</span>
+<span class="banner-english-dot">•</span>
+<span class="banner-slogan-english">YOUR KEY TO A BRIGHT FUTURE</span>
 </div>
+</div>
+<!-- Right Side Button: வழிகாட்டி முகப்பு -->
+<a class="top-frame-side-btn btn-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+<span class="btn-icon">🎓</span>
+<span class="btn-text">வழிகாட்டி முகப்பு</span>
+</a>
 </header>
+
+
 <nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
 <a class="nav-menu-btn btn-portal-home" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ தளம்">
 <span class="btn-icon">🏛️</span>
@@ -3893,9 +3994,11 @@
 <span class="btn-text">TNEA பொறியியல் நேரடிச் சேர்க்கை</span>
 </span>
 </nav>
+
+
 <div class="header-banner-wrap">
-<header class="header-banner" style="background: radial-gradient(ellipse at 50% 0%, #1e3a8a 0%, #0f172a 75%, #090d16 100%) !important; border-radius: 13px !important; padding: 18px 22px 16px 22px !important; text-align: center !important; color: #ffffff !important;">
-<h1 class="banner-main-title" style="font-size: clamp(1.4rem, 2.0vw, 1.85rem) !important; font-weight: 900 !important; margin: 0 0 6px 0 !important; color: #ffffff !important; letter-spacing: -0.3px !important;">
+<header class="header-banner galaxy-theme">
+<h1 class="banner-main-title" style="font-size: clamp(1.4rem, 2.0vw, 1.85rem) !important; font-weight: 900 !important; margin: 0 0 6px 0 !important; color: #ffffff !important; letter-spacing: -0.3px !important; text-shadow: 0 2px 8px rgba(0,0,0,0.8) !important;">
 பொறியியல் நேரடிச் சேர்க்கை (TNEA) &amp; <span style="color: #fde047 !important;">கேம்பஸ் வேலைவாய்ப்புக் கல்லூரிகள் வழிகாட்டி</span>
 </h1>
 <p class="banner-desc" style="font-size: clamp(0.84rem, 0.96vw, 0.92rem) !important; color: #e2e8f0 !important; max-width: 980px !important; margin: 0 auto 8px auto !important; line-height: 1.55 !important;">
@@ -3912,25 +4015,28 @@
 </div>
 </header>
 </div>
-</header>
-</div>
+
+
 <nav aria-label="பொறியியல் வழிகாட்டல் விரைவு வழிசெலுத்தல்" class="sticky-portal-nav" id="stickyPortalNavbar">
 <marquee behavior="scroll" direction="left" scrollamount="4" onmouseover="this.stop();" onmouseout="this.start();" style="display: flex; align-items: center; width: 100%;" title="பொத்தான்களைத் தேர்ந்தெடுக்க மவுஸை இதன் மேல் வைக்கவும் (Hover to Pause)">
 <span style="display: inline-flex; align-items: center; gap: 10px; padding: 0 6px;">
 <button class="nav-anchor-pill active" onclick="smoothScrollToAnchor('calculator', this)" type="button">🧮 கட்-ஆஃப் கால்குலேட்டர்</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('overview', this)" type="button">📌 சேர்க்கை &amp; தகுதிகள்</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('quota', this)" type="button" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important; color: #ffffff !important; border: 1.5px solid #6ee7b7 !important;">🎯 7.5% அரசுப் பள்ளி இடஒதுக்கீடு</button>
-<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('colleges', this)" type="button" style="background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%) !important; color: #091330 !important; font-weight: 800 !important; border: 1.5px solid #fde68a !important;">🏆 டாப் கேம்பஸ் கல்லூரிகள்</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('branches', this)" type="button">💻 6 முக்கிய பொறியியல் துறைகள்</button>
-<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('counselling', this)" type="button">🔄 கலந்தாய்வு 4 சுற்றுகள் (Rounds)</button>
-<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('choice-filling', this)" type="button">💡 சாய்ஸ் ஃபில்லிங் உத்திகள்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('distance-part-time', this)" type="button" style="background: linear-gradient(135deg, #b45309 0%, #d97706 100%) !important; color: #ffffff !important; border: 1.5px solid #fbbf24 !important; font-weight: 800 !important;">🎓 பகுதிநேர B.E. &amp; மாற்று வழிகள்</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('documents', this)" type="button">📑 தேவையான சான்றிதழ்கள்</button>
-<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('all-branches', this)" type="button">🚀 அனைத்துப் பாடப்பிரிவுகள் வழிகாட்டி</button>
-<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('distance-part-time', this)" type="button">🎓 பகுதிநேர B.E. வழிகாட்டி</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('choice-filling', this)" type="button">💡 சாய்ஸ் ஃபில்லிங் உத்திகள்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('cecri-spotlight', this)" type="button" style="background: linear-gradient(90deg, #0284c7, #0369a1) !important; color: #ffffff !important; border: 1.5px solid #38bdf8 !important;">🔬 CSIR-CECRI காரைக்குடி</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('colleges', this)" type="button" style="background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%) !important; color: #091330 !important; font-weight: 800 !important; border: 1.5px solid #fde68a !important;">🏆 டாப் கேம்பஸ் கல்லூரிகள்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('all-branches', this)" type="button">🚀 அனைத்துப் பாடப்பிரிவுகள்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('counselling', this)" type="button">🔄 கலந்தாய்வு 4 சுற்றுகள் (Rounds)</button>
 <button class="nav-anchor-pill btn-feedback-nav" onclick="smoothScrollToAnchor('feedback-sec', this)" type="button" style="background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%) !important; color: #ffffff !important; border: 1.5px solid #a78bfa !important;">✨ ஆலோசனைக் கூடம் (Feedback)</button>
 </span>
 </marquee>
 </nav>
+
+
 <div class="highlights-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-bottom: 22px;">
 <div class="highlight-box" style="background: #ffffff; border: 1.6px solid #cbd5e1; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(15,23,42,0.05); border-left: 4.5px solid #2563eb;">
 <div class="highlight-label" style="font-size: 0.80rem; font-weight: 700; color: #64748b; text-transform: uppercase;">சேர்க்கை முறை</div>
@@ -3953,6 +4059,8 @@
 <div class="highlight-desc" style="font-size: 0.82rem; color: #334155; line-height: 1.45;">கல்விக் கட்டணம், விடுதிக் கட்டணம் முழுமையாக அரசு ஏற்கும்</div>
 </div>
 </div>
+
+
 <section class="calculator-card compact-calc-strip" id="calculator" style="background: linear-gradient(135deg, #091330 0%, #1e293b 50%, #0a0f1d 100%) !important; border: 2px solid #38bdf8 !important; border-radius: 12px !important; padding: 12px 18px !important; box-shadow: 0 4px 18px rgba(15, 23, 42, 0.35) !important; color: #ffffff !important; margin-bottom: 20px !important;">
 <div style="display: flex !important; align-items: center !important; justify-content: space-between !important; flex-wrap: wrap !important; gap: 8px !important; margin-bottom: 10px !important; border-bottom: 1px solid rgba(255,255,255,0.12) !important; padding-bottom: 6px !important;">
 <div style="display: flex !important; align-items: center !important; gap: 8px !important;">
@@ -3985,6 +4093,7 @@ TNEA பொறியியல் கட்-ஆஃப் கால்குலே
 </div>
 </div>
 </section>
+
 <section class="content-card" id="overview">
 <h2 class="section-title">
 <span class="icon">📌</span> 1. சேர்க்கை அமைப்பு &amp; குறைந்தபட்ச தகுதிகள்
@@ -4012,7 +4121,6 @@ TNEA பொறியியல் கட்-ஆஃப் கால்குலே
 </div>
 </div>
 </section>
-<!-- Section 2: 7.5% Govt School Quota -->
 <section class="content-card" id="quota">
 <h2 class="section-title">
 <span class="icon">🎯</span> 2. அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு
@@ -4039,7 +4147,6 @@ TNEA பொறியியல் கட்-ஆஃப் கால்குலே
 </div>
 </div>
 </section>
-<!-- Section 3: Engineering Branches & Specializations (6 Domains) -->
 <section class="content-card" id="branches">
 <h2 class="section-title">
 <span class="icon">💻</span> 3. முக்கிய பொறியியல் பாடப்பிரிவுகள் (6 Major Engineering Domains)
@@ -4102,57 +4209,170 @@ TNEA பொறியியல் கட்-ஆஃப் கால்குலே
 </div>
 </div>
 </section>
-<!-- Section 4: Step-by-Step Counselling Process -->
-<section class="content-card" id="counselling">
-<h2 class="section-title">
-<span class="icon">🔄</span> 4. TNEA கலந்தாய்வு நிலைகள் (Step-by-Step Process)
-      </h2>
-<div class="steps-container">
-<div class="step-item">
-<div class="step-badge">1</div>
-<div class="step-content">
-<h4>இணையவழி விண்ணப்பப் பதிவு (Online Registration)</h4>
-<p>tneaonline.org தளத்தில் மாணவர் விபரங்கள், பள்ளி விவரங்கள் மற்றும் மதிப்பெண்களைப் பதிவு செய்து விண்ணப்பத்தை சமர்ப்பித்தல்.</p>
+<section class="guide-section" id="distance-part-time" style="border-top: 5px solid #d97706;">
+<h2 class="section-title" style="color: #b45309;">
+<span class="icon">🎓</span> 4. தொலைதூரப் பொறியியல் சாத்தியக்கூறுகள் &amp; பணிபுரிவோருக்கான பகுதிநேர B.E. / B.Tech வழிகாட்டி
+</h2>
+<p style="margin-bottom: 18px; font-size: 0.98rem; color: #334155; line-height: 1.75;">
+        தொழில்நுட்பத் துறையில் பணிபுரிபவர்கள், பாலிடெக்னிக் டிப்ளமோ முடித்தவர்கள் மற்றும் வேலை பார்த்துக்கொண்டே பொறியியல் பட்டம் (B.E. / B.Tech) பெற விரும்பும் மாணவர்களுக்கான <strong>தொலைதூரக் கல்வி உண்மை நிலை மற்றும் அரசு அங்கீகாரம் பெற்ற சட்டப்பூர்வ மாற்று வழிகள்</strong> கீழே விரிவாக விளக்கப்பட்டுள்ளன:
+      </p>
+<!-- Warning Alert: Supreme Court & AICTE Verdict on Distance B.Tech -->
+<div style="background: linear-gradient(135deg, #fef2f2 0%, #fff1f2 100%); border: 2px solid #f87171; border-left: 6px solid #dc2626; border-radius: var(--radius-md); padding: 20px 22px; margin-bottom: 24px; box-shadow: var(--shadow-sm);">
+<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+<span style="font-size: 1.6rem;">⚠️</span>
+<h3 style="margin: 0; color: #991b1b; font-size: 1.2rem; font-weight: 800;">
+            தொலைதூர முறையில் பொறியியல் (B.E. / B.Tech) படிக்க முடியுமா? — சட்டப்பூர்வ உண்மை நிலை:
+          </h3>
+</div>
+<p style="font-size: 0.94rem; color: #7f1d1d; line-height: 1.75; margin-bottom: 12px;">
+<strong>முற்றிலும் சாத்தியமில்லை / இந்தியாவில் சட்டப்படி செல்லாது! (Strictly Prohibited &amp; Invalid):</strong><br/>
+          பொறியியல் மற்றும் தொழில்நுட்பக் கல்வி என்பது வகுப்பறைப் பாடம் மட்டுமின்றி, <strong>கட்டாய நேரடி ஆய்வகப் பரிசோதனைகள் (Mandatory Physical Labs), பட்டறைப் பயிற்சிகள் (Workshops), இயந்திரக் கையாளுதல் மற்றும் துறைசார் திட்டப்பணிகளை (Live Projects)</strong> அடிப்படையாகக் கொண்ட தொழில்முறைப் படிப்பாகும்.
+        </p>
+<ul style="font-size: 0.88rem; color: #450a0a; line-height: 1.7; padding-left: 20px; margin: 0;">
+<li><strong>உச்ச நீதிமன்றத் தீர்ப்பு (Supreme Court Verdict - 2017):</strong> 2017-ஆம் ஆண்டு இந்திய உச்ச நீதிமன்றம் அளித்த வரலாற்றுச் சிறப்புமிக்க தீர்ப்பின்படி, <em>முற்றிலும் அஞ்சல் வழி அல்லது தொலைதூர முறையில் (Pure Distance Education / Correspondence / Open University) வழங்கப்படும் எந்தவொரு B.E. / B.Tech பட்டமும் செல்லாது</em> எனத் திட்டவட்டமாக அறிவிக்கப்பட்டுள்ளது.</li>
+<li><strong>AICTE &amp; UGC-DEB தடை:</strong> அகில இந்திய தொழில்நுட்பக் கல்விக் குழுமம் (AICTE) மற்றும் பல்கலைக்கழக மானியக் குழு தொலைதூர பி.இ./பி.டெக் படிப்புகளுக்கு எவ்வித அனுமதியும் வழங்கவில்லை.</li>
+<li><strong>எச்சரிக்கை:</strong> ஏதேனும் வெளிமாநிலப் பல்கலைக்கழகங்களோ அல்லது தனியார் அமைப்புகளோ "அஞ்சல் வழி பி.டெக்" என்று விளம்பரம் செய்தால் அதனை நம்பி ஏமாற வேண்டாம். அத்தகைய சான்றிதழ்கள் <strong>TNPSC, UPSC, TNEB (TANGEDCO), TRB, அரசுப் பணிகள், பொதுத்துறை நிறுவனங்கள் (BHEL, ONGC, ISRO) மற்றும் M.E. / M.Tech உயர்கல்விக்கு 100% செல்லுபடியாகாது!</strong></li>
+</ul>
+</div>
+<!-- Approved 4 Legitimate Pathways -->
+<div style="margin: 22px 0 20px 0;">
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+<h3 style="margin: 0; color: #047857; font-size: 1.15rem; font-weight: 900; display: flex; align-items: center; gap: 8px;">
+<span>✅</span> பணிபுரிவோர் &amp; டிப்ளமோ முடித்தவர்களுக்கான 4 அங்கீகரிக்கப்பட்ட மாற்றுப் பொறியியல் வழிகள் (விரைவு ஒப்பீடு):
+</h3>
+<span style="font-size: 0.78rem; font-weight: 700; color: #065f46; background: #dcfce7; border: 1px solid #86efac; padding: 2px 10px; border-radius: 999px;">
+அரசு &amp; AICTE சட்டப்பூர்வ அங்கீகாரம்
+</span>
+</div>
+
+<!-- Compact Executive Comparison Table -->
+<div style="overflow-x: auto; border: 1.6px solid #cbd5e1; border-radius: 12px; box-shadow: 0 4px 14px rgba(15,23,42,0.06); margin-bottom: 16px; background: #ffffff;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.86rem; text-align: left;">
+<thead>
+<tr style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%); color: #ffffff;">
+<th style="padding: 10px 12px; border: 1px solid #059669; width: 4%;">வ.எண்</th>
+<th style="padding: 10px 12px; border: 1px solid #059669; width: 22%;">மாற்றுப் பொறியியல் பாதை (Pathway)</th>
+<th style="padding: 10px 12px; border: 1px solid #059669; width: 18%;">பயிலும் முறை &amp; நேரம்</th>
+<th style="padding: 10px 12px; border: 1px solid #059669; width: 10%; text-align: center;">கால அளவு</th>
+<th style="padding: 10px 12px; border: 1px solid #059669; width: 22%;">முக்கியத் தகுதி &amp; நிபந்தனை</th>
+<th style="padding: 10px 12px; border: 1px solid #059669; width: 12%;">கட்டணம்</th>
+<th style="padding: 10px 12px; border: 1px solid #059669; width: 12%; text-align: center;">விவரங்கள்</th>
+</tr>
+</thead>
+<tbody>
+<!-- Pathway 1 -->
+<tr style="background: #ffffff; border-bottom: 1px solid #e2e8f0;">
+<td style="padding: 9px 12px; font-weight: 800; text-align: center; border: 1px solid #e2e8f0;">1</td>
+<td style="padding: 9px 12px; border: 1px solid #e2e8f0;">
+<strong style="color: #0369a1; font-size: 0.90rem;">அண்ணா பல்கலைக்கழக பகுதிநேர B.E.</strong><br/>
+<span style="font-size: 0.74rem; color: #64748b;">(Evening Colleges / அண்ணா பல்கலை கலந்தாய்வு)</span>
+</td>
+<td style="padding: 9px 12px; border: 1px solid #e2e8f0; color: #334155;">திங்கள் - வெள்ளி மாலை (5:30 - 8:30 PM) நேரில்</td>
+<td style="padding: 9px 12px; text-align: center; font-weight: 800; color: #065f46; border: 1px solid #e2e8f0;">3½ ஆண்டுகள்<br/><span style="font-size: 0.72rem; color: #64748b;">(7 செமஸ்டர்)</span></td>
+<td style="padding: 9px 12px; border: 1px solid #e2e8f0; font-size: 0.82rem; color: #334155;">டிப்ளமோ + 1-2 ஆண்டு பணி அனுபவம். கல்லூரிக்கு 90 கி.மீ-க்குள் பணிபுரிய வேண்டும் (NOC கட்டாயம்).</td>
+<td style="padding: 9px 12px; border: 1px solid #e2e8f0; font-weight: 700; color: #047857;">ஆண்டுக்கு ₹12,000 - ₹18,000</td>
+<td style="padding: 9px 12px; text-align: center; border: 1px solid #e2e8f0;">
+<button onclick="togglePathwayDrawer('pathway-drawer-1')" style="background: #0284c7; color: #ffffff; border: none; padding: 4px 10px; border-radius: 6px; font-size: 0.76rem; font-weight: 800; cursor: pointer;" type="button">விவரம் ▼</button>
+</td>
+</tr>
+<!-- Pathway 2 -->
+<tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+<td style="padding: 9px 12px; font-weight: 800; text-align: center; border: 1px solid #e2e8f0;">2</td>
+<td style="padding: 9px 12px; border: 1px solid #e2e8f0;">
+<strong style="color: #6d28d9; font-size: 0.90rem;">AICTE நெகிழ்வு நேர B.Tech</strong><br/>
+<span style="font-size: 0.74rem; color: #64748b;">(Working Professionals Scheme - NEP 2020)</span>
+</td>
+<td style="padding: 9px 12px; border: 1px solid #e2e8f0; color: #334155;">நெகிழ்வு மாலை வகுப்புகள் + வார இறுதி செய்முறை</td>
+<td style="padding: 9px 12px; text-align: center; font-weight: 800; color: #6d28d9; border: 1px solid #e2e8f0;">3 முதல் 3½ ஆண்டுகள்</td>
+<td style="padding: 9px 12px; border: 1px solid #e2e8f0; font-size: 0.82rem; color: #334155;">டிப்ளமோ தேர்ச்சி + பதிவுபெற்ற நிறுவனத்தில் பணிபுரிதல் (வேலை நேரம் பாதிக்காத அட்டவணை).</td>
+<td style="padding: 9px 12px; border: 1px solid #e2e8f0; font-weight: 700; color: #6d28d9;">செமஸ்டருக்கு ₹25,000 - ₹40,000</td>
+<td style="padding: 9px 12px; text-align: center; border: 1px solid #e2e8f0;">
+<button onclick="togglePathwayDrawer('pathway-drawer-2')" style="background: #7c3aed; color: #ffffff; border: none; padding: 4px 10px; border-radius: 6px; font-size: 0.76rem; font-weight: 800; cursor: pointer;" type="button">விவரம் ▼</button>
+</td>
+</tr>
+<!-- Pathway 3 -->
+<tr style="background: #ffffff; border-bottom: 1px solid #e2e8f0;">
+<td style="padding: 9px 12px; font-weight: 800; text-align: center; border: 1px solid #e2e8f0;">3</td>
+<td style="padding: 9px 12px; border: 1px solid #e2e8f0;">
+<strong style="color: #c2410c; font-size: 0.90rem;">BITS பிலானி பணிசார் படிப்பு (WILP)</strong><br/>
+<span style="font-size: 0.74rem; color: #64748b;">(Work Integrated Learning Programmes)</span>
+</td>
+<td style="padding: 9px 12px; border: 1px solid #e2e8f0; color: #334155;">வார இறுதி நேரலை விரிவுரை + மெய்நிகர் ஆய்வகம்</td>
+<td style="padding: 9px 12px; text-align: center; font-weight: 800; color: #c2410c; border: 1px solid #e2e8f0;">3½ ஆண்டுகள்<br/><span style="font-size: 0.72rem; color: #64748b;">(7 செமஸ்டர்)</span></td>
+<td style="padding: 9px 12px; border: 1px solid #e2e8f0; font-size: 0.82rem; color: #334155;">டிப்ளமோவில் 60% + 1 ஆண்டு பணி அனுபவம் + பணியில் இருத்தல். பன்னாட்டு கார்ப்பரேட் மதிப்பு.</td>
+<td style="padding: 9px 12px; border: 1px solid #e2e8f0; font-weight: 700; color: #c2410c;">செமஸ்டருக்கு ₹65,000 - ₹70,000</td>
+<td style="padding: 9px 12px; text-align: center; border: 1px solid #e2e8f0;">
+<button onclick="togglePathwayDrawer('pathway-drawer-3')" style="background: #ea580c; color: #ffffff; border: none; padding: 4px 10px; border-radius: 6px; font-size: 0.76rem; font-weight: 800; cursor: pointer;" type="button">விவரம் ▼</button>
+</td>
+</tr>
+<!-- Pathway 4 -->
+<tr style="background: #f8fafc;">
+<td style="padding: 9px 12px; font-weight: 800; text-align: center; border: 1px solid #e2e8f0;">4</td>
+<td style="padding: 9px 12px; border: 1px solid #e2e8f0;">
+<strong style="color: #15803d; font-size: 0.90rem;">நேரடி 2-ஆம் ஆண்டு பொறியியல் (Lateral Entry)</strong><br/>
+<span style="font-size: 0.74rem; color: #64748b;">(முழுநேர Regular B.E. / B.Tech கலந்தாய்வு)</span>
+</td>
+<td style="padding: 9px 12px; border: 1px solid #e2e8f0; color: #334155;">முழுநேர வழக்கமான கல்லூரி வகுப்புகள்</td>
+<td style="padding: 9px 12px; text-align: center; font-weight: 800; color: #15803d; border: 1px solid #e2e8f0;">3 ஆண்டுகள்<br/><span style="font-size: 0.72rem; color: #64748b;">(நேரடி 2-ஆம் ஆண்டு)</span></td>
+<td style="padding: 9px 12px; border: 1px solid #e2e8f0; font-size: 0.82rem; color: #334155;">3 ஆண்டு டிப்ளமோ அல்லது B.Sc கணிதம் தேர்ச்சி. பணி அனுபவம் தேவையில்லை.</td>
+<td style="padding: 9px 12px; border: 1px solid #e2e8f0; font-weight: 700; color: #15803d;">அரசு கல்லூரிகளில் மிகக் குறைவு</td>
+<td style="padding: 9px 12px; text-align: center; border: 1px solid #e2e8f0;">
+<button onclick="togglePathwayDrawer('pathway-drawer-4')" style="background: #16a34a; color: #ffffff; border: none; padding: 4px 10px; border-radius: 6px; font-size: 0.76rem; font-weight: 800; cursor: pointer;" type="button">விவரம் ▼</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!-- Compact Expandable Details Drawers (Hidden by default, open on click) -->
+<div id="pathway-drawer-1" style="display: none; background: #f0f9ff; border: 1.5px solid #7dd3fc; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px;">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+<strong style="color: #0369a1; font-size: 0.95rem;">🏛️ அண்ணா பல்கலைக்கழக பகுதிநேர B.E. கல்லூரிகள் &amp; விண்ணப்ப விவரம்:</strong>
+<button onclick="togglePathwayDrawer('pathway-drawer-1')" style="background: transparent; border: none; color: #64748b; font-size: 1.1rem; cursor: pointer;">✕</button>
+</div>
+<p style="font-size: 0.85rem; color: #334155; line-height: 1.6; margin: 0 0 6px 0;">
+<strong>வழங்கும் முக்கிய அரசு கல்லூரிகள்:</strong> கிண்டி பொறியியல் கல்லூரி (CEG சென்னை), <strong>அழகப்பா செட்டியார் பொறியியல் கல்லூரி (ACGCET, காரைக்குடி - சிவகங்கை மாவட்டம்!)</strong>, GCT கோயம்புத்தூர், GCE சேலம், தந்தை பெரியார் கல்லூரி (வேலூர்), GCE திருநெல்வேலி, தியாகராசர் பொறியியல் கல்லூரி (TCE மதுரை), PSG Tech (கோவை).
+</p>
+<div style="font-size: 0.82rem; color: #0284c7; font-weight: 700;">
+சேர்க்கை தளம்: <a href="https://www.annauniv.edu" style="color: #0284c7; text-decoration: underline;" target="_blank">annauniv.edu</a> | வழக்கமான B.E. பட்டத்திற்கு 100% சமமானது (TNPSC, TNEB Assistant Engineer பதவி உயர்வுக்கு முழுமையாகச் செல்லும்).
 </div>
 </div>
-<div class="step-item">
-<div class="step-badge">2</div>
-<div class="step-content">
-<h4>சான்றிதழ் பதிவேற்றம் &amp; சரிபார்ப்பு (Certificate Upload &amp; Verification)</h4>
-<p>சான்றிதழ்களை இணையவழியாகப் பதிவேற்றம் செய்தல்; மாவட்ட TFC மையங்கள் (TNEA Facilitation Centres) மூலம் அரசு அதிகாரிகள் சரிபார்ப்பர்.</p>
+
+<div id="pathway-drawer-2" style="display: none; background: #faf5ff; border: 1.5px solid #d8b4fe; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px;">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+<strong style="color: #6d28d9; font-size: 0.95rem;">⚡ AICTE நெகிழ்வு நேர B.Tech திட்டக் குறிப்புகள்:</strong>
+<button onclick="togglePathwayDrawer('pathway-drawer-2')" style="background: transparent; border: none; color: #64748b; font-size: 1.1rem; cursor: pointer;">✕</button>
 </div>
+<p style="font-size: 0.85rem; color: #334155; line-height: 1.6; margin: 0 0 6px 0;">
+தேசியக் கல்விக் கொள்கையின்படி (NEP 2020) AICTE அங்கீகரித்த அண்ணா பல்கலைக்கழக உறுப்புக் கல்லூரிகள் மற்றும் முன்னணி தன்னாட்சி கல்லூரிகளில் வழங்கப்படும் 'Face-to-Face with Flexible Hours' திட்டம். வார இறுதி செய்முறை ஆய்வகங்கள் கட்டாயம்.
+</p>
 </div>
-<div class="step-item">
-<div class="step-badge">3</div>
-<div class="step-content">
-<h4>ரேண்டம் எண் &amp; தரவரிசைப் பட்டியல் (Random Number &amp; Rank List)</h4>
-<p>டை-பிரேக்கர் முறையில் ரேண்டம் எண் ஒதுக்கப்பட்டு, மாநில அளவிலான பொதுத் தரவரிசை (Overall Rank) மற்றும் சமூகப் பிரிவு தரவரிசை (Community Rank) வெளியிடப்படும்.</p>
+
+<div id="pathway-drawer-3" style="display: none; background: #fff7ed; border: 1.5px solid #fdba74; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px;">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+<strong style="color: #c2410c; font-size: 0.95rem;">🌐 BITS Pilani WILP பட்டப்படிப்பு விவரம்:</strong>
+<button onclick="togglePathwayDrawer('pathway-drawer-3')" style="background: transparent; border: none; color: #64748b; font-size: 1.1rem; cursor: pointer;">✕</button>
 </div>
+<p style="font-size: 0.85rem; color: #334155; line-height: 1.6; margin: 0 0 6px 0;">
+<strong>பாடப்பிரிவுகள்:</strong> B.Tech in Engineering Technology, Software Systems, Process Engineering. ஆண்டுக்கு இருமுறை சேர்க்கை (மே/ஜூன் &amp; நவம்பர்/டிசம்பர்). ஐடி மற்றும் பன்னாட்டு கார்ப்பரேட் நிறுவனங்களில் மிக உயர்ந்த அங்கீகாரம். தளம்: <a href="https://bits-pilani-wilp.ac.in" style="color: #ea580c; text-decoration: underline;" target="_blank">bits-pilani-wilp.ac.in</a>.
+</p>
 </div>
-<div class="step-item">
-<div class="step-badge">4</div>
-<div class="step-content">
-<h4>கலந்தாய்வு சுற்றுகள் &amp; கல்லூரித் தேர்வு (Choice Filling &amp; Locking)</h4>
-<p>கட்-ஆஃப் அடிப்படையில் சுற்றுகளாகப் (Rounds) பிரிக்கப்பட்டு, மாணவர்கள் தங்களுக்கு விருப்பமான கல்லூரிகள் மற்றும் பாடப்பிரிவுகளை முன்னுரிமை வரிசையில் பதிவு செய்தல்.</p>
+
+<div id="pathway-drawer-4" style="display: none; background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px;">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+<strong style="color: #15803d; font-size: 0.95rem;">🎓 முழுநேர நேரடி 2-ஆம் ஆண்டு பொறியியல் (Lateral Entry):</strong>
+<button onclick="togglePathwayDrawer('pathway-drawer-4')" style="background: transparent; border: none; color: #64748b; font-size: 1.1rem; cursor: pointer;">✕</button>
 </div>
+<p style="font-size: 0.85rem; color: #334155; line-height: 1.6; margin: 0 0 6px 0;">
+அழகப்பா செட்டியார் பொறியியல் கல்லூரி (காரைக்குடி), தியாகராசர் (மதுரை), CEG உட்பட தமிழ்நாட்டின் 450+ கல்லூரிகளில் நேரடி 2-ஆம் ஆண்டு சேர்க்கை. DOTE நடத்தும் ஒற்றைச் சாளர கலந்தாய்வு. தளம்: <a href="https://www.tnealea.com" style="color: #16a34a; text-decoration: underline;" target="_blank">tnealea.com</a>.
+</p>
 </div>
-<div class="step-item">
-<div class="step-badge">5</div>
-<div class="step-content">
-<h4>தற்காலிக ஒதுக்கீடு &amp; உறுதிப்படுத்தல் (Tentative Allotment &amp; Confirmation)</h4>
-<p>கிடைத்த கல்லூரியை Accept &amp; Join, Accept &amp; Upward (மேல்நோக்கி செல்லுதல்) என 6 வகையான விருப்பங்களில் ஒன்றை உறுதி செய்தல்.</p>
-</div>
-</div>
-<div class="step-item">
-<div class="step-badge">6</div>
-<div class="step-content">
-<h4>இறுதிச் சேர்க்கை ஆணை &amp; கல்லூரியில் இணைதல் (Provisional Allotment)</h4>
-<p>இறுதி சேர்க்கை ஆணையைப் பதிவிறக்கம் செய்து, குறிப்பிட்ட காலக்கெடுவுக்குள் கல்லூரியில் நேரில் சேர்ந்து சேர்க்கையை உறுதி செய்தல்.</p>
-</div>
+
+<div style="background: #f0fdf4; border: 1.2px solid #bbf7d0; border-radius: 8px; padding: 10px 14px; font-size: 0.82rem; color: #166534; line-height: 1.5;">
+🌟 <strong>வழிகாட்டல் முடிவுரை:</strong> பணிபுரிந்து கொண்டே பொறியியல் பட்டம் பெற விரும்புவோர் அண்ணா பல்கலைக்கழக பகுதிநேர B.E. அல்லது AICTE நெகிழ்வு நேர திட்டத்தையே தேர்வு செய்ய வேண்டும். போலி திறந்தவெளி பல்கலைக்கழக தொலைதூரப் பட்டங்களில் சேர்ந்து ஏமாற வேண்டாம்!
 </div>
 </div>
 </section>
-<!-- Section 5: Required Documents -->
 <section class="content-card" id="documents">
 <h2 class="section-title">
 <span class="icon">📑</span> 5. கலந்தாய்விற்குத் தேவையான சான்றிதழ்கள் பட்டியல்
@@ -4178,7 +4398,6 @@ TNEA பொறியியல் கட்-ஆஃப் கால்குலே
 </div>
 </div>
 </section>
-<!-- Section 6: Choice Filling Guidance -->
 <section class="content-card" id="choice-filling" style="border-left: 6px solid #d97706;">
 <h2 class="section-title" style="color: #92400e;">
 <span class="icon">💡</span> 6. சாய்ஸ் ஃபில்லிங் (Choice Filling) செய்வதற்கான சிறந்த உத்திகள்
@@ -4191,8 +4410,6 @@ TNEA பொறியியல் கட்-ஆஃப் கால்குலே
 <li><strong>சாய்ஸ் லாக் (Choice Locking) செய்யும் முன் கவனம்:</strong> ஒருமுறை Lock செய்துவிட்டால் மாற்ற இயலாது; எனவே பெற்றோர் மற்றும் ஆசிரியர்களுடன் கலந்து ஆலோசித்து வரிசைப்படுத்துங்கள்.</li>
 </ul>
 </section>
-<!-- SECTION 7 (இறுதிப் பகுதி - FINAL SECTION): Top Campus Placement Colleges in Tamil Nadu (GOVT, AIDED, TOP PRIVATE) -->
-<!-- SECTION 7 (SPECIAL DISTRICT SPOTLIGHT): CSIR-CECRI KARAIKUDI -->
 <section class="content-card" id="cecri-spotlight" style="border: 2px solid #38bdf8; border-top: 6px solid #0284c7; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 15%); margin-top: 36px; box-shadow: 0 10px 25px rgba(2, 132, 199, 0.1);">
 <!-- Spotlight Header Badge -->
 <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 14px;">
@@ -4233,7 +4450,7 @@ TNEA பொறியியல் கட்-ஆஃப் கால்குலே
 </div>
 </div>
 <!-- 4 Core Pillars of CECRI -->
-<div class="sub-grid" style="margin-bottom: 20px;">
+<div class="sub-grid" style="display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 18px !important; margin-top: 16px !important; margin-bottom: 20px !important;">
 <!-- Pillar 1: History & Infrastructure -->
 <div class="sub-card" style="background: #ffffff; border-left-color: #0284c7; border: 1px solid #e2e8f0; border-left-width: 4px;">
 <h3 class="sub-card-title" style="color: #0369a1; display: flex; align-items: center; gap: 8px;">
@@ -4696,7 +4913,6 @@ TNEA பொறியியல் கட்-ஆஃப் கால்குலே
 </table>
 </div>
 </section>
-<!-- SECTION 8: All Engineering Branches Directory & Future Career Scope -->
 <section class="content-card" id="all-branches" style="border-top: 5px solid #2563eb; margin-top: 36px;">
 <h2 class="section-title" style="color: #1e3a8a;">
 <span class="icon">🚀</span> 9. அனைத்துப் பொறியியல் பாடப்பிரிவுகளின் விரிவான வழிகாட்டி &amp; எதிர்கால வேலைவாய்ப்புகள்
@@ -5169,171 +5385,56 @@ TNEA பொறியியல் கட்-ஆஃப் கால்குலே
 </table>
 </div>
 </section>
-<!-- SECTION 10: DISTANCE EDUCATION REALITY & APPROVED PART-TIME B.E. / B.TECH ALTERNATIVES -->
-<section class="guide-section" id="distance-part-time" style="border-top: 5px solid #d97706;">
-<h2 class="section-title" style="color: #b45309;">
-<span class="icon">🎓</span> 10. தொலைதூரப் பொறியியல் சாத்தியக்கூறுகள் &amp; பணிபுரிவோருக்கான பகுதிநேர B.E. / B.Tech வழிகாட்டி
-      </h2>
-<p style="margin-bottom: 18px; font-size: 0.98rem; color: #334155; line-height: 1.75;">
-        தொழில்நுட்பத் துறையில் பணிபுரிபவர்கள், பாலிடெக்னிக் டிப்ளமோ முடித்தவர்கள் மற்றும் வேலை பார்த்துக்கொண்டே பொறியியல் பட்டம் (B.E. / B.Tech) பெற விரும்பும் மாணவர்களுக்கான <strong>தொலைதூரக் கல்வி உண்மை நிலை மற்றும் அரசு அங்கீகாரம் பெற்ற சட்டப்பூர்வ மாற்று வழிகள்</strong> கீழே விரிவாக விளக்கப்பட்டுள்ளன:
-      </p>
-<!-- Warning Alert: Supreme Court & AICTE Verdict on Distance B.Tech -->
-<div style="background: linear-gradient(135deg, #fef2f2 0%, #fff1f2 100%); border: 2px solid #f87171; border-left: 6px solid #dc2626; border-radius: var(--radius-md); padding: 20px 22px; margin-bottom: 24px; box-shadow: var(--shadow-sm);">
-<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-<span style="font-size: 1.6rem;">⚠️</span>
-<h3 style="margin: 0; color: #991b1b; font-size: 1.2rem; font-weight: 800;">
-            தொலைதூர முறையில் பொறியியல் (B.E. / B.Tech) படிக்க முடியுமா? — சட்டப்பூர்வ உண்மை நிலை:
-          </h3>
-</div>
-<p style="font-size: 0.94rem; color: #7f1d1d; line-height: 1.75; margin-bottom: 12px;">
-<strong>முற்றிலும் சாத்தியமில்லை / இந்தியாவில் சட்டப்படி செல்லாது! (Strictly Prohibited &amp; Invalid):</strong><br/>
-          பொறியியல் மற்றும் தொழில்நுட்பக் கல்வி என்பது வகுப்பறைப் பாடம் மட்டுமின்றி, <strong>கட்டாய நேரடி ஆய்வகப் பரிசோதனைகள் (Mandatory Physical Labs), பட்டறைப் பயிற்சிகள் (Workshops), இயந்திரக் கையாளுதல் மற்றும் துறைசார் திட்டப்பணிகளை (Live Projects)</strong> அடிப்படையாகக் கொண்ட தொழில்முறைப் படிப்பாகும்.
-        </p>
-<ul style="font-size: 0.88rem; color: #450a0a; line-height: 1.7; padding-left: 20px; margin: 0;">
-<li><strong>உச்ச நீதிமன்றத் தீர்ப்பு (Supreme Court Verdict - 2017):</strong> 2017-ஆம் ஆண்டு இந்திய உச்ச நீதிமன்றம் அளித்த வரலாற்றுச் சிறப்புமிக்க தீர்ப்பின்படி, <em>முற்றிலும் அஞ்சல் வழி அல்லது தொலைதூர முறையில் (Pure Distance Education / Correspondence / Open University) வழங்கப்படும் எந்தவொரு B.E. / B.Tech பட்டமும் செல்லாது</em> எனத் திட்டவட்டமாக அறிவிக்கப்பட்டுள்ளது.</li>
-<li><strong>AICTE &amp; UGC-DEB தடை:</strong> அகில இந்திய தொழில்நுட்பக் கல்விக் குழுமம் (AICTE) மற்றும் பல்கலைக்கழக மானியக் குழு தொலைதூர பி.இ./பி.டெக் படிப்புகளுக்கு எவ்வித அனுமதியும் வழங்கவில்லை.</li>
-<li><strong>எச்சரிக்கை:</strong> ஏதேனும் வெளிமாநிலப் பல்கலைக்கழகங்களோ அல்லது தனியார் அமைப்புகளோ "அஞ்சல் வழி பி.டெக்" என்று விளம்பரம் செய்தால் அதனை நம்பி ஏமாற வேண்டாம். அத்தகைய சான்றிதழ்கள் <strong>TNPSC, UPSC, TNEB (TANGEDCO), TRB, அரசுப் பணிகள், பொதுத்துறை நிறுவனங்கள் (BHEL, ONGC, ISRO) மற்றும் M.E. / M.Tech உயர்கல்விக்கு 100% செல்லுபடியாகாது!</strong></li>
-</ul>
-</div>
-<!-- Approved 4 Legitimate Pathways -->
-<div style="margin: 22px 0 20px 0;">
-<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
-<h3 style="margin: 0; color: #047857; font-size: 1.15rem; font-weight: 900; display: flex; align-items: center; gap: 8px;">
-<span>✅</span> பணிபுரிவோர் &amp; டிப்ளமோ முடித்தவர்களுக்கான 4 அங்கீகரிக்கப்பட்ட மாற்றுப் பொறியியல் வழிகள் (விரைவு ஒப்பீடு):
-</h3>
-<span style="font-size: 0.78rem; font-weight: 700; color: #065f46; background: #dcfce7; border: 1px solid #86efac; padding: 2px 10px; border-radius: 999px;">
-அரசு &amp; AICTE சட்டப்பூர்வ அங்கீகாரம்
-</span>
-</div>
-
-<!-- Compact Executive Comparison Table -->
-<div style="overflow-x: auto; border: 1.6px solid #cbd5e1; border-radius: 12px; box-shadow: 0 4px 14px rgba(15,23,42,0.06); margin-bottom: 16px; background: #ffffff;">
-<table style="width: 100%; border-collapse: collapse; font-size: 0.86rem; text-align: left;">
-<thead>
-<tr style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%); color: #ffffff;">
-<th style="padding: 10px 12px; border: 1px solid #059669; width: 4%;">வ.எண்</th>
-<th style="padding: 10px 12px; border: 1px solid #059669; width: 22%;">மாற்றுப் பொறியியல் பாதை (Pathway)</th>
-<th style="padding: 10px 12px; border: 1px solid #059669; width: 18%;">பயிலும் முறை &amp; நேரம்</th>
-<th style="padding: 10px 12px; border: 1px solid #059669; width: 10%; text-align: center;">கால அளவு</th>
-<th style="padding: 10px 12px; border: 1px solid #059669; width: 22%;">முக்கியத் தகுதி &amp; நிபந்தனை</th>
-<th style="padding: 10px 12px; border: 1px solid #059669; width: 12%;">கட்டணம்</th>
-<th style="padding: 10px 12px; border: 1px solid #059669; width: 12%; text-align: center;">விவரங்கள்</th>
-</tr>
-</thead>
-<tbody>
-<!-- Pathway 1 -->
-<tr style="background: #ffffff; border-bottom: 1px solid #e2e8f0;">
-<td style="padding: 9px 12px; font-weight: 800; text-align: center; border: 1px solid #e2e8f0;">1</td>
-<td style="padding: 9px 12px; border: 1px solid #e2e8f0;">
-<strong style="color: #0369a1; font-size: 0.90rem;">அண்ணா பல்கலைக்கழக பகுதிநேர B.E.</strong><br/>
-<span style="font-size: 0.74rem; color: #64748b;">(Evening Colleges / அண்ணா பல்கலை கலந்தாய்வு)</span>
-</td>
-<td style="padding: 9px 12px; border: 1px solid #e2e8f0; color: #334155;">திங்கள் - வெள்ளி மாலை (5:30 - 8:30 PM) நேரில்</td>
-<td style="padding: 9px 12px; text-align: center; font-weight: 800; color: #065f46; border: 1px solid #e2e8f0;">3½ ஆண்டுகள்<br/><span style="font-size: 0.72rem; color: #64748b;">(7 செமஸ்டர்)</span></td>
-<td style="padding: 9px 12px; border: 1px solid #e2e8f0; font-size: 0.82rem; color: #334155;">டிப்ளமோ + 1-2 ஆண்டு பணி அனுபவம். கல்லூரிக்கு 90 கி.மீ-க்குள் பணிபுரிய வேண்டும் (NOC கட்டாயம்).</td>
-<td style="padding: 9px 12px; border: 1px solid #e2e8f0; font-weight: 700; color: #047857;">ஆண்டுக்கு ₹12,000 - ₹18,000</td>
-<td style="padding: 9px 12px; text-align: center; border: 1px solid #e2e8f0;">
-<button onclick="togglePathwayDrawer('pathway-drawer-1')" style="background: #0284c7; color: #ffffff; border: none; padding: 4px 10px; border-radius: 6px; font-size: 0.76rem; font-weight: 800; cursor: pointer;" type="button">விவரம் ▼</button>
-</td>
-</tr>
-<!-- Pathway 2 -->
-<tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
-<td style="padding: 9px 12px; font-weight: 800; text-align: center; border: 1px solid #e2e8f0;">2</td>
-<td style="padding: 9px 12px; border: 1px solid #e2e8f0;">
-<strong style="color: #6d28d9; font-size: 0.90rem;">AICTE நெகிழ்வு நேர B.Tech</strong><br/>
-<span style="font-size: 0.74rem; color: #64748b;">(Working Professionals Scheme - NEP 2020)</span>
-</td>
-<td style="padding: 9px 12px; border: 1px solid #e2e8f0; color: #334155;">நெகிழ்வு மாலை வகுப்புகள் + வார இறுதி செய்முறை</td>
-<td style="padding: 9px 12px; text-align: center; font-weight: 800; color: #6d28d9; border: 1px solid #e2e8f0;">3 முதல் 3½ ஆண்டுகள்</td>
-<td style="padding: 9px 12px; border: 1px solid #e2e8f0; font-size: 0.82rem; color: #334155;">டிப்ளமோ தேர்ச்சி + பதிவுபெற்ற நிறுவனத்தில் பணிபுரிதல் (வேலை நேரம் பாதிக்காத அட்டவணை).</td>
-<td style="padding: 9px 12px; border: 1px solid #e2e8f0; font-weight: 700; color: #6d28d9;">செமஸ்டருக்கு ₹25,000 - ₹40,000</td>
-<td style="padding: 9px 12px; text-align: center; border: 1px solid #e2e8f0;">
-<button onclick="togglePathwayDrawer('pathway-drawer-2')" style="background: #7c3aed; color: #ffffff; border: none; padding: 4px 10px; border-radius: 6px; font-size: 0.76rem; font-weight: 800; cursor: pointer;" type="button">விவரம் ▼</button>
-</td>
-</tr>
-<!-- Pathway 3 -->
-<tr style="background: #ffffff; border-bottom: 1px solid #e2e8f0;">
-<td style="padding: 9px 12px; font-weight: 800; text-align: center; border: 1px solid #e2e8f0;">3</td>
-<td style="padding: 9px 12px; border: 1px solid #e2e8f0;">
-<strong style="color: #c2410c; font-size: 0.90rem;">BITS பிலானி பணிசார் படிப்பு (WILP)</strong><br/>
-<span style="font-size: 0.74rem; color: #64748b;">(Work Integrated Learning Programmes)</span>
-</td>
-<td style="padding: 9px 12px; border: 1px solid #e2e8f0; color: #334155;">வார இறுதி நேரலை விரிவுரை + மெய்நிகர் ஆய்வகம்</td>
-<td style="padding: 9px 12px; text-align: center; font-weight: 800; color: #c2410c; border: 1px solid #e2e8f0;">3½ ஆண்டுகள்<br/><span style="font-size: 0.72rem; color: #64748b;">(7 செமஸ்டர்)</span></td>
-<td style="padding: 9px 12px; border: 1px solid #e2e8f0; font-size: 0.82rem; color: #334155;">டிப்ளமோவில் 60% + 1 ஆண்டு பணி அனுபவம் + பணியில் இருத்தல். பன்னாட்டு கார்ப்பரேட் மதிப்பு.</td>
-<td style="padding: 9px 12px; border: 1px solid #e2e8f0; font-weight: 700; color: #c2410c;">செமஸ்டருக்கு ₹65,000 - ₹70,000</td>
-<td style="padding: 9px 12px; text-align: center; border: 1px solid #e2e8f0;">
-<button onclick="togglePathwayDrawer('pathway-drawer-3')" style="background: #ea580c; color: #ffffff; border: none; padding: 4px 10px; border-radius: 6px; font-size: 0.76rem; font-weight: 800; cursor: pointer;" type="button">விவரம் ▼</button>
-</td>
-</tr>
-<!-- Pathway 4 -->
-<tr style="background: #f8fafc;">
-<td style="padding: 9px 12px; font-weight: 800; text-align: center; border: 1px solid #e2e8f0;">4</td>
-<td style="padding: 9px 12px; border: 1px solid #e2e8f0;">
-<strong style="color: #15803d; font-size: 0.90rem;">நேரடி 2-ஆம் ஆண்டு பொறியியல் (Lateral Entry)</strong><br/>
-<span style="font-size: 0.74rem; color: #64748b;">(முழுநேர Regular B.E. / B.Tech கலந்தாய்வு)</span>
-</td>
-<td style="padding: 9px 12px; border: 1px solid #e2e8f0; color: #334155;">முழுநேர வழக்கமான கல்லூரி வகுப்புகள்</td>
-<td style="padding: 9px 12px; text-align: center; font-weight: 800; color: #15803d; border: 1px solid #e2e8f0;">3 ஆண்டுகள்<br/><span style="font-size: 0.72rem; color: #64748b;">(நேரடி 2-ஆம் ஆண்டு)</span></td>
-<td style="padding: 9px 12px; border: 1px solid #e2e8f0; font-size: 0.82rem; color: #334155;">3 ஆண்டு டிப்ளமோ அல்லது B.Sc கணிதம் தேர்ச்சி. பணி அனுபவம் தேவையில்லை.</td>
-<td style="padding: 9px 12px; border: 1px solid #e2e8f0; font-weight: 700; color: #15803d;">அரசு கல்லூரிகளில் மிகக் குறைவு</td>
-<td style="padding: 9px 12px; text-align: center; border: 1px solid #e2e8f0;">
-<button onclick="togglePathwayDrawer('pathway-drawer-4')" style="background: #16a34a; color: #ffffff; border: none; padding: 4px 10px; border-radius: 6px; font-size: 0.76rem; font-weight: 800; cursor: pointer;" type="button">விவரம் ▼</button>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-<!-- Compact Expandable Details Drawers (Hidden by default, open on click) -->
-<div id="pathway-drawer-1" style="display: none; background: #f0f9ff; border: 1.5px solid #7dd3fc; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px;">
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-<strong style="color: #0369a1; font-size: 0.95rem;">🏛️ அண்ணா பல்கலைக்கழக பகுதிநேர B.E. கல்லூரிகள் &amp; விண்ணப்ப விவரம்:</strong>
-<button onclick="togglePathwayDrawer('pathway-drawer-1')" style="background: transparent; border: none; color: #64748b; font-size: 1.1rem; cursor: pointer;">✕</button>
-</div>
-<p style="font-size: 0.85rem; color: #334155; line-height: 1.6; margin: 0 0 6px 0;">
-<strong>வழங்கும் முக்கிய அரசு கல்லூரிகள்:</strong> கிண்டி பொறியியல் கல்லூரி (CEG சென்னை), <strong>அழகப்பா செட்டியார் பொறியியல் கல்லூரி (ACGCET, காரைக்குடி - சிவகங்கை மாவட்டம்!)</strong>, GCT கோயம்புத்தூர், GCE சேலம், தந்தை பெரியார் கல்லூரி (வேலூர்), GCE திருநெல்வேலி, தியாகராசர் பொறியியல் கல்லூரி (TCE மதுரை), PSG Tech (கோவை).
-</p>
-<div style="font-size: 0.82rem; color: #0284c7; font-weight: 700;">
-சேர்க்கை தளம்: <a href="https://www.annauniv.edu" style="color: #0284c7; text-decoration: underline;" target="_blank">annauniv.edu</a> | வழக்கமான B.E. பட்டத்திற்கு 100% சமமானது (TNPSC, TNEB Assistant Engineer பதவி உயர்வுக்கு முழுமையாகச் செல்லும்).
+<section class="content-card" id="counselling">
+<h2 class="section-title">
+<span class="icon">🔄</span> 10. TNEA கலந்தாய்வு நிலைகள் (Step-by-Step Process)
+</h2>
+<div class="steps-container">
+<div class="step-item">
+<div class="step-badge">1</div>
+<div class="step-content">
+<h4>இணையவழி விண்ணப்பப் பதிவு (Online Registration)</h4>
+<p>tneaonline.org தளத்தில் மாணவர் விபரங்கள், பள்ளி விவரங்கள் மற்றும் மதிப்பெண்களைப் பதிவு செய்து விண்ணப்பத்தை சமர்ப்பித்தல்.</p>
 </div>
 </div>
-
-<div id="pathway-drawer-2" style="display: none; background: #faf5ff; border: 1.5px solid #d8b4fe; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px;">
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-<strong style="color: #6d28d9; font-size: 0.95rem;">⚡ AICTE நெகிழ்வு நேர B.Tech திட்டக் குறிப்புகள்:</strong>
-<button onclick="togglePathwayDrawer('pathway-drawer-2')" style="background: transparent; border: none; color: #64748b; font-size: 1.1rem; cursor: pointer;">✕</button>
+<div class="step-item">
+<div class="step-badge">2</div>
+<div class="step-content">
+<h4>சான்றிதழ் பதிவேற்றம் &amp; சரிபார்ப்பு (Certificate Upload &amp; Verification)</h4>
+<p>சான்றிதழ்களை இணையவழியாகப் பதிவேற்றம் செய்தல்; மாவட்ட TFC மையங்கள் (TNEA Facilitation Centres) மூலம் அரசு அதிகாரிகள் சரிபார்ப்பர்.</p>
 </div>
-<p style="font-size: 0.85rem; color: #334155; line-height: 1.6; margin: 0 0 6px 0;">
-தேசியக் கல்விக் கொள்கையின்படி (NEP 2020) AICTE அங்கீகரித்த அண்ணா பல்கலைக்கழக உறுப்புக் கல்லூரிகள் மற்றும் முன்னணி தன்னாட்சி கல்லூரிகளில் வழங்கப்படும் 'Face-to-Face with Flexible Hours' திட்டம். வார இறுதி செய்முறை ஆய்வகங்கள் கட்டாயம்.
-</p>
 </div>
-
-<div id="pathway-drawer-3" style="display: none; background: #fff7ed; border: 1.5px solid #fdba74; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px;">
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-<strong style="color: #c2410c; font-size: 0.95rem;">🌐 BITS Pilani WILP பட்டப்படிப்பு விவரம்:</strong>
-<button onclick="togglePathwayDrawer('pathway-drawer-3')" style="background: transparent; border: none; color: #64748b; font-size: 1.1rem; cursor: pointer;">✕</button>
+<div class="step-item">
+<div class="step-badge">3</div>
+<div class="step-content">
+<h4>ரேண்டம் எண் &amp; தரவரிசைப் பட்டியல் (Random Number &amp; Rank List)</h4>
+<p>டை-பிரேக்கர் முறையில் ரேண்டம் எண் ஒதுக்கப்பட்டு, மாநில அளவிலான பொதுத் தரவரிசை (Overall Rank) மற்றும் சமூகப் பிரிவு தரவரிசை (Community Rank) வெளியிடப்படும்.</p>
 </div>
-<p style="font-size: 0.85rem; color: #334155; line-height: 1.6; margin: 0 0 6px 0;">
-<strong>பாடப்பிரிவுகள்:</strong> B.Tech in Engineering Technology, Software Systems, Process Engineering. ஆண்டுக்கு இருமுறை சேர்க்கை (மே/ஜூன் &amp; நவம்பர்/டிசம்பர்). ஐடி மற்றும் பன்னாட்டு கார்ப்பரேட் நிறுவனங்களில் மிக உயர்ந்த அங்கீகாரம். தளம்: <a href="https://bits-pilani-wilp.ac.in" style="color: #ea580c; text-decoration: underline;" target="_blank">bits-pilani-wilp.ac.in</a>.
-</p>
 </div>
-
-<div id="pathway-drawer-4" style="display: none; background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px;">
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-<strong style="color: #15803d; font-size: 0.95rem;">🎓 முழுநேர நேரடி 2-ஆம் ஆண்டு பொறியியல் (Lateral Entry):</strong>
-<button onclick="togglePathwayDrawer('pathway-drawer-4')" style="background: transparent; border: none; color: #64748b; font-size: 1.1rem; cursor: pointer;">✕</button>
+<div class="step-item">
+<div class="step-badge">4</div>
+<div class="step-content">
+<h4>கலந்தாய்வு சுற்றுகள் &amp; கல்லூரித் தேர்வு (Choice Filling &amp; Locking)</h4>
+<p>கட்-ஆஃப் அடிப்படையில் சுற்றுகளாகப் (Rounds) பிரிக்கப்பட்டு, மாணவர்கள் தங்களுக்கு விருப்பமான கல்லூரிகள் மற்றும் பாடப்பிரிவுகளை முன்னுரிமை வரிசையில் பதிவு செய்தல்.</p>
 </div>
-<p style="font-size: 0.85rem; color: #334155; line-height: 1.6; margin: 0 0 6px 0;">
-அழகப்பா செட்டியார் பொறியியல் கல்லூரி (காரைக்குடி), தியாகராசர் (மதுரை), CEG உட்பட தமிழ்நாட்டின் 450+ கல்லூரிகளில் நேரடி 2-ஆம் ஆண்டு சேர்க்கை. DOTE நடத்தும் ஒற்றைச் சாளர கலந்தாய்வு. தளம்: <a href="https://www.tnealea.com" style="color: #16a34a; text-decoration: underline;" target="_blank">tnealea.com</a>.
-</p>
 </div>
-
-<div style="background: #f0fdf4; border: 1.2px solid #bbf7d0; border-radius: 8px; padding: 10px 14px; font-size: 0.82rem; color: #166534; line-height: 1.5;">
-🌟 <strong>வழிகாட்டல் முடிவுரை:</strong> பணிபுரிந்து கொண்டே பொறியியல் பட்டம் பெற விரும்புவோர் அண்ணா பல்கலைக்கழக பகுதிநேர B.E. அல்லது AICTE நெகிழ்வு நேர திட்டத்தையே தேர்வு செய்ய வேண்டும். போலி திறந்தவெளி பல்கலைக்கழக தொலைதூரப் பட்டங்களில் சேர்ந்து ஏமாற வேண்டாம்!
+<div class="step-item">
+<div class="step-badge">5</div>
+<div class="step-content">
+<h4>தற்காலிக ஒதுக்கீடு &amp; உறுதிப்படுத்தல் (Tentative Allotment &amp; Confirmation)</h4>
+<p>கிடைத்த கல்லூரியை Accept &amp; Join, Accept &amp; Upward (மேல்நோக்கி செல்லுதல்) என 6 வகையான விருப்பங்களில் ஒன்றை உறுதி செய்தல்.</p>
+</div>
+</div>
+<div class="step-item">
+<div class="step-badge">6</div>
+<div class="step-content">
+<h4>இறுதிச் சேர்க்கை ஆணை &amp; கல்லூரியில் இணைதல் (Provisional Allotment)</h4>
+<p>இறுதி சேர்க்கை ஆணையைப் பதிவிறக்கம் செய்து, குறிப்பிட்ட காலக்கெடுவுக்குள் கல்லூரியில் நேரில் சேர்ந்து சேர்க்கையை உறுதி செய்தல்.</p>
+</div>
 </div>
 </div>
 </section>
+
 <div class="kural-box">
 <div class="kural-header">
 <span class="kural-icon">📜</span>
@@ -5348,6 +5449,7 @@ TNEA பொறியியல் கட்-ஆஃப் கால்குலே
 <strong>குறள் விளக்கம்:</strong> விதியினால் ஒரு செயல் நிறைவேறாமல் போனாலும், உடலை வருத்தித் தளராமல் செய்யும் இடைவிடாத முயற்சிக்குரிய பலன் (வெற்றி) நிச்சயமாகக் கிட்டும்; பொறியியல் சேர்க்கையிலும் தொடர் முயற்சியே சிறந்த கல்லூரியை வென்றெடுக்க உதவும்.
 </div>
 </div>
+
 <section class="feedback-section" id="feedback-sec">
 <div class="animated-top-bar"></div>
 <canvas id="fb_crackers_canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 99; display: none;"></canvas>
@@ -5431,6 +5533,7 @@ TNEA சேர்க்கை, கல்லூரிகள் தேர்வு
 </form>
 <div id="fb_status" style="margin-top: 10px; text-align: center; padding: 10px 16px; border-radius: 8px; font-size: 0.95rem; font-weight: 800; display: none;"></div>
 </section>
+
 <div class="creator-card">
 <div class="creator-typewriter-wrapper">
 <span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
@@ -5440,6 +5543,8 @@ TNEA சேர்க்கை, கல்லூரிகள் தேர்வு
 <span class="phone-text">9626471035</span>
 </a>
 </div>
+
+
 <footer class="portal-footer">
 <p style="margin-bottom: 6px; font-weight: 600; color: #334155;">தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a></p>
 <div class="footer-update" style="margin: 6px 0; font-weight: 800; color: #0d9488; font-size: 0.88rem;">
@@ -5454,6 +5559,7 @@ TNEA சேர்க்கை, கல்லூரிகள் தேர்வு
 <a href="index.html" style="color: #0284c7; font-weight: 600; text-decoration: none; font-size: 0.85rem;">🎓 உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு</a>
 </div>
 </footer>
+
 </div>
 </main>
 </div>
@@ -5522,7 +5628,14 @@ function computeTNEAPage() {
   }
 }
 
-// 3. Floating Back to Top Button Controller
+// 3. Compact Pathway Drawer Toggle
+function togglePathwayDrawer(drawerId) {
+  var d = document.getElementById(drawerId);
+  if (!d) return;
+  d.style.display = (d.style.display === 'none' || d.style.display === '') ? 'block' : 'none';
+}
+
+// 4. Floating Back to Top Button Controller
 (function() {
   const btt = document.getElementById('floatingBackToTop');
   if (!btt) return;
@@ -5538,7 +5651,7 @@ function computeTNEAPage() {
   });
 })();
 
-// 4. Sidebar Toggle and Active Links
+// 5. Sidebar Toggle and Active Links
 function toggleSidebarMenu() {
   var sidebar = document.getElementById('desktopLeftSidebar');
   var backdrop = document.getElementById('sidebarBackdrop');
@@ -5580,7 +5693,7 @@ document.addEventListener('DOMContentLoaded', function() {
   computeTNEAPage();
 });
 
-// 5. Standardized Creator Typewriter Animation
+// 6. Standardized Creator Typewriter Animation
 (function() {
   let hasTyped = false;
   const creatorSegments = [
@@ -5672,7 +5785,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 
-// 6. Feedback Form Submission & Fireworks
+// 7. Feedback Form Submission & Fireworks
 const fbForm = document.getElementById('guidanceFeedbackForm');
 const fbSubmitBtn = document.getElementById('fb_submitBtn');
 const fbStatus = document.getElementById('fb_status');
