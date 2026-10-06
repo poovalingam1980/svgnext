@@ -6053,6 +6053,62 @@
   color: #ffffff !important;
   border: 1.2px solid #34d399 !important;
 }
+
+/* Targeted High-Contrast Overrides for Sports Calculator */
+#sports-tools-sec .sports-year-card div:first-child span:first-child,
+#sports-tools-sec .sports-card-badge {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 0.90rem !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
+}
+
+#sports-tools-sec .sports-card-header {
+  background: linear-gradient(135deg, #064e3b 0%, #047857 100%) !important;
+  padding: 10px 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  border-bottom: 2px solid #10b981 !important;
+}
+
+#sports-tools-sec .sports-card-yr-pill {
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #fef08a !important;
+  padding: 1px 7px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(254, 240, 138, 0.5) !important;
+}
+
+#sports-tools-sec .sports-card-score-pill {
+  white-space: nowrap !important;
+  font-size: 0.80rem !important;
+  font-weight: 900 !important;
+  background: #fef08a !important;
+  color: #713f12 !important;
+  padding: 3px 9px !important;
+  border-radius: 6px !important;
+  border: 1.2px solid #eab308 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Ensure the other parts below the calculator are clean light (பழையபடியே) */
+#sports-tools-sec .sports-pdf-option-shell {
+  background: #ffffff !important;
+  border: 2px solid #a7f3d0 !important;
+  border-radius: 14px !important;
+  padding: 18px 20px !important;
+  box-shadow: 0 4px 14px rgba(5,150,105,0.08) !important;
+  margin-top: 20px !important;
+}
+
+#sports-tools-sec .sports-pdf-option-shell div[style*="background: #f0fdf4"] {
+  background: #f0fdf4 !important;
+  border: 1.4px solid #a7f3d0 !important;
+}
 </style>
 </head>
 <body>
@@ -6583,17 +6639,17 @@
 <div class="sports-4year-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 14px; margin-bottom: 18px;">
 <!-- Year 4: 12th Std -->
 <div class="sports-year-card">
-<div class="sports-card-header">
-<div class="sports-card-title-group">
-<span class="sports-card-badge">🥇 12-ஆம் வகுப்பு</span>
-<span class="sports-card-yr-pill">Year 4</span>
+<div class="sports-card-header" style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%) !important; padding: 10px 14px !important; display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 8px !important; border-bottom: 2px solid #10b981 !important;">
+<div class="sports-card-title-group" style="display: flex !important; align-items: center !important; gap: 6px !important; white-space: nowrap !important;">
+<span class="sports-card-badge" style="font-weight: 800 !important; font-size: 0.90rem !important; color: #ffffff !important; letter-spacing: 0.3px !important; text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;">🥇 12-ஆம் வகுப்பு</span>
+<span class="sports-card-yr-pill" style="font-size: 0.72rem !important; font-weight: 800 !important; background: rgba(255,255,255,0.2) !important; color: #fef08a !important; padding: 1px 7px !important; border-radius: 999px !important; border: 1px solid rgba(254,240,138,0.5) !important;">Year 4</span>
 </div>
-<span class="sports-card-score-pill" id="sports-y4-score">0 மதிப்பெண்</span>
+<span class="sports-card-score-pill" id="sports-y4-score" style="white-space: nowrap !important; font-size: 0.80rem !important; font-weight: 900 !important; background: #fef08a !important; color: #713f12 !important; padding: 3px 9px !important; border-radius: 6px !important; border: 1.2px solid #eab308 !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important;">0 மதிப்பெண்</span>
 </div>
-<div class="sports-card-body">
+<div class="sports-card-body" style="padding: 14px 14px 16px 14px !important; display: flex !important; flex-direction: column !important; gap: 10px !important; background: #fcfdfd !important;">
 <div class="sports-field-group">
-<label for="sports-y4-level">போட்டி நிலை (Competition Level):</label>
-<select id="sports-y4-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()">
+<label for="sports-y4-level" style="font-size: 0.80rem !important; font-weight: 800 !important; color: #064e3b !important; margin-bottom: 4px !important; display: block !important;">போட்டி நிலை (Competition Level):</label>
+<select id="sports-y4-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100% !important; padding: 8px 10px !important; font-size: 0.82rem !important; font-weight: 700 !important; border: 1.6px solid #cbd5e1 !important; border-radius: 8px !important; background: #ffffff !important; color: #0f172a !important;">
 <option value="none">-- சான்றிதழ் இல்லை --</option>
 <option value="international">🌍 சர்வதேசம் (International - Table I)</option>
 <option value="national">🇮🇳 தேசியம் (National / SGFI - Table II)</option>
@@ -6605,8 +6661,8 @@
 </select>
 </div>
 <div class="sports-field-group">
-<label for="sports-y4-medal">வெற்றி நிலை (Medal / Position):</label>
-<select id="sports-y4-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()">
+<label for="sports-y4-medal" style="font-size: 0.80rem !important; font-weight: 800 !important; color: #064e3b !important; margin-bottom: 4px !important; display: block !important;">வெற்றி நிலை (Medal / Position):</label>
+<select id="sports-y4-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100% !important; padding: 8px 10px !important; font-size: 0.82rem !important; font-weight: 700 !important; border: 1.6px solid #cbd5e1 !important; border-radius: 8px !important; background: #ffffff !important; color: #0f172a !important;">
 <option value="none">-- தேர்ந்தெடுக்கவும் --</option>
 <option value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
 <option value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
@@ -6618,17 +6674,17 @@
 </div>
 <!-- Year 3: 11th Std -->
 <div class="sports-year-card">
-<div class="sports-card-header">
-<div class="sports-card-title-group">
-<span class="sports-card-badge">🥈 11-ஆம் வகுப்பு</span>
-<span class="sports-card-yr-pill">Year 3</span>
+<div class="sports-card-header" style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%) !important; padding: 10px 14px !important; display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 8px !important; border-bottom: 2px solid #10b981 !important;">
+<div class="sports-card-title-group" style="display: flex !important; align-items: center !important; gap: 6px !important; white-space: nowrap !important;">
+<span class="sports-card-badge" style="font-weight: 800 !important; font-size: 0.90rem !important; color: #ffffff !important; letter-spacing: 0.3px !important; text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;">🥈 11-ஆம் வகுப்பு</span>
+<span class="sports-card-yr-pill" style="font-size: 0.72rem !important; font-weight: 800 !important; background: rgba(255,255,255,0.2) !important; color: #fef08a !important; padding: 1px 7px !important; border-radius: 999px !important; border: 1px solid rgba(254,240,138,0.5) !important;">Year 3</span>
 </div>
-<span class="sports-card-score-pill" id="sports-y3-score">0 மதிப்பெண்</span>
+<span class="sports-card-score-pill" id="sports-y3-score" style="white-space: nowrap !important; font-size: 0.80rem !important; font-weight: 900 !important; background: #fef08a !important; color: #713f12 !important; padding: 3px 9px !important; border-radius: 6px !important; border: 1.2px solid #eab308 !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important;">0 மதிப்பெண்</span>
 </div>
-<div class="sports-card-body">
+<div class="sports-card-body" style="padding: 14px 14px 16px 14px !important; display: flex !important; flex-direction: column !important; gap: 10px !important; background: #fcfdfd !important;">
 <div class="sports-field-group">
-<label for="sports-y3-level">போட்டி நிலை (Competition Level):</label>
-<select id="sports-y3-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()">
+<label for="sports-y3-level" style="font-size: 0.80rem !important; font-weight: 800 !important; color: #064e3b !important; margin-bottom: 4px !important; display: block !important;">போட்டி நிலை (Competition Level):</label>
+<select id="sports-y3-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100% !important; padding: 8px 10px !important; font-size: 0.82rem !important; font-weight: 700 !important; border: 1.6px solid #cbd5e1 !important; border-radius: 8px !important; background: #ffffff !important; color: #0f172a !important;">
 <option value="none">-- சான்றிதழ் இல்லை --</option>
 <option value="international">🌍 சர்வதேசம் (International - Table I)</option>
 <option value="national">🇮🇳 தேசியம் (National / SGFI - Table II)</option>
@@ -6640,8 +6696,8 @@
 </select>
 </div>
 <div class="sports-field-group">
-<label for="sports-y3-medal">வெற்றி நிலை (Medal / Position):</label>
-<select id="sports-y3-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()">
+<label for="sports-y3-medal" style="font-size: 0.80rem !important; font-weight: 800 !important; color: #064e3b !important; margin-bottom: 4px !important; display: block !important;">வெற்றி நிலை (Medal / Position):</label>
+<select id="sports-y3-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100% !important; padding: 8px 10px !important; font-size: 0.82rem !important; font-weight: 700 !important; border: 1.6px solid #cbd5e1 !important; border-radius: 8px !important; background: #ffffff !important; color: #0f172a !important;">
 <option value="none">-- தேர்ந்தெடுக்கவும் --</option>
 <option value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
 <option value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
@@ -6653,17 +6709,17 @@
 </div>
 <!-- Year 2: 10th Std -->
 <div class="sports-year-card">
-<div class="sports-card-header">
-<div class="sports-card-title-group">
-<span class="sports-card-badge">🥉 10-ஆம் வகுப்பு</span>
-<span class="sports-card-yr-pill">Year 2</span>
+<div class="sports-card-header" style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%) !important; padding: 10px 14px !important; display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 8px !important; border-bottom: 2px solid #10b981 !important;">
+<div class="sports-card-title-group" style="display: flex !important; align-items: center !important; gap: 6px !important; white-space: nowrap !important;">
+<span class="sports-card-badge" style="font-weight: 800 !important; font-size: 0.90rem !important; color: #ffffff !important; letter-spacing: 0.3px !important; text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;">🥉 10-ஆம் வகுப்பு</span>
+<span class="sports-card-yr-pill" style="font-size: 0.72rem !important; font-weight: 800 !important; background: rgba(255,255,255,0.2) !important; color: #fef08a !important; padding: 1px 7px !important; border-radius: 999px !important; border: 1px solid rgba(254,240,138,0.5) !important;">Year 2</span>
 </div>
-<span class="sports-card-score-pill" id="sports-y2-score">0 மதிப்பெண்</span>
+<span class="sports-card-score-pill" id="sports-y2-score" style="white-space: nowrap !important; font-size: 0.80rem !important; font-weight: 900 !important; background: #fef08a !important; color: #713f12 !important; padding: 3px 9px !important; border-radius: 6px !important; border: 1.2px solid #eab308 !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important;">0 மதிப்பெண்</span>
 </div>
-<div class="sports-card-body">
+<div class="sports-card-body" style="padding: 14px 14px 16px 14px !important; display: flex !important; flex-direction: column !important; gap: 10px !important; background: #fcfdfd !important;">
 <div class="sports-field-group">
-<label for="sports-y2-level">போட்டி நிலை (Competition Level):</label>
-<select id="sports-y2-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()">
+<label for="sports-y2-level" style="font-size: 0.80rem !important; font-weight: 800 !important; color: #064e3b !important; margin-bottom: 4px !important; display: block !important;">போட்டி நிலை (Competition Level):</label>
+<select id="sports-y2-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100% !important; padding: 8px 10px !important; font-size: 0.82rem !important; font-weight: 700 !important; border: 1.6px solid #cbd5e1 !important; border-radius: 8px !important; background: #ffffff !important; color: #0f172a !important;">
 <option value="none">-- சான்றிதழ் இல்லை --</option>
 <option value="international">🌍 சர்வதேசம் (International - Table I)</option>
 <option value="national">🇮🇳 தேசியம் (National / SGFI - Table II)</option>
@@ -6675,8 +6731,8 @@
 </select>
 </div>
 <div class="sports-field-group">
-<label for="sports-y2-medal">வெற்றி நிலை (Medal / Position):</label>
-<select id="sports-y2-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()">
+<label for="sports-y2-medal" style="font-size: 0.80rem !important; font-weight: 800 !important; color: #064e3b !important; margin-bottom: 4px !important; display: block !important;">வெற்றி நிலை (Medal / Position):</label>
+<select id="sports-y2-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100% !important; padding: 8px 10px !important; font-size: 0.82rem !important; font-weight: 700 !important; border: 1.6px solid #cbd5e1 !important; border-radius: 8px !important; background: #ffffff !important; color: #0f172a !important;">
 <option value="none">-- தேர்ந்தெடுக்கவும் --</option>
 <option value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
 <option value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
@@ -6688,17 +6744,17 @@
 </div>
 <!-- Year 1: 9th Std -->
 <div class="sports-year-card">
-<div class="sports-card-header">
-<div class="sports-card-title-group">
-<span class="sports-card-badge">🏅 9-ஆம் வகுப்பு</span>
-<span class="sports-card-yr-pill">Year 1</span>
+<div class="sports-card-header" style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%) !important; padding: 10px 14px !important; display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 8px !important; border-bottom: 2px solid #10b981 !important;">
+<div class="sports-card-title-group" style="display: flex !important; align-items: center !important; gap: 6px !important; white-space: nowrap !important;">
+<span class="sports-card-badge" style="font-weight: 800 !important; font-size: 0.90rem !important; color: #ffffff !important; letter-spacing: 0.3px !important; text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;">🏅 9-ஆம் வகுப்பு</span>
+<span class="sports-card-yr-pill" style="font-size: 0.72rem !important; font-weight: 800 !important; background: rgba(255,255,255,0.2) !important; color: #fef08a !important; padding: 1px 7px !important; border-radius: 999px !important; border: 1px solid rgba(254,240,138,0.5) !important;">Year 1</span>
 </div>
-<span class="sports-card-score-pill" id="sports-y1-score">0 மதிப்பெண்</span>
+<span class="sports-card-score-pill" id="sports-y1-score" style="white-space: nowrap !important; font-size: 0.80rem !important; font-weight: 900 !important; background: #fef08a !important; color: #713f12 !important; padding: 3px 9px !important; border-radius: 6px !important; border: 1.2px solid #eab308 !important; box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important;">0 மதிப்பெண்</span>
 </div>
-<div class="sports-card-body">
+<div class="sports-card-body" style="padding: 14px 14px 16px 14px !important; display: flex !important; flex-direction: column !important; gap: 10px !important; background: #fcfdfd !important;">
 <div class="sports-field-group">
-<label for="sports-y1-level">போட்டி நிலை (Competition Level):</label>
-<select id="sports-y1-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()">
+<label for="sports-y1-level" style="font-size: 0.80rem !important; font-weight: 800 !important; color: #064e3b !important; margin-bottom: 4px !important; display: block !important;">போட்டி நிலை (Competition Level):</label>
+<select id="sports-y1-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100% !important; padding: 8px 10px !important; font-size: 0.82rem !important; font-weight: 700 !important; border: 1.6px solid #cbd5e1 !important; border-radius: 8px !important; background: #ffffff !important; color: #0f172a !important;">
 <option value="none">-- சான்றிதழ் இல்லை --</option>
 <option value="international">🌍 சர்வதேசம் (International - Table I)</option>
 <option value="national">🇮🇳 தேசியம் (National / SGFI - Table II)</option>
@@ -6710,8 +6766,8 @@
 </select>
 </div>
 <div class="sports-field-group">
-<label for="sports-y1-medal">வெற்றி நிலை (Medal / Position):</label>
-<select id="sports-y1-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()">
+<label for="sports-y1-medal" style="font-size: 0.80rem !important; font-weight: 800 !important; color: #064e3b !important; margin-bottom: 4px !important; display: block !important;">வெற்றி நிலை (Medal / Position):</label>
+<select id="sports-y1-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100% !important; padding: 8px 10px !important; font-size: 0.82rem !important; font-weight: 700 !important; border: 1.6px solid #cbd5e1 !important; border-radius: 8px !important; background: #ffffff !important; color: #0f172a !important;">
 <option value="none">-- தேர்ந்தெடுக்கவும் --</option>
 <option value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
 <option value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
@@ -6729,7 +6785,11 @@
 <span class="computed-tag" id="sports-total-status" style="display: inline-block; padding: 3px 12px; border-radius: 999px; font-size: 0.80rem; font-weight: 800; background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd;">
         சான்றிதழ்களைத் தேர்ந்தெடுத்து மதிப்பெண் அறியவும்
       </span>
-</div><div class="sports-pdf-option-shell" style="margin-top: 18px; background: #ffffff; border: 2px solid #a7f3d0; border-radius: 14px; padding: 18px 20px; box-shadow: 0 4px 14px rgba(5,150,105,0.08);">
+</div>
+<!-- Important Rules & Seat Matrix Accordion / Guidance Box -->
+
+</div>
+<div class="sports-pdf-option-shell" style="margin-top: 18px; background: #ffffff; border: 2px solid #a7f3d0; border-radius: 14px; padding: 18px 20px; box-shadow: 0 4px 14px rgba(5,150,105,0.08);">
 <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
 <div style="display: flex; align-items: center; gap: 12px;">
 <span style="font-size: 1.8rem; background: #ecfdf5; border: 1.2px solid #a7f3d0; border-radius: 10px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;">📄</span>
@@ -6933,9 +6993,7 @@
 </button>
 </div>
 </div>
-</div>
-<!-- Important Rules & Seat Matrix Accordion / Guidance Box -->
-<div style="background: #f8fafc; border: 1.3px solid #e2e8f0; border-radius: 9px; padding: 12px 14px; text-align: left; font-size: 0.80rem; color: #334155; line-height: 1.55;">
+</div><div style="background: #f8fafc; border: 1.3px solid #e2e8f0; border-radius: 9px; padding: 12px 14px; text-align: left; font-size: 0.80rem; color: #334155; line-height: 1.55;">
 <div style="font-weight: 800; color: #1e3a8a; font-size: 0.88rem; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
 <span>📌</span><span>விளையாட்டுப் பிரிவு இடஒதுக்கீடு &amp; KVS / CBSE சிறப்பு விதிகள்:</span>
 </div>
@@ -6945,9 +7003,7 @@
 <li><strong>வேளாண்மை (TNAU) &amp; கால்நடை (TANUVAS):</strong> முறையே <strong>40+ இடங்கள்</strong> மற்றும் <strong>5+ இடங்கள்</strong> விளையாட்டு வீரர்களுக்கு ஒதுக்கப்பட்டுள்ளன.</li>
 <li><strong>கேந்திரிய வித்யாலயா (KVS) &amp; சிபிஎஸ்இ (CBSE) விதி:</strong> தமிழக எல்லைக்குள் அமைந்துள்ள கேந்திரிய வித்யாலயா (KVS) மற்றும் CBSE பள்ளிகளில் பயின்ற தமிழக இருப்பிடச் சான்றுடைய மாணவர்கள் மட்டுமே இச்சலுகைக்குத் தகுதியுடையவர்கள். KVS/CBSE தேசியப் போட்டிகள் மாநில அளவிற்கும் (Table III), KVS மண்டல/CBSE கிளஸ்டர் போட்டிகள் கோட்ட/மண்டல அளவிற்கும் (Table IV) இணையாகக் கணக்கிடப்படும்.</li>
 </ul>
-</div>
-</div>
-</section><section class="section-card" id="entrance-stream-sec">
+</div></section><section class="section-card" id="entrance-stream-sec">
 <div class="card-top-header">
 <h2 class="card-top-title">✍️ 1. தேசிய &amp; மாநில அளவிலான நுழைவுத் தேர்வு வழிகாட்டல் நெறிமுறைகள்</h2>
 <span class="card-tag-badge entrance">நுழைவுத்தேர்வு வழிகாட்டல்</span>
