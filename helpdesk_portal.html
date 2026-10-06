@@ -6261,148 +6261,193 @@
       சூத்திரம்: கடந்த 4 கல்வி ஆண்டுகளில் (9, 10, 11, 12-ஆம் வகுப்பு) பெற்ற சான்றிதழ்களில், ஒரு கல்வி ஆண்டிற்கு 1 அதிகபட்ச சாதனை மட்டுமே மதிப்பெண்ணுக்கு ஏற்கப்படும் (அதிகபட்சம் 4 சான்றிதழ்கள்).
     </div>
 <!-- 4 Academic Years Selection Grid -->
-<div class="sports-candidate-card" style="background: #ffffff; border: 1.6px solid #a7f3d0; border-radius: 10px; padding: 12px 16px; margin-bottom: 14px; box-shadow: 0 2px 8px rgba(5,150,105,0.06);">
-<div style="font-weight: 800; font-size: 0.90rem; color: #065f46; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
-<div style="display: flex; align-items: center; gap: 6px;">
-<span>📝</span><span>மாணவர் விவரங்கள் (அரசாணை படிவம் VII-A &amp; VII-B உருவாக்கத்திற்கு):</span>
-</div>
-<span style="font-size: 0.76rem; background: #ecfdf5; color: #047857; padding: 2px 8px; border-radius: 6px; font-weight: 700; border: 1px solid #a7f3d0;">
-      TN Medical DME &amp; TNEA Sports Quota
-    </span>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px 14px;">
-<div>
-<label for="sports-student-name" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">👤 மாணவர் பெயர் (Candidate Full Name):</label>
-<input id="sports-student-name" oninput="computeSportsQuota()" placeholder="எ.கா. க. அன்பரசன் / K. ANBARASAN" style="width: 100%; padding: 7px 10px; font-size: 0.86rem; font-weight: 700; border: 1.4px solid #cbd5e1; border-radius: 7px; background: #ffffff; color: #0f172a; box-sizing: border-box;" type="text"/>
-</div>
-<div>
-<label for="sports-app-no" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">🔢 விண்ணப்ப எண் / நீட் பதிவு எண் (Application / Reg No):</label>
-<input id="sports-app-no" oninput="computeSportsQuota()" placeholder="எ.கா. TN2026-MED-84920 / NEET Roll No" style="width: 100%; padding: 7px 10px; font-size: 0.86rem; font-weight: 700; border: 1.4px solid #cbd5e1; border-radius: 7px; background: #ffffff; color: #0f172a; box-sizing: border-box;" type="text"/>
-</div>
-<div>
-<label for="sports-discipline" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">🏅 விளையாட்டு வகை (Sports Discipline / Game):</label>
-<input id="sports-discipline" oninput="computeSportsQuota()" placeholder="எ.கா. தடகளம் (Athletics), கூடைப்பந்து, கால்பந்து..." style="width: 100%; padding: 7px 10px; font-size: 0.86rem; font-weight: 700; border: 1.4px solid #cbd5e1; border-radius: 7px; background: #ffffff; color: #0f172a; box-sizing: border-box;" type="text"/>
-</div>
-</div>
-</div><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-bottom: 16px;">
+<div class="sports-4year-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-bottom: 16px;">
 <!-- Year 4: 12th Std -->
-<div class="sports-year-card" style="">
-<div style="font-weight: 800; font-size: 0.86rem; color: #1e3a8a; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
+<div class="sports-year-card">
+<div style="font-weight: 800; font-size: 0.88rem; color: #065f46; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;">
 <span>🥇 12-ஆம் வகுப்பு (Year 4)</span>
-<span id="sports-y4-score" style="background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 5px; font-size: 0.80rem; font-weight: 800;">0 மதிப்பெண்</span>
+<span id="sports-y4-score">0 மதிப்பெண்</span>
 </div>
 <div style="margin-bottom: 6px;">
-<label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">போட்டி நிலை (Level):</label>
-<select id="sports-y4-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
-<option style="background: #ffffff; color: #0f172a;" value="none">-- சான்றிதழ் இல்லை --</option>
-<option style="background: #ffffff; color: #0f172a;" value="international">சர்வதேசம் (International - Table I)</option>
-<option style="background: #ffffff; color: #0f172a;" value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
-<option style="background: #ffffff; color: #0f172a;" value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
-<option style="background: #ffffff; color: #0f172a;" value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
-<option style="background: #ffffff; color: #0f172a;" value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
-<option style="background: #ffffff; color: #0f172a;" value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
-<option style="background: #ffffff; color: #0f172a;" value="district">மாவட்டம் (District / Inter-School - Table V)</option>
+<label for="sports-y4-year">கல்வியாண்டு (Academic Year):</label>
+<select id="sports-y4-year" style="width: 100%;">
+<option selected="" value="2025-2026">2025-2026 (12-ஆம் வகுப்பு)</option>
+<option value="2024-2025">2024-2025</option>
+<option value="2023-2024">2023-2024</option>
+<option value="2022-2023">2022-2023</option>
 </select>
 </div>
-<div>
-<label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">வெற்றி நிலை (Medal / Rank):</label>
-<select id="sports-y4-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
-<option style="background: #ffffff; color: #0f172a;" value="none">-- தேர்ந்தெடுக்கவும் --</option>
-<option style="background: #ffffff; color: #0f172a;" value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
-<option style="background: #ffffff; color: #0f172a;" value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
-<option style="background: #ffffff; color: #0f172a;" value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
-<option style="background: #ffffff; color: #0f172a;" value="part">🎖️ பங்கேற்பு (Participation)</option>
+<div style="margin-bottom: 6px;">
+<label for="sports-y4-level">போட்டி நிலை (Competition Level):</label>
+<select id="sports-y4-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%;">
+<option value="none">-- சான்றிதழ் இல்லை --</option>
+<option value="international">சர்வதேசம் (International - Table I)</option>
+<option value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
+<option value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
+<option value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
+<option value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
+<option value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
+<option value="district">மாவட்டம் (District / Inter-School - Table V)</option>
 </select>
+</div>
+<div style="margin-bottom: 6px;">
+<label for="sports-y4-medal">வெற்றி நிலை (Medal / Position):</label>
+<select id="sports-y4-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%;">
+<option value="none">-- தேர்ந்தெடுக்கவும் --</option>
+<option value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
+<option value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
+<option value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
+<option value="part">🎖️ பங்கேற்பு (Participation)</option>
+</select>
+</div>
+<div style="margin-bottom: 6px;">
+<label for="sports-y4-tourn">கலந்துகொண்ட போட்டியின் பெயர் (Tournament Name):</label>
+<input id="sports-y4-tourn" placeholder="எ.கா. 68th SGFI தேசிய தடகளப் போட்டி" style="width: 100%;" type="text"/>
+</div>
+<div>
+<label for="sports-y4-auth">சான்றிதழ் வழங்கிய அமைப்பு / எண் (Authority &amp; Cert No):</label>
+<input id="sports-y4-auth" placeholder="எ.கா. SGFI / SDAT (சான்றிதழ் எண்: 4920)" style="width: 100%;" type="text"/>
 </div>
 </div>
 <!-- Year 3: 11th Std -->
-<div class="sports-year-card" style="">
-<div style="font-weight: 800; font-size: 0.86rem; color: #1e3a8a; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
+<div class="sports-year-card">
+<div style="font-weight: 800; font-size: 0.88rem; color: #065f46; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;">
 <span>🥈 11-ஆம் வகுப்பு (Year 3)</span>
-<span id="sports-y3-score" style="background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 5px; font-size: 0.80rem; font-weight: 800;">0 மதிப்பெண்</span>
+<span id="sports-y3-score">0 மதிப்பெண்</span>
 </div>
 <div style="margin-bottom: 6px;">
-<label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">போட்டி நிலை (Level):</label>
-<select id="sports-y3-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
-<option style="background: #ffffff; color: #0f172a;" value="none">-- சான்றிதழ் இல்லை --</option>
-<option style="background: #ffffff; color: #0f172a;" value="international">சர்வதேசம் (International - Table I)</option>
-<option style="background: #ffffff; color: #0f172a;" value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
-<option style="background: #ffffff; color: #0f172a;" value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
-<option style="background: #ffffff; color: #0f172a;" value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
-<option style="background: #ffffff; color: #0f172a;" value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
-<option style="background: #ffffff; color: #0f172a;" value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
-<option style="background: #ffffff; color: #0f172a;" value="district">மாவட்டம் (District / Inter-School - Table V)</option>
+<label for="sports-y3-year">கல்வியாண்டு (Academic Year):</label>
+<select id="sports-y3-year" style="width: 100%;">
+<option selected="" value="2024-2025">2024-2025 (11-ஆம் வகுப்பு)</option>
+<option value="2025-2026">2025-2026</option>
+<option value="2023-2024">2023-2024</option>
+<option value="2022-2023">2022-2023</option>
 </select>
 </div>
-<div>
-<label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">வெற்றி நிலை (Medal / Rank):</label>
-<select id="sports-y3-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
-<option style="background: #ffffff; color: #0f172a;" value="none">-- தேர்ந்தெடுக்கவும் --</option>
-<option style="background: #ffffff; color: #0f172a;" value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
-<option style="background: #ffffff; color: #0f172a;" value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
-<option style="background: #ffffff; color: #0f172a;" value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
-<option style="background: #ffffff; color: #0f172a;" value="part">🎖️ பங்கேற்பு (Participation)</option>
+<div style="margin-bottom: 6px;">
+<label for="sports-y3-level">போட்டி நிலை (Competition Level):</label>
+<select id="sports-y3-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%;">
+<option value="none">-- சான்றிதழ் இல்லை --</option>
+<option value="international">சர்வதேசம் (International - Table I)</option>
+<option value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
+<option value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
+<option value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
+<option value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
+<option value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
+<option value="district">மாவட்டம் (District / Inter-School - Table V)</option>
 </select>
+</div>
+<div style="margin-bottom: 6px;">
+<label for="sports-y3-medal">வெற்றி நிலை (Medal / Position):</label>
+<select id="sports-y3-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%;">
+<option value="none">-- தேர்ந்தெடுக்கவும் --</option>
+<option value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
+<option value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
+<option value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
+<option value="part">🎖️ பங்கேற்பு (Participation)</option>
+</select>
+</div>
+<div style="margin-bottom: 6px;">
+<label for="sports-y3-tourn">கலந்துகொண்ட போட்டியின் பெயர் (Tournament Name):</label>
+<input id="sports-y3-tourn" placeholder="எ.கா. SDAT முதலமைச்சர் கோப்பை மாநிலப் போட்டி" style="width: 100%;" type="text"/>
+</div>
+<div>
+<label for="sports-y3-auth">சான்றிதழ் வழங்கிய அமைப்பு / எண் (Authority &amp; Cert No):</label>
+<input id="sports-y3-auth" placeholder="எ.கா. SDAT தமிழ்நாடு (சான்றிதழ் எண்: 3105)" style="width: 100%;" type="text"/>
 </div>
 </div>
 <!-- Year 2: 10th Std -->
-<div class="sports-year-card" style="">
-<div style="font-weight: 800; font-size: 0.86rem; color: #1e3a8a; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
+<div class="sports-year-card">
+<div style="font-weight: 800; font-size: 0.88rem; color: #065f46; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;">
 <span>🥉 10-ஆம் வகுப்பு (Year 2)</span>
-<span id="sports-y2-score" style="background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 5px; font-size: 0.80rem; font-weight: 800;">0 மதிப்பெண்</span>
+<span id="sports-y2-score">0 மதிப்பெண்</span>
 </div>
 <div style="margin-bottom: 6px;">
-<label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">போட்டி நிலை (Level):</label>
-<select id="sports-y2-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
-<option style="background: #ffffff; color: #0f172a;" value="none">-- சான்றிதழ் இல்லை --</option>
-<option style="background: #ffffff; color: #0f172a;" value="international">சர்வதேசம் (International - Table I)</option>
-<option style="background: #ffffff; color: #0f172a;" value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
-<option style="background: #ffffff; color: #0f172a;" value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
-<option style="background: #ffffff; color: #0f172a;" value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
-<option style="background: #ffffff; color: #0f172a;" value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
-<option style="background: #ffffff; color: #0f172a;" value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
-<option style="background: #ffffff; color: #0f172a;" value="district">மாவட்டம் (District / Inter-School - Table V)</option>
+<label for="sports-y2-year">கல்வியாண்டு (Academic Year):</label>
+<select id="sports-y2-year" style="width: 100%;">
+<option selected="" value="2023-2024">2023-2024 (10-ஆம் வகுப்பு)</option>
+<option value="2024-2025">2024-2025</option>
+<option value="2022-2023">2022-2023</option>
+<option value="2021-2022">2021-2022</option>
 </select>
 </div>
-<div>
-<label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">வெற்றி நிலை (Medal / Rank):</label>
-<select id="sports-y2-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
-<option style="background: #ffffff; color: #0f172a;" value="none">-- தேர்ந்தெடுக்கவும் --</option>
-<option style="background: #ffffff; color: #0f172a;" value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
-<option style="background: #ffffff; color: #0f172a;" value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
-<option style="background: #ffffff; color: #0f172a;" value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
-<option style="background: #ffffff; color: #0f172a;" value="part">🎖️ பங்கேற்பு (Participation)</option>
+<div style="margin-bottom: 6px;">
+<label for="sports-y2-level">போட்டி நிலை (Competition Level):</label>
+<select id="sports-y2-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%;">
+<option value="none">-- சான்றிதழ் இல்லை --</option>
+<option value="international">சர்வதேசம் (International - Table I)</option>
+<option value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
+<option value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
+<option value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
+<option value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
+<option value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
+<option value="district">மாவட்டம் (District / Inter-School - Table V)</option>
 </select>
+</div>
+<div style="margin-bottom: 6px;">
+<label for="sports-y2-medal">வெற்றி நிலை (Medal / Position):</label>
+<select id="sports-y2-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%;">
+<option value="none">-- தேர்ந்தெடுக்கவும் --</option>
+<option value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
+<option value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
+<option value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
+<option value="part">🎖️ பங்கேற்பு (Participation)</option>
+</select>
+</div>
+<div style="margin-bottom: 6px;">
+<label for="sports-y2-tourn">கலந்துகொண்ட போட்டியின் பெயர் (Tournament Name):</label>
+<input id="sports-y2-tourn" placeholder="எ.கா. KVS / CBSE மண்டல அளவிலான விளையாட்டுப் போட்டி" style="width: 100%;" type="text"/>
+</div>
+<div>
+<label for="sports-y2-auth">சான்றிதழ் வழங்கிய அமைப்பு / எண் (Authority &amp; Cert No):</label>
+<input id="sports-y2-auth" placeholder="எ.கா. KVS சென்னை மண்டலம் / CBSE Cluster" style="width: 100%;" type="text"/>
 </div>
 </div>
 <!-- Year 1: 9th Std -->
-<div class="sports-year-card" style="">
-<div style="font-weight: 800; font-size: 0.86rem; color: #1e3a8a; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
+<div class="sports-year-card">
+<div style="font-weight: 800; font-size: 0.88rem; color: #065f46; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;">
 <span>🏅 9-ஆம் வகுப்பு (Year 1)</span>
-<span id="sports-y1-score" style="background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 5px; font-size: 0.80rem; font-weight: 800;">0 மதிப்பெண்</span>
+<span id="sports-y1-score">0 மதிப்பெண்</span>
 </div>
 <div style="margin-bottom: 6px;">
-<label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">போட்டி நிலை (Level):</label>
-<select id="sports-y1-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
-<option style="background: #ffffff; color: #0f172a;" value="none">-- சான்றிதழ் இல்லை --</option>
-<option style="background: #ffffff; color: #0f172a;" value="international">சர்வதேசம் (International - Table I)</option>
-<option style="background: #ffffff; color: #0f172a;" value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
-<option style="background: #ffffff; color: #0f172a;" value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
-<option style="background: #ffffff; color: #0f172a;" value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
-<option style="background: #ffffff; color: #0f172a;" value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
-<option style="background: #ffffff; color: #0f172a;" value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
-<option style="background: #ffffff; color: #0f172a;" value="district">மாவட்டம் (District / Inter-School - Table V)</option>
+<label for="sports-y1-year">கல்வியாண்டு (Academic Year):</label>
+<select id="sports-y1-year" style="width: 100%;">
+<option selected="" value="2022-2023">2022-2023 (9-ஆம் வகுப்பு)</option>
+<option value="2023-2024">2023-2024</option>
+<option value="2021-2022">2021-2022</option>
+<option value="2020-2021">2020-2021</option>
 </select>
 </div>
-<div>
-<label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">வெற்றி நிலை (Medal / Rank):</label>
-<select id="sports-y1-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
-<option style="background: #ffffff; color: #0f172a;" value="none">-- தேர்ந்தெடுக்கவும் --</option>
-<option style="background: #ffffff; color: #0f172a;" value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
-<option style="background: #ffffff; color: #0f172a;" value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
-<option style="background: #ffffff; color: #0f172a;" value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
-<option style="background: #ffffff; color: #0f172a;" value="part">🎖️ பங்கேற்பு (Participation)</option>
+<div style="margin-bottom: 6px;">
+<label for="sports-y1-level">போட்டி நிலை (Competition Level):</label>
+<select id="sports-y1-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%;">
+<option value="none">-- சான்றிதழ் இல்லை --</option>
+<option value="international">சர்வதேசம் (International - Table I)</option>
+<option value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
+<option value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
+<option value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
+<option value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
+<option value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
+<option value="district">மாவட்டம் (District / Inter-School - Table V)</option>
 </select>
+</div>
+<div style="margin-bottom: 6px;">
+<label for="sports-y1-medal">வெற்றி நிலை (Medal / Position):</label>
+<select id="sports-y1-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%;">
+<option value="none">-- தேர்ந்தெடுக்கவும் --</option>
+<option value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
+<option value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
+<option value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
+<option value="part">🎖️ பங்கேற்பு (Participation)</option>
+</select>
+</div>
+<div style="margin-bottom: 6px;">
+<label for="sports-y1-tourn">கலந்துகொண்ட போட்டியின் பெயர் (Tournament Name):</label>
+<input id="sports-y1-tourn" placeholder="எ.கா. வருவாய் / கல்வி மாவட்ட அளவிலான விளையாட்டுப் போட்டி" style="width: 100%;" type="text"/>
+</div>
+<div>
+<label for="sports-y1-auth">சான்றிதழ் வழங்கிய அமைப்பு / எண் (Authority &amp; Cert No):</label>
+<input id="sports-y1-auth" placeholder="எ.கா. மாவட்ட விளையாட்டு சங்கம் / பள்ளிக்கல்வித்துறை" style="width: 100%;" type="text"/>
 </div>
 </div>
 </div>
@@ -6413,13 +6458,80 @@
 <span class="computed-tag" id="sports-total-status" style="display: inline-block; padding: 3px 12px; border-radius: 999px; font-size: 0.80rem; font-weight: 800; background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd;">
         சான்றிதழ்களைத் தேர்ந்தெடுத்து மதிப்பெண் அறியவும்
       </span>
-</div><div class="sports-pdf-action-bar" style="margin: 14px 0 16px 0; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-<button onclick="generateOfficialSportsPDF()" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #ffffff; border: 1.5px solid #065f46; border-radius: 8px; padding: 10px 22px; font-size: 0.88rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(5,150,105,0.3); transition: all 0.2s ease;" type="button">
-<span>📄</span><span>படிவம் VII(A) &amp; VII(B) PDF பதிவிறக்குக / அச்சிடுக (Official PDF)</span>
+</div><div class="sports-pdf-option-shell" style="margin-top: 18px; background: #ffffff; border: 2px solid #a7f3d0; border-radius: 14px; padding: 18px 20px; box-shadow: 0 4px 14px rgba(5,150,105,0.08);">
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+<div style="display: flex; align-items: center; gap: 12px;">
+<span style="font-size: 1.8rem; background: #ecfdf5; border: 1.2px solid #a7f3d0; border-radius: 10px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;">📄</span>
+<div>
+<div style="font-weight: 800; font-size: 1.0rem; color: #064e3b; margin-bottom: 2px;">
+          அரசாணை விளையாட்டு இடஒதுக்கீட்டுப் படிவத்தை (PDF) பதிவிறக்க விரும்புகிறீர்களா?
+        </div>
+<div style="font-size: 0.84rem; color: #475569; line-height: 1.45;">
+          தேவையெனில் உங்கள் படிப்பு (மருத்துவம், பொறியியல், வேளாண்மை, கால்நடை, துணை மருத்துவம், சட்டம்) மற்றும் மாணவர் விவரங்களை உள்ளிட்டு அந்தந்த படிப்பிற்கான அதிகாரப்பூர்வ A4 படிவத்தைப் பதிவிறக்கலாம்.
+        </div>
+</div>
+</div>
+<div>
+<button id="btnToggleSportsForm" onclick="toggleSportsFormSection()" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #ffffff; border: none; border-radius: 8px; padding: 10px 20px; font-size: 0.88rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(5,150,105,0.3); transition: all 0.2s ease;" type="button">
+<span id="toggleSportsFormIcon">➕</span>
+<span id="toggleSportsFormText">படிவ விவரங்களை உள்ளிடுக &amp; PDF பெறுக</span>
 </button>
-<button onclick="previewOfficialSportsModal()" style="background: #ffffff; color: #065f46; border: 1.5px solid #059669; border-radius: 8px; padding: 10px 18px; font-size: 0.88rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); transition: all 0.2s ease;" type="button">
+</div>
+</div>
+<!-- Expandable Form Container (Hidden by default, shown on demand) -->
+<div id="sportsCandidateDetailsSection" style="display: none; margin-top: 18px; border-top: 1.6px dashed #a7f3d0; padding-top: 16px;">
+<div style="font-weight: 800; font-size: 0.92rem; color: #065f46; margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+<span>📝</span><span>மாணவர் &amp; விண்ணப்பிக்கும் படிப்பு விவரங்கள் (அரசாணைப் படிவத்திற்கு):</span>
+</div>
+<!-- Course Selection Dropdown -->
+<div style="background: #f0fdf4; border: 1.4px solid #a7f3d0; border-radius: 9px; padding: 12px 14px; margin-bottom: 14px;">
+<label for="sports-target-course" style="font-size: 0.84rem; font-weight: 900; color: #064e3b; margin-bottom: 4px; display: block;">
+        🎯 நீங்கள் விண்ணப்பிக்கும் தொழிற்கல்வி / பட்டப்படிப்பு (Target Admission Course):
+      </label>
+<select id="sports-target-course" onchange="onCourseSelected()" style="width: 100%; padding: 8px 12px; font-size: 0.90rem; font-weight: 800; border: 1.5px solid #059669; border-radius: 8px; background: #ffffff; color: #064e3b;">
+<option selected="" value="mbbs">🩺 தமிழ்நாடு மருத்துவச் சேர்க்கை (MBBS / BDS - DME) — அரசாணை படிவம் VII(a) &amp; VII(b)</option>
+<option value="tnea">📐 தமிழ்நாடு பொறியியல் சேர்க்கை (B.E / B.Tech - TNEA அண்ணா பல்கலைக்கழகம்) — Annexure III / Form I</option>
+<option value="agri">🌾 தமிழ்நாடு வேளாண்மைப் பல்கலைக்கழகம் (TNAU B.Sc Agri) — Appendix II Sports Quota Form</option>
+<option value="vet">🐾 தமிழ்நாடு கால்நடை மருத்துவ அறிவியல் பல்கலைக்கழகம் (TANUVAS BVSc) — Annexure IV Form</option>
+<option value="paramed">🩺 தமிழ்நாடு அரசு துணை மருத்துவப் படிப்புகள் (TN Paramedical - B.Pharm, B.Sc Nursing, BPT) — Special Form</option>
+<option value="law">⚖️ தமிழ்நாடு டாக்டர் அம்பேத்கர் சட்டப் பல்கலைக்கழகம் (TNDALU 5-Year Law) — Annexure IV Form</option>
+</select>
+<div id="course-form-badge" style="font-size: 0.78rem; font-weight: 700; color: #047857; margin-top: 5px;">
+        📌 தேர்ந்தெடுக்கப்பட்ட படிவம்: <strong>DME தமிழ்நாடு அரசு மருத்துவக் கல்வி இயக்கக சிறப்புப் பிரிவு படிவம் VII(A) &amp; VII(B)</strong>
+</div>
+</div>
+<!-- Candidate Input Fields -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px 16px; margin-bottom: 16px;">
+<div>
+<label for="sports-student-name" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">👤 மாணவர் முழுப் பெயர் (Candidate Full Name):</label>
+<input id="sports-student-name" placeholder="எ.கா. க. அன்பரசன் / K. ANBARASAN" style="width: 100%;" type="text"/>
+</div>
+<div>
+<label for="sports-app-no" id="label-sports-app-no" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">🔢 விண்ணப்ப எண் / பதிவு எண் (Application / Reg No):</label>
+<input id="sports-app-no" placeholder="எ.கா. TN2026-MED-84920 / NEET Roll No" style="width: 100%;" type="text"/>
+</div>
+<div>
+<label for="sports-discipline" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">🏅 விளையாட்டு வகை &amp; பிரிவு (Discipline &amp; Event):</label>
+<input id="sports-discipline" placeholder="எ.கா. தடகளம் (Athletics) - 100m, கூடைப்பந்து..." style="width: 100%;" type="text"/>
+</div>
+<div>
+<label for="sports-community" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">🏛️ இருப்பிடம் &amp; வகுப்பு (Nativity &amp; Community):</label>
+<input id="sports-community" placeholder="இருப்பிடம் மற்றும் வகுப்பு" style="width: 100%;" type="text" value="Tamil Nadu Native | BC"/>
+</div>
+</div>
+<!-- Bottom Actions -->
+<div style="display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 12px;">
+<button onclick="toggleSportsFormSection()" style="background: #ffffff; color: #475569; border: 1.4px solid #cbd5e1; border-radius: 8px; padding: 9px 16px; font-size: 0.84rem; font-weight: 700; cursor: pointer;" type="button">
+        ❌ சுருக்குக (Collapse)
+      </button>
+<button onclick="previewOfficialSportsModal()" style="background: #ffffff; color: #065f46; border: 1.5px solid #059669; border-radius: 8px; padding: 9px 18px; font-size: 0.86rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 6px;" type="button">
 <span>👁️</span><span>மாதிரிப் படிவத்தை முன்கூட்டியே காண்க (Preview)</span>
 </button>
+<button onclick="generateOfficialSportsPDF()" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #ffffff; border: 1.5px solid #065f46; border-radius: 8px; padding: 9px 22px; font-size: 0.88rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(5,150,105,0.3);" type="button">
+<span>📄</span><span>அதிகாரப்பூர்வ படிவத்தை PDF ஆக பதிவிறக்குக (Download PDF)</span>
+</button>
+</div>
+</div>
 </div>
 <!-- Important Rules & Seat Matrix Accordion / Guidance Box -->
 <div style="background: #f8fafc; border: 1.3px solid #e2e8f0; border-radius: 9px; padding: 12px 14px; text-align: left; font-size: 0.80rem; color: #334155; line-height: 1.55;">
@@ -8236,55 +8348,150 @@ function switchCalcPane(paneId) {
 </div>
 </div><script>
 // ========================================================
-// ANNEXURE VII(A) & VII(B) PDF GENERATION & PREVIEW LOGIC
+// ADVANCED COURSE-SPECIFIC SPORTS FORMS (PDF GENERATOR)
 // ========================================================
-const SPORTS_LEVEL_MAP = {
-  'international': { name: 'சர்வதேசப் போட்டிகள் (International Level - Olympics / Asian / World)', table: 'Table I' },
-  'national': { name: 'தேசிய அளவிலான போட்டிகள் (National / SGFI / Khelo India)', table: 'Table II' },
-  'kvs_national': { name: 'கேந்திரிய வித்யாலயா (KVS) / CBSE தேசியப் போட்டிகள் (Board National)', table: 'Table III' },
-  'state': { name: 'மாநில அளவிலான போட்டிகள் (State Championship / SDAT CM Trophy)', table: 'Table III' },
-  'kvs_regional': { name: 'கேந்திரிய வித்யாலயா (KVS) மண்டல / CBSE கிளஸ்டர் போட்டிகள்', table: 'Table IV' },
-  'divisional': { name: 'மண்டல / கோட்ட அளவிலான போட்டிகள் (Divisional Level)', table: 'Table IV' },
-  'district': { name: 'மாவட்ட அளவிலான போட்டிகள் (District / Inter-School Meets)', table: 'Table V' },
-  'none': { name: '-- சான்றிதழ் சமர்ப்பிக்கப்படவில்லை --', table: '-' }
+const COURSE_METADATA = {
+  'mbbs': {
+    gov_dept: 'GOVERNMENT OF TAMIL NADU',
+    committee: 'SELECTION COMMITTEE, DIRECTORATE OF MEDICAL EDUCATION & RESEARCH, CHENNAI – 10',
+    form_a: 'ANNEXURE – VII (a)',
+    form_b: 'ANNEXURE – VII (b)',
+    title: 'SPECIAL CATEGORY APPLICATION FORM FOR EMINENT SPORTS PERSONS QUOTA',
+    sub_course: '(ADMISSION TO MBBS / BDS DEGREE COURSES 2026-2027)',
+    app_label: 'Application No. / NEET Reg No. (விண்ணப்ப எண் / நீட் பதிவு எண்)',
+    quota_desc: 'அரசு மருத்துவக் கல்லூரிகளில் 13 MBBS + 2 BDS இடங்கள்',
+    badge_text: 'DME தமிழ்நாடு அரசு மருத்துவக் கல்வி இயக்கக சிறப்புப் பிரிவு படிவம் VII(A) & VII(B)'
+  },
+  'tnea': {
+    gov_dept: 'GOVERNMENT OF TAMIL NADU',
+    committee: 'DIRECTORATE OF TECHNICAL EDUCATION & ANNA UNIVERSITY, CHENNAI – 25',
+    form_a: 'ANNEXURE – III / FORM – I',
+    form_b: 'ANNEXURE – III / TABLE – VI',
+    title: 'TAMIL NADU ENGINEERING ADMISSIONS (TNEA) - SPORTS QUOTA APPLICATION',
+    sub_course: '(ADMISSION TO B.E. / B.TECH DEGREE COURSES 2026-2027)',
+    app_label: 'TNEA Registration Number (பொறியியல் சேர்க்கை பதிவு எண்)',
+    quota_desc: 'அண்ணா பல்கலைக்கழகம் & தமிழக பொறியியல் கல்லூரிகளில் 500 சிறப்பு இடங்கள்',
+    badge_text: 'TNEA அண்ணா பல்கலைக்கழக பொறியியல் சேர்க்கை படிவம் III & Form I'
+  },
+  'agri': {
+    gov_dept: 'TAMIL NADU AGRICULTURAL UNIVERSITY (TNAU)',
+    committee: 'UNDERGRADUATE ADMISSIONS COMMITTEE, COIMBATORE – 641 003',
+    form_a: 'APPENDIX – II / FORM – A',
+    form_b: 'APPENDIX – II / FORM – B (CERTIFICATES EVALUATION)',
+    title: 'SELECTION OF CANDIDATES UNDER QUOTA FOR EMINENT SPORTS PERSONS',
+    sub_course: '(ADMISSION TO B.Sc. (Hons.) AGRICULTURE / HORTICULTURE / B.TECH 2026-2027)',
+    app_label: 'TNAU Application / Registration Number (வேளாண்மை விண்ணப்ப எண்)',
+    quota_desc: 'TNAU உறுப்புக் கல்லூரிகளில் 40+ சிறப்பு இடங்கள்',
+    badge_text: 'TNAU தமிழ்நாடு வேளாண்மைப் பல்கலைக்கழக சிறப்புப் பிரிவு படிவம் Appendix II'
+  },
+  'vet': {
+    gov_dept: 'TAMIL NADU VETERINARY AND ANIMAL SCIENCES UNIVERSITY (TANUVAS)',
+    committee: 'UNDERGRADUATE ADMISSION COMMITTEE, VEPERY, CHENNAI – 600 007',
+    form_a: 'APPENDIX – II / ANNEXURE – IV',
+    form_b: 'APPENDIX – II / FORM – B (CERTIFICATE PARTICULARS)',
+    title: 'SPECIAL RESERVATION FOR EMINENT SPORTS PERSONS QUOTA',
+    sub_course: '(ADMISSION TO B.V.Sc. & A.H. / B.TECH DEGREE COURSES 2026-2027)',
+    app_label: 'TANUVAS Application Number (கால்நடை சேர்க்கை விண்ணப்ப எண்)',
+    quota_desc: 'அரசு கால்நடை மருத்துவக் கல்லூரிகளில் 5+ சிறப்பு இடங்கள்',
+    badge_text: 'TANUVAS தமிழ்நாடு கால்நடை மருத்துவப் பல்கலைக்கழக படிவம் Annexure IV'
+  },
+  'paramed': {
+    gov_dept: 'GOVERNMENT OF TAMIL NADU',
+    committee: 'SELECTION COMMITTEE, DIRECTORATE OF MEDICAL EDUCATION & RESEARCH, CHENNAI – 10',
+    form_a: 'SPECIAL CATEGORY APPLICATION FORM (SPORTS QUOTA)',
+    form_b: 'DETAILS OF SPORTS CERTIFICATES PRODUCED FOR EVALUATION',
+    title: 'ADMISSION TO PARAMEDICAL DEGREE COURSES UNDER EMINENT SPORTS PERSONS QUOTA',
+    sub_course: '(B.PHARM / B.Sc. NURSING / BPT / ALLIED HEALTH SCIENCES 2026-2027)',
+    app_label: 'Paramedical Application / AR Number (துணை மருத்துவ விண்ணப்ப எண்)',
+    quota_desc: 'அரசு துணை மருத்துவக் கல்லூரிகளில் சிறப்பு இடங்கள்',
+    badge_text: 'தமிழ்நாடு அரசு துணை மருத்துவப் படிப்புகள் சிறப்புப் பிரிவு படிவம்'
+  },
+  'law': {
+    gov_dept: 'THE TAMIL NADU DR. AMBEDKAR LAW UNIVERSITY (TNDALU)',
+    committee: 'THE LAW ADMISSIONS COMMITTEE, CHENNAI – 600 113',
+    form_a: 'ANNEXURE – IV (1)',
+    form_b: 'ANNEXURE – IV (2) (DETAILS OF SPORTS CERTIFICATES)',
+    title: 'SPECIAL RESERVATION FOR EMINENT SPORTS PERSONS QUOTA',
+    sub_course: '(5-YEAR INTEGRATED LAW DEGREE HONOURS COURSES 2026-2027)',
+    app_label: 'TNDALU Application Registration Number (சட்டக் கல்லூரி பதிவு எண்)',
+    quota_desc: 'TNDALU சீர்மிகு சட்டப் பள்ளிகளில் சிறப்பு இடங்கள்',
+    badge_text: 'TNDALU அம்பேத்கர் சட்டப் பல்கலைக்கழக படிவம் Annexure IV'
+  }
 };
 
-const SPORTS_MEDAL_MAP = {
-  'gold': '🥇 தங்கம் (Gold Medal / 1st Place)',
-  'silver': '🥈 வெள்ளி (Silver Medal / 2nd Place)',
-  'bronze': '🥉 வெண்கலம் (Bronze Medal / 3rd Place)',
-  'part': '🎖️ பங்கேற்பு (Participation Certificate)',
-  'none': '-'
-};
+function toggleSportsFormSection() {
+  const sec = document.getElementById('sportsCandidateDetailsSection');
+  const icon = document.getElementById('toggleSportsFormIcon');
+  const txt = document.getElementById('toggleSportsFormText');
+  if (!sec) return;
+
+  if (sec.style.display === 'none' || sec.style.display === '') {
+    sec.style.display = 'block';
+    if (icon) icon.innerText = '➖';
+    if (txt) txt.innerText = 'படிவப் பிரிவைச் சுருக்குக (Close)';
+    sec.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  } else {
+    sec.style.display = 'none';
+    if (icon) icon.innerText = '➕';
+    if (txt) txt.innerText = 'படிவ விவரங்களை உள்ளிடுக & PDF பெறுக';
+  }
+}
+
+function onCourseSelected() {
+  const sel = document.getElementById('sports-target-course');
+  const courseKey = sel ? sel.value : 'mbbs';
+  const meta = COURSE_METADATA[courseKey] || COURSE_METADATA['mbbs'];
+
+  const badge = document.getElementById('course-form-badge');
+  if (badge) {
+    badge.innerHTML = '📌 தேர்ந்தெடுக்கப்பட்ட படிவம்: <strong>' + meta.badge_text + '</strong>';
+  }
+
+  const appLbl = document.getElementById('label-sports-app-no');
+  if (appLbl) {
+    appLbl.innerText = '🔢 ' + meta.app_label + ':';
+  }
+}
 
 function getFormDataPayload() {
+  const courseKey = (document.getElementById('sports-target-course') && document.getElementById('sports-target-course').value) || 'mbbs';
+  const meta = COURSE_METADATA[courseKey] || COURSE_METADATA['mbbs'];
+
   const name = (document.getElementById('sports-student-name') && document.getElementById('sports-student-name').value.trim()) || '______________________________________';
   const appNo = (document.getElementById('sports-app-no') && document.getElementById('sports-app-no').value.trim()) || '____________________';
   const discipline = (document.getElementById('sports-discipline') && document.getElementById('sports-discipline').value.trim()) || 'Athletics / General Sports (விளையாட்டுப் பிரிவு)';
+  const community = (document.getElementById('sports-community') && document.getElementById('sports-community').value.trim()) || 'Tamil Nadu Native | BC';
 
   const years = [
-    { yr: 'Year 4 (12-ஆம் வகுப்பு)', lvlId: 'sports-y4-level', medId: 'sports-y4-medal', scoreId: 'sports-y4-score' },
-    { yr: 'Year 3 (11-ஆம் வகுப்பு)', lvlId: 'sports-y3-level', medId: 'sports-y3-medal', scoreId: 'sports-y3-score' },
-    { yr: 'Year 2 (10-ஆம் வகுப்பு)', lvlId: 'sports-y2-level', medId: 'sports-y2-medal', scoreId: 'sports-y2-score' },
-    { yr: 'Year 1 (9-ஆம் வகுப்பு)', lvlId: 'sports-y1-level', medId: 'sports-y1-medal', scoreId: 'sports-y1-score' }
+    { yrId: 'sports-y4-year', defYr: '2025-2026 (12-ஆம் வகுப்பு)', std: '12th Std (Year 4)', lvlId: 'sports-y4-level', medId: 'sports-y4-medal', tournId: 'sports-y4-tourn', authId: 'sports-y4-auth', scoreId: 'sports-y4-score' },
+    { yrId: 'sports-y3-year', defYr: '2024-2025 (11-ஆம் வகுப்பு)', std: '11th Std (Year 3)', lvlId: 'sports-y3-level', medId: 'sports-y3-medal', tournId: 'sports-y3-tourn', authId: 'sports-y3-auth', scoreId: 'sports-y3-score' },
+    { yrId: 'sports-y2-year', defYr: '2023-2024 (10-ஆம் வகுப்பு)', std: '10th Std (Year 2)', lvlId: 'sports-y2-level', medId: 'sports-y2-medal', tournId: 'sports-y2-tourn', authId: 'sports-y2-auth', scoreId: 'sports-y2-score' },
+    { yrId: 'sports-y1-year', defYr: '2022-2023 (9-ஆம் வகுப்பு)', std: '9th Std (Year 1)', lvlId: 'sports-y1-level', medId: 'sports-y1-medal', tournId: 'sports-y1-tourn', authId: 'sports-y1-auth', scoreId: 'sports-y1-score' }
   ];
 
   let rows = [];
   let totalScore = 0;
 
   years.forEach((item, index) => {
+    const yrVal = (document.getElementById(item.yrId) && document.getElementById(item.yrId).value) || item.defYr;
     const lvlVal = document.getElementById(item.lvlId) ? document.getElementById(item.lvlId).value : 'none';
     const medVal = document.getElementById(item.medId) ? document.getElementById(item.medId).value : 'none';
+    const tournVal = (document.getElementById(item.tournId) && document.getElementById(item.tournId).value.trim()) || 'அங்கீகரிக்கப்பட்ட விளையாட்டுப் போட்டி (Official Meet)';
+    const authVal = (document.getElementById(item.authId) && document.getElementById(item.authId).value.trim()) || 'SDAT / SGFI / KVS / Sports Association';
+
     const scoreText = document.getElementById(item.scoreId) ? document.getElementById(item.scoreId).innerText : '0 மதிப்பெண்';
     const score = parseInt(scoreText) || 0;
     totalScore += score;
 
-    const lvlObj = SPORTS_LEVEL_MAP[lvlVal] || { name: '-', table: '-' };
+    const lvlObj = SPORTS_LEVEL_MAP[lvlVal] || { name: '-- சான்றிதழ் இல்லை --', table: '-' };
     const medName = SPORTS_MEDAL_MAP[medVal] || '-';
 
     rows.push({
       sl: index + 1,
-      year: item.yr,
+      academicYear: yrVal,
+      standard: item.std,
+      tournament: tournVal,
+      authority: authVal,
       level: lvlObj.name,
       medal: medName,
       table: lvlObj.table,
@@ -8292,47 +8499,52 @@ function getFormDataPayload() {
     });
   });
 
-  return { name, appNo, discipline, rows, totalScore };
+  return { meta, courseKey, name, appNo, discipline, community, rows, totalScore };
 }
 
-function buildOfficialFormHTML(payload, isPrintMode) {
+function buildOfficialFormHTML(payload) {
+  const m = payload.meta;
   return `
-    <div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #0f172a; line-height: 1.45; max-width: 780px; margin: 0 auto; background: #ffffff;">
-      <!-- ANNEXURE VII (a) -->
+    <div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #0f172a; line-height: 1.45; max-width: 800px; margin: 0 auto; background: #ffffff;">
+      <!-- FORM A -->
       <div style="text-align: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 8px; margin-bottom: 14px;">
-        <div style="font-size: 13pt; font-weight: 900; color: #1e3a8a; text-transform: uppercase;">GOVERNMENT OF TAMIL NADU</div>
-        <div style="font-size: 9.5pt; font-weight: 700; color: #334155; margin: 2px 0;">SELECTION COMMITTEE, DIRECTORATE OF MEDICAL EDUCATION &amp; RESEARCH / TNEA</div>
-        <div style="font-size: 11pt; font-weight: 800; color: #0f172a; margin: 4px 0;">ANNEXURE – VII (a)</div>
-        <div style="font-size: 9.5pt; font-weight: 800; color: #047857;">SPECIAL CATEGORY APPLICATION FORM FOR EMINENT SPORTS PERSONS QUOTA</div>
-        <div style="font-size: 8.5pt; color: #64748b; font-weight: 600;">(ADMISSION TO PROFESSIONAL DEGREE COURSES: MBBS / BDS / B.E. / B.TECH / BVSc / B.Sc AGRI)</div>
+        <div style="font-size: 13pt; font-weight: 900; color: #1e3a8a; text-transform: uppercase;">${m.gov_dept}</div>
+        <div style="font-size: 9.5pt; font-weight: 700; color: #334155; margin: 2px 0;">${m.committee}</div>
+        <div style="font-size: 11pt; font-weight: 900; color: #0f172a; margin: 4px 0;">${m.form_a}</div>
+        <div style="font-size: 9.5pt; font-weight: 800; color: #047857;">${m.title}</div>
+        <div style="font-size: 8.5pt; color: #64748b; font-weight: 600;">${m.sub_course}</div>
       </div>
 
       <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 9pt;">
         <tr>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px; width: 45%; font-weight: 700; background: #f8fafc;">1. Name of the Candidate (மாணவர் பெயர்):</td>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px; width: 45%; font-weight: 700; background: #f8fafc;">1. விண்ணப்பிக்கும் படிப்பு (Target Course):</td>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 800; color: #064e3b;">${m.sub_course}</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">2. Name of the Candidate (மாணவர் பெயர்):</td>
           <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 800; color: #1e3a8a;">${payload.name}</td>
         </tr>
         <tr>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">2. Application No. / NEET Reg No. (விண்ணப்ப எண்):</td>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">3. ${m.app_label}:</td>
           <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 800; color: #1e3a8a;">${payload.appNo}</td>
         </tr>
         <tr>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">3. Sports Discipline / Game (விளையாட்டு வகை):</td>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">4. Sports Discipline / Game &amp; Event (விளையாட்டு &amp; பிரிவு):</td>
           <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700;">${payload.discipline}</td>
         </tr>
         <tr>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">4. Nativity &amp; Community (இருப்பிடம் &amp; வகுப்பு):</td>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px;">Tamil Nadu Native (தமிழ்நாடு இருப்பிடம்)</td>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">5. Nativity &amp; Community (இருப்பிடம் &amp; வகுப்பு):</td>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px;">${payload.community}</td>
         </tr>
         <tr>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">5. Total Cumulative Sports Marks (கோரப்படும் மொத்த மதிப்பெண்கள்):</td>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">6. Total Cumulative Sports Marks (கோரப்படும் மொத்த மதிப்பெண்கள்):</td>
           <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 900; font-size: 11pt; color: #047857;">${payload.totalScore} Marks</td>
         </tr>
       </table>
 
       <div style="font-size: 8.5pt; text-align: justify; margin: 10px 0; line-height: 1.5; color: #1e293b; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px 10px;">
         <strong>DECLARATION &amp; UNDERTAKING (உறுதிமொழி):</strong><br/>
-        I hereby declare that the particulars given above and in Annexure VII (b) are true, genuine and correct to the best of my knowledge and belief. I have submitted genuine original sports certificates along with relevant forms issued by recognized National Federations / State Associations / SGFI / KVS / CBSE / SDAT. I also undertake that on admission under the Eminent Sports Persons Quota, I shall regularly participate in sports activities representing the institution / university.
+        I hereby declare that the particulars given above and in ${m.form_b} are true, genuine and correct to the best of my knowledge and belief. I have submitted genuine original sports certificates along with relevant forms issued by recognized National Federations / State Associations / SGFI / KVS / CBSE / SDAT. I also undertake that on admission under the Eminent Sports Persons Quota, I shall regularly participate in sports activities representing the institution / university.
       </div>
 
       <div style="margin-top: 24px; display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; color: #334155;">
@@ -8341,51 +8553,53 @@ function buildOfficialFormHTML(payload, isPrintMode) {
         <div style="text-align: center;">மாணவர் கையொப்பம்<br/>(Signature of Candidate)</div>
       </div>
 
-      <!-- Divider / Page Break -->
+      <!-- Page Break for Form B -->
       <div style="margin: 22px 0 16px 0; border-top: 2px dashed #94a3b8; page-break-before: always; padding-top: 14px;"></div>
 
-      <!-- ANNEXURE VII (b) -->
+      <!-- FORM B -->
       <div style="text-align: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 8px; margin-bottom: 12px;">
-        <div style="font-size: 13pt; font-weight: 900; color: #1e3a8a; text-transform: uppercase;">GOVERNMENT OF TAMIL NADU</div>
-        <div style="font-size: 9.5pt; font-weight: 700; color: #334155; margin: 2px 0;">DIRECTORATE OF MEDICAL EDUCATION &amp; RESEARCH / ANNA UNIVERSITY TNEA</div>
-        <div style="font-size: 11pt; font-weight: 800; color: #0f172a; margin: 4px 0;">ANNEXURE – VII (b)</div>
+        <div style="font-size: 13pt; font-weight: 900; color: #1e3a8a; text-transform: uppercase;">${m.gov_dept}</div>
+        <div style="font-size: 9.5pt; font-weight: 700; color: #334155; margin: 2px 0;">${m.committee}</div>
+        <div style="font-size: 11pt; font-weight: 900; color: #0f172a; margin: 4px 0;">${m.form_b}</div>
         <div style="font-size: 9.5pt; font-weight: 800; color: #047857;">DETAILS OF SPORTS CERTIFICATES PRODUCED FOR EMINENT SPORTS PERSONS QUOTA</div>
-        <div style="font-size: 8.5pt; color: #64748b; font-weight: 600;">(Eligible Academic Years: 9th, 10th, 11th &amp; 12th Standards — One highest certificate per year)</div>
+        <div style="font-size: 8.5pt; color: #64748b; font-weight: 600;">(Eligible Academic Years: 9th, 10th, 11th &amp; 12th Standards — Maximum one highest certificate per year)</div>
       </div>
 
-      <div style="display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; margin-bottom: 8px; color: #1e293b;">
+      <div style="display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; margin-bottom: 8px; color: #1e293b; background: #f1f5f9; padding: 6px 10px; border-radius: 6px;">
         <span>மாணவர் பெயர்: <strong>${payload.name}</strong></span>
         <span>விண்ணப்ப எண்: <strong>${payload.appNo}</strong></span>
         <span>விளையாட்டு: <strong>${payload.discipline}</strong></span>
       </div>
 
-      <table style="width: 100%; border-collapse: collapse; margin-bottom: 10px; font-size: 8.5pt;">
+      <table style="width: 100%; border-collapse: collapse; margin-bottom: 10px; font-size: 8.2pt;">
         <thead>
           <tr style="background-color: #1e3a8a; color: #ffffff;">
-            <th style="border: 1px solid #64748b; padding: 6px 8px; width: 5%; text-align: center;">Sl.</th>
-            <th style="border: 1px solid #64748b; padding: 6px 8px; width: 22%;">கல்வி ஆண்டு &amp; வகுப்பு (Academic Year)</th>
-            <th style="border: 1px solid #64748b; padding: 6px 8px; width: 33%;">போட்டி நிலை (Tournament Level)</th>
-            <th style="border: 1px solid #64748b; padding: 6px 8px; width: 22%;">வெற்றி நிலை (Position / Medal)</th>
-            <th style="border: 1px solid #64748b; padding: 6px 8px; width: 9%; text-align: center;">அட்டவணை</th>
-            <th style="border: 1px solid #64748b; padding: 6px 8px; width: 9%; text-align: center;">மதிப்பெண்</th>
+            <th style="border: 1px solid #64748b; padding: 6px 6px; width: 4%; text-align: center;">Sl.</th>
+            <th style="border: 1px solid #64748b; padding: 6px 6px; width: 14%;">கல்வியாண்டு &amp; வகுப்பு (Academic Year)</th>
+            <th style="border: 1px solid #64748b; padding: 6px 6px; width: 24%;">போட்டியின் பெயர் (Tournament / Meet)</th>
+            <th style="border: 1px solid #64748b; padding: 6px 6px; width: 22%;">போட்டி நிலை (Level)</th>
+            <th style="border: 1px solid #64748b; padding: 6px 6px; width: 18%;">அமைப்பு &amp; சான்றிதழ் எண்</th>
+            <th style="border: 1px solid #64748b; padding: 6px 6px; width: 10%;">பதக்கம் / வெற்றி</th>
+            <th style="border: 1px solid #64748b; padding: 6px 6px; width: 8%; text-align: center;">மதிப்பெண்</th>
           </tr>
         </thead>
         <tbody>
           ${payload.rows.map(r => `
             <tr style="background-color: ${r.sl % 2 === 0 ? '#f8fafc' : '#ffffff'};">
-              <td style="border: 1px solid #94a3b8; padding: 6px 8px; text-align: center;">${r.sl}</td>
-              <td style="border: 1px solid #94a3b8; padding: 6px 8px; font-weight: 700;">${r.year}</td>
-              <td style="border: 1px solid #94a3b8; padding: 6px 8px;">${r.level}</td>
-              <td style="border: 1px solid #94a3b8; padding: 6px 8px;">${r.medal}</td>
-              <td style="border: 1px solid #94a3b8; padding: 6px 8px; text-align: center; font-weight: 700;">${r.table}</td>
-              <td style="border: 1px solid #94a3b8; padding: 6px 8px; text-align: center; font-weight: 800; color: #047857;">${r.score}</td>
+              <td style="border: 1px solid #94a3b8; padding: 5px 6px; text-align: center;">${r.sl}</td>
+              <td style="border: 1px solid #94a3b8; padding: 5px 6px; font-weight: 700;">${r.academicYear}</td>
+              <td style="border: 1px solid #94a3b8; padding: 5px 6px;">${r.tournament}</td>
+              <td style="border: 1px solid #94a3b8; padding: 5px 6px;">${r.level} (${r.table})</td>
+              <td style="border: 1px solid #94a3b8; padding: 5px 6px;">${r.authority}</td>
+              <td style="border: 1px solid #94a3b8; padding: 5px 6px; font-weight: 700;">${r.medal}</td>
+              <td style="border: 1px solid #94a3b8; padding: 5px 6px; text-align: center; font-weight: 800; color: #047857;">${r.score}</td>
             </tr>
           `).join('')}
-          <tr style="background-color: #fefce8; font-weight: 900; font-size: 9.5pt;">
-            <td colspan="5" style="border: 1px solid #94a3b8; padding: 8px 10px; text-align: right; color: #92400e;">
+          <tr style="background-color: #fefce8; font-weight: 900; font-size: 9.2pt;">
+            <td colspan="6" style="border: 1px solid #94a3b8; padding: 7px 10px; text-align: right; color: #92400e;">
               CUMULATIVE TOTAL SPORTS MARKS CLAIMED (கூட்டு மொத்த மதிப்பெண்கள்):
             </td>
-            <td style="border: 1px solid #94a3b8; padding: 8px 10px; text-align: center; color: #92400e; font-size: 11pt;">
+            <td style="border: 1px solid #94a3b8; padding: 7px 8px; text-align: center; color: #92400e; font-size: 11pt;">
               ${payload.totalScore}
             </td>
           </tr>
@@ -8393,7 +8607,7 @@ function buildOfficialFormHTML(payload, isPrintMode) {
       </table>
 
       <div style="font-size: 7.8pt; color: #475569; line-height: 1.4; margin-top: 6px;">
-        <em>* குறிப்பு: தமிழ்நாடு விளையாட்டு மேம்பாட்டு ஆணையம் (SDAT) வழிகாட்டுதலின்படி, ஒரு கல்வி ஆண்டில் 1 அதிகபட்ச சாதனைக்கு மட்டுமே மதிப்பெண் வழங்கப்படும். தமிழகத்தின் எல்லைக்குள் அமைந்துள்ள கேந்திரிய வித்யாலயா (KVS) மற்றும் சிபிஎஸ்இ (CBSE) பள்ளிகளில் பயின்ற தமிழக இருப்பிடச் சான்றுடைய மாணவர்கள் மட்டுமே தகுதியுடையவர்கள்.</em>
+        <em>* குறிப்பு: தமிழ்நாடு விளையாட்டு மேம்பாட்டு ஆணையம் (SDAT) மற்றும் சேர்க்கைக் குழு விதிகளின்படி, ஒரு கல்வி ஆண்டில் 1 அதிகபட்ச சாதனைக்கு மட்டுமே மதிப்பெண் வழங்கப்படும். தமிழகத்தின் எல்லைக்குள் அமைந்துள்ள கேந்திரிய வித்யாலயா (KVS) மற்றும் சிபிஎஸ்இ (CBSE) பள்ளிகளில் பயின்ற தமிழக இருப்பிடச் சான்றுடைய மாணவர்கள் மட்டுமே தகுதியுடையவர்கள்.</em>
       </div>
 
       <div style="margin-top: 35px; display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; color: #334155;">
@@ -8409,41 +8623,45 @@ function generateOfficialSportsPDF() {
   const payload = getFormDataPayload();
   const printWindow = window.open('', '_blank', 'width=850,height=900');
   if (!printWindow) {
-    alert('பாப்-அப் விண்டோ தடுக்கப்பட்டுள்ளது. தயவுசெய்து பாப்-அப் அனுமதியை இயக்கவும்.');
+    alert('பாப்-அப் விண்டோ தடுக்கப்பட்டுள்ளது. தயவுசெய்து உலாவி அமைப்பில் பாப்-அப் அனுமதியை இயக்கவும்.');
     return;
   }
 
-  const printDocHTML = `
-    <!DOCTYPE html>
-    <html lang="ta">
-    <head>
-      <meta charset="utf-8">
-      <title>ANNEXURE_VII_A_and_B_${payload.appNo.replace(/[^a-zA-Z0-9_-]/g, '')}</title>
-      <style>
-        @page { size: A4; margin: 12mm 15mm; }
-        body { margin: 0; padding: 10px; background: #ffffff; }
-        @media print {
-          body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-        }
-      </style>
-    </head>
-    <body>
-      ${buildOfficialFormHTML(payload, true)}
+  const cleanAppNo = payload.appNo.replace(/[^a-zA-Z0-9_-]/g, '') || 'Application';
+  const cleanCourse = payload.courseKey.toUpperCase();
 
-    </body>
-    </html>
-  `;
+  const printDocHTML = `<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="utf-8">
+  <title>${cleanCourse}_SPORTS_QUOTA_FORM_${cleanAppNo}</title>
+  <style>
+    @page { size: A4; margin: 12mm 15mm; }
+    body { margin: 0; padding: 10px; background: #ffffff; }
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  ${buildOfficialFormHTML(payload)}
+</body>
+</html>`;
 
   printWindow.document.open();
   printWindow.document.write(printDocHTML);
-  printWindow.document.close(); printWindow.focus(); setTimeout(function(){ printWindow.print(); }, 400);
+  printWindow.document.close();
+  printWindow.focus();
+  setTimeout(function() {
+    printWindow.print();
+  }, 400);
 }
 
 function previewOfficialSportsModal() {
   const payload = getFormDataPayload();
   const contentEl = document.getElementById('sportsFormModalContent');
   if (contentEl) {
-    contentEl.innerHTML = buildOfficialFormHTML(payload, false);
+    contentEl.innerHTML = buildOfficialFormHTML(payload);
   }
   const modal = document.getElementById('sportsFormPreviewModal');
   if (modal) {
