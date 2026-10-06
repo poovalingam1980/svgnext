@@ -4715,6 +4715,101 @@
   }
 }
 
+
+/* ========================================================
+   FLOATING BACK-TO-TOP BUTTON (VISIBLE ON RIGHT IN ALL SECTIONS)
+   & CENTER-ALIGNED 2-LINE TRADITIONAL TIRUKKURAL
+   ======================================================== */
+.floating-back-to-top {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 99999 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  padding: 9px 18px !important;
+  background: linear-gradient(135deg, #0284c7 0%, #1e40af 100%) !important;
+  color: #ffffff !important;
+  border: 1.8px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), 0 0 12px rgba(56, 189, 248, 0.4) !important;
+  font-family: 'Noto Sans Tamil', 'Inter', sans-serif !important;
+  font-size: 0.86rem !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  outline: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(14px) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.floating-back-to-top.visible {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+
+.floating-back-to-top:hover {
+  transform: translateY(-3px) scale(1.04) !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(56, 189, 248, 0.6) !important;
+  background: linear-gradient(135deg, #0369a1 0%, #1e3a8a 100%) !important;
+  border-color: #facc15 !important;
+}
+
+.floating-btn-arrow {
+  font-size: 0.92rem !important;
+  line-height: 1 !important;
+  color: #facc15 !important;
+}
+
+.floating-btn-text {
+  letter-spacing: 0.3px !important;
+}
+
+@media (max-width: 680px) {
+  .floating-back-to-top {
+    bottom: 16px !important;
+    right: 14px !important;
+    padding: 7px 14px !important;
+    font-size: 0.78rem !important;
+  }
+}
+
+/* Tirukkural 2-Line & Center-Aligned Meaning Styles */
+.kural-verse-text {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: clamp(1.02rem, 1.35vw, 1.18rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.6 !important;
+  color: #ffffff !important;
+  margin: 4px 0 8px 0 !important;
+  letter-spacing: 0.2px !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
+  text-align: center !important;
+}
+
+.kural-meaning {
+  font-size: clamp(0.80rem, 0.95vw, 0.88rem) !important;
+  color: #f1f5f9 !important;
+  line-height: 1.5 !important;
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  background: rgba(15, 23, 42, 0.65) !important;
+  padding: 7px 16px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(250, 204, 21, 0.3) !important;
+  text-align: center !important;
+}
+
+.kural-meaning strong {
+  color: #fde047 !important;
+  font-weight: 800 !important;
+}
+
 </style>
 </head>
 <body id="top">
@@ -4829,7 +4924,6 @@
 </div><div class="header-banner-wrap">
 <header class="header-banner">
 <!-- Animated Glow Sparkle Badge -->
-
 <!-- Crystal Clear Glowing Main Title -->
 <h1 class="banner-main-title">அரசு / சீருடைப் பணி போட்டித்தேர்வுகள்</h1>
 <div style="font-family: 'Inter', sans-serif; font-size: clamp(0.92rem, 1.25vw, 1.15rem); font-weight: 800; color: #cbd5e1; letter-spacing: 1.5px; margin: 0 0 10px 0; text-transform: uppercase; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
@@ -7487,7 +7581,8 @@
 <span class="kural-sparkle">✨ விடாமுயற்சி</span>
 </div>
 <div class="kural-verse-text">
-    “அருமை உடைத்தென் றசாவாமை வேண்டும் பெருமை முயற்சி தரும்.”
+    “அருமை உடைத்தென் றசாவாமை வேண்டும்<br/>
+    பெருமை முயற்சி தரும்.”
   </div>
 <div class="kural-meaning">
 <strong>மு. வரதராசனார் உரை:</strong> கடினம் என்று சோர்வடையாமல் விடாமுயற்சியுடன் உழைத்தால் அச்செயலை வென்று முடிக்கும் பெரும் பெருமையை அந்த முயற்சியே தரும்.
@@ -7595,9 +7690,7 @@
 <span style="color: #cbd5e1; margin: 0 8px;">|</span>
 <a href="index.html" style="color: #0284c7; font-weight: 600; text-decoration: none; font-size: 0.85rem;">🎓 உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு</a>
 </div>
-</footer></div><a class="back-to-top" href="#top" title="மேலே செல்ல">
-<span>▲</span> மேலே (Top)
-  </a><script>
+</footer></div><script>
     // 1. Dynamic Typing Effect for Flash News Ticker
     const typingTexts = [
       "10-ஆம் வகுப்பு முடித்த உடனேயே TNPSC குரூப் 4 & VAO தேர்வு எழுதலாம்!",
@@ -8092,5 +8185,24 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
-</body>
+<button aria-label="பக்கத்தின் மேலே செல்" class="floating-back-to-top" id="floatingBackToTop" title="பக்கத்தின் மேலே செல்">
+<span class="floating-btn-arrow">▲</span>
+<span class="floating-btn-text">மேலே செல்</span>
+</button><script>
+// Smooth Scroll Floating Back to Top Button
+(function() {
+  const btt = document.getElementById('floatingBackToTop');
+  if (!btt) return;
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 80) {
+      btt.classList.add('visible');
+    } else {
+      btt.classList.remove('visible');
+    }
+  });
+  btt.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script></body>
 </html>
