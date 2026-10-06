@@ -5626,13 +5626,12 @@
 }
 
 #sports-tools-sec .sports-year-card span[id$="-score"] {
-  background: #fef3c7 !important;
-  color: #92400e !important;
-  border: 1.3px solid #f59e0b !important;
-  padding: 3px 10px !important;
-  border-radius: 6px !important;
-  font-weight: 800 !important;
-  font-size: 0.84rem !important;
+  background: transparent !important;
+  color: #fef08a !important;
+  border: none !important;
+  padding: 0 !important;
+  font-weight: 900 !important;
+  font-size: 0.88rem !important;
 }
 
 #sports-tools-sec .sports-year-card label {
@@ -5970,14 +5969,14 @@
 
 #sports-tools-sec .sports-card-score-pill {
   white-space: nowrap !important;
-  font-size: 0.80rem !important;
-  font-weight: 900 !important;
-  background: #fef08a !important;
-  color: #713f12 !important;
-  padding: 3px 9px !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  background: transparent !important;
+  color: #fef08a !important;
+  padding: 2px 8px !important;
   border-radius: 6px !important;
-  border: 1.2px solid #eab308 !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+  border: 1.2px solid rgba(254, 240, 138, 0.6) !important;
+  box-shadow: none !important;
 }
 
 #sports-tools-sec .sports-card-body {
@@ -6085,14 +6084,14 @@
 
 #sports-tools-sec .sports-card-score-pill {
   white-space: nowrap !important;
-  font-size: 0.80rem !important;
-  font-weight: 900 !important;
-  background: #fef08a !important;
-  color: #713f12 !important;
-  padding: 3px 9px !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  background: transparent !important;
+  color: #fef08a !important;
+  padding: 2px 8px !important;
   border-radius: 6px !important;
-  border: 1.2px solid #eab308 !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+  border: 1.2px solid rgba(254, 240, 138, 0.6) !important;
+  box-shadow: none !important;
 }
 
 /* Ensure the other parts below the calculator are clean light (பழையபடியே) */
@@ -6652,13 +6651,17 @@
 <div class="sports-4year-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 14px; margin-bottom: 18px;">
 <!-- Year 4: 12th Std -->
 <div class="sports-year-card" style="background: #ffffff !important; border: 2px solid #34d399 !important; border-radius: 12px !important; padding: 0 !important; overflow: visible !important; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important; display: flex !important; flex-direction: column !important;">
-<div class="sports-card-header" style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%) !important; padding: 10px 14px !important; display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 8px !important; border-bottom: 2px solid #10b981 !important; border-radius: 10px 10px 0 0 !important;">
-<div class="sports-card-title-group" style="display: flex !important; flex-direction: column !important; gap: 2px !important; min-width: 0 !important;">
-<span class="sports-card-badge" style="font-weight: 800 !important; font-size: 0.90rem !important; color: #ffffff !important; letter-spacing: 0.2px !important; white-space: nowrap !important; text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;">🥇 12-ஆம் வகுப்பு</span>
-<span class="sports-card-yr-pill" style="font-size: 0.72rem !important; font-weight: 700 !important; color: #fef08a !important; letter-spacing: 0.3px !important; white-space: nowrap !important;">12th Std (Year 4)</span>
+<div class="sports-card-header" style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%) !important; padding: 12px 14px !important; display: flex !important; flex-direction: column !important; gap: 6px !important; border-bottom: 2px solid #10b981 !important; border-radius: 10px 10px 0 0 !important;">
+<div style="display: flex !important; align-items: center !important; justify-content: space-between !important; width: 100% !important;">
+<span class="sports-card-badge" style="font-weight: 900 !important; font-size: 0.95rem !important; color: #ffffff !important; letter-spacing: 0.2px !important; white-space: nowrap !important; text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;">🥇 12-ஆம் வகுப்பு</span>
 </div>
-<!-- Empty space in header as requested -->
-<span id="sports-y4-score" style="display: none !important;">0</span>
+<div style="display: flex !important; align-items: center !important; justify-content: space-between !important; width: 100% !important; gap: 6px !important;">
+<span class="sports-card-yr-pill" style="font-size: 0.72rem !important; font-weight: 700 !important; background: rgba(255, 255, 255, 0.15) !important; color: #fef08a !important; padding: 2px 8px !important; border-radius: 999px !important; border: 1px solid rgba(254, 240, 138, 0.4) !important; white-space: nowrap !important;">12th Std (Year 4)</span>
+<div class="sports-card-score-pill" style="display: inline-flex !important; align-items: center !important; gap: 4px !important; background: transparent !important; border: 1.2px solid rgba(254, 240, 138, 0.6) !important; border-radius: 6px !important; padding: 2px 8px !important; color: #fef08a !important; font-size: 0.78rem !important; font-weight: 800 !important; box-shadow: none !important;" title="12-ஆம் வகுப்பு சான்றிதழ் மதிப்பெண்">
+<span id="sports-y4-score" style="font-size: 0.88rem !important; font-weight: 900 !important; color: #fef08a !important; line-height: 1 !important; background: transparent !important; border: none !important; padding: 0 !important;">0</span>
+<span style="font-size: 0.70rem !important; font-weight: 700 !important; color: #bae6fd !important; line-height: 1 !important;">மதிப்பெண்</span>
+</div>
+</div>
 </div>
 <div class="sports-card-body" style="padding: 14px 14px 16px 14px !important; display: flex !important; flex-direction: column !important; gap: 10px !important; background: #fcfdfd !important; border-radius: 0 0 10px 10px !important;">
 <div class="sports-field-group">
@@ -6688,13 +6691,17 @@
 </div>
 <!-- Year 3: 11th Std -->
 <div class="sports-year-card" style="background: #ffffff !important; border: 2px solid #34d399 !important; border-radius: 12px !important; padding: 0 !important; overflow: visible !important; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important; display: flex !important; flex-direction: column !important;">
-<div class="sports-card-header" style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%) !important; padding: 10px 14px !important; display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 8px !important; border-bottom: 2px solid #10b981 !important; border-radius: 10px 10px 0 0 !important;">
-<div class="sports-card-title-group" style="display: flex !important; flex-direction: column !important; gap: 2px !important; min-width: 0 !important;">
-<span class="sports-card-badge" style="font-weight: 800 !important; font-size: 0.90rem !important; color: #ffffff !important; letter-spacing: 0.2px !important; white-space: nowrap !important; text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;">🥈 11-ஆம் வகுப்பு</span>
-<span class="sports-card-yr-pill" style="font-size: 0.72rem !important; font-weight: 700 !important; color: #fef08a !important; letter-spacing: 0.3px !important; white-space: nowrap !important;">11th Std (Year 3)</span>
+<div class="sports-card-header" style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%) !important; padding: 12px 14px !important; display: flex !important; flex-direction: column !important; gap: 6px !important; border-bottom: 2px solid #10b981 !important; border-radius: 10px 10px 0 0 !important;">
+<div style="display: flex !important; align-items: center !important; justify-content: space-between !important; width: 100% !important;">
+<span class="sports-card-badge" style="font-weight: 900 !important; font-size: 0.95rem !important; color: #ffffff !important; letter-spacing: 0.2px !important; white-space: nowrap !important; text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;">🥈 11-ஆம் வகுப்பு</span>
 </div>
-<!-- Empty space in header as requested -->
-<span id="sports-y3-score" style="display: none !important;">0</span>
+<div style="display: flex !important; align-items: center !important; justify-content: space-between !important; width: 100% !important; gap: 6px !important;">
+<span class="sports-card-yr-pill" style="font-size: 0.72rem !important; font-weight: 700 !important; background: rgba(255, 255, 255, 0.15) !important; color: #fef08a !important; padding: 2px 8px !important; border-radius: 999px !important; border: 1px solid rgba(254, 240, 138, 0.4) !important; white-space: nowrap !important;">11th Std (Year 3)</span>
+<div class="sports-card-score-pill" style="display: inline-flex !important; align-items: center !important; gap: 4px !important; background: transparent !important; border: 1.2px solid rgba(254, 240, 138, 0.6) !important; border-radius: 6px !important; padding: 2px 8px !important; color: #fef08a !important; font-size: 0.78rem !important; font-weight: 800 !important; box-shadow: none !important;" title="11-ஆம் வகுப்பு சான்றிதழ் மதிப்பெண்">
+<span id="sports-y3-score" style="font-size: 0.88rem !important; font-weight: 900 !important; color: #fef08a !important; line-height: 1 !important; background: transparent !important; border: none !important; padding: 0 !important;">0</span>
+<span style="font-size: 0.70rem !important; font-weight: 700 !important; color: #bae6fd !important; line-height: 1 !important;">மதிப்பெண்</span>
+</div>
+</div>
 </div>
 <div class="sports-card-body" style="padding: 14px 14px 16px 14px !important; display: flex !important; flex-direction: column !important; gap: 10px !important; background: #fcfdfd !important; border-radius: 0 0 10px 10px !important;">
 <div class="sports-field-group">
@@ -6724,13 +6731,17 @@
 </div>
 <!-- Year 2: 10th Std -->
 <div class="sports-year-card" style="background: #ffffff !important; border: 2px solid #34d399 !important; border-radius: 12px !important; padding: 0 !important; overflow: visible !important; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important; display: flex !important; flex-direction: column !important;">
-<div class="sports-card-header" style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%) !important; padding: 10px 14px !important; display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 8px !important; border-bottom: 2px solid #10b981 !important; border-radius: 10px 10px 0 0 !important;">
-<div class="sports-card-title-group" style="display: flex !important; flex-direction: column !important; gap: 2px !important; min-width: 0 !important;">
-<span class="sports-card-badge" style="font-weight: 800 !important; font-size: 0.90rem !important; color: #ffffff !important; letter-spacing: 0.2px !important; white-space: nowrap !important; text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;">🥉 10-ஆம் வகுப்பு</span>
-<span class="sports-card-yr-pill" style="font-size: 0.72rem !important; font-weight: 700 !important; color: #fef08a !important; letter-spacing: 0.3px !important; white-space: nowrap !important;">10th Std (Year 2)</span>
+<div class="sports-card-header" style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%) !important; padding: 12px 14px !important; display: flex !important; flex-direction: column !important; gap: 6px !important; border-bottom: 2px solid #10b981 !important; border-radius: 10px 10px 0 0 !important;">
+<div style="display: flex !important; align-items: center !important; justify-content: space-between !important; width: 100% !important;">
+<span class="sports-card-badge" style="font-weight: 900 !important; font-size: 0.95rem !important; color: #ffffff !important; letter-spacing: 0.2px !important; white-space: nowrap !important; text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;">🥉 10-ஆம் வகுப்பு</span>
 </div>
-<!-- Empty space in header as requested -->
-<span id="sports-y2-score" style="display: none !important;">0</span>
+<div style="display: flex !important; align-items: center !important; justify-content: space-between !important; width: 100% !important; gap: 6px !important;">
+<span class="sports-card-yr-pill" style="font-size: 0.72rem !important; font-weight: 700 !important; background: rgba(255, 255, 255, 0.15) !important; color: #fef08a !important; padding: 2px 8px !important; border-radius: 999px !important; border: 1px solid rgba(254, 240, 138, 0.4) !important; white-space: nowrap !important;">10th Std (Year 2)</span>
+<div class="sports-card-score-pill" style="display: inline-flex !important; align-items: center !important; gap: 4px !important; background: transparent !important; border: 1.2px solid rgba(254, 240, 138, 0.6) !important; border-radius: 6px !important; padding: 2px 8px !important; color: #fef08a !important; font-size: 0.78rem !important; font-weight: 800 !important; box-shadow: none !important;" title="10-ஆம் வகுப்பு சான்றிதழ் மதிப்பெண்">
+<span id="sports-y2-score" style="font-size: 0.88rem !important; font-weight: 900 !important; color: #fef08a !important; line-height: 1 !important; background: transparent !important; border: none !important; padding: 0 !important;">0</span>
+<span style="font-size: 0.70rem !important; font-weight: 700 !important; color: #bae6fd !important; line-height: 1 !important;">மதிப்பெண்</span>
+</div>
+</div>
 </div>
 <div class="sports-card-body" style="padding: 14px 14px 16px 14px !important; display: flex !important; flex-direction: column !important; gap: 10px !important; background: #fcfdfd !important; border-radius: 0 0 10px 10px !important;">
 <div class="sports-field-group">
@@ -6760,13 +6771,17 @@
 </div>
 <!-- Year 1: 9th Std -->
 <div class="sports-year-card" style="background: #ffffff !important; border: 2px solid #34d399 !important; border-radius: 12px !important; padding: 0 !important; overflow: visible !important; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important; display: flex !important; flex-direction: column !important;">
-<div class="sports-card-header" style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%) !important; padding: 10px 14px !important; display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 8px !important; border-bottom: 2px solid #10b981 !important; border-radius: 10px 10px 0 0 !important;">
-<div class="sports-card-title-group" style="display: flex !important; flex-direction: column !important; gap: 2px !important; min-width: 0 !important;">
-<span class="sports-card-badge" style="font-weight: 800 !important; font-size: 0.90rem !important; color: #ffffff !important; letter-spacing: 0.2px !important; white-space: nowrap !important; text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;">🏅 9-ஆம் வகுப்பு</span>
-<span class="sports-card-yr-pill" style="font-size: 0.72rem !important; font-weight: 700 !important; color: #fef08a !important; letter-spacing: 0.3px !important; white-space: nowrap !important;">9th Std (Year 1)</span>
+<div class="sports-card-header" style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%) !important; padding: 12px 14px !important; display: flex !important; flex-direction: column !important; gap: 6px !important; border-bottom: 2px solid #10b981 !important; border-radius: 10px 10px 0 0 !important;">
+<div style="display: flex !important; align-items: center !important; justify-content: space-between !important; width: 100% !important;">
+<span class="sports-card-badge" style="font-weight: 900 !important; font-size: 0.95rem !important; color: #ffffff !important; letter-spacing: 0.2px !important; white-space: nowrap !important; text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;">🏅 9-ஆம் வகுப்பு</span>
 </div>
-<!-- Empty space in header as requested -->
-<span id="sports-y1-score" style="display: none !important;">0</span>
+<div style="display: flex !important; align-items: center !important; justify-content: space-between !important; width: 100% !important; gap: 6px !important;">
+<span class="sports-card-yr-pill" style="font-size: 0.72rem !important; font-weight: 700 !important; background: rgba(255, 255, 255, 0.15) !important; color: #fef08a !important; padding: 2px 8px !important; border-radius: 999px !important; border: 1px solid rgba(254, 240, 138, 0.4) !important; white-space: nowrap !important;">9th Std (Year 1)</span>
+<div class="sports-card-score-pill" style="display: inline-flex !important; align-items: center !important; gap: 4px !important; background: transparent !important; border: 1.2px solid rgba(254, 240, 138, 0.6) !important; border-radius: 6px !important; padding: 2px 8px !important; color: #fef08a !important; font-size: 0.78rem !important; font-weight: 800 !important; box-shadow: none !important;" title="9-ஆம் வகுப்பு சான்றிதழ் மதிப்பெண்">
+<span id="sports-y1-score" style="font-size: 0.88rem !important; font-weight: 900 !important; color: #fef08a !important; line-height: 1 !important; background: transparent !important; border: none !important; padding: 0 !important;">0</span>
+<span style="font-size: 0.70rem !important; font-weight: 700 !important; color: #bae6fd !important; line-height: 1 !important;">மதிப்பெண்</span>
+</div>
+</div>
 </div>
 <div class="sports-card-body" style="padding: 14px 14px 16px 14px !important; display: flex !important; flex-direction: column !important; gap: 10px !important; background: #fcfdfd !important; border-radius: 0 0 10px 10px !important;">
 <div class="sports-field-group">
@@ -7009,17 +7024,115 @@
 </button>
 </div>
 </div>
-</div><div style="background: #f8fafc; border: 1.3px solid #e2e8f0; border-radius: 9px; padding: 12px 14px; text-align: left; font-size: 0.80rem; color: #334155; line-height: 1.55;">
-<div style="font-weight: 800; color: #1e3a8a; font-size: 0.88rem; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
-<span>📌</span><span>விளையாட்டுப் பிரிவு இடஒதுக்கீடு &amp; KVS / CBSE சிறப்பு விதிகள்:</span>
+</div><div style="margin-top: 22px; background: #ffffff; border: 2px solid #059669; border-radius: 12px; padding: 18px 20px; box-shadow: 0 4px 14px rgba(5, 150, 105, 0.1);">
+<div style="font-weight: 900; font-size: 1.05rem; color: #064e3b; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+<span>🏆</span>
+<span>தமிழ்நாடு முக்கிய உயர்கல்வி சேர்க்கைகளில் விளையாட்டு வீரர்களுக்கான இடங்கள் ஒதுக்கீடு விவரம் (Seat Matrix for Eminent Sports Persons Quota):</span>
 </div>
-<ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px;">
-<li><strong>மருத்துவச் சேர்க்கை (TN MBBS / BDS):</strong> அரசு மருத்துவக் கல்லூரிகளில் <strong>13 MBBS மற்றும் 2 BDS இடங்கள்</strong> விளையாட்டுப் பிரிவினருக்கு ஒதுக்கப்பட்டுள்ளன. நீட் தேர்வில் குறைந்தபட்ச தகுதி மதிப்பெண் போதுமானது; விளையாட்டு சான்றிதழ் மதிப்பெண்கள் அடிப்படையிலேயே பிரத்யேகத் தரவரிசை வெளியிடப்பட்டு நேரடி கலந்தாய்வு நடத்தப்படும்.</li>
-<li><strong>பொறியியல் (TNEA):</strong> <strong>500 சிறப்பு இடங்கள்</strong> (+2 PCM தேர்ச்சியுடன் விளையாட்டு மதிப்பெண் அடிப்படையில்).</li>
-<li><strong>வேளாண்மை (TNAU) &amp; கால்நடை (TANUVAS):</strong> முறையே <strong>40+ இடங்கள்</strong> மற்றும் <strong>5+ இடங்கள்</strong> விளையாட்டு வீரர்களுக்கு ஒதுக்கப்பட்டுள்ளன.</li>
-<li><strong>கேந்திரிய வித்யாலயா (KVS) &amp; சிபிஎஸ்இ (CBSE) விதி:</strong> தமிழக எல்லைக்குள் அமைந்துள்ள கேந்திரிய வித்யாலயா (KVS) மற்றும் CBSE பள்ளிகளில் பயின்ற தமிழக இருப்பிடச் சான்றுடைய மாணவர்கள் மட்டுமே இச்சலுகைக்குத் தகுதியுடையவர்கள். KVS/CBSE தேசியப் போட்டிகள் மாநில அளவிற்கும் (Table III), KVS மண்டல/CBSE கிளஸ்டர் போட்டிகள் கோட்ட/மண்டல அளவிற்கும் (Table IV) இணையாகக் கணக்கிடப்படும்.</li>
-</ul>
-</div></section>
+<p style="font-size: 0.86rem; color: #334155; line-height: 1.6; margin-bottom: 14px;">
+தமிழக அரசு மற்றும் பல்கலைக்கழக அரசாணைகளின்படி (GO Ms No. &amp; Prospectus), சிறந்த விளையாட்டு வீரர்களுக்கான (Eminent Sports Persons) சிறப்பு ஒதுக்கீட்டின் கீழ் தொழிற்கல்வி மற்றும் பட்டப்படிப்புகளில் ஒதுக்கப்பட்டுள்ள இடங்களின் அதிகாரப்பூர்வ பட்டியல்:
+</p>
+<div style="overflow-x: auto;">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.86rem; text-align: left;">
+<thead>
+<tr style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%); color: #ffffff; border-bottom: 2px solid #10b981;">
+<th style="padding: 10px 12px; border: 1px solid #059669;">வ.எண்</th>
+<th style="padding: 10px 12px; border: 1px solid #059669;">படிப்பு &amp; துறை (Course / Discipline)</th>
+<th style="padding: 10px 12px; border: 1px solid #059669;">சேர்க்கை வாரியம் / பல்கலைக்கழகம்</th>
+<th style="padding: 10px 12px; border: 1px solid #059669; text-align: center;">ஒதுக்கப்பட்ட இடங்கள்</th>
+<th style="padding: 10px 12px; border: 1px solid #059669;">முக்கிய தகுதி &amp; சேர்க்கை முறை</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #e2e8f0; background: #f0fdf4;">
+<td style="padding: 10px 12px; font-weight: 700; text-align: center; border: 1px solid #e2e8f0;">1</td>
+<td style="padding: 10px 12px; font-weight: 800; color: #065f46; border: 1px solid #e2e8f0;">🩺 அரசு மருத்துவப் படிப்புகள் (MBBS / BDS)</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">DME மருத்துவக் கல்வி இயக்ககம்</td>
+<td style="padding: 10px 12px; font-weight: 900; color: #064e3b; text-align: center; border: 1px solid #e2e8f0; background: #dcfce7; font-size: 0.95rem;">
+15 இடங்கள்<br><span style="font-size: 0.76rem; font-weight: 700; color: #047857;">(13 MBBS + 2 BDS)</span>
+</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">நீட் குறைந்தபட்ச தகுதி போதுமானது. விளையாட்டு சான்றிதழ் கூட்டு மதிப்பெண் (Rank list) அடிப்படையில் நேரடி சேர்க்கை.</td>
+</tr>
+<tr style="border-bottom: 1px solid #e2e8f0;">
+<td style="padding: 10px 12px; font-weight: 700; text-align: center; border: 1px solid #e2e8f0;">2</td>
+<td style="padding: 10px 12px; font-weight: 800; color: #1e3a8a; border: 1px solid #e2e8f0;">📐 பொறியியல் சேர்க்கை (B.E / B.Tech - TNEA)</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">அண்ணா பல்கலைக்கழகம் / DOTE</td>
+<td style="padding: 10px 12px; font-weight: 900; color: #1e3a8a; text-align: center; border: 1px solid #e2e8f0; background: #eff6ff; font-size: 0.95rem;">
+500 இடங்கள்<br><span style="font-size: 0.76rem; font-weight: 700; color: #2563eb;">(சிறப்பு இடஒதுக்கீடு)</span>
+</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">+2 கணிதம், இயற்பியல், வேதியியல் தேர்ச்சி. 4 ஆண்டு விளையாட்டுச் சான்றிதழ் கூட்டு மதிப்பெண் (190-க்கு) அடிப்படையில் கவுன்சிலிங்.</td>
+</tr>
+<tr style="border-bottom: 1px solid #e2e8f0; background: #f0fdf4;">
+<td style="padding: 10px 12px; font-weight: 700; text-align: center; border: 1px solid #e2e8f0;">3</td>
+<td style="padding: 10px 12px; font-weight: 800; color: #065f46; border: 1px solid #e2e8f0;">🌾 வேளாண்மை &amp; தோட்டக்கலை (B.Sc Agri / Horti)</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">TNAU தமிழ்நாடு வேளாண் பல்கலைக்கழகம்</td>
+<td style="padding: 10px 12px; font-weight: 900; color: #064e3b; text-align: center; border: 1px solid #e2e8f0; background: #dcfce7; font-size: 0.95rem;">
+40+ இடங்கள்<br><span style="font-size: 0.76rem; font-weight: 700; color: #047857;">(உறுப்புக் கல்லூரிகளில்)</span>
+</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">+2 அறிவியல் பாடங்களில் தேர்ச்சி மற்றும் விளையாட்டுச் சான்றிதழ்கள் தரவரிசைப் பட்டியல் அடிப்படையில் கலந்தாய்வு.</td>
+</tr>
+<tr style="border-bottom: 1px solid #e2e8f0;">
+<td style="padding: 10px 12px; font-weight: 700; text-align: center; border: 1px solid #e2e8f0;">4</td>
+<td style="padding: 10px 12px; font-weight: 800; color: #7c2d12; border: 1px solid #e2e8f0;">🐾 கால்நடை மருத்துவம் &amp; தொழில்நுட்பம் (BVSc &amp; B.Tech)</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">TANUVAS கால்நடை மருத்துவப் பல்கலைக்கழகம்</td>
+<td style="padding: 10px 12px; font-weight: 900; color: #7c2d12; text-align: center; border: 1px solid #e2e8f0; background: #fef2f2; font-size: 0.95rem;">
+8 இடங்கள்<br><span style="font-size: 0.76rem; font-weight: 700; color: #b91c1c;">(5 BVSc + 3 B.Tech)</span>
+</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">சென்னை, நாமக்கல், நெல்லை, ஒரத்தநாடு கல்லூரிகளில் விளையாட்டு வீரர்களுக்கான சிறப்புத் தரவரிசைப்படி சேர்க்கை.</td>
+</tr>
+<tr style="border-bottom: 1px solid #e2e8f0; background: #f0fdf4;">
+<td style="padding: 10px 12px; font-weight: 700; text-align: center; border: 1px solid #e2e8f0;">5</td>
+<td style="padding: 10px 12px; font-weight: 800; color: #0369a1; border: 1px solid #e2e8f0;">🐟 மீன்வள அறிவியல் &amp; பொறியியல் (B.F.Sc)</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">TNJFU தமிழ்நாடு டாக்டர் ஜெ.ஜெ. மீன்வளப் பல்கலை.</td>
+<td style="padding: 10px 12px; font-weight: 900; color: #0369a1; text-align: center; border: 1px solid #e2e8f0; background: #f0f9ff; font-size: 0.95rem;">
+5 இடங்கள்<br><span style="font-size: 0.76rem; font-weight: 700; color: #0284c7;">(3 B.F.Sc + 2 B.Tech)</span>
+</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">நாகப்பட்டினம் &amp; தூத்துக்குடி மீன்வளக் கல்லூரிகளில் சிறப்பு ஒதுக்கீடு.</td>
+</tr>
+<tr style="border-bottom: 1px solid #e2e8f0;">
+<td style="padding: 10px 12px; font-weight: 700; text-align: center; border: 1px solid #e2e8f0;">6</td>
+<td style="padding: 10px 12px; font-weight: 800; color: #6b21a8; border: 1px solid #e2e8f0;">⚖️ சட்டப் படிப்புகள் (5-Year Integrated B.A. LL.B.)</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">TNDALU அம்பேத்கர் சட்டப் பல்கலைக்கழகம்</td>
+<td style="padding: 10px 12px; font-weight: 900; color: #6b21a8; text-align: center; border: 1px solid #e2e8f0; background: #faf5ff; font-size: 0.95rem;">
+14 இடங்கள்<br><span style="font-size: 0.76rem; font-weight: 700; color: #7e22ce;">(4 SOEL + 10 அரசு சட்டக் கல்லூரிகள்)</span>
+</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">SOEL சென்னை வளாகம் மற்றும் மதுரை, திருச்சி, கோவை, நெல்லை உள்ளிட்ட அரசு சட்டக் கல்லூரிகளில் விளையாட்டு ஒதுக்கீடு.</td>
+</tr>
+<tr style="border-bottom: 1px solid #e2e8f0; background: #f0fdf4;">
+<td style="padding: 10px 12px; font-weight: 700; text-align: center; border: 1px solid #e2e8f0;">7</td>
+<td style="padding: 10px 12px; font-weight: 800; color: #047857; border: 1px solid #e2e8f0;">🩺 அரசு துணை மருத்துவப் படிப்புகள் (B.Pharm, B.Sc Nursing, BPT)</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">DME துணை மருத்துவக் குழு</td>
+<td style="padding: 10px 12px; font-weight: 900; color: #047857; text-align: center; border: 1px solid #e2e8f0; background: #dcfce7; font-size: 0.95rem;">
+20+ இடங்கள்<br><span style="font-size: 0.76rem; font-weight: 700; color: #059669;">(அரசு மருத்துவக் கல்லூரிகள்)</span>
+</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">துணை மருத்துவ பட்டப்படிப்புகளுக்கான சிறப்பு விளையாட்டுப் பிரிவு கலந்தாய்வு.</td>
+</tr>
+<tr style="border-bottom: 1px solid #e2e8f0;">
+<td style="padding: 10px 12px; font-weight: 700; text-align: center; border: 1px solid #e2e8f0;">8</td>
+<td style="padding: 10px 12px; font-weight: 800; color: #0f172a; border: 1px solid #e2e8f0;">🏛️ அரசு கலை &amp; அறிவியல் கல்லூரிகள் (B.A / B.Sc / B.Com)</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">TNGASA கல்லூரி கல்வி இயக்ககம் (DCE)</td>
+<td style="padding: 10px 12px; font-weight: 900; color: #0f172a; text-align: center; border: 1px solid #e2e8f0; background: #f8fafc; font-size: 0.95rem;">
+3% இடஒதுக்கீடு<br><span style="font-size: 0.76rem; font-weight: 700; color: #475569;">(அனைத்து அரசு கல்லூரிகளிலும்)</span>
+</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">ஒவ்வொரு கலை மற்றும் அறிவியல் இளநிலைப் பாடப்பிரிவிலும் விளையாட்டு வீரர்களுக்கு 3% கிடைமட்ட இடஒதுக்கீடு உண்டு.</td>
+</tr>
+<tr style="background: #f0fdf4;">
+<td style="padding: 10px 12px; font-weight: 700; text-align: center; border: 1px solid #e2e8f0;">9</td>
+<td style="padding: 10px 12px; font-weight: 800; color: #b45309; border: 1px solid #e2e8f0;">⚙️ பாலிடெக்னிக் டிப்ளமோ படிப்புகள் (Polytechnic Diploma)</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">தொழில்நுட்பக் கல்வி இயக்ககம் (DOTE)</td>
+<td style="padding: 10px 12px; font-weight: 900; color: #b45309; text-align: center; border: 1px solid #e2e8f0; background: #fefce8; font-size: 0.95rem;">
+தலா 2 இடங்கள்<br><span style="font-size: 0.76rem; font-weight: 700; color: #b45309;">(ஒவ்வொரு பாடப்பிரிவிலும்)</span>
+</td>
+<td style="padding: 10px 12px; border: 1px solid #e2e8f0;">அரசு பாலிடெக்னிக் கல்லூரிகளில் 10-ஆம் வகுப்பு தேர்ச்சியுடன் விளையாட்டுச் சான்றிதழ் அடிப்படையில் சேர்க்கை.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="margin-top: 12px; font-size: 0.80rem; color: #64748b; line-height: 1.5;">
+📌 <b>முக்கியக் குறிப்பு:</b> விளையாட்டு ஒதுக்கீட்டின் கீழ் தேர்ந்தெடுக்கப்படும் மாணவர்கள், தாங்கள் சேரும் கல்லூரி / பல்கலைக்கழகத்தின் சார்பாக விளையாட்டுப் போட்டிகளில் கட்டாயம் தொடர்ந்து பங்கேற்க வேண்டும் என்ற உறுதிமொழியை அளிக்க வேண்டும்.
+</div>
+</div>
+</section>
 <section class="section-card" id="student-ask-sec" style="border: 2px solid #0284c7 !important; background: #ffffff !important; box-shadow: 0 8px 24px rgba(2, 132, 199, 0.12) !important;">
 <div class="card-top-header" style="background: linear-gradient(135deg, #091330 0%, #1e3a8a 100%) !important; color: #ffffff !important; padding: 14px 20px !important; border-radius: 12px 12px 0 0 !important; margin: -1px -1px 16px -1px !important;">
 <h2 class="card-top-title" style="color: #ffffff !important; font-size: 1.25rem !important; display: flex !important; align-items: center !important; gap: 10px !important;">
