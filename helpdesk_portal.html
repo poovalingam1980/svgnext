@@ -8410,7 +8410,7 @@ function switchCalcPane(paneId) {
 </div>
 </div><script>
 // ========================================================
-// ADVANCED COURSE-SPECIFIC SPORTS FORMS & DYNAMIC YEARS LOGIC
+// ADVANCED COURSE-SPECIFIC SPORTS FORMS & DIRECT PDF DOWNLOAD
 // ========================================================
 const COURSE_METADATA = {
   'mbbs': {
@@ -8502,9 +8502,9 @@ function syncYearCheckboxesWithCalculator() {
 }
 
 // Hook sync into computeSportsQuota
-const originalComputeSportsQuota = computeSportsQuota;
+const origComputeSportsQuota = computeSportsQuota;
 computeSportsQuota = function() {
-  originalComputeSportsQuota();
+  origComputeSportsQuota();
   syncYearCheckboxesWithCalculator();
 };
 
@@ -8565,7 +8565,6 @@ function getFormDataPayload() {
 
   years.forEach((item) => {
     const chk = document.getElementById(item.chkId);
-    // Include if checkbox is checked OR level is selected
     const lvlVal = document.getElementById(item.lvlId) ? document.getElementById(item.lvlId).value : 'none';
     const isChecked = chk ? chk.checked : (lvlVal !== 'none');
 
@@ -8728,6 +8727,459 @@ function buildOfficialFormHTML(payload) {
       </div>
     </div>
   `;
+}
+
+// ----------------------------------------------------
+// PURE CLIENT-SIDE 2-PAGE PDF GENERATOR & DIRECT DOWNLOAD
+// ----------------------------------------------------
+function dataURItoUint8Array(dataURI) {
+  const byteString = atob(dataURI.split(',')[1]);
+  const ia = new Uint8Array(byteString.length);
+  for (let i = 0; i < byteString.length; i++) {
+    ia[i] = byteString.charCodeAt(i);
+  }
+  return ia;
+}
+
+function assemble2PagePDF(jpegBytes1, w1, h1, jpegBytes2, w2, h2) {
+  const parts = [];
+  let currentOffset = 0;
+  const offsets = [];
+
+  function addPart(data) {
+    let buf;
+    if (typeof data === 'string') {
+      const arr = new Uint8Array(data.length);
+      for (let i = 0; i < data.length; i++) {
+        arr[i] = data.charCodeAt(i) & 0xff;
+      }
+      buf = arr;
+    } else {
+      buf = data;
+    }
+    parts.push(buf);
+    currentOffset += buf.length;
+  }
+
+  // Header
+  addPart("%PDF-1.4\n");
+
+  // 1: Catalog
+  offsets.push(currentOffset);
+  addPart("1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n");
+
+  // 2: Pages
+  offsets.push(currentOffset);
+  addPart("2 0 obj\n<< /Type /Pages /Kids [3 0 R 6 0 R] /Count 2 >>\nendobj\n");
+
+  // 3: Page 1
+  offsets.push(currentOffset);
+  addPart("3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /XObject << /Im1 4 0 R >> >> /Contents 5 0 R >>\nendobj\n");
+
+  // 4: Image 1 XObject
+  offsets.push(currentOffset);
+  addPart("4 0 obj\n<< /Type /XObject /Subtype /Image /Width " + w1 + " /Height " + h1 + " /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length " + jpegBytes1.length + " >>\nstream\n");
+  addPart(jpegBytes1);
+  addPart("\nendstream\nendobj\n");
+
+  // 5: Contents 1
+  const c1 = "q\n595.28 0 0 841.89 0 0 cm\n/Im1 Do\nQ\n";
+  offsets.push(currentOffset);
+  addPart("5 0 obj\n<< /Length " + c1.length + " >>\nstream\n" + c1 + "endstream\nendobj\n");
+
+  // 6: Page 2
+  offsets.push(currentOffset);
+  addPart("6 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /XObject << /Im2 7 0 R >> >> /Contents 8 0 R >>\nendobj\n");
+
+  // 7: Image 2 XObject
+  offsets.push(currentOffset);
+  addPart("7 0 obj\n<< /Type /XObject /Subtype /Image /Width " + w2 + " /Height " + h2 + " /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length " + jpegBytes2.length + " >>\nstream\n");
+  addPart(jpegBytes2);
+  addPart("\nendstream\nendobj\n");
+
+  // 8: Contents 2
+  const c2 = "q\n595.28 0 0 841.89 0 0 cm\n/Im2 Do\nQ\n";
+  offsets.push(currentOffset);
+  addPart("8 0 obj\n<< /Length " + c2.length + " >>\nstream\n" + c2 + "endstream\nendobj\n");
+
+  // Xref
+  const xrefOffset = currentOffset;
+  let xref = "xref\n0 " + (offsets.length + 1) + "\n0000000000 65535 f \n";
+  for (let off of offsets) {
+    xref += String(off).padStart(10, '0') + " 00000 n \n";
+  }
+  xref += "trailer\n<< /Size " + (offsets.length + 1) + " /Root 1 0 R >>\nstartxref\n" + xrefOffset + "\n%%EOF";
+  addPart(xref);
+
+  let totalLen = 0;
+  for (let p of parts) totalLen += p.length;
+  const combined = new Uint8Array(totalLen);
+  let pos = 0;
+  for (let p of parts) {
+    combined.set(p, pos);
+    pos += p.length;
+  }
+  return combined;
+}
+
+function drawFormAPage(ctx, payload, w, h) {
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(0, 0, w, h);
+  
+  ctx.strokeStyle = '#1e3a8a';
+  ctx.lineWidth = 3;
+  ctx.strokeRect(40, 40, w - 80, h - 80);
+  
+  const m = payload.meta;
+  
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#1e3a8a';
+  ctx.font = 'bold 24px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText(m.gov_dept, w / 2, 85);
+  
+  ctx.fillStyle = '#334155';
+  ctx.font = 'bold 17px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText(m.committee, w / 2, 120);
+  
+  ctx.fillStyle = '#0f172a';
+  ctx.font = 'bold 22px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText(m.form_a, w / 2, 160);
+  
+  ctx.fillStyle = '#047857';
+  ctx.font = 'bold 17px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText(m.title, w / 2, 195);
+  
+  ctx.fillStyle = '#64748b';
+  ctx.font = 'bold 14px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText(m.sub_course, w / 2, 225);
+  
+  ctx.beginPath();
+  ctx.moveTo(60, 250);
+  ctx.lineTo(w - 60, 250);
+  ctx.strokeStyle = '#1e3a8a';
+  ctx.lineWidth = 2;
+  ctx.stroke();
+  
+  let y = 280;
+  const fields = [
+    ["1. விண்ணப்பிக்கும் படிப்பு (Target Course):", m.sub_course],
+    ["2. மாணவர் பெயர் (Name of Candidate):", payload.name],
+    ["3. " + m.app_label + ":", payload.appNo],
+    ["4. விளையாட்டு & பிரிவு (Sports Disciplines):", payload.discipline],
+    ["5. இருப்பிடம் & வகுப்பு (Nativity & Community):", payload.community],
+    ["6. கோரப்படும் மொத்த விளையாட்டு மதிப்பெண்கள்:", payload.totalScore + " Marks (மதிப்பெண்கள்)"]
+  ];
+  
+  fields.forEach(f => {
+    ctx.fillStyle = '#f8fafc';
+    ctx.fillRect(60, y, 420, 52);
+    ctx.strokeStyle = '#94a3b8';
+    ctx.lineWidth = 1.2;
+    ctx.strokeRect(60, y, 420, 52);
+    
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(480, y, w - 540, 52);
+    ctx.strokeRect(480, y, w - 540, 52);
+    
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#0f172a';
+    ctx.font = 'bold 16px "Inter", "Noto Sans Tamil", sans-serif';
+    ctx.fillText(f[0], 75, y + 32);
+    
+    const isHighlight = f[0].includes('மதிப்பெண்கள்') || f[0].startsWith('2.');
+    ctx.fillStyle = isHighlight ? '#1e40af' : '#0f172a';
+    ctx.font = isHighlight ? 'bold 18px "Inter", "Noto Sans Tamil", sans-serif' : '16px "Inter", "Noto Sans Tamil", sans-serif';
+    ctx.fillText(f[1], 495, y + 32);
+    
+    y += 52;
+  });
+  
+  y += 35;
+  ctx.fillStyle = '#f8fafc';
+  ctx.fillRect(60, y, w - 120, 160);
+  ctx.strokeStyle = '#cbd5e1';
+  ctx.lineWidth = 1.2;
+  ctx.strokeRect(60, y, w - 120, 160);
+  
+  ctx.textAlign = 'left';
+  ctx.fillStyle = '#064e3b';
+  ctx.font = 'bold 16px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("DECLARATION & UNDERTAKING (மாணவர் & பெற்றோர் உறுதிமொழி):", 80, y + 30);
+  
+  ctx.fillStyle = '#1e293b';
+  ctx.font = '14px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("I hereby declare that the particulars given above and in " + m.form_b + " are true, genuine and correct to the best of my knowledge and belief.", 80, y + 65);
+  ctx.fillText("I have submitted genuine original sports certificates along with relevant forms issued by recognized National Federations / State Associations / SGFI / KVS / CBSE / SDAT.", 80, y + 100);
+  ctx.fillText("I also undertake that on admission under the Eminent Sports Persons Quota, I shall regularly participate in sports activities representing the institution / university.", 80, y + 135);
+  
+  const ySig = h - 160;
+  ctx.fillStyle = '#334155';
+  ctx.font = 'bold 15px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("தேதி (Date): ____________________", 80, ySig);
+  ctx.fillText("இடம் (Place): ____________________", 80, ySig + 35);
+  
+  ctx.textAlign = 'center';
+  ctx.fillText("பெற்றோர் / பாதுகாவலர் கையொப்பம்", w / 2, ySig);
+  ctx.fillStyle = '#64748b';
+  ctx.font = '13px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("(Signature of Parent / Guardian)", w / 2, ySig + 30);
+  
+  ctx.textAlign = 'right';
+  ctx.fillStyle = '#334155';
+  ctx.font = 'bold 15px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("மாணவர் கையொப்பம்", w - 80, ySig);
+  ctx.fillStyle = '#64748b';
+  ctx.font = '13px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("(Signature of Candidate)", w - 80, ySig + 30);
+}
+
+function drawFormBPage(ctx, payload, w, h) {
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(0, 0, w, h);
+  
+  ctx.strokeStyle = '#1e3a8a';
+  ctx.lineWidth = 3;
+  ctx.strokeRect(40, 40, w - 80, h - 80);
+  
+  const m = payload.meta;
+  
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#1e3a8a';
+  ctx.font = 'bold 24px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText(m.gov_dept, w / 2, 85);
+  
+  ctx.fillStyle = '#334155';
+  ctx.font = 'bold 17px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText(m.committee, w / 2, 120);
+  
+  ctx.fillStyle = '#0f172a';
+  ctx.font = 'bold 22px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText(m.form_b, w / 2, 160);
+  
+  ctx.fillStyle = '#047857';
+  ctx.font = 'bold 17px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("DETAILS OF SPORTS CERTIFICATES PRODUCED FOR EMINENT SPORTS PERSONS QUOTA", w / 2, 195);
+  
+  ctx.fillStyle = '#64748b';
+  ctx.font = 'bold 14px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("(Eligible Academic Years: 9th, 10th, 11th & 12th Standards — One highest certificate per year)", w / 2, 225);
+  
+  ctx.beginPath();
+  ctx.moveTo(60, 250);
+  ctx.lineTo(w - 60, 250);
+  ctx.strokeStyle = '#1e3a8a';
+  ctx.lineWidth = 2;
+  ctx.stroke();
+  
+  // Summary Bar
+  ctx.fillStyle = '#f1f5f9';
+  ctx.fillRect(60, 270, w - 120, 45);
+  ctx.strokeStyle = '#cbd5e1';
+  ctx.strokeRect(60, 270, w - 120, 45);
+  
+  ctx.textAlign = 'left';
+  ctx.fillStyle = '#0f172a';
+  ctx.font = 'bold 15px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("மாணவர் பெயர்: " + payload.name, 80, 298);
+  ctx.fillText("விண்ணப்ப எண்: " + payload.appNo, 480, 298);
+  ctx.fillStyle = '#047857';
+  ctx.fillText("சான்றிதழ்கள்: " + payload.rows.length + " எண்ணிக்கை", 880, 298);
+  
+  // Table Header
+  let y = 335;
+  const cols = [
+    { start: 60, end: 110, title: "Sl." },
+    { start: 110, end: 270, title: "கல்வியாண்டு & வகுப்பு" },
+    { start: 270, end: 440, title: "விளையாட்டு & பிரிவு" },
+    { start: 440, end: 680, title: "போட்டியின் பெயர் (Tournament)" },
+    { start: 680, end: 870, title: "போட்டி நிலை (Level & Table)" },
+    { start: 870, end: 1000, title: "அமைப்பு & சான்றிதழ் எண்" },
+    { start: 1000, end: 1070, title: "பதக்கம்" },
+    { start: 1070, end: 1140, title: "மதிப்பெண்" }
+  ];
+  
+  ctx.fillStyle = '#1e3a8a';
+  ctx.fillRect(60, y, 1080, 45);
+  ctx.strokeStyle = '#1e3a8a';
+  ctx.strokeRect(60, y, 1080, 45);
+  
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#ffffff';
+  ctx.font = 'bold 14px "Inter", "Noto Sans Tamil", sans-serif';
+  cols.forEach(c => {
+    ctx.fillText(c.title, (c.start + c.end) / 2, y + 27);
+    ctx.beginPath();
+    ctx.moveTo(c.start, y);
+    ctx.lineTo(c.start, y + 45);
+    ctx.strokeStyle = '#ffffff';
+    ctx.stroke();
+  });
+  y += 45;
+  
+  // Draw Rows
+  payload.rows.forEach(r => {
+    ctx.fillStyle = r.sl % 2 === 0 ? '#f8fafc' : '#ffffff';
+    ctx.fillRect(60, y, 1080, 58);
+    ctx.strokeStyle = '#cbd5e1';
+    ctx.strokeRect(60, y, 1080, 58);
+    
+    cols.forEach(c => {
+      ctx.beginPath();
+      ctx.moveTo(c.start, y);
+      ctx.lineTo(c.start, y + 58);
+      ctx.strokeStyle = '#cbd5e1';
+      ctx.stroke();
+    });
+    
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#0f172a';
+    ctx.font = 'bold 15px "Inter", "Noto Sans Tamil", sans-serif';
+    ctx.fillText(r.sl.toString(), 85, y + 33);
+    
+    ctx.textAlign = 'left';
+    ctx.font = 'bold 13px "Inter", "Noto Sans Tamil", sans-serif';
+    ctx.fillText(r.academicYear, 120, y + 24);
+    ctx.font = '12px "Inter", "Noto Sans Tamil", sans-serif';
+    ctx.fillStyle = '#64748b';
+    ctx.fillText(r.standard, 120, y + 44);
+    
+    ctx.fillStyle = '#064e3b';
+    ctx.font = 'bold 13px "Inter", "Noto Sans Tamil", sans-serif';
+    ctx.fillText(r.game, 280, y + 33);
+    
+    ctx.fillStyle = '#0f172a';
+    ctx.font = '13px "Inter", "Noto Sans Tamil", sans-serif';
+    ctx.fillText(r.tournament, 450, y + 33);
+    
+    ctx.fillText(r.level, 690, y + 33);
+    
+    ctx.fillStyle = '#475569';
+    ctx.font = '12px "Inter", "Noto Sans Tamil", sans-serif';
+    ctx.fillText(r.authority, 880, y + 33);
+    
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#0f172a';
+    ctx.font = 'bold 14px "Inter", "Noto Sans Tamil", sans-serif';
+    ctx.fillText(r.medal, 1035, y + 33);
+    
+    ctx.fillStyle = '#047857';
+    ctx.font = 'bold 16px "Inter", "Noto Sans Tamil", sans-serif';
+    ctx.fillText(r.score.toString(), 1105, y + 33);
+    
+    y += 58;
+  });
+  
+  // Total Row
+  ctx.fillStyle = '#fefce8';
+  ctx.fillRect(60, y, 1080, 50);
+  ctx.strokeStyle = '#cbd5e1';
+  ctx.strokeRect(60, y, 1080, 50);
+  
+  ctx.textAlign = 'right';
+  ctx.fillStyle = '#92400e';
+  ctx.font = 'bold 15px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("CUMULATIVE TOTAL SPORTS MARKS CLAIMED (கூட்டு மொத்த மதிப்பெண்கள்):", 1050, y + 31);
+  
+  ctx.textAlign = 'center';
+  ctx.font = 'bold 18px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText(payload.totalScore.toString(), 1105, y + 31);
+  y += 75;
+  
+  // Guidelines
+  ctx.textAlign = 'left';
+  ctx.fillStyle = '#475569';
+  ctx.font = '13px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("* குறிப்பு: தமிழ்நாடு விளையாட்டு மேம்பாட்டு ஆணையம் (SDAT) மற்றும் சேர்க்கைக் குழு விதிகளின்படி, ஒரு கல்வி ஆண்டில் 1 அதிகபட்ச சாதனைக்கு மட்டுமே மதிப்பெண் வழங்கப்படும்.", 65, y);
+  ctx.fillText("  தமிழகத்தின் எல்லைக்குள் அமைந்துள்ள கேந்திரிய வித்யாலயா (KVS) மற்றும் சிபிஎஸ்இ (CBSE) பள்ளிகளில் பயின்ற தமிழக மாணவர்கள் தகுதியுடையவர்கள்.", 65, y + 25);
+  
+  // Signatures
+  const ySig = h - 160;
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#334155';
+  ctx.font = 'bold 15px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("உடற்கல்வி இயக்குநர் / தலைமையாசிரியர் ஒப்பம்", 200, ySig);
+  ctx.fillStyle = '#64748b';
+  ctx.font = '13px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("(Attested by PE Director / Headmaster)", 200, ySig + 30);
+  
+  ctx.fillStyle = '#334155';
+  ctx.font = 'bold 15px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("பெற்றோர் / பாதுகாவலர் கையொப்பம்", w / 2, ySig);
+  ctx.fillStyle = '#64748b';
+  ctx.font = '13px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("(Signature of Parent / Guardian)", w / 2, ySig + 30);
+  
+  ctx.textAlign = 'right';
+  ctx.fillStyle = '#334155';
+  ctx.font = 'bold 15px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("மாணவர் கையொப்பம்", w - 80, ySig);
+  ctx.fillStyle = '#64748b';
+  ctx.font = '13px "Inter", "Noto Sans Tamil", sans-serif';
+  ctx.fillText("(Signature of Candidate)", w - 80, ySig + 30);
+}
+
+function generateOfficialSportsPDF() {
+  const payload = getFormDataPayload();
+  if (!payload.rows || payload.rows.length === 0) {
+    alert('தயவுசெய்து மேலே உள்ள கால்குலேட்டரில் குறைந்தது ஒரு கல்வி ஆண்டிற்கான விளையாட்டு சான்றிதழ் விவரத்தைத் தேர்வு செய்யவும்.');
+    return;
+  }
+  
+  const w = 1200;
+  const h = 1700;
+  
+  // Render Page 1 (Form A)
+  const canvas1 = document.createElement('canvas');
+  canvas1.width = w;
+  canvas1.height = h;
+  const ctx1 = canvas1.getContext('2d');
+  drawFormAPage(ctx1, payload, w, h);
+  const jpegURI1 = canvas1.toDataURL('image/jpeg', 0.92);
+  const bytes1 = dataURItoUint8Array(jpegURI1);
+  
+  // Render Page 2 (Form B)
+  const canvas2 = document.createElement('canvas');
+  canvas2.width = w;
+  canvas2.height = h;
+  const ctx2 = canvas2.getContext('2d');
+  drawFormBPage(ctx2, payload, w, h);
+  const jpegURI2 = canvas2.toDataURL('image/jpeg', 0.92);
+  const bytes2 = dataURItoUint8Array(jpegURI2);
+  
+  // Assemble 2-Page PDF
+  const pdfBytes = assemble2PagePDF(bytes1, w, h, bytes2, w, h);
+  
+  // Directly trigger PDF download in the browser
+  const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+  const downloadUrl = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = downloadUrl;
+  const cleanAppNo = payload.appNo.replace(/[^a-zA-Z0-9_-]/g, '') || 'Application';
+  const cleanCourse = payload.courseKey.toUpperCase();
+  a.download = cleanCourse + '_SPORTS_QUOTA_FORM_' + cleanAppNo + '.pdf';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
+}
+
+function previewOfficialSportsModal() {
+  const payload = getFormDataPayload();
+  const contentEl = document.getElementById('sportsFormModalContent');
+  if (contentEl) {
+    contentEl.innerHTML = buildOfficialFormHTML(payload);
+  }
+  const modal = document.getElementById('sportsFormPreviewModal');
+  if (modal) {
+    modal.style.display = 'flex';
+  }
+}
+
+function closeSportsFormModal() {
+  const modal = document.getElementById('sportsFormPreviewModal');
+  if (modal) {
+    modal.style.display = 'none';
+  }
 }
 </script></body>
 </html>
