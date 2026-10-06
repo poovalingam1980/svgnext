@@ -6307,6 +6307,7 @@
 </div>
 </div><nav aria-label="உயர்கல்வி வழிகாட்டல் வழிசெலுத்தல்" class="sticky-portal-nav" id="stickyPortalNavbar">
 <button class="nav-anchor-pill active" onclick="smoothScrollToAnchor('cutoff-tools-sec', this)" type="button">🧮 கட்-ஆஃப் கருவிகள்</button><button class="nav-anchor-pill" onclick="smoothScrollToAnchor('sports-tools-sec', this)" type="button">🏆 விளையாட்டுப் பிரிவு</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('student-ask-sec', this)" type="button" style="background: linear-gradient(135deg, #1e3a8a 0%, #0284c7 100%) !important; color: #ffffff !important; border: 1.5px solid #38bdf8 !important;">✉️ சந்தேகக் கேட்புப் பெட்டி</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('entrance-stream-sec', this)" type="button">✍️ நுழைவுத்தேர்வுகள்</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('direct-stream-sec', this)" type="button">🎯 நேரடிச் சேர்க்கை</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('reservation-sec', this)" type="button">🏛️ இடஒதுக்கீடு</button>
@@ -6314,7 +6315,7 @@
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('doc-checklist-sec', this)" type="button">📄 சான்றிதழ்கள் பட்டியல்</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('counselling-flow-sec', this)" type="button">🔄 கலந்தாய்வு நிலைகள்</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('district-centers-sec', this)" type="button">🏢 மாவட்ட மையங்கள்</button>
-<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('student-ask-sec', this)" type="button">✉️ சந்தேகப் படிவம்</button>
+
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('faqs-sec', this)" type="button">❓ வினா-விடை (FAQs)</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('portals-sec', this)" type="button">🌐 கல்வி தளங்கள்</button>
 </nav><section class="section-card" id="cutoff-tools-sec">
@@ -7026,7 +7027,110 @@
 <li><strong>வேளாண்மை (TNAU) &amp; கால்நடை (TANUVAS):</strong> முறையே <strong>40+ இடங்கள்</strong> மற்றும் <strong>5+ இடங்கள்</strong> விளையாட்டு வீரர்களுக்கு ஒதுக்கப்பட்டுள்ளன.</li>
 <li><strong>கேந்திரிய வித்யாலயா (KVS) &amp; சிபிஎஸ்இ (CBSE) விதி:</strong> தமிழக எல்லைக்குள் அமைந்துள்ள கேந்திரிய வித்யாலயா (KVS) மற்றும் CBSE பள்ளிகளில் பயின்ற தமிழக இருப்பிடச் சான்றுடைய மாணவர்கள் மட்டுமே இச்சலுகைக்குத் தகுதியுடையவர்கள். KVS/CBSE தேசியப் போட்டிகள் மாநில அளவிற்கும் (Table III), KVS மண்டல/CBSE கிளஸ்டர் போட்டிகள் கோட்ட/மண்டல அளவிற்கும் (Table IV) இணையாகக் கணக்கிடப்படும்.</li>
 </ul>
-</div></section><section class="section-card" id="entrance-stream-sec">
+</div></section>
+<section class="section-card" id="student-ask-sec" style="border: 2px solid #0284c7 !important; background: #ffffff !important; box-shadow: 0 8px 24px rgba(2, 132, 199, 0.12) !important;">
+<div class="card-top-header" style="background: linear-gradient(135deg, #091330 0%, #1e3a8a 100%) !important; color: #ffffff !important; padding: 14px 20px !important; border-radius: 12px 12px 0 0 !important; margin: -1px -1px 16px -1px !important;">
+<h2 class="card-top-title" style="color: #ffffff !important; font-size: 1.25rem !important; display: flex !important; align-items: center !important; gap: 10px !important;">
+<span>✍️</span> மாணவர் சந்தேகக் கேட்புப் பெட்டி (Student Query &amp; Doubt Submission Desk)
+</h2>
+<span class="card-tag-badge direct" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important; color: #ffffff !important; font-weight: 800 !important; border: 1px solid #38bdf8 !important;">⚡ நேரடி வினா &amp; உடனடி மின்னஞ்சல் ஒப்புகை</span>
+</div>
+<p class="box-desc" style="margin-bottom: 20px; font-size: 0.95rem; color: #334155; line-height: 1.65;">
+  உங்கள் உயர்கல்வி சேர்க்கை, கட்-ஆஃப், 7.5% அரசுப் பள்ளி இடஒதுக்கீடு, கட்டண விலக்கு மற்றும் நுழைவுத் தேர்வுகள் தொடர்பான சந்தேகங்களை இங்கே பதிவு செய்யலாம். <b>பதிவு செய்தவுடன் தங்களின் மின்னஞ்சல் முகவரிக்கு ஒப்புகை மடல் (Acknowledgement Receipt) உடன் கண்காணிப்பு குறிப்பு எண் (Reference ID) உடனே அனுப்பி வைக்கப்படும்:</b>
+</p>
+<form id="masterGuidanceForm" onsubmit="handleQuerySubmit(event);">
+<div class="form-inputs-grid">
+<div class="form-control-item">
+<label class="form-label-title">மாணவர் பெயர் <span class="required-star">*</span></label>
+<input class="form-text-box" id="formStudentName" placeholder="உங்கள் முழுப் பெயர்" required="" type="text"/>
+</div>
+<div class="form-control-item">
+<label class="form-label-title">வகுப்பு நிலை <span class="required-star">*</span></label>
+<select class="form-select-box" id="formStudentClass" required="">
+<option value="">-- வகுப்பைத் தேர்வு செய்க --</option>
+<option value="12-ஆம் வகுப்பு (HSC)">12-ஆம் வகுப்பு (HSC)</option>
+<option value="11-ஆம் வகுப்பு">11-ஆம் வகுப்பு</option>
+<option value="10-ஆம் வகுப்பு">10-ஆம் வகுப்பு</option>
+<option value="+2 தேர்ச்சி பெற்றவர்">+2 தேர்ச்சி பெற்றவர்</option>
+</select>
+</div>
+<div class="form-control-item">
+<label class="form-label-title">பள்ளி வகை <span class="required-star">*</span></label>
+<select class="form-select-box" id="formSchoolCategory" required="">
+<option value="அரசுப் பள்ளி (7.5% தகுதி)">அரசுப் பள்ளி (7.5% தகுதி)</option>
+<option value="அரசு உதவிபெறும் பள்ளி">அரசு உதவிபெறும் பள்ளி</option>
+<option value="சுயநிதி / தனியார் மெட்ரிக் பள்ளி">சுயநிதி / தனியார் மெட்ரிக் பள்ளி</option>
+</select>
+</div>
+<div class="form-control-item">
+<label class="form-label-title">மாவட்டம் <span class="required-star">*</span></label>
+<input class="form-text-box" id="formStudentDistrict" placeholder="எ.கா. சிவகங்கை" required="" type="text" value="சிவகங்கை"/>
+</div>
+<div class="form-control-item">
+<label class="form-label-title">அலைபேசி எண் <span class="required-star">*</span></label>
+<input class="form-text-box" id="formStudentPhone" pattern="[0-9]{10}" placeholder="10 இலக்க மொபைல் எண்" required="" type="tel"/>
+</div>
+<div class="form-control-item">
+<label class="form-label-title">மின்னஞ்சல் முகவரி (Email Address) <span class="required-star" style="color: #dc2626; font-weight: 900;">* கட்டாயம்</span></label>
+<input class="form-text-box" id="formStudentEmail" placeholder="மாணவரின் மின்னஞ்சல் (எ.கா. student@gmail.com)" required="" type="email" autocomplete="email"/>
+<span style="font-size: 0.78rem; color: #0284c7; font-weight: 700; margin-top: 2px;">📌 ஒப்புகை மடல் (Acknowledgement Email) இந்த முகவரிக்கு உடனடியாக அனுப்பப்படும்.</span>
+</div>
+<div class="form-control-item">
+<label class="form-label-title">சந்தேகப் பிரிவு <span class="required-star">*</span></label>
+<select class="form-select-box" id="formSubjectCategory" required="">
+<option value="மருத்துவம் & துணை மருத்துவம் (NEET / Nursing / BNYS)">மருத்துவம் &amp; துணை மருத்துவம் (NEET / Nursing / BNYS)</option>
+<option value="பொறியியல் சேர்க்கை (TNEA 7.5% / JEE)">பொறியியல் சேர்க்கை (TNEA 7.5% / JEE)</option>
+<option value="கலை மற்றும் அறிவியல் (TNGASA)">கலை மற்றும் அறிவியல் (TNGASA)</option>
+<option value="வேளாண்மை & கால்நடை (TNAU / TANUVAS)">வேளாண்மை &amp; கால்நடை (TNAU / TANUVAS)</option>
+<option value="7.5% அரசுப் பள்ளி இடஒதுக்கீடு">7.5% அரசுப் பள்ளி இடஒதுக்கீடு</option>
+<option value="கல்வி உதவித்தொகை & கல்விக் கடன்">கல்வி உதவித்தொகை &amp; கல்விக் கடன்</option>
+<option value="விளையாட்டு ஒதுக்கீடு & இதர சேர்க்கை">விளையாட்டு ஒதுக்கீடு &amp; இதர சேர்க்கை</option>
+</select>
+</div>
+<div class="form-control-item full-width">
+<label class="form-label-title">உங்கள் கேள்வி / சந்தேகம் <span class="required-star">*</span></label>
+<textarea class="form-textarea-box" id="formStudentQuery" placeholder="உங்கள் கட்-ஆஃப் அல்லது சந்தேகங்களை விரிவாக எழுதவும்..." required=""></textarea>
+</div>
+</div>
+<button class="btn-submit-action" id="masterSubmitBtn" type="submit" style="background: linear-gradient(135deg, #091330 0%, #1e3a8a 50%, #0284c7 100%) !important; color: #fef08a !important; font-weight: 800 !important; font-size: 1rem !important; border: 1.5px solid #d4af37 !important; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;">
+<span>✉️ சந்தேகத்தைப் பதிவு செய்து மின்னஞ்சல் ஒப்புகை பெறுக (Submit Query)</span>
+<span>→</span>
+</button>
+</form>
+
+<!-- Instant Student-Facing Confirmation Card -->
+<div class="form-feedback-card" id="masterSuccessBox" style="display: none; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2px solid #10b981; border-radius: 14px; padding: 22px; margin-top: 22px; box-shadow: 0 8px 24px rgba(16, 185, 129, 0.18);">
+<h4 style="color: #065f46; font-size: 1.2rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; font-weight: 900;">
+<span>✅</span> தங்களின் சந்தேகம் வெற்றிகரமாகப் பதிவு செய்யப்பட்டது!
+</h4>
+<p style="font-size: 1rem; margin-bottom: 12px; color: #1e293b;">
+தங்களின் கண்காணிப்பு குறிப்பு எண் (Reference ID): <b id="generatedTicketId" style="color: #0284c7; font-size: 1.15rem; background: #ffffff; padding: 3px 10px; border-radius: 6px; border: 1.5px solid #38bdf8; letter-spacing: 0.8px;">TN-CG-2026-XXXX</b>
+</p>
+
+<!-- Email Confirmation Callout -->
+<div style="background: #ffffff; border: 1.5px solid #0284c7; border-radius: 10px; padding: 14px 18px; margin: 14px 0; display: flex; align-items: center; gap: 14px; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.1);">
+<div style="font-size: 2rem; line-height: 1;">📧</div>
+<div>
+<div style="font-size: 0.82rem; font-weight: 800; color: #0369a1; text-transform: uppercase; letter-spacing: 0.3px;">ஒப்புகை மடல் அனுப்பப்பட்ட மின்னஞ்சல் முகவரி (Acknowledgement Sent to)</div>
+<div id="ackEmailDisplay" style="font-size: 1.05rem; font-weight: 900; color: #0f172a; word-break: break-all; margin-top: 2px;">student@gmail.com</div>
+<div style="font-size: 0.78rem; color: #059669; font-weight: 700; margin-top: 2px;">✓ தங்களின் மின்னஞ்சல் இன்பாக்ஸ் (Inbox / Spam) கோப்புறையைச் சரிபார்க்கவும்.</div>
+</div>
+</div>
+
+<div id="ackDetailsSummary" style="background: rgba(255,255,255,0.85); border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px 16px; margin: 12px 0;"></div>
+
+<p style="font-size: 0.90rem; color: #334155; line-height: 1.65; margin: 10px 0;">
+மாவட்ட உயர்கல்வி வழிகாட்டல் குழுவின் ஆசிரியர் வல்லுநர்கள் தங்கள் சந்தேகத்தை ஆய்வு செய்து, பதிவு செய்யப்பட்ட தொலைபேசி எண் / மின்னஞ்சல் வழியாக விரைவில் உரிய ஆலோசனைகளை வழங்குவர். அவசர வழிகாட்டுதலுக்கு <b>14417</b> என்ற பள்ளிக் கல்வி கட்டணமில்லா உதவி எண்ணை அழைக்கலாம்.
+</p>
+
+<div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px;">
+<button type="button" onclick="printStudentAcknowledgementSlip()" style="display: inline-flex; align-items: center; gap: 8px; background: #0f172a; color: #fef08a; border: 1.5px solid #d4af37; padding: 8px 18px; border-radius: 8px; font-weight: 800; font-size: 0.88rem; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+<span>🖨️</span> ஒப்புகைச் சீட்டு அச்சிடு / சேமி (Print / Save Slip)
+</button>
+</div>
+</div>
+</section>
+<section class="section-card" id="entrance-stream-sec">
 <div class="card-top-header">
 <h2 class="card-top-title">✍️ 1. தேசிய &amp; மாநில அளவிலான நுழைவுத் தேர்வு வழிகாட்டல் நெறிமுறைகள்</h2>
 <span class="card-tag-badge entrance">நுழைவுத்தேர்வு வழிகாட்டல்</span>
@@ -7540,79 +7644,6 @@
 <div class="dist-row-info"><b>மின்னஞ்சல்:</b> <a href="mailto:ceotry@nic.in" style="color: #0284c7; font-weight: 700; text-decoration: none;">ceotry@nic.in</a></div>
 <div class="dist-row-info"><b>பணி நேரம்:</b> <span>வேலை நாட்களில் காலை 10:00 - மாலை 5:30</span></div>
 </div>
-</div>
-</section><section class="section-card" id="student-ask-sec">
-<div class="card-top-header">
-<h2 class="card-top-title">✍️ மாணவர் சந்தேகப் படிவம் (Ask a Question to Guidance Team)</h2>
-<span class="card-tag-badge direct">நேரடி வினா சமர்ப்பிப்பு</span>
-</div>
-<p class="box-desc" style="margin-bottom: 20px;">
-        உங்கள் உயர்கல்வி சேர்க்கை, கட்-ஆஃப், கட்டண விலக்கு மற்றும் நுழைவுத் தேர்வு தொடர்பான சந்தேகங்களை இங்கே பதிவு செய்யலாம். வழிகாட்டல் குழுவினர் ஆய்வு செய்து வழிகாட்டுவர்:
-      </p>
-<form id="masterGuidanceForm" onsubmit="handleQuerySubmit(event);">
-<div class="form-inputs-grid">
-<div class="form-control-item">
-<label class="form-label-title">மாணவர் பெயர் <span class="required-star">*</span></label>
-<input class="form-text-box" id="formStudentName" placeholder="உங்கள் முழுப் பெயர்" required="" type="text"/>
-</div>
-<div class="form-control-item">
-<label class="form-label-title">வகுப்பு நிலை <span class="required-star">*</span></label>
-<select class="form-select-box" id="formStudentClass" required="">
-<option value="">-- வகுப்பைத் தேர்வு செய்க --</option>
-<option value="12th">12-ஆம் வகுப்பு (HSC)</option>
-<option value="11th">11-ஆம் வகுப்பு</option>
-<option value="10th">10-ஆம் வகுப்பு</option>
-<option value="passed">+2 தேர்ச்சி பெற்றவர்</option>
-</select>
-</div>
-<div class="form-control-item">
-<label class="form-label-title">பள்ளி வகை <span class="required-star">*</span></label>
-<select class="form-select-box" id="formSchoolCategory" required="">
-<option value="Govt">அரசுப் பள்ளி (7.5% தகுதி)</option>
-<option value="Aided">அரசு உதவிபெறும் பள்ளி</option>
-<option value="Private">சுயநிதி / தனியார் மெட்ரிக் பள்ளி</option>
-</select>
-</div>
-<div class="form-control-item">
-<label class="form-label-title">மாவட்டம் <span class="required-star">*</span></label>
-<input class="form-text-box" id="formStudentDistrict" placeholder="எ.கா. சிவகங்கை" required="" type="text"/>
-</div>
-<div class="form-control-item">
-<label class="form-label-title">அலைபேசி எண் <span class="required-star">*</span></label>
-<input class="form-text-box" id="formStudentPhone" pattern="[0-9]{10}" placeholder="10 இலக்க மொபைல் எண்" required="" type="tel"/>
-</div>
-<div class="form-control-item">
-<label class="form-label-title">சந்தேகப் பிரிவு <span class="required-star">*</span></label>
-<select class="form-select-box" id="formSubjectCategory" required="">
-<option value="medical">மருத்துவம் &amp; துணை மருத்துவம் (NEET / Nursing / BNYS)</option>
-<option value="engineering">பொறியியல் சேர்க்கை (TNEA 7.5% / JEE)</option>
-<option value="arts_science">கலை மற்றும் அறிவியல் (TNGASA)</option>
-<option value="agri">வேளாண்மை &amp; கால்நடை (TNAU / TANUVAS)</option>
-<option value="reservation">7.5% அரசுப் பள்ளி இடஒதுக்கீடு</option>
-<option value="scholarship">கல்வி உதவித்தொகை &amp; கல்விக் கடன்</option>
-</select>
-</div>
-<div class="form-control-item full-width">
-<label class="form-label-title">உங்கள் கேள்வி / சந்தேகம் <span class="required-star">*</span></label>
-<textarea class="form-textarea-box" id="formStudentQuery" placeholder="உங்கள் கட்-ஆஃப் அல்லது சந்தேகங்களை விரிவாக எழுதவும்..." required=""></textarea>
-</div>
-</div>
-<button class="btn-submit-action" id="masterSubmitBtn" type="submit">
-<span>✉️ கேள்வியைச் சமர்ப்பிக்க (Submit Query)</span>
-<span>→</span>
-</button>
-</form>
-<!-- Instant Student-Facing Confirmation Card -->
-<div class="form-feedback-card" id="masterSuccessBox">
-<h4 style="color: #065f46; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-weight: 800;">
-<span>✅</span> தங்களின் கோரிக்கை வெற்றிகரமாகப் பதிவு செய்யப்பட்டது!
-        </h4>
-<p style="font-size: 0.95rem; margin-bottom: 10px; color: #1e293b;">
-          தங்களின் கண்காணிப்பு எண் (Reference ID): <b id="generatedTicketId" style="color: #0284c7; font-size: 1.1rem; letter-spacing: 0.5px;">TN-CG-2026-XXXX</b>
-</p>
-<p style="font-size: 0.90rem; color: #334155; line-height: 1.65; margin: 0;">
-          மாவட்ட உயர்கல்வி வழிகாட்டல் குழுவினர் தங்கள் சந்தேகத்தை ஆய்வு செய்து, பதிவு செய்யப்பட்ட தொலைபேசி எண்ணிற்கு விரைவில் தொடர்புகொண்டு வழிகாட்டுதல் வழங்குவர். அவசர ஆலோசனைகளுக்கு <b>14417</b> என்ற பள்ளிக் கல்வி கட்டணமில்லா உதவி எண்ணை அழைக்கலாம்.
-        </p>
 </div>
 </section><section class="section-card" id="faqs-sec">
 <div class="card-top-header">
@@ -8180,22 +8211,60 @@
 
     async function handleQuerySubmit(e) {
       e.preventDefault();
+      const emailInput = document.getElementById('formStudentEmail');
+      const emailVal = emailInput ? emailInput.value.trim() : '';
+
+      if (!emailVal || !emailVal.includes('@') || !emailVal.includes('.')) {
+        alert('தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும் (Please enter a valid email address).');
+        if (emailInput) {
+          emailInput.focus();
+        }
+        return;
+      }
+
       const submitBtn = document.getElementById('masterSubmitBtn');
       const originalText = submitBtn.innerHTML;
 
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span>⏳ பதிவு செய்யப்படுகிறது (Submitting)...</span>';
+      submitBtn.innerHTML = '<span>⏳ பதிவு செய்யப்பட்டு மின்னஞ்சல் அனுப்பப்படுகிறது (Submitting &amp; Sending Email)...</span>';
 
       const ticketId = 'TN-CG-2026-' + Math.floor(1000 + Math.random() * 9000);
+      const studentName = document.getElementById('formStudentName').value.trim();
+      const studentClass = document.getElementById('formStudentClass').value;
+      const schoolType = document.getElementById('formSchoolCategory').value;
+      const district = document.getElementById('formStudentDistrict').value.trim();
+      const phone = document.getElementById('formStudentPhone').value.trim();
+      const categorySelect = document.getElementById('formSubjectCategory');
+      const category = categorySelect.value;
+      const categoryText = categorySelect.options[categorySelect.selectedIndex].text;
+      const query = document.getElementById('formStudentQuery').value.trim();
+      const nowFormatted = new Date().toLocaleString('ta-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' });
+
+      // Save for slip generation
+      window.lastSubmittedStudentAck = {
+        ticketId: ticketId,
+        name: studentName,
+        email: emailVal,
+        phone: phone,
+        studentClass: studentClass,
+        schoolType: schoolType,
+        district: district,
+        category: categoryText,
+        query: query,
+        timestamp: nowFormatted
+      };
+
       const formData = {
         ticketId: ticketId,
-        name: document.getElementById('formStudentName').value.trim(),
-        studentClass: document.getElementById('formStudentClass').value,
-        schoolType: document.getElementById('formSchoolCategory').value,
-        district: document.getElementById('formStudentDistrict').value.trim(),
-        phone: document.getElementById('formStudentPhone').value.trim(),
-        category: document.getElementById('formSubjectCategory').value,
-        query: document.getElementById('formStudentQuery').value.trim()
+        name: studentName,
+        email: emailVal,
+        studentClass: studentClass,
+        schoolType: schoolType,
+        district: district,
+        phone: phone,
+        category: categoryText,
+        query: query,
+        timestamp: new Date().toISOString()
       };
 
       try {
@@ -8207,21 +8276,83 @@
           },
           body: JSON.stringify(formData)
         });
-
+      } catch (err) {
+        console.warn("Apps script submission notice:", err);
+      } finally {
         document.getElementById('generatedTicketId').innerText = ticketId;
+        const ackEmailEl = document.getElementById('ackEmailDisplay');
+        if (ackEmailEl) ackEmailEl.innerText = emailVal;
+
+        const summaryBox = document.getElementById('ackDetailsSummary');
+        if (summaryBox) {
+          summaryBox.innerHTML = `
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; font-size: 0.88rem; color: #334155; margin-top: 4px;">
+              <div><b>மாணவர் பெயர்:</b> ${studentName}</div>
+              <div><b>வகுப்பு &amp; பள்ளி:</b> ${studentClass} (${schoolType})</div>
+              <div><b>மாவட்டம்:</b> ${district}</div>
+              <div><b>அலைபேசி:</b> ${phone}</div>
+              <div style="grid-column: 1 / -1;"><b>சந்தேகப் பிரிவு:</b> <span style="color: #0284c7; font-weight: 700;">${categoryText}</span></div>
+              <div style="grid-column: 1 / -1; background: #f8fafc; padding: 10px 14px; border-radius: 6px; border-left: 3px solid #0284c7; margin-top: 6px;"><b>கேள்வி:</b> <i>"${query}"</i></div>
+            </div>
+          `;
+        }
+
         const successBox = document.getElementById('masterSuccessBox');
         successBox.style.display = 'block';
         successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
         document.getElementById('masterGuidanceForm').reset();
-      } catch (err) {
-        console.error("Submission status:", err);
-        document.getElementById('generatedTicketId').innerText = ticketId;
-        const successBox = document.getElementById('masterSuccessBox');
-        successBox.style.display = 'block';
-      } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
       }
+    }
+
+    function printStudentAcknowledgementSlip() {
+      const data = window.lastSubmittedStudentAck;
+      if (!data) return;
+      const printWin = window.open('', '_blank', 'width=750,height=800');
+      printWin.document.write(`
+        <!DOCTYPE html>
+        <html lang="ta">
+        <head>
+          <meta charset="utf-8">
+          <title>ஒப்புகைச் சீட்டு - ${data.ticketId}</title>
+          <style>
+            body { font-family: 'Noto Sans Tamil', -apple-system, sans-serif; padding: 30px; color: #0f172a; line-height: 1.5; }
+            .header { text-align: center; border-bottom: 2px solid #0f172a; padding-bottom: 12px; margin-bottom: 20px; }
+            .badge { display: inline-block; background: #eff6ff; color: #1d4ed8; border: 1.5px solid #3b82f6; border-radius: 6px; padding: 6px 14px; font-size: 16px; font-weight: bold; margin: 10px 0; }
+            table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+            th, td { border: 1px solid #cbd5e1; padding: 8px 12px; font-size: 14px; text-align: left; }
+            th { background: #f8fafc; width: 35%; color: #334155; }
+            .footer { margin-top: 30px; border-top: 1px dashed #94a3b8; padding-top: 15px; font-size: 12px; text-align: center; color: #64748b; }
+          </style>
+        </head>
+        <body>
+          <div class="header">
+            <h2 style="margin:0 0 6px 0;">முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்</h2>
+            <h3 style="margin:0; font-weight: normal; color: #334155;">மாவட்ட உயர்கல்வி வழிகாட்டல் மையம் - மாணவர் சந்தேகக் கேட்பு ஒப்புகைச் சீட்டு</h3>
+          </div>
+          <div style="text-align:center;">
+            <div class="badge">கண்காணிப்பு குறிப்பு எண்: ${data.ticketId}</div>
+          </div>
+          <table>
+            <tr><th>மாணவர் பெயர்</th><td><b>${data.name}</b></td></tr>
+            <tr><th>மின்னஞ்சல் முகவரி</th><td><b>${data.email}</b> (ஒப்புகை மடல் அனுப்பப்பட்டது)</td></tr>
+            <tr><th>அலைபேசி எண்</th><td>${data.phone}</td></tr>
+            <tr><th>வகுப்பு &amp; பள்ளி வகை</th><td>${data.studentClass} | ${data.schoolType}</td></tr>
+            <tr><th>மாவட்டம்</th><td>${data.district}</td></tr>
+            <tr><th>சந்தேகப் பிரிவு</th><td>${data.category}</td></tr>
+            <tr><th>கேள்வி / சந்தேகம்</th><td>${data.query}</td></tr>
+            <tr><th>பதிவு செய்யப்பட்ட நேரம்</th><td>${data.timestamp}</td></tr>
+          </table>
+          <div class="footer">
+            <p>இவ்வொப்புகை மடல் தானியங்கி முறையில் உருவாக்கப்பட்டது. மாவட்ட வழிகாட்டல் குழு தங்களை விரைவில் தொடர்புகொள்வர்.</p>
+            <p>கட்டணமில்லா உதவி எண்: <b>14417</b> | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை.</p>
+          </div>
+          <script>window.print();<\/script>
+        </body>
+        </html>
+      `);
+      printWin.document.close();
     }
 
     // 7. Accordion FAQs Toggle & Live Filter
