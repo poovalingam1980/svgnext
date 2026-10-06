@@ -3826,8 +3826,8 @@
 
     
     /* ========================================================
-       TOP BANNER FRAME (EXACT MATCH WITH USER'S REFERENCE IMAGE)
-       Compact, 3D Gold, Embossed Silver & Flowing Aurora Animation
+       TOP BANNER FRAME (STREAMLINED 3-COLUMN ULTRA-COMPACT LAYOUT)
+       Buttons flanking on left & right; Height automatically reduced!
        ======================================================== */
     @keyframes auroraTextFlow {
       0% { background-position: 0% 50%; }
@@ -3850,10 +3850,12 @@
       overflow: hidden !important;
       background: linear-gradient(145deg, #071328 0%, #0d1e3d 45%, #132a54 75%, #081328 100%) !important;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 0 14px rgba(56, 189, 248, 0.22), inset 0 0 30px rgba(14, 165, 233, 0.08) !important;
-      padding: 10px 18px 12px 18px !important;
+      padding: 8px 18px !important;
       display: flex !important;
-      flex-direction: column !important;
-      gap: 3px !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 12px !important;
+      position: relative !important;
     }
 
     /* Subtle background watermark pattern */
@@ -3863,83 +3865,50 @@
       top: 50% !important;
       left: 50% !important;
       transform: translate(-50%, -50%) !important;
-      font-size: 2.8rem !important;
-      letter-spacing: 28px !important;
+      font-size: 2.6rem !important;
+      letter-spacing: 24px !important;
       opacity: 0.035 !important;
       pointer-events: none !important;
       white-space: nowrap !important;
     }
 
-    /* Top Row: Department Info & Quick Actions */
-    .top-frame-header-row {
-      display: flex !important;
+    /* Flanking Side Buttons */
+    .top-frame-side-btn {
+      display: inline-flex !important;
       align-items: center !important;
-      justify-content: space-between !important;
-      width: 100% !important;
-      flex-wrap: wrap !important;
       gap: 6px !important;
+      padding: 6px 14px !important;
+      border-radius: 8px !important;
+      font-size: 0.82rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      transition: all 0.2s ease !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
       position: relative !important;
       z-index: 2 !important;
     }
 
-    .top-frame-dept-badge {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 7px !important;
-    }
-
-    .cap-3d-icon {
-      font-size: 1.25rem !important;
-      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8)) !important;
-      line-height: 1 !important;
-    }
-
-    .dept-name-gold {
-      font-size: 0.86rem !important;
-      font-weight: 800 !important;
-      color: #fef08a !important;
-      letter-spacing: 0.3px !important;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9) !important;
-    }
-
-    .top-frame-actions {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 6px !important;
-    }
-
-    .top-frame-btn {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 5px !important;
-      padding: 4px 10px !important;
-      border-radius: 6px !important;
-      font-size: 0.78rem !important;
-      font-weight: 700 !important;
-      text-decoration: none !important;
-      cursor: pointer !important;
-      border: 1px solid rgba(255, 255, 255, 0.18) !important;
-      transition: all 0.2s ease !important;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) !important;
-    }
-
-    .top-frame-btn.btn-ceosvg {
-      background: rgba(15, 23, 42, 0.75) !important;
+    .top-frame-side-btn.btn-ceosvg {
+      background: rgba(15, 23, 42, 0.8) !important;
       color: #e2e8f0 !important;
     }
-    .top-frame-btn.btn-ceosvg:hover {
+    .top-frame-side-btn.btn-ceosvg:hover {
       background: #1e293b !important;
       border-color: #38bdf8 !important;
       color: #38bdf8 !important;
       transform: translateY(-1px) !important;
     }
 
-    .top-frame-btn.btn-home {
+    .top-frame-side-btn.btn-home {
       background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
       color: #ffffff !important;
       border-color: #38bdf8 !important;
     }
-    .top-frame-btn.btn-home:hover {
+    .top-frame-side-btn.btn-home:hover {
       background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
       transform: translateY(-1px) !important;
     }
@@ -3951,15 +3920,17 @@
       align-items: center !important;
       justify-content: center !important;
       text-align: center !important;
+      flex-grow: 1 !important;
+      min-width: 0 !important;
       position: relative !important;
       z-index: 2 !important;
-      gap: 2px !important;
+      gap: 1px !important;
     }
 
     /* 1. Main 3D Gold Tamil Title */
     .banner-title-tamil {
       font-family: 'Noto Sans Tamil', sans-serif !important;
-      font-size: clamp(1.45rem, 2.3vw, 2.05rem) !important;
+      font-size: clamp(1.4rem, 2.2vw, 1.95rem) !important;
       font-weight: 900 !important;
       line-height: 1.15 !important;
       margin: 0 !important;
@@ -3972,9 +3943,9 @@
 
     /* 2. Aurora Animated Tamil Tagline */
     .banner-tagline-aurora {
-      font-size: clamp(0.82rem, 1.1vw, 0.98rem) !important;
+      font-size: clamp(0.82rem, 1.1vw, 0.95rem) !important;
       font-weight: 800 !important;
-      line-height: 1.3 !important;
+      line-height: 1.25 !important;
       margin: 0 !important;
       letter-spacing: 0.2px !important;
       background: linear-gradient(90deg, #67e8f9 0%, #a78bfa 25%, #f472b6 50%, #34d399 75%, #67e8f9 100%) !important;
@@ -3985,13 +3956,21 @@
       filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8)) !important;
     }
 
-    /* 3. Embossed Silver-White English Title */
+    /* 3. English Title & Slogan Row */
+    .banner-english-row {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      flex-wrap: wrap !important;
+      margin: 1px 0 0 0 !important;
+      line-height: 1.15 !important;
+    }
+
     .banner-title-english {
       font-family: 'Inter', sans-serif !important;
-      font-size: clamp(1.05rem, 1.6vw, 1.4rem) !important;
+      font-size: clamp(0.92rem, 1.35vw, 1.25rem) !important;
       font-weight: 900 !important;
-      line-height: 1.15 !important;
-      margin: 1px 0 0 0 !important;
       letter-spacing: 2px !important;
       background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 40%, #cbd5e1 75%, #94a3b8 100%) !important;
       -webkit-background-clip: text !important;
@@ -3999,40 +3978,47 @@
       filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8)) !important;
     }
 
-    /* 4. Spaced Clean English Sub-slogan */
+    .banner-english-dot {
+      color: rgba(255, 255, 255, 0.4) !important;
+      font-size: 0.75rem !important;
+    }
+
     .banner-slogan-english {
       font-family: 'Inter', sans-serif !important;
-      font-size: clamp(0.68rem, 0.85vw, 0.78rem) !important;
+      font-size: clamp(0.66rem, 0.85vw, 0.76rem) !important;
       font-weight: 800 !important;
       color: #94a3b8 !important;
-      letter-spacing: 2.5px !important;
+      letter-spacing: 2px !important;
       text-transform: uppercase !important;
-      margin: 0 !important;
-      line-height: 1.2 !important;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
     }
 
-    @media (max-width: 680px) {
+    @media (max-width: 900px) {
       .portal-top-frame {
-        padding: 8px 12px 10px 12px !important;
-        gap: 2px !important;
+        flex-wrap: wrap !important;
+        padding: 8px 12px !important;
+        gap: 8px !important;
       }
-      .top-frame-header-row {
-        justify-content: center !important;
-        gap: 6px !important;
+      .top-frame-side-btn {
+        padding: 4px 10px !important;
+        font-size: 0.74rem !important;
       }
-      .dept-name-gold {
-        font-size: 0.76rem !important;
+      .top-frame-center-stack {
+        order: 2 !important;
+        width: 100% !important;
       }
-      .top-frame-btn {
-        padding: 3px 8px !important;
-        font-size: 0.72rem !important;
+      .top-frame-side-btn.btn-ceosvg {
+        order: 1 !important;
+      }
+      .top-frame-side-btn.btn-home {
+        order: 1 !important;
+        margin-left: auto !important;
       }
       .banner-title-tamil {
         font-size: 1.35rem !important;
       }
       .banner-tagline-aurora {
-        font-size: 0.76rem !important;
+        font-size: 0.78rem !important;
       }
       .banner-title-english {
         font-size: 0.95rem !important;
@@ -4040,7 +4026,7 @@
       }
       .banner-slogan-english {
         font-size: 0.62rem !important;
-        letter-spacing: 1.5px !important;
+        letter-spacing: 1.2px !important;
       }
     }
 
@@ -4131,41 +4117,33 @@
 <!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
 <!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
 <header class="portal-top-frame no-print">
-  <!-- Top Bar Row: Left Department Info with Graduation Cap, Right Navigation Buttons -->
-  <div class="top-frame-header-row">
-    <div class="top-frame-dept-badge">
-      <span class="cap-3d-icon">🎓</span>
-      <span class="dept-name-gold">பள்ளிக்கல்வித்துறை, சிவகங்கை மாவட்டம்</span>
-    </div>
-    
-    <div class="top-frame-actions">
-      <!-- Official ceosvg.in Link -->
-      <a href="https://www.ceosvg.in" target="_blank" rel="noopener" class="top-frame-btn btn-ceosvg" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
-        <span class="btn-icon">🌐</span>
-        <span>ceosvg.in</span>
-      </a>
-      <!-- Career Guidance Home Link -->
-      <a href="index.html" class="top-frame-btn btn-home" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
-        <span class="btn-icon">🏛️</span>
-        <span>முகப்பு</span>
-      </a>
-    </div>
-  </div>
+  <!-- Left Side Button: ceosvg.in முதன்மை தளம் -->
+  <a href="https://www.ceosvg.in" target="_blank" rel="noopener" class="top-frame-side-btn btn-ceosvg" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
+    <span class="btn-icon">🌐</span>
+    <span class="btn-text">ceosvg.in முதன்மை தளம்</span>
+  </a>
 
-  <!-- Center Hero Branding Stack: Matching the User Uploaded Image -->
+  <!-- Center Branding Stack: 3D Gold Title, Aurora Tagline & English Sub-branding -->
   <div class="top-frame-center-stack">
     <!-- 1. Main 3D Gold Tamil Title -->
-    <div class="banner-title-tamil">உயர்கல்வி வழிகாட்டி</div>
+    <h1 class="banner-title-tamil">உயர்கல்வி வழிகாட்டி</h1>
 
     <!-- 2. Aurora Animated Tamil Tagline -->
     <div class="banner-tagline-aurora">உங்கள் சிறந்த எதிர்காலத்திற்கான திறவுகோல்</div>
 
-    <!-- 3. Embossed Silver-White English Title -->
-    <div class="banner-title-english">CAREER GUIDANCE</div>
-
-    <!-- 4. Spaced Clean English Sub-slogan -->
-    <div class="banner-slogan-english">YOUR KEY TO A BRIGHT FUTURE</div>
+    <!-- 3. English Title & Slogan Row -->
+    <div class="banner-english-row">
+      <span class="banner-title-english">CAREER GUIDANCE</span>
+      <span class="banner-english-dot">•</span>
+      <span class="banner-slogan-english">YOUR KEY TO A BRIGHT FUTURE</span>
+    </div>
   </div>
+
+  <!-- Right Side Button: வழிகாட்டி முகப்பு -->
+  <a href="index.html" class="top-frame-side-btn btn-home" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+    <span class="btn-icon">🎓</span>
+    <span class="btn-text">வழிகாட்டி முகப்பு</span>
+  </a>
 </header>
 
 
