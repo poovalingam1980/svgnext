@@ -5032,6 +5032,179 @@
   }
 }
 
+
+/* ========================================================
+   NAVIGATION MENU IN BUTTON FORMAT BENEATH TOP FRAME
+   & HARMONIZED TIRUKKURAL BACKGROUND MATCHING TEXT COLORS
+   ======================================================== */
+.breadcrumb-bar {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  padding: 10px 16px !important;
+  margin: 0 0 16px 0 !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 1.8px solid #cbd5e1 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.06) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.nav-menu-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  padding: 7px 16px !important;
+  border-radius: 9px !important;
+  font-family: inherit !important;
+  font-size: 0.86rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  border: 1.5px solid !important;
+  transition: all 0.22s ease !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+  white-space: nowrap !important;
+}
+
+.nav-menu-btn.btn-portal-home {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border-color: #cbd5e1 !important;
+}
+.nav-menu-btn.btn-portal-home:hover {
+  background: #f1f5f9 !important;
+  color: #0284c7 !important;
+  border-color: #38bdf8 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.18) !important;
+}
+
+.nav-menu-btn.btn-guidance-home {
+  background: #ffffff !important;
+  color: #0f766e !important;
+  border-color: #99f6e4 !important;
+}
+.nav-menu-btn.btn-guidance-home:hover {
+  background: #f0fdfa !important;
+  color: #0d9488 !important;
+  border-color: #2dd4bf !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 10px rgba(13, 148, 136, 0.2) !important;
+}
+
+.nav-menu-btn.btn-current-page {
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%) !important;
+  color: #ffffff !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.3) !important;
+  cursor: default !important;
+}
+
+.nav-menu-separator {
+  color: #94a3b8 !important;
+  font-size: 0.75rem !important;
+  margin: 0 2px !important;
+}
+
+@media (max-width: 680px) {
+  .breadcrumb-bar {
+    padding: 8px 10px !important;
+    gap: 6px !important;
+    margin-bottom: 12px !important;
+  }
+  .nav-menu-btn {
+    padding: 5px 11px !important;
+    font-size: 0.76rem !important;
+  }
+}
+
+/* Harmonized Tirukkural Card Background matching gold & white text colors */
+.kural-box {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 18px auto 16px auto !important;
+  padding: 12px 20px 10px 20px !important;
+  border-radius: 14px !important;
+  background: radial-gradient(ellipse at 50% 0%, #1e1b4b 0%, #0f172a 65%, #020617 100%) !important;
+  border: 1.8px solid #f59e0b !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 0 14px rgba(245, 158, 11, 0.18), inset 0 0 25px rgba(245, 158, 11, 0.06) !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.kural-header {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 3px 14px !important;
+  background: rgba(245, 158, 11, 0.15) !important;
+  border: 1px solid rgba(245, 158, 11, 0.4) !important;
+  border-radius: 999px !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  color: #fef08a !important;
+  margin-bottom: 6px !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+.kural-icon {
+  font-size: 1.05rem !important;
+}
+
+.kural-title {
+  font-weight: 800 !important;
+  color: #fef08a !important;
+}
+
+.kural-sparkle {
+  color: #38bdf8 !important;
+  font-weight: 700 !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.25) !important;
+  padding-left: 8px !important;
+  margin-left: 2px !important;
+}
+
+.kural-verse-text {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: clamp(1.05rem, 1.4vw, 1.22rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.6 !important;
+  margin: 4px 0 8px 0 !important;
+  letter-spacing: 0.3px !important;
+  background: linear-gradient(180deg, #ffffff 0%, #fef08a 40%, #facc15 80%, #ca8a04 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.95)) !important;
+  text-align: center !important;
+  display: block !important;
+}
+
+.kural-meaning {
+  font-size: clamp(0.82rem, 0.98vw, 0.90rem) !important;
+  color: #f8fafc !important;
+  line-height: 1.55 !important;
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  background: rgba(15, 23, 42, 0.75) !important;
+  padding: 8px 18px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(245, 158, 11, 0.35) !important;
+  text-align: center !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.kural-meaning strong {
+  color: #fef08a !important;
+  font-weight: 800 !important;
+}
+
 </style>
 </head>
 <body>
@@ -5137,13 +5310,22 @@
 <span class="btn-icon">🎓</span>
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
 </a>
-</header><div class="breadcrumb-bar">
-<a href="https://www.ceosvg.in" rel="noopener" target="_blank">🏛️ இணையதள முகப்பு (ceosvg.in)</a>
-<span class="breadcrumb-separator">▶</span>
-<a href="index.html">🧭 வழிகாட்டி முகப்பு</a>
-<span class="breadcrumb-separator">▶</span>
-<span class="breadcrumb-current">உயர்கல்வி சேர்க்கை உதவி மையம் &amp; வழிகாட்டல்</span>
-</div><div class="header-banner-wrap">
+</header><nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
+<a class="nav-menu-btn btn-portal-home" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ தளம்">
+<span class="btn-icon">🏛️</span>
+<span class="btn-text">ceosvg.in முதன்மை தளம்</span>
+</a>
+<span class="nav-menu-separator">▶</span>
+<a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+<span class="btn-icon">🧭</span>
+<span class="btn-text">வழிகாட்டி முகப்பு</span>
+</a>
+<span class="nav-menu-separator">▶</span>
+<span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
+<span class="btn-icon">🎯</span>
+<span class="btn-text">உயர்கல்வி சேர்க்கை உதவி மையம்</span>
+</span>
+</nav><div class="header-banner-wrap">
 <header class="header-banner">
 <!-- Crystal Clear Glowing Main Title (No Year 2026) -->
 <h1 class="banner-main-title">ஒருங்கிணைந்த உயர்கல்வி சேர்க்கை வழிகாட்டல் &amp; உதவி மையம்</h1>
@@ -6285,7 +6467,7 @@
 </footer></div></main></div>
 <!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
 <!-- Back to Top Floating Action Button -->
-<button id="masterBackTopBtn" onclick="scrollToPageTop()" title="மேலே செல்ல">↑ மேல்நோக்கி</button>
+
 <!-- Complete Vanilla JavaScript Interactive Logic -->
 <script>
     // 1. Smooth Scroll with Sticky Navbar Height Offset
@@ -6342,17 +6524,11 @@
       });
 
       // Back to top button visibility
-      const topBtn = document.getElementById('masterBackTopBtn');
-      if (window.scrollY > 350) {
-        topBtn.style.display = 'block';
-      } else {
-        topBtn.style.display = 'none';
-      }
+      // masterBackTopBtn removed
+      
     });
 
-    function scrollToPageTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    
 
     // 2. Calculator Tab Switching
     function switchCalcPane(paneId) {
