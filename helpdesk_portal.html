@@ -5382,251 +5382,356 @@
 }
 
 
+
 /* ========================================================
-   MASTER DARK GLOSSY (அடர் நிற கிளாசி) THEME FOR BOTH CALCULATORS
+   HIGH-CONTRAST DUAL-THEME ARCHITECTURE FOR CALCULATORS
+   Box 1: Royal Sapphire Blue Theme (Academic Cut-off)
+   Box 2: Athletic Emerald & Amber Theme (Sports Quota)
    ======================================================== */
-#cutoff-tools-sec,
-#sports-tools-sec {
-  background: linear-gradient(145deg, #090e1a 0%, #0f172a 40%, #1e1b4b 75%, #090e1a 100%) !important;
-  border: 1.8px solid rgba(56, 189, 248, 0.42) !important;
+
+/* --- BOX 1: ACADEMIC CUT-OFF CALCULATOR (ROYAL BLUE THEME) --- */
+#cutoff-tools-sec {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e6f2fe 50%, #f8fafc 100%) !important;
+  border: 2px solid #2563eb !important;
+  border-top: 5px solid #1d4ed8 !important;
   border-radius: 16px !important;
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.55), 0 0 20px rgba(37, 99, 235, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
-  padding: 18px 22px !important;
-  margin-bottom: 22px !important;
-  position: relative !important;
-  overflow: hidden !important;
-  color: #f8fafc !important;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+  padding: 20px 22px 24px 22px !important;
+  margin-bottom: 24px !important;
+  box-sizing: border-box !important;
 }
 
-#cutoff-tools-sec::before,
-#sports-tools-sec::before {
-  content: '' !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  height: 3px !important;
-  background: linear-gradient(90deg, #38bdf8, #818cf8, #f472b6, #facc15, #38bdf8) !important;
-  background-size: 200% 100% !important;
-  animation: flowingBorder 6s linear infinite !important;
-  pointer-events: none !important;
-}
-
-#cutoff-tools-sec .card-top-title,
-#sports-tools-sec .card-top-title {
+#cutoff-tools-sec .card-top-title {
   font-family: 'Noto Sans Tamil', sans-serif !important;
-  font-size: clamp(1.05rem, 1.35vw, 1.25rem) !important;
+  font-size: clamp(1.08rem, 1.4vw, 1.28rem) !important;
   font-weight: 900 !important;
-  line-height: 1.35 !important;
+  color: #1e3a8a !important;
   margin: 0 !important;
   letter-spacing: -0.2px !important;
-  background: linear-gradient(135deg, #ffffff 0%, #fef08a 40%, #facc15 80%, #ca8a04 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 10px rgba(250, 204, 21, 0.35)) !important;
-  display: inline-block !important;
 }
 
-#cutoff-tools-sec .box-desc,
-#sports-tools-sec .box-desc {
-  font-size: 0.84rem !important;
-  color: #cbd5e1 !important;
-  margin: 4px 0 14px 0 !important;
-  line-height: 1.5 !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) !important;
+#cutoff-tools-sec .box-desc {
+  font-size: 0.88rem !important;
+  color: #334155 !important;
+  margin: 5px 0 16px 0 !important;
+  line-height: 1.55 !important;
+  font-weight: 500 !important;
 }
 
-/* Dark Glossy Tabs */
 #cutoff-tools-sec .calc-tabs-bar {
   display: flex !important;
   align-items: center !important;
   gap: 6px 8px !important;
   flex-wrap: wrap !important;
-  margin-bottom: 14px !important;
-  padding-bottom: 4px !important;
+  margin-bottom: 16px !important;
 }
 
 #cutoff-tools-sec .calc-btn-tab {
-  padding: 6px 13px !important;
-  font-size: 0.80rem !important;
+  padding: 6px 14px !important;
+  font-size: 0.82rem !important;
   font-weight: 700 !important;
   border-radius: 8px !important;
-  border: 1.2px solid rgba(255, 255, 255, 0.18) !important;
-  background: rgba(15, 23, 42, 0.75) !important;
-  color: #e2e8f0 !important;
+  border: 1.5px solid #93c5fd !important;
+  background: #ffffff !important;
+  color: #1e293b !important;
   cursor: pointer !important;
   transition: all 0.2s ease !important;
+  box-shadow: 0 2px 5px rgba(37, 99, 235, 0.08) !important;
   white-space: nowrap !important;
-  backdrop-filter: blur(8px) !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
 }
 
 #cutoff-tools-sec .calc-btn-tab:hover {
-  background: rgba(30, 41, 59, 0.9) !important;
-  border-color: #38bdf8 !important;
-  color: #38bdf8 !important;
+  background: #eff6ff !important;
+  border-color: #3b82f6 !important;
+  color: #1d4ed8 !important;
   transform: translateY(-1px) !important;
-  box-shadow: 0 4px 10px rgba(56, 189, 248, 0.25) !important;
 }
 
 #cutoff-tools-sec .calc-btn-tab.active {
-  background: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #7c3aed 100%) !important;
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%) !important;
   color: #ffffff !important;
-  border-color: #38bdf8 !important;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.45), 0 0 10px rgba(56, 189, 248, 0.4) !important;
+  border-color: #1d4ed8 !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35) !important;
 }
 
-/* Dark Glossy Card Shell */
-#cutoff-tools-sec .calc-card-shell,
-#sports-tools-sec .calc-card-shell {
-  background: radial-gradient(ellipse at 50% 0%, #1e293b 0%, #0f172a 75%, #090e1a 100%) !important;
-  border: 1.5px solid rgba(56, 189, 248, 0.3) !important;
-  border-radius: 14px !important;
-  padding: 16px 18px !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+#cutoff-tools-sec .calc-card-shell {
+  background: #ffffff !important;
+  border: 1.8px solid #bfdbfe !important;
+  border-radius: 12px !important;
+  padding: 18px 20px !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08) !important;
   box-sizing: border-box !important;
 }
 
-#cutoff-tools-sec .calc-pane-title,
-#sports-tools-sec .calc-pane-title {
-  font-size: 0.95rem !important;
+#cutoff-tools-sec .calc-pane-title {
+  font-size: 0.98rem !important;
   font-weight: 800 !important;
-  color: #38bdf8 !important;
-  margin-bottom: 6px !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+  color: #1e40af !important;
+  margin-bottom: 8px !important;
 }
 
-#cutoff-tools-sec .calc-formula-badge,
-#sports-tools-sec .calc-formula-badge {
-  padding: 5px 12px !important;
-  font-size: 0.78rem !important;
+#cutoff-tools-sec .calc-formula-badge {
+  padding: 6px 12px !important;
+  font-size: 0.80rem !important;
   font-weight: 700 !important;
   border-radius: 6px !important;
-  margin-bottom: 14px !important;
+  margin-bottom: 16px !important;
   display: inline-block !important;
-  background: rgba(15, 23, 42, 0.85) !important;
-  color: #fef08a !important;
-  border: 1px solid rgba(250, 204, 21, 0.4) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  background: #eff6ff !important;
+  color: #1e3a8a !important;
+  border: 1.2px solid #93c5fd !important;
 }
 
-/* Input Fields & Labels */
-#cutoff-tools-sec .field-wrap label,
-#sports-tools-sec .sports-year-card label {
-  font-size: 0.78rem !important;
-  font-weight: 700 !important;
-  color: #93c5fd !important;
-  margin-bottom: 3px !important;
+#cutoff-tools-sec .field-wrap label {
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  margin-bottom: 4px !important;
   display: block !important;
 }
 
-#cutoff-tools-sec .field-wrap input,
-#sports-tools-sec select {
+#cutoff-tools-sec .field-wrap input {
   width: 100% !important;
-  padding: 7px 10px !important;
-  font-size: 0.86rem !important;
-  background: #0f172a !important;
-  color: #ffffff !important;
-  border: 1.4px solid rgba(56, 189, 248, 0.35) !important;
-  border-radius: 7px !important;
+  padding: 8px 12px !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
   box-sizing: border-box !important;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5) !important;
   outline: none !important;
   transition: all 0.2s ease !important;
 }
 
-#cutoff-tools-sec .field-wrap input:focus,
-#sports-tools-sec select:focus {
-  border-color: #38bdf8 !important;
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25) !important;
+#cutoff-tools-sec .field-wrap input:focus {
+  background: #ffffff !important;
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18) !important;
 }
 
-/* Sports Year Cards (Dark Glossy) */
+#cutoff-tools-sec .calc-output-center {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%) !important;
+  border: 2px solid #3b82f6 !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+  text-align: center !important;
+  margin-top: 14px !important;
+}
+
+#cutoff-tools-sec .calc-output-center div[style*="font-size: 0.95rem"] {
+  color: #1e3a8a !important;
+  font-weight: 800 !important;
+}
+
+#cutoff-tools-sec .computed-score {
+  font-size: 2.3rem !important;
+  font-weight: 900 !important;
+  color: #1d4ed8 !important;
+  margin: 3px 0 !important;
+}
+
+#cutoff-tools-sec .computed-tag {
+  font-size: 0.84rem !important;
+  font-weight: 800 !important;
+  padding: 4px 14px !important;
+  border-radius: 999px !important;
+  display: inline-block !important;
+  background: #1e40af !important;
+  color: #ffffff !important;
+}
+
+/* Summary Table in Box 1 */
+#cutoff-tools-sec div[style*="margin-top: 24px"] {
+  background: #ffffff !important;
+  border: 1.8px solid #93c5fd !important;
+  border-radius: 12px !important;
+  box-shadow: 0 3px 12px rgba(37, 99, 235, 0.08) !important;
+}
+
+#cutoff-tools-sec table th {
+  background: #1e3a8a !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+#cutoff-tools-sec table td {
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+
+
+/* --- BOX 2: SPORTS QUOTA CALCULATOR (ATHLETIC EMERALD & AMBER THEME) --- */
+#sports-tools-sec {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #fefce8 100%) !important;
+  border: 2px solid #059669 !important;
+  border-top: 5px solid #047857 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.14), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+  padding: 20px 22px 24px 22px !important;
+  margin-bottom: 24px !important;
+  box-sizing: border-box !important;
+}
+
+#sports-tools-sec .card-top-title {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: clamp(1.08rem, 1.4vw, 1.28rem) !important;
+  font-weight: 900 !important;
+  color: #064e3b !important;
+  margin: 0 !important;
+  letter-spacing: -0.2px !important;
+}
+
+#sports-tools-sec .box-desc {
+  font-size: 0.88rem !important;
+  color: #1f2937 !important;
+  margin: 5px 0 16px 0 !important;
+  line-height: 1.55 !important;
+  font-weight: 500 !important;
+}
+
+#sports-tools-sec .calc-card-shell {
+  background: #ffffff !important;
+  border: 1.8px solid #a7f3d0 !important;
+  border-radius: 12px !important;
+  padding: 18px 20px !important;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.08) !important;
+  box-sizing: border-box !important;
+}
+
+#sports-tools-sec .calc-formula-badge {
+  padding: 6px 12px !important;
+  font-size: 0.80rem !important;
+  font-weight: 800 !important;
+  border-radius: 6px !important;
+  margin-bottom: 16px !important;
+  display: inline-block !important;
+  background: #fefce8 !important;
+  color: #92400e !important;
+  border: 1.4px solid #f59e0b !important;
+}
+
 #sports-tools-sec .sports-year-card {
-  background: linear-gradient(145deg, #0d1527 0%, #141f38 100%) !important;
-  border: 1.4px solid rgba(56, 189, 248, 0.28) !important;
+  background: #f8fafc !important;
+  border: 1.6px solid #a7f3d0 !important;
   border-radius: 10px !important;
-  padding: 12px !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+  padding: 14px !important;
+  box-shadow: 0 3px 10px rgba(5, 150, 105, 0.07) !important;
+}
+
+#sports-tools-sec .sports-year-card div:first-child span:first-child {
+  color: #065f46 !important;
+  font-weight: 900 !important;
+  font-size: 0.90rem !important;
 }
 
 #sports-tools-sec .sports-year-card span[id$="-score"] {
-  background: rgba(56, 189, 248, 0.15) !important;
-  color: #facc15 !important;
-  border: 1px solid rgba(250, 204, 21, 0.35) !important;
-  padding: 2px 8px !important;
+  background: #fef3c7 !important;
+  color: #92400e !important;
+  border: 1.3px solid #f59e0b !important;
+  padding: 3px 10px !important;
   border-radius: 6px !important;
   font-weight: 800 !important;
+  font-size: 0.84rem !important;
 }
 
-/* Output Displays */
-#cutoff-tools-sec .calc-output-center,
-#sports-tools-sec .calc-output-center {
-  background: linear-gradient(145deg, #070c18 0%, #0f1b33 60%, #192748 100%) !important;
-  border: 1.8px solid #facc15 !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5), 0 0 16px rgba(250, 204, 21, 0.22), inset 0 0 20px rgba(250, 204, 21, 0.08) !important;
-  border-radius: 12px !important;
-  padding: 12px 18px !important;
-  text-align: center !important;
-  margin-top: 10px !important;
-}
-
-#cutoff-tools-sec .computed-score,
-#sports-tools-sec .computed-score {
-  font-size: 2.1rem !important;
-  font-weight: 900 !important;
-  color: #fef08a !important;
-  margin: 2px 0 !important;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9), 0 0 14px rgba(250, 204, 21, 0.45) !important;
-}
-
-#cutoff-tools-sec .computed-tag,
-#sports-tools-sec .computed-tag {
-  font-size: 0.82rem !important;
+#sports-tools-sec .sports-year-card label {
+  font-size: 0.80rem !important;
   font-weight: 800 !important;
-  padding: 3px 12px !important;
+  color: #0f172a !important;
+  margin-bottom: 4px !important;
+  display: block !important;
+}
+
+#sports-tools-sec select {
+  width: 100% !important;
+  padding: 8px 10px !important;
+  font-size: 0.86rem !important;
+  font-weight: 700 !important;
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 7px !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+  transition: all 0.2s ease !important;
+}
+
+#sports-tools-sec select:focus {
+  border-color: #059669 !important;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.18) !important;
+}
+
+#sports-tools-sec select option {
+  background: #ffffff !important;
+  color: #0f172a !important;
+}
+
+#sports-tools-sec .calc-output-center {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #fefce8 100%) !important;
+  border: 2px solid #059669 !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+  text-align: center !important;
+  margin-top: 14px !important;
+}
+
+#sports-tools-sec .calc-output-center div[style*="font-size: 0.90rem"] {
+  color: #064e3b !important;
+  font-weight: 800 !important;
+}
+
+#sports-tools-sec .computed-score {
+  font-size: 2.4rem !important;
+  font-weight: 900 !important;
+  color: #047857 !important;
+  margin: 3px 0 !important;
+}
+
+#sports-tools-sec .computed-tag {
+  font-size: 0.84rem !important;
+  font-weight: 800 !important;
+  padding: 4px 14px !important;
   border-radius: 999px !important;
   display: inline-block !important;
-  background: rgba(15, 23, 42, 0.85) !important;
-  border: 1.2px solid #38bdf8 !important;
-  color: #67e8f9 !important;
-}
-
-/* Dark Glossy Summary Table & Rules Boxes */
-#cutoff-tools-sec table {
-  width: 100% !important;
-  border-collapse: collapse !important;
-  color: #e2e8f0 !important;
-}
-
-#cutoff-tools-sec tr[style*="background: #f1f5f9"] {
-  background: rgba(30, 41, 59, 0.9) !important;
-  color: #facc15 !important;
-  border-bottom: 2px solid rgba(56, 189, 248, 0.4) !important;
-}
-
-#cutoff-tools-sec tr {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-}
-
-#cutoff-tools-sec tr:nth-child(even) {
-  background: rgba(15, 23, 42, 0.45) !important;
-}
-
-#cutoff-tools-sec div[style*="background: #ffffff; border: 1.8px solid #cbd5e1"] {
-  background: linear-gradient(145deg, #090e1a 0%, #111a2e 100%) !important;
-  border: 1.5px solid rgba(56, 189, 248, 0.3) !important;
-  color: #e2e8f0 !important;
+  background: #047857 !important;
+  color: #ffffff !important;
 }
 
 #sports-tools-sec div[style*="background: #f8fafc; border: 1.3px solid #e2e8f0"] {
-  background: rgba(15, 23, 42, 0.75) !important;
-  border: 1.3px solid rgba(56, 189, 248, 0.28) !important;
-  color: #e2e8f0 !important;
+  background: #f0fdf4 !important;
+  border: 1.5px solid #a7f3d0 !important;
+  border-radius: 10px !important;
+  color: #1e293b !important;
+  padding: 14px 16px !important;
+}
+
+#sports-tools-sec div[style*="font-weight: 800; color: #1e3a8a; font-size: 0.88rem"] {
+  color: #064e3b !important;
+  font-size: 0.92rem !important;
+  font-weight: 900 !important;
+}
+
+#sports-tools-sec ul li {
+  color: #1e293b !important;
+  font-size: 0.84rem !important;
+  line-height: 1.6 !important;
 }
 
 #sports-tools-sec ul li strong {
-  color: #facc15 !important;
+  color: #065f46 !important;
+  font-weight: 800 !important;
+}
+
+@media (max-width: 680px) {
+  #cutoff-tools-sec,
+  #sports-tools-sec {
+    padding: 14px 12px 18px 12px !important;
+  }
+  #cutoff-tools-sec .calc-card-shell,
+  #sports-tools-sec .calc-card-shell {
+    padding: 12px 10px !important;
+  }
 }
 
 </style>
@@ -6142,7 +6247,7 @@
 </tbody>
 </table>
 </div>
-</div></section><section class="section-card compact-calc-card" id="sports-tools-sec" style="margin-top: 20px;">
+</div></section><section class="section-card compact-calc-card" id="sports-tools-sec" style="">
 <div class="card-top-header" style="display: flex; align-items: center; justify-content: flex-start; margin-bottom: 8px;">
 <h2 class="card-top-title" style="font-size: clamp(1.02rem, 1.35vw, 1.25rem) !important; font-weight: 800; color: #1e3a8a; margin: 0;">
       🏆 தமிழ்நாடு மருத்துவ &amp; தொழிற்கல்வி விளையாட்டு வீரர்கள் (Sports Quota) சான்றிதழ் மதிப்பெண் கால்குலேட்டர்
@@ -6151,14 +6256,14 @@
 <p class="box-desc" style="font-size: 0.84rem; color: #475569; margin: 0 0 14px 0; line-height: 1.5;">
     SDAT, மருத்துவக் கல்வி இயக்ககம் (DME) &amp; அண்ணா பல்கலைக்கழக (TNEA) விதிகளின்படி கேந்திரிய வித்யாலயா (KVS), சிபிஎஸ்இ (CBSE), சர்வதேச, தேசிய, மாநில, மண்டல மற்றும் மாவட்ட அளவிலான விளையாட்டுச் சான்றிதழ்களின் கூட்டு மதிப்பெண் கணக்கீடு:
   </p>
-<div class="calc-card-shell" style="background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px; box-shadow: 0 2px 10px rgba(15,23,42,0.04);">
+<div class="calc-card-shell" style="">
 <div class="calc-formula-badge" style="display: inline-block; padding: 5px 12px; font-size: 0.78rem; font-weight: 700; color: #b45309; background: #fefce8; border: 1px solid #fef08a; border-radius: 6px; margin-bottom: 14px;">
       சூத்திரம்: கடந்த 4 கல்வி ஆண்டுகளில் (9, 10, 11, 12-ஆம் வகுப்பு) பெற்ற சான்றிதழ்களில், ஒரு கல்வி ஆண்டிற்கு 1 அதிகபட்ச சாதனை மட்டுமே மதிப்பெண்ணுக்கு ஏற்கப்படும் (அதிகபட்சம் 4 சான்றிதழ்கள்).
     </div>
 <!-- 4 Academic Years Selection Grid -->
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-bottom: 16px;">
 <!-- Year 4: 12th Std -->
-<div class="sports-year-card" style="background: #f8fafc; border: 1.3px solid #cbd5e1; border-radius: 9px; padding: 11px;">
+<div class="sports-year-card" style="">
 <div style="font-weight: 800; font-size: 0.86rem; color: #1e3a8a; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
 <span>🥇 12-ஆம் வகுப்பு (Year 4)</span>
 <span id="sports-y4-score" style="background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 5px; font-size: 0.80rem; font-weight: 800;">0 மதிப்பெண்</span>
@@ -6166,29 +6271,29 @@
 <div style="margin-bottom: 6px;">
 <label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">போட்டி நிலை (Level):</label>
 <select id="sports-y4-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
-<option style="background: #0f172a; color: #ffffff;" value="none">-- சான்றிதழ் இல்லை --</option>
-<option style="background: #0f172a; color: #ffffff;" value="international">சர்வதேசம் (International - Table I)</option>
-<option style="background: #0f172a; color: #ffffff;" value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
-<option style="background: #0f172a; color: #ffffff;" value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
-<option style="background: #0f172a; color: #ffffff;" value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
-<option style="background: #0f172a; color: #ffffff;" value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
-<option style="background: #0f172a; color: #ffffff;" value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
-<option style="background: #0f172a; color: #ffffff;" value="district">மாவட்டம் (District / Inter-School - Table V)</option>
+<option style="background: #ffffff; color: #0f172a;" value="none">-- சான்றிதழ் இல்லை --</option>
+<option style="background: #ffffff; color: #0f172a;" value="international">சர்வதேசம் (International - Table I)</option>
+<option style="background: #ffffff; color: #0f172a;" value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
+<option style="background: #ffffff; color: #0f172a;" value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
+<option style="background: #ffffff; color: #0f172a;" value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
+<option style="background: #ffffff; color: #0f172a;" value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
+<option style="background: #ffffff; color: #0f172a;" value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
+<option style="background: #ffffff; color: #0f172a;" value="district">மாவட்டம் (District / Inter-School - Table V)</option>
 </select>
 </div>
 <div>
 <label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">வெற்றி நிலை (Medal / Rank):</label>
 <select id="sports-y4-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
-<option style="background: #0f172a; color: #ffffff;" value="none">-- தேர்ந்தெடுக்கவும் --</option>
-<option style="background: #0f172a; color: #ffffff;" value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
-<option style="background: #0f172a; color: #ffffff;" value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
-<option style="background: #0f172a; color: #ffffff;" value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
-<option style="background: #0f172a; color: #ffffff;" value="part">🎖️ பங்கேற்பு (Participation)</option>
+<option style="background: #ffffff; color: #0f172a;" value="none">-- தேர்ந்தெடுக்கவும் --</option>
+<option style="background: #ffffff; color: #0f172a;" value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
+<option style="background: #ffffff; color: #0f172a;" value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
+<option style="background: #ffffff; color: #0f172a;" value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
+<option style="background: #ffffff; color: #0f172a;" value="part">🎖️ பங்கேற்பு (Participation)</option>
 </select>
 </div>
 </div>
 <!-- Year 3: 11th Std -->
-<div class="sports-year-card" style="background: #f8fafc; border: 1.3px solid #cbd5e1; border-radius: 9px; padding: 11px;">
+<div class="sports-year-card" style="">
 <div style="font-weight: 800; font-size: 0.86rem; color: #1e3a8a; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
 <span>🥈 11-ஆம் வகுப்பு (Year 3)</span>
 <span id="sports-y3-score" style="background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 5px; font-size: 0.80rem; font-weight: 800;">0 மதிப்பெண்</span>
@@ -6196,29 +6301,29 @@
 <div style="margin-bottom: 6px;">
 <label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">போட்டி நிலை (Level):</label>
 <select id="sports-y3-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
-<option style="background: #0f172a; color: #ffffff;" value="none">-- சான்றிதழ் இல்லை --</option>
-<option style="background: #0f172a; color: #ffffff;" value="international">சர்வதேசம் (International - Table I)</option>
-<option style="background: #0f172a; color: #ffffff;" value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
-<option style="background: #0f172a; color: #ffffff;" value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
-<option style="background: #0f172a; color: #ffffff;" value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
-<option style="background: #0f172a; color: #ffffff;" value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
-<option style="background: #0f172a; color: #ffffff;" value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
-<option style="background: #0f172a; color: #ffffff;" value="district">மாவட்டம் (District / Inter-School - Table V)</option>
+<option style="background: #ffffff; color: #0f172a;" value="none">-- சான்றிதழ் இல்லை --</option>
+<option style="background: #ffffff; color: #0f172a;" value="international">சர்வதேசம் (International - Table I)</option>
+<option style="background: #ffffff; color: #0f172a;" value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
+<option style="background: #ffffff; color: #0f172a;" value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
+<option style="background: #ffffff; color: #0f172a;" value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
+<option style="background: #ffffff; color: #0f172a;" value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
+<option style="background: #ffffff; color: #0f172a;" value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
+<option style="background: #ffffff; color: #0f172a;" value="district">மாவட்டம் (District / Inter-School - Table V)</option>
 </select>
 </div>
 <div>
 <label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">வெற்றி நிலை (Medal / Rank):</label>
 <select id="sports-y3-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
-<option style="background: #0f172a; color: #ffffff;" value="none">-- தேர்ந்தெடுக்கவும் --</option>
-<option style="background: #0f172a; color: #ffffff;" value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
-<option style="background: #0f172a; color: #ffffff;" value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
-<option style="background: #0f172a; color: #ffffff;" value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
-<option style="background: #0f172a; color: #ffffff;" value="part">🎖️ பங்கேற்பு (Participation)</option>
+<option style="background: #ffffff; color: #0f172a;" value="none">-- தேர்ந்தெடுக்கவும் --</option>
+<option style="background: #ffffff; color: #0f172a;" value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
+<option style="background: #ffffff; color: #0f172a;" value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
+<option style="background: #ffffff; color: #0f172a;" value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
+<option style="background: #ffffff; color: #0f172a;" value="part">🎖️ பங்கேற்பு (Participation)</option>
 </select>
 </div>
 </div>
 <!-- Year 2: 10th Std -->
-<div class="sports-year-card" style="background: #f8fafc; border: 1.3px solid #cbd5e1; border-radius: 9px; padding: 11px;">
+<div class="sports-year-card" style="">
 <div style="font-weight: 800; font-size: 0.86rem; color: #1e3a8a; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
 <span>🥉 10-ஆம் வகுப்பு (Year 2)</span>
 <span id="sports-y2-score" style="background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 5px; font-size: 0.80rem; font-weight: 800;">0 மதிப்பெண்</span>
@@ -6226,29 +6331,29 @@
 <div style="margin-bottom: 6px;">
 <label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">போட்டி நிலை (Level):</label>
 <select id="sports-y2-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
-<option style="background: #0f172a; color: #ffffff;" value="none">-- சான்றிதழ் இல்லை --</option>
-<option style="background: #0f172a; color: #ffffff;" value="international">சர்வதேசம் (International - Table I)</option>
-<option style="background: #0f172a; color: #ffffff;" value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
-<option style="background: #0f172a; color: #ffffff;" value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
-<option style="background: #0f172a; color: #ffffff;" value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
-<option style="background: #0f172a; color: #ffffff;" value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
-<option style="background: #0f172a; color: #ffffff;" value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
-<option style="background: #0f172a; color: #ffffff;" value="district">மாவட்டம் (District / Inter-School - Table V)</option>
+<option style="background: #ffffff; color: #0f172a;" value="none">-- சான்றிதழ் இல்லை --</option>
+<option style="background: #ffffff; color: #0f172a;" value="international">சர்வதேசம் (International - Table I)</option>
+<option style="background: #ffffff; color: #0f172a;" value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
+<option style="background: #ffffff; color: #0f172a;" value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
+<option style="background: #ffffff; color: #0f172a;" value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
+<option style="background: #ffffff; color: #0f172a;" value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
+<option style="background: #ffffff; color: #0f172a;" value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
+<option style="background: #ffffff; color: #0f172a;" value="district">மாவட்டம் (District / Inter-School - Table V)</option>
 </select>
 </div>
 <div>
 <label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">வெற்றி நிலை (Medal / Rank):</label>
 <select id="sports-y2-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
-<option style="background: #0f172a; color: #ffffff;" value="none">-- தேர்ந்தெடுக்கவும் --</option>
-<option style="background: #0f172a; color: #ffffff;" value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
-<option style="background: #0f172a; color: #ffffff;" value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
-<option style="background: #0f172a; color: #ffffff;" value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
-<option style="background: #0f172a; color: #ffffff;" value="part">🎖️ பங்கேற்பு (Participation)</option>
+<option style="background: #ffffff; color: #0f172a;" value="none">-- தேர்ந்தெடுக்கவும் --</option>
+<option style="background: #ffffff; color: #0f172a;" value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
+<option style="background: #ffffff; color: #0f172a;" value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
+<option style="background: #ffffff; color: #0f172a;" value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
+<option style="background: #ffffff; color: #0f172a;" value="part">🎖️ பங்கேற்பு (Participation)</option>
 </select>
 </div>
 </div>
 <!-- Year 1: 9th Std -->
-<div class="sports-year-card" style="background: #f8fafc; border: 1.3px solid #cbd5e1; border-radius: 9px; padding: 11px;">
+<div class="sports-year-card" style="">
 <div style="font-weight: 800; font-size: 0.86rem; color: #1e3a8a; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
 <span>🏅 9-ஆம் வகுப்பு (Year 1)</span>
 <span id="sports-y1-score" style="background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 5px; font-size: 0.80rem; font-weight: 800;">0 மதிப்பெண்</span>
@@ -6256,30 +6361,30 @@
 <div style="margin-bottom: 6px;">
 <label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">போட்டி நிலை (Level):</label>
 <select id="sports-y1-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
-<option style="background: #0f172a; color: #ffffff;" value="none">-- சான்றிதழ் இல்லை --</option>
-<option style="background: #0f172a; color: #ffffff;" value="international">சர்வதேசம் (International - Table I)</option>
-<option style="background: #0f172a; color: #ffffff;" value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
-<option style="background: #0f172a; color: #ffffff;" value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
-<option style="background: #0f172a; color: #ffffff;" value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
-<option style="background: #0f172a; color: #ffffff;" value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
-<option style="background: #0f172a; color: #ffffff;" value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
-<option style="background: #0f172a; color: #ffffff;" value="district">மாவட்டம் (District / Inter-School - Table V)</option>
+<option style="background: #ffffff; color: #0f172a;" value="none">-- சான்றிதழ் இல்லை --</option>
+<option style="background: #ffffff; color: #0f172a;" value="international">சர்வதேசம் (International - Table I)</option>
+<option style="background: #ffffff; color: #0f172a;" value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
+<option style="background: #ffffff; color: #0f172a;" value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
+<option style="background: #ffffff; color: #0f172a;" value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
+<option style="background: #ffffff; color: #0f172a;" value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
+<option style="background: #ffffff; color: #0f172a;" value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
+<option style="background: #ffffff; color: #0f172a;" value="district">மாவட்டம் (District / Inter-School - Table V)</option>
 </select>
 </div>
 <div>
 <label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">வெற்றி நிலை (Medal / Rank):</label>
 <select id="sports-y1-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
-<option style="background: #0f172a; color: #ffffff;" value="none">-- தேர்ந்தெடுக்கவும் --</option>
-<option style="background: #0f172a; color: #ffffff;" value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
-<option style="background: #0f172a; color: #ffffff;" value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
-<option style="background: #0f172a; color: #ffffff;" value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
-<option style="background: #0f172a; color: #ffffff;" value="part">🎖️ பங்கேற்பு (Participation)</option>
+<option style="background: #ffffff; color: #0f172a;" value="none">-- தேர்ந்தெடுக்கவும் --</option>
+<option style="background: #ffffff; color: #0f172a;" value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
+<option style="background: #ffffff; color: #0f172a;" value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
+<option style="background: #ffffff; color: #0f172a;" value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
+<option style="background: #ffffff; color: #0f172a;" value="part">🎖️ பங்கேற்பு (Participation)</option>
 </select>
 </div>
 </div>
 </div>
 <!-- Output Box -->
-<div class="calc-output-center" style="background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%); border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 12px 16px; text-align: center; margin-bottom: 14px;">
+<div class="calc-output-center" style="">
 <div style="font-size: 0.90rem; font-weight: 700; color: #475569; margin-bottom: 2px;">உங்கள் விளையாட்டு மொத்த மதிப்பெண் (Cumulative Sports Score):</div>
 <div class="computed-score" id="sports-total-result" style="font-size: 1.65rem; font-weight: 900; color: #1e3a8a; margin: 2px 0;">0</div>
 <span class="computed-tag" id="sports-total-status" style="display: inline-block; padding: 3px 12px; border-radius: 999px; font-size: 0.80rem; font-weight: 800; background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd;">
