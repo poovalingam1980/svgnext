@@ -6261,23 +6261,14 @@
       சூத்திரம்: கடந்த 4 கல்வி ஆண்டுகளில் (9, 10, 11, 12-ஆம் வகுப்பு) பெற்ற சான்றிதழ்களில், ஒரு கல்வி ஆண்டிற்கு 1 அதிகபட்ச சாதனை மட்டுமே மதிப்பெண்ணுக்கு ஏற்கப்படும் (அதிகபட்சம் 4 சான்றிதழ்கள்).
     </div>
 <!-- 4 Academic Years Selection Grid -->
-<div class="sports-4year-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-bottom: 16px;">
+<div class="sports-4year-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-bottom: 16px;">
 <!-- Year 4: 12th Std -->
 <div class="sports-year-card">
 <div style="font-weight: 800; font-size: 0.88rem; color: #065f46; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;">
 <span>🥇 12-ஆம் வகுப்பு (Year 4)</span>
 <span id="sports-y4-score">0 மதிப்பெண்</span>
 </div>
-<div style="margin-bottom: 6px;">
-<label for="sports-y4-year">கல்வியாண்டு (Academic Year):</label>
-<select id="sports-y4-year" style="width: 100%;">
-<option selected="" value="2025-2026">2025-2026 (12-ஆம் வகுப்பு)</option>
-<option value="2024-2025">2024-2025</option>
-<option value="2023-2024">2023-2024</option>
-<option value="2022-2023">2022-2023</option>
-</select>
-</div>
-<div style="margin-bottom: 6px;">
+<div style="margin-bottom: 8px;">
 <label for="sports-y4-level">போட்டி நிலை (Competition Level):</label>
 <select id="sports-y4-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%;">
 <option value="none">-- சான்றிதழ் இல்லை --</option>
@@ -6290,7 +6281,7 @@
 <option value="district">மாவட்டம் (District / Inter-School - Table V)</option>
 </select>
 </div>
-<div style="margin-bottom: 6px;">
+<div>
 <label for="sports-y4-medal">வெற்றி நிலை (Medal / Position):</label>
 <select id="sports-y4-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%;">
 <option value="none">-- தேர்ந்தெடுக்கவும் --</option>
@@ -6300,14 +6291,6 @@
 <option value="part">🎖️ பங்கேற்பு (Participation)</option>
 </select>
 </div>
-<div style="margin-bottom: 6px;">
-<label for="sports-y4-tourn">கலந்துகொண்ட போட்டியின் பெயர் (Tournament Name):</label>
-<input id="sports-y4-tourn" placeholder="எ.கா. 68th SGFI தேசிய தடகளப் போட்டி" style="width: 100%;" type="text"/>
-</div>
-<div>
-<label for="sports-y4-auth">சான்றிதழ் வழங்கிய அமைப்பு / எண் (Authority &amp; Cert No):</label>
-<input id="sports-y4-auth" placeholder="எ.கா. SGFI / SDAT (சான்றிதழ் எண்: 4920)" style="width: 100%;" type="text"/>
-</div>
 </div>
 <!-- Year 3: 11th Std -->
 <div class="sports-year-card">
@@ -6315,16 +6298,7 @@
 <span>🥈 11-ஆம் வகுப்பு (Year 3)</span>
 <span id="sports-y3-score">0 மதிப்பெண்</span>
 </div>
-<div style="margin-bottom: 6px;">
-<label for="sports-y3-year">கல்வியாண்டு (Academic Year):</label>
-<select id="sports-y3-year" style="width: 100%;">
-<option selected="" value="2024-2025">2024-2025 (11-ஆம் வகுப்பு)</option>
-<option value="2025-2026">2025-2026</option>
-<option value="2023-2024">2023-2024</option>
-<option value="2022-2023">2022-2023</option>
-</select>
-</div>
-<div style="margin-bottom: 6px;">
+<div style="margin-bottom: 8px;">
 <label for="sports-y3-level">போட்டி நிலை (Competition Level):</label>
 <select id="sports-y3-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%;">
 <option value="none">-- சான்றிதழ் இல்லை --</option>
@@ -6337,7 +6311,7 @@
 <option value="district">மாவட்டம் (District / Inter-School - Table V)</option>
 </select>
 </div>
-<div style="margin-bottom: 6px;">
+<div>
 <label for="sports-y3-medal">வெற்றி நிலை (Medal / Position):</label>
 <select id="sports-y3-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%;">
 <option value="none">-- தேர்ந்தெடுக்கவும் --</option>
@@ -6347,14 +6321,6 @@
 <option value="part">🎖️ பங்கேற்பு (Participation)</option>
 </select>
 </div>
-<div style="margin-bottom: 6px;">
-<label for="sports-y3-tourn">கலந்துகொண்ட போட்டியின் பெயர் (Tournament Name):</label>
-<input id="sports-y3-tourn" placeholder="எ.கா. SDAT முதலமைச்சர் கோப்பை மாநிலப் போட்டி" style="width: 100%;" type="text"/>
-</div>
-<div>
-<label for="sports-y3-auth">சான்றிதழ் வழங்கிய அமைப்பு / எண் (Authority &amp; Cert No):</label>
-<input id="sports-y3-auth" placeholder="எ.கா. SDAT தமிழ்நாடு (சான்றிதழ் எண்: 3105)" style="width: 100%;" type="text"/>
-</div>
 </div>
 <!-- Year 2: 10th Std -->
 <div class="sports-year-card">
@@ -6362,16 +6328,7 @@
 <span>🥉 10-ஆம் வகுப்பு (Year 2)</span>
 <span id="sports-y2-score">0 மதிப்பெண்</span>
 </div>
-<div style="margin-bottom: 6px;">
-<label for="sports-y2-year">கல்வியாண்டு (Academic Year):</label>
-<select id="sports-y2-year" style="width: 100%;">
-<option selected="" value="2023-2024">2023-2024 (10-ஆம் வகுப்பு)</option>
-<option value="2024-2025">2024-2025</option>
-<option value="2022-2023">2022-2023</option>
-<option value="2021-2022">2021-2022</option>
-</select>
-</div>
-<div style="margin-bottom: 6px;">
+<div style="margin-bottom: 8px;">
 <label for="sports-y2-level">போட்டி நிலை (Competition Level):</label>
 <select id="sports-y2-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%;">
 <option value="none">-- சான்றிதழ் இல்லை --</option>
@@ -6384,7 +6341,7 @@
 <option value="district">மாவட்டம் (District / Inter-School - Table V)</option>
 </select>
 </div>
-<div style="margin-bottom: 6px;">
+<div>
 <label for="sports-y2-medal">வெற்றி நிலை (Medal / Position):</label>
 <select id="sports-y2-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%;">
 <option value="none">-- தேர்ந்தெடுக்கவும் --</option>
@@ -6394,14 +6351,6 @@
 <option value="part">🎖️ பங்கேற்பு (Participation)</option>
 </select>
 </div>
-<div style="margin-bottom: 6px;">
-<label for="sports-y2-tourn">கலந்துகொண்ட போட்டியின் பெயர் (Tournament Name):</label>
-<input id="sports-y2-tourn" placeholder="எ.கா. KVS / CBSE மண்டல அளவிலான விளையாட்டுப் போட்டி" style="width: 100%;" type="text"/>
-</div>
-<div>
-<label for="sports-y2-auth">சான்றிதழ் வழங்கிய அமைப்பு / எண் (Authority &amp; Cert No):</label>
-<input id="sports-y2-auth" placeholder="எ.கா. KVS சென்னை மண்டலம் / CBSE Cluster" style="width: 100%;" type="text"/>
-</div>
 </div>
 <!-- Year 1: 9th Std -->
 <div class="sports-year-card">
@@ -6409,16 +6358,7 @@
 <span>🏅 9-ஆம் வகுப்பு (Year 1)</span>
 <span id="sports-y1-score">0 மதிப்பெண்</span>
 </div>
-<div style="margin-bottom: 6px;">
-<label for="sports-y1-year">கல்வியாண்டு (Academic Year):</label>
-<select id="sports-y1-year" style="width: 100%;">
-<option selected="" value="2022-2023">2022-2023 (9-ஆம் வகுப்பு)</option>
-<option value="2023-2024">2023-2024</option>
-<option value="2021-2022">2021-2022</option>
-<option value="2020-2021">2020-2021</option>
-</select>
-</div>
-<div style="margin-bottom: 6px;">
+<div style="margin-bottom: 8px;">
 <label for="sports-y1-level">போட்டி நிலை (Competition Level):</label>
 <select id="sports-y1-level" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%;">
 <option value="none">-- சான்றிதழ் இல்லை --</option>
@@ -6431,7 +6371,7 @@
 <option value="district">மாவட்டம் (District / Inter-School - Table V)</option>
 </select>
 </div>
-<div style="margin-bottom: 6px;">
+<div>
 <label for="sports-y1-medal">வெற்றி நிலை (Medal / Position):</label>
 <select id="sports-y1-medal" onchange="computeSportsQuota()" oninput="computeSportsQuota()" style="width: 100%;">
 <option value="none">-- தேர்ந்தெடுக்கவும் --</option>
@@ -6440,14 +6380,6 @@
 <option value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
 <option value="part">🎖️ பங்கேற்பு (Participation)</option>
 </select>
-</div>
-<div style="margin-bottom: 6px;">
-<label for="sports-y1-tourn">கலந்துகொண்ட போட்டியின் பெயர் (Tournament Name):</label>
-<input id="sports-y1-tourn" placeholder="எ.கா. வருவாய் / கல்வி மாவட்ட அளவிலான விளையாட்டுப் போட்டி" style="width: 100%;" type="text"/>
-</div>
-<div>
-<label for="sports-y1-auth">சான்றிதழ் வழங்கிய அமைப்பு / எண் (Authority &amp; Cert No):</label>
-<input id="sports-y1-auth" placeholder="எ.கா. மாவட்ட விளையாட்டு சங்கம் / பள்ளிக்கல்வித்துறை" style="width: 100%;" type="text"/>
 </div>
 </div>
 </div>
@@ -6467,7 +6399,7 @@
           அரசாணை விளையாட்டு இடஒதுக்கீட்டுப் படிவத்தை (PDF) பதிவிறக்க விரும்புகிறீர்களா?
         </div>
 <div style="font-size: 0.84rem; color: #475569; line-height: 1.45;">
-          தேவையெனில் உங்கள் படிப்பு (மருத்துவம், பொறியியல், வேளாண்மை, கால்நடை, துணை மருத்துவம், சட்டம்) மற்றும் மாணவர் விவரங்களை உள்ளிட்டு அந்தந்த படிப்பிற்கான அதிகாரப்பூர்வ A4 படிவத்தைப் பதிவிறக்கலாம்.
+          தேவையெனில் உங்கள் படிப்பு (மருத்துவம், பொறியியல், வேளாண்மை, கால்நடை, துணை மருத்துவம், சட்டம்) மற்றும் கூடுதல் விவரங்களை உள்ளிட்டு அதிகாரப்பூர்வ A4 படிவத்தைப் பெறலாம்.
         </div>
 </div>
 </div>
@@ -6480,10 +6412,7 @@
 </div>
 <!-- Expandable Form Container (Hidden by default, shown on demand) -->
 <div id="sportsCandidateDetailsSection" style="display: none; margin-top: 18px; border-top: 1.6px dashed #a7f3d0; padding-top: 16px;">
-<div style="font-weight: 800; font-size: 0.92rem; color: #065f46; margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
-<span>📝</span><span>மாணவர் &amp; விண்ணப்பிக்கும் படிப்பு விவரங்கள் (அரசாணைப் படிவத்திற்கு):</span>
-</div>
-<!-- Course Selection Dropdown -->
+<!-- Step 1: Course Selection Dropdown -->
 <div style="background: #f0fdf4; border: 1.4px solid #a7f3d0; border-radius: 9px; padding: 12px 14px; margin-bottom: 14px;">
 <label for="sports-target-course" style="font-size: 0.84rem; font-weight: 900; color: #064e3b; margin-bottom: 4px; display: block;">
         🎯 நீங்கள் விண்ணப்பிக்கும் தொழிற்கல்வி / பட்டப்படிப்பு (Target Admission Course):
@@ -6500,27 +6429,111 @@
         📌 தேர்ந்தெடுக்கப்பட்ட படிவம்: <strong>DME தமிழ்நாடு அரசு மருத்துவக் கல்வி இயக்கக சிறப்புப் பிரிவு படிவம் VII(A) &amp; VII(B)</strong>
 </div>
 </div>
-<!-- Candidate Input Fields -->
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px 16px; margin-bottom: 16px;">
+<!-- Step 2: Candidate General Details -->
+<div style="font-weight: 800; font-size: 0.88rem; color: #065f46; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+<span>👤</span><span>1. மாணவர் பொது விவரங்கள் (Candidate Particulars):</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px 14px; margin-bottom: 16px;">
 <div>
-<label for="sports-student-name" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">👤 மாணவர் முழுப் பெயர் (Candidate Full Name):</label>
+<label for="sports-student-name" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">மாணவர் முழுப் பெயர் (Full Name):</label>
 <input id="sports-student-name" placeholder="எ.கா. க. அன்பரசன் / K. ANBARASAN" style="width: 100%;" type="text"/>
 </div>
 <div>
-<label for="sports-app-no" id="label-sports-app-no" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">🔢 விண்ணப்ப எண் / பதிவு எண் (Application / Reg No):</label>
+<label for="sports-app-no" id="label-sports-app-no" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">விண்ணப்ப எண் / பதிவு எண் (Application / Reg No):</label>
 <input id="sports-app-no" placeholder="எ.கா. TN2026-MED-84920 / NEET Roll No" style="width: 100%;" type="text"/>
 </div>
 <div>
-<label for="sports-discipline" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">🏅 விளையாட்டு வகை &amp; பிரிவு (Discipline &amp; Event):</label>
+<label for="sports-discipline" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">விளையாட்டு வகை &amp; நிகழ்வு (Discipline &amp; Event):</label>
 <input id="sports-discipline" placeholder="எ.கா. தடகளம் (Athletics) - 100m, கூடைப்பந்து..." style="width: 100%;" type="text"/>
 </div>
 <div>
-<label for="sports-community" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">🏛️ இருப்பிடம் &amp; வகுப்பு (Nativity &amp; Community):</label>
+<label for="sports-community" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">இருப்பிடம் &amp; வகுப்பு (Nativity &amp; Community):</label>
 <input id="sports-community" placeholder="இருப்பிடம் மற்றும் வகுப்பு" style="width: 100%;" type="text" value="Tamil Nadu Native | BC"/>
 </div>
 </div>
-<!-- Bottom Actions -->
-<div style="display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 12px;">
+<!-- Step 3: Tournament & Academic Year Details for 4 Years (For Form B) -->
+<div style="font-weight: 800; font-size: 0.88rem; color: #065f46; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+<span>🏆</span><span>2. 4 கல்வி ஆண்டுகளுக்கான சான்றிதழ் விவரங்கள் (Official Particulars for Form B):</span>
+</div>
+<p style="font-size: 0.80rem; color: #64748b; margin: 0 0 10px 0;">
+      (குறிப்பு: மேலே கால்குலேட்டரில் நீங்கள் தேர்ந்தெடுத்த போட்டி நிலை &amp; பதக்கத்திற்குரிய கூடுதல் விவரங்களை இங்கு உள்ளிடவும்)
+    </p>
+<div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;">
+<!-- Year 4 Detail Row -->
+<div style="background: #f8fafc; border: 1.4px solid #cbd5e1; border-radius: 9px; padding: 10px 12px;">
+<div style="font-weight: 800; font-size: 0.84rem; color: #1e3a8a; margin-bottom: 6px;">🥇 12-ஆம் வகுப்பு சான்றிதழ் விவரங்கள் (Year 4):</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px 12px;">
+<div>
+<label for="form-y4-year" style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">கல்வியாண்டு (Academic Year):</label>
+<input id="form-y4-year" style="width: 100%;" type="text" value="2025-2026"/>
+</div>
+<div>
+<label for="form-y4-tourn" style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">கலந்துகொண்ட போட்டியின் பெயர் (Tournament Name):</label>
+<input id="form-y4-tourn" placeholder="எ.கா. 68th SGFI தேசிய தடகளப் போட்டி" style="width: 100%;" type="text"/>
+</div>
+<div>
+<label for="form-y4-auth" style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">சான்றிதழ் வழங்கிய அமைப்பு / எண் (Authority &amp; Cert No):</label>
+<input id="form-y4-auth" placeholder="எ.கா. SGFI / SDAT (சான்றிதழ் எண்: 4920)" style="width: 100%;" type="text"/>
+</div>
+</div>
+</div>
+<!-- Year 3 Detail Row -->
+<div style="background: #f8fafc; border: 1.4px solid #cbd5e1; border-radius: 9px; padding: 10px 12px;">
+<div style="font-weight: 800; font-size: 0.84rem; color: #1e3a8a; margin-bottom: 6px;">🥈 11-ஆம் வகுப்பு சான்றிதழ் விவரங்கள் (Year 3):</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px 12px;">
+<div>
+<label for="form-y3-year" style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">கல்வியாண்டு (Academic Year):</label>
+<input id="form-y3-year" style="width: 100%;" type="text" value="2024-2025"/>
+</div>
+<div>
+<label for="form-y3-tourn" style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">கலந்துகொண்ட போட்டியின் பெயர் (Tournament Name):</label>
+<input id="form-y3-tourn" placeholder="எ.கா. SDAT முதலமைச்சர் கோப்பை மாநிலப் போட்டி" style="width: 100%;" type="text"/>
+</div>
+<div>
+<label for="form-y3-auth" style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">சான்றிதழ் வழங்கிய அமைப்பு / எண் (Authority &amp; Cert No):</label>
+<input id="form-y3-auth" placeholder="எ.கா. SDAT தமிழ்நாடு (சான்றிதழ் எண்: 3105)" style="width: 100%;" type="text"/>
+</div>
+</div>
+</div>
+<!-- Year 2 Detail Row -->
+<div style="background: #f8fafc; border: 1.4px solid #cbd5e1; border-radius: 9px; padding: 10px 12px;">
+<div style="font-weight: 800; font-size: 0.84rem; color: #1e3a8a; margin-bottom: 6px;">🥉 10-ஆம் வகுப்பு சான்றிதழ் விவரங்கள் (Year 2):</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px 12px;">
+<div>
+<label for="form-y2-year" style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">கல்வியாண்டு (Academic Year):</label>
+<input id="form-y2-year" style="width: 100%;" type="text" value="2023-2024"/>
+</div>
+<div>
+<label for="form-y2-tourn" style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">கலந்துகொண்ட போட்டியின் பெயர் (Tournament Name):</label>
+<input id="form-y2-tourn" placeholder="எ.கா. KVS / CBSE மண்டல அளவிலான விளையாட்டுப் போட்டி" style="width: 100%;" type="text"/>
+</div>
+<div>
+<label for="form-y2-auth" style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">சான்றிதழ் வழங்கிய அமைப்பு / எண் (Authority &amp; Cert No):</label>
+<input id="form-y2-auth" placeholder="எ.கா. KVS சென்னை மண்டலம் / CBSE Cluster" style="width: 100%;" type="text"/>
+</div>
+</div>
+</div>
+<!-- Year 1 Detail Row -->
+<div style="background: #f8fafc; border: 1.4px solid #cbd5e1; border-radius: 9px; padding: 10px 12px;">
+<div style="font-weight: 800; font-size: 0.84rem; color: #1e3a8a; margin-bottom: 6px;">🏅 9-ஆம் வகுப்பு சான்றிதழ் விவரங்கள் (Year 1):</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px 12px;">
+<div>
+<label for="form-y1-year" style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">கல்வியாண்டு (Academic Year):</label>
+<input id="form-y1-year" style="width: 100%;" type="text" value="2022-2023"/>
+</div>
+<div>
+<label for="form-y1-tourn" style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">கலந்துகொண்ட போட்டியின் பெயர் (Tournament Name):</label>
+<input id="form-y1-tourn" placeholder="எ.கா. வருவாய் / கல்வி மாவட்ட அளவிலான விளையாட்டுப் போட்டி" style="width: 100%;" type="text"/>
+</div>
+<div>
+<label for="form-y1-auth" style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">சான்றிதழ் வழங்கிய அமைப்பு / எண் (Authority &amp; Cert No):</label>
+<input id="form-y1-auth" placeholder="எ.கா. மாவட்ட விளையாட்டு சங்கம் / பள்ளிக்கல்வித்துறை" style="width: 100%;" type="text"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Actions at Bottom of Expandable Section -->
+<div style="display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 14px;">
 <button onclick="toggleSportsFormSection()" style="background: #ffffff; color: #475569; border: 1.4px solid #cbd5e1; border-radius: 8px; padding: 9px 16px; font-size: 0.84rem; font-weight: 700; cursor: pointer;" type="button">
         ❌ சுருக்குக (Collapse)
       </button>
@@ -8449,7 +8462,7 @@ function onCourseSelected() {
 
   const appLbl = document.getElementById('label-sports-app-no');
   if (appLbl) {
-    appLbl.innerText = '🔢 ' + meta.app_label + ':';
+    appLbl.innerText = meta.app_label + ':';
   }
 }
 
@@ -8463,17 +8476,17 @@ function getFormDataPayload() {
   const community = (document.getElementById('sports-community') && document.getElementById('sports-community').value.trim()) || 'Tamil Nadu Native | BC';
 
   const years = [
-    { yrId: 'sports-y4-year', defYr: '2025-2026 (12-ஆம் வகுப்பு)', std: '12th Std (Year 4)', lvlId: 'sports-y4-level', medId: 'sports-y4-medal', tournId: 'sports-y4-tourn', authId: 'sports-y4-auth', scoreId: 'sports-y4-score' },
-    { yrId: 'sports-y3-year', defYr: '2024-2025 (11-ஆம் வகுப்பு)', std: '11th Std (Year 3)', lvlId: 'sports-y3-level', medId: 'sports-y3-medal', tournId: 'sports-y3-tourn', authId: 'sports-y3-auth', scoreId: 'sports-y3-score' },
-    { yrId: 'sports-y2-year', defYr: '2023-2024 (10-ஆம் வகுப்பு)', std: '10th Std (Year 2)', lvlId: 'sports-y2-level', medId: 'sports-y2-medal', tournId: 'sports-y2-tourn', authId: 'sports-y2-auth', scoreId: 'sports-y2-score' },
-    { yrId: 'sports-y1-year', defYr: '2022-2023 (9-ஆம் வகுப்பு)', std: '9th Std (Year 1)', lvlId: 'sports-y1-level', medId: 'sports-y1-medal', tournId: 'sports-y1-tourn', authId: 'sports-y1-auth', scoreId: 'sports-y1-score' }
+    { yrId: 'form-y4-year', defYr: '2025-2026', std: '12th Std (Year 4)', lvlId: 'sports-y4-level', medId: 'sports-y4-medal', tournId: 'form-y4-tourn', authId: 'form-y4-auth', scoreId: 'sports-y4-score' },
+    { yrId: 'form-y3-year', defYr: '2024-2025', std: '11th Std (Year 3)', lvlId: 'sports-y3-level', medId: 'sports-y3-medal', tournId: 'form-y3-tourn', authId: 'form-y3-auth', scoreId: 'sports-y3-score' },
+    { yrId: 'form-y2-year', defYr: '2023-2024', std: '10th Std (Year 2)', lvlId: 'sports-y2-level', medId: 'sports-y2-medal', tournId: 'form-y2-tourn', authId: 'form-y2-auth', scoreId: 'sports-y2-score' },
+    { yrId: 'form-y1-year', defYr: '2022-2023', std: '9th Std (Year 1)', lvlId: 'sports-y1-level', medId: 'sports-y1-medal', tournId: 'form-y1-tourn', authId: 'form-y1-auth', scoreId: 'sports-y1-score' }
   ];
 
   let rows = [];
   let totalScore = 0;
 
   years.forEach((item, index) => {
-    const yrVal = (document.getElementById(item.yrId) && document.getElementById(item.yrId).value) || item.defYr;
+    const yrVal = (document.getElementById(item.yrId) && document.getElementById(item.yrId).value.trim()) || item.defYr;
     const lvlVal = document.getElementById(item.lvlId) ? document.getElementById(item.lvlId).value : 'none';
     const medVal = document.getElementById(item.medId) ? document.getElementById(item.medId).value : 'none';
     const tournVal = (document.getElementById(item.tournId) && document.getElementById(item.tournId).value.trim()) || 'அங்கீகரிக்கப்பட்ட விளையாட்டுப் போட்டி (Official Meet)';
@@ -8575,7 +8588,7 @@ function buildOfficialFormHTML(payload) {
         <thead>
           <tr style="background-color: #1e3a8a; color: #ffffff;">
             <th style="border: 1px solid #64748b; padding: 6px 6px; width: 4%; text-align: center;">Sl.</th>
-            <th style="border: 1px solid #64748b; padding: 6px 6px; width: 14%;">கல்வியாண்டு &amp; வகுப்பு (Academic Year)</th>
+            <th style="border: 1px solid #64748b; padding: 6px 6px; width: 14%;">கல்வியாண்டு (Academic Year)</th>
             <th style="border: 1px solid #64748b; padding: 6px 6px; width: 24%;">போட்டியின் பெயர் (Tournament / Meet)</th>
             <th style="border: 1px solid #64748b; padding: 6px 6px; width: 22%;">போட்டி நிலை (Level)</th>
             <th style="border: 1px solid #64748b; padding: 6px 6px; width: 18%;">அமைப்பு &amp; சான்றிதழ் எண்</th>
@@ -8617,63 +8630,6 @@ function buildOfficialFormHTML(payload) {
       </div>
     </div>
   `;
-}
-
-function generateOfficialSportsPDF() {
-  const payload = getFormDataPayload();
-  const printWindow = window.open('', '_blank', 'width=850,height=900');
-  if (!printWindow) {
-    alert('பாப்-அப் விண்டோ தடுக்கப்பட்டுள்ளது. தயவுசெய்து உலாவி அமைப்பில் பாப்-அப் அனுமதியை இயக்கவும்.');
-    return;
-  }
-
-  const cleanAppNo = payload.appNo.replace(/[^a-zA-Z0-9_-]/g, '') || 'Application';
-  const cleanCourse = payload.courseKey.toUpperCase();
-
-  const printDocHTML = `<!DOCTYPE html>
-<html lang="ta">
-<head>
-  <meta charset="utf-8">
-  <title>${cleanCourse}_SPORTS_QUOTA_FORM_${cleanAppNo}</title>
-  <style>
-    @page { size: A4; margin: 12mm 15mm; }
-    body { margin: 0; padding: 10px; background: #ffffff; }
-    @media print {
-      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    }
-  </style>
-</head>
-<body>
-  ${buildOfficialFormHTML(payload)}
-</body>
-</html>`;
-
-  printWindow.document.open();
-  printWindow.document.write(printDocHTML);
-  printWindow.document.close();
-  printWindow.focus();
-  setTimeout(function() {
-    printWindow.print();
-  }, 400);
-}
-
-function previewOfficialSportsModal() {
-  const payload = getFormDataPayload();
-  const contentEl = document.getElementById('sportsFormModalContent');
-  if (contentEl) {
-    contentEl.innerHTML = buildOfficialFormHTML(payload);
-  }
-  const modal = document.getElementById('sportsFormPreviewModal');
-  if (modal) {
-    modal.style.display = 'flex';
-  }
-}
-
-function closeSportsFormModal() {
-  const modal = document.getElementById('sportsFormPreviewModal');
-  if (modal) {
-    modal.style.display = 'none';
-  }
 }
 </script></body>
 </html>
