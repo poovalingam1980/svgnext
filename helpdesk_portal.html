@@ -8409,10 +8409,26 @@ function switchCalcPane(paneId) {
 </div>
 </div>
 </div><script>
-// ========================================================
-// ADVANCED COURSE-SPECIFIC SPORTS FORMS & DIRECT PDF DOWNLOAD
-// ========================================================
-const COURSE_METADATA = {
+var SPORTS_LEVEL_MAP = {
+  'international': { name: 'சர்வதேசப் போட்டிகள் (International Level - Olympics / Asian / World)', table: 'Table I' },
+  'national': { name: 'தேசிய அளவிலான போட்டிகள் (National / SGFI / Khelo India)', table: 'Table II' },
+  'kvs_national': { name: 'கேந்திரிய வித்யாலயா (KVS) / CBSE தேசியப் போட்டிகள் (Board National)', table: 'Table III' },
+  'state': { name: 'மாநில அளவிலான போட்டிகள் (State Championship / SDAT CM Trophy)', table: 'Table III' },
+  'kvs_regional': { name: 'கேந்திரிய வித்யாலயா (KVS) மண்டல / CBSE கிளஸ்டர் போட்டிகள்', table: 'Table IV' },
+  'divisional': { name: 'மண்டல / கோட்ட அளவிலான போட்டிகள் (Divisional Level)', table: 'Table IV' },
+  'district': { name: 'மாவட்ட அளவிலான போட்டிகள் (District / Inter-School Meets)', table: 'Table V' },
+  'none': { name: '-- சான்றிதழ் சமர்ப்பிக்கப்படவில்லை --', table: '-' }
+};
+
+var SPORTS_MEDAL_MAP = {
+  'gold': '🥇 தங்கம் (Gold Medal / 1st Place)',
+  'silver': '🥈 வெள்ளி (Silver Medal / 2nd Place)',
+  'bronze': '🥉 வெண்கலம் (Bronze Medal / 3rd Place)',
+  'part': '🎖️ பங்கேற்பு (Participation Certificate)',
+  'none': '-'
+};
+
+var COURSE_METADATA = {
   'mbbs': {
     gov_dept: 'GOVERNMENT OF TAMIL NADU',
     committee: 'SELECTION COMMITTEE, DIRECTORATE OF MEDICAL EDUCATION & RESEARCH, CHENNAI – 10',
@@ -8482,36 +8498,37 @@ const COURSE_METADATA = {
 };
 
 function toggleYearCardInput(yearNum) {
-  const chk = document.getElementById('chk-has-y' + yearNum);
-  const card = document.getElementById('card-input-y' + yearNum);
+  var chk = document.getElementById('chk-has-y' + yearNum);
+  var card = document.getElementById('card-input-y' + yearNum);
   if (!chk || !card) return;
   card.style.display = chk.checked ? 'block' : 'none';
 }
 
 function syncYearCheckboxesWithCalculator() {
-  for (let y = 1; y <= 4; y++) {
-    const lvlEl = document.getElementById('sports-y' + y + '-level');
-    const chk = document.getElementById('chk-has-y' + y);
-    const card = document.getElementById('card-input-y' + y);
+  for (var y = 1; y <= 4; y++) {
+    var lvlEl = document.getElementById('sports-y' + y + '-level');
+    var chk = document.getElementById('chk-has-y' + y);
+    var card = document.getElementById('card-input-y' + y);
     if (lvlEl && chk && card) {
-      const hasCert = lvlEl.value !== 'none';
+      var hasCert = lvlEl.value !== 'none';
       chk.checked = hasCert;
       card.style.display = hasCert ? 'block' : 'none';
     }
   }
 }
 
-// Hook sync into computeSportsQuota
-const origComputeSportsQuota = computeSportsQuota;
-computeSportsQuota = function() {
-  origComputeSportsQuota();
-  syncYearCheckboxesWithCalculator();
-};
+if (typeof computeSportsQuota === 'function') {
+  var origComputeSportsQuota = computeSportsQuota;
+  computeSportsQuota = function() {
+    origComputeSportsQuota();
+    syncYearCheckboxesWithCalculator();
+  };
+}
 
 function toggleSportsFormSection() {
-  const sec = document.getElementById('sportsCandidateDetailsSection');
-  const icon = document.getElementById('toggleSportsFormIcon');
-  const txt = document.getElementById('toggleSportsFormText');
+  var sec = document.getElementById('sportsCandidateDetailsSection');
+  var icon = document.getElementById('toggleSportsFormIcon');
+  var txt = document.getElementById('toggleSportsFormText');
   if (!sec) return;
 
   if (sec.style.display === 'none' || sec.style.display === '') {
@@ -8528,59 +8545,59 @@ function toggleSportsFormSection() {
 }
 
 function onCourseSelected() {
-  const sel = document.getElementById('sports-target-course');
-  const courseKey = sel ? sel.value : 'mbbs';
-  const meta = COURSE_METADATA[courseKey] || COURSE_METADATA['mbbs'];
+  var sel = document.getElementById('sports-target-course');
+  var courseKey = sel ? sel.value : 'mbbs';
+  var meta = COURSE_METADATA[courseKey] || COURSE_METADATA['mbbs'];
 
-  const badge = document.getElementById('course-form-badge');
+  var badge = document.getElementById('course-form-badge');
   if (badge) {
     badge.innerHTML = '📌 தேர்ந்தெடுக்கப்பட்ட படிவம்: <strong>' + meta.badge_text + '</strong>';
   }
 
-  const appLbl = document.getElementById('label-sports-app-no');
+  var appLbl = document.getElementById('label-sports-app-no');
   if (appLbl) {
     appLbl.innerText = meta.app_label + ':';
   }
 }
 
 function getFormDataPayload() {
-  const courseKey = (document.getElementById('sports-target-course') && document.getElementById('sports-target-course').value) || 'mbbs';
-  const meta = COURSE_METADATA[courseKey] || COURSE_METADATA['mbbs'];
+  var courseKey = (document.getElementById('sports-target-course') && document.getElementById('sports-target-course').value) || 'mbbs';
+  var meta = COURSE_METADATA[courseKey] || COURSE_METADATA['mbbs'];
 
-  const name = (document.getElementById('sports-student-name') && document.getElementById('sports-student-name').value.trim()) || '______________________________________';
-  const appNo = (document.getElementById('sports-app-no') && document.getElementById('sports-app-no').value.trim()) || '____________________';
-  const primaryGame = (document.getElementById('sports-primary-game') && document.getElementById('sports-primary-game').value.trim()) || 'Athletics / General Sports (விளையாட்டுப் பிரிவு)';
-  const community = (document.getElementById('sports-community') && document.getElementById('sports-community').value.trim()) || 'Tamil Nadu Native | BC';
+  var name = (document.getElementById('sports-student-name') && document.getElementById('sports-student-name').value.trim()) || '______________________________________';
+  var appNo = (document.getElementById('sports-app-no') && document.getElementById('sports-app-no').value.trim()) || '____________________';
+  var primaryGame = (document.getElementById('sports-primary-game') && document.getElementById('sports-primary-game').value.trim()) || 'Athletics / General Sports (விளையாட்டுப் பிரிவு)';
+  var community = (document.getElementById('sports-community') && document.getElementById('sports-community').value.trim()) || 'Tamil Nadu Native | BC';
 
-  const years = [
+  var years = [
     { num: 4, yrId: 'form-y4-year', defYr: '2025-2026', std: '12th Std (12-ஆம் வகுப்பு)', chkId: 'chk-has-y4', gameId: 'form-y4-game', tournId: 'form-y4-tourn', authId: 'form-y4-auth', lvlId: 'sports-y4-level', medId: 'sports-y4-medal', scoreId: 'sports-y4-score' },
     { num: 3, yrId: 'form-y3-year', defYr: '2024-2025', std: '11th Std (11-ஆம் வகுப்பு)', chkId: 'chk-has-y3', gameId: 'form-y3-game', tournId: 'form-y3-tourn', authId: 'form-y3-auth', lvlId: 'sports-y3-level', medId: 'sports-y3-medal', scoreId: 'sports-y3-score' },
     { num: 2, yrId: 'form-y2-year', defYr: '2023-2024', std: '10th Std (10-ஆம் வகுப்பு)', chkId: 'chk-has-y2', gameId: 'form-y2-game', tournId: 'form-y2-tourn', authId: 'form-y2-auth', lvlId: 'sports-y2-level', medId: 'sports-y2-medal', scoreId: 'sports-y2-score' },
     { num: 1, yrId: 'form-y1-year', defYr: '2022-2023', std: '9th Std (9-ஆம் வகுப்பு)', chkId: 'chk-has-y1', gameId: 'form-y1-game', tournId: 'form-y1-tourn', authId: 'form-y1-auth', lvlId: 'sports-y1-level', medId: 'sports-y1-medal', scoreId: 'sports-y1-score' }
   ];
 
-  let rows = [];
-  let totalScore = 0;
-  let activeDisciplines = [];
+  var rows = [];
+  var totalScore = 0;
+  var activeDisciplines = [];
 
-  years.forEach((item) => {
-    const chk = document.getElementById(item.chkId);
-    const lvlVal = document.getElementById(item.lvlId) ? document.getElementById(item.lvlId).value : 'none';
-    const isChecked = chk ? chk.checked : (lvlVal !== 'none');
+  years.forEach(function(item) {
+    var chk = document.getElementById(item.chkId);
+    var lvlVal = document.getElementById(item.lvlId) ? document.getElementById(item.lvlId).value : 'none';
+    var isChecked = chk ? chk.checked : (lvlVal !== 'none');
 
     if (isChecked) {
-      const yrVal = (document.getElementById(item.yrId) && document.getElementById(item.yrId).value.trim()) || item.defYr;
-      const gameVal = (document.getElementById(item.gameId) && document.getElementById(item.gameId).value.trim()) || primaryGame;
-      const tournVal = (document.getElementById(item.tournId) && document.getElementById(item.tournId).value.trim()) || 'அங்கீகரிக்கப்பட்ட விளையாட்டுப் போட்டி (Official Meet)';
-      const authVal = (document.getElementById(item.authId) && document.getElementById(item.authId).value.trim()) || 'SDAT / SGFI / KVS / Sports Association';
-      const medVal = document.getElementById(item.medId) ? document.getElementById(item.medId).value : 'none';
+      var yrVal = (document.getElementById(item.yrId) && document.getElementById(item.yrId).value.trim()) || item.defYr;
+      var gameVal = (document.getElementById(item.gameId) && document.getElementById(item.gameId).value.trim()) || primaryGame;
+      var tournVal = (document.getElementById(item.tournId) && document.getElementById(item.tournId).value.trim()) || 'அங்கீகரிக்கப்பட்ட விளையாட்டுப் போட்டி (Official Meet)';
+      var authVal = (document.getElementById(item.authId) && document.getElementById(item.authId).value.trim()) || 'SDAT / SGFI / KVS / Sports Association';
+      var medVal = document.getElementById(item.medId) ? document.getElementById(item.medId).value : 'none';
 
-      const scoreText = document.getElementById(item.scoreId) ? document.getElementById(item.scoreId).innerText : '0 மதிப்பெண்';
-      const score = parseInt(scoreText) || 0;
+      var scoreText = document.getElementById(item.scoreId) ? document.getElementById(item.scoreId).innerText : '0 மதிப்பெண்';
+      var score = parseInt(scoreText) || 0;
       totalScore += score;
 
-      const lvlObj = SPORTS_LEVEL_MAP[lvlVal] || { name: '-- சான்றிதழ் சமர்ப்பிக்கப்பட்டுள்ளது --', table: '-' };
-      const medName = SPORTS_MEDAL_MAP[medVal] || '-';
+      var lvlObj = SPORTS_LEVEL_MAP[lvlVal] || { name: '-- சான்றிதழ் சமர்ப்பிக்கப்பட்டுள்ளது --', table: '-' };
+      var medName = SPORTS_MEDAL_MAP[medVal] || '-';
 
       activeDisciplines.push(gameVal);
 
@@ -8599,158 +8616,131 @@ function getFormDataPayload() {
     }
   });
 
-  const finalDiscipline = activeDisciplines.length > 0 ? Array.from(new Set(activeDisciplines)).join(', ') : primaryGame;
+  var finalDiscipline = activeDisciplines.length > 0 ? Array.from(new Set(activeDisciplines)).join(', ') : primaryGame;
 
-  return { meta, courseKey, name, appNo, discipline: finalDiscipline, community, rows, totalScore };
+  return { meta: meta, courseKey: courseKey, name: name, appNo: appNo, discipline: finalDiscipline, community: community, rows: rows, totalScore: totalScore };
 }
 
 function buildOfficialFormHTML(payload) {
-  const m = payload.meta;
-  return `
-    <div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #0f172a; line-height: 1.45; max-width: 800px; margin: 0 auto; background: #ffffff;">
-      <!-- FORM A -->
-      <div style="text-align: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 8px; margin-bottom: 14px;">
-        <div style="font-size: 13pt; font-weight: 900; color: #1e3a8a; text-transform: uppercase;">${m.gov_dept}</div>
-        <div style="font-size: 9.5pt; font-weight: 700; color: #334155; margin: 2px 0;">${m.committee}</div>
-        <div style="font-size: 11pt; font-weight: 900; color: #0f172a; margin: 4px 0;">${m.form_a}</div>
-        <div style="font-size: 9.5pt; font-weight: 800; color: #047857;">${m.title}</div>
-        <div style="font-size: 8.5pt; color: #64748b; font-weight: 600;">${m.sub_course}</div>
-      </div>
-
-      <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 9pt;">
-        <tr>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px; width: 45%; font-weight: 700; background: #f8fafc;">1. விண்ணப்பிக்கும் படிப்பு (Target Course):</td>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 800; color: #064e3b;">${m.sub_course}</td>
-        </tr>
-        <tr>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">2. Name of the Candidate (மாணவர் பெயர்):</td>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 800; color: #1e3a8a;">${payload.name}</td>
-        </tr>
-        <tr>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">3. ${m.app_label}:</td>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 800; color: #1e3a8a;">${payload.appNo}</td>
-        </tr>
-        <tr>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">4. Sports Disciplines / Events (விளையாட்டு &amp; பிரிவு விவரங்கள்):</td>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700;">${payload.discipline}</td>
-        </tr>
-        <tr>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">5. Nativity &amp; Community (இருப்பிடம் &amp; வகுப்பு):</td>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px;">${payload.community}</td>
-        </tr>
-        <tr>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">6. Total Cumulative Sports Marks (கோரப்படும் மொத்த மதிப்பெண்கள்):</td>
-          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 900; font-size: 11pt; color: #047857;">${payload.totalScore} Marks</td>
-        </tr>
-      </table>
-
-      <div style="font-size: 8.5pt; text-align: justify; margin: 10px 0; line-height: 1.5; color: #1e293b; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px 10px;">
-        <strong>DECLARATION &amp; UNDERTAKING (உறுதிமொழி):</strong><br/>
-        I hereby declare that the particulars given above and in ${m.form_b} are true, genuine and correct to the best of my knowledge and belief. I have submitted genuine original sports certificates along with relevant forms issued by recognized National Federations / State Associations / SGFI / KVS / CBSE / SDAT. I also undertake that on admission under the Eminent Sports Persons Quota, I shall regularly participate in sports activities representing the institution / university.
-      </div>
-
-      <div style="margin-top: 24px; display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; color: #334155;">
-        <div>தேதி (Date): ____________________<br/>இடம் (Place): ____________________</div>
-        <div style="text-align: center;">பெற்றோர் / பாதுகாவலர் கையொப்பம்<br/>(Signature of Parent / Guardian)</div>
-        <div style="text-align: center;">மாணவர் கையொப்பம்<br/>(Signature of Candidate)</div>
-      </div>
-
-      <!-- Page Break for Form B -->
-      <div style="margin: 22px 0 16px 0; border-top: 2px dashed #94a3b8; page-break-before: always; padding-top: 14px;"></div>
-
-      <!-- FORM B -->
-      <div style="text-align: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 8px; margin-bottom: 12px;">
-        <div style="font-size: 13pt; font-weight: 900; color: #1e3a8a; text-transform: uppercase;">${m.gov_dept}</div>
-        <div style="font-size: 9.5pt; font-weight: 700; color: #334155; margin: 2px 0;">${m.committee}</div>
-        <div style="font-size: 11pt; font-weight: 900; color: #0f172a; margin: 4px 0;">${m.form_b}</div>
-        <div style="font-size: 9.5pt; font-weight: 800; color: #047857;">DETAILS OF SPORTS CERTIFICATES PRODUCED FOR EMINENT SPORTS PERSONS QUOTA</div>
-        <div style="font-size: 8.5pt; color: #64748b; font-weight: 600;">(Eligible Academic Years: 9th, 10th, 11th &amp; 12th Standards — One highest certificate per eligible academic year)</div>
-      </div>
-
-      <div style="display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; margin-bottom: 8px; color: #1e293b; background: #f1f5f9; padding: 6px 10px; border-radius: 6px;">
-        <span>மாணவர் பெயர்: <strong>${payload.name}</strong></span>
-        <span>விண்ணப்ப எண்: <strong>${payload.appNo}</strong></span>
-        <span>சமர்ப்பிக்கப்பட்ட சான்றிதழ்கள்: <strong>${payload.rows.length} சான்றிதழ்(கள்)</strong></span>
-      </div>
-
-      <table style="width: 100%; border-collapse: collapse; margin-bottom: 10px; font-size: 8.0pt;">
-        <thead>
-          <tr style="background-color: #1e3a8a; color: #ffffff;">
-            <th style="border: 1px solid #64748b; padding: 6px 5px; width: 4%; text-align: center;">Sl.</th>
-            <th style="border: 1px solid #64748b; padding: 6px 5px; width: 15%;">கல்வியாண்டு &amp; வகுப்பு (Academic Year)</th>
-            <th style="border: 1px solid #64748b; padding: 6px 5px; width: 16%;">விளையாட்டு &amp; பிரிவு (Discipline)</th>
-            <th style="border: 1px solid #64748b; padding: 6px 5px; width: 22%;">போட்டியின் பெயர் (Tournament / Meet)</th>
-            <th style="border: 1px solid #64748b; padding: 6px 5px; width: 18%;">போட்டி நிலை (Level)</th>
-            <th style="border: 1px solid #64748b; padding: 6px 5px; width: 12%;">அமைப்பு &amp; சான்றிதழ் எண்</th>
-            <th style="border: 1px solid #64748b; padding: 6px 5px; width: 7%; text-align: center;">பதக்கம்</th>
-            <th style="border: 1px solid #64748b; padding: 6px 5px; width: 6%; text-align: center;">மதிப்பெண்</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${payload.rows.length > 0 ? payload.rows.map(r => `
-            <tr style="background-color: ${r.sl % 2 === 0 ? '#f8fafc' : '#ffffff'};">
-              <td style="border: 1px solid #94a3b8; padding: 5px 5px; text-align: center;">${r.sl}</td>
-              <td style="border: 1px solid #94a3b8; padding: 5px 5px; font-weight: 700;">${r.academicYear}<br/><span style="font-size: 7.2pt; color: #64748b;">${r.standard}</span></td>
-              <td style="border: 1px solid #94a3b8; padding: 5px 5px; font-weight: 700; color: #065f46;">${r.game}</td>
-              <td style="border: 1px solid #94a3b8; padding: 5px 5px;">${r.tournament}</td>
-              <td style="border: 1px solid #94a3b8; padding: 5px 5px;">${r.level}</td>
-              <td style="border: 1px solid #94a3b8; padding: 5px 5px; font-size: 7.5pt;">${r.authority}</td>
-              <td style="border: 1px solid #94a3b8; padding: 5px 5px; font-weight: 700; text-align: center;">${r.medal}</td>
-              <td style="border: 1px solid #94a3b8; padding: 5px 5px; text-align: center; font-weight: 800; color: #047857;">${r.score}</td>
-            </tr>
-          `).join('') : `
-            <tr>
-              <td colspan="8" style="border: 1px solid #94a3b8; padding: 12px; text-align: center; color: #64748b;">
-                சான்றிதழ் விவரங்கள் தேர்ந்தெடுக்கப்படவில்லை.
-              </td>
-            </tr>
-          `}
-          <tr style="background-color: #fefce8; font-weight: 900; font-size: 9.0pt;">
-            <td colspan="7" style="border: 1px solid #94a3b8; padding: 7px 10px; text-align: right; color: #92400e;">
-              CUMULATIVE TOTAL SPORTS MARKS CLAIMED (கூட்டு மொத்த மதிப்பெண்கள்):
-            </td>
-            <td style="border: 1px solid #94a3b8; padding: 7px 6px; text-align: center; color: #92400e; font-size: 11pt;">
-              ${payload.totalScore}
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div style="font-size: 7.8pt; color: #475569; line-height: 1.4; margin-top: 6px;">
-        <em>* குறிப்பு: தமிழ்நாடு விளையாட்டு மேம்பாட்டு ஆணையம் (SDAT) மற்றும் சேர்க்கைக் குழு விதிகளின்படி, ஒரு கல்வி ஆண்டில் 1 அதிகபட்ச சாதனைக்கு மட்டுமே மதிப்பெண் வழங்கப்படும். தமிழகத்தின் எல்லைக்குள் அமைந்துள்ள கேந்திரிய வித்யாலயா (KVS) மற்றும் சிபிஎஸ்இ (CBSE) பள்ளிகளில் பயின்ற தமிழக இருப்பிடச் சான்றுடைய மாணவர்கள் மட்டுமே தகுதியுடையவர்கள்.</em>
-      </div>
-
-      <div style="margin-top: 35px; display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; color: #334155;">
-        <div style="text-align: center;">உடற்கல்வி இயக்குநர் / தலைமையாசிரியர் ஒப்பம்<br/>(Attested by PE Director / Headmaster)</div>
-        <div style="text-align: center;">பெற்றோர் / பாதுகாவலர் கையொப்பம்<br/>(Signature of Parent / Guardian)</div>
-        <div style="text-align: center;">மாணவர் கையொப்பம்<br/>(Signature of Candidate)</div>
-      </div>
-    </div>
-  `;
+  var m = payload.meta;
+  return '<div style="font-family: Arial, sans-serif; color: #0f172a; line-height: 1.45; max-width: 800px; margin: 0 auto; background: #ffffff;">' +
+    '<div style="text-align: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 8px; margin-bottom: 14px;">' +
+      '<div style="font-size: 13pt; font-weight: 900; color: #1e3a8a; text-transform: uppercase;">' + m.gov_dept + '</div>' +
+      '<div style="font-size: 9.5pt; font-weight: 700; color: #334155; margin: 2px 0;">' + m.committee + '</div>' +
+      '<div style="font-size: 11pt; font-weight: 900; color: #0f172a; margin: 4px 0;">' + m.form_a + '</div>' +
+      '<div style="font-size: 9.5pt; font-weight: 800; color: #047857;">' + m.title + '</div>' +
+      '<div style="font-size: 8.5pt; color: #64748b; font-weight: 600;">' + m.sub_course + '</div>' +
+    '</div>' +
+    '<table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 9pt;">' +
+      '<tr>' +
+        '<td style="border: 1px solid #94a3b8; padding: 6px 10px; width: 45%; font-weight: 700; background: #f8fafc;">1. விண்ணப்பிக்கும் படிப்பு (Target Course):</td>' +
+        '<td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 800; color: #064e3b;">' + m.sub_course + '</td>' +
+      '</tr>' +
+      '<tr>' +
+        '<td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">2. Name of the Candidate (மாணவர் பெயர்):</td>' +
+        '<td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 800; color: #1e3a8a;">' + payload.name + '</td>' +
+      '</tr>' +
+      '<tr>' +
+        '<td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">3. ' + m.app_label + ':</td>' +
+        '<td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 800; color: #1e3a8a;">' + payload.appNo + '</td>' +
+      '</tr>' +
+      '<tr>' +
+        '<td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">4. Sports Disciplines / Events (விளையாட்டு & பிரிவு விவரங்கள்):</td>' +
+        '<td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700;">' + payload.discipline + '</td>' +
+      '</tr>' +
+      '<tr>' +
+        '<td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">5. Nativity & Community (இருப்பிடம் & வகுப்பு):</td>' +
+        '<td style="border: 1px solid #94a3b8; padding: 6px 10px;">' + payload.community + '</td>' +
+      '</tr>' +
+      '<tr>' +
+        '<td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">6. Total Cumulative Sports Marks (கோரப்படும் மொத்த மதிப்பெண்கள்):</td>' +
+        '<td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 900; font-size: 11pt; color: #047857;">' + payload.totalScore + ' Marks</td>' +
+      '</tr>' +
+    '</table>' +
+    '<div style="font-size: 8.5pt; text-align: justify; margin: 10px 0; line-height: 1.5; color: #1e293b; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px 10px;">' +
+      '<strong>DECLARATION & UNDERTAKING (உறுதிமொழி):</strong><br/>' +
+      'I hereby declare that the particulars given above and in ' + m.form_b + ' are true, genuine and correct to the best of my knowledge and belief. I have submitted genuine original sports certificates along with relevant forms issued by recognized National Federations / State Associations / SGFI / KVS / CBSE / SDAT. I also undertake that on admission under the Eminent Sports Persons Quota, I shall regularly participate in sports activities representing the institution / university.' +
+    '</div>' +
+    '<div style="margin-top: 24px; display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; color: #334155;">' +
+      '<div>தேதி (Date): ____________________<br/>இடம் (Place): ____________________</div>' +
+      '<div style="text-align: center;">பெற்றோர் / பாதுகாவலர் கையொப்பம்<br/>(Signature of Parent / Guardian)</div>' +
+      '<div style="text-align: center;">மாணவர் கையொப்பம்<br/>(Signature of Candidate)</div>' +
+    '</div>' +
+    '<div style="margin: 22px 0 16px 0; border-top: 2px dashed #94a3b8; page-break-before: always; padding-top: 14px;"></div>' +
+    '<div style="text-align: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 8px; margin-bottom: 12px;">' +
+      '<div style="font-size: 13pt; font-weight: 900; color: #1e3a8a; text-transform: uppercase;">' + m.gov_dept + '</div>' +
+      '<div style="font-size: 9.5pt; font-weight: 700; color: #334155; margin: 2px 0;">' + m.committee + '</div>' +
+      '<div style="font-size: 11pt; font-weight: 900; color: #0f172a; margin: 4px 0;">' + m.form_b + '</div>' +
+      '<div style="font-size: 9.5pt; font-weight: 800; color: #047857;">DETAILS OF SPORTS CERTIFICATES PRODUCED FOR EMINENT SPORTS PERSONS QUOTA</div>' +
+      '<div style="font-size: 8.5pt; color: #64748b; font-weight: 600;">(Eligible Academic Years: 9th, 10th, 11th & 12th Standards — One highest certificate per eligible academic year)</div>' +
+    '</div>' +
+    '<div style="display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; margin-bottom: 8px; color: #1e293b; background: #f1f5f9; padding: 6px 10px; border-radius: 6px;">' +
+      '<span>மாணவர் பெயர்: <strong>' + payload.name + '</strong></span>' +
+      '<span>விண்ணப்ப எண்: <strong>' + payload.appNo + '</strong></span>' +
+      '<span>சமர்ப்பிக்கப்பட்ட சான்றிதழ்கள்: <strong>' + payload.rows.length + ' சான்றிதழ்(கள்)</strong></span>' +
+    '</div>' +
+    '<table style="width: 100%; border-collapse: collapse; margin-bottom: 10px; font-size: 8.0pt;">' +
+      '<thead>' +
+        '<tr style="background-color: #1e3a8a; color: #ffffff;">' +
+          '<th style="border: 1px solid #64748b; padding: 6px 5px; width: 4%; text-align: center;">Sl.</th>' +
+          '<th style="border: 1px solid #64748b; padding: 6px 5px; width: 15%;">கல்வியாண்டு & வகுப்பு (Academic Year)</th>' +
+          '<th style="border: 1px solid #64748b; padding: 6px 5px; width: 16%;">விளையாட்டு & பிரிவு (Discipline)</th>' +
+          '<th style="border: 1px solid #64748b; padding: 6px 5px; width: 22%;">போட்டியின் பெயர் (Tournament / Meet)</th>' +
+          '<th style="border: 1px solid #64748b; padding: 6px 5px; width: 18%;">போட்டி நிலை (Level)</th>' +
+          '<th style="border: 1px solid #64748b; padding: 6px 5px; width: 12%;">அமைப்பு & சான்றிதழ் எண்</th>' +
+          '<th style="border: 1px solid #64748b; padding: 6px 5px; width: 7%; text-align: center;">பதக்கம்</th>' +
+          '<th style="border: 1px solid #64748b; padding: 6px 5px; width: 6%; text-align: center;">மதிப்பெண்</th>' +
+        '</tr>' +
+      '</thead>' +
+      '<tbody>' +
+        (payload.rows.length > 0 ? payload.rows.map(function(r) {
+          return '<tr style="background-color: ' + (r.sl % 2 === 0 ? '#f8fafc' : '#ffffff') + ';">' +
+            '<td style="border: 1px solid #94a3b8; padding: 5px 5px; text-align: center;">' + r.sl + '</td>' +
+            '<td style="border: 1px solid #94a3b8; padding: 5px 5px; font-weight: 700;">' + r.academicYear + '<br/><span style="font-size: 7.2pt; color: #64748b;">' + r.standard + '</span></td>' +
+            '<td style="border: 1px solid #94a3b8; padding: 5px 5px; font-weight: 700; color: #065f46;">' + r.game + '</td>' +
+            '<td style="border: 1px solid #94a3b8; padding: 5px 5px;">' + r.tournament + '</td>' +
+            '<td style="border: 1px solid #94a3b8; padding: 5px 5px;">' + r.level + '</td>' +
+            '<td style="border: 1px solid #94a3b8; padding: 5px 5px; font-size: 7.5pt;">' + r.authority + '</td>' +
+            '<td style="border: 1px solid #94a3b8; padding: 5px 5px; font-weight: 700; text-align: center;">' + r.medal + '</td>' +
+            '<td style="border: 1px solid #94a3b8; padding: 5px 5px; text-align: center; font-weight: 800; color: #047857;">' + r.score + '</td>' +
+          '</tr>';
+        }).join('') : '<tr><td colspan="8" style="border: 1px solid #94a3b8; padding: 12px; text-align: center; color: #64748b;">சான்றிதழ் விவரங்கள் தேர்ந்தெடுக்கப்படவில்லை.</td></tr>') +
+        '<tr style="background-color: #fefce8; font-weight: 900; font-size: 9.0pt;">' +
+          '<td colspan="7" style="border: 1px solid #94a3b8; padding: 7px 10px; text-align: right; color: #92400e;">CUMULATIVE TOTAL SPORTS MARKS CLAIMED (கூட்டு மொத்த மதிப்பெண்கள்):</td>' +
+          '<td style="border: 1px solid #94a3b8; padding: 7px 6px; text-align: center; color: #92400e; font-size: 11pt;">' + payload.totalScore + '</td>' +
+        '</tr>' +
+      '</tbody>' +
+    '</table>' +
+    '<div style="font-size: 7.8pt; color: #475569; line-height: 1.4; margin-top: 6px;">' +
+      '<em>* குறிப்பு: தமிழ்நாடு விளையாட்டு மேம்பாட்டு ஆணையம் (SDAT) மற்றும் சேர்க்கைக் குழு விதிகளின்படி, ஒரு கல்வி ஆண்டில் 1 அதிகபட்ச சாதனைக்கு மட்டுமே மதிப்பெண் வழங்கப்படும். தமிழகத்தின் எல்லைக்குள் அமைந்துள்ள கேந்திரிய வித்யாலயா (KVS) மற்றும் சிபிஎஸ்இ (CBSE) பள்ளிகளில் பயின்ற தமிழக இருப்பிடச் சான்றுடைய மாணவர்கள் மட்டுமே தகுதியுடையவர்கள்.</em>' +
+    '</div>' +
+    '<div style="margin-top: 35px; display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; color: #334155;">' +
+      '<div style="text-align: center;">உடற்கல்வி இயக்குநர் / தலைமையாசிரியர் ஒப்பம்<br/>(Attested by PE Director / Headmaster)</div>' +
+      '<div style="text-align: center;">பெற்றோர் / பாதுகாவலர் கையொப்பம்<br/>(Signature of Parent / Guardian)</div>' +
+      '<div style="text-align: center;">மாணவர் கையொப்பம்<br/>(Signature of Candidate)</div>' +
+    '</div>' +
+  '</div>';
 }
 
-// ----------------------------------------------------
-// PURE CLIENT-SIDE 2-PAGE PDF GENERATOR & DIRECT DOWNLOAD
-// ----------------------------------------------------
 function dataURItoUint8Array(dataURI) {
-  const byteString = atob(dataURI.split(',')[1]);
-  const ia = new Uint8Array(byteString.length);
-  for (let i = 0; i < byteString.length; i++) {
+  var byteString = atob(dataURI.split(',')[1]);
+  var ia = new Uint8Array(byteString.length);
+  for (var i = 0; i < byteString.length; i++) {
     ia[i] = byteString.charCodeAt(i);
   }
   return ia;
 }
 
 function assemble2PagePDF(jpegBytes1, w1, h1, jpegBytes2, w2, h2) {
-  const parts = [];
-  let currentOffset = 0;
-  const offsets = [];
+  var parts = [];
+  var currentOffset = 0;
+  var offsets = [];
 
   function addPart(data) {
-    let buf;
+    var buf;
     if (typeof data === 'string') {
-      const arr = new Uint8Array(data.length);
-      for (let i = 0; i < data.length; i++) {
+      var arr = new Uint8Array(data.length);
+      for (var i = 0; i < data.length; i++) {
         arr[i] = data.charCodeAt(i) & 0xff;
       }
       buf = arr;
@@ -8761,63 +8751,53 @@ function assemble2PagePDF(jpegBytes1, w1, h1, jpegBytes2, w2, h2) {
     currentOffset += buf.length;
   }
 
-  // Header
   addPart("%PDF-1.4\n");
 
-  // 1: Catalog
   offsets.push(currentOffset);
   addPart("1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n");
 
-  // 2: Pages
   offsets.push(currentOffset);
   addPart("2 0 obj\n<< /Type /Pages /Kids [3 0 R 6 0 R] /Count 2 >>\nendobj\n");
 
-  // 3: Page 1
   offsets.push(currentOffset);
   addPart("3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /XObject << /Im1 4 0 R >> >> /Contents 5 0 R >>\nendobj\n");
 
-  // 4: Image 1 XObject
   offsets.push(currentOffset);
   addPart("4 0 obj\n<< /Type /XObject /Subtype /Image /Width " + w1 + " /Height " + h1 + " /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length " + jpegBytes1.length + " >>\nstream\n");
   addPart(jpegBytes1);
   addPart("\nendstream\nendobj\n");
 
-  // 5: Contents 1
-  const c1 = "q\n595.28 0 0 841.89 0 0 cm\n/Im1 Do\nQ\n";
+  var c1 = "q\n595.28 0 0 841.89 0 0 cm\n/Im1 Do\nQ\n";
   offsets.push(currentOffset);
   addPart("5 0 obj\n<< /Length " + c1.length + " >>\nstream\n" + c1 + "endstream\nendobj\n");
 
-  // 6: Page 2
   offsets.push(currentOffset);
   addPart("6 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /XObject << /Im2 7 0 R >> >> /Contents 8 0 R >>\nendobj\n");
 
-  // 7: Image 2 XObject
   offsets.push(currentOffset);
   addPart("7 0 obj\n<< /Type /XObject /Subtype /Image /Width " + w2 + " /Height " + h2 + " /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length " + jpegBytes2.length + " >>\nstream\n");
   addPart(jpegBytes2);
   addPart("\nendstream\nendobj\n");
 
-  // 8: Contents 2
-  const c2 = "q\n595.28 0 0 841.89 0 0 cm\n/Im2 Do\nQ\n";
+  var c2 = "q\n595.28 0 0 841.89 0 0 cm\n/Im2 Do\nQ\n";
   offsets.push(currentOffset);
   addPart("8 0 obj\n<< /Length " + c2.length + " >>\nstream\n" + c2 + "endstream\nendobj\n");
 
-  // Xref
-  const xrefOffset = currentOffset;
-  let xref = "xref\n0 " + (offsets.length + 1) + "\n0000000000 65535 f \n";
-  for (let off of offsets) {
-    xref += String(off).padStart(10, '0') + " 00000 n \n";
+  var xrefOffset = currentOffset;
+  var xref = "xref\n0 " + (offsets.length + 1) + "\n0000000000 65535 f \n";
+  for (var k = 0; k < offsets.length; k++) {
+    xref += String(offsets[k]).padStart(10, '0') + " 00000 n \n";
   }
   xref += "trailer\n<< /Size " + (offsets.length + 1) + " /Root 1 0 R >>\nstartxref\n" + xrefOffset + "\n%%EOF";
   addPart(xref);
 
-  let totalLen = 0;
-  for (let p of parts) totalLen += p.length;
-  const combined = new Uint8Array(totalLen);
-  let pos = 0;
-  for (let p of parts) {
-    combined.set(p, pos);
-    pos += p.length;
+  var totalLen = 0;
+  for (var p = 0; p < parts.length; p++) totalLen += parts[p].length;
+  var combined = new Uint8Array(totalLen);
+  var pos = 0;
+  for (var q = 0; q < parts.length; q++) {
+    combined.set(parts[q], pos);
+    pos += parts[q].length;
   }
   return combined;
 }
@@ -8830,7 +8810,7 @@ function drawFormAPage(ctx, payload, w, h) {
   ctx.lineWidth = 3;
   ctx.strokeRect(40, 40, w - 80, h - 80);
   
-  const m = payload.meta;
+  var m = payload.meta;
   
   ctx.textAlign = 'center';
   ctx.fillStyle = '#1e3a8a';
@@ -8860,8 +8840,8 @@ function drawFormAPage(ctx, payload, w, h) {
   ctx.lineWidth = 2;
   ctx.stroke();
   
-  let y = 280;
-  const fields = [
+  var y = 280;
+  var fields = [
     ["1. விண்ணப்பிக்கும் படிப்பு (Target Course):", m.sub_course],
     ["2. மாணவர் பெயர் (Name of Candidate):", payload.name],
     ["3. " + m.app_label + ":", payload.appNo],
@@ -8870,7 +8850,7 @@ function drawFormAPage(ctx, payload, w, h) {
     ["6. கோரப்படும் மொத்த விளையாட்டு மதிப்பெண்கள்:", payload.totalScore + " Marks (மதிப்பெண்கள்)"]
   ];
   
-  fields.forEach(f => {
+  fields.forEach(function(f) {
     ctx.fillStyle = '#f8fafc';
     ctx.fillRect(60, y, 420, 52);
     ctx.strokeStyle = '#94a3b8';
@@ -8886,7 +8866,7 @@ function drawFormAPage(ctx, payload, w, h) {
     ctx.font = 'bold 16px "Inter", "Noto Sans Tamil", sans-serif';
     ctx.fillText(f[0], 75, y + 32);
     
-    const isHighlight = f[0].includes('மதிப்பெண்கள்') || f[0].startsWith('2.');
+    var isHighlight = f[0].indexOf('மதிப்பெண்கள்') !== -1 || f[0].indexOf('2.') === 0;
     ctx.fillStyle = isHighlight ? '#1e40af' : '#0f172a';
     ctx.font = isHighlight ? 'bold 18px "Inter", "Noto Sans Tamil", sans-serif' : '16px "Inter", "Noto Sans Tamil", sans-serif';
     ctx.fillText(f[1], 495, y + 32);
@@ -8912,7 +8892,7 @@ function drawFormAPage(ctx, payload, w, h) {
   ctx.fillText("I have submitted genuine original sports certificates along with relevant forms issued by recognized National Federations / State Associations / SGFI / KVS / CBSE / SDAT.", 80, y + 100);
   ctx.fillText("I also undertake that on admission under the Eminent Sports Persons Quota, I shall regularly participate in sports activities representing the institution / university.", 80, y + 135);
   
-  const ySig = h - 160;
+  var ySig = h - 160;
   ctx.fillStyle = '#334155';
   ctx.font = 'bold 15px "Inter", "Noto Sans Tamil", sans-serif';
   ctx.fillText("தேதி (Date): ____________________", 80, ySig);
@@ -8941,7 +8921,7 @@ function drawFormBPage(ctx, payload, w, h) {
   ctx.lineWidth = 3;
   ctx.strokeRect(40, 40, w - 80, h - 80);
   
-  const m = payload.meta;
+  var m = payload.meta;
   
   ctx.textAlign = 'center';
   ctx.fillStyle = '#1e3a8a';
@@ -8971,7 +8951,6 @@ function drawFormBPage(ctx, payload, w, h) {
   ctx.lineWidth = 2;
   ctx.stroke();
   
-  // Summary Bar
   ctx.fillStyle = '#f1f5f9';
   ctx.fillRect(60, 270, w - 120, 45);
   ctx.strokeStyle = '#cbd5e1';
@@ -8985,9 +8964,8 @@ function drawFormBPage(ctx, payload, w, h) {
   ctx.fillStyle = '#047857';
   ctx.fillText("சான்றிதழ்கள்: " + payload.rows.length + " எண்ணிக்கை", 880, 298);
   
-  // Table Header
-  let y = 335;
-  const cols = [
+  var y = 335;
+  var cols = [
     { start: 60, end: 110, title: "Sl." },
     { start: 110, end: 270, title: "கல்வியாண்டு & வகுப்பு" },
     { start: 270, end: 440, title: "விளையாட்டு & பிரிவு" },
@@ -9006,7 +8984,7 @@ function drawFormBPage(ctx, payload, w, h) {
   ctx.textAlign = 'center';
   ctx.fillStyle = '#ffffff';
   ctx.font = 'bold 14px "Inter", "Noto Sans Tamil", sans-serif';
-  cols.forEach(c => {
+  cols.forEach(function(c) {
     ctx.fillText(c.title, (c.start + c.end) / 2, y + 27);
     ctx.beginPath();
     ctx.moveTo(c.start, y);
@@ -9016,14 +8994,13 @@ function drawFormBPage(ctx, payload, w, h) {
   });
   y += 45;
   
-  // Draw Rows
-  payload.rows.forEach(r => {
+  payload.rows.forEach(function(r) {
     ctx.fillStyle = r.sl % 2 === 0 ? '#f8fafc' : '#ffffff';
     ctx.fillRect(60, y, 1080, 58);
     ctx.strokeStyle = '#cbd5e1';
     ctx.strokeRect(60, y, 1080, 58);
     
-    cols.forEach(c => {
+    cols.forEach(function(c) {
       ctx.beginPath();
       ctx.moveTo(c.start, y);
       ctx.lineTo(c.start, y + 58);
@@ -9069,7 +9046,6 @@ function drawFormBPage(ctx, payload, w, h) {
     y += 58;
   });
   
-  // Total Row
   ctx.fillStyle = '#fefce8';
   ctx.fillRect(60, y, 1080, 50);
   ctx.strokeStyle = '#cbd5e1';
@@ -9085,15 +9061,13 @@ function drawFormBPage(ctx, payload, w, h) {
   ctx.fillText(payload.totalScore.toString(), 1105, y + 31);
   y += 75;
   
-  // Guidelines
   ctx.textAlign = 'left';
   ctx.fillStyle = '#475569';
   ctx.font = '13px "Inter", "Noto Sans Tamil", sans-serif';
   ctx.fillText("* குறிப்பு: தமிழ்நாடு விளையாட்டு மேம்பாட்டு ஆணையம் (SDAT) மற்றும் சேர்க்கைக் குழு விதிகளின்படி, ஒரு கல்வி ஆண்டில் 1 அதிகபட்ச சாதனைக்கு மட்டுமே மதிப்பெண் வழங்கப்படும்.", 65, y);
   ctx.fillText("  தமிழகத்தின் எல்லைக்குள் அமைந்துள்ள கேந்திரிய வித்யாலயா (KVS) மற்றும் சிபிஎஸ்இ (CBSE) பள்ளிகளில் பயின்ற தமிழக மாணவர்கள் தகுதியுடையவர்கள்.", 65, y + 25);
   
-  // Signatures
-  const ySig = h - 160;
+  var ySig = h - 160;
   ctx.textAlign = 'center';
   ctx.fillStyle = '#334155';
   ctx.font = 'bold 15px "Inter", "Noto Sans Tamil", sans-serif';
@@ -9119,64 +9093,70 @@ function drawFormBPage(ctx, payload, w, h) {
 }
 
 function generateOfficialSportsPDF() {
-  const payload = getFormDataPayload();
-  if (!payload.rows || payload.rows.length === 0) {
-    alert('தயவுசெய்து மேலே உள்ள கால்குலேட்டரில் குறைந்தது ஒரு கல்வி ஆண்டிற்கான விளையாட்டு சான்றிதழ் விவரத்தைத் தேர்வு செய்யவும்.');
-    return;
+  try {
+    var payload = getFormDataPayload();
+    if (!payload.rows || payload.rows.length === 0) {
+      alert('தயவுசெய்து குறைந்தது ஒரு கல்வி ஆண்டிற்கான விளையாட்டு சான்றிதழ் விவரத்தைத் தேர்வு செய்யவும்.');
+      return;
+    }
+    
+    var w = 1200;
+    var h = 1700;
+    
+    var canvas1 = document.createElement('canvas');
+    canvas1.width = w;
+    canvas1.height = h;
+    var ctx1 = canvas1.getContext('2d');
+    drawFormAPage(ctx1, payload, w, h);
+    var jpegURI1 = canvas1.toDataURL('image/jpeg', 0.92);
+    var bytes1 = dataURItoUint8Array(jpegURI1);
+    
+    var canvas2 = document.createElement('canvas');
+    canvas2.width = w;
+    canvas2.height = h;
+    var ctx2 = canvas2.getContext('2d');
+    drawFormBPage(ctx2, payload, w, h);
+    var jpegURI2 = canvas2.toDataURL('image/jpeg', 0.92);
+    var bytes2 = dataURItoUint8Array(jpegURI2);
+    
+    var pdfBytes = assemble2PagePDF(bytes1, w, h, bytes2, w, h);
+    
+    var blob = new Blob([pdfBytes], { type: 'application/pdf' });
+    var downloadUrl = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = downloadUrl;
+    var cleanAppNo = payload.appNo.replace(/[^a-zA-Z0-9_-]/g, '') || 'Application';
+    var cleanCourse = payload.courseKey.toUpperCase();
+    a.download = cleanCourse + '_SPORTS_QUOTA_FORM_' + cleanAppNo + '.pdf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function() { URL.revokeObjectURL(downloadUrl); }, 1500);
+  } catch (err) {
+    console.error('Error generating PDF:', err);
+    alert('PDF உருவாக்கும்போது பிழை ஏற்பட்டது: ' + err.message);
   }
-  
-  const w = 1200;
-  const h = 1700;
-  
-  // Render Page 1 (Form A)
-  const canvas1 = document.createElement('canvas');
-  canvas1.width = w;
-  canvas1.height = h;
-  const ctx1 = canvas1.getContext('2d');
-  drawFormAPage(ctx1, payload, w, h);
-  const jpegURI1 = canvas1.toDataURL('image/jpeg', 0.92);
-  const bytes1 = dataURItoUint8Array(jpegURI1);
-  
-  // Render Page 2 (Form B)
-  const canvas2 = document.createElement('canvas');
-  canvas2.width = w;
-  canvas2.height = h;
-  const ctx2 = canvas2.getContext('2d');
-  drawFormBPage(ctx2, payload, w, h);
-  const jpegURI2 = canvas2.toDataURL('image/jpeg', 0.92);
-  const bytes2 = dataURItoUint8Array(jpegURI2);
-  
-  // Assemble 2-Page PDF
-  const pdfBytes = assemble2PagePDF(bytes1, w, h, bytes2, w, h);
-  
-  // Directly trigger PDF download in the browser
-  const blob = new Blob([pdfBytes], { type: 'application/pdf' });
-  const downloadUrl = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = downloadUrl;
-  const cleanAppNo = payload.appNo.replace(/[^a-zA-Z0-9_-]/g, '') || 'Application';
-  const cleanCourse = payload.courseKey.toUpperCase();
-  a.download = cleanCourse + '_SPORTS_QUOTA_FORM_' + cleanAppNo + '.pdf';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
 }
 
 function previewOfficialSportsModal() {
-  const payload = getFormDataPayload();
-  const contentEl = document.getElementById('sportsFormModalContent');
-  if (contentEl) {
-    contentEl.innerHTML = buildOfficialFormHTML(payload);
-  }
-  const modal = document.getElementById('sportsFormPreviewModal');
-  if (modal) {
-    modal.style.display = 'flex';
+  try {
+    var payload = getFormDataPayload();
+    var contentEl = document.getElementById('sportsFormModalContent');
+    if (contentEl) {
+      contentEl.innerHTML = buildOfficialFormHTML(payload);
+    }
+    var modal = document.getElementById('sportsFormPreviewModal');
+    if (modal) {
+      modal.style.display = 'flex';
+    }
+  } catch (err) {
+    console.error('Error opening preview modal:', err);
+    alert('மாதிரிப் படிவத்தைத் திறக்கும்போது பிழை ஏற்பட்டது: ' + err.message);
   }
 }
 
 function closeSportsFormModal() {
-  const modal = document.getElementById('sportsFormPreviewModal');
+  var modal = document.getElementById('sportsFormPreviewModal');
   if (modal) {
     modal.style.display = 'none';
   }
