@@ -7033,7 +7033,6 @@
 <h2 class="card-top-title" style="color: #ffffff !important; font-size: 1.25rem !important; display: flex !important; align-items: center !important; gap: 10px !important;">
 <span>✍️</span> மாணவர் சந்தேகக் கேட்புப் பெட்டி (Student Query &amp; Doubt Submission Desk)
 </h2>
-<span class="card-tag-badge direct" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important; color: #ffffff !important; font-weight: 800 !important; border: 1px solid #38bdf8 !important;">⚡ நேரடி வினா &amp; உடனடி மின்னஞ்சல் ஒப்புகை</span>
 </div>
 <p class="box-desc" style="margin-bottom: 20px; font-size: 0.95rem; color: #334155; line-height: 1.65;">
   உங்கள் உயர்கல்வி சேர்க்கை, கட்-ஆஃப், 7.5% அரசுப் பள்ளி இடஒதுக்கீடு, கட்டண விலக்கு மற்றும் நுழைவுத் தேர்வுகள் தொடர்பான சந்தேகங்களை இங்கே பதிவு செய்யலாம். <b>பதிவு செய்தவுடன் தங்களின் மின்னஞ்சல் முகவரிக்கு ஒப்புகை மடல் (Acknowledgement Receipt) உடன் கண்காணிப்பு குறிப்பு எண் (Reference ID) உடனே அனுப்பி வைக்கப்படும்:</b>
@@ -7073,7 +7072,6 @@
 <div class="form-control-item">
 <label class="form-label-title">மின்னஞ்சல் முகவரி (Email Address) <span class="required-star" style="color: #dc2626; font-weight: 900;">* கட்டாயம்</span></label>
 <input class="form-text-box" id="formStudentEmail" placeholder="மாணவரின் மின்னஞ்சல் (எ.கா. student@gmail.com)" required="" type="email" autocomplete="email"/>
-<span style="font-size: 0.78rem; color: #0284c7; font-weight: 700; margin-top: 2px;">📌 ஒப்புகை மடல் (Acknowledgement Email) இந்த முகவரிக்கு உடனடியாக அனுப்பப்படும்.</span>
 </div>
 <div class="form-control-item">
 <label class="form-label-title">சந்தேகப் பிரிவு <span class="required-star">*</span></label>
@@ -7093,7 +7091,7 @@
 </div>
 </div>
 <button class="btn-submit-action" id="masterSubmitBtn" type="submit" style="background: linear-gradient(135deg, #091330 0%, #1e3a8a 50%, #0284c7 100%) !important; color: #fef08a !important; font-weight: 800 !important; font-size: 1rem !important; border: 1.5px solid #d4af37 !important; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;">
-<span>✉️ சந்தேகத்தைப் பதிவு செய்து மின்னஞ்சல் ஒப்புகை பெறுக (Submit Query)</span>
+<span>✉️ கேள்வியைச் சமர்ப்பிக்க (Submit Query)</span>
 <span>→</span>
 </button>
 </form>
@@ -7123,11 +7121,6 @@
 மாவட்ட உயர்கல்வி வழிகாட்டல் குழுவின் ஆசிரியர் வல்லுநர்கள் தங்கள் சந்தேகத்தை ஆய்வு செய்து, பதிவு செய்யப்பட்ட தொலைபேசி எண் / மின்னஞ்சல் வழியாக விரைவில் உரிய ஆலோசனைகளை வழங்குவர். அவசர வழிகாட்டுதலுக்கு <b>14417</b> என்ற பள்ளிக் கல்வி கட்டணமில்லா உதவி எண்ணை அழைக்கலாம்.
 </p>
 
-<div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px;">
-<button type="button" onclick="printStudentAcknowledgementSlip()" style="display: inline-flex; align-items: center; gap: 8px; background: #0f172a; color: #fef08a; border: 1.5px solid #d4af37; padding: 8px 18px; border-radius: 8px; font-weight: 800; font-size: 0.88rem; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
-<span>🖨️</span> ஒப்புகைச் சீட்டு அச்சிடு / சேமி (Print / Save Slip)
-</button>
-</div>
 </div>
 </section>
 <section class="section-card" id="entrance-stream-sec">
@@ -8226,7 +8219,7 @@
       const originalText = submitBtn.innerHTML;
 
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span>⏳ பதிவு செய்யப்பட்டு மின்னஞ்சல் அனுப்பப்படுகிறது (Submitting &amp; Sending Email)...</span>';
+      submitBtn.innerHTML = '<span>⏳ சமர்ப்பிக்கப்படுகிறது (Submitting)...</span>';
 
       const ticketId = 'TN-CG-2026-' + Math.floor(1000 + Math.random() * 9000);
       const studentName = document.getElementById('formStudentName').value.trim();
@@ -8304,55 +8297,6 @@
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
       }
-    }
-
-    function printStudentAcknowledgementSlip() {
-      const data = window.lastSubmittedStudentAck;
-      if (!data) return;
-      const printWin = window.open('', '_blank', 'width=750,height=800');
-      printWin.document.write(`
-        <!DOCTYPE html>
-        <html lang="ta">
-        <head>
-          <meta charset="utf-8">
-          <title>ஒப்புகைச் சீட்டு - ${data.ticketId}</title>
-          <style>
-            body { font-family: 'Noto Sans Tamil', -apple-system, sans-serif; padding: 30px; color: #0f172a; line-height: 1.5; }
-            .header { text-align: center; border-bottom: 2px solid #0f172a; padding-bottom: 12px; margin-bottom: 20px; }
-            .badge { display: inline-block; background: #eff6ff; color: #1d4ed8; border: 1.5px solid #3b82f6; border-radius: 6px; padding: 6px 14px; font-size: 16px; font-weight: bold; margin: 10px 0; }
-            table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-            th, td { border: 1px solid #cbd5e1; padding: 8px 12px; font-size: 14px; text-align: left; }
-            th { background: #f8fafc; width: 35%; color: #334155; }
-            .footer { margin-top: 30px; border-top: 1px dashed #94a3b8; padding-top: 15px; font-size: 12px; text-align: center; color: #64748b; }
-          </style>
-        </head>
-        <body>
-          <div class="header">
-            <h2 style="margin:0 0 6px 0;">முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்</h2>
-            <h3 style="margin:0; font-weight: normal; color: #334155;">மாவட்ட உயர்கல்வி வழிகாட்டல் மையம் - மாணவர் சந்தேகக் கேட்பு ஒப்புகைச் சீட்டு</h3>
-          </div>
-          <div style="text-align:center;">
-            <div class="badge">கண்காணிப்பு குறிப்பு எண்: ${data.ticketId}</div>
-          </div>
-          <table>
-            <tr><th>மாணவர் பெயர்</th><td><b>${data.name}</b></td></tr>
-            <tr><th>மின்னஞ்சல் முகவரி</th><td><b>${data.email}</b> (ஒப்புகை மடல் அனுப்பப்பட்டது)</td></tr>
-            <tr><th>அலைபேசி எண்</th><td>${data.phone}</td></tr>
-            <tr><th>வகுப்பு &amp; பள்ளி வகை</th><td>${data.studentClass} | ${data.schoolType}</td></tr>
-            <tr><th>மாவட்டம்</th><td>${data.district}</td></tr>
-            <tr><th>சந்தேகப் பிரிவு</th><td>${data.category}</td></tr>
-            <tr><th>கேள்வி / சந்தேகம்</th><td>${data.query}</td></tr>
-            <tr><th>பதிவு செய்யப்பட்ட நேரம்</th><td>${data.timestamp}</td></tr>
-          </table>
-          <div class="footer">
-            <p>இவ்வொப்புகை மடல் தானியங்கி முறையில் உருவாக்கப்பட்டது. மாவட்ட வழிகாட்டல் குழு தங்களை விரைவில் தொடர்புகொள்வர்.</p>
-            <p>கட்டணமில்லா உதவி எண்: <b>14417</b> | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை.</p>
-          </div>
-          <script>window.print();<\/script>
-        </body>
-        </html>
-      `);
-      printWin.document.close();
     }
 
     // 7. Accordion FAQs Toggle & Live Filter
