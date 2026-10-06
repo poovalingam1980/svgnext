@@ -6261,7 +6261,30 @@
       சூத்திரம்: கடந்த 4 கல்வி ஆண்டுகளில் (9, 10, 11, 12-ஆம் வகுப்பு) பெற்ற சான்றிதழ்களில், ஒரு கல்வி ஆண்டிற்கு 1 அதிகபட்ச சாதனை மட்டுமே மதிப்பெண்ணுக்கு ஏற்கப்படும் (அதிகபட்சம் 4 சான்றிதழ்கள்).
     </div>
 <!-- 4 Academic Years Selection Grid -->
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-bottom: 16px;">
+<div class="sports-candidate-card" style="background: #ffffff; border: 1.6px solid #a7f3d0; border-radius: 10px; padding: 12px 16px; margin-bottom: 14px; box-shadow: 0 2px 8px rgba(5,150,105,0.06);">
+<div style="font-weight: 800; font-size: 0.90rem; color: #065f46; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
+<div style="display: flex; align-items: center; gap: 6px;">
+<span>📝</span><span>மாணவர் விவரங்கள் (அரசாணை படிவம் VII-A &amp; VII-B உருவாக்கத்திற்கு):</span>
+</div>
+<span style="font-size: 0.76rem; background: #ecfdf5; color: #047857; padding: 2px 8px; border-radius: 6px; font-weight: 700; border: 1px solid #a7f3d0;">
+      TN Medical DME &amp; TNEA Sports Quota
+    </span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px 14px;">
+<div>
+<label for="sports-student-name" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">👤 மாணவர் பெயர் (Candidate Full Name):</label>
+<input id="sports-student-name" oninput="computeSportsQuota()" placeholder="எ.கா. க. அன்பரசன் / K. ANBARASAN" style="width: 100%; padding: 7px 10px; font-size: 0.86rem; font-weight: 700; border: 1.4px solid #cbd5e1; border-radius: 7px; background: #ffffff; color: #0f172a; box-sizing: border-box;" type="text"/>
+</div>
+<div>
+<label for="sports-app-no" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">🔢 விண்ணப்ப எண் / நீட் பதிவு எண் (Application / Reg No):</label>
+<input id="sports-app-no" oninput="computeSportsQuota()" placeholder="எ.கா. TN2026-MED-84920 / NEET Roll No" style="width: 100%; padding: 7px 10px; font-size: 0.86rem; font-weight: 700; border: 1.4px solid #cbd5e1; border-radius: 7px; background: #ffffff; color: #0f172a; box-sizing: border-box;" type="text"/>
+</div>
+<div>
+<label for="sports-discipline" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">🏅 விளையாட்டு வகை (Sports Discipline / Game):</label>
+<input id="sports-discipline" oninput="computeSportsQuota()" placeholder="எ.கா. தடகளம் (Athletics), கூடைப்பந்து, கால்பந்து..." style="width: 100%; padding: 7px 10px; font-size: 0.86rem; font-weight: 700; border: 1.4px solid #cbd5e1; border-radius: 7px; background: #ffffff; color: #0f172a; box-sizing: border-box;" type="text"/>
+</div>
+</div>
+</div><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-bottom: 16px;">
 <!-- Year 4: 12th Std -->
 <div class="sports-year-card" style="">
 <div style="font-weight: 800; font-size: 0.86rem; color: #1e3a8a; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
@@ -6390,6 +6413,13 @@
 <span class="computed-tag" id="sports-total-status" style="display: inline-block; padding: 3px 12px; border-radius: 999px; font-size: 0.80rem; font-weight: 800; background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd;">
         சான்றிதழ்களைத் தேர்ந்தெடுத்து மதிப்பெண் அறியவும்
       </span>
+</div><div class="sports-pdf-action-bar" style="margin: 14px 0 16px 0; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+<button onclick="generateOfficialSportsPDF()" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #ffffff; border: 1.5px solid #065f46; border-radius: 8px; padding: 10px 22px; font-size: 0.88rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(5,150,105,0.3); transition: all 0.2s ease;" type="button">
+<span>📄</span><span>படிவம் VII(A) &amp; VII(B) PDF பதிவிறக்குக / அச்சிடுக (Official PDF)</span>
+</button>
+<button onclick="previewOfficialSportsModal()" style="background: #ffffff; color: #065f46; border: 1.5px solid #059669; border-radius: 8px; padding: 10px 18px; font-size: 0.88rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); transition: all 0.2s ease;" type="button">
+<span>👁️</span><span>மாதிரிப் படிவத்தை முன்கூட்டியே காண்க (Preview)</span>
+</button>
 </div>
 <!-- Important Rules & Seat Matrix Accordion / Guidance Box -->
 <div style="background: #f8fafc; border: 1.3px solid #e2e8f0; border-radius: 9px; padding: 12px 14px; text-align: left; font-size: 0.80rem; color: #334155; line-height: 1.55;">
@@ -8180,6 +8210,252 @@ function switchCalcPane(paneId) {
     return btn.getAttribute('onclick') && btn.getAttribute('onclick').includes("'" + paneId + "'");
   });
   if (activeBtn) activeBtn.classList.add('active');
+}
+</script><div id="sportsFormPreviewModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15,23,42,0.75); z-index: 99999; backdrop-filter: blur(5px); justify-content: center; align-items: center; padding: 16px; box-sizing: border-box;">
+<div style="background: #ffffff; width: 100%; max-width: 850px; max-height: 90vh; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 2px solid #059669;">
+<!-- Modal Header -->
+<div style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%); color: #ffffff; padding: 12px 18px; display: flex; justify-content: space-between; align-items: center;">
+<div style="font-weight: 800; font-size: 1.0rem; display: flex; align-items: center; gap: 8px;">
+<span>📄</span><span>அரசாணை படிவம் VII-A &amp; VII-B மாதிரிப் பார்வை (Official Form Preview)</span>
+</div>
+<button onclick="closeSportsFormModal()" style="background: transparent; border: none; color: #ffffff; font-size: 1.3rem; font-weight: 800; cursor: pointer; line-height: 1;">×</button>
+</div>
+<!-- Modal Body (Preview Content Container) -->
+<div id="sportsFormModalContent" style="padding: 18px; overflow-y: auto; flex: 1; font-family: 'Inter', sans-serif;">
+<!-- Dynamic Form VII content will be injected here -->
+</div>
+<!-- Modal Footer Actions -->
+<div style="background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 12px 18px; display: flex; justify-content: flex-end; gap: 10px;">
+<button onclick="closeSportsFormModal()" style="background: #ffffff; border: 1.4px solid #cbd5e1; border-radius: 7px; padding: 7px 16px; font-size: 0.85rem; font-weight: 700; color: #475569; cursor: pointer;" type="button">
+        மூடுக (Close)
+      </button>
+<button onclick="generateOfficialSportsPDF()" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #ffffff; border: 1.4px solid #065f46; border-radius: 7px; padding: 7px 20px; font-size: 0.85rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 6px;" type="button">
+<span>🖨️</span><span>PDF ஆக பதிவிறக்குக / அச்சிடுக (Save as PDF)</span>
+</button>
+</div>
+</div>
+</div><script>
+// ========================================================
+// ANNEXURE VII(A) & VII(B) PDF GENERATION & PREVIEW LOGIC
+// ========================================================
+const SPORTS_LEVEL_MAP = {
+  'international': { name: 'சர்வதேசப் போட்டிகள் (International Level - Olympics / Asian / World)', table: 'Table I' },
+  'national': { name: 'தேசிய அளவிலான போட்டிகள் (National / SGFI / Khelo India)', table: 'Table II' },
+  'kvs_national': { name: 'கேந்திரிய வித்யாலயா (KVS) / CBSE தேசியப் போட்டிகள் (Board National)', table: 'Table III' },
+  'state': { name: 'மாநில அளவிலான போட்டிகள் (State Championship / SDAT CM Trophy)', table: 'Table III' },
+  'kvs_regional': { name: 'கேந்திரிய வித்யாலயா (KVS) மண்டல / CBSE கிளஸ்டர் போட்டிகள்', table: 'Table IV' },
+  'divisional': { name: 'மண்டல / கோட்ட அளவிலான போட்டிகள் (Divisional Level)', table: 'Table IV' },
+  'district': { name: 'மாவட்ட அளவிலான போட்டிகள் (District / Inter-School Meets)', table: 'Table V' },
+  'none': { name: '-- சான்றிதழ் சமர்ப்பிக்கப்படவில்லை --', table: '-' }
+};
+
+const SPORTS_MEDAL_MAP = {
+  'gold': '🥇 தங்கம் (Gold Medal / 1st Place)',
+  'silver': '🥈 வெள்ளி (Silver Medal / 2nd Place)',
+  'bronze': '🥉 வெண்கலம் (Bronze Medal / 3rd Place)',
+  'part': '🎖️ பங்கேற்பு (Participation Certificate)',
+  'none': '-'
+};
+
+function getFormDataPayload() {
+  const name = (document.getElementById('sports-student-name') && document.getElementById('sports-student-name').value.trim()) || '______________________________________';
+  const appNo = (document.getElementById('sports-app-no') && document.getElementById('sports-app-no').value.trim()) || '____________________';
+  const discipline = (document.getElementById('sports-discipline') && document.getElementById('sports-discipline').value.trim()) || 'Athletics / General Sports (விளையாட்டுப் பிரிவு)';
+
+  const years = [
+    { yr: 'Year 4 (12-ஆம் வகுப்பு)', lvlId: 'sports-y4-level', medId: 'sports-y4-medal', scoreId: 'sports-y4-score' },
+    { yr: 'Year 3 (11-ஆம் வகுப்பு)', lvlId: 'sports-y3-level', medId: 'sports-y3-medal', scoreId: 'sports-y3-score' },
+    { yr: 'Year 2 (10-ஆம் வகுப்பு)', lvlId: 'sports-y2-level', medId: 'sports-y2-medal', scoreId: 'sports-y2-score' },
+    { yr: 'Year 1 (9-ஆம் வகுப்பு)', lvlId: 'sports-y1-level', medId: 'sports-y1-medal', scoreId: 'sports-y1-score' }
+  ];
+
+  let rows = [];
+  let totalScore = 0;
+
+  years.forEach((item, index) => {
+    const lvlVal = document.getElementById(item.lvlId) ? document.getElementById(item.lvlId).value : 'none';
+    const medVal = document.getElementById(item.medId) ? document.getElementById(item.medId).value : 'none';
+    const scoreText = document.getElementById(item.scoreId) ? document.getElementById(item.scoreId).innerText : '0 மதிப்பெண்';
+    const score = parseInt(scoreText) || 0;
+    totalScore += score;
+
+    const lvlObj = SPORTS_LEVEL_MAP[lvlVal] || { name: '-', table: '-' };
+    const medName = SPORTS_MEDAL_MAP[medVal] || '-';
+
+    rows.push({
+      sl: index + 1,
+      year: item.yr,
+      level: lvlObj.name,
+      medal: medName,
+      table: lvlObj.table,
+      score: score
+    });
+  });
+
+  return { name, appNo, discipline, rows, totalScore };
+}
+
+function buildOfficialFormHTML(payload, isPrintMode) {
+  return `
+    <div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #0f172a; line-height: 1.45; max-width: 780px; margin: 0 auto; background: #ffffff;">
+      <!-- ANNEXURE VII (a) -->
+      <div style="text-align: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 8px; margin-bottom: 14px;">
+        <div style="font-size: 13pt; font-weight: 900; color: #1e3a8a; text-transform: uppercase;">GOVERNMENT OF TAMIL NADU</div>
+        <div style="font-size: 9.5pt; font-weight: 700; color: #334155; margin: 2px 0;">SELECTION COMMITTEE, DIRECTORATE OF MEDICAL EDUCATION &amp; RESEARCH / TNEA</div>
+        <div style="font-size: 11pt; font-weight: 800; color: #0f172a; margin: 4px 0;">ANNEXURE – VII (a)</div>
+        <div style="font-size: 9.5pt; font-weight: 800; color: #047857;">SPECIAL CATEGORY APPLICATION FORM FOR EMINENT SPORTS PERSONS QUOTA</div>
+        <div style="font-size: 8.5pt; color: #64748b; font-weight: 600;">(ADMISSION TO PROFESSIONAL DEGREE COURSES: MBBS / BDS / B.E. / B.TECH / BVSc / B.Sc AGRI)</div>
+      </div>
+
+      <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 9pt;">
+        <tr>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px; width: 45%; font-weight: 700; background: #f8fafc;">1. Name of the Candidate (மாணவர் பெயர்):</td>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 800; color: #1e3a8a;">${payload.name}</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">2. Application No. / NEET Reg No. (விண்ணப்ப எண்):</td>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 800; color: #1e3a8a;">${payload.appNo}</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">3. Sports Discipline / Game (விளையாட்டு வகை):</td>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700;">${payload.discipline}</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">4. Nativity &amp; Community (இருப்பிடம் &amp; வகுப்பு):</td>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px;">Tamil Nadu Native (தமிழ்நாடு இருப்பிடம்)</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 700; background: #f8fafc;">5. Total Cumulative Sports Marks (கோரப்படும் மொத்த மதிப்பெண்கள்):</td>
+          <td style="border: 1px solid #94a3b8; padding: 6px 10px; font-weight: 900; font-size: 11pt; color: #047857;">${payload.totalScore} Marks</td>
+        </tr>
+      </table>
+
+      <div style="font-size: 8.5pt; text-align: justify; margin: 10px 0; line-height: 1.5; color: #1e293b; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px 10px;">
+        <strong>DECLARATION &amp; UNDERTAKING (உறுதிமொழி):</strong><br/>
+        I hereby declare that the particulars given above and in Annexure VII (b) are true, genuine and correct to the best of my knowledge and belief. I have submitted genuine original sports certificates along with relevant forms issued by recognized National Federations / State Associations / SGFI / KVS / CBSE / SDAT. I also undertake that on admission under the Eminent Sports Persons Quota, I shall regularly participate in sports activities representing the institution / university.
+      </div>
+
+      <div style="margin-top: 24px; display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; color: #334155;">
+        <div>தேதி (Date): ____________________<br/>இடம் (Place): ____________________</div>
+        <div style="text-align: center;">பெற்றோர் / பாதுகாவலர் கையொப்பம்<br/>(Signature of Parent / Guardian)</div>
+        <div style="text-align: center;">மாணவர் கையொப்பம்<br/>(Signature of Candidate)</div>
+      </div>
+
+      <!-- Divider / Page Break -->
+      <div style="margin: 22px 0 16px 0; border-top: 2px dashed #94a3b8; page-break-before: always; padding-top: 14px;"></div>
+
+      <!-- ANNEXURE VII (b) -->
+      <div style="text-align: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 8px; margin-bottom: 12px;">
+        <div style="font-size: 13pt; font-weight: 900; color: #1e3a8a; text-transform: uppercase;">GOVERNMENT OF TAMIL NADU</div>
+        <div style="font-size: 9.5pt; font-weight: 700; color: #334155; margin: 2px 0;">DIRECTORATE OF MEDICAL EDUCATION &amp; RESEARCH / ANNA UNIVERSITY TNEA</div>
+        <div style="font-size: 11pt; font-weight: 800; color: #0f172a; margin: 4px 0;">ANNEXURE – VII (b)</div>
+        <div style="font-size: 9.5pt; font-weight: 800; color: #047857;">DETAILS OF SPORTS CERTIFICATES PRODUCED FOR EMINENT SPORTS PERSONS QUOTA</div>
+        <div style="font-size: 8.5pt; color: #64748b; font-weight: 600;">(Eligible Academic Years: 9th, 10th, 11th &amp; 12th Standards — One highest certificate per year)</div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; margin-bottom: 8px; color: #1e293b;">
+        <span>மாணவர் பெயர்: <strong>${payload.name}</strong></span>
+        <span>விண்ணப்ப எண்: <strong>${payload.appNo}</strong></span>
+        <span>விளையாட்டு: <strong>${payload.discipline}</strong></span>
+      </div>
+
+      <table style="width: 100%; border-collapse: collapse; margin-bottom: 10px; font-size: 8.5pt;">
+        <thead>
+          <tr style="background-color: #1e3a8a; color: #ffffff;">
+            <th style="border: 1px solid #64748b; padding: 6px 8px; width: 5%; text-align: center;">Sl.</th>
+            <th style="border: 1px solid #64748b; padding: 6px 8px; width: 22%;">கல்வி ஆண்டு &amp; வகுப்பு (Academic Year)</th>
+            <th style="border: 1px solid #64748b; padding: 6px 8px; width: 33%;">போட்டி நிலை (Tournament Level)</th>
+            <th style="border: 1px solid #64748b; padding: 6px 8px; width: 22%;">வெற்றி நிலை (Position / Medal)</th>
+            <th style="border: 1px solid #64748b; padding: 6px 8px; width: 9%; text-align: center;">அட்டவணை</th>
+            <th style="border: 1px solid #64748b; padding: 6px 8px; width: 9%; text-align: center;">மதிப்பெண்</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${payload.rows.map(r => `
+            <tr style="background-color: ${r.sl % 2 === 0 ? '#f8fafc' : '#ffffff'};">
+              <td style="border: 1px solid #94a3b8; padding: 6px 8px; text-align: center;">${r.sl}</td>
+              <td style="border: 1px solid #94a3b8; padding: 6px 8px; font-weight: 700;">${r.year}</td>
+              <td style="border: 1px solid #94a3b8; padding: 6px 8px;">${r.level}</td>
+              <td style="border: 1px solid #94a3b8; padding: 6px 8px;">${r.medal}</td>
+              <td style="border: 1px solid #94a3b8; padding: 6px 8px; text-align: center; font-weight: 700;">${r.table}</td>
+              <td style="border: 1px solid #94a3b8; padding: 6px 8px; text-align: center; font-weight: 800; color: #047857;">${r.score}</td>
+            </tr>
+          `).join('')}
+          <tr style="background-color: #fefce8; font-weight: 900; font-size: 9.5pt;">
+            <td colspan="5" style="border: 1px solid #94a3b8; padding: 8px 10px; text-align: right; color: #92400e;">
+              CUMULATIVE TOTAL SPORTS MARKS CLAIMED (கூட்டு மொத்த மதிப்பெண்கள்):
+            </td>
+            <td style="border: 1px solid #94a3b8; padding: 8px 10px; text-align: center; color: #92400e; font-size: 11pt;">
+              ${payload.totalScore}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="font-size: 7.8pt; color: #475569; line-height: 1.4; margin-top: 6px;">
+        <em>* குறிப்பு: தமிழ்நாடு விளையாட்டு மேம்பாட்டு ஆணையம் (SDAT) வழிகாட்டுதலின்படி, ஒரு கல்வி ஆண்டில் 1 அதிகபட்ச சாதனைக்கு மட்டுமே மதிப்பெண் வழங்கப்படும். தமிழகத்தின் எல்லைக்குள் அமைந்துள்ள கேந்திரிய வித்யாலயா (KVS) மற்றும் சிபிஎஸ்இ (CBSE) பள்ளிகளில் பயின்ற தமிழக இருப்பிடச் சான்றுடைய மாணவர்கள் மட்டுமே தகுதியுடையவர்கள்.</em>
+      </div>
+
+      <div style="margin-top: 35px; display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; color: #334155;">
+        <div style="text-align: center;">உடற்கல்வி இயக்குநர் / தலைமையாசிரியர் ஒப்பம்<br/>(Attested by PE Director / Headmaster)</div>
+        <div style="text-align: center;">பெற்றோர் / பாதுகாவலர் கையொப்பம்<br/>(Signature of Parent / Guardian)</div>
+        <div style="text-align: center;">மாணவர் கையொப்பம்<br/>(Signature of Candidate)</div>
+      </div>
+    </div>
+  `;
+}
+
+function generateOfficialSportsPDF() {
+  const payload = getFormDataPayload();
+  const printWindow = window.open('', '_blank', 'width=850,height=900');
+  if (!printWindow) {
+    alert('பாப்-அப் விண்டோ தடுக்கப்பட்டுள்ளது. தயவுசெய்து பாப்-அப் அனுமதியை இயக்கவும்.');
+    return;
+  }
+
+  const printDocHTML = `
+    <!DOCTYPE html>
+    <html lang="ta">
+    <head>
+      <meta charset="utf-8">
+      <title>ANNEXURE_VII_A_and_B_${payload.appNo.replace(/[^a-zA-Z0-9_-]/g, '')}</title>
+      <style>
+        @page { size: A4; margin: 12mm 15mm; }
+        body { margin: 0; padding: 10px; background: #ffffff; }
+        @media print {
+          body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+      </style>
+    </head>
+    <body>
+      ${buildOfficialFormHTML(payload, true)}
+
+    </body>
+    </html>
+  `;
+
+  printWindow.document.open();
+  printWindow.document.write(printDocHTML);
+  printWindow.document.close(); printWindow.focus(); setTimeout(function(){ printWindow.print(); }, 400);
+}
+
+function previewOfficialSportsModal() {
+  const payload = getFormDataPayload();
+  const contentEl = document.getElementById('sportsFormModalContent');
+  if (contentEl) {
+    contentEl.innerHTML = buildOfficialFormHTML(payload, false);
+  }
+  const modal = document.getElementById('sportsFormPreviewModal');
+  if (modal) {
+    modal.style.display = 'flex';
+  }
+}
+
+function closeSportsFormModal() {
+  const modal = document.getElementById('sportsFormPreviewModal');
+  if (modal) {
+    modal.style.display = 'none';
+  }
 }
 </script></body>
 </html>
