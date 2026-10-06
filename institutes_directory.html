@@ -3826,10 +3826,18 @@
 
     
     /* ========================================================
-       TOP BANNER FRAME (STREAMLINED 3-COLUMN ULTRA-COMPACT LAYOUT)
-       Buttons flanking on left & right; Height automatically reduced!
+       TOP BANNER FRAME (ENHANCED STREAMLINED 3-COLUMN BANNER)
+       - Optimal height (+8px) for complete visibility of Tamil ascenders ('வி', 'ழி')
+       - 'YOUR KEY TO A BRIGHT FUTURE' matched in size & styling with 'CAREER GUIDANCE'
+       - Elegant synchronized silver-cyan metallic shine animation
        ======================================================== */
     @keyframes auroraTextFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes engSilverCyanShimmer {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
@@ -3850,11 +3858,11 @@
       overflow: hidden !important;
       background: linear-gradient(145deg, #071328 0%, #0d1e3d 45%, #132a54 75%, #081328 100%) !important;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 0 14px rgba(56, 189, 248, 0.22), inset 0 0 30px rgba(14, 165, 233, 0.08) !important;
-      padding: 8px 18px !important;
+      padding: 13px 20px !important;
       display: flex !important;
       align-items: center !important;
       justify-content: space-between !important;
-      gap: 12px !important;
+      gap: 14px !important;
       position: relative !important;
     }
 
@@ -3877,7 +3885,7 @@
       display: inline-flex !important;
       align-items: center !important;
       gap: 6px !important;
-      padding: 6px 14px !important;
+      padding: 7px 14px !important;
       border-radius: 8px !important;
       font-size: 0.82rem !important;
       font-weight: 700 !important;
@@ -3893,7 +3901,7 @@
     }
 
     .top-frame-side-btn.btn-ceosvg {
-      background: rgba(15, 23, 42, 0.8) !important;
+      background: rgba(15, 23, 42, 0.85) !important;
       color: #e2e8f0 !important;
     }
     .top-frame-side-btn.btn-ceosvg:hover {
@@ -3924,21 +3932,23 @@
       min-width: 0 !important;
       position: relative !important;
       z-index: 2 !important;
-      gap: 1px !important;
+      gap: 2px !important;
     }
 
-    /* 1. Main 3D Gold Tamil Title */
+    /* 1. Main 3D Gold Tamil Title - Ample height and padding for 'வி', 'ழி' ascenders */
     .banner-title-tamil {
       font-family: 'Noto Sans Tamil', sans-serif !important;
       font-size: clamp(1.4rem, 2.2vw, 1.95rem) !important;
       font-weight: 900 !important;
-      line-height: 1.15 !important;
+      line-height: 1.35 !important;
       margin: 0 !important;
+      padding: 3px 6px 1px 6px !important;
       letter-spacing: 0.5px !important;
       background: linear-gradient(180deg, #fffbeb 0%, #fef08a 25%, #facc15 55%, #ca8a04 85%, #854d0e 100%) !important;
       -webkit-background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
       filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 10px rgba(250, 204, 21, 0.35)) !important;
+      display: inline-block !important;
     }
 
     /* 2. Aurora Animated Tamil Tagline */
@@ -3956,52 +3966,52 @@
       filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8)) !important;
     }
 
-    /* 3. English Title & Slogan Row */
+    /* 3. English Title & Slogan Row - Equal size, appearance, and shimmering animation */
     .banner-english-row {
       display: inline-flex !important;
       align-items: center !important;
       justify-content: center !important;
-      gap: 8px !important;
+      gap: 10px !important;
       flex-wrap: wrap !important;
-      margin: 1px 0 0 0 !important;
-      line-height: 1.15 !important;
+      margin: 2px 0 0 0 !important;
+      line-height: 1.2 !important;
     }
 
-    .banner-title-english {
+    .banner-title-english,
+    .banner-slogan-english {
       font-family: 'Inter', sans-serif !important;
-      font-size: clamp(0.92rem, 1.35vw, 1.25rem) !important;
-      font-weight: 900 !important;
-      letter-spacing: 2px !important;
-      background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 40%, #cbd5e1 75%, #94a3b8 100%) !important;
+      font-size: clamp(0.80rem, 1.12vw, 0.98rem) !important;
+      font-weight: 800 !important;
+      letter-spacing: 1.8px !important;
+      text-transform: uppercase !important;
+      background: linear-gradient(90deg, #ffffff 0%, #cbd5e1 20%, #38bdf8 45%, #ffffff 65%, #94a3b8 85%, #ffffff 100%) !important;
+      background-size: 250% auto !important;
       -webkit-background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
-      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8)) !important;
-    }
-
-    .banner-english-dot {
-      color: rgba(255, 255, 255, 0.4) !important;
-      font-size: 0.75rem !important;
+      animation: engSilverCyanShimmer 5s ease-in-out infinite !important;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.85)) !important;
+      display: inline-block !important;
     }
 
     .banner-slogan-english {
-      font-family: 'Inter', sans-serif !important;
-      font-size: clamp(0.66rem, 0.85vw, 0.76rem) !important;
-      font-weight: 800 !important;
-      color: #94a3b8 !important;
-      letter-spacing: 2px !important;
-      text-transform: uppercase !important;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+      animation-delay: -2.5s !important;
+    }
+
+    .banner-english-dot {
+      color: #38bdf8 !important;
+      font-size: 0.85rem !important;
+      filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.75)) !important;
     }
 
     @media (max-width: 900px) {
       .portal-top-frame {
         flex-wrap: wrap !important;
-        padding: 8px 12px !important;
+        padding: 10px 14px !important;
         gap: 8px !important;
       }
       .top-frame-side-btn {
-        padding: 4px 10px !important;
-        font-size: 0.74rem !important;
+        padding: 5px 12px !important;
+        font-size: 0.76rem !important;
       }
       .top-frame-center-stack {
         order: 2 !important;
@@ -4016,17 +4026,18 @@
       }
       .banner-title-tamil {
         font-size: 1.35rem !important;
+        line-height: 1.35 !important;
       }
       .banner-tagline-aurora {
-        font-size: 0.78rem !important;
+        font-size: 0.8rem !important;
       }
-      .banner-title-english {
-        font-size: 0.95rem !important;
-        letter-spacing: 1.2px !important;
-      }
+      .banner-title-english,
       .banner-slogan-english {
-        font-size: 0.62rem !important;
+        font-size: 0.76rem !important;
         letter-spacing: 1.2px !important;
+      }
+      .banner-english-row {
+        gap: 6px !important;
       }
     }
 
