@@ -7975,9 +7975,9 @@
 <label for="fb_email" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
 <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #f3e8ff; color: #9333ea; border-radius: 4px; font-size: 11px;">✉️</span>
 <span>மின்னஞ்சல்</span>
-<span style="font-size: 0.72rem; color: #64748b; background: #f1f5f9; padding: 1px 6px; border-radius: 999px;">விருப்பம்</span>
+<span style="color: #ef4444; font-weight: 800;">*</span>
 </label>
-<input id="fb_email" placeholder="example@gmail.com" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="email"/>
+<input id="fb_email" placeholder="example@gmail.com" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="email" autocomplete="email"/>
 </div>
 <div class="form-group fb-field-file" style="grid-column: span 2;">
 <label for="fb_file" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
@@ -8747,7 +8747,14 @@ if (fbForm) {
         fbStatus.style.color = '#065f46';
         fbStatus.style.border = '2px solid #34d399';
         fbStatus.style.boxShadow = '0 6px 20px rgba(16, 185, 129, 0.25)';
-        fbStatus.innerHTML = '🎉 ✨ தங்களின் மேலான ஆலோசனைக்கு நன்றி! ✨ 🎉';
+        fbStatus.innerHTML = '<div style="text-align: center; padding: 10px;">' +
+          '<div style="font-size: 1.18rem; font-weight: 800; color: #065f46; margin-bottom: 6px;">' +
+          '🎉 ✨ தங்களின் மேலான ஆலோசனைக்கு மனமார்ந்த நன்றி! ✨ 🎉' +
+          '</div>' +
+          '<div style="font-size: 0.90rem; color: #047857; margin-top: 4px;">' +
+          '💌 தங்களின் ஆலோசனையைப் பதிவு செய்தமைக்கு நன்றி தெரிவித்து தங்களின் <b>' + payload.email + '</b> மின்னஞ்சல் முகவரிக்கு முதன்மைக் கல்வி அலுவலகத்தின் <b>மின் வாழ்த்து அட்டை (Digital Greeting Card)</b> அனுப்பி வைக்கப்பட்டுள்ளது.' +
+          '</div>' +
+          '</div>';
         try { fireCelebrationCrackers(); } catch(ce) {}
         fbForm.reset();
         fbSubmitBtn.disabled = false;
