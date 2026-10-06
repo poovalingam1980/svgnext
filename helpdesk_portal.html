@@ -259,7 +259,7 @@
     /* Helplines Bento Grid */
     .helpline-bento-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
       gap: 16px;
       margin-bottom: 24px;
     }
@@ -477,19 +477,19 @@
     /* Grid Layouts */
     .grid-2 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
       gap: 20px;
     }
 
     .grid-3 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
       gap: 20px;
     }
 
     .grid-4 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
       gap: 18px;
     }
 
@@ -626,7 +626,7 @@
 
     .calc-inputs-row {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
       gap: 16px;
       margin-bottom: 20px;
     }
@@ -776,7 +776,7 @@
 
     .checklist-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
       gap: 12px;
     }
 
@@ -839,7 +839,7 @@
 
     .finder-select-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
       gap: 16px;
       margin-bottom: 20px;
     }
@@ -1028,7 +1028,7 @@
     /* Student Query Form */
     .form-inputs-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
       gap: 16px;
       margin-bottom: 18px;
     }
@@ -3123,7 +3123,7 @@
       .pathways-grid,
       .courses-grid,
       .departments-grid {
-        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)) !important;
+        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)) !important;
       }
     }
 
@@ -5317,7 +5317,7 @@
 
 .calc-inputs-row {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)) !important;
   gap: 10px 14px !important;
   margin-bottom: 14px !important;
 }
@@ -5805,7 +5805,7 @@
 
 #cutoff-tools-sec .calc-inputs-row {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)) !important;
   gap: 12px 16px !important;
   margin-bottom: 18px !important;
 }
@@ -5911,7 +5911,7 @@
 
 #sports-tools-sec .sports-4year-grid {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)) !important;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)) !important;
   gap: 14px !important;
   margin-bottom: 18px !important;
 }
@@ -6108,6 +6108,67 @@
   background: #f0fdf4 !important;
   border: 1.4px solid #a7f3d0 !important;
 }
+
+/* Marquee Quick Navigation Bar Styles */
+.sticky-portal-nav {
+  position: sticky !important;
+  top: 10px !important;
+  z-index: 1000 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 8px 0 !important;
+  background: rgba(15, 23, 42, 0.96) !important;
+  backdrop-filter: blur(12px) !important;
+  border-radius: var(--radius-md) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45) !important;
+  margin-bottom: 24px !important;
+  overflow: hidden !important;
+  scrollbar-width: none !important;
+}
+
+.sticky-portal-nav::-webkit-scrollbar {
+  display: none !important;
+}
+
+.nav-marquee-wrapper {
+  width: 100% !important;
+  overflow: hidden !important;
+  position: relative !important;
+  display: flex !important;
+  mask-image: linear-gradient(to right, transparent 0%, black 35px, black calc(100% - 35px), transparent 100%) !important;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 35px, black calc(100% - 35px), transparent 100%) !important;
+}
+
+.nav-marquee-content {
+  display: flex !important;
+  width: max-content !important;
+  animation: navMarqueeScroll 48s linear infinite !important;
+}
+
+.nav-marquee-wrapper:hover .nav-marquee-content,
+.nav-marquee-wrapper:focus-within .nav-marquee-content {
+  animation-play-state: paused !important;
+}
+
+.nav-marquee-group {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 0 6px !important;
+  flex-shrink: 0 !important;
+}
+
+@keyframes navMarqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 </style>
 </head>
 <body>
@@ -6305,8 +6366,13 @@
 <button class="bento-action-link" onclick="smoothScrollToAnchor('district-centers-sec');" type="button">🏢 மைய விவரங்களைக் காண்க</button>
 </div>
 </div><nav aria-label="உயர்கல்வி வழிகாட்டல் வழிசெலுத்தல்" class="sticky-portal-nav" id="stickyPortalNavbar">
-<button class="nav-anchor-pill active" onclick="smoothScrollToAnchor('cutoff-tools-sec', this)" type="button">🧮 கட்-ஆஃப் கருவிகள்</button><button class="nav-anchor-pill" onclick="smoothScrollToAnchor('sports-tools-sec', this)" type="button">🏆 விளையாட்டுப் பிரிவு</button>
-<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('student-ask-sec', this)" type="button" style="background: linear-gradient(135deg, #1e3a8a 0%, #0284c7 100%) !important; color: #ffffff !important; border: 1.5px solid #38bdf8 !important;">✉️ சந்தேகக் கேட்புப் பெட்டி</button>
+<div class="nav-marquee-wrapper" id="navMarqueeWrapper" title="பொத்தான்களைத் தேர்ந்தெடுக்க மவுஸை இதன் மேல் வைக்கவும் (Hover to Pause)">
+<div class="nav-marquee-content" id="navMarqueeContent">
+<!-- Group 1 -->
+<div class="nav-marquee-group">
+<button class="nav-anchor-pill active" onclick="smoothScrollToAnchor('cutoff-tools-sec', this)" type="button">🧮 கட்-ஆஃப் கருவிகள்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('sports-tools-sec', this)" type="button">🏆 விளையாட்டுப் பிரிவு</button>
+<button class="nav-anchor-pill btn-doubt-nav" onclick="smoothScrollToAnchor('student-ask-sec', this)" type="button" style="background: linear-gradient(135deg, #1e3a8a 0%, #0284c7 100%) !important; color: #ffffff !important; border: 1.5px solid #38bdf8 !important;">✉️ சந்தேகக் கேட்புப் பெட்டி</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('entrance-stream-sec', this)" type="button">✍️ நுழைவுத்தேர்வுகள்</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('direct-stream-sec', this)" type="button">🎯 நேரடிச் சேர்க்கை</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('reservation-sec', this)" type="button">🏛️ இடஒதுக்கீடு</button>
@@ -6314,9 +6380,26 @@
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('doc-checklist-sec', this)" type="button">📄 சான்றிதழ்கள் பட்டியல்</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('counselling-flow-sec', this)" type="button">🔄 கலந்தாய்வு நிலைகள்</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('district-centers-sec', this)" type="button">🏢 மாவட்ட மையங்கள்</button>
-
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('faqs-sec', this)" type="button">❓ வினா-விடை (FAQs)</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('portals-sec', this)" type="button">🌐 கல்வி தளங்கள்</button>
+</div>
+<!-- Group 2 (Duplicate for infinite seamless loop) -->
+<div class="nav-marquee-group" aria-hidden="true">
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('cutoff-tools-sec', this)" type="button">🧮 கட்-ஆஃப் கருவிகள்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('sports-tools-sec', this)" type="button">🏆 விளையாட்டுப் பிரிவு</button>
+<button class="nav-anchor-pill btn-doubt-nav" onclick="smoothScrollToAnchor('student-ask-sec', this)" type="button" style="background: linear-gradient(135deg, #1e3a8a 0%, #0284c7 100%) !important; color: #ffffff !important; border: 1.5px solid #38bdf8 !important;">✉️ சந்தேகக் கேட்புப் பெட்டி</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('entrance-stream-sec', this)" type="button">✍️ நுழைவுத்தேர்வுகள்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('direct-stream-sec', this)" type="button">🎯 நேரடிச் சேர்க்கை</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('reservation-sec', this)" type="button">🏛️ இடஒதுக்கீடு</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('quota-7point5-sec', this)" type="button">🏫 7.5% சலுகை</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('doc-checklist-sec', this)" type="button">📄 சான்றிதழ்கள் பட்டியல்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('counselling-flow-sec', this)" type="button">🔄 கலந்தாய்வு நிலைகள்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('district-centers-sec', this)" type="button">🏢 மாவட்ட மையங்கள்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('faqs-sec', this)" type="button">❓ வினா-விடை (FAQs)</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('portals-sec', this)" type="button">🌐 கல்வி தளங்கள்</button>
+</div>
+</div>
+</div>
 </nav><section class="section-card" id="cutoff-tools-sec">
 <div class="card-top-header">
 <h2 class="card-top-title">🧮 உயர்கல்வி சேர்க்கை கட்-ஆஃப் கால்குலேட்டர் (Academic Cut-off Tools)</h2>
@@ -6648,7 +6731,7 @@
       சூத்திரம்: கடந்த 4 கல்வி ஆண்டுகளில் (9, 10, 11, 12-ஆம் வகுப்பு) பெற்ற சான்றிதழ்களில், ஒரு கல்வி ஆண்டிற்கு 1 அதிகபட்ச சாதனை மட்டுமே மதிப்பெண்ணுக்கு ஏற்கப்படும் (அதிகபட்சம் 4 சான்றிதழ்கள்).
     </div>
 <!-- 4 Academic Years Selection Grid -->
-<div class="sports-4year-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 14px; margin-bottom: 18px;">
+<div class="sports-4year-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)); gap: 14px; margin-bottom: 18px;">
 <!-- Year 4: 12th Std -->
 <div class="sports-year-card" style="background: #ffffff !important; border: 2px solid #34d399 !important; border-radius: 12px !important; padding: 0 !important; overflow: visible !important; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important; display: flex !important; flex-direction: column !important;">
 <div class="sports-card-header" style="background: linear-gradient(135deg, #064e3b 0%, #047857 100%) !important; padding: 12px 14px !important; display: flex !important; flex-direction: column !important; gap: 6px !important; border-bottom: 2px solid #10b981 !important; border-radius: 10px 10px 0 0 !important;">
@@ -6863,7 +6946,7 @@
 <div style="font-weight: 800; font-size: 0.88rem; color: #065f46; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
 <span>👤</span><span>1. மாணவர் பொது விவரங்கள் (Candidate Particulars):</span>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px 14px; margin-bottom: 16px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)); gap: 12px 14px; margin-bottom: 16px;">
 <div>
 <label for="sports-student-name" style="font-size: 0.80rem; font-weight: 800; color: #0f172a; margin-bottom: 3px; display: block;">மாணவர் முழுப் பெயர் (Candidate Name):</label>
 <input id="sports-student-name" placeholder="எ.கா. க. அன்பரசன் / K. ANBARASAN" style="width: 100%;" type="text"/>
@@ -6916,7 +6999,7 @@
 <span>🥇 12-ஆம் வகுப்பு சான்றிதழ் விவரங்கள் (Class 12 - Year 4):</span>
 <span style="font-size: 0.76rem; background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Year 4</span>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px 12px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)); gap: 8px 12px;">
 <div>
 <label for="form-y4-year" style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">கல்வியாண்டு (Academic Year):</label>
 <input id="form-y4-year" style="width: 100%;" type="text" value="2025-2026"/>
@@ -6941,7 +7024,7 @@
 <span>🥈 11-ஆம் வகுப்பு சான்றிதழ் விவரங்கள் (Class 11 - Year 3):</span>
 <span style="font-size: 0.76rem; background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Year 3</span>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px 12px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)); gap: 8px 12px;">
 <div>
 <label for="form-y3-year" style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">கல்வியாண்டு (Academic Year):</label>
 <input id="form-y3-year" style="width: 100%;" type="text" value="2024-2025"/>
@@ -6966,7 +7049,7 @@
 <span>🥉 10-ஆம் வகுப்பு சான்றிதழ் விவரங்கள் (Class 10 - Year 2):</span>
 <span style="font-size: 0.76rem; background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Year 2</span>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px 12px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)); gap: 8px 12px;">
 <div>
 <label for="form-y2-year" style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">கல்வியாண்டு (Academic Year):</label>
 <input id="form-y2-year" style="width: 100%;" type="text" value="2023-2024"/>
@@ -6991,7 +7074,7 @@
 <span>🏅 9-ஆம் வகுப்பு சான்றிதழ் விவரங்கள் (Class 9 - Year 1):</span>
 <span style="font-size: 0.76rem; background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-weight: 700;">Year 1</span>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px 12px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)); gap: 8px 12px;">
 <div>
 <label for="form-y1-year" style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">கல்வியாண்டு (Academic Year):</label>
 <input id="form-y1-year" style="width: 100%;" type="text" value="2022-2023"/>
@@ -7174,9 +7257,18 @@
 <label class="form-label-title">அலைபேசி எண் <span class="required-star">*</span></label>
 <input class="form-text-box" id="formStudentPhone" pattern="[0-9]{10}" placeholder="10 இலக்க மொபைல் எண்" required="" type="tel"/>
 </div>
-<div class="form-control-item">
-<label class="form-label-title">மின்னஞ்சல் முகவரி (Email Address) <span class="required-star">*</span></label>
-<input class="form-text-box" id="formStudentEmail" placeholder="மாணவரின் மின்னஞ்சல் (எ.கா. student@gmail.com)" required="" type="email" autocomplete="email"/>
+<div class="form-control-item full-width" style="grid-column: 1 / -1 !important; margin: 6px 0 8px 0 !important; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%) !important; border: 1.8px solid #38bdf8 !important; border-radius: 12px !important; padding: 14px 18px !important; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.10) !important;">
+<label class="form-label-title" for="formStudentEmail" style="font-size: 0.96rem !important; font-weight: 800 !important; color: #0369a1 !important; display: flex !important; align-items: center !important; justify-content: space-between !important; flex-wrap: wrap !important; gap: 6px !important; margin-bottom: 8px !important;">
+<span style="display: inline-flex !important; align-items: center !important; gap: 8px !important;">
+<span style="font-size: 1.25rem !important;">📧</span>
+<span>மின்னஞ்சல் முகவரி (Email Address)</span>
+<span class="required-star" style="color: #dc2626 !important; font-size: 1.2rem !important; font-weight: 900 !important;">*</span>
+</span>
+<span style="font-size: 0.80rem !important; font-weight: 700 !important; color: #0284c7 !important; background: #ffffff !important; border: 1.2px solid #7dd3fc !important; padding: 2px 10px !important; border-radius: 999px !important; box-shadow: 0 1px 4px rgba(0,0,0,0.05) !important;">
+✨ உடனடி ஒப்புகை &amp; மின் வாழ்த்து அட்டை பெற
+</span>
+</label>
+<input class="form-text-box" id="formStudentEmail" placeholder="மாணவரின் அதிகாரப்பூர்வ மின்னஞ்சல் முகவரி (எ.கா. studentname@gmail.com)" required="" type="email" autocomplete="email" style="width: 100% !important; padding: 12px 16px !important; font-size: 1.02rem !important; font-weight: 600 !important; border: 2px solid #0284c7 !important; border-radius: 8px !important; background: #ffffff !important; color: #0f172a !important; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05) !important; outline: none !important; transition: all 0.2s ease !important;"/>
 </div>
 <div class="form-control-item">
 <label class="form-label-title">சந்தேகப் பிரிவு <span class="required-star">*</span></label>
@@ -8428,7 +8520,7 @@
         const summaryBox = document.getElementById('ackDetailsSummary');
         if (summaryBox) {
           summaryBox.innerHTML = `
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; font-size: 0.88rem; color: #334155; margin-top: 4px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)); gap: 8px; font-size: 0.88rem; color: #334155; margin-top: 4px;">
               <div><b>மாணவர் பெயர்:</b> ${studentName}</div>
               <div><b>வகுப்பு &amp; பள்ளி:</b> ${studentClass} (${schoolType})</div>
               <div><b>மாவட்டம்:</b> ${district}</div>
