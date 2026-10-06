@@ -5224,6 +5224,163 @@
   margin-bottom: 12px !important;
 }
 
+
+/* ========================================================
+   COMPACT & ELEGANT TWO-BOX CALCULATOR ARCHITECTURE
+   ======================================================== */
+.compact-calc-card {
+  padding: 16px 20px 18px 20px !important;
+  margin-bottom: 20px !important;
+  border: 1.8px solid #cbd5e1 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05) !important;
+  box-sizing: border-box !important;
+}
+
+.compact-calc-card .card-top-title {
+  font-size: clamp(1.02rem, 1.35vw, 1.25rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+  margin: 0 !important;
+  letter-spacing: -0.2px !important;
+  color: #1e3a8a !important;
+}
+
+.compact-calc-card .box-desc {
+  font-size: 0.84rem !important;
+  color: #475569 !important;
+  margin: 4px 0 14px 0 !important;
+  line-height: 1.5 !important;
+}
+
+.calc-tabs-bar {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px 8px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 14px !important;
+  padding-bottom: 4px !important;
+}
+
+.calc-btn-tab {
+  padding: 5px 12px !important;
+  font-size: 0.80rem !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  border: 1.2px solid #cbd5e1 !important;
+  background: #f8fafc !important;
+  color: #334155 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+}
+
+.calc-btn-tab:hover {
+  background: #f1f5f9 !important;
+  border-color: #38bdf8 !important;
+  color: #0284c7 !important;
+  transform: translateY(-1px) !important;
+}
+
+.calc-btn-tab.active {
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%) !important;
+  color: #ffffff !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.28) !important;
+}
+
+.calc-card-shell {
+  background: #ffffff !important;
+  border: 1.5px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+  box-sizing: border-box !important;
+}
+
+.calc-pane-title {
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  color: #1e3a8a !important;
+  margin-bottom: 6px !important;
+}
+
+.calc-formula-badge {
+  padding: 4px 10px !important;
+  font-size: 0.78rem !important;
+  border-radius: 6px !important;
+  margin-bottom: 12px !important;
+  display: inline-block !important;
+  background: #f1f5f9 !important;
+  color: #334155 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.calc-inputs-row {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
+  gap: 10px 14px !important;
+  margin-bottom: 14px !important;
+}
+
+.field-wrap label {
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  color: #475569 !important;
+  margin-bottom: 3px !important;
+  display: block !important;
+}
+
+.field-wrap input {
+  width: 100% !important;
+  padding: 6px 10px !important;
+  font-size: 0.86rem !important;
+  border: 1.3px solid #cbd5e1 !important;
+  border-radius: 7px !important;
+  box-sizing: border-box !important;
+  background: #ffffff !important;
+}
+
+.field-wrap input:focus {
+  border-color: #2563eb !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
+}
+
+.calc-output-center {
+  background: #f8fafc !important;
+  border: 1.4px solid #cbd5e1 !important;
+  border-radius: 9px !important;
+  padding: 10px 14px !important;
+  text-align: center !important;
+}
+
+.computed-score {
+  font-size: 1.6rem !important;
+  font-weight: 900 !important;
+  color: #1e3a8a !important;
+  margin: 2px 0 !important;
+}
+
+.computed-tag {
+  font-size: 0.80rem !important;
+  padding: 2px 10px !important;
+  border-radius: 999px !important;
+  display: inline-block !important;
+}
+
+@media (max-width: 680px) {
+  .compact-calc-card {
+    padding: 12px 12px 14px 12px !important;
+  }
+  .calc-card-shell {
+    padding: 10px 12px !important;
+  }
+  .calc-inputs-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -5421,7 +5578,7 @@
 <button class="bento-action-link" onclick="smoothScrollToAnchor('district-centers-sec');" type="button">🏢 மைய விவரங்களைக் காண்க</button>
 </div>
 </div><nav aria-label="உயர்கல்வி வழிகாட்டல் வழிசெலுத்தல்" class="sticky-portal-nav" id="stickyPortalNavbar">
-<button class="nav-anchor-pill active" onclick="smoothScrollToAnchor('cutoff-tools-sec', this)" type="button">🧮 கட்-ஆஃப் கருவிகள்</button>
+<button class="nav-anchor-pill active" onclick="smoothScrollToAnchor('cutoff-tools-sec', this)" type="button">🧮 கட்-ஆஃப் கருவிகள்</button><button class="nav-anchor-pill" onclick="smoothScrollToAnchor('sports-tools-sec', this)" type="button">🏆 விளையாட்டுப் பிரிவு</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('entrance-stream-sec', this)" type="button">✍️ நுழைவுத்தேர்வுகள்</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('direct-stream-sec', this)" type="button">🎯 நேரடிச் சேர்க்கை</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('reservation-sec', this)" type="button">🏛️ இடஒதுக்கீடு</button>
@@ -5434,16 +5591,13 @@
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('portals-sec', this)" type="button">🌐 கல்வி தளங்கள்</button>
 </nav><section class="section-card" id="cutoff-tools-sec">
 <div class="card-top-header">
-<h2 class="card-top-title">🧮 அனைத்துப் படிப்புகளுக்குமான ஒருங்கிணைந்த கட்-ஆஃப் &amp; மதிப்பெண் கால்குலேட்டர்கள்</h2>
+<h2 class="card-top-title">🧮 உயர்கல்வி சேர்க்கை கட்-ஆஃப் கால்குலேட்டர் (Academic Cut-off Tools)</h2>
 </div>
-<p class="box-desc" style="margin-bottom: 20px;">
-        நீங்கள் விரும்பும் கல்விப் பிரிவைத் தேர்ந்தெடுத்து மதிப்பெண்களை உள்ளிட்டு உங்கள் துல்லியமான சேர்க்கை கட்-ஆஃப் மற்றும் வாய்ப்புகளை உடனுக்குடன் அறிந்துகொள்ளுங்கள்:
-      </p>
+<p class="box-desc" style="margin-bottom: 20px;">பொறியியல் (TNEA), துணை மருத்துவம் (Paramedical), வேளாண்மை (TNAU), கால்நடை (TANUVAS), கலை &amp; அறிவியல் (TNGASA), சட்டம் மற்றும் பாலிடெக்னிக் சேர்க்கை கட்-ஆஃப் கணக்கீடு:</p>
 <!-- Calc Tab Buttons -->
 <div class="calc-tabs-bar">
 <button class="calc-btn-tab active" onclick="switchCalcPane('tnea')">📐 பொறியியல் (TNEA)</button>
 <button class="calc-btn-tab" onclick="switchCalcPane('paramed')">🩺 துணை மருத்துவம் (Paramedical)</button>
-<button class="calc-btn-tab" onclick="switchCalcPane('sports')">🏆 விளையாட்டுப் பிரிவு (Sports Quota)</button>
 <button class="calc-btn-tab" onclick="switchCalcPane('agri')">🌾 வேளாண்மை (TNAU)</button>
 <button class="calc-btn-tab" onclick="switchCalcPane('vet')">🐾 கால்நடை (TANUVAS)</button>
 <button class="calc-btn-tab" onclick="switchCalcPane('science')">🔬 அறிவியல் (B.Sc)</button>
@@ -5593,146 +5747,6 @@
 <span class="computed-tag" id="vp-status">மதிப்பெண்களை உள்ளிடவும்</span>
 </div>
 </div>
-</div><div class="calc-pane" id="calc-pane-sports">
-<div class="calc-card-shell">
-<div class="calc-pane-title">🏆 தமிழ்நாடு மருத்துவ &amp; தொழிற்கல்வி சேர்க்கை விளையாட்டு வீரர்கள் சான்றிதழ் மதிப்பெண் கால்குலேட்டர்</div>
-<div class="calc-formula-badge">
-      அரசு விதிகளின்படி (SDAT / DME / TNEA): கடந்த 4 கல்வி ஆண்டுகளில் (9, 10, 11, 12-ஆம் வகுப்பு) பெற்ற சான்றிதழ்களில், ஆண்டிற்கு ஒரு அதிகபட்ச சான்றிதழ் மட்டுமே கணக்கில் கொள்ளப்படும்.
-    </div>
-<!-- 4 Academic Years Selection Grid -->
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 18px 0;">
-<!-- Year 4: 12th Std -->
-<div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
-<div style="font-weight: 800; font-size: 0.88rem; color: #1e3a8a; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;">
-<span>🥇 12-ஆம் வகுப்பு (Year 4)</span>
-<span id="sports-y4-score" style="background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 6px; font-size: 0.82rem; font-weight: 800;">0 மதிப்பெண்</span>
-</div>
-<div style="margin-bottom: 8px;">
-<label style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">போட்டி நிலை (Competition Level):</label>
-<select id="sports-y4-level" onchange="computeSportsQuota()" style="width: 100%; padding: 6px 8px; font-size: 0.84rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #f8fafc; font-family: inherit;">
-<option value="none">-- சான்றிதழ் இல்லை --</option>
-<option value="international">சர்வதேசம் (International - Table I)</option>
-<option value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
-<option value="state">மாநிலம் (State / CM Trophy State - Table III)</option>
-<option value="divisional">மண்டலம் (Divisional / Table IV)</option>
-<option value="district">மாவட்டம் (District / Inter-School - Table V)</option>
-</select>
-</div>
-<div>
-<label style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">வெற்றி நிலை (Medal / Rank):</label>
-<select id="sports-y4-medal" onchange="computeSportsQuota()" style="width: 100%; padding: 6px 8px; font-size: 0.84rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #f8fafc; font-family: inherit;">
-<option value="none">-- தேர்ந்தெடுக்கவும் --</option>
-<option value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
-<option value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
-<option value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
-<option value="part">🎖️ பங்கேற்பு (Participation)</option>
-</select>
-</div>
-</div>
-<!-- Year 3: 11th Std -->
-<div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
-<div style="font-weight: 800; font-size: 0.88rem; color: #1e3a8a; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;">
-<span>🥈 11-ஆம் வகுப்பு (Year 3)</span>
-<span id="sports-y3-score" style="background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 6px; font-size: 0.82rem; font-weight: 800;">0 மதிப்பெண்</span>
-</div>
-<div style="margin-bottom: 8px;">
-<label style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">போட்டி நிலை (Competition Level):</label>
-<select id="sports-y3-level" onchange="computeSportsQuota()" style="width: 100%; padding: 6px 8px; font-size: 0.84rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #f8fafc; font-family: inherit;">
-<option value="none">-- சான்றிதழ் இல்லை --</option>
-<option value="international">சர்வதேசம் (International - Table I)</option>
-<option value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
-<option value="state">மாநிலம் (State / CM Trophy State - Table III)</option>
-<option value="divisional">மண்டலம் (Divisional / Table IV)</option>
-<option value="district">மாவட்டம் (District / Inter-School - Table V)</option>
-</select>
-</div>
-<div>
-<label style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">வெற்றி நிலை (Medal / Rank):</label>
-<select id="sports-y3-medal" onchange="computeSportsQuota()" style="width: 100%; padding: 6px 8px; font-size: 0.84rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #f8fafc; font-family: inherit;">
-<option value="none">-- தேர்ந்தெடுக்கவும் --</option>
-<option value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
-<option value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
-<option value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
-<option value="part">🎖️ பங்கேற்பு (Participation)</option>
-</select>
-</div>
-</div>
-<!-- Year 2: 10th Std -->
-<div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
-<div style="font-weight: 800; font-size: 0.88rem; color: #1e3a8a; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;">
-<span>🥉 10-ஆம் வகுப்பு (Year 2)</span>
-<span id="sports-y2-score" style="background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 6px; font-size: 0.82rem; font-weight: 800;">0 மதிப்பெண்</span>
-</div>
-<div style="margin-bottom: 8px;">
-<label style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">போட்டி நிலை (Competition Level):</label>
-<select id="sports-y2-level" onchange="computeSportsQuota()" style="width: 100%; padding: 6px 8px; font-size: 0.84rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #f8fafc; font-family: inherit;">
-<option value="none">-- சான்றிதழ் இல்லை --</option>
-<option value="international">சர்வதேசம் (International - Table I)</option>
-<option value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
-<option value="state">மாநிலம் (State / CM Trophy State - Table III)</option>
-<option value="divisional">மண்டலம் (Divisional / Table IV)</option>
-<option value="district">மாவட்டம் (District / Inter-School - Table V)</option>
-</select>
-</div>
-<div>
-<label style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">வெற்றி நிலை (Medal / Rank):</label>
-<select id="sports-y2-medal" onchange="computeSportsQuota()" style="width: 100%; padding: 6px 8px; font-size: 0.84rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #f8fafc; font-family: inherit;">
-<option value="none">-- தேர்ந்தெடுக்கவும் --</option>
-<option value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
-<option value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
-<option value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
-<option value="part">🎖️ பங்கேற்பு (Participation)</option>
-</select>
-</div>
-</div>
-<!-- Year 1: 9th Std -->
-<div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
-<div style="font-weight: 800; font-size: 0.88rem; color: #1e3a8a; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;">
-<span>🏅 9-ஆம் வகுப்பு (Year 1)</span>
-<span id="sports-y1-score" style="background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 6px; font-size: 0.82rem; font-weight: 800;">0 மதிப்பெண்</span>
-</div>
-<div style="margin-bottom: 8px;">
-<label style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">போட்டி நிலை (Competition Level):</label>
-<select id="sports-y1-level" onchange="computeSportsQuota()" style="width: 100%; padding: 6px 8px; font-size: 0.84rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #f8fafc; font-family: inherit;">
-<option value="none">-- சான்றிதழ் இல்லை --</option>
-<option value="international">சர்வதேசம் (International - Table I)</option>
-<option value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
-<option value="state">மாநிலம் (State / CM Trophy State - Table III)</option>
-<option value="divisional">மண்டலம் (Divisional / Table IV)</option>
-<option value="district">மாவட்டம் (District / Inter-School - Table V)</option>
-</select>
-</div>
-<div>
-<label style="font-size: 0.78rem; font-weight: 700; color: #475569; display: block; margin-bottom: 3px;">வெற்றி நிலை (Medal / Rank):</label>
-<select id="sports-y1-medal" onchange="computeSportsQuota()" style="width: 100%; padding: 6px 8px; font-size: 0.84rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #f8fafc; font-family: inherit;">
-<option value="none">-- தேர்ந்தெடுக்கவும் --</option>
-<option value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
-<option value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
-<option value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
-<option value="part">🎖️ பங்கேற்பு (Participation)</option>
-</select>
-</div>
-</div>
-</div>
-<!-- Cumulative Sports Score Output -->
-<div class="calc-output-center">
-<div style="font-size: 0.95rem; font-weight: 700; color: #475569;">உங்கள் விளையாட்டு மொத்த மதிப்பெண் (Cumulative Sports Score):</div>
-<div class="computed-score" id="sports-total-result">0</div>
-<span class="computed-tag" id="sports-total-status">சான்றிதழ்களைத் தேர்ந்தெடுத்து மதிப்பெண் அறியவும்</span>
-</div>
-<!-- Official Seat Matrix & Rules Box -->
-<div style="margin-top: 16px; background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 10px; padding: 14px; text-align: left; font-size: 0.84rem; color: #334155; line-height: 1.6;">
-<div style="font-weight: 800; color: #1e3a8a; font-size: 0.92rem; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
-<span>📌</span><span>தமிழ்நாடு விளையாட்டுப் பிரிவு இடஒதுக்கீடு &amp; சேர்க்கை முக்கிய விதிகள்:</span>
-</div>
-<ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px;">
-<li><strong>மருத்துவச் சேர்க்கை (TN MBBS / BDS):</strong> அரசு மருத்துவக் கல்லூரிகளில் <strong>13 MBBS மற்றும் 2 BDS இடங்கள்</strong> விளையாட்டுப் பிரிவினருக்கு ஒதுக்கப்பட்டுள்ளன. நீட் (NEET UG) தேர்வில் குறைந்தபட்ச தகுதி மதிப்பெண் பெற்றிருக்க வேண்டும். <em>விளையாட்டு சான்றிதழ் மதிப்பெண்கள் அடிப்படையிலேயே தனித் தரவரிசைப் பட்டியல் தயாரிக்கப்பட்டு நேரடி கலந்தாய்வு நடத்தப்படும்.</em></li>
-<li><strong>பொறியியல் சேர்க்கை (TNEA):</strong> அண்ணா பல்கலைக்கழகம் மற்றும் தமிழகப் பொறியியல் கல்லூரிகளில் <strong>500 சிறப்பு இடங்கள்</strong> விளையாட்டுப் பிரிவினருக்கு ஒதுக்கப்பட்டுள்ளன. (+2 கணிதம், இயற்பியல், வேதியியல் தேர்ச்சியுடன் விளையாட்டு மதிப்பெண் தரவரிசை).</li>
-<li><strong>வேளாண்மை (TNAU) &amp; கால்நடை (TANUVAS):</strong> வேளாண்மை சேர்க்கையில் 40+ இடங்களும், கால்நடை மருத்துவத்தில் 5+ இடங்களும் விளையாட்டுப் பிரிவினருக்கு ஒதுக்கப்பட்டுள்ளன.</li>
-<li><strong>சான்றிதழ் தகுதி:</strong> மத்திய/மாநில அரசால் அங்கீகரிக்கப்பட்ட விளையாட்டுச் சங்கங்கள் (IOA, MYAS, SDAT, TNOA, SGFI) வழங்கிய சான்றிதழ்கள் மட்டுமே ஏற்றுக்கொள்ளப்படும். பள்ளிகள் அளவிலான உள் போட்டிகள் அல்லது அங்கீகாரமற்ற தனியார் போட்டிகள் ஏற்கப்படமாட்டாது.</li>
-</ul>
-</div>
-</div>
 </div><div class="calc-pane" id="calc-pane-agri">
 <div class="calc-card-shell">
 <div class="calc-pane-title">🌾 தமிழ்நாடு வேளாண்மைப் பல்கலைக்கழக (TNAU B.Sc Agri / B.Tech) கட்-ஆஃப்</div>
@@ -5880,7 +5894,164 @@
 </tbody>
 </table>
 </div>
-</div></section><section class="section-card" id="entrance-stream-sec">
+</div></section><section class="section-card compact-calc-card" id="sports-tools-sec" style="margin-top: 20px;">
+<div class="card-top-header" style="display: flex; align-items: center; justify-content: flex-start; margin-bottom: 8px;">
+<h2 class="card-top-title" style="font-size: clamp(1.02rem, 1.35vw, 1.25rem) !important; font-weight: 800; color: #1e3a8a; margin: 0;">
+      🏆 தமிழ்நாடு மருத்துவ &amp; தொழிற்கல்வி விளையாட்டு வீரர்கள் (Sports Quota) சான்றிதழ் மதிப்பெண் கால்குலேட்டர்
+    </h2>
+</div>
+<p class="box-desc" style="font-size: 0.84rem; color: #475569; margin: 0 0 14px 0; line-height: 1.5;">
+    SDAT, மருத்துவக் கல்வி இயக்ககம் (DME) &amp; அண்ணா பல்கலைக்கழக (TNEA) விதிகளின்படி கேந்திரிய வித்யாலயா (KVS), சிபிஎஸ்இ (CBSE), சர்வதேச, தேசிய, மாநில, மண்டல மற்றும் மாவட்ட அளவிலான விளையாட்டுச் சான்றிதழ்களின் கூட்டு மதிப்பெண் கணக்கீடு:
+  </p>
+<div class="calc-card-shell" style="background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 16px; box-shadow: 0 2px 10px rgba(15,23,42,0.04);">
+<div class="calc-formula-badge" style="display: inline-block; padding: 5px 12px; font-size: 0.78rem; font-weight: 700; color: #b45309; background: #fefce8; border: 1px solid #fef08a; border-radius: 6px; margin-bottom: 14px;">
+      சூத்திரம்: கடந்த 4 கல்வி ஆண்டுகளில் (9, 10, 11, 12-ஆம் வகுப்பு) பெற்ற சான்றிதழ்களில், ஒரு கல்வி ஆண்டிற்கு 1 அதிகபட்ச சாதனை மட்டுமே மதிப்பெண்ணுக்கு ஏற்கப்படும் (அதிகபட்சம் 4 சான்றிதழ்கள்).
+    </div>
+<!-- 4 Academic Years Selection Grid -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-bottom: 16px;">
+<!-- Year 4: 12th Std -->
+<div class="sports-year-card" style="background: #f8fafc; border: 1.3px solid #cbd5e1; border-radius: 9px; padding: 11px;">
+<div style="font-weight: 800; font-size: 0.86rem; color: #1e3a8a; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
+<span>🥇 12-ஆம் வகுப்பு (Year 4)</span>
+<span id="sports-y4-score" style="background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 5px; font-size: 0.80rem; font-weight: 800;">0 மதிப்பெண்</span>
+</div>
+<div style="margin-bottom: 6px;">
+<label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">போட்டி நிலை (Level):</label>
+<select id="sports-y4-level" onchange="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
+<option value="none">-- சான்றிதழ் இல்லை --</option>
+<option value="international">சர்வதேசம் (International - Table I)</option>
+<option value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
+<option value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
+<option value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
+<option value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
+<option value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
+<option value="district">மாவட்டம் (District / Inter-School - Table V)</option>
+</select>
+</div>
+<div>
+<label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">வெற்றி நிலை (Medal / Rank):</label>
+<select id="sports-y4-medal" onchange="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
+<option value="none">-- தேர்ந்தெடுக்கவும் --</option>
+<option value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
+<option value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
+<option value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
+<option value="part">🎖️ பங்கேற்பு (Participation)</option>
+</select>
+</div>
+</div>
+<!-- Year 3: 11th Std -->
+<div class="sports-year-card" style="background: #f8fafc; border: 1.3px solid #cbd5e1; border-radius: 9px; padding: 11px;">
+<div style="font-weight: 800; font-size: 0.86rem; color: #1e3a8a; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
+<span>🥈 11-ஆம் வகுப்பு (Year 3)</span>
+<span id="sports-y3-score" style="background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 5px; font-size: 0.80rem; font-weight: 800;">0 மதிப்பெண்</span>
+</div>
+<div style="margin-bottom: 6px;">
+<label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">போட்டி நிலை (Level):</label>
+<select id="sports-y3-level" onchange="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
+<option value="none">-- சான்றிதழ் இல்லை --</option>
+<option value="international">சர்வதேசம் (International - Table I)</option>
+<option value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
+<option value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
+<option value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
+<option value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
+<option value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
+<option value="district">மாவட்டம் (District / Inter-School - Table V)</option>
+</select>
+</div>
+<div>
+<label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">வெற்றி நிலை (Medal / Rank):</label>
+<select id="sports-y3-medal" onchange="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
+<option value="none">-- தேர்ந்தெடுக்கவும் --</option>
+<option value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
+<option value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
+<option value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
+<option value="part">🎖️ பங்கேற்பு (Participation)</option>
+</select>
+</div>
+</div>
+<!-- Year 2: 10th Std -->
+<div class="sports-year-card" style="background: #f8fafc; border: 1.3px solid #cbd5e1; border-radius: 9px; padding: 11px;">
+<div style="font-weight: 800; font-size: 0.86rem; color: #1e3a8a; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
+<span>🥉 10-ஆம் வகுப்பு (Year 2)</span>
+<span id="sports-y2-score" style="background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 5px; font-size: 0.80rem; font-weight: 800;">0 மதிப்பெண்</span>
+</div>
+<div style="margin-bottom: 6px;">
+<label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">போட்டி நிலை (Level):</label>
+<select id="sports-y2-level" onchange="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
+<option value="none">-- சான்றிதழ் இல்லை --</option>
+<option value="international">சர்வதேசம் (International - Table I)</option>
+<option value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
+<option value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
+<option value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
+<option value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
+<option value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
+<option value="district">மாவட்டம் (District / Inter-School - Table V)</option>
+</select>
+</div>
+<div>
+<label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">வெற்றி நிலை (Medal / Rank):</label>
+<select id="sports-y2-medal" onchange="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
+<option value="none">-- தேர்ந்தெடுக்கவும் --</option>
+<option value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
+<option value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
+<option value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
+<option value="part">🎖️ பங்கேற்பு (Participation)</option>
+</select>
+</div>
+</div>
+<!-- Year 1: 9th Std -->
+<div class="sports-year-card" style="background: #f8fafc; border: 1.3px solid #cbd5e1; border-radius: 9px; padding: 11px;">
+<div style="font-weight: 800; font-size: 0.86rem; color: #1e3a8a; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
+<span>🏅 9-ஆம் வகுப்பு (Year 1)</span>
+<span id="sports-y1-score" style="background: #eff6ff; color: #1d4ed8; padding: 2px 8px; border-radius: 5px; font-size: 0.80rem; font-weight: 800;">0 மதிப்பெண்</span>
+</div>
+<div style="margin-bottom: 6px;">
+<label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">போட்டி நிலை (Level):</label>
+<select id="sports-y1-level" onchange="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
+<option value="none">-- சான்றிதழ் இல்லை --</option>
+<option value="international">சர்வதேசம் (International - Table I)</option>
+<option value="national">தேசியம் (National / SGFI / Khelo India - Table II)</option>
+<option value="kvs_national">🏫 KVS / CBSE தேசியப் போட்டிகள் (Board National - Table III)</option>
+<option value="state">மாநிலம் (State / SDAT CM Trophy State - Table III)</option>
+<option value="kvs_regional">🏢 KVS மண்டல / CBSE கிளஸ்டர் (Regional / Cluster - Table IV)</option>
+<option value="divisional">மண்டலம் / கோட்டம் (Divisional - Table IV)</option>
+<option value="district">மாவட்டம் (District / Inter-School - Table V)</option>
+</select>
+</div>
+<div>
+<label style="font-size: 0.76rem; font-weight: 700; color: #475569; display: block; margin-bottom: 2px;">வெற்றி நிலை (Medal / Rank):</label>
+<select id="sports-y1-medal" onchange="computeSportsQuota()" style="width: 100%; padding: 5px 7px; font-size: 0.82rem; border: 1.2px solid #cbd5e1; border-radius: 6px; background: #ffffff; font-family: inherit;">
+<option value="none">-- தேர்ந்தெடுக்கவும் --</option>
+<option value="gold">🥇 தங்கம் (Gold Medal / 1st)</option>
+<option value="silver">🥈 வெள்ளி (Silver Medal / 2nd)</option>
+<option value="bronze">🥉 வெண்கலம் (Bronze Medal / 3rd)</option>
+<option value="part">🎖️ பங்கேற்பு (Participation)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Output Box -->
+<div class="calc-output-center" style="background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%); border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 12px 16px; text-align: center; margin-bottom: 14px;">
+<div style="font-size: 0.90rem; font-weight: 700; color: #475569; margin-bottom: 2px;">உங்கள் விளையாட்டு மொத்த மதிப்பெண் (Cumulative Sports Score):</div>
+<div class="computed-score" id="sports-total-result" style="font-size: 1.65rem; font-weight: 900; color: #1e3a8a; margin: 2px 0;">0</div>
+<span class="computed-tag" id="sports-total-status" style="display: inline-block; padding: 3px 12px; border-radius: 999px; font-size: 0.80rem; font-weight: 800; background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd;">
+        சான்றிதழ்களைத் தேர்ந்தெடுத்து மதிப்பெண் அறியவும்
+      </span>
+</div>
+<!-- Important Rules & Seat Matrix Accordion / Guidance Box -->
+<div style="background: #f8fafc; border: 1.3px solid #e2e8f0; border-radius: 9px; padding: 12px 14px; text-align: left; font-size: 0.80rem; color: #334155; line-height: 1.55;">
+<div style="font-weight: 800; color: #1e3a8a; font-size: 0.88rem; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+<span>📌</span><span>விளையாட்டுப் பிரிவு இடஒதுக்கீடு &amp; KVS / CBSE சிறப்பு விதிகள்:</span>
+</div>
+<ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px;">
+<li><strong>மருத்துவச் சேர்க்கை (TN MBBS / BDS):</strong> அரசு மருத்துவக் கல்லூரிகளில் <strong>13 MBBS மற்றும் 2 BDS இடங்கள்</strong> விளையாட்டுப் பிரிவினருக்கு ஒதுக்கப்பட்டுள்ளன. நீட் தேர்வில் குறைந்தபட்ச தகுதி மதிப்பெண் போதுமானது; விளையாட்டு சான்றிதழ் மதிப்பெண்கள் அடிப்படையிலேயே பிரத்யேகத் தரவரிசை வெளியிடப்பட்டு நேரடி கலந்தாய்வு நடத்தப்படும்.</li>
+<li><strong>பொறியியல் (TNEA):</strong> <strong>500 சிறப்பு இடங்கள்</strong> (+2 PCM தேர்ச்சியுடன் விளையாட்டு மதிப்பெண் அடிப்படையில்).</li>
+<li><strong>வேளாண்மை (TNAU) &amp; கால்நடை (TANUVAS):</strong> முறையே <strong>40+ இடங்கள்</strong> மற்றும் <strong>5+ இடங்கள்</strong> விளையாட்டு வீரர்களுக்கு ஒதுக்கப்பட்டுள்ளன.</li>
+<li><strong>கேந்திரிய வித்யாலயா (KVS) &amp; சிபிஎஸ்இ (CBSE) விதி:</strong> தமிழக எல்லைக்குள் அமைந்துள்ள கேந்திரிய வித்யாலயா (KVS) மற்றும் CBSE பள்ளிகளில் பயின்ற தமிழக இருப்பிடச் சான்றுடைய மாணவர்கள் மட்டுமே இச்சலுகைக்குத் தகுதியுடையவர்கள். KVS/CBSE தேசியப் போட்டிகள் மாநில அளவிற்கும் (Table III), KVS மண்டல/CBSE கிளஸ்டர் போட்டிகள் கோட்ட/மண்டல அளவிற்கும் (Table IV) இணையாகக் கணக்கிடப்படும்.</li>
+</ul>
+</div>
+</div>
+</section><section class="section-card" id="entrance-stream-sec">
 <div class="card-top-header">
 <h2 class="card-top-title">✍️ 1. தேசிய &amp; மாநில அளவிலான நுழைவுத் தேர்வு வழிகாட்டல் நெறிமுறைகள்</h2>
 <span class="card-tag-badge entrance">நுழைவுத்தேர்வு வழிகாட்டல்</span>
@@ -7589,6 +7760,69 @@ function fireCelebrationCrackers() {
         badge.innerText = 'மதிப்பெண்கள் கணக்கிடப்பட்டன (TANUVAS கலந்தாய்வு தரவரிசையைப் பார்க்கவும்)';
       } else {
         badge.innerText = 'மதிப்பெண்களை உள்ளிடவும்';
+      }
+    }
+</script><script>
+    // Extended Sports Quota Scoring with KVS / CBSE Board National & Regional
+    const SPORTS_SCORE_TABLE = {
+      international: { gold: 1000, silver: 750, bronze: 500, part: 250 },
+      national: { gold: 190, silver: 160, bronze: 130, part: 50 },
+      state: { gold: 95, silver: 80, bronze: 65, part: 20 },
+      kvs_national: { gold: 95, silver: 80, bronze: 65, part: 20 },
+      kvs_regional: { gold: 65, silver: 50, bronze: 35, part: 15 },
+      divisional: { gold: 65, silver: 50, bronze: 35, part: 15 },
+      district: { gold: 45, silver: 30, bronze: 15, part: 5 }
+    };
+
+    function getSingleYearScore(levelId, medalId) {
+      const levelEl = document.getElementById(levelId);
+      const medalEl = document.getElementById(medalId);
+      const level = levelEl ? levelEl.value : 'none';
+      const medal = medalEl ? medalEl.value : 'none';
+      if (SPORTS_SCORE_TABLE[level] && SPORTS_SCORE_TABLE[level][medal]) {
+        return SPORTS_SCORE_TABLE[level][medal];
+      }
+      return 0;
+    }
+
+    function computeSportsQuota() {
+      const s4 = getSingleYearScore('sports-y4-level', 'sports-y4-medal');
+      const s3 = getSingleYearScore('sports-y3-level', 'sports-y3-medal');
+      const s2 = getSingleYearScore('sports-y2-level', 'sports-y2-medal');
+      const s1 = getSingleYearScore('sports-y1-level', 'sports-y1-medal');
+
+      const y4El = document.getElementById('sports-y4-score');
+      const y3El = document.getElementById('sports-y3-score');
+      const y2El = document.getElementById('sports-y2-score');
+      const y1El = document.getElementById('sports-y1-score');
+
+      if (y4El) y4El.innerText = s4 + ' மதிப்பெண்';
+      if (y3El) y3El.innerText = s3 + ' மதிப்பெண்';
+      if (y2El) y2El.innerText = s2 + ' மதிப்பெண்';
+      if (y1El) y1El.innerText = s1 + ' மதிப்பெண்';
+
+      const total = s4 + s3 + s2 + s1;
+      const totalEl = document.getElementById('sports-total-result');
+      if (totalEl) totalEl.innerText = total;
+
+      const badge = document.getElementById('sports-total-status');
+      if (badge) {
+        if (total >= 500) {
+          badge.innerText = '🌟 மிகச் சிறந்த சர்வதேச/தேசிய விளையாட்டுத் தகுதி (MBBS & முதன்மைக் கல்லூரிகளில் முன்னுரிமை)';
+          badge.style.background = '#dcfce7'; badge.style.color = '#15803d'; badge.style.borderColor = '#86efac';
+        } else if (total >= 190) {
+          badge.innerText = '🥇 தேசிய / KVS தேசிய அளவிலான சிறந்த சாதனை (TNEA & அரசு தொழிற்கல்லூரிகளில் முன்னுரிமை)';
+          badge.style.background = '#eff6ff'; badge.style.color = '#1d4ed8'; badge.style.borderColor = '#93c5fd';
+        } else if (total >= 95) {
+          badge.innerText = '🥈 மாநில / KVS மண்டல விளையாட்டுச் சாதனை (விளையாட்டுத் தரவரிசையில் நல்ல வாய்ப்பு)';
+          badge.style.background = '#fef3c7'; badge.style.color = '#b45309'; badge.style.borderColor = '#fde047';
+        } else if (total > 0) {
+          badge.innerText = '🥉 மாவட்ட / மண்டல சான்றிதழ் மதிப்பெண்கள் கணக்கிடப்பட்டன';
+          badge.style.background = '#f1f5f9'; badge.style.color = '#475569'; badge.style.borderColor = '#cbd5e1';
+        } else {
+          badge.innerText = 'சான்றிதழ்களைத் தேர்ந்தெடுத்து மதிப்பெண் அறியவும்';
+          badge.style.background = '#e0f2fe'; badge.style.color = '#0369a1'; badge.style.borderColor = '#bae6fd';
+        }
       }
     }
 </script></body>
