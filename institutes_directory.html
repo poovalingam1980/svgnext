@@ -3605,6 +3605,222 @@
       }
     }
 
+
+
+    
+    /* ========================================================
+       STUDENT-ATTRACTIVE ANIMATED HERO BANNER (HIGH CONTRAST & VIBRANT)
+       ======================================================== */
+    @keyframes flowingBorder {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes badgeDotPulse {
+      0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.7); }
+      50% { transform: scale(1.2); opacity: 0.8; box-shadow: 0 0 0 6px rgba(250, 204, 21, 0); }
+    }
+
+    .header-banner-wrap {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 24px 0 !important;
+      padding: 3.5px !important;
+      border-radius: 20px !important;
+      background: linear-gradient(115deg, #f59e0b, #3b82f6, #ec4899, #10b981, #8b5cf6, #f59e0b) !important;
+      background-size: 300% 300% !important;
+      animation: flowingBorder 8s ease infinite !important;
+      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.25), 0 0 20px rgba(37, 99, 235, 0.2) !important;
+      box-sizing: border-box !important;
+      overflow: visible !important;
+      position: relative !important;
+      z-index: 10 !important;
+    }
+
+    .header-banner {
+      background: radial-gradient(ellipse at 50% 0%, #1e3a8a 0%, #0f172a 75%, #090d16 100%) !important;
+      border-radius: 17px !important;
+      padding: 32px 28px 28px 28px !important;
+      text-align: center !important;
+      color: #ffffff !important;
+      position: relative !important;
+      overflow: hidden !important;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .header-banner::before {
+      content: '' !important;
+      position: absolute !important;
+      top: -50% !important;
+      left: -50% !important;
+      width: 200% !important;
+      height: 200% !important;
+      background: radial-gradient(circle at center, rgba(56, 189, 248, 0.08) 0%, transparent 60%) !important;
+      pointer-events: none !important;
+    }
+
+    .banner-top-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      padding: 6px 18px !important;
+      background: rgba(15, 23, 42, 0.8) !important;
+      border: 1.5px solid rgba(250, 204, 21, 0.7) !important;
+      border-radius: 999px !important;
+      font-size: 0.86rem !important;
+      font-weight: 800 !important;
+      color: #fef08a !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35), inset 0 0 10px rgba(250, 204, 21, 0.15) !important;
+      margin-bottom: 14px !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+    }
+
+    .badge-pulse-dot {
+      width: 8px !important;
+      height: 8px !important;
+      background-color: #facc15 !important;
+      border-radius: 50% !important;
+      display: inline-block !important;
+      animation: badgeDotPulse 2s infinite !important;
+    }
+
+    .badge-sparkle {
+      color: #67e8f9 !important;
+      font-size: 0.82rem !important;
+      font-weight: 700 !important;
+      border-left: 1px solid rgba(255, 255, 255, 0.25) !important;
+      padding-left: 8px !important;
+      margin-left: 2px !important;
+    }
+
+    .banner-main-title {
+      font-size: clamp(1.6rem, 2.5vw, 2.35rem) !important;
+      font-weight: 900 !important;
+      line-height: 1.35 !important;
+      margin: 0 0 14px 0 !important;
+      letter-spacing: -0.3px !important;
+      background: linear-gradient(135deg, #ffffff 0%, #fef08a 50%, #facc15 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6)) !important;
+    }
+
+    .banner-fields-pill-row {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 7px 10px !important;
+      margin: 0 auto 16px auto !important;
+      max-width: 1050px !important;
+    }
+
+    .field-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 4px !important;
+      padding: 4px 12px !important;
+      border-radius: 999px !important;
+      font-size: 0.82rem !important;
+      font-weight: 700 !important;
+      color: #f8fafc !important;
+      background: rgba(30, 41, 59, 0.85) !important;
+      border: 1px solid rgba(255, 255, 255, 0.16) !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .field-pill:hover {
+      transform: translateY(-2px) !important;
+      border-color: #facc15 !important;
+      box-shadow: 0 4px 12px rgba(250, 204, 21, 0.3) !important;
+    }
+
+    .banner-desc {
+      font-size: clamp(0.92rem, 1.1vw, 1.04rem) !important;
+      color: #e2e8f0 !important;
+      max-width: 960px !important;
+      margin: 0 auto 18px auto !important;
+      line-height: 1.65 !important;
+      font-weight: 500 !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7) !important;
+    }
+
+    .banner-desc strong {
+      color: #fef08a !important;
+      font-weight: 800 !important;
+    }
+
+    .banner-features-ribbon {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-wrap: wrap !important;
+      gap: 10px 14px !important;
+      padding: 10px 20px !important;
+      background: rgba(15, 23, 42, 0.65) !important;
+      border: 1px solid rgba(56, 189, 248, 0.35) !important;
+      border-radius: 12px !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+    }
+
+    .ribbon-item {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 0.84rem !important;
+      font-weight: 700 !important;
+      color: #38bdf8 !important;
+    }
+
+    .ribbon-dot {
+      color: rgba(255, 255, 255, 0.35) !important;
+      font-size: 0.8rem !important;
+    }
+
+    @media (max-width: 680px) {
+      .header-banner-wrap {
+        padding: 2.5px !important;
+        margin-bottom: 16px !important;
+      }
+      .header-banner {
+        padding: 20px 14px 18px 14px !important;
+      }
+      .banner-top-badge {
+        font-size: 0.76rem !important;
+        padding: 5px 12px !important;
+      }
+      .badge-sparkle {
+        display: none !important;
+      }
+      .banner-main-title {
+        font-size: 1.35rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 10px !important;
+      }
+      .field-pill {
+        font-size: 0.75rem !important;
+        padding: 3px 9px !important;
+      }
+      .banner-desc {
+        font-size: 0.86rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 12px !important;
+      }
+      .banner-features-ribbon {
+        padding: 8px 12px !important;
+        gap: 6px 10px !important;
+      }
+      .ribbon-item {
+        font-size: 0.76rem !important;
+      }
+      .ribbon-dot {
+        display: none !important;
+      }
+    }
+
 </style>
 </head>
 <body>
@@ -3715,9 +3931,7 @@
 </a>
 </div>
 </header>
-<div class="district-badge">
-      🏛️ முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்
-    </div>
+
 
   <!-- Breadcrumb -->
 <div class="breadcrumb-bar">
@@ -3728,14 +3942,62 @@
 <span class="breadcrumb-current">உயர் கல்வி நிறுவனங்களின் முழு அடைவுத் தொகுப்பு 2026 (16 Google Sheets)</span>
 </div>
 <!-- Animated Glowing Banner -->
+<!-- Animated Student-Attractive Hero Banner -->
 <div class="header-banner-wrap">
-<header class="header-banner">
-<div class="header-title-badge">
-        🏛️ தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்
+  <header class="header-banner">
+    <!-- Animated Glow Sparkle Badge -->
+    <div class="banner-top-badge">
+      <span class="badge-pulse-dot"></span>
+      <span class="badge-icon">🏛️</span>
+      <span class="badge-text">அகில இந்திய &amp; தமிழக உயர்கல்வி அடைவுகள் — 2026</span>
+      <span class="badge-sparkle">✨ 16 விரிவான கையேடுகள்</span>
+    </div>
+
+    <!-- Crystal Clear Glowing Main Title -->
+    <h1 class="banner-main-title">
+      உயர் கல்வி நிறுவனங்களின் முழு அடைவுத் தொகுப்பு 2026
+    </h1>
+
+    <!-- Prominent Subtitle Highlighting All Major Fields -->
+    <div class="banner-fields-pill-row">
+      <span class="field-pill pill-med">🩺 மருத்துவம்</span>
+      <span class="field-pill pill-eng">⚙️ பொறியியல்</span>
+      <span class="field-pill pill-sci">🔬 ஆராய்ச்சி</span>
+      <span class="field-pill pill-cuet">🏛️ மத்திய பல்கலை</span>
+      <span class="field-pill pill-law">⚖️ சட்டம்</span>
+      <span class="field-pill pill-agri">🌾 வேளாண்மை</span>
+      <span class="field-pill pill-arts">📚 கலை &amp; அறிவியல்</span>
+      <span class="field-pill pill-poly">🛠️ பாலிடெக்னிக் &amp; ITI</span>
+    </div>
+
+    <!-- Informative & Student-Friendly Subtitle -->
+    <p class="banner-desc">
+      அகில இந்திய மற்றும் தமிழ்நாடு அளவிலான <strong>1,200-க்கும் மேற்பட்ட</strong> முன்னணி அரசு &amp; பல்கலைக்கழகங்களின் முழு விவரங்கள், இடங்கள், சேர்க்கை விதிமுறைகள் மற்றும் <strong>16 பிரத்யேக கூகுள் தாள்கள்</strong> (Landscape PDF &amp; Excel பதிவிறக்க வசதியுடன்).
+    </p>
+
+    <!-- Interactive Highlights Ribbon -->
+    <div class="banner-features-ribbon">
+      <div class="ribbon-item">
+        <span class="ribbon-icon">📊</span>
+        <span>16 Google Sheets நேரடிப் பார்வை</span>
       </div>
-<h1>உயர் கல்வி நிறுவனங்களின் முழு அடைவுத் தொகுப்பு 2026</h1>
-<p style="font-size: 1.08rem; font-weight: 700; color: #1e3a8a; margin: 6px auto 0; letter-spacing: 0.2px;">மருத்துவம், பொறியியல், அறிவியல் ஆராய்ச்சி, சட்டம், வேளாண்மை, கலை &amp; அறிவியல், பாலிடெக்னிக், ITI</p>
-</header>
+      <div class="ribbon-dot">•</div>
+      <div class="ribbon-item">
+        <span class="ribbon-icon">📄</span>
+        <span>Landscape A4 PDF பதிவிறக்கம்</span>
+      </div>
+      <div class="ribbon-dot">•</div>
+      <div class="ribbon-item">
+        <span class="ribbon-icon">📗</span>
+        <span>Excel (.xlsx) கோப்புகள்</span>
+      </div>
+      <div class="ribbon-dot">•</div>
+      <div class="ribbon-item">
+        <span class="ribbon-icon">🎯</span>
+        <span>7.5% அரசுப்பள்ளி இடஒதுக்கீடு</span>
+      </div>
+    </div>
+  </header>
 </div>
 <!-- Table Container -->
 <div class="table-container">
