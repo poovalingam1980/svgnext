@@ -8631,7 +8631,7 @@ function buildOfficialFormHTML(payload) {
       '<div style="font-size: 9.5pt; font-weight: 800; color: #047857;">' + m.title + '</div>' +
       '<div style="font-size: 8.5pt; color: #64748b; font-weight: 600;">' + m.sub_course + '</div>' +
     '</div>' +
-    '<table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 9pt; table-layout: fixed;">' +
+    '<table style="width: 100%; border-collapse: collapse; margin-bottom: 14px; font-size: 9pt; table-layout: fixed;">' +
       '<tr>' +
         '<td style="border: 1px solid #94a3b8; padding: 7px 10px; width: 44%; font-weight: 700; background: #f8fafc; word-break: break-word;">1. விண்ணப்பிக்கும் படிப்பு (Target Course):</td>' +
         '<td style="border: 1px solid #94a3b8; padding: 7px 10px; font-weight: 800; color: #064e3b; word-break: break-word;">' + m.sub_course + '</td>' +
@@ -8657,11 +8657,11 @@ function buildOfficialFormHTML(payload) {
         '<td style="border: 1px solid #94a3b8; padding: 7px 10px; font-weight: 900; font-size: 11pt; color: #047857; word-break: break-word;">' + payload.totalScore + ' Marks (மதிப்பெண்கள்)</td>' +
       '</tr>' +
     '</table>' +
-    '<div style="font-size: 8.5pt; text-align: justify; margin: 10px 0; line-height: 1.5; color: #1e293b; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px 10px;">' +
-      '<strong>DECLARATION & UNDERTAKING (உறுதிமொழி):</strong><br/>' +
+    '<div style="font-size: 8.5pt; text-align: justify; margin: 10px 0; line-height: 1.5; color: #1e293b; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 9px 12px;">' +
+      '<strong>DECLARATION & UNDERTAKING (மாணவர் & பெற்றோர் உறுதிமொழி):</strong><br/>' +
       'I hereby declare that the particulars given above and in ' + m.form_b + ' are true, genuine and correct to the best of my knowledge and belief. I have submitted genuine original sports certificates along with relevant forms issued by recognized National Federations / State Associations / SGFI / KVS / CBSE / SDAT. I also undertake that on admission under the Eminent Sports Persons Quota, I shall regularly participate in sports activities representing the institution / university.' +
     '</div>' +
-    '<div style="margin-top: 30px; display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; color: #334155;">' +
+    '<div style="margin-top: 25px; display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; color: #334155;">' +
       '<div>தேதி (Date): ____________________<br/>இடம் (Place): ____________________</div>' +
       '<div style="text-align: center;">பெற்றோர் / பாதுகாவலர் கையொப்பம்<br/>(Signature of Parent / Guardian)</div>' +
       '<div style="text-align: right;">மாணவர் கையொப்பம்<br/>(Signature of Candidate)</div>' +
@@ -8674,10 +8674,10 @@ function buildOfficialFormHTML(payload) {
       '<div style="font-size: 9.5pt; font-weight: 800; color: #047857;">DETAILS OF SPORTS CERTIFICATES PRODUCED FOR EMINENT SPORTS PERSONS QUOTA</div>' +
       '<div style="font-size: 8.5pt; color: #64748b; font-weight: 600;">(Eligible Academic Years: 9th, 10th, 11th & 12th Standards — One highest certificate per year)</div>' +
     '</div>' +
-    '<div style="display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; margin-bottom: 8px; color: #1e293b; background: #f1f5f9; padding: 6px 10px; border-radius: 6px;">' +
+    '<div style="display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; margin-bottom: 8px; color: #1e293b; background: #f1f5f9; padding: 6px 12px; border-radius: 6px;">' +
       '<span>மாணவர் பெயர்: <strong>' + payload.name + '</strong></span>' +
       '<span>விண்ணப்ப எண்: <strong>' + payload.appNo + '</strong></span>' +
-      '<span>சமர்ப்பிக்கப்பட்ட சான்றிதழ்கள்: <strong>' + payload.rows.length + ' சான்றிதழ்(கள்)</strong></span>' +
+      '<span>சான்றிதழ்கள் எண்ணிக்கை: <strong>' + payload.rows.length + '</strong></span>' +
     '</div>' +
     '<table style="width: 100%; border-collapse: collapse; margin-bottom: 10px; font-size: 8.0pt; table-layout: fixed;">' +
       '<thead>' +
@@ -8711,10 +8711,11 @@ function buildOfficialFormHTML(payload) {
         '</tr>' +
       '</tbody>' +
     '</table>' +
-    '<div style="font-size: 7.8pt; color: #475569; line-height: 1.4; margin-top: 6px;">' +
-      '<em>* குறிப்பு: தமிழ்நாடு விளையாட்டு மேம்பாட்டு ஆணையம் (SDAT) மற்றும் சேர்க்கைக் குழு விதிகளின்படி, ஒரு கல்வி ஆண்டில் 1 அதிகபட்ச சாதனைக்கு மட்டுமே மதிப்பெண் வழங்கப்படும். தமிழகத்தின் எல்லைக்குள் அமைந்துள்ள கேந்திரிய வித்யாலயா (KVS) மற்றும் சிபிஎஸ்இ (CBSE) பள்ளிகளில் பயின்ற தமிழக இருப்பிடச் சான்றுடைய மாணவர்கள் மட்டுமே தகுதியுடையவர்கள்.</em>' +
+    '<div style="font-size: 8.5pt; text-align: justify; margin: 12px 0 10px 0; line-height: 1.5; color: #1e293b; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px 12px;">' +
+      '<strong>உறுதிமொழி (CANDIDATE UNDERTAKING):</strong><br/>' +
+      'மேற்கண்ட அட்டவணையில் குறிப்பிடப்பட்டுள்ள விளையாட்டுச் சான்றிதழ்கள் அனைத்தும் உண்மை மற்றும் சரியானவை என உறுதியளிக்கிறேன்.' +
     '</div>' +
-    '<div style="margin-top: 30px; display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; color: #334155;">' +
+    '<div style="margin-top: 25px; display: flex; justify-content: space-between; font-size: 8.5pt; font-weight: 700; color: #334155;">' +
       '<div>தேதி (Date): ____________________<br/>இடம் (Place): ____________________</div>' +
       '<div style="text-align: center;">பெற்றோர் / பாதுகாவலர் கையொப்பம்<br/>(Signature of Parent / Guardian)</div>' +
       '<div style="text-align: right;">மாணவர் கையொப்பம்<br/>(Signature of Candidate)</div>' +
@@ -8835,11 +8836,6 @@ function drawFormAPage(ctx, payload, w, h) {
   ctx.fillStyle = '#ffffff';
   ctx.fillRect(0, 0, w, h);
   
-  // Outer margin border
-  ctx.strokeStyle = '#1e3a8a';
-  ctx.lineWidth = 3;
-  ctx.strokeRect(45, 45, w - 90, h - 90);
-  
   var m = payload.meta;
   
   // Header Text
@@ -8881,92 +8877,106 @@ function drawFormAPage(ctx, payload, w, h) {
     ["6. கோரப்படும் மொத்த விளையாட்டு மதிப்பெண்கள்:", payload.totalScore + " Marks (மதிப்பெண்கள்)"]
   ];
   
-  // Left col: 440px (70 to 510), Right col: 620px (510 to 1130)
+  // Left col: 430px (70 to 500), Right col: 630px (500 to 1130)
+  // Wrap BOTH labels and values so words never overlap across columns!
   fields.forEach(function(f) {
-    ctx.fillStyle = '#f8fafc';
-    ctx.fillRect(70, y, 440, 52);
-    ctx.strokeStyle = '#94a3b8';
-    ctx.lineWidth = 1.2;
-    ctx.strokeRect(70, y, 440, 52);
-    
-    ctx.fillStyle = '#ffffff';
-    ctx.fillRect(510, y, 620, 52);
-    ctx.strokeRect(510, y, 620, 52);
-    
-    ctx.textAlign = 'left';
-    ctx.fillStyle = '#0f172a';
-    ctx.font = 'bold 15px Arial, sans-serif';
-    ctx.fillText(f[0], 85, y + 32);
+    ctx.font = 'bold 14px Arial, sans-serif';
+    var lblLines = wrapCanvasText(ctx, f[0], 410);
     
     var isHighlight = f[0].indexOf('மதிப்பெண்கள்') !== -1 || f[0].indexOf('2.') === 0;
-    ctx.fillStyle = isHighlight ? '#1e40af' : '#0f172a';
-    ctx.font = isHighlight ? 'bold 17px Arial, sans-serif' : '15px Arial, sans-serif';
+    ctx.font = isHighlight ? 'bold 16px Arial, sans-serif' : '15px Arial, sans-serif';
+    var valLines = wrapCanvasText(ctx, f[1], 610);
     
-    // Wrap value if needed
-    var valLines = wrapCanvasText(ctx, f[1], 600);
-    if (valLines.length === 1) {
-      ctx.fillText(valLines[0], 525, y + 32);
-    } else {
-      ctx.fillText(valLines[0], 525, y + 22);
-      ctx.fillText(valLines[1], 525, y + 42);
+    var maxL = Math.max(lblLines.length, valLines.length, 1);
+    var rowH = Math.max(52, maxL * 22 + 16);
+    
+    ctx.fillStyle = '#f8fafc';
+    ctx.fillRect(70, y, 430, rowH);
+    ctx.strokeStyle = '#94a3b8';
+    ctx.lineWidth = 1.2;
+    ctx.strokeRect(70, y, 430, rowH);
+    
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(500, y, 630, rowH);
+    ctx.strokeRect(500, y, 630, rowH);
+    
+    // Draw label lines inside Left Column
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#0f172a';
+    ctx.font = 'bold 14px Arial, sans-serif';
+    var startLblY = y + (rowH - (lblLines.length * 20)) / 2 + 8;
+    for (var li = 0; li < lblLines.length; li++) {
+      ctx.fillText(lblLines[li], 85, startLblY + (li * 20));
     }
     
-    y += 52;
+    // Draw value lines inside Right Column
+    ctx.fillStyle = isHighlight ? '#1e40af' : '#0f172a';
+    ctx.font = isHighlight ? 'bold 16px Arial, sans-serif' : '15px Arial, sans-serif';
+    var startValY = y + (rowH - (valLines.length * 20)) / 2 + 8;
+    for (var vi = 0; vi < valLines.length; vi++) {
+      ctx.fillText(valLines[vi], 515, startValY + (vi * 20));
+    }
+    
+    y += rowH;
   });
   
-  y += 35;
+  y += 28;
   // Declaration Box with Proper Multi-Line Wrapping
+  ctx.font = '13px Arial, sans-serif';
+  var decText = "I hereby declare that the particulars given above and in " + m.form_b + " are true, genuine and correct to the best of my knowledge and belief. I have submitted genuine original sports certificates along with relevant forms issued by recognized National Federations / State Associations / SGFI / KVS / CBSE / SDAT. I also undertake that on admission under the Eminent Sports Persons Quota, I shall regularly participate in sports activities representing the institution / university.";
+  var decLines = wrapCanvasText(ctx, decText, 1000);
+  var boxH = 42 + (decLines.length * 24) + 14;
+  
   ctx.fillStyle = '#f8fafc';
-  ctx.fillRect(70, y, 1060, 165);
+  ctx.fillRect(70, y, 1060, boxH);
   ctx.strokeStyle = '#cbd5e1';
   ctx.lineWidth = 1.2;
-  ctx.strokeRect(70, y, 1060, 165);
+  ctx.strokeRect(70, y, 1060, boxH);
   
   ctx.textAlign = 'left';
   ctx.fillStyle = '#064e3b';
   ctx.font = 'bold 15px Arial, sans-serif';
-  ctx.fillText("DECLARATION & UNDERTAKING (மாணவர் & பெற்றோர் உறுதிமொழி):", 90, y + 28);
+  ctx.fillText("DECLARATION & UNDERTAKING (மாணவர் & பெற்றோர் உறுதிமொழி):", 90, y + 25);
   
   ctx.fillStyle = '#1e293b';
   ctx.font = '13px Arial, sans-serif';
-  var decText = "I hereby declare that the particulars given above and in " + m.form_b + " are true, genuine and correct to the best of my knowledge and belief. I have submitted genuine original sports certificates along with relevant forms issued by recognized National Federations / State Associations / SGFI / KVS / CBSE / SDAT. I also undertake that on admission under the Eminent Sports Persons Quota, I shall regularly participate in sports activities representing the institution / university.";
-  
-  var decLines = wrapCanvasText(ctx, decText, 1010);
-  var curY = y + 55;
+  var curY = y + 54;
   for (var d = 0; d < decLines.length; d++) {
     ctx.fillText(decLines[d], 90, curY);
     curY += 24;
   }
   
-  // Signatures on Page 1: Headmaster signature REMOVED! Candidate and Parent ONLY!
-  var ySig = h - 150;
+  // Signatures immediately following declaration box! (No giant void!)
+  var ySig = y + boxH + 40;
   ctx.fillStyle = '#334155';
   ctx.font = 'bold 15px Arial, sans-serif';
-  ctx.fillText("தேதி (Date): ____________________", 90, ySig);
-  ctx.fillText("இடம் (Place): ____________________", 90, ySig + 35);
+  ctx.fillText("தேதி (Date): ____________________", 85, ySig);
+  ctx.fillText("இடம் (Place): ____________________", 85, ySig + 32);
   
   ctx.textAlign = 'center';
   ctx.fillText("பெற்றோர் / பாதுகாவலர் கையொப்பம்", w / 2, ySig);
   ctx.fillStyle = '#64748b';
   ctx.font = '13px Arial, sans-serif';
-  ctx.fillText("(Signature of Parent / Guardian)", w / 2, ySig + 28);
+  ctx.fillText("(Signature of Parent / Guardian)", w / 2, ySig + 26);
   
   ctx.textAlign = 'right';
   ctx.fillStyle = '#334155';
   ctx.font = 'bold 15px Arial, sans-serif';
-  ctx.fillText("மாணவர் கையொப்பம்", w - 90, ySig);
+  ctx.fillText("மாணவர் கையொப்பம்", 1115, ySig);
   ctx.fillStyle = '#64748b';
   ctx.font = '13px Arial, sans-serif';
-  ctx.fillText("(Signature of Candidate)", w - 90, ySig + 28);
+  ctx.fillText("(Signature of Candidate)", 1115, ySig + 26);
+  
+  // Outer frame wrapping the form nicely
+  var frameBottom = ySig + 48;
+  ctx.strokeStyle = '#1e3a8a';
+  ctx.lineWidth = 3;
+  ctx.strokeRect(45, 45, w - 90, frameBottom - 45);
 }
 
 function drawFormBPage(ctx, payload, w, h) {
   ctx.fillStyle = '#ffffff';
   ctx.fillRect(0, 0, w, h);
-  
-  ctx.strokeStyle = '#1e3a8a';
-  ctx.lineWidth = 3;
-  ctx.strokeRect(45, 45, w - 90, h - 90);
   
   var m = payload.meta;
   
@@ -8998,7 +9008,7 @@ function drawFormBPage(ctx, payload, w, h) {
   ctx.lineWidth = 2;
   ctx.stroke();
   
-  // Summary Bar
+  // Summary Bar (Right-aligned count to NEVER overflow outside box!)
   ctx.fillStyle = '#f1f5f9';
   ctx.fillRect(70, 270, 1060, 45);
   ctx.strokeStyle = '#cbd5e1';
@@ -9007,10 +9017,15 @@ function drawFormBPage(ctx, payload, w, h) {
   ctx.textAlign = 'left';
   ctx.fillStyle = '#0f172a';
   ctx.font = 'bold 15px Arial, sans-serif';
-  ctx.fillText("மாணவர் பெயர்: " + payload.name, 90, 298);
-  ctx.fillText("விண்ணப்ப எண்: " + payload.appNo, 500, 298);
+  ctx.fillText("மாணவர் பெயர்: " + payload.name, 85, 298);
+  
+  ctx.textAlign = 'center';
+  ctx.fillText("விண்ணப்ப எண்: " + payload.appNo, 540, 298);
+  
+  // Anchored right at 1115px (15px inside 1130px border)
+  ctx.textAlign = 'right';
   ctx.fillStyle = '#047857';
-  ctx.fillText("சான்றிதழ்கள்: " + payload.rows.length + " எண்ணிக்கை", 900, 298);
+  ctx.fillText("சான்றிதழ்கள் எண்ணிக்கை: " + payload.rows.length, 1115, 298);
   
   // Table Columns Definition (Sum = 1060px, x: 70 to 1130)
   var y = 330;
@@ -9039,8 +9054,8 @@ function drawFormBPage(ctx, payload, w, h) {
     if (c.title.length === 1) {
       ctx.fillText(c.title[0], midX, y + 28);
     } else {
-      ctx.fillText(c.title[0], midX, y + 18);
-      ctx.fillText(c.title[1], midX, y + 36);
+      ctx.fillText(c.title[0], midX, y + 17);
+      ctx.fillText(c.title[1], midX, y + 35);
     }
     ctx.beginPath();
     ctx.moveTo(c.start, y);
@@ -9073,7 +9088,6 @@ function drawFormBPage(ctx, payload, w, h) {
     ctx.strokeStyle = '#cbd5e1';
     ctx.strokeRect(70, y, 1060, rowH);
     
-    // Draw vertical column separators
     cols.forEach(function(c) {
       ctx.beginPath();
       ctx.moveTo(c.start, y);
@@ -9098,33 +9112,33 @@ function drawFormBPage(ctx, payload, w, h) {
     ctx.font = 'bold 12px Arial, sans-serif';
     for (var l1 = 0; l1 < lines1.length; l1++) {
       ctx.fillStyle = l1 === 0 ? '#0f172a' : '#64748b';
-      ctx.fillText(lines1[l1], cols[1].start + 7, y + 20 + (l1 * 18));
+      ctx.fillText(lines1[l1], cols[1].start + 7, y + 19 + (l1 * 18));
     }
     
     // Cell 2: Sport / Discipline
     ctx.fillStyle = '#064e3b';
     ctx.font = 'bold 12px Arial, sans-serif';
     for (var l2 = 0; l2 < lines2.length; l2++) {
-      ctx.fillText(lines2[l2], cols[2].start + 7, y + 20 + (l2 * 18));
+      ctx.fillText(lines2[l2], cols[2].start + 7, y + 19 + (l2 * 18));
     }
     
     // Cell 3: Tournament Name
     ctx.fillStyle = '#0f172a';
     ctx.font = '12px Arial, sans-serif';
     for (var l3 = 0; l3 < lines3.length; l3++) {
-      ctx.fillText(lines3[l3], cols[3].start + 7, y + 20 + (l3 * 18));
+      ctx.fillText(lines3[l3], cols[3].start + 7, y + 19 + (l3 * 18));
     }
     
     // Cell 4: Competition Level & Table
     for (var l4 = 0; l4 < lines4.length; l4++) {
-      ctx.fillText(lines4[l4], cols[4].start + 7, y + 20 + (l4 * 18));
+      ctx.fillText(lines4[l4], cols[4].start + 7, y + 19 + (l4 * 18));
     }
     
     // Cell 5: Authority & Cert No
     ctx.fillStyle = '#475569';
     ctx.font = '11px Arial, sans-serif';
     for (var l5 = 0; l5 < lines5.length; l5++) {
-      ctx.fillText(lines5[l5], cols[5].start + 7, y + 20 + (l5 * 18));
+      ctx.fillText(lines5[l5], cols[5].start + 7, y + 19 + (l5 * 18));
     }
     
     // Cell 6: Medal (Center)
@@ -9132,7 +9146,7 @@ function drawFormBPage(ctx, payload, w, h) {
     ctx.fillStyle = '#0f172a';
     ctx.font = 'bold 12px Arial, sans-serif';
     for (var l6 = 0; l6 < lines6.length; l6++) {
-      ctx.fillText(lines6[l6], (cols[6].start + cols[6].end) / 2, y + 20 + (l6 * 18));
+      ctx.fillText(lines6[l6], (cols[6].start + cols[6].end) / 2, y + 19 + (l6 * 18));
     }
     
     // Cell 7: Score (Center)
@@ -9161,35 +9175,52 @@ function drawFormBPage(ctx, payload, w, h) {
   ctx.textAlign = 'center';
   ctx.font = 'bold 18px Arial, sans-serif';
   ctx.fillText(payload.totalScore.toString(), 1090, y + 30);
-  y += 65;
+  y += 48;
   
-  // Guidelines
+  // Candidate Undertaking replaces the footnote note! (Footnote note removed!)
+  y += 24;
+  var undH = 65;
+  ctx.fillStyle = '#f8fafc';
+  ctx.fillRect(70, y, 1060, undH);
+  ctx.strokeStyle = '#cbd5e1';
+  ctx.lineWidth = 1.2;
+  ctx.strokeRect(70, y, 1060, undH);
+  
   ctx.textAlign = 'left';
-  ctx.fillStyle = '#475569';
-  ctx.font = '12px Arial, sans-serif';
-  ctx.fillText("* குறிப்பு: தமிழ்நாடு விளையாட்டு மேம்பாட்டு ஆணையம் (SDAT) மற்றும் சேர்க்கைக் குழு விதிகளின்படி, ஒரு கல்வி ஆண்டில் 1 அதிகபட்ச சாதனைக்கு மட்டுமே மதிப்பெண் வழங்கப்படும்.", 75, y);
-  ctx.fillText("  தமிழகத்தின் எல்லைக்குள் அமைந்துள்ள கேந்திரிய வித்யாலயா (KVS) மற்றும் சிபிஎஸ்இ (CBSE) பள்ளிகளில் பயின்ற தமிழக மாணவர்கள் தகுதியுடையவர்கள்.", 75, y + 24);
+  ctx.fillStyle = '#064e3b';
+  ctx.font = 'bold 14px Arial, sans-serif';
+  ctx.fillText("உறுதிமொழி (CANDIDATE UNDERTAKING):", 85, y + 24);
   
-  // Signatures on Page 2: Headmaster signature REMOVED! Candidate and Parent ONLY!
-  var ySig = h - 150;
+  ctx.fillStyle = '#1e293b';
+  ctx.font = '13px Arial, sans-serif';
+  ctx.fillText("மேற்கண்ட அட்டவணையில் குறிப்பிடப்பட்டுள்ள விளையாட்டுச் சான்றிதழ்கள் அனைத்தும் உண்மை மற்றும் சரியானவை என உறுதியளிக்கிறேன்.", 85, y + 48);
+  
+  // Signatures immediately following the form undertaking! (No giant void!)
+  var ySigB = y + undH + 40;
   ctx.fillStyle = '#334155';
   ctx.font = 'bold 15px Arial, sans-serif';
-  ctx.fillText("தேதி (Date): ____________________", 90, ySig);
-  ctx.fillText("இடம் (Place): ____________________", 90, ySig + 35);
+  ctx.fillText("தேதி (Date): ____________________", 85, ySigB);
+  ctx.fillText("இடம் (Place): ____________________", 85, ySigB + 32);
   
   ctx.textAlign = 'center';
-  ctx.fillText("பெற்றோர் / பாதுகாவலர் கையொப்பம்", w / 2, ySig);
+  ctx.fillText("பெற்றோர் / பாதுகாவலர் கையொப்பம்", w / 2, ySigB);
   ctx.fillStyle = '#64748b';
   ctx.font = '13px Arial, sans-serif';
-  ctx.fillText("(Signature of Parent / Guardian)", w / 2, ySig + 28);
+  ctx.fillText("(Signature of Parent / Guardian)", w / 2, ySigB + 26);
   
   ctx.textAlign = 'right';
   ctx.fillStyle = '#334155';
   ctx.font = 'bold 15px Arial, sans-serif';
-  ctx.fillText("மாணவர் கையொப்பம்", w - 90, ySig);
+  ctx.fillText("மாணவர் கையொப்பம்", 1115, ySigB);
   ctx.fillStyle = '#64748b';
   ctx.font = '13px Arial, sans-serif';
-  ctx.fillText("(Signature of Candidate)", w - 90, ySig + 28);
+  ctx.fillText("(Signature of Candidate)", 1115, ySigB + 26);
+  
+  // Outer frame wrapping the form nicely
+  var frameBottomB = ySigB + 48;
+  ctx.strokeStyle = '#1e3a8a';
+  ctx.lineWidth = 3;
+  ctx.strokeRect(45, 45, w - 90, frameBottomB - 45);
 }
 
 function generateOfficialSportsPDF() {
