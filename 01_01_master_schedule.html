@@ -4438,6 +4438,42 @@
 }
 </style>
 
+
+<style>
+/* Responsive Grids that prevent awkward empty space */
+.timeline-grid,
+.domains-grid,
+.portals-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 16px !important;
+}
+
+@media (max-width: 1280px) {
+  .timeline-grid,
+  .domains-grid,
+  .portals-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .timeline-grid,
+  .domains-grid,
+  .portals-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .timeline-grid,
+  .domains-grid,
+  .portals-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -5426,100 +5462,178 @@
 <div style="display: flex; align-items: center; gap: 10px;">
 <span style="font-size: 1.5rem;">📅</span>
 <h2 class="section-title" style="margin: 0; font-size: 1.38rem; color: #065f46;">
-2. மாதவாரியான வருடாந்திர தேர்வு காலண்டர் வரைபடம் (Annual Month-by-Month Roadmap)
+2. மாதவாரியான வருடாந்திர தேர்வு காலண்டர் வரைபடம் (Annual 12-Month Master Roadmap)
 </h2>
 </div>
 <span style="background: #dcfce7; color: #15803d; font-size: 0.82rem; font-weight: 800; padding: 4px 12px; border-radius: 999px; border: 1px solid #86efac;">
-வருடாந்திர திட்டமிடல் வழிகாட்டி
+12 மாத முழுமையான வழிகாட்டி
 </span>
 </div>
 
 <p style="font-size: 0.94rem; color: #334155; line-height: 1.6; margin-bottom: 18px;">
-+2 படிக்கும் மாணவர்கள் பள்ளித் தேர்வுகளுடன் தேசிய நுழைவுத்தேர்வுகளையும் சமநிலைப்படுத்தி திட்டமிடுவதற்கு ஏதுவாக, எந்தெந்த மாதங்களில் என்னென்ன தேர்வுகள் நடைபெறும் என்ற காலவரிசை வரைபடம்:
++2 படிக்கும் மாணவர்கள் பள்ளித் தேர்வுகளுடன் தேசிய மற்றும் மாநில அளவிலான அனைத்து நுழைவுத்தேர்வுகளையும் சமநிலைப்படுத்தி திட்டமிடுவதற்கு ஏதுவாக, ஜனவரி முதல் டிசம்பர் வரையிலான முழுமையான 12 மாத காலவரிசை வழிகாட்டி வரைபடம்:
 </p>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;">
+<div class="timeline-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
 
-<!-- Dec -->
-<div class="timeline-card" style="border-left: 5px solid #0f172a;">
+<!-- 01. Jan -->
+<div class="timeline-card" style="border-left: 5px solid #0284c7; margin-bottom: 0;">
 <div class="timeline-month-header">
-<span style="font-size: 1.15rem; font-weight: 800; color: #0f172a;">❄️ டிசம்பர் (December)</span>
-<span class="month-tag-pill" style="background: #f1f5f9; color: #0f172a;">அடுத்த ஆண்டிற்கான முன்கூட்டிய தேர்வுகள்</span>
+<span style="font-size: 1.10rem; font-weight: 800; color: #0369a1;">🌨️ 01. ஜனவரி (Jan)</span>
+<span class="month-tag-pill" style="background: #e0f2fe; color: #0369a1;">பொறியியல் &amp; வடிவமைப்பு</span>
 </div>
-<ul class="styled-list" style="font-size: 0.90rem; margin: 0; padding-left: 18px;">
-<li><strong>CLAT (Consortium of NLUs):</strong> 26 தேசிய சட்டப் பல்கலைக்கழக சேர்க்கைக்கான தேசியத் தேர்வு (டிசம்பர் முதல் ஞாயிறு).</li>
-<li><strong>AILET (NLU Delhi):</strong> டெல்லி தேசிய சட்டப் பல்கலைக்கழக 5 ஆண்டு சட்டப் படிப்பு நுழைவுத்தேர்வு.</li>
-<li><strong>NID DAT (Prelims):</strong> அகில இந்திய தேசிய வடிவமைப்பு நிறுவன B.Des முதல்நிலைத் தேர்வு.</li>
+<ul class="styled-list" style="font-size: 0.86rem; margin: 0; padding-left: 16px; line-height: 1.5;">
+<li><strong>JEE Main (Session 1):</strong> NIT, IIIT முதல் அமர்வு தேர்வு (ஜனவரி இறுதி வாரம்).</li>
+<li><strong>UCEED (IIT Bombay):</strong> ஐஐடி B.Des பட்டப்படிப்பு நுழைவுத்தேர்வு.</li>
+<li><strong>AEEE (Phase 1):</strong> அமிர்தா பொறியியல் நுழைவுத்தேர்வு முதற்கட்டம்.</li>
+<li><strong>NID DAT (Prelims):</strong> தேசிய வடிவமைப்பு நிறுவன B.Des தேர்வு.</li>
 </ul>
 </div>
 
-<!-- Jan -->
-<div class="timeline-card" style="border-left: 5px solid #0284c7;">
+<!-- 02. Feb -->
+<div class="timeline-card" style="border-left: 5px solid #7c3aed; margin-bottom: 0;">
 <div class="timeline-month-header">
-<span style="font-size: 1.15rem; font-weight: 800; color: #0369a1;">🌨️ ஜனவரி (January)</span>
-<span class="month-tag-pill" style="background: #e0f2fe; color: #0369a1;">பொறியியல் &amp; வடிவமைப்பு முதல் அமர்வுகள்</span>
+<span style="font-size: 1.10rem; font-weight: 800; color: #6b21a8;">🌱 02. பிப்ரவரி (Feb)</span>
+<span class="month-tag-pill" style="background: #f3e8ff; color: #6b21a8;">ஃபேஷன் &amp; விண்ணப்பங்கள்</span>
 </div>
-<ul class="styled-list" style="font-size: 0.90rem; margin: 0; padding-left: 18px;">
-<li><strong>JEE Main (Session 1):</strong> NIT, IIIT மற்றும் மத்திய நிறுவனங்களுக்கான முதல் அமர்வு தேர்வு (ஜனவரி கடைசி வாரம்).</li>
-<li><strong>UCEED (IIT Bombay):</strong> ஐஐடிகளில் 4 ஆண்டு Bachelor of Design (B.Des) சேர்க்கை நுழைவுத்தேர்வு.</li>
-<li><strong>AEEE (Phase 1):</strong> அமிர்தா பல்கலைக்கழக பொறியியல் நுழைவுத்தேர்வு முதல் கட்டம்.</li>
+<ul class="styled-list" style="font-size: 0.86rem; margin: 0; padding-left: 16px; line-height: 1.5;">
+<li><strong>NIFT Entrance:</strong> 18 தேசிய ஃபேஷன் நிறுவன எழுத்துத்தேர்வு.</li>
+<li><strong>NEET &amp; CUET விண்ணப்பங்கள்:</strong> NTA தேசிய மருத்துவ &amp; மத்தியப் பல்கலை விண்ணப்பத் தொடக்கம்.</li>
+<li><strong>செய்முறைத் தேர்வுகள்:</strong> +2 பள்ளிப் பொதுத்தேர்வு செய்முறைத் தேர்வுகள்.</li>
 </ul>
 </div>
 
-<!-- Feb -->
-<div class="timeline-card" style="border-left: 5px solid #7c3aed;">
+<!-- 03. Mar -->
+<div class="timeline-card" style="border-left: 5px solid #059669; margin-bottom: 0;">
 <div class="timeline-month-header">
-<span style="font-size: 1.15rem; font-weight: 800; color: #6b21a8;">🌱 பிப்ரவரி (February)</span>
-<span class="month-tag-pill" style="background: #f3e8ff; color: #6b21a8;">ஃபேஷன் &amp; தேசிய விண்ணப்பங்கள் தொடக்கம்</span>
+<span style="font-size: 1.10rem; font-weight: 800; color: #065f46;">🌿 03. மார்ச் (Mar)</span>
+<span class="month-tag-pill" style="background: #dcfce7; color: #15803d;">பொதுத்தேர்வு &amp; அறிவியல்</span>
 </div>
-<ul class="styled-list" style="font-size: 0.90rem; margin: 0; padding-left: 18px;">
-<li><strong>NIFT Entrance Exam:</strong> 18 தேசிய ஃபேஷன் தொழில்நுட்ப நிறுவனங்களுக்கான எழுத்துத் தேர்வு (CAT &amp; GAT).</li>
-<li><strong>NEET-UG &amp; CUET-UG விண்ணப்பங்கள்:</strong> தேசிய தேர்வு முகமை (NTA) மருத்துவ மற்றும் மத்தியப் பல்கலை விண்ணப்பங்களைத் தொடங்கும் காலம்.</li>
+<ul class="styled-list" style="font-size: 0.86rem; margin: 0; padding-left: 16px; line-height: 1.5;">
+<li><strong>+2 பொதுத்தேர்வுகள்:</strong> தமிழ்நாடு மாநில &amp; CBSE போர்டு தேர்வுகள்.</li>
+<li><strong>NATA கட்டிடக்கலை:</strong> B.Arch சேர்க்கை விண்ணப்பப் பதிவு தொடக்கம்.</li>
+<li><strong>ஆராய்ச்சி விண்ணப்பங்கள்:</strong> IISER (IAT), NISER (NEST), CMI &amp; ISI உயர் கணித விண்ணப்பத் தொடக்கம்.</li>
 </ul>
 </div>
 
-<!-- Apr -->
-<div class="timeline-card" style="border-left: 5px solid #d97706;">
+<!-- 04. Apr -->
+<div class="timeline-card" style="border-left: 5px solid #d97706; margin-bottom: 0;">
 <div class="timeline-month-header">
-<span style="font-size: 1.15rem; font-weight: 800; color: #b45309;">☀️ ஏப்ரல் (April)</span>
-<span class="month-tag-pill" style="background: #fef3c7; color: #b45309;">பொதுத்தேர்வு முடிவு &amp; தேசியத் தேர்வுகள்</span>
+<span style="font-size: 1.10rem; font-weight: 800; color: #b45309;">☀️ 04. ஏப்ரல் (Apr)</span>
+<span class="month-tag-pill" style="background: #fef3c7; color: #b45309;">பொறியியல் &amp; பாதுகாப்பு</span>
 </div>
-<ul class="styled-list" style="font-size: 0.90rem; margin: 0; padding-left: 18px;">
-<li><strong>JEE Main (Session 2):</strong> பொறியியல் இரண்டாவது அமர்வு தேர்வு (ஏப்ரல் தொடக்கம்).</li>
-<li><strong>NDA &amp; NA Exam (I):</strong> மத்திய அரசுப் பணியாளர் தேர்வாணையம் (UPSC) நடத்தும் முப்படைகளின் ராணுவ அதிகாரி தேர்வு.</li>
-<li><strong>VITEEE &amp; SRMJEEE:</strong> வேலூர் VIT மற்றும் SRM பல்கலைக்கழக பொறியியல் நுழைவுத்தேர்வுகள்.</li>
-<li><strong>NATA Sessions:</strong> தேசிய கட்டிடக்கலை நுழைவுத்தேர்வின் முதல் கட்ட அமர்வுகள் தொடக்கம்.</li>
+<ul class="styled-list" style="font-size: 0.86rem; margin: 0; padding-left: 16px; line-height: 1.5;">
+<li><strong>JEE Main (Session 2):</strong> பொறியியல் 2-ஆம் அமர்வு தேர்வு.</li>
+<li><strong>NDA &amp; NA (I):</strong> UPSC முப்படைகளின் ராணுவ அதிகாரி தேர்வு.</li>
+<li><strong>VITEEE &amp; SRMJEEE:</strong> VIT வேலூர் &amp; SRM பொறியியல் தேர்வுகள்.</li>
+<li><strong>NATA அமர்வுகள்:</strong> கட்டிடக்கலை நுழைவுத்தேர்வு முதல் சுற்றுகள்.</li>
 </ul>
 </div>
 
-<!-- May -->
-<div class="timeline-card" style="border-left: 5px solid #dc2626;">
+<!-- 05. May -->
+<div class="timeline-card" style="border-left: 5px solid #dc2626; margin-bottom: 0;">
 <div class="timeline-month-header">
-<span style="font-size: 1.15rem; font-weight: 800; color: #b91c1c;">🔥 மே (May) - உச்சபட்ச தேர்வு மாதம்</span>
-<span class="month-tag-pill" style="background: #fee2e2; color: #b91c1c;">NEET, JEE Adv, CUET, BITSAT</span>
+<span style="font-size: 1.10rem; font-weight: 800; color: #b91c1c;">🔥 05. மே (May) - உச்சம்</span>
+<span class="month-tag-pill" style="background: #fee2e2; color: #b91c1c;">NEET, JEE Adv, CUET</span>
 </div>
-<ul class="styled-list" style="font-size: 0.90rem; margin: 0; padding-left: 18px;">
-<li><strong>NEET-UG (National Medical Exam):</strong> மே முதல் ஞாயிறு நடைபெறும் தேசிய மருத்துவ நுழைவுத்தேர்வு.</li>
-<li><strong>JEE Advanced (IITs):</strong> 23 ஐஐடிகளுக்கான இறுதி நுழைவுத்தேர்வு (மே கடைசி ஞாயிறு).</li>
-<li><strong>CUET-UG:</strong> 250+ மத்தியப் பல்கலைக்கழக பட்டப்படிப்புகளுக்கான தேசிய நுழைவுத்தேர்வு.</li>
-<li><strong>BITSAT (Session 1):</strong> BITS பிலானி, கோவா, ஹைதராபாத் வளாகங்களுக்கான தேர்வு.</li>
-<li><strong>IPMAT Indore &amp; Rohtak:</strong> IIM 5 ஆண்டு ஒருங்கிணைந்த மேலாண்மைப் படிப்புத் தேர்வுகள்.</li>
-<li><strong>NCHMCT JEE &amp; CMI / ISI:</strong> ஹோட்டல் மேலாண்மை மற்றும் சென்னை கணித நிறுவனம்/ISI தேர்வுகள்.</li>
+<ul class="styled-list" style="font-size: 0.86rem; margin: 0; padding-left: 16px; line-height: 1.5;">
+<li><strong>NEET-UG:</strong> அகில இந்திய மருத்துவ நுழைவுத்தேர்வு (மே முதல் ஞாயிறு).</li>
+<li><strong>JEE Advanced:</strong> 23 ஐஐடிகளுக்கான நுழைவுத்தேர்வு (மே இறுதி).</li>
+<li><strong>CUET-UG:</strong> 250+ மத்தியப் பல்கலைக்கழக பட்டப்படிப்புத் தேர்வுகள்.</li>
+<li><strong>BITSAT, IPMAT, NCHMCT:</strong> BITS பிலானி, IIM இந்தூர் &amp; IHM தேர்வுகள்.</li>
 </ul>
 </div>
 
-<!-- Jun -->
-<div class="timeline-card" style="border-left: 5px solid #2563eb;">
+<!-- 06. Jun -->
+<div class="timeline-card" style="border-left: 5px solid #2563eb; margin-bottom: 0;">
 <div class="timeline-month-header">
-<span style="font-size: 1.15rem; font-weight: 800; color: #1d4ed8;">🌊 ஜூன் (June)</span>
-<span class="month-tag-pill" style="background: #e0f2fe; color: #1d4ed8;">அறிவியல் ஆராய்ச்சி &amp; கலந்தாய்வுகள்</span>
+<span style="font-size: 1.10rem; font-weight: 800; color: #1d4ed8;">🌊 06. ஜூன் (Jun)</span>
+<span class="month-tag-pill" style="background: #e0e7ff; color: #4338ca;">ஆராய்ச்சி &amp; கப்பற்படை</span>
 </div>
-<ul class="styled-list" style="font-size: 0.90rem; margin: 0; padding-left: 18px;">
-<li><strong>IAT (IISER Aptitude Test):</strong> 7 ஐசர் மற்றும் ஐஐஎஸ்சி பெங்களூரு BS-MS ஆராய்ச்சி சேர்க்கைத் தேர்வு.</li>
-<li><strong>NEST (NISER &amp; CEBS):</strong> மத்திய அணுசக்தித் துறை ஆராய்ச்சி நிறுவனங்களுக்கான தேர்வு.</li>
-<li><strong>IMU-CET:</strong> இந்திய கடல்சார் பல்கலைக்கழக வணிகக் கப்பல்படை (Merchant Navy) நுழைவுத்தேர்வு.</li>
-<li><strong>AIIMS B.Sc Nursing &amp; Paramedical:</strong> எய்ம்ஸ் செவிலியர் மற்றும் துணை மருத்துவப் படிப்புத் தேர்வு.</li>
-<li><strong>JIPMAT:</strong> IIM போத்கயா மற்றும் ஜம்மு ஒருங்கிணைந்த BBA+MBA தேர்வு.</li>
+<ul class="styled-list" style="font-size: 0.86rem; margin: 0; padding-left: 16px; line-height: 1.5;">
+<li><strong>IAT (IISER):</strong> 7 ஐசர் மற்றும் IISc பெங்களூரு ஆராய்ச்சித் தேர்வு.</li>
+<li><strong>NEST (NISER):</strong> மத்திய அணுசக்தித் துறை ஒருங்கிணைந்த M.Sc.</li>
+<li><strong>IMU-CET:</strong> வணிகக் கப்பல்படை (Merchant Navy) நுழைவுத்தேர்வு.</li>
+<li><strong>AIIMS Paramedical &amp; Nursing:</strong> எய்ம்ஸ் செவிலியர்/துணை மருத்துவம்.</li>
+</ul>
+</div>
+
+<!-- 07. Jul -->
+<div class="timeline-card" style="border-left: 5px solid #0891b2; margin-bottom: 0;">
+<div class="timeline-month-header">
+<span style="font-size: 1.10rem; font-weight: 800; color: #0e7490;">🌧️ 07. ஜூலை (Jul)</span>
+<span class="month-tag-pill" style="background: #cffafe; color: #155e75;">தேசியக் கலந்தாய்வுகள்</span>
+</div>
+<ul class="styled-list" style="font-size: 0.86rem; margin: 0; padding-left: 16px; line-height: 1.5;">
+<li><strong>JoSAA கலந்தாய்வு:</strong> IITs, NITs, IIITs அகில இந்திய சேர்க்கை.</li>
+<li><strong>MCC மருத்துவக் கலந்தாய்வு:</strong> 15% AIQ MBBS/BDS இடங்களுக்கான சுற்றுகள்.</li>
+<li><strong>TNEA பொறியியல்:</strong> தமிழ்நாடு பொறியியல் தரவரிசை &amp; கலந்தாய்வு.</li>
+<li><strong>CSAB சிறப்புச் சுற்றுகள்:</strong> NIT/IIIT இடங்களுக்கான சிறப்புக் கலந்தாய்வு.</li>
+</ul>
+</div>
+
+<!-- 08. Aug -->
+<div class="timeline-card" style="border-left: 5px solid #16a34a; margin-bottom: 0;">
+<div class="timeline-month-header">
+<span style="font-size: 1.10rem; font-weight: 800; color: #15803d;">🌾 08. ஆகஸ்ட் (Aug)</span>
+<span class="month-tag-pill" style="background: #dcfce7; color: #166534;">மாநிலக் கலந்தாய்வு &amp; கல்லூரி</span>
+</div>
+<ul class="styled-list" style="font-size: 0.86rem; margin: 0; padding-left: 16px; line-height: 1.5;">
+<li><strong>TN மருத்துவக் கலந்தாய்வு:</strong> 85% மாநில &amp; 7.5% அரசுப் பள்ளி ஒதுக்கீடு.</li>
+<li><strong>TNAU &amp; TANUVAS:</strong> தமிழ்நாடு வேளாண் &amp; கால்நடைச் சேர்க்கை.</li>
+<li><strong>கல்லூரி வகுப்புகள் தொடக்கம்:</strong> முதலாமாண்டு வகுப்புகள் தொடங்குதல்.</li>
+</ul>
+</div>
+
+<!-- 09. Sep -->
+<div class="timeline-card" style="border-left: 5px solid #c2410c; margin-bottom: 0;">
+<div class="timeline-month-header">
+<span style="font-size: 1.10rem; font-weight: 800; color: #9a3412;">🍂 09. செப்டம்பர் (Sep)</span>
+<span class="month-tag-pill" style="background: #ffedd5; color: #9a3412;">பாதுகாப்பு &amp; புதிய தொடக்கம்</span>
+</div>
+<ul class="styled-list" style="font-size: 0.86rem; margin: 0; padding-left: 16px; line-height: 1.5;">
+<li><strong>NDA &amp; NA (II):</strong> UPSC முப்படைகளின் இரண்டாம் கட்டத் தேர்வு.</li>
+<li><strong>வடிவமைப்பு அறிவிப்புகள்:</strong> NID DAT மற்றும் UCEED அறிவிப்புகள் வெளியீடு.</li>
+<li><strong>புதிய மாணவர் தயாரிப்பு:</strong> அடுத்த ஆண்டு தேர்வுகளுக்கான வழிகாட்டல்.</li>
+</ul>
+</div>
+
+<!-- 10. Oct -->
+<div class="timeline-card" style="border-left: 5px solid #9333ea; margin-bottom: 0;">
+<div class="timeline-month-header">
+<span style="font-size: 1.10rem; font-weight: 800; color: #7e22ce;">🍁 10. அக்டோபர் (Oct)</span>
+<span class="month-tag-pill" style="background: #f3e8ff; color: #7e22ce;">அறிவிப்புகள் &amp; மாதிரித் தேர்வு</span>
+</div>
+<ul class="styled-list" style="font-size: 0.86rem; margin: 0; padding-left: 16px; line-height: 1.5;">
+<li><strong>JEE Main வழிகாட்டி:</strong> NTA தேர்வு மாதிரி வினாக்கள் மற்றும் விவரக்குறிப்பு.</li>
+<li><strong>CLAT விண்ணப்ப நிறைவு:</strong> தேசிய சட்டப் பல்கலைக்கழக விண்ணப்பக் கடைசி நாள்.</li>
+<li><strong>Army TES-2:</strong> இந்திய ராணுவ 10+2 தொழில்நுட்பத் திட்ட விண்ணப்பங்கள்.</li>
+</ul>
+</div>
+
+<!-- 11. Nov -->
+<div class="timeline-card" style="border-left: 5px solid #0284c7; margin-bottom: 0;">
+<div class="timeline-month-header">
+<span style="font-size: 1.10rem; font-weight: 800; color: #0369a1;">🌾 11. நவம்பர் (Nov)</span>
+<span class="month-tag-pill" style="background: #e0f2fe; color: #0369a1;">தேசிய விண்ணப்பப் பதிவு</span>
+</div>
+<ul class="styled-list" style="font-size: 0.86rem; margin: 0; padding-left: 16px; line-height: 1.5;">
+<li><strong>JEE Main அமர்வு 1 பதிவு:</strong> பொறியியல் அமர்வு 1 விண்ணப்பத் தொடக்கம்.</li>
+<li><strong>NIFT &amp; தனியார் பல்கலைகள்:</strong> NIFT, VITEEE, SRMJEEE, AEEE விண்ணப்பத் தொடக்கம்.</li>
+<li><strong>அரையாண்டுத் தேர்வுத் தயாரிப்பு:</strong> பள்ளி அரையாண்டுத் தேர்வுகளுடன் திட்டமிடல்.</li>
+</ul>
+</div>
+
+<!-- 12. Dec -->
+<div class="timeline-card" style="border-left: 5px solid #0f172a; margin-bottom: 0;">
+<div class="timeline-month-header">
+<span style="font-size: 1.10rem; font-weight: 800; color: #0f172a;">❄️ 12. டிசம்பர் (Dec)</span>
+<span class="month-tag-pill" style="background: #f1f5f9; color: #0f172a;">முன்கூட்டிய தேர்வுகள்</span>
+</div>
+<ul class="styled-list" style="font-size: 0.86rem; margin: 0; padding-left: 16px; line-height: 1.5;">
+<li><strong>CLAT (NLUs Law):</strong> 26 தேசிய சட்டப் பல்கலைக்கழகத் தேர்வு (டிசம்பர் முதல் ஞாயிறு).</li>
+<li><strong>AILET (NLU Delhi):</strong> டெல்லி தேசிய சட்டப் பல்கலைக்கழக 5 ஆண்டு தேர்வு.</li>
+<li><strong>NID DAT (Prelims):</strong> அகில இந்திய வடிவமைப்பு நிறுவன முதல்நிலைத் தேர்வு.</li>
 </ul>
 </div>
 
@@ -5536,7 +5650,7 @@
 </h2>
 </div>
 <span style="background: #f3e8ff; color: #7e22ce; font-size: 0.82rem; font-weight: 800; padding: 4px 12px; border-radius: 999px; border: 1px solid #d8b4fe;">
-11 தனித்துவ வழிகாட்டல் பக்கங்கள்
+12 முதன்மை வழிகாட்டல் பக்கங்கள்
 </span>
 </div>
 
@@ -5544,91 +5658,111 @@
 மாணவர்கள் குறிப்பிட்ட துறை குறித்த பாடத்திட்டம், தேர்வு முறை, கல்லூரிகள் பட்டியல், கட்டண விவரங்கள் மற்றும் தயாரிப்பு உத்திகளை விரிவாக அறிய கீழ்க்கண்ட வழிகாட்டல் பக்கங்களை நேரடியாகப் பார்வையிடலாம்:
 </p>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+<div class="domains-grid">
 
+<!-- 01. Schedule -->
+<div style="background: #ffffff; border: 1.8px solid #38bdf8; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<div style="font-weight: 800; color: #0284c7; font-size: 1.02rem; margin-bottom: 4px;">📅 01. மகா தேர்வு அட்டவணை</div>
+<p style="font-size: 0.84rem; color: #475569; margin: 0 0 10px 0; line-height: 1.45;">40+ தேசிய நுழைவுத்தேர்வுகள், விண்ணப்ப மாதங்கள் மற்றும் இணையதளங்களின் காலண்டர்.</p>
+</div>
+<a class="portal-link-btn" href="01_01_master_schedule.html" style="background: #0284c7; align-self: flex-start;">தற்போதைய பக்கம் ✓</a>
+</div>
+
+<!-- 02. Medical -->
 <div style="background: #ffffff; border: 1.8px solid #fecaca; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #991b1b; font-size: 1.02rem; margin-bottom: 4px;">🩺 01. மருத்துவம் (NEET UG)</div>
+<div style="font-weight: 800; color: #991b1b; font-size: 1.02rem; margin-bottom: 4px;">🩺 02. மருத்துவம் (NEET UG)</div>
 <p style="font-size: 0.84rem; color: #475569; margin: 0 0 10px 0; line-height: 1.45;">MBBS, BDS, ஆயுஷ், வெட்னரி மற்றும் 7.5% அரசுப் பள்ளி இடஒதுக்கீடு முழு விவரங்கள்.</p>
 </div>
 <a class="portal-link-btn" href="01_02_medical_neet_ug.html" style="background: #dc2626; align-self: flex-start;">விவரங்கள் காண்க ›</a>
 </div>
 
+<!-- 03. Engineering -->
 <div style="background: #ffffff; border: 1.8px solid #bae6fd; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #0369a1; font-size: 1.02rem; margin-bottom: 4px;">⚙️ 02. பொறியியல் (JEE Main / Adv)</div>
+<div style="font-weight: 800; color: #0369a1; font-size: 1.02rem; margin-bottom: 4px;">⚙️ 03. பொறியியல் (JEE Main / Adv)</div>
 <p style="font-size: 0.84rem; color: #475569; margin: 0 0 10px 0; line-height: 1.45;">IIT, NIT, IIIT மற்றும் B.Arch படிப்புகளுக்கான முழு வழிகாட்டி &amp; JoSAA கலந்தாய்வு.</p>
 </div>
 <a class="portal-link-btn" href="01_03_engineering_jee.html" style="background: #0284c7; align-self: flex-start;">விவரங்கள் காண்க ›</a>
 </div>
 
+<!-- 04. Science -->
 <div style="background: #ffffff; border: 1.8px solid #bbf7d0; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #166534; font-size: 1.02rem; margin-bottom: 4px;">🔬 03. அறிவியல் &amp; ஆராய்ச்சி (IISER)</div>
+<div style="font-weight: 800; color: #166534; font-size: 1.02rem; margin-bottom: 4px;">🔬 04. அறிவியல் &amp; ஆராய்ச்சி (IISER)</div>
 <p style="font-size: 0.84rem; color: #475569; margin: 0 0 10px 0; line-height: 1.45;">7 ஐசர்கள், நைசர், IISc பெங்களூரு ஆராய்ச்சிப் படிப்புகள் மற்றும் மத்திய உதவித்தொகை.</p>
 </div>
 <a class="portal-link-btn" href="01_04_science_research_iiser.html" style="background: #16a34a; align-self: flex-start;">விவரங்கள் காண்க ›</a>
 </div>
 
+<!-- 05. Central Univ -->
 <div style="background: #ffffff; border: 1.8px solid #fed7aa; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #9a3412; font-size: 1.02rem; margin-bottom: 4px;">🏛️ 04. மத்தியப் பல்கலைக்கழகங்கள் (CUET)</div>
+<div style="font-weight: 800; color: #9a3412; font-size: 1.02rem; margin-bottom: 4px;">🏛️ 05. மத்தியப் பல்கலைகள் (CUET)</div>
 <p style="font-size: 0.84rem; color: #475569; margin: 0 0 10px 0; line-height: 1.45;">டெல்லி பல்கலை, JNU, BHU, தமிழ்நாடு மத்தியப் பல்கலை உள்ளிட்ட 250+ கல்லூரிகள் சேர்க்கை.</p>
 </div>
 <a class="portal-link-btn" href="01_05_central_universities_cuet.html" style="background: #ea580c; align-self: flex-start;">விவரங்கள் காண்க ›</a>
 </div>
 
+<!-- 06. Law -->
 <div style="background: #ffffff; border: 1.8px solid #fef08a; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #854d0e; font-size: 1.02rem; margin-bottom: 4px;">⚖️ 05. தேசிய சட்டப் பல்கலைக்கழகங்கள் (CLAT)</div>
+<div style="font-weight: 800; color: #854d0e; font-size: 1.02rem; margin-bottom: 4px;">⚖️ 06. தேசிய சட்டப் பல்கலைகள் (CLAT)</div>
 <p style="font-size: 0.84rem; color: #475569; margin: 0 0 10px 0; line-height: 1.45;">26 தேசிய சட்டப் பல்கலைக்கழகங்களில் 5 ஆண்டு BA LLB / BBA LLB பட்டப்படிப்புகள்.</p>
 </div>
 <a class="portal-link-btn" href="01_06_law_clat_nlu.html" style="background: #ca8a04; align-self: flex-start;">விவரங்கள் காண்க ›</a>
 </div>
 
+<!-- 07. Design -->
 <div style="background: #ffffff; border: 1.8px solid #fbcfe8; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #9d174d; font-size: 1.02rem; margin-bottom: 4px;">🎨 06. வடிவமைப்பு &amp; ஃபேஷன் (NIFT / NATA)</div>
+<div style="font-weight: 800; color: #9d174d; font-size: 1.02rem; margin-bottom: 4px;">🎨 07. வடிவமைப்பு &amp; ஃபேஷன் (NIFT)</div>
 <p style="font-size: 0.84rem; color: #475569; margin: 0 0 10px 0; line-height: 1.45;">18 NIFT, NID மற்றும் B.Arch கட்டிடக்கலைத் துறை சேர்க்கைக்கான முழு வழிகாட்டல்.</p>
 </div>
 <a class="portal-link-btn" href="01_07_design_architecture_nata_nift.html" style="background: #db2777; align-self: flex-start;">விவரங்கள் காண்க ›</a>
 </div>
 
+<!-- 08. Management -->
 <div style="background: #ffffff; border: 1.8px solid #e9d5ff; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #6b21a8; font-size: 1.02rem; margin-bottom: 4px;">📈 07. மேலாண்மை &amp; IIMs (IPMAT)</div>
+<div style="font-weight: 800; color: #6b21a8; font-size: 1.02rem; margin-bottom: 4px;">📈 08. மேலாண்மை &amp; IIMs (IPMAT)</div>
 <p style="font-size: 0.84rem; color: #475569; margin: 0 0 10px 0; line-height: 1.45;">IIM இந்தூர், ரோஹ்தக், போத்கயா, ஜம்மு 5 ஆண்டு ஒருங்கிணைந்த BBA+MBA படிப்பு.</p>
 </div>
 <a class="portal-link-btn" href="01_08_management_iim_ipm.html" style="background: #9333ea; align-self: flex-start;">விவரங்கள் காண்க ›</a>
 </div>
 
+<!-- 09. Hospitality -->
 <div style="background: #ffffff; border: 1.8px solid #cbd5e1; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #334155; font-size: 1.02rem; margin-bottom: 4px;">🏨 08. ஹோட்டல் மேலாண்மை (NCHMCT JEE)</div>
+<div style="font-weight: 800; color: #334155; font-size: 1.02rem; margin-bottom: 4px;">🏨 09. ஹோட்டல் மேலாண்மை (NCHMCT)</div>
 <p style="font-size: 0.84rem; color: #475569; margin: 0 0 10px 0; line-height: 1.45;">75+ மத்திய &amp; மாநில அரசு IHM நிறுவனங்களில் உலகத்தரம் வாய்ந்த விருந்தோம்பல் கல்வி.</p>
 </div>
 <a class="portal-link-btn" href="01_09_hotel_management_nchmct.html" style="background: #475569; align-self: flex-start;">விவரங்கள் காண்க ›</a>
 </div>
 
+<!-- 10. Maritime -->
 <div style="background: #ffffff; border: 1.8px solid #a5f3fc; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #0e7490; font-size: 1.02rem; margin-bottom: 4px;">⚓ 09. கடல்சார் படிப்பு (IMU-CET)</div>
+<div style="font-weight: 800; color: #0e7490; font-size: 1.02rem; margin-bottom: 4px;">⚓ 10. கடல்சார் படிப்பு (IMU-CET)</div>
 <p style="font-size: 0.84rem; color: #475569; margin: 0 0 10px 0; line-height: 1.45;">வணிகக் கப்பல் கேப்டன், கடல்சார் பொறியியல் (Marine Engg) மற்றும் டெக் கேடட் பணிகள்.</p>
 </div>
 <a class="portal-link-btn" href="01_10_maritime_merchant_navy.html" style="background: #0891b2; align-self: flex-start;">விவரங்கள் காண்க ›</a>
 </div>
 
+<!-- 11. Defence -->
 <div style="background: #ffffff; border: 1.8px solid #fed7aa; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #c2410c; font-size: 1.02rem; margin-bottom: 4px;">🎖️ 10. பாதுகாப்புப் படைகள் (NDA &amp; Navy)</div>
+<div style="font-weight: 800; color: #c2410c; font-size: 1.02rem; margin-bottom: 4px;">🎖️ 11. பாதுகாப்புப் படைகள் (NDA)</div>
 <p style="font-size: 0.84rem; color: #475569; margin: 0 0 10px 0; line-height: 1.45;">UPSC NDA தேர்வு, இந்தியக் கடற்படை B.Tech திட்டம், ராணுவ TES நேரடி அதிகாரி வாய்ப்புகள்.</p>
 </div>
 <a class="portal-link-btn" href="01_11_defence_armed_forces.html" style="background: #ea580c; align-self: flex-start;">விவரங்கள் காண்க ›</a>
 </div>
 
+<!-- 12. Aviation -->
 <div style="background: #ffffff; border: 1.8px solid #99f6e4; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #0f766e; font-size: 1.02rem; margin-bottom: 4px;">✈️ 11. பைலட் பயிற்சிகள் (CPL &amp; IAF)</div>
+<div style="font-weight: 800; color: #0f766e; font-size: 1.02rem; margin-bottom: 4px;">✈️ 12. பைலட் பயிற்சிகள் (CPL)</div>
 <p style="font-size: 0.84rem; color: #475569; margin: 0 0 10px 0; line-height: 1.45;">மத்திய அரசு IGRUA ரேபரேலி வணிக விமானி பயிற்சி (CPL) மற்றும் விமானப்படை போர் விமானி.</p>
 </div>
 <a class="portal-link-btn" href="01_12_pilot_careers_cpl_and_iaf_fighter.html" style="background: #0d9488; align-self: flex-start;">விவரங்கள் காண்க ›</a>
@@ -5647,7 +5781,7 @@
 </h2>
 </div>
 <span style="background: #fef3c7; color: #b45309; font-size: 0.82rem; font-weight: 800; padding: 4px 12px; border-radius: 999px; border: 1px solid #fde68a;">
-சரிபார்க்கப்பட்ட அதிகாரப்பூர்வ இணைப்புகள்
+12 சரிபார்க்கப்பட்ட அரசு இணையதளங்கள்
 </span>
 </div>
 
@@ -5655,54 +5789,104 @@
 தேர்வுகளுக்கு விண்ணப்பிக்கும் போதும், ஹால் டிக்கெட் மற்றும் முடிவுகளைப் பார்க்கும் போதும் போலி இணையதளங்களைத் தவிர்த்து, அரசு மற்றும் தேசிய அமைப்புகளின் அதிகாரப்பூர்வ இணையதளங்களை மட்டுமே பயன்படுத்த வேண்டும்:
 </p>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;">
+<div class="portals-grid">
+
 <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #0f172a; font-size: 0.90rem;">NTA தேர்வுகள் போர்ட்டல்</div>
-<div style="font-size: 0.76rem; color: #64748b;">NEET, JEE Main, CUET, NCHM, NIFT, JIPMAT</div>
+<div style="font-weight: 800; color: #0f172a; font-size: 0.88rem;">NTA தேர்வுகள் போர்ட்டல்</div>
+<div style="font-size: 0.74rem; color: #64748b;">NEET, JEE Main, CUET, NCHM</div>
 </div>
 <a class="portal-link-btn" href="https://exams.nta.ac.in/" rel="noopener" target="_blank">exams.nta.ac.in ↗</a>
 </div>
 
 <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #0f172a; font-size: 0.90rem;">UPSC பாதுகாப்புப் பணிகள்</div>
-<div style="font-size: 0.76rem; color: #64748b;">NDA &amp; NA (I &amp; II) தேர்வுகள்</div>
+<div style="font-weight: 800; color: #0f172a; font-size: 0.88rem;">UPSC பாதுகாப்புப் பணிகள்</div>
+<div style="font-size: 0.74rem; color: #64748b;">NDA &amp; NA (I &amp; II) தேர்வுகள்</div>
 </div>
 <a class="portal-link-btn" href="https://upsc.gov.in/" rel="noopener" target="_blank">upsc.gov.in ↗</a>
 </div>
 
 <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #0f172a; font-size: 0.90rem;">Consortium of NLUs (சட்டம்)</div>
-<div style="font-size: 0.76rem; color: #64748b;">CLAT 2026 / 2027 தேசிய சட்டம்</div>
+<div style="font-weight: 800; color: #0f172a; font-size: 0.88rem;">Consortium of NLUs (சட்டம்)</div>
+<div style="font-size: 0.74rem; color: #64748b;">CLAT தேசிய சட்டப் பல்கை</div>
 </div>
 <a class="portal-link-btn" href="https://consortiumofnlus.ac.in/" rel="noopener" target="_blank">consortiumofnlus.ac.in ↗</a>
 </div>
 
 <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #0f172a; font-size: 0.90rem;">IISER சேர்க்கை போர்ட்டல்</div>
-<div style="font-size: 0.76rem; color: #64748b;">IAT 2026 ஆராய்ச்சி அறிவியல்</div>
+<div style="font-weight: 800; color: #0f172a; font-size: 0.88rem;">IIT JEE Advanced</div>
+<div style="font-size: 0.74rem; color: #64748b;">23 ஐஐடிகள் B.Tech சேர்க்கை</div>
+</div>
+<a class="portal-link-btn" href="https://jeeadv.ac.in/" rel="noopener" target="_blank">jeeadv.ac.in ↗</a>
+</div>
+
+<div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between;">
+<div>
+<div style="font-weight: 800; color: #0f172a; font-size: 0.88rem;">IISER சேர்க்கை போர்ட்டல்</div>
+<div style="font-size: 0.74rem; color: #64748b;">IAT ஆராய்ச்சி அறிவியல் &amp; IISc</div>
 </div>
 <a class="portal-link-btn" href="https://iiseradmission.in/" rel="noopener" target="_blank">iiseradmission.in ↗</a>
 </div>
 
 <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #0f172a; font-size: 0.90rem;">இந்திய கடல்சார் பல்கை (IMU)</div>
-<div style="font-size: 0.76rem; color: #64748b;">IMU-CET வணிகக் கப்பல் படிப்பு</div>
+<div style="font-weight: 800; color: #0f172a; font-size: 0.88rem;">இந்திய கடல்சார் பல்கை (IMU)</div>
+<div style="font-size: 0.74rem; color: #64748b;">IMU-CET வணிகக் கப்பல் படிப்பு</div>
 </div>
 <a class="portal-link-btn" href="https://www.imu.edu.in/" rel="noopener" target="_blank">imu.edu.in ↗</a>
 </div>
 
 <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between;">
 <div>
-<div style="font-weight: 800; color: #0f172a; font-size: 0.90rem;">AIIMS தேர்வுகள் பிரிவு</div>
-<div style="font-size: 0.76rem; color: #64748b;">B.Sc Nursing &amp; Paramedical</div>
+<div style="font-weight: 800; color: #0f172a; font-size: 0.88rem;">AIIMS தேர்வுகள் பிரிவு</div>
+<div style="font-size: 0.74rem; color: #64748b;">B.Sc Nursing &amp; Paramedical</div>
 </div>
 <a class="portal-link-btn" href="https://www.aiimsexams.ac.in/" rel="noopener" target="_blank">aiimsexams.ac.in ↗</a>
 </div>
+
+<div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between;">
+<div>
+<div style="font-weight: 800; color: #0f172a; font-size: 0.88rem;">Council of Architecture</div>
+<div style="font-size: 0.74rem; color: #64748b;">NATA கட்டிடக்கலை சேர்க்கை</div>
+</div>
+<a class="portal-link-btn" href="https://www.nata.in/" rel="noopener" target="_blank">nata.in ↗</a>
+</div>
+
+<div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between;">
+<div>
+<div style="font-weight: 800; color: #0f172a; font-size: 0.88rem;">BITS Pilani சேர்க்கை</div>
+<div style="font-size: 0.74rem; color: #64748b;">BITSAT பிலானி, கோவா, ஹைதராபாத்</div>
+</div>
+<a class="portal-link-btn" href="https://www.bitsadmission.com/" rel="noopener" target="_blank">bitsadmission.com ↗</a>
+</div>
+
+<div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between;">
+<div>
+<div style="font-weight: 800; color: #0f172a; font-size: 0.88rem;">தேசிய வடிவமைப்பு (NID)</div>
+<div style="font-size: 0.74rem; color: #64748b;">NID DAT B.Des சேர்க்கை</div>
+</div>
+<a class="portal-link-btn" href="https://admissions.nid.edu/" rel="noopener" target="_blank">admissions.nid.edu ↗</a>
+</div>
+
+<div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between;">
+<div>
+<div style="font-weight: 800; color: #0f172a; font-size: 0.88rem;">NCERT ஆசிரியர் கல்வி (RIE)</div>
+<div style="font-size: 0.74rem; color: #64748b;">4-ஆண்டு B.Sc.B.Ed / B.A.B.Ed</div>
+</div>
+<a class="portal-link-btn" href="https://cee.ncert.gov.in/" rel="noopener" target="_blank">cee.ncert.gov.in ↗</a>
+</div>
+
+<div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between;">
+<div>
+<div style="font-weight: 800; color: #0f172a; font-size: 0.88rem;">இந்திய ராணுவம் &amp; கடற்படை</div>
+<div style="font-size: 0.74rem; color: #64748b;">10+2 B.Tech &amp; TES திட்டங்கள்</div>
+</div>
+<a class="portal-link-btn" href="https://joinindianarmy.nic.in/" rel="noopener" target="_blank">joinindianarmy.nic.in ↗</a>
+</div>
+
 </div>
 </section>
 
