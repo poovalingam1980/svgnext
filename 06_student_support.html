@@ -6241,6 +6241,89 @@
 }
 </style>
 
+<style>
+    .portal-layout-wrapper {
+      display: block !important;
+      width: 100% !important;
+      min-height: 100vh !important;
+      position: relative !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Fixed Left Sidebar - 100% Permanently Anchored to Viewport (Never Scrolls Away) */
+    .desktop-left-sidebar {
+      width: 295px !important;
+      min-width: 295px !important;
+      max-width: 295px !important;
+      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+      border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      height: 100vh !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex-shrink: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Main Content Column - Compensates for 295px Fixed Sidebar on Desktop */
+    .portal-main-content {
+      margin-left: 295px !important;
+      width: calc(100% - 295px) !important;
+      min-height: 100vh !important;
+      padding: 12px 18px 40px !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+    }
+
+    @media (max-width: 1024px) {
+      .desktop-left-sidebar {
+        position: fixed !important;
+        left: -320px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 295px !important;
+        height: 100vh !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        z-index: 9999 !important;
+      }
+      .desktop-left-sidebar.sidebar-open {
+        left: 0 !important;
+      }
+      .portal-main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 8px 10px 30px !important;
+      }
+    }
+</style>
+<style>
+@media (min-width: 901px) {
+  .portal-top-frame {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+  }
+  .top-frame-center-stack {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  .top-frame-side-btn.btn-home,
+  .top-frame-btn.btn-home {
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+}
+</style>
 </head>
 <body>
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
@@ -6322,11 +6405,6 @@
 </aside>
 <!-- Main Portal Content Column -->
 <main class="portal-main-content"><div class="portal-container"><header class="portal-top-frame no-print">
-<!-- Left Side Button: ceosvg.in முதன்மை தளம் -->
-<a class="top-frame-side-btn btn-ceosvg" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
-<span class="btn-icon">🌐</span>
-<span class="btn-text">ceosvg.in முதன்மை தளம்</span>
-</a>
 <!-- Center Branding Stack: 3D Gold Title, Aurora Tagline & English Sub-branding -->
 <div class="top-frame-center-stack">
 <!-- 1. Main 3D Gold Tamil Title -->
@@ -6346,11 +6424,6 @@
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
 </a>
 </header><nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
-<a class="nav-menu-btn btn-portal-home" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ தளம்">
-<span class="btn-icon">🏛️</span>
-<span class="btn-text">ceosvg.in முதன்மை தளம்</span>
-</a>
-<span class="nav-menu-separator">▶</span>
 <a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
 <span class="btn-icon">🧭</span>
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
@@ -8193,8 +8266,6 @@
     © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
 <div style="margin-top: 8px;">
-<a href="https://www.ceosvg.in" rel="noopener" style="color: #0284c7; font-weight: 600; text-decoration: none; font-size: 0.85rem;" target="_blank">🌐 ceosvg.in அதிகாரப்பூர்வ தளம்</a>
-<span style="color: #cbd5e1; margin: 0 8px;">|</span>
 <a href="index.html" style="color: #0284c7; font-weight: 600; text-decoration: none; font-size: 0.85rem;">🎓 உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு</a>
 </div>
 </footer></div></main></div>
