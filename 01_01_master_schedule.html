@@ -6869,264 +6869,144 @@ CUET-UG தேர்வில் மூன்று பிரிவுகள் 
 </div>
 
 
-<section class="feedback-section" id="doubt-sec" style="border: 2px solid #0284c7 !important; background: #ffffff !important; box-shadow: 0 8px 24px rgba(2, 132, 199, 0.12) !important;">
-<div class="animated-top-bar"></div>
+<section class="feedback-section" id="doubt-sec" style="position: relative; overflow: hidden; background: #ffffff; border: 1.8px solid #cbd5e1; border-radius: 14px; padding: 24px; margin: 32px 0 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);">
+<div class="animated-top-bar" style="position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(90deg, #0284c7, #10b981, #f59e0b, #6366f1, #0284c7); background-size: 300% 100%; animation: softBorderFlow 8s linear infinite;"></div>
 <canvas id="fb_crackers_canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 99; display: none;"></canvas>
 
-<!-- Section Header -->
-<div class="doubt-header-wrapper" style="margin-bottom: 20px;">
-  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+<!-- Header -->
+<div class="doubt-header-wrapper" style="margin-bottom: 20px; border-bottom: 2px solid #f1f5f9; padding-bottom: 14px;">
+  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 6px;">
     <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span class="sparkle-badge" style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); color: #0369a1; border-color: #7dd3fc;">
-        <span class="sparkle-icon">🤖</span><span>மாணவர் சந்தேகக் கேட்பு வினாக்களம் (CG Enquiry Desk)</span>
+      <span class="sparkle-badge" style="display: inline-flex; align-items: center; gap: 6px; background: #e0f2fe; color: #0369a1; padding: 4px 12px; border-radius: 999px; font-size: 0.82rem; font-weight: 800; border: 1px solid #bae6fd;">
+        <span>🎓</span><span>சிவகங்கை மாவட்ட உயர்கல்வி வழிகாட்டல்</span>
       </span>
-      <h2 class="doubt-main-title" style="margin: 0; font-size: 1.35rem; color: #0f172a; font-weight: 800;">
-        அகில இந்திய நுழைவுத் தேர்வுகள் — மாணவர் சந்தேகங்கள் &amp; உடனடி AI வழிகாட்டல்
+      <h2 style="margin: 0; font-size: 1.35rem; color: #091a3e; font-weight: 800;">
+        மாணவர் சந்தேகக் கேட்பு வினாக்களம் (CG Enquiry Desk)
       </h2>
     </div>
-    <span style="background: #f0fdf4; color: #15803d; font-size: 0.82rem; font-weight: 800; padding: 4px 12px; border-radius: 999px; border: 1px solid #86efac;">
-      ⚡ உடனடி AI பதில் + மாவட்டக் குழு உதவி
+    <span style="background: #f0fdf4; color: #15803d; font-size: 0.80rem; font-weight: 800; padding: 4px 12px; border-radius: 999px; border: 1px solid #86efac;">
+      🤖 உடனடி AI மின்னஞ்சல் பதில் + 👨‍🏫 வழிகாட்டுக் குழு உதவி
     </span>
   </div>
-  <p class="doubt-sub-desc" style="font-size: 0.94rem; color: #334155; line-height: 1.6; margin: 0;">
-    அகில இந்திய நுழைவுத் தேர்வுகள் (NEET, JEE, CUET, CLAT, IAT, NIFT, NDA...), விண்ணப்பத் தேதிகள், கட்-ஆஃப் மற்றும் தகுதிகள் குறித்த தங்களின் சந்தேகங்களைத் தட்டச்சு செய்து <b>உடனடி AI வழிகாட்டலைப் பெறுங்கள்!</b> பதிலில் கூடுதல் விளக்கம் தேவைப்படின், மாவட்ட வழிகாட்டிக் குழுவிடம் நேரடியாகப் பதிவு செய்யலாம்.
+  <p style="margin: 0; font-size: 0.92rem; color: #475569; line-height: 1.55;">
+    உயர்கல்வி, நுழைவுத்தேர்வுகள், கட்-ஆப், கல்லூரிகள் மற்றும் அரசு சலுகைகள் குறித்த தங்களின் சந்தேகங்களைத் தட்டச்சு செய்து சமர்ப்பிக்கவும். உங்களுக்கான விரிவான வழிகாட்டல் பதில் <strong>செயற்கை நுண்ணறிவு (AI) மூலம் தங்களின் மின்னஞ்சலுக்கு உடனடியாக அனுப்பப்படும்.</strong> அப்பதிலில் கூடுதல் விளக்கம் தேவைப்படின், மின்னஞ்சலில் உள்ள பொத்தானை அழுத்தி மாவட்ட வழிகாட்டுக் குழுவின் நேரடி உதவியைப் பெறலாம்.
   </p>
 </div>
 
-<!-- STAGE 1: AI QUERY INPUT & QUICK PROMPT PILLS -->
-<div id="ai-query-stage" class="ai-query-box" style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 18px; margin-bottom: 18px;">
-  <label for="student_ai_question" class="ai-input-label" style="display: flex; align-items: center; gap: 8px; font-weight: 800; color: #0f172a; margin-bottom: 10px; font-size: 0.96rem;">
-    <span class="ai-input-icon">❓</span>
-    <span>தங்களின் நுழைவுத்தேர்வு / உயர்கல்வி சந்தேகம் அல்லது வினா:</span>
-  </label>
-  <div class="ai-input-wrap" style="display: flex; gap: 10px; flex-wrap: wrap;">
-    <textarea id="student_ai_question" class="ai-textarea" rows="2" placeholder="எ.கா: JEE Main அமர்வு 1 தேர்வு எப்போது? அல்லது NEET தேர்வில் 7.5% அரசுப் பள்ளி சலுகை எப்படி? தங்களின் கேள்வியை இங்கே தட்டச்சு செய்யவும்..." style="flex: 1; min-width: 280px; padding: 10px 14px; font-size: 0.92rem; font-family: inherit; border: 1.8px solid #94a3b8; border-radius: 8px; outline: none; box-sizing: border-box; line-height: 1.45;"></textarea>
-    <button type="button" id="btn_ask_ai" class="btn-ask-ai" onclick="submitToAIAssistant()" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff; border: none; border-radius: 8px; padding: 10px 18px; font-weight: 800; font-size: 0.95rem; cursor: pointer; box-shadow: 0 3px 10px rgba(2, 132, 199, 0.3); transition: all 0.2s ease;">
-      <span>🤖 AI உடனடிப் பதில் பெறுக</span>
-      <svg style="width: 16px; height: 16px; fill: none; stroke: currentColor;" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/></svg>
-    </button>
-  </div>
+<!-- Form Container -->
+<div id="enquiry-form-container">
+  <form id="guidanceFeedbackForm" onsubmit="handleEnquiryFormSubmit(event)" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; align-items: start;">
+    <input name="page" type="hidden" value="01_01_master_schedule.html"/>
 
-  <!-- Quick Sample Pills -->
-  <div class="quick-pills-bar" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
-    <span class="quick-pill-label" style="font-size: 0.82rem; font-weight: 800; color: #475569;">💡 மாதிரி வினாக்கள்:</span>
-    <button type="button" class="quick-pill" onclick="setAiQuery('NEET மருத்துவத் தேர்வுக்கு எப்போது விண்ணப்பிக்க வேண்டும்? 7.5% அரசுப் பள்ளி சலுகைகள் என்ன?')" style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 999px; padding: 4px 12px; font-size: 0.78rem; font-weight: 700; color: #0f172a; cursor: pointer;">🩺 NEET &amp; 7.5% சலுகை</button>
-    <button type="button" class="quick-pill" onclick="setAiQuery('JEE Main மற்றும் Advanced பொறியியல் நுழைவுத்தேர்வுகள் நடைபெறும் கால அட்டவணை என்ன?')" style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 999px; padding: 4px 12px; font-size: 0.78rem; font-weight: 700; color: #0f172a; cursor: pointer;">⚙️ JEE பொறியியல் தேர்வுகள்</button>
-    <button type="button" class="quick-pill" onclick="setAiQuery('CUET-UG மத்திய பல்கலைக்கழக நுழைவுத்தேர்வு மூலம் எந்தெந்த கல்லூரிகளில் சேரலாம்?')" style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 999px; padding: 4px 12px; font-size: 0.78rem; font-weight: 700; color: #0f172a; cursor: pointer;">🏛️ CUET மத்திய பல்கை</button>
-    <button type="button" class="quick-pill" onclick="setAiQuery('CLAT சட்டப் படிப்பு நுழைவுத்தேர்வுக்கு எப்போது விண்ணப்பிக்க வேண்டும்?')" style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 999px; padding: 4px 12px; font-size: 0.78rem; font-weight: 700; color: #0f172a; cursor: pointer;">⚖️ CLAT சட்டப் பல்கை</button>
-    <button type="button" class="quick-pill" onclick="setAiQuery('IISER மற்றும் NISER அறிவியல் ஆராய்ச்சி சேர்க்கை எவ்வாறு நடைபெறும்? உதவித்தொகை என்ன?')" style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 999px; padding: 4px 12px; font-size: 0.78rem; font-weight: 700; color: #0f172a; cursor: pointer;">🔬 IISER / NISER ஆராய்ச்சி</button>
-    <button type="button" class="quick-pill" onclick="setAiQuery('அகில இந்திய நுழைவுத் தேர்வுகள் அட்டவணை மற்றும் விண்ணப்பக் காலண்டர் விவரம் என்ன?')" style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 999px; padding: 4px 12px; font-size: 0.78rem; font-weight: 700; color: #0f172a; cursor: pointer;">📅 12 மாத காலண்டர்</button>
-  </div>
-</div>
-
-<!-- AI THINKING INDICATOR -->
-<div id="ai-thinking-indicator" class="ai-thinking-box" style="display: none; align-items: center; gap: 14px; background: #f0f9ff; border: 1.5px solid #7dd3fc; border-radius: 10px; padding: 14px 18px; margin-bottom: 18px;">
-  <div class="ai-spinner" style="width: 24px; height: 24px; border: 3px solid #bae6fd; border-top: 3px solid #0284c7; border-radius: 50%; animation: spinAI 0.8s linear infinite;"></div>
-  <div class="ai-thinking-text">
-    <strong style="color: #0369a1; font-size: 0.92rem;">செயற்கை நுண்ணறிவு வழிகாட்டி (Career AI) சிந்தித்து பதிலளிக்கிறது...</strong>
-    <div style="font-size: 0.78rem; color: #64748b;">அதிகாரப்பூர்வ தேசிய தேர்வு விதிகளுடன் தகவல் சரிபார்க்கப்படுகிறது</div>
-  </div>
-</div>
-
-<!-- STAGE 2: AI ANSWER CARD WITH SATISFACTION POLL -->
-<div id="ai-answer-container" class="ai-answer-wrapper" style="display: none; margin-bottom: 20px;">
-  <div class="ai-answer-card" style="background: #ffffff; border: 1.8px solid #38bdf8; border-radius: 12px; padding: 20px; box-shadow: 0 4px 18px rgba(56, 189, 248, 0.14);">
-    <div class="ai-answer-header" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1.5px solid #e0f2fe;">
-      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-        <span class="ai-robot-badge" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff; padding: 3px 10px; border-radius: 6px; font-size: 0.80rem; font-weight: 800;">🤖 AI உடனடி வழிகாட்டல்</span>
-        <span id="ai-response-topic" class="ai-topic-tag" style="background: #e0f2fe; color: #0369a1; padding: 3px 10px; border-radius: 6px; font-size: 0.80rem; font-weight: 800;">பொதுவான உயர்கல்வி வழிகாட்டல்</span>
-      </div>
-      <span class="ai-verified-tag" style="color: #059669; font-size: 0.80rem; font-weight: 800; background: #ecfdf5; padding: 3px 10px; border-radius: 6px; border: 1px solid #a7f3d0;">✓ சரிபார்க்கப்பட்ட கையேட்டுத் தகவல்</span>
-    </div>
-    
-    <!-- Student's question echoed -->
-    <div class="ai-echo-question" style="background: #f8fafc; border-left: 3px solid #0284c7; padding: 8px 12px; border-radius: 4px; margin-bottom: 14px; font-size: 0.88rem;">
-      <span style="color: #64748b; font-weight: 700;">தங்களின் கேள்வி:</span>
-      <span id="ai-echo-query" style="color: #0f172a; font-weight: 600;"></span>
+    <!-- 1. Name -->
+    <div class="form-group" style="grid-column: span 1;">
+      <label for="fb_name" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+        <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #e0f2fe; color: #0284c7; border-radius: 4px; font-size: 11px;">👤</span>
+        <span>மாணவர் பெயர்</span>
+        <span style="color: #ef4444;">*</span>
+      </label>
+      <input id="fb_name" name="name" placeholder="முழுப் பெயர்" required style="width: 100%; padding: 9px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; box-sizing: border-box;" type="text"/>
     </div>
 
-    <!-- AI Generated Answer Body -->
-    <div id="ai-answer-body" class="ai-answer-content" style="font-size: 0.90rem; color: #1e293b; line-height: 1.65;">
-      <!-- Injected dynamically -->
+    <!-- 2. School / Town -->
+    <div class="form-group" style="grid-column: span 1;">
+      <label for="fb_place" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+        <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #fef3c7; color: #d97706; border-radius: 4px; font-size: 11px;">🏫</span>
+        <span>பள்ளி / ஊர்</span>
+        <span style="color: #ef4444;">*</span>
+      </label>
+      <input id="fb_place" name="place" placeholder="பள்ளி பெயர் &amp; ஊர்" required style="width: 100%; padding: 9px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; box-sizing: border-box;" type="text"/>
     </div>
 
-    <!-- Satisfaction Feedback Bar -->
-    <div class="ai-satisfaction-bar" style="margin-top: 16px; padding-top: 14px; border-top: 1.5px dashed #cbd5e1; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-      <div class="sat-question">
-        <span style="font-size: 0.88rem; font-weight: 800; color: #0f172a;">❓ இந்த AI பதில் தங்களுக்குத் திருப்தியளிக்கிறதா?</span>
-      </div>
-      <div class="sat-actions" style="display: inline-flex; gap: 8px; flex-wrap: wrap;">
-        <button type="button" class="btn-sat-yes" onclick="handleSatisfaction(true)" style="background: #10b981; color: #ffffff; border: none; border-radius: 6px; padding: 6px 14px; font-size: 0.82rem; font-weight: 700; cursor: pointer;">
-          <span>👍 ஆம், பயனுள்ளதாக உள்ளது</span>
-        </button>
-        <button type="button" class="btn-sat-no" onclick="handleSatisfaction(false)" style="background: #f1f5f9; color: #475569; border: 1.2px solid #cbd5e1; border-radius: 6px; padding: 6px 14px; font-size: 0.82rem; font-weight: 700; cursor: pointer;">
-          <span>👎 திருப்தியில்லை / வழிகாட்டி குழுவின் நேரடி உதவி தேவை</span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- STAGE 3A: THANK YOU / CELEBRATION BOX IF SATISFIED -->
-<div id="ai-satisfied-box" class="ai-thankyou-box" style="display: none; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2px solid #10b981; border-radius: 12px; padding: 22px; text-align: center; margin-bottom: 20px;">
-  <div style="font-size: 2.2rem; margin-bottom: 6px;">🎉</div>
-  <h3 style="color: #15803d; margin: 0 0 6px 0; font-size: 1.20rem; font-weight: 800;">மிக்க மகிழ்ச்சி! தங்களுக்கு வழிகாட்ட முடிந்ததில் பெருமகிழ்ச்சி!</h3>
-  <p style="color: #334155; font-size: 0.90rem; margin: 0 0 14px 0;">உங்கள் உயர்கல்வி மற்றும் நுழைவுத்தேர்வுப் பயணம் சிறக்க சிவகங்கை மாவட்டக் கல்வித்துறை நல்வாழ்த்துகளைத் தெரிவிக்கிறது. 🎓</p>
-  <button type="button" class="btn-ask-another" onclick="resetAiWorkflow()" style="background: #059669; color: #ffffff; border: none; border-radius: 6px; padding: 8px 16px; font-size: 0.84rem; font-weight: 700; cursor: pointer;">
-    <span>🔄 வேறு சந்தேகம் கேட்க</span>
-  </button>
-</div>
-
-<!-- STAGE 3B: OFFICIAL CG ENQUIRY FORM TO DISTRICT HUMAN GUIDANCE TEAM -->
-<div id="human-team-stage" class="human-escalation-wrapper" style="display: none; background: #ffffff; border: 2px solid #0284c7; border-radius: 12px; padding: 20px; box-shadow: 0 4px 18px rgba(2, 132, 199, 0.12); margin-top: 16px;">
-  <div class="escalation-header-box" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1.5px solid #bae6fd; border-radius: 10px; padding: 14px 16px; margin-bottom: 18px;">
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <span style="font-size: 1.6rem;">✍️</span>
-      <div>
-        <h3 style="margin: 0; font-size: 1.12rem; color: #0369a1; font-weight: 800;">
-          சிவகங்கை மாவட்ட உயர்கல்வி வழிகாட்டிக் குழுவிடம் நேரடி சந்தேகம் பதிவு செய்தல் (CG Enquiry)
-        </h3>
-        <p style="margin: 3px 0 0 0; font-size: 0.84rem; color: #0284c7;">
-          தாங்கள் கேட்ட வினாவிற்கு மாவட்டக் கல்வி வழிகாட்டல் குழுவின் ஆசிரியர் வல்லுநர்கள் ஆய்வு செய்து, தங்கள் தொலைபேசி எண் / மின்னஞ்சல் வழியாக விரைவில் உரிய ஆலோசனைகளை வழங்குவர்.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <form id="masterGuidanceForm" onsubmit="handleQuerySubmit(event);">
-    <div class="form-inputs-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px 14px;">
-      
-      <!-- Student Name -->
-      <div class="form-control-item" style="grid-column: span 1;">
-        <label class="form-label-title" style="display: block; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-          மாணவர் பெயர் <span style="color: #dc2626;">*</span>
-        </label>
-        <input class="form-text-box" id="formStudentName" placeholder="முழுப் பெயர்" required="" type="text" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; outline: none; box-sizing: border-box;"/>
-      </div>
-
-      <!-- Class Level -->
-      <div class="form-control-item" style="grid-column: span 1;">
-        <label class="form-label-title" style="display: block; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-          வகுப்பு நிலை <span style="color: #dc2626;">*</span>
-        </label>
-        <select class="form-select-box" id="formStudentClass" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; outline: none; background: #ffffff; box-sizing: border-box;">
-          <option value="12-ஆம் வகுப்பு (HSC)">12-ஆம் வகுப்பு (HSC)</option>
-          <option value="11-ஆம் வகுப்பு">11-ஆம் வகுப்பு</option>
-          <option value="10-ஆம் வகுப்பு">10-ஆம் வகுப்பு</option>
-          <option value="+2 தேர்ச்சி பெற்றவர்">+2 தேர்ச்சி பெற்றவர்</option>
-        </select>
-      </div>
-
-      <!-- School Category -->
-      <div class="form-control-item" style="grid-column: span 1;">
-        <label class="form-label-title" style="display: block; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-          பள்ளி வகை <span style="color: #dc2626;">*</span>
-        </label>
-        <select class="form-select-box" id="formSchoolCategory" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; outline: none; background: #ffffff; box-sizing: border-box;">
-          <option value="அரசுப் பள்ளி (7.5% தகுதி)">அரசுப் பள்ளி (7.5% தகுதி)</option>
-          <option value="அரசு உதவிபெறும் பள்ளி">அரசு உதவிபெறும் பள்ளி</option>
-          <option value="சுயநிதி / தனியார் மெட்ரிக் பள்ளி">சுயநிதி / தனியார் மெட்ரிக் பள்ளி</option>
-        </select>
-      </div>
-
-      <!-- District -->
-      <div class="form-control-item" style="grid-column: span 1;">
-        <label class="form-label-title" style="display: block; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-          மாவட்டம் <span style="color: #dc2626;">*</span>
-        </label>
-        <input class="form-text-box" id="formStudentDistrict" placeholder="எ.கா. சிவகங்கை" required="" type="text" value="சிவகங்கை" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; outline: none; box-sizing: border-box;"/>
-      </div>
-
-      <!-- Phone Number -->
-      <div class="form-control-item" style="grid-column: span 2;">
-        <label class="form-label-title" style="display: block; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-          அலைபேசி எண் <span style="color: #dc2626;">*</span>
-        </label>
-        <input class="form-text-box" id="formStudentPhone" pattern="[0-9]{10}" placeholder="10 இலக்க மொபைல் எண்" required="" type="tel" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; outline: none; box-sizing: border-box;"/>
-      </div>
-
-      <!-- Subject Category -->
-      <div class="form-control-item" style="grid-column: span 2;">
-        <label class="form-label-title" style="display: block; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-          சந்தேகப் பிரிவு <span style="color: #dc2626;">*</span>
-        </label>
-        <select class="form-select-box" id="formSubjectCategory" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; outline: none; background: #ffffff; box-sizing: border-box;">
-          <option value="அகில இந்திய நுழைவுத் தேர்வுகள் அட்டவணை">அகில இந்திய நுழைவுத் தேர்வுகள் அட்டவணை</option>
-          <option value="மருத்துவம் &amp; துணை மருத்துவம் (NEET / Nursing / BNYS)">மருத்துவம் &amp; துணை மருத்துவம் (NEET / Nursing / BNYS)</option>
-          <option value="பொறியியல் சேர்க்கை (JEE / TNEA 7.5%)">பொறியியல் சேர்க்கை (JEE / TNEA 7.5%)</option>
-          <option value="மத்தியப் பல்கலைக்கழகங்கள் (CUET-UG)">மத்தியப் பல்கலைக்கழகங்கள் (CUET-UG)</option>
-          <option value="சட்டக் கல்வி (CLAT / NLUs)">சட்டக் கல்வி (CLAT / NLUs)</option>
-          <option value="அறிவியல் ஆராய்ச்சி (IISER / NISER)">அறிவியல் ஆராய்ச்சி (IISER / NISER)</option>
-          <option value="பாதுகாப்புப் படைகள் (NDA / Navy B.Tech)">பாதுகாப்புப் படைகள் (NDA / Navy B.Tech)</option>
-          <option value="7.5% அரசுப் பள்ளி இடஒதுக்கீடு">7.5% அரசுப் பள்ளி இடஒதுக்கீடு</option>
-          <option value="கல்வி உதவித்தொகை &amp; கட்டணச் சலுகை">கல்வி உதவித்தொகை &amp; கட்டணச் சலுகை</option>
-        </select>
-      </div>
-
-      <!-- Email Address (Highlighted Full Width) -->
-      <div class="form-control-item full-width" style="grid-column: 1 / -1; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1.8px solid #38bdf8; border-radius: 10px; padding: 12px 16px; margin: 4px 0;">
-        <label class="form-label-title" for="formStudentEmail" style="font-size: 0.92rem; font-weight: 800; color: #0369a1; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
-          <span style="display: inline-flex; align-items: center; gap: 6px;">
-            <span>📧</span>
-            <span>மின்னஞ்சல் முகவரி (Email Address)</span>
-            <span style="color: #dc2626; font-size: 1.1rem; font-weight: 900;">*</span>
-          </span>
-          <span style="font-size: 0.76rem; font-weight: 700; color: #0284c7; background: #ffffff; border: 1px solid #7dd3fc; padding: 2px 8px; border-radius: 999px;">
-            ✨ உடனடி ஒப்புகை மடல் &amp; குறிப்பு எண் பெற
-          </span>
-        </label>
-        <input class="form-text-box" id="formStudentEmail" placeholder="மாணவரின் அதிகாரப்பூர்வ மின்னஞ்சல் (எ.கா. student@gmail.com)" required="" type="email" autocomplete="email" style="width: 100%; padding: 10px 14px; font-size: 0.94rem; font-weight: 600; border: 1.8px solid #0284c7; border-radius: 6px; background: #ffffff; outline: none; box-sizing: border-box;"/>
-      </div>
-
-      <!-- Detailed Query -->
-      <div class="form-control-item full-width" style="grid-column: 1 / -1;">
-        <label class="form-label-title" style="display: block; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-          வழிகாட்டிக் குழுவிடம் கேட்க விரும்பும் விளக்கம் / சந்தேகம் <span style="color: #dc2626;">*</span>
-        </label>
-        <textarea class="form-textarea-box" id="formStudentQuery" rows="3" placeholder="உங்கள் சந்தேகங்களை விரிவாக எழுதவும்..." required="" style="width: 100%; padding: 10px 14px; font-size: 0.90rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; outline: none; resize: vertical; box-sizing: border-box; line-height: 1.45;"></textarea>
-      </div>
-
+    <!-- 3. Mobile Phone -->
+    <div class="form-group" style="grid-column: span 1;">
+      <label for="fb_phone" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+        <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #dcfce7; color: #16a34a; border-radius: 4px; font-size: 11px;">📱</span>
+        <span>கைபேசி எண்</span>
+        <span style="color: #ef4444;">*</span>
+      </label>
+      <input id="fb_phone" name="phone" pattern="[0-9]{10}" placeholder="10 இலக்க எண்" required style="width: 100%; padding: 9px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; box-sizing: border-box;" title="10 இலக்க கைபேசி எண்" type="tel"/>
     </div>
 
-    <!-- Submit Button -->
-    <div style="margin-top: 14px; display: flex; justify-content: flex-end;">
-      <button class="btn-submit-action" id="masterSubmitBtn" type="submit" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #091330 0%, #1e3a8a 50%, #0284c7 100%); color: #fef08a; font-weight: 800; font-size: 0.98rem; padding: 12px 24px; border: 1.5px solid #d4af37; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35); transition: all 0.2s ease;">
-        <span>✉️ கேள்வியைச் சமர்ப்பிக்க (Submit to CG Enquiry Desk)</span>
-        <span>→</span>
+    <!-- 4. Email (AI response destination) -->
+    <div class="form-group" style="grid-column: span 1;">
+      <label for="fb_email" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+        <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #f3e8ff; color: #9333ea; border-radius: 4px; font-size: 11px;">✉️</span>
+        <span>மின்னஞ்சல் (AI பதில் வரும்)</span>
+        <span style="color: #ef4444;">*</span>
+      </label>
+      <input id="fb_email" name="email" placeholder="example@gmail.com" required style="width: 100%; padding: 9px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; box-sizing: border-box;" type="email" autocomplete="email"/>
+    </div>
+
+    <!-- 5. Target Stream / Subject -->
+    <div class="form-group" style="grid-column: span 1;">
+      <label for="fb_stream" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+        <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #fce7f3; color: #be185d; border-radius: 4px; font-size: 11px;">🎯</span>
+        <span>விருப்பப் படிப்பு / துறை</span>
+      </label>
+      <select id="fb_stream" name="stream" style="width: 100%; padding: 9px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; box-sizing: border-box; cursor: pointer;">
+        <option value="பொதுவான வழிகாட்டல்">பொதுவான உயர்கல்வி வழிகாட்டல்</option>
+        <option value="மருத்துவம் & துணை மருத்துவம்">மருத்துவம் &amp; துணை மருத்துவம் (MBBS/BDS/Nursing)</option>
+        <option value="பொறியியல் & தொழில்நுட்பம்">பொறியியல் &amp; தொழில்நுட்பம் (TNEA / JEE / IIT)</option>
+        <option value="வேளாண்மை & கால்நடை">வேளாண்மை &amp; கால்நடை (TNAU / TANUVAS)</option>
+        <option value="அறிவியல் & ஆராய்ச்சி">அறிவியல் &amp; ஆராய்ச்சி (IISER / NISER / IISc)</option>
+        <option value="மத்தியப் பல்கலைக்கழகங்கள்">மத்தியப் பல்கலைக்கழகங்கள் (CUET-UG)</option>
+        <option value="சட்டக் கல்வி">சட்டக் கல்வி (CLAT / அம்பேத்கர் சட்ட பல்கை)</option>
+        <option value="கலை & அறிவியல் / வணிகவியல்">கலை &amp; அறிவியல் / வணிகவியல் (Arts &amp; Commerce)</option>
+        <option value="மேலாண்மை & கணினி">மேலாண்மை &amp; கணினி (IPMAT / BCA / IT)</option>
+        <option value="பாதுகாப்பு & விமானத்துறை">பாதுகாப்புப் படைகள் (NDA) &amp; பைலட் (CPL)</option>
+        <option value="பாலிடெக்னிக் & ஐடிஐ">பாலிடெக்னிக் &amp; ஐடிஐ (Polytechnic &amp; ITI)</option>
+      </select>
+    </div>
+
+    <!-- 6. Student Question -->
+    <div class="form-group" style="grid-column: span 2;">
+      <label for="fb_message" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+        <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #ffe4e6; color: #e11d48; border-radius: 4px; font-size: 11px;">❓</span>
+        <span>தங்களின் சந்தேகம் / வினாவை விரிவாக உள்ளிடவும்:</span>
+        <span style="color: #ef4444;">*</span>
+      </label>
+      <textarea id="fb_message" name="message" rows="2" placeholder="எ.கா: NEET-க்கு எப்போது விண்ணப்பிக்க வேண்டும்? 7.5% அரசுப் பள்ளி சலுகை என்ன? அல்லது TNEA கட் ஆப் எப்படி கணக்கிட வேண்டும்? தங்களின் கேள்வியை இங்கே தட்டச்சு செய்யவும்..." required style="width: 100%; height: 42px; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; resize: vertical; box-sizing: border-box; line-height: 1.4;"></textarea>
+    </div>
+
+    <!-- 7. Submit Button -->
+    <div class="form-group" style="grid-column: span 1; display: flex; flex-direction: column; justify-content: flex-end;">
+      <button id="fb_submitBtn" style="width: 100%; height: 42px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0c4a6e 100%); color: #ffffff; border: none; font-size: 0.92rem; font-weight: 800; font-family: inherit; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35); transition: all 0.25s ease; box-sizing: border-box;" type="submit">
+        <span>வினாவை சமர்ப்பிக்க</span>
+        <svg style="width: 16px; height: 16px; fill: none; stroke: currentColor;" viewBox="0 0 24 24">
+          <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </button>
     </div>
   </form>
-
-  <!-- Instant Confirmation Card -->
-  <div class="form-feedback-card" id="masterSuccessBox" style="display: none; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2px solid #10b981; border-radius: 12px; padding: 20px; margin-top: 18px; box-shadow: 0 8px 24px rgba(16, 185, 129, 0.18);">
-    <h4 style="color: #065f46; font-size: 1.15rem; margin: 0 0 10px 0; display: flex; align-items: center; gap: 8px; font-weight: 900;">
-      <span>✅</span> தங்களின் சந்தேகம் வெற்றிகரமாகப் பதிவு செய்யப்பட்டது!
-    </h4>
-    <p style="font-size: 0.95rem; margin: 0 0 12px 0; color: #1e293b;">
-      தங்களின் கண்காணிப்பு குறிப்பு எண் (Reference ID): <b id="generatedTicketId" style="color: #0284c7; font-size: 1.12rem; background: #ffffff; padding: 3px 10px; border-radius: 6px; border: 1.5px solid #38bdf8; letter-spacing: 0.8px;">TN-CG-2026-XXXX</b>
-    </p>
-
-    <!-- Email Confirmation Callout -->
-    <div style="background: #ffffff; border: 1.5px solid #0284c7; border-radius: 10px; padding: 12px 16px; margin: 12px 0; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.1);">
-      <div style="font-size: 1.8rem; line-height: 1;">📧</div>
-      <div>
-        <div style="font-size: 0.80rem; font-weight: 800; color: #0369a1; text-transform: uppercase;">ஒப்புகை மடல் அனுப்பப்பட்ட மின்னஞ்சல் முகவரி (Acknowledgement Sent to)</div>
-        <div id="ackEmailDisplay" style="font-size: 1rem; font-weight: 900; color: #0f172a; word-break: break-all; margin-top: 2px;">student@gmail.com</div>
-        <div style="font-size: 0.76rem; color: #059669; font-weight: 700; margin-top: 2px;">✓ தங்களின் மின்னஞ்சல் இன்பாக்ஸ் (Inbox / Spam) கோப்புறையைச் சரிபார்க்கவும்.</div>
-      </div>
-    </div>
-
-    <!-- Details Summary -->
-    <div id="ackDetailsSummary" style="background: rgba(255,255,255,0.9); border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px 16px; margin: 12px 0;"></div>
-
-    <p style="font-size: 0.88rem; color: #334155; line-height: 1.6; margin: 10px 0 0 0;">
-      மாவட்ட உயர்கல்வி வழிகாட்டல் குழுவின் ஆசிரியர் வல்லுநர்கள் தங்கள் சந்தேகத்தை ஆய்வு செய்து, பதிவு செய்யப்பட்ட தொலைபேசி எண் / மின்னஞ்சல் வழியாக விரைவில் உரிய ஆலோசனைகளை வழங்குவர். அவசர வழிகாட்டுதலுக்கு <b>14417</b> என்ற பள்ளிக் கல்வி கட்டணமில்லா உதவி எண்ணை அழைக்கலாம்.
-    </p>
-  </div>
-
 </div>
 
+<!-- Success Message Card (Shown after successful submission) -->
+<div id="enquiry-success-box" style="display: none; background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #e0f2fe 100%); border: 2px solid #86efac; border-radius: 12px; padding: 24px; text-align: center; box-shadow: 0 4px 18px rgba(16, 185, 129, 0.12);">
+  <div style="font-size: 3rem; margin-bottom: 8px;">🎉</div>
+  <h3 style="color: #15803d; font-size: 1.30rem; font-weight: 800; margin: 0 0 10px 0;">
+    தங்களது கேள்வி வெற்றிகரமாக பதிவு செய்யப்பட்டது!
+  </h3>
+  <p id="enquiry-success-details" style="font-size: 0.95rem; color: #1e293b; line-height: 1.65; max-width: 750px; margin: 0 auto 16px auto;">
+    அன்பார்ந்த மாணவர், தங்களின் வினா பெறப்பட்டு கூகுள் தாளில் பதிவு செய்யப்பட்டுள்ளது.<br/>
+    உங்களுக்கான விரிவான உயர்கல்வி வழிகாட்டல் பதில் <strong>செயற்கை நுண்ணறிவு (AI) மூலம் தயாரிக்கப்பட்டு தங்களின் மின்னஞ்சலுக்கு அனுப்பப்பட்டுள்ளது!</strong>
+  </p>
+  <div style="display: inline-flex; align-items: center; gap: 8px; background: #ffffff; border: 1.5px solid #cbd5e1; padding: 6px 16px; border-radius: 999px; font-size: 0.88rem; font-weight: 700; color: #0369a1; margin-bottom: 16px;">
+    <span>மனு எண் (Reference ID):</span>
+    <span id="enquiry-ref-id" style="color: #b91c1c; font-weight: 800;">CG-2026-XXXX</span>
+  </div>
+  <div style="background: #ffffff; border-left: 4px solid #f59e0b; padding: 12px 18px; border-radius: 8px; max-width: 650px; margin: 0 auto 18px auto; text-align: left; font-size: 0.88rem; color: #78350f; line-height: 1.5;">
+    <strong>📌 முக்கியக் குறிப்பு:</strong> தயவுசெய்து தங்களது மின்னஞ்சல் இன்பாக்ஸைச் (Inbox அல்லது Spam போல்டரை) சரிபார்க்கவும். AI வழங்கிய பதிலில் கூடுதல் விளக்கம் அல்லது நேரடி உதவி தேவைப்படின், மின்னஞ்சலின் கீழே உள்ள <strong>'வழிகாட்டுதல் குழுவின் உதவி தேவை'</strong> பொத்தானை அழுத்தவும்; மாவட்டக் குழுவினர் தங்களைத் தொடர்பு கொள்வர்.
+  </div>
+  <button type="button" onclick="resetEnquiryForm()" style="display: inline-flex; align-items: center; gap: 6px; background: #0284c7; color: #ffffff; border: none; padding: 10px 22px; font-size: 0.90rem; font-weight: 700; font-family: inherit; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);">
+    <span>➕ அடுத்த சந்தேகம் கேட்க (Ask Another Question)</span>
+  </button>
+</div>
+
+<!-- Status Message for Errors -->
+<div id="fb_status" style="margin-top: 12px; text-align: center; padding: 10px 16px; border-radius: 8px; font-size: 0.92rem; font-weight: 800; display: none;"></div>
 </section>
+
 
 
 <div class="creator-card">
@@ -7818,6 +7698,142 @@ function toggleFitScreen() {
     tbl.style.minWidth = '1080px';
     if (btn) btn.innerText = '📜 முழு அகலம் (Scroll)';
   }
-}</script>
+}
+
+// ========================================================
+// UNIFIED ENQUIRY & SPREADSHEET SUBMISSION CONTROLLER
+// ========================================================
+const PRIMARY_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw6JT5M-sr-6vz96-dKK00Xema0v3--HXkHJp0jX-Tvx_LeWvIuV6VPCOn-U76HjbAcxg/exec";
+const BACKUP_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx87BcBrzGcVBqpWkKvyK4VBFwKqd8a1U-GuTQ9ouG-Ygn2A6SXsW97lSZxYb8PL_HUOA/exec";
+
+async function handleEnquiryFormSubmit(e) {
+  if (e) e.preventDefault();
+  
+  const form = document.getElementById("guidanceFeedbackForm");
+  if (!form) return;
+
+  const name = (document.getElementById("fb_name")?.value || "").trim();
+  const place = (document.getElementById("fb_place")?.value || "").trim();
+  const phone = (document.getElementById("fb_phone")?.value || "").trim();
+  const email = (document.getElementById("fb_email")?.value || "").trim();
+  const stream = (document.getElementById("fb_stream")?.value || "பொதுவான வழிகாட்டல்").trim();
+  const message = (document.getElementById("fb_message")?.value || "").trim();
+  const page = (form.querySelector('input[name="page"]')?.value || "career_guidance_portal").trim();
+
+  if (!name || !email || !message) {
+    alert("தயவுசெய்து பெயர், மின்னஞ்சல் மற்றும் தங்களின் கேள்வியை நிரப்பவும் (* உள்ளவை கட்டாயம்).");
+    return;
+  }
+  if (!email.includes('@') || !email.includes('.')) {
+    alert("தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்.");
+    document.getElementById("fb_email")?.focus();
+    return;
+  }
+
+  const btn = document.getElementById("fb_submitBtn");
+  const originalBtnHtml = btn ? btn.innerHTML : "வினாவை சமர்ப்பிக்க";
+  if (btn) {
+    btn.disabled = true;
+    btn.innerHTML = '<span>⏳ சமர்ப்பிக்கப்படுகிறது...</span> <span style="display:inline-block; width:12px; height:12px; border:2px solid #ffffff; border-top-color:transparent; border-radius:50%; animation:spin 0.8s linear infinite;"></span>';
+  }
+
+  const ticketId = "TN-CG-2026-" + Math.floor(1000 + Math.random() * 9000);
+
+  const payload = {
+    ticketId: ticketId,
+    name: name,
+    studentName: name,
+    email: email,
+    studentEmail: email,
+    phone: phone,
+    studentPhone: phone,
+    place: place,
+    district: "சிவகங்கை",
+    studentClass: "12-ஆம் வகுப்பு (HSC)",
+    schoolType: place || "அரசுப் பள்ளி",
+    stream: stream,
+    category: stream,
+    message: message,
+    query: message,
+    question: message,
+    page: page,
+    timestamp: new Date().toISOString()
+  };
+
+  // 1. Send to Primary Apps Script endpoint using mode: no-cors
+  try {
+    await fetch(PRIMARY_APPS_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload)
+    });
+  } catch (err1) {
+    console.warn("Primary fetch notice:", err1);
+  }
+
+  // 2. Send to Backup endpoint using mode: no-cors
+  try {
+    await fetch(BACKUP_APPS_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload)
+    });
+  } catch (err2) {
+    console.warn("Backup fetch notice:", err2);
+  }
+
+  // 3. Show Success Screen & Fire Fireworks Canvas
+  showEnquirySuccess(name, email, ticketId, place, stream, message);
+
+  if (btn) {
+    btn.disabled = false;
+    btn.innerHTML = originalBtnHtml;
+  }
+}
+
+function showEnquirySuccess(name, email, refId, place, stream, message) {
+  const formWrap = document.getElementById("enquiry-form-container");
+  const successBox = document.getElementById("enquiry-success-box");
+  const detailsEl = document.getElementById("ackDetailsSummary");
+  const ackEmailEl = document.getElementById("ackEmailDisplay");
+  const ticketIdEl = document.getElementById("generatedTicketId");
+
+  if (ticketIdEl) ticketIdEl.innerText = refId;
+  if (ackEmailEl) ackEmailEl.innerText = email;
+
+  if (detailsEl) {
+    detailsEl.innerHTML = `
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 0.85rem; line-height: 1.6; color: #334155;">
+        <div><strong>👤 மாணவர் பெயர்:</strong> ${name}</div>
+        <div><strong>🏫 பள்ளி / ஊர்:</strong> ${place || '-'}</div>
+        <div><strong>📧 மின்னஞ்சல்:</strong> ${email}</div>
+        <div><strong>📚 விருப்பப் பிரிவு:</strong> ${stream || 'பொது வழிகாட்டல்'}</div>
+        <div style="margin-top: 4px; border-top: 1px dashed #cbd5e1; padding-top: 4px;"><strong>❓ தங்களின் கேள்வி:</strong> <em>"${message || '-'}"</em></div>
+      </div>
+    `;
+  }
+
+  if (formWrap) formWrap.style.display = "none";
+  if (successBox) successBox.style.display = "block";
+
+  // Trigger celebration fireworks if canvas exists
+  if (typeof startCrackersAnimation === "function") {
+    startCrackersAnimation();
+  }
+}
+
+function resetEnquiryForm() {
+  const form = document.getElementById("guidanceFeedbackForm");
+  const formWrap = document.getElementById("enquiry-form-container");
+  const successBox = document.getElementById("enquiry-success-box");
+
+  if (form) form.reset();
+  if (successBox) successBox.style.display = "none";
+  if (formWrap) formWrap.style.display = "block";
+}
+
+</script>
 </body>
 </html>

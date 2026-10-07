@@ -10791,5 +10791,141 @@ function closeSportsFormModal() {
     modal.style.display = 'none';
   }
 }
+
+
+// ========================================================
+// UNIFIED ENQUIRY & SPREADSHEET SUBMISSION CONTROLLER
+// ========================================================
+const PRIMARY_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw6JT5M-sr-6vz96-dKK00Xema0v3--HXkHJp0jX-Tvx_LeWvIuV6VPCOn-U76HjbAcxg/exec";
+const BACKUP_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx87BcBrzGcVBqpWkKvyK4VBFwKqd8a1U-GuTQ9ouG-Ygn2A6SXsW97lSZxYb8PL_HUOA/exec";
+
+async function handleEnquiryFormSubmit(e) {
+  if (e) e.preventDefault();
+  
+  const form = document.getElementById("guidanceFeedbackForm");
+  if (!form) return;
+
+  const name = (document.getElementById("fb_name")?.value || "").trim();
+  const place = (document.getElementById("fb_place")?.value || "").trim();
+  const phone = (document.getElementById("fb_phone")?.value || "").trim();
+  const email = (document.getElementById("fb_email")?.value || "").trim();
+  const stream = (document.getElementById("fb_stream")?.value || "பொதுவான வழிகாட்டல்").trim();
+  const message = (document.getElementById("fb_message")?.value || "").trim();
+  const page = (form.querySelector('input[name="page"]')?.value || "career_guidance_portal").trim();
+
+  if (!name || !email || !message) {
+    alert("தயவுசெய்து பெயர், மின்னஞ்சல் மற்றும் தங்களின் கேள்வியை நிரப்பவும் (* உள்ளவை கட்டாயம்).");
+    return;
+  }
+  if (!email.includes('@') || !email.includes('.')) {
+    alert("தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்.");
+    document.getElementById("fb_email")?.focus();
+    return;
+  }
+
+  const btn = document.getElementById("fb_submitBtn");
+  const originalBtnHtml = btn ? btn.innerHTML : "வினாவை சமர்ப்பிக்க";
+  if (btn) {
+    btn.disabled = true;
+    btn.innerHTML = '<span>⏳ சமர்ப்பிக்கப்படுகிறது...</span> <span style="display:inline-block; width:12px; height:12px; border:2px solid #ffffff; border-top-color:transparent; border-radius:50%; animation:spin 0.8s linear infinite;"></span>';
+  }
+
+  const ticketId = "TN-CG-2026-" + Math.floor(1000 + Math.random() * 9000);
+
+  const payload = {
+    ticketId: ticketId,
+    name: name,
+    studentName: name,
+    email: email,
+    studentEmail: email,
+    phone: phone,
+    studentPhone: phone,
+    place: place,
+    district: "சிவகங்கை",
+    studentClass: "12-ஆம் வகுப்பு (HSC)",
+    schoolType: place || "அரசுப் பள்ளி",
+    stream: stream,
+    category: stream,
+    message: message,
+    query: message,
+    question: message,
+    page: page,
+    timestamp: new Date().toISOString()
+  };
+
+  // 1. Send to Primary Apps Script endpoint using mode: no-cors
+  try {
+    await fetch(PRIMARY_APPS_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload)
+    });
+  } catch (err1) {
+    console.warn("Primary fetch notice:", err1);
+  }
+
+  // 2. Send to Backup endpoint using mode: no-cors
+  try {
+    await fetch(BACKUP_APPS_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload)
+    });
+  } catch (err2) {
+    console.warn("Backup fetch notice:", err2);
+  }
+
+  // 3. Show Success Screen & Fire Fireworks Canvas
+  showEnquirySuccess(name, email, ticketId, place, stream, message);
+
+  if (btn) {
+    btn.disabled = false;
+    btn.innerHTML = originalBtnHtml;
+  }
+}
+
+function showEnquirySuccess(name, email, refId, place, stream, message) {
+  const formWrap = document.getElementById("enquiry-form-container");
+  const successBox = document.getElementById("enquiry-success-box");
+  const detailsEl = document.getElementById("ackDetailsSummary");
+  const ackEmailEl = document.getElementById("ackEmailDisplay");
+  const ticketIdEl = document.getElementById("generatedTicketId");
+
+  if (ticketIdEl) ticketIdEl.innerText = refId;
+  if (ackEmailEl) ackEmailEl.innerText = email;
+
+  if (detailsEl) {
+    detailsEl.innerHTML = `
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 0.85rem; line-height: 1.6; color: #334155;">
+        <div><strong>👤 மாணவர் பெயர்:</strong> ${name}</div>
+        <div><strong>🏫 பள்ளி / ஊர்:</strong> ${place || '-'}</div>
+        <div><strong>📧 மின்னஞ்சல்:</strong> ${email}</div>
+        <div><strong>📚 விருப்பப் பிரிவு:</strong> ${stream || 'பொது வழிகாட்டல்'}</div>
+        <div style="margin-top: 4px; border-top: 1px dashed #cbd5e1; padding-top: 4px;"><strong>❓ தங்களின் கேள்வி:</strong> <em>"${message || '-'}"</em></div>
+      </div>
+    `;
+  }
+
+  if (formWrap) formWrap.style.display = "none";
+  if (successBox) successBox.style.display = "block";
+
+  // Trigger celebration fireworks if canvas exists
+  if (typeof startCrackersAnimation === "function") {
+    startCrackersAnimation();
+  }
+}
+
+function resetEnquiryForm() {
+  const form = document.getElementById("guidanceFeedbackForm");
+  const formWrap = document.getElementById("enquiry-form-container");
+  const successBox = document.getElementById("enquiry-success-box");
+
+  if (form) form.reset();
+  if (successBox) successBox.style.display = "none";
+  if (formWrap) formWrap.style.display = "block";
+}
+
 </script></body>
 </html>
