@@ -1509,6 +1509,27 @@
         font-size: 0.95rem !important;
       }
     }
+
+@media (min-width: 901px) {
+  .portal-top-frame {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+  }
+  .top-frame-center-stack {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  .top-frame-side-btn.btn-home,
+  .top-frame-btn.btn-home {
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1540,7 +1561,7 @@
 </span>
 </a>
 <!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
-<a class="sidebar-main-btn" href="00_entrance_exams.html">
+<a class="sidebar-main-btn" href="01_00_entrance_main.html">
 <span class="icon">🎯</span>
 <span class="btn-text-group">
 <span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
@@ -1556,7 +1577,7 @@
 </span>
 </a>
 <!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
-<a class="sidebar-main-btn" href="institutes_directory.html">
+<a class="sidebar-main-btn" href="03_institutes.html">
 <span class="icon">🏛️</span>
 <span class="btn-text-group">
 <span class="menu-ta">கல்லூரிகள் அடைவு</span>
@@ -1572,7 +1593,7 @@
 </span>
 </a>
 <!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
-<a class="sidebar-main-btn" href="direct_careers.html">
+<a class="sidebar-main-btn" href="05_direct_careers.html">
 <span class="icon">💼</span>
 <span class="btn-text-group">
 <span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
@@ -1580,7 +1601,7 @@
 </span>
 </a>
 <!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
-<a class="sidebar-main-btn" href="helpdesk_portal.html">
+<a class="sidebar-main-btn" href="06_student_support.html">
 <span class="icon">☎️</span>
 <span class="btn-text-group">
 <span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
@@ -1607,10 +1628,6 @@
 </div>
 <div class="top-frame-actions">
 <!-- Official ceosvg.in Main District Portal Link -->
-<a class="top-frame-btn btn-ceosvg" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
-<span class="btn-icon">🌐</span>
-<span>ceosvg.in முதன்மை தளம்</span>
-</a>
 <!-- Career Guidance Home Link -->
 <a class="top-frame-btn btn-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
 <span class="btn-icon">🎓</span>
@@ -1628,304 +1645,10 @@
 </header>
 <!-- 12 ENTRANCE EXAM CARDS GRID (EXACT ARCHITECTURE OF IMAGE 2) -->
 <div class="cards-grid">
-<!-- 01. MEDICAL (NEET UG) -->
-<div class="course-card border-med">
-<div>
-<div class="card-badge badge-med">01 / MEDICAL</div>
-<div class="card-header">
-<div class="card-icon-box icon-med">🩺</div>
-<div class="card-title-group">
-<h2 class="card-title">மருத்துவம் &amp; துணை மருத்துவம்</h2>
-<div class="card-subtitle">Medicine &amp; Allied Health Sciences (NEET UG)</div>
-</div>
-</div>
-<p class="card-desc">
-              அகில இந்திய மற்றும் மாநில அரசு மருத்துவக் கல்லூரிகள், AIIMS, JIPMER மற்றும் அரசு மருத்துவக் கல்வி நிறுவனங்களுக்கான தேசிய தகுதி மற்றும் நுழைவுத்தேர்வு.
-            </p>
-<div class="card-tags">
-<span class="card-tag tag-med">NEET UG</span>
-<span class="card-tag tag-med">MBBS / BDS</span>
-<span class="card-tag tag-med">AYUSH</span>
-<span class="card-tag tag-med">AIIMS / JIPMER</span>
-<span class="card-tag tag-med">7.5% அரசுப் பள்ளி</span>
-</div>
-</div>
-<a class="btn-details btn-med" href="01_medical_neet_ug.html">
-<span>விவரங்கள் காண்க</span>
-<span>›</span>
-</a>
-</div>
-<!-- 02. ENGINEERING (JEE MAIN / ADV) -->
-<div class="course-card border-eng">
-<div>
-<div class="card-badge badge-eng">02 / ENGINEERING</div>
-<div class="card-header">
-<div class="card-icon-box icon-eng">⚙️</div>
-<div class="card-title-group">
-<h2 class="card-title">பொறியியல் &amp; தொழில்நுட்பம்</h2>
-<div class="card-subtitle">Engineering &amp; Technology (JEE Main / Adv)</div>
-</div>
-</div>
-<p class="card-desc">
-              ஐ.ஐ.டி (IITs), என்.ஐ.டி (NITs), ஐ.ஐ.ஐ.டி (IIITs) மற்றும் மத்திய அரசு நிதியுதவி பெறும் தலைசிறந்த தொழில்நுட்பக் கல்வி நிறுவனங்கள் சேர்க்கை.
-            </p>
-<div class="card-tags">
-<span class="card-tag tag-eng">JEE Main</span>
-<span class="card-tag tag-eng">JEE Advanced</span>
-<span class="card-tag tag-eng">IIT / NIT / IIIT</span>
-<span class="card-tag tag-eng">B.E / B.Tech</span>
-<span class="card-tag tag-eng">JoSAA கலந்தாய்வு</span>
-</div>
-</div>
-<a class="btn-details btn-eng" href="02_engineering_jee.html">
-<span>விவரங்கள் காண்க</span>
-<span>›</span>
-</a>
-</div>
-<!-- 03. SCIENCE & RESEARCH (IISER / NISER) -->
-<div class="course-card border-sci">
-<div>
-<div class="card-badge badge-sci">03 / SCIENCE &amp; RESEARCH</div>
-<div class="card-header">
-<div class="card-icon-box icon-sci">🔬</div>
-<div class="card-title-group">
-<h2 class="card-title">அறிவியல் &amp; ஆராய்ச்சி</h2>
-<div class="card-subtitle">Pure Sciences &amp; Research (IISER, NISER, IISc)</div>
-</div>
-</div>
-<p class="card-desc">
-              அறிவியல் ஆய்வாளர்கள் மற்றும் விஞ்ஞானிகளை உருவாக்கும் 7 ஐசர் (IISER) நிறுவனங்கள், நைசர் (NISER), ஐ.ஐ.எஸ்சி (IISc) மற்றும் ஐ.ஐ.டி மெட்ராஸ் BS படிப்புகள்.
-            </p>
-<div class="card-tags">
-<span class="card-tag tag-sci">IAT தேர்வு</span>
-<span class="card-tag tag-sci">NEST தேர்வு</span>
-<span class="card-tag tag-sci">IISc பெங்களூரு</span>
-<span class="card-tag tag-sci">IISER 7 நிறுவனங்கள்</span>
-<span class="card-tag tag-sci">B.S. Engineering</span>
-</div>
-</div>
-<a class="btn-details btn-sci" href="03_science_research_iiser.html">
-<span>விவரங்கள் காண்க</span>
-<span>›</span>
-</a>
-</div>
-<!-- 04. CENTRAL UNIVERSITIES (CUET UG) -->
-<div class="course-card border-central">
-<div>
-<div class="card-badge badge-central">04 / CENTRAL UNIVERSITIES</div>
-<div class="card-header">
-<div class="card-icon-box icon-central">🏛️</div>
-<div class="card-title-group">
-<h2 class="card-title">மத்தியப் பல்கலைக்கழகங்கள்</h2>
-<div class="card-subtitle">Central Universities &amp; Premier Colleges (CUET UG)</div>
-</div>
-</div>
-<p class="card-desc">
-              டெல்லி பல்கலைக்கழகம் (DU), JNU, BHU, பாண்டிச்சேரி மற்றும் தமிழ்நாடு மத்தியப் பல்கலைக்கழகங்களில் கலை, அறிவியல், வணிகவியல் பட்டப்படிப்புகளுக்கான நுழைவுத்தேர்வு.
-            </p>
-<div class="card-tags">
-<span class="card-tag tag-central">CUET UG</span>
-<span class="card-tag tag-central">டெல்லி பல்கலைக்கழகம்</span>
-<span class="card-tag tag-central">JNU / BHU</span>
-<span class="card-tag tag-central">கலை &amp; அறிவியல்</span>
-<span class="card-tag tag-central">ஒரே நுழைவுத்தேர்வு</span>
-</div>
-</div>
-<a class="btn-details btn-central" href="04_central_universities_cuet.html">
-<span>விவரங்கள் காண்க</span>
-<span>›</span>
-</a>
-</div>
-<!-- 05. LAW (CLAT / NLUs) -->
-<div class="course-card border-law">
-<div>
-<div class="card-badge badge-law">05 / LAW</div>
-<div class="card-header">
-<div class="card-icon-box icon-law">⚖️</div>
-<div class="card-title-group">
-<h2 class="card-title">தேசிய சட்டப் பல்கலைக்கழகங்கள்</h2>
-<div class="card-subtitle">National Law Universities &amp; Legal Studies (CLAT)</div>
-</div>
-</div>
-<p class="card-desc">
-              இந்தியாவின் தலைசிறந்த 26 தேசிய சட்டப் பல்கலைக்கழகங்களில் (NLUs) 5 ஆண்டு ஒருங்கிணைந்த BA LLB, BBA LLB பட்டப்படிப்புகளுக்கான தேசிய நுழைவுத்தேர்வு.
-            </p>
-<div class="card-tags">
-<span class="card-tag tag-law">CLAT 2026</span>
-<span class="card-tag tag-law">26 NLUs</span>
-<span class="card-tag tag-law">5 ஆண்டு BA LLB</span>
-<span class="card-tag tag-law">BBA LLB</span>
-<span class="card-tag tag-law">கார்ப்பரேட் சட்டம்</span>
-</div>
-</div>
-<a class="btn-details btn-law" href="05_law_clat_nlu.html">
-<span>விவரங்கள் காண்க</span>
-<span>›</span>
-</a>
-</div>
-<!-- 06. DESIGN & ARCHITECTURE (NATA, NIFT, UCEED) -->
-<div class="course-card border-design">
-<div>
-<div class="card-badge badge-design">06 / DESIGN &amp; ARCHITECTURE</div>
-<div class="card-header">
-<div class="card-icon-box icon-design">📐</div>
-<div class="card-title-group">
-<h2 class="card-title">வடிவமைப்பு &amp; கட்டிடக்கலை</h2>
-<div class="card-subtitle">Design, Fashion &amp; Architecture (NATA, NIFT)</div>
-</div>
-</div>
-<p class="card-desc">
-              கட்டிடக்கலையில் B.Arch சேர்க்கைக்கான NATA தேர்வு, தேசிய ஆடை வடிவமைப்பு நிறுவனங்கள் (NIFT), ஐ.ஐ.டி வடிவமைப்பு (UCEED) மற்றும் NID கல்வி நிறுவனங்கள்.
-            </p>
-<div class="card-tags">
-<span class="card-tag tag-design">NATA (B.Arch)</span>
-<span class="card-tag tag-design">NIFT (ஃபேஷன்)</span>
-<span class="card-tag tag-design">UCEED (IIT Design)</span>
-<span class="card-tag tag-design">NID அகமதாபாத்</span>
-</div>
-</div>
-<a class="btn-details btn-design" href="06_design_architecture_nata_nift.html">
-<span>விவரங்கள் காண்க</span>
-<span>›</span>
-</a>
-</div>
-<!-- 07. INTEGRATED MANAGEMENT (IIM IPMAT) -->
-<div class="course-card border-mgmt">
-<div>
-<div class="card-badge badge-mgmt">07 / MANAGEMENT</div>
-<div class="card-header">
-<div class="card-icon-box icon-mgmt">📊</div>
-<div class="card-title-group">
-<h2 class="card-title">ஒருங்கிணைந்த மேலாண்மை (IIM)</h2>
-<div class="card-subtitle">Integrated Management (IPMAT / JIPMAT)</div>
-</div>
-</div>
-<p class="card-desc">
-              12-ஆம் வகுப்பிற்குப் பின் நேரடியாக ஐ.ஐ.எம் (IIM Indore, Rohtak, Ranchi, Bodh Gaya, Jammu) கல்வி நிறுவனங்களில் 5 ஆண்டு BBA+MBA பட்டப்படிப்பு.
-            </p>
-<div class="card-tags">
-<span class="card-tag tag-mgmt">IIM இந்தூர்</span>
-<span class="card-tag tag-mgmt">IIM ரோஹ்தக்</span>
-<span class="card-tag tag-mgmt">5 ஆண்டு BBA+MBA</span>
-<span class="card-tag tag-mgmt">JIPMAT</span>
-<span class="card-tag tag-mgmt">கார்ப்பரேட் தலைமை</span>
-</div>
-</div>
-<a class="btn-details btn-mgmt" href="07_management_iim_ipm.html">
-<span>விவரங்கள் காண்க</span>
-<span>›</span>
-</a>
-</div>
-<!-- 08. HOTEL MANAGEMENT (NCHMCT JEE) -->
-<div class="course-card border-hotel">
-<div>
-<div class="card-badge badge-hotel">08 / HOSPITALITY</div>
-<div class="card-header">
-<div class="card-icon-box icon-hotel">🏨</div>
-<div class="card-title-group">
-<h2 class="card-title">உணவக மேலாண்மை &amp; விருந்தோம்பல்</h2>
-<div class="card-subtitle">Hotel Management &amp; Catering (NCHMCT JEE)</div>
-</div>
-</div>
-<p class="card-desc">
-              மத்திய மற்றும் மாநில அரசு உணவு மேலாண்மைக் கல்லூரிகளில் (IHMs) 3 ஆண்டு B.Sc விருந்தோம்பல் மற்றும் உணவக நிர்வாகப் பட்டப்படிப்புக்கான தேசிய நுழைவுத்தேர்வு.
-            </p>
-<div class="card-tags">
-<span class="card-tag tag-hotel">NCHMCT JEE</span>
-<span class="card-tag tag-hotel">மத்திய IHMs</span>
-<span class="card-tag tag-hotel">B.Sc HHA</span>
-<span class="card-tag tag-hotel">சர்வதேச வாய்ப்புகள்</span>
-</div>
-</div>
-<a class="btn-details btn-hotel" href="08_hotel_management_nchmct.html">
-<span>விவரங்கள் காண்க</span>
-<span>›</span>
-</a>
-</div>
-<!-- 09. MARITIME & MERCHANT NAVY (IMU-CET) -->
-<div class="course-card border-marine">
-<div>
-<div class="card-badge badge-marine">09 / MARITIME</div>
-<div class="card-header">
-<div class="card-icon-box icon-marine">⚓</div>
-<div class="card-title-group">
-<h2 class="card-title">கடல்சார் கல்வி &amp; வணிகக் கப்பல் துறை</h2>
-<div class="card-subtitle">Merchant Navy &amp; Marine Engineering (IMU-CET)</div>
-</div>
-</div>
-<p class="card-desc">
-              இந்திய கடல்சார் பல்கலைக்கழகம் (IMU) மற்றும் முன்னணி கப்பல் கல்லூரிகளில் B.Sc Nautical Science, B.E Marine Engineering மற்றும் கப்பல் துறைப் பணிகள்.
-            </p>
-<div class="card-tags">
-<span class="card-tag tag-marine">IMU-CET</span>
-<span class="card-tag tag-marine">B.Sc Nautical Science</span>
-<span class="card-tag tag-marine">B.E Marine</span>
-<span class="card-tag tag-marine">வணிகக் கப்பல் துறை</span>
-<span class="card-tag tag-marine">உயர் ஊதியம்</span>
-</div>
-</div>
-<a class="btn-details btn-marine" href="09_maritime_merchant_navy.html">
-<span>விவரங்கள் காண்க</span>
-<span>›</span>
-</a>
-</div>
-<!-- 10. ARMED FORCES (UPSC NDA) -->
-<div class="course-card border-defence">
-<div>
-<div class="card-badge badge-defence">10 / ARMED FORCES</div>
-<div class="card-header">
-<div class="card-icon-box icon-defence">🎖️</div>
-<div class="card-title-group">
-<h2 class="card-title">இந்திய பாதுகாப்புப் படைகள் (முப்படைகள்)</h2>
-<div class="card-subtitle">Armed Forces (Army, Navy, Air Force) &amp; UPSC NDA</div>
-</div>
-</div>
-<p class="card-desc">
-              இந்திய ராணுவம், கடற்படை மற்றும் விமானப்படையில் முதல் நிலை அதிகாரியாக (Lieutenant) சேர்வதற்கான UPSC நேஷனல் டிஃபென்ஸ் அகாடமி (NDA) தேர்வு.
-            </p>
-<div class="card-tags">
-<span class="card-tag tag-defence">UPSC NDA</span>
-<span class="card-tag tag-defence">ராணுவம் / கடற்படை / விமானப்படை</span>
-<span class="card-tag tag-defence">100% இலவச கல்வி</span>
-<span class="card-tag tag-defence">லெப்டினன்ட் பதவி</span>
-</div>
-</div>
-<a class="btn-details btn-defence" href="10_defence_armed_forces.html">
-<span>விவரங்கள் காண்க</span>
-<span>›</span>
-</a>
-</div>
-<!-- 11. PILOT CAREERS (CPL & IAF) -->
-<div class="course-card border-pilot">
-<div>
-<div class="card-badge badge-pilot">11 / AVIATION</div>
-<div class="card-header">
-<div class="card-icon-box icon-pilot">✈️</div>
-<div class="card-title-group">
-<h2 class="card-title">விமானியாவது எப்படி? (CPL &amp; IAF)</h2>
-<div class="card-subtitle">Commercial Airline (CPL) &amp; IAF Fighter Pilot</div>
-</div>
-</div>
-<p class="card-desc">
-              விமான நிறுவனங்களில் வணிக விமானி (Commercial Pilot Licence - CPL) ஆவதற்கான வழிமுறைகள் மற்றும் இந்திய விமானப்படை போர் விமானி ஆவதற்கான முழு வழிகாட்டி.
-            </p>
-<div class="card-tags">
-<span class="card-tag tag-pilot">DGCA CPL</span>
-<span class="card-tag tag-pilot">IGRUA ரேபரேலி</span>
-<span class="card-tag tag-pilot">விமானப்படை NDA</span>
-<span class="card-tag tag-pilot">பைலட் உரிமம்</span>
-<span class="card-tag tag-pilot">விமானத்துறை</span>
-</div>
-</div>
-<a class="btn-details btn-pilot" href="11_pilot_careers_cpl_and_iaf_fighter.html">
-<span>விவரங்கள் காண்க</span>
-<span>›</span>
-</a>
-</div>
-<!-- 12. ENTRANCE EXAMS SCHEDULE & CALENDAR -->
+<!-- 01. ENTRANCE EXAMS MASTER SCHEDULE & CALENDAR -->
 <div class="course-card border-schedule" style="border-top: 5px solid #0284c7; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 25%);">
 <div>
-<div class="card-badge badge-schedule" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">12 / EXAM SCHEDULE</div>
+<div class="card-badge badge-schedule" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">01 / MASTER SCHEDULE</div>
 <div class="card-header">
 <div class="card-icon-box icon-schedule" style="background: linear-gradient(135deg, #0284c7, #0369a1); color: #ffffff;">📅</div>
 <div class="card-title-group">
@@ -1944,11 +1667,307 @@
 <span class="card-tag tag-schedule" style="background: #ffe4e6; color: #be123c;">அனைத்து தேர்வுகள்</span>
 </div>
 </div>
-<a class="btn-details btn-schedule" href="12_entrance_exams_schedule.html" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff; text-decoration: none; display: flex; align-items: center; justify-content: space-between;">
+<a class="btn-details btn-schedule" href="01_01_master_schedule.html" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff; text-decoration: none; display: flex; align-items: center; justify-content: space-between;">
 <span>அட்டவணை விவரங்கள் காண்க</span>
 <span>›</span>
 </a>
 </div>
+
+<!-- 02. MEDICAL (NEET UG) -->
+<div class="course-card border-med">
+<div>
+<div class="card-badge badge-med">02 / MEDICAL</div>
+<div class="card-header">
+<div class="card-icon-box icon-med">🩺</div>
+<div class="card-title-group">
+<h2 class="card-title">மருத்துவம் &amp; துணை மருத்துவம்</h2>
+<div class="card-subtitle">Medicine &amp; Allied Health Sciences (NEET UG)</div>
+</div>
+</div>
+<p class="card-desc">
+              அகில இந்திய மற்றும் மாநில அரசு மருத்துவக் கல்லூரிகள், AIIMS, JIPMER மற்றும் அரசு மருத்துவக் கல்வி நிறுவனங்களுக்கான தேசிய தகுதி மற்றும் நுழைவுத்தேர்வு.
+            </p>
+<div class="card-tags">
+<span class="card-tag tag-med">NEET UG</span>
+<span class="card-tag tag-med">MBBS / BDS</span>
+<span class="card-tag tag-med">AYUSH</span>
+<span class="card-tag tag-med">AIIMS / JIPMER</span>
+<span class="card-tag tag-med">7.5% அரசுப் பள்ளி</span>
+</div>
+</div>
+<a class="btn-details btn-med" href="01_02_medical_neet_ug.html">
+<span>விவரங்கள் காண்க</span>
+<span>›</span>
+</a>
+</div>
+<!-- 03. ENGINEERING (JEE MAIN / ADV) -->
+<div class="course-card border-eng">
+<div>
+<div class="card-badge badge-eng">03 / ENGINEERING</div>
+<div class="card-header">
+<div class="card-icon-box icon-eng">⚙️</div>
+<div class="card-title-group">
+<h2 class="card-title">பொறியியல் &amp; தொழில்நுட்பம்</h2>
+<div class="card-subtitle">Engineering &amp; Technology (JEE Main / Adv)</div>
+</div>
+</div>
+<p class="card-desc">
+              ஐ.ஐ.டி (IITs), என்.ஐ.டி (NITs), ஐ.ஐ.ஐ.டி (IIITs) மற்றும் மத்திய அரசு நிதியுதவி பெறும் தலைசிறந்த தொழில்நுட்பக் கல்வி நிறுவனங்கள் சேர்க்கை.
+            </p>
+<div class="card-tags">
+<span class="card-tag tag-eng">JEE Main</span>
+<span class="card-tag tag-eng">JEE Advanced</span>
+<span class="card-tag tag-eng">IIT / NIT / IIIT</span>
+<span class="card-tag tag-eng">B.E / B.Tech</span>
+<span class="card-tag tag-eng">JoSAA கலந்தாய்வு</span>
+</div>
+</div>
+<a class="btn-details btn-eng" href="01_03_engineering_jee.html">
+<span>விவரங்கள் காண்க</span>
+<span>›</span>
+</a>
+</div>
+<!-- 03. SCIENCE & RESEARCH (IISER / NISER) -->
+<div class="course-card border-sci">
+<div>
+<div class="card-badge badge-sci">04 / SCIENCE &amp; RESEARCH</div>
+<div class="card-header">
+<div class="card-icon-box icon-sci">🔬</div>
+<div class="card-title-group">
+<h2 class="card-title">அறிவியல் &amp; ஆராய்ச்சி</h2>
+<div class="card-subtitle">Pure Sciences &amp; Research (IISER, NISER, IISc)</div>
+</div>
+</div>
+<p class="card-desc">
+              அறிவியல் ஆய்வாளர்கள் மற்றும் விஞ்ஞானிகளை உருவாக்கும் 7 ஐசர் (IISER) நிறுவனங்கள், நைசர் (NISER), ஐ.ஐ.எஸ்சி (IISc) மற்றும் ஐ.ஐ.டி மெட்ராஸ் BS படிப்புகள்.
+            </p>
+<div class="card-tags">
+<span class="card-tag tag-sci">IAT தேர்வு</span>
+<span class="card-tag tag-sci">NEST தேர்வு</span>
+<span class="card-tag tag-sci">IISc பெங்களூரு</span>
+<span class="card-tag tag-sci">IISER 7 நிறுவனங்கள்</span>
+<span class="card-tag tag-sci">B.S. Engineering</span>
+</div>
+</div>
+<a class="btn-details btn-sci" href="01_04_science_research_iiser.html">
+<span>விவரங்கள் காண்க</span>
+<span>›</span>
+</a>
+</div>
+<!-- 05. CENTRAL UNIVERSITIES (CUET UG) -->
+<div class="course-card border-central">
+<div>
+<div class="card-badge badge-central">05 / CENTRAL UNIVERSITIES</div>
+<div class="card-header">
+<div class="card-icon-box icon-central">🏛️</div>
+<div class="card-title-group">
+<h2 class="card-title">மத்தியப் பல்கலைக்கழகங்கள்</h2>
+<div class="card-subtitle">Central Universities &amp; Premier Colleges (CUET UG)</div>
+</div>
+</div>
+<p class="card-desc">
+              டெல்லி பல்கலைக்கழகம் (DU), JNU, BHU, பாண்டிச்சேரி மற்றும் தமிழ்நாடு மத்தியப் பல்கலைக்கழகங்களில் கலை, அறிவியல், வணிகவியல் பட்டப்படிப்புகளுக்கான நுழைவுத்தேர்வு.
+            </p>
+<div class="card-tags">
+<span class="card-tag tag-central">CUET UG</span>
+<span class="card-tag tag-central">டெல்லி பல்கலைக்கழகம்</span>
+<span class="card-tag tag-central">JNU / BHU</span>
+<span class="card-tag tag-central">கலை &amp; அறிவியல்</span>
+<span class="card-tag tag-central">ஒரே நுழைவுத்தேர்வு</span>
+</div>
+</div>
+<a class="btn-details btn-central" href="01_05_central_universities_cuet.html">
+<span>விவரங்கள் காண்க</span>
+<span>›</span>
+</a>
+</div>
+<!-- 06. LAW (CLAT / NLUs) -->
+<div class="course-card border-law">
+<div>
+<div class="card-badge badge-law">06 / LAW</div>
+<div class="card-header">
+<div class="card-icon-box icon-law">⚖️</div>
+<div class="card-title-group">
+<h2 class="card-title">தேசிய சட்டப் பல்கலைக்கழகங்கள்</h2>
+<div class="card-subtitle">National Law Universities &amp; Legal Studies (CLAT)</div>
+</div>
+</div>
+<p class="card-desc">
+              இந்தியாவின் தலைசிறந்த 26 தேசிய சட்டப் பல்கலைக்கழகங்களில் (NLUs) 5 ஆண்டு ஒருங்கிணைந்த BA LLB, BBA LLB பட்டப்படிப்புகளுக்கான தேசிய நுழைவுத்தேர்வு.
+            </p>
+<div class="card-tags">
+<span class="card-tag tag-law">CLAT 2026</span>
+<span class="card-tag tag-law">26 NLUs</span>
+<span class="card-tag tag-law">5 ஆண்டு BA LLB</span>
+<span class="card-tag tag-law">BBA LLB</span>
+<span class="card-tag tag-law">கார்ப்பரேட் சட்டம்</span>
+</div>
+</div>
+<a class="btn-details btn-law" href="01_06_law_clat_nlu.html">
+<span>விவரங்கள் காண்க</span>
+<span>›</span>
+</a>
+</div>
+<!-- 07. DESIGN & ARCHITECTURE (NATA, NIFT, UCEED) -->
+<div class="course-card border-design">
+<div>
+<div class="card-badge badge-design">07 / DESIGN &amp; ARCHITECTURE</div>
+<div class="card-header">
+<div class="card-icon-box icon-design">📐</div>
+<div class="card-title-group">
+<h2 class="card-title">வடிவமைப்பு &amp; கட்டிடக்கலை</h2>
+<div class="card-subtitle">Design, Fashion &amp; Architecture (NATA, NIFT)</div>
+</div>
+</div>
+<p class="card-desc">
+              கட்டிடக்கலையில் B.Arch சேர்க்கைக்கான NATA தேர்வு, தேசிய ஆடை வடிவமைப்பு நிறுவனங்கள் (NIFT), ஐ.ஐ.டி வடிவமைப்பு (UCEED) மற்றும் NID கல்வி நிறுவனங்கள்.
+            </p>
+<div class="card-tags">
+<span class="card-tag tag-design">NATA (B.Arch)</span>
+<span class="card-tag tag-design">NIFT (ஃபேஷன்)</span>
+<span class="card-tag tag-design">UCEED (IIT Design)</span>
+<span class="card-tag tag-design">NID அகமதாபாத்</span>
+</div>
+</div>
+<a class="btn-details btn-design" href="01_07_design_architecture_nata_nift.html">
+<span>விவரங்கள் காண்க</span>
+<span>›</span>
+</a>
+</div>
+<!-- 07. INTEGRATED MANAGEMENT (IIM IPMAT) -->
+<div class="course-card border-mgmt">
+<div>
+<div class="card-badge badge-mgmt">08 / MANAGEMENT</div>
+<div class="card-header">
+<div class="card-icon-box icon-mgmt">📊</div>
+<div class="card-title-group">
+<h2 class="card-title">ஒருங்கிணைந்த மேலாண்மை (IIM)</h2>
+<div class="card-subtitle">Integrated Management (IPMAT / JIPMAT)</div>
+</div>
+</div>
+<p class="card-desc">
+              12-ஆம் வகுப்பிற்குப் பின் நேரடியாக ஐ.ஐ.எம் (IIM Indore, Rohtak, Ranchi, Bodh Gaya, Jammu) கல்வி நிறுவனங்களில் 5 ஆண்டு BBA+MBA பட்டப்படிப்பு.
+            </p>
+<div class="card-tags">
+<span class="card-tag tag-mgmt">IIM இந்தூர்</span>
+<span class="card-tag tag-mgmt">IIM ரோஹ்தக்</span>
+<span class="card-tag tag-mgmt">5 ஆண்டு BBA+MBA</span>
+<span class="card-tag tag-mgmt">JIPMAT</span>
+<span class="card-tag tag-mgmt">கார்ப்பரேட் தலைமை</span>
+</div>
+</div>
+<a class="btn-details btn-mgmt" href="01_08_management_iim_ipm.html">
+<span>விவரங்கள் காண்க</span>
+<span>›</span>
+</a>
+</div>
+<!-- 09. HOTEL MANAGEMENT (NCHMCT JEE) -->
+<div class="course-card border-hotel">
+<div>
+<div class="card-badge badge-hotel">09 / HOSPITALITY</div>
+<div class="card-header">
+<div class="card-icon-box icon-hotel">🏨</div>
+<div class="card-title-group">
+<h2 class="card-title">உணவக மேலாண்மை &amp; விருந்தோம்பல்</h2>
+<div class="card-subtitle">Hotel Management &amp; Catering (NCHMCT JEE)</div>
+</div>
+</div>
+<p class="card-desc">
+              மத்திய மற்றும் மாநில அரசு உணவு மேலாண்மைக் கல்லூரிகளில் (IHMs) 3 ஆண்டு B.Sc விருந்தோம்பல் மற்றும் உணவக நிர்வாகப் பட்டப்படிப்புக்கான தேசிய நுழைவுத்தேர்வு.
+            </p>
+<div class="card-tags">
+<span class="card-tag tag-hotel">NCHMCT JEE</span>
+<span class="card-tag tag-hotel">மத்திய IHMs</span>
+<span class="card-tag tag-hotel">B.Sc HHA</span>
+<span class="card-tag tag-hotel">சர்வதேச வாய்ப்புகள்</span>
+</div>
+</div>
+<a class="btn-details btn-hotel" href="01_09_hotel_management_nchmct.html">
+<span>விவரங்கள் காண்க</span>
+<span>›</span>
+</a>
+</div>
+<!-- 10. MARITIME & MERCHANT NAVY (IMU-CET) -->
+<div class="course-card border-marine">
+<div>
+<div class="card-badge badge-marine">10 / MARITIME</div>
+<div class="card-header">
+<div class="card-icon-box icon-marine">⚓</div>
+<div class="card-title-group">
+<h2 class="card-title">கடல்சார் கல்வி &amp; வணிகக் கப்பல் துறை</h2>
+<div class="card-subtitle">Merchant Navy &amp; Marine Engineering (IMU-CET)</div>
+</div>
+</div>
+<p class="card-desc">
+              இந்திய கடல்சார் பல்கலைக்கழகம் (IMU) மற்றும் முன்னணி கப்பல் கல்லூரிகளில் B.Sc Nautical Science, B.E Marine Engineering மற்றும் கப்பல் துறைப் பணிகள்.
+            </p>
+<div class="card-tags">
+<span class="card-tag tag-marine">IMU-CET</span>
+<span class="card-tag tag-marine">B.Sc Nautical Science</span>
+<span class="card-tag tag-marine">B.E Marine</span>
+<span class="card-tag tag-marine">வணிகக் கப்பல் துறை</span>
+<span class="card-tag tag-marine">உயர் ஊதியம்</span>
+</div>
+</div>
+<a class="btn-details btn-marine" href="01_10_maritime_merchant_navy.html">
+<span>விவரங்கள் காண்க</span>
+<span>›</span>
+</a>
+</div>
+<!-- 10. ARMED FORCES (UPSC NDA) -->
+<div class="course-card border-defence">
+<div>
+<div class="card-badge badge-defence">11 / ARMED FORCES</div>
+<div class="card-header">
+<div class="card-icon-box icon-defence">🎖️</div>
+<div class="card-title-group">
+<h2 class="card-title">இந்திய பாதுகாப்புப் படைகள் (முப்படைகள்)</h2>
+<div class="card-subtitle">Armed Forces (Army, Navy, Air Force) &amp; UPSC NDA</div>
+</div>
+</div>
+<p class="card-desc">
+              இந்திய ராணுவம், கடற்படை மற்றும் விமானப்படையில் முதல் நிலை அதிகாரியாக (Lieutenant) சேர்வதற்கான UPSC நேஷனல் டிஃபென்ஸ் அகாடமி (NDA) தேர்வு.
+            </p>
+<div class="card-tags">
+<span class="card-tag tag-defence">UPSC NDA</span>
+<span class="card-tag tag-defence">ராணுவம் / கடற்படை / விமானப்படை</span>
+<span class="card-tag tag-defence">100% இலவச கல்வி</span>
+<span class="card-tag tag-defence">லெப்டினன்ட் பதவி</span>
+</div>
+</div>
+<a class="btn-details btn-defence" href="01_11_defence_armed_forces.html">
+<span>விவரங்கள் காண்க</span>
+<span>›</span>
+</a>
+</div>
+<!-- 12. PILOT CAREERS (CPL & IAF) -->
+<div class="course-card border-pilot">
+<div>
+<div class="card-badge badge-pilot">12 / AVIATION</div>
+<div class="card-header">
+<div class="card-icon-box icon-pilot">✈️</div>
+<div class="card-title-group">
+<h2 class="card-title">விமானியாவது எப்படி? (CPL &amp; IAF)</h2>
+<div class="card-subtitle">Commercial Airline (CPL) &amp; IAF Fighter Pilot</div>
+</div>
+</div>
+<p class="card-desc">
+              விமான நிறுவனங்களில் வணிக விமானி (Commercial Pilot Licence - CPL) ஆவதற்கான வழிமுறைகள் மற்றும் இந்திய விமானப்படை போர் விமானி ஆவதற்கான முழு வழிகாட்டி.
+            </p>
+<div class="card-tags">
+<span class="card-tag tag-pilot">DGCA CPL</span>
+<span class="card-tag tag-pilot">IGRUA ரேபரேலி</span>
+<span class="card-tag tag-pilot">விமானப்படை NDA</span>
+<span class="card-tag tag-pilot">பைலட் உரிமம்</span>
+<span class="card-tag tag-pilot">விமானத்துறை</span>
+</div>
+</div>
+<a class="btn-details btn-pilot" href="01_12_pilot_careers_cpl_and_iaf_fighter.html">
+<span>விவரங்கள் காண்க</span>
+<span>›</span>
+</a>
+</div>
+
 </div>
 <!-- PYQ MODAL -->
 <div class="pyq-modal-overlay" id="pyqModal" onclick="closePyqModal(event)">
