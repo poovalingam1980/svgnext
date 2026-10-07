@@ -4793,6 +4793,125 @@
 }
 </style>
 
+
+<style id="table-layout-override-css">
+/* ========================================================
+   CRITICAL OVERFLOW FIX: TABLE FIT-TO-SCREEN & BADGE WRAP
+   நெடுவரிசைகள் திரைக்குள் அடங்கி வார்த்தைகள் அடுத்த கட்டத்திற்கு செல்லாமல் தடுக்கும் அமைப்பு
+   ======================================================== */
+.schedule-table-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  border: 1.8px solid #cbd5e1 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+  background: #ffffff !important;
+  margin: 14px 0 28px 0 !important;
+  box-sizing: border-box !important;
+}
+
+.schedule-master-table {
+  width: 100% !important;
+  max-width: 100% !important;
+  table-layout: fixed !important;
+  border-collapse: collapse !important;
+  font-size: 0.80rem !important;
+  line-height: 1.4 !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+}
+
+.schedule-master-table th {
+  background: linear-gradient(135deg, #091a3e 0%, #1e3a8a 100%) !important;
+  color: #ffffff !important;
+  padding: 8px 6px !important;
+  font-weight: 800 !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.2px !important;
+  border: 1px solid #1e40af !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+
+.schedule-master-table td {
+  padding: 8px 6px !important;
+  border: 1px solid #e2e8f0 !important;
+  vertical-align: middle !important;
+  font-size: 0.79rem !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  white-space: normal !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure badges strictly wrap and never overflow out of their cells */
+.exam-pill-badge {
+  display: inline-block !important;
+  max-width: 100% !important;
+  width: auto !important;
+  box-sizing: border-box !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  font-size: 0.69rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.1px !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  line-height: 1.25 !important;
+  margin-top: 3px !important;
+  text-align: left !important;
+}
+
+.month-badge {
+  display: inline-block !important;
+  max-width: 100% !important;
+  width: auto !important;
+  box-sizing: border-box !important;
+  padding: 3px 6px !important;
+  border-radius: 5px !important;
+  font-weight: 800 !important;
+  font-size: 0.71rem !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  line-height: 1.25 !important;
+  margin: 1.5px 0 !important;
+  text-align: left !important;
+}
+
+.portal-link-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 4px 6px !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  text-align: center !important;
+}
+
+/* On smaller screens / tablets allow smooth scrolling */
+@media (max-width: 900px) {
+  .schedule-master-table {
+    table-layout: auto !important;
+    min-width: 900px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -5061,16 +5180,26 @@
 
 <div class="schedule-table-wrap">
 <table class="schedule-master-table" id="masterExamTable">
+<colgroup>
+  <col class="col-sno" style="width: 38px;">
+  <col class="col-name" style="width: 17%;">
+  <col class="col-course" style="width: 18%;">
+  <col class="col-body" style="width: 10%;">
+  <col class="col-app" style="width: 9%;">
+  <col class="col-month" style="width: 14%;">
+  <col class="col-elig" style="width: 22%;">
+  <col class="col-link" style="width: 10%;">
+</colgroup>
 <thead>
 <tr>
-<th style="width: 45px; text-align: center;">வ.எண்</th>
-<th>நுழைவுத்தேர்வின் பெயர் &amp; சுருக்கம்</th>
-<th>துறை &amp; பட்டப்படிப்புகள்</th>
-<th>நடத்தும் தேசிய அமைப்பு</th>
-<th>விண்ணப்பக் காலம்</th>
-<th>தேர்வு நடைபெறும் மாதம்</th>
-<th>அடிப்படைத் தகுதி &amp; பாடங்கள்</th>
-<th style="text-align: center;">அதிகாரப்பூர்வ தளம்</th>
+  <th class="col-sno" style="text-align: center;">வ.எண்</th>
+  <th class="col-name">நுழைவுத்தேர்வு &amp; குறியீடு</th>
+  <th class="col-course">துறை &amp; பட்டப்படிப்புகள்</th>
+  <th class="col-body">நடத்தும் அமைப்பு</th>
+  <th class="col-app">விண்ணப்பக் காலம்</th>
+  <th class="col-month">தேர்வு நடைபெறும் மாதம்</th>
+  <th class="col-elig">அடிப்படைத் தகுதி &amp; பாடங்கள்</th>
+  <th class="col-link" style="text-align: center;">அதிகாரப்பூர்வ தளம்</th>
 </tr>
 </thead>
 <tbody>
@@ -6879,7 +7008,7 @@ let currentTableZoom = 100;
 let isFixedFit = true;
 
 function zoomTable(delta) {
-  currentTableZoom = Math.min(Math.max(currentTableZoom + delta, 65), 150);
+  currentTableZoom = Math.min(Math.max(currentTableZoom + delta, 60), 160);
   applyTableZoom();
 }
 
@@ -6889,13 +7018,13 @@ function resetTableZoom() {
 }
 
 function applyTableZoom() {
-  const tbl = document.getElementById('master-schedule-table');
+  const tbl = document.getElementById('masterExamTable') || document.querySelector('.schedule-master-table');
   const badge = document.getElementById('current-zoom-level');
   if (badge) badge.innerText = currentTableZoom + '%';
   if (tbl) {
-    tbl.style.fontSize = (0.81 * (currentTableZoom / 100)) + 'rem';
-    const padV = Math.max(3, Math.round(8 * (currentTableZoom / 100)));
-    const padH = Math.max(3, Math.round(7 * (currentTableZoom / 100)));
+    tbl.style.fontSize = (0.79 * (currentTableZoom / 100)) + 'rem';
+    const padV = Math.max(3, Math.round(7 * (currentTableZoom / 100)));
+    const padH = Math.max(3, Math.round(6 * (currentTableZoom / 100)));
     tbl.querySelectorAll('th, td').forEach(cell => {
       cell.style.padding = `${padV}px ${padH}px`;
     });
@@ -6903,7 +7032,7 @@ function applyTableZoom() {
 }
 
 function toggleFitScreen() {
-  const tbl = document.getElementById('master-schedule-table');
+  const tbl = document.getElementById('masterExamTable') || document.querySelector('.schedule-master-table');
   const btn = document.getElementById('fit-screen-btn-text');
   if (!tbl) return;
   isFixedFit = !isFixedFit;
@@ -6913,11 +7042,9 @@ function toggleFitScreen() {
     if (btn) btn.innerText = '↔️ திரைக்குள் அடக்கு (Fit)';
   } else {
     tbl.style.tableLayout = 'auto';
-    tbl.style.minWidth = '1100px';
+    tbl.style.minWidth = '1080px';
     if (btn) btn.innerText = '📜 முழு அகலம் (Scroll)';
   }
-}
-
-</script>
+}</script>
 </body>
 </html>
