@@ -3,7 +3,7 @@
 <head>
 
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport"/>
 <title>பொறியியல் நேரடிச் சேர்க்கை (TNEA) &amp; கேம்பஸ் வேலைவாய்ப்புக் கல்லூரிகள் வழிகாட்டி | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
 <!-- Google Fonts: Inter & Noto Sans Tamil -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -4474,6 +4474,164 @@
 }
 </style>
 
+
+<style>
+/* ========================================================
+   RESPONSIVE FIT-TO-SCREEN & COMPACT COLUMN STYLING
+   அட்டவணை திரைக்குள் அடங்கும் வகையில் நெடுவரிசைச் சுருக்கம்
+   ======================================================== */
+.schedule-table-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  border: 1.8px solid #cbd5e1 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+  background: #ffffff !important;
+  margin: 14px 0 28px 0 !important;
+  transition: all 0.2s ease !important;
+}
+
+.schedule-master-table {
+  width: 100% !important;
+  table-layout: fixed !important;
+  border-collapse: collapse !important;
+  font-size: 0.81rem !important;
+  line-height: 1.4 !important;
+  text-align: left !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+.schedule-master-table th {
+  background: linear-gradient(135deg, #091a3e 0%, #1e3a8a 100%) !important;
+  color: #ffffff !important;
+  padding: 9px 7px !important;
+  font-weight: 800 !important;
+  font-size: 0.80rem !important;
+  letter-spacing: 0.2px !important;
+  border: 1px solid #1e40af !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+.schedule-master-table td {
+  padding: 8px 7px !important;
+  border: 1px solid #e2e8f0 !important;
+  vertical-align: middle !important;
+  font-size: 0.81rem !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  white-space: normal !important;
+}
+
+/* Explicit Width Distribution on Desktop (Sum = 100%) */
+@media (min-width: 992px) {
+  .col-sno { width: 38px !important; }
+  .col-name { width: 15% !important; }
+  .col-course { width: 20% !important; }
+  .col-body { width: 11% !important; }
+  .col-app { width: 11% !important; }
+  .col-month { width: 11% !important; }
+  .col-elig { width: 22% !important; }
+  .col-link { width: 10% !important; }
+}
+
+@media (max-width: 991px) {
+  .schedule-master-table {
+    table-layout: auto !important;
+    min-width: 920px !important;
+  }
+}
+
+/* Mobile Zoom & View Toolbar */
+.table-zoom-toolbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #e0f2fe 100%) !important;
+  border: 1.5px solid #86efac !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  margin-bottom: 12px !important;
+}
+
+.zoom-label-group {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 0.86rem !important;
+  font-weight: 700 !important;
+  color: #065f46 !important;
+}
+
+.zoom-level-badge {
+  background: #059669 !important;
+  color: #ffffff !important;
+  padding: 2px 8px !important;
+  border-radius: 999px !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+}
+
+.zoom-btn-group {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  flex-wrap: wrap !important;
+}
+
+.zoom-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 6px !important;
+  padding: 5px 10px !important;
+  font-size: 0.80rem !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.15s ease !important;
+}
+
+.zoom-btn:hover {
+  background: #059669 !important;
+  color: #ffffff !important;
+  border-color: #047857 !important;
+  transform: translateY(-1px) !important;
+}
+
+.zoom-btn:active {
+  transform: scale(0.96) !important;
+}
+
+.mobile-scroll-hint {
+  display: none !important;
+  font-size: 0.76rem !important;
+  color: #0284c7 !important;
+  font-weight: 700 !important;
+  background: #e0f2fe !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  margin-top: 4px !important;
+  text-align: center !important;
+}
+
+@media (max-width: 900px) {
+  .mobile-scroll-hint {
+    display: block !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -4714,6 +4872,32 @@
 </div>
 
 <!-- Responsive Master Table -->
+
+<!-- Table Zoom & Fit-to-Screen Toolbar -->
+<div class="table-zoom-toolbar">
+  <div class="zoom-label-group">
+    <span>🔍 அட்டவணை அளவு (Zoom):</span>
+    <span id="current-zoom-level" class="zoom-level-badge">100%</span>
+  </div>
+  <div class="zoom-btn-group">
+    <button type="button" class="zoom-btn" onclick="zoomTable(-10)" title="எழுத்து அளவைக் குறைக்க (Zoom Out)">
+      <span>➖ சிறிதாக்கு (A-)</span>
+    </button>
+    <button type="button" class="zoom-btn" onclick="resetTableZoom()" title="இயல்பு நிலைக்குக் கொண்டுவர (Reset 100%)">
+      <span>↺ இயல்பு (100%)</span>
+    </button>
+    <button type="button" class="zoom-btn" onclick="zoomTable(10)" title="எழுத்து அளவைப் பெரிதாக்க (Zoom In)">
+      <span>➕ பெரிதாக்கு (A+)</span>
+    </button>
+    <button type="button" class="zoom-btn" onclick="toggleFitScreen()" title="திரைக்குள் அடக்கு / முழு அகலம் மாற்று">
+      <span id="fit-screen-btn-text">↔️ திரைக்குள் அடக்கு (Fit)</span>
+    </button>
+  </div>
+</div>
+<div class="mobile-scroll-hint">
+  👆 மொபைலில் அட்டவணையை இடது-வலதுபுறம் நகர்த்த விரலால் ஸ்வைப் (Swipe) செய்யவும் அல்லது மேலே உள்ள ஜூம் (Zoom) பொத்தான்களைப் பயன்படுத்தவும்.
+</div>
+
 <div class="schedule-table-wrap">
 <table class="schedule-master-table" id="masterExamTable">
 <thead>
@@ -6526,6 +6710,53 @@ function fireCelebrationCrackers() {
   }
   render();
 }
+
+// ========================================================
+// TABLE ZOOM & FIT-TO-SCREEN CONTROLLER
+// ========================================================
+let currentTableZoom = 100;
+let isFixedFit = true;
+
+function zoomTable(delta) {
+  currentTableZoom = Math.min(Math.max(currentTableZoom + delta, 65), 150);
+  applyTableZoom();
+}
+
+function resetTableZoom() {
+  currentTableZoom = 100;
+  applyTableZoom();
+}
+
+function applyTableZoom() {
+  const tbl = document.getElementById('master-schedule-table');
+  const badge = document.getElementById('current-zoom-level');
+  if (badge) badge.innerText = currentTableZoom + '%';
+  if (tbl) {
+    tbl.style.fontSize = (0.81 * (currentTableZoom / 100)) + 'rem';
+    const padV = Math.max(3, Math.round(8 * (currentTableZoom / 100)));
+    const padH = Math.max(3, Math.round(7 * (currentTableZoom / 100)));
+    tbl.querySelectorAll('th, td').forEach(cell => {
+      cell.style.padding = `${padV}px ${padH}px`;
+    });
+  }
+}
+
+function toggleFitScreen() {
+  const tbl = document.getElementById('master-schedule-table');
+  const btn = document.getElementById('fit-screen-btn-text');
+  if (!tbl) return;
+  isFixedFit = !isFixedFit;
+  if (isFixedFit) {
+    tbl.style.tableLayout = 'fixed';
+    tbl.style.minWidth = '100%';
+    if (btn) btn.innerText = '↔️ திரைக்குள் அடக்கு (Fit)';
+  } else {
+    tbl.style.tableLayout = 'auto';
+    tbl.style.minWidth = '1100px';
+    if (btn) btn.innerText = '📜 முழு அகலம் (Scroll)';
+  }
+}
+
 </script>
 </body>
 </html>
