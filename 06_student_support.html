@@ -6518,6 +6518,148 @@
 }
 
 </style>
+<style>
+
+/* ========================================================
+   DEFINITIVE PERMANENT LEFT SIDEBAR & ZERO OVERLAP LAYOUT
+   எந்தத் திரையிலும் இடதுபக்க மெனுவின் கீழ் பக்கம் செல்லாதவாறு வடிவமைப்பு
+   ======================================================== */
+.portal-layout-wrapper {
+  display: flex !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  position: relative !important;
+  align-items: stretch !important;
+  box-sizing: border-box !important;
+}
+
+/* On Desktop / Laptops / Tablets (Screens >= 851px, including 1024px):
+   Sidebar is permanent, fixed at left: 0 with width 280px.
+   Main content has margin-left: 280px and width: calc(100% - 280px).
+   This guarantees that main content NEVER slides underneath the sidebar! */
+@media (min-width: 851px) {
+  .desktop-left-sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 280px !important;
+    min-width: 280px !important;
+    max-width: 280px !important;
+    height: 100vh !important;
+    z-index: 1000 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+    border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+  }
+
+  .portal-main-content {
+    margin-left: 280px !important;
+    width: calc(100% - 280px) !important;
+    min-height: 100vh !important;
+    padding-top: 0 !important;
+    padding-left: clamp(12px, 2vw, 28px) !important;
+    padding-right: clamp(12px, 2vw, 28px) !important;
+    padding-bottom: 40px !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  .portal-top-frame {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+  }
+  .top-frame-center-stack {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  .top-frame-side-btn.btn-home {
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .mobile-menu-floating-btn {
+    display: none !important;
+  }
+
+  .sidebar-close-btn {
+    display: none !important;
+  }
+
+  .sidebar-backdrop {
+    display: none !important;
+  }
+}
+
+/* On Mobile Phones (Screens <= 850px):
+   Sidebar is a slide-in drawer hidden off-screen (left: -320px).
+   Main content takes full width (margin-left: 0).
+   When opened (.sidebar-open), it slides over with a backdrop overlay. */
+@media (max-width: 850px) {
+  .portal-layout-wrapper {
+    display: block !important;
+  }
+
+  .desktop-left-sidebar {
+    position: fixed !important;
+    left: -320px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 280px !important;
+    height: 100vh !important;
+    z-index: 99999 !important;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 6px 0 35px rgba(0, 0, 0, 0.85) !important;
+  }
+
+  .desktop-left-sidebar.sidebar-open {
+    left: 0 !important;
+  }
+
+  .sidebar-close-btn {
+    display: inline-flex !important;
+  }
+
+  .sidebar-backdrop {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(0, 0, 0, 0.65) !important;
+    z-index: 99998 !important;
+  }
+
+  .sidebar-backdrop.active {
+    display: block !important;
+  }
+
+  .portal-main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding-top: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-bottom: 30px !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  .mobile-menu-floating-btn {
+    display: flex !important;
+  }
+}
+
+</style>
 </head>
 <body>
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
@@ -6599,11 +6741,6 @@
 </aside>
 <!-- Main Portal Content Column -->
 <main class="portal-main-content"><div class="portal-container"><header class="portal-top-frame no-print">
-<!-- Left Side Button: ceosvg.in முதன்மை தளம் -->
-<a class="top-frame-side-btn btn-ceosvg" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
-<span class="btn-icon">🌐</span>
-<span class="btn-text">ceosvg.in முதன்மை தளம்</span>
-</a>
 <!-- Center Branding Stack: 3D Gold Title, Aurora Tagline & English Sub-branding -->
 <div class="top-frame-center-stack">
 <!-- 1. Main 3D Gold Tamil Title -->
@@ -6623,11 +6760,6 @@
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
 </a>
 </header><nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
-<a class="nav-menu-btn btn-portal-home" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ தளம்">
-<span class="btn-icon">🏛️</span>
-<span class="btn-text">ceosvg.in முதன்மை தளம்</span>
-</a>
-<span class="nav-menu-separator">▶</span>
 <a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
 <span class="btn-icon">🧭</span>
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
@@ -8488,8 +8620,6 @@
     © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
 <div style="margin-top: 8px;">
-<a href="https://www.ceosvg.in" rel="noopener" style="color: #0284c7; font-weight: 600; text-decoration: none; font-size: 0.85rem;" target="_blank">🌐 ceosvg.in அதிகாரப்பூர்வ தளம்</a>
-<span style="color: #cbd5e1; margin: 0 8px;">|</span>
 <a href="index.html" style="color: #0284c7; font-weight: 600; text-decoration: none; font-size: 0.85rem;">🎓 உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு</a>
 </div>
 </footer></div></main></div>
