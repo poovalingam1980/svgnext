@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ta">
 <head>
 <meta charset="utf-8"/>
@@ -4336,15 +4337,84 @@
       box-shadow: 0 8px 24px rgba(5, 150, 105, 0.25);
     }
 
+
+    /* Official Portal Buttons (அதிகாரப்பூர்வ தளங்களின் பொத்தான்கள்) */
+    .portal-link-btn, .link-btn, .table-link {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 6px !important;
+      padding: 6px 14px !important;
+      font-size: 0.82rem !important;
+      font-weight: 700 !important;
+      font-family: inherit !important;
+      text-decoration: none !important;
+      border-radius: 8px !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      border: 1px solid #38bdf8 !important;
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25) !important;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      white-space: nowrap !important;
+      cursor: pointer !important;
+    }
+    .portal-link-btn:hover, .link-btn:hover, .table-link:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.45) !important;
+      transform: translateY(-2px) !important;
+      filter: brightness(1.08) !important;
+      text-decoration: none !important;
+    }
+    .btn-tanuvas {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+      border-color: #34d399 !important;
+      box-shadow: 0 2px 6px rgba(5, 150, 105, 0.25) !important;
+    }
+    .btn-tanuvas:hover {
+      background: linear-gradient(135deg, #047857 0%, #064e3b 100%) !important;
+      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.45) !important;
+    }
+    .btn-dme {
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+      border-color: #60a5fa !important;
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25) !important;
+    }
+    .btn-dme:hover {
+      background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%) !important;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.45) !important;
+    }
+    .official-portals-showcase {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+      gap: 12px !important;
+      margin: 18px 0 24px 0 !important;
+    }
+    .portal-action-card {
+      background: #ffffff !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-radius: 12px !important;
+      padding: 14px 18px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      gap: 10px !important;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05) !important;
+      transition: all 0.2s ease !important;
+    }
+    .portal-action-card:hover {
+      border-color: #0284c7 !important;
+      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.12) !important;
+      transform: translateY(-2px) !important;
+    }
 </style>
 </head>
 <body id="top">
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
 <button class="mobile-menu-floating-btn" id="mobileMenuFloatingBtn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
-  <span style="font-size: 1.15rem; line-height: 1;">☰</span>
-  <span>மெனு</span>
+<span style="font-size: 1.15rem; line-height: 1;">☰</span>
+<span>மெனு</span>
 </button>
-
 <div class="portal-layout-wrapper">
 <aside class="desktop-left-sidebar" id="desktopLeftSidebar">
 <div class="sidebar-header">
@@ -4424,35 +4494,33 @@
 </a>
 </nav>
 </aside>
-
 <main class="portal-main-content">
 <div class="portal-container">
 <header class="portal-top-frame no-print">
-  <!-- Center Branding Stack: 3D Gold Title, Aurora Tagline & English Sub-branding -->
-  <div class="top-frame-center-stack">
-    <h1 class="banner-title-tamil">உயர்கல்வி வழிகாட்டி</h1>
-    <div class="banner-tagline-aurora">உங்கள் சிறந்த எதிர்காலத்திற்கான திறவுகோல்</div>
-    <div class="banner-english-row">
-      <span class="banner-title-english">CAREER GUIDANCE</span>
-      <span class="banner-english-dot">•</span>
-      <span class="banner-slogan-english">YOUR KEY TO A BRIGHT FUTURE</span>
-    </div>
-  </div>
-
-  <!-- Right Side Button: வழிகாட்டி முகப்பு -->
-  <a class="top-frame-side-btn btn-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
-    <span class="btn-icon">🎓</span>
-    <span class="btn-text">வழிகாட்டி முகப்பு</span>
-  </a>
+<!-- Center Branding Stack: 3D Gold Title, Aurora Tagline & English Sub-branding -->
+<div class="top-frame-center-stack">
+<h1 class="banner-title-tamil">உயர்கல்வி வழிகாட்டி</h1>
+<div class="banner-tagline-aurora">உங்கள் சிறந்த எதிர்காலத்திற்கான திறவுகோல்</div>
+<div class="banner-english-row">
+<span class="banner-title-english">CAREER GUIDANCE</span>
+<span class="banner-english-dot">•</span>
+<span class="banner-slogan-english">YOUR KEY TO A BRIGHT FUTURE</span>
+</div>
+</div>
+<!-- Right Side Button: வழிகாட்டி முகப்பு -->
+<a class="top-frame-side-btn btn-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+<span class="btn-icon">🎓</span>
+<span class="btn-text">வழிகாட்டி முகப்பு</span>
+</a>
 </header>
 <div class="breadcrumb-bar">
-  <a href="index.html">முகப்பு (Home)</a>
-  <span class="breadcrumb-separator">/</span>
-  <a href="https://www.ceosvg.in" target="_blank" rel="noopener">ceosvg.in</a>
-  <span class="breadcrumb-separator">/</span>
-  <a href="02_00_direct_admissions.html">02 / நேரடிச் சேர்க்கை</a>
-  <span class="breadcrumb-separator">/</span>
-  <span class="breadcrumb-current">கால்நடை மருத்துவம், துணை மருத்துவம் &amp; டிப்ளமோ படிப்புகள் (Non-NEET)</span>
+<a href="index.html">முகப்பு (Home)</a>
+<span class="breadcrumb-separator">/</span>
+<a href="https://www.ceosvg.in" rel="noopener" target="_blank">ceosvg.in</a>
+<span class="breadcrumb-separator">/</span>
+<a href="02_00_direct_admissions.html">02 / நேரடிச் சேர்க்கை</a>
+<span class="breadcrumb-separator">/</span>
+<span class="breadcrumb-current">கால்நடை மருத்துவம், துணை மருத்துவம் &amp; டிப்ளமோ படிப்புகள் (Non-NEET)</span>
 </div>
 <div class="header-banner-wrap">
 <header class="header-banner aurora-theme">
@@ -4544,7 +4612,6 @@
 </div>
 </div>
 </section>
-
 <section class="content-card" id="overview">
 <h2 class="section-title">
 <span class="icon">📌</span> 1. சேர்க்கை அமைப்புகள் &amp; கல்வித் தகுதிகள்
@@ -4600,8 +4667,28 @@
 </ul>
 </div>
 </div>
-</section>
-
+<div class="sub-card" style="margin-top: 18px; border-left: 4.5px solid #0284c7; background: linear-gradient(135deg, #f8fafc 0%, #f0fdf4 100%);">
+<h3 class="sub-card-title" style="color: #0f172a; display: flex; align-items: center; gap: 8px;">
+<span>🏛️</span> அதிகாரப்பூர்வ சேர்க்கை போர்ட்டல்கள் (Official Admission Portals)
+</h3>
+<p style="font-size: 0.88rem; color: #475569; margin-bottom: 12px;">
+கால்நடை மருத்துவம், துணை மருத்துவம் மற்றும் இயற்கை மருத்துவப் படிப்புகளுக்கான ஆன்லைன் விண்ணப்பம், அறிவிப்புகள் மற்றும் கலந்தாய்வு முடிவுகளைக் கீழ்க்கண்ட அதிகாரப்பூர்வ தளங்களின் வாயிலாக நேரடியாகப் பெறலாம்:
+</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+<a class="portal-link-btn btn-tanuvas" href="https://tanuvas.ac.in" rel="noopener noreferrer" style="padding: 9px 18px !important; font-size: 0.88rem !important;" target="_blank">
+<span>🐾 TANUVAS அதிகாரப்பூர்வ தளம் (tanuvas.ac.in) ↗</span>
+</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" style="padding: 9px 18px !important; font-size: 0.88rem !important;" target="_blank">
+<span>🩺 DME துணை மருத்துவ கலந்தாய்வு தளம் (tnmedicalselection.net) ↗</span>
+</a>
+<a class="portal-link-btn" href="https://tnhealth.tn.gov.in" rel="noopener noreferrer" style="padding: 9px 18px !important; font-size: 0.88rem !important;" target="_blank">
+<span>🏥 மக்கள் நல்வாழ்வுத் துறை (tnhealth.tn.gov.in) ↗</span>
+</a>
+<a class="portal-link-btn" href="https://dphpm.tn.gov.in" rel="noopener noreferrer" style="padding: 9px 18px !important; font-size: 0.88rem !important;" target="_blank">
+<span>💊 பொது சுகாதாரம் &amp; நோய்த்தடுப்பு மருந்து இயக்ககம் (dphpm.tn.gov.in) ↗</span>
+</a>
+</div>
+</div></section>
 <section class="content-card" id="quota" style="border-top: 5px solid #d97706;">
 <h2 class="section-title" style="color: #b45309;">
 <span class="icon">🎯</span> 2. அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு &amp; 100% இலவசக் கல்வி
@@ -4649,7 +4736,6 @@
 </div>
 </div>
 </section>
-
 <section class="content-card" id="tanuvas">
 <h2 class="section-title">
 <span class="icon">🐾</span> 3. தமிழ்நாடு கால்நடை மருத்துவ அறிவியல் பல்கலைக்கழகம் (TANUVAS)
@@ -4692,7 +4778,6 @@
 </div>
 </div>
 </section>
-
 <section class="content-card" id="paramedical">
 <h2 class="section-title">
 <span class="icon">🩺</span> 4. தமிழ்நாடு மருத்துவக் கல்வி இயக்ககம் (DME) நடத்தும் 23 துணை மருத்துவப் பட்டப் படிப்புகள்
@@ -4842,42 +4927,42 @@
 <td><strong>Institute of Public Health (பூந்தமல்லி பொது சுகாதார நிறுவனம்)</strong><br/><span style="font-size:0.80rem; color:#be185d; font-weight:700;">அரசு முதன்மை பொது சுகாதார பயிற்சி நிலையம்</span></td>
 <td>சென்னை (பூந்தமல்லி)</td>
 <td>ANM / பலநோக்கு சுகாதாரப் பணியாளர் (MPHW-F) 2 ஆண்டு பட்டயப் படிப்பு (VHN / SHN பணி)</td>
-<td><a class="table-link" href="https://dphpm.tn.gov.in" target="_blank">dphpm.tn.gov.in</a></td>
+<td><a class="portal-link-btn" href="https://dphpm.tn.gov.in" rel="noopener noreferrer" target="_blank">🌐 dphpm.tn.gov.in ↗</a></td>
 </tr>
 <tr data-type="anm-vhn" style="background: #fdf2f8;">
 <td><span class="code-badge" style="background:#be185d;">ANM-MDU</span></td>
 <td><strong>அரசு துணை செவிலியர் பயிற்சிப் பள்ளி (Govt ANM Training School)</strong><br/><span style="font-size:0.80rem; color:#be185d; font-weight:700;">பொது சுகாதார இயக்ககம் (DPH&amp;PM)</span></td>
 <td>மதுரை</td>
 <td>ANM (MPHW-F) 2 ஆண்டு பட்டயப் படிப்பு (தாய்-சேய் நலம் &amp; தடுப்பூசி களப்பயிற்சி)</td>
-<td><a class="table-link" href="https://tnhealth.tn.gov.in" target="_blank">tnhealth.tn.gov.in</a></td>
+<td><a class="portal-link-btn" href="https://tnhealth.tn.gov.in" rel="noopener noreferrer" target="_blank">🌐 tnhealth.tn.gov.in ↗</a></td>
 </tr>
 <tr data-type="anm-vhn" style="background: #fdf2f8;">
 <td><span class="code-badge" style="background:#be185d;">ANM-SLM</span></td>
 <td><strong>மண்டல பொது சுகாதார பயிற்சி நிலையம் (RHTC Salem)</strong><br/><span style="font-size:0.80rem; color:#be185d; font-weight:700;">அரசு துணை செவிலியர் பயிற்சி மையம்</span></td>
 <td>சேலம்</td>
 <td>ANM / பலநோக்கு சுகாதாரப் பணியாளர் (பெண்கள்) பட்டயப் படிப்பு</td>
-<td><a class="table-link" href="https://dphpm.tn.gov.in" target="_blank">dphpm.tn.gov.in</a></td>
+<td><a class="portal-link-btn" href="https://dphpm.tn.gov.in" rel="noopener noreferrer" target="_blank">🌐 dphpm.tn.gov.in ↗</a></td>
 </tr>
 <tr data-type="anm-vhn" style="background: #fdf2f8;">
 <td><span class="code-badge" style="background:#be185d;">ANM-CDL</span></td>
 <td><strong>அரசு துணை செவிலியர் பயிற்சிப் பள்ளி (Govt ANM Training School)</strong><br/><span style="font-size:0.80rem; color:#be185d; font-weight:700;">மாவட்ட தலைமை மருத்துவமனை வளாகம்</span></td>
 <td>கடலூர்</td>
 <td>ANM (MPHW-F) 2 ஆண்டு இலவச பயிற்சி (மாத உதவித்தொகையுடன்)</td>
-<td><a class="table-link" href="https://tnhealth.tn.gov.in" target="_blank">tnhealth.tn.gov.in</a></td>
+<td><a class="portal-link-btn" href="https://tnhealth.tn.gov.in" rel="noopener noreferrer" target="_blank">🌐 tnhealth.tn.gov.in ↗</a></td>
 </tr>
 <tr data-type="anm-vhn" style="background: #fdf2f8;">
 <td><span class="code-badge" style="background:#be185d;">ANM-TRY</span></td>
 <td><strong>அரசு துணை செவிலியர் பயிற்சிப் பள்ளி (Govt ANM Training School)</strong><br/><span style="font-size:0.80rem; color:#be185d; font-weight:700;">பொது சுகாதாரம் &amp; நோய் தடுப்பு இயக்ககம்</span></td>
 <td>திருச்சிராப்பள்ளி</td>
 <td>ANM / பலநோக்கு சுகாதாரப் பணியாளர் (பெண்கள்) 2 ஆண்டு பட்டயப் படிப்பு</td>
-<td><a class="table-link" href="https://tnhealth.tn.gov.in" target="_blank">tnhealth.tn.gov.in</a></td>
+<td><a class="portal-link-btn" href="https://tnhealth.tn.gov.in" rel="noopener noreferrer" target="_blank">🌐 tnhealth.tn.gov.in ↗</a></td>
 </tr>
 <tr data-type="anm-vhn" style="background: #fdf2f8;">
 <td><span class="code-badge" style="background:#be185d;">ANM-RMD</span></td>
 <td><strong>அரசு துணை செவிலியர் பயிற்சி மையம் (Govt ANM Training Centre)</strong><br/><span style="font-size:0.80rem; color:#be185d; font-weight:700;">சிவகங்கை &amp; இராமநாதபுரம் மண்டல மையம்</span></td>
 <td>இராமநாதபுரம் / திண்டுக்கல்</td>
 <td>ANM (MPHW-F) 2 ஆண்டு பட்டயப் படிப்பு (VHN நேரடி அரசு பணிக்கு)</td>
-<td><a class="table-link" href="https://tnhealth.tn.gov.in" target="_blank">tnhealth.tn.gov.in</a></td>
+<td><a class="portal-link-btn" href="https://tnhealth.tn.gov.in" rel="noopener noreferrer" target="_blank">🌐 tnhealth.tn.gov.in ↗</a></td>
 </tr>
 <tr>
 <td>8</td>
@@ -5197,7 +5282,6 @@
 </div>
 </div>
 </section>
-
 <section class="content-card" id="bnys" style="border-top: 5px solid #16a34a;">
 <h2 class="section-title" style="color: #15803d;">
 <span class="icon">🌿</span> 5. இயற்கை மருத்துவம் மற்றும் யோகா அறிவியல் (BNYS டாக்டர் பட்டப்படிப்பு)
@@ -5229,7 +5313,6 @@
 </div>
 </div>
 </section>
-
 <section class="content-card" id="diploma-certificate" style="border-top: 5px solid #7c3aed;">
 <h2 class="section-title" style="color: #6d28d9;">
 <span class="icon">📜</span> 6. கால்நடை &amp; துணை மருத்துவ டிப்ளமோ மற்றும் சான்றிதழ் படிப்புகள் (Diploma &amp; Certificate Courses)
@@ -5677,7 +5760,7 @@
 </tr>
 <tr>
 <td style="font-weight: 800; background: #fff1f2; color: #9f1239;">சேர்க்கை நடத்தும் முகமை</td>
-<td><strong>தேர்வுக் குழு, பொது சுகாதாரம் மற்றும் நோய் தடுப்பு மருந்து இயக்ககம் (DPH&amp;PM), சென்னை.</strong> அதிகாரப்பூர்வ இணையதளம்: <a href="https://tnhealth.tn.gov.in" style="color: #db2777; font-weight: 800;" target="_blank">tnhealth.tn.gov.in</a> / <a href="https://dphpm.tn.gov.in" style="color: #db2777; font-weight: 800;" target="_blank">dphpm.tn.gov.in</a>.</td>
+<td><strong>தேர்வுக் குழு, பொது சுகாதாரம் மற்றும் நோய் தடுப்பு மருந்து இயக்ககம் (DPH&amp;PM), சென்னை.</strong> அதிகாரப்பூர்வ இணையதளம்: <a class="portal-link-btn" href="https://tnhealth.tn.gov.in" rel="noopener noreferrer" style="color: #db2777; font-weight: 800;" target="_blank">🌐 tnhealth.tn.gov.in ↗</a> / <a class="portal-link-btn" href="https://dphpm.tn.gov.in" rel="noopener noreferrer" style="color: #db2777; font-weight: 800;" target="_blank">🌐 dphpm.tn.gov.in ↗</a>.</td>
 </tr>
 <tr>
 <td style="font-weight: 800; background: #fff1f2; color: #9f1239;">கல்விக் கட்டணம் &amp; உதவித்தொகை</td>
@@ -5731,7 +5814,6 @@
 </div>
 </div>
 </section>
-
 <section class="content-card" id="counselling">
 <h2 class="section-title">
 <span class="icon">🔄</span> 7. ஒற்றைச் சாளரக் கலந்தாய்வு நடைமுறைகள் &amp; 6 முக்கிய நிலைகள்
@@ -5772,7 +5854,6 @@
 </div>
 </div>
 </section>
-
 <section class="content-card" id="documents">
 <h2 class="section-title">
 <span class="icon">📑</span> 8. தேவையான ஆவணங்கள் &amp; சரிபார்ப்புப் பட்டியல் (Checklist)
@@ -5805,7 +5886,6 @@
 </div>
 </div>
 </section>
-
 <section class="content-card" id="choice-filling" style="border-top: 5px solid #d97706;">
 <h2 class="section-title" style="color: #b45309;">
 <span class="icon">💡</span> 9. சாய்ஸ் ஃபில்லிங் வழிகாட்டி &amp; வெற்றிக்கான முக்கிய உத்திகள் (Choice Filling Strategies)
@@ -5833,7 +5913,6 @@
 </div>
 </div>
 </section>
-
 <section class="content-card" id="colleges" style="border-top: 5px solid #059669;">
 <h2 class="section-title" style="color: #065f46;">
 <span class="icon">🏆</span> 10. தமிழ்நாடு அரசு கல்லூரிகள், டிப்ளமோ &amp; பயிற்சி மையங்கள் பட்டியல்
@@ -5884,7 +5963,7 @@
                 ECG / TMT, எக்ஸ்ரே DRA, Emergency Care சான்றிதழ் படிப்புகள்
               </td>
 <td>
-<a class="link-btn" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
 </td>
 </tr>
 <!-- Diploma Center 2: TANUVAS VLDA Orathanadu -->
@@ -5901,7 +5980,7 @@
                 கால்நடை பராமரிப்பு உதவியாளர் நேரடி அரசுப் பணி வாய்ப்பு
               </td>
 <td>
-<a class="link-btn" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
+<a class="portal-link-btn btn-tanuvas" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
 </td>
 </tr>
 <!-- Diploma Center 3: TANUVAS VLDA Pudukkottai -->
@@ -5918,7 +5997,7 @@
                 நாட்டு மாடுகள் மற்றும் ஆடு வளர்ப்பு சிறப்புப் பயிற்சி
               </td>
 <td>
-<a class="link-btn" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
+<a class="portal-link-btn btn-tanuvas" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
 </td>
 </tr>
 <!-- Diploma Center 4: Madurai Medical College Diploma Wing -->
@@ -5935,7 +6014,7 @@
                 DRT எக்ஸ்ரே, Cardiac Cath Lab, Dialysis &amp; Ortho Technician சான்றிதழ்கள்
               </td>
 <td>
-<a class="link-btn" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
 </td>
 </tr>
 <!-- Diploma Center 5: King Institute Guindy Chennai -->
@@ -5952,7 +6031,7 @@
                 வைராலஜி, தடுப்பூசி மற்றும் நவீன நுண்ணுயிரியல் சிறப்புப் பயிற்சி
               </td>
 <td>
-<a class="link-btn" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
 </td>
 </tr>
 <!-- Sivagangai Government Medical College (Local District Highlight) -->
@@ -5969,7 +6048,7 @@
                 B.Sc Nursing, B.Sc MLT (ஆய்வகம்), B.Sc Radiography, B.Sc OT &amp; Anaesthesia, Dialysis Tech, Emergency Care
               </td>
 <td>
-<a class="link-btn" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
 </td>
 </tr>
 <!-- TANUVAS 1: MVC Chennai -->
@@ -5986,7 +6065,7 @@
                 ஆசியாவின் முன்னோடி கால்நடை மருத்துவ ஆராய்ச்சி மையம்
               </td>
 <td>
-<a class="link-btn" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
+<a class="portal-link-btn btn-tanuvas" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
 </td>
 </tr>
 <!-- TANUVAS 2: VCRI Namakkal -->
@@ -6003,7 +6082,7 @@
                 முட்டை மற்றும் கோழி வளர்ப்பு ஆராய்ச்சி சிறப்பு மையம்
               </td>
 <td>
-<a class="link-btn" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
+<a class="portal-link-btn btn-tanuvas" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
 </td>
 </tr>
 <!-- TANUVAS 3: VCRI Tirunelveli -->
@@ -6020,7 +6099,7 @@
                 தென்மாவட்டங்களுக்கான முதன்மை கால்நடை மருத்துவமனை
               </td>
 <td>
-<a class="link-btn" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
+<a class="portal-link-btn btn-tanuvas" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
 </td>
 </tr>
 <!-- TANUVAS 4: VCRI Orathanadu Thanjavur -->
@@ -6037,7 +6116,7 @@
                 டெல்டா மாவட்ட கால்நடை பாதுகாப்பு மையம்
               </td>
 <td>
-<a class="link-btn" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
+<a class="portal-link-btn btn-tanuvas" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
 </td>
 </tr>
 <!-- TANUVAS 5: VCRI Salem -->
@@ -6054,7 +6133,7 @@
                 மேம்பட்ட கால்நடை ஆராய்ச்சி பூங்கா
               </td>
 <td>
-<a class="link-btn" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
+<a class="portal-link-btn btn-tanuvas" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
 </td>
 </tr>
 <!-- TANUVAS 6: VCRI Theni -->
@@ -6071,7 +6150,7 @@
                 மலை மற்றும் நாட்டு மாடுகள் பாதுகாப்பு ஆராய்ச்சி
               </td>
 <td>
-<a class="link-btn" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
+<a class="portal-link-btn btn-tanuvas" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
 </td>
 </tr>
 <!-- TANUVAS 7: VCRI Udumalpet -->
@@ -6088,7 +6167,7 @@
                 கொங்கு மண்டல கால்நடை ஆராய்ச்சி மையம்
               </td>
 <td>
-<a class="link-btn" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
+<a class="portal-link-btn btn-tanuvas" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
 </td>
 </tr>
 <!-- Madurai Medical College (Adjacent District) -->
@@ -6104,7 +6183,7 @@
                 B.Pharm, B.Sc Nursing, BPT, B.Sc Radiography, B.Sc Cardiac Tech, MLT, Perfusion Tech, Operation Theatre Tech
               </td>
 <td>
-<a class="link-btn" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
 </td>
 </tr>
 <!-- Madras Medical College MMC Chennai -->
@@ -6120,7 +6199,7 @@
                 B.Pharm, B.Sc Nursing, BPT, BOT, Radiography, Radio Therapy, Cardiac Tech, Neuro Electrophysiology, MLT
               </td>
 <td>
-<a class="link-btn" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
 </td>
 </tr>
 <!-- Stanley Medical College -->
@@ -6136,7 +6215,7 @@
                 B.Sc Nursing, B.Pharm, BPT, Critical Care Tech, Dialysis Tech, Operation Theatre Tech, Physician Assistant
               </td>
 <td>
-<a class="link-btn" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
 </td>
 </tr>
 <!-- Kilpauk Medical College -->
@@ -6152,7 +6231,7 @@
                 B.Sc Nursing, B.Pharm, B.Sc Radiography, Medical Lab Tech, Emergency Care Tech, Dialysis Tech
               </td>
 <td>
-<a class="link-btn" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
 </td>
 </tr>
 <!-- Coimbatore Medical College -->
@@ -6168,7 +6247,7 @@
                 B.Pharm, B.Sc Nursing, B.Sc Cardiac Tech, Radiography, Dialysis, Physician Assistant, Optometry
               </td>
 <td>
-<a class="link-btn" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
 </td>
 </tr>
 <!-- Thanjavur Medical College -->
@@ -6184,7 +6263,7 @@
                 B.Pharm, B.Sc Nursing, B.Sc MLT, Radiography, Operation Theatre Tech, Critical Care Technology
               </td>
 <td>
-<a class="link-btn" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
 </td>
 </tr>
 <!-- Tirunelveli Medical College -->
@@ -6200,7 +6279,7 @@
                 B.Pharm, B.Sc Nursing, BPT, B.Sc Radiography, Cardiac Tech, Dialysis Tech, MLT, Physician Assistant
               </td>
 <td>
-<a class="link-btn" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
 </td>
 </tr>
 <!-- Trichy KAPV Medical College -->
@@ -6216,7 +6295,7 @@
                 B.Sc Nursing, B.Pharm, B.Sc Radiography, Medical Lab Technology, Operation Theatre Technology
               </td>
 <td>
-<a class="link-btn" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
 </td>
 </tr>
 <!-- Salem Mohan Kumaramangalam Medical College -->
@@ -6232,7 +6311,7 @@
                 B.Pharm, B.Sc Nursing, B.Sc Radiography, Medical Lab Technology, Operation Theatre Tech
               </td>
 <td>
-<a class="link-btn" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
 </td>
 </tr>
 <!-- Theni Government Medical College -->
@@ -6248,7 +6327,7 @@
                 B.Sc Nursing, B.Sc MLT (ஆய்வகம்), Radiography, Dialysis Tech, Emergency Care Technology
               </td>
 <td>
-<a class="link-btn" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
 </td>
 </tr>
 <!-- Vellore Government Medical College -->
@@ -6264,7 +6343,7 @@
                 B.Sc Nursing, B.Pharm, Radiography, Cardiac Technology, Operation Theatre Technology
               </td>
 <td>
-<a class="link-btn" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
 </td>
 </tr>
 <!-- Chengalpattu Government Medical College -->
@@ -6280,7 +6359,7 @@
                 B.Pharm, B.Sc Nursing, BPT (பிசியோதெரபி), Radiography, Dialysis Tech, Medical Lab Tech
               </td>
 <td>
-<a class="link-btn" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
+<a class="portal-link-btn btn-dme" href="https://tnmedicalselection.net" rel="noopener noreferrer" target="_blank">விவரம் காண்க ↗</a>
 </td>
 </tr>
 <!-- BNYS Government College Arumbakkam -->
@@ -6297,7 +6376,7 @@
                 அரசு இயற்கை மருத்துவ தலைமை மருத்துவமனை வளாகம்
               </td>
 <td>
-<a class="link-btn" href="https://tnhealth.tn.gov.in" rel="noopener noreferrer" target="_blank">tnhealth.tn.gov.in ↗</a>
+<a class="portal-link-btn" href="https://tnhealth.tn.gov.in" rel="noopener noreferrer" target="_blank">tnhealth.tn.gov.in ↗</a>
 </td>
 </tr>
 <!-- BNYS Chengalpattu -->
@@ -6314,7 +6393,7 @@
                 இயற்கை மருத்துவ ஆராய்ச்சி &amp; மூலிகை பூங்கா
               </td>
 <td>
-<a class="link-btn" href="https://tnhealth.tn.gov.in" rel="noopener noreferrer" target="_blank">tnhealth.tn.gov.in ↗</a>
+<a class="portal-link-btn" href="https://tnhealth.tn.gov.in" rel="noopener noreferrer" target="_blank">tnhealth.tn.gov.in ↗</a>
 </td>
 </tr>
 <!-- CFDT Koduvalli (B.Tech Food & Dairy) -->
@@ -6331,7 +6410,7 @@
 <strong>B.Tech (Dairy Technology) - 40 இடங்கள்</strong>
 </td>
 <td>
-<a class="link-btn" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
+<a class="portal-link-btn btn-tanuvas" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
 </td>
 </tr>
 <!-- CPPM Hosur (B.Tech Poultry) -->
@@ -6348,7 +6427,7 @@
                 இந்தியாவின் முன்னோடி கோழிப்பண்ணை தொழில்நுட்பக் கல்வி
               </td>
 <td>
-<a class="link-btn" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
+<a class="portal-link-btn btn-tanuvas" href="https://tanuvas.ac.in" rel="noopener noreferrer" target="_blank">tanuvas.ac.in ↗</a>
 </td>
 </tr>
 </tbody>
@@ -6573,20 +6652,19 @@
 </div>
 </div>
 </section>
-
 <div class="kural-box">
 <div class="kural-header">
 <span class="kural-icon">📜</span>
-<span class="kural-title">திருக்குறள் — அதிகாரம்: ஆள்வினையுடைமை (குறள்: 619)</span>
-<span class="kural-sparkle">✨ விடாமுயற்சி &amp; உழைப்பின் வெற்றி</span>
+<span class="kural-title">திருக்குறள் — அதிகாரம்: மருந்து (குறள்: 948)</span>
+<span class="kural-sparkle">🩺 மருத்துவ நலம் &amp; நோய்தீர்க்கும் தொண்டு</span>
 </div>
 <div class="kural-verse-text">
-    “தெய்வத்தான் ஆகா தெனினும் முயற்சிதன்<br/>
-    மெய்வருத்தக் கூலி தரும்.”
-</div>
+    “நோய்நாடி நோய்முதல் நாடி அதுதணிக்கும்<br/>
+    வாய்நாடி வாய்ப்பச் செயல்.”
+  </div>
 <div class="kural-meaning">
-<strong>குறள் விளக்கம்:</strong> விதியினால் ஒரு செயல் நிறைவேறாமல் போனாலும், உடலை வருத்தித் தளராமல் செய்யும் இடைவிடாத முயற்சிக்குரிய பலன் (வெற்றி) நிச்சயமாகக் கிட்டும்; பொறியியல் சேர்க்கையிலும் தொடர் முயற்சியே சிறந்த கல்லூரியை வென்றெடுக்க உதவும்.
-</div>
+<strong>குறள் விளக்கம் (மு. வரதராசனார்):</strong> நோய் இன்னதென்று ஆராய்ந்து, நோய்க்கான மூலக் காரணத்தை அறிந்து, அதைத் தணிக்கும் சரியான மருத்துவ முறையைத் தேர்ந்தெடுத்து ஆற்றலுடன் சிகிச்சை செய்ய வேண்டும். மருத்துவக் கல்வி மற்றும் மக்கள் சேவையின் தலையாய நெறி இதுவேயாகும்.
+  </div>
 </div>
 <div class="creator-card">
 <div class="creator-typewriter-wrapper">
@@ -6609,11 +6687,9 @@
 <a href="index.html" style="color: #0284c7; font-weight: 600; text-decoration: none; font-size: 0.85rem;">🎓 உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு</a>
 </div>
 </footer>
-
 </div>
 </main>
 </div>
-
 <script>
 function smoothScrollToAnchor(targetId, buttonElement) {
   const target = document.getElementById(targetId);
