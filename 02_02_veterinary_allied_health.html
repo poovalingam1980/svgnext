@@ -4407,6 +4407,214 @@
       box-shadow: 0 6px 18px rgba(2, 132, 199, 0.12) !important;
       transform: translateY(-2px) !important;
     }
+
+    /* ========================================================
+       REFINEMENT STYLES: TABLE BORDERS, CORE 7 GRID, NAV BUTTONS & FLOATING BTN
+       ======================================================== */
+    /* Clean, Distinct Gridlines for All Tables (தெளிவான கோடுகளுடன் கூடிய அட்டவணைகள்) */
+    table.styled-table, table.custom-table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      font-size: 0.88rem !important;
+      background: #ffffff !important;
+      border: 1.5px solid #94a3b8 !important;
+      margin: 14px 0 22px 0 !important;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04) !important;
+    }
+    table.styled-table th, table.custom-table th {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%) !important;
+      color: #ffffff !important;
+      padding: 12px 14px !important;
+      text-align: left !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.2px !important;
+      vertical-align: middle !important;
+      border: 1.5px solid #334155 !important;
+      line-height: 1.4 !important;
+    }
+    table.styled-table td, table.custom-table td {
+      padding: 10px 14px !important;
+      border: 1.2px solid #cbd5e1 !important;
+      color: #1e293b !important;
+      vertical-align: top !important;
+      line-height: 1.5 !important;
+      background: #ffffff;
+    }
+    table.styled-table tbody tr:nth-child(even) td {
+      background-color: #f8fafc !important;
+    }
+    table.styled-table tbody tr:hover td {
+      background-color: #f1f5f9 !important;
+    }
+    table.styled-table tr.highlight-row td {
+      background-color: #fefce8 !important;
+    }
+    table.styled-table tr.highlight-row:hover td {
+      background-color: #fef9c3 !important;
+    }
+
+    /* Core 7 Degrees Layout: 1x2 Grid Rows with 7th Card Spanning Full Row Horizontally */
+    .core-7-degrees-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 18px !important;
+      margin-top: 16px !important;
+      margin-bottom: 24px !important;
+    }
+    .core-7-degrees-grid > .course-card-detail.course-card-fullwidth,
+    .core-7-degrees-grid > .course-card-detail:last-child {
+      grid-column: 1 / -1 !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-left: 6px solid #475569 !important;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08) !important;
+    }
+    @media (max-width: 820px) {
+      .core-7-degrees-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .core-7-degrees-grid > .course-card-detail.course-card-fullwidth,
+      .core-7-degrees-grid > .course-card-detail:last-child {
+        grid-column: auto !important;
+      }
+    }
+
+    /* Top Navigation Menu Buttons (வழிசெலுத்துதல் மெனு பொத்தான்கள்) */
+    .breadcrumb-bar {
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 8px 10px !important;
+      padding: 10px 16px !important;
+      margin: 0 0 16px 0 !important;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+      border: 1.8px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      box-shadow: 0 3px 12px rgba(15, 23, 42, 0.06) !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .nav-menu-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 7px !important;
+      padding: 7px 16px !important;
+      border-radius: 9px !important;
+      font-family: inherit !important;
+      font-size: 0.86rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 1.5px solid !important;
+      transition: all 0.22s ease !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+      white-space: nowrap !important;
+    }
+    .nav-menu-btn.btn-portal-home {
+      background: #ffffff !important;
+      color: #1e293b !important;
+      border-color: #cbd5e1 !important;
+    }
+    .nav-menu-btn.btn-portal-home:hover {
+      background: #f1f5f9 !important;
+      color: #0284c7 !important;
+      border-color: #38bdf8 !important;
+      transform: translateY(-2px) !important;
+    }
+    .nav-menu-btn.btn-guidance-home {
+      background: #ffffff !important;
+      color: #0f766e !important;
+      border-color: #99f6e4 !important;
+    }
+    .nav-menu-btn.btn-guidance-home:hover {
+      background: #f0fdfa !important;
+      color: #0d9488 !important;
+      border-color: #2dd4bf !important;
+      transform: translateY(-2px) !important;
+    }
+    .nav-menu-btn.btn-direct-home {
+      background: #ffffff !important;
+      color: #c2410c !important;
+      border-color: #fed7aa !important;
+    }
+    .nav-menu-btn.btn-direct-home:hover {
+      background: #fff7ed !important;
+      color: #ea580c !important;
+      border-color: #f97316 !important;
+      transform: translateY(-2px) !important;
+    }
+    .nav-menu-btn.btn-current-page {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      border-color: #38bdf8 !important;
+      box-shadow: 0 3px 10px rgba(2, 132, 199, 0.3) !important;
+      cursor: default !important;
+    }
+    .nav-menu-separator {
+      color: #94a3b8 !important;
+      font-size: 0.75rem !important;
+      margin: 0 2px !important;
+    }
+
+    /* Floating Back to Top Button ("மேலே செல்க") */
+    .floating-back-to-top {
+      position: fixed !important;
+      bottom: 24px !important;
+      right: 24px !important;
+      z-index: 99999 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      padding: 10px 18px !important;
+      background: linear-gradient(135deg, #0284c7 0%, #1e40af 100%) !important;
+      color: #ffffff !important;
+      border: 2px solid #38bdf8 !important;
+      border-radius: 999px !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 0 14px rgba(56, 189, 248, 0.45) !important;
+      font-family: 'Noto Sans Tamil', 'Inter', sans-serif !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      cursor: pointer !important;
+      outline: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: translateY(16px) !important;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      backdrop-filter: blur(8px) !important;
+    }
+    .floating-back-to-top.visible {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: translateY(0) !important;
+    }
+    .floating-back-to-top:hover {
+      transform: translateY(-3px) scale(1.05) !important;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.55), 0 0 18px rgba(56, 189, 248, 0.65) !important;
+      background: linear-gradient(135deg, #0369a1 0%, #1e3a8a 100%) !important;
+      border-color: #fde047 !important;
+      color: #ffffff !important;
+    }
+    .floating-btn-arrow {
+      font-size: 0.82rem !important;
+      display: inline-block !important;
+      transition: transform 0.2s ease !important;
+    }
+    .floating-back-to-top:hover .floating-btn-arrow {
+      transform: translateY(-2px) !important;
+    }
+    @media (max-width: 680px) {
+      .floating-back-to-top {
+        bottom: 18px !important;
+        right: 16px !important;
+        padding: 8px 14px !important;
+        font-size: 0.80rem !important;
+        gap: 6px !important;
+      }
+    }
+
 </style>
 </head>
 <body id="top">
@@ -4513,15 +4721,27 @@
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
 </a>
 </header>
-<div class="breadcrumb-bar">
-<a href="index.html">முகப்பு (Home)</a>
-<span class="breadcrumb-separator">/</span>
-<a href="https://www.ceosvg.in" rel="noopener" target="_blank">ceosvg.in</a>
-<span class="breadcrumb-separator">/</span>
-<a href="02_00_direct_admissions.html">02 / நேரடிச் சேர்க்கை</a>
-<span class="breadcrumb-separator">/</span>
-<span class="breadcrumb-current">கால்நடை மருத்துவம், துணை மருத்துவம் &amp; டிப்ளமோ படிப்புகள் (Non-NEET)</span>
-</div>
+<nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
+<a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+<span class="btn-icon">🧭</span>
+<span class="btn-text">வழிகாட்டி முகப்பு</span>
+</a>
+<span class="nav-menu-separator">▶</span>
+<a class="nav-menu-btn btn-portal-home" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலக தளம்">
+<span class="btn-icon">🌐</span>
+<span class="btn-text">ceosvg.in</span>
+</a>
+<span class="nav-menu-separator">▶</span>
+<a class="nav-menu-btn btn-direct-home" href="02_00_direct_admissions.html" title="நேரடிச் சேர்க்கைப் படிப்புகள்">
+<span class="btn-icon">🎯</span>
+<span class="btn-text">02 / நேரடிச் சேர்க்கை</span>
+</a>
+<span class="nav-menu-separator">▶</span>
+<span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்: கால்நடை &amp; துணை மருத்துவம்">
+<span class="btn-icon">🩺</span>
+<span class="btn-text">கால்நடை &amp; துணை மருத்துவம்</span>
+</span>
+</nav>
 <div class="header-banner-wrap">
 <header class="header-banner aurora-theme">
 <h1 class="banner-main-title" style="font-size: clamp(1.4rem, 2.0vw, 1.85rem) !important; font-weight: 900 !important; margin: 0 0 6px 0 !important; color: #ffffff !important; letter-spacing: -0.3px !important; text-shadow: 0 2px 8px rgba(0,0,0,0.8) !important;">
@@ -4592,7 +4812,7 @@
 சூத்திரம்: Biology (100) + [Phy÷2] (50) + [Chem÷2] (50) = 200
 </div>
 </div>
-<div style="display: grid !important; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)) 250px !important; gap: 10px !important; align-items: center !important;">
+<div style="display: grid !important; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) minmax(290px, 350px) !important; gap: 10px !important; align-items: center !important;">
 <div style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
 <label for="biology" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">🧬 உயிரியல் (Biology /100):</label>
 <input id="biology" max="100" min="0" oninput="computeMedCutoff()" placeholder="0 - 100" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="95"/>
@@ -4605,10 +4825,10 @@
 <label for="chemistry" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">🧪 வேதியியல் (Chem /100):</label>
 <input id="chemistry" max="100" min="0" oninput="computeMedCutoff()" placeholder="0 - 100" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="92"/>
 </div>
-<div style="background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%) !important; border: 2px solid #fbbf24 !important; border-radius: 10px !important; padding: 6px 12px !important; text-align: center !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;">
-<div style="font-size: 0.72rem !important; font-weight: 800 !important; color: #fef08a !important;">உங்கள் கட்-ஆஃப் (200-க்கு):</div>
-<div id="medCutoffResult" style="font-size: 1.85rem !important; font-weight: 900 !important; color: #ffffff !important; text-shadow: 0 2px 8px rgba(251, 191, 36, 0.5) !important; line-height: 1.1 !important; margin: 1px 0 !important;">186.00</div>
-<span id="medCutoffStatus" style="background: rgba(251, 191, 36, 0.2) !important; border: 1px solid #f59e0b !important; color: #fef08a !important; font-size: 0.70rem !important; font-weight: 800 !important; padding: 1px 8px !important; border-radius: 999px !important; white-space: nowrap !important; max-width: 100% !important; overflow: hidden !important; text-overflow: ellipsis !important;">🩺 அரசு B.Sc Nursing / B.Pharm / BPT வாய்ப்பு அதிகம்</span>
+<div style="background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%) !important; border: 2.2px solid #fbbf24 !important; border-radius: 12px !important; padding: 10px 14px !important; text-align: center !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; box-shadow: 0 4px 16px rgba(0,0,0,0.35) !important; min-width: 280px !important; box-sizing: border-box !important;">
+<div style="font-size: 0.78rem !important; font-weight: 800 !important; color: #fef08a !important; letter-spacing: 0.3px !important; margin-bottom: 2px !important;">உங்கள் கட்-ஆஃப் (200-க்கு):</div>
+<div id="medCutoffResult" style="font-size: 2.1rem !important; font-weight: 900 !important; color: #ffffff !important; text-shadow: 0 2px 10px rgba(251, 191, 36, 0.6) !important; line-height: 1.15 !important; margin: 2px 0 6px 0 !important;">186.00</div>
+<span id="medCutoffStatus" style="background: rgba(251, 191, 36, 0.22) !important; border: 1.2px solid #f59e0b !important; color: #fef08a !important; font-size: 0.78rem !important; font-weight: 800 !important; padding: 4px 12px !important; border-radius: 999px !important; white-space: normal !important; word-break: normal !important; line-height: 1.35 !important; display: inline-block !important; width: 100% !important; box-sizing: border-box !important;">🩺 அரசு B.Sc Nursing / B.Pharm / BPT வாய்ப்பு அதிகம்</span>
 </div>
 </div>
 </section>
@@ -4789,7 +5009,7 @@
 <h3 style="font-size: 1.2rem; font-weight: 800; color: #1e40af; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
 <span>🏥</span> பிரிவு (A): முதன்மையான 7 மருத்துவத் தொழில்முறைப் பட்டங்கள் (Core Professional Degrees)
       </h3>
-<div class="sub-grid" style="margin-bottom: 24px;">
+<div class="sub-grid core-7-degrees-grid" id="core7DegreesGrid" style="margin-bottom: 24px;">
 <!-- Course 1: B.Sc Nursing -->
 <div class="course-card-detail" style="border-left-color: #e11d48;">
 <div class="course-title-row">
@@ -4887,7 +5107,7 @@
           </div>
 </div>
 <!-- Course 7: BPO -->
-<div class="course-card-detail" style="border-left-color: #475569;">
+<div class="course-card-detail course-card-fullwidth" style="border-left-color: #475569;">
 <div class="course-title-row">
 <div>
 <span class="course-name-tamil">7. B.P.O (செயற்கை உறுப்பு &amp; மூட்டு உபகரணப் படிப்பு)</span>
@@ -6433,224 +6653,6 @@
 </tbody>
 </table>
 </div>
-<!-- Sub-section 4.1: College-wise Seat Matrix for Top 7 Core Healthcare Degrees -->
-<div id="core-7-seats" style="margin-top: 32px;">
-<h3 style="font-size: 1.25rem; font-weight: 800; color: #1e40af; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-<span>🏥</span> முதன்மையான 7 மருத்துவத் தொழில்முறைப் பட்டங்கள் — வழங்கும் அரசு கல்லூரிகள் &amp; இடங்கள் விவரம் (Seat Matrix)
-        </h3>
-<p style="font-size: 0.92rem; color: #334155; margin-bottom: 16px;">
-          மாணவர்கள் மற்றும் பெற்றோர்கள் அதிகம் விரும்பும் தலைசிறந்த 7 தொழில்முறை மருத்துவப் பட்டங்களுக்கான அரசு மருத்துவக் கல்லூரிகள் மற்றும் இடங்களின் (Seats) அதிகாரப்பூர்வ தொகுப்பு:
-        </p>
-<div class="table-container" style="margin-bottom: 24px;">
-<table class="styled-table">
-<thead>
-<tr>
-<th style="width: 5%;">வ.எண்</th>
-<th style="width: 22%;">பட்டப்படிப்பு பெயர்</th>
-<th style="width: 12%;">கால அளவு</th>
-<th style="width: 41%;">வழங்கும் முக்கிய அரசு கல்லூரிகள் &amp; பயிற்சி நிறுவனங்கள்</th>
-<th style="width: 20%;">அரசு &amp; சுயநிதி இடங்கள் (Seats)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td><strong>B.Sc. Nursing<br/><small style="color: #64748b;">செவிலியர் படிப்பு</small></strong></td>
-<td>4 ஆண்டுகள்</td>
-<td>
-                  • மெட்ராஸ் மெடிக்கல் காலேஜ் (MMC சென்னை) – 50 இடங்கள்<br/>
-                  • ஸ்டான்லி மருத்துவக் கல்லூரி, சென்னை – 50 இடங்கள்<br/>
-                  • மதுரை மருத்துவக் கல்லூரி – 50 இடங்கள்<br/>
-                  • செங்கல்பட்டு அரசு மருத்துவக் கல்லூரி – 50 இடங்கள்<br/>
-                  • சேலம் மோகன் குமாரமங்கலம் மருத்துவக் கல்லூரி – 50 இடங்கள்<br/>
-                  • திருச்சி கி.ஆ.பெ. விசுவநாதம் மருத்துவக் கல்லூரி – 50 இடங்கள்<br/>
-                  • திருநெல்வேலி அரசு மருத்துவக் கல்லூரி – 50 இடங்கள்<br/>
-                  • கடலூர் அரசு மருத்துவக் கல்லூரி (ராஜா முத்தையா வளாகம்) – 100 இடங்கள் (ஆண்கள்/பெண்கள்)
-                </td>
-<td>
-<strong style="color: #065f46; font-size: 1rem;">அரசு இடங்கள்: ~450+</strong><br/>
-<span style="font-size: 0.82rem; color: #475569;">சுயநிதிக் கல்லூரிகளில் அரசு ஒதுக்கீட்டு இடங்கள்: 3,500+ இடங்கள் (180+ கல்லூரிகள்)</span>
-</td>
-</tr>
-<tr>
-<td>2</td>
-<td><strong>B.Pharm<br/><small style="color: #64748b;">மருந்தியல் படிப்பு</small></strong></td>
-<td>4 ஆண்டுகள்</td>
-<td>
-                  • மெட்ராஸ் மெடிக்கல் காலேஜ் (College of Pharmacy, MMC சென்னை) – 60 இடங்கள்<br/>
-                  • மதுரை அரசு மருத்துவக் கல்லூரி (College of Pharmacy, Madurai) – 60 இடங்கள்
-                </td>
-<td>
-<strong style="color: #065f46; font-size: 1rem;">அரசு இடங்கள்: 120</strong><br/>
-<span style="font-size: 0.82rem; color: #475569;">சுயநிதிக் கல்லூரிகளில் அரசு ஒதுக்கீட்டு இடங்கள்: 3,000+ இடங்கள் (65+ கல்லூரிகள்)</span>
-</td>
-</tr>
-<tr>
-<td>3</td>
-<td><strong>Pharm.D<br/><small style="color: #64748b;">டாக்டர் ஆஃப் பார்மசி</small></strong></td>
-<td>6 ஆண்டுகள்<br/><small>(5 படிப்பு + 1 Internship)</small></td>
-<td>
-                  • கடலூர் அரசு மருத்துவக் கல்லூரி (அண்ணாமலைப் பல்கலைக்கழகம்)<br/>
-                  • DME ஒற்றைச் சாளரக் கலந்தாய்வில் உள்ள முன்னணி சுயநிதி மருந்தியல் கல்லூரிகள் (KMCH கோவை, PSG, Sri Ramachandra, JKK Nattraja, SRPA)
-                </td>
-<td>
-<strong style="color: #065f46; font-size: 1rem;">அரசு ஒதுக்கீட்டு இடங்கள்: ~400+</strong><br/>
-<span style="font-size: 0.82rem; color: #475569;">கல்லூரிக்கு தலா 30 முதல் 60 அரசு ஒதுக்கீட்டு இடங்கள்</span>
-</td>
-</tr>
-<tr>
-<td>4</td>
-<td><strong>BPT<br/><small style="color: #64748b;">பிசியோதெரபி / உடலியக்கம்</small></strong></td>
-<td>4½ ஆண்டுகள்<br/><small>(6 மாத பயிற்சி உள்பட)</small></td>
-<td>
-                  • அரசு மறுவாழ்வு மருத்துவமனை (GIRM), கே.கே. நகர், சென்னை (MMC இணைப்பு) – 25 இடங்கள்<br/>
-                  • மதுரை அரசு மருத்துவக் கல்லூரி, மதுரை – 20 இடங்கள்<br/>
-                  • திருநெல்வேலி அரசு மருத்துவக் கல்லூரி – 20 இடங்கள்
-                </td>
-<td>
-<strong style="color: #065f46; font-size: 1rem;">அரசு இடங்கள்: 65</strong><br/>
-<span style="font-size: 0.82rem; color: #475569;">சுயநிதிக் கல்லூரிகளில் அரசு ஒதுக்கீட்டு இடங்கள்: 1,500+ இடங்கள் (45+ கல்லூரிகள்)</span>
-</td>
-</tr>
-<tr>
-<td>5</td>
-<td><strong>BOT<br/><small style="color: #64748b;">ஆக்குபேஷனல் தெரபி</small></strong></td>
-<td>4½ ஆண்டுகள்<br/><small>(6 மாத பயிற்சி உள்பட)</small></td>
-<td>
-                  • அரசு மறுவாழ்வு மருத்துவமனை (GIRM), கே.கே. நகர், சென்னை (MMC இணைப்பு) – 20 இடங்கள்<br/>
-                  • மத்திய அரசு மாற்றுத்திறனாளிகள் மேம்பாட்டு நிறுவனம் (NIEPMD), முட்டுக்காடு, சென்னை – 25 இடங்கள்
-                </td>
-<td>
-<strong style="color: #065f46; font-size: 1rem;">அரசு / மத்திய அரசு இடங்கள்: 45</strong><br/>
-<span style="font-size: 0.82rem; color: #475569;">சுயநிதிக் கல்லூரிகளில் அரசு ஒதுக்கீட்டு இடங்கள்: 400+ இடங்கள்</span>
-</td>
-</tr>
-<tr>
-<td>6</td>
-<td><strong>B.A.S.L.P<br/><small style="color: #64748b;">பேச்சு &amp; செவித்திறன்</small></strong></td>
-<td>4 ஆண்டுகள்<br/><small>(1 ஆண்டு Internship)</small></td>
-<td>
-                  • மெட்ராஸ் மெடிக்கல் காலேஜ் (MMC சென்னை) – 25 இடங்கள்<br/>
-                  • NIEPMD (மத்திய மாற்றுத்திறனாளிகள் நிறுவனம்), ECR முட்டுக்காடு, சென்னை – 25 இடங்கள்<br/>
-                  • ஹோலி கிராஸ் கல்லூரி (Holy Cross), திருச்சிராப்பள்ளி – 25 இடங்கள்
-                </td>
-<td>
-<strong style="color: #065f46; font-size: 1rem;">அரசு ஒதுக்கீட்டு இடங்கள்: ~75</strong><br/>
-<span style="font-size: 0.82rem; color: #475569;">தமிழ்நாட்டின் மிகக் குறைந்த எண்ணிக்கையிலான பிரத்யேக இடங்கள்</span>
-</td>
-</tr>
-<tr>
-<td>7</td>
-<td><strong>B.P.O<br/><small style="color: #64748b;">செயற்கை உறுப்பு &amp; மூட்டு உபகரணம்</small></strong></td>
-<td>4½ ஆண்டுகள்<br/><small>(6 மாத பயிற்சி உள்பட)</small></td>
-<td>
-                  • அரசு மறுவாழ்வு மருத்துவமனை (GIRM), கே.கே. நகர், சென்னை (MMC இணைப்பு) – 10 இடங்கள்<br/>
-                  • மத்திய அரசு நிறுவனம் NIEPMD, கிழக்குக் கடற்கரைச் சாலை (ECR), முட்டுக்காடு, சென்னை – 20 இடங்கள்
-                </td>
-<td>
-<strong style="color: #065f46; font-size: 1rem;">அரசு / மத்திய அரசு இடங்கள்: 30</strong><br/>
-<span style="font-size: 0.82rem; color: #475569;">அரிதான செயற்கை உறுப்பு வடிவமைக்கும் பொறியியல் மருத்துவப் படிப்பு</span>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<!-- Sub-section 4.2: Rare & Super-Specialized Allied Health Courses and Colleges -->
-<div id="rare-courses" style="margin-top: 32px;">
-<h3 style="font-size: 1.25rem; font-weight: 800; color: #b45309; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-<span>🔬</span> தமிழ்நாட்டின் அரிதான &amp; அதிநவீன துணை மருத்துவப் படிப்புகள் (Rare &amp; Super-Specialized Courses)
-        </h3>
-<p style="font-size: 0.92rem; color: #334155; margin-bottom: 16px;">
-          தமிழ்நாட்டில் குறிப்பிட்ட சில அரசு மருத்துவக் கல்லூரிகள் மற்றும் சிறப்பு மருத்துவ ஆராய்ச்சி நிறுவனங்களில் மட்டுமே வழங்கப்படும் மிகவும் அரிதான, சர்வதேச அளவில் உச்சபட்ச ஊதியம் பெற்றுத்தரும் உயர் தொழில்நுட்பப் படிப்புகள்:
-        </p>
-<div class="sub-grid">
-<!-- Rare Course 1: Perfusion Tech -->
-<div class="course-card-detail" style="border-left-color: #dc2626;">
-<div class="course-title-row">
-<span class="course-name-tamil">1. B.Sc. Cardio-Pulmonary Perfusion Care Technology</span>
-<span class="course-meta-pill" style="background: #fef2f2; color: #b91c1c; border-color: #fecaca;">அரிதான இதய அறுவை அரங்கு படிப்பு</span>
-</div>
-<p class="course-desc-text">
-              திறந்த இதய அறுவை சிகிச்சையின் போது இதய-நுரையீரல் கருவியை (Heart-Lung Machine) இயக்கும் உயரிய பணி.
-            </p>
-<div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #dc2626; font-size: 0.88rem; color: #334155;">
-<strong>வழங்கும் அரசு கல்லூரிகள்:</strong> மெட்ராஸ் மெடிக்கல் காலேஜ் (MMC சென்னை), மதுரை அரசு மருத்துவக் கல்லூரி, திருநெல்வேலி அரசு மருத்துவக் கல்லூரி.<br/>
-<strong>இடங்கள்:</strong> கல்லூரிக்கு <strong>5 முதல் 10 இடங்கள் மட்டுமே!</strong> (தமிழ்நாடு முழுமைக்கும் விரல்விட்டு எண்ணக்கூடிய மிகக் குறைந்த இடங்கள்).
-            </div>
-</div>
-<!-- Rare Course 2: Nuclear Medicine -->
-<div class="course-card-detail" style="border-left-color: #7c3aed;">
-<div class="course-title-row">
-<span class="course-name-tamil">2. B.Sc. Nuclear Medicine Technology (அணுக்கரு மருத்துவம்)</span>
-<span class="course-meta-pill" style="background: #f5f3ff; color: #6d28d9; border-color: #ddd6fe;">அதிநவீன அணுக்கதிர்வீச்சு படிப்பு</span>
-</div>
-<p class="course-desc-text">
-              கதிரியக்க ஐசோடோப்புகள், காமா கேமரா மற்றும் PET-CT / SPECT ஸ்கேனர் மூலம் புற்றுநோய் செல்களை மூலக்கூறு அளவில் கண்டறிதல்.
-            </p>
-<div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #7c3aed; font-size: 0.88rem; color: #334155;">
-<strong>வழங்கும் முதன்மை நிறுவனங்கள்:</strong> அடையாறு கேன்சர் இன்ஸ்டிடியூட் (Cancer Institute WIA, சென்னை), கிறிஸ்டியன் மெடிக்கல் காலேஜ் (CMC வேலூர்), ஸ்ரீ ராமச்சந்திரா (SRMC சென்னை).<br/>
-<strong>இடங்கள்:</strong> நிறுவனம் ஒன்றுக்கு <strong>10 முதல் 15 இடங்கள் மட்டுமே!</strong>
-</div>
-</div>
-<!-- Rare Course 3: Neuro Electro Physiology -->
-<div class="course-card-detail" style="border-left-color: #0284c7;">
-<div class="course-title-row">
-<span class="course-name-tamil">3. B.Sc. Neuro Electro Physiology (நரம்பியல் மின் உடலியங்கியல்)</span>
-<span class="course-meta-pill blue">நரம்பியல் சிறப்புப் படிப்பு</span>
-</div>
-<p class="course-desc-text">
-              மூளை மின் வரைபடம் (EEG), தசை நரம்பு மின் வரைபடம் (EMG), நரம்பு கடத்தல் வேகம் (NCV) மற்றும் வலிப்பு/தூக்க குறைபாடு பரிசோதனைகள்.
-            </p>
-<div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #0284c7; font-size: 0.88rem; color: #334155;">
-<strong>வழங்கும் அரசு கல்லூரிகள்:</strong> மெட்ராஸ் மெடிக்கல் காலேஜ் - நரம்பியல் நிறுவனம் (Institute of Neurology, MMC சென்னை), மதுரை அரசு மருத்துவக் கல்லூரி நரம்பியல் பிரிவு.<br/>
-<strong>இடங்கள்:</strong> <strong>5 முதல் 10 இடங்கள் மட்டுமே!</strong>
-</div>
-</div>
-<!-- Rare Course 4: Radio Therapy -->
-<div class="course-card-detail" style="border-left-color: #d97706;">
-<div class="course-title-row">
-<span class="course-name-tamil">4. B.Sc. Radio Therapy Technology (RTT - புற்றுநோய் கதிர்வீச்சு)</span>
-<span class="course-meta-pill amber">புற்றுநோய் கதிர்வீச்சு தொழில்நுட்பம்</span>
-</div>
-<p class="course-desc-text">
-              புற்றுநோய் கட்டிகளை அழிக்க லீனியர் ஆக்ஸிலரேட்டர் (Linac) இயந்திரம் மூலம் துல்லியமான கதிர்வீச்சு செலுத்தும் உயர் பணி.
-            </p>
-<div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #d97706; font-size: 0.88rem; color: #334155;">
-<strong>வழங்கும் அரசு நிறுவனங்கள்:</strong> மெட்ராஸ் மெடிக்கல் காலேஜ் (MMC சென்னை), அரசு அறிஞர் அண்ணா நினைவு புற்றுநோய் ஆராய்ச்சி மருத்துவமனை (காஞ்சிபுரம்), மதுரை அரசு ராஜாஜி மருத்துவமனை.<br/>
-<strong>இடங்கள்:</strong> <strong>10 முதல் 15 இடங்கள் மட்டுமே!</strong>
-</div>
-</div>
-<!-- Rare Course 5: Prosthetics and Orthotics -->
-<div class="course-card-detail" style="border-left-color: #475569;">
-<div class="course-title-row">
-<span class="course-name-tamil">5. B.P.O (செயற்கை உறுப்பு &amp; மூட்டு உபகரணப் பொறியியல்)</span>
-<span class="course-meta-pill" style="background: #f1f5f9; color: #334155; border-color: #cbd5e1;">மருத்துவப் பொறியியல் துறை</span>
-</div>
-<p class="course-desc-text">
-              செயற்கை கால்கள், கைகள் மற்றும் முதுகெலும்பு தாங்கு உபகரணங்கள் (Braces) தயாரித்து நோயாளிகளுக்குப் பொருத்துதல்.
-            </p>
-<div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #475569; font-size: 0.88rem; color: #334155;">
-<strong>வழங்கும் முதன்மை நிறுவனங்கள்:</strong> அரசு மறுவாழ்வு மருத்துவமனை (GIRM), கே.கே. நகர், சென்னை (MMC) &amp; மத்திய அரசு நிறுவனம் NIEPMD முட்டுக்காடு, சென்னை.<br/>
-<strong>இடங்கள்:</strong> <strong>10 முதல் 20 இடங்கள் மட்டுமே!</strong>
-</div>
-</div>
-<!-- Rare Course 6: Respiratory Therapy -->
-<div class="course-card-detail" style="border-left-color: #059669;">
-<div class="course-title-row">
-<span class="course-name-tamil">6. B.Sc. Respiratory Therapy (சுவாச நோய் சிகிச்சை)</span>
-<span class="course-meta-pill" style="background: #ecfdf5; color: #065f46; border-color: #a7f3d0;">நுரையீரல் &amp; ICU சிறப்புப் படிப்பு</span>
-</div>
-<p class="course-desc-text">
-              தீவிர ஆஸ்துமா, நுரையீரல் முடக்கம், சுவாசக் கோளாறுகளுக்கு வென்டிலேட்டர் மற்றும் ஆக்ஸிஜன் சுவாச சிகிச்சை அளித்தல்.
-            </p>
-<div style="background: #f8fafc; padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid #059669; font-size: 0.88rem; color: #334155;">
-<strong>வழங்கும் அரசு கல்லூரிகள்:</strong> அரசு ஸ்டான்லி மருத்துவக் கல்லூரி (Stanley சென்னை), மதுரை அரசு மருத்துவக் கல்லூரி, கோயம்புத்தூர் அரசு மருத்துவக் கல்லூரி.<br/>
-<strong>இடங்கள்:</strong> கல்லூரிக்கு <strong>10 முதல் 15 இடங்கள் மட்டுமே!</strong>
-</div>
-</div>
-</div>
-</div>
 </section>
 <div class="kural-box">
 <div class="kural-header">
@@ -6867,5 +6869,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
+<button aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" id="floatingBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="பக்கத்தின் மேலே செல்க" type="button">
+<span class="floating-btn-arrow">▲</span>
+<span class="floating-btn-text">மேலே செல்க</span>
+</button>
 </body>
 </html>
