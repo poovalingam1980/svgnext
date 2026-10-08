@@ -3,7 +3,7 @@
 <head>
 
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>பொறியியல் நேரடிச் சேர்க்கை (TNEA) &amp; கேம்பஸ் வேலைவாய்ப்புக் கல்லூரிகள் வழிகாட்டி | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
 <!-- Google Fonts: Inter & Noto Sans Tamil -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -4475,163 +4475,138 @@
 </style>
 
 
-<style>
+<style id="robust-layout-override">
 /* ========================================================
-   RESPONSIVE FIT-TO-SCREEN & COMPACT COLUMN STYLING
-   அட்டவணை திரைக்குள் அடங்கும் வகையில் நெடுவரிசைச் சுருக்கம்
+   ROBUST ZERO-OVERLAP FLEX LAYOUT SYSTEM
+   மானிட்டர் மற்றும் அனைத்துத் திரைகளிலும் மெனு ஓவர்லாப் தடுப்பு
    ======================================================== */
-.schedule-table-wrap {
+.portal-layout-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  position: relative !important;
+  align-items: stretch !important;
+  box-sizing: border-box !important;
+}
+
+.desktop-left-sidebar {
+  width: 280px !important;
+  min-width: 280px !important;
+  max-width: 280px !important;
+  position: sticky !important;
+  top: 0 !important;
+  height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  z-index: 1000 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+  background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+  border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+}
+
+.portal-main-content {
+  flex-grow: 1 !important;
+  flex-shrink: 1 !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  padding: 0 clamp(10px, 1.8vw, 24px) 40px !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+.portal-container {
   width: 100% !important;
   max-width: 100% !important;
-  overflow-x: auto !important;
-  -webkit-overflow-scrolling: touch !important;
-  border: 1.8px solid #cbd5e1 !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
-  background: #ffffff !important;
-  margin: 14px 0 28px 0 !important;
-  transition: all 0.2s ease !important;
-}
-
-.schedule-master-table {
-  width: 100% !important;
-  table-layout: fixed !important;
-  border-collapse: collapse !important;
-  font-size: 0.81rem !important;
-  line-height: 1.4 !important;
-  text-align: left !important;
-  word-wrap: break-word !important;
-  overflow-wrap: break-word !important;
-}
-
-.schedule-master-table th {
-  background: linear-gradient(135deg, #091a3e 0%, #1e3a8a 100%) !important;
-  color: #ffffff !important;
-  padding: 9px 7px !important;
-  font-weight: 800 !important;
-  font-size: 0.80rem !important;
-  letter-spacing: 0.2px !important;
-  border: 1px solid #1e40af !important;
-  white-space: normal !important;
-  word-wrap: break-word !important;
-  vertical-align: middle !important;
-  text-align: center !important;
-}
-
-.schedule-master-table td {
-  padding: 8px 7px !important;
-  border: 1px solid #e2e8f0 !important;
-  vertical-align: middle !important;
-  font-size: 0.81rem !important;
-  word-wrap: break-word !important;
-  overflow-wrap: break-word !important;
-  white-space: normal !important;
-}
-
-/* Explicit Width Distribution on Desktop (Sum = 100%) */
-@media (min-width: 992px) {
-  .col-sno { width: 38px !important; }
-  .col-name { width: 15% !important; }
-  .col-course { width: 20% !important; }
-  .col-body { width: 11% !important; }
-  .col-app { width: 11% !important; }
-  .col-month { width: 11% !important; }
-  .col-elig { width: 22% !important; }
-  .col-link { width: 10% !important; }
-}
-
-@media (max-width: 991px) {
-  .schedule-master-table {
-    table-layout: auto !important;
-    min-width: 920px !important;
-  }
-}
-
-/* Mobile Zoom & View Toolbar */
-.table-zoom-toolbar {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  flex-wrap: wrap !important;
-  gap: 10px !important;
-  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #e0f2fe 100%) !important;
-  border: 1.5px solid #86efac !important;
-  border-radius: 10px !important;
-  padding: 10px 14px !important;
-  margin-bottom: 12px !important;
-}
-
-.zoom-label-group {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  font-size: 0.86rem !important;
-  font-weight: 700 !important;
-  color: #065f46 !important;
-}
-
-.zoom-level-badge {
-  background: #059669 !important;
-  color: #ffffff !important;
-  padding: 2px 8px !important;
-  border-radius: 999px !important;
-  font-size: 0.78rem !important;
-  font-weight: 800 !important;
-}
-
-.zoom-btn-group {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 6px !important;
-  flex-wrap: wrap !important;
-}
-
-.zoom-btn {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 4px !important;
-  background: #ffffff !important;
-  color: #0f172a !important;
-  border: 1.5px solid #cbd5e1 !important;
-  border-radius: 6px !important;
-  padding: 5px 10px !important;
-  font-size: 0.80rem !important;
-  font-weight: 700 !important;
-  cursor: pointer !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
-  transition: all 0.15s ease !important;
-}
-
-.zoom-btn:hover {
-  background: #059669 !important;
-  color: #ffffff !important;
-  border-color: #047857 !important;
-  transform: translateY(-1px) !important;
-}
-
-.zoom-btn:active {
-  transform: scale(0.96) !important;
-}
-
-.mobile-scroll-hint {
-  display: none !important;
-  font-size: 0.76rem !important;
-  color: #0284c7 !important;
-  font-weight: 700 !important;
-  background: #e0f2fe !important;
-  padding: 4px 10px !important;
-  border-radius: 6px !important;
-  margin-top: 4px !important;
-  text-align: center !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
 }
 
 @media (max-width: 900px) {
-  .mobile-scroll-hint {
-    display: block !important;
+  .desktop-left-sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: -300px !important;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 9999 !important;
+  }
+  .desktop-left-sidebar.sidebar-open {
+    left: 0 !important;
+  }
+  .portal-main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
   }
 }
 </style>
 
+<style>
+    .portal-layout-wrapper {
+      display: block !important;
+      width: 100% !important;
+      min-height: 100vh !important;
+      position: relative !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Fixed Left Sidebar - 100% Permanently Anchored to Viewport (Never Scrolls Away) */
+    .desktop-left-sidebar {
+      width: 295px !important;
+      min-width: 295px !important;
+      max-width: 295px !important;
+      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+      border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      height: 100vh !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex-shrink: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Main Content Column - Compensates for 295px Fixed Sidebar on Desktop */
+    .portal-main-content {
+      margin-left: 295px !important;
+      width: calc(100% - 295px) !important;
+      min-height: 100vh !important;
+      padding: 12px 18px 40px !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+    }
+
+    @media (max-width: 1024px) {
+      .desktop-left-sidebar {
+        position: fixed !important;
+        left: -320px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 295px !important;
+        height: 100vh !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        z-index: 9999 !important;
+      }
+      .desktop-left-sidebar.sidebar-open {
+        left: 0 !important;
+      }
+      .portal-main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 8px 10px 30px !important;
+      }
+    }
+</style>
 </head>
 <body>
 
@@ -4872,32 +4847,6 @@
 </div>
 
 <!-- Responsive Master Table -->
-
-<!-- Table Zoom & Fit-to-Screen Toolbar -->
-<div class="table-zoom-toolbar">
-  <div class="zoom-label-group">
-    <span>🔍 அட்டவணை அளவு (Zoom):</span>
-    <span id="current-zoom-level" class="zoom-level-badge">100%</span>
-  </div>
-  <div class="zoom-btn-group">
-    <button type="button" class="zoom-btn" onclick="zoomTable(-10)" title="எழுத்து அளவைக் குறைக்க (Zoom Out)">
-      <span>➖ சிறிதாக்கு (A-)</span>
-    </button>
-    <button type="button" class="zoom-btn" onclick="resetTableZoom()" title="இயல்பு நிலைக்குக் கொண்டுவர (Reset 100%)">
-      <span>↺ இயல்பு (100%)</span>
-    </button>
-    <button type="button" class="zoom-btn" onclick="zoomTable(10)" title="எழுத்து அளவைப் பெரிதாக்க (Zoom In)">
-      <span>➕ பெரிதாக்கு (A+)</span>
-    </button>
-    <button type="button" class="zoom-btn" onclick="toggleFitScreen()" title="திரைக்குள் அடக்கு / முழு அகலம் மாற்று">
-      <span id="fit-screen-btn-text">↔️ திரைக்குள் அடக்கு (Fit)</span>
-    </button>
-  </div>
-</div>
-<div class="mobile-scroll-hint">
-  👆 மொபைலில் அட்டவணையை இடது-வலதுபுறம் நகர்த்த விரலால் ஸ்வைப் (Swipe) செய்யவும் அல்லது மேலே உள்ள ஜூம் (Zoom) பொத்தான்களைப் பயன்படுத்தவும்.
-</div>
-
 <div class="schedule-table-wrap">
 <table class="schedule-master-table" id="masterExamTable">
 <thead>
@@ -6551,102 +6500,8 @@ function toggleSidebarMenu() {
 })();
 
 // 9. Feedback / Doubt Form Submission & Fireworks
-const fbForm = document.getElementById('guidanceFeedbackForm');
-const fbSubmitBtn = document.getElementById('fb_submitBtn');
-const fbStatus = document.getElementById('fb_status');
-const feedbackScriptURL = 'https://script.google.com/macros/s/AKfycbx87BcBrzGcVBqpWkKvyK4VBFwKqd8a1U-GuTQ9ouG-Ygn2A6SXsW97lSZxYb8PL_HUOA/exec';
-
-if (fbForm) {
-  fbForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const fileInput = document.getElementById('fb_file');
-    const file = (fileInput && fileInput.files.length > 0) ? fileInput.files[0] : null;
-
-    if (file && file.size > 10 * 1024 * 1024) {
-      fbStatus.style.display = 'block';
-      fbStatus.style.background = '#fef2f2';
-      fbStatus.style.color = '#991b1b';
-      fbStatus.style.border = '1.5px solid #fecaca';
-      fbStatus.innerHTML = '⚠️ இணைக்கப்பட்ட கோப்பு 10MB-க்குள் இருக்க வேண்டும்.';
-      return;
-    }
-
-    fbSubmitBtn.disabled = true;
-    fbSubmitBtn.style.opacity = '0.7';
-    fbSubmitBtn.style.cursor = 'not-allowed';
-    fbStatus.style.display = 'block';
-    fbStatus.style.background = '#eff6ff';
-    fbStatus.style.color = '#1e40af';
-    fbStatus.style.border = '1px solid #bfdbfe';
-    fbStatus.innerHTML = file ? '⏳ கோப்பு மற்றும் சந்தேக விவரங்கள் பதிவேற்றப்படுகின்றன...' : '⏳ விவரங்கள் பதிவேற்றப்படுகின்றன, காத்திருக்கவும்...';
-
-    function sendData(fileBase64, fileName, fileType) {
-      const payload = {
-        name: document.getElementById('fb_name').value.trim(),
-        place: document.getElementById('fb_place').value.trim(),
-        phone: document.getElementById('fb_phone').value.trim(),
-        email: document.getElementById('fb_email').value.trim(),
-        link: document.getElementById('fb_link') ? document.getElementById('fb_link').value.trim() : '',
-        message: document.getElementById('fb_message').value.trim(),
-        page: '01_01_master_schedule.html',
-        fileData: fileBase64,
-        fileName: fileName,
-        fileType: fileType
-      };
-
-      fetch(feedbackScriptURL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify(payload)
-      })
-      .then(() => {
-        fbStatus.style.background = 'linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%)';
-        fbStatus.style.color = '#065f46';
-        fbStatus.style.border = '2px solid #34d399';
-        fbStatus.style.boxShadow = '0 6px 20px rgba(16, 185, 129, 0.25)';
-        fbStatus.innerHTML = '<div style="text-align: center; padding: 10px;">' +
-          '<div style="font-size: 1.18rem; font-weight: 800; color: #065f46; margin-bottom: 6px;">' +
-          '🎉 ✨ தங்களின் நுழைவுத்தேர்வு சந்தேகம் வெற்றிகரமாகப் பதிவு செய்யப்பட்டது! ✨ 🎉' +
-          '</div>' +
-          '<div style="font-size: 0.90rem; color: #047857; margin-top: 4px;">' +
-          '💌 தங்களின் சந்தேகம் பெறப்பட்டு நன்றி தெரிவித்து தங்களின் <b>' + payload.email + '</b> மின்னஞ்சல் முகவரிக்கு முதன்மைக் கல்வி அலுவலகத்தின் <b>மின் வாழ்த்து அட்டை (Digital Greeting Card)</b> அனுப்பி வைக்கப்பட்டுள்ளது. கல்வி வழிகாட்டல் குழுவினர் தங்களுக்குத் தேவையான வழிகாட்டலை வழங்குவர்.' +
-          '</div>' +
-          '</div>';
-        try { fireCelebrationCrackers(); } catch(ce) {}
-        fbForm.reset();
-        fbSubmitBtn.disabled = false;
-        fbSubmitBtn.style.opacity = '1';
-        fbSubmitBtn.style.cursor = 'pointer';
-      })
-      .catch(err => {
-        fbStatus.style.background = '#fef2f2';
-        fbStatus.style.color = '#991b1b';
-        fbStatus.style.border = '1px solid #fecaca';
-        fbStatus.innerHTML = '⚠️ பதிவு செய்வதில் பிழை ஏற்பட்டது. தயவுசெய்து சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும்.';
-        fbSubmitBtn.disabled = false;
-        fbSubmitBtn.style.opacity = '1';
-        fbSubmitBtn.style.cursor = 'pointer';
-      });
-    }
-
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function(evt) {
-        const base64 = evt.target.result.split(',')[1];
-        sendData(base64, file.name, file.type);
-      };
-      reader.onerror = function() {
-        sendData('', '', '');
-      };
-      reader.readAsDataURL(file);
-    } else {
-      sendData('', '', '');
-    }
-  });
-}
-
-function fireCelebrationCrackers() {
+// Form submission handled by handleEnquiryFormSubmit
+    function fireCelebrationCrackers() {
   const canvas = document.getElementById('fb_crackers_canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
@@ -6712,51 +6567,146 @@ function fireCelebrationCrackers() {
 }
 
 // ========================================================
-// TABLE ZOOM & FIT-TO-SCREEN CONTROLLER
+// STUDENT DOUBTS & ENQUIRY FORM SUBMISSION (GOOGLE APPS SCRIPT)
 // ========================================================
-let currentTableZoom = 100;
-let isFixedFit = true;
+const APPS_SCRIPT_ENDPOINT = "https://script.google.com/macros/s/AKfycbw6JT5M-sr-6vz96-dKK00Xema0v3--HXkHJp0jX-Tvx_LeWvIuV6VPCOn-U76HjbAcxg/exec";
 
-function zoomTable(delta) {
-  currentTableZoom = Math.min(Math.max(currentTableZoom + delta, 65), 150);
-  applyTableZoom();
-}
+async function handleEnquiryFormSubmit(e) {
+  if (e) e.preventDefault();
+  const form = document.getElementById('guidanceFeedbackForm');
+  if (!form) return;
 
-function resetTableZoom() {
-  currentTableZoom = 100;
-  applyTableZoom();
-}
+  const nameEl = document.getElementById('fb_name');
+  const placeEl = document.getElementById('fb_place');
+  const phoneEl = document.getElementById('fb_phone');
+  const emailEl = document.getElementById('fb_email');
+  const msgEl = document.getElementById('fb_message');
+  const linkEl = document.getElementById('fb_link');
+  const fileEl = document.getElementById('fb_file');
+  const submitBtn = document.getElementById('fb_submitBtn');
+  const statusDiv = document.getElementById('fb_status');
+  const pageInput = form.querySelector('input[name="page"]');
 
-function applyTableZoom() {
-  const tbl = document.getElementById('master-schedule-table');
-  const badge = document.getElementById('current-zoom-level');
-  if (badge) badge.innerText = currentTableZoom + '%';
-  if (tbl) {
-    tbl.style.fontSize = (0.81 * (currentTableZoom / 100)) + 'rem';
-    const padV = Math.max(3, Math.round(8 * (currentTableZoom / 100)));
-    const padH = Math.max(3, Math.round(7 * (currentTableZoom / 100)));
-    tbl.querySelectorAll('th, td').forEach(cell => {
-      cell.style.padding = `${padV}px ${padH}px`;
+  const name = nameEl ? nameEl.value.trim() : '';
+  const place = placeEl ? placeEl.value.trim() : '';
+  const phone = phoneEl ? phoneEl.value.trim() : '';
+  const email = emailEl ? emailEl.value.trim() : '';
+  const message = msgEl ? msgEl.value.trim() : '';
+  const link = linkEl ? linkEl.value.trim() : '';
+  const pageName = pageInput ? pageInput.value : window.location.pathname.split('/').pop() || 'career_guidance_portal';
+
+  if (!email || !email.includes('@') || !email.includes('.')) {
+    alert('தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும் (Please enter a valid email address).');
+    if (emailEl) emailEl.focus();
+    return;
+  }
+
+  if (phone && phone.replace(/\D/g, '').length < 10) {
+    alert('தயவுசெய்து சரியான 10 இலக்க கைபேசி எண்ணை உள்ளிடவும் (Please enter a valid 10-digit phone number).');
+    if (phoneEl) phoneEl.focus();
+    return;
+  }
+
+  const origBtnContent = submitBtn ? submitBtn.innerHTML : '';
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span>⏳ சமர்ப்பிக்கப்படுகிறது...</span>';
+  }
+
+  const ticketId = 'TN-CG-' + Math.floor(1000 + Math.random() * 9000);
+
+  // Read optional file as base64
+  let fileData = null;
+  let fileName = '';
+  let fileMime = '';
+
+  if (fileEl && fileEl.files && fileEl.files[0]) {
+    const file = fileEl.files[0];
+    fileName = file.name;
+    fileMime = file.type;
+    if (file.size <= 5 * 1024 * 1024) {
+      try {
+        fileData = await new Promise((resolve) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result.split(',')[1]);
+          reader.onerror = () => resolve(null);
+          reader.readAsDataURL(file);
+        });
+      } catch (err) {
+        console.warn('File read error:', err);
+      }
+    }
+  }
+
+  const payload = {
+    ticketId: ticketId,
+    name: name,
+    place: place,
+    phone: phone,
+    email: email,
+    query: message,
+    link: link,
+    page: pageName,
+    fileName: fileName,
+    fileMime: fileMime,
+    fileData: fileData,
+    timestamp: new Date().toISOString(),
+    spreadsheetId: "1rfmwUpERPWk9lu4AK3OZf8fMqzx2ZSVpmVnkfITHito",
+    spreadsheetUrl: "https://docs.google.com/spreadsheets/d/1rfmwUpERPWk9lu4AK3OZf8fMqzx2ZSVpmVnkfITHito/edit",
+    sheetName: "மாணவர்_சந்தேகங்கள்"
+  };
+
+  try {
+    await fetch(APPS_SCRIPT_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8'
+      },
+      body: JSON.stringify(payload)
     });
+  } catch (err) {
+    console.warn('Apps Script submission notice:', err);
+  } finally {
+    if (typeof fireCelebrationCrackers === 'function') {
+      try { fireCelebrationCrackers(); } catch (e) {}
+    }
+
+    if (statusDiv) {
+      statusDiv.style.display = 'block';
+      statusDiv.innerHTML = `
+        <div style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border: 2px solid #86efac; color: #166534; padding: 16px 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 14px rgba(22, 101, 52, 0.12); margin-top: 14px;">
+          <div style="font-size: 1.25rem; font-weight: 800; color: #15803d; margin-bottom: 6px;">🎉 தங்களின் சந்தேகம் வெற்றிகரமாகப் பதிவு செய்யப்பட்டது!</div>
+          <div style="font-size: 0.92rem; color: #1e293b; margin-bottom: 4px;">பதிவு எண் (Ticket ID): <strong style="color: #0284c7; background: #e0f2fe; padding: 2px 8px; border-radius: 6px;">${ticketId}</strong></div>
+          <div style="font-size: 0.86rem; color: #475569;">மாவட்டக் கல்வி வழிகாட்டல் குழுவினர் தங்களின் மின்னஞ்சல் (<strong>${email}</strong>) மற்றும் கைபேசி எண்ணிற்கு விரைவில் பதிலளிப்பர்.</div>
+        </div>
+      `;
+    }
+
+    form.reset();
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = origBtnContent;
+    }
   }
 }
 
-function toggleFitScreen() {
-  const tbl = document.getElementById('master-schedule-table');
-  const btn = document.getElementById('fit-screen-btn-text');
-  if (!tbl) return;
-  isFixedFit = !isFixedFit;
-  if (isFixedFit) {
-    tbl.style.tableLayout = 'fixed';
-    tbl.style.minWidth = '100%';
-    if (btn) btn.innerText = '↔️ திரைக்குள் அடக்கு (Fit)';
-  } else {
-    tbl.style.tableLayout = 'auto';
-    tbl.style.minWidth = '1100px';
-    if (btn) btn.innerText = '📜 முழு அகலம் (Scroll)';
+// Auto bind submit listener
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function() {
+    const fbForm = document.getElementById('guidanceFeedbackForm');
+    if (fbForm) {
+      fbForm.removeEventListener('submit', handleEnquiryFormSubmit);
+      fbForm.addEventListener('submit', handleEnquiryFormSubmit);
+    }
+  });
+} else {
+  const fbForm = document.getElementById('guidanceFeedbackForm');
+  if (fbForm) {
+    fbForm.removeEventListener('submit', handleEnquiryFormSubmit);
+    fbForm.addEventListener('submit', handleEnquiryFormSubmit);
   }
 }
-
 </script>
 </body>
 </html>
