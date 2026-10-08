@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-
 <html lang="ta">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>கால்நடை மருத்துவம், துணை மருத்துவம், டிப்ளமோ &amp; சான்றிதழ் படிப்புகள் நேரடிச் சேர்க்கை வழிகாட்டி (Non-NEET 2026) | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport"/>
+<title>கால்நடை மருத்துவம், துணை மருத்துவம், டிப்ளமோ படிப்புகள் நேரடிச் சேர்க்கை வழிகாட்டி (Non-NEET 2026) | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
 <!-- Google Fonts: Inter & Noto Sans Tamil -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <style>
+
     :root {
-      --primary: #065f46;          /* Deep Emerald Medical Green */
-      --primary-dark: #064e3b;     /* Deep Pine Slate */
-      --primary-light: #059669;    /* Vibrant Emerald */
-      --primary-accent: #10b981;   /* Bright Mint Green */
-      --secondary: #0284c7;        /* Medical Science Sky Blue */
-      --accent: #d97706;           /* Warm Amber Gold */
+      --primary: #1e3a8a;          /* Deep Engineering Navy */
+      --primary-dark: #0f172a;     /* Midnight Slate */
+      --primary-light: #2563eb;    /* Royal Blue */
+      --secondary: #0284c7;        /* Tech Cyan Blue */
+      --accent: #d97706;           /* Precision Amber */
       --accent-gold: #f59e0b;      /* Academic Gold */
-      --danger: #dc2626;           /* Crimson Red */
       --success: #15803d;          /* Approved Green */
       --bg-main: #f8fafc;
       --card-bg: #ffffff;
@@ -27,8 +25,8 @@
       --text-muted: #64748b;
       --border: #e2e8f0;
       --border-accent: #cbd5e1;
-      --badge-bg: #ecfdf5;
-      --badge-text: #065f46;
+      --badge-bg: #eff6ff;
+      --badge-text: #1d4ed8;
       --radius-sm: 8px;
       --radius-md: 14px;
       --radius-lg: 20px;
@@ -57,10 +55,15 @@
       -webkit-font-smoothing: antialiased;
     }
   
-    .portal-container { 
-       max-width: 100% !important; width: 100% !important; 
-      margin: 0 auto;
-     }
+    .portal-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 clamp(10px, 1.8vw, 28px) !important;
+  box-sizing: border-box !important;
+}
+
+    
   
     /* Top Navigation Bar */
     .top-bar {
@@ -88,7 +91,7 @@
     }
   
     .home-btn:hover {
-      background-color: #022c22;
+      background-color: #1e293b;
       transform: translateY(-1px);
       box-shadow: 0 4px 10px rgba(15, 23, 42, 0.3);
     }
@@ -105,150 +108,184 @@
       gap: 6px;
       font-size: 0.88rem;
       font-weight: 700;
-      color: #065f46;
-      background: #ecfdf5;
-      padding: 6px 16px;
+      color: #0369a1;
+      background: #e0f2fe;
+      padding: 6px 14px;
       border-radius: 999px;
-      border: 1px solid #a7f3d0;
+      border: 1px solid #bae6fd;
     }
   
-    /* Header Section */
+    /* Hero Header Banner */
     .portal-header {
-      background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%);
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0369a1 100%);
       border-radius: var(--radius-xl);
-      padding: 36px 32px 30px;
+      padding: 44px 32px 36px;
       color: #ffffff;
+      position: relative;
+      overflow: hidden;
       box-shadow: var(--shadow-lg);
       border: 1px solid rgba(255, 255, 255, 0.15);
       margin-bottom: 24px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .portal-header::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
-      pointer-events: none;
     }
   
     .header-badge-row {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
       flex-wrap: wrap;
-      margin-bottom: 12px;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 16px;
     }
   
     .header-tag {
-      padding: 5px 14px;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.4px;
-      text-transform: uppercase;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-    }
-  
-    .header-tag.primary {
-      background-color: #fef08a;
-      color: #713f12;
-      border-color: #fde047;
-    }
-  
-    .header-tag.secondary {
-      background-color: rgba(255, 255, 255, 0.15);
-      color: #ecfdf5;
-      
-    }
-  
-    .portal-title {
-      font-size: 2.1rem;
-      font-weight: 900;
-      line-height: 1.35;
-      margin-bottom: 12px;
-      color: #ffffff;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
-  
-    .accent-gold {
-      color: #fde047;
-    }
-  
-    .portal-subtitle {
-      font-size: 1.02rem;
-      color: #d1fae5;
-      max-width: 960px;
-      margin: 0 auto;
-      line-height: 1.65;
-    }
-  
-    /* Quick Navigation Pills */
-    .quick-nav-pills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 22px;
-    }
-  
-    .quick-nav-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(255, 255, 255, 0.14);
-      color: #ffffff;
-      text-decoration: none;
-      padding: 6px 14px;
+      padding: 5px 14px;
       border-radius: 999px;
       font-size: 0.82rem;
-      font-weight: 600;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+  
+    .header-tag.primary {
+      background: linear-gradient(90deg, #f59e0b, #d97706);
+      color: #0f172a;
+      box-shadow: 0 2px 8px rgba(217, 119, 6, 0.3);
+    }
+  
+    .header-tag.secondary {
+      background: rgba(255, 255, 255, 0.15);
+      color: #e0f2fe;
       border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+  
+    .portal-title {
+      font-size: 2.2rem;
+      font-weight: 900;
+      line-height: 1.3;
+      color: #ffffff;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+  
+    .portal-title span.accent-gold {
+      background: linear-gradient(90deg, #fde047, #f59e0b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  
+    .portal-subtitle {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      max-width: 1000px;
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+  
+    /* Quick Navigation Pills in Hero */
+    .quick-nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 18px;
+    }
+  
+    .quick-nav-pill {
+      background: rgba(255, 255, 255, 0.1);
+      color: #f1f5f9;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      user-select: none;
+    }
+  
+    /* Floating Back to Top Button */
+    .floating-nav-wrap {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+      transform: translateY(10px);
+    }
+
+    .floating-nav-wrap.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .floating-btn {
+      background: linear-gradient(135deg, #1e3a8a, #0369a1);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.3);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       transition: all 0.2s ease;
       
+    }
+
+    .floating-btn:hover {
+      background: linear-gradient(135deg, #2563eb, #0284c7);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
     }
   
     .quick-nav-pill:hover {
       background: #ffffff;
-      color: #065f46;
+      color: var(--primary-dark);
       transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
-  
+
     .quick-nav-pill.highlight-pill {
-      background: #fef08a;
-      color: #713f12;
-      font-weight: 800;
-      border-color: #fde047;
+      background: linear-gradient(90deg, #f59e0b, #d97706);
+      color: #0f172a;
+      font-weight: 700;
+      border-color: #f59e0b;
     }
-  
+
     .quick-nav-pill.highlight-pill:hover {
       background: #ffffff;
-      color: #065f46;
+      color: #b45309;
     }
   
-    /* Highlights Grid */
+    /* Key Highlights Grid */
     .highlights-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-bottom: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
     }
   
     .highlight-box {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
+      background: #ffffff;
       border-radius: var(--radius-md);
-      padding: 16px 14px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--primary-light);
       box-shadow: var(--shadow-sm);
-      text-align: center;
-      border-top: 4px solid var(--primary-light);
       transition: transform 0.2s ease;
     }
   
@@ -258,89 +295,64 @@
     }
   
     .highlight-label {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 700;
       color: var(--text-muted);
       text-transform: uppercase;
-      letter-spacing: 0.5px;
       margin-bottom: 4px;
+      letter-spacing: 0.5px;
     }
   
     .highlight-val {
-      font-size: 1.28rem;
-      font-weight: 900;
-      color: var(--primary);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-main);
       margin-bottom: 4px;
     }
   
     .highlight-desc {
-      font-size: 0.80rem;
+      font-size: 0.85rem;
       color: var(--text-sub);
-      line-height: 1.4;
     }
   
-    /* Section Cards Common */
-    .content-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 26px 28px;
-      margin-bottom: 24px;
-      box-shadow: var(--shadow-sm);
-    }
-  
-    .section-title {
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-bottom: 2px solid #f1f5f9;
-      padding-bottom: 10px;
-    }
-  
-    .section-title .icon {
-      font-size: 1.5rem;
-    }
-  
-    /* Calculator Card */
+    /* Live Cut-off Calculator Widget */
     .calculator-card {
-      background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
-      border: 2px solid #a7f3d0;
+      background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+      color: #ffffff;
       border-radius: var(--radius-lg);
-      padding: 24px 26px;
-      margin-bottom: 24px;
+      padding: 28px;
+      margin-bottom: 32px;
       box-shadow: var(--shadow-md);
+      border: 1px solid rgba(255, 255, 255, 0.15);
     }
   
     .calc-header {
-      margin-bottom: 18px;
       text-align: center;
+      margin-bottom: 20px;
     }
   
     .calc-title {
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 800;
-      color: #065f46;
+      color: #fef08a;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
+      margin-bottom: 6px;
     }
   
     .calc-subtitle {
-      font-size: 0.90rem;
-      color: #047857;
-      margin-top: 4px;
+      font-size: 0.92rem;
+      color: #cbd5e1;
     }
   
     .calc-inputs {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 16px;
-      margin-bottom: 18px;
+      max-width: 800px;
+      margin: 0 auto 20px;
     }
   
     .input-group {
@@ -352,318 +364,184 @@
     .input-group label {
       font-size: 0.88rem;
       font-weight: 700;
-      color: var(--text-sub);
+      color: #e2e8f0;
     }
   
     .input-group input {
       padding: 10px 14px;
-      border: 2px solid #cbd5e1;
-      border-radius: var(--radius-sm);
+      border-radius: 8px;
+      border: 2px solid #64748b;
       font-size: 1.05rem;
       font-weight: 700;
-      font-family: inherit;
-      color: var(--text-main);
+      color: #0f172a;
       outline: none;
       transition: all 0.2s ease;
-      background: #ffffff;
     }
   
     .input-group input:focus {
-      border-color: var(--primary-light);
-      box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.18);
+      border-color: #f59e0b;
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
     }
   
     .calc-result-box {
-      background: #065f46;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      
+      border: 1px dashed rgba(254, 240, 138, 0.5);
       border-radius: var(--radius-md);
-      padding: 16px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #ffffff;
-      flex-wrap: wrap;
-      gap: 12px;
+      padding: 16px;
+      max-width: 500px;
+      margin: 0 auto;
     }
   
-    .calc-result-label {
-      font-size: 0.95rem;
+    .result-label {
+      font-size: 0.9rem;
+      color: #e2e8f0;
       font-weight: 600;
-      color: #d1fae5;
     }
   
-    .calc-result-val {
-      font-size: 2rem;
+    .result-score {
+      font-size: 2.2rem;
       font-weight: 900;
-      color: #fef08a;
-      letter-spacing: 0.5px;
-    }
-
-    .calc-guidance {
-      width: 100%;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      padding-top: 8px;
-      margin-top: 4px;
-      font-size: 0.84rem;
-      color: #ecfdf5;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .guidance-badge {
-      background: rgba(255, 255, 255, 0.2);
-      padding: 3px 10px;
-      border-radius: 6px;
-      font-weight: 700;
+      color: #fde047;
+      line-height: 1.2;
+      margin: 4px 0;
     }
   
-    /* Sub Grid & Cards */
+    .result-formula {
+      font-size: 0.82rem;
+      color: #94a3b8;
+    }
+  
+    /* Main Content Sections Layout */
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+  
+    .section-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+  
+    .section-title span.icon {
+      font-size: 1.5rem;
+    }
+  
+    /* Sub-section cards / grids */
     .sub-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 18px;
-      margin-top: 14px;
-    }
-
-    .sub-grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 14px;
+      margin-top: 16px;
     }
   
     .sub-card {
       background: #f8fafc;
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
-      padding: 18px 20px;
-      transition: all 0.2s ease;
+      padding: 20px;
+      border-left: 4px solid var(--secondary);
     }
-
-    .sub-card:hover {
-      border-color: #cbd5e1;
-      background: #ffffff;
-      box-shadow: var(--shadow-sm);
+  
+    .sub-card.accent-amber {
+      border-left-color: var(--accent);
+      background: #fffbeb;
+    }
+  
+    .sub-card.accent-green {
+      border-left-color: var(--success);
+      background: #f0fdf4;
     }
   
     .sub-card-title {
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 8px;
     }
   
     .styled-list {
       list-style: none;
-      padding: 0;
+      padding-left: 0;
     }
   
     .styled-list li {
       position: relative;
-      padding-left: 22px;
-      margin-bottom: 10px;
-      font-size: 0.93rem;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      font-size: 0.94rem;
       color: var(--text-sub);
       line-height: 1.55;
     }
   
     .styled-list li::before {
-      content: '✓';
+      content: "✓";
+      color: var(--primary-light);
+      font-weight: bold;
       position: absolute;
       left: 0;
       top: 0;
-      color: var(--primary-light);
-      font-weight: 900;
-      font-size: 1rem;
-    }
-
-    .styled-list.bullet-star li::before {
-      content: '★';
-      color: var(--accent);
     }
   
-    /* Step Cards (Counselling) */
+    /* Process Steps (Timeline Style) */
     .steps-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      flex-direction: column;
       gap: 16px;
-      margin-top: 16px;
+      margin-top: 18px;
     }
   
-    .step-card {
-      background: #ffffff;
-      border: 1px solid var(--border);
+    .step-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: #f8fafc;
+      padding: 16px 20px;
       border-radius: var(--radius-md);
-      padding: 18px;
-      position: relative;
-      border-top: 4px solid var(--primary-light);
-      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
     }
   
-    .step-number {
-      position: absolute;
-      top: -12px;
-      right: 14px;
-      background: var(--primary);
-      color: #ffffff;
-      width: 28px;
-      height: 28px;
+    .step-badge {
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
+      background: var(--primary-light);
+      color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.85rem;
-      font-weight: 900;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-  
-    .step-title {
-      font-size: 0.98rem;
       font-weight: 800;
-      color: var(--text-main);
-      margin-bottom: 8px;
-      padding-right: 20px;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
     }
   
-    .step-desc {
-      font-size: 0.86rem;
+    .step-content h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+  
+    .step-content p {
+      font-size: 0.92rem;
       color: var(--text-sub);
       line-height: 1.5;
     }
-  
-    /* Courses Catalog Tabs / Cards */
-    .course-card-detail {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 18px 20px;
-      margin-bottom: 14px;
-      border-left: 5px solid var(--primary-light);
-      box-shadow: var(--shadow-sm);
-      transition: all 0.2s ease;
-    }
 
-    .course-card-detail:hover {
-      transform: translateX(4px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .course-title-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 8px;
-    }
-
-    .course-name-tamil {
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: var(--primary);
-    }
-
-    .course-name-eng {
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--text-muted);
-      margin-left: 6px;
-    }
-
-    .course-meta-pill {
-      background: #ecfdf5;
-      color: #065f46;
-      border: 1px solid #a7f3d0;
-      padding: 4px 12px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 800;
-    }
-
-    .course-meta-pill.blue {
-      background: #eff6ff;
-      color: #1d4ed8;
-      border-color: #bfdbfe;
-    }
-
-    .course-meta-pill.amber {
-      background: #fffbeb;
-      color: #b45309;
-      border-color: #fde68a;
-    }
-
-    .course-desc-text {
-      font-size: 0.92rem;
-      color: var(--text-sub);
-      margin-bottom: 10px;
-      line-height: 1.6;
-    }
-
-    .career-scope {
-      background: #f8fafc;
-      border-radius: var(--radius-sm);
-      padding: 10px 14px;
-      font-size: 0.88rem;
-      color: var(--text-sub);
-      border-left: 3px solid var(--accent);
-    }
-
-    .career-scope strong {
-      color: var(--text-main);
-    }
-  
-    /* Banner Quota 7.5% */
-    .quota-banner {
-      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-      border: 2px solid #f59e0b;
-      border-radius: var(--radius-md);
-      padding: 22px 24px;
-      margin-bottom: 20px;
-      color: #78350f;
-    }
-
-    .quota-banner-title {
-      font-size: 1.25rem;
-      font-weight: 900;
-      color: #92400e;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .quota-banner-text {
-      font-size: 0.94rem;
-      line-height: 1.65;
-      color: #78350f;
-    }
-
-    .quota-features-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .quota-feature-item {
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: var(--radius-sm);
-      padding: 10px 14px;
-      border: 1px solid #fcd34d;
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: #92400e;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-  
-    /* Search Box for Colleges */
+    /* College Filter & Search Box */
     .college-search-box {
       display: flex;
       align-items: center;
@@ -674,13 +552,13 @@
       margin-bottom: 16px;
       transition: all 0.2s ease;
     }
-  
+
     .college-search-box:focus-within {
       border-color: var(--primary-light);
       background: #ffffff;
-      box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
     }
-  
+
     .college-search-box svg {
       width: 20px;
       height: 20px;
@@ -688,7 +566,7 @@
       margin-right: 12px;
       flex-shrink: 0;
     }
-  
+
     .college-search-input {
       width: 100%;
       border: none;
@@ -698,227 +576,222 @@
       color: var(--text-main);
       outline: none;
     }
-  
-    /* College Filter Pills */
+
     .college-pills {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       margin-bottom: 18px;
     }
-  
-    .college-pill {
-      background: #ffffff;
+
+    .college-pill, .branch-pill {
+      background: #f1f5f9;
       border: 1px solid #cbd5e1;
-      padding: 7px 16px;
+      padding: 6px 14px;
       border-radius: 999px;
       font-size: 0.84rem;
-      font-weight: 700;
-      color: var(--text-sub);
+      font-weight: 600;
+      color: #334155;
       cursor: pointer;
       transition: all 0.2s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-  
-    .college-pill:hover {
-      background: #ecfdf5;
-      color: var(--primary);
-      border-color: #a7f3d0;
-    }
-  
-    .college-pill.active {
-      background: var(--primary);
-      color: #ffffff;
-      border-color: var(--primary);
-      box-shadow: 0 2px 6px rgba(6, 95, 70, 0.3);
-    }
-  
-    /* Colleges Data Table */
-    .table-container {
-      overflow-x: auto;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
-      margin-top: 10px;
-    }
-  
-    .styled-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.90rem;
-      text-align: left;
-      background: #ffffff;
-    }
-  
-    .styled-table thead tr {
-      background-color: #064e3b;
-      color: #ffffff;
-      text-align: left;
-      font-weight: 700;
-    }
-  
-    .styled-table th, 
-    .styled-table td {
-      padding: 13px 15px;
-      border-bottom: 1px solid #e2e8f0;
-      vertical-align: middle;
-    }
-  
-    .styled-table tbody tr {
-      transition: background 0.15s ease;
-    }
-  
-    .styled-table tbody tr:hover {
-      background-color: #f0fdf4;
-    }
-  
-    .code-badge {
-      display: inline-block;
-      font-family: 'Inter', monospace;
-      font-weight: 800;
-      font-size: 0.82rem;
-      background: #f1f5f9;
-      color: #0f172a;
-      padding: 3px 8px;
-      border-radius: 4px;
-      border: 1px solid #cbd5e1;
+      user-select: none;
     }
 
-    .highlight-row {
-      background-color: #fefce8 !important;
+    .college-pill:hover, .branch-pill:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    .college-pill.active, .branch-pill.active {
+      background: var(--primary-light);
+      color: #ffffff;
+      border-color: var(--primary-light);
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
     }
   
+    /* Colleges Classification Table */
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 16px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+      background: #ffffff;
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5e1 #f8fafc;
+    }
+  
+    .table-wrap::-webkit-scrollbar {
+      height: 8px;
+    }
+    .table-wrap::-webkit-scrollbar-track {
+      background: #f8fafc;
+    }
+    .table-wrap::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    .table-wrap::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    table.custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      background: #ffffff;
+      table-layout: auto;
+    }
+  
+    table.custom-table th {
+      background: #1e3a8a;
+      color: #ffffff;
+      padding: 10px 12px;
+      text-align: left;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      white-space: normal;
+      vertical-align: middle;
+      line-height: 1.4;
+    }
+  
+    table.custom-table td {
+      padding: 9px 12px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-sub);
+      vertical-align: top;
+      line-height: 1.45;
+      overflow-wrap: break-word;
+    }
+  
+    table.custom-table tr:hover td {
+      background-color: #f8fafc;
+    }
+
+    .tnea-code-badge {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-weight: 800;
+      font-size: 0.78rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid #bae6fd;
+      margin-bottom: 4px;
+    }
+
     .type-badge {
       display: inline-block;
       font-size: 0.76rem;
-      font-weight: 800;
-      padding: 3px 9px;
-      border-radius: 4px;
-      text-transform: uppercase;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 999px;
       white-space: nowrap;
     }
+
+    .type-govt {
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+    }
+
+    .type-aided {
+      background: #fef3c7;
+      color: #b45309;
+      border: 1px solid #fde68a;
+    }
+
+    .type-private {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+    }
+
+    .placement-badge {
+      display: inline-block;
+      background: #f0fdf4;
+      color: #166534;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 2px 7px;
+      border-radius: 4px;
+      border: 1px solid #bbf7d0;
+      margin-top: 4px;
+    }
   
-    .type-badge.tanuvas { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
-    .type-badge.govt { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
-    .type-badge.bnys { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
-    .type-badge.btech { background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe; }
+    /* Thirukkural Motivational Box */
+    .kural-box {
+      background: linear-gradient(135deg, #fefce8 0%, #fffbeb 50%, #fef3c7 100%);
+      border: 1px solid #fde047;
+      border-left: 5px solid #d97706;
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      margin: 32px 0 24px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(217, 119, 6, 0.08);
+    }
   
-    .link-btn {
+    .kural-header {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
-      font-size: 0.80rem;
-      font-weight: 700;
-      color: var(--primary);
-      text-decoration: none;
-      padding: 4px 10px;
-      border-radius: 6px;
-      background: #ecfdf5;
-      border: 1px solid #a7f3d0;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-    }
-  
-    .link-btn:hover {
-      background: var(--primary);
-      color: #ffffff;
-      border-color: var(--primary);
-    }
-  
-    /* Footer */
-    .portal-footer {
-      background: #064e3b;
-      color: #cbd5e1;
-      padding: 32px 24px;
-      border-radius: var(--radius-lg);
-      margin-top: 30px;
-      text-align: center;
-      font-size: 0.88rem;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-  
-    .footer-title {
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: #ffffff;
-      margin-bottom: 8px;
-    }
-  
-    .footer-sub {
-      color: #a7f3d0;
-      font-size: 0.90rem;
-      margin-bottom: 16px;
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .footer-link-pill {
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.12);
-      padding: 6px 16px;
-      border-radius: 999px;
-      text-decoration: none;
+      gap: 6px;
       font-size: 0.82rem;
-      font-weight: 600;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.2s ease;
-    }
-
-    .footer-link-pill:hover {
-      background: #fef08a;
-      color: #713f12;
-    }
-  
-    /* Responsive Breakpoints */
-    @media (max-width: 992px) {
-      .highlights-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .steps-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .sub-grid, .sub-grid-3 {
-        grid-template-columns: 1fr;
-      }
-      .quota-features-grid {
-        grid-template-columns: 1fr;
-      }
+      font-weight: 700;
+      color: #b45309;
+      letter-spacing: 0.4px;
+      margin-bottom: 8px;
+      background: rgba(254, 240, 138, 0.7);
+      padding: 3px 12px;
+      border-radius: 999px;
+      border: 1px solid #fde68a;
     }
   
-    @media (max-width: 640px) {
-      body {
-        padding: 10px 8px;
-      }
+    .kural-text {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #78350f;
+      line-height: 1.65;
+      margin-bottom: 6px;
+    }
+  
+    .kural-meaning {
+      font-size: 0.90rem;
+      color: #92400e;
+      line-height: 1.55;
+    }
+  
+    /* Official Footer */
+    .portal-footer {
+      text-align: center;
+      padding: 24px 16px 20px;
+      margin-top: 36px;
+      border-top: 1px solid var(--border);
+      color: var(--text-sub);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+  
+    .portal-footer a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  
+    @media (max-width: 768px) {
       .portal-header {
-        padding: 26px 16px 22px;
+        padding: 28px 18px;
       }
       .portal-title {
-        font-size: 1.55rem;
+        font-size: 1.65rem;
       }
-      .highlights-grid {
-        grid-template-columns: 1fr;
+      .content-card {
+        padding: 20px 16px;
       }
       .calc-inputs {
         grid-template-columns: 1fr;
       }
-      .steps-container {
+      .highlights-grid {
         grid-template-columns: 1fr;
-      }
-      .content-card {
-        padding: 18px 14px;
-      }
-      .styled-table th, 
-      .styled-table td {
-        padding: 10px 8px;
-        font-size: 0.82rem;
       }
     }
   
@@ -1393,13 +1266,13 @@
 
     /* Main Page Content - Offset by exactly 295px on desktop so fixed sidebar never covers it */
     .portal-main-content {
-      margin-left: 295px !important;
-      width: calc(100% - 295px) !important;
-      min-height: 100vh;
-      padding: 16px 22px 40px;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
+  margin-left: 295px !important;
+  width: calc(100% - 295px) !important;
+  min-height: 100vh !important;
+  padding: 12px clamp(10px, 1.8vw, 24px) 40px !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
 
     .sidebar-backdrop {
       display: none;
@@ -1750,13 +1623,13 @@
 
     /* Main Content Column */
     .portal-main-content {
-      margin-left: 295px !important;
-      width: calc(100% - 295px) !important;
-      min-height: 100vh;
-      padding: 16px 22px 40px;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
+  margin-left: 295px !important;
+  width: calc(100% - 295px) !important;
+  min-height: 100vh !important;
+  padding: 12px clamp(10px, 1.8vw, 24px) 40px !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
 
     .sidebar-backdrop {
       display: none;
@@ -2198,13 +2071,13 @@
 
     /* Main Content Column */
     .portal-main-content {
-      margin-left: 295px !important;
-      width: calc(100% - 295px) !important;
-      min-height: 100vh;
-      padding: 16px 22px 40px;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
+  margin-left: 295px !important;
+  width: calc(100% - 295px) !important;
+  min-height: 100vh !important;
+  padding: 12px clamp(10px, 1.8vw, 24px) 40px !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
 
     .sidebar-backdrop {
       display: none;
@@ -3245,16 +3118,13 @@
     }
 
     .portal-main-content {
-      margin-left: 295px !important;
-      width: calc(100% - 295px) !important;
-      min-height: 100vh;
-      padding-top: 0 !important; /* Absolutely ZERO empty space above top-frame */
-      padding-left: clamp(10px, 1.8vw, 24px) !important;
-      padding-right: clamp(10px, 1.8vw, 24px) !important;
-      padding-bottom: 40px !important;
-      box-sizing: border-box;
-      overflow-x: hidden;
-    }
+  margin-left: 295px !important;
+  width: calc(100% - 295px) !important;
+  min-height: 100vh !important;
+  padding: 12px clamp(10px, 1.8vw, 24px) 40px !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
 
     @media (max-width: 1024px) {
       .portal-main-content {
@@ -3685,6 +3555,302 @@
       }
     }
 
+
+/* Marquee Quick Navigation Bar Styles */
+.sticky-portal-nav {
+  position: sticky !important;
+  top: 10px !important;
+  z-index: 1000 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 8px 10px !important;
+  background: rgba(15, 23, 42, 0.96) !important;
+  backdrop-filter: blur(12px) !important;
+  border-radius: var(--radius-md) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45) !important;
+  margin-bottom: 24px !important;
+  overflow: hidden !important;
+  scrollbar-width: none !important;
+}
+
+.sticky-portal-nav::-webkit-scrollbar {
+  display: none !important;
+}
+
+.nav-anchor-pill {
+  white-space: nowrap !important;
+  padding: 8px 16px !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #f1f5f9 !important;
+  text-decoration: none !important;
+  font-size: 0.86rem !important;
+  font-weight: 700 !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+.nav-anchor-pill:hover, .nav-anchor-pill.active {
+  background: linear-gradient(135deg, #fb7185 0%, #f43f5e 30%, #a855f7 70%, #38bdf8 100%) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(244, 63, 94, 0.4) !important;
+}
+
+/* Feedback Section Animation */
+@keyframes flowingBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.feedback-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 24px 22px !important;
+  background: #ffffff !important;
+  border: 1.8px solid #cbd5e1 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+  margin-bottom: 24px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.animated-top-bar {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b, #3b82f6) !important;
+  background-size: 200% 100% !important;
+  animation: flowingBorder 6s linear infinite !important;
+}
+
+.sparkle-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%) !important;
+  color: #6d28d9 !important;
+  padding: 4px 12px !important;
+  border-radius: 999px !important;
+  font-size: 0.8rem !important;
+  font-weight: 800 !important;
+  border: 1px solid #c4b5fd !important;
+}
+
+#guidanceFeedbackForm {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 14px 16px !important;
+  align-items: start !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 900px) {
+  #guidanceFeedbackForm {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  #guidanceFeedbackForm {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+.breadcrumb-bar {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 8px 10px !important;
+  padding: 10px 16px !important;
+  margin: 0 0 16px 0 !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 1.8px solid #cbd5e1 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.06) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.nav-menu-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  padding: 7px 16px !important;
+  border-radius: 9px !important;
+  font-family: inherit !important;
+  font-size: 0.86rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  border: 1.5px solid !important;
+  transition: all 0.22s ease !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+  white-space: nowrap !important;
+}
+
+.nav-menu-btn.btn-portal-home {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border-color: #cbd5e1 !important;
+}
+.nav-menu-btn.btn-portal-home:hover {
+  background: #f1f5f9 !important;
+  color: #0284c7 !important;
+  border-color: #38bdf8 !important;
+  transform: translateY(-2px) !important;
+}
+
+.nav-menu-btn.btn-guidance-home {
+  background: #ffffff !important;
+  color: #0f766e !important;
+  border-color: #99f6e4 !important;
+}
+.nav-menu-btn.btn-guidance-home:hover {
+  background: #f0fdfa !important;
+  color: #0d9488 !important;
+  border-color: #2dd4bf !important;
+  transform: translateY(-2px) !important;
+}
+
+.nav-menu-btn.btn-direct-home {
+  background: #ffffff !important;
+  color: #c2410c !important;
+  border-color: #fed7aa !important;
+}
+.nav-menu-btn.btn-direct-home:hover {
+  background: #fff7ed !important;
+  color: #ea580c !important;
+  border-color: #f97316 !important;
+  transform: translateY(-2px) !important;
+}
+
+.nav-menu-btn.btn-current-page {
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%) !important;
+  color: #ffffff !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.3) !important;
+  cursor: default !important;
+}
+
+.nav-menu-separator {
+  color: #94a3b8 !important;
+  font-size: 0.75rem !important;
+  margin: 0 2px !important;
+}
+
+
+/* ========================================================
+   SOOTHING AURORA SILK WAVE ANIMATION (EYE-FRIENDLY & ELEGANT)
+   மாணவர்கள் கவரும் வகையில் கண்களுக்குக் குளிர்ச்சியான அரோரா அனிமேஷன்
+   ======================================================== */
+@keyframes softAuroraWave {
+  0% {
+    background-position: 0% 30%;
+  }
+  50% {
+    background-position: 100% 70%;
+  }
+  100% {
+    background-position: 0% 30%;
+  }
+}
+
+@keyframes ambientGlowFloat {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate(60px, -20px) scale(1.15);
+    opacity: 0.70;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.45;
+  }
+}
+
+@keyframes softBorderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.header-banner-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 0 16px 0 !important;
+  padding: 2.5px !important;
+  border-radius: 16px !important;
+  background: linear-gradient(120deg, #38bdf8, #818cf8, #34d399, #60a5fa, #a78bfa, #38bdf8) !important;
+  background-size: 300% 300% !important;
+  animation: softBorderFlow 12s ease infinite !important;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.25) !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.header-banner.aurora-theme,
+.header-banner {
+  border-radius: 13.5px !important;
+  padding: 22px 24px 20px 24px !important;
+  text-align: center !important;
+  color: #ffffff !important;
+  position: relative !important;
+  overflow: hidden !important;
+  background-color: #0c1833 !important;
+  background-image: 
+    radial-gradient(ellipse at 20% 0%, rgba(14, 165, 233, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 100%, rgba(99, 102, 241, 0.45) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.25) 0%, transparent 55%),
+    linear-gradient(135deg, #09152e 0%, #0e214d 40%, #132a63 70%, #0a1738 100%) !important;
+  background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100% !important;
+  animation: softAuroraWave 16s ease-in-out infinite alternate !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 6px 20px rgba(15, 23, 42, 0.3) !important;
+}
+
+.header-banner::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -40% !important;
+  left: -20% !important;
+  width: 140% !important;
+  height: 180% !important;
+  background: radial-gradient(circle at center, rgba(56, 189, 248, 0.22) 0%, rgba(129, 140, 248, 0.15) 35%, transparent 70%) !important;
+  filter: blur(35px) !important;
+  animation: ambientGlowFloat 14s ease-in-out infinite alternate !important;
+  pointer-events: none !important;
+}
+
+/* Ensure CECRI 4 pillars form a balanced 2x2 grid without any empty gaps */
+#cecri-spotlight .sub-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 18px !important;
+  margin-top: 16px !important;
+  margin-bottom: 20px !important;
+}
+
+@media (max-width: 820px) {
+  #cecri-spotlight .sub-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
 /* ========================================================
    STANDARDIZED TOP FRAME BANNER (AS IN GOVT EXAMS)
    ======================================================== */
@@ -3862,514 +4028,212 @@
     transform: translateY(-50%) !important;
   }
 }
-</style>
-
-<style id="robust-layout-override">
-/* ========================================================
-   ROBUST ZERO-OVERLAP FLEX LAYOUT SYSTEM
-   மானிட்டர் மற்றும் அனைத்துத் திரைகளிலும் மெனு ஓவர்லாப் தடுப்பு
-   ======================================================== */
-.portal-layout-wrapper {
-  display: flex !important;
-  flex-direction: row !important;
-  width: 100% !important;
-  min-height: 100vh !important;
-  position: relative !important;
-  align-items: stretch !important;
-  box-sizing: border-box !important;
-}
-
-.desktop-left-sidebar {
-  width: 280px !important;
-  min-width: 280px !important;
-  max-width: 280px !important;
-  position: sticky !important;
-  top: 0 !important;
-  height: 100vh !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  z-index: 1000 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  flex-shrink: 0 !important;
-  box-sizing: border-box !important;
-  background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
-  border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
-  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
-}
-
-.portal-main-content {
-  flex-grow: 1 !important;
-  flex-shrink: 1 !important;
-  min-width: 0 !important;
-  width: 100% !important;
-  margin-left: 0 !important;
-  padding: 0 clamp(10px, 1.8vw, 24px) 40px !important;
-  box-sizing: border-box !important;
-  overflow-x: hidden !important;
-}
-
-.portal-container {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-  box-sizing: border-box !important;
-}
-
-@media (max-width: 900px) {
-  .desktop-left-sidebar {
-    position: fixed !important;
-    top: 0 !important;
-    left: -300px !important;
-    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    z-index: 9999 !important;
-  }
-  .desktop-left-sidebar.sidebar-open {
-    left: 0 !important;
-  }
-  .portal-main-content {
-    margin-left: 0 !important;
-    width: 100% !important;
-  }
-}
-</style>
-
-<style>
-    .portal-layout-wrapper {
-      display: block !important;
-      width: 100% !important;
-      min-height: 100vh !important;
-      position: relative !important;
-      box-sizing: border-box !important;
-    }
-
-    /* Fixed Left Sidebar - 100% Permanently Anchored to Viewport (Never Scrolls Away) */
-    .desktop-left-sidebar {
-      width: 295px !important;
-      min-width: 295px !important;
-      max-width: 295px !important;
-      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
-      border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
-      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
-      position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
-      bottom: 0 !important;
-      height: 100vh !important;
-      overflow-y: auto !important;
-      overflow-x: hidden !important;
-      z-index: 1000 !important;
-      display: flex !important;
-      flex-direction: column !important;
-      flex-shrink: 0 !important;
-      box-sizing: border-box !important;
-    }
-
-    /* Main Content Column - Compensates for 295px Fixed Sidebar on Desktop */
-    .portal-main-content {
-      margin-left: 295px !important;
-      width: calc(100% - 295px) !important;
-      min-height: 100vh !important;
-      padding: 12px 18px 40px !important;
-      box-sizing: border-box !important;
-      overflow-x: hidden !important;
-    }
-
-    @media (max-width: 1024px) {
-      .desktop-left-sidebar {
-        position: fixed !important;
-        left: -320px !important;
-        top: 0 !important;
-        bottom: 0 !important;
-        width: 295px !important;
-        height: 100vh !important;
-        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        z-index: 9999 !important;
-      }
-      .desktop-left-sidebar.sidebar-open {
-        left: 0 !important;
-      }
-      .portal-main-content {
-        margin-left: 0 !important;
-        width: 100% !important;
-        padding: 8px 10px 30px !important;
-      }
-    }
-</style>
-<style>
 
 /* ========================================================
-   CANONICAL STANDARDIZED FIXED LEFT SIDEBAR FRAME
-   அனைத்துப் பக்கங்களுக்குமான நிலையான இடதுபுற மெனு பிரேம்
+   STUDENT-ATTRACTIVE COMPACT ANIMATED HERO BANNER
    ======================================================== */
-.portal-layout-wrapper {
-  display: flex !important;
-  width: 100% !important;
-  min-height: 100vh !important;
-  position: relative !important;
-  box-sizing: border-box !important;
-}
-
-/* Fixed Left Sidebar on Desktop */
-.desktop-left-sidebar {
-  width: 295px !important;
-  min-width: 295px !important;
-  max-width: 295px !important;
-  background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
-  border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
-  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  bottom: 0 !important;
-  height: 100vh !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  z-index: 1000 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  flex-shrink: 0 !important;
-  box-sizing: border-box !important;
-}
-
-/* Custom Slim Gold Scrollbar for Sidebar */
-.desktop-left-sidebar::-webkit-scrollbar {
-  width: 6px !important;
-}
-.desktop-left-sidebar::-webkit-scrollbar-track {
-  background: rgba(10, 15, 29, 0.95) !important;
-}
-.desktop-left-sidebar::-webkit-scrollbar-thumb {
-  background: rgba(212, 175, 55, 0.45) !important;
-  border-radius: 4px !important;
-}
-.desktop-left-sidebar::-webkit-scrollbar-thumb:hover {
-  background: rgba(212, 175, 55, 0.75) !important;
-}
-
-.sidebar-header {
-  padding: 16px 14px 14px !important;
-  border-bottom: 1.5px solid rgba(212, 175, 55, 0.25) !important;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(15, 23, 42, 0.4) 100%) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 10px !important;
-}
-
-.sidebar-brand {
-  display: flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  text-decoration: none !important;
-  color: inherit !important;
-}
-
-.sidebar-emblem {
-  font-size: 1.6rem !important;
-  line-height: 1 !important;
-}
-
-.sidebar-title-wrap {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 2px !important;
-}
-
-.sidebar-main-title {
-  font-size: 0.95rem !important;
-  font-weight: 900 !important;
-  color: #fde047 !important;
-  letter-spacing: 0.3px !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
-}
-
-.sidebar-sub-title {
-  font-size: 0.70rem !important;
-  font-weight: 700 !important;
-  color: #94a3b8 !important;
-  letter-spacing: 0.2px !important;
-}
-
-.sidebar-close-btn {
-  display: none !important;
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(212, 175, 55, 0.3) !important;
-  color: #fde047 !important;
-  width: 32px !important;
-  height: 32px !important;
-  border-radius: 8px !important;
-  font-size: 1.15rem !important;
-  font-weight: 800 !important;
-  cursor: pointer !important;
-  align-items: center !important;
-  justify-content: center !important;
-  transition: all 0.2s ease !important;
-}
-.sidebar-close-btn:hover {
-  background: rgba(220, 38, 38, 0.6) !important;
-  color: #ffffff !important;
-}
-
-.sidebar-nav-body {
-  padding: 14px 10px 40px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 10px !important;
-  flex-grow: 1 !important;
-}
-
-/* Sidebar Navigation Buttons */
-.sidebar-main-btn {
-  display: flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  padding: 9px 12px !important;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(15, 23, 42, 0.5) 100%) !important;
-  border: 1px solid rgba(212, 175, 55, 0.2) !important;
-  border-radius: 8px !important;
-  color: #e2e8f0 !important;
-  font-size: 0.85rem !important;
-  font-weight: 700 !important;
-  text-decoration: none !important;
-  transition: all 0.2s ease !important;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) !important;
-}
-.sidebar-main-btn:hover {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(26, 86, 219, 0.25) 100%) !important;
-  border-color: #d4af37 !important;
-  color: #fef08a !important;
-  transform: translateX(2px) !important;
-}
-.sidebar-main-btn.active-page {
-  background: linear-gradient(90deg, rgba(212, 175, 55, 0.35) 0%, rgba(26, 86, 219, 0.4) 100%) !important;
-  border-color: #fde047 !important;
-  color: #ffffff !important;
-  font-weight: 900 !important;
-  box-shadow: 0 0 12px rgba(253, 224, 71, 0.25) !important;
-}
-.sidebar-main-btn .icon {
-  font-size: 1.15rem !important;
-  flex-shrink: 0 !important;
-}
-.sidebar-main-btn .btn-text-group {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 1px !important;
-  line-height: 1.25 !important;
-}
-.sidebar-main-btn .menu-ta {
-  font-size: 0.84rem !important;
-  font-weight: 800 !important;
-}
-.sidebar-main-btn .menu-en {
-  font-size: 0.66rem !important;
-  color: #94a3b8 !important;
-  letter-spacing: 0.4px !important;
-}
-.sidebar-main-btn.active-page .menu-en {
-  color: #fef08a !important;
-}
-
-/* Main Content Column Offset on Desktop */
-.portal-main-content {
-  margin-left: 295px !important;
-  width: calc(100% - 295px) !important;
-  min-height: 100vh !important;
-  box-sizing: border-box !important;
-}
-
-/* Mobile & Tablet Responsive Behavior (<= 1024px) */
-.mobile-menu-floating-btn {
-  display: none !important;
-  position: fixed !important;
-  bottom: 24px !important;
-  left: 20px !important;
-  z-index: 9998 !important;
-  background: linear-gradient(135deg, #091a3e 0%, #1e3a8a 100%) !important;
-  border: 1.8px solid #d4af37 !important;
-  border-radius: 999px !important;
-  color: #fde047 !important;
-  padding: 10px 18px !important;
-  font-size: 0.86rem !important;
-  font-weight: 800 !important;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45) !important;
-  cursor: pointer !important;
-  align-items: center !important;
-  gap: 8px !important;
-  transition: all 0.2s ease !important;
-}
-.mobile-menu-floating-btn:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4) !important;
-}
-
-.sidebar-backdrop {
-  display: none !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  background: rgba(0, 0, 0, 0.65) !important;
-  backdrop-filter: blur(4px) !important;
-  z-index: 9990 !important;
-}
-.sidebar-backdrop.active {
-  display: block !important;
-}
-
-@media (max-width: 1024px) {
-  .desktop-left-sidebar {
-    position: fixed !important;
-    left: -320px !important;
-    top: 0 !important;
-    bottom: 0 !important;
-    width: 295px !important;
-    height: 100vh !important;
-    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    z-index: 9999 !important;
-    box-shadow: 6px 0 35px rgba(0, 0, 0, 0.85) !important;
-  }
-  .desktop-left-sidebar.active {
-    left: 0 !important;
-  }
-  .sidebar-close-btn {
-    display: flex !important;
-  }
-  .portal-main-content {
-    margin-left: 0 !important;
-    width: 100% !important;
-  }
-  .mobile-menu-floating-btn {
-    display: inline-flex !important;
-  }
-}
-
-</style>
-<style>
-/* ========================================================
-   STANDARDIZED PORTAL TOP FRAME (UNIFIED ACROSS ALL 33 PAGES)
-   3D Gold Title, Aurora Shimmer Tagline & Clean Responsive Alignment
-   ======================================================== */
-@keyframes auroraTextFlow {
+@keyframes flowingBorder {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-.portal-top-frame {
+@keyframes badgeDotPulse {
+  0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.7); }
+  50% { transform: scale(1.2); opacity: 0.8; box-shadow: 0 0 0 6px rgba(250, 204, 21, 0); }
+}
+
+/* ========================================================
+   FAQ SECTION & DOUBT CLEARANCE BOX STYLES
+   ======================================================== */
+.faq-section-card {
   width: 100% !important;
   max-width: 100% !important;
   box-sizing: border-box !important;
-  background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
-  border: 1.8px solid #d4af37 !important;
+  background: #ffffff !important;
+  border: 1.8px solid #cbd5e1 !important;
+  border-top: 5px solid #2563eb !important;
   border-radius: 14px !important;
-  padding: 12px 18px !important;
-  margin-bottom: 16px !important;
-  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.16) !important;
+  padding: 24px 22px !important;
+  margin: 28px 0 24px 0 !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+}
+
+.faq-search-wrap {
+  position: relative !important;
+  margin-bottom: 20px !important;
+}
+
+.faq-search-input {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 12px 16px 12px 42px !important;
+  font-size: 0.94rem !important;
+  font-family: inherit !important;
+  border: 2px solid #cbd5e1 !important;
+  border-radius: 10px !important;
+  background: #f8fafc !important;
+  outline: none !important;
+  transition: all 0.25s ease !important;
+}
+
+.faq-search-input:focus {
+  background: #ffffff !important;
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
+}
+
+.faq-search-icon {
+  position: absolute !important;
+  left: 14px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  font-size: 1.1rem !important;
+  pointer-events: none !important;
+}
+
+.faq-collection {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.faq-item-card {
+  background: #f8fafc !important;
+  border: 1.5px solid #e2e8f0 !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  transition: all 0.22s ease !important;
+}
+
+.faq-item-card:hover {
+  border-color: #3b82f6 !important;
+  background: #ffffff !important;
+}
+
+.faq-header-btn {
+  width: 100% !important;
+  padding: 14px 18px !important;
+  background: transparent !important;
+  border: none !important;
+  color: #0f172a !important;
+  font-size: 0.95rem !important;
+  font-weight: 750 !important;
+  font-family: inherit !important;
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  flex-wrap: wrap !important;
-  gap: 12px !important;
-  position: relative !important;
+  gap: 14px !important;
+  cursor: pointer !important;
+  text-align: left !important;
+  transition: background 0.2s ease !important;
 }
 
-.top-frame-center-stack {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
-  flex-grow: 1 !important;
-  min-width: 0 !important;
-  position: relative !important;
-  z-index: 2 !important;
-  gap: 2px !important;
+.faq-header-btn.active {
+  background: #eff6ff !important;
+  color: #1e40af !important;
 }
 
-.banner-title-tamil {
-  font-family: 'Noto Sans Tamil', sans-serif !important;
-  font-size: clamp(1.4rem, 2.2vw, 1.95rem) !important;
-  font-weight: 900 !important;
-  line-height: 1.35 !important;
-  margin: 0 !important;
-  padding: 3px 6px 1px 6px !important;
-  letter-spacing: 0.5px !important;
-  background: linear-gradient(180deg, #fffbeb 0%, #fef08a 25%, #facc15 55%, #ca8a04 85%, #854d0e 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 10px rgba(250, 204, 21, 0.35)) !important;
-  display: inline-block !important;
-}
-
-.banner-tagline-aurora {
-  font-size: clamp(0.82rem, 1.1vw, 0.95rem) !important;
-  font-weight: 800 !important;
-  line-height: 1.25 !important;
-  margin: 0 !important;
-  letter-spacing: 0.2px !important;
-  background: linear-gradient(90deg, #67e8f9 0%, #a78bfa 25%, #f472b6 50%, #34d399 75%, #67e8f9 100%) !important;
-  background-size: 250% auto !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  animation: auroraTextFlow 5s ease-in-out infinite !important;
-}
-
-.banner-english-row {
+.faq-toggle-arrow {
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 50% !important;
+  background: #e2e8f0 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 6px !important;
-  margin-top: 2px !important;
   font-size: 0.72rem !important;
-  letter-spacing: 1.2px !important;
-  font-weight: 800 !important;
-  text-transform: uppercase !important;
+  color: #475569 !important;
+  transition: transform 0.3s ease !important;
+  flex-shrink: 0 !important;
 }
 
-.banner-title-english {
-  color: #93c5fd !important;
+.faq-header-btn.active .faq-toggle-arrow {
+  transform: rotate(180deg) !important;
+  background: #2563eb !important;
+  color: #ffffff !important;
 }
 
-.banner-english-dot {
-  color: #facc15 !important;
-  font-size: 0.8rem !important;
+.faq-drawer-panel {
+  max-height: 0 !important;
+  overflow: hidden !important;
+  transition: max-height 0.35s ease-out !important;
+  background: #ffffff !important;
+  border-top: 1px solid transparent !important;
 }
 
-.banner-slogan-english {
-  color: #e0e7ff !important;
-  opacity: 0.92 !important;
+.faq-drawer-content {
+  padding: 14px 18px 18px 18px !important;
+  font-size: 0.90rem !important;
+  color: #334155 !important;
+  line-height: 1.7 !important;
 }
 
-.top-frame-side-btn {
+
+/* ========================================================
+   FLOATING BACK TO TOP BUTTON ("மேலே செல்க")
+   ======================================================== */
+.floating-back-to-top {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 99999 !important;
   display: inline-flex !important;
   align-items: center !important;
-  gap: 6px !important;
-  padding: 8px 14px !important;
-  border-radius: 9px !important;
-  font-size: 0.84rem !important;
-  font-weight: 800 !important;
-  text-decoration: none !important;
-  cursor: pointer !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  transition: all 0.2s ease !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
-  white-space: nowrap !important;
-  z-index: 2 !important;
-}
-
-.top-frame-side-btn.btn-home {
-  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 10px 18px !important;
+  background: linear-gradient(135deg, #0284c7 0%, #1e40af 100%) !important;
   color: #ffffff !important;
-  border-color: #38bdf8 !important;
+  border: 2px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 0 14px rgba(56, 189, 248, 0.45) !important;
+  font-family: 'Noto Sans Tamil', 'Inter', sans-serif !important;
+  font-size: 0.88rem !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  outline: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(16px) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  backdrop-filter: blur(8px) !important;
 }
 
-.top-frame-side-btn.btn-home:hover {
-  background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
-  transform: translateY(-1px) !important;
+.floating-back-to-top.visible {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
 }
+
+.floating-back-to-top:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.55), 0 0 18px rgba(56, 189, 248, 0.65) !important;
+  background: linear-gradient(135deg, #0369a1 0%, #1e3a8a 100%) !important;
+  border-color: #fde047 !important;
+  color: #ffffff !important;
+}
+
+.floating-btn-arrow {
+  font-size: 0.82rem !important;
+  display: inline-block !important;
+  transition: transform 0.2s ease !important;
+}
+
+.floating-back-to-top:hover .floating-btn-arrow {
+  transform: translateY(-2px) !important;
+}
+
+@media (max-width: 768px) {
+  .floating-back-to-top {
+    bottom: 18px !important;
+    right: 16px !important;
+    padding: 8px 14px !important;
+    font-size: 0.80rem !important;
+    gap: 6px !important;
+  }
+}
+
 
 @media (min-width: 901px) {
   .portal-top-frame {
@@ -4382,7 +4246,8 @@
     text-align: center !important;
     margin: 0 auto !important;
   }
-  .top-frame-side-btn.btn-home {
+  .top-frame-side-btn.btn-home,
+  .top-frame-btn.btn-home {
     position: absolute !important;
     right: 20px !important;
     top: 50% !important;
@@ -4390,258 +4255,296 @@
   }
 }
 
-@media (max-width: 900px) {
-  .portal-top-frame {
-    flex-direction: column !important;
-    text-align: center !important;
-  }
-  .top-frame-side-btn.btn-home {
-    order: 1 !important;
-    margin-left: auto !important;
-  }
-  .top-frame-center-stack {
-    order: 2 !important;
-    width: 100% !important;
-  }
-}
+
+
+    /* Additional Styles specific to Veterinary & Paramedical Content */
+    .btech { background: #e0f2fe; color: #0369a1; }
+    .bnys { background: #fef3c7; color: #b45309; }
+    .govt { background: #dcfce7; color: #15803d; }
+    .guidance-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.80rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+    }
+    .course-card-detail {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+      transition: all 0.2s ease;
+    }
+    .course-card-detail:hover {
+      border-color: #38bdf8;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.12);
+      transform: translateY(-2px);
+    }
+    .course-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .course-name-tamil {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: #1e3a8a;
+    }
+    .course-name-eng {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #64748b;
+    }
+    .course-meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: #f1f5f9;
+      color: #475569;
+    }
+    .college-pill {
+      display: inline-block;
+      font-size: 0.80rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      margin: 3px 2px;
+      color: #1e293b;
+    }
+    .quota-banner {
+      background: linear-gradient(135deg, #065f46 0%, #047857 50%, #059669 100%);
+      color: #ffffff;
+      border-radius: 14px;
+      padding: 22px 26px;
+      margin-bottom: 22px;
+      box-shadow: 0 8px 24px rgba(5, 150, 105, 0.25);
+    }
+
 </style>
 </head>
-<body>
+<body id="top">
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
 <button class="mobile-menu-floating-btn" id="mobileMenuFloatingBtn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
-<span style="font-size: 1.15rem; line-height: 1;">☰</span>
-<span>மெனு</span>
+  <span style="font-size: 1.15rem; line-height: 1;">☰</span>
+  <span>மெனு</span>
 </button>
+
 <div class="portal-layout-wrapper">
-<!-- Desktop Permanent Left Menu Frame with Collapsible Accordion -->
 <aside class="desktop-left-sidebar" id="desktopLeftSidebar">
-    <div class="sidebar-header">
-      <a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
-        <span class="sidebar-emblem">🏛️</span>
-        <div class="sidebar-title-wrap">
-          <span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
-          <span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
-        </div>
-      </a>
-      <button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
-    </div>
+<div class="sidebar-header">
+<a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
+<span class="sidebar-emblem">🏛️</span>
+<div class="sidebar-title-wrap">
+<span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
+<span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
+</div>
+</a>
+<button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
+</div>
+<nav class="sidebar-nav-body">
+<!-- 00. முதன்மை முகப்பு (Home) -->
+<a .strip()="" class="sidebar-main-btn" href="index.html">
+<span class="icon">🏠</span>
+<span class="btn-text-group">
+<span class="menu-ta">முதன்மை முகப்பு</span>
+<span class="menu-en">HOME</span>
+</span>
+</a>
+<!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
+<a .strip()="" class="sidebar-main-btn" href="01_00_entrance_main.html">
+<span class="icon">🎯</span>
+<span class="btn-text-group">
+<span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
+<span class="menu-en">ENTRANCE EXAMS</span>
+</span>
+</a>
+<!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
+<a .strip()="" class="sidebar-main-btn active-page" href="02_00_direct_admissions.html">
+<span class="icon">📈</span>
+<span class="btn-text-group">
+<span class="menu-ta">நேரடிச் சேர்க்கை</span>
+<span class="menu-en">DIRECT ADMISSIONS</span>
+</span>
+</a>
+<!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
+<a .strip()="" class="sidebar-main-btn" href="03_institutes.html">
+<span class="icon">🏛️</span>
+<span class="btn-text-group">
+<span class="menu-ta">கல்லூரிகள் அடைவு</span>
+<span class="menu-en">INSTITUTES DIRECTORY</span>
+</span>
+</a>
+<!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
+<a .strip()="" class="sidebar-main-btn" href="04_govt_exams.html">
+<span class="icon">🏆</span>
+<span class="btn-text-group">
+<span class="menu-ta">அரசுத் தேர்வுகள்</span>
+<span class="menu-en">GOVT COMPETITIVE EXAMS</span>
+</span>
+</a>
+<!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
+<a .strip()="" class="sidebar-main-btn" href="05_direct_careers.html">
+<span class="icon">💼</span>
+<span class="btn-text-group">
+<span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
+<span class="menu-en">SKILLS &amp; CAREERS</span>
+</span>
+</a>
+<!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
+<a .strip()="" class="sidebar-main-btn" href="06_student_support.html">
+<span class="icon">☎️</span>
+<span class="btn-text-group">
+<span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
+<span class="menu-en">HELPDESK &amp; SUPPORT</span>
+</span>
+</a>
+<!-- 07. கல்வி வளங்கள் & போர்ட்டல் (Resources & External Portals) -->
+<a .strip()="" class="sidebar-main-btn" href="07_resources_external_portals.html">
+<span class="icon">📚</span>
+<span class="btn-text-group">
+<span class="menu-ta">கல்வி வளங்கள் &amp; போர்ட்டல்</span>
+<span class="menu-en">RESOURCES &amp; PORTALS</span>
+</span>
+</a>
+</nav>
+</aside>
 
-    <nav class="sidebar-nav-body">
-      <!-- 00. முதன்மை முகப்பு (Home) -->
-      <a class="sidebar-main-btn".strip() href="index.html">
-        <span class="icon">🏠</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">முதன்மை முகப்பு</span>
-          <span class="menu-en">HOME</span>
-        </span>
-      </a>
-
-      <!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
-      <a class="sidebar-main-btn".strip() href="01_00_entrance_main.html">
-        <span class="icon">🎯</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
-          <span class="menu-en">ENTRANCE EXAMS</span>
-        </span>
-      </a>
-
-      <!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
-      <a class="sidebar-main-btn active-page".strip() href="02_00_direct_admissions.html">
-        <span class="icon">📈</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">நேரடிச் சேர்க்கை</span>
-          <span class="menu-en">DIRECT ADMISSIONS</span>
-        </span>
-      </a>
-
-      <!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
-      <a class="sidebar-main-btn".strip() href="03_institutes.html">
-        <span class="icon">🏛️</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">கல்லூரிகள் அடைவு</span>
-          <span class="menu-en">INSTITUTES DIRECTORY</span>
-        </span>
-      </a>
-
-      <!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
-      <a class="sidebar-main-btn".strip() href="04_govt_exams.html">
-        <span class="icon">🏆</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">அரசுத் தேர்வுகள்</span>
-          <span class="menu-en">GOVT COMPETITIVE EXAMS</span>
-        </span>
-      </a>
-
-      <!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
-      <a class="sidebar-main-btn".strip() href="05_direct_careers.html">
-        <span class="icon">💼</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
-          <span class="menu-en">SKILLS &amp; CAREERS</span>
-        </span>
-      </a>
-
-      <!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
-      <a class="sidebar-main-btn".strip() href="06_student_support.html">
-        <span class="icon">☎️</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
-          <span class="menu-en">HELPDESK &amp; SUPPORT</span>
-        </span>
-      </a>
-
-      <!-- 07. கல்வி வளங்கள் & போர்ட்டல் (Resources & External Portals) -->
-      <a class="sidebar-main-btn".strip() href="07_resources_external_portals.html">
-        <span class="icon">📚</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">கல்வி வளங்கள் &amp; போர்ட்டல்</span>
-          <span class="menu-en">RESOURCES &amp; PORTALS</span>
-        </span>
-      </a>
-    </nav>
-  </aside>
-<!-- Main Portal Content Column -->
 <main class="portal-main-content">
 <div class="portal-container">
-<!-- Top Navigation Bar -->
-<!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
-<!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
 <header class="portal-top-frame no-print">
-<!-- Center Branding Stack: 3D Gold Title, Aurora Tagline & English Sub-branding -->
-<div class="top-frame-center-stack">
-<h1 class="banner-title-tamil">உயர்கல்வி வழிகாட்டி</h1>
-<div class="banner-tagline-aurora">உங்கள் சிறந்த எதிர்காலத்திற்கான திறவுகோல்</div>
-<div class="banner-english-row">
-<span class="banner-title-english">CAREER GUIDANCE</span>
-<span class="banner-english-dot">•</span>
-<span class="banner-slogan-english">YOUR KEY TO A BRIGHT FUTURE</span>
-</div>
-</div>
-<!-- Right Side Button: வழிகாட்டி முகப்பு -->
-<a class="top-frame-side-btn btn-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
-<span class="btn-icon">🎓</span>
-<span class="btn-text">வழிகாட்டி முகப்பு</span>
-</a>
+  <!-- Center Branding Stack: 3D Gold Title, Aurora Tagline & English Sub-branding -->
+  <div class="top-frame-center-stack">
+    <h1 class="banner-title-tamil">உயர்கல்வி வழிகாட்டி</h1>
+    <div class="banner-tagline-aurora">உங்கள் சிறந்த எதிர்காலத்திற்கான திறவுகோல்</div>
+    <div class="banner-english-row">
+      <span class="banner-title-english">CAREER GUIDANCE</span>
+      <span class="banner-english-dot">•</span>
+      <span class="banner-slogan-english">YOUR KEY TO A BRIGHT FUTURE</span>
+    </div>
+  </div>
+
+  <!-- Right Side Button: வழிகாட்டி முகப்பு -->
+  <a class="top-frame-side-btn btn-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+    <span class="btn-icon">🎓</span>
+    <span class="btn-text">வழிகாட்டி முகப்பு</span>
+  </a>
 </header>
-<div class="district-badge">
-<span>🏢</span> முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்
-      </div>
-<div class="kural-box">
-<div class="kural-header">
-<span class="kural-icon">📜</span>
-<span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-<span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
+<div class="breadcrumb-bar">
+  <a href="index.html">முகப்பு (Home)</a>
+  <span class="breadcrumb-separator">/</span>
+  <a href="https://www.ceosvg.in" target="_blank" rel="noopener">ceosvg.in</a>
+  <span class="breadcrumb-separator">/</span>
+  <a href="02_00_direct_admissions.html">02 / நேரடிச் சேர்க்கை</a>
+  <span class="breadcrumb-separator">/</span>
+  <span class="breadcrumb-current">கால்நடை மருத்துவம், துணை மருத்துவம் &amp; டிப்ளமோ படிப்புகள் (Non-NEET)</span>
 </div>
-<div class="kural-verse-text">
-    “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
-    திண்ணியர் ஆகப் பெறின்.”
-  </div>
-<div class="kural-meaning">
-<strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
-  </div>
-</div><div class="creator-card">
-<div class="creator-typewriter-wrapper">
-<span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
-</div>
-<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
-<span class="phone-icon">📱</span>
-<span class="phone-text">9626471035</span>
-</a>
-</div><footer class="portal-footer">
-<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
-    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
+<div class="header-banner-wrap">
+<header class="header-banner aurora-theme">
+<h1 class="banner-main-title" style="font-size: clamp(1.4rem, 2.0vw, 1.85rem) !important; font-weight: 900 !important; margin: 0 0 6px 0 !important; color: #ffffff !important; letter-spacing: -0.3px !important; text-shadow: 0 2px 8px rgba(0,0,0,0.8) !important;">
+கால்நடை மருத்துவம், துணை மருத்துவம் &amp; <span style="color: #fde047 !important;">டிப்ளமோ சேர்க்கை வழிகாட்டி</span>
+</h1>
+<p class="banner-desc" style="font-size: clamp(0.84rem, 0.96vw, 0.92rem) !important; color: #e2e8f0 !important; max-width: 980px !important; margin: 0 auto 8px auto !important; line-height: 1.55 !important;">
+தமிழ்நாடு கால்நடை மருத்துவ அறிவியல் பல்கலைக்கழகம் (TANUVAS B.V.Sc &amp; A.H), மருத்துவக் கல்வி இயக்ககம் (DME) நடத்தும் 23 துணை மருத்துவப் பட்டப்படிப்புகள் (Nursing, Pharmacy, BPT), யோகா மற்றும் இயற்கை மருத்துவம் (BNYS) மற்றும் அரசு மருத்துவக் கல்லூரி டிப்ளமோ/சான்றிதழ் படிப்புகளின் நீட் தேர்விலா (Non-NEET 2026) ஒற்றைச் சாளர நேரடிச் சேர்க்கை முழு அடைவு.
 </p>
-<p style="font-size: 0.85rem; color: #64748b;">
-    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
-  </p>
-</footer></div>
-<!-- Portal Hero Header Banner -->
-<header class="portal-header">
-<div class="header-badge-row">
-<span class="header-tag primary">பிரிவு 02</span>
-<span class="header-tag secondary">TANUVAS &amp; TN DME SELECTION</span>
-<span class="header-tag secondary">பட்டப்படிப்பு (Degree) • டிப்ளமோ (Diploma) • சான்றிதழ் (Certificate)</span>
-<span class="header-tag secondary">நீட் (NEET) இல்லாத நேரடிச் சேர்க்கை</span>
-</div>
-<h1 class="portal-title">
-        கால்நடை, துணை மருத்துவம், <span class="accent-gold">டிப்ளமோ &amp; சான்றிதழ் படிப்புகள்</span> முழுமையான சேர்க்கை வழிகாட்டி
-      </h1>
-<p class="portal-subtitle">
-        +2 பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் தமிழ்நாடு கால்நடை மருத்துவ அறிவியல் பல்கலைக்கழகம் (TANUVAS), மருத்துவக் கல்வி இயக்ககம் (DME Paramedical) மற்றும் அரசு மருத்துவக் கல்லூரிகள் வழங்கும் இளநிலைப் பட்டப் படிப்புகள் (Degree), 2 ஆண்டுகள் டிப்ளமோ (Diploma) மற்றும் 1 ஆண்டு சிறப்பு மருத்துவச் சான்றிதழ் (Certificate) படிப்புகளுக்கான முழுமையான வழிகாட்டி.
-      </p>
-<!-- Quick Navigation Jump Pills -->
-<div class="quick-nav-pills">
-<a class="quick-nav-pill" href="#calculator">🧮 கட்-ஆஃப் கால்குலேட்டர்</a>
-<a class="quick-nav-pill" href="#overview">📌 சேர்க்கை அமைப்புகள் &amp; தகுதிகள்</a>
-<a class="quick-nav-pill" href="#quota">🎯 7.5% அரசுப் பள்ளி முன்னுரிமை</a>
-<a class="quick-nav-pill" href="#tanuvas">🐾 கால்நடை மருத்துவம் (B.V.Sc &amp; B.Tech)</a>
-<a class="quick-nav-pill" href="#paramedical">🩺 23 துணை மருத்துவப் பட்டங்கள்</a>
-<a class="quick-nav-pill" href="#core-7-seats" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd; font-weight: 800;">🏥 7 முதன்மைப் பட்டங்கள் &amp; இடங்கள்</a>
-<a class="quick-nav-pill" href="#rare-courses" style="background: #fef3c7; color: #92400e; border-color: #fde68a; font-weight: 800;">🔬 அரிதான படிப்புகள் &amp; கல்லூரிகள்</a>
-<a class="quick-nav-pill" href="#bnys">🌿 இயற்கை மருத்துவம் (BNYS டாக்டர்)</a>
-<a class="quick-nav-pill highlight-pill" href="#diploma-certificate">📜 டிப்ளமோ &amp; சான்றிதழ் படிப்புகள்</a>
-<a class="quick-nav-pill" href="#vhn-shn" style="background: #fdf2f8; color: #9d174d; border-color: #fbcfe8; font-weight: 800;">👩‍⚕️ VHN &amp; SHN செவிலியர் வழிகாட்டி</a>
-<a class="quick-nav-pill" href="#counselling">🔄 கலந்தாய்வு 6 நிலைகள்</a>
-<a class="quick-nav-pill" href="#choice-filling">💡 சாய்ஸ் உத்திகள்</a>
-<a class="quick-nav-pill" href="#colleges">🏆 கல்லூரிகள் பட்டியல்</a>
+<div class="banner-features-ribbon" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; flex-wrap: wrap !important; gap: 8px 12px !important; padding: 4px 14px !important; background: rgba(15, 23, 42, 0.75) !important; border: 1px solid rgba(56, 189, 248, 0.4) !important; border-radius: 8px !important;">
+<div class="ribbon-item" style="color: #38bdf8; font-weight: 700; font-size: 0.76rem;">⚡ 200 கட்-ஆஃப் துல்லியக் கணக்கீடு (Bio + Phy÷2 + Chem÷2)</div>
+<div class="ribbon-dot" style="color: rgba(255,255,255,0.35);">•</div>
+<div class="ribbon-item" style="color: #fde047; font-weight: 700; font-size: 0.76rem;">🎯 7.5% அரசுப் பள்ளி முழுக் கட்டண விலக்கு &amp; முன்னுரிமை</div>
+<div class="ribbon-dot" style="color: rgba(255,255,255,0.35);">•</div>
+<div class="ribbon-item" style="color: #34d399; font-weight: 700; font-size: 0.76rem;">🐾 TANUVAS 7 கல்லூரிகள் &amp; 36 அரசு மருத்துவக் கல்லூரிகள்</div>
+<div class="ribbon-dot" style="color: rgba(255,255,255,0.35);">•</div>
+<div class="ribbon-item" style="color: #c084fc; font-weight: 700; font-size: 0.76rem;">💡 ஒற்றைச் சாளர சாய்ஸ் ஃபில்லிங் வழிகாட்டி</div>
 </div>
 </header>
-<!-- Key Metrics Highlight Bar -->
-<div class="highlights-grid">
-<div class="highlight-box">
-<div class="highlight-label">சேர்க்கை முறை</div>
-<div class="highlight-val">NEET தேவையில்லை</div>
-<div class="highlight-desc">+2 அறிவியல் பொதுத்தேர்வு மதிப்பெண் அடிப்படையில் மட்டுமே சேர்க்கை</div>
 </div>
-<div class="highlight-box">
-<div class="highlight-label">கட்-ஆஃப் அளவீடு</div>
-<div class="highlight-val">200 மதிப்பெண்கள்</div>
-<div class="highlight-desc">+2 உயிரியல் (100) + இயற்பியல் (50) + வேதியியல் (50)</div>
+<nav aria-label="மருத்துவம் &amp; துணை மருத்துவம் விரைவு வழிசெலுத்தல்" class="sticky-portal-nav" id="stickyPortalNavbar">
+<marquee behavior="scroll" direction="left" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="4" style="display: flex; align-items: center; width: 100%;" title="பொத்தான்களைத் தேர்ந்தெடுக்க மவுஸை இதன் மேல் வைக்கவும் (Hover to Pause)">
+<span style="display: inline-flex; align-items: center; gap: 10px; padding: 0 6px;">
+<button class="nav-anchor-pill active" onclick="smoothScrollToAnchor('calculator', this)" type="button">🧮 கட்-ஆஃப் கால்குலேட்டர்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('overview', this)" type="button">📌 சேர்க்கை &amp; தகுதிகள்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('quota', this)" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important; color: #ffffff !important; border: 1.5px solid #6ee7b7 !important;" type="button">🎯 7.5% அரசுப் பள்ளி இடஒதுக்கீடு</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('tanuvas', this)" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important; color: #ffffff !important; border: 1.5px solid #38bdf8 !important;" type="button">🐾 TANUVAS கால்நடை மருத்துவம்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('paramedical', this)" style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important; color: #ffffff !important; border: 1.5px solid #60a5fa !important;" type="button">🩺 DME 23 துணை மருத்துவப் படிப்புகள்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('bnys', this)" style="background: linear-gradient(135deg, #b45309 0%, #d97706 100%) !important; color: #ffffff !important; border: 1.5px solid #fbbf24 !important; font-weight: 800 !important;" type="button">🌿 BNYS இயற்கை மருத்துவம்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('diploma-certificate', this)" type="button">📜 டிப்ளமோ &amp; சான்றிதழ் படிப்புகள்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('counselling', this)" type="button">🔄 ஒற்றைச் சாளரக் கலந்தாய்வு 6 நிலைகள்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('documents', this)" type="button">📑 தேவையான சான்றிதழ்கள் பட்டியல்</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('choice-filling', this)" type="button">💡 சாய்ஸ் ஃபில்லிங் வழிகாட்டி</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('colleges', this)" style="background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%) !important; color: #091330 !important; font-weight: 800 !important; border: 1.5px solid #fde68a !important;" type="button">🏆 அரசு கல்லூரிகள் &amp; இடங்கள்</button>
+</span>
+</marquee>
+</nav>
+<div class="highlights-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-bottom: 22px;">
+<div class="highlight-box" style="background: #ffffff; border: 1.6px solid #cbd5e1; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(15,23,42,0.05); border-left: 4.5px solid #2563eb;">
+<div class="highlight-label" style="font-size: 0.80rem; font-weight: 700; color: #64748b; text-transform: uppercase;">சேர்க்கை அமைப்புகள்</div>
+<div class="highlight-val" style="font-size: 1.35rem; font-weight: 900; color: #1e3a8a; margin: 3px 0;">TANUVAS &amp; DME</div>
+<div class="highlight-desc" style="font-size: 0.82rem; color: #334155; line-height: 1.45;">tanuvas.ac.in &amp; tnmedicalselection.net இணையவழி ஒற்றைச் சாளரம்</div>
 </div>
-<div class="highlight-box">
-<div class="highlight-label">அரசுப் பள்ளி முன்னுரிமை</div>
-<div class="highlight-val">7.5% தனி இடஒதுக்கீடு</div>
-<div class="highlight-desc">கல்வி, தேர்வு, தங்கும் விடுதி மற்றும் உணவுக் கட்டணங்களை அரசே ஏற்கும்</div>
+<div class="highlight-box" style="background: #ffffff; border: 1.6px solid #cbd5e1; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(15,23,42,0.05); border-left: 4.5px solid #059669;">
+<div class="highlight-label" style="font-size: 0.80rem; font-weight: 700; color: #64748b; text-transform: uppercase;">கட்-ஆஃப் அளவீடு</div>
+<div class="highlight-val" style="font-size: 1.35rem; font-weight: 900; color: #065f46; margin: 3px 0;">200 மதிப்பெண்கள்</div>
+<div class="highlight-desc" style="font-size: 0.82rem; color: #334155; line-height: 1.45;">+2 உயிரியல் (100) + [இயற்பியல் ÷ 2] (50) + [வேதியியல் ÷ 2] (50)</div>
 </div>
-<div class="highlight-box">
-<div class="highlight-label">முதன்மை அமைப்புகள்</div>
-<div class="highlight-val">TANUVAS &amp; DME</div>
-<div class="highlight-desc">tanuvas.ac.in &amp; tnmedicalselection.net இணையவழி ஒற்றைச் சாளரம்</div>
+<div class="highlight-box" style="background: #ffffff; border: 1.6px solid #cbd5e1; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(15,23,42,0.05); border-left: 4.5px solid #d97706;">
+<div class="highlight-label" style="font-size: 0.80rem; font-weight: 700; color: #64748b; text-transform: uppercase;">படிப்புகள் வாய்ப்பு</div>
+<div class="highlight-val" style="font-size: 1.35rem; font-weight: 900; color: #92400e; margin: 3px 0;">25+ பட்டங்கள் &amp; 40+ டிப்ளமோ</div>
+<div class="highlight-desc" style="font-size: 0.82rem; color: #334155; line-height: 1.45;">B.V.Sc &amp; A.H, B.Sc Nursing, B.Pharm, BPT, BNYS, DMLT</div>
 </div>
-</div>
-<!-- Section: Interactive Live Cut-off Calculator Widget -->
-<section class="calculator-card" id="calculator">
-<div class="calc-header">
-<h2 class="calc-title">🧮 கால்நடை &amp; துணை மருத்துவ கட்-ஆஃப் கால்குலேட்டர்</h2>
-<p class="calc-subtitle">உங்கள் +2 உயிரியல் (Biology), இயற்பியல் (Physics) மற்றும் வேதியியல் (Chemistry) மதிப்பெண்களை உள்ளிட்டவுடன் கட்-ஆஃப் தானாகக் கணக்கிடப்படும்</p>
-</div>
-<div class="calc-inputs">
-<div class="input-group">
-<label for="biology">உயிரியல் / (தாவரவியல் + விலங்கியல்) (/100):</label>
-<input id="biology" max="100" min="0" placeholder="எ.கா: 96" type="number" value="95"/>
-</div>
-<div class="input-group">
-<label for="physics">இயற்பியல் (Physics /100):</label>
-<input id="physics" max="100" min="0" placeholder="எ.கா: 88" type="number" value="90"/>
-</div>
-<div class="input-group">
-<label for="chemistry">வேதியியல் (Chemistry /100):</label>
-<input id="chemistry" max="100" min="0" placeholder="எ.கா: 92" type="number" value="92"/>
+<div class="highlight-box" style="background: #ffffff; border: 1.6px solid #cbd5e1; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(15,23,42,0.05); border-left: 4.5px solid #7c3aed;">
+<div class="highlight-label" style="font-size: 0.80rem; font-weight: 700; color: #64748b; text-transform: uppercase;">அரசுப் பள்ளி முன்னுரிமை</div>
+<div class="highlight-val" style="font-size: 1.35rem; font-weight: 900; color: #6b21a8; margin: 3px 0;">7.5% தனி ஒதுக்கீடு</div>
+<div class="highlight-desc" style="font-size: 0.82rem; color: #334155; line-height: 1.45;">கல்வி, தேர்வு, தங்கும் விடுதி மற்றும் உணவுக் கட்டணங்களை அரசே ஏற்கும்</div>
 </div>
 </div>
-<div class="calc-result-box">
-<div>
-<div class="calc-result-label">கணக்கிடப்பட்ட மருத்துவக் கட்-ஆஃப் (Medical Cut-off Score):</div>
-<div style="font-size: 0.85rem; color: #a7f3d0; margin-top: 2px;">சூத்திரம்: உயிரியல் + (இயற்பியல் + வேதியியல்)/2</div>
+<section class="calculator-card compact-calc-strip" id="calculator" style="background: linear-gradient(135deg, #091330 0%, #1e293b 50%, #0a0f1d 100%) !important; border: 2px solid #38bdf8 !important; border-radius: 12px !important; padding: 12px 18px !important; box-shadow: 0 4px 18px rgba(15, 23, 42, 0.35) !important; color: #ffffff !important; margin-bottom: 20px !important;">
+<div style="display: flex !important; align-items: center !important; justify-content: space-between !important; flex-wrap: wrap !important; gap: 8px !important; margin-bottom: 10px !important; border-bottom: 1px solid rgba(255,255,255,0.12) !important; padding-bottom: 6px !important;">
+<div style="display: flex !important; align-items: center !important; gap: 8px !important;">
+<span style="font-size: 1.15rem !important;">🧮</span>
+<h3 style="color: #93c5fd !important; font-size: 1.05rem !important; font-weight: 800 !important; margin: 0 !important;">
+கால்நடை &amp; துணை மருத்துவ கட்-ஆஃப் கால்குலேட்டர் (Non-NEET)
+</h3>
 </div>
-<div class="calc-result-val" id="cutoffResult">186.00 / 200</div>
-<div class="calc-guidance">
-<div id="cutoffStatusText">🎯 சிறப்பான கட்-ஆஃப் மதிப்பெண்! அரசு கல்லூரிகளில் B.V.Sc &amp; A.H., B.Sc Nursing, B.Pharm மற்றும் உயர்தர Paramedical படிப்புகளுக்கு அதிக வாய்ப்புள்ளது.</div>
-<span class="guidance-badge" id="chanceBadge">High Potential</span>
+<div style="font-size: 0.74rem !important; font-weight: 700 !important; color: #bae6fd !important; background: rgba(56,189,248,0.15) !important; border: 1px solid #38bdf8 !important; padding: 2px 8px !important; border-radius: 6px !important;">
+சூத்திரம்: Biology (100) + [Phy÷2] (50) + [Chem÷2] (50) = 200
+</div>
+</div>
+<div style="display: grid !important; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)) 250px !important; gap: 10px !important; align-items: center !important;">
+<div style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
+<label for="biology" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">🧬 உயிரியல் (Biology /100):</label>
+<input id="biology" max="100" min="0" oninput="computeMedCutoff()" placeholder="0 - 100" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="95"/>
+</div>
+<div style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
+<label for="physics" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">⚡ இயற்பியல் (Physics /100):</label>
+<input id="physics" max="100" min="0" oninput="computeMedCutoff()" placeholder="0 - 100" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="90"/>
+</div>
+<div style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
+<label for="chemistry" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">🧪 வேதியியல் (Chem /100):</label>
+<input id="chemistry" max="100" min="0" oninput="computeMedCutoff()" placeholder="0 - 100" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="92"/>
+</div>
+<div style="background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%) !important; border: 2px solid #fbbf24 !important; border-radius: 10px !important; padding: 6px 12px !important; text-align: center !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;">
+<div style="font-size: 0.72rem !important; font-weight: 800 !important; color: #fef08a !important;">உங்கள் கட்-ஆஃப் (200-க்கு):</div>
+<div id="medCutoffResult" style="font-size: 1.85rem !important; font-weight: 900 !important; color: #ffffff !important; text-shadow: 0 2px 8px rgba(251, 191, 36, 0.5) !important; line-height: 1.1 !important; margin: 1px 0 !important;">186.00</div>
+<span id="medCutoffStatus" style="background: rgba(251, 191, 36, 0.2) !important; border: 1px solid #f59e0b !important; color: #fef08a !important; font-size: 0.70rem !important; font-weight: 800 !important; padding: 1px 8px !important; border-radius: 999px !important; white-space: nowrap !important; max-width: 100% !important; overflow: hidden !important; text-overflow: ellipsis !important;">🩺 அரசு B.Sc Nursing / B.Pharm / BPT வாய்ப்பு அதிகம்</span>
 </div>
 </div>
 </section>
-<!-- Section 1: Overview & Eligibility -->
+
 <section class="content-card" id="overview">
 <h2 class="section-title">
 <span class="icon">📌</span> 1. சேர்க்கை அமைப்புகள் &amp; கல்வித் தகுதிகள்
@@ -4698,7 +4601,7 @@
 </div>
 </div>
 </section>
-<!-- Section 2: 7.5% Govt School Quota -->
+
 <section class="content-card" id="quota" style="border-top: 5px solid #d97706;">
 <h2 class="section-title" style="color: #b45309;">
 <span class="icon">🎯</span> 2. அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு &amp; 100% இலவசக் கல்வி
@@ -4746,7 +4649,7 @@
 </div>
 </div>
 </section>
-<!-- Section 3: TANUVAS Veterinary Sciences -->
+
 <section class="content-card" id="tanuvas">
 <h2 class="section-title">
 <span class="icon">🐾</span> 3. தமிழ்நாடு கால்நடை மருத்துவ அறிவியல் பல்கலைக்கழகம் (TANUVAS)
@@ -4789,7 +4692,7 @@
 </div>
 </div>
 </section>
-<!-- Section 4: Comprehensive 23 Paramedical & Allied Health Degree Courses -->
+
 <section class="content-card" id="paramedical">
 <h2 class="section-title">
 <span class="icon">🩺</span> 4. தமிழ்நாடு மருத்துவக் கல்வி இயக்ககம் (DME) நடத்தும் 23 துணை மருத்துவப் பட்டப் படிப்புகள்
@@ -5294,7 +5197,7 @@
 </div>
 </div>
 </section>
-<!-- Section 5: BNYS Naturopathy Doctor Course -->
+
 <section class="content-card" id="bnys" style="border-top: 5px solid #16a34a;">
 <h2 class="section-title" style="color: #15803d;">
 <span class="icon">🌿</span> 5. இயற்கை மருத்துவம் மற்றும் யோகா அறிவியல் (BNYS டாக்டர் பட்டப்படிப்பு)
@@ -5326,7 +5229,7 @@
 </div>
 </div>
 </section>
-<!-- Section 6: Diploma & Certificate Courses in Veterinary & Paramedical -->
+
 <section class="content-card" id="diploma-certificate" style="border-top: 5px solid #7c3aed;">
 <h2 class="section-title" style="color: #6d28d9;">
 <span class="icon">📜</span> 6. கால்நடை &amp; துணை மருத்துவ டிப்ளமோ மற்றும் சான்றிதழ் படிப்புகள் (Diploma &amp; Certificate Courses)
@@ -5828,7 +5731,7 @@
 </div>
 </div>
 </section>
-<!-- Section 7: Counselling Process 6 Steps -->
+
 <section class="content-card" id="counselling">
 <h2 class="section-title">
 <span class="icon">🔄</span> 7. ஒற்றைச் சாளரக் கலந்தாய்வு நடைமுறைகள் &amp; 6 முக்கிய நிலைகள்
@@ -5869,7 +5772,7 @@
 </div>
 </div>
 </section>
-<!-- Section 8: Required Documents Checklist -->
+
 <section class="content-card" id="documents">
 <h2 class="section-title">
 <span class="icon">📑</span> 8. தேவையான ஆவணங்கள் &amp; சரிபார்ப்புப் பட்டியல் (Checklist)
@@ -5902,7 +5805,7 @@
 </div>
 </div>
 </section>
-<!-- Section 9: Choice Filling Guidelines & Strategies -->
+
 <section class="content-card" id="choice-filling" style="border-top: 5px solid #d97706;">
 <h2 class="section-title" style="color: #b45309;">
 <span class="icon">💡</span> 9. சாய்ஸ் ஃபில்லிங் வழிகாட்டி &amp; வெற்றிக்கான முக்கிய உத்திகள் (Choice Filling Strategies)
@@ -5930,7 +5833,7 @@
 </div>
 </div>
 </section>
-<!-- Section 10: Colleges Table with Search & Filter -->
+
 <section class="content-card" id="colleges" style="border-top: 5px solid #059669;">
 <h2 class="section-title" style="color: #065f46;">
 <span class="icon">🏆</span> 10. தமிழ்நாடு அரசு கல்லூரிகள், டிப்ளமோ &amp; பயிற்சி மையங்கள் பட்டியல்
@@ -6670,111 +6573,106 @@
 </div>
 </div>
 </section>
-<!-- Footer -->
-</main></div>
-<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
 
-<!-- Interactive JavaScript -->
-<script>
-    // Live Cut-off Calculator Logic
-    const bioInput = document.getElementById('biology');
-    const phyInput = document.getElementById('physics');
-    const chemInput = document.getElementById('chemistry');
-    const cutoffResult = document.getElementById('cutoffResult');
-    const cutoffStatusText = document.getElementById('cutoffStatusText');
-    const chanceBadge = document.getElementById('chanceBadge');
+<div class="kural-box">
+<div class="kural-header">
+<span class="kural-icon">📜</span>
+<span class="kural-title">திருக்குறள் — அதிகாரம்: ஆள்வினையுடைமை (குறள்: 619)</span>
+<span class="kural-sparkle">✨ விடாமுயற்சி &amp; உழைப்பின் வெற்றி</span>
+</div>
+<div class="kural-verse-text">
+    “தெய்வத்தான் ஆகா தெனினும் முயற்சிதன்<br/>
+    மெய்வருத்தக் கூலி தரும்.”
+</div>
+<div class="kural-meaning">
+<strong>குறள் விளக்கம்:</strong> விதியினால் ஒரு செயல் நிறைவேறாமல் போனாலும், உடலை வருத்தித் தளராமல் செய்யும் இடைவிடாத முயற்சிக்குரிய பலன் (வெற்றி) நிச்சயமாகக் கிட்டும்; பொறியியல் சேர்க்கையிலும் தொடர் முயற்சியே சிறந்த கல்லூரியை வென்றெடுக்க உதவும்.
+</div>
+</div>
+<div class="creator-card">
+<div class="creator-typewriter-wrapper">
+<span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
+</div>
+<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
+<span class="phone-icon">📱</span>
+<span class="phone-text">9626471035</span>
+</a>
+</div>
+<footer class="portal-footer">
+<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a></p>
+<div class="footer-update" style="margin: 6px 0; font-weight: 800; color: #0d9488; font-size: 0.88rem;">
+<span>📅 கடைசியாகப் புதுப்பிக்கப்பட்ட தேதி:</span> <span style="color: #0f172a; font-weight: 900;">06-10-2026</span>
+</div>
+<p style="font-size: 0.85rem; color: #64748b; margin-top: 4px;">
+© Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+</p>
+<div style="margin-top: 8px;">
+<a href="index.html" style="color: #0284c7; font-weight: 600; text-decoration: none; font-size: 0.85rem;">🎓 உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு</a>
+</div>
+</footer>
 
-    function calculateCutoff() {
-      let bio = parseFloat(bioInput.value) || 0;
-      let phy = parseFloat(phyInput.value) || 0;
-      let chem = parseFloat(chemInput.value) || 0;
-
-      // Cap at 100
-      bio = Math.min(100, Math.max(0, bio));
-      phy = Math.min(100, Math.max(0, phy));
-      chem = Math.min(100, Math.max(0, chem));
-
-      // Cut-off = Bio + (Phy + Chem)/2
-      const cutoff = bio + ((phy + chem) / 2);
-      cutoffResult.textContent = cutoff.toFixed(2) + " / 200";
-
-      // Dynamic Feedback
-      if (cutoff >= 190) {
-        cutoffStatusText.textContent = "🌟 உச்சபட்ச கட்-ஆஃப்! அரசு கால்நடை மருத்துவக் கல்லூரிகளில் (B.V.Sc & A.H.) மற்றும் அரசு மருத்துவக் கல்லூரிகளில் B.Sc Nursing / B.Pharm இடங்கள் கிடைக்க 100% பிரகாசமான வாய்ப்புள்ளது.";
-        chanceBadge.textContent = "Top Tier / B.V.Sc Sure";
-        chanceBadge.style.background = "#fef08a";
-        chanceBadge.style.color = "#713f12";
-      } else if (cutoff >= 175) {
-        cutoffStatusText.textContent = "🎯 மிகச் சிறந்த கட்-ஆஃப்! B.Sc Nursing, B.Pharm, BPT மற்றும் உயர்தர Paramedical பிரிவுகளில் (Radiography, Cardiac Tech) அரசு இடங்கள் கிடைக்க அதிக வாய்ப்புள்ளது.";
-        chanceBadge.textContent = "High Chance / Paramedical";
-        chanceBadge.style.background = "#d1fae5";
-        chanceBadge.style.color = "#065f46";
-      } else if (cutoff >= 155) {
-        cutoffStatusText.textContent = "👍 நல்ல கட்-ஆஃப் மதிப்பெண்! B.Sc MLT, Operation Theatre Tech, Dialysis Tech, Optometry மற்றும் BNYS படிப்புகளில் நல்ல அரசு / சுயநிதி அரசு ஒதுக்கீட்டு இடங்கள் கிடைக்கும்.";
-        chanceBadge.textContent = "Moderate to High";
-        chanceBadge.style.background = "#e0f2fe";
-        chanceBadge.style.color = "#0369a1";
-      } else {
-        cutoffStatusText.textContent = "💡 மிகச் சிறந்த வாய்ப்புகள் காத்திருக்கின்றன! அரசு மருத்துவக் கல்லூரிகளில் 2 ஆண்டு டிப்ளமோ (D.Pharm, GNM நர்சிங், DMLT, DRT எக்ஸ்ரே) அல்லது 1 ஆண்டு சான்றிதழ் (ECG, கேத் லேப், டயாலிசிஸ்) மற்றும் TANUVAS கால்நடை உதவியாளர் (VLDA) டிப்ளமோ படிப்புகளில் சேர்ந்து 1 அல்லது 2 ஆண்டுகளில் உடனடி வேலைவாய்ப்பைப் பெறலாம்!";
-        chanceBadge.textContent = "Diploma & Certificate Focus";
-        chanceBadge.style.background = "#ede9fe";
-        chanceBadge.style.color = "#5b21b6";
-      }
-    }
-
-    bioInput.addEventListener('input', calculateCutoff);
-    phyInput.addEventListener('input', calculateCutoff);
-    chemInput.addEventListener('input', calculateCutoff);
-
-    // Initial calculation
-    calculateCutoff();
-
-    // Colleges Table Filter and Search
-    const collegeSearchInput = document.getElementById('collegeSearchInput');
-    const collegePills = document.querySelectorAll('.college-pill');
-    const tableRows = document.querySelectorAll('#collegesTable tbody tr');
-
-    let currentType = 'all';
-
-    function filterTable() {
-      const query = collegeSearchInput.value.toLowerCase().trim();
-
-      tableRows.forEach(row => {
-        const rowType = row.getAttribute('data-type');
-        const text = row.innerText.toLowerCase();
-
-        const matchesType = (currentType === 'all' || rowType === currentType);
-        const matchesQuery = (query === '' || text.includes(query));
-
-        if (matchesType && matchesQuery) {
-          row.style.display = '';
-        } else {
-          row.style.display = 'none';
-        }
-      });
-    }
-
-    collegePills.forEach(pill => {
-      pill.addEventListener('click', () => {
-        collegePills.forEach(p => p.classList.remove('active'));
-        pill.classList.add('active');
-        currentType = pill.getAttribute('data-type');
-        filterTable();
-      });
-    });
-
-    collegeSearchInput.addEventListener('input', filterTable);
-  </script>
-<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
-
-<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
-
-<!-- Footer -->
-
- <!-- /.container -->
-
+</div>
+</main>
+</div>
 
 <script>
+function smoothScrollToAnchor(targetId, buttonElement) {
+  const target = document.getElementById(targetId);
+  if (!target) return;
+
+  const navBar = document.getElementById('stickyPortalNavbar');
+  const offset = navBar ? navBar.offsetHeight + 18 : 80;
+  const bodyRect = document.body.getBoundingClientRect().top;
+  const elementRect = target.getBoundingClientRect().top;
+  const elementPosition = elementRect - bodyRect;
+  const offsetPosition = elementPosition - offset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: 'smooth'
+  });
+
+  if (buttonElement) {
+    document.querySelectorAll('.nav-anchor-pill').forEach(btn => btn.classList.remove('active'));
+    buttonElement.classList.add('active');
+  }
+}
+
+function computeMedCutoff() {
+  const bio = parseFloat(document.getElementById('biology').value) || 0;
+  const phy = parseFloat(document.getElementById('physics').value) || 0;
+  const chem = parseFloat(document.getElementById('chemistry').value) || 0;
+
+  const validBio = Math.min(Math.max(bio, 0), 100);
+  const validPhy = Math.min(Math.max(phy, 0), 100);
+  const validChem = Math.min(Math.max(chem, 0), 100);
+
+  const cutoff = validBio + (validPhy / 2) + (validChem / 2);
+  const resultEl = document.getElementById('medCutoffResult');
+  const statusEl = document.getElementById('medCutoffStatus');
+
+  if (resultEl) resultEl.innerText = cutoff.toFixed(2);
+
+  if (statusEl) {
+    if (cutoff >= 195) {
+      statusEl.innerText = '🌟 TANUVAS B.V.Sc & A.H / முன்னணி அரசு மருத்துவக் கல்லூரி உறுதி';
+      statusEl.style.color = '#86efac';
+      statusEl.style.borderColor = '#22c55e';
+    } else if (cutoff >= 185) {
+      statusEl.innerText = '🩺 அரசு B.Sc Nursing / B.Pharm / BPT வாய்ப்பு அதிகம்';
+      statusEl.style.color = '#fef08a';
+      statusEl.style.borderColor = '#eab308';
+    } else if (cutoff >= 170) {
+      statusEl.innerText = '🏥 அரசு & சுயநிதி (அரசு ஒதுக்கீடு) துணை மருத்துவப் படிப்புகள் வாய்ப்பு';
+      statusEl.style.color = '#93c5fd';
+      statusEl.style.borderColor = '#3b82f6';
+    } else {
+      statusEl.innerText = '📜 துணை மருத்துவ டிப்ளமோ & சான்றிதழ் படிப்புகள் / சுயநிதி வாய்ப்பு';
+      statusEl.style.color = '#fca5a5';
+      statusEl.style.borderColor = '#ef4444';
+    }
+  }
+}
+
 function toggleSidebarMenu() {
   var sidebar = document.getElementById('desktopLeftSidebar');
   var backdrop = document.getElementById('sidebarBackdrop');
@@ -6797,69 +6695,10 @@ function toggleAccordion(id) {
   }
 }
 
-function toggleSubAccordion(id) {
-  var header = document.getElementById('sub-hdr-' + id);
-  var content = document.getElementById('sub-cnt-' + id);
-  if (header && content) {
-    var isOpen = content.classList.contains('open');
-    if (isOpen) {
-      content.classList.remove('open');
-      header.classList.remove('open');
-    } else {
-      content.classList.add('open');
-      header.classList.add('open');
-    }
-  }
-}
-
 document.addEventListener('DOMContentLoaded', function() {
-  var rawPath = window.location.pathname;
-  var currentPage = rawPath.substring(rawPath.lastIndexOf('/') + 1) || 'index.html';
-  
-  // Highlight active main button
-  var mainBtns = document.querySelectorAll('.desktop-left-sidebar .sidebar-main-btn');
-  mainBtns.forEach(function(btn) {
-    var href = btn.getAttribute('href');
-    if (href && href.split('#')[0] === currentPage) {
-      btn.classList.add('active-page');
-    }
-  });
-
-  // Highlight active sub-link and auto-expand parent accordion & nested sub-accordion
-  var subLinks = document.querySelectorAll('.desktop-left-sidebar .sidebar-link');
-  subLinks.forEach(function(l) {
-    var href = l.getAttribute('href');
-    if (href) {
-      var baseHref = href.split('#')[0];
-      if (baseHref === currentPage) {
-        l.classList.add('active-page');
-        
-        // Open nested sub-accordion if inside one
-        var parentNested = l.closest('.sidebar-nested-content');
-        if (parentNested) {
-          parentNested.classList.add('open');
-          var subId = parentNested.id.replace('sub-cnt-', '');
-          var subHdr = document.getElementById('sub-hdr-' + subId);
-          if (subHdr) subHdr.classList.add('open');
-        }
-
-        // Open main accordion if inside one
-        var parentContent = l.closest('.sidebar-accordion-content');
-        if (parentContent) {
-          parentContent.classList.add('open');
-          var accId = parentContent.id.replace('acc-cnt-', '');
-          var header = document.getElementById('acc-hdr-' + accId);
-          if (header) header.classList.add('open');
-        }
-      }
-    }
-    l.addEventListener('click', function() {
-      if (window.innerWidth <= 1024) toggleSidebarMenu();
-    });
-  });
+  computeMedCutoff();
 });
-</script>
-<script>
+
 // Standardized Creator Typewriter Animation (Guaranteed Execution & Colors)
 (function() {
   let hasTyped = false;
@@ -6939,7 +6778,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       }, { threshold: 0.1 });
       observer.observe(cardElem);
-      // Fallback timer: guarantees execution even if scroll event is missed
       setTimeout(runCreatorTypewriter, 3500);
     } else {
       setTimeout(runCreatorTypewriter, 500);
