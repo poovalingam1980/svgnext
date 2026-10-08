@@ -1,14 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="ta">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport"/>
-<title>கல்வி வளங்கள், பாடநூல்கள் & இலவச மாதிரித் தேர்வு இணையதளங்கள் | தமிழ்நாடு பள்ளிக் கல்வித்துறை</title>
+<title>கல்வி வளங்கள், பாடநூல்கள் &amp; இலவச மாதிரித் தேர்வு இணையதளங்கள் | தமிழ்நாடு பள்ளிக் கல்வித்துறை</title>
 <!-- Google Fonts: Inter & Noto Sans Tamil -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <style>
     :root {
       --primary: #1e3a8a;          /* Deep Executive Navy */
@@ -1470,112 +1470,99 @@
 }
 </style>
 </head>
-
 <body>
 <div class="portal-layout-wrapper">
 <div class="portal-container">
 <div class="portal-executive-wrapper">
-
-  <!-- Mobile Backdrop & Sidebar Toggle -->
-  <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
-  <button class="mobile-menu-floating-btn" id="mobileMenuFloatingBtn" onclick="toggleSidebarMenu()" type="button">
-    <span>🧭</span>
-    <span>வழிகாட்டல் மெனு</span>
-  </button>
-
-  <!-- Left Sidebar Navigation -->
-  <aside class="desktop-left-sidebar" id="desktopLeftSidebar">
-    <div class="sidebar-header">
-      <a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
-        <span class="sidebar-emblem">🏛️</span>
-        <div class="sidebar-title-wrap">
-          <span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
-          <span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
-        </div>
-      </a>
-      <button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
-    </div>
-
-    <nav class="sidebar-nav-body">
-      <!-- 00. முதன்மை முகப்பு (Home) -->
-      <a class="sidebar-main-btn".strip() href="index.html">
-        <span class="icon">🏠</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">முதன்மை முகப்பு</span>
-          <span class="menu-en">HOME</span>
-        </span>
-      </a>
-
-      <!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
-      <a class="sidebar-main-btn".strip() href="01_00_entrance_main.html">
-        <span class="icon">🎯</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
-          <span class="menu-en">ENTRANCE EXAMS</span>
-        </span>
-      </a>
-
-      <!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
-      <a class="sidebar-main-btn".strip() href="02_00_direct_admissions.html">
-        <span class="icon">📈</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">நேரடிச் சேர்க்கை</span>
-          <span class="menu-en">DIRECT ADMISSIONS</span>
-        </span>
-      </a>
-
-      <!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
-      <a class="sidebar-main-btn".strip() href="03_institutes.html">
-        <span class="icon">🏛️</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">கல்லூரிகள் அடைவு</span>
-          <span class="menu-en">INSTITUTES DIRECTORY</span>
-        </span>
-      </a>
-
-      <!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
-      <a class="sidebar-main-btn".strip() href="04_govt_exams.html">
-        <span class="icon">🏆</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">அரசுத் தேர்வுகள்</span>
-          <span class="menu-en">GOVT COMPETITIVE EXAMS</span>
-        </span>
-      </a>
-
-      <!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
-      <a class="sidebar-main-btn".strip() href="05_direct_careers.html">
-        <span class="icon">💼</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
-          <span class="menu-en">SKILLS &amp; CAREERS</span>
-        </span>
-      </a>
-
-      <!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
-      <a class="sidebar-main-btn".strip() href="06_student_support.html">
-        <span class="icon">☎️</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
-          <span class="menu-en">HELPDESK &amp; SUPPORT</span>
-        </span>
-      </a>
-
-      <!-- 07. கல்வி வளங்கள் & போர்ட்டல் (Resources & External Portals) -->
-      <a class="sidebar-main-btn active-page".strip() href="07_resources_external_portals.html">
-        <span class="icon">📚</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">கல்வி வளங்கள் &amp; போர்ட்டல்</span>
-          <span class="menu-en">RESOURCES &amp; PORTALS</span>
-        </span>
-      </a>
-    </nav>
-  </aside>
-
-  <!-- Main Content Area -->
-  <main class="portal-main-content">
-
-    <!-- Top Frame Banner -->
-    <header class="portal-top-frame no-print">
+<!-- Mobile Backdrop & Sidebar Toggle -->
+<div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
+<button class="mobile-menu-floating-btn" id="mobileMenuFloatingBtn" onclick="toggleSidebarMenu()" type="button">
+<span>🧭</span>
+<span>வழிகாட்டல் மெனு</span>
+</button>
+<!-- Left Sidebar Navigation -->
+<aside class="desktop-left-sidebar" id="desktopLeftSidebar">
+<div class="sidebar-header">
+<a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
+<span class="sidebar-emblem">🏛️</span>
+<div class="sidebar-title-wrap">
+<span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
+<span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
+</div>
+</a>
+<button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
+</div>
+<nav class="sidebar-nav-body">
+<!-- 00. முதன்மை முகப்பு (Home) -->
+<a .strip()="" class="sidebar-main-btn" href="index.html">
+<span class="icon">🏠</span>
+<span class="btn-text-group">
+<span class="menu-ta">முதன்மை முகப்பு</span>
+<span class="menu-en">HOME</span>
+</span>
+</a>
+<!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
+<a .strip()="" class="sidebar-main-btn" href="01_00_entrance_main.html">
+<span class="icon">🎯</span>
+<span class="btn-text-group">
+<span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
+<span class="menu-en">ENTRANCE EXAMS</span>
+</span>
+</a>
+<!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
+<a .strip()="" class="sidebar-main-btn" href="02_00_direct_admissions.html">
+<span class="icon">📈</span>
+<span class="btn-text-group">
+<span class="menu-ta">நேரடிச் சேர்க்கை</span>
+<span class="menu-en">DIRECT ADMISSIONS</span>
+</span>
+</a>
+<!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
+<a .strip()="" class="sidebar-main-btn" href="03_institutes.html">
+<span class="icon">🏛️</span>
+<span class="btn-text-group">
+<span class="menu-ta">கல்லூரிகள் அடைவு</span>
+<span class="menu-en">INSTITUTES DIRECTORY</span>
+</span>
+</a>
+<!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
+<a .strip()="" class="sidebar-main-btn" href="04_govt_exams.html">
+<span class="icon">🏆</span>
+<span class="btn-text-group">
+<span class="menu-ta">அரசுத் தேர்வுகள்</span>
+<span class="menu-en">GOVT COMPETITIVE EXAMS</span>
+</span>
+</a>
+<!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
+<a .strip()="" class="sidebar-main-btn" href="05_direct_careers.html">
+<span class="icon">💼</span>
+<span class="btn-text-group">
+<span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
+<span class="menu-en">SKILLS &amp; CAREERS</span>
+</span>
+</a>
+<!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
+<a .strip()="" class="sidebar-main-btn" href="06_student_support.html">
+<span class="icon">☎️</span>
+<span class="btn-text-group">
+<span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
+<span class="menu-en">HELPDESK &amp; SUPPORT</span>
+</span>
+</a>
+<!-- 07. கல்வி வளங்கள் & போர்ட்டல் (Resources & External Portals) -->
+<a .strip()="" class="sidebar-main-btn active-page" href="07_resources_external_portals.html">
+<span class="icon">📚</span>
+<span class="btn-text-group">
+<span class="menu-ta">கல்வி வளங்கள் &amp; போர்ட்டல்</span>
+<span class="menu-en">RESOURCES &amp; PORTALS</span>
+</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<main class="portal-main-content">
+<!-- Top Frame Banner -->
+<header class="portal-top-frame no-print">
 <!-- Center Branding Stack: 3D Gold Title, Aurora Tagline & English Sub-branding -->
 <div class="top-frame-center-stack">
 <h1 class="banner-title-tamil">உயர்கல்வி வழிகாட்டி</h1>
@@ -1592,510 +1579,412 @@
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
 </a>
 </header>
-
-    <!-- Breadcrumb Bar -->
-    <nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
-      <a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
-        <span class="btn-icon">🧭</span>
-        <span class="btn-text">வழிகாட்டி முகப்பு</span>
-      </a>
-      <span class="nav-menu-separator">▶</span>
-      <a class="nav-menu-btn btn-support" href="06_student_support.html" title="உதவி மையம் &amp; தொடர்பு">
-        <span class="btn-icon">☎️</span>
-        <span class="btn-text">உதவி மையம் &amp; தொடர்பு</span>
-      </a>
-      <span class="nav-menu-separator">▶</span>
-      <span class="nav-menu-btn btn-current-page">
-        <span class="btn-icon">📚</span>
-        <span class="btn-text">கல்வி வளங்கள், பாடநூல்கள் &amp; மாதிரித் தேர்வு போர்ட்டல்கள்</span>
-      </span>
-    </nav>
-
-    <!-- Hero Banner with Aurora Animation -->
-    <div class="header-banner-wrap">
-      <header class="header-banner aurora-theme">
-        <h1 class="banner-main-title">கல்வி வளங்கள் &amp; அதிகாரப்பூர்வ மாதிரித் தேர்வு போர்ட்டல்கள்</h1>
-        <div class="banner-sub-english">Official Textbooks, Free CBT Mock Tests &amp; National Learning Portals</div>
-        <p class="banner-desc">
+<!-- Breadcrumb Bar -->
+<nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
+<a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+<span class="btn-icon">🧭</span>
+<span class="btn-text">வழிகாட்டி முகப்பு</span>
+</a>
+<span class="nav-menu-separator">▶</span>
+<a class="nav-menu-btn btn-support" href="06_student_support.html" title="உதவி மையம் &amp; தொடர்பு">
+<span class="btn-icon">☎️</span>
+<span class="btn-text">உதவி மையம் &amp; தொடர்பு</span>
+</a>
+<span class="nav-menu-separator">▶</span>
+<span class="nav-menu-btn btn-current-page">
+<span class="btn-icon">📚</span>
+<span class="btn-text">கல்வி வளங்கள், பாடநூல்கள் &amp; மாதிரித் தேர்வு போர்ட்டல்கள்</span>
+</span>
+</nav>
+<!-- Hero Banner with Aurora Animation -->
+<div class="header-banner-wrap">
+<header class="header-banner aurora-theme">
+<h1 class="banner-main-title">கல்வி வளங்கள் &amp; அதிகாரப்பூர்வ மாதிரித் தேர்வு போர்ட்டல்கள்</h1>
+<div class="banner-sub-english">Official Textbooks, Free CBT Mock Tests &amp; National Learning Portals</div>
+<p class="banner-desc">
           தமிழ்நாடு அரசுப் பாடநூல்கள், NCERT தேசியப் பாடப்புத்தகங்கள் மற்றும் மத்திய அரசின் எவ்வித விளம்பரமும் அற்ற 100% இலவச கணினி வழி மாதிரித் தேர்வு (CBT Mock Test) இணையதளங்களின் ஒரே தொகுப்பு.
         </p>
-      </header>
-    </div>
-
-    <!-- SECTION 1: பாடநூல்கள் அதிகாரப்பூர்வ பதிவிறக்க இணையதளங்கள் -->
-    <section class="content-card" style="border-top: 5px solid #0284c7;">
-      <div class="section-header-row">
-        <div class="section-title-group">
-          <span style="font-size: 1.6rem;">📖</span>
-          <h2 class="section-title" style="color: #0369a1;">1. தமிழ்நாடு &amp; இந்திய அரசு பாடநூல்கள் அதிகாரப்பூர்வ தளங்கள்</h2>
-        </div>
-        <span class="section-badge-pill" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">
+</header>
+</div>
+<!-- SECTION 1: பாடநூல்கள் அதிகாரப்பூர்வ பதிவிறக்க இணையதளங்கள் -->
+<section class="content-card" style="border-top: 5px solid #0284c7;">
+<div class="section-header-row">
+<div class="section-title-group">
+<span style="font-size: 1.6rem;">📖</span>
+<h2 class="section-title" style="color: #0369a1;">1. தமிழ்நாடு &amp; இந்திய அரசு பாடநூல்கள் அதிகாரப்பூர்வ தளங்கள்</h2>
+</div>
+<span class="section-badge-pill" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">
           அரசு அதிகாரப்பூர்வ இலவச பதிவிறக்கம்
         </span>
-      </div>
-
-      <p style="font-size: 0.94rem; color: #334155; line-height: 1.6; margin-bottom: 18px;">
+</div>
+<p style="font-size: 0.94rem; color: #334155; line-height: 1.6; margin-bottom: 18px;">
         பள்ளிப் பொதுத்தேர்வுகள் மற்றும் தேசிய நுழைவுத்தேர்வுகளுக்கு (NEET, JEE, CUET) முழுமையாகத் தயாராக, தமிழ்நாடு அரசுப் பள்ளிக் கல்வித்துறை மற்றும் மத்தியக் கல்வி அமைச்சகத்தின் அதிகாரப்பூர்வ இணையதளங்களில் இருந்து 1-ஆம் வகுப்பு முதல் 12-ஆம் வகுப்பு வரையிலான அனைத்துப் பாடநூல்களையும் PDF வடிவில் இலவசமாகப் பதிவிறக்கம் செய்யலாம்:
       </p>
-
-      <div class="resource-grid">
-        <!-- TN Textbooks Official -->
-        <div class="resource-card" style="border-top: 4px solid #0284c7;">
-          <div>
-            <div class="resource-card-header">
-              <div class="resource-card-icon" style="color: #0284c7;">📗</div>
-              <div>
-                <h3 class="resource-card-title" style="color: #0369a1;">தமிழ்நாடு அரசு பாடநூல்கள் தளம்</h3>
-                <div class="resource-card-sub">TN Textbook Corporation (TNSCERT)</div>
-              </div>
-            </div>
-            <p class="resource-card-desc">
+<div class="resource-grid">
+<!-- TN Textbooks Official -->
+<div class="resource-card" style="border-top: 4px solid #0284c7;">
+<div>
+<div class="resource-card-header">
+<div class="resource-card-icon" style="color: #0284c7;">📗</div>
+<div>
+<h3 class="resource-card-title" style="color: #0369a1;">தமிழ்நாடு அரசு பாடநூல்கள் தளம்</h3>
+<div class="resource-card-sub">TN Textbook Corporation (TNSCERT)</div>
+</div>
+</div>
+<p class="resource-card-desc">
               தமிழ்நாடு பள்ளிக் கல்வித்துறை மற்றும் பாடநூல் கழகத்தின் 1 முதல் 12-ஆம் வகுப்பு வரையிலான அனைத்துப் பாடப்புத்தகங்களும் தமிழ் மற்றும் ஆங்கில வழியில் முழுமையாகப் பதிவிறக்கக் கிடைக்கின்றன.
             </p>
-            <div class="resource-card-tags">
-              <span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">1 முதல் 12-ஆம் வகுப்பு</span>
-              <span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">தமிழ் &amp; ஆங்கில வழி</span>
-              <span class="resource-tag" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">அரசு போர்ட்டல்</span>
-            </div>
-          </div>
-          <a class="action-btn" href="https://textbookcorp.tn.gov.in/textbook-download.php" rel="noopener" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);" target="_blank">
-            <span>பாடநூல்கள் பதிவிறக்க தளம்</span>
-            <span>↗</span>
-          </a>
-        </div>
-
-        <!-- NCERT Textbooks Official -->
-        <div class="resource-card" style="border-top: 4px solid #7c3aed;">
-          <div>
-            <div class="resource-card-header">
-              <div class="resource-card-icon" style="color: #7c3aed;">📘</div>
-              <div>
-                <h3 class="resource-card-title" style="color: #6b21a8;">NCERT தேசிய பாடநூல்கள் தளம்</h3>
-                <div class="resource-card-sub">NCERT Official Books Portal</div>
-              </div>
-            </div>
-            <p class="resource-card-desc">
+<div class="resource-card-tags">
+<span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">1 முதல் 12-ஆம் வகுப்பு</span>
+<span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">தமிழ் &amp; ஆங்கில வழி</span>
+<span class="resource-tag" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">அரசு போர்ட்டல்</span>
+</div>
+</div>
+<a class="action-btn" href="https://textbookcorp.tn.gov.in/textbook-download.php" rel="noopener" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);" target="_blank">
+<span>பாடநூல்கள் பதிவிறக்க தளம்</span>
+<span>↗</span>
+</a>
+</div>
+<!-- NCERT Textbooks Official -->
+<div class="resource-card" style="border-top: 4px solid #7c3aed;">
+<div>
+<div class="resource-card-header">
+<div class="resource-card-icon" style="color: #7c3aed;">📘</div>
+<div>
+<h3 class="resource-card-title" style="color: #6b21a8;">NCERT தேசிய பாடநூல்கள் தளம்</h3>
+<div class="resource-card-sub">NCERT Official Books Portal</div>
+</div>
+</div>
+<p class="resource-card-desc">
               மத்தியக் கல்வி அமைச்சகத்தின் NCERT அதிகாரப்பூர்வ போர்ட்டல். NEET, JEE Main, CUET, NDA போன்ற அகில இந்திய நுழைவுத்தேர்வுகளுக்கு அடிப்படையான 11 &amp; 12-ஆம் வகுப்பு இயற்பியல், வேதியியல், உயிரியல், கணிதப் புத்தகங்கள்.
             </p>
-            <div class="resource-card-tags">
-              <span class="resource-tag" style="background: #f3e8ff; color: #6b21a8; border-color: #e9d5ff;">NEET / JEE அடிப்படை</span>
-              <span class="resource-tag" style="background: #f3e8ff; color: #6b21a8; border-color: #e9d5ff;">1 முதல் 12 வகுப்பு</span>
-              <span class="resource-tag" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">NCERT மத்திய அரசு</span>
-            </div>
-          </div>
-          <a class="action-btn" href="https://ncert.nic.in/textbook.php" rel="noopener" style="background: linear-gradient(135deg, #7c3aed 0%, #6b21a8 100%);" target="_blank">
-            <span>NCERT புத்தகங்கள் பெற</span>
-            <span>↗</span>
-          </a>
-        </div>
-
-        <!-- TN EMIS DIKSHA Portal -->
-        <div class="resource-card" style="border-top: 4px solid #059669;">
-          <div>
-            <div class="resource-card-header">
-              <div class="resource-card-icon" style="color: #059669;">📱</div>
-              <div>
-                <h3 class="resource-card-title" style="color: #065f46;">தீக்ஷா (DIKSHA) டிஜிட்டல் நூலகம்</h3>
-                <div class="resource-card-sub">Digital Infrastructure for Knowledge Sharing</div>
-              </div>
-            </div>
-            <p class="resource-card-desc">
+<div class="resource-card-tags">
+<span class="resource-tag" style="background: #f3e8ff; color: #6b21a8; border-color: #e9d5ff;">NEET / JEE அடிப்படை</span>
+<span class="resource-tag" style="background: #f3e8ff; color: #6b21a8; border-color: #e9d5ff;">1 முதல் 12 வகுப்பு</span>
+<span class="resource-tag" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">NCERT மத்திய அரசு</span>
+</div>
+</div>
+<a class="action-btn" href="https://ncert.nic.in/textbook.php" rel="noopener" style="background: linear-gradient(135deg, #7c3aed 0%, #6b21a8 100%);" target="_blank">
+<span>NCERT புத்தகங்கள் பெற</span>
+<span>↗</span>
+</a>
+</div>
+<!-- TN EMIS DIKSHA Portal -->
+<div class="resource-card" style="border-top: 4px solid #059669;">
+<div>
+<div class="resource-card-header">
+<div class="resource-card-icon" style="color: #059669;">📱</div>
+<div>
+<h3 class="resource-card-title" style="color: #065f46;">தீக்ஷா (DIKSHA) டிஜிட்டல் நூலகம்</h3>
+<div class="resource-card-sub">Digital Infrastructure for Knowledge Sharing</div>
+</div>
+</div>
+<p class="resource-card-desc">
               மத்திய மற்றும் மாநில அரசுகளின் ஒருங்கிணைந்த டிஜிட்டல் கல்வி தளம். பாடநூல்களுடன் தொடர்புடைய QR Code வீடியோ பாடங்கள், அனிமேஷன் விளக்கங்கள் மற்றும் பயிற்சி வினாக்கள் இலவசமாகக் கிடைக்கின்றன.
             </p>
-            <div class="resource-card-tags">
-              <span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #bbf7d0;">QR கோட் வீடியோக்கள்</span>
-              <span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #bbf7d0;">டிஜிட்டல் பாடங்கள்</span>
-              <span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">இலவச ஆப்</span>
-            </div>
-          </div>
-          <a class="action-btn" href="https://diksha.gov.in/" rel="noopener" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);" target="_blank">
-            <span>DIKSHA போர்ட்டல் செல்ல</span>
-            <span>↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: விளம்பரம் இல்லாத 100% இலவச CBT மாதிரித் தேர்வு தளங்கள் -->
-    <section class="content-card" style="border-top: 5px solid #d97706;">
-      <div class="section-header-row">
-        <div class="section-title-group">
-          <span style="font-size: 1.6rem;">💻</span>
-          <h2 class="section-title" style="color: #92400e;">2. அரசு &amp; தேசிய அமைப்புகளின் விளம்பரமில்லா இலவச CBT மாதிரித் தேர்வுகள்</h2>
-        </div>
-        <span class="section-badge-pill" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">
+<div class="resource-card-tags">
+<span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #bbf7d0;">QR கோட் வீடியோக்கள்</span>
+<span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #bbf7d0;">டிஜிட்டல் பாடங்கள்</span>
+<span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">இலவச ஆப்</span>
+</div>
+</div>
+<a class="action-btn" href="https://diksha.gov.in/" rel="noopener" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);" target="_blank">
+<span>DIKSHA போர்ட்டல் செல்ல</span>
+<span>↗</span>
+</a>
+</div>
+</div>
+</section>
+<!-- SECTION 2: விளம்பரம் இல்லாத 100% இலவச CBT மாதிரித் தேர்வு தளங்கள் -->
+<section class="content-card" style="border-top: 5px solid #d97706;">
+<div class="section-header-row">
+<div class="section-title-group">
+<span style="font-size: 1.6rem;">💻</span>
+<h2 class="section-title" style="color: #92400e;">2. அரசு &amp; தேசிய அமைப்புகளின் விளம்பரமில்லா இலவச CBT மாதிரித் தேர்வுகள்</h2>
+</div>
+<span class="section-badge-pill" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">
           100% இலவசம் • விளம்பரங்கள் அற்றது
         </span>
-      </div>
-
-      <p style="font-size: 0.94rem; color: #334155; line-height: 1.6; margin-bottom: 18px;">
+</div>
+<p style="font-size: 0.94rem; color: #334155; line-height: 1.6; margin-bottom: 18px;">
         தனியார் இணையதளங்களில் தோன்றும் தேவையில்லாத வணிக விளம்பரங்கள், கட்டண வற்புறுத்தல்கள் மற்றும் போலி இணைப்புகளைத் தவிர்த்து, <strong>மத்திய அரசு மற்றும் தேசியத் தேர்வு முகமைகள் நேரடியாக வழங்கும் இலவச கணினி வழி மாதிரித் தேர்வு (Computer Based Test - CBT Mock Test)</strong> தளங்கள்:
       </p>
-
-      <div class="resource-grid">
-        <!-- NTA National Test Abhyas -->
-        <div class="resource-card" style="border-top: 4px solid #0284c7;">
-          <div>
-            <div class="resource-card-header">
-              <div class="resource-card-icon" style="color: #0284c7;">🎯</div>
-              <div>
-                <h3 class="resource-card-title" style="color: #0369a1;">NTA தேசிய டெஸ்ட் அப்யாஸ்</h3>
-                <div class="resource-card-sub">NTA National Test Abhyas (AI Mock Tests)</div>
-              </div>
-            </div>
-            <p class="resource-card-desc">
+<div class="resource-grid">
+<!-- NTA National Test Abhyas -->
+<div class="resource-card" style="border-top: 4px solid #0284c7;">
+<div>
+<div class="resource-card-header">
+<div class="resource-card-icon" style="color: #0284c7;">🎯</div>
+<div>
+<h3 class="resource-card-title" style="color: #0369a1;">NTA தேசிய டெஸ்ட் அப்யாஸ்</h3>
+<div class="resource-card-sub">NTA National Test Abhyas (AI Mock Tests)</div>
+</div>
+</div>
+<p class="resource-card-desc">
               மத்தியக் கல்வி அமைச்சகம் NTA மூலம் வழங்கும் அதிகாரப்பூர்வ இலவச மாதிரித் தேர்வு செயலி மற்றும் தளம். NEET-UG மற்றும் JEE Main தேர்வுகளுக்கான தினசரி முழு நீள மாதிரித் தேர்வுகள், உடனடி மதிப்பெண் மற்றும் பகுப்பாய்வு.
             </p>
-            <div class="resource-card-tags">
-              <span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">NEET &amp; JEE மாதிரி</span>
-              <span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #bbf7d0;">AI மதிப்பெண் அறிக்கை</span>
-              <span class="resource-tag" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">விளம்பரம் இல்லை</span>
-            </div>
-          </div>
-          <a class="action-btn" href="https://www.nta.ac.in/Abhyas" rel="noopener" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);" target="_blank">
-            <span>NTA Abhyas மாதிரித் தேர்வு</span>
-            <span>↗</span>
-          </a>
-        </div>
-
-        <!-- NTA Official CBT Mock Test Portal -->
-        <div class="resource-card" style="border-top: 4px solid #dc2626;">
-          <div>
-            <div class="resource-card-header">
-              <div class="resource-card-icon" style="color: #dc2626;">🖥️</div>
-              <div>
-                <h3 class="resource-card-title" style="color: #991b1b;">NTA அதிகாரப்பூர்வ CBT மாதிரி போர்ட்டல்</h3>
-                <div class="resource-card-sub">NTA Exam Mock Practice Portal</div>
-              </div>
-            </div>
-            <p class="resource-card-desc">
+<div class="resource-card-tags">
+<span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">NEET &amp; JEE மாதிரி</span>
+<span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #bbf7d0;">AI மதிப்பெண் அறிக்கை</span>
+<span class="resource-tag" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">விளம்பரம் இல்லை</span>
+</div>
+</div>
+<a class="action-btn" href="https://www.nta.ac.in/Abhyas" rel="noopener" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);" target="_blank">
+<span>NTA Abhyas மாதிரித் தேர்வு</span>
+<span>↗</span>
+</a>
+</div>
+<!-- NTA Official CBT Mock Test Portal -->
+<div class="resource-card" style="border-top: 4px solid #dc2626;">
+<div>
+<div class="resource-card-header">
+<div class="resource-card-icon" style="color: #dc2626;">🖥️</div>
+<div>
+<h3 class="resource-card-title" style="color: #991b1b;">NTA அதிகாரப்பூர்வ CBT மாதிரி போர்ட்டல்</h3>
+<div class="resource-card-sub">NTA Exam Mock Practice Portal</div>
+</div>
+</div>
+<p class="resource-card-desc">
               தேர்வு மையத்தில் கணினியில் தோன்றும் அதே அசல் இடைமுகத்துடன் (Real Exam Screen UI) கூடிய இலவச மாதிரித் தேர்வு தளம். JEE Main, CUET-UG, NEET வினாத்தாள்களைத் தேர்வு செய்து கணினியிலேயே பயிற்சி செய்யலாம்.
             </p>
-            <div class="resource-card-tags">
-              <span class="resource-tag" style="background: #fee2e2; color: #991b1b; border-color: #fecaca;">அசல் தேர்வு திரை (UI)</span>
-              <span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">CUET / JEE / NEET</span>
-              <span class="resource-tag" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">நேரடிப் பயிற்சி</span>
-            </div>
-          </div>
-          <a class="action-btn" href="https://www.nta.ac.in/quiz" rel="noopener" style="background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);" target="_blank">
-            <span>CBT கணினி வழி பயிற்சி</span>
-            <span>↗</span>
-          </a>
-        </div>
-
-        <!-- IIT JEE Advanced Mock Test Portal -->
-        <div class="resource-card" style="border-top: 4px solid #1e3a8a;">
-          <div>
-            <div class="resource-card-header">
-              <div class="resource-card-icon" style="color: #1e3a8a;">⚙️</div>
-              <div>
-                <h3 class="resource-card-title" style="color: #1e3a8a;">IIT JEE Advanced அதிகாரப்பூர்வ Mock</h3>
-                <div class="resource-card-sub">Official JEE Advanced CBT Portal</div>
-              </div>
-            </div>
-            <p class="resource-card-desc">
+<div class="resource-card-tags">
+<span class="resource-tag" style="background: #fee2e2; color: #991b1b; border-color: #fecaca;">அசல் தேர்வு திரை (UI)</span>
+<span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">CUET / JEE / NEET</span>
+<span class="resource-tag" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">நேரடிப் பயிற்சி</span>
+</div>
+</div>
+<a class="action-btn" href="https://www.nta.ac.in/quiz" rel="noopener" style="background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);" target="_blank">
+<span>CBT கணினி வழி பயிற்சி</span>
+<span>↗</span>
+</a>
+</div>
+<!-- IIT JEE Advanced Mock Test Portal -->
+<div class="resource-card" style="border-top: 4px solid #1e3a8a;">
+<div>
+<div class="resource-card-header">
+<div class="resource-card-icon" style="color: #1e3a8a;">⚙️</div>
+<div>
+<h3 class="resource-card-title" style="color: #1e3a8a;">IIT JEE Advanced அதிகாரப்பூர்வ Mock</h3>
+<div class="resource-card-sub">Official JEE Advanced CBT Portal</div>
+</div>
+</div>
+<p class="resource-card-desc">
               இந்திய தொழில்நுட்ப நிறுவனங்கள் (IITs) நேரடியாக நடத்தும் JEE Advanced Paper-1 மற்றும் Paper-2 தேர்வுகளுக்கான அதிகாரப்பூர்வ மாதிரித் தேர்வு போர்ட்டல். ஐஐடி தேர்வு நடைமுறைகளை முன்கூட்டியே பழகலாம்.
             </p>
-            <div class="resource-card-tags">
-              <span class="resource-tag" style="background: #e0e7ff; color: #3730a3; border-color: #c7d2fe;">IIT அதிகாரப்பூர்வ தளம்</span>
-              <span class="resource-tag" style="background: #fee2e2; color: #991b1b; border-color: #fecaca;">Paper 1 &amp; 2</span>
-              <span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #bbf7d0;">100% இலவசம்</span>
-            </div>
-          </div>
-          <a class="action-btn" href="https://jeeadv.ac.in/mock_test.html" rel="noopener" style="background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);" target="_blank">
-            <span>JEE Advanced Mock Test</span>
-            <span>↗</span>
-          </a>
-        </div>
-
-        <!-- SATHEE Portal by IIT Kanpur & MoE -->
-        <div class="resource-card" style="border-top: 4px solid #059669;">
-          <div>
-            <div class="resource-card-header">
-              <div class="resource-card-icon" style="color: #059669;">🎓</div>
-              <div>
-                <h3 class="resource-card-title" style="color: #065f46;">சாத்தீ (SATHEE) கல்வி தளம்</h3>
-                <div class="resource-card-sub">MoE &amp; IIT Kanpur Self-Assessment Platform</div>
-              </div>
-            </div>
-            <p class="resource-card-desc">
+<div class="resource-card-tags">
+<span class="resource-tag" style="background: #e0e7ff; color: #3730a3; border-color: #c7d2fe;">IIT அதிகாரப்பூர்வ தளம்</span>
+<span class="resource-tag" style="background: #fee2e2; color: #991b1b; border-color: #fecaca;">Paper 1 &amp; 2</span>
+<span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #bbf7d0;">100% இலவசம்</span>
+</div>
+</div>
+<a class="action-btn" href="https://jeeadv.ac.in/mock_test.html" rel="noopener" style="background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);" target="_blank">
+<span>JEE Advanced Mock Test</span>
+<span>↗</span>
+</a>
+</div>
+<!-- SATHEE Portal by IIT Kanpur & MoE -->
+<div class="resource-card" style="border-top: 4px solid #059669;">
+<div>
+<div class="resource-card-header">
+<div class="resource-card-icon" style="color: #059669;">🎓</div>
+<div>
+<h3 class="resource-card-title" style="color: #065f46;">சாத்தீ (SATHEE) கல்வி தளம்</h3>
+<div class="resource-card-sub">MoE &amp; IIT Kanpur Self-Assessment Platform</div>
+</div>
+</div>
+<p class="resource-card-desc">
               மத்தியக் கல்வி அமைச்சகம் மற்றும் ஐஐடி கான்பூர் இணைந்து உருவாக்கிய புரட்சிகர இலவச தளம். JEE, NEET, SSC தேர்வுகளுக்கு ஐஐடி பேராசிரியர்களின் விரிவுரைகள், AI மாதிரித் தேர்வுகள் மற்றும் சந்தேக நிவர்த்தி.
             </p>
-            <div class="resource-card-tags">
-              <span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #bbf7d0;">IIT கான்பூர் பயிற்சி</span>
-              <span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">JEE / NEET / SSC</span>
-              <span class="resource-tag" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">மத்திய அரசு முயற்சி</span>
-            </div>
-          </div>
-          <a class="action-btn" href="https://sathee.prutor.ai/" rel="noopener" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);" target="_blank">
-            <span>SATHEE தளத்தில் இணைய</span>
-            <span>↗</span>
-          </a>
-        </div>
-
-        <!-- SWAYAM PRABHA DTH Free Channels & Portal -->
-        <div class="resource-card" style="border-top: 4px solid #ea580c;">
-          <div>
-            <div class="resource-card-header">
-              <div class="resource-card-icon" style="color: #ea580c;">📺</div>
-              <div>
-                <h3 class="resource-card-title" style="color: #9a3412;">சுயம் பிரபா (SWAYAM PRABHA)</h3>
-                <div class="resource-card-sub">24x7 Educational TV &amp; Web Portal</div>
-              </div>
-            </div>
-            <p class="resource-card-desc">
+<div class="resource-card-tags">
+<span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #bbf7d0;">IIT கான்பூர் பயிற்சி</span>
+<span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">JEE / NEET / SSC</span>
+<span class="resource-tag" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">மத்திய அரசு முயற்சி</span>
+</div>
+</div>
+<a class="action-btn" href="https://sathee.prutor.ai/" rel="noopener" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);" target="_blank">
+<span>SATHEE தளத்தில் இணைய</span>
+<span>↗</span>
+</a>
+</div>
+<!-- SWAYAM PRABHA DTH Free Channels & Portal -->
+<div class="resource-card" style="border-top: 4px solid #ea580c;">
+<div>
+<div class="resource-card-header">
+<div class="resource-card-icon" style="color: #ea580c;">📺</div>
+<div>
+<h3 class="resource-card-title" style="color: #9a3412;">சுயம் பிரபா (SWAYAM PRABHA)</h3>
+<div class="resource-card-sub">24x7 Educational TV &amp; Web Portal</div>
+</div>
+</div>
+<p class="resource-card-desc">
               மத்தியக் கல்வி அமைச்சகத்தின் 40 டிடிஎச் தொலைக்காட்சிகள் மற்றும் இணைய போர்ட்டல். 11 மற்றும் 12-ஆம் வகுப்பு மாணவர்களுக்கான ஐஐடி/என்ஐடி பேராசிரியர்களின் பாடங்கள் மற்றும் தேர்வு தயாரிப்பு பயிற்சிகள் 24 மணி நேரமும் இலவச ஒளிபரப்பு.
             </p>
-            <div class="resource-card-tags">
-              <span class="resource-tag" style="background: #ffedd5; color: #9a3412; border-color: #fed7aa;">24 மணி நேர கல்வி</span>
-              <span class="resource-tag" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">DTH &amp; இணையவழி</span>
-              <span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #bbf7d0;">முழுமையான இலவசம்</span>
-            </div>
-          </div>
-          <a class="action-btn" href="https://www.swayamprabha.gov.in/" rel="noopener" style="background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);" target="_blank">
-            <span>SWAYAM PRABHA தளம்</span>
-            <span>↗</span>
-          </a>
-        </div>
-
-        <!-- BITSAT Official Sample Test Portal -->
-        <div class="resource-card" style="border-top: 4px solid #0891b2;">
-          <div>
-            <div class="resource-card-header">
-              <div class="resource-card-icon" style="color: #0891b2;">🧪</div>
-              <div>
-                <h3 class="resource-card-title" style="color: #0e7490;">BITSAT அதிகாரப்பூர்வ மாதிரித் தேர்வு</h3>
-                <div class="resource-card-sub">BITS Pilani Official Mock Portal</div>
-              </div>
-            </div>
-            <p class="resource-card-desc">
+<div class="resource-card-tags">
+<span class="resource-tag" style="background: #ffedd5; color: #9a3412; border-color: #fed7aa;">24 மணி நேர கல்வி</span>
+<span class="resource-tag" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">DTH &amp; இணையவழி</span>
+<span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #bbf7d0;">முழுமையான இலவசம்</span>
+</div>
+</div>
+<a class="action-btn" href="https://www.swayamprabha.gov.in/" rel="noopener" style="background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);" target="_blank">
+<span>SWAYAM PRABHA தளம்</span>
+<span>↗</span>
+</a>
+</div>
+<!-- BITSAT Official Sample Test Portal -->
+<div class="resource-card" style="border-top: 4px solid #0891b2;">
+<div>
+<div class="resource-card-header">
+<div class="resource-card-icon" style="color: #0891b2;">🧪</div>
+<div>
+<h3 class="resource-card-title" style="color: #0e7490;">BITSAT அதிகாரப்பூர்வ மாதிரித் தேர்வு</h3>
+<div class="resource-card-sub">BITS Pilani Official Mock Portal</div>
+</div>
+</div>
+<p class="resource-card-desc">
               BITS பிலானி, கோவா மற்றும் ஹைதராபாத் வளாகங்களின் B.E., B.Pharm படிப்புகளுக்கான BITSAT ஆன்லைன் கணினித் தேர்வு மாதிரி தளம். வேகமும் துல்லியமும் அவசியமான இத்தேர்வின் கணினி முறையை நேரடியாகப் பழகலாம்.
             </p>
-            <div class="resource-card-tags">
-              <span class="resource-tag" style="background: #cffafe; color: #155e75; border-color: #a5f3fc;">BITS பிலானி Mock</span>
-              <span class="resource-tag" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">நேரடி CBT முறை</span>
-              <span class="resource-tag" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">விளம்பரமற்றது</span>
-            </div>
-          </div>
-          <a class="action-btn" href="https://www.bitsadmission.com/" rel="noopener" style="background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);" target="_blank">
-            <span>BITSAT இணையதளம் செல்ல</span>
-            <span>↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: பிற முக்கிய கல்வி போர்ட்டல்கள் & மாதிரி வினாக்கள் -->
-    <section class="content-card" style="border-top: 5px solid #16a34a;">
-      <div class="section-header-row">
-        <div class="section-title-group">
-          <span style="font-size: 1.6rem;">🌐</span>
-          <h2 class="section-title" style="color: #166534;">3. தேசிய கல்வி நிறுவனங்களின் மாதிரி வினாத்தாள்கள் &amp; பாடத்திட்டப் போர்ட்டல்கள்</h2>
-        </div>
-        <span class="section-badge-pill" style="background: #dcfce7; color: #166534; border-color: #86efac;">
+<div class="resource-card-tags">
+<span class="resource-tag" style="background: #cffafe; color: #155e75; border-color: #a5f3fc;">BITS பிலானி Mock</span>
+<span class="resource-tag" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">நேரடி CBT முறை</span>
+<span class="resource-tag" style="background: #fef3c7; color: #b45309; border-color: #fde68a;">விளம்பரமற்றது</span>
+</div>
+</div>
+<a class="action-btn" href="https://www.bitsadmission.com/" rel="noopener" style="background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);" target="_blank">
+<span>BITSAT இணையதளம் செல்ல</span>
+<span>↗</span>
+</a>
+</div>
+</div>
+</section>
+<!-- SECTION 3: பிற முக்கிய கல்வி போர்ட்டல்கள் & மாதிரி வினாக்கள் -->
+<section class="content-card" style="border-top: 5px solid #16a34a;">
+<div class="section-header-row">
+<div class="section-title-group">
+<span style="font-size: 1.6rem;">🌐</span>
+<h2 class="section-title" style="color: #166534;">3. தேசிய கல்வி நிறுவனங்களின் மாதிரி வினாத்தாள்கள் &amp; பாடத்திட்டப் போர்ட்டல்கள்</h2>
+</div>
+<span class="section-badge-pill" style="background: #dcfce7; color: #166534; border-color: #86efac;">
           முந்தைய ஆண்டு வினாத்தாள்கள் (PYQ)
         </span>
-      </div>
-
-      <p style="font-size: 0.94rem; color: #334155; line-height: 1.6; margin-bottom: 18px;">
+</div>
+<p style="font-size: 0.94rem; color: #334155; line-height: 1.6; margin-bottom: 18px;">
         தேசிய நுழைவுத்தேர்வுகளின் முந்தைய ஆண்டு அசல் வினாத்தாள்கள் (Previous Year Question Papers - PYQ) மற்றும் அதிகாரப்பூர்வ பாடத்திட்டங்களை கட்டணமின்றி நேரடியாகப் பதிவிறக்கும் இணையதளங்கள்:
       </p>
-
-      <div class="resource-grid">
-        <!-- NTA Downloads & PYQ -->
-        <div class="resource-card" style="border-top: 4px solid #0284c7;">
-          <div>
-            <div class="resource-card-header">
-              <div class="resource-card-icon" style="color: #0284c7;">📥</div>
-              <div>
-                <h3 class="resource-card-title" style="color: #0369a1;">NTA அசல் வினாத்தாள்கள் அடைவு</h3>
-                <div class="resource-card-sub">NTA Previous Years Question Papers</div>
-              </div>
-            </div>
-            <p class="resource-card-desc">
+<div class="resource-grid">
+<!-- NTA Downloads & PYQ -->
+<div class="resource-card" style="border-top: 4px solid #0284c7;">
+<div>
+<div class="resource-card-header">
+<div class="resource-card-icon" style="color: #0284c7;">📥</div>
+<div>
+<h3 class="resource-card-title" style="color: #0369a1;">NTA அசல் வினாத்தாள்கள் அடைவு</h3>
+<div class="resource-card-sub">NTA Previous Years Question Papers</div>
+</div>
+</div>
+<p class="resource-card-desc">
               கடந்த 5 ஆண்டுகளுக்கும் மேலாக நடைபெற்ற JEE Main, NEET-UG, CUET-UG, ICAR, NCHMCT உள்ளிட்ட அனைத்துத் தேர்வுகளின் அசல் வினாத்தாள்கள் மற்றும் இறுதி விடைக்குறிப்புகளை (Final Answer Keys) இலவசமாகப் பெறலாம்.
             </p>
-            <div class="resource-card-tags">
-              <span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">அசல் வினாத்தாள்கள்</span>
-              <span class="resource-tag" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">அதிகாரப்பூர்வ விடைகள்</span>
-            </div>
-          </div>
-          <a class="action-btn" href="https://www.nta.ac.in/Downloads" rel="noopener" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);" target="_blank">
-            <span>NTA வினாத்தாள்கள் பதிவிறக்க</span>
-            <span>↗</span>
-          </a>
-        </div>
-
-        <!-- CLAT Consortium Sample Papers -->
-        <div class="resource-card" style="border-top: 4px solid #ca8a04;">
-          <div>
-            <div class="resource-card-header">
-              <div class="resource-card-icon" style="color: #ca8a04;">⚖️</div>
-              <div>
-                <h3 class="resource-card-title" style="color: #854d0e;">CLAT சட்டப் பல்கை மாதிரி வினாக்கள்</h3>
-                <div class="resource-card-sub">Consortium of NLUs Official Resources</div>
-              </div>
-            </div>
-            <p class="resource-card-desc">
+<div class="resource-card-tags">
+<span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">அசல் வினாத்தாள்கள்</span>
+<span class="resource-tag" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">அதிகாரப்பூர்வ விடைகள்</span>
+</div>
+</div>
+<a class="action-btn" href="https://www.nta.ac.in/Downloads" rel="noopener" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);" target="_blank">
+<span>NTA வினாத்தாள்கள் பதிவிறக்க</span>
+<span>↗</span>
+</a>
+</div>
+<!-- CLAT Consortium Sample Papers -->
+<div class="resource-card" style="border-top: 4px solid #ca8a04;">
+<div>
+<div class="resource-card-header">
+<div class="resource-card-icon" style="color: #ca8a04;">⚖️</div>
+<div>
+<h3 class="resource-card-title" style="color: #854d0e;">CLAT சட்டப் பல்கை மாதிரி வினாக்கள்</h3>
+<div class="resource-card-sub">Consortium of NLUs Official Resources</div>
+</div>
+</div>
+<p class="resource-card-desc">
               26 தேசிய சட்டப் பல்கலைக்கழகங்களின் கூட்டமைப்பு அதிகாரப்பூர்வமாக வெளியிடும் மாதிரி வினாத்தாள்கள் மற்றும் முந்தைய ஆண்டு வினாத்தாள்களின் தொகுப்பு.
             </p>
-            <div class="resource-card-tags">
-              <span class="resource-tag" style="background: #fef9c3; color: #854d0e; border-color: #fef08a;">CLAT சட்டத் தேர்வு</span>
-              <span class="resource-tag" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">அசல் மாதிரி வினாக்கள்</span>
-            </div>
-          </div>
-          <a class="action-btn" href="https://consortiumofnlus.ac.in/" rel="noopener" style="background: linear-gradient(135deg, #ca8a04 0%, #a16207 100%);" target="_blank">
-            <span>CLAT போர்ட்டல் செல்ல</span>
-            <span>↗</span>
-          </a>
-        </div>
-
-        <!-- IISER IAT Official Mock & Practice -->
-        <div class="resource-card" style="border-top: 4px solid #16a34a;">
-          <div>
-            <div class="resource-card-header">
-              <div class="resource-card-icon" style="color: #16a34a;">🔬</div>
-              <div>
-                <h3 class="resource-card-title" style="color: #15803d;">IISER Aptitude Test (IAT) வினாக்கள்</h3>
-                <div class="resource-card-sub">IISER Admission Mock Tests &amp; PYQ</div>
-              </div>
-            </div>
-            <p class="resource-card-desc">
+<div class="resource-card-tags">
+<span class="resource-tag" style="background: #fef9c3; color: #854d0e; border-color: #fef08a;">CLAT சட்டத் தேர்வு</span>
+<span class="resource-tag" style="background: #f0fdf4; color: #166534; border-color: #bbf7d0;">அசல் மாதிரி வினாக்கள்</span>
+</div>
+</div>
+<a class="action-btn" href="https://consortiumofnlus.ac.in/" rel="noopener" style="background: linear-gradient(135deg, #ca8a04 0%, #a16207 100%);" target="_blank">
+<span>CLAT போர்ட்டல் செல்ல</span>
+<span>↗</span>
+</a>
+</div>
+<!-- IISER IAT Official Mock & Practice -->
+<div class="resource-card" style="border-top: 4px solid #16a34a;">
+<div>
+<div class="resource-card-header">
+<div class="resource-card-icon" style="color: #16a34a;">🔬</div>
+<div>
+<h3 class="resource-card-title" style="color: #15803d;">IISER Aptitude Test (IAT) வினாக்கள்</h3>
+<div class="resource-card-sub">IISER Admission Mock Tests &amp; PYQ</div>
+</div>
+</div>
+<p class="resource-card-desc">
               7 ஐசர்கள் மற்றும் ஐஐஎஸ்சி பெங்களூரு ஆராய்ச்சிப் படிப்பு சேர்க்கைக்கான IAT மாதிரித் தேர்வுகள், முந்தைய ஆண்டு வினாத்தாள்கள் மற்றும் விரிவான பாடத்திட்டம்.
             </p>
-            <div class="resource-card-tags">
-              <span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #bbf7d0;">அறிவியல் ஆராய்ச்சி</span>
-              <span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">IISER / IISc</span>
-            </div>
-          </div>
-          <a class="action-btn" href="https://iiseradmission.in/" rel="noopener" style="background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);" target="_blank">
-            <span>IISER போர்ட்டல் செல்ல</span>
-            <span>↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Thirukkural Motivational Box (குறள் 400 - கேடில் விழுச்செல்வம் கல்வி) -->
-    <div class="kural-box">
-      <div class="kural-header">
-        <span class="kural-icon">📜</span>
-        <span class="kural-title">திருக்குறள் — அதிகாரம்: கல்வி (குறள்: 400)</span>
-        <span class="kural-sparkle">✨ அழியாத கல்விச் செல்வம்</span>
-      </div>
-      <div class="kural-verse-text">
+<div class="resource-card-tags">
+<span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #bbf7d0;">அறிவியல் ஆராய்ச்சி</span>
+<span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">IISER / IISc</span>
+</div>
+</div>
+<a class="action-btn" href="https://iiseradmission.in/" rel="noopener" style="background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);" target="_blank">
+<span>IISER போர்ட்டல் செல்ல</span>
+<span>↗</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Thirukkural Motivational Box (குறள் 400 - கேடில் விழுச்செல்வம் கல்வி) -->
+<div class="kural-box">
+<div class="kural-header">
+<span class="kural-icon">📜</span>
+<span class="kural-title">திருக்குறள் — அதிகாரம்: கல்வி (குறள்: 400)</span>
+<span class="kural-sparkle">✨ அழியாத கல்விச் செல்வம்</span>
+</div>
+<div class="kural-verse-text">
         “கேடில் விழுச்செல்வம் கல்வி ஒருவற்கு<br/>
         மாடல்ல மற்றை யவை.”
       </div>
-      <div class="kural-meaning">
-        <strong>குறள் விளக்கம்:</strong> ஒரு மனிதனுக்கு அழிவில்லாத சிறந்த பெருஞ்செல்வம் என்பது அவன் கற்ற கல்வியே ஆகும்; கல்வி தவிர்த்த மற்றப் பொன், பொருள் போன்ற செல்வங்கள் எவையும் நிலையான சிறந்த செல்வங்கள் ஆகாது. முறையான அரசுப் பாடநூல்களையும் கல்வி வளங்களையும் கொண்டு கற்கும் கல்வியே மாணவர்களின் உண்மையான எதிர்கால மூலதனமாகும்.
+<div class="kural-meaning">
+<strong>குறள் விளக்கம்:</strong> ஒரு மனிதனுக்கு அழிவில்லாத சிறந்த பெருஞ்செல்வம் என்பது அவன் கற்ற கல்வியே ஆகும்; கல்வி தவிர்த்த மற்றப் பொன், பொருள் போன்ற செல்வங்கள் எவையும் நிலையான சிறந்த செல்வங்கள் ஆகாது. முறையான அரசுப் பாடநூல்களையும் கல்வி வளங்களையும் கொண்டு கற்கும் கல்வியே மாணவர்களின் உண்மையான எதிர்கால மூலதனமாகும்.
       </div>
-    </div>
-
-    <!-- Student Doubt & Feedback Section -->
-    <section class="feedback-section" id="doubt-sec">
-      <div class="animated-top-bar"></div>
-      <canvas id="fb_crackers_canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 99; display: none;"></canvas>
-      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(226, 232, 240, 0.8);">
-        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-          <div class="sparkle-badge" style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); color: #0369a1; border-color: #7dd3fc;">
-            <span class="sparkle-icon">💬</span>
-            <span>கல்வி வளங்கள் வழிகாட்டல் வினாக்களம்</span>
-          </div>
-          <h2 style="font-size: 1.35rem; font-weight: 800; background: linear-gradient(135deg, #1e3a8a 0%, #0369a1 50%, #0891b2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0; letter-spacing: -0.2px;">
-            பாடநூல்கள் &amp; மாதிரித் தேர்வுகள் குறித்த சந்தேகங்களைக் கேட்கலாம்
-          </h2>
-        </div>
-        <p style="font-size: 0.86rem; color: #475569; margin: 0;">
-          அரசுப் பாடநூல்கள் பதிவிறக்கம், NCERT புத்தகங்கள், கணினி வழி மாதிரித் தேர்வுகள் (CBT Mock Test) குறித்த தங்களின் சந்தேகங்களைப் பதிவு செய்யலாம். மாவட்டக் கல்வி வழிகாட்டல் குழுவினர் வழிகாட்டுவர்.
-        </p>
-      </div>
-
-      <form id="guidanceFeedbackForm" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px 14px; align-items: start;">
-        <input name="page" type="hidden" value="07_resources_external_portals.html"/>
-        <div class="form-group fb-field-name" style="grid-column: span 1;">
-          <label for="fb_name" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-            <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #e0f2fe; color: #0284c7; border-radius: 4px; font-size: 11px;">👤</span>
-            <span>மாணவர் பெயர்</span>
-            <span style="color: #ef4444;">*</span>
-          </label>
-          <input id="fb_name" placeholder="முழுப் பெயர்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="text"/>
-        </div>
-        <div class="form-group fb-field-place" style="grid-column: span 1;">
-          <label for="fb_place" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-            <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #fef3c7; color: #d97706; border-radius: 4px; font-size: 11px;">🏫</span>
-            <span>பள்ளி / ஊர்</span>
-            <span style="color: #ef4444;">*</span>
-          </label>
-          <input id="fb_place" placeholder="பள்ளி பெயர் &amp; ஊர்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="text"/>
-        </div>
-        <div class="form-group fb-field-phone" style="grid-column: span 1;">
-          <label for="fb_phone" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-            <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #dcfce7; color: #16a34a; border-radius: 4px; font-size: 11px;">📱</span>
-            <span>கைபேசி எண்</span>
-            <span style="color: #ef4444;">*</span>
-          </label>
-          <input id="fb_phone" pattern="[0-9]{10}" placeholder="10 இலக்க எண்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" title="10 இலக்க கைபேசி எண்" type="tel"/>
-        </div>
-        <div class="form-group fb-field-email" style="grid-column: span 1;">
-          <label for="fb_email" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-            <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #f3e8ff; color: #9333ea; border-radius: 4px; font-size: 11px;">✉️</span>
-            <span>மின்னஞ்சல்</span>
-            <span style="color: #ef4444; font-weight: 800;">*</span>
-          </label>
-          <input autocomplete="email" id="fb_email" placeholder="example@gmail.com" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="email"/>
-        </div>
-        <div class="form-group fb-field-msg" style="grid-column: span 3;">
-          <label for="fb_message" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-            <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #ffe4e6; color: #e11d48; border-radius: 4px; font-size: 11px;">❓</span>
-            <span>தங்களின் சந்தேகம் / வினாக்கள்</span>
-            <span style="color: #ef4444;">*</span>
-          </label>
-          <textarea id="fb_message" placeholder="எ.கா: NCERT 11 &amp; 12-ஆம் வகுப்பு புத்தகங்களை ஆன்லைனில் எவ்வாறு முழுமையாகப் பதிவிறக்குவது? NTA Abhyas செயலியில் எவ்வாறு மாதிரித் தேர்வு எழுதுவது? ஏதேனும் சந்தேகம் இருந்தால் இங்கே பதிவிடலாம்..." required="" rows="2" style="width: 100%; height: 50px; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; resize: vertical; box-sizing: border-box; line-height: 1.4;"></textarea>
-        </div>
-        <div class="form-group fb-field-submit" style="grid-column: span 1; display: flex; flex-direction: column; justify-content: flex-end;">
-          <button id="fb_submitBtn" style="width: 100%; height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0f172a 100%); color: #ffffff; border: none; font-size: 0.94rem; font-weight: 800; font-family: inherit; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35); transition: all 0.25s ease; box-sizing: border-box;" type="submit">
-            <span>சந்தேகம் பதிவு செய்க</span>
-            <svg style="width: 16px; height: 16px; fill: none; stroke: currentColor;" viewbox="0 0 24 24">
-              <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
-            </svg>
-          </button>
-        </div>
-      </form>
-      <div id="fb_status" style="margin-top: 10px; text-align: center; padding: 10px 16px; border-radius: 8px; font-size: 0.95rem; font-weight: 800; display: none;"></div>
-    </section>
-
-    <!-- Creator Card -->
-    <div class="creator-card">
-      <div class="creator-typewriter-wrapper">
-        <span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
-      </div>
-      <a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
-        <span class="phone-icon">📱</span>
-        <span class="phone-text">9626471035</span>
-      </a>
-    </div>
-
-    <!-- Official Footer -->
-    <footer class="portal-footer">
-      <p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
+</div>
+<!-- Student Doubt & Feedback Section -->
+<!-- Creator Card -->
+<div class="creator-card">
+<div class="creator-typewriter-wrapper">
+<span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
+</div>
+<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
+<span class="phone-icon">📱</span>
+<span class="phone-text">9626471035</span>
+</a>
+</div>
+<!-- Official Footer -->
+<footer class="portal-footer">
+<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
         தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none;">04575-240408</a>, <a href="mailto:ceosvg@nic.in" style="color: #0284c7; text-decoration: none;">ceosvg@nic.in</a>
-      </p>
-      <p style="font-size: 0.76rem; color: #64748b;">
+</p>
+<p style="font-size: 0.76rem; color: #64748b;">
         இணையதள வடிவமைப்பு &amp; பராமரிப்பு: கூ. பூவலிங்கம், பள்ளித் துணை ஆய்வாளர், சிவகங்கை மாவட்டம். © 2026 தமிழ்நாடு பள்ளிக் கல்வித்துறை. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.
       </p>
-    </footer>
-
-  </main>
+</footer>
+</main>
 </div>
 </div>
-
 <!-- Floating Back to Top Button -->
 <a aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" href="#" id="floatingBackToTopBtn" role="button" title="பக்கத்தின் மேலே செல்ல">
-  <span style="font-size: 1.15rem; font-weight: 900;">▲</span>
-  <span>மேலே செல்க</span>
+<span style="font-size: 1.15rem; font-weight: 900;">▲</span>
+<span>மேலே செல்க</span>
 </a>
-
 <script>
 // 1. Floating Back to Top Controller
 (function() {
