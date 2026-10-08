@@ -4811,354 +4811,6 @@
 }
 
 </style>
-<style>
-
-/* ========================================================
-   AI-FIRST DOUBT & GUIDANCE TEAM ESCALATION SYSTEM
-   மாணவர் சந்தேகங்களுக்கு AI உடனடிப் பதில் & குழு உதவி
-   ======================================================== */
-.doubt-header-wrapper {
-  margin-bottom: 16px !important;
-  padding-bottom: 12px !important;
-  border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
-}
-
-.doubt-main-title {
-  font-size: 1.32rem !important;
-  font-weight: 800 !important;
-  background: linear-gradient(135deg, #1e3a8a 0%, #0369a1 50%, #0891b2 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  margin: 0 !important;
-}
-
-.doubt-sub-desc {
-  font-size: 0.86rem !important;
-  color: #475569 !important;
-  margin: 6px 0 0 0 !important;
-  line-height: 1.5 !important;
-}
-
-.ai-query-box {
-  background: #ffffff !important;
-  border: 1.8px solid #bae6fd !important;
-  border-radius: 12px !important;
-  padding: 16px !important;
-  box-shadow: 0 3px 12px rgba(2, 132, 199, 0.08) !important;
-  margin-bottom: 14px !important;
-}
-
-.ai-input-label {
-  display: flex !important;
-  align-items: center !important;
-  gap: 6px !important;
-  font-size: 0.88rem !important;
-  font-weight: 700 !important;
-  color: #0369a1 !important;
-  margin-bottom: 8px !important;
-}
-
-.ai-input-wrap {
-  display: flex !important;
-  gap: 10px !important;
-  align-items: stretch !important;
-}
-
-@media (max-width: 768px) {
-  .ai-input-wrap {
-    flex-direction: column !important;
-  }
-}
-
-.ai-textarea {
-  flex-grow: 1 !important;
-  padding: 10px 14px !important;
-  font-size: 0.90rem !important;
-  font-family: inherit !important;
-  border: 1.8px solid #cbd5e1 !important;
-  border-radius: 8px !important;
-  outline: none !important;
-  resize: vertical !important;
-  box-sizing: border-box !important;
-  transition: border-color 0.2s ease !important;
-}
-
-.ai-textarea:focus {
-  border-color: #0284c7 !important;
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2) !important;
-}
-
-.btn-ask-ai {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 8px !important;
-  padding: 10px 18px !important;
-  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0f172a 100%) !important;
-  color: #ffffff !important;
-  border: none !important;
-  border-radius: 8px !important;
-  font-size: 0.92rem !important;
-  font-weight: 800 !important;
-  font-family: inherit !important;
-  cursor: pointer !important;
-  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;
-  transition: all 0.2s ease !important;
-  white-space: nowrap !important;
-}
-
-.btn-ask-ai:hover {
-  transform: translateY(-1px) !important;
-  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.45) !important;
-}
-
-.btn-ask-ai:active {
-  transform: scale(0.98) !important;
-}
-
-.quick-pills-bar {
-  display: flex !important;
-  align-items: center !important;
-  flex-wrap: wrap !important;
-  gap: 6px !important;
-  margin-top: 10px !important;
-}
-
-.quick-pill-label {
-  font-size: 0.78rem !important;
-  font-weight: 700 !important;
-  color: #64748b !important;
-}
-
-.quick-pill {
-  background: #f0f9ff !important;
-  color: #0369a1 !important;
-  border: 1px solid #bae6fd !important;
-  border-radius: 999px !important;
-  padding: 3px 9px !important;
-  font-size: 0.76rem !important;
-  font-weight: 700 !important;
-  font-family: inherit !important;
-  cursor: pointer !important;
-  transition: all 0.15s ease !important;
-}
-
-.quick-pill:hover {
-  background: #0284c7 !important;
-  color: #ffffff !important;
-  border-color: #0284c7 !important;
-  transform: translateY(-1px) !important;
-}
-
-/* AI Thinking Spinner */
-.ai-thinking-box {
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-  background: #f8fafc !important;
-  border: 1.5px dashed #94a3b8 !important;
-  border-radius: 10px !important;
-  padding: 14px 18px !important;
-  margin: 12px 0 !important;
-}
-
-.ai-spinner {
-  width: 24px !important;
-  height: 24px !important;
-  border: 3px solid #e2e8f0 !important;
-  border-top: 3px solid #0284c7 !important;
-  border-radius: 50% !important;
-  animation: spinAI 0.8s linear infinite !important;
-}
-
-@keyframes spinAI {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* AI Answer Card */
-.ai-answer-wrapper {
-  margin: 14px 0 !important;
-  animation: fadeInAI 0.3s ease-out !important;
-}
-
-@keyframes fadeInAI {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.ai-answer-card {
-  background: #ffffff !important;
-  border: 1.8px solid #38bdf8 !important;
-  border-radius: 12px !important;
-  padding: 18px !important;
-  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.12) !important;
-}
-
-.ai-answer-header {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  flex-wrap: wrap !important;
-  gap: 8px !important;
-  margin-bottom: 10px !important;
-  padding-bottom: 8px !important;
-  border-bottom: 1.5px solid #e0f2fe !important;
-}
-
-.ai-robot-badge {
-  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
-  color: #ffffff !important;
-  padding: 3px 10px !important;
-  border-radius: 6px !important;
-  font-size: 0.80rem !important;
-  font-weight: 800 !important;
-}
-
-.ai-topic-tag {
-  background: #e0f2fe !important;
-  color: #0369a1 !important;
-  padding: 2px 8px !important;
-  border-radius: 999px !important;
-  font-size: 0.76rem !important;
-  font-weight: 700 !important;
-}
-
-.ai-verified-tag {
-  font-size: 0.74rem !important;
-  font-weight: 700 !important;
-  color: #16a34a !important;
-  background: #dcfce7 !important;
-  padding: 2px 8px !important;
-  border-radius: 999px !important;
-}
-
-.ai-echo-question {
-  background: #f8fafc !important;
-  border-left: 3.5px solid #0284c7 !important;
-  padding: 6px 12px !important;
-  border-radius: 4px !important;
-  font-size: 0.84rem !important;
-  margin-bottom: 12px !important;
-}
-
-.ai-answer-content {
-  font-size: 0.88rem !important;
-  color: #1e293b !important;
-  line-height: 1.6 !important;
-}
-
-.ai-answer-content p {
-  margin: 0 0 8px 0 !important;
-}
-
-.ai-answer-content ul {
-  margin: 0 0 10px 0 !important;
-  padding-left: 20px !important;
-}
-
-.ai-answer-content li {
-  margin-bottom: 5px !important;
-}
-
-/* Satisfaction Poll Bar */
-.ai-satisfaction-bar {
-  margin-top: 14px !important;
-  padding-top: 12px !important;
-  border-top: 1.5px dashed #cbd5e1 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  flex-wrap: wrap !important;
-  gap: 10px !important;
-}
-
-.sat-question {
-  font-size: 0.86rem !important;
-  font-weight: 800 !important;
-  color: #0f172a !important;
-}
-
-.sat-actions {
-  display: inline-flex !important;
-  gap: 8px !important;
-  flex-wrap: wrap !important;
-}
-
-.btn-sat-yes {
-  background: #dcfce7 !important;
-  color: #15803d !important;
-  border: 1.5px solid #86efac !important;
-  padding: 6px 12px !important;
-  border-radius: 8px !important;
-  font-size: 0.82rem !important;
-  font-weight: 800 !important;
-  cursor: pointer !important;
-  transition: all 0.15s ease !important;
-}
-
-.btn-sat-yes:hover {
-  background: #16a34a !important;
-  color: #ffffff !important;
-  transform: translateY(-1px) !important;
-}
-
-.btn-sat-no {
-  background: #fee2e2 !important;
-  color: #b91c1c !important;
-  border: 1.5px solid #fca5a5 !important;
-  padding: 6px 12px !important;
-  border-radius: 8px !important;
-  font-size: 0.82rem !important;
-  font-weight: 800 !important;
-  cursor: pointer !important;
-  transition: all 0.15s ease !important;
-}
-
-.btn-sat-no:hover {
-  background: #dc2626 !important;
-  color: #ffffff !important;
-  transform: translateY(-1px) !important;
-}
-
-/* Thank You Box */
-.ai-thankyou-box {
-  background: #f0fdf4 !important;
-  border: 1.8px solid #86efac !important;
-  border-radius: 12px !important;
-  padding: 18px !important;
-  text-align: center !important;
-  margin: 14px 0 !important;
-  animation: fadeInAI 0.25s ease !important;
-}
-
-.btn-ask-another {
-  background: #ffffff !important;
-  color: #059669 !important;
-  border: 1.5px solid #059669 !important;
-  padding: 6px 14px !important;
-  border-radius: 6px !important;
-  font-size: 0.82rem !important;
-  font-weight: 800 !important;
-  cursor: pointer !important;
-  transition: all 0.15s ease !important;
-}
-
-.btn-ask-another:hover {
-  background: #059669 !important;
-  color: #ffffff !important;
-}
-
-/* Human Escalation Header Box */
-.escalation-header-box {
-  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%) !important;
-  border: 1.8px solid #f87171 !important;
-  border-radius: 10px !important;
-  padding: 12px 16px !important;
-  margin-top: 14px !important;
-}
-
-</style>
 </head>
 <body id="top">
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
@@ -7935,216 +7587,88 @@
 <div class="kural-meaning">
 <strong>மு. வரதராசனார் உரை:</strong> கடினம் என்று சோர்வடையாமல் விடாமுயற்சியுடன் உழைத்தால் அச்செயலை வென்று முடிக்கும் பெரும் பெருமையை அந்த முயற்சியே தரும்.
   </div>
-</div><section class="feedback-section" id="doubt-sec">
+</div><section class="feedback-section">
 <div class="animated-top-bar"></div>
 <canvas id="fb_crackers_canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 99; display: none;"></canvas>
-
-<!-- Section Header -->
-<div class="doubt-header-wrapper">
-  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span class="sparkle-badge" style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); color: #0369a1; border-color: #7dd3fc;">
-        <span class="sparkle-icon">🤖</span><span>AI வழிகாட்டி &amp; மனித ஆலோசகர் வழிகாட்டல் வினாக்களம்</span>
-      </span>
-      <h2 class="doubt-main-title">
-        மாணவர் உயர்கல்வி சந்தேகங்கள் &amp; உடனடி AI வழிகாட்டல் வினாக்களம்
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(226, 232, 240, 0.8);">
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+<div class="sparkle-badge"><span class="sparkle-icon">✨</span><span>கருத்துக் களம் &amp; வழிகாட்டல்</span></div>
+<h2 style="font-size: 1.35rem; font-weight: 800; background: linear-gradient(135deg, #1e3a8a 0%, #6b21a8 50%, #9d174d 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0; letter-spacing: -0.2px;">
+        தங்களின் மேலான ஆலோசனை/கருத்துகளை பதிவு செய்க
       </h2>
-    </div>
-    <span style="background: #f0fdf4; color: #15803d; font-size: 0.80rem; font-weight: 800; padding: 4px 12px; border-radius: 999px; border: 1px solid #86efac;">
-      உடனடி AI பதில் + நேரடி குழு உதவி
-    </span>
-  </div>
-  <p class="doubt-sub-desc">
-    தேசிய நுழைவுத்தேர்வுகள், விண்ணப்பிக்கும் வழிமுறைகள், கட்-ஆப் கணக்கீடு மற்றும் அரசு சலுகைகள் குறித்த தங்களின் சந்தேகங்களைத் தட்டச்சு செய்து உடனடி AI வழிகாட்டலைப் பெறுங்கள். பதிலில் கூடுதல் விளக்கம் தேவைப்படின், மாவட்ட வழிகாட்டிக் குழுவின் நேரடி உதவியைப் பெறலாம்.
-  </p>
 </div>
-
-<!-- STAGE 1: AI QUERY INPUT & QUICK PROMPT PILLS -->
-<div id="ai-query-stage" class="ai-query-box">
-  <label for="student_ai_question" class="ai-input-label">
-    <span class="ai-input-icon">❓</span>
-    <span>தங்களின் உயர்கல்வி / நுழைவுத்தேர்வு சந்தேகம் அல்லது வினா:</span>
-  </label>
-  <div class="ai-input-wrap">
-    <textarea id="student_ai_question" class="ai-textarea" rows="2" placeholder="எ.கா: NEET தேர்வுக்கு எப்போது விண்ணப்பிக்க வேண்டும்? அல்லது பொறியியல் கட் ஆப் எப்படி கணக்கிடுவது? 7.5% சலுகைகள் என்னென்ன? தங்களின் கேள்வியை இங்கே தட்டச்சு செய்யவும்..."></textarea>
-    <button type="button" id="btn_ask_ai" class="btn-ask-ai" onclick="submitToAIAssistant()">
-      <span>🤖 AI உடனடிப் பதில் பெறுக</span>
-      <svg class="send-arrow-icon" style="width: 16px; height: 16px; fill: none; stroke: currentColor;" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-  </div>
-
-  <!-- Quick Sample Pills -->
-  <div class="quick-pills-bar">
-    <span class="quick-pill-label">💡 மாதிரி வினாக்கள்:</span>
-    <button type="button" class="quick-pill" onclick="setAiQuery('NEET மருத்துவத் தேர்வுக்கு எப்போது விண்ணப்பிக்க வேண்டும்? 7.5% அரசுப் பள்ளி சலுகைகள் என்ன?')">🩺 NEET &amp; 7.5% சலுகை</button>
-    <button type="button" class="quick-pill" onclick="setAiQuery('பொறியியல் சேர்க்கை TNEA கட் ஆப் எப்படி கணக்கிட வேண்டும்?')">⚙️ TNEA கட்-ஆப்</button>
-    <button type="button" class="quick-pill" onclick="setAiQuery('TNAU வேளாண்மை படிப்புகளுக்கான கட் ஆப் எப்படி கணக்கிட வேண்டும்?')">🌾 வேளாண்மை கட்-ஆப்</button>
-    <button type="button" class="quick-pill" onclick="setAiQuery('CUET-UG மத்திய பல்கலைக்கழக நுழைவுத்தேர்வு என்றால் என்ன?')">🏛️ CUET மத்திய பல்கை</button>
-    <button type="button" class="quick-pill" onclick="setAiQuery('CLAT சட்டப் படிப்பு நுழைவுத்தேர்வுக்கு எப்போது விண்ணப்பிக்க வேண்டும்?')">⚖️ CLAT சட்டப் பல்கை</button>
-    <button type="button" class="quick-pill" onclick="setAiQuery('IISER மற்றும் NISER அறிவியல் ஆராய்ச்சி சேர்க்கை எவ்வாறு நடைபெறும்?')">🔬 IISER / NISER ஆராய்ச்சி</button>
-    <button type="button" class="quick-pill" onclick="setAiQuery('அகில இந்திய நுழைவுத் தேர்வுகள் அட்டவணை மற்றும் விண்ணப்பக் காலண்டர் விவரம் என்ன?')">📅 தேர்வுகள் அட்டவணை</button>
-  </div>
+<p style="font-size: 0.86rem; color: #64748b; margin: 0;">
+      போட்டித்தேர்வுகள் வழிகாட்டல் குறித்து ஆலோசனைகள், கோப்புகள் (PDF/Word/Excel/PPT/படம்) அல்லது இணைப்புகளைப் பகிரலாம்
+    </p>
 </div>
-
-<!-- AI THINKING INDICATOR -->
-<div id="ai-thinking-indicator" class="ai-thinking-box" style="display: none;">
-  <div class="ai-spinner"></div>
-  <div class="ai-thinking-text">
-    <strong>செயற்கை நுண்ணறிவு வழிகாட்டி (Career AI) சிந்தித்து பதிலளிக்கிறது...</strong>
-    <div style="font-size: 0.78rem; color: #64748b;">அதிகாரப்பூர்வ கையேட்டு விதிகளுடன் தகவல் சரிபார்க்கப்படுகிறது</div>
-  </div>
+<form id="guidanceFeedbackForm" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px 14px; align-items: start;">
+<input name="page" type="hidden" value="04_govt_exams.html"/>
+<div class="form-group fb-field-name" style="grid-column: span 1;">
+<label for="fb_name" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #e0f2fe; color: #0284c7; border-radius: 4px; font-size: 11px;">👤</span>
+<span>பெயர்</span>
+<span style="color: #ef4444;">*</span>
+</label>
+<input id="fb_name" placeholder="முழுப் பெயர்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="text"/>
 </div>
-
-<!-- STAGE 2: AI ANSWER CARD WITH SATISFACTION POLL -->
-<div id="ai-answer-container" class="ai-answer-wrapper" style="display: none;">
-  <div class="ai-answer-card">
-    <div class="ai-answer-header">
-      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-        <span class="ai-robot-badge">🤖 AI உடனடி வழிகாட்டல்</span>
-        <span id="ai-response-topic" class="ai-topic-tag">பொதுவான உயர்கல்வி வழிகாட்டல்</span>
-      </div>
-      <span class="ai-verified-tag">✓ சரிபார்க்கப்பட்ட கையேட்டுத் தகவல்</span>
-    </div>
-    
-    <!-- Student's question echoed -->
-    <div class="ai-echo-question">
-      <span style="color: #64748b; font-weight: 700;">தங்களின் கேள்வி:</span>
-      <span id="ai-echo-query" style="color: #0f172a; font-weight: 600;"></span>
-    </div>
-
-    <!-- AI Generated Answer Body -->
-    <div id="ai-answer-body" class="ai-answer-content">
-      <!-- Injected dynamically -->
-    </div>
-
-    <!-- Satisfaction Feedback Bar -->
-    <div class="ai-satisfaction-bar">
-      <div class="sat-question">
-        <span>❓ இந்த AI பதில் தங்களுக்குத் திருப்தியளிக்கிறதா?</span>
-      </div>
-      <div class="sat-actions">
-        <button type="button" class="btn-sat-yes" onclick="handleSatisfaction(true)">
-          <span>👍 ஆம், பயனுள்ளதாக உள்ளது</span>
-        </button>
-        <button type="button" class="btn-sat-no" onclick="handleSatisfaction(false)">
-          <span>👎 திருப்தியில்லை / வழிகாட்டி குழுவின் உதவி தேவை</span>
-        </button>
-      </div>
-    </div>
-  </div>
+<div class="form-group fb-field-place" style="grid-column: span 1;">
+<label for="fb_place" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #fef3c7; color: #d97706; border-radius: 4px; font-size: 11px;">🏫</span>
+<span>பள்ளி / ஊர்</span>
+<span style="color: #ef4444;">*</span>
+</label>
+<input id="fb_place" placeholder="பள்ளி பெயர் &amp; ஊர்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="text"/>
 </div>
-
-<!-- STAGE 3A: THANK YOU / CELEBRATION BOX IF SATISFIED -->
-<div id="ai-satisfied-box" class="ai-thankyou-box" style="display: none;">
-  <div style="font-size: 2rem; margin-bottom: 6px;">🎉</div>
-  <h3 style="color: #15803d; margin: 0 0 6px 0; font-size: 1.15rem; font-weight: 800;">மிக்க மகிழ்ச்சி! தங்களுக்கு வழிகாட்ட முடிந்ததில் பெருமகிழ்ச்சி!</h3>
-  <p style="color: #334155; font-size: 0.88rem; margin: 0 0 12px 0;">உங்கள் உயர்கல்வி மற்றும் எதிர்காலப் பயணம் சிறக்க சிவகங்கை மாவட்டக் கல்வித்துறை நல்வாழ்த்துகளைத் தெரிவிக்கிறது. 🎓</p>
-  <button type="button" class="btn-ask-another" onclick="resetAiWorkflow()">
-    <span>🔄 வேறு சந்தேகம் கேட்க</span>
-  </button>
+<div class="form-group fb-field-phone" style="grid-column: span 1;">
+<label for="fb_phone" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #dcfce7; color: #16a34a; border-radius: 4px; font-size: 11px;">📱</span>
+<span>தொலைபேசி எண்</span>
+<span style="color: #ef4444;">*</span>
+</label>
+<input id="fb_phone" pattern="[0-9]{10}" placeholder="10 இலக்க எண்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" title="10 இலக்க கைபேசி எண்" type="tel"/>
 </div>
-
-<!-- STAGE 3B: ESCALATION FORM TO HUMAN GUIDANCE TEAM -->
-<div id="human-team-stage" class="human-escalation-wrapper" style="display: none;">
-  <div class="escalation-header-box">
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <span style="font-size: 1.5rem;">👥</span>
-      <div>
-        <h3 style="margin: 0; font-size: 1.10rem; color: #991b1b; font-weight: 800;">
-          சிவகங்கை மாவட்ட உயர்கல்வி வழிகாட்டிக் குழுவின் நேரடி உதவி கோருதல்
-        </h3>
-        <p style="margin: 3px 0 0 0; font-size: 0.82rem; color: #7f1d1d;">
-          தாங்கள் கேட்ட வினாவிற்கு மாவட்டக் கல்வி வழிகாட்டல் குழுவின் மூத்த ஆலோசகர்கள் மற்றும் துறை வல்லுநர்கள் நேரடியாகத் தொடர்பு கொண்டு விரிவான விளக்கம் அளிப்பர்.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <form id="guidanceFeedbackForm" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px 14px; align-items: start; margin-top: 14px;">
-    <input name="page" type="hidden" value="04_govt_exams.html"/>
-    
-    <!-- Name -->
-    <div class="form-group fb-field-name" style="grid-column: span 1;">
-      <label for="fb_name" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-        <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #e0f2fe; color: #0284c7; border-radius: 4px; font-size: 11px;">👤</span>
-        <span>மாணவர் பெயர்</span>
-        <span style="color: #ef4444;">*</span>
-      </label>
-      <input id="fb_name" placeholder="முழுப் பெயர்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; box-sizing: border-box;" type="text"/>
-    </div>
-
-    <!-- School/Town -->
-    <div class="form-group fb-field-place" style="grid-column: span 1;">
-      <label for="fb_place" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-        <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #fef3c7; color: #d97706; border-radius: 4px; font-size: 11px;">🏫</span>
-        <span>பள்ளி / ஊர்</span>
-        <span style="color: #ef4444;">*</span>
-      </label>
-      <input id="fb_place" placeholder="பள்ளி பெயர் &amp; ஊர்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; box-sizing: border-box;" type="text"/>
-    </div>
-
-    <!-- Phone -->
-    <div class="form-group fb-field-phone" style="grid-column: span 1;">
-      <label for="fb_phone" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-        <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #dcfce7; color: #16a34a; border-radius: 4px; font-size: 11px;">📱</span>
-        <span>கைபேசி எண்</span>
-        <span style="color: #ef4444;">*</span>
-      </label>
-      <input id="fb_phone" pattern="[0-9]{10}" placeholder="10 இலக்க எண்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; box-sizing: border-box;" title="10 இலக்க கைபேசி எண்" type="tel"/>
-    </div>
-
-    <!-- Email -->
-    <div class="form-group fb-field-email" style="grid-column: span 1;">
-      <label for="fb_email" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-        <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #f3e8ff; color: #9333ea; border-radius: 4px; font-size: 11px;">✉️</span>
-        <span>மின்னஞ்சல்</span>
-        <span style="color: #ef4444; font-weight: 800;">*</span>
-      </label>
-      <input id="fb_email" placeholder="example@gmail.com" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; box-sizing: border-box;" type="email" autocomplete="email"/>
-    </div>
-
-    <!-- Attachment -->
-    <div class="form-group fb-field-file" style="grid-column: span 2;">
-      <label for="fb_file" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-        <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #fce7f3; color: #be185d; border-radius: 4px; font-size: 11px;">📎</span>
-        <span>ஆவணம் / மதிப்பெண் பட்டியல் (விருப்பப்பட்டால்)</span>
-        <span style="font-size: 0.72rem; color: #64748b; background: #f1f5f9; padding: 1px 6px; border-radius: 999px;">Max 10MB</span>
-      </label>
-      <input accept=".pdf,image/*,.doc,.docx" id="fb_file" style="width: 100%; padding: 6px 10px; font-size: 0.84rem; font-family: inherit; border: 1.5px dashed #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; cursor: pointer; box-sizing: border-box;" type="file"/>
-    </div>
-
-    <!-- Link -->
-    <div class="form-group fb-field-link" style="grid-column: span 2;">
-      <label for="fb_link" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-        <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #ccfbf1; color: #0f766e; border-radius: 4px; font-size: 11px;">🔗</span>
-        <span>இணைய இணைப்பு / Link (விருப்பப்பட்டால்)</span>
-      </label>
-      <input id="fb_link" placeholder="Google Drive / Web Link" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; box-sizing: border-box;" type="url"/>
-    </div>
-
-    <!-- Question Message (Pre-filled with student question) -->
-    <div class="form-group fb-field-msg" style="grid-column: span 3;">
-      <label for="fb_message" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
-        <span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #ffe4e6; color: #e11d48; border-radius: 4px; font-size: 11px;">❓</span>
-        <span>வழிகாட்டிக் குழுவிடம் கேட்க விரும்பும் விளக்கம் / கூடுதல் வினா:</span>
-        <span style="color: #ef4444;">*</span>
-      </label>
-      <textarea id="fb_message" rows="2" required="" style="width: 100%; height: 50px; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; resize: vertical; box-sizing: border-box; line-height: 1.4;"></textarea>
-    </div>
-
-    <!-- Submit Button -->
-    <div class="form-group fb-field-submit" style="grid-column: span 1; display: flex; flex-direction: column; justify-content: flex-end;">
-      <button id="fb_submitBtn" style="width: 100%; height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #b91c1c 0%, #991b1b 50%, #450a0a 100%); color: #ffffff; border: none; font-size: 0.94rem; font-weight: 800; font-family: inherit; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 14px rgba(185, 28, 28, 0.35); transition: all 0.25s ease; box-sizing: border-box;" type="submit">
-        <span>குழுவிற்கு அனுப்புக</span>
-        <svg style="width: 16px; height: 16px; fill: none; stroke: currentColor;" viewBox="0 0 24 24">
-          <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-    </div>
-  </form>
-  <div id="fb_status" style="margin-top: 10px; text-align: center; padding: 10px 16px; border-radius: 8px; font-size: 0.95rem; font-weight: 800; display: none;"></div>
+<div class="form-group fb-field-email" style="grid-column: span 1;">
+<label for="fb_email" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #f3e8ff; color: #9333ea; border-radius: 4px; font-size: 11px;">✉️</span>
+<span>மின்னஞ்சல்</span>
+<span style="color: #ef4444; font-weight: 800;">*</span>
+</label>
+<input id="fb_email" placeholder="example@gmail.com" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="email" autocomplete="email"/>
 </div>
-
+<div class="form-group fb-field-file" style="grid-column: span 2;">
+<label for="fb_file" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #fce7f3; color: #be185d; border-radius: 4px; font-size: 11px;">📎</span>
+<span>கோப்பு / ஆவணம் இணைக்க (விருப்பப்பட்டால்)</span>
+<span style="font-size: 0.72rem; color: #64748b; background: #f1f5f9; padding: 1px 6px; border-radius: 999px;">PDF, Image, Word, Excel, PPT (Max 10MB)</span>
+</label>
+<input accept=".pdf,image/*,.doc,.docx,.xls,.xlsx,.ppt,.pptx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation" id="fb_file" style="width: 100%; padding: 6px 10px; font-size: 0.84rem; font-family: inherit; border: 1.5px dashed #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box; cursor: pointer;" type="file"/>
+</div>
+<div class="form-group fb-field-link" style="grid-column: span 2;">
+<label for="fb_link" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #ccfbf1; color: #0f766e; border-radius: 4px; font-size: 11px;">🔗</span>
+<span>இணைய இணைப்பு / Link (விருப்பப்பட்டால்)</span>
+<span style="font-size: 0.72rem; color: #64748b; background: #f1f5f9; padding: 1px 6px; border-radius: 999px;">Google Drive / Web URL</span>
+</label>
+<input id="fb_link" placeholder="https://drive.google.com/... அல்லது இணைய முகவரி" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="url"/>
+</div>
+<div class="form-group fb-field-msg" style="grid-column: span 3;">
+<label for="fb_message" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #ffe4e6; color: #e11d48; border-radius: 4px; font-size: 11px;">💡</span>
+<span>தங்களின் மேலான ஆலோசனைகள் / கருத்துகள்</span>
+<span style="color: #ef4444;">*</span>
+</label>
+<textarea id="fb_message" placeholder="போட்டித்தேர்வுகள் வழிகாட்டி மற்றும் இத்தளம் குறித்த தங்களின் மேலான ஆலோசனைகள்..." required="" rows="2" style="width: 100%; height: 50px; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; resize: vertical; box-sizing: border-box; line-height: 1.4;"></textarea>
+</div>
+<div class="form-group fb-field-submit" style="grid-column: span 1; display: flex; flex-direction: column; justify-content: flex-end;">
+<button id="fb_submitBtn" style="width: 100%; height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%); color: #ffffff; border: none; font-size: 0.96rem; font-weight: 800; font-family: inherit; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3); transition: all 0.25s ease; box-sizing: border-box;" type="submit">
+<span>பதிவு செய்க</span>
+<svg style="width: 16px; height: 16px; fill: none; stroke: currentColor;" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+</div>
+</form>
+<div id="fb_status" style="margin-top: 10px; text-align: center; padding: 10px 16px; border-radius: 8px; font-size: 0.95rem; font-weight: 800; display: none;"></div>
 </section><div class="creator-card">
 <div class="creator-typewriter-wrapper">
 <span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
@@ -8330,256 +7854,6 @@
 
     </script><script>
 // Feedback Form Submission Script & Fireworks
-
-// ========================================================
-// AI-FIRST CAREER GUIDANCE & DISTRICT ESCALATION CONTROLLER
-// ========================================================
-
-const CAREER_AI_KB = [
-  {
-    keys: ['neet', 'நீட்', 'மருத்துவ', 'doctor', 'mbbs', 'bds', 'ayush', 'ஆயுஷ்', 'செவிலியர்', 'nursing', 'வெட்னரி', '7.5'],
-    topic: 'மருத்துவம் & துணை மருத்துவப் படிப்புகள் (NEET-UG)',
-    answer: `
-      <p><strong>🩺 NEET-UG மற்றும் மருத்துவப் படிப்புகள் குறித்த முக்கிய வழிகாட்டல்:</strong></p>
-      <ul>
-        <li><strong>தேர்வு மற்றும் விண்ணப்பம்:</strong> NEET-UG தேசிய தேர்வு முகமையால் (NTA) ஆண்டுதோறும் <strong>மே மாதம் முதல் ஞாயிற்றுக்கிழமை</strong> நடத்தப்படுகிறது. இதற்கான விண்ணப்பப் பதிவு வழக்கமாக <strong>பிப்ரவரி - மார்ச்</strong> மாதங்களில் தொடங்கும்.</li>
-        <li><strong>சேர்க்கை பெறும் படிப்புகள்:</strong> MBBS, BDS, BSMS (சித்தா), BAMS (ஆயுர்வேதா), BHMS (ஹோமியோபதி), மற்றும் BVSc (கால்நடை மருத்துவம்).</li>
-        <li><strong>தமிழ்நாடு 7.5% அரசுப் பள்ளி உள் ஒதுக்கீடு:</strong> 6-ஆம் வகுப்பு முதல் 12-ஆம் வகுப்பு வரை அரசுப் பள்ளிகளில் படித்த மாணவர்களுக்குத் தனி கலந்தாய்வு உண்டு. இதில் தேர்வாகும் மாணவர்களின் <strong>முழுக் கல்விக் கட்டணம், விடுதிக் கட்டணம் அனைத்தையும் தமிழக அரசே ஏற்கும்</strong>.</li>
-        <li><strong>அதிகாரப்பூர்வ தளங்கள்:</strong> <a href="https://exams.nta.ac.in/NEET/" target="_blank" style="color: #0284c7; font-weight:700;">exams.nta.ac.in/NEET</a> மற்றும் மாநில கலந்தாய்வுக்கு <a href="https://tnmedicalselection.net/" target="_blank" style="color: #0284c7; font-weight:700;">tnmedicalselection.net</a>.</li>
-      </ul>
-      <p style="margin: 0; font-size: 0.84rem; color: #475569;">💡 <em>பரிந்துரை: இயற்பியல், வேதியியல், உயிரியல் பாடங்களில் NCERT பாடப்புத்தகங்களை முழுமையாகப் படித்து மாதிரி வினாக்களைத் தொடர்ந்து பயிற்சி செய்யவும்.</em></p>
-    `
-  },
-  {
-    keys: ['jee', 'iit', 'nit', 'iiit', 'ஜேஇஇ', 'பொறியியல் நுழைவு', 'advanced', 'b.arch', 'architecture', 'josaa'],
-    topic: 'அகில இந்திய பொறியியல் தேர்வுகள் (JEE Main & Advanced)',
-    answer: `
-      <p><strong>⚙️ JEE Main & Advanced தேசிய பொறியியல் சேர்க்கை வழிகாட்டல்:</strong></p>
-      <ul>
-        <li><strong>JEE Main (அமர்வுகள் 1 & 2):</strong> 31 NITகள் (திருச்சி NIT உட்பட), 26 IIITகள் மற்றும் மத்திய அரசு நிதியுதவி பெறும் கல்வி நிறுவனங்களுக்கான சேர்க்கை. <strong>அமர்வு 1: ஜனவரி இறுதி</strong>, <strong>அமர்வு 2: ஏப்ரல் மாதம்</strong> நடைபெறும். இரண்டு அமர்வுகளையும் எழுதலாம்; சிறந்த மதிப்பெண் கணக்கில் கொள்ளப்படும்.</li>
-        <li><strong>JEE Advanced (IITs):</strong> JEE Main தேர்வில் அகில இந்திய அளவில் தேர்ச்சி பெறும் முதல் 2.50 லட்சம் மாணவர்கள் மட்டுமே <strong>23 ஐஐடிகளுக்கான (IIT Madras உட்பட)</strong> JEE Advanced தேர்வை மே மாத இறுதியில் எழுத முடியும்.</li>
-        <li><strong>கலந்தாய்வு முறை:</strong> மத்திய கல்வி அமைச்சகத்தின் <strong>JoSAA (Joint Seat Allocation Authority)</strong> மூலம் ஆன்லைனில் இடஒதுக்கீடு நடைபெறும்.</li>
-        <li><strong>அதிகாரப்பூர்வ தளங்கள்:</strong> <a href="https://jeemain.nta.nic.in/" target="_blank" style="color: #0284c7; font-weight:700;">jeemain.nta.nic.in</a> மற்றும் <a href="https://jeeadv.ac.in/" target="_blank" style="color: #0284c7; font-weight:700;">jeeadv.ac.in</a>.</li>
-      </ul>
-    `
-  },
-  {
-    keys: ['tnea', 'அண்ணா பல்கலை', 'கட் ஆப்', 'கட்-ஆப்', 'cutoff', 'cut off', 'பொறியியல் கலந்தாய்வு', 'anna university'],
-    topic: 'தமிழ்நாடு பொறியியல் சேர்க்கை (TNEA) & கட்-ஆப் முறை',
-    answer: `
-      <p><strong>📐 TNEA பொறியியல் நேரடிச் சேர்க்கை &amp; கட்-ஆப் கணக்கீடு:</strong></p>
-      <ul>
-        <li><strong>கட்-ஆப் சூத்திரம் (200 மதிப்பெண்களுக்கு):</strong><br/>
-            <code>கட்-ஆப் = கணிதம் (100) + [இயற்பியல் / 2] (50) + [வேதியியல் / 2] (50)</code></li>
-        <li><strong>சேர்க்கை முறை:</strong> நுழைவுத்தேர்வு கிடையாது. +2 பொதுத்தேர்வு மதிப்பெண் அடிப்படையில் தமிழ்நாடு அரசின் உயர்கல்வித் துறை நடத்தும் <strong>TNEA ஆன்லைன் கலந்தாய்வு</strong> மூலம் அண்ணா பல்கலைக்கழக வளாகங்கள் (CEG, MIT, ACTech) மற்றும் 450+ உறுப்புக் கல்லூரிகளில் இடம் பெறலாம்.</li>
-        <li><strong>7.5% முன்னுரிமை ஒதுக்கீடு:</strong> அரசுப் பள்ளி மாணவர்களுக்குத் தலைசிறந்த தன்னாட்சி பொறியியல் கல்லூரிகளிலும் முழுக் கல்விக் கட்டண விலக்குடன் சேர்க்கை உண்டு.</li>
-        <li><strong>அதிகாரப்பூர்வ தளம்:</strong> <a href="https://www.tneaonline.org/" target="_blank" style="color: #0284c7; font-weight:700;">tneaonline.org</a>.</li>
-      </ul>
-    `
-  },
-  {
-    keys: ['விவசாய', 'வேளாண்மை', 'tnau', 'agri', 'horticulture', 'மீன்வள', 'வேளாண்'],
-    topic: 'வேளாண்மை & தோட்டக்கலை படிப்புகள் (TNAU & ICAR)',
-    answer: `
-      <p><strong>🌾 தமிழ்நாடு வேளாண்மைப் பல்கலைக்கழகம் (TNAU) சேர்க்கை வழிகாட்டல்:</strong></p>
-      <ul>
-        <li><strong>TNAU கட்-ஆப் சூத்திரம் (200 மதிப்பெண்கள்):</strong> 4 முக்கியப் பாடங்கள் தலா 50 மதிப்பெண்களுக்கு கணக்கிடப்படும்.<br/>
-            • <em>PCMB பிரிவு:</em> இயற்பியல் (50) + வேதியியல் (50) + உயிரியல் (50) + கணிதம் (50) = 200.<br/>
-            • <em>Pure Science பிரிவு:</em> இயற்பியல் (50) + வேதியியல் (50) + தாவரவியல் (50) + விலங்கியல் (50) = 200.</li>
-        <li><strong>அகில இந்திய சேர்க்கை (ICAR):</strong> மத்திய வேளாண் கல்வி நிறுவனங்களுக்கு (IARI, NDRI) NTA நடத்தும் <strong>CUET-UG (ICAR பிரிவு)</strong> மூலம் விண்ணப்பிக்க வேண்டும்.</li>
-        <li><strong>அதிகாரப்பூர்வ தளங்கள்:</strong> <a href="https://tnau.ac.in/" target="_blank" style="color: #0284c7; font-weight:700;">tnau.ac.in</a> மற்றும் <a href="https://cuetug.ntaonline.in/" target="_blank" style="color: #0284c7; font-weight:700;">cuetug.ntaonline.in</a>.</li>
-      </ul>
-    `
-  },
-  {
-    keys: ['cuet', 'மத்திய பல்கலை', 'central', 'delhi university', 'jnu', 'bhu', 'cutn'],
-    topic: 'மத்தியப் பல்கலைக்கழகங்கள் சேர்க்கை (CUET-UG)',
-    answer: `
-      <p><strong>🏛️ CUET-UG தேசிய நுழைவுத்தேர்வு வழிகாட்டல்:</strong></p>
-      <ul>
-        <li><strong>அமைப்பும் வாய்ப்புகளும்:</strong> டெல்லி பல்கலைக்கழகம் (DU), ஜவஹர்லால் நேரு பல்கலை (JNU), பனாரஸ் இந்து பல்கலை (BHU), திருவாரூர் தமிழ்நாடு மத்தியப் பல்கலை (CUTN) உள்ளிட்ட <strong>250+ மத்திய &amp; முன்னணிப் பல்கலைக்கழகங்களுக்கான பொது நுழைவுத்தேர்வு</strong>.</li>
-        <li><strong>தேர்வு நடைபெறும் காலம்:</strong> ஆண்டுதோறும் <strong>மே மாதத்தில்</strong> கணினி வழியில் (CBT / Hybrid Mode) நடைபெறும். விண்ணப்பங்கள் பிப்ரவரி-மார்ச்சில் தொடங்கும்.</li>
-        <li><strong>பாடத் தேர்வுகள்:</strong> பிரிவு 1: மொழிப்பாடம் (தமிழ்/ஆங்கிலம்), பிரிவு 2: முதன்மைப் பாடங்கள் (Physics, Chemistry, Maths, Biology, Commerce, History etc.), பிரிவு 3: பொது வினாத்தாள் (General Test).</li>
-        <li><strong>அதிகாரப்பூர்வ தளம்:</strong> <a href="https://cuetug.ntaonline.in/" target="_blank" style="color: #0284c7; font-weight:700;">cuetug.ntaonline.in</a>.</li>
-      </ul>
-    `
-  },
-  {
-    keys: ['சட்டம்', 'law', 'clat', 'ailet', 'advocate', 'வழக்கறிஞர்', 'nlu', 'soel', 'tndalu'],
-    topic: 'சட்டக் கல்வி (CLAT & தமிழ்நாடு டாக்டர் அம்பேத்கர் சட்டப் பல்கலை)',
-    answer: `
-      <p><strong>⚖️ தேசிய சட்டப் பல்கலைக்கழகங்கள் &amp; சட்டக் கல்வி வழிகாட்டல்:</strong></p>
-      <ul>
-        <li><strong>CLAT (தேசிய சட்டப் பல்கை):</strong> இந்தியாவில் உள்ள 26 தேசிய சட்டப் பல்கலைக்கழகங்களில் (NLUs - திருச்சி NLU உட்பட) 5 ஆண்டு ஒருங்கிணைந்த BA LLB / BBA LLB சேர்க்கை. தேர்வு ஆண்டுதோறும் <strong>டிசம்பர் முதல் ஞாயிறு</strong> நடைபெறும்.</li>
-        <li><strong>தமிழ்நாடு டாக்டர் அம்பேத்கர் சட்டப் பல்கலைக்கழகம் (TNDALU / SOEL):</strong> சென்னை சீர்மிகு சட்டப் பள்ளி மற்றும் தமிழக அரசு சட்டக் கல்லூரிகளுக்கு +2 மதிப்பெண் அடிப்படையில் நேரடி ஆன்லைன் விண்ணப்பம் மூலம் சேர்க்கை நடைபெறும்.</li>
-        <li><strong>அதிகாரப்பூர்வ தளங்கள்:</strong> <a href="https://consortiumofnlus.ac.in/" target="_blank" style="color: #0284c7; font-weight:700;">consortiumofnlus.ac.in</a> மற்றும் <a href="https://tndalu.ac.in/" target="_blank" style="color: #0284c7; font-weight:700;">tndalu.ac.in</a>.</li>
-      </ul>
-    `
-  },
-  {
-    keys: ['iiser', 'niser', 'ஆராய்ச்சி', 'research', 'scientist', 'விஞ்ஞானி', 'iisc', 'iat', 'nest'],
-    topic: 'அறிவியல் ஆராய்ச்சி & விஞ்ஞானி பணிகள் (IISER, NISER & IISc)',
-    answer: `
-      <p><strong>🔬 அடிப்படை அறிவியல் &amp; ஆராய்ச்சி வழிகாட்டல்:</strong></p>
-      <ul>
-        <li><strong>IISER &amp; IISc (IAT தேர்வு):</strong> 7 இந்திய அறிவியல் கல்வி &amp; ஆராய்ச்சி நிறுவனங்கள் மற்றும் பெங்களூரு IISc நிறுவனத்தில் 5 ஆண்டு BS-MS ஆராய்ச்சிப் படிப்பு. தேர்வு <strong>ஜூன் மாதத்தில்</strong> நடைபெறும்.</li>
-        <li><strong>NISER புவனேஸ்வர் &amp; மும்பை CEBS (NEST தேர்வு):</strong> மத்திய அணுசக்தித் துறையின் உலகத்தரம் வாய்ந்த 5 ஆண்டு ஒருங்கிணைந்த M.Sc படிப்பு. அனைத்து மாணவர்களுக்கும் <strong>மாதம் ₹5,000 உதவித்தொகை + ₹20,000 கோடைகால ஊக்கத்தொகை</strong> வழங்கப்படுகிறது.</li>
-        <li><strong>அதிகாரப்பூர்வ தளங்கள்:</strong> <a href="https://iiseradmission.in/" target="_blank" style="color: #0284c7; font-weight:700;">iiseradmission.in</a> மற்றும் <a href="https://www.nestexam.in/" target="_blank" style="color: #0284c7; font-weight:700;">nestexam.in</a>.</li>
-      </ul>
-    `
-  },
-  {
-    keys: ['ராணுவம்', 'defence', 'nda', 'navy', 'கடற்படை', 'விமானப்படை', 'air force', 'army'],
-    topic: 'பாதுகாப்புப் படைகள் (UPSC NDA & கடற்படை B.Tech)',
-    answer: `
-      <p><strong>🎖️ முப்படைகளில் நேரடி ராணுவ அதிகாரி வாய்ப்புகள்:</strong></p>
-      <ul>
-        <li><strong>UPSC NDA &amp; NA தேர்வு:</strong> +2 முடிக்கும் மாணவ மாணவியர் ராணுவம், கடற்படை, விமானப்படையில் லெப்டினன்ட் அதிகாரியாகச் சேரலாம். ஆண்டுக்கு இருமுறை (ஏப்ரல் &amp; செப்டம்பர்) தேர்வு நடைபெறும். முழுப் பயிற்சிக் காலத்திலும் மத்திய அரசு சம்பளம் மற்றும் இலவசக் கல்வி வழங்குகிறது.</li>
-        <li><strong>இந்திய கடற்படை 10+2 B.Tech திட்டம்:</strong> JEE Main மதிப்பெண் அடிப்படையில் தேர்வு செய்யப்பட்டு எழிமலா கடற்படை அகாடமியில் இலவச B.Tech படித்து நேரடி அதிகாரியாகலாம்.</li>
-        <li><strong>அதிகாரப்பூர்வ தளங்கள்:</strong> <a href="https://upsc.gov.in/" target="_blank" style="color: #0284c7; font-weight:700;">upsc.gov.in</a> மற்றும் <a href="https://joinindiannavy.gov.in/" target="_blank" style="color: #0284c7; font-weight:700;">joinindiannavy.gov.in</a>.</li>
-      </ul>
-    `
-  },
-  {
-    keys: ['காலண்டர்', 'அட்டவணை', 'மாதம்', 'தேதி', 'எப்போது', 'schedule', 'calendar', 'dates'],
-    topic: 'அகில இந்திய நுழைவுத்தேர்வுகள் கால அட்டவணை & விண்ணப்ப மாதங்கள்',
-    answer: `
-      <p><strong>📅 வருடாந்திர நுழைவுத்தேர்வு கால அட்டவணைச் சுருக்கம்:</strong></p>
-      <ul>
-        <li><strong>டிசம்பர்:</strong> CLAT (சட்டம்), AILET, NID DAT Prelims.</li>
-        <li><strong>ஜனவரி:</strong> JEE Main அமர்வு 1 (பொறியியல்), UCEED (வடிவமைப்பு), AEEE Phase 1.</li>
-        <li><strong>பிப்ரவரி:</strong> NIFT ஃபேஷன் தேர்வு, NEET &amp; CUET விண்ணப்பங்கள் தொடக்கம்.</li>
-        <li><strong>ஏப்ரல்:</strong> JEE Main அமர்வு 2, UPSC NDA &amp; NA (I), VITEEE, SRMJEEE, NATA கட்டிடக்கலை.</li>
-        <li><strong>மே:</strong> NEET-UG (மருத்துவம்), JEE Advanced (IITs), CUET-UG, BITSAT, IPMAT, NCHMCT.</li>
-        <li><strong>ஜூன்:</strong> IISER (IAT), NISER (NEST), IMU-CET கப்பல்படை, AIIMS நர்சிங்.</li>
-        <li><strong>ஜூலை - ஆகஸ்ட்:</strong> JoSAA, MCC, TNEA அகில இந்திய மற்றும் மாநிலக் கலந்தாய்வுகள் &amp; சேர்க்கை.</li>
-      </ul>
-    `
-  }
-];
-
-function queryCareerAI(userQuery) {
-  const q = (userQuery || '').toLowerCase().trim();
-  for (let item of CAREER_AI_KB) {
-    for (let k of item.keys) {
-      if (q.includes(k)) {
-        return { topic: item.topic, answer: item.answer };
-      }
-    }
-  }
-  return {
-    topic: 'பொதுவான உயர்கல்வி & தொழில் வழிகாட்டல்',
-    answer: `
-      <p><strong>🎓 மாணவர்களுக்கான முதன்மை வழிகாட்டல் குறிப்புகள்:</strong></p>
-      <ul>
-        <li><strong>தங்களின் விருப்பப் பாடம்:</strong> கணிதம், அறிவியல், வணிகவியல், கலைப்பிரிவு ஆகியவற்றில் தங்களின் ஆர்வம் மற்றும் +2 மதிப்பெண்களைப் பொறுத்து படிப்புகளைத் தேர்வு செய்யலாம்.</li>
-        <li><strong>நுழைவுத்தேர்வுகள் vs நேரடிச் சேர்க்கை:</strong> ஐஐடி, என்ஐடி, எய்ம்ஸ், மத்தியப் பல்கலைகளுக்கு நுழைவுத்தேர்வுகளும் (JEE, NEET, CUET), தமிழ்நாடு அண்ணா பல்கை மற்றும் கலைக் கல்லூரிகளுக்கு +2 மதிப்பெண் அடிப்படையிலும் சேர்க்கை உண்டு.</li>
-        <li><strong>அரசு சலுகைகள்:</strong> 7.5% அரசுப் பள்ளி முன்னுரிமை இடஒதுக்கீடு, புதுமைப் பெண் திட்டம், தமிழ்ப் புதல்வன் திட்டம் மற்றும் முதல் தலைமுறை பட்டதாரி சலுகைகளைப் பயன்படுத்திக் கொள்ளலாம்.</li>
-        <li>தங்களின் குறிப்பிட்ட வினாவுக்குக் கூடுதல் விவரங்கள் தேவைப்படின், கீழே உள்ள <strong>"வழிகாட்டி குழுவின் உதவி தேவை"</strong> பொத்தானைச் சொடுக்கி மாவட்டக் குழுவை நேரடியாகத் தொடர்பு கொள்ளலாம்.</li>
-      </ul>
-    `
-  };
-}
-
-let lastStudentQuestion = '';
-
-function setAiQuery(text) {
-  const input = document.getElementById('student_ai_question');
-  if (input) {
-    input.value = text;
-    input.focus();
-  }
-}
-
-function submitToAIAssistant() {
-  const input = document.getElementById('student_ai_question');
-  if (!input) return;
-  const q = input.value.trim();
-  if (!q) {
-    alert('தயவுசெய்து தங்களின் சந்தேகத்தை அல்லது வினாவைத் தட்டச்சு செய்யவும்.');
-    input.focus();
-    return;
-  }
-
-  lastStudentQuestion = q;
-  const thinkingBox = document.getElementById('ai-thinking-indicator');
-  const answerBox = document.getElementById('ai-answer-container');
-  const thankyouBox = document.getElementById('ai-satisfied-box');
-  const humanStage = document.getElementById('human-team-stage');
-
-  if (thankyouBox) thankyouBox.style.display = 'none';
-  if (humanStage) humanStage.style.display = 'none';
-  if (answerBox) answerBox.style.display = 'none';
-  if (thinkingBox) thinkingBox.style.display = 'flex';
-
-  setTimeout(function() {
-    if (thinkingBox) thinkingBox.style.display = 'none';
-    const result = queryCareerAI(q);
-    
-    const topicEl = document.getElementById('ai-response-topic');
-    const echoEl = document.getElementById('ai-echo-query');
-    const bodyEl = document.getElementById('ai-answer-body');
-
-    if (topicEl) topicEl.innerText = result.topic;
-    if (echoEl) echoEl.innerText = q;
-    if (bodyEl) bodyEl.innerHTML = result.answer;
-
-    if (answerBox) {
-      answerBox.style.display = 'block';
-      answerBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-  }, 400);
-}
-
-function handleSatisfaction(isSatisfied) {
-  const answerBox = document.getElementById('ai-answer-container');
-  const thankyouBox = document.getElementById('ai-satisfied-box');
-  const humanStage = document.getElementById('human-team-stage');
-
-  if (isSatisfied) {
-    if (answerBox) answerBox.style.display = 'none';
-    if (humanStage) humanStage.style.display = 'none';
-    if (thankyouBox) {
-      thankyouBox.style.display = 'block';
-      thankyouBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-  } else {
-    // Escalate to human team
-    if (thankyouBox) thankyouBox.style.display = 'none';
-    if (humanStage) {
-      humanStage.style.display = 'block';
-      const msgBox = document.getElementById('fb_message');
-      if (msgBox) {
-        msgBox.value = lastStudentQuestion;
-      }
-      humanStage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      const nameInput = document.getElementById('fb_name');
-      if (nameInput) nameInput.focus();
-    }
-  }
-}
-
-function resetAiWorkflow() {
-  const input = document.getElementById('student_ai_question');
-  if (input) {
-    input.value = '';
-    input.focus();
-  }
-  const answerBox = document.getElementById('ai-answer-container');
-  const thankyouBox = document.getElementById('ai-satisfied-box');
-  const humanStage = document.getElementById('human-team-stage');
-  const thinkingBox = document.getElementById('ai-thinking-indicator');
-
-  if (answerBox) answerBox.style.display = 'none';
-  if (thankyouBox) thankyouBox.style.display = 'none';
-  if (humanStage) humanStage.style.display = 'none';
-  if (thinkingBox) thinkingBox.style.display = 'none';
-
-  const queryStage = document.getElementById('ai-query-stage');
-  if (queryStage) queryStage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-
-
 const fbForm = document.getElementById('guidanceFeedbackForm');
 const fbSubmitBtn = document.getElementById('fb_submitBtn');
 const fbStatus = document.getElementById('fb_status');

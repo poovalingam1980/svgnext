@@ -6170,160 +6170,6 @@
 }
 
 </style>
-
-<style id="robust-layout-override">
-/* ========================================================
-   ROBUST ZERO-OVERLAP FLEX LAYOUT SYSTEM
-   மானிட்டர் மற்றும் அனைத்துத் திரைகளிலும் மெனு ஓவர்லாப் தடுப்பு
-   ======================================================== */
-.portal-layout-wrapper {
-  display: flex !important;
-  flex-direction: row !important;
-  width: 100% !important;
-  min-height: 100vh !important;
-  position: relative !important;
-  align-items: stretch !important;
-  box-sizing: border-box !important;
-}
-
-.desktop-left-sidebar {
-  width: 280px !important;
-  min-width: 280px !important;
-  max-width: 280px !important;
-  position: sticky !important;
-  top: 0 !important;
-  height: 100vh !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-  z-index: 1000 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  flex-shrink: 0 !important;
-  box-sizing: border-box !important;
-  background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
-  border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
-  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
-}
-
-.portal-main-content {
-  flex-grow: 1 !important;
-  flex-shrink: 1 !important;
-  min-width: 0 !important;
-  width: 100% !important;
-  margin-left: 0 !important;
-  padding: 0 clamp(10px, 1.8vw, 24px) 40px !important;
-  box-sizing: border-box !important;
-  overflow-x: hidden !important;
-}
-
-.portal-container {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-  box-sizing: border-box !important;
-}
-
-@media (max-width: 900px) {
-  .desktop-left-sidebar {
-    position: fixed !important;
-    top: 0 !important;
-    left: -300px !important;
-    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    z-index: 9999 !important;
-  }
-  .desktop-left-sidebar.sidebar-open {
-    left: 0 !important;
-  }
-  .portal-main-content {
-    margin-left: 0 !important;
-    width: 100% !important;
-  }
-}
-</style>
-
-<style>
-    .portal-layout-wrapper {
-      display: block !important;
-      width: 100% !important;
-      min-height: 100vh !important;
-      position: relative !important;
-      box-sizing: border-box !important;
-    }
-
-    /* Fixed Left Sidebar - 100% Permanently Anchored to Viewport (Never Scrolls Away) */
-    .desktop-left-sidebar {
-      width: 295px !important;
-      min-width: 295px !important;
-      max-width: 295px !important;
-      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
-      border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
-      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
-      position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
-      bottom: 0 !important;
-      height: 100vh !important;
-      overflow-y: auto !important;
-      overflow-x: hidden !important;
-      z-index: 1000 !important;
-      display: flex !important;
-      flex-direction: column !important;
-      flex-shrink: 0 !important;
-      box-sizing: border-box !important;
-    }
-
-    /* Main Content Column - Compensates for 295px Fixed Sidebar on Desktop */
-    .portal-main-content {
-      margin-left: 295px !important;
-      width: calc(100% - 295px) !important;
-      min-height: 100vh !important;
-      padding: 12px 18px 40px !important;
-      box-sizing: border-box !important;
-      overflow-x: hidden !important;
-    }
-
-    @media (max-width: 1024px) {
-      .desktop-left-sidebar {
-        position: fixed !important;
-        left: -320px !important;
-        top: 0 !important;
-        bottom: 0 !important;
-        width: 295px !important;
-        height: 100vh !important;
-        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        z-index: 9999 !important;
-      }
-      .desktop-left-sidebar.sidebar-open {
-        left: 0 !important;
-      }
-      .portal-main-content {
-        margin-left: 0 !important;
-        width: 100% !important;
-        padding: 8px 10px 30px !important;
-      }
-    }
-</style>
-<style>
-@media (min-width: 901px) {
-  .portal-top-frame {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    position: relative !important;
-  }
-  .top-frame-center-stack {
-    text-align: center !important;
-    margin: 0 auto !important;
-  }
-  .top-frame-side-btn.btn-home,
-  .top-frame-btn.btn-home {
-    position: absolute !important;
-    right: 20px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-  }
-}
-</style>
 </head>
 <body>
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
@@ -6405,6 +6251,11 @@
 </aside>
 <!-- Main Portal Content Column -->
 <main class="portal-main-content"><div class="portal-container"><header class="portal-top-frame no-print">
+<!-- Left Side Button: ceosvg.in முதன்மை தளம் -->
+<a class="top-frame-side-btn btn-ceosvg" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
+<span class="btn-icon">🌐</span>
+<span class="btn-text">ceosvg.in முதன்மை தளம்</span>
+</a>
 <!-- Center Branding Stack: 3D Gold Title, Aurora Tagline & English Sub-branding -->
 <div class="top-frame-center-stack">
 <!-- 1. Main 3D Gold Tamil Title -->
@@ -6424,6 +6275,11 @@
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
 </a>
 </header><nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
+<a class="nav-menu-btn btn-portal-home" href="https://www.ceosvg.in" rel="noopener" target="_blank" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ தளம்">
+<span class="btn-icon">🏛️</span>
+<span class="btn-text">ceosvg.in முதன்மை தளம்</span>
+</a>
+<span class="nav-menu-separator">▶</span>
 <a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
 <span class="btn-icon">🧭</span>
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
@@ -8266,6 +8122,8 @@
     © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
 <div style="margin-top: 8px;">
+<a href="https://www.ceosvg.in" rel="noopener" style="color: #0284c7; font-weight: 600; text-decoration: none; font-size: 0.85rem;" target="_blank">🌐 ceosvg.in அதிகாரப்பூர்வ தளம்</a>
+<span style="color: #cbd5e1; margin: 0 8px;">|</span>
 <a href="index.html" style="color: #0284c7; font-weight: 600; text-decoration: none; font-size: 0.85rem;">🎓 உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு</a>
 </div>
 </footer></div></main></div>
@@ -8636,10 +8494,7 @@
         phone: phone,
         category: categoryText,
         query: query,
-        timestamp: new Date().toISOString(),
-    spreadsheetId: "1rfmwUpERPWk9lu4AK3OZf8fMqzx2ZSVpmVnkfITHito",
-    spreadsheetUrl: "https://docs.google.com/spreadsheets/d/1rfmwUpERPWk9lu4AK3OZf8fMqzx2ZSVpmVnkfITHito/edit",
-    sheetName: "மாணவர்_சந்தேகங்கள்"
+        timestamp: new Date().toISOString()
       };
 
       try {
@@ -8931,8 +8786,101 @@ document.addEventListener('DOMContentLoaded', function() {
 <span class="floating-btn-text">மேலே செல்</span>
 </button><script>
 // Feedback Form Submission Script & Fireworks
-// Form submission handled by handleEnquiryFormSubmit
-    function fireCelebrationCrackers() {
+const fbForm = document.getElementById('guidanceFeedbackForm');
+const fbSubmitBtn = document.getElementById('fb_submitBtn');
+const fbStatus = document.getElementById('fb_status');
+const feedbackScriptURL = 'https://script.google.com/macros/s/AKfycbx87BcBrzGcVBqpWkKvyK4VBFwKqd8a1U-GuTQ9ouG-Ygn2A6SXsW97lSZxYb8PL_HUOA/exec';
+
+if (fbForm) {
+  fbForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const fileInput = document.getElementById('fb_file');
+    const file = (fileInput && fileInput.files.length > 0) ? fileInput.files[0] : null;
+
+    if (file && file.size > 10 * 1024 * 1024) {
+      fbStatus.style.display = 'block';
+      fbStatus.style.background = '#fef2f2';
+      fbStatus.style.color = '#991b1b';
+      fbStatus.style.border = '1.5px solid #fecaca';
+      fbStatus.innerHTML = '⚠️ இணைக்கப்பட்ட கோப்பு 10MB-க்குள் இருக்க வேண்டும்.';
+      return;
+    }
+
+    fbSubmitBtn.disabled = true;
+    fbSubmitBtn.style.opacity = '0.7';
+    fbSubmitBtn.style.cursor = 'not-allowed';
+    fbStatus.style.display = 'block';
+    fbStatus.style.background = '#eff6ff';
+    fbStatus.style.color = '#1e40af';
+    fbStatus.style.border = '1px solid #bfdbfe';
+    fbStatus.innerHTML = file ? '⏳ கோப்பு மற்றும் விவரங்கள் பதிவேற்றப்படுகின்றன...' : '⏳ விவரங்கள் பதிவேற்றப்படுகின்றன, காத்திருக்கவும்...';
+
+    function sendData(fileBase64, fileName, fileType) {
+      const payload = {
+        name: document.getElementById('fb_name').value.trim(),
+        place: document.getElementById('fb_place').value.trim(),
+        phone: document.getElementById('fb_phone').value.trim(),
+        email: document.getElementById('fb_email').value.trim(),
+        link: document.getElementById('fb_link') ? document.getElementById('fb_link').value.trim() : '',
+        message: document.getElementById('fb_message').value.trim(),
+        fileData: fileBase64,
+        fileName: fileName,
+        fileType: fileType
+      };
+
+      fetch(feedbackScriptURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      })
+      .then(() => {
+        fbStatus.style.background = 'linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%)';
+        fbStatus.style.color = '#065f46';
+        fbStatus.style.border = '2px solid #34d399';
+        fbStatus.style.boxShadow = '0 6px 20px rgba(16, 185, 129, 0.25)';
+        fbStatus.innerHTML = '<div style="text-align: center; padding: 10px;">' +
+          '<div style="font-size: 1.18rem; font-weight: 800; color: #065f46; margin-bottom: 6px;">' +
+          '🎉 ✨ தங்களின் மேலான ஆலோசனைக்கு மனமார்ந்த நன்றி! ✨ 🎉' +
+          '</div>' +
+          '<div style="font-size: 0.90rem; color: #047857; margin-top: 4px;">' +
+          '💌 தங்களின் ஆலோசனையைப் பதிவு செய்தமைக்கு நன்றி தெரிவித்து தங்களின் <b>' + payload.email + '</b> மின்னஞ்சல் முகவரிக்கு முதன்மைக் கல்வி அலுவலகத்தின் <b>மின் வாழ்த்து அட்டை (Digital Greeting Card)</b> அனுப்பி வைக்கப்பட்டுள்ளது.' +
+          '</div>' +
+          '</div>';
+        try { fireCelebrationCrackers(); } catch(ce) {}
+        fbForm.reset();
+        fbSubmitBtn.disabled = false;
+        fbSubmitBtn.style.opacity = '1';
+        fbSubmitBtn.style.cursor = 'pointer';
+      })
+      .catch(err => {
+        fbStatus.style.background = '#fef2f2';
+        fbStatus.style.color = '#991b1b';
+        fbStatus.style.border = '1px solid #fecaca';
+        fbStatus.innerHTML = '⚠️ பதிவு செய்வதில் பிழை ஏற்பட்டது. தயவுசெய்து சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும்.';
+        fbSubmitBtn.disabled = false;
+        fbSubmitBtn.style.opacity = '1';
+        fbSubmitBtn.style.cursor = 'pointer';
+      });
+    }
+
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        const base64 = evt.target.result.split(',')[1];
+        sendData(base64, file.name, file.type);
+      };
+      reader.onerror = function() {
+        sendData('', '', '');
+      };
+      reader.readAsDataURL(file);
+    } else {
+      sendData('', '', '');
+    }
+  });
+}
+
+function fireCelebrationCrackers() {
   const canvas = document.getElementById('fb_crackers_canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
