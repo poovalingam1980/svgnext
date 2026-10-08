@@ -2250,15 +2250,46 @@
     }
 
     /* Feedback Form Responsive Layout */
-    
+    .feedback-section {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      padding: 24px 22px !important;
+      background: #ffffff !important;
+      border: 1.8px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+      margin-bottom: 24px !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
 
-    
+    #guidanceFeedbackForm {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 14px 16px !important;
+      align-items: start !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
 
     /* Responsive Rules for Tablet (< 900px) */
     @media (max-width: 900px) {
-      
-      
-      
+      #guidanceFeedbackForm {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      .fb-field-name,
+      .fb-field-place,
+      .fb-field-phone,
+      .fb-field-email {
+        grid-column: span 1 !important;
+      }
+      .fb-field-file,
+      .fb-field-link,
+      .fb-field-msg,
+      .fb-field-submit {
+        grid-column: span 2 !important;
+      }
     }
 
     /* Responsive Rules for Mobile Phones (< 680px) */
@@ -2284,11 +2315,34 @@
       }
 
       /* Feedback Section Full-Width Single Column on Mobile */
-      
-      
-      
-      
-      
+      .feedback-section {
+        padding: 16px 14px !important;
+      }
+      #guidanceFeedbackForm {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+      .fb-field-name,
+      .fb-field-place,
+      .fb-field-phone,
+      .fb-field-email,
+      .fb-field-file,
+      .fb-field-link,
+      .fb-field-msg,
+      .fb-field-submit {
+        grid-column: span 1 !important;
+        width: 100% !important;
+      }
+      #guidanceFeedbackForm input,
+      #guidanceFeedbackForm textarea,
+      #guidanceFeedbackForm button {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        font-size: 0.90rem !important;
+      }
+      #fb_message {
+        height: 65px !important;
+      }
       #fb_submitBtn {
         height: 48px !important;
         font-size: 0.95rem !important;
@@ -2835,17 +2889,8 @@
       border-color: #38bdf8 !important;
     }
 
-    .top-frame-btn.btn-ceosvg {
-      background: #0f172a !important;
-      color: #ffffff !important;
-      border-color: #334155 !important;
-    }
-    .top-frame-btn.btn-ceosvg:hover {
-      background: #1e293b !important;
-      border-color: #38bdf8 !important;
-      color: #93c5fd !important;
-      transform: translateY(-1px) !important;
-    }
+    .top-frame-btn
+    .top-frame-btn
 
     .top-frame-btn.btn-home {
       background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
@@ -3086,17 +3131,8 @@
       border-color: #38bdf8 !important;
     }
 
-    .top-frame-btn.btn-ceosvg {
-      background: #0f172a !important;
-      color: #ffffff !important;
-      border-color: #334155 !important;
-    }
-    .top-frame-btn.btn-ceosvg:hover {
-      background: #1e293b !important;
-      border-color: #38bdf8 !important;
-      color: #93c5fd !important;
-      transform: translateY(-1px) !important;
-    }
+    .top-frame-btn
+    .top-frame-btn
 
     .top-frame-btn.btn-home {
       background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
@@ -3955,6 +3991,726 @@
         margin-top: 5px !important;
       }
     }
+
+/* ========================================================
+   STANDARDIZED TOP FRAME BANNER (AS IN GOVT EXAMS)
+   ======================================================== */
+@keyframes auroraTextFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes engSilverCyanShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.portal-top-frame {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 0 16px 0 !important;
+  border: 1.8px solid #38bdf8 !important;
+  border-radius: 14px !important;
+  box-sizing: border-box !important;
+  position: sticky !important;
+  top: 8px !important;
+  left: auto !important;
+  right: auto !important;
+  z-index: 999 !important;
+  overflow: hidden !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 45%, #132a54 75%, #081328 100%) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 0 14px rgba(56, 189, 248, 0.22), inset 0 0 30px rgba(14, 165, 233, 0.08) !important;
+  padding: 13px 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+  position: relative !important;
+}
+
+.portal-top-frame::before {
+  content: '🎓 🔍 ⚙️ 🧭 💡 🏛️' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  font-size: 2.6rem !important;
+  letter-spacing: 24px !important;
+  opacity: 0.035 !important;
+  pointer-events: none !important;
+  white-space: nowrap !important;
+}
+
+.top-frame-side-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 7px 14px !important;
+  border-radius: 8px !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.top-frame-side-btn.btn-home {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  border-color: #38bdf8 !important;
+}
+.top-frame-side-btn.btn-home:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+  transform: translateY(-1px) !important;
+}
+
+.top-frame-center-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  flex-grow: 1 !important;
+  min-width: 0 !important;
+  position: relative !important;
+  z-index: 2 !important;
+  gap: 2px !important;
+}
+
+.banner-title-tamil {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: clamp(1.4rem, 2.2vw, 1.95rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.35 !important;
+  margin: 0 !important;
+  padding: 3px 6px 1px 6px !important;
+  letter-spacing: 0.5px !important;
+  background: linear-gradient(180deg, #fffbeb 0%, #fef08a 25%, #facc15 55%, #ca8a04 85%, #854d0e 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 10px rgba(250, 204, 21, 0.35)) !important;
+  display: inline-block !important;
+}
+
+.banner-tagline-aurora {
+  font-size: clamp(0.82rem, 1.1vw, 0.95rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+  letter-spacing: 0.2px !important;
+  background: linear-gradient(90deg, #67e8f9 0%, #a78bfa 25%, #f472b6 50%, #34d399 75%, #67e8f9 100%) !important;
+  background-size: 250% auto !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  animation: auroraTextFlow 5s ease-in-out infinite !important;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8)) !important;
+}
+
+.banner-english-row {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  margin: 2px 0 0 0 !important;
+  line-height: 1.2 !important;
+}
+
+.banner-title-english,
+.banner-slogan-english {
+  font-family: 'Inter', sans-serif !important;
+  font-size: clamp(0.80rem, 1.12vw, 0.98rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.8px !important;
+  text-transform: uppercase !important;
+  background: linear-gradient(90deg, #ffffff 0%, #cbd5e1 20%, #38bdf8 45%, #ffffff 65%, #94a3b8 85%, #ffffff 100%) !important;
+  background-size: 250% auto !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  animation: engSilverCyanShimmer 5s ease-in-out infinite !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.85)) !important;
+  display: inline-block !important;
+}
+
+.banner-slogan-english {
+  animation-delay: -2.5s !important;
+}
+
+.banner-english-dot {
+  color: #38bdf8 !important;
+  font-size: 0.85rem !important;
+  filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.75)) !important;
+}
+
+@media (min-width: 901px) {
+  .portal-top-frame {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+  }
+  .top-frame-center-stack {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  .top-frame-side-btn.btn-home,
+  .top-frame-btn.btn-home {
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+}
+</style>
+
+<style id="robust-layout-override">
+/* ========================================================
+   ROBUST ZERO-OVERLAP FLEX LAYOUT SYSTEM
+   மானிட்டர் மற்றும் அனைத்துத் திரைகளிலும் மெனு ஓவர்லாப் தடுப்பு
+   ======================================================== */
+.portal-layout-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  position: relative !important;
+  align-items: stretch !important;
+  box-sizing: border-box !important;
+}
+
+.desktop-left-sidebar {
+  width: 280px !important;
+  min-width: 280px !important;
+  max-width: 280px !important;
+  position: sticky !important;
+  top: 0 !important;
+  height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  z-index: 1000 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+  background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+  border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+}
+
+.portal-main-content {
+  flex-grow: 1 !important;
+  flex-shrink: 1 !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  padding: 0 clamp(10px, 1.8vw, 24px) 40px !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+.portal-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 900px) {
+  .desktop-left-sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: -300px !important;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 9999 !important;
+  }
+  .desktop-left-sidebar.sidebar-open {
+    left: 0 !important;
+  }
+  .portal-main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+}
+</style>
+
+<style>
+    .portal-layout-wrapper {
+      display: block !important;
+      width: 100% !important;
+      min-height: 100vh !important;
+      position: relative !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Fixed Left Sidebar - 100% Permanently Anchored to Viewport (Never Scrolls Away) */
+    .desktop-left-sidebar {
+      width: 295px !important;
+      min-width: 295px !important;
+      max-width: 295px !important;
+      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+      border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      height: 100vh !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex-shrink: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Main Content Column - Compensates for 295px Fixed Sidebar on Desktop */
+    .portal-main-content {
+      margin-left: 295px !important;
+      width: calc(100% - 295px) !important;
+      min-height: 100vh !important;
+      padding: 12px 18px 40px !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+    }
+
+    @media (max-width: 1024px) {
+      .desktop-left-sidebar {
+        position: fixed !important;
+        left: -320px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 295px !important;
+        height: 100vh !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        z-index: 9999 !important;
+      }
+      .desktop-left-sidebar.sidebar-open {
+        left: 0 !important;
+      }
+      .portal-main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 8px 10px 30px !important;
+      }
+    }
+</style>
+<style>
+
+/* ========================================================
+   CANONICAL STANDARDIZED FIXED LEFT SIDEBAR FRAME
+   அனைத்துப் பக்கங்களுக்குமான நிலையான இடதுபுற மெனு பிரேம்
+   ======================================================== */
+.portal-layout-wrapper {
+  display: flex !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+/* Fixed Left Sidebar on Desktop */
+.desktop-left-sidebar {
+  width: 295px !important;
+  min-width: 295px !important;
+  max-width: 295px !important;
+  background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+  border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  z-index: 1000 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Custom Slim Gold Scrollbar for Sidebar */
+.desktop-left-sidebar::-webkit-scrollbar {
+  width: 6px !important;
+}
+.desktop-left-sidebar::-webkit-scrollbar-track {
+  background: rgba(10, 15, 29, 0.95) !important;
+}
+.desktop-left-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.45) !important;
+  border-radius: 4px !important;
+}
+.desktop-left-sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.75) !important;
+}
+
+.sidebar-header {
+  padding: 16px 14px 14px !important;
+  border-bottom: 1.5px solid rgba(212, 175, 55, 0.25) !important;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(15, 23, 42, 0.4) 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+}
+
+.sidebar-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.sidebar-emblem {
+  font-size: 1.6rem !important;
+  line-height: 1 !important;
+}
+
+.sidebar-title-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+}
+
+.sidebar-main-title {
+  font-size: 0.95rem !important;
+  font-weight: 900 !important;
+  color: #fde047 !important;
+  letter-spacing: 0.3px !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+}
+
+.sidebar-sub-title {
+  font-size: 0.70rem !important;
+  font-weight: 700 !important;
+  color: #94a3b8 !important;
+  letter-spacing: 0.2px !important;
+}
+
+.sidebar-close-btn {
+  display: none !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+  color: #fde047 !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 8px !important;
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+}
+.sidebar-close-btn:hover {
+  background: rgba(220, 38, 38, 0.6) !important;
+  color: #ffffff !important;
+}
+
+.sidebar-nav-body {
+  padding: 14px 10px 40px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  flex-grow: 1 !important;
+}
+
+/* Sidebar Navigation Buttons */
+.sidebar-main-btn {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 9px 12px !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(15, 23, 42, 0.5) 100%) !important;
+  border: 1px solid rgba(212, 175, 55, 0.2) !important;
+  border-radius: 8px !important;
+  color: #e2e8f0 !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) !important;
+}
+.sidebar-main-btn:hover {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(26, 86, 219, 0.25) 100%) !important;
+  border-color: #d4af37 !important;
+  color: #fef08a !important;
+  transform: translateX(2px) !important;
+}
+.sidebar-main-btn.active-page {
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.35) 0%, rgba(26, 86, 219, 0.4) 100%) !important;
+  border-color: #fde047 !important;
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  box-shadow: 0 0 12px rgba(253, 224, 71, 0.25) !important;
+}
+.sidebar-main-btn .icon {
+  font-size: 1.15rem !important;
+  flex-shrink: 0 !important;
+}
+.sidebar-main-btn .btn-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1px !important;
+  line-height: 1.25 !important;
+}
+.sidebar-main-btn .menu-ta {
+  font-size: 0.84rem !important;
+  font-weight: 800 !important;
+}
+.sidebar-main-btn .menu-en {
+  font-size: 0.66rem !important;
+  color: #94a3b8 !important;
+  letter-spacing: 0.4px !important;
+}
+.sidebar-main-btn.active-page .menu-en {
+  color: #fef08a !important;
+}
+
+/* Main Content Column Offset on Desktop */
+.portal-main-content {
+  margin-left: 295px !important;
+  width: calc(100% - 295px) !important;
+  min-height: 100vh !important;
+  box-sizing: border-box !important;
+}
+
+/* Mobile & Tablet Responsive Behavior (<= 1024px) */
+.mobile-menu-floating-btn {
+  display: none !important;
+  position: fixed !important;
+  bottom: 24px !important;
+  left: 20px !important;
+  z-index: 9998 !important;
+  background: linear-gradient(135deg, #091a3e 0%, #1e3a8a 100%) !important;
+  border: 1.8px solid #d4af37 !important;
+  border-radius: 999px !important;
+  color: #fde047 !important;
+  padding: 10px 18px !important;
+  font-size: 0.86rem !important;
+  font-weight: 800 !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45) !important;
+  cursor: pointer !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 0.2s ease !important;
+}
+.mobile-menu-floating-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4) !important;
+}
+
+.sidebar-backdrop {
+  display: none !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(0, 0, 0, 0.65) !important;
+  backdrop-filter: blur(4px) !important;
+  z-index: 9990 !important;
+}
+.sidebar-backdrop.active {
+  display: block !important;
+}
+
+@media (max-width: 1024px) {
+  .desktop-left-sidebar {
+    position: fixed !important;
+    left: -320px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 295px !important;
+    height: 100vh !important;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 9999 !important;
+    box-shadow: 6px 0 35px rgba(0, 0, 0, 0.85) !important;
+  }
+  .desktop-left-sidebar.active {
+    left: 0 !important;
+  }
+  .sidebar-close-btn {
+    display: flex !important;
+  }
+  .portal-main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  .mobile-menu-floating-btn {
+    display: inline-flex !important;
+  }
+}
+
+</style>
+<style>
+/* ========================================================
+   STANDARDIZED PORTAL TOP FRAME (UNIFIED ACROSS ALL 33 PAGES)
+   3D Gold Title, Aurora Shimmer Tagline & Clean Responsive Alignment
+   ======================================================== */
+@keyframes auroraTextFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.portal-top-frame {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+  border: 1.8px solid #d4af37 !important;
+  border-radius: 14px !important;
+  padding: 12px 18px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.16) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  position: relative !important;
+}
+
+.top-frame-center-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  flex-grow: 1 !important;
+  min-width: 0 !important;
+  position: relative !important;
+  z-index: 2 !important;
+  gap: 2px !important;
+}
+
+.banner-title-tamil {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: clamp(1.4rem, 2.2vw, 1.95rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.35 !important;
+  margin: 0 !important;
+  padding: 3px 6px 1px 6px !important;
+  letter-spacing: 0.5px !important;
+  background: linear-gradient(180deg, #fffbeb 0%, #fef08a 25%, #facc15 55%, #ca8a04 85%, #854d0e 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 10px rgba(250, 204, 21, 0.35)) !important;
+  display: inline-block !important;
+}
+
+.banner-tagline-aurora {
+  font-size: clamp(0.82rem, 1.1vw, 0.95rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+  letter-spacing: 0.2px !important;
+  background: linear-gradient(90deg, #67e8f9 0%, #a78bfa 25%, #f472b6 50%, #34d399 75%, #67e8f9 100%) !important;
+  background-size: 250% auto !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  animation: auroraTextFlow 5s ease-in-out infinite !important;
+}
+
+.banner-english-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  margin-top: 2px !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 1.2px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+}
+
+.banner-title-english {
+  color: #93c5fd !important;
+}
+
+.banner-english-dot {
+  color: #facc15 !important;
+  font-size: 0.8rem !important;
+}
+
+.banner-slogan-english {
+  color: #e0e7ff !important;
+  opacity: 0.92 !important;
+}
+
+.top-frame-side-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 8px 14px !important;
+  border-radius: 9px !important;
+  font-size: 0.84rem !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  white-space: nowrap !important;
+  z-index: 2 !important;
+}
+
+.top-frame-side-btn.btn-home {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  border-color: #38bdf8 !important;
+}
+
+.top-frame-side-btn.btn-home:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+  transform: translateY(-1px) !important;
+}
+
+@media (min-width: 901px) {
+  .portal-top-frame {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+  }
+  .top-frame-center-stack {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  .top-frame-side-btn.btn-home {
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .portal-top-frame {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  .top-frame-side-btn.btn-home {
+    order: 1 !important;
+    margin-left: auto !important;
+  }
+  .top-frame-center-stack {
+    order: 2 !important;
+    width: 100% !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -3980,9 +4736,9 @@
       <button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
     </div>
 
-        <nav class="sidebar-nav-body">
+    <nav class="sidebar-nav-body">
       <!-- 00. முதன்மை முகப்பு (Home) -->
-      <a class="sidebar-main-btn" href="index.html">
+      <a class="sidebar-main-btn active-page".strip() href="index.html">
         <span class="icon">🏠</span>
         <span class="btn-text-group">
           <span class="menu-ta">முதன்மை முகப்பு</span>
@@ -3991,7 +4747,7 @@
       </a>
 
       <!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
-      <a class="sidebar-main-btn" href="01_00_entrance_main.html">
+      <a class="sidebar-main-btn".strip() href="01_00_entrance_main.html">
         <span class="icon">🎯</span>
         <span class="btn-text-group">
           <span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
@@ -4000,7 +4756,7 @@
       </a>
 
       <!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
-      <a class="sidebar-main-btn" href="02_00_direct_admissions.html">
+      <a class="sidebar-main-btn".strip() href="02_00_direct_admissions.html">
         <span class="icon">📈</span>
         <span class="btn-text-group">
           <span class="menu-ta">நேரடிச் சேர்க்கை</span>
@@ -4009,7 +4765,7 @@
       </a>
 
       <!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
-      <a class="sidebar-main-btn" href="03_institutes.html">
+      <a class="sidebar-main-btn".strip() href="03_institutes.html">
         <span class="icon">🏛️</span>
         <span class="btn-text-group">
           <span class="menu-ta">கல்லூரிகள் அடைவு</span>
@@ -4018,7 +4774,7 @@
       </a>
 
       <!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
-      <a class="sidebar-main-btn" href="04_govt_exams.html">
+      <a class="sidebar-main-btn".strip() href="04_govt_exams.html">
         <span class="icon">🏆</span>
         <span class="btn-text-group">
           <span class="menu-ta">அரசுத் தேர்வுகள்</span>
@@ -4027,7 +4783,7 @@
       </a>
 
       <!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
-      <a class="sidebar-main-btn" href="05_direct_careers.html">
+      <a class="sidebar-main-btn".strip() href="05_direct_careers.html">
         <span class="icon">💼</span>
         <span class="btn-text-group">
           <span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
@@ -4036,11 +4792,20 @@
       </a>
 
       <!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
-      <a class="sidebar-main-btn" href="06_student_support.html">
+      <a class="sidebar-main-btn".strip() href="06_student_support.html">
         <span class="icon">☎️</span>
         <span class="btn-text-group">
           <span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
           <span class="menu-en">HELPDESK &amp; SUPPORT</span>
+        </span>
+      </a>
+
+      <!-- 07. கல்வி வளங்கள் & போர்ட்டல் (Resources & External Portals) -->
+      <a class="sidebar-main-btn".strip() href="07_resources_external_portals.html">
+        <span class="icon">📚</span>
+        <span class="btn-text-group">
+          <span class="menu-ta">கல்வி வளங்கள் &amp; போர்ட்டல்</span>
+          <span class="menu-en">RESOURCES &amp; PORTALS</span>
         </span>
       </a>
     </nav>
@@ -4057,29 +4822,16 @@
 <!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
 <!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
 <header class="portal-top-frame no-print">
-  <div class="top-frame-branding">
-    <div class="top-frame-badge">
-      <span class="govt-emblem">🏛️</span>
-      <span class="dept-text">தமிழ்நாடு பள்ளிக் கல்வித்துறை — சிவகங்கை மாவட்டம்</span>
-    </div>
-    <div class="portal-main-heading">
-      <span class="portal-title-text">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
-      <span class="portal-subtitle-en">CAREER GUIDANCE PORTAL</span>
-    </div>
-  </div>
-
-  <div class="top-frame-actions">
-    <!-- Official ceosvg.in Main District Portal Link -->
-    <a href="https://www.ceosvg.in" target="_blank" rel="noopener" class="top-frame-btn btn-ceosvg" title="சிவகங்கை முதன்மைக் கல்வி அலுவலர் அதிகாரப்பூர்வ இணையதளம்">
-      <span class="btn-icon">🌐</span>
-      <span>ceosvg.in முதன்மை தளம்</span>
-    </a>
-    <!-- Career Guidance Home Link -->
-    <a href="index.html" class="top-frame-btn btn-home" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
-      <span class="btn-icon">🎓</span>
-      <span>உயர்கல்வி முகப்பு</span>
-    </a>
-  </div>
+<!-- Center Branding Stack: 3D Gold Title, Aurora Tagline & English Sub-branding -->
+<div class="top-frame-center-stack">
+<h1 class="banner-title-tamil">உயர்கல்வி வழிகாட்டி</h1>
+<div class="banner-tagline-aurora">உங்கள் சிறந்த எதிர்காலத்திற்கான திறவுகோல்</div>
+<div class="banner-english-row">
+<span class="banner-title-english">CAREER GUIDANCE</span>
+<span class="banner-english-dot">•</span>
+<span class="banner-slogan-english">YOUR KEY TO A BRIGHT FUTURE</span>
+</div>
+</div>
 </header>
 
 <!-- Control Panel -->
@@ -4131,22 +4883,22 @@
       <!-- ஒவ்வொரு தேர்வுக்கும் பிரத்யேக நேரடி இணைப்புகள் -->
       <div class="tags" onclick="event.stopPropagation();">
         <!-- மருத்துவம் & அதன் அடைவுப் பக்கங்கள் -->
-        <a class="tag" href="01_medical_neet_ug.html" style="text-decoration: none;" title="மருத்துவ நுழைவுத்தேர்வு">🩺 NEET (மருத்துவம்)</a>
-        <a class="tag" href="01_A_tn_med_colleges.html" style="text-decoration: none;" title="தமிழக மருத்துவக் கல்லூரிகள் அடைவு">🏥 TN மருத்துவ அடைவு</a>
-        <a class="tag" href="01_B_in_med_colleges.html" style="text-decoration: none;" title="அகில இந்திய மருத்துவக் கல்லூரிகள் அடைவு">🏛️ AIQ மருத்துவ அடைவு</a>
+        <a class="tag" href="01_02_medical_neet_ug.html" style="text-decoration: none;" title="மருத்துவ நுழைவுத்தேர்வு">🩺 NEET (மருத்துவம்)</a>
+        <a class="tag" href="01_02_A_tn_med_colleges.html" style="text-decoration: none;" title="தமிழக மருத்துவக் கல்லூரிகள் அடைவு">🏥 TN மருத்துவ அடைவு</a>
+        <a class="tag" href="01_02_B_in_med_colleges.html" style="text-decoration: none;" title="அகில இந்திய மருத்துவக் கல்லூரிகள் அடைவு">🏛️ AIQ மருத்துவ அடைவு</a>
         <!-- பொறியியல் & அதன் அடைவுப் பக்கங்கள் -->
-        <a class="tag" href="02_engineering_jee.html" style="text-decoration: none;" title="பொறியியல் நுழைவுத்தேர்வு">⚙️ JEE (IIT/NIT)</a>
-        <a class="tag" href="02_aiq_eng_colleges.html" style="text-decoration: none;" title="அகில இந்திய JEE பொறியியல் கல்வி நிறுவனங்கள் அடைவு (119 கல்லூரிகள்)">🏛️ AIQ பொறியியல் அடைவு (119)</a>
+        <a class="tag" href="01_03_engineering_jee.html" style="text-decoration: none;" title="பொறியியல் நுழைவுத்தேர்வு">⚙️ JEE (IIT/NIT)</a>
+        <a class="tag" href="01_03_aiq_eng_colleges.html" style="text-decoration: none;" title="அகில இந்திய JEE பொறியியல் கல்வி நிறுவனங்கள் அடைவு (119 கல்லூரிகள்)">🏛️ AIQ பொறியியல் அடைவு (119)</a>
         <!-- பிற தேசிய நுழைவுத்தேர்வுகள் -->
-        <a class="tag" href="03_science_research_iiser.html" style="text-decoration: none;" title="அறிவியல் & ஆராய்ச்சி">🔬 IISER / NISER</a>
-        <a class="tag" href="04_central_universities_cuet.html" style="text-decoration: none;" title="மத்தியப் பல்கலைக்கழகங்கள்">🏛️ CUET (மத்திய பல்கலை)</a>
-        <a class="tag" href="05_law_clat_nlu.html" style="text-decoration: none;" title="தேசிய சட்டப் பல்கலைக்கழகங்கள்">⚖️ CLAT (சட்டம்)</a>
-        <a class="tag" href="06_design_architecture_nata_nift.html" style="text-decoration: none;" title="கட்டிடக்கலை & ஆடை வடிவமைப்பு">📐 NATA / NIFT</a>
-        <a class="tag" href="07_management_iim_ipm.html" style="text-decoration: none;" title="ஒருங்கிணைந்த மேலாண்மை">📊 IIM IPMAT</a>
-        <a class="tag" href="08_hotel_management_nchmct.html" style="text-decoration: none;" title="உணவக மேலாண்மை">🏨 NCHMCT (IHM)</a>
-        <a class="tag" href="09_maritime_merchant_navy.html" style="text-decoration: none;" title="கடல்சார் கல்வி & வணிகக் கப்பல்">⚓ IMU-CET (கடற்படை)</a>
-        <a class="tag" href="10_defence_armed_forces.html" style="text-decoration: none;" title="பாதுகாப்பு & முப்படைகள்">🎖️ பாதுகாப்புப் படைகள் (NDA)</a>
-        <a class="tag" href="11_pilot_careers_cpl_and_iaf_fighter.html" style="text-decoration: none;" title="விமானிப் பயிற்சிகள்">✈️ விமானி (Pilot / CPL)</a>
+        <a class="tag" href="01_04_science_research_iiser.html" style="text-decoration: none;" title="அறிவியல் & ஆராய்ச்சி">🔬 IISER / NISER</a>
+        <a class="tag" href="01_05_central_universities_cuet.html" style="text-decoration: none;" title="மத்தியப் பல்கலைக்கழகங்கள்">🏛️ CUET (மத்திய பல்கலை)</a>
+        <a class="tag" href="01_06_law_clat_nlu.html" style="text-decoration: none;" title="தேசிய சட்டப் பல்கலைக்கழகங்கள்">⚖️ CLAT (சட்டம்)</a>
+        <a class="tag" href="01_07_design_architecture_nata_nift.html" style="text-decoration: none;" title="கட்டிடக்கலை & ஆடை வடிவமைப்பு">📐 NATA / NIFT</a>
+        <a class="tag" href="01_08_management_iim_ipm.html" style="text-decoration: none;" title="ஒருங்கிணைந்த மேலாண்மை">📊 IIM IPMAT</a>
+        <a class="tag" href="01_09_hotel_management_nchmct.html" style="text-decoration: none;" title="உணவக மேலாண்மை">🏨 NCHMCT (IHM)</a>
+        <a class="tag" href="01_10_maritime_merchant_navy.html" style="text-decoration: none;" title="கடல்சார் கல்வி & வணிகக் கப்பல்">⚓ IMU-CET (கடற்படை)</a>
+        <a class="tag" href="01_11_defence_armed_forces.html" style="text-decoration: none;" title="பாதுகாப்பு & முப்படைகள்">🎖️ பாதுகாப்புப் படைகள் (NDA)</a>
+        <a class="tag" href="01_12_pilot_careers_cpl_and_iaf_fighter.html" style="text-decoration: none;" title="விமானிப் பயிற்சிகள்">✈️ விமானி (Pilot / CPL)</a>
       </div>
     </div>
     <a class="btn-link" href="01_00_entrance_main.html" style="margin-top: 10px;">
@@ -4208,12 +4960,12 @@
       </div>
       <p class="card-summary">அகில இந்திய மற்றும் தமிழக அளவிலான தலைசிறந்த மத்திய/மாநில அரசு நிறுவனங்கள், அரசு மருத்துவ, பொறியியல் மற்றும் மாவட்ட வாரியான அரசு கலை மற்றும் அறிவியல் கல்லூரிகள் பட்டியல்.</p>
       <div class="tags" onclick="event.stopPropagation();">
-        <a class="tag" href="02_aiq_eng_colleges.html" style="text-decoration: none;" title="119 அகில இந்திய பொறியியல் கல்வி நிறுவனங்கள் (IIT / NIT / IIIT / GFTI)">🏛️ AIQ பொறியியல் அடைவு (119)</a>
+        <a class="tag" href="01_03_aiq_eng_colleges.html" style="text-decoration: none;" title="119 அகில இந்திய பொறியியல் கல்வி நிறுவனங்கள் (IIT / NIT / IIIT / GFTI)">🏛️ AIQ பொறியியல் அடைவு (119)</a>
         <a class="tag" href="02_01_tnea_engineering.html" style="text-decoration: none;" title="தமிழக TNEA பொறியியல் கல்லூரிகள்">⚙️ TNEA பொறியியல் கல்லூரிகள்</a>
-        <a class="tag" href="01_A_tn_med_colleges.html" style="text-decoration: none;" title="தமிழகத்தின் 37 அரசு + 90 மருத்துவ, பல் & ஆயுஷ் கல்லூரிகள்">🏥 தமிழக மருத்துவ அடைவு (90)</a>
-        <a class="tag" href="01_B_in_med_colleges.html" style="text-decoration: none;" title="அகில இந்திய AIIMS, JIPMER & மத்திய மருத்துவக் கல்லூரிகள்">🏛️ AIQ மருத்துவ அடைவு (685)</a>
+        <a class="tag" href="01_02_A_tn_med_colleges.html" style="text-decoration: none;" title="தமிழகத்தின் 37 அரசு + 90 மருத்துவ, பல் & ஆயுஷ் கல்லூரிகள்">🏥 தமிழக மருத்துவ அடைவு (90)</a>
+        <a class="tag" href="01_02_B_in_med_colleges.html" style="text-decoration: none;" title="அகில இந்திய AIIMS, JIPMER & மத்திய மருத்துவக் கல்லூரிகள்">🏛️ AIQ மருத்துவ அடைவு (685)</a>
         <a class="tag" href="03_institutes.html" style="text-decoration: none;" title="அரசு கலை, அறிவியல் & பாலிடெக்னிக் கல்லூரிகள்">🏫 அரசு கலை & பாலிடெக்னிக்</a>
-        <a class="tag" href="11_pilot_careers_cpl_and_iaf_fighter.html" style="text-decoration: none;" title="விமானப் பயிற்சிப் பள்ளிகள் (IGRUA / DGCA)">✈️ விமானப் பயிற்சிப் பள்ளிகள்</a>
+        <a class="tag" href="01_12_pilot_careers_cpl_and_iaf_fighter.html" style="text-decoration: none;" title="விமானப் பயிற்சிப் பள்ளிகள் (IGRUA / DGCA)">✈️ விமானப் பயிற்சிப் பள்ளிகள்</a>
       </div>
     </div>
     <a class="btn-link" href="03_institutes.html">
@@ -4244,7 +4996,7 @@
         <a class="tag" href="04_govt_exams.html#sec-ssc-chsl" style="text-decoration: none;" title="மத்திய பணியாளர் தேர்வாணையம் (SSC CHSL, MTS)">SSC (CHSL / MTS)</a>
         <a class="tag" href="04_govt_exams.html#sec-rrb-ntpc-ug" style="text-decoration: none;" title="ரயில்வே பணித் தேர்வுகள் (RRB NTPC, ALP)">ரயில்வே (RRB NTPC)</a>
         <a class="tag" href="04_govt_exams.html#sec-tnusrb-pc" style="text-decoration: none;" title="TNUSRB இரண்டாம் நிலை காவலர்">TNUSRB காவலர்</a>
-        <a class="tag" href="10_defence_armed_forces.html" style="text-decoration: none;" title="முப்படை அக்னிவீர் நேரடிப் பணி (Army / Navy / Air Force)">🎖️ முப்படை அக்னிவீர்</a>
+        <a class="tag" href="01_11_defence_armed_forces.html" style="text-decoration: none;" title="முப்படை அக்னிவீர் நேரடிப் பணி (Army / Navy / Air Force)">🎖️ முப்படை அக்னிவீர்</a>
         <a class="tag" href="04_govt_exams.html#sec-ssc-gd" style="text-decoration: none;" title="மத்திய துணை ராணுவம் (CRPF, BSF, CISF)">துணை ராணுவம் (CRPF/CISF)</a>
         <a class="tag" href="04_govt_exams.html#group-degree" style="text-decoration: none;" title="வங்கி மற்றும் பட்டப்படிப்பு போட்டித்தேர்வுகள்">வங்கி &amp; பட்டப்படிப்புத் தேர்வுகள்</a>
       </div>
@@ -4305,6 +5057,37 @@
     </a>
   </div>
 
+  <!-- CARD 7: RESOURCES & EXTERNAL PORTALS -->
+  <div class="card" style="border-top: 5px solid #0284c7;">
+    <div>
+      <div class="card-top-row">
+        <span class="badge" style="background:#e0f2fe; color:#0369a1; border: 1px solid #bae6fd;">07 / கல்வி வளங்கள் &amp; போர்ட்டல்</span>
+        <span class="category-badge" style="background:#f0fdf4; color:#166534; border: 1px solid #bbf7d0;">பாடநூல்கள் &amp; இலவச CBT தேர்வுகள்</span>
+      </div>
+      <div class="card-header">
+        <div class="icon-box" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color:#ffffff;">📚</div>
+        <div class="card-title-group">
+          <a class="card-title" href="07_resources_external_portals.html">
+            கல்வி வளங்கள், பாடநூல்கள் &amp; மாதிரித் தேர்வு போர்ட்டல்கள்
+            <small>Official Textbooks, Free CBT Mock Tests &amp; National Learning Portals</small>
+          </a>
+        </div>
+      </div>
+      <p class="card-summary">தமிழ்நாடு அரசுப் பாடநூல்கள் (TNSCERT), மத்திய NCERT புத்தகங்கள் (PDF) மற்றும் NTA Abhyas, IIT JEE, SATHEE உள்ளிட்ட விளம்பரமற்ற 100% இலவச கணினி வழி மாதிரித் தேர்வு (CBT) போர்ட்டல்கள்.</p>
+      <div class="tags">
+        <span class="tag" title="தமிழ்நாடு 1-12 அரசுப் பாடநூல்கள்">தமிழ்நாடு பாடநூல்கள்</span>
+        <span class="tag" title="மத்திய NCERT 1-12 பாடப்புத்தகங்கள்">NCERT Books</span>
+        <span class="tag" title="NTA தேசிய டெஸ்ட் அப்யாஸ் AI மாதிரித் தேர்வு">NTA CBT Mock Test</span>
+        <span class="tag" title="ஐஐடி கான்பூர் &amp; மத்திய அரசு சாத்தீ தளம்">SATHEE போர்ட்டல்</span>
+        <span class="tag" title="100% விளம்பரம் அற்ற அரசு இணையதளங்கள்">இலவச கல்வி தளம்</span>
+      </div>
+    </div>
+    <a class="btn-link" href="07_resources_external_portals.html" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff;">
+      <span>பாடநூல்கள் &amp; போர்ட்டல்கள் காண்க</span>
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+    </a>
+  </div>
+
 </div>
 
 <!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
@@ -4323,7 +5106,74 @@
   </div>
 </div>
 
-
+<!-- ஆலோசனை மற்றும் கருத்துப் பதிவுப் பகுதி -->
+<section class="feedback-section" id="feedback-sec">
+<div class="animated-top-bar"></div>
+<canvas id="fb_crackers_canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 99; display: none;"></canvas>
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(226, 232, 240, 0.8);">
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+<div class="sparkle-badge" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); color: #b45309; border-color: #fcd34d;"><span class="sparkle-icon">💡</span><span>ஆலோசனை &amp; கருத்துக் களம் (Feedback &amp; Suggestions)</span></div>
+<h2 style="font-size: 1.35rem; font-weight: 800; background: linear-gradient(135deg, #1e3a8a 0%, #6b21a8 50%, #9d174d 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0; letter-spacing: -0.2px;">
+உயர்கல்வி வழிகாட்டல் தளம் குறித்த தங்களின் மேலான ஆலோசனைகள் / கருத்துகளைப் பகிரலாம்
+</h2>
+</div>
+<p style="font-size: 0.86rem; color: #475569; margin: 0;">
+சிவகங்கை மாவட்ட உயர்கல்வி வழிகாட்டல் போர்டல் மேம்பாடு, புதிய பாடப்பிரிவுத் தகவல்கள், மாணவர் நல ஆலோசனைகள் மற்றும் வழிகாட்டல் கோப்புகளை இங்கே சமர்ப்பிக்கலாம்.
+</p>
+</div>
+<form id="guidanceFeedbackForm" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px 14px; align-items: start;">
+<input name="page" type="hidden" value="index.html"/>
+<div class="form-group fb-field-name" style="grid-column: span 1;">
+<label for="fb_name" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #e0f2fe; color: #0284c7; border-radius: 4px; font-size: 11px;">👤</span>
+<span>பெயர்</span>
+<span style="color: #ef4444;">*</span>
+</label>
+<input id="fb_name" placeholder="முழுப் பெயர்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="text"/>
+</div>
+<div class="form-group fb-field-place" style="grid-column: span 1;">
+<label for="fb_place" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #fef3c7; color: #d97706; border-radius: 4px; font-size: 11px;">🏫</span>
+<span>பள்ளி / ஊர்</span>
+<span style="color: #ef4444;">*</span>
+</label>
+<input id="fb_place" placeholder="பள்ளி பெயர் அல்லது ஊர்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="text"/>
+</div>
+<div class="form-group fb-field-phone" style="grid-column: span 1;">
+<label for="fb_phone" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #dcfce7; color: #16a34a; border-radius: 4px; font-size: 11px;">📱</span>
+<span>கைபேசி எண்</span>
+<span style="color: #ef4444;">*</span>
+</label>
+<input id="fb_phone" pattern="[0-9]{10}" placeholder="10 இலக்க எண்" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" title="10 இலக்க கைபேசி எண்" type="tel"/>
+</div>
+<div class="form-group fb-field-email" style="grid-column: span 1;">
+<label for="fb_email" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #f3e8ff; color: #9333ea; border-radius: 4px; font-size: 11px;">✉️</span>
+<span>மின்னஞ்சல்</span>
+<span style="color: #ef4444; font-weight: 800;">*</span>
+</label>
+<input id="fb_email" placeholder="example@gmail.com" required="" style="width: 100%; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; transition: all 0.2s ease; box-sizing: border-box;" type="email" autocomplete="email"/>
+</div>
+<div class="form-group fb-field-msg" style="grid-column: span 3;">
+<label for="fb_message" style="display: flex; align-items: center; gap: 5px; font-size: 0.84rem; font-weight: 700; color: #1e293b; margin-bottom: 4px;">
+<span style="display: inline-flex; justify-content: center; align-items: center; width: 20px; height: 20px; background: #fef3c7; color: #b45309; border-radius: 4px; font-size: 11px;">💡</span>
+<span>தங்களின் மேலான ஆலோசனைகள் / வழிகாட்டல் கருத்துகள்</span>
+<span style="color: #ef4444;">*</span>
+</label>
+<textarea id="fb_message" placeholder="எ.கா: தளத்தில் கூடுதல் கல்லூரிகள் குறித்த தகவல்கள் சேர்க்கப்பட வேண்டும், அல்லது புதிய மாதிரி வினாத்தாள்கள் இணைக்கப்பட வேண்டும் போன்ற தங்களின் மேலான ஆலோசனைகள்..." required="" rows="2" style="width: 100%; height: 50px; padding: 8px 12px; font-size: 0.88rem; font-family: inherit; border: 1.5px solid #cbd5e1; border-radius: 8px; background-color: #ffffff; outline: none; resize: vertical; box-sizing: border-box; line-height: 1.4;"></textarea>
+</div>
+<div class="form-group fb-field-submit" style="grid-column: span 1; display: flex; flex-direction: column; justify-content: flex-end;">
+<button id="fb_submitBtn" style="width: 100%; height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #1e3a8a 0%, #6b21a8 50%, #9d174d 100%); color: #ffffff; border: none; font-size: 0.94rem; font-weight: 800; font-family: inherit; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 14px rgba(107, 33, 168, 0.35); transition: all 0.25s ease; box-sizing: border-box;" type="submit">
+<span>கருத்து பதிவு செய்க</span>
+<svg style="width: 16px; height: 16px; fill: none; stroke: currentColor;" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+</div>
+</form>
+<div id="fb_status" style="margin-top: 10px; text-align: center; padding: 10px 16px; border-radius: 8px; font-size: 0.95rem; font-weight: 800; display: none;"></div>
+</section>
 
       <!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
       <div class="creator-card">
@@ -4687,7 +5537,72 @@
       document.getElementById('cutoffResultBox').style.display = 'block';
     }
 
-    
+    // 4. Feedback Form Script
+    // Form submission handled by handleEnquiryFormSubmit
+    function fireCelebrationCrackers() {
+      const canvas = document.getElementById('fb_crackers_canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      canvas.width = canvas.parentElement.offsetWidth;
+      canvas.height = canvas.parentElement.offsetHeight;
+      canvas.style.display = 'block';
+
+      const particles = [];
+      const colors = ['#f43f5e', '#ec4899', '#d946ef', '#a855f7', '#6366f1', '#3b82f6', '#06b6d4', '#10b981', '#eab308', '#f97316'];
+      const burstPoints = [
+        { x: canvas.width * 0.35, y: canvas.height * 0.5 },
+        { x: canvas.width * 0.65, y: canvas.height * 0.5 }
+      ];
+
+      burstPoints.forEach(pt => {
+        for (let i = 0; i < 60; i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const speed = Math.random() * 8 + 3;
+          particles.push({
+            x: pt.x,
+            y: pt.y,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed - 2,
+            radius: Math.random() * 3.5 + 2,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            gravity: 0.16,
+            alpha: 1,
+            decay: Math.random() * 0.012 + 0.01
+          });
+        }
+      });
+
+      let animId;
+      function render() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        let alive = false;
+        particles.forEach(p => {
+          if (p.alpha > 0) {
+            alive = true;
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vy += p.gravity;
+            p.alpha -= p.decay;
+            ctx.save();
+            ctx.globalAlpha = Math.max(p.alpha, 0);
+            ctx.fillStyle = p.color;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+          }
+        });
+
+        if (alive) {
+          animId = requestAnimationFrame(render);
+        } else {
+          cancelAnimationFrame(animId);
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          canvas.style.display = 'none';
+        }
+      }
+      render();
+    }
     </script>
 
 <script>
@@ -4875,6 +5790,152 @@ document.addEventListener('DOMContentLoaded', function() {
     initCreatorObserver();
   }
 })();
+
+// ========================================================
+// STUDENT DOUBTS & ENQUIRY FORM SUBMISSION (GOOGLE APPS SCRIPT)
+// ========================================================
+const APPS_SCRIPT_ENDPOINT = "https://script.google.com/macros/s/AKfycbw6JT5M-sr-6vz96-dKK00Xema0v3--HXkHJp0jX-Tvx_LeWvIuV6VPCOn-U76HjbAcxg/exec";
+
+async function handleEnquiryFormSubmit(e) {
+  if (e) e.preventDefault();
+  const form = document.getElementById('guidanceFeedbackForm');
+  if (!form) return;
+
+  const nameEl = document.getElementById('fb_name');
+  const placeEl = document.getElementById('fb_place');
+  const phoneEl = document.getElementById('fb_phone');
+  const emailEl = document.getElementById('fb_email');
+  const msgEl = document.getElementById('fb_message');
+  const linkEl = document.getElementById('fb_link');
+  const fileEl = document.getElementById('fb_file');
+  const submitBtn = document.getElementById('fb_submitBtn');
+  const statusDiv = document.getElementById('fb_status');
+  const pageInput = form.querySelector('input[name="page"]');
+
+  const name = nameEl ? nameEl.value.trim() : '';
+  const place = placeEl ? placeEl.value.trim() : '';
+  const phone = phoneEl ? phoneEl.value.trim() : '';
+  const email = emailEl ? emailEl.value.trim() : '';
+  const message = msgEl ? msgEl.value.trim() : '';
+  const link = linkEl ? linkEl.value.trim() : '';
+  const fileLinkEl = document.getElementById('fb_file_link');
+  const fileLink = fileLinkEl ? fileLinkEl.value.trim() : '';
+  const pageName = pageInput ? pageInput.value : window.location.pathname.split('/').pop() || 'career_guidance_portal';
+
+  if (!email || !email.includes('@') || !email.includes('.')) {
+    alert('தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும் (Please enter a valid email address).');
+    if (emailEl) emailEl.focus();
+    return;
+  }
+
+  if (phone && phone.replace(/\D/g, '').length < 10) {
+    alert('தயவுசெய்து சரியான 10 இலக்க கைபேசி எண்ணை உள்ளிடவும் (Please enter a valid 10-digit phone number).');
+    if (phoneEl) phoneEl.focus();
+    return;
+  }
+
+  const origBtnContent = submitBtn ? submitBtn.innerHTML : '';
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span>⏳ சமர்ப்பிக்கப்படுகிறது...</span>';
+  }
+
+  const ticketId = 'TN-CG-' + Math.floor(1000 + Math.random() * 9000);
+
+  // Read optional file as base64
+  let fileData = null;
+  let fileName = '';
+  let fileMime = '';
+
+  if (fileEl && fileEl.files && fileEl.files[0]) {
+    const file = fileEl.files[0];
+    fileName = file.name;
+    fileMime = file.type;
+    if (file.size <= 5 * 1024 * 1024) {
+      try {
+        fileData = await new Promise((resolve) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result.split(',')[1]);
+          reader.onerror = () => resolve(null);
+          reader.readAsDataURL(file);
+        });
+      } catch (err) {
+        console.warn('File read error:', err);
+      }
+    }
+  }
+
+  const payload = {
+    ticketId: ticketId,
+    name: name,
+    place: place,
+    phone: phone,
+    email: email,
+    query: message,
+    fileLink: fileLink || (fileName ? ('Uploaded File: ' + fileName) : '-'),
+    link: link || '-',
+    referenceWebLink: link || '-',
+    page: pageName,
+    fileName: fileName,
+    fileMime: fileMime,
+    fileData: fileData,
+    timestamp: new Date().toISOString(),
+    spreadsheetId: "1rfmwUpERPWk9lu4AK3OZf8fMqzx2ZSVpmVnkfITHito",
+    spreadsheetUrl: "https://docs.google.com/spreadsheets/d/1rfmwUpERPWk9lu4AK3OZf8fMqzx2ZSVpmVnkfITHito/edit",
+    sheetName: "மாணவர்_சந்தேகங்கள்"
+  };
+
+  try {
+    await fetch(APPS_SCRIPT_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8'
+      },
+      body: JSON.stringify(payload)
+    });
+  } catch (err) {
+    console.warn('Apps Script submission notice:', err);
+  } finally {
+    if (typeof fireCelebrationCrackers === 'function') {
+      try { fireCelebrationCrackers(); } catch (e) {}
+    }
+
+    if (statusDiv) {
+      statusDiv.style.display = 'block';
+      statusDiv.innerHTML = `
+        <div style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border: 2px solid #86efac; color: #166534; padding: 16px 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 14px rgba(22, 101, 52, 0.12); margin-top: 14px;">
+          <div style="font-size: 1.25rem; font-weight: 800; color: #15803d; margin-bottom: 6px;">🎉 தங்களின் சந்தேகம் வெற்றிகரமாகப் பதிவு செய்யப்பட்டது!</div>
+          <div style="font-size: 0.92rem; color: #1e293b; margin-bottom: 4px;">பதிவு எண் (Ticket ID): <strong style="color: #0284c7; background: #e0f2fe; padding: 2px 8px; border-radius: 6px;">${ticketId}</strong></div>
+          <div style="font-size: 0.86rem; color: #475569;">மாவட்டக் கல்வி வழிகாட்டல் குழுவினர் தங்களின் மின்னஞ்சல் (<strong>${email}</strong>) மற்றும் கைபேசி எண்ணிற்கு விரைவில் பதிலளிப்பர்.</div>
+        </div>
+      `;
+    }
+
+    form.reset();
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = origBtnContent;
+    }
+  }
+}
+
+// Auto bind submit listener
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function() {
+    const fbForm = document.getElementById('guidanceFeedbackForm');
+    if (fbForm) {
+      fbForm.removeEventListener('submit', handleEnquiryFormSubmit);
+      fbForm.addEventListener('submit', handleEnquiryFormSubmit);
+    }
+  });
+} else {
+  const fbForm = document.getElementById('guidanceFeedbackForm');
+  if (fbForm) {
+    fbForm.removeEventListener('submit', handleEnquiryFormSubmit);
+    fbForm.addEventListener('submit', handleEnquiryFormSubmit);
+  }
+}
 </script>
 </body>
 </html>
