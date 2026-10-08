@@ -3855,6 +3855,516 @@
     transform: translateY(-50%) !important;
   }
 }
+
+    /* ========================================================
+       PERFECT FLUID MONITOR WIDTH MATCHING 01_00_ENTRANCE_MAIN.HTML
+       (மானிட்டரின் முழு அகல விரிவாக்கம்)
+       ======================================================== */
+    html, body {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+      background-color: var(--bg-main) !important;
+    }
+
+    .portal-layout-wrapper {
+      display: flex !important;
+      flex-direction: row !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-height: 100vh !important;
+      position: relative !important;
+      align-items: stretch !important;
+      box-sizing: border-box !important;
+    }
+
+    .portal-main-content {
+      margin-left: 295px !important;
+      width: calc(100% - 295px) !important;
+      min-height: 100vh !important;
+      padding: 12px 18px 40px !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+    }
+
+    @media (max-width: 1024px) {
+      .portal-main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 8px 12px 30px !important;
+      }
+    }
+
+    .portal-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .content-card {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 20px 0 !important;
+      padding: 22px 24px !important;
+      box-sizing: border-box !important;
+    }
+
+    .header-banner-wrap,
+    .portal-top-frame,
+    .breadcrumb-bar,
+    .sticky-portal-nav,
+    .kural-box,
+    .creator-card,
+    .portal-footer,
+    .table-container,
+    .bottom-page-nav-bar {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    /* ========================================================
+       TOP FRAME VISIBLE BACKGROUND ANIMATION & LIGHT SWEEP
+       ======================================================== */
+    .portal-top-frame {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 16px 0 !important;
+      border: 2px solid #38bdf8 !important;
+      border-radius: 14px !important;
+      box-sizing: border-box !important;
+      position: sticky !important;
+      top: 8px !important;
+      left: auto !important;
+      right: auto !important;
+      z-index: 999 !important;
+      overflow: hidden !important;
+      background: linear-gradient(130deg, #071739 0%, #0b3266 25%, #0f4c82 50%, #0b3266 75%, #071739 100%) !important;
+      background-size: 250% 250% !important;
+      animation: topFrameBgShift 8s ease infinite, topFrameBorderGlow 4s ease-in-out infinite alternate !important;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5), 0 0 16px rgba(56, 189, 248, 0.35) !important;
+      padding: 13px 20px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 14px !important;
+      position: relative !important;
+    }
+
+    @keyframes topFrameBgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes topFrameBorderGlow {
+      0% {
+        border-color: #38bdf8 !important;
+        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5), 0 0 14px rgba(56, 189, 248, 0.35) !important;
+      }
+      50% {
+        border-color: #fbbf24 !important;
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6), 0 0 24px rgba(251, 191, 36, 0.5) !important;
+      }
+      100% {
+        border-color: #38bdf8 !important;
+        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5), 0 0 14px rgba(56, 189, 248, 0.35) !important;
+      }
+    }
+
+    .portal-top-frame::after {
+      content: '' !important;
+      position: absolute !important;
+      top: -25% !important;
+      left: -80% !important;
+      width: 50% !important;
+      height: 150% !important;
+      background: linear-gradient(90deg, transparent 0%, rgba(56, 189, 248, 0.28) 45%, rgba(254, 240, 138, 0.22) 55%, transparent 100%) !important;
+      transform: skewX(-25deg) !important;
+      animation: topFrameLightSweep 5s ease-in-out infinite !important;
+      pointer-events: none !important;
+    }
+
+    @keyframes topFrameLightSweep {
+      0% { left: -80%; opacity: 0; }
+      15% { opacity: 0.95; }
+      55% { left: 140%; opacity: 0.95; }
+      100% { left: 140%; opacity: 0; }
+    }
+
+    @keyframes goldTitleShimmer {
+      0% {
+        filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 8px rgba(250, 204, 21, 0.3));
+        transform: scale(1);
+      }
+      50% {
+        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 22px rgba(250, 204, 21, 0.8));
+        transform: scale(1.015);
+      }
+      100% {
+        filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 8px rgba(250, 204, 21, 0.3));
+        transform: scale(1);
+      }
+    }
+
+    .banner-title-tamil {
+      animation: goldTitleShimmer 3.5s ease-in-out infinite alternate !important;
+      display: inline-block !important;
+    }
+
+    /* ========================================================
+       TOP BREADCRUMB BUTTONS BAR
+       ======================================================== */
+    .breadcrumb-bar {
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 8px 10px !important;
+      padding: 10px 16px !important;
+      margin-bottom: 16px !important;
+      background: linear-gradient(135deg, #071328 0%, #0d1e3d 100%) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.35) !important;
+      border-radius: 12px !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+    }
+
+    .nav-menu-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      padding: 6px 14px !important;
+      border-radius: 8px !important;
+      font-size: 0.84rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+      border: 1.2px solid transparent !important;
+      cursor: pointer !important;
+    }
+
+    .nav-menu-btn.btn-guidance-home {
+      background: rgba(2, 132, 199, 0.25) !important;
+      color: #7dd3fc !important;
+      border-color: rgba(56, 189, 248, 0.4) !important;
+    }
+    .nav-menu-btn.btn-guidance-home:hover {
+      background: rgba(2, 132, 199, 0.45) !important;
+      color: #ffffff !important;
+      border-color: #38bdf8 !important;
+    }
+
+    .nav-menu-btn.btn-direct-home {
+      background: rgba(234, 88, 12, 0.22) !important;
+      color: #fdba74 !important;
+      border-color: rgba(251, 146, 60, 0.4) !important;
+    }
+    .nav-menu-btn.btn-direct-home:hover {
+      background: rgba(234, 88, 12, 0.4) !important;
+      color: #ffffff !important;
+      border-color: #fb923c !important;
+    }
+
+    .nav-menu-btn.btn-current-page {
+      background: linear-gradient(135deg, #15803d 0%, #166534 100%) !important;
+      color: #fef08a !important;
+      border-color: #86efac !important;
+      cursor: default !important;
+      box-shadow: 0 0 10px rgba(74, 222, 128, 0.3) !important;
+    }
+
+    .nav-menu-separator {
+      color: #64748b !important;
+      font-size: 0.72rem !important;
+    }
+
+    /* ========================================================
+       DEDICATED AGRICULTURE & FISHERIES HERO THEME
+       (வேளாண்மை & மீன்வள அறிவியல் பிரத்யேக பசுமை-நீல வண்ணத்திட்டம்)
+       ======================================================== */
+    .header-banner-wrap.agri-fish-wrap,
+    .header-banner-wrap {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 16px 0 !important;
+      padding: 3.5px !important;
+      border-radius: 16px !important;
+      background: linear-gradient(120deg, #16a34a, #0284c7, #eab308, #10b981, #0369a1, #16a34a) !important;
+      background-size: 300% 300% !important;
+      animation: agriFishBorderFlow 10s ease infinite !important;
+      box-shadow: 0 8px 30px rgba(22, 101, 52, 0.45) !important;
+      box-sizing: border-box !important;
+      position: relative !important;
+      z-index: 10 !important;
+    }
+
+    @keyframes agriFishBorderFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .header-banner.agri-fish-theme,
+    .header-banner {
+      border-radius: 13.5px !important;
+      padding: 26px 28px 24px 28px !important;
+      text-align: center !important;
+      color: #ffffff !important;
+      position: relative !important;
+      overflow: hidden !important;
+      background-color: #02261c !important;
+      background-image: 
+        radial-gradient(ellipse at 15% 15%, rgba(22, 163, 74, 0.8) 0%, transparent 60%),
+        radial-gradient(ellipse at 85% 85%, rgba(2, 132, 199, 0.75) 0%, transparent 60%),
+        radial-gradient(circle at 50% 35%, rgba(234, 179, 8, 0.4) 0%, transparent 55%),
+        linear-gradient(135deg, #022017 0%, #064e3b 35%, #0c4a6e 75%, #022017 100%) !important;
+      background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100% !important;
+      animation: agriFishAuroraWave 12s ease-in-out infinite alternate !important;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 8px 30px rgba(2, 38, 28, 0.55) !important;
+    }
+
+    @keyframes agriFishAuroraWave {
+      0% {
+        background-position: 0% 20%, 100% 80%, 50% 50%, 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%, 0% 50%, 80% 20%, 100% 50%;
+      }
+      100% {
+        background-position: 20% 80%, 80% 20%, 30% 70%, 0% 50%;
+      }
+    }
+
+    .header-banner.agri-fish-theme::before,
+    .header-banner::before {
+      content: '' !important;
+      position: absolute !important;
+      top: -50% !important;
+      left: -25% !important;
+      width: 150% !important;
+      height: 200% !important;
+      background: radial-gradient(circle at center, rgba(74, 222, 128, 0.3) 0%, rgba(56, 189, 248, 0.22) 40%, transparent 70%) !important;
+      filter: blur(40px) !important;
+      animation: agriFishGlowFloat 10s ease-in-out infinite alternate !important;
+      pointer-events: none !important;
+    }
+
+    @keyframes agriFishGlowFloat {
+      0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+      50% { transform: translate(4%, -4%) scale(1.08); opacity: 0.85; }
+      100% { transform: translate(-3%, 3%) scale(0.95); opacity: 0.5; }
+    }
+
+    /* ========================================================
+       CLEAN, CRISP TABLE BORDERS & GRIDLINES
+       ======================================================== */
+    table.styled-table,
+    table.custom-table {
+      border-collapse: collapse !important;
+      width: 100% !important;
+      border: 1.5px solid #94a3b8 !important;
+      background: #ffffff !important;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05) !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
+    }
+
+    table.styled-table thead th,
+    table.custom-table thead th {
+      border: 1.5px solid #334155 !important;
+      background: linear-gradient(135deg, #064e3b 0%, #0f766e 100%) !important;
+      color: #ffffff !important;
+      padding: 12px 14px !important;
+      font-weight: 800 !important;
+      text-align: left !important;
+      vertical-align: middle !important;
+    }
+
+    table.styled-table tbody td,
+    table.custom-table tbody td {
+      border: 1.2px solid #cbd5e1 !important;
+      padding: 10px 14px !important;
+      font-size: 0.88rem !important;
+      color: #1e293b !important;
+      vertical-align: middle !important;
+      line-height: 1.5 !important;
+    }
+
+    table.styled-table tbody tr:nth-child(even),
+    table.custom-table tbody tr:nth-child(even) {
+      background-color: #f8fafc !important;
+    }
+
+    table.styled-table tbody tr:hover,
+    table.custom-table tbody tr:hover {
+      background-color: #ecfdf5 !important;
+    }
+
+    /* ========================================================
+       EYE-CATCHING ANIMATED BOTTOM NAVIGATION BUTTONS
+       ======================================================== */
+    .bottom-page-nav-bar {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 14px 18px !important;
+      margin: 26px 0 28px 0 !important;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .page-nav-btn.btn-prev-animated {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 10px 20px !important;
+      border-radius: 10px !important;
+      font-family: inherit !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 2px solid #059669 !important;
+      background: linear-gradient(135deg, #047857 0%, #065f46 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(4, 120, 87, 0.35) !important;
+      animation: pulseNudgeLeft 3s ease-in-out infinite !important;
+      transition: all 0.25s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .page-nav-btn.btn-prev-animated:hover {
+      background: linear-gradient(135deg, #065f46 0%, #022c22 100%) !important;
+      border-color: #fde047 !important;
+      transform: translateX(-5px) scale(1.04) !important;
+      box-shadow: 0 6px 20px rgba(4, 120, 87, 0.55), 0 0 15px rgba(52, 211, 153, 0.5) !important;
+    }
+
+    .page-nav-btn.btn-next-animated {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 10px 22px !important;
+      border-radius: 10px !important;
+      font-family: inherit !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 2px solid #3b82f6 !important;
+      background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.4) !important;
+      animation: pulseNudgeRight 3s ease-in-out infinite !important;
+      transition: all 0.25s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .page-nav-btn.btn-next-animated:hover {
+      background: linear-gradient(135deg, #1e40af 0%, #172554 100%) !important;
+      border-color: #fde047 !important;
+      transform: translateX(5px) scale(1.04) !important;
+      box-shadow: 0 6px 20px rgba(29, 78, 216, 0.6), 0 0 16px rgba(59, 130, 246, 0.5) !important;
+    }
+
+    @keyframes pulseNudgeLeft {
+      0%, 100% {
+        transform: translateX(0);
+        box-shadow: 0 4px 14px rgba(4, 120, 87, 0.35);
+      }
+      50% {
+        transform: translateX(-4px);
+        box-shadow: 0 4px 18px rgba(52, 211, 153, 0.55), 0 0 12px rgba(52, 211, 153, 0.4);
+      }
+    }
+
+    @keyframes pulseNudgeRight {
+      0%, 100% {
+        transform: translateX(0);
+        box-shadow: 0 4px 14px rgba(29, 78, 216, 0.4);
+      }
+      50% {
+        transform: translateX(4px);
+        box-shadow: 0 4px 20px rgba(59, 130, 246, 0.6), 0 0 14px rgba(59, 130, 246, 0.45);
+      }
+    }
+
+    @media (max-width: 680px) {
+      .bottom-page-nav-bar {
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+      .page-nav-btn.btn-prev-animated,
+      .page-nav-btn.btn-next-animated {
+        width: 100% !important;
+        justify-content: center !important;
+      }
+    }
+
+    /* ========================================================
+       FLOATING BACK-TO-TOP BUTTON
+       ======================================================== */
+    .floating-back-to-top {
+      position: fixed !important;
+      bottom: 24px !important;
+      right: 24px !important;
+      z-index: 999999 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      padding: 10px 18px !important;
+      background: linear-gradient(135deg, #15803d 0%, #166534 100%) !important;
+      color: #ffffff !important;
+      border: 2px solid #86efac !important;
+      border-radius: 999px !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 0 14px rgba(74, 222, 128, 0.45) !important;
+      font-family: 'Noto Sans Tamil', 'Inter', sans-serif !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      cursor: pointer !important;
+      outline: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: translateY(16px) !important;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      backdrop-filter: blur(8px) !important;
+    }
+
+    .floating-back-to-top.visible {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: translateY(0) !important;
+    }
+
+    .floating-back-to-top:hover {
+      transform: translateY(-3px) scale(1.05) !important;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.55), 0 0 18px rgba(74, 222, 128, 0.65) !important;
+      background: linear-gradient(135deg, #166534 0%, #052e16 100%) !important;
+      border-color: #fde047 !important;
+      color: #ffffff !important;
+    }
+
+    @media (max-width: 680px) {
+      .floating-back-to-top {
+        bottom: 18px !important;
+        right: 16px !important;
+        padding: 8px 14px !important;
+        font-size: 0.80rem !important;
+        gap: 6px !important;
+      }
+    }
+
 </style>
 
 <style id="robust-layout-override">
@@ -4516,53 +5026,41 @@
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
 </a>
 </header>
-<div class="district-badge">
-<span>🌾</span> முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்
-      </div>
-<div class="kural-box">
-<div class="kural-header">
-<span class="kural-icon">📜</span>
-<span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-<span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
-</div>
-<div class="kural-verse-text">
-    “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
-    திண்ணியர் ஆகப் பெறின்.”
-  </div>
-<div class="kural-meaning">
-<strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
-  </div>
-</div><div class="creator-card">
-<div class="creator-typewriter-wrapper">
-<span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
-</div>
-<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
-<span class="phone-icon">📱</span>
-<span class="phone-text">9626471035</span>
+<nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
+<a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+<span class="btn-icon">🧭</span>
+<span class="btn-text">வழிகாட்டி முகப்பு</span>
 </a>
-</div><footer class="portal-footer">
-<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
-    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
+<span class="nav-menu-separator">▶</span>
+<a class="nav-menu-btn btn-direct-home" href="02_00_direct_admissions.html" title="நேரடிச் சேர்க்கைப் படிப்புகள்">
+<span class="btn-icon">🎯</span>
+<span class="btn-text">02 / நேரடிச் சேர்க்கை</span>
+</a>
+<span class="nav-menu-separator">▶</span>
+<span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்: வேளாண்மை &amp; மீன்வளம்">
+<span class="btn-icon">🌾</span>
+<span class="btn-text">வேளாண்மை &amp; மீன்வளம்</span>
+</span>
+</nav>
+
+<div class="header-banner-wrap agri-fish-wrap">
+<header class="header-banner agri-fish-theme">
+<h1 class="banner-main-title" style="font-size: clamp(1.4rem, 2.0vw, 1.85rem) !important; font-weight: 900 !important; margin: 0 0 6px 0 !important; color: #ffffff !important; letter-spacing: -0.3px !important; text-shadow: 0 2px 8px rgba(0,0,0,0.8) !important;">
+வேளாண்மை, தோட்டக்கலை, வனவியல் &amp; <span class="hero-highlight-badge" style="color: #fde047 !important; text-shadow: 0 0 16px rgba(250, 204, 21, 0.6) !important;">மீன்வள அறிவியல் சேர்க்கை வழிகாட்டி</span>
+</h1>
+<p class="banner-desc" style="font-size: clamp(0.84rem, 0.96vw, 0.92rem) !important; color: #ecfdf5 !important; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75) !important; font-weight: 500 !important; max-width: 100% !important; margin: 0 auto 8px auto !important; line-height: 1.55 !important;">
++2 பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் தமிழ்நாடு வேளாண்மைப் பல்கலைக்கழகம் (TNAU) மற்றும் தமிழ்நாடு டாக்டர் ஜெ. ஜெயலலிதா மீன்வளப் பல்கலைக்கழகம் (TNJFU) நடத்தும் அரசு ஒற்றைச் சாளர நேரடிச் சேர்க்கை, தமிழ் வழி வேளாண்மை (Tamil Medium Agri) மற்றும் வேலைவாய்ப்புகளுக்கான முழு அடைவு.
 </p>
-<p style="font-size: 0.85rem; color: #64748b;">
-    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
-  </p>
-</footer></div>
-<!-- Portal Hero Header Banner -->
-<header class="portal-header">
-<div class="header-badge-row">
-<span class="header-tag primary">பிரிவு 03</span>
-<span class="header-tag secondary">TNAU கோவை &amp; TNJFU நாகப்பட்டினம்</span>
-<span class="header-tag secondary">இளநிலைப் பட்டங்கள் (Degree) • டிப்ளமோ (Diploma) • சான்றிதழ்</span>
-<span class="header-tag secondary">நுழைவுத் தேர்வு இல்லாத நேரடிச் சேர்க்கை (Non-NEET)</span>
+<div class="banner-features-ribbon agri-fish-ribbon" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; flex-wrap: wrap !important; gap: 8px 14px !important; padding: 6px 18px !important; background: rgba(3, 44, 33, 0.88) !important; border: 1.2px solid rgba(52, 211, 153, 0.55) !important; border-radius: 10px !important;">
+<div class="ribbon-item" style="color: #fde047; font-weight: 800; font-size: 0.78rem;">🌾 TNAU கோவை &amp; உறுப்புக் கல்லூரிகள்</div>
+<div class="ribbon-item" style="color: #38bdf8; font-weight: 800; font-size: 0.78rem;">🐟 TNJFU நாகப்பட்டினம் மீன்வளம்</div>
+<div class="ribbon-item" style="color: #4ade80; font-weight: 800; font-size: 0.78rem;">🎯 7.5% அரசுப் பள்ளி முன்னுரிமை</div>
+<div class="ribbon-item" style="color: #fbcfe8; font-weight: 800; font-size: 0.78rem;">📜 2 ஆண்டு அரசு அக்ரி டிப்ளமோ</div>
+<div class="ribbon-item" style="color: #fed7aa; font-weight: 800; font-size: 0.78rem;">⚡ 200 அக்ரி கட்-ஆஃப் நேரடிக் கணக்கீடு</div>
 </div>
-<h1 class="portal-title">
-        வேளாண்மை, தோட்டக்கலை, வனவியல் &amp; <span class="accent-gold">மீன்வள அறிவியல்</span> சேர்க்கை வழிகாட்டி
-      </h1>
-<p class="portal-subtitle">
-        +2 பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் தமிழ்நாடு வேளாண்மைப் பல்கலைக்கழகம் (TNAU) மற்றும் தமிழ்நாடு டாக்டர் ஜெ. ஜெயலலிதா மீன்வளப் பல்கலைக்கழகம் (TNJFU) நடத்தும் அரசு ஒற்றைச் சாளர நேரடிச் சேர்க்கை மற்றும் வேலைவாய்ப்புகளுக்கான முழுமையான வழிகாட்டி.
-      </p>
-<!-- Quick Navigation Jump Pills -->
+</header>
+</div>
+
 <div class="quick-nav-pills">
 <a class="quick-nav-pill" href="#calculator">🧮 அக்ரி கட்-ஆஃப் கால்குலேட்டர்</a>
 <a class="quick-nav-pill" href="#overview">📌 சேர்க்கை அமைப்புகள் &amp; தகுதிகள்</a>
@@ -4576,7 +5074,7 @@
 <a class="quick-nav-pill" href="#choice-filling">💡 சாய்ஸ் ஃபில்லிங் உத்திகள்</a>
 <a class="quick-nav-pill" href="#colleges">🏆 அரசு வேளாண்மை &amp; மீன்வளக் கல்லூரிகள்</a>
 </div>
-</header>
+
 <!-- Key Metrics Highlight Bar -->
 <div class="highlights-grid">
 <div class="highlight-box">
@@ -5477,6 +5975,56 @@
 </div>
 </section>
 <!-- Footer -->
+
+<!-- Bottom Chapter Navigation Bar: Animated Edge-to-Edge Navigation -->
+<nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar">
+  <a class="page-nav-btn btn-prev-animated" href="02_02_veterinary_allied_health.html" title="02_02 கால்நடை &amp; துணை மருத்துவம்">
+    <span class="nav-btn-icon">◀</span>
+    <span class="nav-btn-text">02_02 கால்நடை &amp; துணை மருத்துவம்</span>
+  </a>
+  <a class="page-nav-btn btn-next-animated" href="02_04_law_admissions.html" title="02_04 சட்டப் படிப்புகள்">
+    <span class="nav-btn-text">02_04 சட்டப் படிப்புகள்</span>
+    <span class="nav-btn-icon">▶</span>
+  </a>
+</nav>
+
+<!-- திருக்குறள் பகுதி — வேளாண்மை மாண்பு (அதிகாரம்: உழவு) -->
+<div class="kural-box">
+<div class="kural-header">
+<span class="kural-icon">📜</span>
+<span class="kural-title">திருக்குறள் — அதிகாரம்: உழவு (குறள்: 1031)</span>
+<span class="kural-sparkle">🌾 வேளாண்மை மாண்பு &amp; உழவுச் சிறப்பு</span>
+</div>
+<div class="kural-verse-text">
+    “சுழன்றும்ஏர்ப் பின்னது உலகம் அதனால்<br/>
+    உழந்தும் உழவே தலை.”
+  </div>
+<div class="kural-meaning">
+<strong>குறள் விளக்கம்:</strong> உலகம் பல தொழில்களைச் செய்து சுழன்று இயங்கினாலும், முடிவில் ஏர்த்தொழிலின் பின்னேதான் நிற்க வேண்டும்; அதனால் எத்துணை வருந்திப் பாடுபட்டாலும் உழவுத் தொழிலே உலகிற்கு முதன்மையானது.
+  </div>
+</div>
+
+<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
+<div class="creator-card">
+<div class="creator-typewriter-wrapper">
+<span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
+</div>
+<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
+<span class="phone-icon">📱</span>
+<span class="phone-text">9626471035</span>
+</a>
+</div>
+
+<!-- Official District Portal Footer -->
+<footer class="portal-footer">
+<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
+    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
+</p>
+<p style="font-size: 0.85rem; color: #64748b;">
+    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் உதவி மையம்: <a href="mailto:ceosvg@gmail.com" style="color: #0284c7; text-decoration: none;">ceosvg@gmail.com</a>
+</p>
+</footer>
+
 </main></div>
 <!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
 
@@ -5791,6 +6339,36 @@ document.addEventListener('DOMContentLoaded', function() {
     initCreatorObserver();
   }
 })();
+
+// Guaranteed Floating Back to Top Button Controller ("மேலே செல்க")
+(function() {
+  function setupBackToTop() {
+    const btt = document.getElementById('floatingBackToTop');
+    if (!btt) return;
+    function checkScroll() {
+      const scrollPos = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      if (scrollPos > 100) {
+        btt.classList.add('visible');
+      } else {
+        btt.classList.remove('visible');
+      }
+    }
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    window.addEventListener('resize', checkScroll, { passive: true });
+    checkScroll();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupBackToTop);
+  } else {
+    setupBackToTop();
+  }
+  setTimeout(setupBackToTop, 400);
+})();
+
 </script>
+<button aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" id="floatingBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="பக்கத்தின் மேலே செல்க" type="button">
+<span class="floating-btn-arrow">▲</span>
+<span class="floating-btn-text">மேலே செல்க</span>
+</button>
 </body>
 </html>
