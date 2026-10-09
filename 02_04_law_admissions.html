@@ -4197,6 +4197,81 @@
       }
     }
 
+
+    /* ========================================================
+       CREATOR CARD CENTER-ALIGNED & CONTINUOUS BUTTON
+       ======================================================== */
+    .creator-card {
+      background: #ffffff !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      padding: 12px 20px !important;
+      margin: 20px 0 16px 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06) !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      flex-wrap: wrap !important;
+      gap: 12px !important;
+      box-sizing: border-box !important;
+    }
+
+    .creator-typewriter-wrapper {
+      display: inline-flex !important;
+      align-items: center !important;
+      font-size: 0.92rem !important;
+      font-weight: 700 !important;
+      color: #1e293b !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: center !important;
+    }
+
+    .footer-phone-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+      color: #ffffff !important;
+      padding: 4px 12px !important;
+      border-radius: 999px !important;
+      font-size: 0.84rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.35) !important;
+      transition: all 0.2s ease !important;
+      margin: 0 !important;
+      vertical-align: middle !important;
+    }
+
+    .footer-phone-pill:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+      transform: translateY(-1px) scale(1.03) !important;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.45) !important;
+      color: #ffffff !important;
+    }
+
+    @media (max-width: 640px) {
+      .calc-inputs-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      .calc-res-divider {
+        display: none !important;
+      }
+      .calc-horizontal-result-bar {
+        flex-direction: column !important;
+        gap: 6px !important;
+      }
+      .creator-card {
+        flex-direction: column !important;
+        gap: 8px !important;
+      }
+    }
+
 </style>
 
 <style id="robust-layout-override">
@@ -4927,15 +5002,16 @@
 <div style="display: flex !important; align-items: center !important; justify-content: space-between !important; flex-wrap: wrap !important; gap: 8px !important; margin-bottom: 10px !important; border-bottom: 1px solid rgba(255,255,255,0.12) !important; padding-bottom: 6px !important;">
   <div style="display: flex !important; align-items: center !important; gap: 8px !important;">
     <span style="font-size: 1.15rem !important;">🧮</span>
-    <h3 style="color: #93c5fd !important; font-size: 1.05rem !important; font-weight: 800 !important; margin: 0 !important;">
+    <h3 style="color: #93c5fd !important; font-size: 1.02rem !important; font-weight: 800 !important; margin: 0 !important;">
       சட்டப் படிப்பு கட்-ஆஃப் &amp; சதவீதக் கணக்கீட்டுக் கருவி (Law Cut-off Calculator)
     </h3>
   </div>
   <div style="font-size: 0.74rem !important; font-weight: 700 !important; color: #bae6fd !important; background: rgba(56,189,248,0.15) !important; border: 1px solid #38bdf8 !important; padding: 2px 8px !important; border-radius: 6px !important;">
-    சூத்திரம்: [முக்கிய 4 பாடங்கள் கூடுதல் ÷ 400] × 100 = கட்-ஆஃப் % (மொழிப்பாடம் தவிர்த்து)
+    சூத்திரம்: [முக்கிய 4 பாடங்கள் கூடுதல் ÷ 400] × 100 = கட்-ஆஃப் %
   </div>
 </div>
-<div class="calc-inputs-grid" style="display: grid !important; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) 250px !important; gap: 10px !important; align-items: center !important;">
+<!-- 4 Subject Inputs in a 4-Column Row -->
+<div class="calc-inputs-grid" style="display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 10px !important; margin-bottom: 10px !important;">
   <div style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
     <label for="sub1" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">📚 பாடம் 1 (/100):</label>
     <input id="sub1" max="100" min="0" oninput="calculateLawCutoff()" placeholder="0 - 100" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="85"/>
@@ -4952,11 +5028,15 @@
     <label for="sub4" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">📚 பாடம் 4 (/100):</label>
     <input id="sub4" max="100" min="0" oninput="calculateLawCutoff()" placeholder="0 - 100" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="90"/>
   </div>
-  <div style="background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%) !important; border: 2px solid #fbbf24 !important; border-radius: 10px !important; padding: 6px 12px !important; text-align: center !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;">
-    <div style="font-size: 0.72rem !important; font-weight: 800 !important; color: #fef08a !important;">உங்கள் கட்-ஆஃப் %:</div>
-    <div id="cutoffValue" style="font-size: 1.85rem !important; font-weight: 900 !important; color: #ffffff !important; text-shadow: 0 2px 8px rgba(251, 191, 36, 0.5) !important; line-height: 1.1 !important; margin: 1px 0 !important;">86.25 %</div>
-    <span id="cutoffStatus" style="background: rgba(251, 191, 36, 0.2) !important; border: 1px solid #f59e0b !important; color: #fef08a !important; font-size: 0.70rem !important; font-weight: 800 !important; padding: 1px 8px !important; border-radius: 999px !important; white-space: normal !important; text-align: center !important; max-width: 100% !important;">👍 அரசு கல்லூரிகளில் B.A. LL.B. வாய்ப்பு!</span>
-  </div>
+</div>
+<!-- Slim Horizontal Result Bar (சிறிய கிடைமட்டப்பெட்டி) -->
+<div class="calc-horizontal-result-bar" style="background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%) !important; border: 1.5px solid #fbbf24 !important; border-radius: 8px !important; padding: 6px 16px !important; display: flex !important; align-items: center !important; justify-content: center !important; flex-wrap: wrap !important; gap: 8px 16px !important; box-shadow: 0 2px 8px rgba(0,0,0,0.25) !important;">
+  <span style="font-size: 0.84rem !important; font-weight: 800 !important; color: #fef08a !important; display: inline-flex !important; align-items: center !important; gap: 6px !important;">
+    <span>🎯 உங்கள் கட்-ஆஃப் %:</span>
+    <span id="cutoffValue" style="font-size: 1.35rem !important; font-weight: 900 !important; color: #ffffff !important; text-shadow: 0 1px 6px rgba(251, 191, 36, 0.5) !important; line-height: 1 !important;">86.25 %</span>
+  </span>
+  <span class="calc-res-divider" style="color: rgba(255,255,255,0.3) !important; font-size: 0.9rem !important;">|</span>
+  <span id="cutoffStatus" style="background: rgba(251, 191, 36, 0.2) !important; border: 1px solid #f59e0b !important; color: #fef08a !important; font-size: 0.74rem !important; font-weight: 800 !important; padding: 2px 10px !important; border-radius: 999px !important; text-align: center !important;">👍 அரசு கல்லூரிகளில் B.A. LL.B. வாய்ப்பு!</span>
 </div>
 </section>
 <!-- SECTION 1: OVERVIEW & ELIGIBILITY -->
@@ -5415,9 +5495,6 @@
   </a>
 </nav>
 
-<div class="district-badge">
-<span>🏛️ தமிழ்நாடு பள்ளிக் கல்வித்துறை | சிவகங்கை மாவட்டம்</span>
-</div>
 <div class="kural-box">
 <div class="kural-header">
 <span class="kural-icon">📜</span>
