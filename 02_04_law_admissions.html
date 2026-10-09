@@ -4088,6 +4088,115 @@
       }
     }
 
+
+    /* ========================================================
+       FULL SCREEN WIDTH LAYOUT (02_02 VETERINARY & ALLIED HEALTH MODEL)
+       (முழு அகலத்திரை வடிவமைப்பு)
+       ======================================================== */
+    html, body {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+      background-color: var(--bg-main, #f8fafc) !important;
+    }
+
+    .portal-layout-wrapper {
+      display: flex !important;
+      flex-direction: row !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-height: 100vh !important;
+      position: relative !important;
+      align-items: stretch !important;
+      box-sizing: border-box !important;
+    }
+
+    .desktop-left-sidebar {
+      width: 295px !important;
+      min-width: 295px !important;
+      max-width: 295px !important;
+      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+      border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      height: 100vh !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex-shrink: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .portal-main-content {
+      margin-left: 295px !important;
+      width: calc(100% - 295px) !important;
+      min-height: 100vh !important;
+      padding: 12px clamp(12px, 1.8vw, 36px) 40px !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+    }
+
+    .portal-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .info-card,
+    .content-card,
+    section,
+    .portal-header,
+    .quick-nav-marquee-container,
+    .bottom-page-nav-bar,
+    .kural-box,
+    .creator-card,
+    .portal-footer,
+    .table-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .info-card {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 20px 0 !important;
+      padding: 22px 24px !important;
+      box-sizing: border-box !important;
+    }
+
+    @media (max-width: 1024px) {
+      .desktop-left-sidebar {
+        position: fixed !important;
+        left: -320px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 295px !important;
+        height: 100vh !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 9999 !important;
+        box-shadow: 6px 0 35px rgba(0, 0, 0, 0.85);
+      }
+      .desktop-left-sidebar.sidebar-open {
+        left: 0 !important;
+      }
+      .portal-main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 8px 12px 30px !important;
+      }
+    }
+
 </style>
 
 <style id="robust-layout-override">
@@ -5320,7 +5429,7 @@
     தேர்ந்துசெய் வஃதே முறை.”
   </div>
 <div class="kural-meaning">
-<strong>மு. வரதராசனார் உரை:</strong> எதையும் தீர ஆராய்ந்து, ஒரு பக்கமும் சாயாமல் நடுவுநிலைமை நின்று, எவரிடத்திலும் குற்றமும் தகுதியும் அறிந்து முறைப்படி நீதி வழங்குவதே சிறந்த சட்டத்தின் ஆட்சி (செங்கோன்மை) ஆகும்.
+<strong>விளக்கவுரை:</strong> எதையும் தீர ஆராய்ந்து, ஒரு பக்கமும் சாயாமல் நடுவுநிலைமை நின்று, எவரிடத்திலும் குற்றமும் தகுதியும் அறிந்து முறைப்படி நீதி வழங்குவதே சிறந்த சட்டத்தின் ஆட்சி (செங்கோன்மை) ஆகும்.
   </div>
 </div>
 <div class="creator-card">
