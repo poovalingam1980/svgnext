@@ -4388,13 +4388,15 @@
     .marquee-label {
       display: inline-flex !important;
       align-items: center !important;
-      gap: 6px !important;
-      padding: 6px 12px !important;
+      justify-content: center !important;
+      min-width: 36px !important;
+      height: 32px !important;
+      padding: 4px 8px !important;
       background: linear-gradient(135deg, #15803d 0%, #166534 100%) !important;
       color: #fef08a !important;
       border: 1.2px solid #86efac !important;
       border-radius: 8px !important;
-      font-size: 0.82rem !important;
+      font-size: 1.05rem !important;
       font-weight: 800 !important;
       white-space: nowrap !important;
       flex-shrink: 0 !important;
@@ -4732,6 +4734,64 @@
 
     .header-badge-row {
       display: none !important;
+    }
+
+
+    /* ========================================================
+       ULTRA-BRIGHT & CRYSTAL-CLEAR PORTAL BANNER (NO GOLD LETTERS)
+       (பார்த்த உடனே பளிச்சென்று தெரியும் நவீன எழில்மிகு பேனர் வடிவம்)
+       ======================================================== */
+    .portal-header {
+      background: linear-gradient(135deg, #091a2f 0%, #0c2b42 45%, #053b30 80%, #06231c 100%) !important;
+      border-radius: 20px !important;
+      padding: 34px 28px 28px !important;
+      color: #ffffff !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(2, 132, 199, 0.22) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.42) !important;
+      border-bottom: 4px solid #0284c7 !important;
+      margin-bottom: 20px !important;
+      text-align: center !important;
+      position: relative !important;
+      overflow: hidden !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .portal-title,
+    .portal-title.unified-gold-title {
+      font-size: clamp(1.45rem, 2.2vw, 2.15rem) !important;
+      font-weight: 900 !important;
+      line-height: 1.35 !important;
+      margin: 0 0 12px 0 !important;
+      text-align: center !important;
+      letter-spacing: -0.2px !important;
+      color: #ffffff !important;
+      background: none !important;
+      -webkit-text-fill-color: initial !important;
+      -webkit-background-clip: initial !important;
+      filter: none !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85) !important;
+    }
+
+    .portal-title .highlight-cyan {
+      color: #38bdf8 !important;
+      font-weight: 900 !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 16px rgba(56, 189, 248, 0.6) !important;
+      display: inline-block !important;
+      background: none !important;
+      -webkit-text-fill-color: initial !important;
+      -webkit-background-clip: initial !important;
+      filter: none !important;
+    }
+
+    .portal-subtitle {
+      font-size: 1.02rem !important;
+      color: #f1f5f9 !important;
+      max-width: 1050px !important;
+      margin: 0 auto !important;
+      line-height: 1.65 !important;
+      font-weight: 500 !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
     }
 
 </style>
@@ -5413,8 +5473,8 @@
 </nav>
 
 <header class="portal-header">
-<h1 class="portal-title unified-gold-title">
-    வேளாண்மை, தோட்டக்கலை, வனவியல் &amp; மீன்வள அறிவியல் சேர்க்கை வழிகாட்டி
+<h1 class="portal-title">
+    வேளாண்மை, தோட்டக்கலை, வனவியல் &amp; மீன்வள அறிவியல் <span class="highlight-cyan">சேர்க்கை வழிகாட்டி</span>
 </h1>
 <p class="portal-subtitle">
     +2 பொதுத்தேர்வு மதிப்பெண்கள் அடிப்படையில் தமிழ்நாடு வேளாண்மைப் பல்கலைக்கழகம் (TNAU) மற்றும் தமிழ்நாடு டாக்டர் ஜெ. ஜெயலலிதா மீன்வளப் பல்கலைக்கழகம் (TNJFU) நடத்தும் அரசு ஒற்றைச் சாளர நேரடிச் சேர்க்கை, இளநிலைப் பட்டங்கள் (B.Sc / B.Tech / B.F.Sc), டிப்ளமோ படிப்புகள் மற்றும் வேலைவாய்ப்புகளுக்கான முழுமையான வழிகாட்டி.
@@ -5423,9 +5483,8 @@
 
 <!-- Quick Navigation Marquee Bar (ஓடும் விரைவு வழிசெலுத்தல் பட்டை) -->
 <div class="quick-nav-marquee-container" aria-label="விரைவு வழிசெலுத்தல் ஓடும் பட்டை">
-  <div class="marquee-label">
+  <div class="marquee-label" title="விரைவு வழிகாட்டல்" aria-label="விரைவு வழிகாட்டல்">
     <span class="marquee-label-icon">⚡</span>
-    <span class="marquee-label-text">விரைவு வழிகாட்டல்:</span>
   </div>
   <div class="marquee-content-viewport">
     <div class="marquee-content-track">
