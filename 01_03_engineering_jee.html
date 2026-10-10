@@ -4812,6 +4812,93 @@
       background-color: #f8fafc !important;
     }
 
+
+    /* Dynamic Typing Effect (Animated Flash Bar Under Header Banner) */
+    .typing-banner-wrap {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      text-align: center !important;
+      margin: 14px auto 16px auto !important;
+    }
+
+    .typing-container {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      background: linear-gradient(135deg, rgba(239, 246, 255, 0.95) 0%, rgba(245, 243, 255, 0.92) 100%) !important;
+      border: 1.5px solid #93c5fd !important;
+      padding: 8px 22px !important;
+      border-radius: 999px !important;
+      margin-bottom: 4px !important;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.15), inset 0 1px 2px #ffffff !important;
+      min-height: 44px !important;
+      max-width: 96% !important;
+      box-sizing: border-box !important;
+    }
+
+    .typing-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 0.84rem !important;
+      font-weight: 800 !important;
+      color: #1d4ed8 !important;
+      background: rgba(255, 255, 255, 0.95) !important;
+      border: 1px solid rgba(147, 197, 253, 0.8) !important;
+      padding: 4px 12px !important;
+      border-radius: 999px !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+      flex-shrink: 0 !important;
+    }
+
+    .typing-text {
+      font-size: 1.00rem !important;
+      font-weight: 700 !important;
+      color: #1e3a8a !important;
+      letter-spacing: 0.2px !important;
+    }
+
+    .typing-cursor {
+      display: inline-block !important;
+      font-weight: 800 !important;
+      font-size: 1.15rem !important;
+      color: #f59e0b !important;
+      margin-left: 2px !important;
+      animation: blinkCursor 0.8s infinite !important;
+    }
+
+    @keyframes blinkCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .sparkle-icon {
+      display: inline-block !important;
+      animation: sparkleSpin 3s linear infinite !important;
+    }
+
+    @keyframes sparkleSpin {
+      0%, 100% { transform: scale(1) rotate(0deg); }
+      50% { transform: scale(1.15) rotate(15deg); }
+    }
+
+    @media (max-width: 768px) {
+      .typing-container {
+        padding: 6px 14px !important;
+        min-height: 40px !important;
+        border-radius: 12px !important;
+      }
+      .typing-badge {
+        font-size: 0.74rem !important;
+        padding: 2px 8px !important;
+      }
+      .typing-text {
+        font-size: 0.86rem !important;
+      }
+    }
+
 </style>
 <style id="distinct-theme-css">
 /* ============================================================
@@ -5779,6 +5866,16 @@
   <span class="ribbon-dot">•</span>
   <span>PM-Vidyalaxmi 100% கல்விக் கடன்</span>
 </div>
+
+<!-- துடிப்பான தட்டச்சு வழிகாட்டல் வாசகம் (Dynamic Typing Effect - Animated Flash Bar) -->
+<div class="typing-banner-wrap" style="text-align: center; margin: 14px auto 16px auto;">
+  <div class="typing-container">
+    <span class="typing-badge"><span class="sparkle-icon">✨</span> வழிகாட்டல்:</span>
+    <span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
+  </div>
+</div>
+
+
 
 <!-- Quick Navigation Marquee Bar (ஓடும் விரைவு வழிசெலுத்தல் பட்டை) -->
 <div class="quick-nav-marquee-container" aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை">
@@ -7137,6 +7234,58 @@ document.addEventListener('DOMContentLoaded', function() {
       document.addEventListener('DOMContentLoaded', setupBackToTop);
     } else {
       setupBackToTop();
+    }
+  })();
+
+
+
+  // Dynamic Typing Effect (Under Header Banner)
+  (function() {
+    const engTypingPhrases = [
+      "JEE Main 2026: 32 என்ஐடிகள் (NITs), 26 ஐஐஐடிகள் (IIITs) மற்றும் மத்திய அரசின் தலைசிறந்த தொழில்நுட்பக் கல்வி நிறுவனங்கள் சேர்க்கை!",
+      "திருச்சி என்ஐடி (NIT Trichy) -ல் தமிழக பள்ளி மாணவர்களுக்கு 50% மாநில இடஒதுக்கீடு (Home State Quota)!",
+      "JEE Advanced 2026 வாயிலாக நாட்டின் முன்னணி 23 ஐஐடிகளில் (IIT Madras உட்பட) B.Tech நேரடிச் சேர்க்கை!",
+      "ஆண்டுக்கு 2 அமர்வுகளில் தேர்வு (Session 1 & Session 2) — உங்கள் சிறந்த NTA ஸ்கோர் மட்டுமே கணக்கில் கொள்ளப்படும்!",
+      "மத்திய அரசின் JoSAA & CSAB ஒற்றைச் சாளர இணையவழிக் கலந்தாய்வு முழுமையான வழிகாட்டல்!",
+      "PM-Vidyalaxmi திட்டத்தின் கீழ் 100% பாதுகாப்பற்ற கல்விக் கடன் (Collateral-free Education Loan) & கட்டணச் சலுகைகள்!"
+    ];
+
+    const typingTarget = document.getElementById('typingText');
+    let phraseIdx = 0;
+    let charIdx = 0;
+    let isDeleting = false;
+    let typingSpeed = 80;
+
+    function typeEffect() {
+      if (!typingTarget) return;
+      const currentPhrase = engTypingPhrases[phraseIdx];
+
+      if (isDeleting) {
+        typingTarget.textContent = currentPhrase.substring(0, charIdx - 1);
+        charIdx--;
+        typingSpeed = 35;
+      } else {
+        typingTarget.textContent = currentPhrase.substring(0, charIdx + 1);
+        charIdx++;
+        typingSpeed = 75;
+      }
+
+      if (!isDeleting && charIdx === currentPhrase.length) {
+        typingSpeed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIdx === 0) {
+        isDeleting = false;
+        phraseIdx = (phraseIdx + 1) % engTypingPhrases.length;
+        typingSpeed = 450;
+      }
+
+      setTimeout(typeEffect, typingSpeed);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', typeEffect);
+    } else {
+      typeEffect();
     }
   })();
 
