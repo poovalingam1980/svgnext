@@ -2326,6 +2326,279 @@
       display: inline-block !important;
     }
 
+
+
+    /* ========================================================
+       RECTANGULAR MENU BUTTON & TOP-TO-BOTTOM ROLLING FRAME
+       ======================================================== */
+    .portal-main-menu-wrapper {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 16px 0 !important;
+      position: relative !important;
+      z-index: 900 !important;
+      box-sizing: border-box !important;
+    }
+
+    .portal-menu-bar-row {
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      flex-wrap: wrap !important;
+    }
+
+    /* கனச்செவ்வக வடிவ மெனு பொத்தான் (Rectangular Menu Button) */
+    .portal-menu-rect-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      color: #ffffff !important;
+      border: 1.8px solid #d4af37 !important;
+      border-radius: 8px !important; /* Crisp rectangular shape */
+      padding: 10px 18px !important;
+      font-size: 0.90rem !important;
+      font-weight: 800 !important;
+      cursor: pointer !important;
+      text-decoration: none !important;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25) !important;
+      transition: all 0.25s ease !important;
+      flex-shrink: 0 !important;
+      font-family: inherit !important;
+    }
+
+    .portal-menu-rect-btn:hover {
+      background: linear-gradient(135deg, #0f2b66 0%, #1e40af 100%) !important;
+      border-color: #fde047 !important;
+      color: #fde047 !important;
+      transform: translateY(-1px) !important;
+      box-shadow: 0 6px 18px rgba(212, 175, 55, 0.35) !important;
+    }
+
+    .menu-btn-icon {
+      font-size: 1.15rem !important;
+      color: #fde047 !important;
+    }
+
+    .menu-btn-arrow {
+      font-size: 0.75rem !important;
+      color: #38bdf8 !important;
+      transition: transform 0.25s ease !important;
+    }
+
+    /* மேலிருந்து கீழாக சுழலும் சட்டம் (Vertical Rolling Marquee Frame from Top to Bottom) */
+    .vertical-rolling-frame {
+      flex: 1 1 320px !important;
+      height: 44px !important;
+      min-height: 44px !important;
+      max-height: 44px !important;
+      background: linear-gradient(135deg, #070e1e 0%, #0d1e38 50%, #070e1e 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
+      display: flex !important;
+      align-items: center !important;
+      position: relative !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+      box-sizing: border-box !important;
+    }
+
+    .vertical-rolling-label {
+      flex-shrink: 0 !important;
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
+      color: #ffffff !important;
+      font-size: 0.82rem !important;
+      font-weight: 800 !important;
+      height: 100% !important;
+      padding: 0 12px !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+      z-index: 2 !important;
+    }
+
+    .vertical-rolling-viewport {
+      flex-grow: 1 !important;
+      height: 100% !important;
+      overflow: hidden !important;
+      position: relative !important;
+    }
+
+    .vertical-rolling-track {
+      display: flex !important;
+      flex-direction: column !important;
+      position: absolute !important;
+      width: 100% !important;
+      top: 0 !important;
+      left: 0 !important;
+      animation: rollTopToBottom 20s linear infinite !important;
+    }
+
+    .vertical-rolling-frame:hover .vertical-rolling-track {
+      animation-play-state: paused !important;
+    }
+
+    @keyframes rollTopToBottom {
+      0% {
+        transform: translateY(-50%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
+    }
+
+    .rolling-item {
+      height: 44px !important;
+      line-height: 44px !important;
+      display: flex !important;
+      align-items: center !important;
+      padding: 0 14px !important;
+      font-size: 0.86rem !important;
+      font-weight: 700 !important;
+      color: #f8fafc !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      text-overflow: ellipsis !important;
+      overflow: hidden !important;
+      transition: color 0.2s ease !important;
+    }
+
+    .rolling-item:hover {
+      color: #fde047 !important;
+      text-shadow: 0 0 8px rgba(253, 224, 71, 0.6) !important;
+    }
+
+    /* மேலிருந்து கீழாக சுழன்று விரியும் கீழிறங்கு மெனு சட்டம் (Roll-Down Menu Frame from Top to Bottom) */
+    .portal-menu-dropdown-frame {
+      display: none !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      background: linear-gradient(135deg, #070e1e 0%, #0d1e38 50%, #070e1e 100%) !important;
+      border: 2px solid #d4af37 !important;
+      border-radius: 12px !important;
+      margin-top: 10px !important;
+      padding: 16px 20px !important;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6) !important;
+      box-sizing: border-box !important;
+      position: relative !important;
+      z-index: 950 !important;
+    }
+
+    .portal-menu-dropdown-frame.open {
+      display: block !important;
+      animation: rollDownFromTop 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+    }
+
+    @keyframes rollDownFromTop {
+      0% {
+        opacity: 0;
+        transform: translateY(-16px) scaleY(0.9);
+        transform-origin: top center;
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+        transform-origin: top center;
+      }
+    }
+
+    .menu-dropdown-header {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
+      padding-bottom: 10px !important;
+      margin-bottom: 14px !important;
+    }
+
+    .dropdown-header-title {
+      font-size: 0.94rem !important;
+      font-weight: 800 !important;
+      color: #fde047 !important;
+    }
+
+    .dropdown-close-btn {
+      background: rgba(255, 255, 255, 0.1) !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.25) !important;
+      border-radius: 6px !important;
+      padding: 4px 10px !important;
+      font-size: 0.85rem !important;
+      font-weight: 800 !important;
+      cursor: pointer !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .dropdown-close-btn:hover {
+      background: #ef4444 !important;
+      border-color: #ef4444 !important;
+      color: #ffffff !important;
+    }
+
+    .menu-cards-grid {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+      gap: 12px !important;
+    }
+
+    .menu-nav-card {
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      padding: 10px 14px !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      border: 1.2px solid rgba(255, 255, 255, 0.12) !important;
+      border-radius: 8px !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .menu-nav-card:hover {
+      background: rgba(212, 175, 55, 0.15) !important;
+      border-color: #d4af37 !important;
+      transform: translateY(-2px) !important;
+    }
+
+    .menu-nav-card .card-icon {
+      font-size: 1.4rem !important;
+      flex-shrink: 0 !important;
+    }
+
+    .menu-nav-card .card-content {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 2px !important;
+    }
+
+    .menu-nav-card .card-title {
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      color: #ffffff !important;
+    }
+
+    .menu-nav-card .card-desc {
+      font-size: 0.74rem !important;
+      color: #94a3b8 !important;
+      font-weight: 500 !important;
+    }
+
+    @media (max-width: 640px) {
+      .portal-menu-bar-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+      }
+      .portal-menu-rect-btn {
+        width: 100% !important;
+        justify-content: center !important;
+      }
+      .vertical-rolling-frame {
+        width: 100% !important;
+      }
+    }
+
 </style>
 <style id="robust-layout-override">
 /* ========================================================
@@ -2919,6 +3192,19 @@
     }
 
 </style>
+
+<style>
+  .card-tag {
+    cursor: pointer !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+    display: inline-block !important;
+  }
+  .card-tag:hover {
+    transform: translateY(-2px) scale(1.05) !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
+  }
+</style>
 </head>
 <body>
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
@@ -3028,72 +3314,164 @@
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
 </a>
 </header>
-
-<!-- Top Breadcrumb Navigation Bar -->
-<nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
-  <a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
-    <span class="btn-icon">🧭</span>
-    <span class="btn-text">வழிகாட்டி முகப்பு</span>
-  </a>
-  <span class="nav-menu-separator">▶</span>
-  <span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
-    <span class="btn-icon">🎯</span>
-    <span class="btn-text">01 / தேசிய &amp; மாநில நுழைவுத்தேர்வுகள்</span>
-  </span>
-</nav>
-
-
+<!-- ========================================================
+     உயர்கல்வி வழிகாட்டி — கனச்செவ்வக வடிவ முதன்மை மெனு & மேலிருந்து கீழாக சுழலும் சட்டம்
+     ======================================================== -->
+<div class="portal-main-menu-wrapper" id="portalMainMenuWrapper">
+<div class="portal-menu-bar-row">
+<!-- கனச்செவ்வக வடிவ மெனு பொத்தான் (Rectangular Menu Button) -->
+<button aria-expanded="false" class="portal-menu-rect-btn" id="portalMenuToggleBtn" onclick="togglePortalMainMenu(event)" title="உயர்கல்வி வழிகாட்டி முதன்மை மெனுவை திறக்க / மூட">
+<span class="menu-btn-icon">☰</span>
+<span class="menu-btn-text">வழிகாட்டி முதன்மை மெனு</span>
+<span class="menu-btn-arrow" id="portalMenuArrow">▼</span>
+</button>
+<!-- மேலிருந்து கீழாக சுழலும் சட்டம் (Vertical Rolling Marquee Frame from Top to Bottom) -->
+<div class="vertical-rolling-frame" title="வழிகாட்டிப் பிரிவுகள் சுழற்சி">
+<div class="vertical-rolling-label">
+<span class="rolling-label-icon">⚡</span>
+<span class="rolling-label-text">பிரிவுகள்:</span>
+</div>
+<div class="vertical-rolling-viewport">
+<div class="vertical-rolling-track">
+<a class="rolling-item" href="index.html">🏛️ வழிகாட்டி முதன்மை முகப்பு (Home)</a>
+<a class="rolling-item" href="01_00_entrance_main.html">🎯 01 / தேசிய &amp; மாநில நுழைவுத்தேர்வுகள்</a>
+<a class="rolling-item" href="02_00_direct_admissions.html">📈 02 / நேரடிச் சேர்க்கைப் படிப்புகள் (+2 Direct)</a>
+<a class="rolling-item" href="03_institutes.html">🏛️ 03 / கல்லூரிகள் அடைவு (Institutes Directory)</a>
+<a class="rolling-item" href="04_govt_exams.html">🏆 04 / அரசு &amp; சீருடைப் பணி போட்டித் தேர்வுகள்</a>
+<a class="rolling-item" href="05_direct_careers.html">💼 05 / திறன்சார் பணிகள் &amp; வேலைவாய்ப்புகள்</a>
+<a class="rolling-item" href="06_student_support.html">🤝 06 / மாணவர் நலத்திட்டங்கள் &amp; உதவி மையம்</a>
+<a class="rolling-item" href="07_resources_external_portals.html">📚 07 / கல்வி வளங்கள் &amp; மாதிரித் தேர்வுகள்</a>
+<!-- Duplicate for infinite seamless vertical loop -->
+<a aria-hidden="true" class="rolling-item" href="index.html">🏛️ வழிகாட்டி முதன்மை முகப்பு (Home)</a>
+<a aria-hidden="true" class="rolling-item" href="01_00_entrance_main.html">🎯 01 / தேசிய &amp; மாநில நுழைவுத்தேர்வுகள்</a>
+<a aria-hidden="true" class="rolling-item" href="02_00_direct_admissions.html">📈 02 / நேரடிச் சேர்க்கைப் படிப்புகள் (+2 Direct)</a>
+<a aria-hidden="true" class="rolling-item" href="03_institutes.html">🏛️ 03 / கல்லூரிகள் அடைவு (Institutes Directory)</a>
+<a aria-hidden="true" class="rolling-item" href="04_govt_exams.html">🏆 04 / அரசு &amp; சீருடைப் பணி போட்டித் தேர்வுகள்</a>
+<a aria-hidden="true" class="rolling-item" href="05_direct_careers.html">💼 05 / திறன்சார் பணிகள் &amp; வேலைவாய்ப்புகள்</a>
+<a aria-hidden="true" class="rolling-item" href="06_student_support.html">🤝 06 / மாணவர் நலத்திட்டங்கள் &amp; உதவி மையம்</a>
+<a aria-hidden="true" class="rolling-item" href="07_resources_external_portals.html">📚 07 / கல்வி வளங்கள் &amp; மாதிரித் தேர்வுகள்</a>
+</div>
+</div>
+</div>
+</div>
+<!-- மேலிருந்து கீழாக சுழன்று விரியும் கீழிறங்கு மெனு சட்டம் (Roll-Down Menu Frame from Top to Bottom) -->
+<div class="portal-menu-dropdown-frame" id="portalMenuDropdownFrame">
+<div class="menu-dropdown-inner">
+<div class="menu-dropdown-header">
+<span class="dropdown-header-title">🧭 உயர்கல்வி வழிகாட்டி — முதன்மைப் பிரிவுகள் அடைவு (Portal Navigation)</span>
+<button class="dropdown-close-btn" onclick="togglePortalMainMenu(event)" title="மூடுக">✕</button>
+</div>
+<div class="menu-cards-grid">
+<a class="menu-nav-card" href="index.html">
+<span class="card-icon">🏛️</span>
+<div class="card-content">
+<span class="card-title">முதன்மை முகப்பு</span>
+<span class="card-desc">வழிகாட்டி முகப்பு &amp; 7 நுழைவு வாயில்கள்</span>
+</div>
+</a>
+<a class="menu-nav-card" href="01_00_entrance_main.html">
+<span class="card-icon">🎯</span>
+<div class="card-content">
+<span class="card-title">01 / நுழைவுத்தேர்வுகள்</span>
+<span class="card-desc">NEET, JEE, CUET, CLAT, NATA, NDA...</span>
+</div>
+</a>
+<a class="menu-nav-card" href="02_00_direct_admissions.html">
+<span class="card-icon">📈</span>
+<div class="card-content">
+<span class="card-title">02 / நேரடிச் சேர்க்கை</span>
+<span class="card-desc">பொறியியல், மருத்துவம், வேளாண்மை, கலை &amp; அறிவியல்</span>
+</div>
+</a>
+<a class="menu-nav-card" href="03_institutes.html">
+<span class="card-icon">🏛️</span>
+<div class="card-content">
+<span class="card-title">03 / கல்லூரிகள் அடைவு</span>
+<span class="card-desc">அரசு &amp; அரசு உதவிபெறும் கல்லூரிகள் பட்டியல்</span>
+</div>
+</a>
+<a class="menu-nav-card" href="04_govt_exams.html">
+<span class="card-icon">🏆</span>
+<div class="card-content">
+<span class="card-title">04 / அரசுத் தேர்வுகள்</span>
+<span class="card-desc">TNPSC, TNUSRB, SSC, UPSC, ரயில்வே, வங்கி</span>
+</div>
+</a>
+<a class="menu-nav-card" href="05_direct_careers.html">
+<span class="card-icon">💼</span>
+<div class="card-content">
+<span class="card-title">05 / திறன் &amp; பணிகள்</span>
+<span class="card-desc">நேரடி வேலை, நான் முதல்வன், தொழிற்பழகுநர்</span>
+</div>
+</a>
+<a class="menu-nav-card" href="06_student_support.html">
+<span class="card-icon">🤝</span>
+<div class="card-content">
+<span class="card-title">06 / மாணவர் நலன்</span>
+<span class="card-desc">7.5% சலுகை, உதவி எண் 14417, வழிகாட்டல் மையம்</span>
+</div>
+</a>
+<a class="menu-nav-card" href="07_resources_external_portals.html">
+<span class="card-icon">📚</span>
+<div class="card-content">
+<span class="card-title">07 / கல்வி வளங்கள்</span>
+<span class="card-desc">அரசு அதிகாரப்பூர்வ போர்ட்டல்கள் &amp; மாதிரித் தேர்வு</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
 <!-- HERO BANNER (MATCHING IMAGE 2 EXACTLY) -->
 <header class="portal-header">
-  <h1 class="portal-title">
+<h1 class="portal-title">
     தேசிய &amp; மாநில <span class="highlight-cyan">நுழைவுத்தேர்வுகள் வழிகாட்டி (Entrance Exams)</span>
-  </h1>
-  <p class="portal-subtitle">
+</h1>
+<p class="portal-subtitle">
     மருத்துவம், பொறியியல், அறிவியல் ஆராய்ச்சி, மத்தியப் பல்கலைக்கழகங்கள், சட்டம், வடிவமைப்பு, மேலாண்மை, பாதுகாப்புப் படைகள் மற்றும் வணிக விமானி உள்ளிட்ட 12 முதன்மை நுழைவுத்தேர்வுகளின் முழுமையான வழிகாட்டி கையேடு.
   </p>
 </header>
-
 <!-- Quick Navigation Marquee Bar (ஓடும் விரைவு வழிசெலுத்தல் பட்டை) -->
-<div class="quick-nav-marquee-container" aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை">
-  <div class="marquee-static-label" title="விரைவு வழிகாட்டல்">
-    <span class="pulse-icon">⚡</span>
-  </div>
-  <div class="marquee-scroll-track">
-    <div class="marquee-content-loop">
-      <a href="01_01_master_schedule.html" class="marquee-pill-btn">📅 01 / மாஸ்டர் காலண்டர்</a>
-      <a href="01_02_medical_neet.html" class="marquee-pill-btn">🩺 02 / நீட் &amp; மருத்துவம்</a>
-      <a href="01_03_engineering_jee.html" class="marquee-pill-btn">⚙️ 03 / ஜேஇஇ &amp; பொறியியல்</a>
-      <a href="01_04_science_research.html" class="marquee-pill-btn">🔬 04 / அறிவியல் ஆராய்ச்சி</a>
-      <a href="01_05_central_universities_cuet.html" class="marquee-pill-btn">🏛️ 05 / CUET மத்திய பல்கலை</a>
-      <a href="01_06_law_clat.html" class="marquee-pill-btn">⚖️ 06 / CLAT சட்டப் படிப்புகள்</a>
-      <a href="01_07_design_architecture.html" class="marquee-pill-btn">📐 07 / NID &amp; NATA வடிவமைப்பு</a>
-      <a href="01_08_management_ipmat.html" class="marquee-pill-btn">📊 08 / IPMAT மேலாண்மை</a>
-      <a href="01_09_hotel_management.html" class="marquee-pill-btn">🏨 09 / ஹோட்டல் மேலாண்மை</a>
-      <a href="01_10_marine_merchant_navy.html" class="marquee-pill-btn">⚓ 10 / IMU-CET கப்பல் துறை</a>
-      <a href="01_11_defence_forces.html" class="marquee-pill-btn">🎖️ 11 / NDA முப்படைகள்</a>
-      <a href="01_12_commercial_pilot.html" class="marquee-pill-btn">✈️ 12 / DGCA வணிக விமானி</a>
-    </div>
-    <!-- Duplicate for infinite seamless scroll -->
-    <div class="marquee-content-loop" aria-hidden="true">
-      <a href="01_01_master_schedule.html" class="marquee-pill-btn">📅 01 / மாஸ்டர் காலண்டர்</a>
-      <a href="01_02_medical_neet.html" class="marquee-pill-btn">🩺 02 / நீட் &amp; மருத்துவம்</a>
-      <a href="01_03_engineering_jee.html" class="marquee-pill-btn">⚙️ 03 / ஜேஇஇ &amp; பொறியியல்</a>
-      <a href="01_04_science_research.html" class="marquee-pill-btn">🔬 04 / அறிவியல் ஆராய்ச்சி</a>
-      <a href="01_05_central_universities_cuet.html" class="marquee-pill-btn">🏛️ 05 / CUET மத்திய பல்கலை</a>
-      <a href="01_06_law_clat.html" class="marquee-pill-btn">⚖️ 06 / CLAT சட்டப் படிப்புகள்</a>
-      <a href="01_07_design_architecture.html" class="marquee-pill-btn">📐 07 / NID &amp; NATA வடிவமைப்பு</a>
-      <a href="01_08_management_ipmat.html" class="marquee-pill-btn">📊 08 / IPMAT மேலாண்மை</a>
-      <a href="01_09_hotel_management.html" class="marquee-pill-btn">🏨 09 / ஹோட்டல் மேலாண்மை</a>
-      <a href="01_10_marine_merchant_navy.html" class="marquee-pill-btn">⚓ 10 / IMU-CET கப்பல் துறை</a>
-      <a href="01_11_defence_forces.html" class="marquee-pill-btn">🎖️ 11 / NDA முப்படைகள்</a>
-      <a href="01_12_commercial_pilot.html" class="marquee-pill-btn">✈️ 12 / DGCA வணிக விமானி</a>
-    </div>
-  </div>
+<div aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை" class="quick-nav-marquee-container">
+<div class="marquee-static-label" title="விரைவு வழிகாட்டல்">
+<span class="pulse-icon">⚡</span>
+</div>
+<div class="marquee-scroll-track">
+<div class="marquee-content-loop">
+<a class="marquee-pill-btn" href="01_01_master_schedule.html">📅 01 / மாஸ்டர் காலண்டர்</a>
+<a class="marquee-pill-btn" href="01_02_medical_neet.html">🩺 02 / நீட் &amp; மருத்துவம்</a>
+<a class="marquee-pill-btn" href="01_03_engineering_jee.html">⚙️ 03 / ஜேஇஇ &amp; பொறியியல்</a>
+<a class="marquee-pill-btn" href="01_04_science_research.html">🔬 04 / அறிவியல் ஆராய்ச்சி</a>
+<a class="marquee-pill-btn" href="01_05_central_universities_cuet.html">🏛️ 05 / CUET மத்திய பல்கலை</a>
+<a class="marquee-pill-btn" href="01_06_law_clat.html">⚖️ 06 / CLAT சட்டப் படிப்புகள்</a>
+<a class="marquee-pill-btn" href="01_07_design_architecture.html">📐 07 / NID &amp; NATA வடிவமைப்பு</a>
+<a class="marquee-pill-btn" href="01_08_management_ipmat.html">📊 08 / IPMAT மேலாண்மை</a>
+<a class="marquee-pill-btn" href="01_09_hotel_management.html">🏨 09 / ஹோட்டல் மேலாண்மை</a>
+<a class="marquee-pill-btn" href="01_10_marine_merchant_navy.html">⚓ 10 / IMU-CET கப்பல் துறை</a>
+<a class="marquee-pill-btn" href="01_11_defence_forces.html">🎖️ 11 / NDA முப்படைகள்</a>
+<a class="marquee-pill-btn" href="01_12_commercial_pilot.html">✈️ 12 / DGCA வணிக விமானி</a>
+</div>
+<!-- Duplicate for infinite seamless scroll -->
+<div aria-hidden="true" class="marquee-content-loop">
+<a class="marquee-pill-btn" href="01_01_master_schedule.html">📅 01 / மாஸ்டர் காலண்டர்</a>
+<a class="marquee-pill-btn" href="01_02_medical_neet.html">🩺 02 / நீட் &amp; மருத்துவம்</a>
+<a class="marquee-pill-btn" href="01_03_engineering_jee.html">⚙️ 03 / ஜேஇஇ &amp; பொறியியல்</a>
+<a class="marquee-pill-btn" href="01_04_science_research.html">🔬 04 / அறிவியல் ஆராய்ச்சி</a>
+<a class="marquee-pill-btn" href="01_05_central_universities_cuet.html">🏛️ 05 / CUET மத்திய பல்கலை</a>
+<a class="marquee-pill-btn" href="01_06_law_clat.html">⚖️ 06 / CLAT சட்டப் படிப்புகள்</a>
+<a class="marquee-pill-btn" href="01_07_design_architecture.html">📐 07 / NID &amp; NATA வடிவமைப்பு</a>
+<a class="marquee-pill-btn" href="01_08_management_ipmat.html">📊 08 / IPMAT மேலாண்மை</a>
+<a class="marquee-pill-btn" href="01_09_hotel_management.html">🏨 09 / ஹோட்டல் மேலாண்மை</a>
+<a class="marquee-pill-btn" href="01_10_marine_merchant_navy.html">⚓ 10 / IMU-CET கப்பல் துறை</a>
+<a class="marquee-pill-btn" href="01_11_defence_forces.html">🎖️ 11 / NDA முப்படைகள்</a>
+<a class="marquee-pill-btn" href="01_12_commercial_pilot.html">✈️ 12 / DGCA வணிக விமானி</a>
+</div>
+</div>
 </div>
 <!-- 12 ENTRANCE EXAM CARDS GRID (EXACT ARCHITECTURE OF IMAGE 2) -->
 <div class="cards-grid">
 <!-- 01. ENTRANCE EXAMS MASTER SCHEDULE & CALENDAR -->
-<div class="course-card border-schedule" style="border-top: 5px solid #0284c7; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 25%);">
+<div class="course-card border-schedule" onclick="window.location.href='01_01_master_schedule.html';" style="border-top: 5px solid #0284c7; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 25%);; cursor: pointer">
 <div>
 <div class="card-badge badge-schedule" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">01 / MASTER SCHEDULE</div>
 <div class="card-header">
@@ -3107,11 +3485,11 @@
               இந்தியாவில் +2 முடித்தவர்களுக்கான அனைத்து தேசிய &amp; மாநில நுழைவுத்தேர்வுகள், விண்ணப்ப மாதங்கள், தேர்வு நடைபெறும் கால அட்டவணை மற்றும் அதிகாரப்பூர்வ இணையதளங்களின் முழுமையான தொகுப்பு.
             </p>
 <div class="card-tags">
-<span class="card-tag tag-schedule" style="background: #e0f2fe; color: #0369a1;">தேர்வு காலண்டர்</span>
-<span class="card-tag tag-schedule" style="background: #fef3c7; color: #b45309;">விண்ணப்ப மாதங்கள்</span>
-<span class="card-tag tag-schedule" style="background: #dcfce7; color: #15803d;">தேர்வு மாதங்கள்</span>
-<span class="card-tag tag-schedule" style="background: #f3e8ff; color: #7e22ce;">அதிகாரப்பூர்வ தளங்கள்</span>
-<span class="card-tag tag-schedule" style="background: #ffe4e6; color: #be123c;">அனைத்து தேர்வுகள்</span>
+<a class="card-tag tag-schedule" href="01_01_master_schedule.html" style="text-decoration: none; cursor: pointer;">தேர்வு காலண்டர்</a>
+<a class="card-tag tag-schedule" href="01_01_master_schedule.html" style="text-decoration: none; cursor: pointer;">விண்ணப்ப மாதங்கள்</a>
+<a class="card-tag tag-schedule" href="01_01_master_schedule.html" style="text-decoration: none; cursor: pointer;">தேர்வு மாதங்கள்</a>
+<a class="card-tag tag-schedule" href="01_01_master_schedule.html" style="text-decoration: none; cursor: pointer;">அதிகாரப்பூர்வ தளங்கள்</a>
+<a class="card-tag tag-schedule" href="01_01_master_schedule.html" style="text-decoration: none; cursor: pointer;">அனைத்து தேர்வுகள்</a>
 </div>
 </div>
 <a class="btn-details btn-schedule" href="01_01_master_schedule.html" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff; text-decoration: none; display: flex; align-items: center; justify-content: space-between;">
@@ -3120,7 +3498,7 @@
 </a>
 </div>
 <!-- 02. MEDICAL (NEET UG) -->
-<div class="course-card border-med">
+<div class="course-card border-med" onclick="window.location.href='01_02_medical_neet_ug.html';" style=" cursor: pointer">
 <div>
 <div class="card-badge badge-med">02 / MEDICAL</div>
 <div class="card-header">
@@ -3134,11 +3512,11 @@
               அகில இந்திய மற்றும் மாநில அரசு மருத்துவக் கல்லூரிகள், AIIMS, JIPMER மற்றும் அரசு மருத்துவக் கல்வி நிறுவனங்களுக்கான தேசிய தகுதி மற்றும் நுழைவுத்தேர்வு.
             </p>
 <div class="card-tags">
-<span class="card-tag tag-med">NEET UG</span>
-<span class="card-tag tag-med">MBBS / BDS</span>
-<span class="card-tag tag-med">AYUSH</span>
-<span class="card-tag tag-med">AIIMS / JIPMER</span>
-<span class="card-tag tag-med">7.5% அரசுப் பள்ளி</span>
+<a class="card-tag tag-med" href="01_02_medical_neet_ug.html" style="text-decoration: none; cursor: pointer;">NEET UG</a>
+<a class="card-tag tag-med" href="01_02_medical_neet_ug.html" style="text-decoration: none; cursor: pointer;">MBBS / BDS</a>
+<a class="card-tag tag-med" href="01_02_medical_neet_ug.html" style="text-decoration: none; cursor: pointer;">AYUSH</a>
+<a class="card-tag tag-med" href="01_02_medical_neet_ug.html" style="text-decoration: none; cursor: pointer;">AIIMS / JIPMER</a>
+<a class="card-tag tag-med" href="01_02_medical_neet_ug.html" style="text-decoration: none; cursor: pointer;">7.5% அரசுப் பள்ளி</a>
 </div>
 </div>
 <a class="btn-details btn-med" href="01_02_medical_neet_ug.html">
@@ -3147,7 +3525,7 @@
 </a>
 </div>
 <!-- 03. ENGINEERING (JEE MAIN / ADV) -->
-<div class="course-card border-eng">
+<div class="course-card border-eng" onclick="window.location.href='01_03_engineering_jee.html';" style=" cursor: pointer">
 <div>
 <div class="card-badge badge-eng">03 / ENGINEERING</div>
 <div class="card-header">
@@ -3161,11 +3539,11 @@
               ஐ.ஐ.டி (IITs), என்.ஐ.டி (NITs), ஐ.ஐ.ஐ.டி (IIITs) மற்றும் மத்திய அரசு நிதியுதவி பெறும் தலைசிறந்த தொழில்நுட்பக் கல்வி நிறுவனங்கள் சேர்க்கை.
             </p>
 <div class="card-tags">
-<span class="card-tag tag-eng">JEE Main</span>
-<span class="card-tag tag-eng">JEE Advanced</span>
-<span class="card-tag tag-eng">IIT / NIT / IIIT</span>
-<span class="card-tag tag-eng">B.E / B.Tech</span>
-<span class="card-tag tag-eng">JoSAA கலந்தாய்வு</span>
+<a class="card-tag tag-eng" href="01_03_engineering_jee.html" style="text-decoration: none; cursor: pointer;">JEE Main</a>
+<a class="card-tag tag-eng" href="01_03_engineering_jee.html" style="text-decoration: none; cursor: pointer;">JEE Advanced</a>
+<a class="card-tag tag-eng" href="01_03_engineering_jee.html" style="text-decoration: none; cursor: pointer;">IIT / NIT / IIIT</a>
+<a class="card-tag tag-eng" href="01_03_engineering_jee.html" style="text-decoration: none; cursor: pointer;">B.E / B.Tech</a>
+<a class="card-tag tag-eng" href="01_03_engineering_jee.html" style="text-decoration: none; cursor: pointer;">JoSAA கலந்தாய்வு</a>
 </div>
 </div>
 <a class="btn-details btn-eng" href="01_03_engineering_jee.html">
@@ -3174,7 +3552,7 @@
 </a>
 </div>
 <!-- 03. SCIENCE & RESEARCH (IISER / NISER) -->
-<div class="course-card border-sci">
+<div class="course-card border-sci" onclick="window.location.href='01_04_science_research_iiser.html';" style=" cursor: pointer">
 <div>
 <div class="card-badge badge-sci">04 / SCIENCE &amp; RESEARCH</div>
 <div class="card-header">
@@ -3188,11 +3566,11 @@
               அறிவியல் ஆய்வாளர்கள் மற்றும் விஞ்ஞானிகளை உருவாக்கும் 7 ஐசர் (IISER) நிறுவனங்கள், நைசர் (NISER), ஐ.ஐ.எஸ்சி (IISc) மற்றும் ஐ.ஐ.டி மெட்ராஸ் BS படிப்புகள்.
             </p>
 <div class="card-tags">
-<span class="card-tag tag-sci">IAT தேர்வு</span>
-<span class="card-tag tag-sci">NEST தேர்வு</span>
-<span class="card-tag tag-sci">IISc பெங்களூரு</span>
-<span class="card-tag tag-sci">IISER 7 நிறுவனங்கள்</span>
-<span class="card-tag tag-sci">B.S. Engineering</span>
+<a class="card-tag tag-sci" href="01_04_science_research_iiser.html" style="text-decoration: none; cursor: pointer;">IAT தேர்வு</a>
+<a class="card-tag tag-sci" href="01_04_science_research_iiser.html" style="text-decoration: none; cursor: pointer;">NEST தேர்வு</a>
+<a class="card-tag tag-sci" href="01_04_science_research_iiser.html" style="text-decoration: none; cursor: pointer;">IISc பெங்களூரு</a>
+<a class="card-tag tag-sci" href="01_04_science_research_iiser.html" style="text-decoration: none; cursor: pointer;">IISER 7 நிறுவனங்கள்</a>
+<a class="card-tag tag-sci" href="01_04_science_research_iiser.html" style="text-decoration: none; cursor: pointer;">B.S. Engineering</a>
 </div>
 </div>
 <a class="btn-details btn-sci" href="01_04_science_research_iiser.html">
@@ -3201,7 +3579,7 @@
 </a>
 </div>
 <!-- 05. CENTRAL UNIVERSITIES (CUET UG) -->
-<div class="course-card border-central">
+<div class="course-card border-central" onclick="window.location.href='01_05_central_universities_cuet.html';" style=" cursor: pointer">
 <div>
 <div class="card-badge badge-central">05 / CENTRAL UNIVERSITIES</div>
 <div class="card-header">
@@ -3215,11 +3593,11 @@
               டெல்லி பல்கலைக்கழகம் (DU), JNU, BHU, பாண்டிச்சேரி மற்றும் தமிழ்நாடு மத்தியப் பல்கலைக்கழகங்களில் கலை, அறிவியல், வணிகவியல் பட்டப்படிப்புகளுக்கான நுழைவுத்தேர்வு.
             </p>
 <div class="card-tags">
-<span class="card-tag tag-central">CUET UG</span>
-<span class="card-tag tag-central">டெல்லி பல்கலைக்கழகம்</span>
-<span class="card-tag tag-central">JNU / BHU</span>
-<span class="card-tag tag-central">கலை &amp; அறிவியல்</span>
-<span class="card-tag tag-central">ஒரே நுழைவுத்தேர்வு</span>
+<a class="card-tag tag-central" href="01_05_central_universities_cuet.html" style="text-decoration: none; cursor: pointer;">CUET UG</a>
+<a class="card-tag tag-central" href="01_05_central_universities_cuet.html" style="text-decoration: none; cursor: pointer;">டெல்லி பல்கலைக்கழகம்</a>
+<a class="card-tag tag-central" href="01_05_central_universities_cuet.html" style="text-decoration: none; cursor: pointer;">JNU / BHU</a>
+<a class="card-tag tag-central" href="01_05_central_universities_cuet.html" style="text-decoration: none; cursor: pointer;">கலை &amp; அறிவியல்</a>
+<a class="card-tag tag-central" href="01_05_central_universities_cuet.html" style="text-decoration: none; cursor: pointer;">ஒரே நுழைவுத்தேர்வு</a>
 </div>
 </div>
 <a class="btn-details btn-central" href="01_05_central_universities_cuet.html">
@@ -3228,7 +3606,7 @@
 </a>
 </div>
 <!-- 06. LAW (CLAT / NLUs) -->
-<div class="course-card border-law">
+<div class="course-card border-law" onclick="window.location.href='01_06_law_clat_nlu.html';" style=" cursor: pointer">
 <div>
 <div class="card-badge badge-law">06 / LAW</div>
 <div class="card-header">
@@ -3242,11 +3620,11 @@
               இந்தியாவின் தலைசிறந்த 26 தேசிய சட்டப் பல்கலைக்கழகங்களில் (NLUs) 5 ஆண்டு ஒருங்கிணைந்த BA LLB, BBA LLB பட்டப்படிப்புகளுக்கான தேசிய நுழைவுத்தேர்வு.
             </p>
 <div class="card-tags">
-<span class="card-tag tag-law">CLAT 2026</span>
-<span class="card-tag tag-law">26 NLUs</span>
-<span class="card-tag tag-law">5 ஆண்டு BA LLB</span>
-<span class="card-tag tag-law">BBA LLB</span>
-<span class="card-tag tag-law">கார்ப்பரேட் சட்டம்</span>
+<a class="card-tag tag-law" href="01_06_law_clat_nlu.html" style="text-decoration: none; cursor: pointer;">CLAT 2026</a>
+<a class="card-tag tag-law" href="01_06_law_clat_nlu.html" style="text-decoration: none; cursor: pointer;">26 NLUs</a>
+<a class="card-tag tag-law" href="01_06_law_clat_nlu.html" style="text-decoration: none; cursor: pointer;">5 ஆண்டு BA LLB</a>
+<a class="card-tag tag-law" href="01_06_law_clat_nlu.html" style="text-decoration: none; cursor: pointer;">BBA LLB</a>
+<a class="card-tag tag-law" href="01_06_law_clat_nlu.html" style="text-decoration: none; cursor: pointer;">கார்ப்பரேட் சட்டம்</a>
 </div>
 </div>
 <a class="btn-details btn-law" href="01_06_law_clat_nlu.html">
@@ -3255,7 +3633,7 @@
 </a>
 </div>
 <!-- 07. DESIGN & ARCHITECTURE (NATA, NIFT, UCEED) -->
-<div class="course-card border-design">
+<div class="course-card border-design" onclick="window.location.href='01_07_design_architecture_nata_nift.html';" style=" cursor: pointer">
 <div>
 <div class="card-badge badge-design">07 / DESIGN &amp; ARCHITECTURE</div>
 <div class="card-header">
@@ -3269,10 +3647,10 @@
               கட்டிடக்கலையில் B.Arch சேர்க்கைக்கான NATA தேர்வு, தேசிய ஆடை வடிவமைப்பு நிறுவனங்கள் (NIFT), ஐ.ஐ.டி வடிவமைப்பு (UCEED) மற்றும் NID கல்வி நிறுவனங்கள்.
             </p>
 <div class="card-tags">
-<span class="card-tag tag-design">NATA (B.Arch)</span>
-<span class="card-tag tag-design">NIFT (ஃபேஷன்)</span>
-<span class="card-tag tag-design">UCEED (IIT Design)</span>
-<span class="card-tag tag-design">NID அகமதாபாத்</span>
+<a class="card-tag tag-design" href="01_07_design_architecture_nata_nift.html" style="text-decoration: none; cursor: pointer;">NATA (B.Arch)</a>
+<a class="card-tag tag-design" href="01_07_design_architecture_nata_nift.html" style="text-decoration: none; cursor: pointer;">NIFT (ஃபேஷன்)</a>
+<a class="card-tag tag-design" href="01_07_design_architecture_nata_nift.html" style="text-decoration: none; cursor: pointer;">UCEED (IIT Design)</a>
+<a class="card-tag tag-design" href="01_07_design_architecture_nata_nift.html" style="text-decoration: none; cursor: pointer;">NID அகமதாபாத்</a>
 </div>
 </div>
 <a class="btn-details btn-design" href="01_07_design_architecture_nata_nift.html">
@@ -3281,7 +3659,7 @@
 </a>
 </div>
 <!-- 07. INTEGRATED MANAGEMENT (IIM IPMAT) -->
-<div class="course-card border-mgmt">
+<div class="course-card border-mgmt" onclick="window.location.href='01_08_management_iim_ipm.html';" style=" cursor: pointer">
 <div>
 <div class="card-badge badge-mgmt">08 / MANAGEMENT</div>
 <div class="card-header">
@@ -3295,11 +3673,11 @@
               12-ஆம் வகுப்பிற்குப் பின் நேரடியாக ஐ.ஐ.எம் (IIM Indore, Rohtak, Ranchi, Bodh Gaya, Jammu) கல்வி நிறுவனங்களில் 5 ஆண்டு BBA+MBA பட்டப்படிப்பு.
             </p>
 <div class="card-tags">
-<span class="card-tag tag-mgmt">IIM இந்தூர்</span>
-<span class="card-tag tag-mgmt">IIM ரோஹ்தக்</span>
-<span class="card-tag tag-mgmt">5 ஆண்டு BBA+MBA</span>
-<span class="card-tag tag-mgmt">JIPMAT</span>
-<span class="card-tag tag-mgmt">கார்ப்பரேட் தலைமை</span>
+<a class="card-tag tag-mgmt" href="01_08_management_iim_ipm.html" style="text-decoration: none; cursor: pointer;">IIM இந்தூர்</a>
+<a class="card-tag tag-mgmt" href="01_08_management_iim_ipm.html" style="text-decoration: none; cursor: pointer;">IIM ரோஹ்தக்</a>
+<a class="card-tag tag-mgmt" href="01_08_management_iim_ipm.html" style="text-decoration: none; cursor: pointer;">5 ஆண்டு BBA+MBA</a>
+<a class="card-tag tag-mgmt" href="01_08_management_iim_ipm.html" style="text-decoration: none; cursor: pointer;">JIPMAT</a>
+<a class="card-tag tag-mgmt" href="01_08_management_iim_ipm.html" style="text-decoration: none; cursor: pointer;">கார்ப்பரேட் தலைமை</a>
 </div>
 </div>
 <a class="btn-details btn-mgmt" href="01_08_management_iim_ipm.html">
@@ -3308,7 +3686,7 @@
 </a>
 </div>
 <!-- 09. HOTEL MANAGEMENT (NCHMCT JEE) -->
-<div class="course-card border-hotel">
+<div class="course-card border-hotel" onclick="window.location.href='01_09_hotel_management_nchmct.html';" style=" cursor: pointer">
 <div>
 <div class="card-badge badge-hotel">09 / HOSPITALITY</div>
 <div class="card-header">
@@ -3322,10 +3700,10 @@
               மத்திய மற்றும் மாநில அரசு உணவு மேலாண்மைக் கல்லூரிகளில் (IHMs) 3 ஆண்டு B.Sc விருந்தோம்பல் மற்றும் உணவக நிர்வாகப் பட்டப்படிப்புக்கான தேசிய நுழைவுத்தேர்வு.
             </p>
 <div class="card-tags">
-<span class="card-tag tag-hotel">NCHMCT JEE</span>
-<span class="card-tag tag-hotel">மத்திய IHMs</span>
-<span class="card-tag tag-hotel">B.Sc HHA</span>
-<span class="card-tag tag-hotel">சர்வதேச வாய்ப்புகள்</span>
+<a class="card-tag tag-hotel" href="01_09_hotel_management_nchmct.html" style="text-decoration: none; cursor: pointer;">NCHMCT JEE</a>
+<a class="card-tag tag-hotel" href="01_09_hotel_management_nchmct.html" style="text-decoration: none; cursor: pointer;">மத்திய IHMs</a>
+<a class="card-tag tag-hotel" href="01_09_hotel_management_nchmct.html" style="text-decoration: none; cursor: pointer;">B.Sc HHA</a>
+<a class="card-tag tag-hotel" href="01_09_hotel_management_nchmct.html" style="text-decoration: none; cursor: pointer;">சர்வதேச வாய்ப்புகள்</a>
 </div>
 </div>
 <a class="btn-details btn-hotel" href="01_09_hotel_management_nchmct.html">
@@ -3334,7 +3712,7 @@
 </a>
 </div>
 <!-- 10. MARITIME & MERCHANT NAVY (IMU-CET) -->
-<div class="course-card border-marine">
+<div class="course-card border-marine" onclick="window.location.href='01_10_maritime_merchant_navy.html';" style=" cursor: pointer">
 <div>
 <div class="card-badge badge-marine">10 / MARITIME</div>
 <div class="card-header">
@@ -3348,11 +3726,11 @@
               இந்திய கடல்சார் பல்கலைக்கழகம் (IMU) மற்றும் முன்னணி கப்பல் கல்லூரிகளில் B.Sc Nautical Science, B.E Marine Engineering மற்றும் கப்பல் துறைப் பணிகள்.
             </p>
 <div class="card-tags">
-<span class="card-tag tag-marine">IMU-CET</span>
-<span class="card-tag tag-marine">B.Sc Nautical Science</span>
-<span class="card-tag tag-marine">B.E Marine</span>
-<span class="card-tag tag-marine">வணிகக் கப்பல் துறை</span>
-<span class="card-tag tag-marine">உயர் ஊதியம்</span>
+<a class="card-tag tag-marine" href="01_10_maritime_merchant_navy.html" style="text-decoration: none; cursor: pointer;">IMU-CET</a>
+<a class="card-tag tag-marine" href="01_10_maritime_merchant_navy.html" style="text-decoration: none; cursor: pointer;">B.Sc Nautical Science</a>
+<a class="card-tag tag-marine" href="01_10_maritime_merchant_navy.html" style="text-decoration: none; cursor: pointer;">B.E Marine</a>
+<a class="card-tag tag-marine" href="01_10_maritime_merchant_navy.html" style="text-decoration: none; cursor: pointer;">வணிகக் கப்பல் துறை</a>
+<a class="card-tag tag-marine" href="01_10_maritime_merchant_navy.html" style="text-decoration: none; cursor: pointer;">உயர் ஊதியம்</a>
 </div>
 </div>
 <a class="btn-details btn-marine" href="01_10_maritime_merchant_navy.html">
@@ -3387,7 +3765,7 @@
 </a>
 </div>
 <!-- 12. PILOT CAREERS (CPL & IAF) -->
-<div class="course-card border-pilot">
+<div class="course-card border-pilot" onclick="window.location.href='01_12_pilot_careers_cpl_and_iaf_fighter.html';" style=" cursor: pointer">
 <div>
 <div class="card-badge badge-pilot">12 / AVIATION</div>
 <div class="card-header">
@@ -3401,11 +3779,11 @@
               விமான நிறுவனங்களில் வணிக விமானி (Commercial Pilot Licence - CPL) ஆவதற்கான வழிமுறைகள் மற்றும் இந்திய விமானப்படை போர் விமானி ஆவதற்கான முழு வழிகாட்டி.
             </p>
 <div class="card-tags">
-<span class="card-tag tag-pilot">DGCA CPL</span>
-<span class="card-tag tag-pilot">IGRUA ரேபரேலி</span>
-<span class="card-tag tag-pilot">விமானப்படை NDA</span>
-<span class="card-tag tag-pilot">பைலட் உரிமம்</span>
-<span class="card-tag tag-pilot">விமானத்துறை</span>
+<a class="card-tag tag-pilot" href="01_12_pilot_careers_cpl_and_iaf_fighter.html" style="text-decoration: none; cursor: pointer;">DGCA CPL</a>
+<a class="card-tag tag-pilot" href="01_12_pilot_careers_cpl_and_iaf_fighter.html" style="text-decoration: none; cursor: pointer;">IGRUA ரேபரேலி</a>
+<a class="card-tag tag-pilot" href="01_12_pilot_careers_cpl_and_iaf_fighter.html" style="text-decoration: none; cursor: pointer;">விமானப்படை NDA</a>
+<a class="card-tag tag-pilot" href="01_12_pilot_careers_cpl_and_iaf_fighter.html" style="text-decoration: none; cursor: pointer;">பைலட் உரிமம்</a>
+<a class="card-tag tag-pilot" href="01_12_pilot_careers_cpl_and_iaf_fighter.html" style="text-decoration: none; cursor: pointer;">விமானத்துறை</a>
 </div>
 </div>
 <a class="btn-details btn-pilot" href="01_12_pilot_careers_cpl_and_iaf_fighter.html">
@@ -3420,70 +3798,64 @@
 <div style="font-size: 2.4rem; margin-bottom: 12px;">📚</div>
 <h3 style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin-bottom: 8px;">பாடக்குறிப்புகள் &amp; வினாத்தாள்கள்</h3>
 <p style="font-size: 0.92rem; color: #475569; line-height: 1.6; margin-bottom: 20px;">
-            அனைத்து 11 நுழைவுத்தேர்வுகளுக்குமான பாடக்குறிப்புகள், மாதிரி வினாத்தாள்கள் மற்றும் முந்தைய ஆண்டு வினாக்கள் (PYQs) தயாரிப்பில் உள்ளன. மிக விரைவில் இப்பகுதியில் பதிவேற்றப்படும்!
+            அனைத்து நுழைவுத்தேர்வுகளுக்குமான பாடக்குறிப்புகள், மாதிரி வினாத்தாள்கள் மற்றும் முந்தைய ஆண்டு வினாக்கள் (PYQs) தயாரிப்பில் உள்ளன. மிக விரைவில் இப்பகுதியில் பதிவேற்றப்படும்!
           </p>
 <button onclick="closePyqModal()" style="padding: 9px 24px; background: #0f172a; color: #ffffff; border: none; border-radius: 8px; font-size: 0.9rem; font-weight: 700; cursor: pointer;">சரி, மூடுக (Close)</button>
 </div>
 </div>
 <!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
-
 <!-- Bottom Chapter Navigation Bar: Animated Edge-to-Edge Navigation -->
 <nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar">
-  <a class="page-nav-btn btn-prev-animated" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
-    <span class="nav-btn-icon">◀</span>
-    <span class="nav-btn-text">🏠 முதன்மை முகப்பு</span>
-  </a>
-  <a class="page-nav-btn btn-next-animated" href="01_01_master_schedule.html" title="01_01 நுழைவுத்தேர்வுகள் மாஸ்டர் காலண்டர்">
-    <span class="nav-btn-text">01_01 மாஸ்டர் காலண்டர்</span>
-    <span class="nav-btn-icon">▶</span>
-  </a>
+<a class="page-nav-btn btn-prev-animated" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+<span class="nav-btn-icon">◀</span>
+<span class="nav-btn-text">🏠 முதன்மை முகப்பு</span>
+</a>
+<a class="page-nav-btn btn-next-animated" href="01_01_master_schedule.html" title="01_01 நுழைவுத்தேர்வுகள் மாஸ்டர் காலண்டர்">
+<span class="nav-btn-text">01_01 மாஸ்டர் காலண்டர்</span>
+<span class="nav-btn-icon">▶</span>
+</a>
 </nav>
-
 <!-- திருக்குறள் பகுதி — உயர்ந்த இலக்கு & விடாமுயற்சி (அதிகாரம்: ஊக்கமுடைமை) -->
 <div class="kural-box">
-  <div class="kural-header">
-    <span class="kural-icon">📜</span>
-    <span class="kural-title">திருக்குறள் — அதிகாரம்: ஊக்கமுடைமை (குறள்: 596)</span>
-    <span class="kural-sparkle">🎯 உயர்ந்த இலக்கு &amp; விடாமுயற்சி</span>
-  </div>
-  <div class="kural-verse-text">
+<div class="kural-header">
+<span class="kural-icon">📜</span>
+<span class="kural-title">திருக்குறள் — அதிகாரம்: ஊக்கமுடைமை (குறள்: 596)</span>
+<span class="kural-sparkle">🎯 உயர்ந்த இலக்கு &amp; விடாமுயற்சி</span>
+</div>
+<div class="kural-verse-text">
     “உள்ளுவ தெல்லாம் உயர்வுள்ளல் மற்றது<br/>
     தள்ளினும் தள்ளாமை நீர்த்து.”
   </div>
-  <div class="kural-meaning">
-    <strong>விளக்கவுரை:</strong> எண்ணுவதெல்லாம் மிக உயர்ந்த இலக்குகளாகவே இருக்க வேண்டும்; அவ்வுயர்ந்த இலக்குகள் ஒருவேளை முழுமையாகக் கைகூடாவிட்டாலும், அத்தகைய பெருநோக்குடன் கூடிய விடாமுயற்சியே ஒருவரை வாழ்வின் உச்சத்திற்கு உயர்த்தும்; தேசிய மற்றும் மாநில அளவிலான முதன்மை நுழைவுத்தேர்வுகளுக்குத் (National Entrance Exams) தயாராகும் மாணவச் செல்வங்கள் எந்நிலையிலும் தங்களது லட்சியக் கனவுகளைக் குறைக்காமல் உறுதியுடன் பயில இக்குறள் வழிகாட்டுகிறது.
+<div class="kural-meaning">
+<strong>விளக்கவுரை:</strong> எண்ணுவதெல்லாம் மிக உயர்ந்த இலக்குகளாகவே இருக்க வேண்டும்; அவ்வுயர்ந்த இலக்குகள் ஒருவேளை முழுமையாகக் கைகூடாவிட்டாலும், அத்தகைய பெருநோக்குடன் கூடிய விடாமுயற்சியே ஒருவரை வாழ்வின் உச்சத்திற்கு உயர்த்தும்; தேசிய மற்றும் மாநில அளவிலான முதன்மை நுழைவுத்தேர்வுகளுக்குத் (National Entrance Exams) தயாராகும் மாணவச் செல்வங்கள் எந்நிலையிலும் தங்களது லட்சியக் கனவுகளைக் குறைக்காமல் உறுதியுடன் பயில இக்குறள் வழிகாட்டுகிறது.
   </div>
 </div>
-
 <!-- உருவாக்கியவர் பெட்டி (Classic Dark Theme & Aurora Animation, Centered Flow) -->
 <div class="creator-card">
-  <div class="creator-typewriter-wrapper">
-    <span class="creator-typewriter-target" id="creatorTypewriterTarget"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role">, பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role">, Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
-  </div>
-  <a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
-    <span class="phone-icon">📱</span>
-    <span class="phone-text">9626471035</span>
-  </a>
+<div class="creator-typewriter-wrapper">
+<span class="creator-typewriter-target" id="creatorTypewriterTarget"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role">, பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role">, Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
 </div>
-
+<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
+<span class="phone-icon">📱</span>
+<span class="phone-text">9626471035</span>
+</a>
+</div>
 <!-- முதன்மைக் கல்வி அலுவலக அடிக்குறிப்பு -->
-<footer class="portal-footer" style="text-align: center !important; padding: 24px 16px 20px !important; margin-top: 30px !important; border-top: 1.5px solid #cbd5e1 !important; width: 100% !important; box-sizing: border-box !important;">
-  <p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #1e293b !important; font-size: 0.96rem !important; line-height: 1.6 !important;">
+<footer class="portal-footer" style="text-align: center !important; padding: 22px 18px 20px !important; margin: 28px 0 16px 0 !important; background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important; border: 1.5px solid rgba(212, 175, 55, 0.45) !important; border-radius: 14px !important; box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35) !important; width: 100% !important; box-sizing: border-box !important;">
+<p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #ffffff !important; font-size: 0.96rem !important; line-height: 1.6 !important; text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;">
     தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, 
-    <a class="footer-phone-link" href="tel:04575240408" style="color: #0369a1 !important; text-decoration: none !important; font-weight: 800 !important; background: #e0f2fe !important; padding: 4px 12px !important; border-radius: 999px !important; border: 1.2px solid #7dd3fc !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; margin-left: 6px !important;">
-      <span>☎️</span>
-      <span>04575240408</span>
-    </a>
-  </p>
-  <p class="footer-copyright" style="font-size: 0.86rem !important; color: #64748b !important; margin: 6px 0 0 0 !important; font-weight: 500 !important;">
+    <a class="footer-phone-link" href="tel:04575240408" style="color: #fde047 !important; text-decoration: none !important; font-weight: 800 !important; background: rgba(0, 0, 0, 0.45) !important; padding: 3px 12px !important; border-radius: 6px !important; border: 1.2px solid rgba(253, 224, 71, 0.6) !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; margin-left: 6px !important; vertical-align: middle !important; transition: all 0.2s ease !important;">
+<span>☎️</span>
+<span>04575240408</span>
+</a>
+</p>
+<p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;">
     © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
 </footer>
-
 </div> <!-- /.portal-container -->
 </main> <!-- /.portal-main-content -->
 </div> <!-- /.portal-layout-wrapper -->
-
 <script>
 // 1. Sidebar Toggle & Accordion Controls
 function toggleSidebarMenu() {
@@ -3595,7 +3967,6 @@ function closePyqModal(e) {
   }
 })();
 </script>
-
 <script>
 
 
