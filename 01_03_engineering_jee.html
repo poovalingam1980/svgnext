@@ -495,12 +495,18 @@
   }
 
   /* Grid of Exams (Cards) */
-  .exam-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 18px;
-    margin: 20px 0;
-  }
+  /* Section 7: 1x2 Grid for Top Private Engineering Exams */
+    .exam-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 18px !important;
+      margin: 20px 0 !important;
+    }
+    @media (max-width: 768px) {
+      .exam-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
   .exam-card {
     background: #ffffff;
     border: 1px solid var(--border);
@@ -3956,6 +3962,735 @@
     transform: translateY(-50%) !important;
   }
 }
+
+    /* ========================================================
+       FULL SCREEN WIDTH LAYOUT & STANDARDIZED DESIGN (MATCHING 01_02 MEDICAL)
+       ======================================================== */
+    html, body {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+      background-color: var(--bg-main, #f8fafc) !important;
+    }
+
+    .portal-layout-wrapper {
+      display: flex !important;
+      flex-direction: row !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-height: 100vh !important;
+      position: relative !important;
+      align-items: stretch !important;
+      box-sizing: border-box !important;
+    }
+
+    .desktop-left-sidebar {
+      width: 295px !important;
+      min-width: 295px !important;
+      max-width: 295px !important;
+      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+      border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      height: 100vh !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex-shrink: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .portal-main-content {
+      margin-left: 295px !important;
+      width: calc(100% - 295px) !important;
+      min-height: 100vh !important;
+      padding: 12px clamp(12px, 1.8vw, 36px) 40px !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+    }
+
+    .portal-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .card,
+    .content-section,
+    .quick-nav-card,
+    .hero-rich-bottom-ribbon,
+    .quick-nav-marquee-container,
+    .bottom-page-nav-bar,
+    .kural-box,
+    .creator-card,
+    .portal-footer,
+    .table-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .card {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 22px 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    /* TOP BREADCRUMB BAR WITH COMPACT DIRECTORY BUTTONS */
+    .breadcrumb-bar {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 10px !important;
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.4) !important;
+      border-radius: 12px !important;
+      padding: 8px 14px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
+      flex-wrap: wrap !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .breadcrumb-left-stack {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      flex-wrap: wrap !important;
+    }
+
+    .breadcrumb-right-stack {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      margin-left: auto !important;
+      flex-wrap: wrap !important;
+    }
+
+    .nav-menu-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 0.84rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      color: #e2e8f0 !important;
+      padding: 4px 10px !important;
+      border-radius: 6px !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .nav-menu-btn:hover {
+      background: rgba(255, 255, 255, 0.12) !important;
+      color: #fef08a !important;
+    }
+
+    .nav-menu-btn.btn-current-page {
+      background: rgba(56, 189, 248, 0.2) !important;
+      border: 1px solid #38bdf8 !important;
+      color: #38bdf8 !important;
+    }
+
+    .nav-menu-separator {
+      color: #94a3b8 !important;
+      font-size: 0.75rem !important;
+    }
+
+    .compact-dir-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 4px !important;
+      font-size: 0.76rem !important;
+      font-weight: 700 !important;
+      padding: 4px 10px !important;
+      border-radius: 6px !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .compact-dir-btn.btn-aiq-eng {
+      background: rgba(245, 158, 11, 0.22) !important;
+      color: #fef08a !important;
+      border: 1.2px solid #fbbf24 !important;
+    }
+
+    .compact-dir-btn.btn-aiq-eng:hover {
+      background: rgba(245, 158, 11, 0.45) !important;
+      color: #ffffff !important;
+      border-color: #fde047 !important;
+      transform: translateY(-1px) !important;
+    }
+
+    .compact-dir-btn.btn-tnea-eng {
+      background: rgba(2, 132, 199, 0.22) !important;
+      color: #bae6fd !important;
+      border: 1.2px solid #38bdf8 !important;
+    }
+
+    .compact-dir-btn.btn-tnea-eng:hover {
+      background: rgba(2, 132, 199, 0.45) !important;
+      color: #ffffff !important;
+      border-color: #7dd3fc !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* HERO PORTAL HEADER: DEEP ROYAL BLUE & GOLD THEME */
+    .portal-header {
+      background: linear-gradient(135deg, #091a3e 0%, #0d2860 50%, #034882 100%) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.42) !important;
+      border-bottom: 4px solid #0284c7 !important;
+      border-radius: 16px !important;
+      padding: 28px 24px 24px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4) !important;
+      text-align: center !important;
+      position: relative !important;
+      overflow: hidden !important;
+      width: 100% !important;
+    }
+
+    .header-badge-row {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      flex-wrap: wrap !important;
+      margin-bottom: 12px !important;
+    }
+
+    .header-tag {
+      font-size: 0.76rem !important;
+      font-weight: 800 !important;
+      padding: 3px 10px !important;
+      border-radius: 999px !important;
+      letter-spacing: 0.3px !important;
+      text-transform: uppercase !important;
+    }
+
+    .header-tag.primary {
+      background: #0284c7 !important;
+      color: #ffffff !important;
+    }
+
+    .header-tag.secondary {
+      background: rgba(255, 255, 255, 0.15) !important;
+      color: #bae6fd !important;
+      border: 1px solid rgba(186, 230, 253, 0.3) !important;
+    }
+
+    .header-tag.amber {
+      background: rgba(245, 158, 11, 0.25) !important;
+      color: #fde047 !important;
+      border: 1px solid rgba(253, 224, 71, 0.4) !important;
+    }
+
+    .portal-title {
+      color: #ffffff !important;
+      font-size: clamp(1.4rem, 2.3vw, 2.1rem) !important;
+      font-weight: 900 !important;
+      margin: 0 0 10px 0 !important;
+      line-height: 1.3 !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .portal-title .accent-gold {
+      color: #fde047 !important;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 16px rgba(253,224,71,0.6) !important;
+    }
+
+    .portal-subtitle {
+      color: #f1f5f9 !important;
+      font-size: clamp(0.88rem, 1.1vw, 1.02rem) !important;
+      line-height: 1.65 !important;
+      max-width: 980px !important;
+      margin: 0 auto !important;
+      font-weight: 500 !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+    }
+
+    /* HERO RIBBON */
+    .hero-rich-bottom-ribbon {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-wrap: wrap !important;
+      gap: 8px 14px !important;
+      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%) !important;
+      border: 1.2px solid rgba(251, 191, 36, 0.4) !important;
+      border-radius: 10px !important;
+      padding: 8px 16px !important;
+      margin-bottom: 16px !important;
+      color: #fef08a !important;
+      font-size: 0.84rem !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .ribbon-dot {
+      color: rgba(255, 255, 255, 0.35) !important;
+    }
+
+    /* QUICK NAVIGATION MARQUEE BAR */
+    .quick-nav-marquee-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      background: linear-gradient(135deg, #060d1a 0%, #0d1e38 50%, #060d1a 100%) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.35) !important;
+      border-radius: 12px !important;
+      padding: 8px 12px !important;
+      margin-bottom: 18px !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+      position: relative !important;
+    }
+
+    .marquee-static-label {
+      flex-shrink: 0 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      font-size: 1.15rem !important;
+      padding: 6px 12px !important;
+      border-radius: 8px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.4) !important;
+      z-index: 2 !important;
+    }
+
+    .marquee-scroll-track {
+      flex-grow: 1 !important;
+      overflow: hidden !important;
+      display: flex !important;
+      position: relative !important;
+      mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+    }
+
+    .marquee-content-loop {
+      display: flex !important;
+      gap: 10px !important;
+      align-items: center !important;
+      white-space: nowrap !important;
+      animation: marqueeScroll 28s linear infinite !important;
+      padding-right: 10px !important;
+    }
+
+    .quick-nav-marquee-container:hover .marquee-content-loop {
+      animation-play-state: paused !important;
+    }
+
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .marquee-pill-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: rgba(30, 41, 59, 0.85) !important;
+      color: #e2e8f0 !important;
+      border: 1px solid rgba(148, 163, 184, 0.25) !important;
+      padding: 5px 12px !important;
+      border-radius: 999px !important;
+      font-size: 0.80rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .marquee-pill-btn:hover {
+      background: rgba(56, 189, 248, 0.25) !important;
+      color: #38bdf8 !important;
+      border-color: #38bdf8 !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* TABLE GRIDLINES */
+    table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      border: 1.5px solid #94a3b8 !important;
+      background: #ffffff !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
+    }
+
+    table th {
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      padding: 12px 14px !important;
+      border: 1.2px solid #334155 !important;
+      font-size: 0.88rem !important;
+      text-align: left !important;
+    }
+
+    table td {
+      padding: 10px 14px !important;
+      border: 1.2px solid #cbd5e1 !important;
+      font-size: 0.86rem !important;
+      color: #1e293b !important;
+      line-height: 1.5 !important;
+    }
+
+    table tbody tr:nth-child(even) {
+      background-color: #f8fafc !important;
+    }
+
+    /* BOTTOM PAGE NAVIGATION BAR */
+    .bottom-page-nav-bar {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 14px 18px !important;
+      margin: 26px 0 28px 0 !important;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .page-nav-btn.btn-prev-animated {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 10px 20px !important;
+      border-radius: 10px !important;
+      font-family: inherit !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 2px solid #059669 !important;
+      background: linear-gradient(135deg, #047857 0%, #065f46 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(4, 120, 87, 0.35) !important;
+      animation: pulseNudgeLeft 3s ease-in-out infinite !important;
+      transition: all 0.25s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .page-nav-btn.btn-prev-animated:hover {
+      background: linear-gradient(135deg, #065f46 0%, #022c22 100%) !important;
+      border-color: #fde047 !important;
+      transform: translateX(-5px) scale(1.04) !important;
+      box-shadow: 0 6px 20px rgba(4, 120, 87, 0.55), 0 0 15px rgba(52, 211, 153, 0.5) !important;
+    }
+
+    .page-nav-btn.btn-next-animated {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 10px 20px !important;
+      border-radius: 10px !important;
+      font-family: inherit !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 2px solid #0284c7 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;
+      animation: pulseNudgeRight 3s ease-in-out infinite !important;
+      transition: all 0.25s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .page-nav-btn.btn-next-animated:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #0c4a6e 100%) !important;
+      border-color: #fde047 !important;
+      transform: translateX(5px) scale(1.04) !important;
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.55), 0 0 15px rgba(56, 189, 248, 0.5) !important;
+    }
+
+    @keyframes pulseNudgeLeft {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(-4px); }
+    }
+
+    @keyframes pulseNudgeRight {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(4px); }
+    }
+
+    /* CREATOR CARD: CLASSIC DARK THEME WITH AURORA ANIMATION */
+    .creator-card {
+      background: linear-gradient(135deg, #050811 0%, #0d1527 50%, #050811 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+      border-radius: 14px !important;
+      padding: 12px clamp(16px, 2vw, 32px) !important;
+      margin: 20px 0 16px 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.55), 0 0 20px rgba(0, 194, 255, 0.15) !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      flex-wrap: wrap !important;
+      gap: 14px !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+
+    .creator-typewriter-wrapper {
+      font-size: clamp(0.74rem, 0.95vw, 0.90rem) !important;
+      color: #f8fafc !important;
+      font-weight: 600 !important;
+      line-height: 1.4 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      flex: 0 1 auto !important;
+      min-width: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: center !important;
+    }
+
+    .creator-typewriter-target {
+      display: inline !important;
+      white-space: pre-wrap !important;
+    }
+
+    .creator-label {
+      font-size: 80% !important;
+      font-weight: 700 !important;
+      color: #f1f5f9 !important;
+      white-space: nowrap !important;
+      opacity: 0.92 !important;
+    }
+
+    .creator-role {
+      font-size: 80% !important;
+      color: #94a3b8 !important;
+      font-weight: 600 !important;
+      white-space: nowrap !important;
+      opacity: 0.90 !important;
+    }
+
+    .creator-name-ta,
+    .creator-name-en,
+    .creator-name-ta-blue,
+    .creator-name-ta-purple,
+    .creator-name-en-blue,
+    .creator-name-en-purple {
+      background: linear-gradient(
+        90deg,
+        #00c2ff 0%,
+        #33ff8c 25%,
+        #ffc640 50%,
+        #e54cff 75%,
+        #00c2ff 100%
+      ) !important;
+      background-size: 300% 100% !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      animation: aurora-text-flow 6s linear infinite !important;
+      font-weight: 900 !important;
+      letter-spacing: 0.3px !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      display: inline-block !important;
+      filter: drop-shadow(0 0 6px rgba(0, 194, 255, 0.45));
+    }
+
+    .creator-cursor {
+      display: inline-block !important;
+      font-weight: 300 !important;
+      color: #00c2ff !important;
+      margin-left: 2px !important;
+      animation: blinkCreatorCursor 0.65s infinite !important;
+      text-shadow: 0 0 8px rgba(0, 194, 255, 0.8);
+      flex-shrink: 0 !important;
+    }
+
+    @keyframes aurora-text-flow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 300% 50%; }
+    }
+
+    @keyframes blinkCreatorCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .footer-phone-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+      color: #ffffff !important;
+      padding: 4px 12px !important;
+      border-radius: 999px !important;
+      font-size: 0.84rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4) !important;
+      transition: all 0.2s ease !important;
+      margin: 0 !important;
+      vertical-align: middle !important;
+      flex-shrink: 0 !important;
+    }
+
+    .footer-phone-pill:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+      transform: translateY(-1px) scale(1.03) !important;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5) !important;
+      color: #ffffff !important;
+    }
+
+    /* FLOATING BACK TO TOP BUTTON (STANDARDIZED) */
+    .floating-back-to-top {
+      position: fixed !important;
+      bottom: 24px !important;
+      right: 24px !important;
+      z-index: 9999 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+      border-radius: 999px !important;
+      padding: 10px 18px !important;
+      font-size: 0.85rem !important;
+      font-weight: 800 !important;
+      font-family: inherit !important;
+      cursor: pointer !important;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35) !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: translateY(16px) !important;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .floating-back-to-top.visible {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: translateY(0) !important;
+    }
+
+    .floating-back-to-top:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+      border-color: #fde047 !important;
+      color: #fde047 !important;
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.5) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    @media (max-width: 1024px) {
+      .desktop-left-sidebar {
+        position: fixed !important;
+        left: -320px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 295px !important;
+        height: 100vh !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 9999 !important;
+        box-shadow: 6px 0 35px rgba(0, 0, 0, 0.85);
+      }
+      .desktop-left-sidebar.sidebar-open {
+        left: 0 !important;
+      }
+      .portal-main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 8px 12px 30px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .breadcrumb-bar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+      }
+      .breadcrumb-right-stack {
+        margin-left: 0 !important;
+        width: 100% !important;
+        justify-content: flex-start !important;
+      }
+      .bottom-page-nav-bar {
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+      .page-nav-btn.btn-prev-animated,
+      .page-nav-btn.btn-next-animated {
+        width: 100% !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+      }
+    }
+
+
+
+    /* STANDARDIZED HIGH-CONTRAST PORTAL FOOTER */
+    .portal-footer {
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+      border-radius: 14px !important;
+      text-align: center !important;
+      padding: 22px 18px 20px !important;
+      margin: 24px 0 16px 0 !important;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35) !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .portal-footer p {
+      color: #ffffff !important;
+      margin-bottom: 8px !important;
+      font-weight: 700 !important;
+      font-size: 0.96rem !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85) !important;
+    }
+    .portal-footer .footer-copyright {
+      font-size: 0.86rem !important;
+      color: #cbd5e1 !important;
+      margin-top: 6px !important;
+      font-weight: 500 !important;
+    }
+    .portal-footer .footer-phone-link {
+      color: #fde047 !important;
+      text-decoration: none !important;
+      font-weight: 800 !important;
+      background: rgba(0, 0, 0, 0.45) !important;
+      padding: 3px 10px !important;
+      border-radius: 6px !important;
+      border: 1.2px solid rgba(253, 224, 71, 0.6) !important;
+      display: inline-block !important;
+    }
+
 </style>
 <style id="distinct-theme-css">
 /* ============================================================
@@ -4874,44 +5609,98 @@
 </header>
 <div class="portal-container" id="top">
 <!-- Segmented Breadcrumb Navigation Bar (Matching Section 01 & Pilot Guide) -->
-<nav aria-label="Breadcrumb Navigation" class="nav-button-menu-bar">
-<div class="nav-button-menu-container">
-<a class="menu-btn-pill btn-career" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மைப் பக்கம்">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"></path></svg>
-<span>🎓 உயர்கல்வி</span>
-</a>
-<span class="menu-arrow">›</span>
-<a class="menu-btn-pill btn-entrance" href="01_00_entrance_main.html" title="உயர்கல்வி நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம்">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
-<span>📝 நுழைவுத்தேர்வுகள்</span>
-</a>
-<span class="menu-arrow">›</span>
-<span class="menu-btn-pill btn-current-page" title="தற்போதைய வழிகாட்டிப் பக்கம்">
-<span>⚙️ பிரிவு 02: பொறியியல் கல்வி (JEE)</span>
-</span>
-<span style="margin-left:auto;"></span>
-<a class="menu-btn-pill" href="01_03_aiq_eng_colleges.html" style="background:#fffbeb; color:#92400e; border:1.5px solid #fde68a; font-weight:700;" title="அகில இந்திய JEE கல்வி நிறுவனங்கள் அடைவு (119 கல்லூரிகள்)">
-<span>🏛️ அகில இந்திய JEE அடைவு (119) ➔</span>
-</a>
-<a class="menu-btn-pill" href="02_01_tnea_engineering.html" style="background:#eff6ff; color:#1d4ed8; border:1.5px solid #bfdbfe; font-weight:700;" title="தமிழ்நாடு TNEA பொறியியல் கல்லூரிகள் அடைவு">
-<span>🏢 தமிழக TNEA பொறியியல் அடைவு ➔</span>
-</a>
-</div>
+<!-- Top Breadcrumb Navigation Bar (Matching 01_02 Medical) -->
+<nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
+  <div class="breadcrumb-left-stack">
+    <a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+      <span class="btn-icon">🧭</span>
+      <span class="btn-text">வழிகாட்டி முகப்பு</span>
+    </a>
+    <span class="nav-menu-separator">▶</span>
+    <a class="nav-menu-btn btn-entrance-home" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம்">
+      <span class="btn-icon">📝</span>
+      <span class="btn-text">01 / நுழைவுத்தேர்வுகள்</span>
+    </a>
+    <span class="nav-menu-separator">▶</span>
+    <span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
+      <span class="btn-icon">⚙️</span>
+      <span class="btn-text">03 / பொறியியல் (JEE &amp; Tech)</span>
+    </span>
+  </div>
+  <div class="breadcrumb-right-stack">
+    <a class="compact-dir-btn btn-aiq-eng" href="01_03_aiq_eng_colleges.html" title="அகில இந்திய JEE கல்வி நிறுவனங்கள் அடைவு (119 கல்லூரிகள்)">
+      <span>🏛️ AIQ JEE அடைவு (119) ➔</span>
+    </a>
+    <a class="compact-dir-btn btn-tnea-eng" href="02_01_tnea_engineering.html" title="தமிழ்நாடு TNEA பொறியியல் சேர்க்கை வழிகாட்டி">
+      <span>🏢 TN TNEA பொறியியல் ➔</span>
+    </a>
+  </div>
 </nav>
 <!-- Portal Header Hero Banner -->
 <header class="portal-header">
-<div class="header-badge-row">
-<span class="header-tag primary">பிரிவு 02 (Section 02)</span>
-<span class="header-tag secondary">அகில இந்திய &amp; தமிழகப் பொறியியல் கல்வி (Engineering &amp; Tech)</span>
-<span class="header-tag amber">IITs | NIT திருச்சி (50% Home State Quota) | IIITs | BITSAT | பொறியியல் கல்லூரிகள்</span>
-</div>
-<h1 class="portal-title">
-    பொறியியல் நுழைவுத்தேர்வுகள் &amp; உயர்கல்வி <span class="accent-gold">(B.E. / B.Tech)</span>
-</h1>
-<p class="portal-subtitle">
-    12-ஆம் வகுப்பு பள்ளி மாணவர்களுக்கான IIT ஜே.இ.இ மெயின் &amp; அட்வான்ஸ்டு தேர்வுகள், ஜே.இ.இ மூலம் 119+ தேசிய முதன்மைக் கல்வி நிறுவனங்கள், TNEA அண்ணா பல்கலைக்கழக கலந்தாய்வு, 7.5% அரசுப்பள்ளி இடஒதுக்கீடு &amp; 100% இலவசக் கல்வி கட்டமைப்பு விரிவான வழிகாட்டல் தொகுப்பு.
+  <div class="header-badge-row">
+    <span class="header-tag primary">பிரிவு 03 (Section 03)</span>
+    <span class="header-tag secondary">தேசிய நுழைவுத்தேர்வு (JEE Main &amp; Advanced)</span>
+    <span class="header-tag amber">JoSAA / CSAB கலந்தாய்வு &amp; BITSAT</span>
+  </div>
+  <h1 class="portal-title">
+    பொறியியல் நுழைவுத்தேர்வுகள் &amp; உயர்கல்வி <span class="accent-gold">(JEE / B.E. / B.Tech)</span>
+  </h1>
+  <p class="portal-subtitle">
+    12-ஆம் வகுப்பு பள்ளி மாணவர்களுக்கான JEE Main, JEE Advanced, NIT திருச்சி (50% Home State Quota), IITs, IIITs, BITSAT மற்றும் அகில இந்திய முன்னணி தொழில்நுட்பக் கல்வி நிறுவனங்கள் (Institutes of National Importance) சேர்க்கை வழிகாட்டி.
   </p>
 </header>
+
+<!-- Hero Rich Bottom Ribbon -->
+<div class="hero-rich-bottom-ribbon">
+  <span>⭐ NIT திருச்சி 50% தமிழக இடஒதுக்கீடு (Home State)</span>
+  <span class="ribbon-dot">•</span>
+  <span>23 ஐஐடிகள் (IITs) &amp; 32 என்ஐடிகள் (NITs)</span>
+  <span class="ribbon-dot">•</span>
+  <span>JoSAA / CSAB கலந்தாய்வு வழிகாட்டல்</span>
+  <span class="ribbon-dot">•</span>
+  <span>PM-Vidyalaxmi 100% கல்விக் கடன்</span>
+</div>
+
+<!-- Quick Navigation Marquee Bar (ஓடும் விரைவு வழிசெலுத்தல் பட்டை) -->
+<div class="quick-nav-marquee-container" aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை">
+  <div class="marquee-static-label" title="விரைவு வழிகாட்டல்">
+    <span class="pulse-icon">⚡</span>
+  </div>
+  <div class="marquee-scroll-track">
+    <div class="marquee-content-loop">
+      <a href="#section-1" class="marquee-pill-btn">📌 1. பொறியியல் அறிமுகம்</a>
+      <a href="#section-2" class="marquee-pill-btn">📝 2. JEE Main கட்டமைப்பு</a>
+      <a href="#section-3" class="marquee-pill-btn">🔬 3. JEE Advanced &amp; IITs</a>
+      <a href="#section-4" class="marquee-pill-btn">🏛️ 4. NITs, IIITs &amp; GFTIs</a>
+      <a href="#section-5" class="marquee-pill-btn">🔄 5. JoSAA கலந்தாய்வு</a>
+      <a href="#section-6" class="marquee-pill-btn">🌟 6. BITSAT வழிகாட்டி</a>
+      <a href="#section-7" class="marquee-pill-btn">🏢 7. முன்னணி தனியார் நிறுவனங்கள்</a>
+      <a href="#section-9" class="marquee-pill-btn">💻 8. பொறியியல் பிரிவுகள்</a>
+      <a href="#section-10" class="marquee-pill-btn">📊 9. தேர்வுகளின் ஒப்பீடு</a>
+      <a href="#section-11" class="marquee-pill-btn">🚀 10. பள்ளி வகுப்பு வாரிய தயாரிப்பு</a>
+      <a href="#section-12" class="marquee-pill-btn">💰 11. PM-Vidyalaxmi கல்விக் கடன்</a>
+      <a href="#section-faq" class="marquee-pill-btn">❓ 12. அடிக்கடி கேட்கப்படும் வினாக்கள்</a>
+      <a href="#section-13" class="marquee-pill-btn">📑 13. தேவையான சான்றிதழ்கள்</a>
+    </div>
+    <!-- Duplicate for infinite seamless scroll -->
+    <div class="marquee-content-loop" aria-hidden="true">
+      <a href="#section-1" class="marquee-pill-btn">📌 1. பொறியியல் அறிமுகம்</a>
+      <a href="#section-2" class="marquee-pill-btn">📝 2. JEE Main கட்டமைப்பு</a>
+      <a href="#section-3" class="marquee-pill-btn">🔬 3. JEE Advanced &amp; IITs</a>
+      <a href="#section-4" class="marquee-pill-btn">🏛️ 4. NITs, IIITs &amp; GFTIs</a>
+      <a href="#section-5" class="marquee-pill-btn">🔄 5. JoSAA கலந்தாய்வு</a>
+      <a href="#section-6" class="marquee-pill-btn">🌟 6. BITSAT வழிகாட்டி</a>
+      <a href="#section-7" class="marquee-pill-btn">🏢 7. முன்னணி தனியார் நிறுவனங்கள்</a>
+      <a href="#section-9" class="marquee-pill-btn">💻 8. பொறியியல் பிரிவுகள்</a>
+      <a href="#section-10" class="marquee-pill-btn">📊 9. தேர்வுகளின் ஒப்பீடு</a>
+      <a href="#section-11" class="marquee-pill-btn">🚀 10. பள்ளி வகுப்பு வாரிய தயாரிப்பு</a>
+      <a href="#section-12" class="marquee-pill-btn">💰 11. PM-Vidyalaxmi கல்விக் கடன்</a>
+      <a href="#section-faq" class="marquee-pill-btn">❓ 12. அடிக்கடி கேட்கப்படும் வினாக்கள்</a>
+      <a href="#section-13" class="marquee-pill-btn">📑 13. தேவையான சான்றிதழ்கள்</a>
+    </div>
+  </div>
+</div>
 <!-- Quick Navigation Bar / பொருளடக்கம் -->
 <div class="quick-nav-card no-print" id="quickNavCard">
 <div class="quick-nav-title">
@@ -5561,49 +6350,7 @@
 </div>
 <!-- Prominent All-India Directory & Spreadsheet Banner Card linked to user's exact published URL -->
 <!-- Dual Engineering Directories Showcase (இருபெரும் பொறியியல் கல்வி நிறுவனங்கள் அடைவு) -->
-<div class="dual-directory-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:20px; margin:26px 0;">
-<!-- Card 1: All India JEE Directory -->
-<div style="background:linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); border-radius:16px; padding:24px; color:#ffffff; border:1.5px solid #3b82f6; box-shadow:0 4px 18px rgba(30,58,138,0.25); display:flex; flex-direction:column; justify-content:space-between;">
-<div>
-<div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
-<span style="background:#fef08a; color:#713f12; font-weight:800; font-size:0.78rem; padding:4px 12px; border-radius:999px; text-transform:uppercase;">அகில இந்திய அடைவு</span>
-<span style="background:rgba(255,255,255,0.15); color:#93c5fd; font-weight:700; font-size:0.78rem; padding:3px 10px; border-radius:6px;">JoSAA / CSAB 2026</span>
-</div>
-<h4 style="margin:0 0 10px 0; font-size:1.24rem; font-weight:800; color:#fde047;">🏛️ அகில இந்திய JEE கல்வி நிறுவனங்கள் (119 கல்லூரிகள்) முழு அடைவு</h4>
-<p style="margin:0 0 14px 0; font-size:0.91rem; color:#cbd5e1; line-height:1.65;">
-        இந்தியாவின் <b>23 IITகள் (IIT மெட்ராஸ் #1 உட்பட)</b>, <b>32 NITகள் (NIT திருச்சி 50% தமிழக Home State ஒதுக்கீடு!)</b>, <b>29 IIITகள் (திருச்சி &amp; காஞ்சிபுரம்)</b>, <b>27 GFTIகள்</b>, DTU/NSUT மற்றும் IIST விண்வெளி நிறுவனத்தின் முழுமையான கட்டமைப்பு, NIRF தரவரிசை, வழங்கப்படும் கிளைகள் மற்றும் இணையதள விவரங்கள் அடங்கிய முழு அடைவு.
-      </p>
-</div>
-<div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
-<a href="01_03_aiq_eng_colleges.html" style="flex:1; min-width:180px; text-align:center; padding:11px 16px; background:#f59e0b; color:#0f172a; text-decoration:none; font-weight:800; border-radius:8px; font-size:0.88rem; transition:all 0.2s ease;">
-        🌐 119 கல்லூரிகள் அடைவு காண்க ➔
-      </a>
-<a href="https://docs.google.com/spreadsheets/d/1_geHOEntVg00AxYQ1Zv3jEEhBKAOiyKcR4Nt-nC311c/edit?usp=sharing" rel="noopener noreferrer" style="padding:11px 16px; background:#047857; color:#ffffff; text-decoration:none; font-weight:700; border-radius:8px; font-size:0.88rem; display:inline-flex; align-items:center; gap:6px;" target="_blank">
-        📊 கூகுள் ஷீட் டவுன்லோடு
-      </a>
-</div>
-</div>
-<!-- Card 2: TN TNEA Engineering Directory -->
-<div style="background:linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%); border-radius:16px; padding:24px; color:#ffffff; border:1.5px solid #10b981; box-shadow:0 4px 18px rgba(6,95,70,0.25); display:flex; flex-direction:column; justify-content:space-between;">
-<div>
-<div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
-<span style="background:#fef08a; color:#713f12; font-weight:800; font-size:0.78rem; padding:4px 12px; border-radius:999px; text-transform:uppercase;">தமிழ்நாடு சேர்க்கை</span>
-<span style="background:rgba(255,255,255,0.15); color:#a7f3d0; font-weight:700; font-size:0.78rem; padding:3px 10px; border-radius:6px;">TNEA Anna Univ 2026</span>
-</div>
-<h4 style="margin:0 0 10px 0; font-size:1.24rem; font-weight:800; color:#fde047;">🏢 தமிழ்நாடு பொறியியல் நேரடிச் சேர்க்கை (TNEA 440+ கல்லூரிகள்) அடைவு</h4>
-<p style="margin:0 0 14px 0; font-size:0.91rem; color:#d1fae5; line-height:1.65;">
-        அண்ணா பல்கலைக்கழக வளாகங்கள் (CEG, MIT, ACT), காரைக்குடி <b>ACCET அழகப்பா அரசு பொறியியல் கல்லூரி (சிவகங்கை மாவட்டம் - TNEA குறியீடு: 5002)</b>, <b>CSIR-CECRI காரைக்குடி</b>, அரசு உதவிபெறும் கல்லூரிகள் (PSG, தியாகராசர், CIT) மற்றும் முன்னணி வேலைவாய்ப்பு தரும் 440+ கல்லூரிகளின் அடைவு, கட்-ஆஃப் கணக்கீடு &amp; <b>7.5% அரசுப்பள்ளி 100% இலவசக் கல்வி வழிகாட்டி</b>.
-      </p>
-</div>
-<div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
-<a href="02_01_tnea_engineering.html" style="flex:1; min-width:180px; text-align:center; padding:11px 16px; background:#ffffff; color:#064e3b; text-decoration:none; font-weight:800; border-radius:8px; font-size:0.88rem; transition:all 0.2s ease;">
-        🏢 TNEA கல்லூரிகள் முழு அடைவு காண்க ➔
-      </a>
-<a href="https://www.tneaonline.org/" rel="noopener noreferrer" style="padding:11px 16px; background:#0284c7; color:#ffffff; text-decoration:none; font-weight:700; border-radius:8px; font-size:0.88rem; display:inline-flex; align-items:center; gap:6px;" target="_blank">
-        🌐 TNEA போர்ட்டல்
-      </a>
-</div>
-</div>
+
 </div>
 </div>
 <!-- Section 5: JoSAA & CSAB Counselling Steps -->
@@ -5966,184 +6713,105 @@
 </div>
 </div>
 <!-- Closing Inspiration Card -->
+
+<!-- இறுதிப்பகுதி: அகில இந்திய JEE & தமிழ்நாடு பொறியியல் நேரடிச் சேர்க்கை அடைவுகள் -->
+<div class="dual-directory-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:20px; margin:26px 0;">
+<!-- Card 1: All India JEE Directory -->
+<div style="background:linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); border-radius:16px; padding:24px; color:#ffffff; border:1.5px solid #3b82f6; box-shadow:0 4px 18px rgba(30,58,138,0.25); display:flex; flex-direction:column; justify-content:space-between;">
+<div>
+<div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+<span style="background:#fef08a; color:#713f12; font-weight:800; font-size:0.78rem; padding:4px 12px; border-radius:999px; text-transform:uppercase;">அகில இந்திய அடைவு</span>
+<span style="background:rgba(255,255,255,0.15); color:#93c5fd; font-weight:700; font-size:0.78rem; padding:3px 10px; border-radius:6px;">JoSAA / CSAB 2026</span>
+</div>
+<h4 style="margin:0 0 10px 0; font-size:1.24rem; font-weight:800; color:#fde047;">🏛️ அகில இந்திய JEE கல்வி நிறுவனங்கள் (119 கல்லூரிகள்) முழு அடைவு</h4>
+<p style="margin:0 0 14px 0; font-size:0.91rem; color:#cbd5e1; line-height:1.65;">
+        இந்தியாவின் <b>23 IITகள் (IIT மெட்ராஸ் #1 உட்பட)</b>, <b>32 NITகள் (NIT திருச்சி 50% தமிழக Home State ஒதுக்கீடு!)</b>, <b>29 IIITகள் (திருச்சி &amp; காஞ்சிபுரம்)</b>, <b>27 GFTIகள்</b>, DTU/NSUT மற்றும் IIST விண்வெளி நிறுவனத்தின் முழுமையான கட்டமைப்பு, NIRF தரவரிசை, வழங்கப்படும் கிளைகள் மற்றும் இணையதள விவரங்கள் அடங்கிய முழு அடைவு.
+      </p>
+</div>
+<div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+<a href="01_03_aiq_eng_colleges.html" style="flex:1; min-width:180px; text-align:center; padding:11px 16px; background:#f59e0b; color:#0f172a; text-decoration:none; font-weight:800; border-radius:8px; font-size:0.88rem; transition:all 0.2s ease;">
+        🌐 119 கல்லூரிகள் அடைவு காண்க ➔
+      </a>
+<a href="https://docs.google.com/spreadsheets/d/1_geHOEntVg00AxYQ1Zv3jEEhBKAOiyKcR4Nt-nC311c/edit?usp=sharing" rel="noopener noreferrer" style="padding:11px 16px; background:#047857; color:#ffffff; text-decoration:none; font-weight:700; border-radius:8px; font-size:0.88rem; display:inline-flex; align-items:center; gap:6px;" target="_blank">
+        📊 கூகுள் ஷீட் டவுன்லோடு
+      </a>
+</div>
+</div>
+<!-- Card 2: TN TNEA Engineering Directory -->
+<div style="background:linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%); border-radius:16px; padding:24px; color:#ffffff; border:1.5px solid #10b981; box-shadow:0 4px 18px rgba(6,95,70,0.25); display:flex; flex-direction:column; justify-content:space-between;">
+<div>
+<div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+<span style="background:#fef08a; color:#713f12; font-weight:800; font-size:0.78rem; padding:4px 12px; border-radius:999px; text-transform:uppercase;">தமிழ்நாடு சேர்க்கை</span>
+<span style="background:rgba(255,255,255,0.15); color:#a7f3d0; font-weight:700; font-size:0.78rem; padding:3px 10px; border-radius:6px;">TNEA Anna Univ 2026</span>
+</div>
+<h4 style="margin:0 0 10px 0; font-size:1.24rem; font-weight:800; color:#fde047;">🏢 தமிழ்நாடு பொறியியல் நேரடிச் சேர்க்கை (TNEA 440+ கல்லூரிகள்) அடைவு</h4>
+<p style="margin:0 0 14px 0; font-size:0.91rem; color:#d1fae5; line-height:1.65;">
+        அண்ணா பல்கலைக்கழக வளாகங்கள் (CEG, MIT, ACT), காரைக்குடி <b>ACCET அழகப்பா அரசு பொறியியல் கல்லூரி (சிவகங்கை மாவட்டம் - TNEA குறியீடு: 5002)</b>, <b>CSIR-CECRI காரைக்குடி</b>, அரசு உதவிபெறும் கல்லூரிகள் (PSG, தியாகராசர், CIT) மற்றும் முன்னணி வேலைவாய்ப்பு தரும் 440+ கல்லூரிகளின் அடைவு, கட்-ஆஃப் கணக்கீடு &amp; <b>7.5% அரசுப்பள்ளி 100% இலவசக் கல்வி வழிகாட்டி</b>.
+      </p>
+</div>
+<div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+<a href="02_01_tnea_engineering.html" style="flex:1; min-width:180px; text-align:center; padding:11px 16px; background:#ffffff; color:#064e3b; text-decoration:none; font-weight:800; border-radius:8px; font-size:0.88rem; transition:all 0.2s ease;">
+        🏢 TNEA கல்லூரிகள் முழு அடைவு காண்க ➔
+      </a>
+<a href="https://www.tneaonline.org/" rel="noopener noreferrer" style="padding:11px 16px; background:#0284c7; color:#ffffff; text-decoration:none; font-weight:700; border-radius:8px; font-size:0.88rem; display:inline-flex; align-items:center; gap:6px;" target="_blank">
+        🌐 TNEA போர்ட்டல்
+      </a>
+</div>
+</div>
+</div>
+
 <div class="closing-card">
 <h4>பொறியியல் பயில விரும்பும் மாணவச் செல்வங்களுக்கு வாழ்த்துகள்!</h4>
 <p>தொழில்நுட்பப் பொறியியல் கல்வி என்பது ஒரு நாட்டின் வளர்ச்சிக்கும், புதிய கண்டுபிடிப்புகளுக்கும் முதுகெலும்பாகத் திகழ்கிறது. கடின உழைப்பு, தினசரி பயிற்சி மற்றும் தன்னம்பிக்கையுடன் படித்தால் சிவகங்கை மாவட்ட அரசு மற்றும் அரசு உதவிபெறும் பள்ளி மாணவர்கள் எவராலும் வெல்ல முடியாத தொழில்நுட்ப சிகரங்களை எட்ட முடியும்! எதிர்காலப் பொறியாளர்களாக உருவாக முதன்மைக் கல்வி அலுவலகம் மனதார வாழ்த்துகிறது!</p>
 </div>
-<!-- Floating Back to Top Button -->
-<button class="back-to-top no-print" onclick="scrollToTop(event);" title="மேலே செல்ல" type="button">
-    ▲ மேலே செல்ல
-  </button>
-<!-- ==============================================
-       சுருக்கப்பட்ட & அனிமேஷன் செய்யப்பட்ட திருக்குறள் பகுதி (குறள் 421)
-       ============================================== -->
-<!-- ==================================================== -->
+<!-- Bottom Chapter Navigation Bar: Animated Edge-to-Edge Navigation -->
+<nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar">
+  <a class="page-nav-btn btn-prev-animated" href="01_02_medical_neet_ug.html" title="01_02 மருத்துவம் (NEET UG)">
+    <span class="nav-btn-icon">◀</span>
+    <span class="nav-btn-text">01_02 மருத்துவம் (NEET UG)</span>
+  </a>
+  <a class="page-nav-btn btn-next-animated" href="01_04_science_research_iiser.html" title="01_04 அறிவியல் ஆராய்ச்சி (IISER / NISER)">
+    <span class="nav-btn-text">01_04 அறிவியல் ஆராய்ச்சி (IISER)</span>
+    <span class="nav-btn-icon">▶</span>
+  </a>
+</nav>
+
+<!-- திருக்குறள் பகுதி — பொறியியல் திட்டமிடல் & திறன் (அதிகாரம்: தெரிந்து வினையாடல்) -->
 <div class="kural-box">
-<div class="kural-header">
-<span class="kural-icon">📜</span>
-<span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-<span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
-</div>
-<div class="kural-verse-text">
-    “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
-    திண்ணியர் ஆகப் பெறின்.”
+  <div class="kural-header">
+    <span class="kural-icon">📜</span>
+    <span class="kural-title">திருக்குறள் — அதிகாரம்: தெரிந்து வினையாடல் (குறள்: 516)</span>
+    <span class="kural-sparkle">⚙️ பொறியியல் திட்டமிடல் &amp; திறன்</span>
   </div>
-<div class="kural-meaning">
-<strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
+  <div class="kural-verse-text">
+    “செய்வானை நாடி வினைநாடி காலத்தோடு<br/>
+    எய்த உணர்ந்து செயல்.”
   </div>
-</div><div class="creator-card" style="justify-content: center !important; text-align: center !important;">
-<div class="creator-typewriter-wrapper" style="justify-content: center !important; text-align: center !important; display: inline-flex !important; align-items: center !important;">
-<span class="creator-typewriter-target" id="creatorTypewriterTarget" style="text-align: center !important;"></span><span class="creator-cursor" id="creatorCursor">|</span>
+  <div class="kural-meaning">
+    <strong>விளக்கவுரை:</strong> ஒரு செயலைச் செய்வதற்குரிய தகுதியுள்ள பொறியாளரை/மனிதரை ஆராய்ந்து, அச்செயலின் நுணுக்கங்களை ஆய்ந்து, தகுந்த காலத்தோடு பொருந்துமாறு அறிந்து செயல்பட வேண்டும்; பொறியியல் மற்றும் நவீன தொழில்நுட்பத் துறைகளில் (Engineering &amp; Technology) சரியான தொழினுட்பத்தையும், அதற்குரிய திறனாளர்களையும் தேர்ந்தெடுத்துத் திட்டமிட்டுச் செயல்படுவதே பெரும் சாதனைகளுக்கு வழிகோலும்.
+  </div>
 </div>
-<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
-<span class="phone-icon">📱</span>
-<span class="phone-text">9626471035</span>
-</a>
-</div><footer class="portal-footer">
-<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
-    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
-</p>
-<p style="font-size: 0.85rem; color: #64748b;">
+
+<!-- உருவாக்கியவர் பெட்டி (Classic Dark Theme & Aurora Animation, Centered Flow) -->
+<div class="creator-card">
+  <div class="creator-typewriter-wrapper">
+    <span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
+  </div>
+  <a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
+    <span class="phone-icon">📱</span>
+    <span class="phone-text">9626471035</span>
+  </a>
+</div>
+
+<!-- முதன்மைக் கல்வி அலுவலக அடிக்குறிப்பு -->
+<footer class="portal-footer">
+  <p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #ffffff !important; font-size: 0.96rem !important; text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;">
+    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a class="footer-phone-link" href="tel:04575240408" style="color: #fde047 !important; text-decoration: none !important; font-weight: 800 !important; background: rgba(0, 0, 0, 0.45) !important; padding: 3px 10px !important; border-radius: 6px !important; border: 1.2px solid rgba(253, 224, 71, 0.6) !important; display: inline-block !important;">☎️ 04575240408</a>
+  </p>
+  <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important;">
     © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
-</footer></div>
-<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
-
-<!-- Interactive JavaScript -->
-<script>
-  function scrollToSection(sectionId, event) {
-    if (event) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    var target = document.getElementById(sectionId);
-    if (target) {
-      try {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } catch (e) {
-        target.scrollIntoView();
-      }
-
-      try {
-        var rect = target.getBoundingClientRect();
-        var absTop = window.pageYOffset + rect.top - 15;
-        window.scrollTo({ top: absTop, behavior: 'smooth' });
-      } catch (e) {}
-
-      try {
-        if (history.pushState) {
-          history.pushState(null, null, '#' + sectionId);
-        } else {
-          window.location.hash = sectionId;
-        }
-      } catch(e) {}
-
-      target.classList.add('highlight-pulse');
-      setTimeout(function() {
-        target.classList.remove('highlight-pulse');
-      }, 1500);
-
-      updateActiveNav(sectionId);
-    }
-  }
-
-  function scrollToTop(event) {
-    if (event) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  function updateActiveNav(activeId) {
-    var btns = document.querySelectorAll('.nav-btn');
-    btns.forEach(function(b) {
-      b.classList.remove('active');
-      var onclickAttr = b.getAttribute('onclick') || '';
-      if (onclickAttr.indexOf(activeId) !== -1) {
-        b.classList.add('active');
-      }
-    });
-  }
-
-  function toggleFaq(button) {
-    var answer = button.nextElementSibling;
-    var isActive = button.classList.contains('active');
-    document.querySelectorAll('.faq-question').forEach(function(q) {
-      q.classList.remove('active');
-      q.nextElementSibling.classList.remove('show');
-    });
-    if (!isActive) {
-      button.classList.add('active');
-      answer.classList.add('show');
-    }
-  }
-
-  function filterContent() {
-    var query = (document.getElementById('examSearchInput').value || '').toLowerCase().trim();
-    var sections = document.querySelectorAll('.filterable-section');
-
-    sections.forEach(function(sec) {
-      var text = sec.innerText.toLowerCase();
-      if (!query || text.indexOf(query) !== -1) {
-        sec.style.display = '';
-      } else {
-        sec.style.display = 'none';
-      }
-    });
-  }
-
-  function filterByTag(tag, el) {
-    var chips = document.querySelectorAll('.filter-chip');
-    chips.forEach(function(c) { c.classList.remove('active'); });
-    if (el) el.classList.add('active');
-
-    var searchBox = document.getElementById('examSearchInput');
-    if (searchBox) searchBox.value = '';
-
-    var sections = document.querySelectorAll('.filterable-section');
-    sections.forEach(function(sec) {
-      var tags = (sec.getAttribute('data-tags') || '').toLowerCase();
-      if (tag === 'all' || tags.indexOf(tag.toLowerCase()) !== -1) {
-        sec.style.display = '';
-      } else {
-        sec.style.display = 'none';
-      }
-    });
-  }
-
-  window.addEventListener('scroll', function() {
-    var sections = document.querySelectorAll('.filterable-section');
-    var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
-
-    sections.forEach(function(sec) {
-      var top = sec.offsetTop - 120;
-      var height = sec.offsetHeight;
-      var id = sec.getAttribute('id');
-      if (scrollPos >= top && scrollPos < top + height) {
-        updateActiveNav(id);
-      }
-    });
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-      anchor.addEventListener('click', function(e) {
-        var targetId = this.getAttribute('href').substring(1);
-        if (targetId && document.getElementById(targetId)) {
-          scrollToSection(targetId, e);
-        }
-      });
-    });
-  });
-
-</script>
-<!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
-
-<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
-
-<!-- Footer -->
-
+</footer>
 </main></div> <!-- /.container -->
 
 
@@ -6325,6 +6993,32 @@ document.addEventListener('DOMContentLoaded', function() {
     initCreatorObserver();
   }
 })();
+
+
+  // Floating Back to Top Button Controller
+  (function() {
+    function setupBackToTop() {
+      const btt = document.getElementById('floatingBackToTop');
+      if (!btt) return;
+      function checkScroll() {
+        const scrollPos = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if (scrollPos > 120) {
+          btt.classList.add('visible');
+        } else {
+          btt.classList.remove('visible');
+        }
+      }
+      window.addEventListener('scroll', checkScroll, { passive: true });
+      checkScroll();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupBackToTop);
+    } else {
+      setupBackToTop();
+    }
+  })();
+
 </script>
+<button aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" id="floatingBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="மேலே செல்க">↑ மேலே செல்க</button>
 </body>
 </html>
