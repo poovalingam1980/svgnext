@@ -4255,6 +4255,573 @@
   }
 }
 
+
+    /* ========================================================
+       FULL SCREEN WIDTH LAYOUT & STANDARDIZED DESIGN (01_00 ENTRANCE MAIN MODEL)
+       ======================================================== */
+    html, body {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+      background-color: var(--bg-main, #f8fafc) !important;
+    }
+
+    .portal-layout-wrapper {
+      display: flex !important;
+      flex-direction: row !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-height: 100vh !important;
+      position: relative !important;
+      align-items: stretch !important;
+      box-sizing: border-box !important;
+    }
+
+    .desktop-left-sidebar {
+      width: 295px !important;
+      min-width: 295px !important;
+      max-width: 295px !important;
+      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+      border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      height: 100vh !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex-shrink: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .portal-main-content {
+      margin-left: 295px !important;
+      width: calc(100% - 295px) !important;
+      min-height: 100vh !important;
+      padding: 12px clamp(12px, 1.8vw, 36px) 40px !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+    }
+
+    .portal-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .info-card,
+    .content-card,
+    .course-card,
+    .cards-grid,
+    section,
+    #highlights,
+    .portal-header,
+    .quick-nav-marquee-container,
+    .bottom-page-nav-bar,
+    .kural-box,
+    .creator-card,
+    .portal-footer,
+    .table-container,
+    .schedule-table-wrap {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .content-card {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 26px 0 !important;
+      padding: 22px 24px !important;
+      box-sizing: border-box !important;
+    }
+
+    /* TOP BREADCRUMB BAR */
+    .breadcrumb-bar {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.4) !important;
+      border-radius: 12px !important;
+      padding: 8px 16px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
+      flex-wrap: wrap !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .nav-menu-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 0.84rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      color: #e2e8f0 !important;
+      padding: 4px 10px !important;
+      border-radius: 6px !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .nav-menu-btn:hover {
+      background: rgba(255, 255, 255, 0.12) !important;
+      color: #fef08a !important;
+    }
+
+    .nav-menu-btn.btn-current-page {
+      background: rgba(56, 189, 248, 0.2) !important;
+      border: 1px solid #38bdf8 !important;
+      color: #38bdf8 !important;
+    }
+
+    .nav-menu-separator {
+      color: #94a3b8 !important;
+      font-size: 0.75rem !important;
+    }
+
+    /* HERO PORTAL HEADER: NATIONAL BLUE & CYAN THEME */
+    .portal-header {
+      background: linear-gradient(135deg, #091330 0%, #0f2b66 50%, #0369a1 100%) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.42) !important;
+      border-bottom: 4px solid #0284c7 !important;
+      border-radius: 16px !important;
+      padding: 28px 24px 24px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4) !important;
+      text-align: center !important;
+      position: relative !important;
+      overflow: hidden !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .portal-title {
+      color: #ffffff !important;
+      font-size: clamp(1.4rem, 2.3vw, 2.1rem) !important;
+      font-weight: 900 !important;
+      margin: 0 0 10px 0 !important;
+      line-height: 1.3 !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .portal-title .highlight-cyan {
+      color: #38bdf8 !important;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 16px rgba(56,189,248,0.6) !important;
+    }
+
+    .portal-subtitle {
+      color: #f1f5f9 !important;
+      font-size: clamp(0.88rem, 1.1vw, 1.02rem) !important;
+      line-height: 1.65 !important;
+      max-width: 980px !important;
+      margin: 0 auto !important;
+      font-weight: 500 !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+    }
+
+    /* QUICK NAVIGATION MARQUEE BAR */
+    .quick-nav-marquee-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      background: linear-gradient(135deg, #060d1a 0%, #0d1e38 50%, #060d1a 100%) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.35) !important;
+      border-radius: 12px !important;
+      padding: 8px 12px !important;
+      margin-bottom: 18px !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+      position: relative !important;
+    }
+
+    .marquee-static-label {
+      flex-shrink: 0 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      font-size: 1.15rem !important;
+      padding: 6px 12px !important;
+      border-radius: 8px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.4) !important;
+      z-index: 2 !important;
+    }
+
+    .marquee-scroll-track {
+      flex-grow: 1 !important;
+      overflow: hidden !important;
+      display: flex !important;
+      position: relative !important;
+      mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+    }
+
+    .marquee-content-loop {
+      display: flex !important;
+      gap: 10px !important;
+      align-items: center !important;
+      white-space: nowrap !important;
+      animation: marqueeScroll 28s linear infinite !important;
+      padding-right: 10px !important;
+    }
+
+    .quick-nav-marquee-container:hover .marquee-content-loop {
+      animation-play-state: paused !important;
+    }
+
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .marquee-pill-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: rgba(30, 41, 59, 0.85) !important;
+      color: #e2e8f0 !important;
+      border: 1px solid rgba(148, 163, 184, 0.25) !important;
+      padding: 5px 12px !important;
+      border-radius: 999px !important;
+      font-size: 0.80rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .marquee-pill-btn:hover {
+      background: rgba(56, 189, 248, 0.25) !important;
+      color: #38bdf8 !important;
+      border-color: #38bdf8 !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* SCHEDULE MASTER TABLE RESPONSIVENESS */
+    .schedule-table-wrap {
+      width: 100% !important;
+      max-width: 100% !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      border: 1.8px solid #cbd5e1 !important;
+      border-radius: 12px !important;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+      background: #ffffff !important;
+      margin: 14px 0 28px 0 !important;
+      transition: all 0.2s ease !important;
+      box-sizing: border-box !important;
+    }
+
+    .schedule-master-table {
+      width: 100% !important;
+      min-width: 1240px !important;
+      table-layout: auto !important;
+      border-collapse: collapse !important;
+      font-size: 0.83rem !important;
+      line-height: 1.45 !important;
+      text-align: left !important;
+      border: 1.5px solid #94a3b8 !important;
+      background: #ffffff !important;
+    }
+
+    /* BOTTOM PAGE NAVIGATION BAR */
+    .bottom-page-nav-bar {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 14px 18px !important;
+      margin: 26px 0 28px 0 !important;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .page-nav-btn.btn-prev-animated {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 10px 20px !important;
+      border-radius: 10px !important;
+      font-family: inherit !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 2px solid #059669 !important;
+      background: linear-gradient(135deg, #047857 0%, #065f46 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(4, 120, 87, 0.35) !important;
+      animation: pulseNudgeLeft 3s ease-in-out infinite !important;
+      transition: all 0.25s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .page-nav-btn.btn-prev-animated:hover {
+      background: linear-gradient(135deg, #065f46 0%, #022c22 100%) !important;
+      border-color: #fde047 !important;
+      transform: translateX(-5px) scale(1.04) !important;
+      box-shadow: 0 6px 20px rgba(4, 120, 87, 0.55), 0 0 15px rgba(52, 211, 153, 0.5) !important;
+    }
+
+    .page-nav-btn.btn-next-animated {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 10px 20px !important;
+      border-radius: 10px !important;
+      font-family: inherit !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 2px solid #0284c7 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;
+      animation: pulseNudgeRight 3s ease-in-out infinite !important;
+      transition: all 0.25s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .page-nav-btn.btn-next-animated:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #0c4a6e 100%) !important;
+      border-color: #fde047 !important;
+      transform: translateX(5px) scale(1.04) !important;
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.55), 0 0 15px rgba(56, 189, 248, 0.5) !important;
+    }
+
+    @keyframes pulseNudgeLeft {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(-4px); }
+    }
+
+    @keyframes pulseNudgeRight {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(4px); }
+    }
+
+    /* CREATOR CARD: CLASSIC DARK THEME WITH AURORA ANIMATION */
+    .creator-card {
+      background: linear-gradient(135deg, #050811 0%, #0d1527 50%, #050811 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+      border-radius: 14px !important;
+      padding: 12px clamp(16px, 2vw, 32px) !important;
+      margin: 20px 0 16px 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.55), 0 0 20px rgba(0, 194, 255, 0.15) !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      flex-wrap: wrap !important;
+      gap: 14px !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+
+    .creator-typewriter-wrapper {
+      font-size: clamp(0.74rem, 0.95vw, 0.90rem) !important;
+      color: #f8fafc !important;
+      font-weight: 600 !important;
+      line-height: 1.4 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      flex: 0 1 auto !important;
+      min-width: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: center !important;
+    }
+
+    .creator-typewriter-target {
+      display: inline !important;
+      white-space: pre-wrap !important;
+    }
+
+    .creator-label {
+      font-size: 80% !important;
+      font-weight: 700 !important;
+      color: #f1f5f9 !important;
+      white-space: nowrap !important;
+      opacity: 0.92 !important;
+    }
+
+    .creator-role {
+      font-size: 80% !important;
+      color: #94a3b8 !important;
+      font-weight: 600 !important;
+      white-space: nowrap !important;
+      opacity: 0.90 !important;
+    }
+
+    .creator-name-ta,
+    .creator-name-en,
+    .creator-name-ta-blue,
+    .creator-name-ta-purple,
+    .creator-name-en-blue,
+    .creator-name-en-purple {
+      background: linear-gradient(
+        90deg,
+        #00c2ff 0%,
+        #33ff8c 25%,
+        #ffc640 50%,
+        #e54cff 75%,
+        #00c2ff 100%
+      ) !important;
+      background-size: 300% 100% !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      animation: aurora-text-flow 6s linear infinite !important;
+      font-weight: 900 !important;
+      letter-spacing: 0.3px !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      display: inline-block !important;
+      filter: drop-shadow(0 0 6px rgba(0, 194, 255, 0.45));
+    }
+
+    .creator-cursor {
+      display: inline-block !important;
+      font-weight: 300 !important;
+      color: #00c2ff !important;
+      margin-left: 2px !important;
+      animation: blinkCreatorCursor 0.65s infinite !important;
+      text-shadow: 0 0 8px rgba(0, 194, 255, 0.8);
+      flex-shrink: 0 !important;
+    }
+
+    @keyframes aurora-text-flow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 300% 50%; }
+    }
+
+    @keyframes blinkCreatorCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .footer-phone-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+      color: #ffffff !important;
+      padding: 4px 12px !important;
+      border-radius: 999px !important;
+      font-size: 0.84rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4) !important;
+      transition: all 0.2s ease !important;
+      margin: 0 !important;
+      vertical-align: middle !important;
+      flex-shrink: 0 !important;
+    }
+
+    .footer-phone-pill:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+      transform: translateY(-1px) scale(1.03) !important;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5) !important;
+      color: #ffffff !important;
+    }
+
+    /* FLOATING BACK TO TOP BUTTON (STANDARDIZED) */
+    .floating-back-to-top {
+      position: fixed !important;
+      bottom: 24px !important;
+      right: 24px !important;
+      z-index: 9999 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+      border-radius: 999px !important;
+      padding: 10px 18px !important;
+      font-size: 0.85rem !important;
+      font-weight: 800 !important;
+      font-family: inherit !important;
+      cursor: pointer !important;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35) !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: translateY(16px) !important;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .floating-back-to-top.visible {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: translateY(0) !important;
+    }
+
+    .floating-back-to-top:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+      border-color: #fde047 !important;
+      color: #fde047 !important;
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.5) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    @media (max-width: 1024px) {
+      .desktop-left-sidebar {
+        position: fixed !important;
+        left: -320px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 295px !important;
+        height: 100vh !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 9999 !important;
+        box-shadow: 6px 0 35px rgba(0, 0, 0, 0.85);
+      }
+      .desktop-left-sidebar.sidebar-open {
+        left: 0 !important;
+      }
+      .portal-main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 8px 12px 30px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .bottom-page-nav-bar {
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+      .page-nav-btn.btn-prev-animated,
+      .page-nav-btn.btn-next-animated {
+        width: 100% !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+      }
+    }
+
 </style>
 <style>
 /* ========================================================
@@ -5325,53 +5892,55 @@
 </a>
 </header>
 <nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
-<a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
-<span class="btn-icon">🧭</span>
-<span class="btn-text">வழிகாட்டி முகப்பு</span>
-</a>
-<span class="nav-menu-separator">▶</span>
-<a class="nav-menu-btn btn-direct-home" href="01_00_entrance_main.html" title="அனைத்து நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம்">
-<span class="btn-icon">🎯</span>
-<span class="btn-text">நுழைவுத்தேர்வுகள்</span>
-</a>
-<span class="nav-menu-separator">▶</span>
-<span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
-<span class="btn-icon">📅</span>
-<span class="btn-text">நுழைவுத் தேர்வுகள் அட்டவணை &amp; காலண்டர்</span>
-</span>
+  <a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+    <span class="btn-icon">🧭</span>
+    <span class="btn-text">வழிகாட்டி முகப்பு</span>
+  </a>
+  <span class="nav-menu-separator">▶</span>
+  <a class="nav-menu-btn btn-direct-home" href="01_00_entrance_main.html" title="அனைத்து நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம்">
+    <span class="btn-icon">🎯</span>
+    <span class="btn-text">01 / நுழைவுத்தேர்வுகள் முதன்மை</span>
+  </a>
+  <span class="nav-menu-separator">▶</span>
+  <span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
+    <span class="btn-icon">📅</span>
+    <span class="btn-text">01_01 / மகா தேர்வு அட்டவணை &amp; காலண்டர்</span>
+  </span>
 </nav>
-<div class="header-banner-wrap">
-<header class="header-banner aurora-theme">
-<h1 class="banner-main-title" style="font-size: clamp(1.35rem, 2.0vw, 1.85rem) !important; font-weight: 900 !important; margin: 0 0 6px 0 !important; color: #ffffff !important; letter-spacing: -0.3px !important; text-shadow: 0 2px 8px rgba(0,0,0,0.8) !important;">
-இந்தியாவின் அனைத்து நுழைவுத் தேர்வுகள் <span style="color: #fde047 !important;">முழுமையான அட்டவணை &amp; காலண்டர்</span>
-</h1>
-<p class="banner-desc" style="font-size: clamp(0.84rem, 0.96vw, 0.92rem) !important; color: #e2e8f0 !important; max-width: 980px !important; margin: 0 auto 8px auto !important; line-height: 1.55 !important;">
-+2 முடிக்கும் மாணவ, மாணவியர் இந்தியாவில் உள்ள தலைசிறந்த தேசிய மற்றும் மாநில உயர் கல்வி நிறுவனங்களில் சேர்வதற்கான 50-க்கும் மேற்பட்ட அனைத்து நுழைவுத்தேர்வுகள், விண்ணப்பக் காலம், தேர்வு மாதங்கள் மற்றும் அதிகாரப்பூர்வ இணையதளங்களின் முழுமையான கால அட்டவணை.
-</p>
-<div class="banner-features-ribbon" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; flex-wrap: wrap !important; gap: 8px 12px !important; padding: 4px 14px !important; background: rgba(15, 23, 42, 0.75) !important; border: 1px solid rgba(56, 189, 248, 0.4) !important; border-radius: 8px !important;">
-<div class="ribbon-item" style="color: #38bdf8; font-weight: 700; font-size: 0.76rem;">📅 மாதவாரியான தேர்வு காலண்டர்</div>
-<div class="ribbon-dot" style="color: rgba(255,255,255,0.35);">•</div>
-<div class="ribbon-item" style="color: #fde047; font-weight: 700; font-size: 0.76rem;">🌐 நேரடி அதிகாரப்பூர்வ இணையதளங்கள்</div>
-<div class="ribbon-dot" style="color: rgba(255,255,255,0.35);">•</div>
-<div class="ribbon-item" style="color: #34d399; font-weight: 700; font-size: 0.76rem;">🎯 50+ தேசிய &amp; மாநிலத் தேர்வுகள்</div>
-<div class="ribbon-dot" style="color: rgba(255,255,255,0.35);">•</div>
-<div class="ribbon-item" style="color: #c084fc; font-weight: 700; font-size: 0.76rem;">💡 சரியான நேரத்தில் விண்ணப்பிக்கும் வழிகாட்டி</div>
-</div>
+<header class="portal-header">
+  <h1 class="portal-title">
+    இந்தியாவின் அனைத்து நுழைவுத் தேர்வுகள் <span class="highlight-cyan">முழுமையான அட்டவணை &amp; காலண்டர்</span>
+  </h1>
+  <p class="portal-subtitle">
+    +2 முடிக்கும் மாணவ, மாணவியர் இந்தியாவில் உள்ள தலைசிறந்த தேசிய மற்றும் மாநில உயர் கல்வி நிறுவனங்களில் சேர்வதற்கான 50-க்கும் மேற்பட்ட அனைத்து நுழைவுத்தேர்வுகள், விண்ணப்பக் காலம், தேர்வு மாதங்கள் மற்றும் அதிகாரப்பூர்வ இணையதளங்களின் முழுமையான கால அட்டவணை.
+  </p>
 </header>
+
+<!-- Quick Navigation Marquee Bar (ஓடும் விரைவு வழிசெலுத்தல் பட்டை) -->
+<div class="quick-nav-marquee-container" aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை">
+  <div class="marquee-static-label" title="விரைவு வழிகாட்டல்">
+    <span class="pulse-icon">⚡</span>
+  </div>
+  <div class="marquee-scroll-track">
+    <div class="marquee-content-loop">
+      <a href="#highlights" class="marquee-pill-btn">📊 காலண்டர் சுருக்கம்</a>
+      <a href="#master-table-sec" class="marquee-pill-btn">🗓️ மகா தேர்வு அட்டவணை</a>
+      <a href="#monthly-timeline-sec" class="marquee-pill-btn">📅 மாதவாரியான காலண்டர்</a>
+      <a href="#domain-cards-sec" class="marquee-pill-btn">🎯 துறைவாரியான தேர்வுகள்</a>
+      <a href="#portals-directory-sec" class="marquee-pill-btn">🌐 அதிகாரப்பூர்வ தளங்கள் அடைவு</a>
+      <a href="#faq-section" class="marquee-pill-btn">❓ அடிக்கடி கேட்கப்படும் வினாக்கள்</a>
+    </div>
+    <!-- Duplicate for infinite seamless scroll -->
+    <div class="marquee-content-loop" aria-hidden="true">
+      <a href="#highlights" class="marquee-pill-btn">📊 காலண்டர் சுருக்கம்</a>
+      <a href="#master-table-sec" class="marquee-pill-btn">🗓️ மகா தேர்வு அட்டவணை</a>
+      <a href="#monthly-timeline-sec" class="marquee-pill-btn">📅 மாதவாரியான காலண்டர்</a>
+      <a href="#domain-cards-sec" class="marquee-pill-btn">🎯 துறைவாரியான தேர்வுகள்</a>
+      <a href="#portals-directory-sec" class="marquee-pill-btn">🌐 அதிகாரப்பூர்வ தளங்கள் அடைவு</a>
+      <a href="#faq-section" class="marquee-pill-btn">❓ அடிக்கடி கேட்கப்படும் வினாக்கள்</a>
+    </div>
+  </div>
 </div>
-<nav aria-label="நுழைவுத்தேர்வுகள் வழிகாட்டல் விரைவு வழிசெலுத்தல்" class="sticky-portal-nav" id="stickyPortalNavbar">
-<marquee behavior="scroll" direction="left" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="4" style="display: flex; align-items: center; width: 100%;" title="பொத்தான்களைத் தேர்ந்தெடுக்க மவுஸை இதன் மேல் வைக்கவும் (Hover to Pause)">
-<span style="display: inline-flex; align-items: center; gap: 10px; padding: 0 6px;">
-<button class="nav-anchor-pill active" onclick="smoothScrollToAnchor('highlights', this)" type="button">📊 காலண்டர் சுருக்கம்</button>
-<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('master-table-sec', this)" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important; color: #ffffff !important; border: 1.5px solid #38bdf8 !important; font-weight: 800 !important;" type="button">🗓️ மகா தேர்வு அட்டவணை</button>
-<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('monthly-timeline-sec', this)" type="button">📅 மாதவாரியான காலண்டர்</button>
-<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('domain-cards-sec', this)" type="button">🎯 துறைவாரியான தேர்வுகள்</button>
-<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('portals-directory-sec', this)" type="button">🌐 அதிகாரப்பூர்வ தளங்கள் அடைவு</button>
-<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('faq-section', this)" style="background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%) !important; color: #ffffff !important; border: 1.5px solid #818cf8 !important;" type="button">❓ அடிக்கடி கேட்கப்படும் வினாக்கள் (FAQs)</button>
-<button class="nav-anchor-pill btn-feedback-nav" onclick="smoothScrollToAnchor('doubt-sec', this)" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important; color: #ffffff !important; border: 1.5px solid #38bdf8 !important;" type="button">💬 சந்தேகம் கேட்க (Ask Doubt)</button>
-</span>
-</marquee>
-</nav>
 <section id="highlights" style="margin-bottom: 22px;">
 <div class="highlights-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;">
 <div class="highlight-box" style="background: #ffffff; border: 1.6px solid #cbd5e1; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(15,23,42,0.05); border-left: 4.5px solid #0284c7;">
@@ -6682,6 +7251,19 @@ CUET-UG தேர்வில் மூன்று பிரிவுகள் 
 </div>
 </div>
 </section>
+
+<!-- Bottom Chapter Navigation Bar: Animated Edge-to-Edge Navigation -->
+<nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar">
+  <a class="page-nav-btn btn-prev-animated" href="01_00_entrance_main.html" title="01_00 நுழைவுத்தேர்வுகள் முதன்மை">
+    <span class="nav-btn-icon">◀</span>
+    <span class="nav-btn-text">01_00 நுழைவுத்தேர்வுகள் முதன்மை</span>
+  </a>
+  <a class="page-nav-btn btn-next-animated" href="01_02_medical_neet_ug.html" title="01_02 மருத்துவம் &amp; NEET UG">
+    <span class="nav-btn-text">01_02 மருத்துவம் &amp; NEET UG</span>
+    <span class="nav-btn-icon">▶</span>
+  </a>
+</nav>
+
 <div class="kural-box">
 <div class="kural-header">
 <span class="kural-icon">📜</span>
@@ -6693,7 +7275,7 @@ CUET-UG தேர்வில் மூன்று பிரிவுகள் 
     கருதி இடத்தால் செயின்.”
 </div>
 <div class="kural-meaning">
-<strong>குறள் விளக்கம்:</strong> தகுந்த காலத்தை அறிந்து, அதற்குரிய இடத்தையும் உணர்ந்து ஒரு செயலை மேற்கொண்டால், உலகத்தையே அடைய நினைத்தாலும் அது நிச்சயமாகக் கைகூடும்; அதேபோல் +2 பயிலும் மாணவ, மாணவியர் உரிய காலத்தில் தேசிய நுழைவுத்தேர்வுகளுக்குத் திட்டமிட்டுத் தயாரானால், இந்தியாவின் எந்தவொரு தலைசிறந்த உயர் கல்வி நிறுவனத்திலும் இடம் பெறுவது நிச்சயம் கைகூடும்.
+<strong>விளக்கவுரை:</strong> தகுந்த காலத்தை அறிந்து, அதற்குரிய இடத்தையும் உணர்ந்து ஒரு செயலை மேற்கொண்டால், உலகத்தையே அடைய நினைத்தாலும் அது நிச்சயமாகக் கைகூடும்; அதேபோல் +2 பயிலும் மாணவ, மாணவியர் உரிய காலத்தில் தேசிய நுழைவுத்தேர்வுகளுக்குத் திட்டமிட்டுத் தயாரானால், இந்தியாவின் எந்தவொரு தலைசிறந்த உயர் கல்வி நிறுவனத்திலும் இடம் பெறுவது நிச்சயம் கைகூடும்.
 </div>
 </div>
 <div class="creator-card" style="justify-content: center !important; text-align: center !important;">
@@ -6706,24 +7288,17 @@ CUET-UG தேர்வில் மூன்று பிரிவுகள் 
 </a>
 </div>
 <footer class="portal-footer">
-<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a></p>
-<div class="footer-update" style="margin: 6px 0; font-weight: 800; color: #0d9488; font-size: 0.88rem;">
-<span>📅 கடைசியாகப் புதுப்பிக்கப்பட்ட தேதி:</span> <span style="color: #0f172a; font-weight: 900;">07-10-2026</span>
-</div>
-<p style="font-size: 0.85rem; color: #64748b; margin-top: 4px;">
-© Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
-</p>
-<div style="margin-top: 8px;">
-<a href="index.html" style="color: #0284c7; font-weight: 600; text-decoration: none; font-size: 0.85rem;">🎓 உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு</a>
-</div>
+  <p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #ffffff !important; font-size: 0.96rem !important; text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;">
+    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a class="footer-phone-link" href="tel:04575240408" style="color: #fde047 !important; text-decoration: none !important; font-weight: 800 !important; background: rgba(0, 0, 0, 0.45) !important; padding: 3px 10px !important; border-radius: 6px !important; border: 1.2px solid rgba(253, 224, 71, 0.6) !important; display: inline-block !important;">☎️ 04575240408</a>
+  </p>
+  <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important;">
+    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+  </p>
 </footer>
 </div>
 </main>
 </div>
-<button aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" id="floatingBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="பக்கத்தின் மேலே செல்க" type="button">
-<span class="floating-btn-arrow">▲</span>
-<span class="floating-btn-text">மேலே செல்க</span>
-</button>
+<button aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" id="floatingBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="மேலே செல்க">↑ மேலே செல்க</button>
 <script>
 // 1. Smooth Scroll with Sticky Navbar Height Offset
 function smoothScrollToAnchor(targetId, buttonElement) {
