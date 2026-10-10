@@ -4212,6 +4212,27 @@
 
     
 
+
+    /* Smooth Interactive Tag Pills */
+    .tag {
+      cursor: pointer !important;
+      text-decoration: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 4px !important;
+      transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      user-select: none !important;
+      -webkit-tap-highlight-color: rgba(56, 189, 248, 0.35) !important;
+    }
+    .tag:hover,
+    .tag:focus {
+      transform: translateY(-2px) scale(1.04) !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+    }
+    .tag:active {
+      transform: translateY(0) scale(0.98) !important;
+    }
+
 </style>
 <style id="robust-layout-override">
 /* ========================================================
@@ -5309,26 +5330,26 @@
 <!-- ஒவ்வொரு தேர்வுக்கும் பிரத்யேக நேரடி இணைப்புகள் -->
 <div class="tags" onclick="event.stopPropagation();">
 <!-- மருத்துவம் & அதன் அடைவுப் பக்கங்கள் -->
-<a class="tag" href="01_02_medical_neet_ug.html" style="text-decoration: none;" title="மருத்துவ நுழைவுத்தேர்வு">🩺 NEET (மருத்துவம்)</a>
-<a class="tag" href="01_02_A_tn_med_colleges.html" style="text-decoration: none;" title="தமிழக மருத்துவக் கல்லூரிகள் அடைவு">🏥 TN மருத்துவ அடைவு</a>
-<a class="tag" href="01_02_B_in_med_colleges.html" style="text-decoration: none;" title="அகில இந்திய மருத்துவக் கல்லூரிகள் அடைவு">🏛️ AIQ மருத்துவ அடைவு</a>
+<a class="tag" href="01_02_medical_neet_ug.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="மருத்துவ நுழைவுத்தேர்வு">🩺 NEET (மருத்துவம்)</a>
+<a class="tag" href="01_02_A_tn_med_colleges.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="தமிழக மருத்துவக் கல்லூரிகள் அடைவு">🏥 TN மருத்துவ அடைவு</a>
+<a class="tag" href="01_02_B_in_med_colleges.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="அகில இந்திய மருத்துவக் கல்லூரிகள் அடைவு">🏛️ AIQ மருத்துவ அடைவு</a>
 <!-- பொறியியல் & அதன் அடைவுப் பக்கங்கள் -->
-<a class="tag" href="01_03_engineering_jee.html" style="text-decoration: none;" title="பொறியியல் நுழைவுத்தேர்வு">⚙️ JEE (IIT/NIT)</a>
-<a class="tag" href="01_03_aiq_eng_colleges.html" style="text-decoration: none;" title="அகில இந்திய JEE பொறியியல் கல்வி நிறுவனங்கள் அடைவு (119 கல்லூரிகள்)">🏛️ AIQ பொறியியல் அடைவு (119)</a>
+<a class="tag" href="01_03_engineering_jee.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="பொறியியல் நுழைவுத்தேர்வு">⚙️ JEE (IIT/NIT)</a>
+<a class="tag" href="01_03_aiq_eng_colleges.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="அகில இந்திய JEE பொறியியல் கல்வி நிறுவனங்கள் அடைவு (119 கல்லூரிகள்)">🏛️ AIQ பொறியியல் அடைவு (119)</a>
 <!-- பிற தேசிய நுழைவுத்தேர்வுகள் -->
-<a class="tag" href="01_04_science_research_iiser.html" style="text-decoration: none;" title="அறிவியல் &amp; ஆராய்ச்சி">🔬 IISER / NISER</a>
-<a class="tag" href="01_05_central_universities_cuet.html" style="text-decoration: none;" title="மத்தியப் பல்கலைக்கழகங்கள்">🏛️ CUET (மத்திய பல்கலை)</a>
-<a class="tag" href="01_06_law_clat_nlu.html" style="text-decoration: none;" title="தேசிய சட்டப் பல்கலைக்கழகங்கள்">⚖️ CLAT (சட்டம்)</a>
-<a class="tag" href="01_07_design_architecture_nata_nift.html" style="text-decoration: none;" title="கட்டிடக்கலை &amp; ஆடை வடிவமைப்பு">📐 NATA / NIFT</a>
-<a class="tag" href="01_08_management_iim_ipm.html" style="text-decoration: none;" title="ஒருங்கிணைந்த மேலாண்மை">📊 IIM IPMAT</a>
-<a class="tag" href="01_09_hotel_management_nchmct.html" style="text-decoration: none;" title="உணவக மேலாண்மை">🏨 NCHMCT (IHM)</a>
-<a class="tag" href="01_10_maritime_merchant_navy.html" style="text-decoration: none;" title="கடல்சார் கல்வி &amp; வணிகக் கப்பல்">⚓ IMU-CET (கடற்படை)</a>
-<a class="tag" href="01_11_defence_armed_forces.html" style="text-decoration: none;" title="பாதுகாப்பு &amp; முப்படைகள்">🎖️ பாதுகாப்புப் படைகள் (NDA)</a>
-<a class="tag" href="01_12_pilot_careers_cpl_and_iaf_fighter.html" style="text-decoration: none;" title="விமானிப் பயிற்சிகள்">✈️ விமானி (Pilot / CPL)</a>
+<a class="tag" href="01_04_science_research_iiser.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="அறிவியல் &amp; ஆராய்ச்சி">🔬 IISER / NISER</a>
+<a class="tag" href="01_05_central_universities_cuet.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="மத்தியப் பல்கலைக்கழகங்கள்">🏛️ CUET (மத்திய பல்கலை)</a>
+<a class="tag" href="01_06_law_clat_nlu.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="தேசிய சட்டப் பல்கலைக்கழகங்கள்">⚖️ CLAT (சட்டம்)</a>
+<a class="tag" href="01_07_design_architecture_nata_nift.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="கட்டிடக்கலை &amp; ஆடை வடிவமைப்பு">📐 NATA / NIFT</a>
+<a class="tag" href="01_08_management_iim_ipm.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="ஒருங்கிணைந்த மேலாண்மை">📊 IIM IPMAT</a>
+<a class="tag" href="01_09_hotel_management_nchmct.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="உணவக மேலாண்மை">🏨 NCHMCT (IHM)</a>
+<a class="tag" href="01_10_maritime_merchant_navy.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="கடல்சார் கல்வி &amp; வணிகக் கப்பல்">⚓ IMU-CET (கடற்படை)</a>
+<a class="tag" href="01_11_defence_armed_forces.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="பாதுகாப்பு &amp; முப்படைகள்">🎖️ பாதுகாப்புப் படைகள் (NDA)</a>
+<a class="tag" href="01_12_pilot_careers_cpl_and_iaf_fighter.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="விமானிப் பயிற்சிகள்">✈️ விமானி (Pilot / CPL)</a>
 </div>
 </div>
 <a class="btn-link" href="01_00_entrance_main.html" style="margin-top: 10px;">
-<span>அனைத்து 11 தேர்வுகள் விவரம் காண்க</span>
+<span>அனைத்து நுழைவுத்தேர்வுகள் விவரம் காண்க</span>
 <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
 </a>
 </div>
@@ -5348,21 +5369,21 @@
 </a>
 </div>
 </div>
-<p class="card-summary">எந்தவித நுழைவுத்தேர்வும் இன்றி, 12-ஆம் வகுப்பு பொதுத்தேர்வு மதிப்பெண் மற்றும் கட்-ஆஃப் அடிப்படையில் ஒற்றைச் சாளர கலந்தாய்வு மூலம் நேரடியாகச் சேர்க்கப்படும் 9 முதன்மைப் பட்டப்படிப்புகள்.</p>
+<p class="card-summary">எந்தவித நுழைவுத்தேர்வும் இன்றி, 12-ஆம் வகுப்பு பொதுத்தேர்வு மதிப்பெண் மற்றும் கட்-ஆஃப் அடிப்படையில் ஒற்றைச் சாளர கலந்தாய்வு மூலம் நேரடியாகச் சேர்க்கப்படும் முதன்மைப் பட்டப்படிப்புகள்.</p>
 <div class="tags" onclick="event.stopPropagation();">
-<a class="tag" href="02_01_tnea_engineering.html" style="text-decoration: none;" title="TNEA தமிழ்நாடு பொறியியல் கலந்தாய்வு">⚙️ TNEA பொறியியல்</a>
-<a class="tag" href="02_02_veterinary_allied_health.html" style="text-decoration: none;" title="TANUVAS கால்நடை &amp; துணை மருத்துவம்">🩺 TANUVAS &amp; துணை மருத்துவம்</a>
-<a class="tag" href="02_03_agriculture_fisheries.html" style="text-decoration: none;" title="TNAU வேளாண்மை, தோட்டக்கலை &amp; மீன்வளம்">🌾 TNAU வேளாண்மை</a>
-<a class="tag" href="02_04_law_admissions.html" style="text-decoration: none;" title="TNDALU 5 ஆண்டு சட்டப் படிப்புகள்">⚖️ TNDALU சட்டம்</a>
-<a class="tag" href="02_05_pure_applied_sciences.html" style="text-decoration: none;" title="தூய &amp; பயன்பாட்டு அறிவியல் (B.Sc)">🔬 அறிவியல் (B.Sc)</a>
-<a class="tag" href="02_06_computer_applications_it.html" style="text-decoration: none;" title="கணினிப் பயன்பாட்டியல் &amp; IT (BCA / B.Sc IT)">💻 கணினி &amp; IT (BCA)</a>
-<a class="tag" href="02_07_arts_humanities.html" style="text-decoration: none;" title="TNGASA அரசு கலை &amp; அறிவியல் கல்லூரிகள்">📚 TNGASA கலை</a>
-<a class="tag" href="02_08_commerce_management.html" style="text-decoration: none;" title="வணிகவியல் &amp; மேலாண்மைப் படிப்புகள் (B.Com / BBA)">📊 வணிகவியல் (B.Com)</a>
-<a class="tag" href="02_09_polytechnic_iti.html" style="text-decoration: none;" title="பாலிடெக்னிக் டிப்ளமோ &amp; அரசு ITI தொழிற்பயிற்சிகள்">🛠️ பாலிடெக்னிக் / ITI</a>
+<a class="tag" href="02_01_tnea_engineering.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="TNEA தமிழ்நாடு பொறியியல் கலந்தாய்வு">⚙️ TNEA பொறியியல்</a>
+<a class="tag" href="02_02_veterinary_allied_health.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="TANUVAS கால்நடை &amp; துணை மருத்துவம்">🩺 TANUVAS &amp; துணை மருத்துவம்</a>
+<a class="tag" href="02_03_agriculture_fisheries.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="TNAU வேளாண்மை, தோட்டக்கலை &amp; மீன்வளம்">🌾 TNAU வேளாண்மை</a>
+<a class="tag" href="02_04_law_admissions.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="TNDALU 5 ஆண்டு சட்டப் படிப்புகள்">⚖️ TNDALU சட்டம்</a>
+<a class="tag" href="02_05_pure_applied_sciences.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="தூய &amp; பயன்பாட்டு அறிவியல் (B.Sc)">🔬 அறிவியல் (B.Sc)</a>
+<a class="tag" href="02_06_computer_applications_it.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="கணினிப் பயன்பாட்டியல் &amp; IT (BCA / B.Sc IT)">💻 கணினி &amp; IT (BCA)</a>
+<a class="tag" href="02_07_arts_humanities.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="TNGASA அரசு கலை &amp; அறிவியல் கல்லூரிகள்">📚 TNGASA கலை</a>
+<a class="tag" href="02_08_commerce_management.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="வணிகவியல் &amp; மேலாண்மைப் படிப்புகள் (B.Com / BBA)">📊 வணிகவியல் (B.Com)</a>
+<a class="tag" href="02_09_polytechnic_iti.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="பாலிடெக்னிக் டிப்ளமோ &amp; அரசு ITI தொழிற்பயிற்சிகள்">🛠️ பாலிடெக்னிக் / ITI</a>
 </div>
 </div>
 <a class="btn-link" href="02_00_direct_admissions.html" style="margin-top: 10px;">
-<span>அனைத்து 9 நேரடிச் சேர்க்கைப் படிப்புகள் விவரம் காண்க</span>
+<span>அனைத்து நேரடிச் சேர்க்கைப் படிப்புகள் விவரம் காண்க</span>
 <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
 </a>
 </div>
@@ -5430,7 +5451,7 @@
 </a>
 </div>
 <!-- 5. திறன்சார் பணிகள், தனியார் வேலைகள் & சுயதொழில் -->
-<div class="card cat-skills" id="gateway-skills">
+<div class="card cat-skills" id="gateway-skills" onclick="window.location.href='05_direct_careers.html';" style="cursor: pointer;">
 <div>
 <div class="card-top-meta">
 <span class="card-number">👑 05 / DIRECT CAREERS</span>
@@ -5446,7 +5467,14 @@
 </div>
 </div>
 <p class="card-summary">போட்டித்தேர்வு இல்லாத நேரடி வேலைவாய்ப்புகள், படித்துக்கொண்டே சம்பாதிக்கும் Work &amp; Learn திட்டங்கள், தொழில் முனைவோர் கடன் திட்டங்கள் மற்றும் தனியார் வேலைவாய்ப்பு முகாம்கள்.</p>
-<div class="tags"><span class="tag" title="Zoho Schools (கட்டணமில்லா படிப்பு + வேலை)">Zoho Schools (படிப்பு+வேலை)</span><span class="tag" title="HCL TechBee Early Career Programme">HCL TechBee</span><span class="tag" title="நான் முதல்வன் &amp; TNSDC இலவச திறன் பயிற்சி">நான் முதல்வன் &amp; TNSDC</span><span class="tag" title="மாவட்ட வேலைவாய்ப்பு முகாம்கள்">வேலைவாய்ப்பு முகாம்கள்</span><span class="tag" title="UYEGP &amp; PMEGP அரசு மானியக் கடன்">UYEGP / PMEGP மானியக் கடன்</span><span class="tag" title="முத்ரா சிறுதொழில் கடன் திட்டம் (PMMY)">முத்ரா சிறுதொழில் கடன்</span></div>
+<div class="tags" onclick="event.stopPropagation();">
+<a class="tag" href="05_direct_careers.html#work-learn" onclick="event.stopPropagation();" style="text-decoration: none;" title="Zoho Schools (கட்டணமில்லா படிப்பு + வேலை)">💼 Zoho Schools (படிப்பு+வேலை)</a>
+<a class="tag" href="05_direct_careers.html#work-learn" onclick="event.stopPropagation();" style="text-decoration: none;" title="HCL TechBee Early Career Programme">💻 HCL TechBee</a>
+<a class="tag" href="05_direct_careers.html#thiran-tn" onclick="event.stopPropagation();" style="text-decoration: none;" title="நான் முதல்வன் &amp; TNSDC இலவச திறன் பயிற்சி">🚀 நான் முதல்வன் &amp; TNSDC</a>
+<a class="tag" href="05_direct_careers.html#job-fairs" onclick="event.stopPropagation();" style="text-decoration: none;" title="மாவட்ட வேலைவாய்ப்பு முகாம்கள்">🤝 வேலைவாய்ப்பு முகாம்கள்</a>
+<a class="tag" href="05_direct_careers.html#self-employment" onclick="event.stopPropagation();" style="text-decoration: none;" title="UYEGP &amp; PMEGP அரசு மானியக் கடன்">💰 UYEGP / PMEGP மானியக் கடன்</a>
+<a class="tag" href="05_direct_careers.html#self-employment" onclick="event.stopPropagation();" style="text-decoration: none;" title="முத்ரா சிறுதொழில் கடன் திட்டம் (PMMY)">🏦 முத்ரா சிறுதொழில் கடன்</a>
+</div>
 </div>
 <a class="btn-link" href="05_direct_careers.html">
 <span>வேலைவாய்ப்புகள் காண்க</span>
@@ -5454,7 +5482,7 @@
 </a>
 </div>
 <!-- 6. மாணவர் நலத்திட்டங்கள், கட்-ஆஃப் கருவிகள் & உதவி மையம் -->
-<div class="card cat-support" id="gateway-support">
+<div class="card cat-support" id="gateway-support" onclick="window.location.href='06_student_support.html';" style="cursor: pointer;">
 <div>
 <div class="card-top-meta">
 <span class="card-number">👑 06 / STUDENT SUPPORT</span>
@@ -5470,7 +5498,14 @@
 </div>
 </div>
 <p class="card-summary">அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு, அரசின் கல்வி உதவித்தொகைகள், கட்-ஆஃப் கணக்கீட்டுக் கருவிகள், வழிகாட்டிக் கையேடுகள் பதிவிறக்கம் மற்றும் உதவி மையம்.</p>
-<div class="tags"><span class="tag" title="அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு">7.5% அரசுப்பள்ளி இடஒதுக்கீடு</span><span class="tag" title="புதுமைப் பெண் &amp; தமிழ்ப் புதல்வன் திட்டம்">புதுமைப் பெண் &amp; புதல்வன்</span><span class="tag" title="முதல் தலைமுறை பட்டதாரி முழு கட்டணச் சலுகை">முதல் பட்டதாரி சலுகை</span><span class="tag" onclick="openCutoffModal()" style="background: rgba(136, 19, 55, 0.55); color: #fecdd3; border: 1.2px solid #fb7185; font-weight: 800; cursor: pointer;" title="பொறியியல், வேளாண்மை, கலை &amp; அறிவியல் நேரடி சேர்க்கை கட்-ஆஃப் கணக்கீடு">🧮 கட்-ஆஃப் கால்குலேட்டர்</span><span class="tag" title="உயர்கல்வி வழிகாட்டிக் கையேடு (PDF பதிவிறக்கம்)">வழிகாட்டிக் கையேடு (PDF)</span><span class="tag" title="பள்ளிக்கல்வித்துறை 24/7 மாணவர் உதவி எண் 14417">மாணவர் உதவி எண் 14417</span></div>
+<div class="tags" onclick="event.stopPropagation();">
+<a class="tag" href="06_student_support.html#quota-7point5-sec" onclick="event.stopPropagation();" style="text-decoration: none;" title="அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு">🎯 7.5% அரசுப்பள்ளி இடஒதுக்கீடு</a>
+<a class="tag" href="06_student_support.html#reservation-sec" onclick="event.stopPropagation();" style="text-decoration: none;" title="புதுமைப் பெண் &amp; தமிழ்ப் புதல்வன் திட்டம்">🎓 புதுமைப் பெண் &amp; புதல்வன்</a>
+<a class="tag" href="06_student_support.html#reservation-sec" onclick="event.stopPropagation();" style="text-decoration: none;" title="முதல் தலைமுறை பட்டதாரி முழு கட்டணச் சலுகை">📜 முதல் பட்டதாரி சலுகை</a>
+<a class="tag" href="06_student_support.html#cutoff-tools-sec" onclick="openCutoffModal(); return false;" style="background: rgba(136, 19, 55, 0.55); color: #fecdd3; border: 1.2px solid #fb7185; font-weight: 800; cursor: pointer; text-decoration: none;" title="பொறியியல், வேளாண்மை, கலை &amp; அறிவியல் நேரடி சேர்க்கை கட்-ஆஃப் கணக்கீடு">🧮 கட்-ஆஃப் கால்குலேட்டர்</a>
+<a class="tag" href="06_student_support.html#doc-checklist-sec" onclick="event.stopPropagation();" style="text-decoration: none;" title="உயர்கல்வி வழிகாட்டிக் கையேடு (PDF பதிவிறக்கம்)">📥 வழிகாட்டிக் கையேடு (PDF)</a>
+<a class="tag" href="06_student_support.html#services-14417-sec" onclick="event.stopPropagation();" style="text-decoration: none;" title="பள்ளிக்கல்வித்துறை 24/7 மாணவர் உதவி எண் 14417">📞 மாணவர் உதவி எண் 14417</a>
+</div>
 </div>
 <a class="btn-link" href="06_student_support.html">
 <span>உதவிகள் &amp; கருவிகள் பெற</span>
@@ -5478,7 +5513,7 @@
 </a>
 </div>
 <!-- CARD 7: RESOURCES & EXTERNAL PORTALS -->
-<div class="card" id="gateway-resources" style="border-top: 5px solid #0284c7;">
+<div class="card" id="gateway-resources" onclick="window.location.href='07_resources_external_portals.html';" style="border-top: 5px solid #0284c7; cursor: pointer;">
 <div>
 <div class="card-top-row">
 <span class="badge" style="background:#e0f2fe; color:#0369a1; border: 1px solid #bae6fd;">07 / கல்வி வளங்கள் &amp; போர்ட்டல்</span>
@@ -5494,12 +5529,12 @@
 </div>
 </div>
 <p class="card-summary">தமிழ்நாடு அரசுப் பாடநூல்கள் (TNSCERT), மத்திய NCERT புத்தகங்கள் (PDF) மற்றும் NTA Abhyas, IIT JEE, SATHEE உள்ளிட்ட விளம்பரமற்ற 100% இலவச கணினி வழி மாதிரித் தேர்வு (CBT) போர்ட்டல்கள்.</p>
-<div class="tags">
-<span class="tag" title="தமிழ்நாடு 1-12 அரசுப் பாடநூல்கள்">தமிழ்நாடு பாடநூல்கள்</span>
-<span class="tag" title="மத்திய NCERT 1-12 பாடப்புத்தகங்கள்">NCERT Books</span>
-<span class="tag" title="NTA தேசிய டெஸ்ட் அப்யாஸ் AI மாதிரித் தேர்வு">NTA CBT Mock Test</span>
-<span class="tag" title="ஐஐடி கான்பூர் &amp; மத்திய அரசு சாத்தீ தளம்">SATHEE போர்ட்டல்</span>
-<span class="tag" title="100% விளம்பரம் அற்ற அரசு இணையதளங்கள்">இலவச கல்வி தளம்</span>
+<div class="tags" onclick="event.stopPropagation();">
+<a class="tag" href="07_resources_external_portals.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="தமிழ்நாடு 1-12 அரசுப் பாடநூல்கள்">📖 தமிழ்நாடு பாடநூல்கள்</a>
+<a class="tag" href="07_resources_external_portals.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="மத்திய NCERT 1-12 பாடப்புத்தகங்கள்">📗 NCERT Books</a>
+<a class="tag" href="07_resources_external_portals.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="NTA தேசிய டெஸ்ட் அப்யாஸ் AI மாதிரித் தேர்வு">💻 NTA CBT Mock Test</a>
+<a class="tag" href="07_resources_external_portals.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="ஐஐடி கான்பூர் &amp; மத்திய அரசு சாத்தீ தளம்">🎓 SATHEE போர்ட்டல்</a>
+<a class="tag" href="07_resources_external_portals.html" onclick="event.stopPropagation();" style="text-decoration: none;" title="100% விளம்பரம் அற்ற அரசு இணையதளங்கள்">🌐 இலவச கல்வி தளம்</a>
 </div>
 </div>
 <a class="btn-link" href="07_resources_external_portals.html" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff;">
