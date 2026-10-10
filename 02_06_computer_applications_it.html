@@ -572,29 +572,8 @@
    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   }
  
-  #backToTopBtn {
-   display: none;
-   position: fixed;
-   bottom: 24px;
-   right: 24px;
-   z-index: 9999;
-   background-color: #4c1d95;
-   color: #ffffff;
-   border: 2px solid #a855f7;
-   border-radius: 999px;
-   padding: 10px 18px;
-   font-size: 0.88rem;
-   font-weight: 700;
-   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
-   cursor: pointer;
-   transition: all 0.25s ease;
-  }
-  #backToTopBtn:hover {
-   background-color: #a855f7;
-   color: #2e1065;
-   transform: translateY(-3px);
-   box-shadow: 0 6px 20px rgba(168, 85, 247, 0.45);
-  }
+  
+  
   .quick-nav-pill {
    cursor: pointer;
    user-select: none;
@@ -3541,6 +3520,599 @@
     transform: translateY(-50%) !important;
   }
 }
+
+    /* STANDARDIZED FOOTER (FOLLOWING 02_03) */
+    .portal-footer {
+      background: linear-gradient(135deg, #090e1a 0%, #0e172a 50%, #090e1a 100%) !important;
+      color: #cbd5e1 !important;
+      border: 1.5px solid rgba(245, 158, 11, 0.35) !important;
+      border-radius: 16px !important;
+      padding: 26px 20px !important;
+      margin-top: 30px !important;
+      text-align: center !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+
+    /* ========================================================
+       FULL SCREEN WIDTH LAYOUT & STANDARDIZED DESIGN (02_02 & 02_04 MODEL)
+       ======================================================== */
+    html, body {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+      background-color: var(--bg-main, #f8fafc) !important;
+    }
+
+    .portal-layout-wrapper {
+      display: flex !important;
+      flex-direction: row !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-height: 100vh !important;
+      position: relative !important;
+      align-items: stretch !important;
+      box-sizing: border-box !important;
+    }
+
+    .desktop-left-sidebar {
+      width: 295px !important;
+      min-width: 295px !important;
+      max-width: 295px !important;
+      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+      border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      height: 100vh !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex-shrink: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .portal-main-content {
+      margin-left: 295px !important;
+      width: calc(100% - 295px) !important;
+      min-height: 100vh !important;
+      padding: 12px clamp(12px, 1.8vw, 36px) 40px !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+    }
+
+    .portal-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .info-card,
+    .content-card,
+    section,
+    .portal-header,
+    .quick-nav-marquee-container,
+    .bottom-page-nav-bar,
+    .kural-box,
+    .creator-card,
+    .portal-footer,
+    .table-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .info-card {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 20px 0 !important;
+      padding: 22px 24px !important;
+      box-sizing: border-box !important;
+    }
+
+    /* TOP BREADCRUMB BAR */
+    .breadcrumb-bar {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.4) !important;
+      border-radius: 12px !important;
+      padding: 8px 16px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
+      flex-wrap: wrap !important;
+    }
+
+    .nav-menu-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 0.84rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      color: #e2e8f0 !important;
+      padding: 4px 10px !important;
+      border-radius: 6px !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .nav-menu-btn:hover {
+      background: rgba(255, 255, 255, 0.12) !important;
+      color: #fef08a !important;
+    }
+
+    .nav-menu-btn.btn-current-page {
+      background: rgba(56, 189, 248, 0.2) !important;
+      border: 1px solid #38bdf8 !important;
+      color: #38bdf8 !important;
+    }
+
+    .nav-menu-separator {
+      color: #94a3b8 !important;
+      font-size: 0.75rem !important;
+    }
+
+    /* HERO PORTAL HEADER: TECH VIOLET & CYAN THEME */
+    .portal-header {
+      background: linear-gradient(135deg, #091330 0%, #1e1b4b 50%, #0c1222 100%) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.42) !important;
+      border-bottom: 4px solid #6366f1 !important;
+      border-radius: 16px !important;
+      padding: 28px 24px 24px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4) !important;
+      text-align: center !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    .portal-title {
+      color: #ffffff !important;
+      font-size: clamp(1.4rem, 2.3vw, 2.1rem) !important;
+      font-weight: 900 !important;
+      margin: 0 0 10px 0 !important;
+      line-height: 1.3 !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .portal-title .highlight-cyan {
+      color: #38bdf8 !important;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 16px rgba(56,189,248,0.6) !important;
+    }
+
+    .portal-subtitle {
+      color: #f1f5f9 !important;
+      font-size: clamp(0.88rem, 1.1vw, 1.02rem) !important;
+      line-height: 1.65 !important;
+      max-width: 980px !important;
+      margin: 0 auto !important;
+      font-weight: 500 !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+    }
+
+    /* QUICK NAVIGATION MARQUEE BAR */
+    .quick-nav-marquee-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      background: linear-gradient(135deg, #060d1a 0%, #0d1e38 50%, #060d1a 100%) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.35) !important;
+      border-radius: 12px !important;
+      padding: 8px 12px !important;
+      margin-bottom: 18px !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+      position: relative !important;
+    }
+
+    .marquee-static-label {
+      flex-shrink: 0 !important;
+      background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
+      color: #ffffff !important;
+      font-size: 1.15rem !important;
+      padding: 6px 12px !important;
+      border-radius: 8px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-shadow: 0 2px 6px rgba(99, 102, 241, 0.4) !important;
+      z-index: 2 !important;
+    }
+
+    .marquee-scroll-track {
+      flex-grow: 1 !important;
+      overflow: hidden !important;
+      display: flex !important;
+      position: relative !important;
+      mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+    }
+
+    .marquee-content-loop {
+      display: flex !important;
+      gap: 10px !important;
+      align-items: center !important;
+      white-space: nowrap !important;
+      animation: marqueeScroll 26s linear infinite !important;
+      padding-right: 10px !important;
+    }
+
+    .quick-nav-marquee-container:hover .marquee-content-loop {
+      animation-play-state: paused !important;
+    }
+
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .marquee-pill-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: rgba(30, 41, 59, 0.85) !important;
+      color: #e2e8f0 !important;
+      border: 1px solid rgba(148, 163, 184, 0.25) !important;
+      padding: 5px 12px !important;
+      border-radius: 999px !important;
+      font-size: 0.80rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .marquee-pill-btn:hover {
+      background: rgba(99, 102, 241, 0.25) !important;
+      color: #a5b4fc !important;
+      border-color: #818cf8 !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* TABLE GRIDLINES */
+    table.styled-table,
+    table#collegesTable {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      border: 1.5px solid #94a3b8 !important;
+      background: #ffffff !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
+    }
+
+    table.styled-table th,
+    table#collegesTable th {
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      padding: 12px 14px !important;
+      border: 1.2px solid #334155 !important;
+      font-size: 0.88rem !important;
+      text-align: left !important;
+    }
+
+    table.styled-table td,
+    table#collegesTable td {
+      padding: 10px 14px !important;
+      border: 1.2px solid #cbd5e1 !important;
+      font-size: 0.86rem !important;
+      color: #1e293b !important;
+      line-height: 1.5 !important;
+    }
+
+    table.styled-table tbody tr:nth-child(even),
+    table#collegesTable tbody tr:nth-child(even) {
+      background-color: #f8fafc !important;
+    }
+
+    /* BOTTOM PAGE NAVIGATION BAR */
+    .bottom-page-nav-bar {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 14px 18px !important;
+      margin: 26px 0 28px 0 !important;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .page-nav-btn.btn-prev-animated {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 10px 20px !important;
+      border-radius: 10px !important;
+      font-family: inherit !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 2px solid #059669 !important;
+      background: linear-gradient(135deg, #047857 0%, #065f46 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(4, 120, 87, 0.35) !important;
+      animation: pulseNudgeLeft 3s ease-in-out infinite !important;
+      transition: all 0.25s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .page-nav-btn.btn-prev-animated:hover {
+      background: linear-gradient(135deg, #065f46 0%, #022c22 100%) !important;
+      border-color: #fde047 !important;
+      transform: translateX(-5px) scale(1.04) !important;
+      box-shadow: 0 6px 20px rgba(4, 120, 87, 0.55), 0 0 15px rgba(52, 211, 153, 0.5) !important;
+    }
+
+    .page-nav-btn.btn-next-animated {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 10px 20px !important;
+      border-radius: 10px !important;
+      font-family: inherit !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 2px solid #0284c7 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;
+      animation: pulseNudgeRight 3s ease-in-out infinite !important;
+      transition: all 0.25s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .page-nav-btn.btn-next-animated:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #0c4a6e 100%) !important;
+      border-color: #fde047 !important;
+      transform: translateX(5px) scale(1.04) !important;
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.55), 0 0 15px rgba(56, 189, 248, 0.5) !important;
+    }
+
+    @keyframes pulseNudgeLeft {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(-4px); }
+    }
+
+    @keyframes pulseNudgeRight {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(4px); }
+    }
+
+    /* CREATOR CARD: CLASSIC DARK THEME WITH AURORA ANIMATION */
+    .creator-card {
+      background: linear-gradient(135deg, #050811 0%, #0d1527 50%, #050811 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+      border-radius: 14px !important;
+      padding: 12px clamp(16px, 2vw, 32px) !important;
+      margin: 20px 0 16px 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.55), 0 0 20px rgba(0, 194, 255, 0.15) !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      flex-wrap: wrap !important;
+      gap: 14px !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+
+    .creator-typewriter-wrapper {
+      font-size: clamp(0.74rem, 0.95vw, 0.90rem) !important;
+      color: #f8fafc !important;
+      font-weight: 600 !important;
+      line-height: 1.4 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      flex: 0 1 auto !important;
+      min-width: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: center !important;
+    }
+
+    .creator-typewriter-target {
+      display: inline !important;
+      white-space: pre-wrap !important;
+    }
+
+    .creator-label {
+      font-size: 80% !important;
+      font-weight: 700 !important;
+      color: #f1f5f9 !important;
+      white-space: nowrap !important;
+      opacity: 0.92 !important;
+    }
+
+    .creator-role {
+      font-size: 80% !important;
+      color: #94a3b8 !important;
+      font-weight: 600 !important;
+      white-space: nowrap !important;
+      opacity: 0.90 !important;
+    }
+
+    .creator-name-ta,
+    .creator-name-en,
+    .creator-name-ta-blue,
+    .creator-name-ta-purple,
+    .creator-name-en-blue,
+    .creator-name-en-purple {
+      background: linear-gradient(
+        90deg,
+        #00c2ff 0%,
+        #33ff8c 25%,
+        #ffc640 50%,
+        #e54cff 75%,
+        #00c2ff 100%
+      ) !important;
+      background-size: 300% 100% !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      animation: aurora-text-flow 6s linear infinite !important;
+      font-weight: 900 !important;
+      letter-spacing: 0.3px !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      display: inline-block !important;
+      filter: drop-shadow(0 0 6px rgba(0, 194, 255, 0.45));
+    }
+
+    .creator-cursor {
+      display: inline-block !important;
+      font-weight: 300 !important;
+      color: #00c2ff !important;
+      margin-left: 2px !important;
+      animation: blinkCreatorCursor 0.65s infinite !important;
+      text-shadow: 0 0 8px rgba(0, 194, 255, 0.8);
+      flex-shrink: 0 !important;
+    }
+
+    @keyframes aurora-text-flow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 300% 50%; }
+    }
+
+    @keyframes blinkCreatorCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .footer-phone-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+      color: #ffffff !important;
+      padding: 4px 12px !important;
+      border-radius: 999px !important;
+      font-size: 0.84rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4) !important;
+      transition: all 0.2s ease !important;
+      margin: 0 !important;
+      vertical-align: middle !important;
+      flex-shrink: 0 !important;
+    }
+
+    .footer-phone-pill:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+      transform: translateY(-1px) scale(1.03) !important;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5) !important;
+      color: #ffffff !important;
+    }
+
+    /* FLOATING BACK TO TOP BUTTON (STANDARDIZED) */
+    .floating-back-to-top {
+      position: fixed !important;
+      bottom: 24px !important;
+      right: 24px !important;
+      z-index: 9999 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+      border-radius: 999px !important;
+      padding: 10px 18px !important;
+      font-size: 0.85rem !important;
+      font-weight: 800 !important;
+      font-family: inherit !important;
+      cursor: pointer !important;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35) !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: translateY(16px) !important;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .floating-back-to-top.visible {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: translateY(0) !important;
+    }
+
+    .floating-back-to-top:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+      border-color: #fde047 !important;
+      color: #fde047 !important;
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.5) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    @media (max-width: 1024px) {
+      .desktop-left-sidebar {
+        position: fixed !important;
+        left: -320px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 295px !important;
+        height: 100vh !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 9999 !important;
+        box-shadow: 6px 0 35px rgba(0, 0, 0, 0.85);
+      }
+      .desktop-left-sidebar.sidebar-open {
+        left: 0 !important;
+      }
+      .portal-main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 8px 12px 30px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .calc-inputs-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      .calc-res-divider {
+        display: none !important;
+      }
+      .calc-horizontal-result-bar {
+        flex-direction: column !important;
+        gap: 6px !important;
+      }
+      .bottom-page-nav-bar {
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+      .page-nav-btn.btn-prev-animated,
+      .page-nav-btn.btn-next-animated {
+        width: 100% !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+      }
+    }
+
 </style>
 
 <style id="robust-layout-override">
@@ -4202,57 +4774,61 @@
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
 </a>
 </header>
-<div class="district-badge">
-<span>🏛️ தமிழ்நாடு பள்ளிக் கல்வித்துறை | சிவகங்கை மாவட்டம்</span>
-</div>
-<div class="kural-box">
-<div class="kural-header">
-<span class="kural-icon">📜</span>
-<span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-<span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
-</div>
-<div class="kural-verse-text">
-    “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
-    திண்ணியர் ஆகப் பெறின்.”
-  </div>
-<div class="kural-meaning">
-<strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
-  </div>
-</div><div class="creator-card">
-<div class="creator-typewriter-wrapper">
-<span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
-</div>
-<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
-<span class="phone-icon">📱</span>
-<span class="phone-text">9626471035</span>
-</a>
-</div><footer class="portal-footer">
-<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
-    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
-</p>
-<p style="font-size: 0.85rem; color: #64748b;">
-    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
-  </p>
-</footer></div>
+
+<!-- Top Breadcrumb Navigation Bar -->
+<nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
+  <a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+    <span class="btn-icon">🧭</span>
+    <span class="btn-text">வழிகாட்டி முகப்பு</span>
+  </a>
+  <span class="nav-menu-separator">▶</span>
+  <a class="nav-menu-btn btn-direct-home" href="02_00_direct_admissions.html" title="நேரடிச் சேர்க்கைப் படிப்புகள்">
+    <span class="btn-icon">🎯</span>
+    <span class="btn-text">02 / நேரடிச் சேர்க்கை</span>
+  </a>
+  <span class="nav-menu-separator">▶</span>
+  <span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
+    <span class="btn-icon">💻</span>
+    <span class="btn-text">06 / கணினிப் பயன்பாட்டியல் &amp; IT (BCA / B.Sc CS)</span>
+  </span>
+</nav>
+
+
 <!-- Portal Header -->
 <header class="portal-header">
-<div class="header-badge-row">
-<span class="header-tag primary">பிரிவு 06 / COMPUTER &amp; IT CAREERS</span>
-<span class="header-tag secondary">BCA / B.Sc CS / B.Sc IT / Data Science</span>
-<span class="header-tag secondary">3-ஆண்டு நேரடி ஐடி பட்டப்படிப்புகள்</span>
-</div>
-<h1 class="portal-title">கணினிப் பயன்பாட்டியல் &amp; IT சேர்க்கை வழிகாட்டி </h1>
-<p class="portal-subtitle">பொறியியல் படிப்புக்கு மாற்றாக 3 ஆண்டுகளில் குறைந்த செலவில் IT துறையில் மென்பொருள் பொறியாளர் (Software Engineer) ஆக வழிகாட்டும் BCA, B.Sc Computer Science, IT மற்றும் நவீன Data Science, AI படிப்புகள், கல்லூரிப் பட்டியல் மற்றும் TCS / Wipro உடனான வேலைவாய்ப்புத் திட்டங்கள்.</p>
-<!-- Quick Nav Pills -->
-<div class="quick-nav-pills">
-<a class="quick-nav-pill" href="#calculator" onclick="scrollToSection (\'calculator\', event); return false;">🧮 ஐடி கட்-ஆஃப் கால்குலேட்டர்</a>
-<a class="quick-nav-pill" href="#comparison" onclick="scrollToSection (\'comparison\', event); return false;">💻 படிப்புகள் ஒப்பீடு (BCA vs B.Sc)</a>
-<a class="quick-nav-pill" href="#courses" onclick="scrollToSection (\'courses\', event); return false;">📱 கணினிப் படிப்புகள் விவரம்</a>
-<a class="quick-nav-pill" href="#work-study" onclick="scrollToSection (\'work-study\', event); return false;">🎓 படித்துக்கொண்டே M.Tech / MCA</a>
-<a class="quick-nav-pill" href="#colleges" onclick="scrollToSection (\'colleges\', event); return false;">🏆 சிவகங்கை &amp; அரசு கல்லூரிகள்</a>
-<a class="quick-nav-pill" href="#careers" onclick="scrollToSection (\'careers\', event); return false;">💼 IT வேலைவாய்ப்பு &amp; சம்பளம்</a>
-</div>
+  <h1 class="portal-title">
+    கணினிப் பயன்பாட்டியல் &amp; IT சேர்க்கை <span class="highlight-cyan">வழிகாட்டி (BCA / B.Sc CS)</span>
+  </h1>
+  <p class="portal-subtitle">
+    பொறியியல் படிப்புக்கு மாற்றாக 3 ஆண்டுகளில் குறைந்த செலவில் IT துறையில் மென்பொருள் பொறியாளர் (Software Engineer) ஆக வழிகாட்டும் BCA, B.Sc Computer Science, IT மற்றும் நவீன Data Science, AI படிப்புகள், கல்லூரிப் பட்டியல் மற்றும் TCS / Wipro உடனான வேலைவாய்ப்புத் திட்டங்கள்.
+  </p>
 </header>
+
+<!-- Quick Navigation Marquee Bar (ஓடும் விரைவு வழிசெலுத்தல் பட்டை) -->
+<div class="quick-nav-marquee-container" aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை">
+  <div class="marquee-static-label" title="விரைவு வழிகாட்டல்">
+    <span class="pulse-icon">⚡</span>
+  </div>
+  <div class="marquee-scroll-track">
+    <div class="marquee-content-loop">
+      <a href="#calculator" class="marquee-pill-btn">🧮 ஐடி கட்-ஆஃப் கால்குலேட்டர்</a>
+      <a href="#comparison" class="marquee-pill-btn">💻 படிப்புகள் ஒப்பீடு (BCA vs B.Sc)</a>
+      <a href="#courses" class="marquee-pill-btn">🤖 நவீன கணினிப் படிப்புகள்</a>
+      <a href="#work-study" class="marquee-pill-btn">🎓 படித்துக்கொண்டே M.Tech / MCA</a>
+      <a href="#colleges" class="marquee-pill-btn">🏆 சிவகங்கை &amp; அரசு கல்லூரிகள்</a>
+      <a href="#careers" class="marquee-pill-btn">💼 IT வேலைவாய்ப்பு &amp; சம்பளம்</a>
+    </div>
+    <!-- Duplicate for infinite seamless scroll -->
+    <div class="marquee-content-loop" aria-hidden="true">
+      <a href="#calculator" class="marquee-pill-btn">🧮 ஐடி கட்-ஆஃப் கால்குலேட்டர்</a>
+      <a href="#comparison" class="marquee-pill-btn">💻 படிப்புகள் ஒப்பீடு (BCA vs B.Sc)</a>
+      <a href="#courses" class="marquee-pill-btn">🤖 நவீன கணினிப் படிப்புகள்</a>
+      <a href="#work-study" class="marquee-pill-btn">🎓 படித்துக்கொண்டே M.Tech / MCA</a>
+      <a href="#colleges" class="marquee-pill-btn">🏆 சிவகங்கை &amp; அரசு கல்லூரிகள்</a>
+      <a href="#careers" class="marquee-pill-btn">💼 IT வேலைவாய்ப்பு &amp; சம்பளம்</a>
+    </div>
+  </div>
+</div>
 <!-- Notice -->
 <div class="notice-box notice-violet">
 <span style="font-size: 1.5rem;">💡</span>
@@ -4261,36 +4837,45 @@
   </div>
 </div>
 <!-- SECTION: CALCULATOR -->
-<section class="calc-container" id="calculator">
-<div class="calc-title">
-<span>🧮</span>
-<span>கணினி &amp; ஐடி படிப்பு கட்-ஆஃப் கால்குலேட்டர் (IT Cut-off Calculator)</span>
+<section class="info-card" id="calculator" style="background: linear-gradient(135deg, #091330 0%, #1e293b 50%, #0a0f1d 100%) !important; border: 2px solid #38bdf8 !important; border-radius: 12px !important; padding: 12px 18px !important; box-shadow: 0 4px 18px rgba(15, 23, 42, 0.35) !important; color: #ffffff !important; margin-bottom: 20px !important;">
+<div style="display: flex !important; align-items: center !important; justify-content: space-between !important; flex-wrap: wrap !important; gap: 8px !important; margin-bottom: 10px !important; border-bottom: 1px solid rgba(255,255,255,0.12) !important; padding-bottom: 6px !important;">
+  <div style="display: flex !important; align-items: center !important; gap: 8px !important;">
+    <span style="font-size: 1.15rem !important;">🧮</span>
+    <h3 style="color: #93c5fd !important; font-size: 1.02rem !important; font-weight: 800 !important; margin: 0 !important;">
+      கணினி &amp; ஐடி படிப்பு கட்-ஆஃப் &amp; சதவீதக் கணக்கீட்டுக் கருவி (IT Cut-off Calculator)
+    </h3>
+  </div>
+  <div style="font-size: 0.74rem !important; font-weight: 700 !important; color: #bae6fd !important; background: rgba(56,189,248,0.15) !important; border: 1px solid #38bdf8 !important; padding: 2px 8px !important; border-radius: 6px !important;">
+    சூத்திரம்: [முக்கிய 4 பாடங்கள் கூடுதல் ÷ 400] × 100 = கட்-ஆஃப் %
+  </div>
 </div>
-<p style="font-size: 0.94rem; color: #4c1d95; margin-bottom: 18px;">
-   கணினி அறிவியல் / கணினி பயன்பாட்டியல், கணிதம் மற்றும் பிற 2 முதன்மைப் பாடங்களின் மதிப்பெண்களை உள்ளிட்டு உங்கள் ஐடி சேர்க்கை சதவீதத்தைக் கணக்கிடவும்:
-  </p>
-<div class="calc-inputs-grid">
-<div class="input-group">
-<label for="sub1">கணினி அறிவியல் / பயன்பாட்டியல்:</label>
-<input id="sub1" max="100" min="0" placeholder="100-க்கு" type="number" value="92"/>
+<!-- 4 Subject Inputs in a 4-Column Row -->
+<div class="calc-inputs-grid" style="display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 10px !important; margin-bottom: 10px !important;">
+  <div style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
+    <label for="sub1" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">💻 கணினி அறிவியல் / பயன்பாட்டியல்:</label>
+    <input id="sub1" max="100" min="0" oninput="calculateITCutoff()" placeholder="0 - 100" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="92"/>
+  </div>
+  <div style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
+    <label for="sub2" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">📐 கணிதம் / வணிகக் கணிதம்:</label>
+    <input id="sub2" max="100" min="0" oninput="calculateITCutoff()" placeholder="0 - 100" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="85"/>
+  </div>
+  <div style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
+    <label for="sub3" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">⚡ பாடம் 3 (Physics / Commerce):</label>
+    <input id="sub3" max="100" min="0" oninput="calculateITCutoff()" placeholder="0 - 100" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="80"/>
+  </div>
+  <div style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
+    <label for="sub4" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">🧪 பாடம் 4 (Chemistry / Acc):</label>
+    <input id="sub4" max="100" min="0" oninput="calculateITCutoff()" placeholder="0 - 100" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="86"/>
+  </div>
 </div>
-<div class="input-group">
-<label for="sub2">கணிதம் / வணிகக் கணிதம்:</label>
-<input id="sub2" max="100" min="0" placeholder="100-க்கு" type="number" value="85"/>
-</div>
-<div class="input-group">
-<label for="sub3">பாடம் 3 (Physics / Commerce):</label>
-<input id="sub3" max="100" min="0" placeholder="100-க்கு" type="number" value="80"/>
-</div>
-<div class="input-group">
-<label for="sub4">பாடம் 4 (Chemistry / Accountancy):</label>
-<input id="sub4" max="100" min="0" placeholder="100-க்கு" type="number" value="86"/>
-</div>
-</div>
-<div class="calc-result-box">
-<div style="font-size: 0.92rem; font-weight: 700; color: #64748b; text-transform: uppercase;">உங்கள் கணினிப் படிப்பு கட்-ஆஃப் சதவீதம்</div>
-<div class="cutoff-score" id="cutoffValue">85.75 %</div>
-<div class="cutoff-badge" id="cutoffStatus">முன்னணி அரசுக் கல்லூரிகளில் BCA / B.Sc CS கிடைக்க மிகச் சிறந்த வாய்ப்பு!</div>
+<!-- Slim Horizontal Result Bar -->
+<div class="calc-horizontal-result-bar" style="background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%) !important; border: 1.5px solid #fbbf24 !important; border-radius: 8px !important; padding: 6px 16px !important; display: flex !important; align-items: center !important; justify-content: center !important; flex-wrap: wrap !important; gap: 8px 16px !important; box-shadow: 0 2px 8px rgba(0,0,0,0.25) !important;">
+  <span style="font-size: 0.84rem !important; font-weight: 800 !important; color: #fef08a !important; display: inline-flex !important; align-items: center !important; gap: 6px !important;">
+    <span>🎯 உங்கள் கட்-ஆஃப் சதவீதம்:</span>
+    <span id="cutoffValue" style="font-size: 1.30rem !important; font-weight: 900 !important; color: #ffffff !important; text-shadow: 0 1px 6px rgba(251, 191, 36, 0.5) !important; line-height: 1 !important;">85.75 %</span>
+  </span>
+  <span class="calc-res-divider" style="color: rgba(255,255,255,0.3) !important; font-size: 0.9rem !important;">|</span>
+  <span id="cutoffStatus" style="background: rgba(251, 191, 36, 0.2) !important; border: 1px solid #f59e0b !important; color: #fef08a !important; font-size: 0.74rem !important; font-weight: 800 !important; padding: 2px 10px !important; border-radius: 999px !important; text-align: center !important;">👍 முன்னணி அரசுக் கல்லூரிகளில் BCA / B.Sc CS கிடைக்க மிகச் சிறந்த வாய்ப்பு!</span>
 </div>
 </section>
 <!-- SECTION 1: COMPARISON -->
@@ -4444,7 +5029,7 @@
 </div>
 <!-- Colleges Table -->
 <div class="table-container">
-<table id="collegesTable">
+<table class="styled-table" id="collegesTable">
 <thead>
 <tr>
 <th>வ.எண்</th>
@@ -4535,6 +5120,57 @@
 </div>
 </div>
 </section>
+
+<!-- Bottom Chapter Navigation Bar: Animated Edge-to-Edge Navigation -->
+<nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar">
+  <a class="page-nav-btn btn-prev-animated" href="02_05_pure_applied_sciences.html" title="02_05 தூய &amp; பயன்பாட்டு அறிவியல்">
+    <span class="nav-btn-icon">◀</span>
+    <span class="nav-btn-text">02_05 தூய &amp; பயன்பாட்டு அறிவியல்</span>
+  </a>
+  <a class="page-nav-btn btn-next-animated" href="02_07_arts_humanities.html" title="02_07 கலை &amp; மானுடவியல் படிப்புகள்">
+    <span class="nav-btn-text">02_07 கலை &amp; மானுடவியல் படிப்புகள்</span>
+    <span class="nav-btn-icon">▶</span>
+  </a>
+</nav>
+
+<!-- திருக்குறள் பகுதி — கணினி & அல்காரிதம் நெறி (அதிகாரம்: வினைசெயல்வகை) -->
+<div class="kural-box">
+  <div class="kural-header">
+    <span class="kural-icon">📜</span>
+    <span class="kural-title">திருக்குறள் — அதிகாரம்: வினைசெயல்வகை (குறள்: 675)</span>
+    <span class="kural-sparkle">💡 திட்டமிடல் &amp; அல்காரிதம் நெறி</span>
+  </div>
+  <div class="kural-verse-text">
+    “பொருள்கருவி காலம் வினையிடனொடு ஐந்தும்<br/>
+    இருள்தீர எண்ணிச் செயல்.”
+  </div>
+  <div class="kural-meaning">
+    <strong>விளக்கவுரை:</strong> தேவையான பொருள், தகுந்த கருவி, ஏற்ற காலம், செய்யும் செயலின் தன்மை, அதற்குரிய இடம் ஆகிய ஐந்தையும் ஐயத்திற்கு இடமின்றி நன்கு ஆராய்ந்து கணினி அல்காரிதம் போலத் திட்டமிட்டுச் செய்வதே வெற்றியைத் தரும்; கணினி மற்றும் தகவல் தொழில்நுட்பத் (Computer Science &amp; IT) துறையில் மென்பொருள் உருவாக்குநர்களுக்கு இத்தகைய முறையான திட்டமிடலே வெற்றிக்கான அடித்தளமாகும்.
+  </div>
+</div>
+
+<!-- உருவாக்கியவர் பெட்டி (Classic Dark Theme & Aurora Animation, Centered Flow) -->
+<div class="creator-card">
+  <div class="creator-typewriter-wrapper">
+    <span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
+  </div>
+  <a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
+    <span class="phone-icon">📱</span>
+    <span class="phone-text">9626471035</span>
+  </a>
+</div>
+
+<!-- முதன்மைக் கல்வி அலுவலக அடிக்குறிப்பு -->
+<footer class="portal-footer">
+  <p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #ffffff !important; font-size: 0.96rem !important; text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;">
+    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a class="footer-phone-link" href="tel:04575240408" style="color: #fde047 !important; text-decoration: none !important; font-weight: 800 !important; background: rgba(0, 0, 0, 0.45) !important; padding: 3px 10px !important; border-radius: 6px !important; border: 1.2px solid rgba(253, 224, 71, 0.6) !important; display: inline-block !important;">☎️ 04575240408</a>
+  </p>
+  <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important;">
+    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+  </p>
+</footer>
+
+
 <!-- Portal Footer -->
 </main></div>
 <!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
@@ -4578,22 +5214,9 @@
   return false;
  }
 
- function scrollToTop (event) {
-  if (event) {
-   if (typeof event.preventDefault === 'function') event.preventDefault;
-   if (typeof event.stopPropagation === 'function') event.stopPropagation;
-  }
-  window.scrollTo ({ top: 0, behavior: 'smooth' });
-  return false;
- }
+ 
 
- // Toggle Back to Top Button
- window.addEventListener ('scroll', function() {
-  const btn = document.getElementById ('backToTopBtn');
-  if (!btn) return;
-  const currentScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-  btn.style.display = (currentScroll > 350) ? 'block' : 'none';
- });
+ 
 
  const s1 = document.getElementById ('sub1');
  const s2 = document.getElementById ('sub2');
@@ -4676,9 +5299,6 @@
  searchInput.addEventListener ('input', filterColleges);
 </script>
 <!-- Floating Back to Top Button -->
-<button id="backToTopBtn" onclick="scrollToTop (event);" title="மேலே செல்க (Back to Top)">
- ↑ மேலே
-</button>
 <!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
 
 <!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
@@ -4866,6 +5486,32 @@ document.addEventListener('DOMContentLoaded', function() {
     initCreatorObserver();
   }
 })();
+
+
+  // Floating Back to Top Button Controller
+  (function() {
+    function setupBackToTop() {
+      const btt = document.getElementById('floatingBackToTop');
+      if (!btt) return;
+      function checkScroll() {
+        const scrollPos = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if (scrollPos > 120) {
+          btt.classList.add('visible');
+        } else {
+          btt.classList.remove('visible');
+        }
+      }
+      window.addEventListener('scroll', checkScroll, { passive: true });
+      checkScroll();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupBackToTop);
+    } else {
+      setupBackToTop();
+    }
+  })();
+
 </script>
+<button aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" id="floatingBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="மேலே செல்க">↑ மேலே செல்க</button>
 </body>
 </html>

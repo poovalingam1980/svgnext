@@ -235,29 +235,8 @@
       outline: none;
     }
 
-    #backToTopBtn {
-      display: none;
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      z-index: 9999;
-      background-color: #0f172a;
-      color: #ffffff;
-      border: 2px solid #f59e0b;
-      border-radius: 999px;
-      padding: 10px 18px;
-      font-size: 0.88rem;
-      font-weight: 700;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
-      cursor: pointer;
-      transition: all 0.25s ease;
-    }
-    #backToTopBtn:hover {
-      background-color: #f59e0b;
-      color: #0f172a;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
-    }
+    
+    
   
     .quick-nav-pill {
       display: inline-flex;
@@ -3853,6 +3832,607 @@
     transform: translateY(-50%) !important;
   }
 }
+
+    /* STANDARDIZED FOOTER (FOLLOWING 02_03) */
+    .portal-footer {
+      background: linear-gradient(135deg, #090e1a 0%, #0e172a 50%, #090e1a 100%) !important;
+      color: #cbd5e1 !important;
+      border: 1.5px solid rgba(245, 158, 11, 0.35) !important;
+      border-radius: 16px !important;
+      padding: 26px 20px !important;
+      margin-top: 30px !important;
+      text-align: center !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+
+    /* ========================================================
+       FULL SCREEN WIDTH LAYOUT & STANDARDIZED DESIGN (02_02 & 02_04 MODEL)
+       ======================================================== */
+    html, body {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+      background-color: var(--bg-main, #f8fafc) !important;
+    }
+
+    .portal-layout-wrapper {
+      display: flex !important;
+      flex-direction: row !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-height: 100vh !important;
+      position: relative !important;
+      align-items: stretch !important;
+      box-sizing: border-box !important;
+    }
+
+    .desktop-left-sidebar {
+      width: 295px !important;
+      min-width: 295px !important;
+      max-width: 295px !important;
+      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+      border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      height: 100vh !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex-shrink: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .portal-main-content {
+      margin-left: 295px !important;
+      width: calc(100% - 295px) !important;
+      min-height: 100vh !important;
+      padding: 12px clamp(12px, 1.8vw, 36px) 40px !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+    }
+
+    .portal-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .info-card,
+    .content-card,
+    section,
+    .portal-header,
+    .quick-nav-marquee-container,
+    .bottom-page-nav-bar,
+    .kural-box,
+    .creator-card,
+    .portal-footer,
+    .table-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .info-card {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 20px 0 !important;
+      padding: 22px 24px !important;
+      box-sizing: border-box !important;
+    }
+
+    /* TOP BREADCRUMB BAR */
+    .breadcrumb-bar {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.4) !important;
+      border-radius: 12px !important;
+      padding: 8px 16px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
+      flex-wrap: wrap !important;
+    }
+
+    .nav-menu-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 0.84rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      color: #e2e8f0 !important;
+      padding: 4px 10px !important;
+      border-radius: 6px !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .nav-menu-btn:hover {
+      background: rgba(255, 255, 255, 0.12) !important;
+      color: #fef08a !important;
+    }
+
+    .nav-menu-btn.btn-current-page {
+      background: rgba(56, 189, 248, 0.2) !important;
+      border: 1px solid #38bdf8 !important;
+      color: #38bdf8 !important;
+    }
+
+    .nav-menu-separator {
+      color: #94a3b8 !important;
+      font-size: 0.75rem !important;
+    }
+
+    /* HERO PORTAL HEADER: INDUSTRIAL BLUE & SLATE THEME */
+    .portal-header {
+      background: linear-gradient(135deg, #0c1a30 0%, #1e293b 50%, #0a0f1d 100%) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.42) !important;
+      border-bottom: 4px solid #0284c7 !important;
+      border-radius: 16px !important;
+      padding: 28px 24px 24px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4) !important;
+      text-align: center !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    .portal-title {
+      color: #ffffff !important;
+      font-size: clamp(1.4rem, 2.3vw, 2.1rem) !important;
+      font-weight: 900 !important;
+      margin: 0 0 10px 0 !important;
+      line-height: 1.3 !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .portal-title .highlight-cyan {
+      color: #38bdf8 !important;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 16px rgba(56,189,248,0.6) !important;
+    }
+
+    .portal-subtitle {
+      color: #f1f5f9 !important;
+      font-size: clamp(0.88rem, 1.1vw, 1.02rem) !important;
+      line-height: 1.65 !important;
+      max-width: 980px !important;
+      margin: 0 auto !important;
+      font-weight: 500 !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+    }
+
+    /* QUICK NAVIGATION MARQUEE BAR */
+    .quick-nav-marquee-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      background: linear-gradient(135deg, #060d1a 0%, #0d1e38 50%, #060d1a 100%) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.35) !important;
+      border-radius: 12px !important;
+      padding: 8px 12px !important;
+      margin-bottom: 18px !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+      position: relative !important;
+    }
+
+    .marquee-static-label {
+      flex-shrink: 0 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      font-size: 1.15rem !important;
+      padding: 6px 12px !important;
+      border-radius: 8px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.4) !important;
+      z-index: 2 !important;
+    }
+
+    .marquee-scroll-track {
+      flex-grow: 1 !important;
+      overflow: hidden !important;
+      display: flex !important;
+      position: relative !important;
+      mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+    }
+
+    .marquee-content-loop {
+      display: flex !important;
+      gap: 10px !important;
+      align-items: center !important;
+      white-space: nowrap !important;
+      animation: marqueeScroll 26s linear infinite !important;
+      padding-right: 10px !important;
+    }
+
+    .quick-nav-marquee-container:hover .marquee-content-loop {
+      animation-play-state: paused !important;
+    }
+
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .marquee-pill-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: rgba(30, 41, 59, 0.85) !important;
+      color: #e2e8f0 !important;
+      border: 1px solid rgba(148, 163, 184, 0.25) !important;
+      padding: 5px 12px !important;
+      border-radius: 999px !important;
+      font-size: 0.80rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .marquee-pill-btn:hover {
+      background: rgba(56, 189, 248, 0.25) !important;
+      color: #38bdf8 !important;
+      border-color: #38bdf8 !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* TABLE GRIDLINES */
+    table,
+    table.styled-table,
+    table.custom-table,
+    table#collegesTable {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      border: 1.5px solid #94a3b8 !important;
+      background: #ffffff !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
+    }
+
+    table th,
+    table.styled-table th,
+    table.custom-table th,
+    table#collegesTable th {
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      padding: 12px 14px !important;
+      border: 1.2px solid #334155 !important;
+      font-size: 0.88rem !important;
+      text-align: left !important;
+    }
+
+    table td,
+    table.styled-table td,
+    table.custom-table td,
+    table#collegesTable td {
+      padding: 10px 14px !important;
+      border: 1.2px solid #cbd5e1 !important;
+      font-size: 0.86rem !important;
+      color: #1e293b !important;
+      line-height: 1.5 !important;
+    }
+
+    table tbody tr:nth-child(even),
+    table.styled-table tbody tr:nth-child(even),
+    table.custom-table tbody tr:nth-child(even),
+    table#collegesTable tbody tr:nth-child(even) {
+      background-color: #f8fafc !important;
+    }
+
+    /* BOTTOM PAGE NAVIGATION BAR */
+    .bottom-page-nav-bar {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 14px 18px !important;
+      margin: 26px 0 28px 0 !important;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .page-nav-btn.btn-prev-animated {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 10px 20px !important;
+      border-radius: 10px !important;
+      font-family: inherit !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 2px solid #059669 !important;
+      background: linear-gradient(135deg, #047857 0%, #065f46 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(4, 120, 87, 0.35) !important;
+      animation: pulseNudgeLeft 3s ease-in-out infinite !important;
+      transition: all 0.25s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .page-nav-btn.btn-prev-animated:hover {
+      background: linear-gradient(135deg, #065f46 0%, #022c22 100%) !important;
+      border-color: #fde047 !important;
+      transform: translateX(-5px) scale(1.04) !important;
+      box-shadow: 0 6px 20px rgba(4, 120, 87, 0.55), 0 0 15px rgba(52, 211, 153, 0.5) !important;
+    }
+
+    .page-nav-btn.btn-next-animated {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 10px 20px !important;
+      border-radius: 10px !important;
+      font-family: inherit !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 2px solid #0284c7 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;
+      animation: pulseNudgeRight 3s ease-in-out infinite !important;
+      transition: all 0.25s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .page-nav-btn.btn-next-animated:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #0c4a6e 100%) !important;
+      border-color: #fde047 !important;
+      transform: translateX(5px) scale(1.04) !important;
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.55), 0 0 15px rgba(56, 189, 248, 0.5) !important;
+    }
+
+    @keyframes pulseNudgeLeft {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(-4px); }
+    }
+
+    @keyframes pulseNudgeRight {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(4px); }
+    }
+
+    /* CREATOR CARD: CLASSIC DARK THEME WITH AURORA ANIMATION */
+    .creator-card {
+      background: linear-gradient(135deg, #050811 0%, #0d1527 50%, #050811 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+      border-radius: 14px !important;
+      padding: 12px clamp(16px, 2vw, 32px) !important;
+      margin: 20px 0 16px 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.55), 0 0 20px rgba(0, 194, 255, 0.15) !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      flex-wrap: wrap !important;
+      gap: 14px !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+
+    .creator-typewriter-wrapper {
+      font-size: clamp(0.74rem, 0.95vw, 0.90rem) !important;
+      color: #f8fafc !important;
+      font-weight: 600 !important;
+      line-height: 1.4 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      flex: 0 1 auto !important;
+      min-width: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: center !important;
+    }
+
+    .creator-typewriter-target {
+      display: inline !important;
+      white-space: pre-wrap !important;
+    }
+
+    .creator-label {
+      font-size: 80% !important;
+      font-weight: 700 !important;
+      color: #f1f5f9 !important;
+      white-space: nowrap !important;
+      opacity: 0.92 !important;
+    }
+
+    .creator-role {
+      font-size: 80% !important;
+      color: #94a3b8 !important;
+      font-weight: 600 !important;
+      white-space: nowrap !important;
+      opacity: 0.90 !important;
+    }
+
+    .creator-name-ta,
+    .creator-name-en,
+    .creator-name-ta-blue,
+    .creator-name-ta-purple,
+    .creator-name-en-blue,
+    .creator-name-en-purple {
+      background: linear-gradient(
+        90deg,
+        #00c2ff 0%,
+        #33ff8c 25%,
+        #ffc640 50%,
+        #e54cff 75%,
+        #00c2ff 100%
+      ) !important;
+      background-size: 300% 100% !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      animation: aurora-text-flow 6s linear infinite !important;
+      font-weight: 900 !important;
+      letter-spacing: 0.3px !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      display: inline-block !important;
+      filter: drop-shadow(0 0 6px rgba(0, 194, 255, 0.45));
+    }
+
+    .creator-cursor {
+      display: inline-block !important;
+      font-weight: 300 !important;
+      color: #00c2ff !important;
+      margin-left: 2px !important;
+      animation: blinkCreatorCursor 0.65s infinite !important;
+      text-shadow: 0 0 8px rgba(0, 194, 255, 0.8);
+      flex-shrink: 0 !important;
+    }
+
+    @keyframes aurora-text-flow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 300% 50%; }
+    }
+
+    @keyframes blinkCreatorCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .footer-phone-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+      color: #ffffff !important;
+      padding: 4px 12px !important;
+      border-radius: 999px !important;
+      font-size: 0.84rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4) !important;
+      transition: all 0.2s ease !important;
+      margin: 0 !important;
+      vertical-align: middle !important;
+      flex-shrink: 0 !important;
+    }
+
+    .footer-phone-pill:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+      transform: translateY(-1px) scale(1.03) !important;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5) !important;
+      color: #ffffff !important;
+    }
+
+    /* FLOATING BACK TO TOP BUTTON (STANDARDIZED) */
+    .floating-back-to-top {
+      position: fixed !important;
+      bottom: 24px !important;
+      right: 24px !important;
+      z-index: 9999 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+      border-radius: 999px !important;
+      padding: 10px 18px !important;
+      font-size: 0.85rem !important;
+      font-weight: 800 !important;
+      font-family: inherit !important;
+      cursor: pointer !important;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35) !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: translateY(16px) !important;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .floating-back-to-top.visible {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: translateY(0) !important;
+    }
+
+    .floating-back-to-top:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+      border-color: #fde047 !important;
+      color: #fde047 !important;
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.5) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    @media (max-width: 1024px) {
+      .desktop-left-sidebar {
+        position: fixed !important;
+        left: -320px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 295px !important;
+        height: 100vh !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 9999 !important;
+        box-shadow: 6px 0 35px rgba(0, 0, 0, 0.85);
+      }
+      .desktop-left-sidebar.sidebar-open {
+        left: 0 !important;
+      }
+      .portal-main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 8px 12px 30px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .calc-inputs-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      .calc-res-divider {
+        display: none !important;
+      }
+      .calc-horizontal-result-bar {
+        flex-direction: column !important;
+        gap: 6px !important;
+      }
+      .bottom-page-nav-bar {
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+      .page-nav-btn.btn-prev-animated,
+      .page-nav-btn.btn-next-animated {
+        width: 100% !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+      }
+    }
+
 </style>
 
 <style id="robust-layout-override">
@@ -4514,72 +5094,73 @@
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
 </a>
 </header>
-<div class="district-badge">
-<span>🏛️ தமிழ்நாடு பள்ளிக் கல்வித்துறை | சிவகங்கை மாவட்டம்</span>
-</div>
-<div class="kural-box">
-<div class="kural-header">
-<span class="kural-icon">📜</span>
-<span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-<span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
-</div>
-<div class="kural-verse-text">
-    “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
-    திண்ணியர் ஆகப் பெறின்.”
-  </div>
-<div class="kural-meaning">
-<strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
-  </div>
-</div><div class="creator-card">
-<div class="creator-typewriter-wrapper">
-<span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
-</div>
-<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
-<span class="phone-icon">📱</span>
-<span class="phone-text">9626471035</span>
-</a>
-</div><footer class="portal-footer">
-<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
-    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
-</p>
-<p style="font-size: 0.85rem; color: #64748b;">
-    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
-  </p>
-</footer></div>
+
+<!-- Top Breadcrumb Navigation Bar -->
+<nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
+  <a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+    <span class="btn-icon">🧭</span>
+    <span class="btn-text">வழிகாட்டி முகப்பு</span>
+  </a>
+  <span class="nav-menu-separator">▶</span>
+  <a class="nav-menu-btn btn-direct-home" href="02_00_direct_admissions.html" title="நேரடிச் சேர்க்கைப் படிப்புகள்">
+    <span class="btn-icon">🎯</span>
+    <span class="btn-text">02 / நேரடிச் சேர்க்கை</span>
+  </a>
+  <span class="nav-menu-separator">▶</span>
+  <span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
+    <span class="btn-icon">⚙️</span>
+    <span class="btn-text">09 / பாலிடெக்னிக் &amp; ITI தொழிற்கல்வி</span>
+  </span>
+</nav>
+
+
 <!-- Portal Header -->
 <header class="portal-header">
-<div class="header-badge-row">
-<span class="header-tag primary">பிரிவு 09 / 8th, 10th &amp; 12th தொழில்நுட்ப &amp; தொழில்சார் கல்வி</span>
-<span class="header-tag secondary">DOTE பாலிடெக்னிக் (10th &amp; +2)</span>
-<span class="header-tag amber">அரசு ITI (8th &amp; 10th) &amp; பட்டயக் கணக்காளர் (CA)</span>
-</div>
-<h1 class="portal-title">டிப்ளமோ, அரசு ITI &amp; பட்டயக் கணக்காளர் வழிகாட்டி <span class="accent-gold"></span></h1>
-<p class="portal-subtitle">10-ஆம் வகுப்பு முடித்தவர்களுக்கான 3 ஆண்டு பாலிடெக்னிக் டிப்ளமோ, +2 முடித்தவர்களுக்கான நேரடி 2-ஆம் ஆண்டு லேட்டரல் என்ட்ரி (Lateral Entry), அண்ணா பல்கலைக்கழகத்தில் B.E. சேர்க்கை, 8 &amp; 10-ஆம் வகுப்பு முடித்தவர்களுக்கான அரசு ITI தொழிற்பயிற்சிகள், பட்டயக் கணக்காளர் (CA / CMA / CS) தகுதிகள் மற்றும் அரசு வேலைவாய்ப்புகளின் முழுமையான வழிகாட்டி.</p>
-<!-- Quick Nav Pills -->
-<!-- View Mode Switcher -->
-<div class="view-mode-container">
-<span class="view-mode-label">⚡ காட்சி முறை (View Mode):</span>
-<button class="mode-toggle-btn active" id="modeBtnTabs" onclick="switchNavMode('tabs', event);">📑 பிரிவு வாரியாக (Tab View - நேரடிக் காட்சி)</button>
-<button class="mode-toggle-btn" id="modeBtnAll" onclick="switchNavMode('all', event);">📜 முழுமையான பக்கம் (Show All Sections)</button>
-</div>
-<div class="quick-nav-pills" id="mainQuickNav">
-<a class="quick-nav-pill" href="#calculator" onclick="scrollToSection('calculator', event); return false;">🧮 தகுதி &amp; கட்-ஆஃப் கால்குலேட்டர்</a>
-<a class="quick-nav-pill" href="#poly-10th" onclick="scrollToSection('poly-10th', event); return false;">📘 10-ஆம் வகுப்பு பாலிடெக்னிக் (3 ஆண்டுகள்)</a>
-<a class="quick-nav-pill" href="#poly-branches" onclick="scrollToSection('poly-branches', event); return false;">⚙️ பாலிடெக்னிக் 20 தொழிற்பிரிவுகள்</a>
-<a class="quick-nav-pill" href="#lateral-poly" onclick="scrollToSection('lateral-poly', event); return false;">🚀 +2 லேட்டரல் என்ட்ரி (2 ஆண்டுகள்)</a>
-<a class="quick-nav-pill" href="#be-pathway" onclick="scrollToSection('be-pathway', event); return false;">🎓 அண்ணா பல்கலையில் B.E. சேரும் வழி</a>
-<a class="quick-nav-pill" href="#iti-overview" onclick="scrollToSection('iti-overview', event); return false;">🛠️ 8th &amp; 10th அரசு ITI சேர்க்கை</a>
-<a class="quick-nav-pill" href="#iti-all-trades" onclick="scrollToSection('iti-all-trades', event); return false;">🔧 ITI அனைத்துத் தொழிற்பிரிவுகள் பட்டியல்</a>
-<a class="quick-nav-pill" href="#quota-schemes" onclick="scrollToSection('quota-schemes', event); return false;">🎯 7.5% இடஒதுக்கீடு &amp; இலவச நலத்திட்டங்கள்</a>
-<a class="quick-nav-pill" href="#ca-foundation" onclick="scrollToSection('ca-foundation', event); return false;">📑 CA / CMA / CS பட்டயக் கணக்காளர்</a>
-<a class="quick-nav-pill" href="#deled-teacher-training" onclick="scrollToSection('deled-teacher-training', event); return false;" style="background:#ecfdf5; color:#065f46; font-weight:800; border:1.5px solid #a7f3d0;">🍎 தொடக்கக் கல்வி ஆசிரியர் பயிற்சி (D.El.Ed)</a>
-<a class="quick-nav-pill" href="#govt-jobs" onclick="scrollToSection('govt-jobs', event); return false;">💼 ரயில்வே &amp; மின்வாரிய வேலைகள்</a>
-<a class="quick-nav-pill" href="#rare-courses" onclick="scrollToSection('rare-courses', event); return false;" style="background:#fef3c7; color:#92400e; font-weight:700; border:1px solid #fde047;">📐 Draughtsman Civil &amp; அரிதான படிப்புகள்</a>
-<a class="quick-nav-pill" href="#colleges" onclick="scrollToSection('colleges', event); return false;">🏆 சிவகங்கை மாவட்ட &amp; அரசு நிறுவனங்கள்</a>
-<a class="quick-nav-pill" href="#faqs" onclick="scrollToSection('faqs', event); return false;">❓ அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQs)</a>
-<a class="quick-nav-pill" href="#documents" onclick="scrollToSection('documents', event); return false;">📑 தேவையான ஆவணங்கள்</a>
-</div>
+  <h1 class="portal-title">
+    பாலிடெக்னிக் டிப்ளமோ &amp; அரசு ITI <span class="highlight-cyan">சேர்க்கை வழிகாட்டி</span>
+  </h1>
+  <p class="portal-subtitle">
+    10-ஆம் வகுப்பு முடித்தவர்களுக்கான 3 ஆண்டு பாலிடெக்னிக் டிப்ளமோ, +2 முடித்தவர்களுக்கான நேரடி 2-ஆம் ஆண்டு லேட்டரல் என்ட்ரி (Lateral Entry), அண்ணா பல்கலைக்கழகத்தில் B.E. சேர்க்கை, 8 &amp; 10-ஆம் வகுப்பு முடித்தவர்களுக்கான அரசு ITI தொழிற்பயிற்சிகள், பட்டயக் கணக்காளர் (CA / CMA / CS) மற்றும் அரசு வேலைவாய்ப்புகளின் முழுமையான வழிகாட்டி.
+  </p>
 </header>
+
+<!-- Quick Navigation Marquee Bar (ஓடும் விரைவு வழிசெலுத்தல் பட்டை) -->
+<div class="quick-nav-marquee-container" aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை">
+  <div class="marquee-static-label" title="விரைவு வழிகாட்டல்">
+    <span class="pulse-icon">⚡</span>
+  </div>
+  <div class="marquee-scroll-track">
+    <div class="marquee-content-loop">
+      <a href="#calculator" class="marquee-pill-btn">🧮 தகுதி &amp; கட்-ஆஃப் கால்குலேட்டர்</a>
+      <a href="#poly-10th" class="marquee-pill-btn">📘 10th பாலிடெக்னிக் (3 ஆண்டுகள்)</a>
+      <a href="#poly-branches" class="marquee-pill-btn">⚙️ 20 தொழிற்பிரிவுகள்</a>
+      <a href="#lateral-poly" class="marquee-pill-btn">🚀 +2 லேட்டரல் என்ட்ரி</a>
+      <a href="#be-pathway" class="marquee-pill-btn">🎓 அண்ணா பல்கலையில் B.E.</a>
+      <a href="#iti-overview" class="marquee-pill-btn">🛠️ 8th &amp; 10th அரசு ITI</a>
+      <a href="#iti-all-trades" class="marquee-pill-btn">🔧 ITI தொழிற்பிரிவுகள்</a>
+      <a href="#quota-schemes" class="marquee-pill-btn">🎯 7.5% இடஒதுக்கீடு</a>
+      <a href="#ca-foundation" class="marquee-pill-btn">📑 CA / CMA / CS</a>
+      <a href="#deled-teacher-training" class="marquee-pill-btn">🍎 ஆசிரியர் பயிற்சி (D.El.Ed)</a>
+      <a href="#govt-jobs" class="marquee-pill-btn">💼 அரசு வேலைவாய்ப்புகள்</a>
+      <a href="#colleges" class="marquee-pill-btn">🏆 சிவகங்கை மாவட்ட நிறுவனங்கள்</a>
+    </div>
+    <!-- Duplicate for infinite seamless scroll -->
+    <div class="marquee-content-loop" aria-hidden="true">
+      <a href="#calculator" class="marquee-pill-btn">🧮 தகுதி &amp; கட்-ஆஃப் கால்குலேட்டர்</a>
+      <a href="#poly-10th" class="marquee-pill-btn">📘 10th பாலிடெக்னிக் (3 ஆண்டுகள்)</a>
+      <a href="#poly-branches" class="marquee-pill-btn">⚙️ 20 தொழிற்பிரிவுகள்</a>
+      <a href="#lateral-poly" class="marquee-pill-btn">🚀 +2 லேட்டரல் என்ட்ரி</a>
+      <a href="#be-pathway" class="marquee-pill-btn">🎓 அண்ணா பல்கலையில் B.E.</a>
+      <a href="#iti-overview" class="marquee-pill-btn">🛠️ 8th &amp; 10th அரசு ITI</a>
+      <a href="#iti-all-trades" class="marquee-pill-btn">🔧 ITI தொழிற்பிரிவுகள்</a>
+      <a href="#quota-schemes" class="marquee-pill-btn">🎯 7.5% இடஒதுக்கீடு</a>
+      <a href="#ca-foundation" class="marquee-pill-btn">📑 CA / CMA / CS</a>
+      <a href="#deled-teacher-training" class="marquee-pill-btn">🍎 ஆசிரியர் பயிற்சி (D.El.Ed)</a>
+      <a href="#govt-jobs" class="marquee-pill-btn">💼 அரசு வேலைவாய்ப்புகள்</a>
+      <a href="#colleges" class="marquee-pill-btn">🏆 சிவகங்கை மாவட்ட நிறுவனங்கள்</a>
+    </div>
+  </div>
+</div>
 <!-- Tab Mode Active Indicator & Quick Switcher -->
 <div class="tab-status-bar" id="tabStatusBar">
 <div class="tab-status-title">
@@ -4604,52 +5185,59 @@
     </div>
 </div>
 <!-- SECTION: CALCULATOR -->
-<section class="calc-container" id="calculator">
-<div class="calc-title">
-<span>🧮</span>
-<span>கல்வித் தகுதி &amp; சேர்க்கை மதிப்பீட்டுக் கருவி (Eligibility Calculator)</span>
+<section class="info-card" id="calculator" style="background: linear-gradient(135deg, #091330 0%, #1e293b 50%, #0a0f1d 100%) !important; border: 2px solid #38bdf8 !important; border-radius: 12px !important; padding: 12px 18px !important; box-shadow: 0 4px 18px rgba(15, 23, 42, 0.35) !important; color: #ffffff !important; margin-bottom: 20px !important;">
+<div style="display: flex !important; align-items: center !important; justify-content: space-between !important; flex-wrap: wrap !important; gap: 8px !important; margin-bottom: 10px !important; border-bottom: 1px solid rgba(255,255,255,0.12) !important; padding-bottom: 6px !important;">
+  <div style="display: flex !important; align-items: center !important; gap: 8px !important;">
+    <span style="font-size: 1.15rem !important;">🧮</span>
+    <h3 style="color: #93c5fd !important; font-size: 1.02rem !important; font-weight: 800 !important; margin: 0 !important;">
+      கல்வித் தகுதி &amp; சேர்க்கை மதிப்பீட்டுக் கருவி (Eligibility &amp; Cut-off Calculator)
+    </h3>
+  </div>
+  <div style="font-size: 0.74rem !important; font-weight: 700 !important; color: #bae6fd !important; background: rgba(56,189,248,0.15) !important; border: 1px solid #38bdf8 !important; padding: 2px 8px !important; border-radius: 6px !important;">
+    கல்வி நிலைக்கு ஏற்ப கட்-ஆஃப் &amp; தகுதி வாய்ப்பு
+  </div>
 </div>
-<p style="font-size: 0.94rem; color: #334155; margin-bottom: 14px;">
-      உங்கள் தற்போதைய கல்வி நிலையைத் தேர்ந்தெடுத்து மதிப்பெண்களை உள்ளிட்டு பாலிடெக்னிக் டிப்ளமோ, அரசு ITI மற்றும் CA சேர்க்கை வாய்ப்புகளைக் கண்டறியவும்:
-    </p>
-<!-- Stream Toggle -->
-<div class="stream-toggle-row">
-<button class="stream-toggle-btn active" id="btn10th" onclick="switchStream('10th')" type="button">10-ஆம் வகுப்பு (10th Standard - 3-Year Polytechnic &amp; ITI)</button>
-<button class="stream-toggle-btn" id="btn8th" onclick="switchStream('8th')" type="button">8-ஆம் வகுப்பு (8th Standard - ITI Trades)</button>
-<button class="stream-toggle-btn" id="btn12th" onclick="switchStream('12th')" type="button">+2 அறிவியல் / தொழிற்கல்வி (Lateral Entry 2 Years)</button>
-<button class="stream-toggle-btn" id="btnCA" onclick="switchStream('ca')" type="button">+2 வணிகவியல் / கலை / அறிவியல் (CA Foundation)</button>
+
+<!-- Stream Toggle Row -->
+<div class="stream-toggle-row" style="display: flex !important; flex-wrap: wrap !important; gap: 6px !important; margin-bottom: 10px !important;">
+  <button class="stream-toggle-btn active" id="btn10th" onclick="switchStream('10th')" type="button" style="padding: 4px 10px !important; font-size: 0.78rem !important; border-radius: 6px !important; font-weight: 700 !important;">10-ஆம் வகுப்பு (3-Year Poly &amp; ITI)</button>
+  <button class="stream-toggle-btn" id="btn8th" onclick="switchStream('8th')" type="button" style="padding: 4px 10px !important; font-size: 0.78rem !important; border-radius: 6px !important; font-weight: 700 !important;">8-ஆம் வகுப்பு (ITI Trades)</button>
+  <button class="stream-toggle-btn" id="btn12th" onclick="switchStream('12th')" type="button" style="padding: 4px 10px !important; font-size: 0.78rem !important; border-radius: 6px !important; font-weight: 700 !important;">+2 அறிவியல் / தொழிற்கல்வி (Lateral 2 Years)</button>
+  <button class="stream-toggle-btn" id="btnCA" onclick="switchStream('ca')" type="button" style="padding: 4px 10px !important; font-size: 0.78rem !important; border-radius: 6px !important; font-weight: 700 !important;">+2 CA Foundation</button>
 </div>
-<div class="calc-inputs-grid" id="inputsGrid">
-<div class="input-group">
-<label for="sub1" id="lbl1">கணிதம் (Mathematics):</label>
-<input id="sub1" max="100" min="0" placeholder="100-க்கு" type="number" value="82"/>
+
+<!-- 4 Subject Inputs in a 4-Column Row -->
+<div class="calc-inputs-grid" id="inputsGrid" style="display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 10px !important; margin-bottom: 10px !important;">
+  <div style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
+    <label for="sub1" id="lbl1" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">📐 கணிதம் (Maths):</label>
+    <input id="sub1" max="100" min="0" oninput="calculateTechCutoff()" placeholder="0 - 100" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="82"/>
+  </div>
+  <div style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
+    <label for="sub2" id="lbl2" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">⚡ அறிவியல் (Science):</label>
+    <input id="sub2" max="100" min="0" oninput="calculateTechCutoff()" placeholder="0 - 100" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="85"/>
+  </div>
+  <div style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
+    <label for="sub3" id="lbl3" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">📜 சமூக அறிவியல் / பிற:</label>
+    <input id="sub3" max="100" min="0" oninput="calculateTechCutoff()" placeholder="0 - 100" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="80"/>
+  </div>
+  <div id="group4" style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
+    <label for="sub4" id="lbl4" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">📊 மொத்த மதிப்பெண் (500-க்கு):</label>
+    <input id="sub4" max="500" min="0" oninput="calculateTechCutoff()" placeholder="500-க்கு" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="415"/>
+  </div>
 </div>
-<div class="input-group">
-<label for="sub2" id="lbl2">அறிவியல் (Science):</label>
-<input id="sub2" max="100" min="0" placeholder="100-க்கு" type="number" value="85"/>
+
+<!-- Slim Horizontal Result Bar -->
+<div class="calc-horizontal-result-bar" style="background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%) !important; border: 1.5px solid #fbbf24 !important; border-radius: 8px !important; padding: 6px 16px !important; display: flex !important; align-items: center !important; justify-content: center !important; flex-wrap: wrap !important; gap: 8px 16px !important; box-shadow: 0 2px 8px rgba(0,0,0,0.25) !important;">
+  <span style="font-size: 0.84rem !important; font-weight: 800 !important; color: #fef08a !important; display: inline-flex !important; align-items: center !important; gap: 6px !important;">
+    <span>🎯 உங்கள் சேர்க்கை சதவீதம் / கட்-ஆஃப்:</span>
+    <span id="cutoffValue" style="font-size: 1.25rem !important; font-weight: 900 !important; color: #ffffff !important; text-shadow: 0 1px 6px rgba(251, 191, 36, 0.5) !important; line-height: 1 !important;">83.00 % (415/500)</span>
+  </span>
+  <span class="calc-res-divider" style="color: rgba(255,255,255,0.3) !important; font-size: 0.9rem !important;">|</span>
+  <span id="cutoffStatus" style="background: rgba(251, 191, 36, 0.2) !important; border: 1px solid #f59e0b !important; color: #fef08a !important; font-size: 0.74rem !important; font-weight: 800 !important; padding: 2px 10px !important; border-radius: 999px !important; text-align: center !important;">அரசு பாலிடெக்னிக் &amp; ITI-ல் விரும்பிய முதன்மைப் பிரிவு உறுதி!</span>
 </div>
-<div class="input-group">
-<label for="sub3" id="lbl3">சமூக அறிவியல் / பிற பாடங்கள்:</label>
-<input id="sub3" max="100" min="0" placeholder="100-க்கு" type="number" value="80"/>
-</div>
-<div class="input-group" id="group4">
-<label for="sub4" id="lbl4">10-ஆம் வகுப்பு மொத்த மதிப்பெண் (500-க்கு):</label>
-<input id="sub4" max="500" min="0" placeholder="500-க்கு" type="number" value="415"/>
-</div>
-</div>
-<div class="calc-result-box">
-<div style="font-size: 0.92rem; font-weight: 700; color: #64748b; text-transform: uppercase;">உங்கள் சேர்க்கை சதவீதம் / கட்-ஆஃப்</div>
-<div class="cutoff-score" id="cutoffValue">83.00 %</div>
-<div class="cutoff-badge" id="cutoffStatus">அரசு பாலிடெக்னிக் &amp; ITI-ல் விரும்பிய முதன்மைப் பிரிவு உறுதி!</div>
-<p id="cutoffAdvice" style="font-size: 0.9rem; color: #475569; margin-top: 10px;">
-        💡 பரிந்துரை: மெக்கானிக்கல், சிவில், EEE, ECE, கம்ப்யூட்டர் இன்ஜினியரிங் அல்லது அரசு ITI எலக்ட்ரீஷியன் / ஃபிட்டர்.
-      </p>
-</div>
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
-</div>
+<p id="cutoffAdvice" style="font-size: 0.82rem !important; color: #94a3b8 !important; margin: 6px 0 0 0 !important; text-align: center !important;">
+  💡 பரிந்துரை: மெக்கானிக்கல், சிவில், EEE, ECE, கம்ப்யூட்டர் இன்ஜினியரிங் அல்லது அரசு ITI எலக்ட்ரீஷியன் / ஃபிட்டர்.
+</p>
 </section>
 <!-- SECTION 1: 10TH REGULAR POLYTECHNIC -->
 <section class="info-card" id="poly-10th">
@@ -5000,7 +5588,7 @@
 <span class="section-badge">All ITI Trades</span>
 </div>
 <div class="table-container">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>வ.எண்</th>
@@ -5320,7 +5908,7 @@
 <span>🏛️</span> CA / CMA / CS தொழில்சார் அடிப்படைக் கல்வி வழங்கும் முதன்மை நிறுவனங்கள் &amp; பயிற்சி மையங்கள் பட்டியல்
     </h3>
 <div class="table-container">
-<table>
+<table class="styled-table">
 <thead>
 <tr style="background: #78350f; color: #ffffff;">
 <th>வ.எண்</th>
@@ -5500,7 +6088,7 @@
 <span class="section-badge">Career Horizons</span>
 </div>
 <div class="table-container">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>நிறுவனம் &amp; துறை</th>
@@ -5675,7 +6263,7 @@
 <span>🏫</span> Draughtsman Civil மற்றும் அரிதான தொழிற்பிரிவுகளை வழங்கும் முதன்மை அரசு கல்வி நிறுவனங்கள் பட்டியல்
     </h3>
 <div class="table-container">
-<table>
+<table class="styled-table">
 <thead>
 <tr style="background: #0f172a; color: #ffffff;">
 <th>வ.எண்</th>
@@ -5815,7 +6403,7 @@
 </div>
 <!-- Table -->
 <div class="table-container">
-<table id="collegesTable">
+<table class="styled-table" id="collegesTable">
 <thead>
 <tr>
 <th>வ.எண்</th>
@@ -6266,6 +6854,57 @@
 <button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
+
+<!-- Bottom Chapter Navigation Bar: Animated Edge-to-Edge Navigation -->
+<nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar">
+  <a class="page-nav-btn btn-prev-animated" href="02_08_commerce_management.html" title="02_08 வணிகவியல் &amp; மேலாண்மைப் படிப்புகள்">
+    <span class="nav-btn-icon">◀</span>
+    <span class="nav-btn-text">02_08 வணிகவியல் &amp; மேலாண்மை</span>
+  </a>
+  <a class="page-nav-btn btn-next-animated" href="03_institutes.html" title="03 / முதன்மை உயர்கல்வி நிறுவனங்கள் அடைவு">
+    <span class="nav-btn-text">03 / முதன்மை நிறுவனங்கள் அடைவு</span>
+    <span class="nav-btn-icon">▶</span>
+  </a>
+</nav>
+
+<!-- திருக்குறள் பகுதி — செயல்முறைத் தொழிற்திறன் & முயற்சி (அதிகாரம்: ஆள்வினையுடைமை) -->
+<div class="kural-box">
+  <div class="kural-header">
+    <span class="kural-icon">📜</span>
+    <span class="kural-title">திருக்குறள் — அதிகாரம்: ஆள்வினையுடைமை (குறள்: 618)</span>
+    <span class="kural-sparkle">🛠️ செயல்முறைத் தொழிற்திறன் &amp; முயற்சி</span>
+  </div>
+  <div class="kural-verse-text">
+    “பொறியின்மை யார்க்கும் பழியன்று அறிவறிந்து<br/>
+    ஆள்வினை இன்மை பழி.”
+  </div>
+  <div class="kural-meaning">
+    <strong>விளக்கவுரை:</strong> விதி அல்லது சூழ்நிலைகள் சாதகமாக அமையாமல் போவது யாருக்கும் பழி ஆகாது; ஆனால் அறிய வேண்டிய தொழினுட்பங்களை நன்கு அறிந்து, முயற்சியோடு கூடிய செயல் திறமை (Hands-on Skill &amp; Craft) இல்லாமல் இருப்பதே பழியாகும்; பாலிடெக்னிக் டிப்ளமோ மற்றும் ITI தொழிற்கல்வி பயிலும் மாணவர்களுக்கு அத்தகைய செயல்முறைத் தொழிற்திறனே தன்னம்பிக்கை தரும் வாழ்வாதாரமாகும்.
+  </div>
+</div>
+
+<!-- உருவாக்கியவர் பெட்டி (Classic Dark Theme & Aurora Animation, Centered Flow) -->
+<div class="creator-card">
+  <div class="creator-typewriter-wrapper">
+    <span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
+  </div>
+  <a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
+    <span class="phone-icon">📱</span>
+    <span class="phone-text">9626471035</span>
+  </a>
+</div>
+
+<!-- முதன்மைக் கல்வி அலுவலக அடிக்குறிப்பு -->
+<footer class="portal-footer">
+  <p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #ffffff !important; font-size: 0.96rem !important; text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;">
+    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a class="footer-phone-link" href="tel:04575240408" style="color: #fde047 !important; text-decoration: none !important; font-weight: 800 !important; background: rgba(0, 0, 0, 0.45) !important; padding: 3px 10px !important; border-radius: 6px !important; border: 1.2px solid rgba(253, 224, 71, 0.6) !important; display: inline-block !important;">☎️ 04575240408</a>
+  </p>
+  <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important;">
+    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+  </p>
+</footer>
+
+
 <!-- Portal Footer -->
 <!-- Footer -->
 </main></div>
@@ -6534,31 +7173,11 @@
     return false;
   }
 
-  function scrollToTop(event) {
-    if (event) {
-      if (typeof event.preventDefault === 'function') event.preventDefault();
-      if (typeof event.stopPropagation === 'function') event.stopPropagation();
-    }
-    try {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      if (document.documentElement) document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
-      if (document.body) document.body.scrollTo({ top: 0, behavior: 'smooth' });
-    } catch (e) {
-      window.scrollTo(0, 0);
-    }
-    return false;
-  }
+  
 
   // Toggle Back to Top Button on scroll
   window.addEventListener('scroll', function() {
-    const btn = document.getElementById('backToTopBtn');
-    if (!btn) return;
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (currentScroll > 350) {
-      btn.style.display = 'block';
-    } else {
-      btn.style.display = 'none';
-    }
+    
   });
 
   // Attach event listeners to all quick nav pills dynamically as a fail-safe
@@ -6769,9 +7388,6 @@
   document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
 </script>
 <!-- Floating Back to Top Button -->
-<button id="backToTopBtn" onclick="scrollToTop(event);" title="மேலே செல்க (Back to Top)">
-  ↑ மேலே
-</button>
 <!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
 
 <!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
@@ -6959,6 +7575,32 @@ document.addEventListener('DOMContentLoaded', function() {
     initCreatorObserver();
   }
 })();
+
+
+  // Floating Back to Top Button Controller
+  (function() {
+    function setupBackToTop() {
+      const btt = document.getElementById('floatingBackToTop');
+      if (!btt) return;
+      function checkScroll() {
+        const scrollPos = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if (scrollPos > 120) {
+          btt.classList.add('visible');
+        } else {
+          btt.classList.remove('visible');
+        }
+      }
+      window.addEventListener('scroll', checkScroll, { passive: true });
+      checkScroll();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupBackToTop);
+    } else {
+      setupBackToTop();
+    }
+  })();
+
 </script>
+<button aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" id="floatingBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="மேலே செல்க">↑ மேலே செல்க</button>
 </body>
 </html>
