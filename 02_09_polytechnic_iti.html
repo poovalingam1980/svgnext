@@ -4433,6 +4433,29 @@
       }
     }
 
+
+    /* ENSURE ALL SECTIONS ARE ALWAYS VISIBLE IN NORMAL FLOW */
+    section.info-card,
+    #calculator,
+    #poly-10th,
+    #poly-branches,
+    #lateral-poly,
+    #be-pathway,
+    #iti-overview,
+    #iti-all-trades,
+    #quota-schemes,
+    #ca-foundation,
+    #deled-teacher-training,
+    #govt-jobs,
+    #rare-courses,
+    #colleges,
+    #faqs,
+    #documents {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
 </style>
 
 <style id="robust-layout-override">
@@ -4975,6 +4998,58 @@
     width: 100% !important;
   }
 }
+
+
+    /* STANDARDIZED CENTER-ALIGNED CREATOR CARD (POLYTECHNIC MODEL) */
+    .creator-card {
+      background: linear-gradient(135deg, #050811 0%, #0d1527 50%, #050811 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+      border-radius: 14px !important;
+      padding: 12px clamp(16px, 2vw, 32px) !important;
+      margin: 20px 0 16px 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.55), 0 0 20px rgba(0, 194, 255, 0.15) !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      flex-wrap: wrap !important;
+      gap: 14px !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+
+    .creator-typewriter-wrapper {
+      font-size: clamp(0.74rem, 0.95vw, 0.90rem) !important;
+      color: #f8fafc !important;
+      font-weight: 600 !important;
+      line-height: 1.4 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      flex-wrap: wrap !important;
+      flex: 0 1 auto !important;
+      min-width: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .creator-typewriter-target {
+      display: inline !important;
+      text-align: center !important;
+      white-space: normal !important;
+    }
+
+    .creator-card .footer-phone-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin: 0 !important;
+    }
+
 </style>
 </head>
 <body>
@@ -5161,17 +5236,7 @@
     </div>
   </div>
 </div>
-<!-- Tab Mode Active Indicator & Quick Switcher -->
-<div class="tab-status-bar" id="tabStatusBar">
-<div class="tab-status-title">
-<span>📍</span> <span id="currentActiveSectionTitle">தற்போதைய பிரிவு: 🧮 தகுதி &amp; கட்-ஆஃப் கால்குலேட்டர்</span>
-</div>
-<div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு</button>
-<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
-<button class="tab-nav-btn" onclick="switchNavMode('all', event);" style="background:#15803d;">📜 அனைத்தும் காட்டு</button>
-</div>
+
 </div>
 <!-- Notice -->
 <div class="notice-box notice-gold">
@@ -5277,11 +5342,6 @@
 <strong>10-ஆம் வகுப்பிற்குப் பின் பாலிடெக்னிக் சேர்வதா? +2 சேர்வதா?</strong><br/>
         விரைவாக ஒரு தொழில்நுட்பப் பட்டயம் பெற்று 18 வயதிலேயே அரசு மற்றும் தனியார் நிறுவனங்களில் வேலைவாய்ப்பு பெற விரும்புபவர்களுக்கும், பின்னர் B.E. படிக்க விரும்புபவர்களுக்கும் பாலிடெக்னிக் மிகச் சிறந்த தெரிவாகும். பாலிடெக்னிக் முடித்தவுடன் நுழைவுத் தேர்வின்றி அண்ணா பல்கலைக்கழகத்தில் <strong>நேரடியாக 2-ஆம் ஆண்டு B.E. (Lateral Entry)</strong> சேர முடியும்!
       </div>
-</div>
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <!-- SECTION 2: 20 POLYTECHNIC BRANCHES & CAREER OPPORTUNITIES -->
@@ -5459,11 +5519,6 @@
 <strong>💼 வேலைவாய்ப்புகள்:</strong> IOCL, BPCL, HPCL, ரிலையன்ஸ் பெட்ரோலியம், கேர்ன் இந்தியா மற்றும் மத்திய கிழக்கு எண்ணெய் சுத்திகரிப்பு ஆலைகள்.
         </div>
 </div></div>
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
-</div>
 </section>
 <!-- SECTION 3: LATERAL ENTRY (+2 TO 2ND YEAR) -->
 <section class="info-card" id="lateral-poly">
@@ -5500,11 +5555,6 @@
         </p>
 </div>
 </div>
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
-</div>
 </section>
 <!-- SECTION 4: BE LATERAL ENTRY PATHWAY -->
 <section class="info-card" id="be-pathway">
@@ -5539,11 +5589,6 @@
         </p>
 </div>
 </div>
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
-</div>
 </section>
 <!-- SECTION 5: ITI 8TH & 10TH ADMISSION OVERVIEW -->
 <section class="info-card" id="iti-overview">
@@ -5574,11 +5619,6 @@
           அரசு ITI-ல் படித்துத் தேர்ச்சி பெறும் மாணவர்களுக்கு மத்திய அரசின் <strong>National Trade Certificate (NTC)</strong> வழங்கப்படும். இது உலகம் முழுவதும் செல்லுபடியாகும்.
         </p>
 </div>
-</div>
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <!-- SECTION 6: ALL ITI TRADES (8TH & 10TH) -->
@@ -5779,11 +5819,6 @@
 </tr></tbody>
 </table>
 </div>
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
-</div>
 </section>
 <!-- SECTION 7: 7.5% QUOTA & GOVT SCHEMES -->
 <section class="info-card" id="quota-schemes">
@@ -5818,11 +5853,6 @@
 <li><strong>இலவச வரைபடக் கருவிகள்:</strong> இஞ்சினியரிங் டிராயிங் டூல் கிட் மற்றும் பாடப்புத்தகங்கள் இலவசம்.</li>
 </ul>
 </div>
-</div>
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <!-- SECTION 8: CA FOUNDATION & PROFESSIONAL FOUNDATION -->
@@ -5993,11 +6023,6 @@
 </table>
 </div>
 </div>
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
-</div>
 </section>
 <!-- SECTION 8.5 / 10: DIPLOMA IN ELEMENTARY EDUCATION (D.El.Ed) -->
 <section class="info-card" id="deled-teacher-training" style="border-top: 5px solid #059669;">
@@ -6075,11 +6100,7 @@
 <li><strong>பதவி உயர்வு &amp; மேற்படிப்பு:</strong> இடைநிலை ஆசிரியராகப் பணியாற்றிக்கொண்டே தொலைதூரக் கல்வி வழியாக B.A. / B.Sc மற்றும் B.Ed படித்து, பட்டதாரி ஆசிரியர் (BT Assistant), தலைமை ஆசிரியர் மற்றும் வட்டாரக் கல்வி அலுவலர் (BEO) பதவிகளுக்கு உயர்வு பெறலாம்.</li>
 </ul>
 </div>
-<div class="nav-buttons-container" style="display:flex; justify-content:space-between; margin-top:24px;">
-<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
-</div>
+
 </section>
 <!-- SECTION 9: GOVT JOBS & SALARY MATRIX -->
 <section class="info-card" id="govt-jobs">
@@ -6157,11 +6178,6 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <!-- SECTION 10: COLLEGES DIRECTORY -->
@@ -6375,11 +6391,6 @@
 </tbody>
 </table>
 </div>
-</div>
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 <section class="info-card" id="colleges">
@@ -6741,11 +6752,6 @@
 </tbody>
 </table>
 </div>
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
-</div>
 </section>
 <!-- SECTION 11: FAQS -->
 <section class="info-card" id="faqs">
@@ -6816,11 +6822,6 @@
         ஆம்! +2 தேர்வில் வணிகவியல் படிக்காத மாணவர்களும் (அறிவியல், கணிதம், கலை, தொழிற்கல்வி பயின்றவர்கள்) ICAI-ல் CA Foundation தேர்வுக்குப் பதிவு செய்யலாம். தாள் 1 கணக்கியல் அடிப்படைகளை ஆர்வத்துடன் படித்தால் அறிவியல் மாணவர்களும் எளிதாக முதல் முயற்சியிலேயே தேர்ச்சி பெற முடியும்.
       </div>
 </div>
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
-</div>
 </section>
 <!-- SECTION 12: DOCUMENTS CHECKLIST -->
 <section class="info-card" id="documents">
@@ -6847,11 +6848,6 @@
 <li><strong>ICAI பதிவு நகல்:</strong> CA Foundation மாணவர்களுக்கு +2 அட்மிட் கார்டு மற்றும் இணையவழிப் பதிவு நகல்.</li>
 </ul>
 </div>
-</div>
-<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:24px; padding-top:16px; border-top:1px dashed #cbd5e1;">
-<button class="tab-nav-btn" onclick="goToPrevSection();" style="background:#475569;">⬅️ முந்தைய பிரிவு</button>
-<button class="tab-nav-btn" onclick="scrollToTop(event);" style="background:#d97706;">🔝 விரைவு மெனு (Quick Nav)</button>
-<button class="tab-nav-btn" onclick="goToNextSection();" style="background:#0284c7;">அடுத்த பிரிவு ➔</button>
 </div>
 </section>
 
@@ -6884,9 +6880,9 @@
 </div>
 
 <!-- உருவாக்கியவர் பெட்டி (Classic Dark Theme & Aurora Animation, Centered Flow) -->
-<div class="creator-card">
-  <div class="creator-typewriter-wrapper">
-    <span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
+<div class="creator-card" style="justify-content: center !important; text-align: center !important;">
+  <div class="creator-typewriter-wrapper" style="justify-content: center !important; text-align: center !important; display: inline-flex !important; align-items: center !important;">
+    <span class="creator-typewriter-target" id="creatorTypewriterTarget" style="text-align: center !important;"></span><span class="creator-cursor" id="creatorCursor">|</span>
   </div>
   <a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
     <span class="phone-icon">📱</span>
@@ -6912,277 +6908,34 @@
 
 <!-- JavaScript for Calculator, Stream Switch, Table Filter & FAQ -->
 <script>
-
-  // Navigation Logic Updated
-
   // ==========================================
-  // Robust Section Navigation (Tab Mode + Scroll Mode)
-  // Designed for Google Sites Embeds & Standalone
+  // Standard Smooth Section Navigation
   // ==========================================
-  
-  const allSectionIds = [
-    'calculator',
-    'poly-10th',
-    'poly-branches',
-    'lateral-poly',
-    'be-pathway',
-    'iti-overview',
-    'iti-all-trades',
-    'quota-schemes',
-    'ca-foundation',
-    'deled-teacher-training',
-    'govt-jobs',
-    'rare-courses',
-    'colleges',
-    'faqs',
-    'documents'
-  ];
-
-  const sectionTitlesMap = {
-    'calculator': '🧮 1. தகுதி & கட்-ஆஃப் கால்குலேட்டர்',
-    'poly-10th': '📘 2. 10-ஆம் வகுப்பு பாலிடெக்னிக் சேர்க்கை (3 ஆண்டுகள்)',
-    'poly-branches': '⚙️ 3. பாலிடெக்னிக் 20 தொழிற்பிரிவுகள்',
-    'lateral-poly': '🚀 4. +2 நேரடி 2-ஆம் ஆண்டு பாலிடெக்னிக் (Lateral Entry)',
-    'be-pathway': '🎓 5. பாலிடெக்னிக் முடித்து B.E. சேரும் நேரடி வழி',
-    'iti-overview': '🛠️ 6. 8th & 10th அரசு ITI சேர்க்கை வழிகாட்டி',
-    'iti-all-trades': '🔧 7. அரசு ITI தொழிற்பிரிவுகள் முழுமையான பட்டியல்',
-    'quota-schemes': '🎯 8. 7.5% அரசுப் பள்ளி இடஒதுக்கீடு & நலத்திட்டங்கள்',
-    'ca-foundation': '📑 9. பட்டயக் கணக்காளர் தொழில்சார் அடிப்படைக் கல்வி (CA/CMA/CS)',
-    'deled-teacher-training': '🍎 10. தொடக்கக் கல்வி ஆசிரியர் பட்டயப் படிப்பு (D.El.Ed)',
-    'govt-jobs': '💼 10. அரசு வேலைவாய்ப்புகள் & ஆரம்ப ஊதிய விபரங்கள்',
-    'rare-courses': '📐 11. Draughtsman Civil, Surveyor & அரிதான படிப்புகள்',
-    'colleges': '🏆 12. சிவகங்கை & தென்மண்டல கல்வி நிறுவனங்கள் பட்டியல்',
-    'faqs': '❓ 13. அடிக்கடி கேட்கப்படும் கேள்விகள் (FAQs)',
-    'documents': '📑 14. சேர்க்கைக்குத் தேவையான ஆவணங்கள் சரிபார்ப்பு'
-  };
-
-  let currentNavMode = 'tabs'; // Default to 'tabs' mode: perfectly solves Google Sites iframe scrolling issue!
-  let currentActiveSectionId = 'calculator';
-
-  function switchNavMode(mode, event) {
-    if (event) {
-      if (typeof event.preventDefault === 'function') event.preventDefault();
-      if (typeof event.stopPropagation === 'function') event.stopPropagation();
-    }
-    currentNavMode = mode;
-    
-    const btnTabs = document.getElementById('modeBtnTabs');
-    const btnAll = document.getElementById('modeBtnAll');
-    const statusBar = document.getElementById('tabStatusBar');
-
-    if (mode === 'tabs') {
-      btnTabs.classList.add('active');
-      btnAll.classList.remove('active');
-      if (statusBar) statusBar.style.display = 'flex';
-      displayOnlySection(currentActiveSectionId);
-    } else {
-      btnAll.classList.add('active');
-      btnTabs.classList.remove('active');
-      if (statusBar) statusBar.style.display = 'none';
-      showAllSectionsDOM();
-    }
-    return false;
-  }
-
-  function displayOnlySection(sectionId) {
-    currentActiveSectionId = sectionId;
-
-    // Show only the selected section
-    allSectionIds.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) {
-        if (id === sectionId) {
-          el.style.display = 'block';
-          el.classList.add('tab-fade-in');
-        } else {
-          el.style.display = 'none';
-          el.classList.remove('tab-fade-in');
-        }
-      }
-    });
-
-    // Update active pill highlighting
-    document.querySelectorAll('.quick-nav-pill').forEach(pill => {
-      const href = pill.getAttribute('href');
-      if (href === '#' + sectionId) {
-        pill.classList.add('active-tab');
-      } else {
-        pill.classList.remove('active-tab');
-      }
-    });
-
-    // Update status bar text
-    const statusTitle = document.getElementById('currentActiveSectionTitle');
-    if (statusTitle && sectionTitlesMap[sectionId]) {
-      statusTitle.innerHTML = 'தற்போதைய பிரிவு: ' + sectionTitlesMap[sectionId];
-    }
-
-    const statusBar = document.getElementById('tabStatusBar');
-    if (statusBar) statusBar.style.display = 'flex';
-
-    // Bring into view smoothly if applicable
-    const targetEl = document.getElementById(sectionId);
-    if (targetEl) {
-      try {
-        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } catch (e) {}
-    }
-  }
-
-  function showAllSectionsDOM() {
-    allSectionIds.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) {
-        el.style.display = 'block';
-        el.classList.remove('tab-fade-in');
-      }
-    });
-
-    // In 'All' mode, pills don't have a single active tab
-    document.querySelectorAll('.quick-nav-pill').forEach(pill => {
-      pill.classList.remove('active-tab');
-    });
-
-    const statusBar = document.getElementById('tabStatusBar');
-    if (statusBar) statusBar.style.display = 'none';
-  }
-
-  // Main unified click handler for Quick Nav Pills
   function scrollToSection(sectionId, event) {
     if (event) {
       if (typeof event.preventDefault === 'function') event.preventDefault();
       if (typeof event.stopPropagation === 'function') event.stopPropagation();
     }
-
-    if (!allSectionIds.includes(sectionId)) {
-      console.warn('Unknown section:', sectionId);
-      return false;
-    }
-
-    if (currentNavMode === 'tabs') {
-      // Instant switch - works 100% inside Google Sites iFrames without requiring parent window scroll!
-      displayOnlySection(sectionId);
-    } else {
-      // In Show-All mode, perform smooth scroll and pulse highlight
-      const targetEl = document.getElementById(sectionId);
-      if (targetEl) {
-        try {
-          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } catch (e) {
-          targetEl.scrollIntoView(true);
-        }
-
-        setTimeout(() => {
-          const rect = targetEl.getBoundingClientRect();
-          const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-          const targetY = rect.top + scrollTop - 20;
-          window.scrollTo({ top: targetY, behavior: 'smooth' });
-        }, 15);
-
-        // Highlight
-        targetEl.style.transition = 'box-shadow 0.4s ease, transform 0.3s ease';
-        targetEl.style.boxShadow = '0 0 0 4px #f59e0b, 0 12px 32px rgba(245, 158, 11, 0.3)';
-        targetEl.style.transform = 'translateY(-2px)';
-        setTimeout(() => {
-          targetEl.style.boxShadow = '';
-          targetEl.style.transform = '';
-        }, 1800);
-      }
-    }
-    return false;
-  }
-
-  function goToNextSection() {
-    const idx = allSectionIds.indexOf(currentActiveSectionId);
-    if (idx !== -1 && idx < allSectionIds.length - 1) {
-      displayOnlySection(allSectionIds[idx + 1]);
-    } else {
-      displayOnlySection(allSectionIds[0]); // Loop back to start
-    }
-  }
-
-  function goToPrevSection() {
-    const idx = allSectionIds.indexOf(currentActiveSectionId);
-    if (idx !== -1 && idx > 0) {
-      displayOnlySection(allSectionIds[idx - 1]);
-    } else {
-      displayOnlySection(allSectionIds[allSectionIds.length - 1]); // Loop to end
-    }
-  }
-
-  // Initialize navigation mode on page load
-  window.addEventListener('load', function() {
-    // Start with Tab view activated for the first section (Calculator)
-    // This makes the page compact, fast, and instantly responsive in Google Sites!
-    displayOnlySection('calculator');
-  });
-
-  function scrollToSection(sectionId, event) {
-    if (event) {
-      if (typeof event.preventDefault === 'function') event.preventDefault();
-      if (typeof event.stopPropagation === 'function') event.stopPropagation();
-    }
-
     const targetEl = document.getElementById(sectionId);
-    if (!targetEl) {
-      console.warn('Target section not found:', sectionId);
-      return false;
-    }
-
-    // 1. Primary scroll using scrollIntoView
-    try {
-      targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } catch (err) {
-      targetEl.scrollIntoView(true);
-    }
-
-    // 2. Coordinate-based offset scroll (compensate for sticky header / margins)
+    if (!targetEl) return false;
+    const topOffset = 80;
+    const elementPosition = targetEl.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - topOffset;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+    targetEl.style.transition = 'outline 0.3s ease';
+    targetEl.style.outline = '3px solid #38bdf8';
     setTimeout(() => {
-      try {
-        const rect = targetEl.getBoundingClientRect();
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-        const targetY = rect.top + scrollTop - 20;
-
-        window.scrollTo({
-          top: targetY,
-          behavior: 'smooth'
-        });
-
-        if (document.documentElement && document.documentElement.scrollTo) {
-          document.documentElement.scrollTo({ top: targetY, behavior: 'smooth' });
-        }
-        if (document.body && document.body.scrollTo) {
-          document.body.scrollTo({ top: targetY, behavior: 'smooth' });
-        }
-      } catch (e) {
-        console.error(e);
-      }
-    }, 15);
-
-    // 3. Visual pulse / highlight target card to show navigation success
-    try {
-      targetEl.style.transition = 'box-shadow 0.4s ease, transform 0.3s ease';
-      targetEl.style.boxShadow = '0 0 0 4px #f59e0b, 0 12px 32px rgba(245, 158, 11, 0.25)';
-      targetEl.style.transform = 'translateY(-2px)';
-      setTimeout(() => {
-        targetEl.style.boxShadow = '';
-        targetEl.style.transform = '';
-      }, 1800);
-    } catch (e) {}
-
+      targetEl.style.outline = 'none';
+    }, 1500);
     return false;
   }
 
-  
-
-  // Toggle Back to Top Button on scroll
-  window.addEventListener('scroll', function() {
-    
-  });
-
-  // Attach event listeners to all quick nav pills dynamically as a fail-safe
+  // Attach event listeners to all quick nav pills dynamically
   document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.quick-nav-pill').forEach(pill => {
+    document.querySelectorAll('.quick-nav-pill, .marquee-pill-btn').forEach(pill => {
       pill.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
         if (href && href.startsWith('#')) {
