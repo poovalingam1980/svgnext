@@ -5981,6 +5981,172 @@
 }
 
 </style>
+
+<style id="distinct-theme-css">
+/* ========================================================
+   3D CRYSTAL BACKGROUND (கிரிஸ்டல் பின்னணி) - MASTER SCHEDULE NAVY SAPPHIRE THEME
+   Following original 01_01 hero banner color: Deep Navy / Midnight Sapphire
+   Authentic glossy 3D crystal reflection, specular highlights & crystal geometric facets
+   ======================================================== */
+.portal-header,
+.portal-header.crystal-header {
+  position: relative !important;
+  background: 
+    radial-gradient(ellipse at 15% 10%, rgba(56, 189, 248, 0.35) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 90%, rgba(99, 102, 241, 0.30) 0%, transparent 50%),
+    radial-gradient(circle at 50% 45%, rgba(15, 43, 102, 0.25) 0%, transparent 65%),
+    linear-gradient(180deg, 
+      #091330 0%, 
+      #0f2b66 32%, 
+      #1e3a8a 68%, 
+      #0f2b66 86%, 
+      #091330 100%) !important;
+  border: 3.5px solid #061530 !important;
+  border-top: 2px solid rgba(255, 255, 255, 0.75) !important;
+  border-bottom: 4px solid #38bdf8 !important;
+  border-radius: 28px !important;
+  padding: 34px 28px 28px !important;
+  margin-bottom: 18px !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  box-shadow: 
+    0 14px 34px rgba(15, 43, 102, 0.5),
+    0 4px 14px rgba(0, 0, 0, 0.55),
+    inset 0 2.5px 5px rgba(255, 255, 255, 0.85),
+    inset 0 -3px 8px rgba(6, 21, 48, 0.8),
+    0 0 35px rgba(56, 189, 248, 0.25) !important;
+  z-index: 1 !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Top Curved Specular Glass Reflection (மேல் கண்ணாடி பளபளப்பு பிரதிபலிப்பு) */
+.portal-header::before,
+.portal-header.crystal-header::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 3px !important;
+  left: 10px !important;
+  right: 10px !important;
+  height: 48% !important;
+  border-radius: 24px 24px 90px 90px / 20px 20px 45px 45px !important;
+  background: linear-gradient(180deg, 
+    rgba(255, 255, 255, 0.78) 0%, 
+    rgba(255, 255, 255, 0.38) 45%, 
+    rgba(255, 255, 255, 0.08) 95%, 
+    transparent 100%) !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+}
+
+/* Bottom Curved Ambient Crystal Glow & Geometric Facet Reflection (கீழ் கிரிஸ்டல் ஒளிவட்டம் & கோண பிரதிபலிப்பு) */
+.portal-header::after,
+.portal-header.crystal-header::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background-image: 
+    radial-gradient(ellipse at 50% 98%, rgba(255, 255, 255, 0.55) 0%, rgba(56, 189, 248, 0.40) 45%, transparent 75%),
+    linear-gradient(60deg, rgba(255, 255, 255, 0.05) 25%, transparent 25.5%, transparent 50%, rgba(255, 255, 255, 0.05) 50.5%, rgba(255, 255, 255, 0.05) 75%, transparent 75.5%) !important;
+  background-size: 100% 100%, 70px 70px !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+}
+
+.portal-header .portal-title {
+  position: relative !important;
+  z-index: 3 !important;
+  color: #ffffff !important;
+  font-size: clamp(1.4rem, 2.3vw, 2.1rem) !important;
+  font-weight: 900 !important;
+  margin: 0 0 10px 0 !important;
+  line-height: 1.3 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 14px rgba(255, 255, 255, 0.4) !important;
+}
+
+.portal-header .portal-title .highlight-cyan {
+  color: #38bdf8 !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 16px rgba(56, 189, 248, 0.7) !important;
+}
+
+.portal-header .portal-subtitle {
+  position: relative !important;
+  z-index: 3 !important;
+  color: #f8fafc !important;
+  font-size: clamp(0.88rem, 1.1vw, 1.02rem) !important;
+  line-height: 1.65 !important;
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1.5px 5px rgba(0, 0, 0, 0.85) !important;
+}
+
+/* Breadcrumb Bar Styling */
+.breadcrumb-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.4) !important;
+  border-radius: 12px !important;
+  padding: 8px 16px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
+  flex-wrap: wrap !important;
+}
+
+.breadcrumb-left-stack {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+}
+
+.nav-menu-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.84rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  color: #e2e8f0 !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+.nav-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #fef08a !important;
+}
+
+.nav-menu-btn.btn-current-page {
+  position: relative !important;
+  background: linear-gradient(180deg, #0284c7 0%, #0369a1 100%) !important;
+  border: 1.5px solid #38bdf8 !important;
+  color: #ffffff !important;
+  border-radius: 999px !important;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.6) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+.nav-menu-separator {
+  color: #94a3b8 !important;
+  font-size: 0.75rem !important;
+}
+
+/* Crystal Styling for Marquee Static Label */
+.marquee-static-label {
+  position: relative !important;
+  background: linear-gradient(180deg, #0284c7 0%, #0369a1 100%) !important;
+  border: 1.5px solid #38bdf8 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.6) !important;
+}
+</style>
+
 </head>
 <body>
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
@@ -6087,7 +6253,29 @@
 </a>
 </header>
 
-<header class="portal-header">
+<!-- Top Breadcrumb Navigation Bar -->
+<nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
+  <div class="breadcrumb-left-stack">
+    <a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+      <span class="btn-icon">🧭</span>
+      <span class="btn-text">வழிகாட்டி முகப்பு</span>
+    </a>
+    <span class="nav-menu-separator">▶</span>
+    <a class="nav-menu-btn btn-direct-home" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முகப்பு">
+      <span class="btn-icon">🎯</span>
+      <span class="btn-text">01 / நுழைவுத்தேர்வுகள்</span>
+    </a>
+    <span class="nav-menu-separator">▶</span>
+    <span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
+      <span class="btn-icon">📅</span>
+      <span class="btn-text">01 / மாஸ்டர் அட்டவணை</span>
+    </span>
+  </div>
+</nav>
+
+
+
+<header class="portal-header crystal-header">
   <h1 class="portal-title">
     இந்தியாவின் அனைத்து நுழைவுத் தேர்வுகள் <span class="highlight-cyan">முழுமையான அட்டவணை &amp; காலண்டர்</span>
   </h1>

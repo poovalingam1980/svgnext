@@ -4751,6 +4751,67 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
     }
 
+
+    /* CRYSTAL HEADER & ENHANCED STYLING (01_01 MASTER SCHEDULE MODEL) */
+    .portal-header.crystal-header {
+      background: linear-gradient(135deg, #061c36 0%, #0d325e 50%, #0369a1 100%) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.42) !important;
+      border-bottom: 4px solid #0284c7 !important;
+      border-radius: 16px !important;
+      padding: 28px 24px 24px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4) !important;
+      text-align: center !important;
+      position: relative !important;
+      overflow: hidden !important;
+      width: 100% !important;
+    }
+
+    .portal-header .highlight-cyan {
+      color: #38bdf8 !important;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 16px rgba(56,189,248,0.6) !important;
+    }
+
+    /* TABLE GRIDLINES */
+    table,
+    table.styled-table,
+    table.custom-table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      border: 1.5px solid #94a3b8 !important;
+      background: #ffffff !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
+    }
+
+    table th,
+    table.styled-table th,
+    table.custom-table th {
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      padding: 12px 14px !important;
+      border: 1.2px solid #334155 !important;
+      font-size: 0.88rem !important;
+      text-align: left !important;
+    }
+
+    table td,
+    table.styled-table td,
+    table.custom-table td {
+      padding: 10px 14px !important;
+      border: 1.2px solid #cbd5e1 !important;
+      font-size: 0.86rem !important;
+      color: #1e293b !important;
+      line-height: 1.5 !important;
+    }
+
+    table tbody tr:nth-child(even),
+    table.styled-table tbody tr:nth-child(even),
+    table.custom-table tbody tr:nth-child(even) {
+      background-color: #f8fafc !important;
+    }
+
 </style>
 <style id="distinct-theme-css">
 /* ============================================================
@@ -5669,16 +5730,39 @@
 </header>
 
 <div class="portal-container" id="top">
+
+<!-- Top Breadcrumb Navigation Bar with Live Directory Link -->
+<nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
+  <div class="breadcrumb-left-stack">
+    <a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+      <span class="btn-icon">🧭</span>
+      <span class="btn-text">வழிகாட்டி முகப்பு</span>
+    </a>
+    <span class="nav-menu-separator">▶</span>
+    <a class="nav-menu-btn btn-direct-home" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முகப்பு">
+      <span class="btn-icon">🎯</span>
+      <span class="btn-text">01 / நுழைவுத்தேர்வுகள்</span>
+    </a>
+    <span class="nav-menu-separator">▶</span>
+    <span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
+      <span class="btn-icon">⚙️</span>
+      <span class="btn-text">03 / பொறியியல் (JEE Main &amp; Adv)</span>
+    </span>
+  </div>
+  <div class="breadcrumb-right-stack">
+    <a class="compact-dir-btn btn-in-med" href="01_03_aiq_eng_colleges.html" style="background: rgba(2, 132, 199, 0.22) !important; color: #bae6fd !important; border: 1.2px solid #38bdf8 !important; padding: 4px 10px !important; border-radius: 6px !important; font-size: 0.78rem !important; font-weight: 700 !important; text-decoration: none !important; display: inline-flex !important; align-items: center !important; gap: 5px !important;" title="அகில இந்திய தேசிய பொறியியல் கல்லூரிகள் அடைவு">
+      <span>🏛️</span>
+      <span>01_03 தேசிய பொறியியல் கல்லூரிகள் ↗</span>
+    </a>
+  </div>
+</nav>
+
+
 <!-- Segmented Breadcrumb Navigation Bar (Matching Section 01 & Pilot Guide) -->
 <!-- Portal Header Hero Banner -->
-<header class="portal-header">
-  <div class="header-badge-row">
-    <span class="header-tag primary">பிரிவு 03 (Section 03)</span>
-    <span class="header-tag secondary">தேசிய நுழைவுத்தேர்வு (JEE Main &amp; Advanced)</span>
-    <span class="header-tag amber">JoSAA / CSAB கலந்தாய்வு &amp; BITSAT</span>
-  </div>
+<header class="portal-header crystal-header">
   <h1 class="portal-title">
-    பொறியியல் நுழைவுத்தேர்வுகள் &amp; உயர்கல்வி <span class="accent-gold">(JEE / B.E. / B.Tech)</span>
+    தேசியப் பொறியியல் நுழைவுத்தேர்வுகள் <span class="highlight-cyan">(JEE Main &amp; Advanced)</span>
   </h1>
   <p class="portal-subtitle">
     12-ஆம் வகுப்பு பள்ளி மாணவர்களுக்கான JEE Main, JEE Advanced, NIT திருச்சி (50% Home State Quota), IITs, IIITs, BITSAT மற்றும் அகில இந்திய முன்னணி தொழில்நுட்பக் கல்வி நிறுவனங்கள் (Institutes of National Importance) சேர்க்கை வழிகாட்டி.
@@ -5784,7 +5868,7 @@
 </div>
 </div>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th style="width: 25%;">அம்சம்</th>
@@ -5883,7 +5967,7 @@
         கணினி வழித் தேர்வாக (CBT) நடத்தப்படும் இத்தேர்வில் கணிதம், இயற்பியல், வேதியியல் ஆகிய மூன்று பாடங்களிலிருந்து வினாக்கள் கேட்கப்படுகின்றன. ஒவ்வொன்றிலும் பிரிவு A (20 MCQs) மற்றும் பிரிவு B (5 Numerical) கட்டாய வினாக்கள் அடங்கும்:
       </p>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>பாடம் (Subject)</th>
@@ -5940,7 +6024,7 @@
         இந்தியாவின் முதன்மை திட்டமிடல் மற்றும் கட்டடக்கலை கல்வி நிறுவனங்களான <b>SPAs (புதுதில்லி, போபால், விஜயவாடா), NIT திருச்சி, NIT காலிகட்</b> போன்றவற்றில் 5 ஆண்டு <b>B.Arch</b> படிப்பில் சேருவதற்கான தேர்வு. இத்தேர்வில் கணிதம் மற்றும் நுண்ணறிவுத் தேர்வு கணினியிலும் (CBT), வரைதல் தேர்வு காகிதத்திலும் (A4 Drawing Sheet) நடைபெறும்:
       </p>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>பகுதி (Part)</th>
@@ -6039,7 +6123,7 @@
         இந்தியாவில் நவீன ஸ்மார்ட் நகரங்கள், உள்கட்டமைப்பு மற்றும் பிராந்திய வளர்ச்சியை வடிவமைக்கும் 4 ஆண்டு <b>B.Planning (Bachelor of Planning)</b> படிப்பில் சேருவதற்கான தேர்வு. <b>இத்தேர்வில் வரைதல் தேர்வு (Drawing Test) கிடையாது; 100% வினாக்களும் கணினி வழியிலேயே (CBT) நடைபெறும்:</b>
 </p>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>பகுதி (Part)</th>
@@ -6107,7 +6191,7 @@
 <div style="margin-top: 24px;">
 <h4 style="color: var(--primary-navy); margin-bottom: 10px; font-weight: 800;">📊 JEE Main மூன்று தாள்களின் ஒப்பீட்டு அட்டவணை (Quick Comparison):</h4>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>அம்சம் (Feature)</th>
@@ -6230,7 +6314,7 @@
         JEE Advanced முற்றிலும் கணினி வழித் தேர்வாக (CBT) ஒரே நாளில் இரண்டு கட்டாய அமர்வுகளாக நடத்தப்படுகிறது. <b>இரு தாள்களையும் கட்டாயமாக எழுத வேண்டும்; ஏதேனும் ஒரு தாளை எழுதத் தவறினாலும் மாணவர் தரவரிசைக்குத் தகுதி பெற மாட்டார்:</b>
 </p>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>தாள் (Paper)</th>
@@ -6310,7 +6394,7 @@
 <span class="badge badge-green">119+ தேசிய நிறுவனங்கள் (IIT, NIT, IIIT &amp; GFTI)</span>
 </div>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>நிறுவனங்கள்</th>
@@ -6509,7 +6593,7 @@
 <span class="badge badge-gold">ஒரே பார்வையில் அனைத்துத் தேர்வுகள்</span>
 </div>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>தேர்வு பெயர்</th>

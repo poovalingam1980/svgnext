@@ -3652,18 +3652,79 @@
       font-size: 0.75rem !important;
     }
 
-    /* HERO PORTAL HEADER: CLASSIC ARTS ROYAL AMBER & DEEP BLUE THEME */
+    /* HERO PORTAL HEADER: CRYSTAL GLASSMORPHISM & ROYAL AMBER GOLD THEME */
     .portal-header {
-      background: linear-gradient(135deg, #1c1917 0%, #292524 50%, #091a3e 100%) !important;
-      border: 1.5px solid rgba(251, 191, 36, 0.42) !important;
-      border-bottom: 4px solid #d97706 !important;
-      border-radius: 16px !important;
-      padding: 28px 24px 24px !important;
-      margin-bottom: 16px !important;
-      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4) !important;
+      background: 
+        radial-gradient(ellipse at 15% 10%, rgba(251, 191, 36, 0.35) 0%, transparent 45%),
+        radial-gradient(ellipse at 85% 90%, rgba(217, 119, 6, 0.30) 0%, transparent 50%),
+        radial-gradient(circle at 50% 45%, rgba(56, 189, 248, 0.18) 0%, transparent 65%),
+        linear-gradient(135deg, rgba(28, 25, 23, 0.92) 0%, rgba(41, 37, 36, 0.88) 45%, rgba(9, 26, 62, 0.94) 100%) !important;
+      backdrop-filter: blur(24px) saturate(200%) contrast(105%) !important;
+      -webkit-backdrop-filter: blur(24px) saturate(200%) contrast(105%) !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.32) !important;
+      border-top: 2px solid rgba(255, 255, 255, 0.75) !important;
+      border-bottom: 3.5px solid rgba(251, 191, 36, 0.9) !important;
+      border-radius: 20px !important;
+      padding: 32px 28px 28px !important;
+      margin-bottom: 18px !important;
+      box-shadow: 
+        0 20px 48px -12px rgba(0, 0, 0, 0.75),
+        0 0 0 1px rgba(255, 255, 255, 0.15) inset,
+        0 2px 0 0 rgba(255, 255, 255, 0.55) inset,
+        0 0 40px rgba(251, 191, 36, 0.28) !important;
       text-align: center !important;
       position: relative !important;
       overflow: hidden !important;
+    }
+
+    .portal-header::before {
+      content: "" !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: -150% !important;
+      width: 400% !important;
+      height: 100% !important;
+      background: linear-gradient(
+        115deg,
+        transparent 0%,
+        transparent 42%,
+        rgba(255, 255, 255, 0.08) 46%,
+        rgba(255, 255, 255, 0.45) 49%,
+        rgba(251, 191, 36, 0.65) 51%,
+        rgba(245, 158, 11, 0.45) 53%,
+        rgba(255, 255, 255, 0.25) 55%,
+        transparent 59%,
+        transparent 100%
+      ) !important;
+      pointer-events: none !important;
+      opacity: 0.9 !important;
+      animation: crystalPrismShimmer 10s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+      z-index: 1 !important;
+    }
+
+    .portal-header::after {
+      content: "" !important;
+      position: absolute !important;
+      inset: 0 !important;
+      background-image: 
+        radial-gradient(circle at 92% 12%, rgba(255, 255, 255, 0.3) 0%, transparent 22%),
+        radial-gradient(circle at 8% 88%, rgba(251, 191, 36, 0.2) 0%, transparent 30%),
+        linear-gradient(60deg, rgba(255, 255, 255, 0.04) 25%, transparent 25.5%, transparent 50%, rgba(255, 255, 255, 0.04) 50.5%, rgba(255, 255, 255, 0.04) 75%, transparent 75.5%) !important;
+      background-size: 100% 100%, 100% 100%, 70px 70px !important;
+      pointer-events: none !important;
+      opacity: 0.7 !important;
+      z-index: 1 !important;
+    }
+
+    .portal-header > * {
+      position: relative !important;
+      z-index: 2 !important;
+    }
+
+    @keyframes crystalPrismShimmer {
+      0% { transform: translateX(0); }
+      35% { transform: translateX(50%); }
+      100% { transform: translateX(50%); }
     }
 
     .portal-title {

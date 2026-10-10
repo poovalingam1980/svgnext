@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>மத்தியப் பல்கலைக்கழகங்கள் &amp; கலை, அறிவியல், வணிகவியல் (CUET UG) முழுமையான வழிகாட்டி - முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
+<title>மத்தியப் பல்கலைக்கழகங்கள் &amp; கலை, அறிவியல், வணிகவியல் (CUET UG) முழுமையான வழிகாட்டி | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
 <style>
   :root {
     --primary: #311b92;
@@ -4342,6 +4342,603 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
     }
 
+
+    /* ========================================================
+       FULL SCREEN WIDTH LAYOUT & STANDARDIZED DESIGN (01_04 MODEL)
+       ======================================================== */
+    html, body {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+      background-color: var(--bg-main, #f8fafc) !important;
+    }
+
+    .portal-layout-wrapper {
+      display: flex !important;
+      flex-direction: row !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-height: 100vh !important;
+      position: relative !important;
+      align-items: stretch !important;
+      box-sizing: border-box !important;
+    }
+
+    .desktop-left-sidebar {
+      width: 295px !important;
+      min-width: 295px !important;
+      max-width: 295px !important;
+      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+      border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      height: 100vh !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex-shrink: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .portal-main-content {
+      margin-left: 295px !important;
+      width: calc(100% - 295px) !important;
+      min-height: 100vh !important;
+      padding: 12px clamp(12px, 1.8vw, 36px) 40px !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+    }
+
+    .container,
+    #top {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .card,
+    .content-section,
+    .quick-nav-marquee-container,
+    .bottom-page-nav-bar,
+    .kural-box,
+    .creator-card,
+    .portal-footer,
+    .table-container,
+    .table-responsive {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .card {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 22px 0 !important;
+      padding: 22px 24px !important;
+      box-sizing: border-box !important;
+    }
+
+    /* TOP BREADCRUMB BAR WITH COMPACT DIRECTORY BUTTONS */
+    .breadcrumb-bar {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 12px !important;
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.4) !important;
+      border-radius: 12px !important;
+      padding: 8px 16px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
+      flex-wrap: wrap !important;
+    }
+
+    .breadcrumb-left-stack {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      flex-wrap: wrap !important;
+    }
+
+    .nav-menu-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 0.84rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      color: #e2e8f0 !important;
+      padding: 4px 10px !important;
+      border-radius: 6px !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .nav-menu-btn:hover {
+      background: rgba(255, 255, 255, 0.12) !important;
+      color: #fef08a !important;
+    }
+
+    .nav-menu-btn.btn-current-page {
+      background: rgba(56, 189, 248, 0.2) !important;
+      border: 1px solid #38bdf8 !important;
+      color: #38bdf8 !important;
+    }
+
+    .nav-menu-separator {
+      color: #94a3b8 !important;
+      font-size: 0.75rem !important;
+    }
+
+    /* HERO PORTAL HEADER: CLASSIC SAPPHIRE BLUE & GOLD THEME */
+    .portal-header {
+      background: linear-gradient(135deg, #091a3e 0%, #172554 50%, #1e1b4b 100%) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.42) !important;
+      border-bottom: 4px solid #0284c7 !important;
+      border-radius: 16px !important;
+      padding: 28px 24px 24px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4) !important;
+      text-align: center !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    .portal-title {
+      color: #ffffff !important;
+      font-size: clamp(1.4rem, 2.3vw, 2.1rem) !important;
+      font-weight: 900 !important;
+      margin: 0 0 10px 0 !important;
+      line-height: 1.3 !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .portal-title .highlight-cyan {
+      color: #38bdf8 !important;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 16px rgba(56,189,248,0.6) !important;
+    }
+
+    .portal-subtitle {
+      color: #f1f5f9 !important;
+      font-size: clamp(0.88rem, 1.1vw, 1.02rem) !important;
+      line-height: 1.65 !important;
+      max-width: 980px !important;
+      margin: 0 auto !important;
+      font-weight: 500 !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+    }
+
+    /* QUICK NAVIGATION MARQUEE BAR */
+    .quick-nav-marquee-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      background: linear-gradient(135deg, #060d1a 0%, #0d1e38 50%, #060d1a 100%) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.35) !important;
+      border-radius: 12px !important;
+      padding: 8px 12px !important;
+      margin-bottom: 18px !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+      position: relative !important;
+    }
+
+    .marquee-static-label {
+      flex-shrink: 0 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      font-size: 1.15rem !important;
+      padding: 6px 12px !important;
+      border-radius: 8px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.4) !important;
+      z-index: 2 !important;
+    }
+
+    .marquee-scroll-track {
+      flex-grow: 1 !important;
+      overflow: hidden !important;
+      display: flex !important;
+      position: relative !important;
+      mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+    }
+
+    .marquee-content-loop {
+      display: flex !important;
+      gap: 10px !important;
+      align-items: center !important;
+      white-space: nowrap !important;
+      animation: marqueeScroll 28s linear infinite !important;
+      padding-right: 10px !important;
+    }
+
+    .quick-nav-marquee-container:hover .marquee-content-loop {
+      animation-play-state: paused !important;
+    }
+
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .marquee-pill-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: rgba(30, 41, 59, 0.85) !important;
+      color: #e2e8f0 !important;
+      border: 1px solid rgba(148, 163, 184, 0.25) !important;
+      padding: 5px 12px !important;
+      border-radius: 999px !important;
+      font-size: 0.80rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .marquee-pill-btn:hover {
+      background: rgba(56, 189, 248, 0.25) !important;
+      color: #38bdf8 !important;
+      border-color: #38bdf8 !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* TABLE GRIDLINES */
+    table,
+    table.styled-table,
+    table.custom-table,
+    table#cuTable {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      border: 1.5px solid #94a3b8 !important;
+      background: #ffffff !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
+    }
+
+    table th,
+    table.styled-table th,
+    table.custom-table th,
+    table#cuTable th {
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      padding: 12px 14px !important;
+      border: 1.2px solid #334155 !important;
+      font-size: 0.88rem !important;
+      text-align: left !important;
+    }
+
+    table td,
+    table.styled-table td,
+    table.custom-table td,
+    table#cuTable td {
+      padding: 10px 14px !important;
+      border: 1.2px solid #cbd5e1 !important;
+      font-size: 0.86rem !important;
+      color: #1e293b !important;
+      line-height: 1.5 !important;
+    }
+
+    table tbody tr:nth-child(even),
+    table.styled-table tbody tr:nth-child(even),
+    table.custom-table tbody tr:nth-child(even),
+    table#cuTable tbody tr:nth-child(even) {
+      background-color: #f8fafc !important;
+    }
+
+    /* BOTTOM PAGE NAVIGATION BAR */
+    .bottom-page-nav-bar {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 14px 18px !important;
+      margin: 26px 0 28px 0 !important;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .page-nav-btn.btn-prev-animated {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 10px 20px !important;
+      border-radius: 10px !important;
+      font-family: inherit !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 2px solid #059669 !important;
+      background: linear-gradient(135deg, #047857 0%, #065f46 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(4, 120, 87, 0.35) !important;
+      animation: pulseNudgeLeft 3s ease-in-out infinite !important;
+      transition: all 0.25s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .page-nav-btn.btn-prev-animated:hover {
+      background: linear-gradient(135deg, #065f46 0%, #022c22 100%) !important;
+      border-color: #fde047 !important;
+      transform: translateX(-5px) scale(1.04) !important;
+      box-shadow: 0 6px 20px rgba(4, 120, 87, 0.55), 0 0 15px rgba(52, 211, 153, 0.5) !important;
+    }
+
+    .page-nav-btn.btn-next-animated {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 10px 20px !important;
+      border-radius: 10px !important;
+      font-family: inherit !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 2px solid #0284c7 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;
+      animation: pulseNudgeRight 3s ease-in-out infinite !important;
+      transition: all 0.25s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .page-nav-btn.btn-next-animated:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #0c4a6e 100%) !important;
+      border-color: #fde047 !important;
+      transform: translateX(5px) scale(1.04) !important;
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.55), 0 0 15px rgba(56, 189, 248, 0.5) !important;
+    }
+
+    @keyframes pulseNudgeLeft {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(-4px); }
+    }
+
+    @keyframes pulseNudgeRight {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(4px); }
+    }
+
+    /* CREATOR CARD: CLASSIC DARK THEME WITH AURORA ANIMATION */
+    .creator-card {
+      background: linear-gradient(135deg, #050811 0%, #0d1527 50%, #050811 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+      border-radius: 14px !important;
+      padding: 12px clamp(16px, 2vw, 32px) !important;
+      margin: 20px 0 16px 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.55), 0 0 20px rgba(0, 194, 255, 0.15) !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      flex-wrap: wrap !important;
+      gap: 14px !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+
+    .creator-typewriter-wrapper {
+      font-size: clamp(0.74rem, 0.95vw, 0.90rem) !important;
+      color: #f8fafc !important;
+      font-weight: 600 !important;
+      line-height: 1.4 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      flex: 0 1 auto !important;
+      min-width: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: center !important;
+    }
+
+    .creator-typewriter-target {
+      display: inline !important;
+      white-space: pre-wrap !important;
+    }
+
+    .creator-label {
+      font-size: 80% !important;
+      font-weight: 700 !important;
+      color: #f1f5f9 !important;
+      white-space: nowrap !important;
+      opacity: 0.92 !important;
+    }
+
+    .creator-role {
+      font-size: 80% !important;
+      color: #94a3b8 !important;
+      font-weight: 600 !important;
+      white-space: nowrap !important;
+      opacity: 0.90 !important;
+    }
+
+    .creator-name-ta,
+    .creator-name-en,
+    .creator-name-ta-blue,
+    .creator-name-ta-purple,
+    .creator-name-en-blue,
+    .creator-name-en-purple {
+      background: linear-gradient(
+        90deg,
+        #00c2ff 0%,
+        #33ff8c 25%,
+        #ffc640 50%,
+        #e54cff 75%,
+        #00c2ff 100%
+      ) !important;
+      background-size: 300% 100% !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      animation: aurora-text-flow 6s linear infinite !important;
+      font-weight: 900 !important;
+      letter-spacing: 0.3px !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      display: inline-block !important;
+      filter: drop-shadow(0 0 6px rgba(0, 194, 255, 0.45));
+    }
+
+    .creator-cursor {
+      display: inline-block !important;
+      font-weight: 300 !important;
+      color: #00c2ff !important;
+      margin-left: 2px !important;
+      animation: blinkCreatorCursor 0.65s infinite !important;
+      text-shadow: 0 0 8px rgba(0, 194, 255, 0.8);
+      flex-shrink: 0 !important;
+    }
+
+    @keyframes aurora-text-flow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 300% 50%; }
+    }
+
+    @keyframes blinkCreatorCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .footer-phone-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+      color: #ffffff !important;
+      padding: 4px 12px !important;
+      border-radius: 999px !important;
+      font-size: 0.84rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4) !important;
+      transition: all 0.2s ease !important;
+      margin: 0 !important;
+      vertical-align: middle !important;
+      flex-shrink: 0 !important;
+    }
+
+    .footer-phone-pill:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+      transform: translateY(-1px) scale(1.03) !important;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5) !important;
+      color: #ffffff !important;
+    }
+
+    /* FLOATING BACK TO TOP BUTTON (STANDARDIZED) */
+    .floating-back-to-top {
+      position: fixed !important;
+      bottom: 24px !important;
+      right: 24px !important;
+      z-index: 9999 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+      border-radius: 999px !important;
+      padding: 10px 18px !important;
+      font-size: 0.85rem !important;
+      font-weight: 800 !important;
+      font-family: inherit !important;
+      cursor: pointer !important;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35) !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: translateY(16px) !important;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .floating-back-to-top.visible {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: translateY(0) !important;
+    }
+
+    .floating-back-to-top:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+      border-color: #fde047 !important;
+      color: #fde047 !important;
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.5) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    @media (max-width: 1024px) {
+      .desktop-left-sidebar {
+        position: fixed !important;
+        left: -320px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 295px !important;
+        height: 100vh !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 9999 !important;
+        box-shadow: 6px 0 35px rgba(0, 0, 0, 0.85);
+      }
+      .desktop-left-sidebar.sidebar-open {
+        left: 0 !important;
+      }
+      .portal-main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 8px 12px 30px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .bottom-page-nav-bar {
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+      .page-nav-btn.btn-prev-animated,
+      .page-nav-btn.btn-next-animated {
+        width: 100% !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+      }
+    }
+
+
+    /* Focus Blueprint 1x2 Grid Enforcement */
+    .focus-blueprint-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 18px !important;
+      margin: 18px 0 !important;
+    }
+    @media (max-width: 768px) {
+      .focus-blueprint-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
 </style>
 <style id="distinct-theme-css">
 /* ============================================================
@@ -5261,55 +5858,75 @@
 
 <div class="container" id="top">
 <!-- Button-Style Segmented Navigation Menu (வழிசெலுத்துதல் பட்டன் மெனு) -->
-<nav aria-label="Breadcrumb Navigation Menu" class="nav-button-menu-bar no-print">
-<div class="nav-button-menu-container">
-<a class="menu-btn-pill btn-career" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மைப் பக்கம்">
-<svg viewbox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"></path></svg>
-<span>🎓 உயர்கல்வி வழிகாட்டி</span>
-</a>
-<span class="menu-arrow">›</span>
-<a class="menu-btn-pill btn-entrance" href="01_00_entrance_main.html" title="உயர்கல்வி நுழைவுத்தேர்வுகள் முதன்மை வழிகாட்டி">
-<svg viewbox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
-<span>📝 நுழைவுத்தேர்வுகள்</span>
-</a>
-<span class="menu-arrow">›</span>
-<span class="menu-btn-pill btn-current-page" title="தற்போதைய வழிகாட்டிப் பக்கம்">
-<span>🏛️ பிரிவு 04: மத்தியப் பல்கலைக்கழகங்கள் (CUET UG)</span>
-</span>
-</div>
+<!-- Top Breadcrumb Navigation Bar -->
+<nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
+  <div class="breadcrumb-left-stack">
+    <a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+      <span class="btn-icon">🧭</span>
+      <span class="btn-text">வழிகாட்டி முகப்பு</span>
+    </a>
+    <span class="nav-menu-separator">▶</span>
+    <a class="nav-menu-btn btn-direct-home" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம்">
+      <span class="btn-icon">🎯</span>
+      <span class="btn-text">01 / நுழைவுத்தேர்வுகள்</span>
+    </a>
+    <span class="nav-menu-separator">▶</span>
+    <span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
+      <span class="btn-icon">🏛️</span>
+      <span class="btn-text">05 / மத்தியப் பல்கலைக்கழகங்கள் (CUET UG)</span>
+    </span>
+  </div>
 </nav>
 <!-- Main Hero Banner (Header) -->
-<header class="portal-header">
-<div class="header-badge-row">
-<span class="header-tag primary">பிரிவு 04 (Section 04)</span>
-<span class="header-tag secondary">மத்தியப் பல்கலைக்கழகங்கள் (Central Universities)</span>
-<span class="header-tag amber">CUET UG • 46+ மத்தியப் பல்கலைகள் • 100+ முதன்மைக் கல்வி நிறுவனங்கள்</span>
-</div>
-<h1 class="portal-title">
-    மத்தியப் பல்கலைக்கழகங்கள் &amp; கலை, அறிவியல், வணிகவியல் <span class="accent-gold">(CUET UG)</span>
-</h1>
-<p class="portal-subtitle">
+<header class="portal-header" style="padding: 16px 20px 18px !important; margin-bottom: 14px !important; border-radius: 14px !important;">
+  <div class="header-badge-row" style="margin-bottom: 8px !important;">
+    <span class="header-tag amber" style="padding: 4px 12px !important; font-size: 0.82rem !important;">CUET UG • 46+ மத்தியப் பல்கலைகள் • 100+ முதன்மைக் கல்வி நிறுவனங்கள்</span>
+  </div>
+  <h1 class="portal-title" style="margin: 0 0 6px 0 !important; font-size: clamp(1.3rem, 2vw, 1.85rem) !important; line-height: 1.25 !important;">
+    மத்தியப் பல்கலைக்கழகங்கள் &amp; கலை, அறிவியல், வணிகவியல் <span class="highlight-cyan">(CUET UG)</span>
+  </h1>
+  <p class="portal-subtitle" style="margin: 0 auto !important; line-height: 1.5 !important; font-size: clamp(0.85rem, 1vw, 0.95rem) !important; max-width: 950px !important;">
     12-ஆம் வகுப்பு பள்ளி மாணவர்களுக்கான தில்லி பல்கலைக்கழகம் (DU), ஜே.என்.யு (JNU), ஹைதராபாத் (UoH), பனாரஸ் (BHU), தமிழ்நாடு மத்தியப் பல்கலைக்கழகம் (CUTN) உள்ளிட்ட 46 மத்தியப் பல்கலைக்கழகங்களின் ஒற்றைச் சாளர சேர்க்கை, பாடத் தேர்வு உத்திகள், கட்டணச் சலுகைகள் &amp; சேர்க்கை கலந்தாய்வு வழிகாட்டல் தொகுப்பு.
   </p>
-</header><div class="official-portals-bar no-print" style="margin: 0 auto 24px auto; padding: 14px 18px; background: #ffffff; border-radius: 14px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px;">
-<span style="font-size: 13px; font-weight: 800; color: #4b5563; margin-right: 6px;">🌐 முக்கிய இணையதளங்கள்:</span>
-<a class="btn-action-outline" href="https://exams.nta.ac.in/CUET-UG/" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; padding:7px 14px; border-radius:8px; font-size:12.5px; font-weight:700; text-decoration:none; background:#311b92; color:#ffffff; border:1px solid #311b92; box-shadow:0 2px 4px rgba(49,27,146,0.2);" target="_blank">
-<span>🌐</span> NTA CUET UG தளம்
-  </a>
-<a class="btn-action-outline" href="https://www.nta.ac.in/Quiz" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; padding:7px 14px; border-radius:8px; font-size:12.5px; font-weight:700; text-decoration:none; background:#d97706; color:#ffffff; border:1px solid #d97706; box-shadow:0 2px 4px rgba(217,119,6,0.2);" target="_blank">
-<span>💻</span> NTA மாதிரித் தேர்வு (Mock Test)
-  </a>
-<a class="btn-action-outline" href="https://admission.uod.ac.in/" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; padding:7px 14px; border-radius:8px; font-size:12.5px; font-weight:700; text-decoration:none; background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1;" target="_blank">
-<span>🏛️</span> தில்லி பல்கலை (DU CSAS)
-  </a>
-<a class="btn-action-outline" href="https://cutn.ac.in/" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; padding:7px 14px; border-radius:8px; font-size:12.5px; font-weight:700; text-decoration:none; background:#f8fafc; color:#1e293b; border:1px solid #cbd5e1;" target="_blank">
-<span>📍</span> தமிழ்நாடு மத்தியப் பல்கலை (CUTN)
-  </a>
-<a class="btn-action-outline" href="#section-4" style="display:inline-flex; align-items:center; gap:6px; padding:7px 14px; border-radius:8px; font-size:12.5px; font-weight:700; text-decoration:none; background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe;">
-<span>📚</span> 46 மத்தியப் பல்கலைகள் அட்டவணை
-  </a>
-</div>
-<!-- துடிப்பான தட்டச்சு வாசகம் (Dynamic Typing Effect - Under Header Banner) -->
+</header>
+
+<!-- Quick Navigation Marquee Bar (ஓடும் விரைவு வழிசெலுத்தல் பட்டை) -->
+<div class="quick-nav-marquee-container" aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை">
+  <div class="marquee-static-label" title="விரைவு வழிகாட்டல்">
+    <span class="pulse-icon">⚡</span>
+  </div>
+  <div class="marquee-scroll-track">
+    <div class="marquee-content-loop">
+      <a href="#section-1" class="marquee-pill-btn">📌 1. CUET UG அறிமுகம்</a>
+      <a href="#section-2" class="marquee-pill-btn">📝 2. தேர்வு கட்டமைப்பு</a>
+      <a href="#section-3" class="marquee-pill-btn">📊 3. மதிப்பெண் &amp; இயல்பாக்குதல்</a>
+      <a href="#section-4" class="marquee-pill-btn">🏛️ 4. 46+ மத்தியப் பல்கலைக்கழகங்கள்</a>
+      <a href="#section-5" class="marquee-pill-btn">🎓 5. இளநிலைப் படிப்புகள் வழிகாட்டி</a>
+      <a href="#section-6" class="marquee-pill-btn">🌐 6. தமிழ் வழிக் கல்வி &amp; மொழி</a>
+      <a href="#section-7" class="marquee-pill-btn">🎯 7. பாடத் தேர்வு உத்திகள்</a>
+      <a href="#section-8" class="marquee-pill-btn">🔄 8. சேர்க்கை நடைமுறை &amp; கலந்தாய்வு</a>
+      <a href="#section-9" class="marquee-pill-btn">💰 9. கட்டணம் &amp; உதவித்தொகை</a>
+      <a href="#section-10" class="marquee-pill-btn">🚀 10. 9-12 தயாரிப்பு வழிகாட்டல்</a>
+      <a href="#section-11" class="marquee-pill-btn">📋 11. ஆவணங்கள் &amp; போர்ட்டல்கள்</a>
+      <a href="#section-12" class="marquee-pill-btn">❓ 12. அடிக்கடி கேட்கப்படும் வினாக்கள்</a>
+    </div>
+    <!-- Duplicate for infinite seamless scroll -->
+    <div class="marquee-content-loop" aria-hidden="true">
+      <a href="#section-1" class="marquee-pill-btn">📌 1. CUET UG அறிமுகம்</a>
+      <a href="#section-2" class="marquee-pill-btn">📝 2. தேர்வு கட்டமைப்பு</a>
+      <a href="#section-3" class="marquee-pill-btn">📊 3. மதிப்பெண் &amp; இயல்பாக்குதல்</a>
+      <a href="#section-4" class="marquee-pill-btn">🏛️ 4. மத்தியப் பல்கலைக்கழகங்கள்</a>
+      <a href="#section-5" class="marquee-pill-btn">🎓 5. இளநிலைப் படிப்புகள் வழிகாட்டி</a>
+      <a href="#section-6" class="marquee-pill-btn">🌐 6. தமிழ் வழிக் கல்வி &amp; மொழி</a>
+      <a href="#section-7" class="marquee-pill-btn">🎯 7. பாடத் தேர்வு உத்திகள்</a>
+      <a href="#section-8" class="marquee-pill-btn">🔄 8. சேர்க்கை நடைமுறை &amp; கலந்தாய்வு</a>
+      <a href="#section-9" class="marquee-pill-btn">💰 9. கட்டணம் &amp; உதவித்தொகை</a>
+      <a href="#section-10" class="marquee-pill-btn">🚀 10. தயாரிப்பு வழிகாட்டல்</a>
+      <a href="#section-11" class="marquee-pill-btn">📋 11. ஆவணங்கள் &amp; போர்ட்டல்கள்</a>
+      <a href="#section-12" class="marquee-pill-btn">❓ 12. அடிக்கடி கேட்கப்படும் வினாக்கள்</a>
+    </div>
+  </div>
+</div><!-- துடிப்பான தட்டச்சு வாசகம் (Dynamic Typing Effect - Under Header Banner) -->
 <div style="text-align: center; margin: 20px auto 22px auto;">
 <div class="typing-container">
 <span class="typing-badge"><span class="sparkle-icon">✨</span> வழிகாட்டல்:</span>
@@ -5317,26 +5934,6 @@
 </div>
 </div>
 <!-- Quick Navigation Bar -->
-<div class="quick-nav-card no-print">
-<div class="quick-nav-title">
-<span>🧭 <b>விரைவு வழிசெலுத்தல் (Quick Navigation):</b></span>
-<span style="font-size:12px; color:var(--primary); font-weight:normal;">(தேவையான பகுதிக்கு உடனடியாகச் செல்ல கிளிக் செய்க)</span>
-</div>
-<div class="quick-nav-grid">
-<a class="nav-btn" href="#section-1"><span class="badge-no">1</span> 📌 CUET UG அறிமுகம் &amp; முக்கியத்துவம்</a>
-<a class="nav-btn" href="#section-2"><span class="badge-no">2</span> 📝 தேர்வு கட்டமைப்பு &amp; 3 பிரிவுகள்</a>
-<a class="nav-btn" href="#section-3"><span class="badge-no">3</span> 📊 மதிப்பெண் திட்டம் &amp; இயல்பாக்குதல்</a>
-<a class="nav-btn" href="#section-4"><span class="badge-no">4</span> 🏛️ முன்னணி மத்தியப் பல்கலைகள்</a>
-<a class="nav-btn" href="#section-5"><span class="badge-no">5</span> 🎓 பட்டப்படிப்புகள்: Arts, Sci, Com</a>
-<a class="nav-btn" href="#section-6"><span class="badge-no">6</span> 🌐 தமிழ் மொழி &amp; வினாத்தாள் தேர்வு</a>
-<a class="nav-btn" href="#section-7"><span class="badge-no">7</span> 🎯 பாடத் தேர்வு உத்திகள் (Subject Mix)</a>
-<a class="nav-btn" href="#section-8"><span class="badge-no">8</span> 🔄 கலந்தாய்வு &amp; சேர்க்கை நடைமுறை</a>
-<a class="nav-btn" href="#section-9"><span class="badge-no">9</span> 💰 கட்டணம், விடுதி &amp; கல்வி உதவித்தொகை</a>
-<a class="nav-btn" href="#section-10"><span class="badge-no">10</span> 🚀 9-12 வகுப்பு படிப்படியான திட்டம்</a>
-<a class="nav-btn" href="#section-11"><span class="badge-no">11</span> 📋 தேவைப்படும் ஆவணங்கள் &amp; தளங்கள்</a>
-<a class="nav-btn" href="#section-12"><span class="badge-no">12</span> ❓ அடிக்கடி கேட்கப்படும் வினாக்கள்</a>
-</div>
-</div>
 <!-- Section 1: Overview & Objectives -->
 <div class="card filter-item" data-cat="all univ" id="section-1">
 <div class="card-header">
@@ -6721,7 +7318,7 @@
         அகில இந்திய அளவில் லட்சக்கணக்கான மாணவர்கள் போட்டியிட்டாலும், முறையான திட்டமிடல் மற்றும் அதிக மதிப்பெண் தரும் பகுதிகளை (High-Yield Focus Areas) அடையாளம் கண்டு படித்தால் தமிழக மாணவர்கள் மிக எளிதாக 95+ சதவீதத் தரவரிசை (Percentile) பெற்று நாட்டின் முதன்மை மத்தியப் பல்கலைக்கழகங்களில் இடம்பிடிக்க முடியும்:
       </p>
 <!-- 4 Strategy Cards Grid -->
-<div class="grid-2col">
+<div class="grid-2col focus-blueprint-grid" style="display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 18px !important; margin: 18px 0 !important;">
 <!-- Strategy 1: Language Paper -->
 <div class="univ-card" style="border-top-color: #2563eb;">
 <h4 style="color: #1d4ed8;">
@@ -7066,60 +7663,56 @@
        ============================================== -->
 
 <!-- Footer Section (Matching Main Portal) -->
-<div class="portal-bottom-nav no-print" style="margin: 40px auto 25px auto; padding: 20px; background: #ffffff; border-radius: 14px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-<div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
-<a class="portal-nav-btn prev-btn" href="01_04_science_research_iiser.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1; box-shadow:0 2px 4px rgba(0,0,0,0.04);">
-<span>← முந்தைய பிரிவு: 03 (அறிவியல் &amp; ஆராய்ச்சி (IISER))</span>
-</a>
-</div>
-<div>
-<a class="portal-nav-btn home-btn" href="01_00_entrance_main.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#1e1b4b; color:#ffffff; text-decoration:none; font-weight:700; font-size:14px; box-shadow:0 3px 8px rgba(30,27,75,0.25);">
-<span>🏠 நுழைவுத்தேர்வுகள் முதன்மை மெனு</span>
-</a>
-</div>
-<div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
-<a class="portal-nav-btn next-btn" href="01_06_law_clat_nlu.html" style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px; background:#f8fafc; color:#1e293b; text-decoration:none; font-weight:700; font-size:14px; border:1px solid #cbd5e1; box-shadow:0 2px 4px rgba(0,0,0,0.04);">
-<span>அடுத்த பிரிவு: 05 (சட்டக் கல்வி (CLAT / NLUs)) →</span>
-</a>
-</div>
-</div>
-<!-- Back to Top Floating Button -->
-<a class="back-to-top no-print" href="index.html" title="பக்கத்தின் தொடக்கத்திற்குச் செல்ல">
-<span>▲</span> மேல்நோக்கி
+
+<!-- Bottom Chapter Navigation Bar: Animated Edge-to-Edge Navigation -->
+<nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar">
+  <a class="page-nav-btn btn-prev-animated" href="01_04_science_research_iiser.html" title="01_04 அறிவியல் ஆராய்ச்சி (IISER / IISc)">
+    <span class="nav-btn-icon">◀</span>
+    <span class="nav-btn-text">01_04 அறிவியல் ஆராய்ச்சி (IISER)</span>
   </a>
+  <a class="page-nav-btn btn-next-animated" href="01_06_law_clat_nlu.html" title="01_06 தேசிய சட்டப் பல்கலைக்கழகங்கள் (CLAT)">
+    <span class="nav-btn-text">01_06 தேசிய சட்டப் பல்கலைகள் (CLAT)</span>
+    <span class="nav-btn-icon">▶</span>
+  </a>
+</nav>
+
+<!-- திருக்குறள் பகுதி — உலகளாவிய உயர்கல்வி & அறிவுத் தெளிவு (அதிகாரம்: கல்வி) -->
 <div class="kural-box">
-<div class="kural-header">
-<span class="kural-icon">📜</span>
-<span class="kural-title">திருக்குறள் — அதிகாரம்: கல்வி (குறள்: 391)</span>
-<span class="kural-sparkle">✨ கல்வி விழுமியம்</span>
-</div>
-<div class="kural-verse-text">
-    “கற்க கசடறக் கற்பவை கற்றபின்<br/>
-    நிற்க அதற்குத் தக.”
+  <div class="kural-header">
+    <span class="kural-icon">📜</span>
+    <span class="kural-title">திருக்குறள் — அதிகாரம்: கல்வி (குறள்: 397)</span>
+    <span class="kural-sparkle">🌍 உலகளாவிய உயர்கல்வி &amp; அறிவுத் தெளிவு</span>
   </div>
-<div class="kural-meaning">
-<strong>மு. வரதராசனார் உரை:</strong> கற்கத் தகுந்த நூல்களைக் குற்றமறக் கற்க வேண்டும்; அவ்வாறு கற்ற பிறகு, கற்ற கல்விக்குத் தகுந்தவாறு நெறியில் நிற்க வேண்டும்.
+  <div class="kural-verse-text">
+    “யாதானும் நாடாமல் ஊராமால் என்னொருவன்<br/>
+    சாந்துணையுங் கல்லாத வாறு.”
   </div>
-</div><div class="creator-card" style="justify-content: center !important; text-align: center !important;">
-<div class="creator-typewriter-wrapper" style="justify-content: center !important; text-align: center !important; display: inline-flex !important; align-items: center !important;">
-<span class="creator-typewriter-target" id="creatorTypewriterTarget" style="text-align: center !important;"></span><span class="creator-cursor" id="creatorCursor">|</span>
+  <div class="kural-meaning">
+    <strong>விளக்கவுரை:</strong> கல்வி கற்றவனுக்கு எந்த நாடும் சொந்த நாடாகும்; எந்த ஊரும் சொந்த ஊராகும்; இவ்வாறிருக்க, ஒருவன் தன் வாழ்நாள் இறுதி வரையிலும் கல்வி கற்காமல் அறியாமையில் இருப்பது ஏன்? இந்திய அளவிலான மத்தியப் பல்கலைக்கழகங்களில் (Central Universities - CUET UG) பயிலும் மாணவர்களுக்கு உலகளாவிய அறிவும், அகில இந்திய அளவிலான உயர்கல்வி வாய்ப்புகளும் திறக்கின்றன என்பதை இக்குறள் பறைசாற்றுகிறது.
+  </div>
 </div>
-<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
-<span class="phone-icon">📱</span>
-<span class="phone-text">9626471035</span>
-</a>
-</div><footer class="portal-footer" style="text-align: center !important; padding: 22px 18px 20px !important; margin: 24px 0 16px 0 !important; background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important; border: 1.5px solid rgba(212, 175, 55, 0.45) !important; border-radius: 14px !important; box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35) !important; width: 100% !important; box-sizing: border-box !important;">
-  <p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #ffffff !important; font-size: 0.96rem !important; line-height: 1.6 !important; text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;">
-    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562,
-    <a class="footer-phone-link" href="tel:04575240408" style="color: #fde047 !important; text-decoration: none !important; font-weight: 800 !important; background: rgba(0, 0, 0, 0.45) !important; padding: 3px 12px !important; border-radius: 6px !important; border: 1.2px solid rgba(253, 224, 71, 0.6) !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; margin-left: 6px !important; vertical-align: middle !important; transition: all 0.2s ease !important;" title="முதன்மைக் கல்வி அலுவலக தொலைபேசி எண்">
-      <span>☎️</span>
-      <span>04575240408</span>
-    </a>
+
+<!-- உருவாக்கியவர் பெட்டி (Classic Dark Theme & Aurora Animation, Centered Flow) -->
+<div class="creator-card">
+  <div class="creator-typewriter-wrapper">
+    <span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
+  </div>
+  <a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
+    <span class="phone-icon">📱</span>
+    <span class="phone-text">9626471035</span>
+  </a>
+</div>
+
+<!-- முதன்மைக் கல்வி அலுவலக அடிக்குறிப்பு -->
+<footer class="portal-footer">
+  <p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #ffffff !important; font-size: 0.96rem !important; text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;">
+    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a class="footer-phone-link" href="tel:04575240408" style="color: #fde047 !important; text-decoration: none !important; font-weight: 800 !important; background: rgba(0, 0, 0, 0.45) !important; padding: 3px 10px !important; border-radius: 6px !important; border: 1.2px solid rgba(253, 224, 71, 0.6) !important; display: inline-block !important;">☎️ 04575240408</a>
   </p>
-  <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important; margin-bottom: 0 !important;">
-    © 2026 Chief Educational Office, Sivagangai. All Rights Reserved. • வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+  <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important;">
+    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
-</footer></div>
+</footer>
+</div>
 <script>
 
 
@@ -7444,6 +8037,32 @@ document.addEventListener('DOMContentLoaded', function() {
     initCreatorObserver();
   }
 })();
+
+
+  // Floating Back to Top Button Controller
+  (function() {
+    function setupBackToTop() {
+      const btt = document.getElementById('floatingBackToTop');
+      if (!btt) return;
+      function checkScroll() {
+        const scrollPos = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if (scrollPos > 120) {
+          btt.classList.add('visible');
+        } else {
+          btt.classList.remove('visible');
+        }
+      }
+      window.addEventListener('scroll', checkScroll, { passive: true });
+      checkScroll();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupBackToTop);
+    } else {
+      setupBackToTop();
+    }
+  })();
+
 </script>
+<button aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" id="floatingBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="மேலே செல்க">↑ மேலே செல்க</button>
 </body>
 </html>

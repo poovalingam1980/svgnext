@@ -4920,6 +4920,67 @@ body {
       text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
     }
 
+
+    /* CRYSTAL HEADER & ENHANCED STYLING (01_01 MASTER SCHEDULE MODEL) */
+    .portal-header.crystal-header {
+      background: linear-gradient(135deg, #061c36 0%, #0d325e 50%, #0369a1 100%) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.42) !important;
+      border-bottom: 4px solid #0284c7 !important;
+      border-radius: 16px !important;
+      padding: 28px 24px 24px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4) !important;
+      text-align: center !important;
+      position: relative !important;
+      overflow: hidden !important;
+      width: 100% !important;
+    }
+
+    .portal-header .highlight-cyan {
+      color: #38bdf8 !important;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 16px rgba(56,189,248,0.6) !important;
+    }
+
+    /* TABLE GRIDLINES */
+    table,
+    table.styled-table,
+    table.custom-table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      border: 1.5px solid #94a3b8 !important;
+      background: #ffffff !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
+    }
+
+    table th,
+    table.styled-table th,
+    table.custom-table th {
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      padding: 12px 14px !important;
+      border: 1.2px solid #334155 !important;
+      font-size: 0.88rem !important;
+      text-align: left !important;
+    }
+
+    table td,
+    table.styled-table td,
+    table.custom-table td {
+      padding: 10px 14px !important;
+      border: 1.2px solid #cbd5e1 !important;
+      font-size: 0.86rem !important;
+      color: #1e293b !important;
+      line-height: 1.5 !important;
+    }
+
+    table tbody tr:nth-child(even),
+    table.styled-table tbody tr:nth-child(even),
+    table.custom-table tbody tr:nth-child(even) {
+      background-color: #f8fafc !important;
+    }
+
 </style>
 <style id="distinct-theme-css">
 /* ============================================================
@@ -5838,6 +5899,38 @@ body {
 </header>
 
 <div class="portal-container" id="top">
+
+<!-- Top Breadcrumb Navigation Bar with Live Directory Links -->
+<nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
+  <div class="breadcrumb-left-stack">
+    <a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+      <span class="btn-icon">🧭</span>
+      <span class="btn-text">வழிகாட்டி முகப்பு</span>
+    </a>
+    <span class="nav-menu-separator">▶</span>
+    <a class="nav-menu-btn btn-direct-home" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முகப்பு">
+      <span class="btn-icon">🎯</span>
+      <span class="btn-text">01 / நுழைவுத்தேர்வுகள்</span>
+    </a>
+    <span class="nav-menu-separator">▶</span>
+    <span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
+      <span class="btn-icon">🩺</span>
+      <span class="btn-text">02 / மருத்துவம் (NEET UG)</span>
+    </span>
+  </div>
+  <div class="breadcrumb-right-stack">
+    <a class="compact-dir-btn btn-tn-med" href="01_02_A_tn_med_colleges.html" title="தமிழக மருத்துவக் கல்லூரிகள் அடைவு">
+      <span>🏥</span>
+      <span>01_02_A தமிழகக் கல்லூரிகள் ↗</span>
+    </a>
+    <a class="compact-dir-btn btn-in-med" href="01_02_B_in_med_colleges.html" title="இந்திய மருத்துவக் கல்லூரிகள் அடைவு">
+      <span>🇮🇳</span>
+      <span>01_02_B இந்தியக் கல்லூரிகள் ↗</span>
+    </a>
+  </div>
+</nav>
+
+
 <!-- Top Navigation Bar with Official Links & Live Directory URLs -->
 <!-- Breadcrumb Navigation Bar -->
 <!-- Portal Header Banner -->
@@ -5846,16 +5939,11 @@ body {
 <!-- 1. Introduction -->
 
 <!-- Portal Header Banner -->
-<header class="portal-header">
-<div class="header-badge-row">
-<span class="header-tag primary">பிரிவு 01 (Section 01)</span>
-<span class="header-tag secondary">தேசிய நுழைவுத்தேர்வு (NEET UG)</span>
-<span class="header-tag amber">TN DME மாநில கலந்தாய்வு &amp; MCC மத்திய கலந்தாய்வு</span>
-</div>
-<h1 class="portal-title">
-    மருத்துவக் கல்வி நுழைவுத்தேர்வுகள் <span class="accent-gold">(NEET UG)</span>
-</h1>
-<p class="portal-subtitle">
+<header class="portal-header crystal-header">
+  <h1 class="portal-title">
+    மருத்துவக் கல்வி நுழைவுத்தேர்வுகள் <span class="highlight-cyan">(NEET UG 2026)</span>
+  </h1>
+  <p class="portal-subtitle">
     12-ஆம் வகுப்பு பள்ளி மாணவர்களுக்கான மருத்துவப் படிப்புகள் (MBBS, BDS, சித்த, ஆயுர்வேத, ஓமியோபதி, யுனானி AYUSH, 15% VCI கால்நடை &amp; MNS), தேர்வு கட்டமைப்பு, மாநில மற்றும் மத்திய கலந்தாய்வு முறைகள், தமிழக &amp; இந்திய கல்லூரிகள் பட்டியல், 7.5% அரசுப் பள்ளி இலவசக் கல்வி மற்றும் கல்விக் கடன் வழிகாட்டல் தொகுப்பு.
   </p>
 </header>
@@ -5975,7 +6063,7 @@ body {
 <div class="stat-item"><div class="stat-num">+4 / -1</div><div class="stat-label">சரியான விடை / தவறான விடை</div></div>
 </div>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>பாடம் (Subject)</th>
@@ -6010,7 +6098,7 @@ body {
 <span class="section-badge">Degree Courses</span>
 </div>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>படிப்பு</th>
@@ -6197,7 +6285,7 @@ body {
 <span class="section-badge">At a Glance Comparison</span>
 </div>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>படிப்பு</th>
