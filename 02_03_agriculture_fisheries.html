@@ -4832,275 +4832,62 @@
 
 
 
+    
     /* ========================================================
-       RECTANGULAR MENU BUTTON & TOP-TO-BOTTOM ROLLING FRAME
+       STANDARDIZED PORTAL FOOTER (OFFICE DETAILS & COPYRIGHT)
        ======================================================== */
-    .portal-main-menu-wrapper {
-      width: 100% !important;
-      max-width: 100% !important;
-      margin: 0 0 16px 0 !important;
-      position: relative !important;
-      z-index: 900 !important;
-      box-sizing: border-box !important;
-    }
-
-    .portal-menu-bar-row {
-      display: flex !important;
-      align-items: center !important;
-      gap: 12px !important;
+    .portal-footer {
+      text-align: center !important;
+      padding: 22px 18px 20px !important;
+      margin: 24px 0 16px 0 !important;
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+      border-radius: 14px !important;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35) !important;
       width: 100% !important;
       box-sizing: border-box !important;
-      flex-wrap: wrap !important;
+      display: block !important;
     }
 
-    /* கனச்செவ்வக வடிவ மெனு பொத்தான் (Rectangular Menu Button) */
-    .portal-menu-rect-btn {
+    .portal-footer p {
+      margin-bottom: 8px !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      font-size: 0.96rem !important;
+      line-height: 1.6 !important;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;
+    }
+
+    .portal-footer .footer-phone-link {
+      color: #fde047 !important;
+      text-decoration: none !important;
+      font-weight: 800 !important;
+      background: rgba(0, 0, 0, 0.45) !important;
+      padding: 3px 12px !important;
+      border-radius: 6px !important;
+      border: 1.2px solid rgba(253, 224, 71, 0.6) !important;
       display: inline-flex !important;
       align-items: center !important;
-      gap: 10px !important;
-      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
-      color: #ffffff !important;
-      border: 1.8px solid #d4af37 !important;
-      border-radius: 8px !important; /* Crisp rectangular shape */
-      padding: 10px 18px !important;
-      font-size: 0.90rem !important;
-      font-weight: 800 !important;
-      cursor: pointer !important;
-      text-decoration: none !important;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25) !important;
-      transition: all 0.25s ease !important;
-      flex-shrink: 0 !important;
-      font-family: inherit !important;
-    }
-
-    .portal-menu-rect-btn:hover {
-      background: linear-gradient(135deg, #0f2b66 0%, #1e40af 100%) !important;
-      border-color: #fde047 !important;
-      color: #fde047 !important;
-      transform: translateY(-1px) !important;
-      box-shadow: 0 6px 18px rgba(212, 175, 55, 0.35) !important;
-    }
-
-    .menu-btn-icon {
-      font-size: 1.15rem !important;
-      color: #fde047 !important;
-    }
-
-    .menu-btn-arrow {
-      font-size: 0.75rem !important;
-      color: #38bdf8 !important;
-      transition: transform 0.25s ease !important;
-    }
-
-    /* மேலிருந்து கீழாக சுழலும் சட்டம் (Vertical Rolling Marquee Frame from Top to Bottom) */
-    .vertical-rolling-frame {
-      flex: 1 1 320px !important;
-      height: 44px !important;
-      min-height: 44px !important;
-      max-height: 44px !important;
-      background: linear-gradient(135deg, #070e1e 0%, #0d1e38 50%, #070e1e 100%) !important;
-      border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
-      border-radius: 8px !important;
-      overflow: hidden !important;
-      display: flex !important;
-      align-items: center !important;
-      position: relative !important;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
-      box-sizing: border-box !important;
-    }
-
-    .vertical-rolling-label {
-      flex-shrink: 0 !important;
-      background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
-      color: #ffffff !important;
-      font-size: 0.82rem !important;
-      font-weight: 800 !important;
-      height: 100% !important;
-      padding: 0 12px !important;
-      display: flex !important;
-      align-items: center !important;
       gap: 6px !important;
-      border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
-      z-index: 2 !important;
+      margin-left: 6px !important;
+      vertical-align: middle !important;
+      transition: all 0.2s ease !important;
     }
 
-    .vertical-rolling-viewport {
-      flex-grow: 1 !important;
-      height: 100% !important;
-      overflow: hidden !important;
-      position: relative !important;
+    .portal-footer .footer-phone-link:hover {
+      background: rgba(0, 0, 0, 0.7) !important;
+      border-color: #fde047 !important;
+      transform: translateY(-1px) !important;
+      box-shadow: 0 2px 8px rgba(253, 224, 71, 0.35) !important;
     }
 
-    .vertical-rolling-track {
-      display: flex !important;
-      flex-direction: column !important;
-      position: absolute !important;
-      width: 100% !important;
-      top: 0 !important;
-      left: 0 !important;
-      animation: rollTopToBottom 20s linear infinite !important;
-    }
-
-    .vertical-rolling-frame:hover .vertical-rolling-track {
-      animation-play-state: paused !important;
-    }
-
-    @keyframes rollTopToBottom {
-      0% {
-        transform: translateY(-50%);
-      }
-      100% {
-        transform: translateY(0%);
-      }
-    }
-
-    .rolling-item {
-      height: 44px !important;
-      line-height: 44px !important;
-      display: flex !important;
-      align-items: center !important;
-      padding: 0 14px !important;
+    .portal-footer .footer-copyright {
       font-size: 0.86rem !important;
-      font-weight: 700 !important;
-      color: #f8fafc !important;
-      text-decoration: none !important;
-      white-space: nowrap !important;
-      text-overflow: ellipsis !important;
-      overflow: hidden !important;
-      transition: color 0.2s ease !important;
-    }
-
-    .rolling-item:hover {
-      color: #fde047 !important;
-      text-shadow: 0 0 8px rgba(253, 224, 71, 0.6) !important;
-    }
-
-    /* மேலிருந்து கீழாக சுழன்று விரியும் கீழிறங்கு மெனு சட்டம் (Roll-Down Menu Frame from Top to Bottom) */
-    .portal-menu-dropdown-frame {
-      display: none !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      background: linear-gradient(135deg, #070e1e 0%, #0d1e38 50%, #070e1e 100%) !important;
-      border: 2px solid #d4af37 !important;
-      border-radius: 12px !important;
-      margin-top: 10px !important;
-      padding: 16px 20px !important;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6) !important;
-      box-sizing: border-box !important;
-      position: relative !important;
-      z-index: 950 !important;
-    }
-
-    .portal-menu-dropdown-frame.open {
-      display: block !important;
-      animation: rollDownFromTop 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
-    }
-
-    @keyframes rollDownFromTop {
-      0% {
-        opacity: 0;
-        transform: translateY(-16px) scaleY(0.9);
-        transform-origin: top center;
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0) scaleY(1);
-        transform-origin: top center;
-      }
-    }
-
-    .menu-dropdown-header {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
-      padding-bottom: 10px !important;
-      margin-bottom: 14px !important;
-    }
-
-    .dropdown-header-title {
-      font-size: 0.94rem !important;
-      font-weight: 800 !important;
-      color: #fde047 !important;
-    }
-
-    .dropdown-close-btn {
-      background: rgba(255, 255, 255, 0.1) !important;
-      color: #ffffff !important;
-      border: 1px solid rgba(255, 255, 255, 0.25) !important;
-      border-radius: 6px !important;
-      padding: 4px 10px !important;
-      font-size: 0.85rem !important;
-      font-weight: 800 !important;
-      cursor: pointer !important;
-      transition: all 0.2s ease !important;
-    }
-
-    .dropdown-close-btn:hover {
-      background: #ef4444 !important;
-      border-color: #ef4444 !important;
-      color: #ffffff !important;
-    }
-
-    .menu-cards-grid {
-      display: grid !important;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
-      gap: 12px !important;
-    }
-
-    .menu-nav-card {
-      display: flex !important;
-      align-items: center !important;
-      gap: 12px !important;
-      padding: 10px 14px !important;
-      background: rgba(255, 255, 255, 0.05) !important;
-      border: 1.2px solid rgba(255, 255, 255, 0.12) !important;
-      border-radius: 8px !important;
-      text-decoration: none !important;
-      transition: all 0.2s ease !important;
-    }
-
-    .menu-nav-card:hover {
-      background: rgba(212, 175, 55, 0.15) !important;
-      border-color: #d4af37 !important;
-      transform: translateY(-2px) !important;
-    }
-
-    .menu-nav-card .card-icon {
-      font-size: 1.4rem !important;
-      flex-shrink: 0 !important;
-    }
-
-    .menu-nav-card .card-content {
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 2px !important;
-    }
-
-    .menu-nav-card .card-title {
-      font-size: 0.88rem !important;
-      font-weight: 800 !important;
-      color: #ffffff !important;
-    }
-
-    .menu-nav-card .card-desc {
-      font-size: 0.74rem !important;
-      color: #94a3b8 !important;
+      color: #cbd5e1 !important;
+      margin-top: 6px !important;
+      margin-bottom: 0 !important;
       font-weight: 500 !important;
-    }
-
-    @media (max-width: 640px) {
-      .portal-menu-bar-row {
-        flex-direction: column !important;
-        align-items: stretch !important;
-      }
-      .portal-menu-rect-btn {
-        width: 100% !important;
-        justify-content: center !important;
-      }
-      .vertical-rolling-frame {
-        width: 100% !important;
-      }
+      text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
     }
 
 </style>
@@ -5816,117 +5603,6 @@
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
 </a>
 </header>
-
-<!-- ========================================================
-     உயர்கல்வி வழிகாட்டி — கனச்செவ்வக வடிவ முதன்மை மெனு & மேலிருந்து கீழாக சுழலும் சட்டம்
-     ======================================================== -->
-<div class="portal-main-menu-wrapper" id="portalMainMenuWrapper">
-  <div class="portal-menu-bar-row">
-    <!-- கனச்செவ்வக வடிவ மெனு பொத்தான் (Rectangular Menu Button) -->
-    <button class="portal-menu-rect-btn" id="portalMenuToggleBtn" onclick="togglePortalMainMenu(event)" aria-expanded="false" title="உயர்கல்வி வழிகாட்டி முதன்மை மெனுவை திறக்க / மூட">
-      <span class="menu-btn-icon">☰</span>
-      <span class="menu-btn-text">வழிகாட்டி முதன்மை மெனு</span>
-      <span class="menu-btn-arrow" id="portalMenuArrow">▼</span>
-    </button>
-
-    <!-- மேலிருந்து கீழாக சுழலும் சட்டம் (Vertical Rolling Marquee Frame from Top to Bottom) -->
-    <div class="vertical-rolling-frame" title="வழிகாட்டிப் பிரிவுகள் சுழற்சி">
-      <div class="vertical-rolling-label">
-        <span class="rolling-label-icon">⚡</span>
-        <span class="rolling-label-text">பிரிவுகள்:</span>
-      </div>
-      <div class="vertical-rolling-viewport">
-        <div class="vertical-rolling-track">
-          <a href="index.html" class="rolling-item">🏛️ வழிகாட்டி முதன்மை முகப்பு (Home)</a>
-          <a href="01_00_entrance_main.html" class="rolling-item">🎯 01 / தேசிய &amp; மாநில நுழைவுத்தேர்வுகள்</a>
-          <a href="02_00_direct_admissions.html" class="rolling-item">📈 02 / நேரடிச் சேர்க்கைப் படிப்புகள் (+2 Direct)</a>
-          <a href="03_institutes.html" class="rolling-item">🏛️ 03 / கல்லூரிகள் அடைவு (Institutes Directory)</a>
-          <a href="04_govt_exams.html" class="rolling-item">🏆 04 / அரசு &amp; சீருடைப் பணி போட்டித் தேர்வுகள்</a>
-          <a href="05_direct_careers.html" class="rolling-item">💼 05 / திறன்சார் பணிகள் &amp; வேலைவாய்ப்புகள்</a>
-          <a href="06_student_support.html" class="rolling-item">🤝 06 / மாணவர் நலத்திட்டங்கள் &amp; உதவி மையம்</a>
-          <a href="07_resources_external_portals.html" class="rolling-item">📚 07 / கல்வி வளங்கள் &amp; மாதிரித் தேர்வுகள்</a>
-          <!-- Duplicate for infinite seamless vertical loop -->
-          <a href="index.html" class="rolling-item" aria-hidden="true">🏛️ வழிகாட்டி முதன்மை முகப்பு (Home)</a>
-          <a href="01_00_entrance_main.html" class="rolling-item" aria-hidden="true">🎯 01 / தேசிய &amp; மாநில நுழைவுத்தேர்வுகள்</a>
-          <a href="02_00_direct_admissions.html" class="rolling-item" aria-hidden="true">📈 02 / நேரடிச் சேர்க்கைப் படிப்புகள் (+2 Direct)</a>
-          <a href="03_institutes.html" class="rolling-item" aria-hidden="true">🏛️ 03 / கல்லூரிகள் அடைவு (Institutes Directory)</a>
-          <a href="04_govt_exams.html" class="rolling-item" aria-hidden="true">🏆 04 / அரசு &amp; சீருடைப் பணி போட்டித் தேர்வுகள்</a>
-          <a href="05_direct_careers.html" class="rolling-item" aria-hidden="true">💼 05 / திறன்சார் பணிகள் &amp; வேலைவாய்ப்புகள்</a>
-          <a href="06_student_support.html" class="rolling-item" aria-hidden="true">🤝 06 / மாணவர் நலத்திட்டங்கள் &amp; உதவி மையம்</a>
-          <a href="07_resources_external_portals.html" class="rolling-item" aria-hidden="true">📚 07 / கல்வி வளங்கள் &amp; மாதிரித் தேர்வுகள்</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- மேலிருந்து கீழாக சுழன்று விரியும் கீழிறங்கு மெனு சட்டம் (Roll-Down Menu Frame from Top to Bottom) -->
-  <div class="portal-menu-dropdown-frame" id="portalMenuDropdownFrame">
-    <div class="menu-dropdown-inner">
-      <div class="menu-dropdown-header">
-        <span class="dropdown-header-title">🧭 உயர்கல்வி வழிகாட்டி — முதன்மைப் பிரிவுகள் அடைவு (Portal Navigation)</span>
-        <button class="dropdown-close-btn" onclick="togglePortalMainMenu(event)" title="மூடுக">✕</button>
-      </div>
-      <div class="menu-cards-grid">
-        <a href="index.html" class="menu-nav-card">
-          <span class="card-icon">🏛️</span>
-          <div class="card-content">
-            <span class="card-title">முதன்மை முகப்பு</span>
-            <span class="card-desc">வழிகாட்டி முகப்பு &amp; 7 நுழைவு வாயில்கள்</span>
-          </div>
-        </a>
-        <a href="01_00_entrance_main.html" class="menu-nav-card">
-          <span class="card-icon">🎯</span>
-          <div class="card-content">
-            <span class="card-title">01 / நுழைவுத்தேர்வுகள்</span>
-            <span class="card-desc">NEET, JEE, CUET, CLAT, NATA, NDA...</span>
-          </div>
-        </a>
-        <a href="02_00_direct_admissions.html" class="menu-nav-card">
-          <span class="card-icon">📈</span>
-          <div class="card-content">
-            <span class="card-title">02 / நேரடிச் சேர்க்கை</span>
-            <span class="card-desc">பொறியியல், மருத்துவம், வேளாண்மை, கலை &amp; அறிவியல்</span>
-          </div>
-        </a>
-        <a href="03_institutes.html" class="menu-nav-card">
-          <span class="card-icon">🏛️</span>
-          <div class="card-content">
-            <span class="card-title">03 / கல்லூரிகள் அடைவு</span>
-            <span class="card-desc">அரசு &amp; அரசு உதவிபெறும் கல்லூரிகள் பட்டியல்</span>
-          </div>
-        </a>
-        <a href="04_govt_exams.html" class="menu-nav-card">
-          <span class="card-icon">🏆</span>
-          <div class="card-content">
-            <span class="card-title">04 / அரசுத் தேர்வுகள்</span>
-            <span class="card-desc">TNPSC, TNUSRB, SSC, UPSC, ரயில்வே, வங்கி</span>
-          </div>
-        </a>
-        <a href="05_direct_careers.html" class="menu-nav-card">
-          <span class="card-icon">💼</span>
-          <div class="card-content">
-            <span class="card-title">05 / திறன் &amp; பணிகள்</span>
-            <span class="card-desc">நேரடி வேலை, நான் முதல்வன், தொழிற்பழகுநர்</span>
-          </div>
-        </a>
-        <a href="06_student_support.html" class="menu-nav-card">
-          <span class="card-icon">🤝</span>
-          <div class="card-content">
-            <span class="card-title">06 / மாணவர் நலன்</span>
-            <span class="card-desc">7.5% சலுகை, உதவி எண் 14417, வழிகாட்டல் மையம்</span>
-          </div>
-        </a>
-        <a href="07_resources_external_portals.html" class="menu-nav-card">
-          <span class="card-icon">📚</span>
-          <div class="card-content">
-            <span class="card-title">07 / கல்வி வளங்கள்</span>
-            <span class="card-desc">அரசு அதிகாரப்பூர்வ போர்ட்டல்கள் &amp; மாதிரித் தேர்வு</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
 
 <header class="portal-header">
 <h1 class="portal-title">
@@ -6915,16 +6591,16 @@
 </div>
 
 <!-- Official District Portal Footer -->
-<footer class="portal-footer" style="text-align: center !important; padding: 22px 18px 20px !important; margin: 28px 0 16px 0 !important; background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important; border: 1.5px solid rgba(212, 175, 55, 0.45) !important; border-radius: 14px !important; box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35) !important; width: 100% !important; box-sizing: border-box !important;">
+<footer class="portal-footer" style="text-align: center !important; padding: 22px 18px 20px !important; margin: 24px 0 16px 0 !important; background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important; border: 1.5px solid rgba(212, 175, 55, 0.45) !important; border-radius: 14px !important; box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35) !important; width: 100% !important; box-sizing: border-box !important;">
   <p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #ffffff !important; font-size: 0.96rem !important; line-height: 1.6 !important; text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;">
-    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, 
-    <a class="footer-phone-link" href="tel:04575240408" style="color: #fde047 !important; text-decoration: none !important; font-weight: 800 !important; background: rgba(0, 0, 0, 0.45) !important; padding: 3px 12px !important; border-radius: 6px !important; border: 1.2px solid rgba(253, 224, 71, 0.6) !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; margin-left: 6px !important; vertical-align: middle !important; transition: all 0.2s ease !important;">
+    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562,
+    <a class="footer-phone-link" href="tel:04575240408" style="color: #fde047 !important; text-decoration: none !important; font-weight: 800 !important; background: rgba(0, 0, 0, 0.45) !important; padding: 3px 12px !important; border-radius: 6px !important; border: 1.2px solid rgba(253, 224, 71, 0.6) !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; margin-left: 6px !important; vertical-align: middle !important; transition: all 0.2s ease !important;" title="முதன்மைக் கல்வி அலுவலக தொலைபேசி எண்">
       <span>☎️</span>
       <span>04575240408</span>
     </a>
   </p>
-  <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;">
-    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+  <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important; margin-bottom: 0 !important;">
+    © 2026 Chief Educational Office, Sivagangai. All Rights Reserved. • வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
 </footer>
 
