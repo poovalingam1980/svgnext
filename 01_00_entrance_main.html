@@ -1699,6 +1699,595 @@
     transform: translateY(-50%) !important;
   }
 }
+
+    /* ========================================================
+       FULL SCREEN WIDTH LAYOUT & STANDARDIZED DESIGN (02_02 & 02_04 MODEL)
+       ======================================================== */
+    html, body {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+      background-color: var(--bg-main, #f8fafc) !important;
+    }
+
+    .portal-layout-wrapper {
+      display: flex !important;
+      flex-direction: row !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-height: 100vh !important;
+      position: relative !important;
+      align-items: stretch !important;
+      box-sizing: border-box !important;
+    }
+
+    .desktop-left-sidebar {
+      width: 295px !important;
+      min-width: 295px !important;
+      max-width: 295px !important;
+      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+      border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      height: 100vh !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex-shrink: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .portal-main-content {
+      margin-left: 295px !important;
+      width: calc(100% - 295px) !important;
+      min-height: 100vh !important;
+      padding: 12px clamp(12px, 1.8vw, 36px) 40px !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+    }
+
+    .portal-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .info-card,
+    .content-card,
+    .course-card,
+    .cards-grid,
+    section,
+    .portal-header,
+    .quick-nav-marquee-container,
+    .bottom-page-nav-bar,
+    .kural-box,
+    .creator-card,
+    .portal-footer,
+    .table-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    /* FULL WIDTH CARDS GRID (12 ENTRANCE EXAM CARDS) */
+    .cards-grid {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)) !important;
+      gap: 22px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-bottom: 28px !important;
+      box-sizing: border-box !important;
+    }
+
+    .course-card {
+      background: #ffffff !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      padding: 22px 20px 20px 20px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      transition: all 0.25s ease !important;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06) !important;
+      box-sizing: border-box !important;
+    }
+
+    .course-card:hover {
+      transform: translateY(-4px) !important;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.12) !important;
+      border-color: #38bdf8 !important;
+    }
+
+    /* TOP BREADCRUMB BAR */
+    .breadcrumb-bar {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.4) !important;
+      border-radius: 12px !important;
+      padding: 8px 16px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
+      flex-wrap: wrap !important;
+    }
+
+    .nav-menu-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 0.84rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      color: #e2e8f0 !important;
+      padding: 4px 10px !important;
+      border-radius: 6px !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .nav-menu-btn:hover {
+      background: rgba(255, 255, 255, 0.12) !important;
+      color: #fef08a !important;
+    }
+
+    .nav-menu-btn.btn-current-page {
+      background: rgba(56, 189, 248, 0.2) !important;
+      border: 1px solid #38bdf8 !important;
+      color: #38bdf8 !important;
+    }
+
+    .nav-menu-separator {
+      color: #94a3b8 !important;
+      font-size: 0.75rem !important;
+    }
+
+    /* HERO PORTAL HEADER: NATIONAL BLUE & CYAN THEME */
+    .portal-header {
+      background: linear-gradient(135deg, #091330 0%, #0f2b66 50%, #0369a1 100%) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.42) !important;
+      border-bottom: 4px solid #0284c7 !important;
+      border-radius: 16px !important;
+      padding: 28px 24px 24px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4) !important;
+      text-align: center !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    .portal-title {
+      color: #ffffff !important;
+      font-size: clamp(1.4rem, 2.3vw, 2.1rem) !important;
+      font-weight: 900 !important;
+      margin: 0 0 10px 0 !important;
+      line-height: 1.3 !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .portal-title .highlight-cyan {
+      color: #38bdf8 !important;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 16px rgba(56,189,248,0.6) !important;
+    }
+
+    .portal-subtitle {
+      color: #f1f5f9 !important;
+      font-size: clamp(0.88rem, 1.1vw, 1.02rem) !important;
+      line-height: 1.65 !important;
+      max-width: 980px !important;
+      margin: 0 auto !important;
+      font-weight: 500 !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+    }
+
+    /* QUICK NAVIGATION MARQUEE BAR */
+    .quick-nav-marquee-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      background: linear-gradient(135deg, #060d1a 0%, #0d1e38 50%, #060d1a 100%) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.35) !important;
+      border-radius: 12px !important;
+      padding: 8px 12px !important;
+      margin-bottom: 18px !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+      position: relative !important;
+    }
+
+    .marquee-static-label {
+      flex-shrink: 0 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      font-size: 1.15rem !important;
+      padding: 6px 12px !important;
+      border-radius: 8px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.4) !important;
+      z-index: 2 !important;
+    }
+
+    .marquee-scroll-track {
+      flex-grow: 1 !important;
+      overflow: hidden !important;
+      display: flex !important;
+      position: relative !important;
+      mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+    }
+
+    .marquee-content-loop {
+      display: flex !important;
+      gap: 10px !important;
+      align-items: center !important;
+      white-space: nowrap !important;
+      animation: marqueeScroll 28s linear infinite !important;
+      padding-right: 10px !important;
+    }
+
+    .quick-nav-marquee-container:hover .marquee-content-loop {
+      animation-play-state: paused !important;
+    }
+
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .marquee-pill-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: rgba(30, 41, 59, 0.85) !important;
+      color: #e2e8f0 !important;
+      border: 1px solid rgba(148, 163, 184, 0.25) !important;
+      padding: 5px 12px !important;
+      border-radius: 999px !important;
+      font-size: 0.80rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .marquee-pill-btn:hover {
+      background: rgba(56, 189, 248, 0.25) !important;
+      color: #38bdf8 !important;
+      border-color: #38bdf8 !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* BOTTOM PAGE NAVIGATION BAR */
+    .bottom-page-nav-bar {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 14px 18px !important;
+      margin: 26px 0 28px 0 !important;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-radius: 14px !important;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .page-nav-btn.btn-prev-animated {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 10px 20px !important;
+      border-radius: 10px !important;
+      font-family: inherit !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 2px solid #059669 !important;
+      background: linear-gradient(135deg, #047857 0%, #065f46 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(4, 120, 87, 0.35) !important;
+      animation: pulseNudgeLeft 3s ease-in-out infinite !important;
+      transition: all 0.25s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .page-nav-btn.btn-prev-animated:hover {
+      background: linear-gradient(135deg, #065f46 0%, #022c22 100%) !important;
+      border-color: #fde047 !important;
+      transform: translateX(-5px) scale(1.04) !important;
+      box-shadow: 0 6px 20px rgba(4, 120, 87, 0.55), 0 0 15px rgba(52, 211, 153, 0.5) !important;
+    }
+
+    .page-nav-btn.btn-next-animated {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 10px 20px !important;
+      border-radius: 10px !important;
+      font-family: inherit !important;
+      font-size: 0.88rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      border: 2px solid #0284c7 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;
+      animation: pulseNudgeRight 3s ease-in-out infinite !important;
+      transition: all 0.25s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .page-nav-btn.btn-next-animated:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #0c4a6e 100%) !important;
+      border-color: #fde047 !important;
+      transform: translateX(5px) scale(1.04) !important;
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.55), 0 0 15px rgba(56, 189, 248, 0.5) !important;
+    }
+
+    @keyframes pulseNudgeLeft {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(-4px); }
+    }
+
+    @keyframes pulseNudgeRight {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(4px); }
+    }
+
+    /* CREATOR CARD: CLASSIC DARK THEME WITH AURORA ANIMATION */
+    .creator-card {
+      background: linear-gradient(135deg, #050811 0%, #0d1527 50%, #050811 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+      border-radius: 14px !important;
+      padding: 12px clamp(16px, 2vw, 32px) !important;
+      margin: 20px 0 16px 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.55), 0 0 20px rgba(0, 194, 255, 0.15) !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      flex-wrap: wrap !important;
+      gap: 14px !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+
+    .creator-typewriter-wrapper {
+      font-size: clamp(0.74rem, 0.95vw, 0.90rem) !important;
+      color: #f8fafc !important;
+      font-weight: 600 !important;
+      line-height: 1.4 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      flex: 0 1 auto !important;
+      min-width: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: center !important;
+    }
+
+    .creator-typewriter-target {
+      display: inline !important;
+      white-space: pre-wrap !important;
+    }
+
+    .creator-label {
+      font-size: 80% !important;
+      font-weight: 700 !important;
+      color: #f1f5f9 !important;
+      white-space: nowrap !important;
+      opacity: 0.92 !important;
+    }
+
+    .creator-role {
+      font-size: 80% !important;
+      color: #94a3b8 !important;
+      font-weight: 600 !important;
+      white-space: nowrap !important;
+      opacity: 0.90 !important;
+    }
+
+    .creator-name-ta,
+    .creator-name-en,
+    .creator-name-ta-blue,
+    .creator-name-ta-purple,
+    .creator-name-en-blue,
+    .creator-name-en-purple {
+      background: linear-gradient(
+        90deg,
+        #00c2ff 0%,
+        #33ff8c 25%,
+        #ffc640 50%,
+        #e54cff 75%,
+        #00c2ff 100%
+      ) !important;
+      background-size: 300% 100% !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      animation: aurora-text-flow 6s linear infinite !important;
+      font-weight: 900 !important;
+      letter-spacing: 0.3px !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      display: inline-block !important;
+      filter: drop-shadow(0 0 6px rgba(0, 194, 255, 0.45));
+    }
+
+    .creator-cursor {
+      display: inline-block !important;
+      font-weight: 300 !important;
+      color: #00c2ff !important;
+      margin-left: 2px !important;
+      animation: blinkCreatorCursor 0.65s infinite !important;
+      text-shadow: 0 0 8px rgba(0, 194, 255, 0.8);
+      flex-shrink: 0 !important;
+    }
+
+    @keyframes aurora-text-flow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 300% 50%; }
+    }
+
+    @keyframes blinkCreatorCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .footer-phone-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+      color: #ffffff !important;
+      padding: 4px 12px !important;
+      border-radius: 999px !important;
+      font-size: 0.84rem !important;
+      font-weight: 800 !important;
+      text-decoration: none !important;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4) !important;
+      transition: all 0.2s ease !important;
+      margin: 0 !important;
+      vertical-align: middle !important;
+      flex-shrink: 0 !important;
+    }
+
+    .footer-phone-pill:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+      transform: translateY(-1px) scale(1.03) !important;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5) !important;
+      color: #ffffff !important;
+    }
+
+    /* FLOATING BACK TO TOP BUTTON (STANDARDIZED) */
+    .floating-back-to-top {
+      position: fixed !important;
+      bottom: 24px !important;
+      right: 24px !important;
+      z-index: 9999 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+      border-radius: 999px !important;
+      padding: 10px 18px !important;
+      font-size: 0.85rem !important;
+      font-weight: 800 !important;
+      font-family: inherit !important;
+      cursor: pointer !important;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35) !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: translateY(16px) !important;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .floating-back-to-top.visible {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: translateY(0) !important;
+    }
+
+    .floating-back-to-top:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+      border-color: #fde047 !important;
+      color: #fde047 !important;
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.5) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    @media (max-width: 1024px) {
+      .desktop-left-sidebar {
+        position: fixed !important;
+        left: -320px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 295px !important;
+        height: 100vh !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 9999 !important;
+        box-shadow: 6px 0 35px rgba(0, 0, 0, 0.85);
+      }
+      .desktop-left-sidebar.sidebar-open {
+        left: 0 !important;
+      }
+      .portal-main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 8px 12px 30px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+      .bottom-page-nav-bar {
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+      .page-nav-btn.btn-prev-animated,
+      .page-nav-btn.btn-next-animated {
+        width: 100% !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+      }
+    }
+
+
+    /* ========================================================
+       PORTAL FOOTER: HIGH-CONTRAST DARK GRADIENT CARD
+       ======================================================== */
+    .portal-footer {
+      background: linear-gradient(135deg, #090e1a 0%, #0e172a 50%, #090e1a 100%) !important;
+      color: #cbd5e1 !important;
+      border: 1.5px solid rgba(245, 158, 11, 0.35) !important;
+      border-radius: 16px !important;
+      padding: 24px 20px !important;
+      margin: 24px 0 20px 0 !important;
+      text-align: center !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45) !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .portal-footer p {
+      margin: 0 0 8px 0 !important;
+      line-height: 1.6 !important;
+    }
+
+    .footer-phone-link:hover {
+      background: rgba(0, 0, 0, 0.75) !important;
+      border-color: #fde047 !important;
+      color: #ffffff !important;
+      transform: translateY(-1px) scale(1.03) !important;
+    }
+
 </style>
 <style id="robust-layout-override">
 /* ========================================================
@@ -2401,14 +2990,68 @@
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
 </a>
 </header>
+
+<!-- Top Breadcrumb Navigation Bar -->
+<nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
+  <a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+    <span class="btn-icon">🧭</span>
+    <span class="btn-text">வழிகாட்டி முகப்பு</span>
+  </a>
+  <span class="nav-menu-separator">▶</span>
+  <span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
+    <span class="btn-icon">🎯</span>
+    <span class="btn-text">01 / தேசிய &amp; மாநில நுழைவுத்தேர்வுகள்</span>
+  </span>
+</nav>
+
+
 <!-- HERO BANNER (MATCHING IMAGE 2 EXACTLY) -->
-<header class="hero-banner">
-<div class="hero-badge">🎯 தேசிய &amp; மாநில நுழைவுத்தேர்வுகள்</div>
-<h1 class="hero-title">12-ஆம் வகுப்பிற்குப் பிந்தைய தேசிய &amp; மாநில நுழைவுத்தேர்வுகள்</h1>
-<p class="hero-subtitle">
-          மருத்துவம், பொறியியல், அறிவியல் ஆராய்ச்சி, மத்தியப் பல்கலைக்கழகங்கள், சட்டம், வடிவமைப்பு, மேலாண்மை, பாதுகாப்புப் படைகள் மற்றும் வணிக விமானி உள்ளிட்ட 12 முதன்மை நுழைவுத்தேர்வுகளின் முழுமையான வழிகாட்டி கையேடு.
-        </p>
+<header class="portal-header">
+  <h1 class="portal-title">
+    தேசிய &amp; மாநில <span class="highlight-cyan">நுழைவுத்தேர்வுகள் வழிகாட்டி (Entrance Exams)</span>
+  </h1>
+  <p class="portal-subtitle">
+    மருத்துவம், பொறியியல், அறிவியல் ஆராய்ச்சி, மத்தியப் பல்கலைக்கழகங்கள், சட்டம், வடிவமைப்பு, மேலாண்மை, பாதுகாப்புப் படைகள் மற்றும் வணிக விமானி உள்ளிட்ட 12 முதன்மை நுழைவுத்தேர்வுகளின் முழுமையான வழிகாட்டி கையேடு.
+  </p>
 </header>
+
+<!-- Quick Navigation Marquee Bar (ஓடும் விரைவு வழிசெலுத்தல் பட்டை) -->
+<div class="quick-nav-marquee-container" aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை">
+  <div class="marquee-static-label" title="விரைவு வழிகாட்டல்">
+    <span class="pulse-icon">⚡</span>
+  </div>
+  <div class="marquee-scroll-track">
+    <div class="marquee-content-loop">
+      <a href="01_01_master_schedule.html" class="marquee-pill-btn">📅 01 / மாஸ்டர் காலண்டர்</a>
+      <a href="01_02_medical_neet.html" class="marquee-pill-btn">🩺 02 / நீட் &amp; மருத்துவம்</a>
+      <a href="01_03_engineering_jee.html" class="marquee-pill-btn">⚙️ 03 / ஜேஇஇ &amp; பொறியியல்</a>
+      <a href="01_04_science_research.html" class="marquee-pill-btn">🔬 04 / அறிவியல் ஆராய்ச்சி</a>
+      <a href="01_05_central_universities_cuet.html" class="marquee-pill-btn">🏛️ 05 / CUET மத்திய பல்கலை</a>
+      <a href="01_06_law_clat.html" class="marquee-pill-btn">⚖️ 06 / CLAT சட்டப் படிப்புகள்</a>
+      <a href="01_07_design_architecture.html" class="marquee-pill-btn">📐 07 / NID &amp; NATA வடிவமைப்பு</a>
+      <a href="01_08_management_ipmat.html" class="marquee-pill-btn">📊 08 / IPMAT மேலாண்மை</a>
+      <a href="01_09_hotel_management.html" class="marquee-pill-btn">🏨 09 / ஹோட்டல் மேலாண்மை</a>
+      <a href="01_10_marine_merchant_navy.html" class="marquee-pill-btn">⚓ 10 / IMU-CET கப்பல் துறை</a>
+      <a href="01_11_defence_forces.html" class="marquee-pill-btn">🎖️ 11 / NDA முப்படைகள்</a>
+      <a href="01_12_commercial_pilot.html" class="marquee-pill-btn">✈️ 12 / DGCA வணிக விமானி</a>
+    </div>
+    <!-- Duplicate for infinite seamless scroll -->
+    <div class="marquee-content-loop" aria-hidden="true">
+      <a href="01_01_master_schedule.html" class="marquee-pill-btn">📅 01 / மாஸ்டர் காலண்டர்</a>
+      <a href="01_02_medical_neet.html" class="marquee-pill-btn">🩺 02 / நீட் &amp; மருத்துவம்</a>
+      <a href="01_03_engineering_jee.html" class="marquee-pill-btn">⚙️ 03 / ஜேஇஇ &amp; பொறியியல்</a>
+      <a href="01_04_science_research.html" class="marquee-pill-btn">🔬 04 / அறிவியல் ஆராய்ச்சி</a>
+      <a href="01_05_central_universities_cuet.html" class="marquee-pill-btn">🏛️ 05 / CUET மத்திய பல்கலை</a>
+      <a href="01_06_law_clat.html" class="marquee-pill-btn">⚖️ 06 / CLAT சட்டப் படிப்புகள்</a>
+      <a href="01_07_design_architecture.html" class="marquee-pill-btn">📐 07 / NID &amp; NATA வடிவமைப்பு</a>
+      <a href="01_08_management_ipmat.html" class="marquee-pill-btn">📊 08 / IPMAT மேலாண்மை</a>
+      <a href="01_09_hotel_management.html" class="marquee-pill-btn">🏨 09 / ஹோட்டல் மேலாண்மை</a>
+      <a href="01_10_marine_merchant_navy.html" class="marquee-pill-btn">⚓ 10 / IMU-CET கப்பல் துறை</a>
+      <a href="01_11_defence_forces.html" class="marquee-pill-btn">🎖️ 11 / NDA முப்படைகள்</a>
+      <a href="01_12_commercial_pilot.html" class="marquee-pill-btn">✈️ 12 / DGCA வணிக விமானி</a>
+    </div>
+  </div>
+</div>
 <!-- 12 ENTRANCE EXAM CARDS GRID (EXACT ARCHITECTURE OF IMAGE 2) -->
 <div class="cards-grid">
 <!-- 01. ENTRANCE EXAMS MASTER SCHEDULE & CALENDAR -->
@@ -2745,112 +3388,63 @@
 </div>
 </div>
 <!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
+
+<!-- Bottom Chapter Navigation Bar: Animated Edge-to-Edge Navigation -->
+<nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar">
+  <a class="page-nav-btn btn-prev-animated" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+    <span class="nav-btn-icon">◀</span>
+    <span class="nav-btn-text">🏠 முதன்மை முகப்பு</span>
+  </a>
+  <a class="page-nav-btn btn-next-animated" href="01_01_master_schedule.html" title="01_01 நுழைவுத்தேர்வுகள் மாஸ்டர் காலண்டர்">
+    <span class="nav-btn-text">01_01 மாஸ்டர் காலண்டர்</span>
+    <span class="nav-btn-icon">▶</span>
+  </a>
+</nav>
+
+<!-- திருக்குறள் பகுதி — உயர்ந்த இலக்கு & விடாமுயற்சி (அதிகாரம்: ஊக்கமுடைமை) -->
 <div class="kural-box">
-<div class="kural-header">
-<span class="kural-icon">📜</span>
-<span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-<span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
-</div>
-<div class="kural-verse-text">
-    “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
-    திண்ணியர் ஆகப் பெறின்.”
+  <div class="kural-header">
+    <span class="kural-icon">📜</span>
+    <span class="kural-title">திருக்குறள் — அதிகாரம்: ஊக்கமுடைமை (குறள்: 596)</span>
+    <span class="kural-sparkle">🎯 உயர்ந்த இலக்கு &amp; விடாமுயற்சி</span>
   </div>
-<div class="kural-meaning">
-<strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
+  <div class="kural-verse-text">
+    “உள்ளுவ தெல்லாம் உயர்வுள்ளல் மற்றது<br/>
+    தள்ளினும் தள்ளாமை நீர்த்து.”
+  </div>
+  <div class="kural-meaning">
+    <strong>விளக்கவுரை:</strong> எண்ணுவதெல்லாம் மிக உயர்ந்த இலக்குகளாகவே இருக்க வேண்டும்; அவ்வுயர்ந்த இலக்குகள் ஒருவேளை முழுமையாகக் கைகூடாவிட்டாலும், அத்தகைய பெருநோக்குடன் கூடிய விடாமுயற்சியே ஒருவரை வாழ்வின் உச்சத்திற்கு உயர்த்தும்; தேசிய மற்றும் மாநில அளவிலான முதன்மை நுழைவுத்தேர்வுகளுக்குத் (National Entrance Exams) தயாராகும் மாணவச் செல்வங்கள் எந்நிலையிலும் தங்களது லட்சியக் கனவுகளைக் குறைக்காமல் உறுதியுடன் பயில இக்குறள் வழிகாட்டுகிறது.
   </div>
 </div>
-<!-- ஆலோசனை மற்றும் கருத்துப் பதிவுப் பகுதி -->
-<!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
-<div class="creator-card" style="justify-content: center !important; text-align: center !important;">
-<div class="creator-typewriter-wrapper" style="justify-content: center !important; text-align: center !important; display: inline-flex !important; align-items: center !important;">
-<span class="creator-typewriter-target" id="creatorTypewriterTarget" style="text-align: center !important;"></span><span class="creator-cursor" id="creatorCursor">|</span>
+
+<!-- உருவாக்கியவர் பெட்டி (Classic Dark Theme & Aurora Animation, Centered Flow) -->
+<div class="creator-card">
+  <div class="creator-typewriter-wrapper">
+    <span class="creator-typewriter-target" id="creatorTypewriterTarget"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role">, பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role">, Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
+  </div>
+  <a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
+    <span class="phone-icon">📱</span>
+    <span class="phone-text">9626471035</span>
+  </a>
 </div>
-<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
-<span class="phone-icon">📱</span>
-<span class="phone-text">9626471035</span>
-</a>
-</div>
-<!-- Footer -->
+
+<!-- முதன்மைக் கல்வி அலுவலக அடிக்குறிப்பு -->
 <footer class="portal-footer">
-<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
-    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
-</p>
-<p style="font-size: 0.85rem; color: #64748b;">
+  <p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #ffffff !important; font-size: 0.96rem !important; text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;">
+    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, 
+    <a class="footer-phone-link" href="tel:04575240408" style="color: #fde047 !important; text-decoration: none !important; font-weight: 800 !important; background: rgba(0, 0, 0, 0.5) !important; padding: 4px 12px !important; border-radius: 999px !important; border: 1.2px solid rgba(253, 224, 71, 0.6) !important; display: inline-flex !important; align-items: center !important; gap: 4px !important; margin-left: 6px !important;">☎️ 04575240408</a>
+  </p>
+  <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important;">
     © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
 </footer>
+
 </div> <!-- /.portal-container -->
 </main> <!-- /.portal-main-content -->
 </div> <!-- /.portal-layout-wrapper -->
+
 <script>
-// Feedback Form Submission Script & Fireworks
-// Form submission handled by handleEnquiryFormSubmit
-    function fireCelebrationCrackers() {
-      const canvas = document.getElementById('fb_crackers_canvas');
-      if (!canvas) return;
-      const ctx = canvas.getContext('2d');
-      canvas.width = canvas.parentElement.offsetWidth;
-      canvas.height = canvas.parentElement.offsetHeight;
-      canvas.style.display = 'block';
-
-      const particles = [];
-      const colors = ['#f43f5e', '#ec4899', '#d946ef', '#a855f7', '#6366f1', '#3b82f6', '#06b6d4', '#10b981', '#eab308', '#f97316'];
-      const burstPoints = [
-        { x: canvas.width * 0.35, y: canvas.height * 0.5 },
-        { x: canvas.width * 0.65, y: canvas.height * 0.5 }
-      ];
-
-      burstPoints.forEach(pt => {
-        for (let i = 0; i < 60; i++) {
-          const angle = Math.random() * Math.PI * 2;
-          const speed = Math.random() * 8 + 3;
-          particles.push({
-            x: pt.x,
-            y: pt.y,
-            vx: Math.cos(angle) * speed,
-            vy: Math.sin(angle) * speed - 2,
-            radius: Math.random() * 3.5 + 2,
-            color: colors[Math.floor(Math.random() * colors.length)],
-            gravity: 0.16,
-            alpha: 1,
-            decay: Math.random() * 0.012 + 0.01
-          });
-        }
-      });
-
-      let animId;
-      function render() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        let alive = false;
-        particles.forEach(p => {
-          if (p.alpha > 0) {
-            alive = true;
-            p.x += p.vx;
-            p.y += p.vy;
-            p.vy += p.gravity;
-            p.alpha -= p.decay;
-            ctx.save();
-            ctx.globalAlpha = Math.max(p.alpha, 0);
-            ctx.fillStyle = p.color;
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.restore();
-          }
-        });
-
-        if (alive) {
-          animId = requestAnimationFrame(render);
-        } else {
-          cancelAnimationFrame(animId);
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          canvas.style.display = 'none';
-        }
-      }
-      render();
-    }
-</script>
-<script>
+// 1. Sidebar Toggle & Accordion Controls
 function toggleSidebarMenu() {
   var sidebar = document.getElementById('desktopLeftSidebar');
   var backdrop = document.getElementById('sidebarBackdrop');
@@ -2858,96 +3452,20 @@ function toggleSidebarMenu() {
   if (backdrop) backdrop.classList.toggle('active');
 }
 
-function toggleAccordion(id) {
-  var header = document.getElementById('acc-hdr-' + id);
-  var content = document.getElementById('acc-cnt-' + id);
-  if (header && content) {
-    var isOpen = content.classList.contains('open');
-    if (isOpen) {
-      content.classList.remove('open');
-      header.classList.remove('open');
-    } else {
-      content.classList.add('open');
-      header.classList.add('open');
-    }
-  }
-}
-
-function toggleSubAccordion(id) {
-  var header = document.getElementById('sub-hdr-' + id);
-  var content = document.getElementById('sub-cnt-' + id);
-  if (header && content) {
-    var isOpen = content.classList.contains('open');
-    if (isOpen) {
-      content.classList.remove('open');
-      header.classList.remove('open');
-    } else {
-      content.classList.add('open');
-      header.classList.add('open');
-    }
-  }
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  var rawPath = window.location.pathname;
-  var currentPage = rawPath.substring(rawPath.lastIndexOf('/') + 1) || 'index.html';
-  
-  // Highlight active main button
-  var mainBtns = document.querySelectorAll('.desktop-left-sidebar .sidebar-main-btn');
-  mainBtns.forEach(function(btn) {
-    var href = btn.getAttribute('href');
-    if (href && href.split('#')[0] === currentPage) {
-      btn.classList.add('active-page');
-    }
-  });
-
-  // Highlight active sub-link and auto-expand parent accordion & nested sub-accordion
-  var subLinks = document.querySelectorAll('.desktop-left-sidebar .sidebar-link');
-  subLinks.forEach(function(l) {
-    var href = l.getAttribute('href');
-    if (href) {
-      var baseHref = href.split('#')[0];
-      if (baseHref === currentPage) {
-        l.classList.add('active-page');
-        
-        // Open nested sub-accordion if inside one
-        var parentNested = l.closest('.sidebar-nested-content');
-        if (parentNested) {
-          parentNested.classList.add('open');
-          var subId = parentNested.id.replace('sub-cnt-', '');
-          var subHdr = document.getElementById('sub-hdr-' + subId);
-          if (subHdr) subHdr.classList.add('open');
-        }
-
-        // Open main accordion if inside one
-        var parentContent = l.closest('.sidebar-accordion-content');
-        if (parentContent) {
-          parentContent.classList.add('open');
-          var accId = parentContent.id.replace('acc-cnt-', '');
-          var header = document.getElementById('acc-hdr-' + accId);
-          if (header) header.classList.add('open');
-        }
-      }
-    }
-    l.addEventListener('click', function() {
-      if (window.innerWidth <= 1024) toggleSidebarMenu();
-    });
-  });
-});
-
-
 function openPyqModal() {
-  document.getElementById('pyqModal').style.display = 'flex';
+  var m = document.getElementById('pyqModal');
+  if (m) m.style.display = 'flex';
 }
-function closePyqModal() {
-  document.getElementById('pyqModal').style.display = 'none';
+
+function closePyqModal(e) {
+  var m = document.getElementById('pyqModal');
+  if (m) m.style.display = 'none';
 }
-</script>
-<!-- STANDARDIZED CREATOR TYPEWRITER ANIMATION (TRIGGERED ON SCROLL) -->
-<script>
-  (function() {
-    let hasTyped = false;
-    const creatorSegments = [
+
+// 2. Creator Typewriter Animation
+(function() {
+  let hasTyped = false;
+  const creatorSegments = [
     { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
     { text: "கூ. பூவலிங்கம்", tag: "span", class: "creator-name-ta" },
     { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
@@ -2955,232 +3473,115 @@ function closePyqModal() {
     { text: ", Deputy Inspector of Schools", tag: "span", class: "creator-role" }
   ];
 
-    function runCreatorTypewriter() {
-      if (hasTyped) return;
-      const container = document.getElementById('creatorTypewriterTarget');
-      const cursor = document.getElementById('creatorCursor');
-      const phonePill = document.getElementById('footerPhonePill');
-      if (!container) return;
+  function runCreatorTypewriter() {
+    if (hasTyped) return;
+    const container = document.getElementById('creatorTypewriterTarget');
+    const cursor = document.getElementById('creatorCursor');
+    const phonePill = document.getElementById('footerPhonePill');
+    if (!container) return;
 
-      hasTyped = true;
-      container.innerHTML = '';
-      if (cursor) cursor.style.display = 'inline-block';
-      if (phonePill) phonePill.style.display = 'none';
+    hasTyped = true;
+    container.innerHTML = '';
+    if (cursor) cursor.style.display = 'inline-block';
+    if (phonePill) phonePill.style.display = 'none';
 
-      let segIdx = 0;
-      let charIdx = 0;
-      let currentElem = null;
+    let segIdx = 0;
+    let charIdx = 0;
+    let currentElem = null;
 
-      function step() {
-        if (segIdx >= creatorSegments.length) {
-          if (cursor) {
-            cursor.style.animation = 'none';
-            cursor.style.opacity = '0';
-            setTimeout(() => { if (cursor) cursor.remove(); }, 300);
-          }
-          if (phonePill) {
-            phonePill.style.display = 'inline-flex';
-            phonePill.style.opacity = '1';
-          }
-          return;
+    function step() {
+      if (segIdx >= creatorSegments.length) {
+        if (cursor) {
+          cursor.style.animation = 'none';
+          cursor.style.opacity = '0';
+          setTimeout(() => { if (cursor) cursor.remove(); }, 300);
         }
-
-        const seg = creatorSegments[segIdx];
-        if (charIdx === 0) {
-          currentElem = document.createElement(seg.tag);
-          currentElem.className = seg.class;
-          container.appendChild(currentElem);
+        if (phonePill) {
+          phonePill.style.display = 'inline-flex';
+          phonePill.style.opacity = '1';
         }
-
-        currentElem.textContent += seg.text.charAt(charIdx);
-        charIdx++;
-
-        if (charIdx >= seg.text.length) {
-          segIdx++;
-          charIdx = 0;
-        }
-
-        setTimeout(step, 28);
-      }
-
-      step();
-    }
-
-    function initCreatorObserver() {
-      const cardElem = document.querySelector('.creator-card');
-      if (!cardElem) {
-        setTimeout(runCreatorTypewriter, 1000);
         return;
       }
 
-      if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              runCreatorTypewriter();
-              observer.disconnect();
-            }
-          });
-        }, { threshold: 0.1 });
-        observer.observe(cardElem);
-        setTimeout(runCreatorTypewriter, 7000);
-      } else {
-        setTimeout(runCreatorTypewriter, 1000);
+      const seg = creatorSegments[segIdx];
+      if (charIdx === 0) {
+        currentElem = document.createElement(seg.tag);
+        currentElem.className = seg.class;
+        container.appendChild(currentElem);
       }
+
+      currentElem.textContent += seg.text.charAt(charIdx);
+      charIdx++;
+
+      if (charIdx >= seg.text.length) {
+        segIdx++;
+        charIdx = 0;
+      }
+
+      setTimeout(step, 25);
     }
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initCreatorObserver);
+    step();
+  }
+
+  function initCreatorObserver() {
+    const cardElem = document.querySelector('.creator-card');
+    if (!cardElem) {
+      setTimeout(runCreatorTypewriter, 500);
+      return;
+    }
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            runCreatorTypewriter();
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.1 });
+      observer.observe(cardElem);
+      setTimeout(runCreatorTypewriter, 3000);
     } else {
-      initCreatorObserver();
+      setTimeout(runCreatorTypewriter, 500);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCreatorObserver);
+  } else {
+    initCreatorObserver();
+  }
+})();
+</script>
+
+<script>
+
+
+  // Floating Back to Top Button Controller
+  (function() {
+    function setupBackToTop() {
+      const btt = document.getElementById('floatingBackToTop');
+      if (!btt) return;
+      function checkScroll() {
+        const scrollPos = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if (scrollPos > 120) {
+          btt.classList.add('visible');
+        } else {
+          btt.classList.remove('visible');
+        }
+      }
+      window.addEventListener('scroll', checkScroll, { passive: true });
+      checkScroll();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupBackToTop);
+    } else {
+      setupBackToTop();
     }
   })();
-  
-// ========================================================
-// STUDENT DOUBTS & ENQUIRY FORM SUBMISSION (GOOGLE APPS SCRIPT)
-// ========================================================
-const APPS_SCRIPT_ENDPOINT = "https://script.google.com/macros/s/AKfycbw6JT5M-sr-6vz96-dKK00Xema0v3--HXkHJp0jX-Tvx_LeWvIuV6VPCOn-U76HjbAcxg/exec";
 
-async function handleEnquiryFormSubmit(e) {
-  if (e) e.preventDefault();
-  const form = document.getElementById('guidanceFeedbackForm');
-  if (!form) return;
-
-  const nameEl = document.getElementById('fb_name');
-  const placeEl = document.getElementById('fb_place');
-  const phoneEl = document.getElementById('fb_phone');
-  const emailEl = document.getElementById('fb_email');
-  const msgEl = document.getElementById('fb_message');
-  const linkEl = document.getElementById('fb_link');
-  const fileEl = document.getElementById('fb_file');
-  const submitBtn = document.getElementById('fb_submitBtn');
-  const statusDiv = document.getElementById('fb_status');
-  const pageInput = form.querySelector('input[name="page"]');
-
-  const name = nameEl ? nameEl.value.trim() : '';
-  const place = placeEl ? placeEl.value.trim() : '';
-  const phone = phoneEl ? phoneEl.value.trim() : '';
-  const email = emailEl ? emailEl.value.trim() : '';
-  const message = msgEl ? msgEl.value.trim() : '';
-  const link = linkEl ? linkEl.value.trim() : '';
-  const fileLinkEl = document.getElementById('fb_file_link');
-  const fileLink = fileLinkEl ? fileLinkEl.value.trim() : '';
-  const pageName = pageInput ? pageInput.value : window.location.pathname.split('/').pop() || 'career_guidance_portal';
-
-  if (!email || !email.includes('@') || !email.includes('.')) {
-    alert('தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும் (Please enter a valid email address).');
-    if (emailEl) emailEl.focus();
-    return;
-  }
-
-  if (phone && phone.replace(/\D/g, '').length < 10) {
-    alert('தயவுசெய்து சரியான 10 இலக்க கைபேசி எண்ணை உள்ளிடவும் (Please enter a valid 10-digit phone number).');
-    if (phoneEl) phoneEl.focus();
-    return;
-  }
-
-  const origBtnContent = submitBtn ? submitBtn.innerHTML : '';
-  if (submitBtn) {
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span>⏳ சமர்ப்பிக்கப்படுகிறது...</span>';
-  }
-
-  const ticketId = 'TN-CG-' + Math.floor(1000 + Math.random() * 9000);
-
-  // Read optional file as base64
-  let fileData = null;
-  let fileName = '';
-  let fileMime = '';
-
-  if (fileEl && fileEl.files && fileEl.files[0]) {
-    const file = fileEl.files[0];
-    fileName = file.name;
-    fileMime = file.type;
-    if (file.size <= 5 * 1024 * 1024) {
-      try {
-        fileData = await new Promise((resolve) => {
-          const reader = new FileReader();
-          reader.onload = () => resolve(reader.result.split(',')[1]);
-          reader.onerror = () => resolve(null);
-          reader.readAsDataURL(file);
-        });
-      } catch (err) {
-        console.warn('File read error:', err);
-      }
-    }
-  }
-
-  const payload = {
-    ticketId: ticketId,
-    name: name,
-    place: place,
-    phone: phone,
-    email: email,
-    query: message,
-    fileLink: fileLink || (fileName ? ('Uploaded File: ' + fileName) : '-'),
-    link: link || '-',
-    referenceWebLink: link || '-',
-    page: pageName,
-    fileName: fileName,
-    fileMime: fileMime,
-    fileData: fileData,
-    timestamp: new Date().toISOString(),
-    spreadsheetId: "1rfmwUpERPWk9lu4AK3OZf8fMqzx2ZSVpmVnkfITHito",
-    spreadsheetUrl: "https://docs.google.com/spreadsheets/d/1rfmwUpERPWk9lu4AK3OZf8fMqzx2ZSVpmVnkfITHito/edit",
-    sheetName: "மாணவர்_சந்தேகங்கள்"
-  };
-
-  try {
-    await fetch(APPS_SCRIPT_ENDPOINT, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: {
-        'Content-Type': 'text/plain;charset=utf-8'
-      },
-      body: JSON.stringify(payload)
-    });
-  } catch (err) {
-    console.warn('Apps Script submission notice:', err);
-  } finally {
-    if (typeof fireCelebrationCrackers === 'function') {
-      try { fireCelebrationCrackers(); } catch (e) {}
-    }
-
-    if (statusDiv) {
-      statusDiv.style.display = 'block';
-      statusDiv.innerHTML = `
-        <div style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border: 2px solid #86efac; color: #166534; padding: 16px 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 14px rgba(22, 101, 52, 0.12); margin-top: 14px;">
-          <div style="font-size: 1.25rem; font-weight: 800; color: #15803d; margin-bottom: 6px;">🎉 தங்களின் சந்தேகம் வெற்றிகரமாகப் பதிவு செய்யப்பட்டது!</div>
-          <div style="font-size: 0.92rem; color: #1e293b; margin-bottom: 4px;">பதிவு எண் (Ticket ID): <strong style="color: #0284c7; background: #e0f2fe; padding: 2px 8px; border-radius: 6px;">${ticketId}</strong></div>
-          <div style="font-size: 0.86rem; color: #475569;">மாவட்டக் கல்வி வழிகாட்டல் குழுவினர் தங்களின் மின்னஞ்சல் (<strong>${email}</strong>) மற்றும் கைபேசி எண்ணிற்கு விரைவில் பதிலளிப்பர்.</div>
-        </div>
-      `;
-    }
-
-    form.reset();
-    if (submitBtn) {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = origBtnContent;
-    }
-  }
-}
-
-// Auto bind submit listener
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', function() {
-    const fbForm = document.getElementById('guidanceFeedbackForm');
-    if (fbForm) {
-      fbForm.removeEventListener('submit', handleEnquiryFormSubmit);
-      fbForm.addEventListener('submit', handleEnquiryFormSubmit);
-    }
-  });
-} else {
-  const fbForm = document.getElementById('guidanceFeedbackForm');
-  if (fbForm) {
-    fbForm.removeEventListener('submit', handleEnquiryFormSubmit);
-    fbForm.addEventListener('submit', handleEnquiryFormSubmit);
-  }
-}
 </script>
+<button aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" id="floatingBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="மேலே செல்க">↑ மேலே செல்க</button>
 </body>
 </html>

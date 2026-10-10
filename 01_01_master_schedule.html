@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport"/>
-<title>பொறியியல் நேரடிச் சேர்க்கை (TNEA) &amp; கேம்பஸ் வேலைவாய்ப்புக் கல்லூரிகள் வழிகாட்டி | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
+<title>இந்தியாவின் அனைத்து நுழைவுத் தேர்வுகள் முழுமையான அட்டவணை &amp; காலண்டர் | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
 <!-- Google Fonts: Inter & Noto Sans Tamil -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -4271,10 +4271,14 @@
 
 .schedule-master-table {
   width: 100% !important;
+  min-width: 1280px !important;
+  table-layout: auto !important;
   border-collapse: collapse !important;
-  font-size: 0.88rem !important;
-  line-height: 1.5 !important;
+  font-size: 0.83rem !important;
+  line-height: 1.45 !important;
   text-align: left !important;
+  border: 1.5px solid #94a3b8 !important;
+  background: #ffffff !important;
 }
 
 .schedule-master-table th {
@@ -4310,7 +4314,11 @@
   font-size: 0.74rem !important;
   font-weight: 800 !important;
   letter-spacing: 0.3px !important;
-  white-space: nowrap !important;
+  white-space: normal !important;
+  max-width: 100% !important;
+  word-break: normal !important;
+  box-sizing: border-box !important;
+  margin-top: 4px !important;
 }
 
 .pill-med { background: #fee2e2 !important; color: #991b1b !important; border: 1px solid #fca5a5 !important; }
@@ -4332,7 +4340,12 @@
   border-radius: 999px !important;
   font-weight: 800 !important;
   font-size: 0.78rem !important;
-  white-space: nowrap !important;
+  white-space: normal !important;
+  max-width: 100% !important;
+  word-break: normal !important;
+  line-height: 1.35 !important;
+  box-sizing: border-box !important;
+  margin: 2px 0 !important;
 }
 
 .month-jan { background: #e0f2fe; color: #0369a1; border: 1px solid #38bdf8; }
@@ -5020,55 +5033,53 @@
 
 .schedule-master-table {
   width: 100% !important;
-  table-layout: fixed !important;
+  min-width: 1280px !important;
+  table-layout: auto !important;
   border-collapse: collapse !important;
-  font-size: 0.81rem !important;
-  line-height: 1.4 !important;
+  font-size: 0.83rem !important;
+  line-height: 1.45 !important;
   text-align: left !important;
-  word-wrap: break-word !important;
-  overflow-wrap: break-word !important;
+  border: 1.5px solid #94a3b8 !important;
+  background: #ffffff !important;
 }
 
 .schedule-master-table th {
   background: linear-gradient(135deg, #091a3e 0%, #1e3a8a 100%) !important;
   color: #ffffff !important;
-  padding: 9px 7px !important;
+  padding: 10px 10px !important;
   font-weight: 800 !important;
-  font-size: 0.80rem !important;
+  font-size: 0.82rem !important;
   letter-spacing: 0.2px !important;
-  border: 1px solid #1e40af !important;
-  white-space: normal !important;
-  word-wrap: break-word !important;
+  border: 1.2px solid #1e40af !important;
+  white-space: nowrap !important;
   vertical-align: middle !important;
   text-align: center !important;
 }
 
 .schedule-master-table td {
-  padding: 8px 7px !important;
-  border: 1px solid #e2e8f0 !important;
+  padding: 10px 10px !important;
+  border: 1.2px solid #cbd5e1 !important;
   vertical-align: middle !important;
-  font-size: 0.81rem !important;
+  font-size: 0.82rem !important;
+  line-height: 1.45 !important;
   word-wrap: break-word !important;
   overflow-wrap: break-word !important;
-  white-space: normal !important;
 }
 
-/* Explicit Width Distribution on Desktop (Sum = 100%) */
-@media (min-width: 992px) {
-  .col-sno { width: 38px !important; }
-  .col-name { width: 15% !important; }
-  .col-course { width: 20% !important; }
-  .col-body { width: 11% !important; }
-  .col-app { width: 11% !important; }
-  .col-month { width: 11% !important; }
-  .col-elig { width: 22% !important; }
-  .col-link { width: 10% !important; }
-}
+/* Explicit Column Width Distribution across all screens */
+.col-sno { width: 58px !important; min-width: 58px !important; text-align: center !important; white-space: nowrap !important; }
+.col-name { width: 16% !important; min-width: 190px !important; }
+.col-course { width: 22% !important; min-width: 220px !important; }
+.col-body { width: 12% !important; min-width: 140px !important; }
+.col-app { width: 11% !important; min-width: 130px !important; }
+.col-month { width: 15% !important; min-width: 185px !important; white-space: normal !important; }
+.col-elig { width: 24% !important; min-width: 260px !important; }
+.col-link { width: 10% !important; min-width: 130px !important; text-align: center !important; }
 
 @media (max-width: 991px) {
   .schedule-master-table {
     table-layout: auto !important;
-    min-width: 920px !important;
+    min-width: 1280px !important;
   }
 }
 
@@ -5467,7 +5478,7 @@
 <table class="schedule-master-table" id="masterExamTable">
 <thead>
 <tr>
-<th class="col-sno" style="text-align: center;">வ.எண்</th>
+<th class="col-sno" style="text-align: center; white-space: nowrap !important;">வ.எண்</th>
 <th class="col-name">நுழைவுத்தேர்வு &amp; குறியீடு</th>
 <th class="col-course">துறை &amp; பட்டப்படிப்புகள்</th>
 <th class="col-body">நடத்தும் அமைப்பு</th>
@@ -7144,7 +7155,7 @@ function resetTableZoom() {
 }
 
 function applyTableZoom() {
-  const tbl = document.getElementById('master-schedule-table');
+  const tbl = document.getElementById('masterExamTable') || document.getElementById('master-schedule-table');
   const badge = document.getElementById('current-zoom-level');
   if (badge) badge.innerText = currentTableZoom + '%';
   if (tbl) {
@@ -7158,7 +7169,7 @@ function applyTableZoom() {
 }
 
 function toggleFitScreen() {
-  const tbl = document.getElementById('master-schedule-table');
+  const tbl = document.getElementById('masterExamTable') || document.getElementById('master-schedule-table');
   const btn = document.getElementById('fit-screen-btn-text');
   if (!tbl) return;
   isFixedFit = !isFixedFit;
