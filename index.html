@@ -4208,6 +4208,10 @@
       display: inline-block !important;
     }
 
+
+
+    
+
 </style>
 <style id="robust-layout-override">
 /* ========================================================
@@ -4828,6 +4832,301 @@
   color: #cbd5e1 !important;
 }
 
+
+    /* ========================================================
+       FULL SCREEN WIDTH LAYOUT & 1x2 + 1x1 HORIZONTAL CARD GRID MODEL
+       ======================================================== */
+    html, body {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+      background-color: var(--bg-main, #f8fafc) !important;
+    }
+
+    .portal-layout-wrapper {
+      display: flex !important;
+      flex-direction: row !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-height: 100vh !important;
+      position: relative !important;
+      align-items: stretch !important;
+      box-sizing: border-box !important;
+    }
+
+    .desktop-left-sidebar {
+      width: 295px !important;
+      min-width: 295px !important;
+      max-width: 295px !important;
+      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+      border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      height: 100vh !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex-shrink: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .portal-main-content {
+      margin-left: 295px !important;
+      width: calc(100% - 295px) !important;
+      min-height: 100vh !important;
+      padding: 12px clamp(12px, 1.8vw, 36px) 40px !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+    }
+
+    .container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .control-panel,
+    .quick-nav-marquee-container,
+    .grid-container,
+    #cardsGrid,
+    .kural-box,
+    .creator-card,
+    .portal-footer {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    /* TOP BREADCRUMB BAR */
+    .breadcrumb-bar {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.4) !important;
+      border-radius: 12px !important;
+      padding: 8px 16px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
+      flex-wrap: wrap !important;
+    }
+
+    .nav-menu-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 0.84rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      color: #e2e8f0 !important;
+      padding: 4px 10px !important;
+      border-radius: 6px !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .nav-menu-btn:hover {
+      background: rgba(255, 255, 255, 0.12) !important;
+      color: #fef08a !important;
+    }
+
+    .nav-menu-btn.btn-current-page {
+      background: rgba(56, 189, 248, 0.2) !important;
+      border: 1px solid #38bdf8 !important;
+      color: #38bdf8 !important;
+    }
+
+    .nav-menu-separator {
+      color: #94a3b8 !important;
+      font-size: 0.75rem !important;
+    }
+
+    /* QUICK NAVIGATION MARQUEE BAR */
+    .quick-nav-marquee-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      background: linear-gradient(135deg, #060d1a 0%, #0d1e38 50%, #060d1a 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.35) !important;
+      border-radius: 12px !important;
+      padding: 8px 12px !important;
+      margin-bottom: 18px !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+      position: relative !important;
+    }
+
+    .marquee-static-label {
+      flex-shrink: 0 !important;
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
+      color: #ffffff !important;
+      font-size: 1.15rem !important;
+      padding: 6px 12px !important;
+      border-radius: 8px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-shadow: 0 2px 6px rgba(217, 119, 6, 0.4) !important;
+      z-index: 2 !important;
+    }
+
+    .marquee-scroll-track {
+      flex-grow: 1 !important;
+      overflow: hidden !important;
+      display: flex !important;
+      position: relative !important;
+      mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+    }
+
+    .marquee-content-loop {
+      display: flex !important;
+      gap: 10px !important;
+      align-items: center !important;
+      white-space: nowrap !important;
+      animation: marqueeScroll 28s linear infinite !important;
+      padding-right: 10px !important;
+    }
+
+    .quick-nav-marquee-container:hover .marquee-content-loop {
+      animation-play-state: paused !important;
+    }
+
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .marquee-pill-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: rgba(30, 41, 59, 0.85) !important;
+      color: #e2e8f0 !important;
+      border: 1px solid rgba(148, 163, 184, 0.25) !important;
+      padding: 5px 12px !important;
+      border-radius: 999px !important;
+      font-size: 0.80rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .marquee-pill-btn:hover {
+      background: rgba(251, 191, 36, 0.25) !important;
+      color: #fde047 !important;
+      border-color: #fbbf24 !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* 1x2 GRID WITH 1x1 HORIZONTAL LAST CARD (NO MONITOR WHITESPACE) */
+    .grid-container,
+    #cardsGrid {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 18px !important;
+      width: 100% !important;
+      margin-bottom: 24px !important;
+      box-sizing: border-box !important;
+    }
+
+    #cardsGrid > .card:last-child {
+      grid-column: 1 / -1 !important;
+      width: 100% !important;
+      background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%) !important;
+      border: 2px solid #38bdf8 !important;
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.12) !important;
+    }
+
+    #cardsGrid > .card:last-child .card-header {
+      margin-bottom: 8px !important;
+    }
+
+    /* FLOATING BACK TO TOP BUTTON (STANDARDIZED) */
+    .floating-back-to-top {
+      position: fixed !important;
+      bottom: 24px !important;
+      right: 24px !important;
+      z-index: 9999 !important;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+      color: #ffffff !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+      border-radius: 999px !important;
+      padding: 10px 18px !important;
+      font-size: 0.85rem !important;
+      font-weight: 800 !important;
+      font-family: inherit !important;
+      cursor: pointer !important;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35) !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: translateY(16px) !important;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .floating-back-to-top.visible {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: translateY(0) !important;
+    }
+
+    .floating-back-to-top:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+      border-color: #fde047 !important;
+      color: #fde047 !important;
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.5) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    @media (max-width: 1024px) {
+      .desktop-left-sidebar {
+        position: fixed !important;
+        left: -320px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 295px !important;
+        height: 100vh !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 9999 !important;
+        box-shadow: 6px 0 35px rgba(0, 0, 0, 0.85);
+      }
+      .desktop-left-sidebar.sidebar-open {
+        left: 0 !important;
+      }
+      .portal-main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 8px 12px 30px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .grid-container,
+      #cardsGrid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+      }
+      #cardsGrid > .card:last-child {
+        grid-column: 1 !important;
+      }
+    }
+
 </style>
 </head>
 <body>
@@ -4933,7 +5232,10 @@
 </div>
 </div>
 </header>
-<!-- Control Panel -->
+
+
+
+  <!-- Control Panel -->
 <div class="control-panel">
 <div class="lead-text-wrap">
 <div class="typing-container">
@@ -4957,6 +5259,35 @@
 </div>
 </div>
 <!-- 6 Macro Portal Cards -->
+
+<!-- Quick Navigation Marquee Bar (ஓடும் விரைவு வழிசெலுத்தல் பட்டை) -->
+<div class="quick-nav-marquee-container" aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை">
+  <div class="marquee-static-label" title="விரைவு வழிகாட்டல்">
+    <span class="pulse-icon">⚡</span>
+  </div>
+  <div class="marquee-scroll-track">
+    <div class="marquee-content-loop">
+      <a href="#gateway-entrance" class="marquee-pill-btn">🎯 01 / தேசிய நுழைவுத்தேர்வுகள்</a>
+      <a href="#gateway-merit" class="marquee-pill-btn">📈 02 / நேரடிச் சேர்க்கைப் படிப்புகள்</a>
+      <a href="#gateway-colleges" class="marquee-pill-btn">🏛️ 03 / கல்லூரிகள் விவர அடைவு</a>
+      <a href="#gateway-competitive" class="marquee-pill-btn">🏆 04 / அரசுப் பணி &amp; போட்டித் தேர்வுகள்</a>
+      <a href="#gateway-skills" class="marquee-pill-btn">💼 05 / தனியார் வேலை &amp; திறன் பயிற்சிகள்</a>
+      <a href="#gateway-support" class="marquee-pill-btn">🤝 06 / மாணவர் நலத்திட்டங்கள் &amp; உதவி மையம்</a>
+      <a href="#gateway-resources" class="marquee-pill-btn">📚 07 / கல்வி வளங்கள் &amp; மாதிரித் தேர்வுகள்</a>
+    </div>
+    <!-- Duplicate for infinite seamless scroll -->
+    <div class="marquee-content-loop" aria-hidden="true">
+      <a href="#gateway-entrance" class="marquee-pill-btn">🎯 01 / தேசிய நுழைவுத்தேர்வுகள்</a>
+      <a href="#gateway-merit" class="marquee-pill-btn">📈 02 / நேரடிச் சேர்க்கைப் படிப்புகள்</a>
+      <a href="#gateway-colleges" class="marquee-pill-btn">🏛️ 03 / கல்லூரிகள் விவர அடைவு</a>
+      <a href="#gateway-competitive" class="marquee-pill-btn">🏆 04 / அரசுப் பணி &amp; போட்டித் தேர்வுகள்</a>
+      <a href="#gateway-skills" class="marquee-pill-btn">💼 05 / தனியார் வேலை &amp; திறன் பயிற்சிகள்</a>
+      <a href="#gateway-support" class="marquee-pill-btn">🤝 06 / மாணவர் நலத்திட்டங்கள் &amp; உதவி மையம்</a>
+      <a href="#gateway-resources" class="marquee-pill-btn">📚 07 / கல்வி வளங்கள் &amp; மாதிரித் தேர்வுகள்</a>
+    </div>
+  </div>
+</div>
+
 <div class="grid-container" id="cardsGrid">
 <!-- 1. நுழைவுத் தேர்வுகள் வாயிலாக உயர்கல்வி (01_00_entrance_main.html மற்றும் அனைத்து துணைப் பக்க இணைப்புகளுடன்) -->
 <div class="card cat-entrance" id="gateway-entrance" onclick="window.location.href='01_00_entrance_main.html';" style="cursor: pointer;">
@@ -5147,7 +5478,7 @@
 </a>
 </div>
 <!-- CARD 7: RESOURCES & EXTERNAL PORTALS -->
-<div class="card" style="border-top: 5px solid #0284c7;">
+<div class="card" id="gateway-resources" style="border-top: 5px solid #0284c7;">
 <div>
 <div class="card-top-row">
 <span class="badge" style="background:#e0f2fe; color:#0369a1; border: 1px solid #bae6fd;">07 / கல்வி வளங்கள் &amp; போர்ட்டல்</span>
@@ -5178,18 +5509,19 @@
 </div>
 </div>
 <!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
+<!-- திருக்குறள் பகுதி — அறிவுடைமை & எதிர்காலப் பாதுகாப்பு (அதிகாரம்: அறிவுடைமை) -->
 <div class="kural-box">
-<div class="kural-header">
-<span class="kural-icon">📜</span>
-<span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-<span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
-</div>
-<div class="kural-verse-text">
-    “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
-    திண்ணியர் ஆகப் பெறின்.”
+  <div class="kural-header">
+    <span class="kural-icon">📜</span>
+    <span class="kural-title">திருக்குறள் — அதிகாரம்: அறிவுடைமை (குறள்: 421)</span>
+    <span class="kural-sparkle">🛡️ வாழ்வின் பாதுகாப்பு அரண் &amp; உயர்கல்வி அறிவு</span>
   </div>
-<div class="kural-meaning">
-<strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
+  <div class="kural-verse-text">
+    “அறிவற்றங் காக்கும் கருவி செறுவார்க்கும்<br/>
+    உள்ளழிக்க லாகா அரண்.”
+  </div>
+  <div class="kural-meaning">
+    <strong>விளக்கவுரை:</strong> அறிவு என்பது அழிவு வராமல் முன்கூட்டியே காக்கும் சிறந்த கருவியாகும்; பகைவராலும் அழிக்க முடியாத உள்ளரண் ஆகும்; மாணவச் செல்வங்கள் எதிர்கால வாழ்வின் சவால்களை வென்று உயர்ந்த நிலையை அடைய வழிகாட்டும் இந்த உயர்கல்வி வழிகாட்டி போர்ட்டலுக்கு (Career Guidance Portal) இவ்வறிவே அழியாத பாதுகாப்பு அரணாகும்.
   </div>
 </div>
 <!-- ஆலோசனை மற்றும் கருத்துப் பதிவுப் பகுதி -->
@@ -5204,13 +5536,17 @@
 </a>
 </div>
 <!-- Footer -->
-<footer class="portal-footer">
-<p style="margin-bottom: 6px; font-weight: 600; color: #334155;">
-          தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a href="tel:04575240408" style="color: #0284c7; text-decoration: none; font-weight: 700;">☎️ 04575240408</a>
-</p>
-<p style="font-size: 0.85rem; color: #64748b;">
-          © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
-        </p>
+<footer class="portal-footer" style="text-align: center !important; padding: 22px 18px 20px !important; margin: 28px 0 16px 0 !important; background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important; border: 1.5px solid rgba(212, 175, 55, 0.45) !important; border-radius: 14px !important; box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35) !important; width: 100% !important; box-sizing: border-box !important;">
+  <p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #ffffff !important; font-size: 0.96rem !important; line-height: 1.6 !important; text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;">
+    தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, 
+    <a class="footer-phone-link" href="tel:04575240408" style="color: #fde047 !important; text-decoration: none !important; font-weight: 800 !important; background: rgba(0, 0, 0, 0.45) !important; padding: 3px 12px !important; border-radius: 6px !important; border: 1.2px solid rgba(253, 224, 71, 0.6) !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; margin-left: 6px !important; vertical-align: middle !important; transition: all 0.2s ease !important;">
+      <span>☎️</span>
+      <span>04575240408</span>
+    </a>
+  </p>
+  <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;">
+    © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+  </p>
 </footer>
 </div> <!-- /.container -->
 </main> <!-- /.portal-main-content -->
@@ -5942,6 +6278,32 @@ if (document.readyState === 'loading') {
     fbForm.addEventListener('submit', handleEnquiryFormSubmit);
   }
 }
+
+
+  // Floating Back to Top Button Controller
+  (function() {
+    function setupBackToTop() {
+      const btt = document.getElementById('floatingBackToTop');
+      if (!btt) return;
+      function checkScroll() {
+        const scrollPos = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if (scrollPos > 120) {
+          btt.classList.add('visible');
+        } else {
+          btt.classList.remove('visible');
+        }
+      }
+      window.addEventListener('scroll', checkScroll, { passive: true });
+      checkScroll();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupBackToTop);
+    } else {
+      setupBackToTop();
+    }
+  })();
+
 </script>
+<button aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" id="floatingBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="மேலே செல்க">↑ மேலே செல்க</button>
 </body>
 </html>
