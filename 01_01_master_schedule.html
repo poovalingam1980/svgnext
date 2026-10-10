@@ -5582,8 +5582,8 @@
 </style>
 <style>
 /* ========================================================
-   RESPONSIVE FIT-TO-SCREEN & COMPACT COLUMN STYLING
-   அட்டவணை திரைக்குள் அடங்கும் வகையில் நெடுவரிசைச் சுருக்கம்
+   OPTIMIZED RESPONSIVE FIT-TO-SCREEN & COMPACT TABLE STYLES
+   அனைத்து திரைகளிலும் 100% தெளிவாகத் தெரியும் நெடுவரிசைச் சீரமைப்பு
    ======================================================== */
 .schedule-table-wrap {
   width: 100% !important;
@@ -5595,15 +5595,34 @@
   box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
   background: #ffffff !important;
   margin: 14px 0 28px 0 !important;
-  transition: all 0.2s ease !important;
+  box-sizing: border-box !important;
+}
+
+/* Styled visible horizontal scrollbar */
+.schedule-table-wrap::-webkit-scrollbar {
+  height: 10px !important;
+}
+
+.schedule-table-wrap::-webkit-scrollbar-track {
+  background: #f1f5f9 !important;
+  border-radius: 8px !important;
+}
+
+.schedule-table-wrap::-webkit-scrollbar-thumb {
+  background: #0284c7 !important;
+  border-radius: 8px !important;
+}
+
+.schedule-table-wrap::-webkit-scrollbar-thumb:hover {
+  background: #0369a1 !important;
 }
 
 .schedule-master-table {
   width: 100% !important;
-  min-width: 1280px !important;
+  min-width: 950px !important;
   table-layout: auto !important;
   border-collapse: collapse !important;
-  font-size: 0.83rem !important;
+  font-size: 0.82rem !important;
   line-height: 1.45 !important;
   text-align: left !important;
   border: 1.5px solid #94a3b8 !important;
@@ -5613,18 +5632,19 @@
 .schedule-master-table th {
   background: linear-gradient(135deg, #091a3e 0%, #1e3a8a 100%) !important;
   color: #ffffff !important;
-  padding: 10px 10px !important;
+  padding: 10px 8px !important;
   font-weight: 800 !important;
   font-size: 0.82rem !important;
   letter-spacing: 0.2px !important;
-  border: 1.2px solid #1e40af !important;
-  white-space: nowrap !important;
+  border: 1.2px solid #334155 !important;
+  white-space: normal !important;
   vertical-align: middle !important;
   text-align: center !important;
+  line-height: 1.35 !important;
 }
 
 .schedule-master-table td {
-  padding: 10px 10px !important;
+  padding: 9px 8px !important;
   border: 1.2px solid #cbd5e1 !important;
   vertical-align: middle !important;
   font-size: 0.82rem !important;
@@ -5633,21 +5653,70 @@
   overflow-wrap: break-word !important;
 }
 
-/* Explicit Column Width Distribution across all screens */
-.col-sno { width: 58px !important; min-width: 58px !important; text-align: center !important; white-space: nowrap !important; }
-.col-name { width: 16% !important; min-width: 190px !important; }
-.col-course { width: 22% !important; min-width: 220px !important; }
-.col-body { width: 12% !important; min-width: 140px !important; }
-.col-app { width: 11% !important; min-width: 130px !important; }
-.col-month { width: 15% !important; min-width: 185px !important; white-space: normal !important; }
-.col-elig { width: 24% !important; min-width: 260px !important; }
-.col-link { width: 10% !important; min-width: 130px !important; text-align: center !important; }
+.schedule-master-table tbody tr:nth-child(even) {
+  background-color: #f8fafc !important;
+}
+
+.schedule-master-table tbody tr:hover {
+  background-color: #f0f9ff !important;
+  transition: background-color 0.15s ease !important;
+}
+
+/* Proportional Column Width Distribution for Zero Cut-Off */
+.col-sno {
+  width: 42px !important;
+  min-width: 42px !important;
+  max-width: 46px !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  padding: 8px 4px !important;
+}
+
+.col-name {
+  width: 15% !important;
+  min-width: 140px !important;
+}
+
+.col-course {
+  width: 18% !important;
+  min-width: 160px !important;
+}
+
+.col-body {
+  width: 11% !important;
+  min-width: 110px !important;
+}
+
+.col-app {
+  width: 10% !important;
+  min-width: 95px !important;
+}
+
+.col-month {
+  width: 13% !important;
+  min-width: 115px !important;
+  white-space: normal !important;
+}
+
+.col-elig {
+  width: 22% !important;
+  min-width: 175px !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+.col-link {
+  width: 11% !important;
+  min-width: 95px !important;
+  text-align: center !important;
+}
 
 @media (max-width: 991px) {
   .schedule-master-table {
     table-layout: auto !important;
-    min-width: 1280px !important;
+    min-width: 950px !important;
   }
+}
 }
 
 /* Mobile Zoom & View Toolbar */
@@ -5784,6 +5853,34 @@
       justify-content: center !important;
       margin: 0 !important;
     }
+
+
+
+/* STANDARDIZED DARK ROYAL PORTAL FOOTER (FIX FOR WASHED-OUT WHITE TEXT) */
+.portal-footer {
+  background: linear-gradient(135deg, #090e1a 0%, #0e172a 50%, #090e1a 100%) !important;
+  color: #cbd5e1 !important;
+  border: 1.5px solid rgba(245, 158, 11, 0.35) !important;
+  border-radius: 16px !important;
+  padding: 24px 20px !important;
+  margin: 28px 0 20px 0 !important;
+  text-align: center !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.portal-footer p {
+  color: #ffffff !important;
+}
+
+.portal-footer a.footer-phone-link {
+  color: #fde047 !important;
+}
+
+.portal-footer p.footer-copyright {
+  color: #cbd5e1 !important;
+}
 
 </style>
 </head>
@@ -7749,12 +7846,12 @@ function toggleFitScreen() {
   if (!tbl) return;
   isFixedFit = !isFixedFit;
   if (isFixedFit) {
-    tbl.style.tableLayout = 'fixed';
-    tbl.style.minWidth = '100%';
+    tbl.style.setProperty('table-layout', 'fixed', 'important');
+    tbl.style.setProperty('min-width', '100%', 'important');
     if (btn) btn.innerText = '↔️ திரைக்குள் அடக்கு (Fit)';
   } else {
-    tbl.style.tableLayout = 'auto';
-    tbl.style.minWidth = '1100px';
+    tbl.style.setProperty('table-layout', 'auto', 'important');
+    tbl.style.setProperty('min-width', '950px', 'important');
     if (btn) btn.innerText = '📜 முழு அகலம் (Scroll)';
   }
 }
