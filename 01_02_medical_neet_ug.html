@@ -5225,45 +5225,7 @@ body {
       box-sizing: border-box !important;
     }
 
-    @media print {
-      body * {
-        visibility: hidden !important;
-      }
-      #choice-planner, #choice-planner * {
-        visibility: visible !important;
-      }
-      #choice-planner {
-        position: absolute !important;
-        left: 0 !important;
-        top: 0 !important;
-        width: 100% !important;
-        background: #ffffff !important;
-        color: #000000 !important;
-        border: none !important;
-        box-shadow: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
-      }
-      .no-print-btn,
-      .quick-nav-marquee-container,
-      .desktop-left-sidebar,
-      .floating-back-to-top {
-        display: none !important;
-      }
-      #choiceFillingTable {
-        border: 1.5px solid #000000 !important;
-      }
-      #choiceFillingTable th {
-        background: #1e293b !important;
-        color: #ffffff !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-      }
-      #choiceFillingTable td {
-        color: #000000 !important;
-        border: 1px solid #94a3b8 !important;
-      }
-    }
+    
 
     @media (max-width: 1024px) {
       .cf-inputs-grid {
@@ -6320,16 +6282,16 @@ body {
     <span class="nav-menu-separator">▶</span>
     <a class="nav-menu-btn btn-direct-home" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முகப்பு">
       <span class="btn-icon">🎯</span>
-      <span class="btn-text">01 / நுழைவுத்தேர்வுகள்</span>
+      <span class="btn-text">நுழைவுத்தேர்வுகள்</span>
     </a>
     <span class="nav-menu-separator">▶</span>
     <span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
       <span class="btn-icon">🩺</span>
-      <span class="btn-text">02 / மருத்துவம் (NEET UG)</span>
+      <span class="btn-text">மருத்துவம் (NEET UG)</span>
     </span>
   </div>
   <div class="breadcrumb-right-stack">
-    <a class="compact-dir-btn" href="01_03_C_Choice_Filling_App.html" style="background: linear-gradient(135deg, #9333ea 0%, #7c3aed 100%) !important; color: #ffffff !important; border: 1.2px solid #c084fc !important; padding: 4px 12px !important; border-radius: 8px !important; font-weight: 800 !important; font-size: 0.78rem !important; text-decoration: none !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; box-shadow: 0 2px 6px rgba(124, 58, 237, 0.4) !important;" title="01_03_C நீட் சாய்ஸ் ஃபில்லிங் செயலி"><span>🎯</span><span>01_03_C சாய்ஸ் ஃபில்லிங் செயலி ↗</span></a>
+    <a class="compact-dir-btn" href="01_03_C_Choice_Filling_App.html" style="background: linear-gradient(135deg, #9333ea 0%, #7c3aed 100%) !important; color: #ffffff !important; border: 1.2px solid #c084fc !important; padding: 4px 12px !important; border-radius: 8px !important; font-weight: 800 !important; font-size: 0.78rem !important; text-decoration: none !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; box-shadow: 0 2px 6px rgba(124, 58, 237, 0.4) !important;" title="CHOICE FILLING PLAN"><span>🎯</span><span>CHOICE FILLING PLAN ↗</span></a>
     <a class="compact-dir-btn btn-tn-med" href="01_02_A_tn_med_colleges.html" title="தமிழக மருத்துவக் கல்லூரிகள் அடைவு">
       <span>🏥</span>
       <span>தமிழகக் கல்லூரிகள் ↗</span>
@@ -6360,13 +6322,7 @@ body {
 </header>
 
 
-<!-- துடிப்பான தட்டச்சு வழிகாட்டல் வாசகம் (Dynamic Typing Effect - Animated Flash Bar) -->
-<div class="typing-banner-wrap" style="text-align: center; margin: 14px auto 16px auto;">
-  <div class="typing-container">
-    <span class="typing-badge" aria-label="தகவல்கள்"><span class="sparkle-icon">✨</span></span>
-    <span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
-  </div>
-</div>
+
 
 
 
@@ -6380,7 +6336,6 @@ body {
       <a href="#intro" class="marquee-pill-btn">📖 1. முன்னுரை &amp; நோக்கம்</a>
       <a href="#section1" class="marquee-pill-btn">📌 2. நீட் அடிப்படை &amp; NMC</a>
       <a href="#section2" class="marquee-pill-btn">📊 3. தேர்வு முறை &amp; மதிப்பெண்</a>
-      <a href="#choice-planner" class="marquee-pill-btn" style="background: rgba(124, 58, 237, 0.4) !important; color: #f3e8ff !important; border: 1.2px solid #c084fc !important; font-weight: 800 !important;">🎯 3(A). AI சாய்ஸ் ஃபில்லிங் செயலி</a>
       <a href="#section3" class="marquee-pill-btn">🎓 4. மருத்துவப் படிப்புகள்</a>
       <a href="#section-vci" class="marquee-pill-btn">🐾 5. கால்நடை மருத்துவம் (VCI)</a>
       <a href="#section4" class="marquee-pill-btn">🏛️ 6. 7.5% அரசுப்பள்ளி ஒதுக்கீடு</a>
@@ -6397,7 +6352,6 @@ body {
       <a href="#intro" class="marquee-pill-btn">📖 1. முன்னுரை &amp; நோக்கம்</a>
       <a href="#section1" class="marquee-pill-btn">📌 2. நீட் அடிப்படை &amp; NMC</a>
       <a href="#section2" class="marquee-pill-btn">📊 3. தேர்வு முறை &amp; மதிப்பெண்</a>
-      <a href="#choice-planner" class="marquee-pill-btn" style="background: rgba(124, 58, 237, 0.4) !important; color: #f3e8ff !important; border: 1.2px solid #c084fc !important; font-weight: 800 !important;">🎯 3(A). AI சாய்ஸ் ஃபில்லிங் செயலி</a>
       <a href="#section3" class="marquee-pill-btn">🎓 4. மருத்துவப் படிப்புகள்</a>
       <a href="#section-vci" class="marquee-pill-btn">🐾 5. கால்நடை மருத்துவம் (VCI)</a>
       <a href="#section4" class="marquee-pill-btn">🏛️ 6. 7.5% அரசுப்பள்ளி ஒதுக்கீடு</a>
@@ -6411,6 +6365,16 @@ body {
     </div>
   </div>
 </div>
+
+<!-- துடிப்பான தட்டச்சு வழிகாட்டல் வாசகம் (Dynamic Typing Effect - Animated Flash Bar) -->
+<div class="typing-banner-wrap" style="text-align: center; margin: 14px auto 16px auto;">
+  <div class="typing-container">
+    <span class="typing-badge" aria-label="தகவல்கள்"><span class="sparkle-icon">✨</span></span>
+    <span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
+  </div>
+</div>
+
+
 
 
 
@@ -6566,67 +6530,7 @@ body {
 <!-- ========================================================
      SECTION: NEET SCORE & ADMISSION ELIGIBILITY CALCULATOR
      ======================================================== -->
-<!-- ========================================================
-     SECTION: NEET COUNSELING CHOICE FILLING PLANNER & EXCEL/PDF EXPORTER
-     ======================================================== -->
-<!-- SECTION 3(A): DEDICATED CHOICE FILLING APP LAUNCH BANNER -->
-<section class="info-card choice-planner-section" id="choice-planner" style="background: linear-gradient(135deg, #0a1128 0%, #1e1b4b 50%, #0f172a 100%) !important; border: 2px solid #a855f7 !important; border-radius: 16px !important; padding: 22px 24px !important; box-shadow: 0 8px 28px rgba(15, 23, 42, 0.45) !important; color: #ffffff !important; margin: 24px 0 !important;">
-  <div style="display: flex !important; align-items: center !important; justify-content: space-between !important; flex-wrap: wrap !important; gap: 10px !important; margin-bottom: 12px !important; border-bottom: 1.5px solid rgba(255,255,255,0.18) !important; padding-bottom: 10px !important;">
-    <div style="display: flex !important; align-items: center !important; gap: 10px !important;">
-      <span style="font-size: 1.6rem !important;">🎯</span>
-      <div>
-        <h3 style="color: #c084fc !important; font-size: 1.22rem !important; font-weight: 800 !important; margin: 0 !important; line-height: 1.3 !important;">
-          3(A). நீட் கவுன்சிலிங் சாய்ஸ் ஃபில்லிங் திட்டமிடல் &amp; முன்னுரிமை செயலி (NEET UG Choice-Filling App)
-        </h3>
-        <span style="font-size: 0.82rem !important; color: #e9d5ff !important; font-weight: 600 !important;">
-          Interactive Choice-Filling Order Optimizer &amp; Multi-Page PDF Engine 2026
-        </span>
-      </div>
-    </div>
-    <div style="display: flex !important; gap: 6px !important; flex-wrap: wrap !important;">
-      <span style="font-size: 0.76rem !important; font-weight: 800 !important; color: #86efac !important; background: rgba(16,185,129,0.18) !important; border: 1.2px solid #34d399 !important; padding: 3px 10px !important; border-radius: 999px !important;">
-        ⚡ 01_03_C தனி இணையச் செயலி
-      </span>
-      <span style="font-size: 0.76rem !important; font-weight: 800 !important; color: #fde047 !important; background: rgba(234,179,8,0.18) !important; border: 1.2px solid #eab308 !important; padding: 3px 10px !important; border-radius: 999px !important;">
-        7.5% அரசுப்பள்ளி &amp; AIQ
-      </span>
-    </div>
-  </div>
 
-  <p style="font-size: 0.94rem !important; color: #f1f5f9 !important; line-height: 1.7 !important; margin-bottom: 16px !important;">
-    மாணவர்கள் தங்களின் நீட் மதிப்பெண், சமூகப் பிரிவு (OC, BC, BCM, MBC, SC, SCA, ST), விரும்பும் படிப்பு (MBBS / BDS) மற்றும் ஒதுக்கீட்டு வகையைத் (7.5% அரசுப்பள்ளி உள்ஒதுக்கீடு / 92.5% பொது அரசு ஒதுக்கீடு / AIQ 15%) தேர்வு செய்து, மருத்துவக் கலந்தாய்வில் பதிவிட வேண்டிய <b>முன்னுரிமை விருப்பப்பட்டியலை (Choice Filling Priority Order)</b> உடனுக்குடன் உருவாக்கவும், அதனை <b>எக்செல் (Excel)</b> அல்லது <b>A4 Landscape PDF</b> வடிவில் இலவசமாகப் பதிவிறக்கவும் தனிச் செயலியாகத் தொடங்கப்பட்டுள்ளது.
-  </p>
-
-  <!-- Feature Highlights Grid -->
-  <div style="display: grid !important; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important; gap: 12px !important; margin-bottom: 20px !important;">
-    <div style="background: rgba(255,255,255,0.06) !important; border: 1px solid rgba(255,255,255,0.15) !important; border-radius: 10px !important; padding: 12px !important;">
-      <div style="font-weight: 800 !important; color: #38bdf8 !important; font-size: 0.90rem !important; margin-bottom: 4px !important;">🏥 38 அரசு &amp; 20+ சுயநிதி கல்லூரிகள்</div>
-      <div style="font-size: 0.82rem !important; color: #cbd5e1 !important; line-height: 1.5 !important;">தமிழகத்தின் அனைத்து அரசு, சுயநிதி &amp; நிகர்நிலைப் பல்கலையின் நேரடி இடங்கள் மற்றும் மண்டல வரிசை.</div>
-    </div>
-    <div style="background: rgba(255,255,255,0.06) !important; border: 1px solid rgba(255,255,255,0.15) !important; border-radius: 10px !important; padding: 12px !important;">
-      <div style="font-weight: 800 !important; color: #4ade80 !important; font-size: 0.90rem !important; margin-bottom: 4px !important;">🎯 7.5% கட்டணச் சலுகை விவரங்கள்</div>
-      <div style="font-size: 0.82rem !important; color: #cbd5e1 !important; line-height: 1.5 !important;">அரசுப்பள்ளி மாணவர்களுக்கு 100% இலவசக் கல்வி மற்றும் சுயநிதிக் கல்லூரிகளின் அரசு ஒதுக்கீட்டு கட்டண வழிகாட்டி.</div>
-    </div>
-    <div style="background: rgba(255,255,255,0.06) !important; border: 1px solid rgba(255,255,255,0.15) !important; border-radius: 10px !important; padding: 12px !important;">
-      <div style="font-weight: 800 !important; color: #fde047 !important; font-size: 0.90rem !important; margin-bottom: 4px !important;">📄 நேரடி Excel &amp; Landscape PDF</div>
-      <div style="font-size: 0.82rem !important; color: #cbd5e1 !important; line-height: 1.5 !important;">கலந்தாய்வில் எளிதாகப் பார்த்துப் பதிவு செய்யும் வகையில் A4 கிடைமட்ட PDF வடிவில் கணினித் தாள் அச்சு.</div>
-    </div>
-    <div style="background: rgba(255,255,255,0.06) !important; border: 1px solid rgba(255,255,255,0.15) !important; border-radius: 10px !important; padding: 12px !important;">
-      <div style="font-weight: 800 !important; color: #c084fc !important; font-size: 0.90rem !important; margin-bottom: 4px !important;">🤖 AI Smart Counseling Analysis</div>
-      <div style="font-size: 0.82rem !important; color: #cbd5e1 !important; line-height: 1.5 !important;">Dream, Realistic, Safe கல்லூரிகளை 3 அடுக்குகளாகப் பிரித்து வழங்கும் அதிநவீன உத்திகள்.</div>
-    </div>
-  </div>
-
-  <!-- Launch Action Buttons -->
-  <div style="display: flex !important; align-items: center !important; justify-content: center !important; flex-wrap: wrap !important; gap: 14px !important; background: rgba(0,0,0,0.25) !important; padding: 14px !important; border-radius: 12px !important; border: 1px dashed rgba(168,85,247,0.4) !important;">
-    <a href="01_03_C_Choice_Filling_App.html" style="background: linear-gradient(135deg, #9333ea 0%, #7c3aed 100%) !important; color: #ffffff !important; padding: 12px 26px !important; border-radius: 10px !important; font-weight: 900 !important; font-size: 0.96rem !important; text-decoration: none !important; display: inline-flex !important; align-items: center !important; gap: 10px !important; box-shadow: 0 4px 18px rgba(147, 51, 234, 0.45) !important; border: 1.5px solid #d8b4fe !important; transition: all 0.25s ease !important;">
-      <span>🚀 தனிப் பக்கத்தில் சாய்ஸ் ஃபில்லிங் செயலியைத் திறக்க (Open Full Choice-Filling App)</span> ➔
-    </a>
-    <a href="#section-gmc" style="background: rgba(255,255,255,0.1) !important; color: #e2e8f0 !important; padding: 12px 20px !important; border-radius: 10px !important; font-weight: 800 !important; font-size: 0.90rem !important; text-decoration: none !important; display: inline-flex !important; align-items: center !important; gap: 8px !important; border: 1px solid rgba(255,255,255,0.25) !important;">
-      <span>🏥 மருத்துவக் கல்லூரிகள் அடைவு காண்க</span> ⬇
-    </a>
-  </div>
-</section>
 
 
 <!-- 4. Section 3: Higher Education Opportunities (NEET Core) -->
@@ -6887,12 +6791,12 @@ body {
     </a>
   </div>
 
-  <!-- Card 3: சாய்ஸ் ஃபில்லிங் திட்டமிடல் செயலி (Choice Filling App) -->
+  <!-- Card 3: CHOICE FILLING PLAN (Choice Filling Planning & Preference) -->
   <div class="dir-banner-card cf-card" style="background:linear-gradient(135deg, #1e1035 0%, #4c1d95 50%, #0f172a 100%); border-radius:16px; padding:22px; color:#ffffff; border:1.5px solid #a855f7; box-shadow:0 4px 18px rgba(168,85,247,0.3); display:flex; flex-direction:column; justify-content:space-between;">
     <div>
       <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
-        <span style="background:#4ade80; color:#052e16; font-weight:800; font-size:0.78rem; padding:4px 12px; border-radius:999px; text-transform:uppercase;">சாய்ஸ் ஃபில்லிங் செயலி</span>
-        <span style="background:rgba(255,255,255,0.15); color:#f3e8ff; font-weight:700; font-size:0.78rem; padding:3px 10px; border-radius:6px;">01_03_C APP</span>
+        <span style="background:#4ade80; color:#052e16; font-weight:800; font-size:0.78rem; padding:4px 12px; border-radius:999px; text-transform:uppercase;">CHOICE FILLING PLAN</span>
+        <span style="background:rgba(255,255,255,0.15); color:#f3e8ff; font-weight:700; font-size:0.78rem; padding:3px 10px; border-radius:6px;">ONLINE PLAN</span>
       </div>
       <div class="dir-header-title" style="font-size:1.15rem; font-weight:800; color:#fde047; margin-bottom:10px;">
         🎯 நீட் கவுன்சிலிங் சாய்ஸ் ஃபில்லிங் திட்டமிடல் &amp; முன்னுரிமை செயலி
@@ -6902,7 +6806,7 @@ body {
       </p>
     </div>
     <a class="dir-btn cf-btn" href="01_03_C_Choice_Filling_App.html" style="background:linear-gradient(135deg, #9333ea 0%, #7c3aed 100%); color:#ffffff; padding:11px 18px; border-radius:8px; text-decoration:none; font-weight:800; font-size:0.88rem; display:inline-flex; align-items:center; justify-content:center; gap:8px; transition:all 0.2s ease; box-shadow:0 3px 10px rgba(147,51,234,0.4); border:1px solid #c084fc;">
-      <span>🎯 சாய்ஸ் ஃபில்லிங் செயலியைத் திறக்க ↗</span> ➔
+      <span>🎯 CHOICE FILLING PLAN ↗</span> ➔
     </a>
   </div>
 </div>
@@ -7203,12 +7107,12 @@ body {
 </div>
 
 <nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar">
-  <a class="page-nav-btn btn-prev-animated" href="01_01_master_schedule.html" title="01_01 மாஸ்டர் காலண்டர் &amp; அட்டவணை">
+  <a class="page-nav-btn btn-prev-animated" href="01_01_master_schedule.html" title="மாஸ்டர் காலண்டர் &amp; அட்டவணை">
     <span class="nav-btn-icon">◀</span>
-    <span class="nav-btn-text">01_01 மாஸ்டர் காலண்டர்</span>
+    <span class="nav-btn-text">மாஸ்டர் காலண்டர்</span>
   </a>
-  <a class="page-nav-btn btn-next-animated" href="01_03_engineering_jee.html" title="01_03 ஜேஇஇ &amp; பொறியியல்">
-    <span class="nav-btn-text">01_03 ஜேஇஇ &amp; பொறியியல்</span>
+  <a class="page-nav-btn btn-next-animated" href="01_03_engineering_jee.html" title="ஜேஇஇ &amp; பொறியியல்">
+    <span class="nav-btn-text">ஜேஇஇ &amp; பொறியியல்</span>
     <span class="nav-btn-icon">▶</span>
   </a>
 </nav>
