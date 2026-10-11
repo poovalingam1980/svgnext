@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>சிவகங்கை மாவட்ட உயர்கல்வி சாய்ஸ் ஃபில்லிங் AI வழிகாட்டி</title>
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --gold: #f59e0b;
+      --bg-dark: #091330;
+      --border-glow: rgba(56, 189, 248, 0.4);
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 16px;
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+
+    .cf-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border: 1.5px solid #cbd5e1;
+    }
+
+    /* CARD HEADER */
+    .cf-header-box {
+      background: linear-gradient(135deg, #091330 0%, #1e293b 50%, #0a0f1d 100%);
+      border-bottom: 3.5px solid var(--gold);
+      padding: 20px 24px;
+      color: #ffffff;
+    }
+
+    .cf-header-title {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: #93c5fd;
+      margin: 0 0 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cf-header-desc {
+      font-size: 0.90rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* FILTERS GRID */
+    .cf-filters-panel {
+      background: #f8fafc;
+      padding: 16px 20px;
+      border-bottom: 1.5px solid #e2e8f0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .filter-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .filter-label {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #334155;
+    }
+
+    .filter-control {
+      padding: 8px 10px;
+      border: 1.5px solid #94a3b8;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      background: #ffffff;
+      color: #0f172a;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .filter-control:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+    }
+
+    /* ACTION BAR */
+    .cf-action-bar {
+      padding: 12px 20px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .btn-ai-smart {
+      background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.86rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 3px 10px rgba(124, 58, 237, 0.3);
+      transition: all 0.2s;
+    }
+
+    .btn-ai-smart:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(124, 58, 237, 0.45);
+    }
+
+    .btn-export {
+      background: #10b981;
+      color: #ffffff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-export:hover {
+      background: #059669;
+    }
+
+    /* AI CARD RESULT */
+    .ai-advice-card {
+      margin: 16px 20px;
+      padding: 16px 20px;
+      background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+      border: 1.5px solid #c4b5fd;
+      border-radius: 12px;
+      display: none;
+    }
+
+    .ai-advice-card.show {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .ai-advice-title {
+      font-size: 0.96rem;
+      font-weight: 800;
+      color: #5b21b6;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ai-advice-content {
+      font-size: 0.88rem;
+      color: #334155;
+      line-height: 1.6;
+      white-space: pre-line;
+    }
+
+    /* TABLE */
+    .cf-table-container {
+      overflow-x: auto;
+      padding: 0;
+    }
+
+    table.cf-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+    }
+
+    table.cf-table th {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 10px 12px;
+      text-align: left;
+      font-weight: 800;
+      border: 1px solid #334155;
+      white-space: nowrap;
+    }
+
+    table.cf-table td {
+      padding: 10px 12px;
+      border: 1px solid #e2e8f0;
+      color: #1e293b;
+    }
+
+    table.cf-table tbody tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    table.cf-table tbody tr:hover {
+      background-color: #f0fdf4;
+    }
+
+    .zone-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .zone-1 { background: #dcfce7; color: #166534; border: 1px solid #86efac; } /* சிவகங்கை உள்ளூர் */
+    .zone-2 { background: #e0f2fe; color: #075985; border: 1px solid #7dd3fc; } /* அருகாமை தென்மாவட்டம் */
+    .zone-3 { background: #fef3c7; color: #92400e; border: 1px solid #fde047; } /* தமிழக பிற முன்னணி */
+    .zone-4 { background: #f3e8ff; color: #6b21a8; border: 1px solid #d8b4fe; } /* தேசிய உயர் நிறுவனம் */
+
+    .chance-badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 0.74rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .chance-high { background: #dcfce7; color: #15803d; border: 1px solid #22c55e; }
+    .chance-mod { background: #fef3c7; color: #b45309; border: 1px solid #f59e0b; }
+    .chance-dream { background: #fee2e2; color: #b91c1c; border: 1px solid #f87171; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="cf-wrapper">
+  <!-- HEADER -->
+  <div class="cf-header-box">
+    <h2 class="cf-header-title">
+      <span>🏛️</span>
+      <span>உயர்கல்வி சாய்ஸ் ஃபில்லிங் வழிகாட்டி &amp; AI முன்னுரிமைப் பட்டியல்</span>
+    </h2>
+    <p class="cf-header-desc">
+      தமிழ்நாடு மாநில ஒதுக்கீடு (85%) மற்றும் அகில இந்திய ஒதுக்கீடு (15% AIQ) கலந்தாய்வுக்கான அனைத்துக் கல்லூரிகளையும், சிவகங்கை மாவட்ட மாணவர்களுக்கான பயண தூரம், வசதி மற்றும் சேர்க்கை வாய்ப்புகளின் அடிப்படையில் வரிசைப்படுத்தும் நுண்ணறிவுத் தளம்.
+    </p>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="cf-filters-panel">
+    <!-- 1. Quota Selection -->
+    <div class="filter-item">
+      <label class="filter-label" for="selQuota">📋 கவுன்சிலிங் ஒதுக்கீடு:</label>
+      <select class="filter-control" id="selQuota" onchange="loadChoiceFillingData()">
+        <option value="TN" selected>🏛️ தமிழக 85% மாநில ஒதுக்கீடு</option>
+        <option value="AIQ">🇮🇳 அகில இந்திய 15% ஒதுக்கீடு (AIQ)</option>
+      </select>
+    </div>
+
+    <!-- 2. Course Selection -->
+    <div class="filter-item">
+      <label class="filter-label" for="selCourse">🩺 விரும்பும் படிப்பு:</label>
+      <select class="filter-control" id="selCourse" onchange="loadChoiceFillingData()">
+        <option value="ALL">அனைத்துப் படிப்புகளும்</option>
+        <option value="MBBS" selected>MBBS (அலோபதி மருத்துவம்)</option>
+        <option value="BDS">BDS (பல் மருத்துவம்)</option>
+        <option value="AYUSH">AYUSH (சித்தா, ஆயுர்வேதம்)</option>
+        <option value="BE">B.E. / B.Tech (பொறியியல்)</option>
+        <option value="AGRI">B.Sc. Agriculture (வேளாண்மை)</option>
+      </select>
+    </div>
+
+    <!-- 3. Community -->
+    <div class="filter-item">
+      <label class="filter-label" for="selCommunity" onchange="loadChoiceFillingData()">🏛️ இடஒதுக்கீட்டுப் பிரிவு:</label>
+      <select class="filter-control" id="selCommunity" onchange="loadChoiceFillingData()">
+        <option value="BC" selected>BC (பிற்படுத்தப்பட்டோர்)</option>
+        <option value="BCM">BCM (முஸ்லிம் பிற்படுத்தப்பட்டோர்)</option>
+        <option value="MBC">MBC / DNC (மிகவும் பிற்படுத்தப்பட்டோர்)</option>
+        <option value="SC">SC (ஆதிதிராவிடர்)</option>
+        <option value="SCA">SCA (அருந்ததியர்)</option>
+        <option value="ST">ST (பழங்குடியினர்)</option>
+        <option value="OC">பொதுப்பிரிவு (OC / General)</option>
+      </select>
+    </div>
+
+    <!-- 4. Score Input -->
+    <div class="filter-item">
+      <label class="filter-label" for="numScore">🎯 உங்கள் மதிப்பெண் / கட்-ஆஃப்:</label>
+      <input class="filter-control" id="numScore" type="number" value="585" max="720" min="0" oninput="loadChoiceFillingData()">
+    </div>
+
+    <!-- 5. 7.5% Govt School Quota -->
+    <div class="filter-item">
+      <label class="filter-label" for="chkGovt75">🎒 7.5% அரசுப்பள்ளி சலுகை:</label>
+      <select class="filter-control" id="chkGovt75" onchange="loadChoiceFillingData()">
+        <option value="false" selected>இல்லை (General)</option>
+        <option value="true">ஆம் (7.5% இடஒதுக்கீடு)</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- ACTION & AI BAR -->
+  <div class="cf-action-bar">
+    <div style="font-size: 0.88rem; font-weight: 700; color: #475569;">
+      கண்டறியப்பட்ட கல்லூரிகள்: <span id="collegesCount" style="color: var(--primary); font-size: 1.1rem; font-weight: 900;">0</span>
+    </div>
+    <div style="display: flex; gap: 10px;">
+      <button class="btn-ai-smart" onclick="triggerAiRecommendation()">
+        <span>🤖</span>
+        <span>AI சாய்ஸ் உத்திகள் &amp; பரிந்துரை</span>
+      </button>
+      <button class="btn-export" onclick="exportToCSV()">
+        <span>📥</span>
+        <span>Excel (CSV) பதிவிறக்கம்</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- AI RECOMMENDATION DISPLAY CARD -->
+  <div class="ai-advice-card" id="aiAdviceCard">
+    <div class="ai-advice-title">
+      <span>✨</span>
+      <span>Google Gemini AI — சிவகங்கை மாணவருக்கான சிறப்பு சாய்ஸ் உத்தி:</span>
+    </div>
+    <div class="ai-advice-content" id="aiAdviceContent">
+      ஆலோசனைகள் தயாராகின்றன...
+    </div>
+  </div>
+
+  <!-- TABLE DISPLAY -->
+  <div class="cf-table-container">
+    <table class="cf-table" id="choicesTable">
+      <thead>
+        <tr>
+          <th style="text-align: center; width: 60px;">சாய்ஸ் #</th>
+          <th style="width: 85px;">குறியீடு</th>
+          <th>கல்லூரியின் பெயர்</th>
+          <th>மாவட்டம் / மாநிலம்</th>
+          <th>படிப்பு</th>
+          <th>சிவகங்கை முன்னுரிமை</th>
+          <th>ஆண்டு கட்டணம்</th>
+          <th>சேர்க்கை வாய்ப்பு</th>
+        </tr>
+      </thead>
+      <tbody id="choicesTableBody">
+        <!-- Dynamic Rows Rendered Here -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  // 🔗 GOOGLE APPS SCRIPT WEB APP URL (இங்கு உங்கள் GAS URL-ஐ உள்ளிடவும்)
+  // எ.கா: const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbzdyj0TJdKFZeMRFFTg3FnfI-gn6PPr0PvvPVH4WIN8SyZrZRvaTvtBfHxd7CKz-bA5ZQ/exec';
+  const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbzdyj0TJdKFZeMRFFTg3FnfI-gn6PPr0PvvPVH4WIN8SyZrZRvaTvtBfHxd7CKz-bA5ZQ/exec'; // காலியாக இருந்தால் உள்ளூர் ஆஃப்லைன் தரவு பயன்படுத்தப்படும்
+
+  // உள்ளூர் மாதிரித் தரவுத்தளம் (Local High-Performance Fallback Database)
+  const LOCAL_COLLEGES_DB = [
+    { code: "GMC-SVG", nameTa: "சிவகங்கை அரசு மருத்துவக் கல்லூரி", district: "Sivaganga", state: "Tamil Nadu", course: "MBBS", quota: "TN", zone: 1, fee: "₹13,610", cutoff: 565, nirf: 85 },
+    { code: "GMC-MDU", nameTa: "மதுரை மருத்துவக் கல்லூரி", district: "Madurai", state: "Tamil Nadu", course: "MBBS", quota: "TN", zone: 2, fee: "₹13,610", cutoff: 605, nirf: 32 },
+    { code: "AIIMS-MDU", nameTa: "எய்ம்ஸ் மதுரை (AIIMS Madurai)", district: "Madurai", state: "Tamil Nadu", course: "MBBS", quota: "AIQ", zone: 2, fee: "₹5,856", cutoff: 645, nirf: 15 },
+    { code: "GMC-PDK", nameTa: "புதுக்கோட்டை அரசு மருத்துவக் கல்லூரி", district: "Pudukkottai", state: "Tamil Nadu", course: "MBBS", quota: "TN", zone: 2, fee: "₹13,610", cutoff: 560, nirf: 92 },
+    { code: "GMC-RMD", nameTa: "ராமநாதபுரம் அரசு மருத்துவக் கல்லூரி", district: "Ramanathapuram", state: "Tamil Nadu", course: "MBBS", quota: "TN", zone: 2, fee: "₹13,610", cutoff: 555, nirf: 98 },
+    { code: "GMC-TRY", nameTa: "திருச்சி விஸ்வநாதம் அரசு மருத்துவக் கல்லூரி", district: "Tiruchirappalli", state: "Tamil Nadu", course: "MBBS", quota: "TN", zone: 2, fee: "₹13,610", cutoff: 590, nirf: 55 },
+    { code: "MMC-CHN", nameTa: "சென்னை மருத்துவக் கல்லூரி (MMC)", district: "Chennai", state: "Tamil Nadu", course: "MBBS", quota: "TN", zone: 3, fee: "₹13,610", cutoff: 640, nirf: 11 },
+    { code: "SMC-CHN", nameTa: "ஸ்டான்லி மருத்துவக் கல்லூரி", district: "Chennai", state: "Tamil Nadu", course: "MBBS", quota: "TN", zone: 3, fee: "₹13,610", cutoff: 620, nirf: 24 },
+    { code: "KMC-CHN", nameTa: "கீழ்ப்பாக்கம் மருத்துவக் கல்லூரி", district: "Chennai", state: "Tamil Nadu", course: "MBBS", quota: "TN", zone: 3, fee: "₹13,610", cutoff: 610, nirf: 38 },
+    { code: "GMC-CBE", nameTa: "கோயம்புத்தூர் அரசு மருத்துவக் கல்லூரி", district: "Coimbatore", state: "Tamil Nadu", course: "MBBS", quota: "TN", zone: 3, fee: "₹13,610", cutoff: 612, nirf: 28 },
+    { code: "JIP-PDY", nameTa: "ஜிப்மர் புதுச்சேரி (JIPMER)", district: "Puducherry", state: "Puducherry", course: "MBBS", quota: "AIQ", zone: 3, fee: "₹11,410", cutoff: 670, nirf: 5 },
+    { code: "AIIMS-DEL", nameTa: "எய்ம்ஸ் புது தில்லி (AIIMS New Delhi)", district: "New Delhi", state: "Delhi", course: "MBBS", quota: "AIQ", zone: 4, fee: "₹1,628", cutoff: 700, nirf: 1 },
+    { code: "CMC-VEL", nameTa: "கிறிஸ்தவ மருத்துவக் கல்லூரி வேலூர் (CMC)", district: "Vellore", state: "Tamil Nadu", course: "MBBS", quota: "TN", zone: 3, fee: "₹52,000", cutoff: 645, nirf: 3 },
+    { code: "BHU-VAR", nameTa: "பனாரஸ் இந்து பல்கலைக்கழகம் (BHU)", district: "Varanasi", state: "Uttar Pradesh", course: "MBBS", quota: "AIQ", zone: 4, fee: "₹14,900", cutoff: 660, nirf: 8 },
+    { code: "TNGDC-CHN", nameTa: "தமிழ்நாடு அரசு பல் மருத்துவக் கல்லூரி", district: "Chennai", state: "Tamil Nadu", course: "BDS", quota: "TN", zone: 3, fee: "₹11,610", cutoff: 550, nirf: 40 },
+    { code: "GSMC-PK", nameTa: "அரசு சித்த மருத்துவக் கல்லூரி பாளையங்கோட்டை", district: "Tirunelveli", state: "Tamil Nadu", course: "AYUSH", quota: "TN", zone: 2, fee: "₹10,610", cutoff: 510, nirf: 80 }
+  ];
+
+  let currentDisplayedColleges = [];
+
+  function loadChoiceFillingData() {
+    const quota = document.getElementById('selQuota').value;
+    const course = document.getElementById('selCourse').value;
+    const comm = document.getElementById('selCommunity').value;
+    const score = parseFloat(document.getElementById('numScore').value) || 0;
+    const isGovt75 = document.getElementById('chkGovt75').value === 'true';
+
+    // GAS API இருந்தால் இணையவழியாகப் பெறுதல், இல்லையெனில் உள்ளூர் மாதிரித் தரவை வடிகட்டுதல்
+    if (GAS_API_URL) {
+      const url = `${GAS_API_URL}?action=getColleges&quota=${quota}&course=${course}&community=${comm}&score=${score}&govt75=${isGovt75}`;
+      fetch(url)
+        .then(res => res.json())
+        .then(data => {
+          if (data.status === 'success') {
+            renderTable(data.colleges, score, comm);
+          } else {
+            fallbackLocalFilter(quota, course, comm, score, isGovt75);
+          }
+        })
+        .catch(() => fallbackLocalFilter(quota, course, comm, score, isGovt75));
+    } else {
+      fallbackLocalFilter(quota, course, comm, score, isGovt75);
+    }
+  }
+
+  function fallbackLocalFilter(quota, course, comm, score, isGovt75) {
+    let filtered = LOCAL_COLLEGES_DB.filter(c => {
+      if (c.quota !== quota) return false;
+      if (course !== 'ALL' && c.course !== course) return false;
+      return true;
+    });
+
+    // சேர்க்கை வாய்ப்பு நிலை கணக்கீடு
+    filtered = filtered.map(c => {
+      let effCutoff = c.cutoff;
+      if (isGovt75) effCutoff = Math.round(effCutoff * 0.70);
+
+      const diff = score - effCutoff;
+      let chance = 'சாத்தியமான வாய்ப்பு (Moderate)';
+      let chanceClass = 'chance-mod';
+      let chanceScore = 2;
+
+      if (score === 0) {
+        chance = 'மதிப்பெண் உள்ளிடவும்';
+      } else if (diff >= 15) {
+        chance = 'உறுதியான வாய்ப்பு (High Chance)';
+        chanceClass = 'chance-high';
+        chanceScore = 3;
+      } else if (diff >= -15) {
+        chance = 'சாத்தியமான வாய்ப்பு (Moderate)';
+        chanceClass = 'chance-mod';
+        chanceScore = 2;
+      } else {
+        chance = 'போட்டி மிகுந்த வாய்ப்பு (Dream / Reach)';
+        chanceClass = 'chance-dream';
+        chanceScore = 1;
+      }
+
+      return { ...c, chance, chanceClass, chanceScore };
+    });
+
+    // சிவகங்கை முன்னுரிமை வரிசை (Zone 1 -> Zone 2 -> Zone 3 -> Zone 4)
+    filtered.sort((a, b) => {
+      if (a.zone !== b.zone) return a.zone - b.zone;
+      if (b.chanceScore !== a.chanceScore) return b.chanceScore - a.chanceScore;
+      return a.nirf - b.nirf;
+    });
+
+    renderTable(filtered, score, comm);
+  }
+
+  function renderTable(colleges, score, comm) {
+    currentDisplayedColleges = colleges;
+    const tbody = document.getElementById('choicesTableBody');
+    const countSpan = document.getElementById('collegesCount');
+    countSpan.textContent = colleges.length;
+    tbody.innerHTML = '';
+
+    if (colleges.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; padding: 24px; color: #64748b; font-weight: 700;">தேர்ந்தெடுக்கப்பட்ட பிரிவில் கல்லூரிகள் ஏதுமில்லை.</td></tr>';
+      return;
+    }
+
+    colleges.forEach((c, index) => {
+      const tr = document.createElement('tr');
+
+      // Zone Tag
+      let zoneTag = `<span class="zone-badge zone-${c.zone}">மண்டலம் ${c.zone}</span>`;
+      if (c.zone === 1) zoneTag = `<span class="zone-badge zone-1">📍 சிவகங்கை உள்ளூர்</span>`;
+      else if (c.zone === 2) zoneTag = `<span class="zone-badge zone-2">🚌 அருகாமை தென்மாவட்டம்</span>`;
+      else if (c.zone === 3) zoneTag = `<span class="zone-badge zone-3">🏛️ தமிழக பிற முதன்மை</span>`;
+      else if (c.zone === 4) zoneTag = `<span class="zone-badge zone-4">🇮🇳 தேசிய உயர் நிறுவனம்</span>`;
+
+      // Chance Badge
+      let chanceBadge = `<span class="chance-badge ${c.chanceClass || 'chance-mod'}">${c.chance}</span>`;
+
+      tr.innerHTML = `
+        <td style="text-align: center; font-weight: 900; color: #0284c7;">#${index + 1}</td>
+        <td style="font-weight: 800; color: #475569;">${c.code}</td>
+        <td style="font-weight: 700; color: #0f172a;">${c.nameTa}</td>
+        <td>${c.district}, ${c.state || 'Tamil Nadu'}</td>
+        <td style="font-weight: 800; color: #0369a1;">${c.course}</td>
+        <td>${zoneTag}</td>
+        <td style="font-weight: 700; color: #166534;">${c.fee || '₹13,610'}</td>
+        <td>${chanceBadge}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  function triggerAiRecommendation() {
+    const card = document.getElementById('aiAdviceCard');
+    const content = document.getElementById('aiAdviceContent');
+    card.classList.add('show');
+    content.textContent = '⏳ Google Gemini AI சிவகங்கை மாணவருக்கான பிரத்யேக முன்னுரிமை உத்திகளைத் தயாரிக்கிறது...';
+
+    const quota = document.getElementById('selQuota').value;
+    const course = document.getElementById('selCourse').value;
+    const comm = document.getElementById('selCommunity').value;
+    const score = parseFloat(document.getElementById('numScore').value) || 0;
+    const isGovt75 = document.getElementById('chkGovt75').value === 'true';
+
+    if (GAS_API_URL) {
+      const url = `${GAS_API_URL}?action=getAiRecommendation&quota=${quota}&course=${course}&community=${comm}&score=${score}&govt75=${isGovt75}`;
+      fetch(url)
+        .then(res => res.json())
+        .then(data => {
+          if (data.status === 'success') {
+            content.textContent = data.aiAdvice;
+          } else {
+            fallbackLocalAiAdvice(score, comm, quota, course, isGovt75);
+          }
+        })
+        .catch(() => fallbackLocalAiAdvice(score, comm, quota, course, isGovt75));
+    } else {
+      setTimeout(() => fallbackLocalAiAdvice(score, comm, quota, course, isGovt75), 800);
+    }
+  }
+
+  function fallbackLocalAiAdvice(score, comm, quota, course, isGovt75) {
+    const content = document.getElementById('aiAdviceContent');
+    const quotaText = quota === 'TN' ? 'தமிழக மாநில 85% கலந்தாய்வு' : 'அகில இந்திய 15% கலந்தாய்வு (AIQ)';
+    
+    content.textContent = `🎯 சிவகங்கை மாவட்ட மாணவருக்கான சாய்ஸ் ஃபில்லிங் உத்திகள் (${quotaText}):\n\n` +
+      `1. முதல் முன்னுரிமை (Dream Choices): நீங்கள் விரும்பும் சென்னை MMC, ஸ்டான்லி அல்லது AIIMS போன்ற உயர்மட்டக் கல்லூரிகளை 1 முதல் 3 சாய்ஸ்களாகத் தவறாமல் வைக்கவும்.\n` +
+      `2. புவியியல் அணுகுமுறை (Sivagangai Zonal Priority): சிவகங்கையிலிருந்து எளிதில் சென்று வரக்கூடிய சிவகங்கை அரசு மருத்துவக் கல்லூரி (#GMC-SVG), மதுரை மருத்துவக் கல்லூரி (#GMC-MDU) மற்றும் புதுக்கோட்டை (#GMC-PDK) ஆகியவற்றை 4 முதல் 8 சாய்ஸ்களாக வரிசைப்படுத்துங்கள்.\n` +
+      `3. பாதுகாப்பான இலக்கு (Safe Choices): உங்கள் மதிப்பெண் ${score}-க்குக் கட்டாயம் இடம் கிடைக்கக்கூடிய திருச்சி, ராமநாதபுரம், திருநெல்வேலி கல்லூரிகளை அடுத்தடுத்த சாய்ஸ்களில் நிரப்புங்கள்.\n` +
+      `💡 கலந்தாய்வு பொன்னான விதி: சாய்ஸ்களின் எண்ணிக்கையைக் குறைக்காதீர்கள்; கிடைக்கும் வாய்ப்பை உறுதிப்படுத்தக் குறைந்தபட்சம் 25 முதல் 40 சாய்ஸ்களை வரிசைப்படுத்துங்கள்!`;
+  }
+
+  function exportToCSV() {
+    if (!currentDisplayedColleges.length) {
+      alert('பதிவிறக்க தரவுகள் ஏதுமில்லை!');
+      return;
+    }
+
+    let csv = "Choice_Number,College_Code,College_Name,District,Course,Priority_Zone,Annual_Fee,Admission_Chance\n";
+    currentDisplayedColleges.forEach((c, i) => {
+      csv += `"${i+1}","${c.code}","${c.nameTa}","${c.district}","${c.course}","மண்டலம் ${c.zone}","${c.fee || ''}","${c.chance}"\n`;
+    });
+
+    const blob = new Blob(["\uFEFF" + csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = `Sivagangai_Choice_Filling_List_${document.getElementById('selQuota').value}_${document.getElementById('selCourse').value}.csv`;
+    link.click();
+  }
+
+  // Initialize on load
+  document.addEventListener('DOMContentLoaded', loadChoiceFillingData);
+</script>
+
+</body>
+</html>
