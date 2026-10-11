@@ -5021,6 +5021,11 @@
 .month-jun { background: #e0e7ff; color: #4338ca; border: 1px solid #818cf8; }
 .month-sep { background: #ffedd5; color: #c2410c; border: 1px solid #fb923c; }
 .month-dec { background: #f1f5f9; color: #0f172a; border: 1px solid #94a3b8; }
+.month-jul { background: #f0fdf4 !important; color: #15803d !important; border: 1px solid #4ade80 !important; }
+.month-aug { background: #fefce8 !important; color: #a16207 !important; border: 1px solid #facc15 !important; }
+.month-oct { background: #fff1f2 !important; color: #be123c !important; border: 1px solid #fb7185 !important; }
+.month-nov { background: #f5f3ff !important; color: #6d28d9 !important; border: 1px solid #a78bfa !important; }
+
 
 .portal-link-btn {
   display: inline-flex !important;
@@ -6382,7 +6387,11 @@
 <button class="filter-btn" onclick="filterByMonth('apr', this)" type="button">ஏப்ரல்</button>
 <button class="filter-btn" onclick="filterByMonth('may', this)" type="button">மே</button>
 <button class="filter-btn" onclick="filterByMonth('jun', this)" type="button">ஜூன்</button>
+<button class="filter-btn" onclick="filterByMonth('jul', this)" type="button">ஜூலை</button>
+<button class="filter-btn" onclick="filterByMonth('aug', this)" type="button">ஆகஸ்ட்</button>
 <button class="filter-btn" onclick="filterByMonth('sep', this)" type="button">செப்டம்பர்</button>
+<button class="filter-btn" onclick="filterByMonth('oct', this)" type="button">அக்டோபர்</button>
+<button class="filter-btn" onclick="filterByMonth('nov', this)" type="button">நவம்பர்</button>
 <button class="filter-btn" onclick="filterByMonth('dec', this)" type="button">டிசம்பர்</button>
 </div>
 </div>
@@ -6411,6 +6420,28 @@
 <div class="mobile-scroll-hint">
   👆 மொபைலில் அட்டவணையை இடது-வலதுபுறம் நகர்த்த விரலால் ஸ்வைப் (Swipe) செய்யவும் அல்லது மேலே உள்ள ஜூம் (Zoom) பொத்தான்களைப் பயன்படுத்தவும்.
 </div>
+
+<!-- Entrance Exams Exclusively Notice Box -->
+<div class="entrance-only-notice" style="background: linear-gradient(135deg, #091330 0%, #1e293b 50%, #0a0f1d 100%) !important; border: 2px solid #38bdf8 !important; border-radius: 12px !important; padding: 14px 18px !important; margin: 16px 0 20px 0 !important; box-shadow: 0 4px 18px rgba(15, 23, 42, 0.35) !important;">
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <span style="font-size: 1.6rem; line-height: 1;">🎯</span>
+    <div style="flex-grow: 1;">
+      <h4 style="color: #38bdf8; font-size: 1.05rem; font-weight: 800; margin: 0 0 6px 0;">அகில இந்திய &amp; மாநில நுழைவுத்தேர்வுகள் மட்டும் (Entrance Exams Exclusively)</h4>
+      <p style="color: #f1f5f9; font-size: 0.90rem; line-height: 1.6; margin: 0 0 10px 0;">
+        இப்பக்கத்தில் அகில இந்திய மற்றும் மாநில அளவிலான <strong>45 முதன்மை நுழைவுத்தேர்வுகள் (Entrance Exams)</strong> மட்டுமே துல்லியமாகப் பட்டியலிடப்பட்டுள்ளன. +2 பொதுத்தேர்வு மதிப்பெண் அடிப்படையிலான <strong>நேரடிச் சேர்க்கைகள் (Direct Admissions — TNEA, TNAU, TANUVAS, TN Paramedical, TNDALU, TNGASA, TNJFU, D.El.Ed)</strong> மற்றும் பாதுகாப்புப் படை வேலைவாய்ப்புத் தேர்வுகள் (Agniveer) மாணவர்களின் வசதிக்காக அவற்றிற்குரிய பிரத்யேகப் பிரிவுகளில் முழுமையாக இணைக்கப்பட்டுள்ளன.
+      </p>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <a href="02_00_direct_admissions.html" class="nav-menu-btn" style="background: rgba(56, 189, 248, 0.2); border: 1.2px solid #38bdf8; color: #38bdf8; padding: 6px 14px; border-radius: 6px; font-weight: 800; text-decoration: none; font-size: 0.84rem; display: inline-flex; align-items: center; gap: 6px;">
+          <span>📈</span> <span>02 / நேரடிச் சேர்க்கைப் பிரிவுக்குச் செல்க (TNEA, TNAU, TANUVAS, TNGASA...) ➔</span>
+        </a>
+        <a href="01_11_defence_armed_forces.html" class="nav-menu-btn" style="background: rgba(251, 191, 36, 0.2); border: 1.2px solid #fbbf24; color: #fde047; padding: 6px 14px; border-radius: 6px; font-weight: 800; text-decoration: none; font-size: 0.84rem; display: inline-flex; align-items: center; gap: 6px;">
+          <span>🛡️</span> <span>01_11 / பாதுகாப்புப் படைகள் வழிகாட்டல் (Agniveer &amp; NDA) ➔</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="schedule-table-wrap">
 <table class="schedule-master-table" id="masterExamTable">
 <thead>
@@ -6424,9 +6455,6 @@
 <th class="col-elig">அடிப்படைத் தகுதி &amp; பாடங்கள்</th>
 <th class="col-link" style="text-align: center;">அதிகாரப்பூர்வ தளம்</th>
 </tr>
-</thead>
-<tbody>
-<!-- 01. NEET UG -->
 <tr data-domain="med" data-month="may">
 <td style="text-align: center; font-weight: 800;">01</td>
 <td>
@@ -6443,7 +6471,6 @@
 <a class="portal-link-btn" href="https://exams.nta.ac.in/NEET/" rel="noopener" target="_blank">🌐 NTA NEET</a>
 </td>
 </tr>
-<!-- 02. JEE Main Session 1 & 2 -->
 <tr data-domain="eng" data-month="jan apr">
 <td style="text-align: center; font-weight: 800;">02</td>
 <td>
@@ -6460,7 +6487,6 @@
 <a class="portal-link-btn" href="https://jeemain.nta.nic.in/" rel="noopener" target="_blank">🌐 JEE Main</a>
 </td>
 </tr>
-<!-- 03. JEE Advanced -->
 <tr data-domain="eng" data-month="may">
 <td style="text-align: center; font-weight: 800;">03</td>
 <td>
@@ -6477,7 +6503,6 @@
 <a class="portal-link-btn" href="https://jeeadv.ac.in/" rel="noopener" target="_blank">🌐 JEE Adv</a>
 </td>
 </tr>
-<!-- 04. IAT (IISER) -->
 <tr data-domain="sci" data-month="jun">
 <td style="text-align: center; font-weight: 800;">04</td>
 <td>
@@ -6494,7 +6519,6 @@
 <a class="portal-link-btn" href="https://iiseradmission.in/" rel="noopener" target="_blank">🌐 IISER IAT</a>
 </td>
 </tr>
-<!-- 05. NEST (NISER & CEBS) -->
 <tr data-domain="sci" data-month="jun">
 <td style="text-align: center; font-weight: 800;">05</td>
 <td>
@@ -6511,7 +6535,6 @@
 <a class="portal-link-btn" href="https://nestexam.in/" rel="noopener" target="_blank">🌐 NEST Exam</a>
 </td>
 </tr>
-<!-- 06. CUET-UG -->
 <tr data-domain="central" data-month="may">
 <td style="text-align: center; font-weight: 800;">06</td>
 <td>
@@ -6528,7 +6551,6 @@
 <a class="portal-link-btn" href="https://exams.nta.ac.in/CUET-UG/" rel="noopener" target="_blank">🌐 NTA CUET</a>
 </td>
 </tr>
-<!-- 07. CLAT -->
 <tr data-domain="law" data-month="dec">
 <td style="text-align: center; font-weight: 800;">07</td>
 <td>
@@ -6545,7 +6567,6 @@
 <a class="portal-link-btn" href="https://consortiumofnlus.ac.in/" rel="noopener" target="_blank">🌐 NLUs CLAT</a>
 </td>
 </tr>
-<!-- 08. AILET -->
 <tr data-domain="law" data-month="dec">
 <td style="text-align: center; font-weight: 800;">08</td>
 <td>
@@ -6562,7 +6583,6 @@
 <a class="portal-link-btn" href="https://nationallawuniversitydelhi.in/" rel="noopener" target="_blank">🌐 NLU Delhi</a>
 </td>
 </tr>
-<!-- 09. UCEED (Design) -->
 <tr data-domain="des" data-month="jan">
 <td style="text-align: center; font-weight: 800;">09</td>
 <td>
@@ -6579,7 +6599,6 @@
 <a class="portal-link-btn" href="https://uceed.iitb.ac.in/" rel="noopener" target="_blank">🌐 UCEED IIT</a>
 </td>
 </tr>
-<!-- 10. NIFT Entrance Exam -->
 <tr data-domain="des" data-month="feb">
 <td style="text-align: center; font-weight: 800;">10</td>
 <td>
@@ -6596,7 +6615,6 @@
 <a class="portal-link-btn" href="https://nift.ac.in/" rel="noopener" target="_blank">🌐 NIFT Portal</a>
 </td>
 </tr>
-<!-- 11. NID DAT -->
 <tr data-domain="des" data-month="jan">
 <td style="text-align: center; font-weight: 800;">11</td>
 <td>
@@ -6613,7 +6631,6 @@
 <a class="portal-link-btn" href="https://admissions.nid.edu/" rel="noopener" target="_blank">🌐 NID Admin</a>
 </td>
 </tr>
-<!-- 12. IPMAT Indore -->
 <tr data-domain="mgmt" data-month="may">
 <td style="text-align: center; font-weight: 800;">12</td>
 <td>
@@ -6630,7 +6647,6 @@
 <a class="portal-link-btn" href="https://www.iimidr.ac.in/" rel="noopener" target="_blank">🌐 IIM Indore</a>
 </td>
 </tr>
-<!-- 13. IPMAT Rohtak -->
 <tr data-domain="mgmt" data-month="may">
 <td style="text-align: center; font-weight: 800;">13</td>
 <td>
@@ -6647,7 +6663,6 @@
 <a class="portal-link-btn" href="https://www.iimrohtak.ac.in/" rel="noopener" target="_blank">🌐 IIM Rohtak</a>
 </td>
 </tr>
-<!-- 14. JIPMAT -->
 <tr data-domain="mgmt" data-month="jun">
 <td style="text-align: center; font-weight: 800;">14</td>
 <td>
@@ -6664,7 +6679,6 @@
 <a class="portal-link-btn" href="https://exams.nta.ac.in/JIPMAT/" rel="noopener" target="_blank">🌐 NTA JIPMAT</a>
 </td>
 </tr>
-<!-- 15. NCHMCT JEE -->
 <tr data-domain="hotel" data-month="may">
 <td style="text-align: center; font-weight: 800;">15</td>
 <td>
@@ -6681,7 +6695,6 @@
 <a class="portal-link-btn" href="https://exams.nta.ac.in/NCHM/" rel="noopener" target="_blank">🌐 NTA NCHM</a>
 </td>
 </tr>
-<!-- 16. IMU-CET -->
 <tr data-domain="navy" data-month="jun">
 <td style="text-align: center; font-weight: 800;">16</td>
 <td>
@@ -6698,7 +6711,6 @@
 <a class="portal-link-btn" href="https://www.imu.edu.in/" rel="noopener" target="_blank">🌐 IMU Portal</a>
 </td>
 </tr>
-<!-- 17. NDA & NA Exam I & II -->
 <tr data-domain="def" data-month="apr sep">
 <td style="text-align: center; font-weight: 800;">17</td>
 <td>
@@ -6715,7 +6727,6 @@
 <a class="portal-link-btn" href="https://upsc.gov.in/" rel="noopener" target="_blank">🌐 UPSC NDA</a>
 </td>
 </tr>
-<!-- 18. Indian Navy 10+2 B.Tech -->
 <tr data-domain="def" data-month="jan jul">
 <td style="text-align: center; font-weight: 800;">18</td>
 <td>
@@ -6732,7 +6743,6 @@
 <a class="portal-link-btn" href="https://www.joinindiannavy.gov.in/" rel="noopener" target="_blank">🌐 Join Navy</a>
 </td>
 </tr>
-<!-- 19. Indian Army 10+2 TES -->
 <tr data-domain="def" data-month="may oct">
 <td style="text-align: center; font-weight: 800;">19</td>
 <td>
@@ -6749,7 +6759,6 @@
 <a class="portal-link-btn" href="https://joinindianarmy.nic.in/" rel="noopener" target="_blank">🌐 Join Army</a>
 </td>
 </tr>
-<!-- 20. IGRUA CPL Entrance -->
 <tr data-domain="pilot" data-month="may">
 <td style="text-align: center; font-weight: 800;">20</td>
 <td>
@@ -6766,7 +6775,6 @@
 <a class="portal-link-btn" href="https://igrua.gov.in/" rel="noopener" target="_blank">🌐 IGRUA Portal</a>
 </td>
 </tr>
-<!-- 21. BITSAT -->
 <tr data-domain="eng" data-month="may jun">
 <td style="text-align: center; font-weight: 800;">21</td>
 <td>
@@ -6783,7 +6791,6 @@
 <a class="portal-link-btn" href="https://www.bitsadmission.com/" rel="noopener" target="_blank">🌐 BITS Admin</a>
 </td>
 </tr>
-<!-- 22. NATA (Architecture) -->
 <tr data-domain="eng" data-month="apr">
 <td style="text-align: center; font-weight: 800;">22</td>
 <td>
@@ -6800,7 +6807,6 @@
 <a class="portal-link-btn" href="https://www.nata.in/" rel="noopener" target="_blank">🌐 NATA Portal</a>
 </td>
 </tr>
-<!-- 23. CMI Entrance Exam -->
 <tr data-domain="sci" data-month="may">
 <td style="text-align: center; font-weight: 800;">23</td>
 <td>
@@ -6817,7 +6823,6 @@
 <a class="portal-link-btn" href="https://www.cmi.ac.in/" rel="noopener" target="_blank">🌐 CMI Portal</a>
 </td>
 </tr>
-<!-- 24. ISI Admission Test -->
 <tr data-domain="sci" data-month="may">
 <td style="text-align: center; font-weight: 800;">24</td>
 <td>
@@ -6834,7 +6839,6 @@
 <a class="portal-link-btn" href="https://www.isical.ac.in/" rel="noopener" target="_blank">🌐 ISI Portal</a>
 </td>
 </tr>
-<!-- 25. AIIMS Paramedical & B.Sc Nursing -->
 <tr data-domain="med" data-month="jun">
 <td style="text-align: center; font-weight: 800;">25</td>
 <td>
@@ -6851,7 +6855,6 @@
 <a class="portal-link-btn" href="https://www.aiimsexams.ac.in/" rel="noopener" target="_blank">🌐 AIIMS Exam</a>
 </td>
 </tr>
-<!-- 26. Military Nursing Service (MNS) -->
 <tr data-domain="med" data-month="may">
 <td style="text-align: center; font-weight: 800;">26</td>
 <td>
@@ -6868,7 +6871,6 @@
 <a class="portal-link-btn" href="https://joinindianarmy.nic.in/" rel="noopener" target="_blank">🌐 Army MNS</a>
 </td>
 </tr>
-<!-- 27. VITEEE -->
 <tr data-domain="eng" data-month="apr">
 <td style="text-align: center; font-weight: 800;">27</td>
 <td>
@@ -6885,7 +6887,6 @@
 <a class="portal-link-btn" href="https://vit.ac.in/" rel="noopener" target="_blank">🌐 VIT Portal</a>
 </td>
 </tr>
-<!-- 28. SRMJEEE -->
 <tr data-domain="eng" data-month="apr">
 <td style="text-align: center; font-weight: 800;">28</td>
 <td>
@@ -6902,7 +6903,6 @@
 <a class="portal-link-btn" href="https://www.srmist.edu.in/" rel="noopener" target="_blank">🌐 SRM Portal</a>
 </td>
 </tr>
-<!-- 29. AEEE (Amrita) -->
 <tr data-domain="eng" data-month="jan may">
 <td style="text-align: center; font-weight: 800;">29</td>
 <td>
@@ -6919,7 +6919,6 @@
 <a class="portal-link-btn" href="https://www.amrita.edu/" rel="noopener" target="_blank">🌐 Amrita Uni</a>
 </td>
 </tr>
-<!-- 30. SLAT (Symbiosis Law) -->
 <tr data-domain="law" data-month="may">
 <td style="text-align: center; font-weight: 800;">30</td>
 <td>
@@ -6936,7 +6935,6 @@
 <a class="portal-link-btn" href="https://www.set-test.org/" rel="noopener" target="_blank">🌐 Symbiosis</a>
 </td>
 </tr>
-<!-- 31. ICAR AIEEA (via CUET-UG) -->
 <tr data-domain="sci" data-month="may">
 <td style="text-align: center; font-weight: 800;">31</td>
 <td>
@@ -6953,7 +6951,6 @@
 <a class="portal-link-btn" href="https://icar.org.in/" rel="noopener" target="_blank">🌐 ICAR Agri</a>
 </td>
 </tr>
-<!-- 32. NFSU Entrance Test (Forensic Science) -->
 <tr data-domain="sci" data-month="jun">
 <td style="text-align: center; font-weight: 800;">32</td>
 <td>
@@ -6970,7 +6967,6 @@
 <a class="portal-link-btn" href="https://beta.nfsu.ac.in/" rel="noopener" target="_blank">🌐 NFSU Portal</a>
 </td>
 </tr>
-<!-- 33. COMEDK UGET -->
 <tr data-domain="eng" data-month="may">
 <td style="text-align: center; font-weight: 800;">33</td>
 <td>
@@ -6987,7 +6983,6 @@
 <a class="portal-link-btn" href="https://www.comedk.org/" rel="noopener" target="_blank">🌐 COMEDK</a>
 </td>
 </tr>
-<!-- 34. MET (Manipal) -->
 <tr data-domain="eng" data-month="apr may">
 <td style="text-align: center; font-weight: 800;">34</td>
 <td>
@@ -7004,7 +6999,6 @@
 <a class="portal-link-btn" href="https://www.manipal.edu/" rel="noopener" target="_blank">🌐 Manipal MET</a>
 </td>
 </tr>
-<!-- 35. SET (Symbiosis General) -->
 <tr data-domain="mgmt" data-month="may">
 <td style="text-align: center; font-weight: 800;">35</td>
 <td>
@@ -7021,7 +7015,6 @@
 <a class="portal-link-btn" href="https://www.set-test.org/" rel="noopener" target="_blank">🌐 Symbiosis SET</a>
 </td>
 </tr>
-<!-- 36. NMIMS NPAT -->
 <tr data-domain="mgmt" data-month="jan may">
 <td style="text-align: center; font-weight: 800;">36</td>
 <td>
@@ -7038,7 +7031,6 @@
 <a class="portal-link-btn" href="https://www.nmimsnpat.in/" rel="noopener" target="_blank">🌐 NMIMS NPAT</a>
 </td>
 </tr>
-<!-- 37. RIE CEE (NCERT Teacher Education) -->
 <tr data-domain="sci" data-month="jun">
 <td style="text-align: center; font-weight: 800;">37</td>
 <td>
@@ -7055,7 +7047,6 @@
 <a class="portal-link-btn" href="https://cee.ncert.gov.in/" rel="noopener" target="_blank">🌐 NCERT RIE</a>
 </td>
 </tr>
-<!-- 38. Gati Shakti Vishwavidyalaya (GSV) -->
 <tr data-domain="eng" data-month="may">
 <td style="text-align: center; font-weight: 800;">38</td>
 <td>
@@ -7072,7 +7063,6 @@
 <a class="portal-link-btn" href="https://gsv.ac.in/" rel="noopener" target="_blank">🌐 GSV Portal</a>
 </td>
 </tr>
-<!-- 39. FDDI AIST -->
 <tr data-domain="des" data-month="may">
 <td style="text-align: center; font-weight: 800;">39</td>
 <td>
@@ -7089,7 +7079,6 @@
 <a class="portal-link-btn" href="https://www.fddiindia.com/" rel="noopener" target="_blank">🌐 FDDI India</a>
 </td>
 </tr>
-<!-- 40. MH CET Law (5-Year) -->
 <tr data-domain="law" data-month="may">
 <td style="text-align: center; font-weight: 800;">40</td>
 <td>
@@ -7105,8 +7094,89 @@
 <td style="text-align: center;">
 <a class="portal-link-btn" href="https://cetcell.mahacet.org/" rel="noopener" target="_blank">🌐 MH CET Law</a>
 </td>
+
+
 </tr>
-</tbody>
+<tr data-domain="mgmt" data-month="jan jun dec">
+<td style="text-align: center; font-weight: 800;">41</td>
+<td>
+<strong>ICAI CA Foundation</strong><br/>
+<span style="font-size: 0.78rem; color: #64748b;">Chartered Accountancy Foundation Examination</span><br/>
+<span class="exam-pill-badge pill-mgmt">பட்டயக் கணக்காளர் (ஆடிட்டர்)</span>
+</td>
+<td><strong>Chartered Accountant (CA) தொழில்முறைப் பட்டயக் கல்விக்கான முதற்கட்ட நுழைவுப் பதிவு</strong></td>
+<td>The Institute of Chartered Accountants of India (ICAI)</td>
+<td>பிப்ரவரி (ஜூன் தேர்வுக்கு) / ஆகஸ்ட் (ஜனவரி தேர்வுக்கு)</td>
+<td><span class="month-badge month-jun">🗓️ ஜூன் &amp; ஜனவரி (எழுத்துத் தேர்வு)</span></td>
+<td>10th முடித்தவுடன் பதிவு செய்யலாம்; +2 முடித்த எவரும் எழுதலாம் (வணிகவியல், அறிவியல், கலை)</td>
+<td style="text-align: center;">
+<a class="portal-link-btn" href="https://www.icai.org/" rel="noopener" target="_blank">🌐 ICAI Portal</a>
+</td>
+</tr>
+<tr data-domain="mgmt" data-month="jan may jul nov">
+<td style="text-align: center; font-weight: 800;">42</td>
+<td>
+<strong>ICSI CSEET</strong><br/>
+<span style="font-size: 0.78rem; color: #64748b;">Company Secretary Executive Entrance Test</span><br/>
+<span class="exam-pill-badge pill-mgmt">நிறுவனச் செயலாளர் (CS)</span>
+</td>
+<td><strong>Company Secretary (CS) - கார்ப்பரேட் நிறுவன நிர்வாகம், சட்டம் &amp; ஆளுகைப் படிப்பு</strong></td>
+<td>The Institute of Company Secretaries of India (ICSI)</td>
+<td>ஆண்டு முழுவதும் (தேர்வுக்கு 1 மாதம் முன்)</td>
+<td><span class="month-badge month-may">🗓️ மே, ஜூலை, நவம்பர் &amp; ஜனவரி</span></td>
+<td>+2 தேர்ச்சி பெற்ற அல்லது தேர்வு எழுதிய எவரும் எழுதலாம் (எந்தப் பாடப்பிரிவும்)</td>
+<td style="text-align: center;">
+<a class="portal-link-btn" href="https://www.icsi.edu/" rel="noopener" target="_blank">🌐 ICSI CSEET</a>
+</td>
+</tr>
+<tr data-domain="mgmt" data-month="jun dec">
+<td style="text-align: center; font-weight: 800;">43</td>
+<td>
+<strong>ICMAI CMA Foundation</strong><br/>
+<span style="font-size: 0.78rem; color: #64748b;">Cost &amp; Management Accountant Foundation</span><br/>
+<span class="exam-pill-badge pill-mgmt">அடக்க &amp; மேலாண்மைக் கணக்காளர்</span>
+</td>
+<td><strong>Cost and Management Accountant (CMA) - உற்பத்தித் தொழில் நிறுவன நிதி மேலாண்மை</strong></td>
+<td>The Institute of Cost Accountants of India (ICMAI)</td>
+<td>ஜனவரி (ஜூன் தேர்வுக்கு) / ஜூலை (டிசம்பர் தேர்வுக்கு)</td>
+<td><span class="month-badge month-jun">🗓️ ஜூன் &amp; டிசம்பர்</span></td>
+<td>+2 முடித்த எவரும் எழுதலாம்</td>
+<td style="text-align: center;">
+<a class="portal-link-btn" href="https://icmai.in/" rel="noopener" target="_blank">🌐 ICMAI Portal</a>
+</td>
+</tr>
+<tr data-domain="eng" data-month="jun">
+<td style="text-align: center; font-weight: 800;">44</td>
+<td>
+<strong>CIPET JEE / Admission</strong><br/>
+<span style="font-size: 0.78rem; color: #64748b;">Central Institute of Petrochemicals Engg &amp; Tech</span><br/>
+<span class="exam-pill-badge pill-eng">CIPET சென்னை கிண்டி &amp; மதுரை</span>
+</td>
+<td><strong>B.Tech (Plastics Tech) &amp; டிப்ளமோ படிப்புகள்: DPT (Plastics Mould), DPMT (Mould Tech)</strong></td>
+<td>CIPET (மத்திய இரசாயன அமைச்சகம்)</td>
+<td>பிப்ரவரி - மே</td>
+<td><span class="month-badge month-jun">🗓️ ஜூன் (கணினித் தேர்வு)</span></td>
+<td>10th (டிப்ளமோவுக்கு); +2 இயற்பியல், வேதியியல், கணிதம் (B.Tech பட்டப்படிப்புக்கு)</td>
+<td style="text-align: center;">
+<a class="portal-link-btn" href="https://www.cipet.gov.in/" rel="noopener" target="_blank">🌐 CIPET Portal</a>
+</td>
+</tr>
+<tr data-domain="eng" data-month="jan apr">
+<td style="text-align: center; font-weight: 800;">45</td>
+<td>
+<strong>JEE Main Paper 2 (B.Arch &amp; B.Plan)</strong><br/>
+<span style="font-size: 0.78rem; color: #64748b;">Architecture &amp; Planning Entrance Exam</span><br/>
+<span class="exam-pill-badge pill-eng">NITs &amp; SPAs கட்டிடக்கலை</span>
+</td>
+<td><strong>5 ஆண்டு B.Arch கட்டிடக்கலை &amp; 4 ஆண்டு B.Planning நகரமைப்பு (NIT திருச்சி, SPAs டெல்லி/போபால்)</strong></td>
+<td>NTA (National Testing Agency)</td>
+<td>நவம்பர் - டிசம்பர் (S1) &amp; பிப்ரவரி - மார்ச் (S2)</td>
+<td><span class="month-badge month-jan">🗓️ ஜனவரி &amp; ஏப்ரல்</span></td>
+<td>+2 இயற்பியல், வேதியியல், கணிதம் (PCM 50% மதிப்பெண்கள் கட்டாயம்)</td>
+<td style="text-align: center;">
+<a class="portal-link-btn" href="https://jeemain.nta.nic.in/" rel="noopener" target="_blank">🌐 JEE Main B.Arch</a>
+</td>
+</tr>
 </table>
 </div>
 </section>
@@ -7211,7 +7281,7 @@
 <ul class="styled-list" style="font-size: 0.86rem; margin: 0; padding-left: 16px; line-height: 1.5;">
 <li><strong>JoSAA கலந்தாய்வு:</strong> IITs, NITs, IIITs அகில இந்திய சேர்க்கை.</li>
 <li><strong>MCC மருத்துவக் கலந்தாய்வு:</strong> 15% AIQ MBBS/BDS இடங்களுக்கான சுற்றுகள்.</li>
-<li><strong>TNEA பொறியியல்:</strong> தமிழ்நாடு பொறியியல் தரவரிசை &amp; கலந்தாய்வு.</li>
+<li><strong>CUET-UG &amp; CLAT கலந்தாய்வு:</strong> மத்தியப் பல்கலைக்கழகங்கள் &amp; தேசிய சட்டப் பல்கலைக்கழகங்கள் சேர்க்கை.</li>
 <li><strong>CSAB சிறப்புச் சுற்றுகள்:</strong> NIT/IIIT இடங்களுக்கான சிறப்புக் கலந்தாய்வு.</li>
 </ul>
 </div>
@@ -7223,7 +7293,7 @@
 </div>
 <ul class="styled-list" style="font-size: 0.86rem; margin: 0; padding-left: 16px; line-height: 1.5;">
 <li><strong>TN மருத்துவக் கலந்தாய்வு:</strong> 85% மாநில &amp; 7.5% அரசுப் பள்ளி ஒதுக்கீடு.</li>
-<li><strong>TNAU &amp; TANUVAS:</strong> தமிழ்நாடு வேளாண் &amp; கால்நடைச் சேர்க்கை.</li>
+<li><strong>தேசிய நிறுவனங்கள் வகுப்புகள் தொடக்கம்:</strong> IITs, NITs, AIIMS, IIMs, IISERs முதலாமாண்டு வகுப்புகள் தொடங்குதல்.</li>
 <li><strong>கல்லூரி வகுப்புகள் தொடக்கம்:</strong> முதலாமாண்டு வகுப்புகள் தொடங்குதல்.</li>
 </ul>
 </div>
@@ -7297,7 +7367,7 @@
 <div style="background: #ffffff; border: 1.8px solid #38bdf8; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
 <div>
 <div style="font-weight: 800; color: #0284c7; font-size: 1.02rem; margin-bottom: 4px;">📅 01. மகா தேர்வு அட்டவணை</div>
-<p style="font-size: 0.84rem; color: #475569; margin: 0 0 10px 0; line-height: 1.45;">40+ தேசிய நுழைவுத்தேர்வுகள், விண்ணப்ப மாதங்கள் மற்றும் இணையதளங்களின் காலண்டர்.</p>
+<p style="font-size: 0.84rem; color: #475569; margin: 0 0 10px 0; line-height: 1.45;">45+ தேசிய &amp; மாநில நுழைவுத்தேர்வுகள், விண்ணப்ப மாதங்கள் மற்றும் இணையதளங்களின் காலண்டர்.</p>
 </div>
 <a class="portal-link-btn" href="01_01_master_schedule.html" style="background: #0284c7; align-self: flex-start;">தற்போதைய பக்கம் ✓</a>
 </div>
