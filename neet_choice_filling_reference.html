@@ -8044,7 +8044,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (syncStatusElem) {
               syncStatusElem.innerHTML = '<span style="color:#86efac; font-weight:800;">🟢 Google Sheets &amp; AI நேரலை இணைப்பு (' + data.total + ' கல்லூரிகள்)</span>';
             }
-            renderTableWithColleges(data.colleges, score, comm, quota);
+            window.NEET_COLLEGES = data.colleges;
+            generateChoiceFillingList();
           } else {
             fallbackLocalList('கூகுள் ஷீட் காலியாக உள்ளது அல்லது தரவு கிடைக்கவில்லை; முழு உள்ளூர் தரவுத்தளம் (143 கல்லூரிகள்) பயன்படுத்தப்படுகிறது.');
           }
@@ -8114,6 +8115,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     for (let i = 0; i < colleges.length; i++) {
       const c = colleges[i];
+      if (searchTerm) {
+        const fullStr = ((c.code || '') + ' ' + (c.name || '') + ' ' + (c.district || '') + ' ' + (c.course || '') + ' ' + (c.type || '')).toLowerCase();
+        if (!fullStr.includes(searchTerm)) continue;
+      }
       if (quota === 'aiq' && c.scope !== 'aiq') continue;
       if (quota !== 'aiq' && c.scope === 'aiq') continue;
       if (course === 'mbbs_bds') {
@@ -8190,24 +8195,33 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
 
-    // சிவகங்கை மாவட்ட மாணவர்களுக்கான புவியியல் மற்றும் பயண முன்னுரிமை வரிசைப்படுத்துதல்
+    // வரிசைப்படுத்துதல் (Sort Order)
     filtered.sort((a, b) => {
-      const coursePriority = { 'MBBS': 1, 'BDS': 2, 'AYUSH': 3 };
-      const pA = coursePriority[a.course] || 99;
-      const pB = coursePriority[b.course] || 99;
-      if (pA !== pB) return pA - pB;
+      if (sortOrder === 'cutoff_desc') {
+        if (a.diff !== b.diff) return a.diff - b.diff; // highest requirement first
+        return a.tier - b.tier;
+      } else if (sortOrder === 'fee_asc') {
+        if (a.cat !== b.cat) return a.cat === 'govt' ? -1 : 1;
+        return a.tier - b.tier;
+      } else {
+        // Default: Proximity (சிவகங்கை அருகாமை மண்டலம் 1 -> 5)
+        const coursePriority = { 'MBBS': 1, 'BDS': 2, 'AYUSH': 3 };
+        const pA = coursePriority[a.course] || 99;
+        const pB = coursePriority[b.course] || 99;
+        if (pA !== pB) return pA - pB;
 
-      // Premier National Institutes (AIIMS Delhi, JIPMER, MMC) can be top dream choices
-      if (a.tier <= 2 && b.tier > 5) return -1;
-      if (b.tier <= 2 && a.tier > 5) return 1;
+        // Premier National Institutes (AIIMS Delhi, JIPMER, MMC) can be top dream choices
+        if (a.tier <= 2 && b.tier > 5) return -1;
+        if (b.tier <= 2 && a.tier > 5) return 1;
 
-      // Geographical Zone order (Zone 1 to 5)
-      if (a.zone !== b.zone) return a.zone - b.zone;
+        // Geographical Zone order (Zone 1 to 5)
+        if (a.zone !== b.zone) return a.zone - b.zone;
 
-      // Govt before Self-Financing
-      if (a.cat !== b.cat) return a.cat === 'govt' ? -1 : 1;
+        // Govt before Self-Financing
+        if (a.cat !== b.cat) return a.cat === 'govt' ? -1 : 1;
 
-      return a.tier - b.tier;
+        return a.tier - b.tier;
+      }
     });
 
     if (sCount) sCount.textContent = filtered.length;
@@ -8773,6 +8787,18 @@ document.addEventListener('DOMContentLoaded', function() {
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
-  })" title="மேலே செல்க">↑ மேலே செல்க</button>
+  }
+
+  // Auto-initialize choice filling list on DOM load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      generateChoiceFillingList();
+    });
+  } else {
+    generateChoiceFillingList();
+  }
+</script>
+
+<button aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" id="floatingBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="மேலே செல்க">↑ மேலே செல்க</button>
 </body>
 </html>
