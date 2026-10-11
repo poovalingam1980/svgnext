@@ -5201,19 +5201,70 @@
     }
 
     /* DIRECTORY BANNER CARDS */
+    /* DIRECTORY BANNER CARDS: RICH HIGH-CONTRAST GRADIENTS (FIX FOR IMAGE 2) */
     .dir-banner-card {
-      background: #ffffff !important;
       border-radius: 16px !important;
       padding: 22px 24px !important;
-      border: 1.5px solid #e2e8f0 !important;
-      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+      box-shadow: 0 6px 22px rgba(15, 23, 42, 0.25) !important;
       display: flex !important;
       flex-direction: column !important;
       justify-content: space-between !important;
       gap: 14px !important;
       position: relative !important;
       overflow: hidden !important;
-      transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+      transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+    }
+
+    .dir-banner-card.in-card {
+      background: linear-gradient(135deg, #091a3e 0%, #172554 50%, #1e3a8a 100%) !important;
+      border: 1.8px solid #3b82f6 !important;
+      color: #ffffff !important;
+    }
+
+    .dir-banner-card.tn-card {
+      background: linear-gradient(135deg, #022c22 0%, #064e3b 50%, #047857 100%) !important;
+      border: 1.8px solid #10b981 !important;
+      color: #ffffff !important;
+    }
+
+    .dir-banner-card.iist-card {
+      background: linear-gradient(135deg, #1e1035 0%, #312e81 50%, #0f172a 100%) !important;
+      border: 1.8px solid #818cf8 !important;
+      color: #ffffff !important;
+    }
+
+    .dir-banner-card:hover {
+      transform: translateY(-4px) !important;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.4) !important;
+    }
+
+    .dir-banner-card .dir-header-title {
+      font-size: 1.18rem !important;
+      font-weight: 800 !important;
+      color: #fde047 !important;
+      margin-bottom: 10px !important;
+      line-height: 1.4 !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .dir-banner-card .dir-desc {
+      font-size: 0.90rem !important;
+      line-height: 1.65 !important;
+      font-weight: 500 !important;
+      margin: 0 0 16px 0 !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+    }
+
+    .dir-banner-card.in-card .dir-desc {
+      color: #f1f5f9 !important;
+    }
+
+    .dir-banner-card.tn-card .dir-desc {
+      color: #f0fdf4 !important;
+    }
+
+    .dir-banner-card.iist-card .dir-desc {
+      color: #f5f3ff !important;
     }
 
     .dir-banner-card:hover {
@@ -6468,19 +6519,15 @@
 <span class="nav-menu-separator">▶</span>
 <a class="nav-menu-btn btn-direct-home" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முகப்பு">
 <span class="btn-icon">🎯</span>
-<span class="btn-text">01 / நுழைவுத்தேர்வுகள்</span>
+<span class="btn-text">நுழைவுத்தேர்வுகள்</span>
 </a>
 <span class="nav-menu-separator">▶</span>
 <span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
 <span class="btn-icon">⚙️</span>
-<span class="btn-text">03 / பொறியியல் (JEE Main &amp; Adv)</span>
+<span class="btn-text">பொறியியல் (JEE Main &amp; Adv)</span>
 </span>
 </div>
 <div class="breadcrumb-right-stack">
-<a class="compact-dir-btn btn-tn-eng" href="02_01_tnea_engineering.html" style="background: linear-gradient(135deg, #047857 0%, #065f46 100%) !important; color: #ffffff !important; border: 1.2px solid #34d399 !important; padding: 4px 12px !important; border-radius: 8px !important; font-weight: 800 !important; font-size: 0.78rem !important; text-decoration: none !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; box-shadow: 0 2px 6px rgba(4, 120, 87, 0.35) !important;" title="தமிழ்நாடு TNEA பொறியியல் கல்லூரிகள் அடைவு">
-<span>🏢</span>
-<span>தமிழகக் கல்லூரிகள் ↗</span>
-</a>
 <a class="compact-dir-btn btn-in-eng" href="01_03_aiq_eng_colleges.html" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important; color: #ffffff !important; border: 1.2px solid #38bdf8 !important; padding: 4px 12px !important; border-radius: 8px !important; font-weight: 800 !important; font-size: 0.78rem !important; text-decoration: none !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; box-shadow: 0 2px 6px rgba(2, 132, 199, 0.35) !important;" title="அகில இந்திய JEE கல்வி நிறுவனங்கள் (IIT, NIT, IIIT) அடைவு">
 <span>🏛️</span>
 <span>இந்தியக் கல்லூரிகள் ↗</span>
@@ -6516,35 +6563,35 @@
 </div>
 <div class="marquee-scroll-track">
 <div class="marquee-content-loop">
-<a class="marquee-pill-btn" href="#section-1">📌 1. பொறியியல் அறிமுகம்</a>
-<a class="marquee-pill-btn" href="#section-2">📝 2. JEE Main கட்டமைப்பு</a>
-<a class="marquee-pill-btn" href="#section-3">🔬 3. JEE Advanced &amp; IITs</a>
-<a class="marquee-pill-btn" href="#section-4">🏛️ 4. NITs, IIITs &amp; GFTIs</a>
-<a class="marquee-pill-btn" href="#section-5">🔄 5. JoSAA கலந்தாய்வு</a>
-<a class="marquee-pill-btn" href="#section-6">🌟 6. BITSAT வழிகாட்டி</a>
-<a class="marquee-pill-btn" href="#section-7">🏢 7. முன்னணி தனியார் நிறுவனங்கள்</a>
-<a class="marquee-pill-btn" href="#section-9">💻 8. பொறியியல் பிரிவுகள்</a>
-<a class="marquee-pill-btn" href="#section-10">📊 9. தேர்வுகளின் ஒப்பீடு</a>
-<a class="marquee-pill-btn" href="#section-11">🚀 10. பள்ளி வகுப்பு வாரிய தயாரிப்பு</a>
-<a class="marquee-pill-btn" href="#section-12">💰 11. PM-Vidyalaxmi கல்விக் கடன்</a>
-<a class="marquee-pill-btn" href="#section-faq">❓ 12. அடிக்கடி கேட்கப்படும் வினாக்கள்</a>
-<a class="marquee-pill-btn" href="#section-13">📑 13. தேவையான சான்றிதழ்கள்</a>
+<a class="marquee-pill-btn" href="#section-1">📌 பொறியியல் அறிமுகம்</a>
+<a class="marquee-pill-btn" href="#section-2">📝 JEE Main கட்டமைப்பு</a>
+<a class="marquee-pill-btn" href="#section-3">🔬 JEE Advanced &amp; IITs</a>
+<a class="marquee-pill-btn" href="#section-4">🏛️ NITs, IIITs &amp; GFTIs</a>
+<a class="marquee-pill-btn" href="#section-5">🔄 JoSAA கலந்தாய்வு</a>
+<a class="marquee-pill-btn" href="#section-6">🌟 BITSAT வழிகாட்டி</a>
+<a class="marquee-pill-btn" href="#section-7">🏢 முன்னணி தனியார் நிறுவனங்கள்</a>
+<a class="marquee-pill-btn" href="#section-9">💻 பொறியியல் பிரிவுகள்</a>
+<a class="marquee-pill-btn" href="#section-10">📊 தேர்வுகளின் ஒப்பீடு</a>
+<a class="marquee-pill-btn" href="#section-11">🚀 பள்ளி வகுப்பு வாரிய தயாரிப்பு</a>
+<a class="marquee-pill-btn" href="#section-12">💰 PM-Vidyalaxmi கல்விக் கடன்</a>
+<a class="marquee-pill-btn" href="#section-faq">❓ அடிக்கடி கேட்கப்படும் வினாக்கள்</a>
+<a class="marquee-pill-btn" href="#section-13">📑 தேவையான சான்றிதழ்கள்</a>
 </div>
 <!-- Duplicate for infinite seamless scroll -->
 <div aria-hidden="true" class="marquee-content-loop">
-<a class="marquee-pill-btn" href="#section-1">📌 1. பொறியியல் அறிமுகம்</a>
-<a class="marquee-pill-btn" href="#section-2">📝 2. JEE Main கட்டமைப்பு</a>
-<a class="marquee-pill-btn" href="#section-3">🔬 3. JEE Advanced &amp; IITs</a>
-<a class="marquee-pill-btn" href="#section-4">🏛️ 4. NITs, IIITs &amp; GFTIs</a>
-<a class="marquee-pill-btn" href="#section-5">🔄 5. JoSAA கலந்தாய்வு</a>
-<a class="marquee-pill-btn" href="#section-6">🌟 6. BITSAT வழிகாட்டி</a>
-<a class="marquee-pill-btn" href="#section-7">🏢 7. முன்னணி தனியார் நிறுவனங்கள்</a>
-<a class="marquee-pill-btn" href="#section-9">💻 8. பொறியியல் பிரிவுகள்</a>
-<a class="marquee-pill-btn" href="#section-10">📊 9. தேர்வுகளின் ஒப்பீடு</a>
-<a class="marquee-pill-btn" href="#section-11">🚀 10. பள்ளி வகுப்பு வாரிய தயாரிப்பு</a>
-<a class="marquee-pill-btn" href="#section-12">💰 11. PM-Vidyalaxmi கல்விக் கடன்</a>
-<a class="marquee-pill-btn" href="#section-faq">❓ 12. அடிக்கடி கேட்கப்படும் வினாக்கள்</a>
-<a class="marquee-pill-btn" href="#section-13">📑 13. தேவையான சான்றிதழ்கள்</a>
+<a class="marquee-pill-btn" href="#section-1">📌 பொறியியல் அறிமுகம்</a>
+<a class="marquee-pill-btn" href="#section-2">📝 JEE Main கட்டமைப்பு</a>
+<a class="marquee-pill-btn" href="#section-3">🔬 JEE Advanced &amp; IITs</a>
+<a class="marquee-pill-btn" href="#section-4">🏛️ NITs, IIITs &amp; GFTIs</a>
+<a class="marquee-pill-btn" href="#section-5">🔄 JoSAA கலந்தாய்வு</a>
+<a class="marquee-pill-btn" href="#section-6">🌟 BITSAT வழிகாட்டி</a>
+<a class="marquee-pill-btn" href="#section-7">🏢 முன்னணி தனியார் நிறுவனங்கள்</a>
+<a class="marquee-pill-btn" href="#section-9">💻 பொறியியல் பிரிவுகள்</a>
+<a class="marquee-pill-btn" href="#section-10">📊 தேர்வுகளின் ஒப்பீடு</a>
+<a class="marquee-pill-btn" href="#section-11">🚀 பள்ளி வகுப்பு வாரிய தயாரிப்பு</a>
+<a class="marquee-pill-btn" href="#section-12">💰 PM-Vidyalaxmi கல்விக் கடன்</a>
+<a class="marquee-pill-btn" href="#section-faq">❓ அடிக்கடி கேட்கப்படும் வினாக்கள்</a>
+<a class="marquee-pill-btn" href="#section-13">📑 தேவையான சான்றிதழ்கள்</a>
 </div>
 </div>
 </div>
@@ -6617,7 +6664,7 @@
 </tbody>
 </table>
 </div>
-</section></div>
+</section>
 <!-- Section 2: JEE Main Pattern & Latest NTA Updates -->
 <!-- Section 2: JEE Main Comprehensive Exam Pattern (Paper 1, 2A & 2B) -->
 <section class="content-section filterable-section" data-tags="jee-main barch-plan all exam-pattern nta updates tie-breaking paper1 paper2a paper2b" id="section-2">
@@ -6972,7 +7019,7 @@
         </a>
 </div>
 </div>
-</section></main></div>
+</section>
 <!-- Section 3: In-depth JEE Advanced Details & AAT Architecture -->
 <section class="content-section filterable-section" data-tags="jee-adv all iit advanced eligibility exam-pattern aat barch" id="section-3">
 <div class="section-header">
@@ -7095,6 +7142,7 @@
 </div>
 </div>
 
+</section>
 <section class="content-section filterable-section" data-tags="jee-main jee-adv all iit nit iiit institutes colleges directory sheets download" id="section-4">
 <div class="section-header">
 <h2 class="section-title">🏛️ 4. மத்திய அரசின் தலைசிறந்த பொறியியல் கல்வி நிறுவனங்கள் &amp; ஸ்ப்ரெட்ஷீட்</h2>
@@ -7178,6 +7226,7 @@
 
 
 <!-- Section 5: JoSAA & CSAB Counselling Steps -->
+</section>
 <section class="content-section filterable-section" data-tags="jee-main jee-adv all josaa csab counselling" id="section-5">
 <div class="section-header">
 <h2 class="section-title">🔄 5. மத்திய பொறியியல் சேர்க்கை கலந்தாய்வு நடைமுறைகள் (JoSAA &amp; CSAB)</h2>
@@ -7203,6 +7252,7 @@
 </ul>
 
 <!-- Section 6: BITSAT -->
+</section>
 <section class="content-section filterable-section" data-tags="bitsat all private merit" id="section-6">
 <div class="section-header">
 <h2 class="section-title">🌟 6. BITSAT - பிட்ஸ் பிலானி பொறியியல் நுழைவுத்தேர்வு (Birla Institute of Technology &amp; Science)</h2>
@@ -7219,6 +7269,7 @@
 </div>
 
 <!-- Section 7: Top Private Engineering Exams -->
+</section>
 <section class="content-section filterable-section" data-tags="private all viteee srm met comedk amrita ugee" id="section-7">
 <div class="section-header">
 <h2 class="section-title">🏢 7. அகில இந்திய முன்னணி தனியார் &amp; நிகர்நிலைப் பல்கலைக்கழகங்களின் பொறியியல் நுழைவுத்தேர்வுகள்</h2>
@@ -7260,6 +7311,7 @@
 </div>
 
 <!-- Section 8: Branches Guide -->
+</section>
 <section class="content-section filterable-section" data-tags="branches all cse ece eee mech civil ai data science" id="section-9">
 <div class="section-header">
 <h2 class="section-title">💻 8. பொறியியல் முதன்மைப் பாடப்பிரிவுகள் &amp; எதிர்கால தொழில்நுட்பத் துறைகள்</h2>
@@ -7293,6 +7345,7 @@
 </div>
 
 <!-- Section 9: Master Comparison Table -->
+</section>
 <section class="content-section filterable-section" data-tags="all comparison table summary engineering" id="section-10">
 <div class="section-header">
 <h2 class="section-title">📊 9. பொறியியல் நுழைவுத்தேர்வுகளின் முழுமையான ஒப்பீட்டு அட்டவணை</h2>
@@ -7372,6 +7425,7 @@
 </div>
 
 <!-- Section 10: Roadmap -->
+</section>
 <section class="content-section filterable-section" data-tags="all roadmap study guide 9 10 11 12 engineering" id="section-11">
 <div class="section-header">
 <h2 class="section-title">🚀 10. 9 முதல் 12-ஆம் வகுப்பு வரை பொறியியல் நுழைவுத்தேர்வு தயாரிப்பு வழிகாட்டி (Roadmap)</h2>
@@ -7402,9 +7456,10 @@
 </div>
 
 <!-- Section 11: Loans & Schemes -->
+</section>
 <section class="content-section filterable-section" data-tags="schemes loan all scholarships vidyalakshmi fees pudhumai-penn tamil-pudhalvan" id="section-12">
 <div class="section-header">
-<h2 class="section-title">💰 11. PM-Vidyalaxmi கல்விக் கடன் திட்டம் &amp; பொறியியல் மாணவர் நலத்திட்டங்கள்</h2>
+<h2 class="section-title">💰 PM-Vidyalaxmi கல்விக் கடன் திட்டம் &amp; பொறியியல் மாணவர் நலத்திட்டங்கள்</h2>
 <span class="section-badge">வங்கிக் கடன் &amp; அரசு உதவித்தொகைகள்</span>
 </div>
 <div class="alert-box">
@@ -7423,6 +7478,7 @@
 </div>
 
 <!-- Section 12: FAQs -->
+</section>
 <section class="content-section filterable-section" data-tags="faq all questions answers jee-main jee-adv bitsat loan" id="section-faq">
 <div class="section-header">
 <h2 class="section-title">❓ 12. அடிக்கடி கேட்கப்படும் கேள்விகள் &amp; பதில்கள் (Frequently Asked Questions - FAQs)</h2>
@@ -7524,6 +7580,7 @@
 </div>
 
 <!-- Section 13: Checklist -->
+</section>
 <section class="content-section filterable-section" data-tags="all documents checklist certificates helpline contacts" id="section-13">
 <div class="section-header">
 <h2 class="section-title">📑 13. பொறியியல் சேர்க்கைக்குத் தேவையான சான்றிதழ்கள் சரிபார்ப்பு பட்டியல்</h2>
@@ -7613,6 +7670,7 @@
 <h4>பொறியியல் பயில விரும்பும் மாணவச் செல்வங்களுக்கு வாழ்த்துகள்!</h4>
 <p>தொழில்நுட்பப் பொறியியல் கல்வி என்பது ஒரு நாட்டின் வளர்ச்சிக்கும், புதிய கண்டுபிடிப்புகளுக்கும் முதுகெலும்பாகத் திகழ்கிறது. கடின உழைப்பு, தினசரி பயிற்சி மற்றும் தன்னம்பிக்கையுடன் படித்தால் சிவகங்கை மாவட்ட அரசு மற்றும் அரசு உதவிபெறும் பள்ளி மாணவர்கள் எவராலும் வெல்ல முடியாத தொழில்நுட்ப சிகரங்களை எட்ட முடியும்! எதிர்காலப் பொறியாளர்களாக உருவாக முதன்மைக் கல்வி அலுவலகம் மனதார வாழ்த்துகிறது!</p>
 </div>
+</section>
 <!-- Bottom Chapter Navigation Bar: Animated Edge-to-Edge Navigation -->
 <nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar">
 <a class="page-nav-btn btn-prev-animated" href="01_02_medical_neet_ug.html" title="01_02 மருத்துவம் (NEET UG)">
@@ -7662,7 +7720,9 @@
     © 2026 Chief Educational Office, Sivagangai. All Rights Reserved. • வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
 </footer>
- <!-- /.container -->
+    </div><!-- /.portal-container -->
+  </main><!-- /.portal-main-content -->
+</div><!-- /.portal-layout-wrapper -->
 <script>
 function toggleSidebarMenu() {
   var sidebar = document.getElementById('desktopLeftSidebar');
@@ -7920,5 +7980,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </script>
 <button aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" id="floatingBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="மேலே செல்க">↑ மேலே செல்க</button>
-</section></section></section></section></section></section></section></section></section></section></section></body>
+</body>
 </html>
