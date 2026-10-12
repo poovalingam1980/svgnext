@@ -6632,7 +6632,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // ==============================================================================
 // MODAL CONTROLLER & MULTI-CHANNEL GOOGLE SHEET SUBMISSION
 // ==============================================================================
-const APPS_SCRIPT_BASE_URL = "https://script.google.com/macros/s/AKfycbw6JT5M-sr-6vz96-dKK00Xema0v3--HXkHJp0jX-Tvx_LeWvIuV6VPCOn-U76HjbAcxg/exec";
+const APPS_SCRIPT_FEEDBACK_URL = "https://script.google.com/macros/s/AKfycbweLUerXxEKeOq0lncL35mAJKQQwKnHKKMzzAiHTiDZnmsyuWEx0xm-8Dr-ZVM0ngw/exec";
+const APPS_SCRIPT_QUERIES_URL  = "https://script.google.com/macros/s/AKfycbwM7YF6emrFge4Xg3o2nt7dj4iTcnjpmnirjsfwAREtWsifhXrZ4QBqowDV2NB5FN8y8w/exec";
 
 function openStudentQueryModal() {
   const m = document.getElementById('modalStudentQuery');
@@ -6686,6 +6687,8 @@ window.addEventListener('keydown', function(e) {
 
 // Multi-Channel Google Sheet Submission Helper
 async function postToGoogleSheet(payload) {
+  const targetUrl = payload.formType === 'student_query' ? APPS_SCRIPT_QUERIES_URL : APPS_SCRIPT_FEEDBACK_URL;
+
   // 1. LocalStorage Persistent Backup
   try {
     const storeKey = payload.formType === 'student_query' ? 'student_query_records' : 'portal_feedback_records';
@@ -6696,9 +6699,9 @@ async function postToGoogleSheet(payload) {
     console.warn("Storage notice:", err);
   }
 
-  // 2. Fetch POST with no-cors
+  // 2. Fetch POST with no-cors to dedicated Web App URL
   try {
-    await fetch(APPS_SCRIPT_BASE_URL, {
+    await fetch(targetUrl, {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
@@ -6714,7 +6717,7 @@ async function postToGoogleSheet(payload) {
     if (iframe) {
       const form = document.createElement('form');
       form.method = 'POST';
-      form.action = APPS_SCRIPT_BASE_URL;
+      form.action = targetUrl;
       form.target = 'hidden_form_sink';
       for (const k in payload) {
         const input = document.createElement('input');
