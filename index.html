@@ -4479,6 +4479,357 @@
   }
 }
 
+
+/* ========================================================
+   PERFECTLY CENTERED DUAL ACTION PILL (NO ICONS, CRISP TEXT)
+   ======================================================== */
+.cg-center-dual-wrapper {
+  flex: 0 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 1.8px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 3px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  max-width: 460px !important;
+  width: 100% !important;
+}
+
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 7px 16px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 14px rgba(253, 224, 71, 0.4), 0 0 16px rgba(245, 158, 11, 0.5) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 14px rgba(56, 189, 248, 0.4), 0 0 16px rgba(2, 132, 199, 0.5) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.2px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.58rem !important;
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  display: block !important;
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.86rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.1px !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  white-space: nowrap !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  display: block !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.63rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 2px auto 0 auto !important;
+  white-space: nowrap !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
+}
+
+
+/* ========================================================
+   CHIEF EDUCATIONAL OFFICER (CEO) SIVAGANGAI MESSAGE CARD
+   ======================================================== */
+.ceo-message-card-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 36px 0 26px 0 !important;
+  padding: 30px 28px !important;
+  background: linear-gradient(135deg, #071328 0%, #0d1e3d 45%, #132a54 75%, #081328 100%) !important;
+  border: 2px solid #d4af37 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45), 0 0 22px rgba(212, 175, 55, 0.22), inset 0 0 30px rgba(14, 165, 233, 0.06) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 5 !important;
+}
+
+.ceo-message-card-section::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, #facc15 0%, #38bdf8 50%, #facc15 100%) !important;
+}
+
+.ceo-card-inner {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 960px !important;
+  margin: 0 auto !important;
+}
+
+.ceo-card-header {
+  text-align: center !important;
+  margin-bottom: 22px !important;
+}
+
+.ceo-gov-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(212, 175, 55, 0.14) !important;
+  border: 1.2px solid #d4af37 !important;
+  padding: 5px 18px !important;
+  border-radius: 999px !important;
+  color: #fef08a !important;
+  font-weight: 800 !important;
+  font-size: 0.84rem !important;
+  letter-spacing: 0.4px !important;
+  margin-bottom: 12px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+}
+
+.ceo-seal-icon {
+  font-size: 1.1rem !important;
+}
+
+.ceo-main-title {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem) !important;
+  font-weight: 900 !important;
+  margin: 0 0 6px 0 !important;
+  background: linear-gradient(180deg, #fffbeb 0%, #fef08a 30%, #facc15 65%, #ca8a04 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  letter-spacing: 0.3px !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+.ceo-sub-tagline {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: clamp(0.70rem, 0.95vw, 0.82rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.5px !important;
+  color: #94a3b8 !important;
+  text-transform: uppercase !important;
+}
+
+.ceo-message-body {
+  position: relative !important;
+  padding: 10px 18px !important;
+  margin: 0 auto !important;
+  line-height: 1.8 !important;
+  color: #f1f5f9 !important;
+}
+
+.ceo-quote-mark {
+  font-family: Georgia, serif !important;
+  font-size: 3.5rem !important;
+  line-height: 1 !important;
+  color: rgba(212, 175, 55, 0.4) !important;
+  user-select: none !important;
+}
+
+.ceo-quote-mark.left {
+  float: left !important;
+  margin: -10px 10px 0 -10px !important;
+}
+
+.ceo-quote-mark.right {
+  float: right !important;
+  margin: -20px -10px 0 10px !important;
+}
+
+.ceo-salutation {
+  font-size: 1.12rem !important;
+  font-weight: 900 !important;
+  color: #fef08a !important;
+  margin-bottom: 12px !important;
+  letter-spacing: 0.2px !important;
+}
+
+.ceo-para {
+  font-size: 0.96rem !important;
+  color: #e2e8f0 !important;
+  margin-bottom: 14px !important;
+  text-align: justify !important;
+  line-height: 1.8 !important;
+}
+
+.ceo-para strong {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+.ceo-para em {
+  color: #fef08a !important;
+  font-style: normal !important;
+  font-weight: 800 !important;
+}
+
+.ceo-para.highlight {
+  background: rgba(56, 189, 248, 0.08) !important;
+  border-left: 3.5px solid #38bdf8 !important;
+  padding: 12px 16px !important;
+  border-radius: 0 10px 10px 0 !important;
+  color: #f8fafc !important;
+  font-weight: 700 !important;
+}
+
+.ceo-signoff-row {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  margin-top: 22px !important;
+  padding-top: 16px !important;
+  border-top: 1px dashed rgba(212, 175, 55, 0.35) !important;
+}
+
+.ceo-signature-block {
+  text-align: right !important;
+}
+
+.ceo-seal-graphic {
+  font-size: 1.15rem !important;
+  letter-spacing: 4px !important;
+  margin-bottom: 4px !important;
+}
+
+.ceo-title-name {
+  font-size: 1.1rem !important;
+  font-weight: 900 !important;
+  color: #fef08a !important;
+  letter-spacing: 0.3px !important;
+}
+
+.ceo-office-sub {
+  font-size: 0.86rem !important;
+  font-weight: 700 !important;
+  color: #cbd5e1 !important;
+}
+
+.ceo-tamilnadu-gov {
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  color: #38bdf8 !important;
+  margin-top: 2px !important;
+}
+
+@media (max-width: 640px) {
+  .ceo-message-card-section {
+    padding: 20px 16px !important;
+    margin: 24px 0 18px 0 !important;
+  }
+  .ceo-signoff-row {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  .ceo-signature-block {
+    text-align: center !important;
+  }
+  .ceo-para {
+    text-align: left !important;
+  }
+}
 </style>
 <style id="robust-layout-override">
 /* ========================================================
@@ -4765,6 +5116,158 @@
   }
 }
 
+
+/* ========================================================
+   PERFECTLY CENTERED DUAL ACTION PILL (NO ICONS, CRISP TEXT)
+   ======================================================== */
+.cg-center-dual-wrapper {
+  flex: 0 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 1.8px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 3px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  max-width: 460px !important;
+  width: 100% !important;
+}
+
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 7px 16px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 14px rgba(253, 224, 71, 0.4), 0 0 16px rgba(245, 158, 11, 0.5) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 14px rgba(56, 189, 248, 0.4), 0 0 16px rgba(2, 132, 199, 0.5) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.2px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.58rem !important;
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  display: block !important;
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.86rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.1px !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  white-space: nowrap !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  display: block !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.63rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 2px auto 0 auto !important;
+  white-space: nowrap !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
+}
+
 </style>
 <style>
     .portal-layout-wrapper {
@@ -5042,6 +5545,158 @@
   .dual-divider {
     display: none !important;
   }
+}
+
+
+/* ========================================================
+   PERFECTLY CENTERED DUAL ACTION PILL (NO ICONS, CRISP TEXT)
+   ======================================================== */
+.cg-center-dual-wrapper {
+  flex: 0 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 1.8px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 3px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  max-width: 460px !important;
+  width: 100% !important;
+}
+
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 7px 16px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 14px rgba(253, 224, 71, 0.4), 0 0 16px rgba(245, 158, 11, 0.5) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 14px rgba(56, 189, 248, 0.4), 0 0 16px rgba(2, 132, 199, 0.5) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.2px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.58rem !important;
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  display: block !important;
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.86rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.1px !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  white-space: nowrap !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  display: block !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.63rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 2px auto 0 auto !important;
+  white-space: nowrap !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
 }
 
 </style>
@@ -5510,6 +6165,158 @@
   .dual-divider {
     display: none !important;
   }
+}
+
+
+/* ========================================================
+   PERFECTLY CENTERED DUAL ACTION PILL (NO ICONS, CRISP TEXT)
+   ======================================================== */
+.cg-center-dual-wrapper {
+  flex: 0 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 1.8px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 3px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  max-width: 460px !important;
+  width: 100% !important;
+}
+
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 7px 16px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 14px rgba(253, 224, 71, 0.4), 0 0 16px rgba(245, 158, 11, 0.5) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 14px rgba(56, 189, 248, 0.4), 0 0 16px rgba(2, 132, 199, 0.5) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.2px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.58rem !important;
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  display: block !important;
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.86rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.1px !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  white-space: nowrap !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  display: block !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.63rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 2px auto 0 auto !important;
+  white-space: nowrap !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
 }
 
 </style>
@@ -6262,6 +7069,158 @@
   }
 }
 
+
+/* ========================================================
+   PERFECTLY CENTERED DUAL ACTION PILL (NO ICONS, CRISP TEXT)
+   ======================================================== */
+.cg-center-dual-wrapper {
+  flex: 0 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 1.8px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 3px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  max-width: 460px !important;
+  width: 100% !important;
+}
+
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 7px 16px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 14px rgba(253, 224, 71, 0.4), 0 0 16px rgba(245, 158, 11, 0.5) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 14px rgba(56, 189, 248, 0.4), 0 0 16px rgba(2, 132, 199, 0.5) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.2px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.58rem !important;
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  display: block !important;
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.86rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.1px !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  white-space: nowrap !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  display: block !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.63rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 2px auto 0 auto !important;
+  white-space: nowrap !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
+}
+
 </style>
 </head>
 <body>
@@ -6652,6 +7611,57 @@
 </a>
 </div>
 </div>
+
+<!-- ========================================================
+     CHIEF EDUCATIONAL OFFICER (CEO) SIVAGANGAI — GREETING MESSAGE
+     சிவகங்கை முதன்மைக் கல்வி அலுவலரின் வாழ்த்துச் செய்தி
+     ======================================================== -->
+<section aria-label="சிவகங்கை முதன்மைக் கல்வி அலுவலரின் வாழ்த்துச் செய்தி" class="ceo-message-card-section no-print" id="ceoGreetingMessageSec">
+<div class="ceo-card-inner">
+<!-- Top Header Badge & Seal -->
+<div class="ceo-card-header">
+<div class="ceo-gov-badge">
+<span class="ceo-seal-icon">🏛️</span>
+<span>தமிழ்நாடு பள்ளிக் கல்வித்துறை • முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்</span>
+</div>
+<h2 class="ceo-main-title">
+        முதன்மைக் கல்வி அலுவலரின் வாழ்த்துச் செய்தி
+      </h2>
+<div class="ceo-sub-tagline">
+        CHIEF EDUCATIONAL OFFICER'S INSPIRATIONAL MESSAGE TO STUDENTS
+      </div>
+</div>
+<!-- Message Content with Quote Treatment -->
+<div class="ceo-message-body">
+<div class="ceo-quote-mark left">“</div>
+<p class="ceo-salutation">
+        அன்பார்ந்த சிவகங்கை மாவட்ட மாணவச் செல்வங்களே!
+      </p>
+<p class="ceo-para">
+        பள்ளிப் படிப்பை வெற்றிகரமாக நிறைவு செய்து, உங்கள் வாழ்க்கைப் பயணத்தின் அடுத்த உன்னதமான படியான <strong>உயர்கல்விக்குள்</strong> அடியெடுத்து வைக்கும் உங்கள் அனைவருக்கும் எனது நெஞ்சம் நிறைந்த நல்வாழ்த்துகளைத் தெரிவித்துக் கொள்கிறேன்.
+      </p>
+<p class="ceo-para">
+        இன்றைய உலகம் எண்ணற்ற புதிய வாய்ப்புகளும் திறன்களும் நிறைந்த ஒரு விரிந்த களம். மருத்துவம், பொறியியல், வேளாண்மை, சட்டம், அறிவியல் ஆராய்ச்சி, தொழில்முனைவு, அரசுப் பணிகள் மற்றும் பாதுகாப்புப் படைகள் எனப் பல துறைகளில் நீங்கள் தடம் பதிக்க முடியும். <em>பொருளாதாரச் சூழல் அல்லது வழிகாட்டுதல் குறைபாடு எக்காரணத்தைக் கொண்டும் ஒரு மாணவரின் கல்விக் கனவைத் தடுத்துவிடக் கூடாது</em> என்பதே நமது மாவட்டப் பள்ளிக் கல்வித்துறையின் தலையாய நோக்கம்.
+      </p>
+<p class="ceo-para">
+        அரசு வழங்கும் <strong>7.5% முன்னுரிமை இடஒதுக்கீடு</strong>, <strong>புதுமைப் பெண்</strong> மற்றும் <strong>தமிழ்ப் புதல்வன்</strong> திட்டங்கள், கல்விக் கட்டண விலக்குகள், கல்வி உதவித்தொகைகள் மற்றும் தேசியக் கல்வி நிறுவனங்களின் சேர்க்கை வாய்ப்புகள் ஆகியவற்றை முழுமையாக அறிந்து விழிப்புணர்வுடன் உங்கள் எதிர்காலத்தைத் திட்டமிடுங்கள்.
+      </p>
+<p class="ceo-para highlight">
+        விடாமுயற்சியும், சரியான வழிகாட்டுதலும், தளராத உழைப்பும் இருந்தால் நீங்கள் எட்ட முடியாத இலக்கே இல்லை. சிவகங்கை மண்ணின் பெருமையை உலகறியச் செய்யும் வண்ணம் சிறந்த ஆளுமைகளாக நீங்கள் உயர மாவட்டக் கல்வித்துறை என்றும் உங்களுக்குத் துணை நிற்கும். உங்கள் எதிர்காலம் ஒளிமயமாக அமைய வாழ்த்துகிறேன்!
+      </p>
+<div class="ceo-quote-mark right">”</div>
+</div>
+<!-- Official Sign-off Footer -->
+<div class="ceo-signoff-row">
+<div class="ceo-signature-block">
+<div class="ceo-seal-graphic">🎓 ✨ ✍️</div>
+<div class="ceo-title-name">முதன்மைக் கல்வி அலுவலர்</div>
+<div class="ceo-office-sub">முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்.</div>
+<div class="ceo-tamilnadu-gov">தமிழ்நாடு அரசு • பள்ளிக் கல்வித்துறை</div>
+</div>
+</div>
+</div>
+</section>
 <section class="portal-bottom-action-hub" id="bottomActionHub" style="width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; margin: 36px 0 24px 0 !important; padding: 24px 20px !important; background: linear-gradient(135deg, #091330 0%, #0f172a 50%, #1e293b 100%) !important; border: 2px solid #d4af37 !important; border-radius: 16px !important; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35), 0 0 16px rgba(212, 175, 55, 0.2) !important; text-align: center !important; position: relative !important; z-index: 10 !important;">
 <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(212, 175, 55, 0.16); border: 1.2px solid #d4af37; padding: 4px 18px; border-radius: 999px; margin-bottom: 12px;">
 <span style="font-size: 1.1rem;">⚡</span>
@@ -6684,8 +7694,6 @@
 </button>
 </div>
 </section>
-
-
 <!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
 <!-- திருக்குறள் பகுதி — அறிவுடைமை & எதிர்காலப் பாதுகாப்பு (அதிகாரம்: அறிவுடைமை) -->
 <div class="kural-box">
@@ -7591,8 +8599,8 @@ document.addEventListener('DOMContentLoaded', function() {
           தங்களின் கண்காணிப்பு குறிப்பு எண்: <b id="modalTicketIdDisplay" style="color: #0284c7; background: #ffffff; padding: 3px 12px; border-radius: 6px; border: 1.5px solid #38bdf8;">TN-CG-2026-XXXX</b>
 </p>
 <p style="font-size: 0.85rem; color: #475569; margin-bottom: 14px;">
-          தகவல்கள் <b>Student_Queries</b> Google Sheet-ல் உடனுக்குடன் சேமிக்கப்பட்டுள்ளன.<br><span style="font-size: 0.80rem; color: #0284c7; font-weight: 700;">(இப்பெட்டி இன்னும் 3 வினாடிகளில் தானாக மறைந்துவிடும்...)</span>
-        </p>
+          தகவல்கள் <b>Student_Queries</b> Google Sheet-ல் உடனுக்குடன் சேமிக்கப்பட்டுள்ளன.<br/><span style="font-size: 0.80rem; color: #0284c7; font-weight: 700;">(இப்பெட்டி இன்னும் 3 வினாடிகளில் தானாக மறைந்துவிடும்...)</span>
+</p>
 <button onclick="closeStudentQueryModal()" style="background: #065f46; color: #ffffff; border: none; padding: 8px 24px; border-radius: 6px; font-weight: 800; cursor: pointer;" type="button">
           சரி (OK)
         </button>
@@ -7660,7 +8668,7 @@ document.addEventListener('DOMContentLoaded', function() {
           தங்கள் ஆலோசனை / கருத்தினை பகிர்ந்து கொண்டமைக்கு நன்றி!
         </h4>
 <div style="display: inline-block; background: #ffffff; border: 1.8px solid #0284c7; padding: 8px 22px; border-radius: 999px; margin-bottom: 12px; font-size: 0.95rem; font-weight: 800; color: #0369a1; box-shadow: 0 2px 6px rgba(2, 132, 199, 0.15);">
-          🌐 <a href="https://www.ceosvg.in" target="_blank" style="color: #0284c7; text-decoration: underline; font-weight: 900;">www.ceosvg.in</a> இணையதளத்துடன் தொடர்ந்து இணைந்திருங்கள்
+          🌐 <a href="https://www.ceosvg.in" style="color: #0284c7; text-decoration: underline; font-weight: 900;" target="_blank">www.ceosvg.in</a> இணையதளத்துடன் தொடர்ந்து இணைந்திருங்கள்
         </div>
 <div style="font-size: 0.82rem; color: #065f46; font-weight: 700; margin-bottom: 12px;">
           (இப்பெட்டி இன்னும் 3 வினாடிகளில் தானாக மறைந்துவிடும்...)
@@ -7896,6 +8904,158 @@ document.addEventListener('DOMContentLoaded', function() {
   .dual-divider {
     display: none !important;
   }
+}
+
+
+/* ========================================================
+   PERFECTLY CENTERED DUAL ACTION PILL (NO ICONS, CRISP TEXT)
+   ======================================================== */
+.cg-center-dual-wrapper {
+  flex: 0 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 1.8px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 3px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  max-width: 460px !important;
+  width: 100% !important;
+}
+
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 7px 16px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 14px rgba(253, 224, 71, 0.4), 0 0 16px rgba(245, 158, 11, 0.5) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 14px rgba(56, 189, 248, 0.4), 0 0 16px rgba(2, 132, 199, 0.5) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.2px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.58rem !important;
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  display: block !important;
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.86rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.1px !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  white-space: nowrap !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  display: block !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.63rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 2px auto 0 auto !important;
+  white-space: nowrap !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
 }
 
 </style>
