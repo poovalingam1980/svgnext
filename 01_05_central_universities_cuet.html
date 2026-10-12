@@ -6154,22 +6154,17 @@
     <span class="nav-menu-separator">▶</span>
     <a class="nav-menu-btn btn-direct-home" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம்">
       <span class="btn-icon">🎯</span>
-      <span class="btn-text">01 / நுழைவுத்தேர்வுகள்</span>
+      <span class="btn-text">நுழைவுத்தேர்வுகள்</span>
     </a>
     <span class="nav-menu-separator">▶</span>
     <span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
       <span class="btn-icon">🏛️</span>
-      <span class="btn-text">05 / மத்தியப் பல்கலைக்கழகங்கள் (CUET UG)</span>
+      <span class="btn-text">மத்தியப் பல்கலைக்கழகங்கள் (CUET UG)</span>
     </span>
   </div>
 </nav>
 <!-- Main Hero Banner (Header) -->
 <header class="portal-header">
-  <div class="header-badge-row" style="margin-bottom: 8px !important;">
-    <span class="header-tag primary" style="background: rgba(251, 191, 36, 0.2) !important; color: #fef08a !important; border: 1px solid rgba(251, 191, 36, 0.5) !important;">
-      CUET UG 2026 • 46+ மத்தியப் பல்கலைகள் • 100+ முதன்மைக் கல்வி நிறுவனங்கள்
-    </span>
-  </div>
   <h1 class="portal-title">
     மத்தியப் பல்கலைக்கழகங்கள் &amp; கலை, அறிவியல், வணிகவியல் <span class="highlight-cyan">(CUET UG சேர்க்கை வழிகாட்டி)</span>
   </h1>
@@ -8021,12 +8016,12 @@
 
 <!-- Bottom Chapter Navigation Bar: Animated Edge-to-Edge Navigation -->
 <nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar">
-  <a class="page-nav-btn btn-prev-animated" href="01_04_science_research_iiser.html" title="01_04 அறிவியல் ஆராய்ச்சி (IISER / IISc)">
+  <a class="page-nav-btn btn-prev-animated" href="01_04_science_research_iiser.html" title="அறிவியல் ஆராய்ச்சி (IISER / IISc)">
     <span class="nav-btn-icon">◀</span>
-    <span class="nav-btn-text">01_04 அறிவியல் ஆராய்ச்சி (IISER)</span>
+    <span class="nav-btn-text">அறிவியல் ஆராய்ச்சி (IISER)</span>
   </a>
-  <a class="page-nav-btn btn-next-animated" href="01_06_law_clat_nlu.html" title="01_06 தேசிய சட்டப் பல்கலைக்கழகங்கள் (CLAT)">
-    <span class="nav-btn-text">01_06 தேசிய சட்டப் பல்கலைகள் (CLAT)</span>
+  <a class="page-nav-btn btn-next-animated" href="01_06_law_clat_nlu.html" title="தேசிய சட்டப் பல்கலைக்கழகங்கள் (CLAT)">
+    <span class="nav-btn-text">தேசிய சட்டப் பல்கலைகள் (CLAT)</span>
     <span class="nav-btn-icon">▶</span>
   </a>
 </nav>
@@ -8062,6 +8057,9 @@
 <footer class="portal-footer">
   <p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #ffffff !important; font-size: 0.96rem !important; text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;">
     தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a class="footer-phone-link" href="tel:04575240408" style="color: #fde047 !important; text-decoration: none !important; font-weight: 800 !important; background: rgba(0, 0, 0, 0.45) !important; padding: 3px 10px !important; border-radius: 6px !important; border: 1.2px solid rgba(253, 224, 71, 0.6) !important; display: inline-block !important;">☎️ 04575240408</a>
+  </p>
+  <p class="footer-last-updated" style="font-size: 0.84rem !important; color: #fde047 !important; margin-top: 6px !important; font-weight: 700 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.8) !important;">
+    📅 கடைசியாகப் புதுப்பிக்கப்பட்டது: <span id="portalLastUpdatedDate">12 அக்டோபர் 2026</span>
   </p>
   <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important;">
     © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
@@ -8530,6 +8528,31 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('cuetPercent').textContent = 'சதவீதம்: ' + pctVal + ' %';
     document.getElementById('cuetFeedback').textContent = feedback;
   }
+
+
+
+  // Automatic Last Updated Date Controller
+  (function() {
+    function updatePortalLastModified() {
+      const el = document.getElementById('portalLastUpdatedDate');
+      if (!el) return;
+      try {
+        const d = new Date(document.lastModified);
+        if (!isNaN(d.getTime())) {
+          const tamilMonths = ['ஜனவரி', 'பிப்ரவரி', 'மார்ச்', 'ஏப்ரல்', 'மே', 'ஜூன்', 'ஜூலை', 'ஆகஸ்ட்', 'செப்டம்பர்', 'அக்டோபர்', 'நவம்பர்', 'டிசம்பர்'];
+          const day = d.getDate();
+          const month = tamilMonths[d.getMonth()];
+          const year = d.getFullYear();
+          el.textContent = day + ' ' + month + ' ' + year;
+        }
+      } catch(e) {}
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updatePortalLastModified);
+    } else {
+      updatePortalLastModified();
+    }
+  })();
 
 </script>
 <button aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" id="floatingBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="மேலே செல்க">↑ மேலே செல்க</button>
