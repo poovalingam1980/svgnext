@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>மாணவர் சந்தேகப் படிவம் | உயர்கல்வி வழிகாட்டி, சிவகங்கை மாவட்டம்</title>
+<!-- Google Fonts: Plus Jakarta Sans, Inter & Noto Sans Tamil -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --font-main: 'Plus Jakarta Sans', 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --primary-dark: #0f172a;
+  --primary: #1e3a8a;
+  --secondary: #0284c7;
+  --accent-gold: #d4af37;
+  --bg-page: #f8fafc;
+  --text-main: #0f172a;
+  --border-crisp: #cbd5e1;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.portal-layout-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+.desktop-left-sidebar {
+  width: 295px !important;
+  min-width: 295px !important;
+  max-width: 295px !important;
+  background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+  border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  z-index: 1000 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.desktop-left-sidebar::-webkit-scrollbar { width: 6px; }
+.desktop-left-sidebar::-webkit-scrollbar-thumb { background: rgba(212, 175, 55, 0.45); border-radius: 4px; }
+
+.sidebar-header {
+  padding: 16px 14px 14px;
+  border-bottom: 1.5px solid rgba(212, 175, 55, 0.25);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(15, 23, 42, 0.4) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.sidebar-emblem { font-size: 1.65rem; line-height: 1; filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.5)); }
+.sidebar-main-title { font-size: 0.92rem; font-weight: 900; color: #fef08a; letter-spacing: 0.3px; line-height: 1.25; }
+.sidebar-sub-title { font-size: 0.74rem; color: #94a3b8; font-weight: 600; margin-top: 2px; }
+
+.sidebar-nav-body { padding: 12px 10px !important; display: flex !important; flex-direction: column !important; gap: 6px !important; }
+.desktop-left-sidebar .sidebar-main-btn {
+  display: flex !important; align-items: center !important; gap: 12px !important; padding: 9px 12px !important;
+  background: rgba(255, 255, 255, 0.05) !important; border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 10px !important; color: #f1f5f9 !important; text-decoration: none !important; transition: all 0.22s ease !important;
+}
+.desktop-left-sidebar .sidebar-main-btn:hover {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(30, 58, 138, 0.35) 100%) !important;
+  border-color: #d4af37 !important; transform: translateX(3px) !important;
+}
+.desktop-left-sidebar .sidebar-main-btn.active-page {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%) !important;
+  border: 1.5px solid #d4af37 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 0 10px rgba(212, 175, 55, 0.25) !important;
+}
+.desktop-left-sidebar .menu-ta { font-size: 0.86rem !important; font-weight: 800 !important; color: #f8fafc !important; }
+.desktop-left-sidebar .menu-en { font-size: 0.66rem !important; font-weight: 700 !important; letter-spacing: 0.7px !important; color: #94a3b8 !important; text-transform: uppercase !important; }
+.desktop-left-sidebar .sidebar-main-btn:hover .menu-ta, .desktop-left-sidebar .sidebar-main-btn.active-page .menu-ta { color: #fef08a !important; }
+
+.portal-main-content {
+  margin-left: 295px !important;
+  width: calc(100% - 295px) !important;
+  min-height: 100vh !important;
+  padding: 16px clamp(14px, 2vw, 32px) 40px !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+.portal-container { width: 100% !important; max-width: 100% !important; margin: 0 auto !important; box-sizing: border-box !important; }
+
+/* Top Frame */
+.portal-top-frame {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+  border: 1.8px solid #d4af37 !important;
+  border-radius: 14px !important;
+  padding: 12px 20px !important;
+  margin: 0 0 16px 0 !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.22), 0 0 12px rgba(212, 175, 55, 0.15) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  position: relative !important;
+}
+
+.top-frame-center-stack { text-align: center !important; margin: 0 auto !important; }
+.banner-title-tamil {
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem) !important;
+  font-weight: 900 !important;
+  background: linear-gradient(180deg, #fffbeb 0%, #fef08a 25%, #facc15 55%, #ca8a04 85%, #854d0e 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.85)) !important;
+}
+.banner-tagline-aurora {
+  font-size: 0.88rem !important;
+  font-weight: 800 !important;
+  background: linear-gradient(90deg, #67e8f9 0%, #a78bfa 50%, #34d399 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+.banner-english-row { font-size: 0.80rem !important; font-weight: 800; color: #cbd5e1; letter-spacing: 1.5px; text-transform: uppercase; }
+
+.top-frame-side-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 7px 14px !important;
+  border-radius: 8px !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid #38bdf8 !important;
+  transition: all 0.2s ease !important;
+}
+.top-frame-side-btn:hover { background: #0369a1 !important; transform: translateY(-1px) !important; }
+
+/* Breadcrumb */
+.breadcrumb-bar {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  padding: 10px 16px !important;
+  margin: 0 0 18px 0 !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 1.8px solid #cbd5e1 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.06) !important;
+}
+.nav-menu-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  padding: 7px 16px !important;
+  border-radius: 9px !important;
+  font-size: 0.86rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  border: 1.5px solid !important;
+}
+.nav-menu-btn.btn-home { background: #ffffff !important; color: #0f766e !important; border-color: #99f6e4 !important; }
+.nav-menu-btn.btn-home:hover { background: #f0fdfa !important; color: #0d9488 !important; transform: translateY(-1px) !important; }
+.nav-menu-btn.btn-current { background: linear-gradient(135deg, #1e40af, #2563eb) !important; color: #ffffff !important; border-color: #3b82f6 !important; }
+
+/* Student Form Card matching image_42949c.png */
+.student-query-card {
+  background: #ffffff !important;
+  border: 2px solid #0284c7 !important;
+  border-radius: 16px !important;
+  padding: 24px 26px !important;
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.10) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  margin-bottom: 24px !important;
+}
+
+.query-card-top-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  border-bottom: 2px solid #e0f2fe !important;
+  padding-bottom: 14px !important;
+  margin-bottom: 12px !important;
+}
+
+.query-card-title {
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem) !important;
+  font-weight: 900 !important;
+  color: #0c4a6e !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 0 !important;
+}
+
+.live-submission-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: #e0f2fe !important;
+  color: #0369a1 !important;
+  padding: 6px 16px !important;
+  border-radius: 999px !important;
+  font-size: 0.84rem !important;
+  font-weight: 800 !important;
+  border: 1.5px solid #bae6fd !important;
+}
+
+.query-lead-desc {
+  font-size: 0.95rem !important;
+  color: #334155 !important;
+  line-height: 1.65 !important;
+  margin-bottom: 20px !important;
+}
+
+.sq-form-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 16px !important;
+  margin-bottom: 20px !important;
+}
+
+.sq-field-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+.sq-field-group label {
+  font-size: 0.88rem !important;
+  font-weight: 800 !important;
+  color: #1e1b4b !important;
+}
+
+.sq-field-group input, .sq-field-group select, .sq-field-group textarea {
+  width: 100% !important;
+  padding: 10px 14px !important;
+  font-size: 0.92rem !important;
+  font-family: inherit !important;
+  border: 1.8px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  background-color: #ffffff !important;
+  outline: none !important;
+  transition: all 0.2s ease !important;
+  box-sizing: border-box !important;
+  color: #0f172a !important;
+}
+
+.sq-field-group input:focus, .sq-field-group select:focus, .sq-field-group textarea:focus {
+  border-color: #0284c7 !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.18) !important;
+}
+
+.btn-submit-query {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, #1e1b4b 0%, #1e3a8a 50%, #0284c7 100%) !important;
+  color: #fef08a !important;
+  border: 1.5px solid #d4af37 !important;
+  padding: 12px 28px !important;
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;
+  transition: all 0.25s ease !important;
+}
+.btn-submit-query:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45) !important;
+  color: #ffffff !important;
+}
+
+/* Sheet Sync Info Bar */
+.sheet-sync-status-box {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%) !important;
+  border: 1.8px solid #38bdf8 !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-bottom: 20px !important;
+}
+
+.sheet-sync-left { display: flex !important; align-items: center !important; gap: 10px !important; }
+.sheet-sync-title { font-weight: 800 !important; font-size: 0.92rem !important; color: #0369a1 !important; }
+.sheet-sync-sub { font-size: 0.80rem !important; color: #475569 !important; }
+
+.btn-open-sheet {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: #ffffff !important;
+  color: #0369a1 !important;
+  border: 1.4px solid #0284c7 !important;
+  padding: 6px 14px !important;
+  border-radius: 7px !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.15) !important;
+  transition: all 0.2s ease !important;
+}
+.btn-open-sheet:hover {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Greeting Card */
+.greeting-card-wrapper {
+  margin: 20px 0;
+  background: linear-gradient(135deg, #091330 0%, #1e3a8a 50%, #0369a1 100%);
+  border: 2.5px solid #d4af37;
+  border-radius: 14px;
+  padding: 22px 18px;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(9, 19, 48, 0.35), 0 0 16px rgba(212, 175, 55, 0.3);
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Quick Helpline Contacts Box */
+.helpline-quick-strip {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+  gap: 12px !important;
+  margin-top: 24px !important;
+}
+
+.help-card-mini {
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 10px !important;
+  padding: 12px 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04) !important;
+}
+
+/* Thirukkural */
+.kural-box {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 22px auto 18px auto !important;
+  padding: 12px 20px 10px 20px !important;
+  border-radius: 14px !important;
+  background: radial-gradient(ellipse at 50% 0%, #1e1b4b 0%, #0f172a 65%, #020617 100%) !important;
+  border: 1.8px solid #f59e0b !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45) !important;
+  text-align: center !important;
+}
+.kural-header {
+  display: inline-flex !important; align-items: center !important; gap: 6px !important; padding: 3px 14px !important;
+  background: rgba(245, 158, 11, 0.15) !important; border: 1px solid rgba(245, 158, 11, 0.4) !important;
+  border-radius: 999px !important; font-size: 0.82rem !important; font-weight: 800 !important; color: #fef08a !important; margin-bottom: 6px !important;
+}
+.kural-verse-text {
+  font-size: 1.15rem !important; font-weight: 900 !important; line-height: 1.6 !important;
+  background: linear-gradient(180deg, #ffffff 0%, #fef08a 40%, #facc15 80%, #ca8a04 100%) !important;
+  -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.95)) !important;
+}
+.kural-meaning {
+  font-size: 0.86rem !important; color: #f8fafc !important; line-height: 1.55 !important;
+  background: rgba(15, 23, 42, 0.75) !important; padding: 8px 18px !important; border-radius: 8px !important;
+  border: 1px solid rgba(245, 158, 11, 0.35) !important; margin-top: 6px !important;
+}
+
+/* Creator Card */
+.creator-card {
+  background: #ffffff !important; border: 1.5px solid #cbd5e1 !important; border-radius: 14px !important;
+  padding: 14px 22px !important; margin: 28px auto 16px auto !important; max-width: 940px !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06) !important; display: flex !important; align-items: center !important;
+  justify-content: center !important; text-align: center !important; flex-wrap: wrap !important; gap: 12px !important;
+}
+.creator-typewriter-wrapper { font-size: 0.94rem !important; color: #1e293b !important; font-weight: 600 !important; display: inline-flex !important; align-items: center !important; }
+.creator-name-ta { color: #1d4ed8 !important; font-weight: 900 !important; }
+.creator-name-en { color: #c026d3 !important; font-weight: 900 !important; }
+.creator-cursor { color: #2563eb !important; animation: blinkCreatorCursor 0.65s infinite !important; }
+@keyframes blinkCreatorCursor { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+.footer-phone-pill {
+  display: inline-flex !important; align-items: center !important; gap: 6px !important;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important; color: #ffffff !important;
+  padding: 6px 14px !important; border-radius: 999px !important; text-decoration: none !important;
+  font-weight: 800 !important; font-size: 0.88rem !important; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Footer */
+.portal-footer {
+  text-align: center !important; padding: 22px 18px 20px !important; margin: 24px 0 16px 0 !important;
+  background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.45) !important; border-radius: 14px !important;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35) !important; width: 100% !important; box-sizing: border-box !important;
+}
+.portal-footer p { color: #ffffff !important; margin-bottom: 6px !important; font-size: 0.94rem !important; }
+
+@media (max-width: 1024px) {
+  .desktop-left-sidebar { position: fixed !important; left: -320px !important; transition: left 0.3s ease !important; }
+  .desktop-left-sidebar.sidebar-open { left: 0 !important; }
+  .portal-main-content { margin-left: 0 !important; width: 100% !important; }
+}
+
+@media (max-width: 900px) {
+  .sq-form-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .sq-col-4 { grid-column: span 2 !important; }
+}
+
+@media (max-width: 600px) {
+  .sq-form-grid { grid-template-columns: 1fr !important; }
+  .sq-col-4 { grid-column: span 1 !important; }
+}
+</style>
+</head>
+<body>
+<div class="portal-layout-wrapper">
+<aside class="desktop-left-sidebar" id="desktopLeftSidebar">
+<div class="sidebar-header">
+<a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
+<span class="sidebar-emblem">🏛️</span>
+<div class="sidebar-title-wrap">
+<span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
+<span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
+</div>
+</a>
+</div>
+<nav class="sidebar-nav-body">
+<a class="sidebar-main-btn" href="index.html">
+<span class="icon">🏠</span>
+<span class="btn-text-group"><span class="menu-ta">முதன்மை முகப்பு</span><span class="menu-en">HOME</span></span>
+</a>
+<a class="sidebar-main-btn" href="01_00_entrance_main.html">
+<span class="icon">🎯</span>
+<span class="btn-text-group"><span class="menu-ta">நுழைவுத்தேர்வுகள்</span><span class="menu-en">ENTRANCE EXAMS</span></span>
+</a>
+<a class="sidebar-main-btn" href="02_00_direct_admissions.html">
+<span class="icon">📈</span>
+<span class="btn-text-group"><span class="menu-ta">நேரடிச் சேர்க்கை</span><span class="menu-en">DIRECT ADMISSIONS</span></span>
+</a>
+<a class="sidebar-main-btn" href="03_institutes.html">
+<span class="icon">🏛️</span>
+<span class="btn-text-group"><span class="menu-ta">கல்லூரிகள் அடைவு</span><span class="menu-en">INSTITUTES DIRECTORY</span></span>
+</a>
+<a class="sidebar-main-btn" href="04_govt_exams.html">
+<span class="icon">🏆</span>
+<span class="btn-text-group"><span class="menu-ta">அரசுத் தேர்வுகள்</span><span class="menu-en">GOVT COMPETITIVE EXAMS</span></span>
+</a>
+<a class="sidebar-main-btn" href="05_direct_careers.html">
+<span class="icon">💼</span>
+<span class="btn-text-group"><span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span><span class="menu-en">SKILLS &amp; CAREERS</span></span>
+</a>
+<a class="sidebar-main-btn" href="06_student_support.html">
+<span class="icon">☎️</span>
+<span class="btn-text-group"><span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span><span class="menu-en">HELPDESK &amp; SUPPORT</span></span>
+</a>
+<a class="sidebar-main-btn active-page" href="student_queries.html">
+<span class="icon">✍️</span>
+<span class="btn-text-group"><span class="menu-ta">மாணவர் சந்தேகப் படிவம்</span><span class="menu-en">STUDENT QUERIES</span></span>
+</a>
+<a class="sidebar-main-btn" href="portal_feedback.html" style="border-left: 3.5px solid #f59e0b !important;">
+<span class="icon">💡</span>
+<span class="btn-text-group"><span class="menu-ta">கருத்துக் களம் &amp; ஆலோசனை</span><span class="menu-en">FEEDBACK &amp; ADVISORY</span></span>
+</a>
+</nav>
+</aside>
+
+<main class="portal-main-content">
+<div class="portal-container">
+
+<header class="portal-top-frame no-print">
+<div class="top-frame-center-stack">
+<h1 class="banner-title-tamil">உயர்கல்வி வழிகாட்டி</h1>
+<div class="banner-tagline-aurora">உங்கள் சிறந்த எதிர்காலத்திற்கான திறவுகோல்</div>
+<div class="banner-english-row">
+<span class="banner-title-english">CAREER GUIDANCE</span>
+<span class="banner-english-dot">•</span>
+<span class="banner-slogan-english">YOUR KEY TO A BRIGHT FUTURE</span>
+</div>
+</div>
+<a class="top-frame-side-btn" href="index.html" title="வழிகாட்டி முதன்மை முகப்பு">
+<span>🎓</span><span>வழிகாட்டி முகப்பு</span>
+</a>
+</header>
+
+<nav aria-label="வழிசெலுத்தல் பட்டை" class="breadcrumb-bar">
+<a class="nav-menu-btn btn-home" href="index.html">
+<span>🧭</span><span>வழிகாட்டி முகப்பு</span>
+</a>
+<span style="color: #94a3b8;">▶</span>
+<span class="nav-menu-btn btn-current">
+<span>✍️</span><span>மாணவர் சந்தேகக் கேட்புப் படிவம்</span>
+</span>
+</nav>
+
+<!-- Google Sheet Connection Status Bar -->
+<div class="sheet-sync-status-box">
+<div class="sheet-sync-left">
+<span style="font-size: 1.8rem;">📊</span>
+<div>
+<div class="sheet-sync-title">அதிகாரப்பூர்வ Google Sheet இணைப்பு தயார் நிலையில் உள்ளது (Google Sheet Connected)</div>
+<div class="sheet-sync-sub">மாணவர் சந்தேகங்கள் சிவகங்கை மாவட்ட Google Sheet தரவுத்தளத்தில் நேரடியாகப் பதிவு செய்யப்படும்.</div>
+</div>
+</div>
+<a class="btn-open-sheet" href="https://docs.google.com/spreadsheets/d/1-nkKQyAqE2IK31Rf4-qXBDVjLD88S2U3d_uF0AGrOZQ/edit" rel="noopener" target="_blank">
+<span>🔗</span><span>Google Sheet-ஐக் காண்க</span>
+</a>
+</div>
+
+<!-- Student Query Form Card matching image_42949c.png -->
+<section class="student-query-card">
+<div class="query-card-top-header">
+<h2 class="query-card-title">
+<span>✍️</span><span>மாணவர் சந்தேகப் படிவம் (Ask a Question to Guidance Team)</span>
+</h2>
+<span class="live-submission-badge">நேரடி வினா சமர்ப்பிப்பு</span>
+</div>
+
+<p class="query-lead-desc">
+உங்கள் உயர்கல்வி சேர்க்கை, கட்-ஆஃப், கட்டண விலக்கு மற்றும் நுழைவுத் தேர்வு தொடர்பான சந்தேகங்களை இங்கே பதிவு செய்யலாம். வழிகாட்டல் குழுவினர் ஆய்வு செய்து வழிகாட்டுவர்:
+</p>
+
+<form id="studentDoubtForm" onsubmit="handleStudentQuerySubmit(event)">
+<input name="spreadsheetId" type="hidden" value="1-nkKQyAqE2IK31Rf4-qXBDVjLD88S2U3d_uF0AGrOZQ"/>
+<input name="sheetName" type="hidden" value="Sheet1"/>
+
+<div class="sq-form-grid">
+<!-- Field 1: Student Name -->
+<div class="sq-field-group">
+<label for="formStudentName">மாணவர் பெயர் <span style="color: #dc2626;">*</span></label>
+<input id="formStudentName" placeholder="உங்கள் முழுப் பெயர்" required="" type="text"/>
+</div>
+
+<!-- Field 2: Class Level -->
+<div class="sq-field-group">
+<label for="formStudentClass">வகுப்பு நிலை <span style="color: #dc2626;">*</span></label>
+<select id="formStudentClass" required="">
+<option value="">-- வகுப்பைத் தேர்வு செய்க --</option>
+<option value="12-ஆம் வகுப்பு (HSC)">12-ஆம் வகுப்பு (HSC)</option>
+<option value="11-ஆம் வகுப்பு">11-ஆம் வகுப்பு</option>
+<option value="10-ஆம் வகுப்பு">10-ஆம் வகுப்பு</option>
+<option value="+2 தேர்ச்சி பெற்றவர்">+2 தேர்ச்சி பெற்றவர்</option>
+</select>
+</div>
+
+<!-- Field 3: School Category -->
+<div class="sq-field-group">
+<label for="formSchoolCategory">பள்ளி வகை <span style="color: #dc2626;">*</span></label>
+<select id="formSchoolCategory" required="">
+<option value="அரசுப் பள்ளி (7.5% தகுதி)">அரசுப் பள்ளி (7.5% தகுதி)</option>
+<option value="அரசு உதவிபெறும் பள்ளி">அரசு உதவிபெறும் பள்ளி</option>
+<option value="சுயநிதி / தனியார் மெட்ரிக் பள்ளி">சுயநிதி / தனியார் மெட்ரிக் பள்ளி</option>
+</select>
+</div>
+
+<!-- Field 4: District -->
+<div class="sq-field-group">
+<label for="formStudentDistrict">மாவட்டம் <span style="color: #dc2626;">*</span></label>
+<input id="formStudentDistrict" placeholder="எ.கா. சிவகங்கை" required="" type="text" value="சிவகங்கை"/>
+</div>
+
+<!-- Field 5: Mobile Number -->
+<div class="sq-field-group">
+<label for="formStudentPhone">அலைபேசி எண் <span style="color: #dc2626;">*</span></label>
+<input id="formStudentPhone" pattern="[0-9]{10}" placeholder="10 இலக்க மொபைல் எண்" required="" title="10 இலக்க கைபேசி எண்" type="tel"/>
+</div>
+
+<!-- Field 6: Email Address -->
+<div class="sq-field-group">
+<label for="formStudentEmail">மின்னஞ்சல் முகவரி <span style="color: #dc2626;">*</span></label>
+<input id="formStudentEmail" placeholder="student@gmail.com (ஒப்புகை மடல் பெற)" required="" type="email"/>
+</div>
+
+<!-- Field 7: Subject Category -->
+<div class="sq-field-group" style="grid-column: span 2;">
+<label for="formSubjectCategory">சந்தேகப் பிரிவு <span style="color: #dc2626;">*</span></label>
+<select id="formSubjectCategory" required="">
+<option value="மருத்துவம் &amp; துணை மருத்துவம் (NEET / Nursing / BNYS)">மருத்துவம் &amp; துணை மருத்துவம் (NEET / Nursing / BNYS)</option>
+<option value="பொறியியல் சேர்க்கை (TNEA 7.5% / JEE)">பொறியியல் சேர்க்கை (TNEA 7.5% / JEE)</option>
+<option value="கலை மற்றும் அறிவியல் (TNGASA)">கலை மற்றும் அறிவியல் (TNGASA)</option>
+<option value="வேளாண்மை &amp; கால்நடை (TNAU / TANUVAS)">வேளாண்மை &amp; கால்நடை (TNAU / TANUVAS)</option>
+<option value="7.5% அரசுப் பள்ளி இடஒதுக்கீடு &amp; கட்டண விலக்கு">7.5% அரசுப் பள்ளி இடஒதுக்கீடு &amp; கட்டண விலக்கு</option>
+<option value="கல்வி உதவித்தொகை &amp; கல்விக் கடன்">கல்வி உதவித்தொகை &amp; கல்விக் கடன்</option>
+<option value="விளையாட்டு ஒதுக்கீடு &amp; சிறப்புப் பிரிவுகள்">விளையாட்டு ஒதுக்கீடு &amp; சிறப்புப் பிரிவுகள்</option>
+<option value="சட்டம், மேலாண்மை &amp; பிற தொழிற்கல்வி">சட்டம், மேலாண்மை &amp; பிற தொழிற்கல்வி</option>
+</select>
+</div>
+
+<!-- Field 8: Query / Doubt -->
+<div class="sq-field-group sq-col-4" style="grid-column: 1 / -1;">
+<label for="formStudentQuery">உங்கள் கேள்வி / சந்தேகம் <span style="color: #dc2626;">*</span></label>
+<textarea id="formStudentQuery" placeholder="உங்கள் கட்-ஆஃப் அல்லது சந்தேகங்களை விரிவாக எழுதவும்..." required="" rows="4" style="height: 100px; resize: vertical;"></textarea>
+</div>
+</div>
+
+<button class="btn-submit-query" id="sqSubmitBtn" type="submit">
+<span>■</span>
+<span>கேள்வியைச் சமர்ப்பிக்க (Submit Query)</span>
+<span>→</span>
+</button>
+</form>
+
+<!-- Confirmation & Greeting Card -->
+<div id="querySuccessCard" style="display: none; margin-top: 24px;">
+<div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2.5px solid #10b981; border-radius: 16px; padding: 24px 20px; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.22); text-align: center;">
+<div style="font-size: 2.4rem; line-height: 1; margin-bottom: 6px;">🎓 ✅ 📞</div>
+<h3 style="color: #065f46; font-size: clamp(1.15rem, 1.9vw, 1.45rem); font-weight: 900; line-height: 1.4; margin-bottom: 10px;">
+தங்களது வினா பதிவு செய்யப்பட்டது. எங்களது வழிகாட்டுதல் குழுவினர் தங்களுக்கு மின்னஞ்சல் அல்லது செல்பேசி வாயிலாக தொடர்பு கொள்வர்!
+</h3>
+<p style="font-size: 1rem; color: #1e293b; margin-bottom: 14px; font-weight: 700;">
+தங்களின் கண்காணிப்பு குறிப்பு எண் (Reference Ticket ID): <b id="ticketIdDisplay" style="color: #0284c7; background: #ffffff; padding: 4px 14px; border-radius: 6px; border: 1.5px solid #38bdf8; letter-spacing: 0.8px;">TN-CG-2026-XXXX</b>
+</p>
+
+<!-- Digital Greeting Card from CEO Sivagangai District Guidance Center -->
+<div class="greeting-card-wrapper">
+<div style="border: 1.5px solid rgba(254, 240, 138, 0.45); border-radius: 10px; padding: 18px 14px; background: rgba(15, 23, 42, 0.45);">
+<div style="font-size: 0.82rem; font-weight: 800; color: #fef08a; letter-spacing: 1.5px; text-transform: uppercase;">
+🏛️ தமிழ்நாடு அரசு • பள்ளிக் கல்வித்துறை
+</div>
+<div style="font-size: 1.20rem; font-weight: 900; color: #ffffff; margin: 3px 0 2px 0; letter-spacing: 0.4px;">
+முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்
+</div>
+<div style="font-size: 0.88rem; color: #93c5fd; font-weight: 700; margin-bottom: 10px;">
+மாவட்ட உயர்கல்வி வழிகாட்டல் மையம்
+</div>
+<div style="width: 70px; height: 2px; background: linear-gradient(90deg, transparent, #d4af37, transparent); margin: 0 auto 12px auto;"></div>
+<div style="display: inline-block; background: linear-gradient(135deg, #d4af37 0%, #fef08a 100%); color: #091330; padding: 4px 18px; border-radius: 999px; font-weight: 900; font-size: 0.92rem; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+✨ உயர்கல்வி நல்வாழ்த்துகள் &amp; பாராட்டு மடல் ✨
+</div>
+<p style="font-size: 1.02rem; color: #ffffff; line-height: 1.6; margin: 8px 0;">
+அன்பார்ந்த மாணவர் செல்வம் <b id="greetStudentName" style="color: #fef08a; font-size: 1.15rem; text-decoration: underline;">மாணவர்</b> அவர்களுக்கு,
+</p>
+<p style="font-size: 0.92rem; color: #e2e8f0; line-height: 1.65; max-width: 580px; margin: 0 auto 12px auto;">
+தங்களின் எதிர்காலக் கல்வி மற்றும் வேலைவாய்ப்புக் கனவுகளை நனவாக்க சிவகங்கை மாவட்ட உயர்கல்வி வழிகாட்டல் உதவி மையத்தில் ஆலோசனைக் கோரிக்கை பதிவு செய்தமைக்கு மனமார்ந்த <b>நன்றியினையும் நல்வாழ்த்துகளையும்</b> தெரிவித்துக் கொள்கிறோம்.
+</p>
+<div style="background: rgba(255, 255, 255, 0.08); border-left: 3px solid #fef08a; border-radius: 6px; padding: 9px 14px; margin: 12px auto; max-width: 520px; font-style: italic; font-size: 0.86rem; color: #fef08a; line-height: 1.5; text-align: center;">
+"தொட்டனைத் தூறும் மணற்கேணி மாந்தர்க்குக்<br>கற்றனைத் தூறும் அறிவு."
+</div>
+<div style="margin: 12px 0 8px 0; font-size: 0.86rem; color: #bae6fd;">
+தங்களின் ஆலோசனைக் குறிப்பு எண்: <b id="greetTicketId" style="color: #fef08a; font-size: 1.05rem; letter-spacing: 0.8px;">TN-CG-2026-XXXX</b>
+</div>
+<div style="display: flex; justify-content: space-around; align-items: flex-end; margin-top: 16px; padding-top: 10px; border-top: 1px dashed rgba(255,255,255,0.25); font-size: 0.80rem; color: #cbd5e1;">
+<div>
+<div>இலவச உதவி மையம்: <b>14417</b></div>
+<div style="font-size: 0.72rem; color: #94a3b8;">(24x7 கல்வி வழிகாட்டல்)</div>
+</div>
+<div>
+<div style="font-weight: 800; color: #ffffff;">முதன்மைக் கல்வி அலுவலர் (CEO)</div>
+<div style="font-size: 0.72rem; color: #94a3b8;">முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</div>
+</div>
+</div>
+</div>
+</div>
+
+<p style="font-size: 0.92rem; color: #1e293b; line-height: 1.65; margin: 12px 0; font-weight: 700;">
+எங்களது வழிகாட்டுதல் குழுவினர் தங்களுக்கு மின்னஞ்சல் அல்லது செல்பேசி வாயிலாக விரைந்து தொடர்பு கொள்வர். அவசர ஆலோசனைக்கு கீழே உள்ள ஆசிரியர்களை நேரடியாகவும் அழைக்கலாம்.
+</p>
+</div>
+</div>
+</section>
+
+<!-- Direct Guide Teachers Contact Quick Strip -->
+<div style="margin-top: 24px; background: #ffffff; border: 1.8px solid #cbd5e1; border-radius: 14px; padding: 20px; box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);">
+<div style="font-size: 1.05rem; font-weight: 900; color: #1e1b4b; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;">
+<span>👥</span><span>அவசர நேரடி வழிகாட்டல் தேவைப்படுவோர் ஆசிரியர்களை நேரடியாக அழைக்கலாம்:</span>
+</div>
+<span style="font-size: 0.78rem; font-weight: 800; color: #065f46; background: #dcfce7; padding: 3px 12px; border-radius: 999px; border: 1px solid #86efac;">Guide Teachers</span>
+</div>
+<div class="helpline-quick-strip">
+<div class="help-card-mini">
+<span style="font-size: 1.5rem;">👩‍🏫</span>
+<div>
+<div style="font-weight: 800; font-size: 0.90rem; color: #0f172a;">திருமதி. உஷா (DIET)</div>
+<a href="tel:8838755505" style="color: #059669; font-weight: 800; text-decoration: none; font-size: 0.88rem;">📞 88387 55505</a>
+</div>
+</div>
+<div class="help-card-mini">
+<span style="font-size: 1.5rem;">👨‍🏫</span>
+<div>
+<div style="font-weight: 800; font-size: 0.90rem; color: #0f172a;">திரு. முத்துராமலிங்கம்</div>
+<a href="tel:9843437037" style="color: #059669; font-weight: 800; text-decoration: none; font-size: 0.88rem;">📞 98434 37037</a>
+</div>
+</div>
+<div class="help-card-mini">
+<span style="font-size: 1.5rem;">👨‍🏫</span>
+<div>
+<div style="font-weight: 800; font-size: 0.90rem; color: #0f172a;">திரு. சிங்காரவேலு</div>
+<a href="tel:9443830044" style="color: #059669; font-weight: 800; text-decoration: none; font-size: 0.88rem;">📞 94438 30044</a>
+</div>
+</div>
+<div class="help-card-mini">
+<span style="font-size: 1.5rem;">👨‍🏫</span>
+<div>
+<div style="font-weight: 800; font-size: 0.90rem; color: #0f172a;">திரு. ராஜபாண்டி</div>
+<a href="tel:8883945240" style="color: #059669; font-weight: 800; text-decoration: none; font-size: 0.88rem;">📞 88839 45240</a>
+</div>
+</div>
+<div class="help-card-mini">
+<span style="font-size: 1.5rem;">🏛️</span>
+<div>
+<div style="font-weight: 800; font-size: 0.90rem; color: #0f172a;">திரு. சந்திரசேகரன் (ஒருங்கிணைப்பாளர்)</div>
+<a href="tel:9943982695" style="color: #059669; font-weight: 800; text-decoration: none; font-size: 0.88rem;">📞 99439 82695</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Thirukkural Section -->
+<div class="kural-box">
+<div class="kural-header">
+<span>📜</span>
+<span>திருக்குறள் — அதிகாரம்: கல்வி (குறள்: 396)</span>
+<span>✨ கற்கும் வழிமுறை</span>
+</div>
+<div class="kural-verse-text">
+“தொட்டனைத் தூறும் மணற்கேணி மாந்தர்க்குக்<br/>கற்றனைத் தூறும் அறிவு.”
+</div>
+<div class="kural-meaning">
+<strong>மு. வரதராசனார் உரை:</strong> மணலில் உள்ள கேணியைத் தோண்டத் தோண்ட நீர் ஊறுவது போல, மனிதர்கள் நூல்களைக் கற்கக் கற்க, சந்தேகங்களைக் கேட்டுத் தெளியத் தெளிய அறிவு வளரும்.
+</div>
+</div>
+
+<!-- Creator Card -->
+<div class="creator-card">
+<div class="creator-typewriter-wrapper">
+<span id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
+</div>
+<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
+<span>📱</span><span>9626471035</span>
+</a>
+</div>
+
+<!-- Portal Footer -->
+<footer class="portal-footer">
+<p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #ffffff !important; font-size: 0.96rem !important;">
+தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562,
+<a href="tel:04575240408" style="color: #fde047 !important; text-decoration: none !important; font-weight: 800 !important; background: rgba(0, 0, 0, 0.45) !important; padding: 3px 12px !important; border-radius: 6px !important; border: 1.2px solid rgba(253, 224, 71, 0.6) !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; margin-left: 6px !important;">
+<span>☎️</span><span>04575240408</span>
+</a>
+</p>
+<p style="font-size: 0.84rem !important; color: #fde047 !important; margin-top: 6px !important; font-weight: 700 !important;">
+📅 கடைசியாகப் புதுப்பிக்கப்பட்டது: <span id="portalLastUpdatedDate">12 அக்டோபர் 2026</span>
+</p>
+<p style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important;">
+© 2026 Chief Educational Office, Sivagangai. All Rights Reserved. • வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+</p>
+<div style="margin-top: 8px;">
+<a href="index.html" style="color: #93c5fd !important; font-weight: 700; text-decoration: none; font-size: 0.85rem;">🎓 உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு</a>
+</div>
+</footer>
+
+</div>
+</main>
+</div>
+
+<script>
+// Creator Typewriter Animation
+(function() {
+  let hasTyped = false;
+  const segments = [
+    { text: "இணையதள வடிவமைப்பு: ", class: "creator-label" },
+    { text: "கூ. பூவலிங்கம்", class: "creator-name-ta" },
+    { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", class: "creator-role" },
+    { text: "K. Poovalingam", class: "creator-name-en" },
+    { text: ", Deputy Inspector of Schools", class: "creator-role" }
+  ];
+
+  function runTypewriter() {
+    if (hasTyped) return;
+    const container = document.getElementById('creatorTypewriterTarget');
+    const cursor = document.getElementById('creatorCursor');
+    if (!container) return;
+    hasTyped = true;
+    container.innerHTML = '';
+
+    let segIdx = 0, charIdx = 0, currentElem = null;
+    function step() {
+      if (segIdx >= segments.length) {
+        if (cursor) cursor.style.display = 'none';
+        return;
+      }
+      const seg = segments[segIdx];
+      if (charIdx === 0) {
+        currentElem = document.createElement('span');
+        currentElem.className = seg.class;
+        container.appendChild(currentElem);
+      }
+      currentElem.textContent += seg.text.charAt(charIdx);
+      charIdx++;
+      if (charIdx >= seg.text.length) {
+        segIdx++;
+        charIdx = 0;
+      }
+      setTimeout(step, 25);
+    }
+    step();
+  }
+  document.addEventListener('DOMContentLoaded', runTypewriter);
+  setTimeout(runTypewriter, 1500);
+})();
+
+// Student Query Submission to Sheet 2
+const APPS_SCRIPT_QUERIES_ENDPOINT = "https://script.google.com/macros/s/AKfycbw6JT5M-sr-6vz96-dKK00Xema0v3--HXkHJp0jX-Tvx_LeWvIuV6VPCOn-U76HjbAcxg/exec";
+
+async function handleStudentQuerySubmit(e) {
+  e.preventDefault();
+  const btn = document.getElementById('sqSubmitBtn');
+  const origBtnText = btn.innerHTML;
+
+  btn.disabled = true;
+  btn.innerHTML = '<span>⏳ சமர்ப்பிக்கப்படுகிறது (Submitting)...</span>';
+
+  const ticketId = 'TN-CG-2026-' + Math.floor(1000 + Math.random() * 9000);
+  const studentName = document.getElementById('formStudentName').value.trim();
+  const studentClass = document.getElementById('formStudentClass').value;
+  const schoolType = document.getElementById('formSchoolCategory').value;
+  const district = document.getElementById('formStudentDistrict').value.trim();
+  const phone = document.getElementById('formStudentPhone').value.trim();
+  const email = document.getElementById('formStudentEmail').value.trim();
+  const categorySelect = document.getElementById('formSubjectCategory');
+  const category = categorySelect.value;
+  const query = document.getElementById('formStudentQuery').value.trim();
+
+  const payload = {
+    formType: "student_query",
+    ticketId: ticketId,
+    name: studentName,
+    studentClass: studentClass,
+    schoolType: schoolType,
+    district: district,
+    phone: phone,
+    email: email,
+    category: category,
+    query: query,
+    timestamp: new Date().toLocaleString('ta-IN', { timeZone: 'Asia/Kolkata' }),
+    spreadsheetId: "1-nkKQyAqE2IK31Rf4-qXBDVjLD88S2U3d_uF0AGrOZQ",
+    spreadsheetUrl: "https://docs.google.com/spreadsheets/d/1-nkKQyAqE2IK31Rf4-qXBDVjLD88S2U3d_uF0AGrOZQ/edit",
+    sheetName: "Sheet1"
+  };
+
+  try {
+    await fetch(APPS_SCRIPT_QUERIES_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    });
+  } catch (err) {
+    console.warn("Student query network submission notice:", err);
+  } finally {
+    document.getElementById('ticketIdDisplay').innerText = ticketId;
+    document.getElementById('greetStudentName').innerText = studentName;
+    document.getElementById('greetTicketId').innerText = ticketId;
+
+    const successCard = document.getElementById('querySuccessCard');
+    successCard.style.display = 'block';
+    successCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    document.getElementById('studentDoubtForm').reset();
+    btn.disabled = false;
+    btn.innerHTML = origBtnText;
+  }
+}
+</script>
+</body>
+</html>

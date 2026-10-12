@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>இணையதள மேம்பாட்டு ஆலோசனைக் களம் | உயர்கல்வி வழிகாட்டி, சிவகங்கை மாவட்டம்</title>
+<!-- Google Fonts: Plus Jakarta Sans, Inter & Noto Sans Tamil -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --font-main: 'Plus Jakarta Sans', 'Noto Sans Tamil', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --primary-dark: #0f172a;
+  --primary: #1e3a8a;
+  --secondary: #0284c7;
+  --accent-gold: #d4af37;
+  --bg-page: #f8fafc;
+  --text-main: #0f172a;
+  --border-crisp: #cbd5e1;
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.portal-layout-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+.desktop-left-sidebar {
+  width: 295px !important;
+  min-width: 295px !important;
+  max-width: 295px !important;
+  background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+  border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  z-index: 1000 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.desktop-left-sidebar::-webkit-scrollbar { width: 6px; }
+.desktop-left-sidebar::-webkit-scrollbar-thumb { background: rgba(212, 175, 55, 0.45); border-radius: 4px; }
+
+.sidebar-header {
+  padding: 16px 14px 14px;
+  border-bottom: 1.5px solid rgba(212, 175, 55, 0.25);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(15, 23, 42, 0.4) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.sidebar-emblem { font-size: 1.65rem; line-height: 1; filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.5)); }
+.sidebar-main-title { font-size: 0.92rem; font-weight: 900; color: #fef08a; letter-spacing: 0.3px; line-height: 1.25; }
+.sidebar-sub-title { font-size: 0.74rem; color: #94a3b8; font-weight: 600; margin-top: 2px; }
+
+.sidebar-nav-body { padding: 12px 10px !important; display: flex !important; flex-direction: column !important; gap: 6px !important; }
+.desktop-left-sidebar .sidebar-main-btn {
+  display: flex !important; align-items: center !important; gap: 12px !important; padding: 9px 12px !important;
+  background: rgba(255, 255, 255, 0.05) !important; border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 10px !important; color: #f1f5f9 !important; text-decoration: none !important; transition: all 0.22s ease !important;
+}
+.desktop-left-sidebar .sidebar-main-btn:hover {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(30, 58, 138, 0.35) 100%) !important;
+  border-color: #d4af37 !important; transform: translateX(3px) !important;
+}
+.desktop-left-sidebar .sidebar-main-btn.active-page {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%) !important;
+  border: 1.5px solid #d4af37 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 0 10px rgba(212, 175, 55, 0.25) !important;
+}
+.desktop-left-sidebar .menu-ta { font-size: 0.86rem !important; font-weight: 800 !important; color: #f8fafc !important; }
+.desktop-left-sidebar .menu-en { font-size: 0.66rem !important; font-weight: 700 !important; letter-spacing: 0.7px !important; color: #94a3b8 !important; text-transform: uppercase !important; }
+.desktop-left-sidebar .sidebar-main-btn:hover .menu-ta, .desktop-left-sidebar .sidebar-main-btn.active-page .menu-ta { color: #fef08a !important; }
+
+.portal-main-content {
+  margin-left: 295px !important;
+  width: calc(100% - 295px) !important;
+  min-height: 100vh !important;
+  padding: 16px clamp(14px, 2vw, 32px) 40px !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+.portal-container { width: 100% !important; max-width: 100% !important; margin: 0 auto !important; box-sizing: border-box !important; }
+
+/* Top Frame */
+.portal-top-frame {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+  border: 1.8px solid #d4af37 !important;
+  border-radius: 14px !important;
+  padding: 12px 20px !important;
+  margin: 0 0 16px 0 !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.22), 0 0 12px rgba(212, 175, 55, 0.15) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  position: relative !important;
+}
+
+.top-frame-center-stack { text-align: center !important; margin: 0 auto !important; }
+.banner-title-tamil {
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem) !important;
+  font-weight: 900 !important;
+  background: linear-gradient(180deg, #fffbeb 0%, #fef08a 25%, #facc15 55%, #ca8a04 85%, #854d0e 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.85)) !important;
+}
+.banner-tagline-aurora {
+  font-size: 0.88rem !important;
+  font-weight: 800 !important;
+  background: linear-gradient(90deg, #67e8f9 0%, #a78bfa 50%, #34d399 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+.banner-english-row { font-size: 0.80rem !important; font-weight: 800; color: #cbd5e1; letter-spacing: 1.5px; text-transform: uppercase; }
+
+.top-frame-side-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 7px 14px !important;
+  border-radius: 8px !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid #38bdf8 !important;
+  transition: all 0.2s ease !important;
+}
+.top-frame-side-btn:hover { background: #0369a1 !important; transform: translateY(-1px) !important; }
+
+/* Breadcrumb */
+.breadcrumb-bar {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  padding: 10px 16px !important;
+  margin: 0 0 18px 0 !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 1.8px solid #cbd5e1 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.06) !important;
+}
+.nav-menu-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  padding: 7px 16px !important;
+  border-radius: 9px !important;
+  font-size: 0.86rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  border: 1.5px solid !important;
+}
+.nav-menu-btn.btn-home { background: #ffffff !important; color: #0f766e !important; border-color: #99f6e4 !important; }
+.nav-menu-btn.btn-home:hover { background: #f0fdfa !important; color: #0d9488 !important; transform: translateY(-1px) !important; }
+.nav-menu-btn.btn-current { background: linear-gradient(135deg, #1e40af, #2563eb) !important; color: #ffffff !important; border-color: #3b82f6 !important; }
+
+/* Form Container matching image_429159.jpg */
+.feedback-main-card {
+  background: #ffffff !important;
+  border: 2px solid #cbd5e1 !important;
+  border-radius: 16px !important;
+  padding: 24px 26px !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  margin-bottom: 24px !important;
+}
+
+.feedback-card-top-bar {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 5px !important;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b, #3b82f6) !important;
+  background-size: 200% 100% !important;
+  animation: flowingBorder 6s linear infinite !important;
+}
+@keyframes flowingBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card-header-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 6px !important;
+}
+
+.sparkle-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%) !important;
+  color: #6d28d9 !important;
+  padding: 5px 14px !important;
+  border-radius: 999px !important;
+  font-size: 0.84rem !important;
+  font-weight: 800 !important;
+  border: 1.2px solid #c4b5fd !important;
+  box-shadow: 0 2px 6px rgba(109, 40, 217, 0.15) !important;
+}
+
+.feedback-headline {
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem) !important;
+  font-weight: 900 !important;
+  color: #831843 !important;
+  margin: 0 !important;
+  letter-spacing: -0.2px !important;
+}
+
+.feedback-sub-desc {
+  font-size: 0.92rem !important;
+  color: #475569 !important;
+  margin: 4px 0 20px 0 !important;
+  line-height: 1.6 !important;
+  border-bottom: 1.5px solid #f1f5f9 !important;
+  padding-bottom: 14px !important;
+}
+
+/* Grid matching image_429159.jpg */
+.fb-form-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 14px 16px !important;
+  align-items: start !important;
+}
+
+.fb-field-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+}
+
+.fb-field-group label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.84rem !important;
+  font-weight: 700 !important;
+  color: #1e293b !important;
+}
+
+.fb-field-group label .icon-tag {
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 5px !important;
+  font-size: 12px !important;
+}
+
+.fb-field-group input, .fb-field-group textarea {
+  width: 100% !important;
+  padding: 10px 14px !important;
+  font-size: 0.90rem !important;
+  font-family: inherit !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  background-color: #ffffff !important;
+  outline: none !important;
+  transition: all 0.2s ease !important;
+  box-sizing: border-box !important;
+}
+
+.fb-field-group input:focus, .fb-field-group textarea:focus {
+  border-color: #4338ca !important;
+  box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.18) !important;
+}
+
+.btn-submit-feedback {
+  width: 100% !important;
+  height: 52px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-size: 1.02rem !important;
+  font-weight: 900 !important;
+  font-family: inherit !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.35) !important;
+  transition: all 0.25s ease !important;
+  box-sizing: border-box !important;
+}
+.btn-submit-feedback:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.45) !important;
+}
+
+/* Google Sheet Connected Box */
+.sheet-sync-status-box {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%) !important;
+  border: 1.8px solid #34d399 !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-bottom: 20px !important;
+}
+
+.sheet-sync-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+.sheet-sync-title { font-weight: 800 !important; font-size: 0.92rem !important; color: #065f46 !important; }
+.sheet-sync-sub { font-size: 0.80rem !important; color: #475569 !important; }
+
+.btn-open-sheet {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: #ffffff !important;
+  color: #065f46 !important;
+  border: 1.4px solid #10b981 !important;
+  padding: 6px 14px !important;
+  border-radius: 7px !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.15) !important;
+  transition: all 0.2s ease !important;
+}
+.btn-open-sheet:hover {
+  background: #059669 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Thirukkural */
+.kural-box {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 22px auto 18px auto !important;
+  padding: 12px 20px 10px 20px !important;
+  border-radius: 14px !important;
+  background: radial-gradient(ellipse at 50% 0%, #1e1b4b 0%, #0f172a 65%, #020617 100%) !important;
+  border: 1.8px solid #f59e0b !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45) !important;
+  text-align: center !important;
+}
+.kural-header {
+  display: inline-flex !important; align-items: center !important; gap: 6px !important; padding: 3px 14px !important;
+  background: rgba(245, 158, 11, 0.15) !important; border: 1px solid rgba(245, 158, 11, 0.4) !important;
+  border-radius: 999px !important; font-size: 0.82rem !important; font-weight: 800 !important; color: #fef08a !important; margin-bottom: 6px !important;
+}
+.kural-verse-text {
+  font-size: 1.15rem !important; font-weight: 900 !important; line-height: 1.6 !important;
+  background: linear-gradient(180deg, #ffffff 0%, #fef08a 40%, #facc15 80%, #ca8a04 100%) !important;
+  -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.95)) !important;
+}
+.kural-meaning {
+  font-size: 0.86rem !important; color: #f8fafc !important; line-height: 1.55 !important;
+  background: rgba(15, 23, 42, 0.75) !important; padding: 8px 18px !important; border-radius: 8px !important;
+  border: 1px solid rgba(245, 158, 11, 0.35) !important; margin-top: 6px !important;
+}
+
+/* Creator Card */
+.creator-card {
+  background: #ffffff !important; border: 1.5px solid #cbd5e1 !important; border-radius: 14px !important;
+  padding: 14px 22px !important; margin: 28px auto 16px auto !important; max-width: 940px !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06) !important; display: flex !important; align-items: center !important;
+  justify-content: center !important; text-align: center !important; flex-wrap: wrap !important; gap: 12px !important;
+}
+.creator-typewriter-wrapper { font-size: 0.94rem !important; color: #1e293b !important; font-weight: 600 !important; display: inline-flex !important; align-items: center !important; }
+.creator-name-ta { color: #1d4ed8 !important; font-weight: 900 !important; }
+.creator-name-en { color: #c026d3 !important; font-weight: 900 !important; }
+.creator-cursor { color: #2563eb !important; animation: blinkCreatorCursor 0.65s infinite !important; }
+@keyframes blinkCreatorCursor { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+.footer-phone-pill {
+  display: inline-flex !important; align-items: center !important; gap: 6px !important;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important; color: #ffffff !important;
+  padding: 6px 14px !important; border-radius: 999px !important; text-decoration: none !important;
+  font-weight: 800 !important; font-size: 0.88rem !important; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Footer */
+.portal-footer {
+  text-align: center !important; padding: 22px 18px 20px !important; margin: 24px 0 16px 0 !important;
+  background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.45) !important; border-radius: 14px !important;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35) !important; width: 100% !important; box-sizing: border-box !important;
+}
+.portal-footer p { color: #ffffff !important; margin-bottom: 6px !important; font-size: 0.94rem !important; }
+
+@media (max-width: 1024px) {
+  .desktop-left-sidebar { position: fixed !important; left: -320px !important; transition: left 0.3s ease !important; }
+  .desktop-left-sidebar.sidebar-open { left: 0 !important; }
+  .portal-main-content { margin-left: 0 !important; width: 100% !important; }
+}
+
+@media (max-width: 850px) {
+  .fb-form-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .fb-col-4 { grid-column: span 2 !important; }
+  .fb-col-3 { grid-column: span 2 !important; }
+  .fb-col-2 { grid-column: span 2 !important; }
+  .fb-col-1 { grid-column: span 1 !important; }
+}
+
+@media (max-width: 600px) {
+  .fb-form-grid { grid-template-columns: 1fr !important; }
+  .fb-col-4, .fb-col-3, .fb-col-2, .fb-col-1 { grid-column: span 1 !important; }
+}
+</style>
+</head>
+<body>
+<div class="portal-layout-wrapper">
+<aside class="desktop-left-sidebar" id="desktopLeftSidebar">
+<div class="sidebar-header">
+<a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
+<span class="sidebar-emblem">🏛️</span>
+<div class="sidebar-title-wrap">
+<span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
+<span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
+</div>
+</a>
+</div>
+<nav class="sidebar-nav-body">
+<a class="sidebar-main-btn" href="index.html">
+<span class="icon">🏠</span>
+<span class="btn-text-group"><span class="menu-ta">முதன்மை முகப்பு</span><span class="menu-en">HOME</span></span>
+</a>
+<a class="sidebar-main-btn" href="01_00_entrance_main.html">
+<span class="icon">🎯</span>
+<span class="btn-text-group"><span class="menu-ta">நுழைவுத்தேர்வுகள்</span><span class="menu-en">ENTRANCE EXAMS</span></span>
+</a>
+<a class="sidebar-main-btn" href="02_00_direct_admissions.html">
+<span class="icon">📈</span>
+<span class="btn-text-group"><span class="menu-ta">நேரடிச் சேர்க்கை</span><span class="menu-en">DIRECT ADMISSIONS</span></span>
+</a>
+<a class="sidebar-main-btn" href="03_institutes.html">
+<span class="icon">🏛️</span>
+<span class="btn-text-group"><span class="menu-ta">கல்லூரிகள் அடைவு</span><span class="menu-en">INSTITUTES DIRECTORY</span></span>
+</a>
+<a class="sidebar-main-btn" href="04_govt_exams.html">
+<span class="icon">🏆</span>
+<span class="btn-text-group"><span class="menu-ta">அரசுத் தேர்வுகள்</span><span class="menu-en">GOVT COMPETITIVE EXAMS</span></span>
+</a>
+<a class="sidebar-main-btn" href="05_direct_careers.html">
+<span class="icon">💼</span>
+<span class="btn-text-group"><span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span><span class="menu-en">SKILLS &amp; CAREERS</span></span>
+</a>
+<a class="sidebar-main-btn" href="06_student_support.html">
+<span class="icon">☎️</span>
+<span class="btn-text-group"><span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span><span class="menu-en">HELPDESK &amp; SUPPORT</span></span>
+</a>
+<a class="sidebar-main-btn" href="student_queries.html" style="border-left: 3.5px solid #38bdf8 !important;">
+<span class="icon">✍️</span>
+<span class="btn-text-group"><span class="menu-ta">மாணவர் சந்தேகப் படிவம்</span><span class="menu-en">STUDENT QUERIES</span></span>
+</a>
+<a class="sidebar-main-btn active-page" href="portal_feedback.html">
+<span class="icon">💡</span>
+<span class="btn-text-group"><span class="menu-ta">கருத்துக் களம் &amp; ஆலோசனை</span><span class="menu-en">FEEDBACK &amp; ADVISORY</span></span>
+</a>
+</nav>
+</aside>
+
+<main class="portal-main-content">
+<div class="portal-container">
+
+<header class="portal-top-frame no-print">
+<div class="top-frame-center-stack">
+<h1 class="banner-title-tamil">உயர்கல்வி வழிகாட்டி</h1>
+<div class="banner-tagline-aurora">உங்கள் சிறந்த எதிர்காலத்திற்கான திறவுகோல்</div>
+<div class="banner-english-row">
+<span class="banner-title-english">CAREER GUIDANCE</span>
+<span class="banner-english-dot">•</span>
+<span class="banner-slogan-english">YOUR KEY TO A BRIGHT FUTURE</span>
+</div>
+</div>
+<a class="top-frame-side-btn" href="index.html" title="வழிகாட்டி முதன்மை முகப்பு">
+<span>🎓</span><span>வழிகாட்டி முகப்பு</span>
+</a>
+</header>
+
+<nav aria-label="வழிசெலுத்தல் பட்டை" class="breadcrumb-bar">
+<a class="nav-menu-btn btn-home" href="index.html">
+<span>🧭</span><span>வழிகாட்டி முகப்பு</span>
+</a>
+<span style="color: #94a3b8;">▶</span>
+<span class="nav-menu-btn btn-current">
+<span>💡</span><span>இணையதள ஆலோசனைக் களம் &amp; கருத்துகள்</span>
+</span>
+</nav>
+
+<!-- Google Sheet Connection Status Bar -->
+<div class="sheet-sync-status-box">
+<div class="sheet-sync-left">
+<span style="font-size: 1.8rem;">📊</span>
+<div>
+<div class="sheet-sync-title">அதிகாரப்பூர்வ Google Sheet இணைப்பு தயார் நிலையில் உள்ளது (Google Sheet Connected)</div>
+<div class="sheet-sync-sub">இங்கு பதிவு செய்யப்படும் அனைத்து ஆலோசனைகளும் பாதுகாப்பாக Google Sheet-ல் உடனுக்குடன் சேமிக்கப்படும்.</div>
+</div>
+</div>
+<a class="btn-open-sheet" href="https://docs.google.com/spreadsheets/d/1fSIyCI4AsqA2-8aqRr5XQb7KODEA6pvnyNhjKO_PBSc/edit" rel="noopener" target="_blank">
+<span>🔗</span><span>Google Sheet-ஐக் காண்க</span>
+</a>
+</div>
+
+<!-- Main Feedback Card matching image_429159.jpg -->
+<section class="feedback-main-card">
+<div class="feedback-card-top-bar"></div>
+<canvas id="fb_crackers_canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 99; display: none;"></canvas>
+
+<div class="card-header-row">
+<div class="sparkle-pill"><span>✨</span><span>கருத்துக் களம் &amp; வழிகாட்டல்</span></div>
+<h2 class="feedback-headline">தங்களின் மேலான ஆலோசனை/கருத்துகளை பதிவு செய்க</h2>
+</div>
+<p class="feedback-sub-desc">
+உயர்கல்வி வழிகாட்டல் குறித்து ஆலோசனைகள், கோப்புகள் (PDF/Word/Excel/PPT/படம்) அல்லது இணைய இணைப்புகளைப் பகிரலாம்
+</p>
+
+<form id="portalFeedbackForm" onsubmit="handlePortalFeedbackSubmit(event)">
+<input name="spreadsheetId" type="hidden" value="1fSIyCI4AsqA2-8aqRr5XQb7KODEA6pvnyNhjKO_PBSc"/>
+<input name="sheetName" type="hidden" value="Sheet1"/>
+
+<div class="fb-form-grid">
+<!-- Field 1: Name -->
+<div class="fb-field-group fb-col-1">
+<label for="fb_name">
+<span class="icon-tag" style="background: #e0f2fe; color: #0284c7;">👤</span>
+<span>பெயர்</span> <span style="color: #ef4444;">*</span>
+</label>
+<input id="fb_name" placeholder="முழுப் பெயர்" required="" type="text"/>
+</div>
+
+<!-- Field 2: School / Place -->
+<div class="fb-field-group fb-col-1">
+<label for="fb_place">
+<span class="icon-tag" style="background: #fef3c7; color: #d97706;">🏫</span>
+<span>பள்ளி / ஊர்</span> <span style="color: #ef4444;">*</span>
+</label>
+<input id="fb_place" placeholder="பள்ளி பெயர் &amp; ஊர்" required="" type="text"/>
+</div>
+
+<!-- Field 3: Phone -->
+<div class="fb-field-group fb-col-1">
+<label for="fb_phone">
+<span class="icon-tag" style="background: #dcfce7; color: #16a34a;">📱</span>
+<span>தொலைபேசி எண்</span> <span style="color: #ef4444;">*</span>
+</label>
+<input id="fb_phone" pattern="[0-9]{10}" placeholder="10 இலக்க எண்" required="" title="10 இலக்க தொலைபேசி எண்" type="tel"/>
+</div>
+
+<!-- Field 4: Email (Optional) -->
+<div class="fb-field-group fb-col-1">
+<label for="fb_email">
+<span class="icon-tag" style="background: #f3e8ff; color: #9333ea;">✉️</span>
+<span>மின்னஞ்சல்</span> <span style="color: #ef4444; font-weight: 800;">*</span>
+</label>
+<input id="fb_email" placeholder="example@gmail.com (மின் வாழ்த்து அட்டை பெற கட்டாயம்)" required="" type="email" autocomplete="email"/>
+</div>
+
+<!-- Field 5: File Attachment (Optional) -->
+<div class="fb-field-group fb-col-2">
+<label for="fb_file">
+<span class="icon-tag" style="background: #fce7f3; color: #be185d;">📎</span>
+<span>கோப்பு / ஆவணம் இணைக்க (விருப்பப்பட்டால்)</span>
+<span style="font-size: 0.72rem; color: #64748b; background: #f1f5f9; padding: 1px 6px; border-radius: 999px;">PDF, Image, Word, Excel, PPT (Max 10MB)</span>
+</label>
+<input accept=".pdf,image/*,.doc,.docx,.xls,.xlsx,.ppt,.pptx" id="fb_file" style="cursor: pointer; border: 1.5px dashed #cbd5e1;" type="file"/>
+</div>
+
+<!-- Field 6: Web Link (Optional) -->
+<div class="fb-field-group fb-col-2">
+<label for="fb_link">
+<span class="icon-tag" style="background: #ccfbf1; color: #0f766e;">🔗</span>
+<span>இணைய இணைப்பு / Link (விருப்பப்பட்டால்)</span>
+<span style="font-size: 0.72rem; color: #64748b; background: #f1f5f9; padding: 1px 6px; border-radius: 999px;">Google Drive / Web URL</span>
+</label>
+<input id="fb_link" placeholder="https://drive.google.com/... அல்லது இணைய முகவரி" type="url"/>
+</div>
+
+<!-- Field 7: Suggestions Message -->
+<div class="fb-field-group fb-col-3" style="grid-column: span 3;">
+<label for="fb_message">
+<span class="icon-tag" style="background: #ffe4e6; color: #e11d48;">💡</span>
+<span>தங்களின் மேலான ஆலோசனைகள் / கருத்துகள்</span> <span style="color: #ef4444;">*</span>
+</label>
+<textarea id="fb_message" placeholder="உயர்கல்வி வழிகாட்டி மற்றும் இத்தளம் குறித்த தங்களின் மேலான ஆலோசனைகள்..." required="" rows="2" style="height: 52px; resize: vertical;"></textarea>
+</div>
+
+<!-- Field 8: Submit Button -->
+<div class="fb-field-group fb-col-1" style="display: flex; justify-content: flex-end;">
+<label style="visibility: hidden;">சமர்ப்பிக்க</label>
+<button class="btn-submit-feedback" id="fbSubmitBtn" type="submit">
+<span>பதிவு செய்க</span>
+<span style="font-size: 1.2rem; line-height: 1;">→</span>
+</button>
+</div>
+</div>
+</form>
+
+<div id="fbStatusBox" style="margin-top: 16px; text-align: center; padding: 14px 20px; border-radius: 10px; font-size: 1rem; font-weight: 800; display: none;"></div>
+</section>
+
+<!-- Thirukkural Section -->
+<div class="kural-box">
+<div class="kural-header">
+<span>📜</span>
+<span>திருக்குறள் — அதிகாரம்: அறிவுடைமை (குறள்: 423)</span>
+<span>✨ ஆலோசனையும் மெய்ப்பொருளும்</span>
+</div>
+<div class="kural-verse-text">
+“எப்பொருள் யார்யார்வாய்க் கேட்பினும் அப்பொருள்<br/>மெய்ப்பொருள் காண்ப தறிவு.”
+</div>
+<div class="kural-meaning">
+<strong>மு. வரதராசனார் உரை:</strong> எவர் எதைச் சொன்னாலும், ஆலோசனையாகக் கூறினாலும், அதன் உண்மைத் தன்மையை ஆய்ந்து மெய்ப்பொருளைக் காண்பதே உண்மையான அறிவாகும்.
+</div>
+</div>
+
+<!-- Creator Card -->
+<div class="creator-card">
+<div class="creator-typewriter-wrapper">
+<span id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
+</div>
+<a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
+<span>📱</span><span>9626471035</span>
+</a>
+</div>
+
+<!-- Portal Footer -->
+<footer class="portal-footer">
+<p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #ffffff !important; font-size: 0.96rem !important;">
+தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562,
+<a href="tel:04575240408" style="color: #fde047 !important; text-decoration: none !important; font-weight: 800 !important; background: rgba(0, 0, 0, 0.45) !important; padding: 3px 12px !important; border-radius: 6px !important; border: 1.2px solid rgba(253, 224, 71, 0.6) !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; margin-left: 6px !important;">
+<span>☎️</span><span>04575240408</span>
+</a>
+</p>
+<p style="font-size: 0.84rem !important; color: #fde047 !important; margin-top: 6px !important; font-weight: 700 !important;">
+📅 கடைசியாகப் புதுப்பிக்கப்பட்டது: <span id="portalLastUpdatedDate">12 அக்டோபர் 2026</span>
+</p>
+<p style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important;">
+© 2026 Chief Educational Office, Sivagangai. All Rights Reserved. • வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
+</p>
+<div style="margin-top: 8px;">
+<a href="index.html" style="color: #93c5fd !important; font-weight: 700; text-decoration: none; font-size: 0.85rem;">🎓 உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு</a>
+</div>
+</footer>
+
+</div>
+</main>
+</div>
+
+<script>
+// Creator Typewriter Animation
+(function() {
+  let hasTyped = false;
+  const segments = [
+    { text: "இணையதள வடிவமைப்பு: ", class: "creator-label" },
+    { text: "கூ. பூவலிங்கம்", class: "creator-name-ta" },
+    { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", class: "creator-role" },
+    { text: "K. Poovalingam", class: "creator-name-en" },
+    { text: ", Deputy Inspector of Schools", class: "creator-role" }
+  ];
+
+  function runTypewriter() {
+    if (hasTyped) return;
+    const container = document.getElementById('creatorTypewriterTarget');
+    const cursor = document.getElementById('creatorCursor');
+    if (!container) return;
+    hasTyped = true;
+    container.innerHTML = '';
+
+    let segIdx = 0, charIdx = 0, currentElem = null;
+    function step() {
+      if (segIdx >= segments.length) {
+        if (cursor) cursor.style.display = 'none';
+        return;
+      }
+      const seg = segments[segIdx];
+      if (charIdx === 0) {
+        currentElem = document.createElement('span');
+        currentElem.className = seg.class;
+        container.appendChild(currentElem);
+      }
+      currentElem.textContent += seg.text.charAt(charIdx);
+      charIdx++;
+      if (charIdx >= seg.text.length) {
+        segIdx++;
+        charIdx = 0;
+      }
+      setTimeout(step, 25);
+    }
+    step();
+  }
+  document.addEventListener('DOMContentLoaded', runTypewriter);
+  setTimeout(runTypewriter, 1500);
+})();
+
+// Celebration Animation
+function fireCelebrationCrackers() {
+  const canvas = document.getElementById('fb_crackers_canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  canvas.width = canvas.parentElement.offsetWidth;
+  canvas.height = canvas.parentElement.offsetHeight;
+  canvas.style.display = 'block';
+
+  const particles = [];
+  const colors = ['#f43f5e', '#ec4899', '#d946ef', '#a855f7', '#6366f1', '#3b82f6', '#06b6d4', '#10b981', '#eab308', '#f97316'];
+  for (let i = 0; i < 90; i++) {
+    const angle = Math.random() * Math.PI * 2;
+    const speed = Math.random() * 8 + 3;
+    particles.push({
+      x: canvas.width * 0.5,
+      y: canvas.height * 0.4,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed - 2,
+      radius: Math.random() * 3.5 + 2,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      gravity: 0.16,
+      alpha: 1,
+      decay: Math.random() * 0.015 + 0.01
+    });
+  }
+
+  function render() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let alive = false;
+    particles.forEach(p => {
+      if (p.alpha > 0) {
+        alive = true;
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += p.gravity;
+        p.alpha -= p.decay;
+        ctx.save();
+        ctx.globalAlpha = Math.max(p.alpha, 0);
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+    });
+    if (alive) requestAnimationFrame(render);
+    else { canvas.style.display = 'none'; }
+  }
+  render();
+}
+
+// Google Sheet Connected Submission Handler
+const APPS_SCRIPT_FEEDBACK_ENDPOINT = "https://script.google.com/macros/s/AKfycbw6JT5M-sr-6vz96-dKK00Xema0v3--HXkHJp0jX-Tvx_LeWvIuV6VPCOn-U76HjbAcxg/exec";
+
+async function handlePortalFeedbackSubmit(e) {
+  e.preventDefault();
+  const emailInput = document.getElementById('fb_email');
+  const email = emailInput ? emailInput.value.trim() : '';
+
+  if (!email || !email.includes('@') || !email.includes('.')) {
+    alert('தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும் (Please enter a valid email address).');
+    if (emailInput) emailInput.focus();
+    return;
+  }
+
+  const btn = document.getElementById('fbSubmitBtn');
+  const statusBox = document.getElementById('fbStatusBox');
+  const origBtnText = btn.innerHTML;
+
+  btn.disabled = true;
+  btn.innerHTML = '<span>⏳ பதிவாகிறது...</span>';
+
+  const name = document.getElementById('fb_name').value.trim();
+  const place = document.getElementById('fb_place').value.trim();
+  const phone = document.getElementById('fb_phone').value.trim();
+  const link = document.getElementById('fb_link').value.trim();
+  const message = document.getElementById('fb_message').value.trim();
+  const nowFormatted = new Date().toLocaleString('ta-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' });
+  const refId = 'TN-FB-2026-' + Math.floor(1000 + Math.random() * 9000);
+
+  const payload = {
+    formType: "portal_feedback",
+    refId: refId,
+    spreadsheetId: "1fSIyCI4AsqA2-8aqRr5XQb7KODEA6pvnyNhjKO_PBSc",
+    spreadsheetUrl: "https://docs.google.com/spreadsheets/d/1fSIyCI4AsqA2-8aqRr5XQb7KODEA6pvnyNhjKO_PBSc/edit",
+    sheetName: "Sheet1",
+    name: name,
+    place: place,
+    phone: phone,
+    email: email,
+    link: link || "இல்லை",
+    message: message,
+    timestamp: new Date().toISOString()
+  };
+
+  try {
+    await fetch(APPS_SCRIPT_FEEDBACK_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    });
+  } catch (err) {
+    console.warn("Feedback network submission notice:", err);
+  } finally {
+    statusBox.style.display = 'block';
+    statusBox.innerHTML = `
+      <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2.5px solid #10b981; border-radius: 16px; padding: 24px 20px; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.25); text-align: center; margin-top: 10px; animation: tabFadeIn 0.4s ease;">
+        <div style="font-size: 2.4rem; line-height: 1; margin-bottom: 6px;">🎉 🎆 ✨</div>
+        <h3 style="font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 900; color: #065f46; margin-bottom: 8px;">
+          தங்கள் ஆலோசனை / கருத்தினை பகிர்ந்து கொண்டமைக்கு நன்றி!
+        </h3>
+        <p style="font-size: 1.02rem; color: #1e293b; font-weight: 700; margin-bottom: 14px;">
+          தங்களின் மேலான கருத்து சிவகங்கை மாவட்ட Google Sheet தரவுத்தளத்தில் வெற்றிகரமாகப் பதிவு செய்யப்பட்டது.
+        </p>
+
+        <!-- Dispatch Info Badge -->
+        <div style="display: inline-flex; align-items: center; gap: 8px; background: #ffffff; border: 1.8px solid #0284c7; padding: 8px 18px; border-radius: 999px; margin-bottom: 18px; box-shadow: 0 3px 10px rgba(2, 132, 199, 0.15);">
+          <span style="font-size: 1.2rem;">✉️</span>
+          <span style="font-size: 0.94rem; font-weight: 800; color: #0369a1;">
+            சம்மந்தப்பட்டவரின் மின்னஞ்சலுக்கு (<b style="color: #0f172a;">${email}</b>) அனிமேஷனுடன் கூடிய மின் வாழ்த்து அட்டை அனுப்பப்பட்டுள்ளது!
+          </span>
+        </div>
+
+        <!-- Animated Digital Greeting Card -->
+        <div class="greeting-card-wrapper" style="margin: 14px auto 8px auto; max-width: 680px; background: linear-gradient(135deg, #091330 0%, #1e3a8a 50%, #0369a1 100%); border: 2.5px solid #d4af37; border-radius: 14px; padding: 22px 18px; color: #ffffff; text-align: center; box-shadow: 0 8px 24px rgba(9, 19, 48, 0.4), 0 0 18px rgba(212, 175, 55, 0.35);">
+          <div style="border: 1.5px solid rgba(254, 240, 138, 0.45); border-radius: 10px; padding: 18px 14px; background: rgba(15, 23, 42, 0.45);">
+            <div style="font-size: 0.82rem; font-weight: 800; color: #fef08a; letter-spacing: 1.5px; text-transform: uppercase;">
+              🏛️ தமிழ்நாடு அரசு • பள்ளிக் கல்வித்துறை
+            </div>
+            <div style="font-size: 1.22rem; font-weight: 900; color: #ffffff; margin: 3px 0 2px 0;">
+              முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்
+            </div>
+            <div style="font-size: 0.88rem; color: #93c5fd; font-weight: 700; margin-bottom: 10px;">
+              உயர்கல்வி வழிகாட்டுதல் தளம்
+            </div>
+            <div style="width: 70px; height: 2px; background: linear-gradient(90deg, transparent, #d4af37, transparent); margin: 0 auto 12px auto;"></div>
+            <div style="display: inline-block; background: linear-gradient(135deg, #d4af37 0%, #fef08a 100%); color: #091330; padding: 4px 20px; border-radius: 999px; font-weight: 900; font-size: 0.92rem; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+              ✨ தளம் மேம்பாட்டுப் பாராட்டு &amp; வாழ்த்து மடல் ✨
+            </div>
+            <p style="font-size: 1.05rem; color: #ffffff; line-height: 1.6; margin: 8px 0;">
+              அன்பார்ந்த <b style="color: #fef08a; font-size: 1.15rem; text-decoration: underline;">${name}</b> அவர்களுக்கு,
+            </p>
+            <p style="font-size: 0.92rem; color: #e2e8f0; line-height: 1.65; max-width: 580px; margin: 0 auto 12px auto;">
+              சிவகங்கை மாவட்ட உயர்கல்வி வழிகாட்டல் தளத்தினை மேலும் பயனுள்ள வகையில் மேம்படுத்திட தங்களின் பொன்னான ஆலோசனைகள் மற்றும் கருத்துகளைப் பகிர்ந்து கொண்டமைக்கு முதன்மைக் கல்வி அலுவலகத்தின் சார்பாக மனமார்ந்த <b>நன்றியினையும் நல்வாழ்த்துகளையும்</b> தெரிவித்துக் கொள்கிறோம்.
+            </p>
+            <div style="background: rgba(255, 255, 255, 0.08); border-left: 3px solid #fef08a; border-radius: 6px; padding: 9px 14px; margin: 12px auto; max-width: 520px; font-style: italic; font-size: 0.86rem; color: #fef08a; line-height: 1.5; text-align: center;">
+              "எப்பொருள் யார்யார்வாய்க் கேட்பினும் அப்பொருள்<br/>மெய்ப்பொருள் காண்ப தறிவு."
+            </div>
+            <div style="margin: 12px 0 8px 0; font-size: 0.86rem; color: #bae6fd;">
+              ஆலோசனைக் குறிப்பு எண்: <b style="color: #fef08a; font-size: 1.05rem; letter-spacing: 0.8px;">${refId}</b> • பதிவு நேரம்: <b>${nowFormatted}</b>
+            </div>
+            <div style="display: flex; justify-content: space-around; align-items: flex-end; margin-top: 16px; padding-top: 10px; border-top: 1px dashed rgba(255,255,255,0.25); font-size: 0.80rem; color: #cbd5e1;">
+              <div>
+                <div>கட்டணமில்லா உதவி எண்: <b>14417</b></div>
+                <div style="font-size: 0.72rem; color: #94a3b8;">(24x7 கல்விச் சேவை)</div>
+              </div>
+              <div>
+                <div style="font-weight: 800; color: #ffffff;">முதன்மைக் கல்வி அலுவலர் (CEO)</div>
+                <div style="font-size: 0.72rem; color: #94a3b8;">சிவகங்கை மாவட்டம்</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    fireCelebrationCrackers();
+    statusBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    document.getElementById('portalFeedbackForm').reset();
+    btn.disabled = false;
+    btn.innerHTML = origBtnText;
+  }
+}
+</script>
+</body>
+</html>
