@@ -4661,6 +4661,169 @@
       }
     }
 
+
+    /* TOP BREADCRUMB BAR WITH LEFT-ALIGNED NAVIGATION & RIGHT ACTION BUTTONS */
+    .breadcrumb-bar {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 10px !important;
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.4) !important;
+      border-radius: 12px !important;
+      padding: 8px 14px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
+      flex-wrap: wrap !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .breadcrumb-left-stack {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      gap: 8px !important;
+      flex-wrap: wrap !important;
+      text-align: left !important;
+    }
+
+    .breadcrumb-right-stack {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      gap: 8px !important;
+      margin-left: auto !important;
+      flex-wrap: wrap !important;
+    }
+
+    .compact-dir-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 0.78rem !important;
+      font-weight: 800 !important;
+      padding: 4px 12px !important;
+      border-radius: 8px !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .compact-dir-btn:hover {
+      transform: translateY(-1px) !important;
+      filter: brightness(1.15) !important;
+    }
+
+    .dir-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      padding: 12px 22px !important;
+      border-radius: 10px !important;
+      font-weight: 800 !important;
+      font-size: 0.92rem !important;
+      text-decoration: none !important;
+      transition: all 0.25s ease !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    .dir-btn:hover {
+      transform: translateY(-2px) !important;
+      filter: brightness(1.12) !important;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    @media (max-width: 768px) {
+      .breadcrumb-bar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+      }
+      .breadcrumb-right-stack {
+        margin-left: 0 !important;
+        width: 100% !important;
+        justify-content: flex-start !important;
+      }
+    }
+
+
+    /* ========================================================
+       V3.95 REFINEMENTS: DEEP GREEN + GOLD HEADER & IISER 1x3 / 1x1 GRID
+       ======================================================== */
+    /* Deep Green + Regal Gold Blended Header (Replacing Crystal Background) */
+    .portal-header,
+    .deep-green-gold-header {
+      background: linear-gradient(135deg, #022c22 0%, #064e3b 35%, #0f3d2e 65%, #2a1f05 100%) !important;
+      border: 2px solid rgba(234, 179, 8, 0.6) !important;
+      border-bottom: 4px solid #eab308 !important;
+      border-radius: 16px !important;
+      padding: 28px 24px 24px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45), 0 0 22px rgba(234, 179, 8, 0.20) !important;
+      text-align: center !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    /* Disable crystal reflective sheen overlays */
+    .crystal-header::before,
+    .crystal-header::after,
+    .deep-green-gold-header::before,
+    .deep-green-gold-header::after {
+      display: none !important;
+      content: none !important;
+    }
+
+    /* IISER Highlights Grid: 1x3 in First 2 Rows (3 columns), 1x1 Horizontal in Last Row */
+    .iiser-highlights-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 16px !important;
+      margin-top: 14px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .iiser-highlights-grid .feature-box {
+      width: 100% !important;
+      box-sizing: border-box !important;
+      margin: 0 !important;
+      background: #ffffff !important;
+      border: 1.5px solid #cbd5e1 !important;
+      border-radius: 12px !important;
+      padding: 16px !important;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06) !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    /* 7th IISER Box (IISER Berhampur): Full Width 1x1 Horizontal Box */
+    .iiser-highlights-grid .feature-box:last-child {
+      grid-column: 1 / -1 !important;
+      width: 100% !important;
+      background: linear-gradient(135deg, #ffffff 0%, #f0fdfa 100%) !important;
+      border: 1.8px solid #0d9488 !important;
+      border-top-width: 4px !important;
+      box-shadow: 0 4px 16px rgba(13, 148, 136, 0.12) !important;
+    }
+
+    @media (max-width: 900px) {
+      .iiser-highlights-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      .iiser-highlights-grid .feature-box:last-child {
+        grid-column: 1 / -1 !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .iiser-highlights-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
 </style>
 <style id="distinct-theme-css">
 
@@ -5006,7 +5169,6 @@
   }
 }
 </style>
-
 <style>
     .portal-layout-wrapper {
       display: block !important;
@@ -5540,91 +5702,83 @@
 <div class="portal-layout-wrapper">
 <!-- Desktop Permanent Left Menu Frame with Collapsible Accordion -->
 <aside class="desktop-left-sidebar" id="desktopLeftSidebar">
-    <div class="sidebar-header">
-      <a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
-        <span class="sidebar-emblem">🏛️</span>
-        <div class="sidebar-title-wrap">
-          <span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
-          <span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
-        </div>
-      </a>
-      <button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
-    </div>
-
-    <nav class="sidebar-nav-body">
-      <!-- 00. முதன்மை முகப்பு (Home) -->
-      <a class="sidebar-main-btn".strip() href="index.html">
-        <span class="icon">🏠</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">முதன்மை முகப்பு</span>
-          <span class="menu-en">HOME</span>
-        </span>
-      </a>
-
-      <!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
-      <a class="sidebar-main-btn active-page".strip() href="01_00_entrance_main.html">
-        <span class="icon">🎯</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
-          <span class="menu-en">ENTRANCE EXAMS</span>
-        </span>
-      </a>
-
-      <!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
-      <a class="sidebar-main-btn".strip() href="02_00_direct_admissions.html">
-        <span class="icon">📈</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">நேரடிச் சேர்க்கை</span>
-          <span class="menu-en">DIRECT ADMISSIONS</span>
-        </span>
-      </a>
-
-      <!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
-      <a class="sidebar-main-btn".strip() href="03_institutes.html">
-        <span class="icon">🏛️</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">கல்லூரிகள் அடைவு</span>
-          <span class="menu-en">INSTITUTES DIRECTORY</span>
-        </span>
-      </a>
-
-      <!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
-      <a class="sidebar-main-btn".strip() href="04_govt_exams.html">
-        <span class="icon">🏆</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">அரசுத் தேர்வுகள்</span>
-          <span class="menu-en">GOVT COMPETITIVE EXAMS</span>
-        </span>
-      </a>
-
-      <!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
-      <a class="sidebar-main-btn".strip() href="05_direct_careers.html">
-        <span class="icon">💼</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
-          <span class="menu-en">SKILLS &amp; CAREERS</span>
-        </span>
-      </a>
-
-      <!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
-      <a class="sidebar-main-btn".strip() href="06_student_support.html">
-        <span class="icon">☎️</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
-          <span class="menu-en">HELPDESK &amp; SUPPORT</span>
-        </span>
-      </a>
-
-      <!-- 07. கல்வி வளங்கள் & போர்ட்டல் (Resources & External Portals) -->
-      <a class="sidebar-main-btn".strip() href="07_resources_external_portals.html">
-        <span class="icon">📚</span>
-        <span class="btn-text-group">
-          <span class="menu-ta">கல்வி வளங்கள் &amp; போர்ட்டல்</span>
-          <span class="menu-en">RESOURCES &amp; PORTALS</span>
-        </span>
-      </a>
-    </nav>
-  </aside>
+<div class="sidebar-header">
+<a class="sidebar-brand" href="index.html" title="முதன்மை முகப்பு">
+<span class="sidebar-emblem">🏛️</span>
+<div class="sidebar-title-wrap">
+<span class="sidebar-main-title">சிவகங்கை மாவட்டம்</span>
+<span class="sidebar-sub-title">உயர்கல்வி வழிகாட்டுதல் தளம்</span>
+</div>
+</a>
+<button class="sidebar-close-btn" onclick="toggleSidebarMenu()" title="மெனுவை மூடுக" type="button">✕</button>
+</div>
+<nav class="sidebar-nav-body">
+<!-- 00. முதன்மை முகப்பு (Home) -->
+<a .strip()="" class="sidebar-main-btn" href="index.html">
+<span class="icon">🏠</span>
+<span class="btn-text-group">
+<span class="menu-ta">முதன்மை முகப்பு</span>
+<span class="menu-en">HOME</span>
+</span>
+</a>
+<!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
+<a .strip()="" class="sidebar-main-btn active-page" href="01_00_entrance_main.html">
+<span class="icon">🎯</span>
+<span class="btn-text-group">
+<span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
+<span class="menu-en">ENTRANCE EXAMS</span>
+</span>
+</a>
+<!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
+<a .strip()="" class="sidebar-main-btn" href="02_00_direct_admissions.html">
+<span class="icon">📈</span>
+<span class="btn-text-group">
+<span class="menu-ta">நேரடிச் சேர்க்கை</span>
+<span class="menu-en">DIRECT ADMISSIONS</span>
+</span>
+</a>
+<!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
+<a .strip()="" class="sidebar-main-btn" href="03_institutes.html">
+<span class="icon">🏛️</span>
+<span class="btn-text-group">
+<span class="menu-ta">கல்லூரிகள் அடைவு</span>
+<span class="menu-en">INSTITUTES DIRECTORY</span>
+</span>
+</a>
+<!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
+<a .strip()="" class="sidebar-main-btn" href="04_govt_exams.html">
+<span class="icon">🏆</span>
+<span class="btn-text-group">
+<span class="menu-ta">அரசுத் தேர்வுகள்</span>
+<span class="menu-en">GOVT COMPETITIVE EXAMS</span>
+</span>
+</a>
+<!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
+<a .strip()="" class="sidebar-main-btn" href="05_direct_careers.html">
+<span class="icon">💼</span>
+<span class="btn-text-group">
+<span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
+<span class="menu-en">SKILLS &amp; CAREERS</span>
+</span>
+</a>
+<!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
+<a .strip()="" class="sidebar-main-btn" href="06_student_support.html">
+<span class="icon">☎️</span>
+<span class="btn-text-group">
+<span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
+<span class="menu-en">HELPDESK &amp; SUPPORT</span>
+</span>
+</a>
+<!-- 07. கல்வி வளங்கள் & போர்ட்டல் (Resources & External Portals) -->
+<a .strip()="" class="sidebar-main-btn" href="07_resources_external_portals.html">
+<span class="icon">📚</span>
+<span class="btn-text-group">
+<span class="menu-ta">கல்வி வளங்கள் &amp; போர்ட்டல்</span>
+<span class="menu-en">RESOURCES &amp; PORTALS</span>
+</span>
+</a>
+</nav>
+</aside>
 <!-- Main Portal Content Column -->
 <main class="portal-main-content">
 <!-- அதிகாரப்பூர்வ மாவட்ட உயர்கல்வி வழிகாட்டல் முதன்மை மேல்பட்டை (Top Frame across all pages) -->
@@ -5646,100 +5800,90 @@
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
 </a>
 </header>
-
 <!-- Top Breadcrumb Navigation Bar -->
 <!-- Top Breadcrumb Navigation Bar -->
 <nav aria-label="உயர்கல்வி வழிகாட்டல் முதன்மை வழிசெலுத்தல்" class="breadcrumb-bar">
-  <a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
-    <span class="btn-icon">🧭</span>
-    <span class="btn-text">வழிகாட்டி முகப்பு</span>
+<div class="breadcrumb-left-stack">
+<a class="nav-menu-btn btn-guidance-home" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மை முகப்பு">
+<span class="btn-icon">🧭</span>
+<span class="btn-text">வழிகாட்டி முகப்பு</span>
+</a>
+<span class="nav-menu-separator">▶</span>
+<a class="nav-menu-btn btn-direct-home" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம்">
+<span class="btn-icon">🎯</span>
+<span class="btn-text">நுழைவுத்தேர்வுகள்</span>
+</a>
+<span class="nav-menu-separator">▶</span>
+<span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
+<span class="btn-icon">🔬</span>
+<span class="btn-text">அறிவியல் ஆராய்ச்சி (IISER / NISER)</span>
+</span>
+</div>
+<div class="breadcrumb-right-stack">
+  <a class="nav-menu-btn btn-notice-link" href="#section-research-directory" onclick="document.getElementById('section-research-directory')?.scrollIntoView({behavior:'smooth'}); return false;" style="background: linear-gradient(135deg, #059669 0%, #047857 100%) !important; color: #ffffff !important; border: 1.2px solid #34d399 !important; padding: 5px 14px !important; border-radius: 8px !important; font-weight: 800 !important; font-size: 0.82rem !important; text-decoration: none !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; box-shadow: 0 2px 6px rgba(5, 150, 105, 0.35) !important;" title="அறிவிப்புப் பெட்டிக்குச் செல்க">
+    <span>📢</span>
+    <span>அறிவிப்புப் பெட்டி ➔</span>
   </a>
-  <span class="nav-menu-separator">▶</span>
-  <a class="nav-menu-btn btn-direct-home" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம்">
-    <span class="btn-icon">🎯</span>
-    <span class="btn-text">நுழைவுத்தேர்வுகள்</span>
-  </a>
-  <span class="nav-menu-separator">▶</span>
-  <span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
-    <span class="btn-icon">🔬</span>
-    <span class="btn-text">அறிவியல் ஆராய்ச்சி (IISER / IISc / NISER)</span>
-  </span>
+</div>
 </nav>
-
-
-
 <div class="portal-container" id="top">
 <!-- Portal Header Hero Banner -->
 <!-- Portal Header (02_05 Pure & Applied Sciences Model: 3D Crystal Glossy Header) -->
-<header class="portal-header crystal-header">
-  <h1 class="portal-title">
-    அறிவியல், ஆராய்ச்சி &amp; B.S. பொறியியல் நுழைவுத்தேர்வுகள் <span class="highlight-cyan">(IISER / IISc / NISER)</span>
-  </h1>
-  <p class="portal-subtitle">
+<header class="portal-header deep-green-gold-header">
+<h1 class="portal-title">
+    அறிவியல், ஆராய்ச்சி &amp; B.S. பொறியியல் நுழைவுத்தேர்வுகள் <span class="highlight-gold" style="color: #fde047 !important; text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 16px rgba(253, 224, 71, 0.6) !important;">(IISER / IISc / NISER)</span>
+</h1>
+<p class="portal-subtitle">
     12-ஆம் வகுப்பு பள்ளி மாணவர்களுக்கான 7 இந்திய அறிவியல் கல்வி மற்றும் ஆராய்ச்சி நிறுவனங்கள் (IISERs), IISc பெங்களூரு, NISER, CEBS, ISI, CMI, IIT மெட்ராஸ் B.S. படிப்புகள், IAT &amp; NEST நுழைவுத்தேர்வுகள் மற்றும் விஞ்ஞானி பணிக்கான விரிவான வழிகாட்டல் தொகுப்பு.
   </p>
 </header>
-
 <!-- Quick Navigation Marquee Bar (ஓடும் விரைவு வழிசெலுத்தல் பட்டை) -->
 <!-- Quick Navigation Marquee Bar (ஓடும் விரைவு வழிசெலுத்தல் பட்டை) -->
-<div class="quick-nav-marquee-container" aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை">
-  <div class="marquee-static-label" title="விரைவு வழிகாட்டல்">
-    <span class="pulse-icon">⚡</span>
-  </div>
-  <div class="marquee-scroll-track">
-    <div class="marquee-content-loop">
-      <a href="#section-1" class="marquee-pill-btn">🔬 அறிவியல் ஆராய்ச்சி நோக்கம்</a>
-      <a href="#section-2" class="marquee-pill-btn">🧪 IAT நுழைவுத்தேர்வு (IISERs)</a>
-      <a href="#section-2a" class="marquee-pill-btn">💻 IISER போபால் B.Tech</a>
-      <a href="#section-2b" class="marquee-pill-btn">🏥 IIT மெட்ராஸ் B.S. மருத்துவ அறிவியல்</a>
-      <a href="#section-3" class="marquee-pill-btn">⚛️ NEST தேர்வு (NISER &amp; CEBS)</a>
-      <a href="#section-4" class="marquee-pill-btn">📐 ISI புள்ளியியல் &amp; கணிதம்</a>
-      <a href="#section-5" class="marquee-pill-btn">🧮 CMI கணிதவியல் மையம்</a>
-      <a href="#section-6" class="marquee-pill-btn">🏛️ IISc பெங்களூரு (B.S.)</a>
-      <a href="#section-6a" class="marquee-pill-btn">🚀 IIST விண்வெளி அறிவியல்</a>
-      <a href="#section-7" class="marquee-pill-btn">💰 மத்திய அரசு உதவித்தொகைகள்</a>
-      <a href="#section-8" class="marquee-pill-btn">📊 ஒப்பீட்டு அட்டவணை</a>
-      <a href="#section-9" class="marquee-pill-btn">🚀 பள்ளி மாணவர்கள் தயாரிப்பு</a>
-      <a href="#section-10" class="marquee-pill-btn">📑 தேவையான ஆவணங்கள்</a>
-      <a href="#section-research-directory" class="marquee-pill-btn">🏛️ ஆராய்ச்சி நிறுவனங்கள் அடைவு</a>
-    </div>
-    <!-- Duplicate for infinite seamless scroll -->
-    <div class="marquee-content-loop" aria-hidden="true">
-      <a href="#section-1" class="marquee-pill-btn">🔬 அறிவியல் ஆராய்ச்சி நோக்கம்</a>
-      <a href="#section-2" class="marquee-pill-btn">🧪 IAT நுழைவுத்தேர்வு (IISERs)</a>
-      <a href="#section-2a" class="marquee-pill-btn">💻 IISER போபால் B.Tech</a>
-      <a href="#section-2b" class="marquee-pill-btn">🏥 IIT மெட்ராஸ் B.S. மருத்துவ அறிவியல்</a>
-      <a href="#section-3" class="marquee-pill-btn">⚛️ NEST தேர்வு (NISER &amp; CEBS)</a>
-      <a href="#section-4" class="marquee-pill-btn">📐 ISI புள்ளியியல் &amp; கணிதம்</a>
-      <a href="#section-5" class="marquee-pill-btn">🧮 CMI கணிதவியல் மையம்</a>
-      <a href="#section-6" class="marquee-pill-btn">🏛️ IISc பெங்களூரு (B.S.)</a>
-      <a href="#section-6a" class="marquee-pill-btn">🚀 IIST விண்வெளி அறிவியல்</a>
-      <a href="#section-7" class="marquee-pill-btn">💰 மத்திய அரசு உதவித்தொகைகள்</a>
-      <a href="#section-8" class="marquee-pill-btn">📊 ஒப்பீட்டு அட்டவணை</a>
-      <a href="#section-9" class="marquee-pill-btn">🚀 பள்ளி மாணவர்கள் தயாரிப்பு</a>
-      <a href="#section-10" class="marquee-pill-btn">📑 தேவையான ஆவணங்கள்</a>
-      <a href="#section-research-directory" class="marquee-pill-btn">🏛️ ஆராய்ச்சி நிறுவனங்கள் அடைவு</a>
-    </div>
-  </div>
+<div aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை" class="quick-nav-marquee-container">
+<div class="marquee-static-label" title="விரைவு வழிகாட்டல்">
+<span class="pulse-icon">⚡</span>
+</div>
+<div class="marquee-scroll-track">
+<div class="marquee-content-loop">
+<a class="marquee-pill-btn" href="#section-1">🔬 அறிவியல் ஆராய்ச்சி நோக்கம்</a>
+<a class="marquee-pill-btn" href="#section-2">🧪 IAT நுழைவுத்தேர்வு (IISERs)</a>
+<a class="marquee-pill-btn" href="#section-2a">💻 IISER போபால் B.Tech</a>
+<a class="marquee-pill-btn" href="#section-2b">🏥 IIT மெட்ராஸ் B.S. மருத்துவ அறிவியல்</a>
+<a class="marquee-pill-btn" href="#section-3">⚛️ NEST தேர்வு (NISER &amp; CEBS)</a>
+<a class="marquee-pill-btn" href="#section-4">📐 ISI புள்ளியியல் &amp; கணிதம்</a>
+<a class="marquee-pill-btn" href="#section-5">🧮 CMI கணிதவியல் மையம்</a>
+<a class="marquee-pill-btn" href="#section-6">🏛️ IISc பெங்களூரு (B.S.)</a>
+<a class="marquee-pill-btn" href="#section-6a">🚀 IIST விண்வெளி அறிவியல்</a>
+<a class="marquee-pill-btn" href="#section-7">💰 மத்திய அரசு உதவித்தொகைகள்</a>
+<a class="marquee-pill-btn" href="#section-8">📊 ஒப்பீட்டு அட்டவணை</a>
+<a class="marquee-pill-btn" href="#section-9">🚀 பள்ளி மாணவர்கள் தயாரிப்பு</a>
+<a class="marquee-pill-btn" href="#section-10">📑 தேவையான ஆவணங்கள்</a>
+<a class="marquee-pill-btn" href="#section-research-directory">🏛️ ஆராய்ச்சி நிறுவனங்கள் அடைவு</a>
+</div>
+<!-- Duplicate for infinite seamless scroll -->
+<div aria-hidden="true" class="marquee-content-loop">
+<a class="marquee-pill-btn" href="#section-1">🔬 அறிவியல் ஆராய்ச்சி நோக்கம்</a>
+<a class="marquee-pill-btn" href="#section-2">🧪 IAT நுழைவுத்தேர்வு (IISERs)</a>
+<a class="marquee-pill-btn" href="#section-2a">💻 IISER போபால் B.Tech</a>
+<a class="marquee-pill-btn" href="#section-2b">🏥 IIT மெட்ராஸ் B.S. மருத்துவ அறிவியல்</a>
+<a class="marquee-pill-btn" href="#section-3">⚛️ NEST தேர்வு (NISER &amp; CEBS)</a>
+<a class="marquee-pill-btn" href="#section-4">📐 ISI புள்ளியியல் &amp; கணிதம்</a>
+<a class="marquee-pill-btn" href="#section-5">🧮 CMI கணிதவியல் மையம்</a>
+<a class="marquee-pill-btn" href="#section-6">🏛️ IISc பெங்களூரு (B.S.)</a>
+<a class="marquee-pill-btn" href="#section-6a">🚀 IIST விண்வெளி அறிவியல்</a>
+<a class="marquee-pill-btn" href="#section-7">💰 மத்திய அரசு உதவித்தொகைகள்</a>
+<a class="marquee-pill-btn" href="#section-8">📊 ஒப்பீட்டு அட்டவணை</a>
+<a class="marquee-pill-btn" href="#section-9">🚀 பள்ளி மாணவர்கள் தயாரிப்பு</a>
+<a class="marquee-pill-btn" href="#section-10">📑 தேவையான ஆவணங்கள்</a>
+<a class="marquee-pill-btn" href="#section-research-directory">🏛️ ஆராய்ச்சி நிறுவனங்கள் அடைவு</a>
+</div>
+</div>
 </div>
 <!-- Section 1: Overview (முழுப்பார்வை - Enhanced like Medical & Engineering Portals) -->
 <div class="card filterable-section" data-tags="all intro research opportunities overview pure-science" id="section-1">
 <div class="card-header">
 <h3 class="card-title">🔬 1. அறிவியல், ஆராய்ச்சி &amp; B.S. பொறியியல் படிப்புகள் — முழுப்பார்வை &amp; உலகளாவிய வாய்ப்புகள் (Master Overview)</h3>
-<!-- Spreadsheet Callout in Section 1 -->
-<div style="background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%); border: 1.5px solid #059669; border-radius: 14px; padding: 18px 22px; margin: 18px 0; box-shadow: 0 3px 12px rgba(5, 150, 105, 0.08); display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
-<div style="flex: 1; min-width: 280px;">
-<h4 style="color: #064e3b; font-size: 1.05rem; font-weight: 800; margin: 0 0 6px 0; display: flex; align-items: center; gap: 8px;">
-<span>📢 தேசிய அறிவியல் &amp; ஆராய்ச்சி நிறுவனங்கள் அடைவு (Google Sheet) வெளியிடப்பட்டுள்ளது:</span>
-</h4>
-<p style="font-size: 0.9rem; color: #334155; line-height: 1.65; margin: 0;">
-          7 IISERs, IISc பெங்களூரு, IIST திருவனந்தபுரம் (ISRO), NISER புவனேஸ்வர் (BARC), UM-DAE CEBS, ISI, CMI, IIT B.S. படிப்புகள் அடங்கிய <b>35 தலைசிறந்த கல்வி நிறுவனங்களின் முழு விவரங்கள்</b> கூகுள் விரிதாளில் வரிசைப்படுத்தப்பட்டுள்ளன.
-        </p>
-</div>
-<a href="https://docs.google.com/spreadsheets/d/1Xo1ccPqcYC8he6yXRm6me17MKbp_7Pv8B3gWwsdxg08/edit?usp=sharing" rel="noopener noreferrer" style="background-color: #059669; color: #ffffff; padding: 10px 20px; font-weight: 800; font-size: 0.88rem; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(5,150,105,0.25);" target="_blank">
-<span>📊 விரிதாள் காண்க</span> ➔
-      </a>
-</div>
+
 <span class="badge badge-green">நாட்டின் எதிர்கால விஞ்ஞானிகள் &amp; உயர் தொழில்நுட்ப வல்லுநர்களுக்கான களம்</span>
 </div>
 <p>வழக்கமான பொறியியல் மற்றும் மருத்துவப் படிப்புகளைத் தாண்டி, புதிய அறிவியலைக் கண்டறிதல், பிரபஞ்சத்தின் புதிர்களை விடுவித்தல், அணுசக்தி, விண்வெளி ஆய்வு, குவாண்டம் கம்ப்யூட்டிங், மரபணு சிகிச்சை, அதிநவீன தரவு அறிவியல் (Data Science) மற்றும் உயர் தொழில்நுட்பப் பொறியியல் ஆராய்ச்சியில் ஆர்வம் கொண்ட மாணவர்களுக்கு இந்தியாவில் மிக உயரிய வாய்ப்புகள் காத்திருக்கின்றன. மத்திய அறிவியல் தொழில்நுட்ப அமைச்சகம் (DST) மற்றும் அணுசக்தித் துறை (DAE) ஆகியவற்றின் கீழ் இயங்கும் தேசிய ஆராய்ச்சி நிறுவனங்கள் உலகத்தரம் வாய்ந்த இளநிலை மற்றும் ஒருங்கிணைந்த முதுநிலைப் படிப்புகளை (BS-MS, B.Tech. in Engineering Sciences, B.S. Economic Sciences, B.Stat, B.Math, B.S. Medical Sciences) வழங்குகின்றன.</p>
@@ -6113,7 +6257,7 @@
 </div>
 <!-- 7 Detailed Cards for each IISER -->
 <div class="card-sub" style="font-size:1.02rem; color:var(--secondary-dark); margin-top:20px;">ஒவ்வொரு IISER கல்வி நிறுவனத்தின் விரிவான துறைசார் கண்ணோட்டம் (Detailed Institutional Highlights):</div>
-<div class="feature-grid-4">
+<div class="iiser-highlights-grid">
 <div class="feature-box" style="border-top-color:#059669;">
 <h4><span>1. IISER புனே (மகாராஷ்டிரா)</span> <span class="badge badge-green">NIRF Top</span></h4>
 <div class="feat-sub">BS-MS (5 ஆண்டுகள்)</div>
@@ -7010,104 +7154,93 @@
 </div>
 <!-- Enhanced Standard Portal Footer (Matching Medical & Engineering Portals) -->
 <!-- All-India Science & Research Directory Announcement Box (கீழ்ப்பகுதியில் கடைசியாக வைக்கப்பட்டது) -->
-<div class="card filterable-section no-print" data-tags="all directory spreadsheet download excel pdf" id="section-research-directory" style="margin-top: 32px; margin-bottom: 36px; border: 2px solid #a7f3d0; border-top: 6px solid #059669; background: linear-gradient(180deg, #ecfdf5 0%, #ffffff 100%); border-radius: var(--radius-lg); padding: 28px 32px; box-shadow: 0 8px 24px rgba(6, 78, 59, 0.09); scroll-margin-top: 30px;">
-<div class="card-header" style="border-bottom: 2px solid #bbf7d0; padding-bottom: 12px; margin-bottom: 16px;">
-<h3 class="card-title" style="color: #064e3b; font-size: 1.35rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; width: 100%;">
-<span style="display:flex; align-items:center; gap:10px;">🏛️ அகில இந்திய அறிவியல், ஆராய்ச்சி &amp; விண்வெளி நிறுவனங்கள் முழு அடைவு (Directory)</span>
-<span class="badge badge-green" style="font-size: 0.84rem; padding: 5px 14px; border-radius: 999px;">அதிகாரப்பூர்வ விரிதாள் &amp; கோப்புகள்</span>
-</h3>
+<!-- தேசிய அறிவியல் & ஆராய்ச்சி நிறுவனங்கள் விரிதாள் அறிவிப்புப் பெட்டி (Official Spreadsheet Notice Box) -->
+<section class="card filterable-section no-print" data-tags="all directory spreadsheet download excel pdf iiser niser iisc" id="section-research-directory" style="margin-top: 26px; margin-bottom: 26px; border: 2px solid #10b981; border-top: 6px solid #059669; background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #022c22 100%); color: #ffffff; border-radius: 18px; padding: 26px 30px; box-shadow: 0 8px 30px rgba(6, 78, 59, 0.35); scroll-margin-top: 30px;">
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; border-bottom: 1.5px solid rgba(255, 255, 255, 0.2); padding-bottom: 12px;">
+<div style="display: flex; align-items: center; gap: 10px;">
+<span style="font-size: 1.65rem;">📢</span>
+<h3 style="color: #fde047; font-size: 1.30rem; font-weight: 900; margin: 0; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">
+        தேசிய அறிவியல், ஆராய்ச்சி &amp; விண்வெளி நிறுவனங்கள் முழு அடைவு (Official Directory &amp; Spreadsheet)
+      </h3>
 </div>
-<p style="font-size: 0.95rem; color: #334155; line-height: 1.75; margin-bottom: 20px;">
-      இந்தியாவின் <b>7 IISERs</b> (புனே, போபால், கொல்கத்தா, மொஹாலி, திருவனந்தபுரம், திருப்பதி, பெர்ஹாம்பூர்), <b>IISc பெங்களூரு</b>, <b>IIST திருவனந்தபுரம் (விண்வெளித் துறை / இஸ்ரோ நேரடிப் பணி - வரிசை 9)</b>, <b>NISER புவனேஸ்வர் (BARC விஞ்ஞானி பணி)</b>, <b>UM-DAE CEBS மும்பை</b>, <b>ISI கொல்கத்தா &amp; பெங்களூரு</b>, <b>CMI சென்னை</b>, <b>IIT மெட்ராஸ் B.S. Medical Sciences</b>, ஆராய்ச்சி B.S. வழங்கும் பிற ஐஐடிக்கள் மற்றும் முன்னணி மத்திய பல்கலைக்கழகங்கள் உட்பட <b>35 தலைசிறந்த தேசிய அறிவியல் நிறுவனங்களின்</b> பட்டப்படிப்புகள், சேர்க்கை நுழைவுத்தேர்வுகள் (IAT, NEST, JEE Advanced, ISI, CMI, CUET), மாதாந்திர உதவித்தொகைகள் மற்றும் அதிகாரப்பூர்வ இணையதள இணைப்புகள் அடங்கிய முழுமையான அடைவுத் தொகுப்பு கூகுள் விரிதாள், எக்செல் (Excel) மற்றும் கிடைமட்ட (Landscape) PDF வடிவங்களில் பதிவிறக்கத்திற்குக் கீழே வழங்கப்பட்டுள்ளது.
-    </p>
-<!-- 3 Action Buttons Requested by User -->
-<div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-top: 10px;">
+<span style="background: #fef08a; color: #713f12; font-weight: 800; font-size: 0.78rem; padding: 4px 14px; border-radius: 999px; text-transform: uppercase; box-shadow: 0 2px 6px rgba(0,0,0,0.25);">
+      அதிகாரப்பூர்வ விரிதாள் அறிவிப்பு
+    </span>
+</div>
+<p style="font-size: 0.94rem; color: #f1f5f9; line-height: 1.75; margin-bottom: 20px;">
+    இந்தியாவின் <b>7 IISERs</b> (புனே, போபால், கொல்கத்தா, மொஹாலி, திருவனந்தபுரம், திருப்பதி, பெர்ஹாம்பூர்), <b>IISc பெங்களூரு</b>, <b>IIST திருவனந்தபுரம் (விண்வெளித் துறை / இஸ்ரோ நேரடி விஞ்ஞானி பணி)</b>, <b>NISER புவனேஸ்வர் (BARC விஞ்ஞானி பணி)</b>, <b>UM-DAE CEBS மும்பை</b>, <b>ISI கொல்கத்தா &amp; பெங்களூரு</b>, <b>CMI சென்னை</b>, <b>IIT மெட்ராஸ் B.S. Medical Sciences</b>, ஆராய்ச்சி B.S. வழங்கும் பிற ஐஐடிக்கள் மற்றும் முன்னணி மத்திய பல்கலைக்கழகங்கள் உட்பட <b>35 தலைசிறந்த தேசிய அறிவியல் நிறுவனங்களின்</b> பட்டப்படிப்புகள், சேர்க்கை நுழைவுத்தேர்வுகள் (IAT, NEST, JEE Advanced, ISI, CMI, CUET), மாதாந்திர உதவித்தொகைகள் மற்றும் அதிகாரப்பூர்வ இணையதள இணைப்புகள் அடங்கிய முழுமையான அடைவுத் தொகுப்பு <b>கூகுள் விரிதாள் (Google Sheet), எக்செல் (Excel) மற்றும் கிடைமட்ட (Landscape) PDF</b> வடிவங்களில் பதிவிறக்கத்திற்குக் கீழே வழங்கப்பட்டுள்ளது.
+  </p>
+<!-- Action Download Buttons Grid -->
+<div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 18px;">
 <!-- Button 1: View Google Sheet -->
-<a class="dir-btn" href="https://docs.google.com/spreadsheets/d/1Xo1ccPqcYC8he6yXRm6me17MKbp_7Pv8B3gWwsdxg08/edit?usp=sharing" rel="noopener noreferrer" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #ffffff; padding: 13px 24px; font-weight: 800; font-size: 0.95rem; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(5,150,105,0.28); transition: all 0.25s ease;" target="_blank">
-<span>📊 View Google Sheet</span> ➔
-      </a>
+<a class="dir-btn" href="https://docs.google.com/spreadsheets/d/1Xo1ccPqcYC8he6yXRm6me17MKbp_7Pv8B3gWwsdxg08/edit?usp=sharing" rel="noopener noreferrer" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #ffffff !important; padding: 12px 22px; font-weight: 800; font-size: 0.92rem; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(5,150,105,0.4); border: 1.2px solid #34d399; transition: all 0.25s ease;" target="_blank">
+<span>📊 கூகுள் விரிதாள் (Google Sheet)</span> ➔
+    </a>
 <!-- Button 2: Download Excel -->
-<a class="dir-btn" href="https://docs.google.com/spreadsheets/d/1Xo1ccPqcYC8he6yXRm6me17MKbp_7Pv8B3gWwsdxg08/export?format=xlsx" rel="noopener noreferrer" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff; padding: 13px 24px; font-weight: 800; font-size: 0.95rem; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(2,132,199,0.28); transition: all 0.25s ease;" target="_blank">
-<span>📥 Download Excel</span> ➔
-      </a>
+<a class="dir-btn" href="https://docs.google.com/spreadsheets/d/1Xo1ccPqcYC8he6yXRm6me17MKbp_7Pv8B3gWwsdxg08/export?format=xlsx" rel="noopener noreferrer" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff !important; padding: 12px 22px; font-weight: 800; font-size: 0.92rem; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(2,132,199,0.4); border: 1.2px solid #38bdf8; transition: all 0.25s ease;" target="_blank">
+<span>📥 எக்செல் கோப்பு (.xlsx)</span> ➔
+    </a>
 <!-- Button 3: Download Landscape PDF -->
-<a class="dir-btn" href="https://docs.google.com/spreadsheets/d/1Xo1ccPqcYC8he6yXRm6me17MKbp_7Pv8B3gWwsdxg08/export?format=pdf&amp;portrait=false&amp;size=a4&amp;fitw=true&amp;gridlines=true" rel="noopener noreferrer" style="background: linear-gradient(135deg, #d97706 0%, #b45309 100%); color: #ffffff; padding: 13px 24px; font-weight: 800; font-size: 0.95rem; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(217,119,6,0.28); transition: all 0.25s ease;" target="_blank">
-<span>📑 Download PDF</span> ➔
-      </a>
+<a class="dir-btn" href="https://docs.google.com/spreadsheets/d/1Xo1ccPqcYC8he6yXRm6me17MKbp_7Pv8B3gWwsdxg08/export?format=pdf&amp;portrait=false&amp;size=A4&amp;fitw=true&amp;gridlines=true&amp;top_margin=0.25&amp;bottom_margin=0.25&amp;left_margin=0.25&amp;right_margin=0.25&amp;sheetnames=false&amp;printtitle=false&amp;fzr=true" rel="noopener noreferrer" style="background: linear-gradient(135deg, #d97706 0%, #b45309 100%); color: #ffffff !important; padding: 12px 22px; font-weight: 800; font-size: 0.92rem; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(217,119,6,0.4); border: 1.2px solid #fde047; transition: all 0.25s ease;" target="_blank" title="Landscape PDF வடிவில் பதிவிறக்கம்">
+<span>📄 கிடைமட்ட பிடிஎப் (Landscape PDF)</span> ➔
+    </a>
 </div>
-<!-- Supplementary Note & Drive Alternative Links -->
-<div style="margin-top: 18px; padding-top: 12px; border-top: 1px dashed #a7f3d0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-<span style="font-size: 0.86rem; color: #065f46; font-weight: 600;">
-        💡 PDF கோப்பானது 11 நெடுவரிசைகளும் முழுமையாகப் பொருந்தும் வகையில் <b>கிடைமட்டத் தாளில் (Landscape A4)</b> பதிவிறக்கம் ஆகும்.
-      </span>
-<div style="display:flex; gap:10px; font-size:0.83rem;">
-<a href="https://drive.google.com/file/d/1k71tInGMatH0HjlRa19UsATrQGFutMTU/view?usp=drivesdk" rel="noopener noreferrer" style="color:#0369a1; text-decoration:none; font-weight:bold;" target="_blank">[மாற்று PDF டிரைவ் இணைப்பு]</a>
-<span style="color:#94a3b8;">|</span>
-<a href="https://drive.google.com/file/d/1UKdZPG9VGYmgrHzyqh1F5-1kEqL8v4Te/view?usp=drivesdk" rel="noopener noreferrer" style="color:#059669; text-decoration:none; font-weight:bold;" target="_blank">[மாற்று Excel டிரைவ் இணைப்பு]</a>
+<!-- Highlight Notice & Alternate Drive Links -->
+<div style="background: rgba(0, 0, 0, 0.35); border: 1px dashed rgba(52, 211, 153, 0.6); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+<span style="font-size: 0.88rem; color: #a7f3d0; font-weight: 700;">
+      💡 PDF கோப்பானது அனைத்து 11 நெடுவரிசைகளும் முழுமையாகப் பொருந்தும் வகையில் <b>கிடைமட்டத் தாளில் (Landscape A4)</b> பதிவிறக்கம் ஆகும்.
+    </span>
+<div style="display:flex; gap:12px; font-size:0.83rem;">
+<a href="https://drive.google.com/file/d/1k71tInGMatH0HjlRa19UsATrQGFutMTU/view?usp=drivesdk" rel="noopener noreferrer" style="color:#fef08a; text-decoration:none; font-weight:bold;" target="_blank">[மாற்று Drive PDF] ↗</a>
+<span style="color:rgba(255,255,255,0.4);">|</span>
+<a href="https://drive.google.com/file/d/1UKdZPG9VGYmgrHzyqh1F5-1kEqL8v4Te/view?usp=drivesdk" rel="noopener noreferrer" style="color:#6ee7b7; text-decoration:none; font-weight:bold;" target="_blank">[மாற்று Drive Excel] ↗</a>
 </div>
 </div>
-</div>
+</section>
 <!-- Floating Back to Top Button -->
-
 <!-- Bottom Chapter Navigation Bar: Animated Edge-to-Edge Navigation -->
 <!-- Bottom Chapter Navigation Bar: Animated Edge-to-Edge Navigation -->
 <nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar">
-  <a class="page-nav-btn btn-prev-animated" href="01_03_engineering_jee.html" title="பொறியியல் நுழைவுத்தேர்வுகள் (JEE)">
-    <span class="nav-btn-icon">◀</span>
-    <span class="nav-btn-text">பொறியியல் நுழைவுத்தேர்வுகள் (JEE)</span>
-  </a>
-  <a class="page-nav-btn btn-next-animated" href="01_05_central_universities_cuet.html" title="மத்தியப் பல்கலைக்கழகங்கள் (CUET)">
-    <span class="nav-btn-text">மத்தியப் பல்கலைக்கழகங்கள் (CUET)</span>
-    <span class="nav-btn-icon">▶</span>
-  </a>
+<a class="page-nav-btn btn-prev-animated" href="01_03_engineering_jee.html" title="பொறியியல் நுழைவுத்தேர்வுகள் (JEE)">
+<span class="nav-btn-icon">◀</span>
+<span class="nav-btn-text">பொறியியல் நுழைவுத்தேர்வுகள் (JEE)</span>
+</a>
+<a class="page-nav-btn btn-next-animated" href="01_05_central_universities_cuet.html" title="மத்தியப் பல்கலைக்கழகங்கள் (CUET)">
+<span class="nav-btn-text">மத்தியப் பல்கலைக்கழகங்கள் (CUET)</span>
+<span class="nav-btn-icon">▶</span>
+</a>
 </nav>
-
 <!-- திருக்குறள் பகுதி — அறிவியல் உண்மை & ஆராய்ச்சி நெறி (அதிகாரம்: மெய்யுணர்தல்) -->
 <div class="kural-box">
-  <div class="kural-header">
-    <span class="kural-icon">📜</span>
-    <span class="kural-title">திருக்குறள் — அதிகாரம்: மெய்யுணர்தல் (குறள்: 355)</span>
-    <span class="kural-sparkle">🔬 அறிவியல் உண்மை &amp; ஆராய்ச்சி நெறி</span>
-  </div>
-  <div class="kural-verse-text">
+<div class="kural-header">
+<span class="kural-icon">📜</span>
+<span class="kural-title">திருக்குறள் — அதிகாரம்: மெய்யுணர்தல் (குறள்: 355)</span>
+<span class="kural-sparkle">🔬 அறிவியல் உண்மை &amp; ஆராய்ச்சி நெறி</span>
+</div>
+<div class="kural-verse-text">
     “எப்பொருள் எத்தன்மைத் தாயினும் அப்பொருள்<br/>
     மெய்ப்பொருள் காண்ப தறிவு.”
   </div>
-  <div class="kural-meaning">
-    <strong>விளக்கவுரை:</strong> எந்தப் பொருள் எந்த இயல்போடு எவ்வாறாகத் தோன்றினாலும், அத்தோற்றத்தை மட்டும் கண்டு மயங்காமல் அதன் உண்மைப் பொருளை, அறிவியல் உண்மையை ஆராய்ந்து காண்பதே மெய்யான அறிவாகும்; தூய அறிவியல் மற்றும் ஆராய்ச்சித் துறையில் (Pure Sciences &amp; Research) புதிய கண்டுபிடிப்புகளை நிகழ்த்த விரும்பும் இளம் விஞ்ஞானிகளுக்கு இக்குறள் தலைசிறந்த அறிவியல் வழிகாட்டியாகும்.
+<div class="kural-meaning">
+<strong>விளக்கவுரை:</strong> எந்தப் பொருள் எந்த இயல்போடு எவ்வாறாகத் தோன்றினாலும், அத்தோற்றத்தை மட்டும் கண்டு மயங்காமல் அதன் உண்மைப் பொருளை, அறிவியல் உண்மையை ஆராய்ந்து காண்பதே மெய்யான அறிவாகும்; தூய அறிவியல் மற்றும் ஆராய்ச்சித் துறையில் (Pure Sciences &amp; Research) புதிய கண்டுபிடிப்புகளை நிகழ்த்த விரும்பும் இளம் விஞ்ஞானிகளுக்கு இக்குறள் தலைசிறந்த அறிவியல் வழிகாட்டியாகும்.
   </div>
 </div>
-
 <!-- உருவாக்கியவர் பெட்டி (Classic Dark Theme & Aurora Animation, Centered Flow) -->
 <!-- உருவாக்கியவர் பெட்டி (Classic Dark Theme & Aurora Animation, Centered Flow) -->
 <div class="creator-card">
-  <div class="creator-typewriter-wrapper">
-    <span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
-  </div>
-  <a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
-    <span class="phone-icon">📱</span>
-    <span class="phone-text">9626471035</span>
-  </a>
+<div class="creator-typewriter-wrapper">
+<span class="creator-typewriter-target" id="creatorTypewriterTarget"></span><span class="creator-cursor" id="creatorCursor">|</span>
 </div>
-  <a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
-    <span class="phone-icon">📱</span>
-    <span class="phone-text">9626471035</span>
-  </a>
-</div>
-
 <!-- முதன்மைக் கல்வி அலுவலக அடிக்குறிப்பு -->
 <footer class="portal-footer">
-  <p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #ffffff !important; font-size: 0.96rem !important; text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;">
+<p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #ffffff !important; font-size: 0.96rem !important; text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;">
     தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a class="footer-phone-link" href="tel:04575240408" style="color: #fde047 !important; text-decoration: none !important; font-weight: 800 !important; background: rgba(0, 0, 0, 0.45) !important; padding: 3px 10px !important; border-radius: 6px !important; border: 1.2px solid rgba(253, 224, 71, 0.6) !important; display: inline-block !important;">☎️ 04575240408</a>
-  </p>
-  <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important;">
+</p>
+<p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important;">
     © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
 </footer>
-
 </main></div> <!-- /.container -->
-
-
 <script>
 function toggleSidebarMenu() {
   var sidebar = document.getElementById('desktopLeftSidebar');
@@ -7209,7 +7342,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (hasTyped) return;
     const container = document.getElementById('creatorTypewriterTarget');
     const cursor = document.getElementById('creatorCursor');
-    const phonePill = document.getElementById('footerPhonePill');
+    const phonePill = null;
     if (!container) return;
 
     hasTyped = true;

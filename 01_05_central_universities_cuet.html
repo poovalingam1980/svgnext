@@ -4939,6 +4939,292 @@
         grid-template-columns: 1fr !important;
       }
     }
+
+    /* ========================================================
+       FULL SCREEN WIDTH LAYOUT & STANDARDIZED DESIGN (02_02 & 02_04 MODEL)
+       ======================================================== */
+    html, body {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+      background-color: var(--bg-main, #f8fafc) !important;
+    }
+
+    .portal-layout-wrapper {
+      display: flex !important;
+      flex-direction: row !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-height: 100vh !important;
+      position: relative !important;
+      align-items: stretch !important;
+      box-sizing: border-box !important;
+    }
+
+    .desktop-left-sidebar {
+      width: 295px !important;
+      min-width: 295px !important;
+      max-width: 295px !important;
+      background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+      border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      height: 100vh !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex-shrink: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .portal-main-content {
+      margin-left: 295px !important;
+      width: calc(100% - 295px) !important;
+      min-height: 100vh !important;
+      padding: 12px clamp(12px, 1.8vw, 36px) 40px !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+    }
+
+    .container,
+    .portal-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .card,
+    .info-card,
+    .content-card,
+    .sheet-announcement-box,
+    .closing-card,
+    section,
+    .portal-header,
+    .quick-nav-marquee-container,
+    .bottom-page-nav-bar,
+    .kural-box,
+    .creator-card,
+    .portal-footer,
+    .table-container,
+    .table-responsive {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .card {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 22px 0 !important;
+      padding: 22px 24px !important;
+      box-sizing: border-box !important;
+    }
+
+    /* HERO PORTAL HEADER: CLASSIC CUET ROYAL INDIGO & GOLD THEME */
+    .portal-header {
+      background: linear-gradient(135deg, #091a3e 0%, #17387d 50%, #0c1a30 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+      border-bottom: 4px solid #d4af37 !important;
+      border-radius: 16px !important;
+      padding: 28px 24px 24px !important;
+      margin-bottom: 16px !important;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4) !important;
+      text-align: center !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+
+    .portal-title {
+      color: #ffffff !important;
+      font-size: clamp(1.4rem, 2.3vw, 2.1rem) !important;
+      font-weight: 900 !important;
+      margin: 0 0 10px 0 !important;
+      line-height: 1.3 !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .portal-title .highlight-cyan {
+      color: #38bdf8 !important;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 16px rgba(56,189,248,0.6) !important;
+    }
+
+    .portal-subtitle {
+      color: #f1f5f9 !important;
+      font-size: clamp(0.88rem, 1.1vw, 1.02rem) !important;
+      line-height: 1.65 !important;
+      max-width: 980px !important;
+      margin: 0 auto !important;
+      font-weight: 500 !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+    }
+
+    /* QUICK NAVIGATION MARQUEE BAR */
+    .quick-nav-marquee-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      background: linear-gradient(135deg, #060d1a 0%, #0d1e38 50%, #060d1a 100%) !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.35) !important;
+      border-radius: 12px !important;
+      padding: 8px 12px !important;
+      margin-bottom: 18px !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+      position: relative !important;
+    }
+
+    .marquee-static-label {
+      flex-shrink: 0 !important;
+      background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%) !important;
+      color: #000000 !important;
+      font-size: 1.15rem !important;
+      padding: 6px 12px !important;
+      border-radius: 8px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-shadow: 0 2px 6px rgba(212, 175, 55, 0.4) !important;
+      z-index: 2 !important;
+    }
+
+    .marquee-scroll-track {
+      flex-grow: 1 !important;
+      overflow: hidden !important;
+      display: flex !important;
+      position: relative !important;
+      mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+    }
+
+    .marquee-content-loop {
+      display: flex !important;
+      gap: 10px !important;
+      align-items: center !important;
+      white-space: nowrap !important;
+      animation: marqueeScroll 30s linear infinite !important;
+      padding-right: 10px !important;
+    }
+
+    .quick-nav-marquee-container:hover .marquee-content-loop {
+      animation-play-state: paused !important;
+    }
+
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .marquee-pill-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: rgba(30, 41, 59, 0.85) !important;
+      color: #e2e8f0 !important;
+      border: 1px solid rgba(148, 163, 184, 0.25) !important;
+      padding: 5px 12px !important;
+      border-radius: 999px !important;
+      font-size: 0.80rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+      white-space: nowrap !important;
+    }
+
+    .marquee-pill-btn:hover {
+      background: rgba(212, 175, 55, 0.25) !important;
+      color: #fde047 !important;
+      border-color: #fbbf24 !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* CRISP TABLE GRIDLINES ACROSS ALL 10 TABLES */
+    table,
+    table.styled-table,
+    table#cuTable {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      border: 1.5px solid #94a3b8 !important;
+      background: #ffffff !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
+    }
+
+    table th,
+    table.styled-table th,
+    table#cuTable th {
+      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      padding: 12px 14px !important;
+      border: 1.2px solid #334155 !important;
+      font-size: 0.88rem !important;
+      text-align: left !important;
+    }
+
+    table td,
+    table.styled-table td,
+    table#cuTable td {
+      padding: 10px 14px !important;
+      border: 1.2px solid #cbd5e1 !important;
+      font-size: 0.86rem !important;
+      color: #1e293b !important;
+      line-height: 1.5 !important;
+    }
+
+    table tbody tr:nth-child(even),
+    table.styled-table tbody tr:nth-child(even),
+    table#cuTable tbody tr:nth-child(even) {
+      background-color: #f8fafc !important;
+    }
+
+    @media (max-width: 1024px) {
+      .desktop-left-sidebar {
+        position: fixed !important;
+        left: -320px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 295px !important;
+        height: 100vh !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 9999 !important;
+        box-shadow: 6px 0 35px rgba(0, 0, 0, 0.85);
+      }
+      .desktop-left-sidebar.sidebar-open {
+        left: 0 !important;
+      }
+      .portal-main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 8px 12px 30px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .calc-inputs-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      .calc-res-divider {
+        display: none !important;
+      }
+      .calc-horizontal-result-bar {
+        flex-direction: column !important;
+        gap: 6px !important;
+      }
+    }
+
 </style>
 <style id="distinct-theme-css">
 /* ============================================================
@@ -5878,15 +6164,17 @@
   </div>
 </nav>
 <!-- Main Hero Banner (Header) -->
-<header class="portal-header" style="padding: 16px 20px 18px !important; margin-bottom: 14px !important; border-radius: 14px !important;">
+<header class="portal-header">
   <div class="header-badge-row" style="margin-bottom: 8px !important;">
-    <span class="header-tag amber" style="padding: 4px 12px !important; font-size: 0.82rem !important;">CUET UG • 46+ மத்தியப் பல்கலைகள் • 100+ முதன்மைக் கல்வி நிறுவனங்கள்</span>
+    <span class="header-tag primary" style="background: rgba(251, 191, 36, 0.2) !important; color: #fef08a !important; border: 1px solid rgba(251, 191, 36, 0.5) !important;">
+      CUET UG 2026 • 46+ மத்தியப் பல்கலைகள் • 100+ முதன்மைக் கல்வி நிறுவனங்கள்
+    </span>
   </div>
-  <h1 class="portal-title" style="margin: 0 0 6px 0 !important; font-size: clamp(1.3rem, 2vw, 1.85rem) !important; line-height: 1.25 !important;">
-    மத்தியப் பல்கலைக்கழகங்கள் &amp; கலை, அறிவியல், வணிகவியல் <span class="highlight-cyan">(CUET UG)</span>
+  <h1 class="portal-title">
+    மத்தியப் பல்கலைக்கழகங்கள் &amp; கலை, அறிவியல், வணிகவியல் <span class="highlight-cyan">(CUET UG சேர்க்கை வழிகாட்டி)</span>
   </h1>
-  <p class="portal-subtitle" style="margin: 0 auto !important; line-height: 1.5 !important; font-size: clamp(0.85rem, 1vw, 0.95rem) !important; max-width: 950px !important;">
-    12-ஆம் வகுப்பு பள்ளி மாணவர்களுக்கான தில்லி பல்கலைக்கழகம் (DU), ஜே.என்.யு (JNU), ஹைதராபாத் (UoH), பனாரஸ் (BHU), தமிழ்நாடு மத்தியப் பல்கலைக்கழகம் (CUTN) உள்ளிட்ட 46 மத்தியப் பல்கலைக்கழகங்களின் ஒற்றைச் சாளர சேர்க்கை, பாடத் தேர்வு உத்திகள், கட்டணச் சலுகைகள் &amp; சேர்க்கை கலந்தாய்வு வழிகாட்டல் தொகுப்பு.
+  <p class="portal-subtitle">
+    12-ஆம் வகுப்பு பள்ளி மாணவர்களுக்கான தில்லி பல்கலைக்கழகம் (DU), ஜே.என்.யு (JNU), ஹைதராபாத் (UoH), பனாரஸ் (BHU), தமிழ்நாடு மத்தியப் பல்கலை (CUTN) உள்ளிட்ட 46 மத்தியப் பல்கலைக்கழகங்கள், தேசிய நிறுவனங்கள் மற்றும் கலை, அறிவியல், வணிகவியல், கணினி, மேலாண்மைப் படிப்புகளுக்கான விரிவான வழிகாட்டி.
   </p>
 </header>
 
@@ -5897,6 +6185,7 @@
   </div>
   <div class="marquee-scroll-track">
     <div class="marquee-content-loop">
+      <a href="#calculator" class="marquee-pill-btn">🧮 CUET மதிப்பெண் கால்குலேட்டர்</a>
       <a href="#section-1" class="marquee-pill-btn">📌 1. CUET UG அறிமுகம்</a>
       <a href="#section-2" class="marquee-pill-btn">📝 2. தேர்வு கட்டமைப்பு</a>
       <a href="#section-3" class="marquee-pill-btn">📊 3. மதிப்பெண் &amp; இயல்பாக்குதல்</a>
@@ -5912,6 +6201,7 @@
     </div>
     <!-- Duplicate for infinite seamless scroll -->
     <div class="marquee-content-loop" aria-hidden="true">
+      <a href="#calculator" class="marquee-pill-btn">🧮 CUET மதிப்பெண் கால்குலேட்டர்</a>
       <a href="#section-1" class="marquee-pill-btn">📌 1. CUET UG அறிமுகம்</a>
       <a href="#section-2" class="marquee-pill-btn">📝 2. தேர்வு கட்டமைப்பு</a>
       <a href="#section-3" class="marquee-pill-btn">📊 3. மதிப்பெண் &amp; இயல்பாக்குதல்</a>
@@ -5935,6 +6225,71 @@
 </div>
 <!-- Quick Navigation Bar -->
 <!-- Section 1: Overview & Objectives -->
+
+<!-- SECTION: CUET UG SCORE & ELIGIBILITY CALCULATOR -->
+<section class="card" id="calculator" style="background: linear-gradient(135deg, #091330 0%, #1e293b 50%, #0a0f1d 100%) !important; border: 2px solid #38bdf8 !important; border-radius: 14px !important; padding: 14px 20px !important; box-shadow: 0 4px 18px rgba(15, 23, 42, 0.35) !important; color: #ffffff !important; margin: 0 0 22px 0 !important; width: 100% !important; box-sizing: border-box !important;">
+  <div style="display: flex !important; align-items: center !important; justify-content: space-between !important; flex-wrap: wrap !important; gap: 8px !important; margin-bottom: 12px !important; border-bottom: 1px solid rgba(255,255,255,0.12) !important; padding-bottom: 8px !important;">
+    <div style="display: flex !important; align-items: center !important; gap: 8px !important;">
+      <span style="font-size: 1.25rem !important;">🧮</span>
+      <h3 style="color: #93c5fd !important; font-size: 1.05rem !important; font-weight: 800 !important; margin: 0 !important;">
+        CUET UG உத்தேச மதிப்பெண் &amp; சேர்க்கை மதிப்பீட்டுக் கருவி (CUET Score &amp; Target Evaluator)
+      </h3>
+    </div>
+    <div style="font-size: 0.74rem !important; font-weight: 700 !important; color: #bae6fd !important; background: rgba(56,189,248,0.15) !important; border: 1px solid #38bdf8 !important; padding: 2px 8px !important; border-radius: 6px !important;">
+      சரியான விடை: +5 | தவறான விடை: -1 (Negative Mark)
+    </div>
+  </div>
+
+  <!-- Stream Selection Toggles -->
+  <div class="stream-toggle-row" style="display: flex !important; flex-wrap: wrap !important; gap: 8px !important; margin-bottom: 12px !important;">
+    <button class="stream-toggle-btn active" id="btnDU800" onclick="switchCuetStream('du800')" type="button" style="padding: 5px 12px !important; font-size: 0.80rem !important; border-radius: 6px !important; font-weight: 800 !important; cursor: pointer !important; background: #0284c7 !important; color: #ffffff !important; border: 1.5px solid #38bdf8 !important;">
+      🏛️ DU / கலை &amp; வணிகவியல் (4 தாள்கள் = 800-க்கு)
+    </button>
+    <button class="stream-toggle-btn" id="btnSci600" onclick="switchCuetStream('sci600')" type="button" style="padding: 5px 12px !important; font-size: 0.80rem !important; border-radius: 6px !important; font-weight: 800 !important; cursor: pointer !important; background: rgba(30, 41, 59, 0.8) !important; color: #cbd5e1 !important; border: 1.5px solid #475569 !important;">
+      🔬 B.Sc அறிவியல் (3 துறைகள் = 600-க்கு)
+    </button>
+    <button class="stream-toggle-btn" id="btnBBA450" onclick="switchCuetStream('bba450')" type="button" style="padding: 5px 12px !important; font-size: 0.80rem !important; border-radius: 6px !important; font-weight: 800 !important; cursor: pointer !important; background: rgba(30, 41, 59, 0.8) !important; color: #cbd5e1 !important; border: 1.5px solid #475569 !important;">
+      💼 BBA / BMS / பொதுத் தேர்வு (450-க்கு)
+    </button>
+  </div>
+
+  <!-- 4 Subject Inputs in a 4-Column Grid -->
+  <div class="calc-inputs-grid" id="cuetInputsGrid" style="display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 10px !important; margin-bottom: 12px !important;">
+    <div id="cuetGrp1" style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
+      <label for="cuetSub1" id="cuetLbl1" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">📖 மொழித்தாள் (English / தமிழ்):</label>
+      <input id="cuetSub1" max="200" min="0" oninput="calculateCuetScore()" placeholder="0 - 200" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="180"/>
+      <span style="font-size: 0.68rem; color: #94a3b8;">50-ல் 40 வினாக்கள் (max 200)</span>
+    </div>
+    <div id="cuetGrp2" style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
+      <label for="cuetSub2" id="cuetLbl2" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">🧪 முதன்மைத் துறை 1 (Domain 1):</label>
+      <input id="cuetSub2" max="200" min="0" oninput="calculateCuetScore()" placeholder="0 - 200" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="185"/>
+      <span style="font-size: 0.68rem; color: #94a3b8;">50-ல் 40 வினாக்கள் (max 200)</span>
+    </div>
+    <div id="cuetGrp3" style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
+      <label for="cuetSub3" id="cuetLbl3" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">📊 முதன்மைத் துறை 2 (Domain 2):</label>
+      <input id="cuetSub3" max="200" min="0" oninput="calculateCuetScore()" placeholder="0 - 200" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="175"/>
+      <span style="font-size: 0.68rem; color: #94a3b8;">50-ல் 40 வினாக்கள் (max 200)</span>
+    </div>
+    <div id="cuetGrp4" style="background: rgba(255, 255, 255, 0.06) !important; border: 1.2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 8px !important; padding: 6px 10px !important;">
+      <label for="cuetSub4" id="cuetLbl4" style="color: #cbd5e1 !important; font-size: 0.75rem !important; font-weight: 800 !important; display: block !important; margin-bottom: 2px !important;">⚡ துறை 3 / பொதுத் தேர்வு:</label>
+      <input id="cuetSub4" max="250" min="0" oninput="calculateCuetScore()" placeholder="0 - 250" style="width: 100% !important; box-sizing: border-box !important; padding: 6px 10px !important; font-size: 1.02rem !important; font-weight: 900 !important; background: #ffffff !important; color: #0f172a !important; border: 1.5px solid #38bdf8 !important; border-radius: 6px !important; outline: none !important;" type="number" value="180"/>
+      <span id="cuetMaxLbl4" style="font-size: 0.68rem; color: #94a3b8;">Domain 3 / GT (max 200/250)</span>
+    </div>
+  </div>
+
+  <!-- Slim Horizontal Result Bar -->
+  <div class="calc-horizontal-result-bar" style="background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%) !important; border: 1.5px solid #fbbf24 !important; border-radius: 8px !important; padding: 6px 16px !important; display: flex !important; align-items: center !important; justify-content: center !important; flex-wrap: wrap !important; gap: 8px 16px !important; box-shadow: 0 2px 8px rgba(0,0,0,0.25) !important;">
+    <span style="font-size: 0.84rem !important; font-weight: 800 !important; color: #fef08a !important; display: inline-flex !important; align-items: center !important; gap: 6px !important;">
+      <span>🎯 உங்கள் CUET மதிப்பெண்:</span>
+      <span id="cuetTotalScore" style="font-size: 1.30rem !important; font-weight: 900 !important; color: #ffffff !important; text-shadow: 0 1px 6px rgba(251, 191, 36, 0.5) !important; line-height: 1 !important;">720 / 800</span>
+    </span>
+    <span class="calc-res-divider" style="color: rgba(255,255,255,0.3) !important; font-size: 0.9rem !important;">|</span>
+    <span id="cuetPercent" style="font-size: 0.84rem !important; font-weight: 800 !important; color: #38bdf8 !important;">சதவீதம்: 90.00 %</span>
+    <span class="calc-res-divider" style="color: rgba(255,255,255,0.3) !important; font-size: 0.9rem !important;">|</span>
+    <span id="cuetFeedback" style="background: rgba(251, 191, 36, 0.2) !important; border: 1px solid #f59e0b !important; color: #fef08a !important; font-size: 0.74rem !important; font-weight: 800 !important; padding: 2px 10px !important; border-radius: 999px !important; text-align: center !important;">🌟 தில்லி பல்கலைக்கழகம் (SRCC, Hindu, Miranda), JNU, BHU-ல் விரும்பிய படிப்பு உறுதி!</span>
+  </div>
+</section>
+
 <div class="card filter-item" data-cat="all univ" id="section-1">
 <div class="card-header">
 <h3 class="card-title">📌 1. CUET UG நுழைவுத்தேர்வு என்றால் என்ன? - முழுமையான அறிமுகம்</h3>
@@ -5977,7 +6332,7 @@
 </div>
 <p>CUET UG தேர்வு மாணவர்களின் மொழித் திறன், பாட அறிவு மற்றும் பொது நுண்ணறிவை அளவிடும் வகையில் மூன்று முதன்மைப் பிரிவுகளாகப் பிரிக்கப்பட்டுள்ளது. மாணவர்கள் தாங்கள் சேர விரும்பும் பல்கலைக்கழகம் மற்றும் பட்டப்படிப்பின் தகுதி விதிகளுக்கு ஏற்ப பாடங்களைத் தேர்ந்தெடுக்கலாம் (அதிகபட்சமாக 6 பாடங்கள் வரை தேர்வு செய்யலாம்):</p>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th style="width: 20%;">பிரிவு (Section)</th>
@@ -6106,7 +6461,7 @@
 <div class="card-sub">📍 தென்னிந்திய மத்தியப் பல்கலைக்கழகங்கள் (தமிழக மாணவர்களுக்கு முதல் முன்னுரிமை)</div>
 <p style="font-size:13.5px; color:#475569;">குறைந்த பயணத் தூரம், பாதுகாப்பான உறைவிட வசதிகள், மொழிப் பரிச்சயம் மற்றும் தமிழக இடஒதுக்கீடு சலுகைகள் கொண்ட தென்னக நிறுவனங்கள்:</p>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th style="width: 5%;">வ.எண்</th>
@@ -6231,7 +6586,7 @@
 <input class="search-input" id="cuSearchInput" onkeyup="filterCUTable()" placeholder="🔍 46 மத்தியப் பல்கலைகளில் தேடுக (பெயர், மாநிலம், படிப்பு, தாள்கள்)..." type="text"/>
 </div>
 <div class="table-responsive" style="max-height: 600px; overflow-y: auto;">
-<table id="cuTable">
+<table class="styled-table" id="cuTable">
 <thead style="position: sticky; top: 0; z-index: 10;">
 <tr>
 <th style="width: 4%;">வ.எண்</th>
@@ -6865,7 +7220,7 @@
 <div class="card-sub">🏆 CUET மதிப்பெண்ணை ஏற்கும் மத்திய அரசின் சிறப்பு தேசிய நிறுவனங்கள் (INI &amp; National Institutes)</div>
 <p style="font-size:13.5px; color:#475569;">ரயில்வே, உணவு பதப்படுத்துதல், சமூக அறிவியல், காலணி வடிவமைப்பு, சுற்றுலா, கைத்தறி மற்றும் ஓட்டல் மேலாண்மை துறைகளில் தேசிய தலைமை நிறுவனங்கள்:</p>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th style="width: 5%;">வ.எண்</th>
@@ -6995,7 +7350,7 @@
 <div class="card-sub">🌾 தமிழ்நாட்டில் CUET மதிப்பெண்ணை ஏற்கும் 14 முன்னணி நிகர்நிலை &amp; மாநிலப் பல்கலைக்கழகங்கள்</div>
 <p style="font-size:13.5px; color:#475569;">தமிழகத்திலேயே தங்கி CUET மதிப்பெண் வாயிலாக சேர்க்கை மற்றும் பிரத்யேக கல்வி உதவித்தொகை பெறக்கூடிய நிறுவனங்கள்:</p>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th style="width: 6%;">வ.எண்</th>
@@ -7142,7 +7497,7 @@
 <!-- Arts & Humanities -->
 <div class="card-sub">அ) கலை மற்றும் சமூக அறிவியல் படிப்புகள் (Arts, Humanities &amp; Social Sciences)</div>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>படிப்பு (Degree)</th>
@@ -7182,7 +7537,7 @@
 <!-- Commerce & Management -->
 <div class="card-sub">ஆ) வணிகவியல் மற்றும் மேலாண்மைப் படிப்புகள் (Commerce &amp; Management)</div>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>படிப்பு (Degree)</th>
@@ -7216,7 +7571,7 @@
 <!-- Science & Research -->
 <div class="card-sub">இ) அறிவியல் மற்றும் ஆராய்ச்சிப் படிப்புகள் (Pure Sciences &amp; Research)</div>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>படிப்பு (Degree)</th>
@@ -7277,7 +7632,7 @@
 </div>
 <p>பல்கலைக்கழகங்களின் விதிப்படி, நீங்கள் 12-ஆம் வகுப்பில் படித்த பாடங்களையே CUET-ன் முதன்மைப் பாடங்களாக (Domain Subjects) தேர்வு செய்வது மிகவும் பாதுகாப்பானது. உங்கள் 12-ஆம் வகுப்பு குரூப்பிற்கு ஏற்ப கீழ்க்கண்டவாறு பாடங்களைத் தேர்ந்தெடுங்கள்:</p>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>12-ஆம் வகுப்பு பாடப்பிரிவு</th>
@@ -7518,7 +7873,7 @@
 </div>
 <div class="card-sub">ஆ) அதிகாரப்பூர்வ இணையதளங்களின் நேரடி இணைப்புகள் (Official Web Portals):</div>
 <div class="table-responsive">
-<table>
+<table class="styled-table">
 <thead>
 <tr>
 <th>நிறுவனம் / போர்ட்டல்</th>
@@ -8061,6 +8416,120 @@ document.addEventListener('DOMContentLoaded', function() {
       setupBackToTop();
     }
   })();
+
+
+
+  // ==========================================
+  // CUET UG Interactive Calculator Logic
+  // ==========================================
+  let currentCuetStream = 'du800';
+
+  function switchCuetStream(streamKey) {
+    currentCuetStream = streamKey;
+    document.querySelectorAll('.stream-toggle-btn').forEach(btn => {
+      btn.classList.remove('active');
+      btn.style.background = 'rgba(30, 41, 59, 0.8)';
+      btn.style.color = '#cbd5e1';
+      btn.style.borderColor = '#475569';
+    });
+
+    const activeBtn = document.getElementById(
+      streamKey === 'du800' ? 'btnDU800' :
+      streamKey === 'sci600' ? 'btnSci600' : 'btnBBA450'
+    );
+    if (activeBtn) {
+      activeBtn.classList.add('active');
+      activeBtn.style.background = '#0284c7';
+      activeBtn.style.color = '#ffffff';
+      activeBtn.style.borderColor = '#38bdf8';
+    }
+
+    const grp1 = document.getElementById('cuetGrp1');
+    const grp4 = document.getElementById('cuetGrp4');
+    const lbl4 = document.getElementById('cuetLbl4');
+    const sub4 = document.getElementById('cuetSub4');
+    const maxLbl4 = document.getElementById('cuetMaxLbl4');
+
+    if (streamKey === 'sci600') {
+      grp1.style.opacity = '0.5';
+      grp4.style.opacity = '1';
+      lbl4.textContent = '⚡ முதன்மைத் துறை 3 (Domain 3):';
+      sub4.max = '200';
+      maxLbl4.textContent = '50-ல் 40 வினாக்கள் (max 200)';
+    } else if (streamKey === 'bba450') {
+      grp1.style.opacity = '1';
+      grp4.style.opacity = '1';
+      lbl4.textContent = '⚡ பொதுத் தேர்வு (General Test):';
+      sub4.max = '250';
+      maxLbl4.textContent = '60-ல் 50 வினாக்கள் (max 250)';
+    } else {
+      grp1.style.opacity = '1';
+      grp4.style.opacity = '1';
+      lbl4.textContent = '⚡ முதன்மைத் துறை 3 (Domain 3):';
+      sub4.max = '200';
+      maxLbl4.textContent = 'Domain 3 / GT (max 200)';
+    }
+
+    calculateCuetScore();
+  }
+
+  function calculateCuetScore() {
+    const s1 = parseFloat(document.getElementById('cuetSub1').value) || 0;
+    const s2 = parseFloat(document.getElementById('cuetSub2').value) || 0;
+    const s3 = parseFloat(document.getElementById('cuetSub3').value) || 0;
+    const s4 = parseFloat(document.getElementById('cuetSub4').value) || 0;
+
+    const v1 = Math.min(200, Math.max(0, s1));
+    const v2 = Math.min(200, Math.max(0, s2));
+    const v3 = Math.min(200, Math.max(0, s3));
+
+    let total = 0;
+    let maxMarks = 800;
+    let feedback = '';
+
+    if (currentCuetStream === 'du800') {
+      const v4 = Math.min(200, Math.max(0, s4));
+      total = v1 + v2 + v3 + v4;
+      maxMarks = 800;
+      const pct = (total / maxMarks) * 100;
+      if (total >= 720) {
+        feedback = '🌟 தில்லி பல்கலைக்கழகம் (SRCC, Hindu, Miranda), JNU, BHU-ல் விரும்பிய படிப்பு உறுதி!';
+      } else if (total >= 640) {
+        feedback = '👍 DU நார்த்/சவுத் கேம்பஸ், ஹைதராபாத் பல்கலை, தமிழ்நாடு மத்தியப் பல்கலை (CUTN) கிடைக்க சிறந்த வாய்ப்பு!';
+      } else if (total >= 520) {
+        feedback = '🎯 அனைத்து மத்தியப் பல்கலைக்கழகங்கள் மற்றும் முன்னணி மாநிலப் பல்கலைகளில் சேர்க்கை வாய்ப்பு உண்டு!';
+      } else {
+        feedback = '📘 பிற மத்தியப் பல்கலைக்கழகங்கள் மற்றும் இணைவு பெற்ற கல்வி நிறுவனங்களில் வாய்ப்பு உண்டு.';
+      }
+    } else if (currentCuetStream === 'sci600') {
+      const v4 = Math.min(200, Math.max(0, s4));
+      total = v2 + v3 + v4;
+      maxMarks = 600;
+      const pct = (total / maxMarks) * 100;
+      if (total >= 540) {
+        feedback = '🌟 BHU, DU, UoH, CUTN B.Sc கணிதம், இயற்பியல், வேதியியல், பயோடெக் சேர்க்கை உறுதி!';
+      } else if (total >= 460) {
+        feedback = '👍 மத்தியப் பல்கலைக்கழகங்களில் முன்னணி அறிவியல் இளநிலைப் படிப்புகள் கிடைக்க சிறந்த வாய்ப்பு!';
+      } else {
+        feedback = '🎯 மத்திய & மாநில அரசுப் பல்கலைக்கழகங்களில் அறிவியல் படிப்புகள் வாய்ப்பு உண்டு!';
+      }
+    } else if (currentCuetStream === 'bba450') {
+      const v4 = Math.min(250, Math.max(0, s4));
+      total = v1 + v4;
+      maxMarks = 450;
+      const pct = (total / maxMarks) * 100;
+      if (total >= 380) {
+        feedback = '🌟 DU BMS, BBA (FIA), TISS, மத்தியப் பல்கலை மேலாண்மைப் படிப்புகளில் சேர்க்கை உறுதி!';
+      } else {
+        feedback = '👍 மத்தியப் பல்கலைகளில் BBA, இதழியல், சுற்றுலா மேலாண்மை வாய்ப்புகள் உண்டு!';
+      }
+    }
+
+    const pctVal = ((total / maxMarks) * 100).toFixed(2);
+    document.getElementById('cuetTotalScore').textContent = total.toFixed(0) + ' / ' + maxMarks;
+    document.getElementById('cuetPercent').textContent = 'சதவீதம்: ' + pctVal + ' %';
+    document.getElementById('cuetFeedback').textContent = feedback;
+  }
 
 </script>
 <button aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" id="floatingBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="மேலே செல்க">↑ மேலே செல்க</button>
