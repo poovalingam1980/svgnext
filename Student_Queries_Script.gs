@@ -150,6 +150,7 @@ function handleStudentQuery(e) {
 
         MailApp.sendEmail({
           to: email,
+          name: "மாவட்ட உயர்கல்வி வழிகாட்டல் மையம்",
           subject: studentSubject,
           htmlBody: studentHtml
         });
@@ -186,6 +187,7 @@ function handleStudentQuery(e) {
       `;
       MailApp.sendEmail({
         to: GUIDANCE_TEAM_EMAILS,
+        name: "மாவட்ட உயர்கல்வி வழிகாட்டல் மையம்",
         subject: teamSubject,
         htmlBody: teamHtml
       });

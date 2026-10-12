@@ -167,6 +167,7 @@ function handleRequest(e) {
 
           MailApp.sendEmail({
             to: email,
+            name: "மாவட்ட உயர்கல்வி வழிகாட்டல் மையம்",
             subject: emailSubject,
             htmlBody: emailHtml
           });
@@ -302,6 +303,7 @@ function handleRequest(e) {
 
           MailApp.sendEmail({
             to: email,
+            name: "மாவட்ட உயர்கல்வி வழிகாட்டல் மையம்",
             subject: emailSubject,
             htmlBody: emailHtml
           });

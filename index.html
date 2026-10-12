@@ -3049,22 +3049,7 @@
     .portal-top-frame {
       position: sticky !important;
       top: 0 !important;
-      z-index: 999 !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-      background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
-      border: 1.8px solid #d4af37 !important;
-      border-radius: 14px !important;
-      padding: 12px 18px !important;
-      margin-bottom: 16px !important;
-      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.22) !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      flex-wrap: wrap !important;
-      gap: 12px !important;
-    }
+      z-index: 10001 !important;}
 
     .top-frame-branding {
       display: flex !important;
@@ -3258,9 +3243,7 @@
       border-top-right-radius: 0 !important;
       position: sticky !important;
       top: 0 !important;
-      z-index: 9999 !important;
-      margin-bottom: 16px !important;
-    }
+      z-index: 10001 !important;}
 
 
 
@@ -3287,9 +3270,7 @@
       top: 8px !important;
       left: auto !important;
       right: auto !important;
-      z-index: 999 !important;
-      overflow: visible !important;
-    }
+      z-index: 10001 !important;}
 
     @media (max-width: 1024px) {
       .portal-main-content {
@@ -4019,17 +4000,7 @@
   top: 8px !important;
   left: auto !important;
   right: auto !important;
-  z-index: 999 !important;
-  overflow: hidden !important;
-  background: linear-gradient(145deg, #071328 0%, #0d1e3d 45%, #132a54 75%, #081328 100%) !important;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 0 14px rgba(56, 189, 248, 0.22), inset 0 0 30px rgba(14, 165, 233, 0.08) !important;
-  padding: 13px 20px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 14px !important;
-  position: relative !important;
-}
+  z-index: 10001 !important;}
 
 .portal-top-frame::before {
   content: '🎓 🔍 ⚙️ 🧭 💡 🏛️' !important;
@@ -4291,6 +4262,223 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
     }
 
+
+/* ========================================================
+   UNIFIED DUAL ACTION BUTTON (ஒரே பொத்தானில் ஆலோசனை & சந்தேகம்)
+   ======================================================== */
+@keyframes dualBorderPulse {
+  0% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+  50% {
+    box-shadow: 0 0 26px rgba(250, 204, 21, 0.65), 0 0 38px rgba(56, 189, 248, 0.45), 0 8px 30px rgba(0, 0, 0, 0.6);
+    border-color: #facc15;
+  }
+  100% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-8deg) scale(1.15); }
+  75% { transform: rotate(8deg) scale(1.15); }
+}
+
+.cg-unified-dual-btn-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 32px 0 24px 0 !important;
+  padding: 0 14px !important;
+  box-sizing: border-box !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 2px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 5px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out, gentleFloat 4s infinite ease-in-out !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  max-width: 820px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* Individual Half-Buttons */
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 12px 22px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+/* LEFT: ஆலோசனை / கருத்து தெரிவிக்க (FEEDBACK) */
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+  border-right: none !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 18px rgba(253, 224, 71, 0.4), 0 0 22px rgba(245, 158, 11, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-left:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* RIGHT: சந்தேகங்களைக் கேட்க (STUDENT QUERIES) */
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+  border-left: none !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 18px rgba(56, 189, 248, 0.4), 0 0 22px rgba(2, 132, 199, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* Center Dividing Glow Bar */
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.5px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.68rem !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+/* Typography inside button */
+.dual-icon {
+  font-size: 1.45rem !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.2s ease !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.96rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.2px !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  margin-top: 2px !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
+}
+
+/* Responsive down to mobile */
+@media (max-width: 680px) {
+  .cg-unified-dual-pill {
+    flex-direction: column !important;
+    border-radius: 20px !important;
+    padding: 6px !important;
+    gap: 6px !important;
+  }
+  .dual-half {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 18px !important;
+    justify-content: flex-start !important;
+  }
+  .dual-half-left {
+    border-radius: 16px !important;
+  }
+  .dual-half-right {
+    border-radius: 16px !important;
+  }
+  .dual-divider {
+    display: none !important;
+  }
+}
+
 </style>
 <style id="robust-layout-override">
 /* ========================================================
@@ -4360,6 +4548,223 @@
     width: 100% !important;
   }
 }
+
+/* ========================================================
+   UNIFIED DUAL ACTION BUTTON (ஒரே பொத்தானில் ஆலோசனை & சந்தேகம்)
+   ======================================================== */
+@keyframes dualBorderPulse {
+  0% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+  50% {
+    box-shadow: 0 0 26px rgba(250, 204, 21, 0.65), 0 0 38px rgba(56, 189, 248, 0.45), 0 8px 30px rgba(0, 0, 0, 0.6);
+    border-color: #facc15;
+  }
+  100% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-8deg) scale(1.15); }
+  75% { transform: rotate(8deg) scale(1.15); }
+}
+
+.cg-unified-dual-btn-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 32px 0 24px 0 !important;
+  padding: 0 14px !important;
+  box-sizing: border-box !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 2px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 5px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out, gentleFloat 4s infinite ease-in-out !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  max-width: 820px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* Individual Half-Buttons */
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 12px 22px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+/* LEFT: ஆலோசனை / கருத்து தெரிவிக்க (FEEDBACK) */
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+  border-right: none !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 18px rgba(253, 224, 71, 0.4), 0 0 22px rgba(245, 158, 11, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-left:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* RIGHT: சந்தேகங்களைக் கேட்க (STUDENT QUERIES) */
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+  border-left: none !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 18px rgba(56, 189, 248, 0.4), 0 0 22px rgba(2, 132, 199, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* Center Dividing Glow Bar */
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.5px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.68rem !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+/* Typography inside button */
+.dual-icon {
+  font-size: 1.45rem !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.2s ease !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.96rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.2px !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  margin-top: 2px !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
+}
+
+/* Responsive down to mobile */
+@media (max-width: 680px) {
+  .cg-unified-dual-pill {
+    flex-direction: column !important;
+    border-radius: 20px !important;
+    padding: 6px !important;
+    gap: 6px !important;
+  }
+  .dual-half {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 18px !important;
+    justify-content: flex-start !important;
+  }
+  .dual-half-left {
+    border-radius: 16px !important;
+  }
+  .dual-half-right {
+    border-radius: 16px !important;
+  }
+  .dual-divider {
+    display: none !important;
+  }
+}
+
 </style>
 <style>
     .portal-layout-wrapper {
@@ -4422,6 +4827,223 @@
         padding: 8px 10px 30px !important;
       }
     }
+
+/* ========================================================
+   UNIFIED DUAL ACTION BUTTON (ஒரே பொத்தானில் ஆலோசனை & சந்தேகம்)
+   ======================================================== */
+@keyframes dualBorderPulse {
+  0% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+  50% {
+    box-shadow: 0 0 26px rgba(250, 204, 21, 0.65), 0 0 38px rgba(56, 189, 248, 0.45), 0 8px 30px rgba(0, 0, 0, 0.6);
+    border-color: #facc15;
+  }
+  100% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-8deg) scale(1.15); }
+  75% { transform: rotate(8deg) scale(1.15); }
+}
+
+.cg-unified-dual-btn-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 32px 0 24px 0 !important;
+  padding: 0 14px !important;
+  box-sizing: border-box !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 2px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 5px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out, gentleFloat 4s infinite ease-in-out !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  max-width: 820px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* Individual Half-Buttons */
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 12px 22px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+/* LEFT: ஆலோசனை / கருத்து தெரிவிக்க (FEEDBACK) */
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+  border-right: none !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 18px rgba(253, 224, 71, 0.4), 0 0 22px rgba(245, 158, 11, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-left:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* RIGHT: சந்தேகங்களைக் கேட்க (STUDENT QUERIES) */
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+  border-left: none !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 18px rgba(56, 189, 248, 0.4), 0 0 22px rgba(2, 132, 199, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* Center Dividing Glow Bar */
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.5px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.68rem !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+/* Typography inside button */
+.dual-icon {
+  font-size: 1.45rem !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.2s ease !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.96rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.2px !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  margin-top: 2px !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
+}
+
+/* Responsive down to mobile */
+@media (max-width: 680px) {
+  .cg-unified-dual-pill {
+    flex-direction: column !important;
+    border-radius: 20px !important;
+    padding: 6px !important;
+    gap: 6px !important;
+  }
+  .dual-half {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 18px !important;
+    justify-content: flex-start !important;
+  }
+  .dual-half-left {
+    border-radius: 16px !important;
+  }
+  .dual-half-right {
+    border-radius: 16px !important;
+  }
+  .dual-divider {
+    display: none !important;
+  }
+}
+
 </style>
 <style>
 
@@ -4670,6 +5292,223 @@
   }
   .mobile-menu-floating-btn {
     display: inline-flex !important;
+  }
+}
+
+
+/* ========================================================
+   UNIFIED DUAL ACTION BUTTON (ஒரே பொத்தானில் ஆலோசனை & சந்தேகம்)
+   ======================================================== */
+@keyframes dualBorderPulse {
+  0% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+  50% {
+    box-shadow: 0 0 26px rgba(250, 204, 21, 0.65), 0 0 38px rgba(56, 189, 248, 0.45), 0 8px 30px rgba(0, 0, 0, 0.6);
+    border-color: #facc15;
+  }
+  100% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-8deg) scale(1.15); }
+  75% { transform: rotate(8deg) scale(1.15); }
+}
+
+.cg-unified-dual-btn-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 32px 0 24px 0 !important;
+  padding: 0 14px !important;
+  box-sizing: border-box !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 2px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 5px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out, gentleFloat 4s infinite ease-in-out !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  max-width: 820px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* Individual Half-Buttons */
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 12px 22px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+/* LEFT: ஆலோசனை / கருத்து தெரிவிக்க (FEEDBACK) */
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+  border-right: none !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 18px rgba(253, 224, 71, 0.4), 0 0 22px rgba(245, 158, 11, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-left:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* RIGHT: சந்தேகங்களைக் கேட்க (STUDENT QUERIES) */
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+  border-left: none !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 18px rgba(56, 189, 248, 0.4), 0 0 22px rgba(2, 132, 199, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* Center Dividing Glow Bar */
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.5px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.68rem !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+/* Typography inside button */
+.dual-icon {
+  font-size: 1.45rem !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.2s ease !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.96rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.2px !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  margin-top: 2px !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
+}
+
+/* Responsive down to mobile */
+@media (max-width: 680px) {
+  .cg-unified-dual-pill {
+    flex-direction: column !important;
+    border-radius: 20px !important;
+    padding: 6px !important;
+    gap: 6px !important;
+  }
+  .dual-half {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 18px !important;
+    justify-content: flex-start !important;
+  }
+  .dual-half-left {
+    border-radius: 16px !important;
+  }
+  .dual-half-right {
+    border-radius: 16px !important;
+  }
+  .dual-divider {
+    display: none !important;
   }
 }
 
@@ -5205,6 +6044,223 @@
         grid-column: 1 !important;
       }
     }
+
+
+/* ========================================================
+   UNIFIED DUAL ACTION BUTTON (ஒரே பொத்தானில் ஆலோசனை & சந்தேகம்)
+   ======================================================== */
+@keyframes dualBorderPulse {
+  0% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+  50% {
+    box-shadow: 0 0 26px rgba(250, 204, 21, 0.65), 0 0 38px rgba(56, 189, 248, 0.45), 0 8px 30px rgba(0, 0, 0, 0.6);
+    border-color: #facc15;
+  }
+  100% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-8deg) scale(1.15); }
+  75% { transform: rotate(8deg) scale(1.15); }
+}
+
+.cg-unified-dual-btn-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 32px 0 24px 0 !important;
+  padding: 0 14px !important;
+  box-sizing: border-box !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 2px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 5px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out, gentleFloat 4s infinite ease-in-out !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  max-width: 820px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* Individual Half-Buttons */
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 12px 22px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+/* LEFT: ஆலோசனை / கருத்து தெரிவிக்க (FEEDBACK) */
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+  border-right: none !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 18px rgba(253, 224, 71, 0.4), 0 0 22px rgba(245, 158, 11, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-left:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* RIGHT: சந்தேகங்களைக் கேட்க (STUDENT QUERIES) */
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+  border-left: none !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 18px rgba(56, 189, 248, 0.4), 0 0 22px rgba(2, 132, 199, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* Center Dividing Glow Bar */
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.5px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.68rem !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+/* Typography inside button */
+.dual-icon {
+  font-size: 1.45rem !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.2s ease !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.96rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.2px !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  margin-top: 2px !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
+}
+
+/* Responsive down to mobile */
+@media (max-width: 680px) {
+  .cg-unified-dual-pill {
+    flex-direction: column !important;
+    border-radius: 20px !important;
+    padding: 6px !important;
+    gap: 6px !important;
+  }
+  .dual-half {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 18px !important;
+    justify-content: flex-start !important;
+  }
+  .dual-half-left {
+    border-radius: 16px !important;
+  }
+  .dual-half-right {
+    border-radius: 16px !important;
+  }
+  .dual-divider {
+    display: none !important;
+  }
+}
 
 </style>
 </head>
@@ -6449,7 +7505,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- ========================================================================= -->
 <!-- 1. POPUP MODAL: மாணவர் சந்தேகப் படிவம் (Student Queries Modal) -->
 <!-- ========================================================================= -->
-<div class="cg-portal-modal-overlay" id="modalStudentQuery" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); z-index: 10000; align-items: flex-start; justify-content: center; padding: 30px 16px; overflow-y: auto;">
+<div class="cg-portal-modal-overlay" id="modalStudentQuery" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); z-index: 10000; align-items: flex-start; justify-content: center; padding: 85px 16px 30px 16px; overflow-y: auto;">
 <div class="cg-modal-content-box" style="position: relative; width: 100%; max-width: 820px; max-height: 92vh; overflow-y: auto; background: #ffffff; border: 2.5px solid #0284c7; border-radius: 18px; padding: 26px 24px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6); box-sizing: border-box; animation: slideDownFromTop 0.28s ease-out;">
 <!-- Close Button -->
 <button onclick="closeStudentQueryModal()" style="position: absolute; top: 14px; right: 16px; width: 36px; height: 36px; border-radius: 50%; background: #f1f5f9; border: 1.5px solid #cbd5e1; font-size: 1.2rem; font-weight: 900; color: #475569; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s;" title="மூடுக (Close)" type="button">✕</button>
@@ -6547,7 +7603,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- ========================================================================= -->
 <!-- 2. POPUP MODAL: இணையதள ஆலோசனைக் களம் (Portal Feedback Modal) -->
 <!-- ========================================================================= -->
-<div class="cg-portal-modal-overlay" id="modalPortalFeedback" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); z-index: 10000; align-items: flex-start; justify-content: center; padding: 30px 16px; overflow-y: auto;">
+<div class="cg-portal-modal-overlay" id="modalPortalFeedback" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); z-index: 10000; align-items: flex-start; justify-content: center; padding: 85px 16px 30px 16px; overflow-y: auto;">
 <div class="cg-modal-content-box" style="position: relative; width: 100%; max-width: 820px; max-height: 92vh; overflow-y: auto; background: #ffffff; border: 2.5px solid #ea580c; border-radius: 18px; padding: 26px 24px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6); box-sizing: border-box; animation: slideDownFromTop 0.28s ease-out;">
 <canvas id="popup_fb_crackers_canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 99; display: none;"></canvas>
 <!-- Close Button -->
@@ -6600,15 +7656,15 @@ document.addEventListener('DOMContentLoaded', function() {
 <div id="modalFbSuccessCard" style="display: none; margin-top: 18px;">
 <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2.5px solid #10b981; border-radius: 16px; padding: 22px 18px; text-align: center;">
 <div style="font-size: 2.2rem; line-height: 1; margin-bottom: 6px;">🎉 🎆 ✨</div>
-<h4 style="color: #065f46; font-size: 1.25rem; font-weight: 900; margin-bottom: 6px;">
+<h4 style="color: #065f46; font-size: 1.25rem; font-weight: 900; margin-bottom: 12px;">
           தங்கள் ஆலோசனை / கருத்தினை பகிர்ந்து கொண்டமைக்கு நன்றி!
         </h4>
-<div style="display: inline-block; background: #ffffff; border: 1.5px solid #0284c7; padding: 6px 16px; border-radius: 999px; margin-bottom: 12px; font-size: 0.88rem; font-weight: 800; color: #0369a1;">
-          ✉️ சம்மந்தப்பட்டவரின் மின்னஞ்சலுக்கு அனிமேஷனுடன் கூடிய மின் வாழ்த்து அட்டை அனுப்பப்பட்டுள்ளது!
+<div style="display: inline-block; background: #ffffff; border: 1.8px solid #0284c7; padding: 8px 22px; border-radius: 999px; margin-bottom: 12px; font-size: 0.95rem; font-weight: 800; color: #0369a1; box-shadow: 0 2px 6px rgba(2, 132, 199, 0.15);">
+          🌐 <a href="https://www.ceosvg.in" target="_blank" style="color: #0284c7; text-decoration: underline; font-weight: 900;">www.ceosvg.in</a> இணையதளத்துடன் தொடர்ந்து இணைந்திருங்கள்
         </div>
-<p style="font-size: 0.88rem; color: #1e293b; margin-bottom: 12px;">
-          தகவல்கள் <b>Portal_Feedback</b> Google Sheet-ல் உடனுக்குடன் பதிவு செய்யப்பட்டுள்ளன.<br><span style="font-size: 0.80rem; color: #065f46; font-weight: 700;">(இப்பெட்டி இன்னும் 3 வினாடிகளில் தானாக மறைந்துவிடும்...)</span>
-        </p>
+<div style="font-size: 0.82rem; color: #065f46; font-weight: 700; margin-bottom: 12px;">
+          (இப்பெட்டி இன்னும் 3 வினாடிகளில் தானாக மறைந்துவிடும்...)
+        </div>
 <button onclick="closeFeedbackModal()" style="background: #065f46; color: #ffffff; border: none; padding: 8px 24px; border-radius: 6px; font-weight: 800; cursor: pointer;" type="button">
           சரி (OK)
         </button>
@@ -6625,6 +7681,223 @@ document.addEventListener('DOMContentLoaded', function() {
   0% { transform: scale(0.92); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
+
+/* ========================================================
+   UNIFIED DUAL ACTION BUTTON (ஒரே பொத்தானில் ஆலோசனை & சந்தேகம்)
+   ======================================================== */
+@keyframes dualBorderPulse {
+  0% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+  50% {
+    box-shadow: 0 0 26px rgba(250, 204, 21, 0.65), 0 0 38px rgba(56, 189, 248, 0.45), 0 8px 30px rgba(0, 0, 0, 0.6);
+    border-color: #facc15;
+  }
+  100% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-8deg) scale(1.15); }
+  75% { transform: rotate(8deg) scale(1.15); }
+}
+
+.cg-unified-dual-btn-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 32px 0 24px 0 !important;
+  padding: 0 14px !important;
+  box-sizing: border-box !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 2px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 5px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out, gentleFloat 4s infinite ease-in-out !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  max-width: 820px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* Individual Half-Buttons */
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 12px 22px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+/* LEFT: ஆலோசனை / கருத்து தெரிவிக்க (FEEDBACK) */
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+  border-right: none !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 18px rgba(253, 224, 71, 0.4), 0 0 22px rgba(245, 158, 11, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-left:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* RIGHT: சந்தேகங்களைக் கேட்க (STUDENT QUERIES) */
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+  border-left: none !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 18px rgba(56, 189, 248, 0.4), 0 0 22px rgba(2, 132, 199, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* Center Dividing Glow Bar */
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.5px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.68rem !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+/* Typography inside button */
+.dual-icon {
+  font-size: 1.45rem !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.2s ease !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.96rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.2px !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  margin-top: 2px !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
+}
+
+/* Responsive down to mobile */
+@media (max-width: 680px) {
+  .cg-unified-dual-pill {
+    flex-direction: column !important;
+    border-radius: 20px !important;
+    padding: 6px !important;
+    gap: 6px !important;
+  }
+  .dual-half {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 18px !important;
+    justify-content: flex-start !important;
+  }
+  .dual-half-left {
+    border-radius: 16px !important;
+  }
+  .dual-half-right {
+    border-radius: 16px !important;
+  }
+  .dual-divider {
+    display: none !important;
+  }
+}
+
 </style>
 <!-- Hidden iframe for reliable zero-CORS submission fallback -->
 <iframe id="hidden_form_sink" name="hidden_form_sink" style="display: none; width: 0; height: 0;"></iframe>

@@ -6468,6 +6468,223 @@
   }
 }
 
+
+/* ========================================================
+   UNIFIED DUAL ACTION BUTTON (ஒரே பொத்தானில் ஆலோசனை & சந்தேகம்)
+   ======================================================== */
+@keyframes dualBorderPulse {
+  0% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+  50% {
+    box-shadow: 0 0 26px rgba(250, 204, 21, 0.65), 0 0 38px rgba(56, 189, 248, 0.45), 0 8px 30px rgba(0, 0, 0, 0.6);
+    border-color: #facc15;
+  }
+  100% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-8deg) scale(1.15); }
+  75% { transform: rotate(8deg) scale(1.15); }
+}
+
+.cg-unified-dual-btn-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 32px 0 24px 0 !important;
+  padding: 0 14px !important;
+  box-sizing: border-box !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 2px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 5px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out, gentleFloat 4s infinite ease-in-out !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  max-width: 820px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* Individual Half-Buttons */
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 12px 22px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+/* LEFT: ஆலோசனை / கருத்து தெரிவிக்க (FEEDBACK) */
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+  border-right: none !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 18px rgba(253, 224, 71, 0.4), 0 0 22px rgba(245, 158, 11, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-left:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* RIGHT: சந்தேகங்களைக் கேட்க (STUDENT QUERIES) */
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+  border-left: none !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 18px rgba(56, 189, 248, 0.4), 0 0 22px rgba(2, 132, 199, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* Center Dividing Glow Bar */
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.5px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.68rem !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+/* Typography inside button */
+.dual-icon {
+  font-size: 1.45rem !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.2s ease !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.96rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.2px !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  margin-top: 2px !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
+}
+
+/* Responsive down to mobile */
+@media (max-width: 680px) {
+  .cg-unified-dual-pill {
+    flex-direction: column !important;
+    border-radius: 20px !important;
+    padding: 6px !important;
+    gap: 6px !important;
+  }
+  .dual-half {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 18px !important;
+    justify-content: flex-start !important;
+  }
+  .dual-half-left {
+    border-radius: 16px !important;
+  }
+  .dual-half-right {
+    border-radius: 16px !important;
+  }
+  .dual-divider {
+    display: none !important;
+  }
+}
+
 </style>
 <style id="robust-layout-override">
 /* ========================================================
@@ -6537,6 +6754,223 @@
     width: 100% !important;
   }
 }
+
+/* ========================================================
+   UNIFIED DUAL ACTION BUTTON (ஒரே பொத்தானில் ஆலோசனை & சந்தேகம்)
+   ======================================================== */
+@keyframes dualBorderPulse {
+  0% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+  50% {
+    box-shadow: 0 0 26px rgba(250, 204, 21, 0.65), 0 0 38px rgba(56, 189, 248, 0.45), 0 8px 30px rgba(0, 0, 0, 0.6);
+    border-color: #facc15;
+  }
+  100% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-8deg) scale(1.15); }
+  75% { transform: rotate(8deg) scale(1.15); }
+}
+
+.cg-unified-dual-btn-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 32px 0 24px 0 !important;
+  padding: 0 14px !important;
+  box-sizing: border-box !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 2px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 5px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out, gentleFloat 4s infinite ease-in-out !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  max-width: 820px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* Individual Half-Buttons */
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 12px 22px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+/* LEFT: ஆலோசனை / கருத்து தெரிவிக்க (FEEDBACK) */
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+  border-right: none !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 18px rgba(253, 224, 71, 0.4), 0 0 22px rgba(245, 158, 11, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-left:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* RIGHT: சந்தேகங்களைக் கேட்க (STUDENT QUERIES) */
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+  border-left: none !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 18px rgba(56, 189, 248, 0.4), 0 0 22px rgba(2, 132, 199, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* Center Dividing Glow Bar */
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.5px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.68rem !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+/* Typography inside button */
+.dual-icon {
+  font-size: 1.45rem !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.2s ease !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.96rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.2px !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  margin-top: 2px !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
+}
+
+/* Responsive down to mobile */
+@media (max-width: 680px) {
+  .cg-unified-dual-pill {
+    flex-direction: column !important;
+    border-radius: 20px !important;
+    padding: 6px !important;
+    gap: 6px !important;
+  }
+  .dual-half {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 18px !important;
+    justify-content: flex-start !important;
+  }
+  .dual-half-left {
+    border-radius: 16px !important;
+  }
+  .dual-half-right {
+    border-radius: 16px !important;
+  }
+  .dual-divider {
+    display: none !important;
+  }
+}
+
 </style>
 <style>
     .portal-layout-wrapper {
@@ -6599,6 +7033,223 @@
         padding: 8px 10px 30px !important;
       }
     }
+
+/* ========================================================
+   UNIFIED DUAL ACTION BUTTON (ஒரே பொத்தானில் ஆலோசனை & சந்தேகம்)
+   ======================================================== */
+@keyframes dualBorderPulse {
+  0% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+  50% {
+    box-shadow: 0 0 26px rgba(250, 204, 21, 0.65), 0 0 38px rgba(56, 189, 248, 0.45), 0 8px 30px rgba(0, 0, 0, 0.6);
+    border-color: #facc15;
+  }
+  100% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-8deg) scale(1.15); }
+  75% { transform: rotate(8deg) scale(1.15); }
+}
+
+.cg-unified-dual-btn-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 32px 0 24px 0 !important;
+  padding: 0 14px !important;
+  box-sizing: border-box !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 2px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 5px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out, gentleFloat 4s infinite ease-in-out !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  max-width: 820px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* Individual Half-Buttons */
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 12px 22px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+/* LEFT: ஆலோசனை / கருத்து தெரிவிக்க (FEEDBACK) */
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+  border-right: none !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 18px rgba(253, 224, 71, 0.4), 0 0 22px rgba(245, 158, 11, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-left:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* RIGHT: சந்தேகங்களைக் கேட்க (STUDENT QUERIES) */
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+  border-left: none !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 18px rgba(56, 189, 248, 0.4), 0 0 22px rgba(2, 132, 199, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* Center Dividing Glow Bar */
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.5px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.68rem !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+/* Typography inside button */
+.dual-icon {
+  font-size: 1.45rem !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.2s ease !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.96rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.2px !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  margin-top: 2px !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
+}
+
+/* Responsive down to mobile */
+@media (max-width: 680px) {
+  .cg-unified-dual-pill {
+    flex-direction: column !important;
+    border-radius: 20px !important;
+    padding: 6px !important;
+    gap: 6px !important;
+  }
+  .dual-half {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 18px !important;
+    justify-content: flex-start !important;
+  }
+  .dual-half-left {
+    border-radius: 16px !important;
+  }
+  .dual-half-right {
+    border-radius: 16px !important;
+  }
+  .dual-divider {
+    display: none !important;
+  }
+}
+
 </style>
 <style>
 @media (min-width: 901px) {
@@ -6723,6 +7374,223 @@
     padding: 10px 14px 30px !important;
   }
 }
+
+/* ========================================================
+   UNIFIED DUAL ACTION BUTTON (ஒரே பொத்தானில் ஆலோசனை & சந்தேகம்)
+   ======================================================== */
+@keyframes dualBorderPulse {
+  0% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+  50% {
+    box-shadow: 0 0 26px rgba(250, 204, 21, 0.65), 0 0 38px rgba(56, 189, 248, 0.45), 0 8px 30px rgba(0, 0, 0, 0.6);
+    border-color: #facc15;
+  }
+  100% {
+    box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-8deg) scale(1.15); }
+  75% { transform: rotate(8deg) scale(1.15); }
+}
+
+.cg-unified-dual-btn-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 32px 0 24px 0 !important;
+  padding: 0 14px !important;
+  box-sizing: border-box !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 2px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 5px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out, gentleFloat 4s infinite ease-in-out !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  max-width: 820px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* Individual Half-Buttons */
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 12px 22px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+/* LEFT: ஆலோசனை / கருத்து தெரிவிக்க (FEEDBACK) */
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+  border-right: none !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 18px rgba(253, 224, 71, 0.4), 0 0 22px rgba(245, 158, 11, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-left:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* RIGHT: சந்தேகங்களைக் கேட்க (STUDENT QUERIES) */
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+  border-left: none !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 18px rgba(56, 189, 248, 0.4), 0 0 22px rgba(2, 132, 199, 0.55) !important;
+  transform: scale(1.015) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right:hover .dual-icon {
+  animation: iconWiggle 0.6s ease-in-out infinite !important;
+}
+
+/* Center Dividing Glow Bar */
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.5px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.68rem !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+/* Typography inside button */
+.dual-icon {
+  font-size: 1.45rem !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.2s ease !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.96rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.2px !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  margin-top: 2px !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
+}
+
+/* Responsive down to mobile */
+@media (max-width: 680px) {
+  .cg-unified-dual-pill {
+    flex-direction: column !important;
+    border-radius: 20px !important;
+    padding: 6px !important;
+    gap: 6px !important;
+  }
+  .dual-half {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 18px !important;
+    justify-content: flex-start !important;
+  }
+  .dual-half-left {
+    border-radius: 16px !important;
+  }
+  .dual-half-right {
+    border-radius: 16px !important;
+  }
+  .dual-divider {
+    display: none !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -10608,5 +11476,674 @@ function closeSportsFormModal() {
     modal.style.display = 'none';
   }
 }
-</script></body>
+</script><div class="cg-portal-modal-overlay" id="modalStudentQuery" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); z-index: 10000; align-items: flex-start; justify-content: center; padding: 85px 16px 30px 16px; overflow-y: auto;">
+<div class="cg-modal-content-box" style="position: relative; width: 100%; max-width: 820px; max-height: 92vh; overflow-y: auto; background: #ffffff; border: 2.5px solid #0284c7; border-radius: 18px; padding: 26px 24px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6); box-sizing: border-box; animation: slideDownFromTop 0.28s ease-out;">
+<!-- Close Button -->
+<button onclick="closeStudentQueryModal()" style="position: absolute; top: 14px; right: 16px; width: 36px; height: 36px; border-radius: 50%; background: #f1f5f9; border: 1.5px solid #cbd5e1; font-size: 1.2rem; font-weight: 900; color: #475569; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s;" title="மூடுக (Close)" type="button">✕</button>
+<div style="display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #e0f2fe; padding-bottom: 12px; margin-bottom: 14px; padding-right: 40px;">
+<span style="font-size: 1.8rem;">✍️</span>
+<div>
+<h3 style="margin: 0; font-size: 1.35rem; font-weight: 900; color: #0c4a6e;">மாணவர் சந்தேகப் படிவம் (Ask a Question)</h3>
+<div style="font-size: 0.82rem; color: #0284c7; font-weight: 700;">நேரடி வழிகாட்டல் வினா சமர்ப்பிப்பு • முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</div>
+</div>
+</div>
+<p style="font-size: 0.90rem; color: #334155; margin-bottom: 16px; line-height: 1.6;">
+      உங்கள் உயர்கல்வி சேர்க்கை, கட்-ஆஃப், கட்டண விலக்கு மற்றும் நுழைவுத் தேர்வு தொடர்பான சந்தேகங்களை இங்கே பதிவு செய்யலாம். வழிகாட்டல் குழுவினர் ஆய்வு செய்து வழிகாட்டுவர்:
+    </p>
+<form id="popupStudentQueryForm" onsubmit="handlePopupStudentQuerySubmit(event)">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 14px; margin-bottom: 16px;">
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<label style="font-size: 0.84rem; font-weight: 800; color: #1e1b4b;">மாணவர் பெயர் <span style="color: #dc2626;">*</span></label>
+<input id="modal_sq_name" placeholder="உங்கள் முழுப் பெயர்" required="" style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.90rem;" type="text"/>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<label style="font-size: 0.84rem; font-weight: 800; color: #1e1b4b;">வகுப்பு நிலை <span style="color: #dc2626;">*</span></label>
+<select id="modal_sq_class" required="" style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.90rem; background: #fff;">
+<option value="">-- வகுப்பைத் தேர்வு செய்க --</option>
+<option value="12-ஆம் வகுப்பு (HSC)">12-ஆம் வகுப்பு (HSC)</option>
+<option value="11-ஆம் வகுப்பு">11-ஆம் வகுப்பு</option>
+<option value="10-ஆம் வகுப்பு">10-ஆம் வகுப்பு</option>
+<option value="+2 தேர்ச்சி பெற்றவர்">+2 தேர்ச்சி பெற்றவர்</option>
+</select>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<label style="font-size: 0.84rem; font-weight: 800; color: #1e1b4b;">பள்ளி வகை <span style="color: #dc2626;">*</span></label>
+<select id="modal_sq_school" required="" style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.90rem; background: #fff;">
+<option value="அரசுப் பள்ளி (7.5% தகுதி)">அரசுப் பள்ளி (7.5% தகுதி)</option>
+<option value="அரசு உதவிபெறும் பள்ளி">அரசு உதவிபெறும் பள்ளி</option>
+<option value="சுயநிதி / தனியார் மெட்ரிக் பள்ளி">சுயநிதி / தனியார் மெட்ரிக் பள்ளி</option>
+</select>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<label style="font-size: 0.84rem; font-weight: 800; color: #1e1b4b;">மாவட்டம் <span style="color: #dc2626;">*</span></label>
+<input id="modal_sq_district" required="" style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.90rem;" type="text" value="சிவகங்கை"/>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<label style="font-size: 0.84rem; font-weight: 800; color: #1e1b4b;">அலைபேசி எண் <span style="color: #dc2626;">*</span></label>
+<input id="modal_sq_phone" pattern="[0-9]{10}" placeholder="10 இலக்க மொபைல் எண்" required="" style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.90rem;" type="tel"/>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<label style="font-size: 0.84rem; font-weight: 800; color: #1e1b4b;">மின்னஞ்சல் முகவரி <span style="color: #dc2626;">*</span></label>
+<input id="modal_sq_email" placeholder="student@gmail.com" required="" style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.90rem;" type="email"/>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; grid-column: 1 / -1;">
+<label style="font-size: 0.84rem; font-weight: 800; color: #1e1b4b;">சந்தேகப் பிரிவு <span style="color: #dc2626;">*</span></label>
+<select id="modal_sq_category" required="" style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.90rem; background: #fff;">
+<option value="மருத்துவம் &amp; துணை மருத்துவம் (NEET / Nursing / BNYS)">மருத்துவம் &amp; துணை மருத்துவம் (NEET / Nursing / BNYS)</option>
+<option value="பொறியியல் சேர்க்கை (TNEA 7.5% / JEE)">பொறியியல் சேர்க்கை (TNEA 7.5% / JEE)</option>
+<option value="கலை மற்றும் அறிவியல் (TNGASA)">கலை மற்றும் அறிவியல் (TNGASA)</option>
+<option value="வேளாண்மை &amp; கால்நடை (TNAU / TANUVAS)">வேளாண்மை &amp; கால்நடை (TNAU / TANUVAS)</option>
+<option value="7.5% அரசுப் பள்ளி இடஒதுக்கீடு &amp; கட்டண விலக்கு">7.5% அரசுப் பள்ளி இடஒதுக்கீடு &amp; கட்டண விலக்கு</option>
+<option value="கல்வி உதவித்தொகை &amp; கல்விக் கடன்">கல்வி உதவித்தொகை &amp; கல்விக் கடன்</option>
+<option value="விளையாட்டு ஒதுக்கீடு &amp; சிறப்புப் பிரிவுகள்">விளையாட்டு ஒதுக்கீடு &amp; சிறப்புப் பிரிவுகள்</option>
+<option value="சட்டம், மேலாண்மை &amp; பிற தொழிற்கல்வி">சட்டம், மேலாண்மை &amp; பிற தொழிற்கல்வி</option>
+</select>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; grid-column: 1 / -1;">
+<label style="font-size: 0.84rem; font-weight: 800; color: #1e1b4b;">உங்கள் கேள்வி / சந்தேகம் <span style="color: #dc2626;">*</span></label>
+<textarea id="modal_sq_query" placeholder="உங்கள் கட்-ஆஃப் அல்லது சந்தேகங்களை விரிவாக எழுதவும்..." required="" rows="3" style="padding: 10px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.90rem; resize: vertical;"></textarea>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+<button id="popupSqSubmitBtn" style="padding: 12px 28px; background: linear-gradient(135deg, #1e1b4b 0%, #1e3a8a 50%, #0284c7 100%); color: #fef08a; border: 1.5px solid #d4af37; border-radius: 8px; font-size: 0.96rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);" type="submit">
+<span>■</span><span>கேள்வியைச் சமர்ப்பிக்க (Submit Query)</span><span>→</span>
+</button>
+<span style="font-size: 0.78rem; color: #64748b;">(Google Sheet-ல் உடனடியாகச் சேமிக்கப்படும்)</span>
+</div>
+</form>
+<!-- Modal Success Response Card -->
+<div id="modalSqSuccessCard" style="display: none; margin-top: 18px;">
+<div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2px solid #10b981; border-radius: 14px; padding: 20px; text-align: center;">
+<div style="font-size: 2.2rem; line-height: 1; margin-bottom: 6px;">🎓 ✅ 📞</div>
+<h4 style="color: #065f46; font-size: 1.15rem; font-weight: 900; line-height: 1.45; margin-bottom: 8px;">
+          தங்களது வினா பதிவு செய்யப்பட்டது. எங்களது வழிகாட்டுதல் குழுவினர் தங்களுக்கு மின்னஞ்சல் அல்லது செல்பேசி வாயிலாக தொடர்பு கொள்வர்!
+        </h4>
+<p style="font-size: 0.92rem; color: #1e293b; margin-bottom: 12px; font-weight: 700;">
+          தங்களின் கண்காணிப்பு குறிப்பு எண்: <b id="modalTicketIdDisplay" style="color: #0284c7; background: #ffffff; padding: 3px 12px; border-radius: 6px; border: 1.5px solid #38bdf8;">TN-CG-2026-XXXX</b>
+</p>
+<p style="font-size: 0.85rem; color: #475569; margin-bottom: 14px;">
+          தகவல்கள் <b>Student_Queries</b> Google Sheet-ல் உடனுக்குடன் சேமிக்கப்பட்டுள்ளன.<br><span style="font-size: 0.80rem; color: #0284c7; font-weight: 700;">(இப்பெட்டி இன்னும் 3 வினாடிகளில் தானாக மறைந்துவிடும்...)</span>
+        </p>
+<button onclick="closeStudentQueryModal()" style="background: #065f46; color: #ffffff; border: none; padding: 8px 24px; border-radius: 6px; font-weight: 800; cursor: pointer;" type="button">
+          சரி (OK)
+        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- 2. POPUP MODAL: இணையதள ஆலோசனைக் களம் (Portal Feedback Modal) -->
+<!-- ========================================================================= -->
+<div class="cg-portal-modal-overlay" id="modalPortalFeedback" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); z-index: 10000; align-items: flex-start; justify-content: center; padding: 85px 16px 30px 16px; overflow-y: auto;">
+<div class="cg-modal-content-box" style="position: relative; width: 100%; max-width: 820px; max-height: 92vh; overflow-y: auto; background: #ffffff; border: 2.5px solid #ea580c; border-radius: 18px; padding: 26px 24px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6); box-sizing: border-box; animation: slideDownFromTop 0.28s ease-out;">
+<canvas id="popup_fb_crackers_canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 99; display: none;"></canvas>
+<!-- Close Button -->
+<button onclick="closeFeedbackModal()" style="position: absolute; top: 14px; right: 16px; width: 36px; height: 36px; border-radius: 50%; background: #f1f5f9; border: 1.5px solid #cbd5e1; font-size: 1.2rem; font-weight: 900; color: #475569; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s;" title="மூடுக (Close)" type="button">✕</button>
+<div style="display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #ffedd5; padding-bottom: 12px; margin-bottom: 14px; padding-right: 40px;">
+<span style="font-size: 1.8rem;">💡</span>
+<div>
+<h3 style="margin: 0; font-size: 1.35rem; font-weight: 900; color: #9a3412;">தங்களின் மேலான ஆலோசனை/கருத்துகளை பதிவு செய்க</h3>
+<div style="font-size: 0.82rem; color: #ea580c; font-weight: 700;">உயர்கல்வி வழிகாட்டல் தளம் மேம்பாட்டுப் பரிந்துரைகள் • சிவகங்கை மாவட்டம்</div>
+</div>
+</div>
+<p style="font-size: 0.90rem; color: #334155; margin-bottom: 16px; line-height: 1.6;">
+      உயர்கல்வி வழிகாட்டல் குறித்து ஆலோசனைகள், கோப்புகள் (PDF/Word/Excel/PPT/படம்) அல்லது இணைய இணைப்புகளைப் பகிரலாம்:
+    </p>
+<form id="popupFeedbackForm" onsubmit="handlePopupFeedbackSubmit(event)">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 14px; margin-bottom: 16px;">
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<label style="font-size: 0.84rem; font-weight: 800; color: #1e1b4b;">பெயர் <span style="color: #dc2626;">*</span></label>
+<input id="modal_fb_name" placeholder="முழுப் பெயர்" required="" style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.90rem;" type="text"/>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<label style="font-size: 0.84rem; font-weight: 800; color: #1e1b4b;">பள்ளி / ஊர் <span style="color: #dc2626;">*</span></label>
+<input id="modal_fb_place" placeholder="பள்ளி பெயர் &amp; ஊர்" required="" style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.90rem;" type="text"/>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<label style="font-size: 0.84rem; font-weight: 800; color: #1e1b4b;">தொலைபேசி எண் <span style="color: #dc2626;">*</span></label>
+<input id="modal_fb_phone" pattern="[0-9]{10}" placeholder="10 இலக்க எண்" required="" style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.90rem;" type="tel"/>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<label style="font-size: 0.84rem; font-weight: 800; color: #1e1b4b;">மின்னஞ்சல் <span style="color: #dc2626;">*</span></label>
+<input id="modal_fb_email" placeholder="example@gmail.com (வாழ்த்து அட்டை பெற)" required="" style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.90rem;" type="email"/>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; grid-column: 1 / -1;">
+<label style="font-size: 0.84rem; font-weight: 800; color: #1e1b4b;">இணைய இணைப்பு / Link (விருப்பப்பட்டால்)</label>
+<input id="modal_fb_link" placeholder="https://drive.google.com/... அல்லது இணைய முகவரி" style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.90rem;" type="url"/>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; grid-column: 1 / -1;">
+<label style="font-size: 0.84rem; font-weight: 800; color: #1e1b4b;">தங்களின் மேலான ஆலோசனைகள் / கருத்துகள் <span style="color: #dc2626;">*</span></label>
+<textarea id="modal_fb_message" placeholder="உயர்கல்வி வழிகாட்டி மற்றும் இத்தளம் குறித்த தங்களின் மேலான ஆலோசனைகள்..." required="" rows="3" style="padding: 10px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.90rem; resize: vertical;"></textarea>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+<button id="popupFbSubmitBtn" style="padding: 12px 28px; background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%); color: #ffffff; border: none; border-radius: 8px; font-size: 0.96rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 16px rgba(124, 58, 237, 0.35);" type="submit">
+<span>பதிவு செய்க</span><span>→</span>
+</button>
+<span style="font-size: 0.78rem; color: #64748b;">(Portal_Feedback Google Sheet-ல் உடனுக்குடன் சேமிக்கப்படும்)</span>
+</div>
+</form>
+<!-- Modal Success Response Card -->
+<div id="modalFbSuccessCard" style="display: none; margin-top: 18px;">
+<div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2.5px solid #10b981; border-radius: 16px; padding: 22px 18px; text-align: center;">
+<div style="font-size: 2.2rem; line-height: 1; margin-bottom: 6px;">🎉 🎆 ✨</div>
+<h4 style="color: #065f46; font-size: 1.25rem; font-weight: 900; margin-bottom: 12px;">
+          தங்கள் ஆலோசனை / கருத்தினை பகிர்ந்து கொண்டமைக்கு நன்றி!
+        </h4>
+<div style="display: inline-block; background: #ffffff; border: 1.8px solid #0284c7; padding: 8px 22px; border-radius: 999px; margin-bottom: 12px; font-size: 0.95rem; font-weight: 800; color: #0369a1; box-shadow: 0 2px 6px rgba(2, 132, 199, 0.15);">
+          🌐 <a href="https://www.ceosvg.in" target="_blank" style="color: #0284c7; text-decoration: underline; font-weight: 900;">www.ceosvg.in</a> இணையதளத்துடன் தொடர்ந்து இணைந்திருங்கள்
+        </div>
+<div style="font-size: 0.82rem; color: #065f46; font-weight: 700; margin-bottom: 12px;">
+          (இப்பெட்டி இன்னும் 3 வினாடிகளில் தானாக மறைந்துவிடும்...)
+        </div>
+<button onclick="closeFeedbackModal()" style="background: #065f46; color: #ffffff; border: none; padding: 8px 24px; border-radius: 6px; font-weight: 800; cursor: pointer;" type="button">
+          சரி (OK)
+        </button>
+</div>
+</div>
+</div>
+</div>
+<style>
+@keyframes slideDownFromTop {
+  0% { transform: translateY(-40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes modalPopZoom {
+  0% { transform: scale(0.92); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+</style>
+<!-- Hidden iframe for reliable zero-CORS submission fallback -->
+<iframe id="hidden_form_sink" name="hidden_form_sink" style="display: none; width: 0; height: 0;"></iframe>
+<script>
+// ==============================================================================
+// MODAL CONTROLLER & MULTI-CHANNEL GOOGLE SHEET SUBMISSION
+// ==============================================================================
+const APPS_SCRIPT_FEEDBACK_URL = "https://script.google.com/macros/s/AKfycbweLUerXxEKeOq0lncL35mAJKQQwKnHKKMzzAiHTiDZnmsyuWEx0xm-8Dr-ZVM0ngw/exec";
+const APPS_SCRIPT_QUERIES_URL  = "https://script.google.com/macros/s/AKfycbwM7YF6emrFge4Xg3o2nt7dj4iTcnjpmnirjsfwAREtWsifhXrZ4QBqowDV2NB5FN8y8w/exec";
+
+function openStudentQueryModal() {
+  const m = document.getElementById('modalStudentQuery');
+  if (m) {
+    m.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    document.getElementById('modalSqSuccessCard').style.display = 'none';
+    document.getElementById('popupStudentQueryForm').style.display = 'block';
+  }
+}
+function closeStudentQueryModal() {
+  const m = document.getElementById('modalStudentQuery');
+  if (m) {
+    m.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+}
+
+function openFeedbackModal() {
+  const m = document.getElementById('modalPortalFeedback');
+  if (m) {
+    m.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    document.getElementById('modalFbSuccessCard').style.display = 'none';
+    document.getElementById('popupFeedbackForm').style.display = 'block';
+  }
+}
+function closeFeedbackModal() {
+  const m = document.getElementById('modalPortalFeedback');
+  if (m) {
+    m.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+}
+
+// Close modals when clicking outside
+window.addEventListener('click', function(e) {
+  const mSq = document.getElementById('modalStudentQuery');
+  const mFb = document.getElementById('modalPortalFeedback');
+  if (e.target === mSq) closeStudentQueryModal();
+  if (e.target === mFb) closeFeedbackModal();
+});
+
+// Close on Escape key
+window.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeStudentQueryModal();
+    closeFeedbackModal();
+  }
+});
+
+// Multi-Channel Google Sheet Submission Helper
+async function postToGoogleSheet(payload) {
+  const targetUrl = payload.formType === 'student_query' ? APPS_SCRIPT_QUERIES_URL : APPS_SCRIPT_FEEDBACK_URL;
+
+  // 1. LocalStorage Persistent Backup
+  try {
+    const storeKey = payload.formType === 'student_query' ? 'student_query_records' : 'portal_feedback_records';
+    const existing = JSON.parse(localStorage.getItem(storeKey) || '[]');
+    existing.push(payload);
+    localStorage.setItem(storeKey, JSON.stringify(existing));
+  } catch (err) {
+    console.warn("Storage notice:", err);
+  }
+
+  // 2. Fetch POST with no-cors to dedicated Web App URL
+  try {
+    await fetch(targetUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    });
+  } catch (err) {
+    console.warn("Fetch notice:", err);
+  }
+
+  // 3. Fallback form post via hidden iframe for guaranteed delivery
+  try {
+    const iframe = document.getElementById('hidden_form_sink');
+    if (iframe) {
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = targetUrl;
+      form.target = 'hidden_form_sink';
+      for (const k in payload) {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = k;
+        input.value = typeof payload[k] === 'object' ? JSON.stringify(payload[k]) : payload[k];
+        form.appendChild(input);
+      }
+      document.body.appendChild(form);
+      form.submit();
+      setTimeout(() => form.remove(), 1000);
+    }
+  } catch (iframeErr) {
+    console.warn("Iframe submit notice:", iframeErr);
+  }
+}
+
+// Student Query Submit
+async function handlePopupStudentQuerySubmit(e) {
+  e.preventDefault();
+  const btn = document.getElementById('popupSqSubmitBtn');
+  const origText = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = '<span>⏳ பதிவாகிறது...</span>';
+
+  const ticketId = 'TN-CG-2026-' + Math.floor(1000 + Math.random() * 9000);
+  const payload = {
+    formType: 'student_query',
+    ticketId: ticketId,
+    name: document.getElementById('modal_sq_name').value.trim(),
+    studentClass: document.getElementById('modal_sq_class').value,
+    schoolType: document.getElementById('modal_sq_school').value,
+    district: document.getElementById('modal_sq_district').value.trim(),
+    phone: document.getElementById('modal_sq_phone').value.trim(),
+    email: document.getElementById('modal_sq_email').value.trim(),
+    category: document.getElementById('modal_sq_category').value,
+    query: document.getElementById('modal_sq_query').value.trim(),
+    spreadsheetId: '1-nkKQyAqE2IK31Rf4-qXBDVjLD88S2U3d_uF0AGrOZQ',
+    sheetName: 'Sheet1',
+    timestamp: new Date().toLocaleString('ta-IN', { timeZone: 'Asia/Kolkata' })
+  };
+
+  await postToGoogleSheet(payload);
+
+  document.getElementById('modalTicketIdDisplay').innerText = ticketId;
+  document.getElementById('popupStudentQueryForm').style.display = 'none';
+  document.getElementById('modalSqSuccessCard').style.display = 'block';
+  btn.disabled = false;
+  btn.innerHTML = origText;
+  document.getElementById('popupStudentQueryForm').reset();
+
+  // Auto-close modal after 3 seconds as requested by user
+  setTimeout(function() {
+    closeStudentQueryModal();
+  }, 3200);
+}
+
+// Celebration Crackers for Modal
+function firePopupCelebrationCrackers() {
+  const canvas = document.getElementById('popup_fb_crackers_canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  canvas.width = canvas.parentElement.offsetWidth;
+  canvas.height = canvas.parentElement.offsetHeight;
+  canvas.style.display = 'block';
+
+  const particles = [];
+  const colors = ['#f43f5e', '#ec4899', '#d946ef', '#a855f7', '#6366f1', '#3b82f6', '#06b6d4', '#10b981', '#eab308', '#f97316'];
+  for (let i = 0; i < 90; i++) {
+    const angle = Math.random() * Math.PI * 2;
+    const speed = Math.random() * 8 + 3;
+    particles.push({
+      x: canvas.width * 0.5,
+      y: canvas.height * 0.35,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed - 2,
+      radius: Math.random() * 3.5 + 2,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      gravity: 0.16,
+      alpha: 1,
+      decay: Math.random() * 0.015 + 0.01
+    });
+  }
+
+  function render() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let alive = false;
+    particles.forEach(p => {
+      if (p.alpha > 0) {
+        alive = true;
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += p.gravity;
+        p.alpha -= p.decay;
+        ctx.save();
+        ctx.globalAlpha = Math.max(p.alpha, 0);
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+    });
+    if (alive) requestAnimationFrame(render);
+    else { canvas.style.display = 'none'; }
+  }
+  render();
+}
+
+// Feedback Submit
+async function handlePopupFeedbackSubmit(e) {
+  e.preventDefault();
+  const email = document.getElementById('modal_fb_email').value.trim();
+  if (!email || !email.includes('@') || !email.includes('.')) {
+    alert('தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்.');
+    return;
+  }
+
+  const btn = document.getElementById('popupFbSubmitBtn');
+  const origText = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = '<span>⏳ பதிவாகிறது...</span>';
+
+  const refId = 'TN-FB-2026-' + Math.floor(1000 + Math.random() * 9000);
+  const payload = {
+    formType: 'portal_feedback',
+    refId: refId,
+    name: document.getElementById('modal_fb_name').value.trim(),
+    place: document.getElementById('modal_fb_place').value.trim(),
+    phone: document.getElementById('modal_fb_phone').value.trim(),
+    email: email,
+    link: document.getElementById('modal_fb_link').value.trim() || 'இல்லை',
+    message: document.getElementById('modal_fb_message').value.trim(),
+    spreadsheetId: '1fSIyCI4AsqA2-8aqRr5XQb7KODEA6pvnyNhjKO_PBSc',
+    sheetName: 'Sheet1',
+    timestamp: new Date().toLocaleString('ta-IN', { timeZone: 'Asia/Kolkata' })
+  };
+
+  await postToGoogleSheet(payload);
+
+  document.getElementById('popupFeedbackForm').style.display = 'none';
+  document.getElementById('modalFbSuccessCard').style.display = 'block';
+  firePopupCelebrationCrackers();
+  btn.disabled = false;
+  btn.innerHTML = origText;
+  document.getElementById('popupFeedbackForm').reset();
+
+  // Auto-close modal after 3.5 seconds as requested by user
+  setTimeout(function() {
+    closeFeedbackModal();
+  }, 3500);
+}
+</script>
+</body>
+</html
+<iframe id="hidden_form_sink" name="hidden_form_sink" style="display:none;"></iframe>
+<canvas id="popupCelebrationCanvas" style="display:none; position:fixed; inset:0; pointer-events:none; z-index:10002;"></canvas>
+<script>
+// ==============================================================================
+// MODAL CONTROLLER & MULTI-CHANNEL GOOGLE SHEET SUBMISSION
+// ==============================================================================
+const APPS_SCRIPT_FEEDBACK_URL = "https://script.google.com/macros/s/AKfycbweLUerXxEKeOq0lncL35mAJKQQwKnHKKMzzAiHTiDZnmsyuWEx0xm-8Dr-ZVM0ngw/exec";
+const APPS_SCRIPT_QUERIES_URL  = "https://script.google.com/macros/s/AKfycbwM7YF6emrFge4Xg3o2nt7dj4iTcnjpmnirjsfwAREtWsifhXrZ4QBqowDV2NB5FN8y8w/exec";
+
+function openStudentQueryModal() {
+  const m = document.getElementById('modalStudentQuery');
+  if (m) {
+    m.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    document.getElementById('modalSqSuccessCard').style.display = 'none';
+    document.getElementById('popupStudentQueryForm').style.display = 'block';
+  }
+}
+function closeStudentQueryModal() {
+  const m = document.getElementById('modalStudentQuery');
+  if (m) {
+    m.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+}
+
+function openFeedbackModal() {
+  const m = document.getElementById('modalPortalFeedback');
+  if (m) {
+    m.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    document.getElementById('modalFbSuccessCard').style.display = 'none';
+    document.getElementById('popupFeedbackForm').style.display = 'block';
+  }
+}
+function closeFeedbackModal() {
+  const m = document.getElementById('modalPortalFeedback');
+  if (m) {
+    m.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+}
+
+// Close modals when clicking outside
+window.addEventListener('click', function(e) {
+  const mSq = document.getElementById('modalStudentQuery');
+  const mFb = document.getElementById('modalPortalFeedback');
+  if (e.target === mSq) closeStudentQueryModal();
+  if (e.target === mFb) closeFeedbackModal();
+});
+
+// Close on Escape key
+window.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeStudentQueryModal();
+    closeFeedbackModal();
+  }
+});
+
+// Multi-Channel Google Sheet Submission Helper
+async function postToGoogleSheet(payload) {
+  const targetUrl = payload.formType === 'student_query' ? APPS_SCRIPT_QUERIES_URL : APPS_SCRIPT_FEEDBACK_URL;
+
+  // 1. LocalStorage Persistent Backup
+  try {
+    const storeKey = payload.formType === 'student_query' ? 'student_query_records' : 'portal_feedback_records';
+    const existing = JSON.parse(localStorage.getItem(storeKey) || '[]');
+    existing.push(payload);
+    localStorage.setItem(storeKey, JSON.stringify(existing));
+  } catch (err) {
+    console.warn("Storage notice:", err);
+  }
+
+  // 2. Fetch POST with no-cors to dedicated Web App URL
+  try {
+    await fetch(targetUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    });
+  } catch (err) {
+    console.warn("Fetch notice:", err);
+  }
+
+  // 3. Fallback form post via hidden iframe for guaranteed delivery
+  try {
+    const iframe = document.getElementById('hidden_form_sink');
+    if (iframe) {
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = targetUrl;
+      form.target = 'hidden_form_sink';
+      for (const k in payload) {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = k;
+        input.value = typeof payload[k] === 'object' ? JSON.stringify(payload[k]) : payload[k];
+        form.appendChild(input);
+      }
+      document.body.appendChild(form);
+      form.submit();
+      setTimeout(() => form.remove(), 1000);
+    }
+  } catch (iframeErr) {
+    console.warn("Iframe submit notice:", iframeErr);
+  }
+}
+
+// Student Query Submit
+async function handlePopupStudentQuerySubmit(e) {
+  e.preventDefault();
+  const btn = document.getElementById('popupSqSubmitBtn');
+  const origText = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = '<span>⏳ பதிவாகிறது...</span>';
+
+  const ticketId = 'TN-CG-2026-' + Math.floor(1000 + Math.random() * 9000);
+  const payload = {
+    formType: 'student_query',
+    ticketId: ticketId,
+    name: document.getElementById('modal_sq_name').value.trim(),
+    studentClass: document.getElementById('modal_sq_class').value,
+    schoolType: document.getElementById('modal_sq_school').value,
+    district: document.getElementById('modal_sq_district').value.trim(),
+    phone: document.getElementById('modal_sq_phone').value.trim(),
+    email: document.getElementById('modal_sq_email').value.trim(),
+    category: document.getElementById('modal_sq_category').value,
+    query: document.getElementById('modal_sq_query').value.trim(),
+    spreadsheetId: '1-nkKQyAqE2IK31Rf4-qXBDVjLD88S2U3d_uF0AGrOZQ',
+    sheetName: 'Sheet1',
+    timestamp: new Date().toLocaleString('ta-IN', { timeZone: 'Asia/Kolkata' })
+  };
+
+  await postToGoogleSheet(payload);
+
+  document.getElementById('modalTicketIdDisplay').innerText = ticketId;
+  document.getElementById('popupStudentQueryForm').style.display = 'none';
+  document.getElementById('modalSqSuccessCard').style.display = 'block';
+  btn.disabled = false;
+  btn.innerHTML = origText;
+  document.getElementById('popupStudentQueryForm').reset();
+
+  // Auto-close modal after 3 seconds as requested by user
+  setTimeout(function() {
+    closeStudentQueryModal();
+  }, 3200);
+}
+
+// Celebration Crackers for Modal
+function firePopupCelebrationCrackers() {
+  const canvas = document.getElementById('popup_fb_crackers_canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  canvas.width = canvas.parentElement.offsetWidth;
+  canvas.height = canvas.parentElement.offsetHeight;
+  canvas.style.display = 'block';
+
+  const particles = [];
+  const colors = ['#f43f5e', '#ec4899', '#d946ef', '#a855f7', '#6366f1', '#3b82f6', '#06b6d4', '#10b981', '#eab308', '#f97316'];
+  for (let i = 0; i < 90; i++) {
+    const angle = Math.random() * Math.PI * 2;
+    const speed = Math.random() * 8 + 3;
+    particles.push({
+      x: canvas.width * 0.5,
+      y: canvas.height * 0.35,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed - 2,
+      radius: Math.random() * 3.5 + 2,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      gravity: 0.16,
+      alpha: 1,
+      decay: Math.random() * 0.015 + 0.01
+    });
+  }
+
+  function render() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let alive = false;
+    particles.forEach(p => {
+      if (p.alpha > 0) {
+        alive = true;
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += p.gravity;
+        p.alpha -= p.decay;
+        ctx.save();
+        ctx.globalAlpha = Math.max(p.alpha, 0);
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+    });
+    if (alive) requestAnimationFrame(render);
+    else { canvas.style.display = 'none'; }
+  }
+  render();
+}
+
+// Feedback Submit
+async function handlePopupFeedbackSubmit(e) {
+  e.preventDefault();
+  const email = document.getElementById('modal_fb_email').value.trim();
+  if (!email || !email.includes('@') || !email.includes('.')) {
+    alert('தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்.');
+    return;
+  }
+
+  const btn = document.getElementById('popupFbSubmitBtn');
+  const origText = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = '<span>⏳ பதிவாகிறது...</span>';
+
+  const refId = 'TN-FB-2026-' + Math.floor(1000 + Math.random() * 9000);
+  const payload = {
+    formType: 'portal_feedback',
+    refId: refId,
+    name: document.getElementById('modal_fb_name').value.trim(),
+    place: document.getElementById('modal_fb_place').value.trim(),
+    phone: document.getElementById('modal_fb_phone').value.trim(),
+    email: email,
+    link: document.getElementById('modal_fb_link').value.trim() || 'இல்லை',
+    message: document.getElementById('modal_fb_message').value.trim(),
+    spreadsheetId: '1fSIyCI4AsqA2-8aqRr5XQb7KODEA6pvnyNhjKO_PBSc',
+    sheetName: 'Sheet1',
+    timestamp: new Date().toLocaleString('ta-IN', { timeZone: 'Asia/Kolkata' })
+  };
+
+  await postToGoogleSheet(payload);
+
+  document.getElementById('popupFeedbackForm').style.display = 'none';
+  document.getElementById('modalFbSuccessCard').style.display = 'block';
+  firePopupCelebrationCrackers();
+  btn.disabled = false;
+  btn.innerHTML = origText;
+  document.getElementById('popupFeedbackForm').reset();
+
+  // Auto-close modal after 3.5 seconds as requested by user
+  setTimeout(function() {
+    closeFeedbackModal();
+  }, 3500);
+}
+</script>
+</body>
 </html>

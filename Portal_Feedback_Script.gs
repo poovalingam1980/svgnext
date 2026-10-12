@@ -132,6 +132,7 @@ function handleFeedback(e) {
 
         MailApp.sendEmail({
           to: email,
+          name: "மாவட்ட உயர்கல்வி வழிகாட்டல் மையம்",
           subject: greetingSubject,
           htmlBody: greetingHtml
         });
@@ -163,6 +164,7 @@ function handleFeedback(e) {
       `;
       MailApp.sendEmail({
         to: ADMIN_FEEDBACK_EMAIL,
+        name: "மாவட்ட உயர்கல்வி வழிகாட்டல் மையம்",
         subject: adminSubject,
         htmlBody: adminHtml
       });
