@@ -5504,12 +5504,12 @@ body {
     <span class="nav-menu-separator">▶</span>
     <a class="nav-menu-btn btn-direct-home" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முகப்பு">
       <span class="btn-icon">🎯</span>
-      <span class="btn-text">01 / நுழைவுத்தேர்வுகள்</span>
+      <span class="btn-text">நுழைவுத்தேர்வுகள்</span>
     </a>
     <span class="nav-menu-separator">▶</span>
     <a class="nav-menu-btn" href="01_02_medical_neet_ug.html" title="மருத்துவக் கல்வி நுழைவுத்தேர்வுகள் (NEET UG)">
       <span class="btn-icon">🩺</span>
-      <span class="btn-text">02 / மருத்துவம் (NEET UG)</span>
+      <span class="btn-text">மருத்துவம் (NEET UG)</span>
     </a>
     <span class="nav-menu-separator">▶</span>
     <span class="nav-menu-btn btn-current-page" title="தற்போதைய பக்கம்">
@@ -5809,6 +5809,9 @@ body {
 <footer class="portal-footer">
   <p style="margin-bottom: 8px !important; font-weight: 700 !important; color: #ffffff !important; font-size: 0.96rem !important; text-shadow: 0 1px 3px rgba(0,0,0,0.85) !important;">
     தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் - 630562, <a class="footer-phone-link" href="tel:04575240408" style="color: #fde047 !important; text-decoration: none !important; font-weight: 800 !important; background: rgba(0, 0, 0, 0.45) !important; padding: 3px 10px !important; border-radius: 6px !important; border: 1.2px solid rgba(253, 224, 71, 0.6) !important; display: inline-block !important;">☎️ 04575240408</a>
+  </p>
+  <p class="footer-last-updated" style="font-size: 0.84rem !important; color: #fde047 !important; margin-top: 6px !important; font-weight: 700 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.8) !important;">
+    📅 கடைசியாகப் புதுப்பிக்கப்பட்டது: <span id="portalLastUpdatedDate">12 அக்டோபர் 2026</span>
   </p>
   <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important;">
     © Chief Educational Office, Sivagangai. All Rights Reserved. வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
@@ -6931,6 +6934,31 @@ body {
   } else {
     generateChoiceFillingList();
   }
+
+
+
+  // Automatic Last Updated Date Controller
+  (function() {
+    function updatePortalLastModified() {
+      const el = document.getElementById('portalLastUpdatedDate');
+      if (!el) return;
+      try {
+        const d = new Date(document.lastModified);
+        if (!isNaN(d.getTime())) {
+          const tamilMonths = ['ஜனவரி', 'பிப்ரவரி', 'மார்ச்', 'ஏப்ரல்', 'மே', 'ஜூன்', 'ஜூலை', 'ஆகஸ்ட்', 'செப்டம்பர்', 'அக்டோபர்', 'நவம்பர்', 'டிசம்பர்'];
+          const day = d.getDate();
+          const month = tamilMonths[d.getMonth()];
+          const year = d.getFullYear();
+          el.textContent = day + ' ' + month + ' ' + year;
+        }
+      } catch(e) {}
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updatePortalLastModified);
+    } else {
+      updatePortalLastModified();
+    }
+  })();
 
 </script>
 </body>
