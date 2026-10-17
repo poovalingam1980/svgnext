@@ -4565,6 +4565,466 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
     }
 
+
+/* ========================================================
+   STANDARDIZED MARITIME PAGE ENHANCEMENTS (01_02 / 01_09 MODEL)
+   ======================================================== */
+.portal-layout-wrapper {
+  display: flex !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+.portal-main-content {
+  margin-left: 295px !important;
+  width: calc(100% - 295px) !important;
+  min-height: 100vh !important;
+  padding: 0 16px 40px 16px !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+.portal-container,
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.content-section,
+section,
+.portal-header,
+.breadcrumb-bar,
+.quick-nav-marquee-container,
+.typing-banner-wrap,
+.bottom-page-nav-bar,
+.traditional-kural-card,
+.creator-card,
+.portal-footer {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Quick Nav Touch Pills Marquee */
+.quick-nav-marquee-container {
+  display: flex !important;
+  align-items: center !important;
+  background: linear-gradient(135deg, #021a38 0%, #0c2b54 100%) !important;
+  border: 1.5px solid #38bdf8 !important;
+  border-radius: 12px !important;
+  padding: 6px 10px !important;
+  margin: 12px 0 14px 0 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.marquee-static-label {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #38bdf8 !important;
+  color: #021a38 !important;
+  font-weight: 900 !important;
+  font-size: 1rem !important;
+  padding: 4px 10px !important;
+  border-radius: 8px !important;
+  margin-right: 10px !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5) !important;
+}
+
+.quick-nav-marquee-viewport {
+  overflow: hidden !important;
+  flex-grow: 1 !important;
+  position: relative !important;
+  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent) !important;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent) !important;
+}
+
+.quick-nav-marquee-track {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  white-space: nowrap !important;
+  animation: marqueeScroll 28s linear infinite !important;
+}
+
+.quick-nav-marquee-track:hover {
+  animation-play-state: paused !important;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.nav-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(56, 189, 248, 0.4) !important;
+  color: #f0f9ff !important;
+  padding: 5px 14px !important;
+  border-radius: 999px !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+}
+
+.nav-pill:hover {
+  background: #38bdf8 !important;
+  color: #021a38 !important;
+  font-weight: 800 !important;
+  transform: translateY(-1px) scale(1.03) !important;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.6) !important;
+}
+
+/* Typing Flash Banner */
+.typing-banner-wrap {
+  width: 100% !important;
+  margin: 10px 0 18px 0 !important;
+  text-align: center !important;
+}
+
+.typing-container {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background: linear-gradient(135deg, rgba(2, 26, 56, 0.95) 0%, rgba(6, 57, 110, 0.92) 100%) !important;
+  border: 1.5px solid #38bdf8 !important;
+  padding: 7px 20px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+  min-height: 40px !important;
+  max-width: 96% !important;
+  box-sizing: border-box !important;
+}
+
+.typing-badge {
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  color: #fef08a !important;
+  background: rgba(56, 189, 248, 0.22) !important;
+  border: 1px solid rgba(56, 189, 248, 0.45) !important;
+  padding: 3px 10px !important;
+  border-radius: 999px !important;
+  flex-shrink: 0 !important;
+}
+
+.typing-text {
+  font-size: 0.94rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  letter-spacing: 0.2px !important;
+}
+
+.typing-cursor {
+  color: #38bdf8 !important;
+  font-weight: 900 !important;
+  animation: blinkCursor 0.8s infinite !important;
+}
+
+/* Traditional Thirukkural 2-Line Card */
+.traditional-kural-card {
+  width: 100% !important;
+  background: linear-gradient(135deg, #031833 0%, #0a2952 50%, #031833 100%) !important;
+  border: 1.8px solid #d4af37 !important;
+  border-radius: 14px !important;
+  padding: 16px 20px !important;
+  margin: 22px 0 !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(212, 175, 55, 0.2) !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+}
+
+.kural-header-row {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(212, 175, 55, 0.15) !important;
+  border: 1px solid #d4af37 !important;
+  padding: 3px 14px !important;
+  border-radius: 999px !important;
+  color: #fef08a !important;
+  font-size: 0.80rem !important;
+  font-weight: 800 !important;
+  margin-bottom: 10px !important;
+}
+
+.kural-couplet-wrap {
+  margin: 6px 0 10px 0 !important;
+}
+
+.kural-first-line, .kural-second-line {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: clamp(1.08rem, 1.4vw, 1.28rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.55 !important;
+  background: linear-gradient(90deg, #fef08a 0%, #facc15 35%, #ffffff 65%, #fde047 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8) !important;
+}
+
+.kural-meaning-row {
+  font-size: 0.88rem !important;
+  color: #cbd5e1 !important;
+  line-height: 1.6 !important;
+  background: rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid rgba(212, 175, 55, 0.25) !important;
+  border-radius: 8px !important;
+  padding: 8px 14px !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+.kural-meaning-badge {
+  color: #fef08a !important;
+  font-weight: 800 !important;
+  margin-right: 6px !important;
+}
+
+/* Full Width Bottom Nav Bar */
+.bottom-page-nav-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 12px 20px !important;
+  margin: 26px 0 28px 0 !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  gap: 12px !important;
+}
+
+.page-nav-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 9px 18px !important;
+  border-radius: 10px !important;
+  font-family: inherit !important;
+  font-size: 0.88rem !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  transition: all 0.25s ease !important;
+  user-select: none !important;
+}
+
+.page-nav-btn.btn-prev-animated {
+  border: 2px solid #059669 !important;
+  background: linear-gradient(135deg, #047857 0%, #065f46 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(4, 120, 87, 0.35) !important;
+  animation: pulseNudgeLeft 3s ease-in-out infinite !important;
+}
+
+.page-nav-btn.btn-prev-animated:hover {
+  background: linear-gradient(135deg, #065f46 0%, #022c22 100%) !important;
+  border-color: #fde047 !important;
+  transform: translateX(-5px) scale(1.04) !important;
+}
+
+.page-nav-btn.btn-next-animated {
+  border: 2px solid #0284c7 !important;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;
+  animation: pulseNudgeRight 3s ease-in-out infinite !important;
+}
+
+.page-nav-btn.btn-next-animated:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #0c4a6e 100%) !important;
+  border-color: #fde047 !important;
+  transform: translateX(5px) scale(1.04) !important;
+}
+
+@keyframes pulseNudgeLeft {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-4px); }
+}
+
+@keyframes pulseNudgeRight {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+
+@keyframes dualBorderPulse {
+  0% { box-shadow: 0 0 10px rgba(56, 189, 248, 0.35); border-color: #38bdf8; }
+  50% { box-shadow: 0 0 20px rgba(250, 204, 21, 0.55); border-color: #facc15; }
+  100% { box-shadow: 0 0 10px rgba(56, 189, 248, 0.35); border-color: #38bdf8; }
+}
+
+.cg-center-dual-wrapper {
+  flex: 0 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 1.8px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 3px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5) !important;
+  overflow: hidden !important;
+  max-width: 440px !important;
+  width: 100% !important;
+}
+
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 6px 14px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.22s ease !important;
+  box-sizing: border-box !important;
+}
+
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 100%) !important;
+  transform: scale(1.02) !important;
+}
+
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  transform: scale(1.02) !important;
+}
+
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 50%, transparent 100%) !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.2px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.58rem !important;
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  display: block !important;
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
+.dual-half-left .dual-title-ta { color: #fef08a !important; }
+
+.dual-sub-en {
+  display: block !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.62rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  margin-top: 2px !important;
+}
+
+.dual-half-left:hover .dual-title-ta { color: #ffffff !important; }
+.dual-half-left:hover .dual-sub-en { color: #fef08a !important; }
+.dual-half-right:hover .dual-title-ta { color: #ffffff !important; }
+.dual-half-right:hover .dual-sub-en { color: #bae6fd !important; }
+
+@media (max-width: 1024px) {
+  .desktop-left-sidebar {
+    position: fixed !important;
+    left: -320px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 295px !important;
+    height: 100vh !important;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 9999 !important;
+  }
+  .desktop-left-sidebar.active,
+  .desktop-left-sidebar.sidebar-open {
+    left: 0 !important;
+  }
+  .portal-main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding: 0 10px 30px 10px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .bottom-page-nav-bar {
+    flex-direction: column !important;
+    padding: 12px 14px !important;
+    gap: 12px !important;
+  }
+  .page-nav-btn { width: 100% !important; justify-content: center !important; }
+  .cg-center-dual-wrapper { width: 100% !important; order: -1 !important; }
+  .cg-unified-dual-pill { width: 100% !important; }
+  .dual-half { flex: 1 1 50% !important; }
+}
 </style>
 <style id="distinct-theme-css">
 /* ============================================================
@@ -5475,36 +5935,67 @@
 <div class="portal-container" id="top">
 <!-- Header Section (NO Print Button here, Quick Nav Links included) -->
 <!-- Compact & High-Impact Portal Header -->
-<nav class="nav-button-menu-bar no-print">
-<div class="nav-button-menu-container">
-<a class="menu-btn-pill btn-career" href="index.html" title="உயர்கல்வி வழிகாட்டல்">
-<svg viewbox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"></path></svg>
-<span>🎓 உயர்கல்வி</span>
-</a>
-<span class="menu-arrow">›</span>
-<a class="menu-btn-pill btn-entrance" href="01_00_entrance_main.html" title="தேசிய அளவிலான நுழைவுத்தேர்வுகள்">
-<svg viewbox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
-<span>📝 நுழைவுத்தேர்வுகள்</span>
-</a>
-<span class="menu-arrow">›</span>
-<span class="menu-btn-pill btn-current-page">
-<svg viewbox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"></path></svg>
-<span>⚓ பிரிவு 09: கடல்சார் கல்வி (IMU CET)</span>
-</span>
+
+<nav aria-label="Breadcrumb Navigation" class="breadcrumb-bar no-print">
+<div class="breadcrumb-left-stack">
+<a class="nav-menu-btn" href="index.html" title="வழிகாட்டி முதன்மை முகப்பு">🧭 வழிகாட்டி முகப்பு</a>
+<span class="nav-menu-separator">▶</span>
+<a class="nav-menu-btn" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முதன்மை மெனு">🎯 நுழைவுத்தேர்வுகள்</a>
+<span class="nav-menu-separator">▶</span>
+<span class="nav-menu-btn btn-current-page">⚓ கடல்சார் படிப்புகள் &amp; வணிகக் கப்பல் (IMU CET)</span>
 </div>
-</nav><header class="portal-header">
-<div class="header-badge-row">
-<span class="header-tag primary">பிரிவு 09 (Section 09)</span>
-<span class="header-tag secondary">கடல்சார் கல்வி &amp; வணிகக் கப்பல் துறை (Maritime &amp; Merchant Navy)</span>
-<span class="header-tag amber">IMU CET • B.Tech Marine • B.Sc Nautical Science • Sponsorship</span>
+<div class="breadcrumb-right-stack">
+<a class="nav-menu-btn btn-sheet-link" href="#section-maritime-directory" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important; color: #ffffff !important; border: 1.2px solid #38bdf8 !important; padding: 5px 14px !important; border-radius: 8px !important; font-weight: 800 !important; font-size: 0.82rem !important; text-decoration: none !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; box-shadow: 0 2px 6px rgba(2, 132, 199, 0.35) !important;" title="கடல்சார் கல்லூரிகள் பட்டியலுக்குச் செல்க">
+<span class="btn-icon">🏛️</span>
+<span class="btn-text">கல்லூரிகள் பட்டியல் ➔</span>
+</a>
 </div>
-<h1 class="portal-title">
-    இந்திய கடல்சார் பல்கலைக்கழகம் &amp; வணிகக் கப்பல் துறை <span class="accent-gold">(Merchant Navy)</span>
-</h1>
-<p class="portal-subtitle">
-    12-ஆம் வகுப்பிற்குப் பின் மத்திய கடல்சார் பல்கலைக்கழகம் (IMU) மற்றும் அங்கீகரிக்கப்பட்ட முன்னணி கடல்சார் கல்வி நிறுவனங்களில் B.Tech Marine Engineering, B.Sc Nautical Science, DNS படிப்புகளுக்கான IMU CET நுழைவுத்தேர்வு, ஷிப்பிங் கம்பெனி ஸ்பான்சர்ஷிப் மற்றும் கேப்டன் பணி வழிகாட்டல் தொகுப்பு.
+</nav>
+
+<header class="portal-header" style="background: linear-gradient(135deg, #021a38 0%, #06396e 50%, #0284c7 100%) !important; border: 2.2px solid #38bdf8 !important; border-bottom: 4.5px solid #0284c7 !important; border-radius: 18px !important; padding: 32px 24px 26px !important; margin-bottom: 16px !important; box-shadow: 0 0 24px rgba(56, 189, 248, 0.4), 0 10px 30px rgba(0, 0, 0, 0.5) !important; outline: 2px solid rgba(56, 189, 248, 0.75) !important; outline-offset: 3px !important; text-align: center !important; position: relative !important; overflow: hidden !important; width: 100% !important; box-sizing: border-box !important;">
+<h1 class="portal-title" style="font-size: clamp(1.6rem, 2.8vw, 2.3rem) !important; font-weight: 900 !important; color: #ffffff !important; margin: 0 0 10px 0 !important; text-shadow: 0 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(56, 189, 248, 0.5) !important; letter-spacing: -0.3px !important;">
+    இந்திய கடல்சார் பல்கலைக்கழகம் (IMU CET) &amp; வணிகக் கப்பல் துறை வழிகாட்டி
+  </h1>
+<p class="portal-subtitle" style="font-size: 1.02rem !important; color: #bae6fd !important; max-width: 1050px !important; margin: 0 auto !important; line-height: 1.65 !important; font-weight: 600 !important;">
+    Indian Maritime University (IMU-CET) • B.Tech Marine Engineering • B.Sc Nautical Science • DNS • Merchant Navy High Salary Global Careers
   </p>
+<div style="background: rgba(0, 0, 0, 0.28) !important; border: 1px solid rgba(255, 255, 255, 0.18) !important; border-radius: 10px !important; padding: 10px 18px !important; max-width: 950px !important; margin: 12px auto 0 auto !important; line-height: 1.6 !important; font-size: 0.92rem !important; color: #f0f9ff !important;">
+    மத்திய கப்பல் போக்குவரத்து அமைச்சகத்தின் இந்திய கடல்சார் பல்கலைக்கழக (IMU) நுழைவுத்தேர்வு, டி.ஜி.ஷிப்பிங் அங்கீகாரம் பெற்ற கல்லூரிகள், கப்பல் நிறுவன ஸ்பான்சர்ஷிப் (Sponsorship), பி.டெக் மரைன் இன்ஜினியரிங், நாட்டிக்கல் சயின்ஸ் மற்றும் சர்வதேச வரிவிலக்கு ஊதியம் சார்ந்த சிவகங்கை மாவட்ட மாணவர்களுக்கான அதிகாரப்பூர்வ வழிகாட்டுதல் மையம்.
+  </div>
 </header>
+<div aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை" class="quick-nav-marquee-container no-print">
+<div class="marquee-static-label" title="விரைவு வழிசெலுத்தல்">
+<span class="pulse-icon">⚡</span>
+</div>
+<div class="quick-nav-marquee-viewport">
+<div class="quick-nav-marquee-track">
+<!-- Group 1 -->
+<a class="nav-pill" href="#section-compare">⚓ கடற்படை vs வணிகக் கப்பல்</a>
+<a class="nav-pill" href="#section-imu">🚢 IMU CET தேர்வுகள் &amp; படிப்புகள்</a>
+<a class="nav-pill" href="#section-medical">🩺 உடற்தகுதி &amp; கண் பார்வை விதிகள்</a>
+<a class="nav-pill" href="#section-roadmap">🗺️ 9 முதல் 12 தயாரிப்புத் திட்டம்</a>
+<a class="nav-pill" href="#section-portals">🌐 அதிகாரப்பூர்வ இணையதளங்கள்</a>
+<a class="nav-pill" href="#section-maritime-directory">🏛️ கடல்சார் கல்லூரிகள் அடைவு</a>
+<a class="nav-pill" href="#section-faqs">❓ அடிக்கடி கேட்கப்படும் கேள்விகள்</a>
+<!-- Group 2 for seamless loop -->
+<a class="nav-pill" href="#section-compare">⚓ கடற்படை vs வணிகக் கப்பல்</a>
+<a class="nav-pill" href="#section-imu">🚢 IMU CET தேர்வுகள் &amp; படிப்புகள்</a>
+<a class="nav-pill" href="#section-medical">🩺 உடற்தகுதி &amp; கண் பார்வை விதிகள்</a>
+<a class="nav-pill" href="#section-roadmap">🗺️ 9 முதல் 12 தயாரிப்புத் திட்டம்</a>
+<a class="nav-pill" href="#section-portals">🌐 அதிகாரப்பூர்வ இணையதளங்கள்</a>
+<a class="nav-pill" href="#section-maritime-directory">🏛️ கடல்சார் கல்லூரிகள் அடைவு</a>
+<a class="nav-pill" href="#section-faqs">❓ அடிக்கடி கேட்கப்படும் கேள்விகள்</a>
+</div>
+</div>
+</div>
+<div class="typing-banner-wrap no-print">
+<div class="typing-container">
+<span class="typing-badge"><span class="sparkle-icon">✨</span> கடல்சார் வழிகாட்டல் குறிப்பு:</span>
+<span class="typing-text" id="typingTextMar"></span><span class="typing-cursor">|</span>
+</div>
+</div>
+
+
 <!-- Button-Style Segmented Navigation Menu (வழிசெலுத்துதல் பட்டன் மெனு) -->
 <!-- Button-Style Quick Navigation Bar (விரைவு வழிசெலுத்துதல் பட்டன் அட்டை) -->
 <div class="quick-nav-card no-print" id="quick-nav">
@@ -5969,6 +6460,62 @@
 </div>
 </section>
 <!-- SECTION 10: 14 FREQUENTLY ASKED QUESTIONS (FAQS) -->
+
+<section class="content-section no-print" id="section-maritime-directory" style="background: linear-gradient(135deg, #021a38 0%, #072a54 50%, #0f172a 100%) !important; border: 2px solid #38bdf8 !important; border-radius: 16px !important; padding: 26px 24px !important; margin: 30px 0 !important; box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45), 0 0 18px rgba(56, 189, 248, 0.25) !important;">
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-bottom: 18px; border-bottom: 1.5px dashed rgba(56, 189, 248, 0.35); padding-bottom: 14px;">
+<div>
+<div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.18); border: 1.2px solid #38bdf8; padding: 4px 16px; border-radius: 999px; color: #bae6fd; font-weight: 800; font-size: 0.82rem; margin-bottom: 8px;">
+        🏛️ DG SHIPPING அங்கீகாரம் பெற்ற தலைமை நிறுவனங்கள்
+      </div>
+<h3 style="color: #ffffff; font-size: 1.35rem; font-weight: 900; margin: 0;">
+        இந்திய கடல்சார் பல்கலைக்கழகம் (IMU) &amp; முன்னணிக் கடல்சார் கல்லூரிகள்
+      </h3>
+</div>
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+<a href="https://www.imu.edu.in" rel="noopener noreferrer" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff; border: 1px solid #38bdf8; padding: 8px 18px; border-radius: 8px; font-weight: 800; font-size: 0.84rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 3px 8px rgba(2, 132, 199, 0.35);" target="_blank">
+        🌐 IMU அதிகாரப்பூர்வ தளம் ↗
+      </a>
+<a href="https://www.dgshipping.gov.in" rel="noopener noreferrer" style="background: linear-gradient(135deg, #047857 0%, #065f46 100%); color: #ffffff; border: 1px solid #34d399; padding: 8px 18px; border-radius: 8px; font-weight: 800; font-size: 0.84rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 3px 8px rgba(4, 120, 87, 0.35);" target="_blank">
+        ⚓ DG Shipping Approved List ↗
+      </a>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+<!-- Card 1: IMU Campuses -->
+<div style="background: rgba(255, 255, 255, 0.05); border: 1.2px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 18px 16px;">
+<div style="font-size: 1.05rem; font-weight: 800; color: #fef08a; margin-bottom: 6px;">🏛️ IMU அரசு வளாகங்கள் (Central Campuses)</div>
+<p style="font-size: 0.86rem; color: #cbd5e1; line-height: 1.6; margin: 0 0 10px 0;">
+        • IMU சென்னை வளாகம் (East Coast Road, உத்தண்டி)<br/>
+        • IMU மும்பை போர்ட் &amp; நவி மும்பை (TS Chanakya)<br/>
+        • IMU கொல்கத்தா (MERI - Marine Engineering &amp; Research Institute)<br/>
+        • IMU விசாகப்பட்டினம் &amp; கொச்சி வளாகங்கள்
+      </p>
+<span style="font-size: 0.78rem; font-weight: 700; color: #38bdf8;">படிப்புகள்: B.Tech Marine Engg, B.Sc Nautical Science</span>
+</div>
+<!-- Card 2: Premier Private Affiliated Institutes -->
+<div style="background: rgba(255, 255, 255, 0.05); border: 1.2px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 18px 16px;">
+<div style="font-size: 1.05rem; font-weight: 800; color: #fef08a; margin-bottom: 6px;">🚢 தமிழ்நாட்டின் முன்னணிக் கடல்சார் கல்லூரிகள்</div>
+<p style="font-size: 0.86rem; color: #cbd5e1; line-height: 1.6; margin: 0 0 10px 0;">
+        • AMET பல்கலைக்கழகம் (கானத்தூர், சென்னை)<br/>
+        • HIMT College (கல்பாக்கம், சென்னை)<br/>
+        • கோயம்புத்தூர் மரைன் காலேஜ் (CMC Coimbatore)<br/>
+        • தோலானி மேரிடைம் இன்ஸ்டிடியூட் (Tolani Pune - National Level)
+      </p>
+<span style="font-size: 0.78rem; font-weight: 700; color: #38bdf8;">100% DG Shipping அங்கீகாரம் மற்றும் கேம்பஸ் இன்டர்வியூ</span>
+</div>
+<!-- Card 3: Shipping Companies Sponsorship -->
+<div style="background: rgba(255, 255, 255, 0.05); border: 1.2px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 18px 16px;">
+<div style="font-size: 1.05rem; font-weight: 800; color: #fef08a; margin-bottom: 6px;">⚓ சர்வதேச கப்பல் நிறுவன ஸ்பான்சர்ஷிப்</div>
+<p style="font-size: 0.86rem; color: #cbd5e1; line-height: 1.6; margin: 0 0 10px 0;">
+        • Anglo-Eastern Ship Management<br/>
+        • Synergy Marine Group (தலைமையகம் சென்னை)<br/>
+        • Fleet Management Ltd, Scorpio, Maersk Line<br/>
+        • The Great Eastern Shipping (GE Shipping)
+      </p>
+<span style="font-size: 0.78rem; font-weight: 700; color: #38bdf8;">முக்கிய ஆலோசனை: ஸ்பான்சர்ஷிப் தேர்வு எழுதி வென்றபின் சேர்வது மிக உத்தமம்</span>
+</div>
+</div>
+</section>
 <section class="content-section" id="section-faqs">
 <div class="section-header">
 <div class="section-title-wrap">
@@ -6089,20 +6636,60 @@
 <button class="back-to-top no-print" onclick="window.scrollTo({top:0, behavior:'smooth'});" title="மேலே செல்ல" type="button">
     ▲ மேலே செல்க
   </button>
-<div class="kural-box">
-<div class="kural-header">
-<span class="kural-icon">📜</span>
-<span class="kural-title">திருக்குறள் — அதிகாரம்: ஆள்வினையுடைமை (குறள்: 616)</span>
-<span class="kural-sparkle">⚓ தளரா விடாமுயற்சி</span>
+
+<!-- பாரம்பரிய ஈரடித் திருக்குறள் — கடல்சார் ஆய்வும் தகுந்த களமும் (அதிகாரம்: இடனறிதல்) -->
+
+<nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar no-print">
+<!-- LEFT ANIMATED NAV BUTTON -->
+<a class="page-nav-btn btn-prev-animated" href="01_09_hotel_management_nchmct.html" title="உணவக மேலாண்மை (NCHMCT JEE)">
+<span class="nav-btn-icon">◀</span>
+<span class="nav-btn-text">உணவக மேலாண்மை</span>
+</a>
+<!-- CENTER COMPACT DUAL ACTION PILL -->
+<div class="cg-center-dual-wrapper">
+<div class="cg-unified-dual-pill">
+<!-- இடதுபுறம்: ஆலோசனை பதிவிட (FEEDBACK) -->
+<a class="dual-half dual-half-left" href="portal_feedback.html" onclick="openPortalFeedbackModal(event)" title="ஆலோசனை / கருத்து தெரிவிக்க">
+<span class="dual-text-group">
+<span class="dual-title-ta">ஆலோசனை பதிவிட</span>
+<span class="dual-sub-en">Feedback &amp; Ideas</span>
+</span>
+</a>
+<!-- GLOWING CENTER DIVIDER -->
+<div class="dual-divider">
+<span class="dual-divider-dot">✦</span>
 </div>
-<div class="kural-verse-text">
-    “முயற்சி திருவினை ஆக்கும் முயற்றின்மை<br/>
-    இன்மை புகுத்தி விடும்.”
-  </div>
-<div class="kural-meaning">
-<strong>மு. வரதராசனார் உரை:</strong> தளராத முயற்சி ஒருவனுக்குச் செல்வத்தையும் மேன்மையையும் சேர்க்கும்; முயற்சியில்லாமல் சோம்பி இருத்தல் அவனுக்கு வறுமையையும் இழிவையும் தந்துவிடும்.
-  </div>
-</div><div class="creator-card" style="justify-content: center !important; text-align: center !important;">
+<!-- வலதுபுறம்: சந்தேகம் கேட்க (QUERIES) -->
+<a class="dual-half dual-half-right" href="student_queries.html" onclick="openStudentQueryModal(event)" title="சந்தேகங்களைக் கேட்க">
+<span class="dual-text-group">
+<span class="dual-title-ta">சந்தேகம் கேட்க</span>
+<span class="dual-sub-en">Ask Student Query</span>
+</span>
+</a>
+</div>
+</div>
+<!-- RIGHT ANIMATED NAV BUTTON -->
+<a class="page-nav-btn btn-next-animated" href="01_11_defence_armed_forces.html" title="பாதுகாப்புப் படைகள் (NDA / CDS)">
+<span class="nav-btn-text">பாதுகாப்புப் படைகள்</span>
+<span class="nav-btn-icon">▶</span>
+</a>
+</nav>
+<div class="traditional-kural-card no-print">
+<div class="kural-header-row">
+<span class="kural-book-emblem">📜</span>
+<span class="kural-authority-badge">திருக்குறள் — அதிகாரம்: இடனறிதல் (குறள்: 496)</span>
+<span class="kural-subject-tag">⚓ நாவாய் &amp; தகுந்த களம்</span>
+</div>
+<div class="kural-couplet-wrap">
+<div class="kural-first-line">“கடலோடா கால்வல் நெடுந்தேர் கடலோடும்”</div>
+<div class="kural-second-line">“நாவாயும் ஓடா நிலத்து.”</div>
+</div>
+<div class="kural-meaning-row">
+<span class="kural-meaning-badge">விளக்கவுரை</span>
+<span class="kural-meaning-text">வலிமையான சக்கரங்களைக் கொண்ட பெரிய தேர் கடலில் ஓட முடியாது; கடலில் வேகமாக ஓடும் கப்பலும் நிலத்தில் ஓட முடியாது. தத்தமக்குரிய தகுந்த துறையையும் களத்தையும் உணர்ந்து திறமைகளை வளர்த்துச் செயல்படுவதே உயரிய பெருமை தரும்.</span>
+</div>
+</div>
+<div class="creator-card" style="justify-content: center !important; text-align: center !important;">
 <div class="creator-typewriter-wrapper" style="justify-content: center !important; text-align: center !important; display: inline-flex !important; align-items: center !important;">
 <span class="creator-typewriter-target" id="creatorTypewriterTarget" style="text-align: center !important;"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role">, பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role">, Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
 </div>
@@ -6121,7 +6708,7 @@
 <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important; margin-bottom: 0 !important;">
     © 2026 Chief Educational Office, Sivagangai. All Rights Reserved. • வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
-</footer></div>
+<p class="footer-last-updated" style="font-size: 0.84rem !important; color: #fde047 !important; margin-top: 6px !important; font-weight: 700 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.8) !important;">📅 கடைசியாகப் புதுப்பிக்கப்பட்டது: 17 அக்டோபர் 2026</p></footer></div>
 <!-- JavaScript for Interactive Search, Filtering, Accordion, and Back-to-Top -->
 <script>
   // Accordion Toggle for FAQs
@@ -6348,6 +6935,44 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     initCreatorObserver();
   }
+})();
+</script>
+
+<script id="maritime_typing_script">
+(function() {
+  const marTexts = [
+    "IMU CET 2026: பி.டெக் மரைன் இன்ஜினியரிங் & பி.எஸ்சி நாட்டிக்கல் சயின்ஸ் சேர்க்கைக்கான தேசிய நுழைவுத் தேர்வு!",
+    "மெர்ச்சண்ட் நேவி ஸ்பான்சர்ஷிப்: படிப்பு தொடங்கும் முன்பே சர்வதேச கப்பல் நிறுவனங்களில் 100% வேலைவாய்ப்பு உறுதி!",
+    "உலகத் தரம் வாய்ந்த ஊதியம்: டாலர்களில் சர்வதேச சம்பளம் மற்றும் வரிவிலக்கு (NRI Tax-free salary) பெரும் பிரம்மாண்ட வாய்ப்பு!",
+    "உடற்தகுதி & கண் பார்வை: நாட்டிக்கல் சயின்ஸ் படிப்புக்கு 6/6 கண் பார்வை மற்றும் வண்ணக்குருடின்மை (No Color Blindness) கட்டாயம்!",
+    "இந்திய கடல்சார் பல்கலைக்கழகம் (IMU): சென்னை உத்தண்டி, மும்பை, கொல்கத்தா, விசாகப்பட்டினம் மத்திய அரசு வளாகங்கள்!"
+  ];
+  let mIdx = 0, chIdx = 0, isDel = false;
+  const el = document.getElementById('typingTextMar');
+  if (!el) return;
+
+  function typeLoop() {
+    const cur = marTexts[mIdx];
+    if (isDel) {
+      el.textContent = cur.substring(0, chIdx - 1);
+      chIdx--;
+    } else {
+      el.textContent = cur.substring(0, chIdx + 1);
+      chIdx++;
+    }
+
+    let speed = isDel ? 25 : 55;
+    if (!isDel && chIdx === cur.length) {
+      speed = 2200;
+      isDel = true;
+    } else if (isDel && chIdx === 0) {
+      isDel = false;
+      mIdx = (mIdx + 1) % marTexts.length;
+      speed = 400;
+    }
+    setTimeout(typeLoop, speed);
+  }
+  typeLoop();
 })();
 </script>
 </body>

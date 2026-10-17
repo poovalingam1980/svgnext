@@ -4107,6 +4107,77 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
     }
 
+
+/* ========================================================
+   STANDARDIZED FLUID FULL-WIDTH LAYOUT (MEDICAL NEET 01_02 MODEL)
+   ======================================================== */
+.portal-layout-wrapper {
+  display: flex !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+.portal-main-content {
+  margin-left: 295px !important;
+  width: calc(100% - 295px) !important;
+  min-height: 100vh !important;
+  padding: 0 16px 40px 16px !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+.portal-container,
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.info-card,
+.content-card,
+.content-section,
+section,
+.portal-header,
+.breadcrumb-bar,
+.quick-nav-marquee-container,
+.typing-banner-wrap,
+.bottom-page-nav-bar,
+.kural-box,
+.traditional-kural-card,
+.creator-card,
+.portal-footer,
+.card,
+.table-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 1024px) {
+  .desktop-left-sidebar {
+    position: fixed !important;
+    left: -320px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 295px !important;
+    height: 100vh !important;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 9999 !important;
+  }
+  .desktop-left-sidebar.active,
+  .desktop-left-sidebar.sidebar-open {
+    left: 0 !important;
+  }
+  .portal-main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding: 0 10px 30px 10px !important;
+  }
+}
 </style>
 <style id="distinct-theme-css">
 /* ============================================================
@@ -4906,7 +4977,6 @@
     }
 
 </style>
-
 <style id="distinct-hospitality-theme">
 /* ============================================================
    Section 08: ஹோட்டல் மேலாண்மை (Hotel Management - NCHMCT JEE)
@@ -5768,23 +5838,7 @@ section,
 <div class="portal-container" id="top">
 <!-- Header Section -->
 <!-- Compact & High-Impact Portal Header -->
-<nav aria-label="Breadcrumb Navigation" class="nav-button-menu-bar no-print">
-<div class="nav-button-menu-container">
-<a class="menu-btn-pill btn-career" href="index.html" title="உயர்கல்வி வழிகாட்டி முதன்மைப் பக்கம்">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"></path></svg>
-<span>🎓 உயர்கல்வி</span>
-</a>
-<span class="menu-arrow">›</span>
-<a class="menu-btn-pill btn-entrance" href="01_00_entrance_main.html" title="உயர்கல்வி நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம்">
-<svg fill="currentColor" viewbox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
-<span>📝 நுழைவுத்தேர்வுகள்</span>
-</a>
-<span class="menu-arrow">›</span>
-<span class="menu-btn-pill btn-current-page" title="தற்போதைய வழிகாட்டிப் பக்கம்">
-<span>🏨 பிரிவு 08: உணவக மேலாண்மை (NCHMCT JEE)</span>
-</span>
-</div>
-</nav><nav aria-label="Breadcrumb Navigation" class="breadcrumb-bar no-print">
+<nav aria-label="Breadcrumb Navigation" class="breadcrumb-bar no-print">
 <div class="breadcrumb-left-stack">
 <a class="nav-menu-btn" href="index.html" title="வழிகாட்டி முதன்மை முகப்பு">🧭 வழிகாட்டி முகப்பு</a>
 <span class="nav-menu-separator">▶</span>
@@ -5799,7 +5853,6 @@ section,
 </a>
 </div>
 </nav><header class="portal-header">
-
 <h1 class="portal-title">உணவக மேலாண்மை &amp; விருந்தோம்பல் நிர்வாகம் <span class="accent-gold">(Hotel Management - B.Sc H&amp;HA)</span></h1>
 <p class="portal-subtitle">12-ஆம் வகுப்புக்குப் பின் NCHMCT JEE நுழைவுத்தேர்வு வாயிலாக 21 மத்திய அரசு IHMs (சென்னை தரமணி, தில்லி பூசா உள்ளிட்டவை), மாநில அரசு SIHMs மற்றும் ஓபராய் STEP இலவச பட்டப்படிப்புக்கான முழுமையான வழிகாட்டல் தொகுப்பு.</p>
 </header><div aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை" class="quick-nav-marquee-container no-print">
@@ -5848,7 +5901,6 @@ section,
 </div>
 <!-- Button-Style Segmented Navigation Menu (வழிசெலுத்துதல் பட்டன் மெனு) -->
 <!-- Button-Style Quick Navigation Bar (விரைவு வழிசெலுத்துதல் பட்டன் அட்டை) -->
-
 <!-- Key Highlights Grid -->
 <div class="metrics-grid">
 <div class="metric-card">
