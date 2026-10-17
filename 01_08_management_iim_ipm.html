@@ -3951,6 +3951,308 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
     }
 
+
+/* ========================================================
+   STANDARDIZED MANAGEMENT 01_08 LAYOUT, MARQUEE & NAV CSS
+   ======================================================== */
+.portal-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.breadcrumb-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.4) !important;
+  border-radius: 12px !important;
+  padding: 8px 14px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.breadcrumb-left-stack {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+
+.breadcrumb-right-stack {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-left: auto !important;
+  flex-wrap: wrap !important;
+}
+
+.nav-menu-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.84rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  color: #e2e8f0 !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+.nav-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #fef08a !important;
+}
+
+.nav-menu-btn.btn-current-page {
+  background: rgba(56, 189, 248, 0.2) !important;
+  border: 1px solid #38bdf8 !important;
+  color: #38bdf8 !important;
+}
+
+.nav-menu-separator {
+  color: #94a3b8 !important;
+  font-size: 0.75rem !important;
+}
+
+/* Quick Nav Marquee */
+.quick-nav-marquee-container {
+  display: flex !important;
+  align-items: center !important;
+  background: #0f172a !important;
+  border: 1.5px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 4px 6px !important;
+  margin: 0 0 18px 0 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.marquee-static-label {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%) !important;
+  color: #ffffff !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+  margin-right: 8px !important;
+}
+
+.pulse-icon {
+  font-size: 1rem !important;
+  animation: pulseRotate 2s infinite ease-in-out !important;
+}
+
+@keyframes pulseRotate {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.marquee-scroll-track {
+  display: flex !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+.marquee-content-loop {
+  display: flex !important;
+  gap: 8px !important;
+  animation: marqueeScroll 45s linear infinite !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.quick-nav-marquee-container:hover .marquee-content-loop {
+  animation-play-state: paused !important;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-pill-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  padding: 5px 14px !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #e2e8f0 !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  transition: all 0.2s ease !important;
+}
+
+.marquee-pill-btn:hover {
+  background: #ea580c !important;
+  color: #ffffff !important;
+  border-color: #fde047 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Typing Flash Ribbon */
+.typing-banner-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  margin: 14px auto 18px auto !important;
+}
+
+.typing-container {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.95) 0%, rgba(255, 247, 237, 0.92) 100%) !important;
+  border: 1.5px solid #facc15 !important;
+  padding: 8px 22px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.15), inset 0 1px 2px #ffffff !important;
+  min-height: 44px !important;
+  max-width: 96% !important;
+  box-sizing: border-box !important;
+}
+
+.typing-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.84rem !important;
+  font-weight: 800 !important;
+  color: #92400e !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(250, 204, 21, 0.8) !important;
+  padding: 4px 12px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  flex-shrink: 0 !important;
+}
+
+.typing-text {
+  font-size: 0.98rem !important;
+  font-weight: 700 !important;
+  color: #451a03 !important;
+  letter-spacing: 0.2px !important;
+}
+
+.typing-cursor {
+  font-weight: 900 !important;
+  color: #ea580c !important;
+  animation: blinkCursor 0.8s infinite !important;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Bottom Nav Bar */
+.bottom-page-nav-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 12px 20px !important;
+  margin: 26px 0 28px 0 !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  gap: 12px !important;
+}
+
+.page-nav-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 9px 18px !important;
+  border-radius: 10px !important;
+  font-family: inherit !important;
+  font-size: 0.88rem !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  transition: all 0.25s ease !important;
+  user-select: none !important;
+}
+
+.page-nav-btn.btn-prev-animated {
+  border: 2px solid #059669 !important;
+  background: linear-gradient(135deg, #047857 0%, #065f46 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(4, 120, 87, 0.35) !important;
+  animation: pulseNudgeLeft 3s ease-in-out infinite !important;
+}
+
+.page-nav-btn.btn-prev-animated:hover {
+  background: linear-gradient(135deg, #065f46 0%, #022c22 100%) !important;
+  border-color: #fde047 !important;
+  transform: translateX(-5px) scale(1.04) !important;
+  box-shadow: 0 6px 20px rgba(4, 120, 87, 0.55), 0 0 15px rgba(52, 211, 153, 0.5) !important;
+  color: #ffffff !important;
+}
+
+.page-nav-btn.btn-next-animated {
+  border: 2px solid #0284c7 !important;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;
+  animation: pulseNudgeRight 3s ease-in-out infinite !important;
+}
+
+.page-nav-btn.btn-next-animated:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #0c4a6e 100%) !important;
+  border-color: #fde047 !important;
+  transform: translateX(5px) scale(1.04) !important;
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.55), 0 0 15px rgba(56, 189, 248, 0.5) !important;
+  color: #ffffff !important;
+}
+
+@keyframes pulseNudgeLeft {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-4px); }
+}
+
+@keyframes pulseNudgeRight {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+
+/* Full monitor width guarantees */
+.portal-main-content,
+.portal-container,
+.portal-header,
+.quick-nav-marquee-container,
+.typing-banner-wrap,
+.bottom-page-nav-bar,
+.kural-box,
+.creator-card,
+.portal-footer,
+.card {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
 </style>
 <style id="distinct-theme-css">
 /* ============================================================
@@ -4861,22 +5163,19 @@
 <div class="portal-container" id="top">
 <!-- Hero Header Banner -->
 <!-- Compact & High-Impact Portal Header -->
-<nav class="nav-button-menu-bar no-print">
-<div class="nav-button-menu-container">
-<a class="menu-btn-pill btn-career" href="index.html" title="உயர்கல்வி வழிகாட்டல்">
-<svg viewbox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"></path></svg>
-<span>🎓 உயர்கல்வி</span>
+<nav class="breadcrumb-bar no-print">
+<div class="breadcrumb-left-stack">
+<a class="nav-menu-btn" href="index.html" title="வழிகாட்டி முதன்மை முகப்பு">🧭 வழிகாட்டி முகப்பு</a>
+<span class="nav-menu-separator">▶</span>
+<a class="nav-menu-btn" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முதன்மை மெனு">🎯 நுழைவுத்தேர்வுகள்</a>
+<span class="nav-menu-separator">▶</span>
+<span class="nav-menu-btn btn-current-page">💼 மேலாண்மை (IIM IPM / JIPMAT)</span>
+</div>
+<div class="breadcrumb-right-stack">
+<a class="nav-menu-btn btn-sheet-link" href="https://docs.google.com/spreadsheets/d/1BhTgHGqsJeuQw8K9olML7Erj_Ue1Aoi_pO_TUC2sz-o/edit?usp=sharing" rel="noopener noreferrer" style="background: linear-gradient(135deg, #059669 0%, #047857 100%) !important; color: #ffffff !important; border: 1.2px solid #34d399 !important; padding: 5px 14px !important; border-radius: 8px !important; font-weight: 800 !important; font-size: 0.82rem !important; text-decoration: none !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; box-shadow: 0 2px 6px rgba(5, 150, 105, 0.35) !important;" target="_blank" title="தேசிய IIM &amp; மேலாண்மை நிறுவனங்கள் கூகுள் ஸ்ப்ரெட்ஷீட் அடைவு">
+<span class="btn-icon">📊</span>
+<span class="btn-text">Google Sheet அடைவு ↗</span>
 </a>
-<span class="menu-arrow">›</span>
-<a class="menu-btn-pill btn-entrance" href="01_00_entrance_main.html" title="தேசிய அளவிலான நுழைவுத்தேர்வுகள்">
-<svg viewbox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path></svg>
-<span>📝 நுழைவுத்தேர்வுகள்</span>
-</a>
-<span class="menu-arrow">›</span>
-<span class="menu-btn-pill btn-current-page">
-<svg viewbox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"></path></svg>
-<span>💼 பிரிவு 07: ஒருங்கிணைந்த மேலாண்மை (IIM IPM)</span>
-</span>
 </div>
 </nav><header class="portal-header">
 <div class="header-badge-row">
@@ -4893,25 +5192,52 @@
 </header>
 <!-- Button-Style Segmented Navigation Menu (வழிசெலுத்துதல் பட்டன் மெனு) -->
 <!-- Button-Style Quick Navigation Bar (விரைவு வழிசெலுத்துதல் பட்டன் அட்டை) -->
-<div class="quick-nav-card no-print" id="quick-nav">
-<div class="quick-nav-title">
-<span>🚀 முக்கியப் பிரிவுகள் &amp; தலைப்புகள் (Quick Navigation)</span>
-<span style="font-size: 12px; color: var(--text-muted); font-weight: normal;">நேரடியாகச் செல்ல விரும்பும் பிரிவை கிளிக் செய்யவும்</span>
+<div aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை" class="quick-nav-marquee-container no-print">
+<div class="marquee-static-label" title="விரைவு வழிசெலுத்தல்">
+<span class="pulse-icon">⚡</span>
 </div>
-<div class="quick-nav-grid">
-<a class="nav-btn" href="#section-intro"><span class="badge-no">01</span><span>💼 IPM திட்டம் அறிமுகம்</span></a>
-<a class="nav-btn" href="#section-ipmat-indore"><span class="badge-no">02</span><span>🏛️ IPMAT Indore தேர்வு</span></a>
-<a class="nav-btn" href="#section-ipmat-rohtak"><span class="badge-no">03</span><span>🏛️ IPMAT Rohtak தேர்வு</span></a>
-<a class="nav-btn" href="#section-jipmat"><span class="badge-no">04</span><span>🎯 JIPMAT (போத்கயா/ஜம்மு)</span></a>
-<a class="nav-btn" href="#section-other-iims"><span class="badge-no">05</span><span>🌍 IIM Ranchi &amp; IIFT</span></a>
-<a class="nav-btn" href="#section-eligibility"><span class="badge-no">06</span><span>📋 கல்வித் தகுதிகள்</span></a>
-<a class="nav-btn" href="#section-syllabus"><span class="badge-no">07</span><span>📚 முழுப் பாடத்திட்டம்</span></a>
-<a class="nav-btn" href="#section-interview"><span class="badge-no">08</span><span>🎯 நேர்காணல் (PI) உத்திகள்</span></a>
-<a class="nav-btn" href="#section-roadmap"><span class="badge-no">09</span><span>🚀 9th-12th வழிகாட்டல்</span></a>
-<a class="nav-btn" href="#section-fees-loans"><span class="badge-no">10</span><span>💰 கட்டணம் &amp; கல்விக் கடன்</span></a>
-<a class="nav-btn" href="#section-placements"><span class="badge-no">11</span><span>📈 வேலைவாய்ப்பு &amp; ஊதியம்</span></a>
-<a class="nav-btn" href="#section-portals"><span class="badge-no">12</span><span>🌐 அதிகாரப்பூர்வ தளங்கள்</span></a>
-<a class="nav-btn" href="#section-faqs"><span class="badge-no">13</span><span>❓ அடிக்கடி கேட்கப்படும் வினாக்கள்</span></a>
+<div class="marquee-scroll-track">
+<div class="marquee-content-loop">
+<a class="marquee-pill-btn" href="#section-intro">📌 1. IPM அறிமுகம்</a>
+<a class="marquee-pill-btn" href="#section-ipmat-indore">🏛️ 2. IIM இந்தூர் (IPMAT)</a>
+<a class="marquee-pill-btn" href="#section-ipmat-rohtak">🎯 3. IIM ரோஹ்தக்</a>
+<a class="marquee-pill-btn" href="#section-jipmat">📝 4. NTA JIPMAT (போத்கயா &amp; ஜம்மு)</a>
+<a class="marquee-pill-btn" href="#section-other-iims">🌐 5. பிற IIMகள் &amp; IIFT</a>
+<a class="marquee-pill-btn" href="#section-eligibility">📜 6. தகுதி வரம்பு</a>
+<a class="marquee-pill-btn" href="#section-syllabus">📚 7. தேர்வுப் பாடத்திட்டம்</a>
+<a class="marquee-pill-btn" href="#section-interview">🎤 8. நேர்காணல் &amp; WAT</a>
+<a class="marquee-pill-btn" href="#section-roadmap">🗺️ 9. வெற்றித் திட்டமிடல்</a>
+<a class="marquee-pill-btn" href="#section-fees-loans">💰 10. கட்டணம் &amp; வங்கிக் கடன்</a>
+<a class="marquee-pill-btn" href="#section-placements">💼 11. கேம்பஸ் பிளேஸ்மென்ட் (ROI)</a>
+<a class="marquee-pill-btn" href="#section-management-directory" style="border-color:#34d399; color:#fde047;">📊 12. கல்லூரிகள் அடைவு ➔</a>
+<a class="marquee-pill-btn" href="#section-portals">🔗 13. போர்ட்டல்கள்</a>
+<a class="marquee-pill-btn" href="#section-faqs">❓ 14. வினா-விடைகள்</a>
+<!-- Duplicate Loop -->
+<a class="marquee-pill-btn" href="#section-intro">📌 1. IPM அறிமுகம்</a>
+<a class="marquee-pill-btn" href="#section-ipmat-indore">🏛️ 2. IIM இந்தூர் (IPMAT)</a>
+<a class="marquee-pill-btn" href="#section-ipmat-rohtak">🎯 3. IIM ரோஹ்தக்</a>
+<a class="marquee-pill-btn" href="#section-jipmat">📝 4. NTA JIPMAT (போத்கயா &amp; ஜம்மு)</a>
+<a class="marquee-pill-btn" href="#section-other-iims">🌐 5. பிற IIMகள் &amp; IIFT</a>
+<a class="marquee-pill-btn" href="#section-eligibility">📜 6. தகுதி வரம்பு</a>
+<a class="marquee-pill-btn" href="#section-syllabus">📚 7. தேர்வுப் பாடத்திட்டம்</a>
+<a class="marquee-pill-btn" href="#section-interview">🎤 8. நேர்காணல் &amp; WAT</a>
+<a class="marquee-pill-btn" href="#section-roadmap">🗺️ 9. வெற்றித் திட்டமிடல்</a>
+<a class="marquee-pill-btn" href="#section-fees-loans">💰 10. கட்டணம் &amp; வங்கிக் கடன்</a>
+<a class="marquee-pill-btn" href="#section-placements">💼 11. கேம்பஸ் பிளேஸ்மென்ட் (ROI)</a>
+<a class="marquee-pill-btn" href="#section-management-directory" style="border-color:#34d399; color:#fde047;">📊 12. கல்லூரிகள் அடைவு ➔</a>
+<a class="marquee-pill-btn" href="#section-portals">🔗 13. போர்ட்டல்கள்</a>
+<a class="marquee-pill-btn" href="#section-faqs">❓ 14. வினா-விடைகள்</a>
+</div>
+</div>
+</div>
+<div class="typing-banner-wrap no-print">
+<div class="typing-container">
+<div class="typing-badge">
+<span class="typing-sparkle">✨</span>
+<span>வழிகாட்டல்:</span>
+</div>
+<span class="typing-text" id="guidanceTypewriter"></span>
+<span class="typing-cursor">|</span>
 </div>
 </div>
 <!-- Search & Filter Controls -->
@@ -5539,6 +5865,50 @@
 </div>
 </div>
 <!-- Closing Motivation Card -->
+
+<!-- ========================================================
+     தேசிய மேலாண்மை நிறுவனங்கள் (IIMs & Top B-Schools) அடைவு அறிவிப்புப் பெட்டி
+     ======================================================== -->
+<section class="card filter-item no-print" id="section-management-directory" style="margin-top: 26px; margin-bottom: 26px; border: 2px solid #ea580c; border-top: 6px solid #d97706; background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%); color: #ffffff; border-radius: 18px; padding: 26px 30px; box-shadow: 0 8px 30px rgba(15, 23, 42, 0.45); scroll-margin-top: 30px;">
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; border-bottom: 1.5px solid rgba(255, 255, 255, 0.2); padding-bottom: 12px;">
+<div style="display: flex; align-items: center; gap: 10px;">
+<span style="font-size: 1.65rem;">📢</span>
+<h3 style="color: #fde047; font-size: 1.30rem; font-weight: 900; margin: 0; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">
+        தேசிய மேலாண்மை நிறுவனங்கள் (IIMs &amp; Top Business Schools) முழு அடைவு (Official Directory &amp; Spreadsheet)
+      </h3>
+</div>
+<span style="background: #fef08a; color: #713f12; font-weight: 800; font-size: 0.78rem; padding: 4px 14px; border-radius: 999px; text-transform: uppercase; box-shadow: 0 2px 6px rgba(0,0,0,0.25);">
+      அதிகாரப்பூர்வ விரிதாள் அறிவிப்பு
+    </span>
+</div>
+<p style="font-size: 0.94rem; color: #f1f5f9; line-height: 1.75; margin-bottom: 20px;">
+    இந்தியாவின் <b>முன்னணி ஐ.ஐ.எம் நிறுவனங்கள்</b> (IIM இந்தூர், IIM ரோஹ்தக், IIM ராஞ்சி, IIM போத்கயா, IIM ஜம்மு, IIM அமிர்தசரஸ்), <b>IIFT காக்கிநாடா</b> (மத்திய வர்த்தக அமைச்சகம்), <b>NALSAR ஹைதராபாத்</b>, <b>நிர்மா பல்கலைக்கழகம்</b>, <b>TAPMI மணிப்பால்</b> உட்பட 12-ஆம் வகுப்பிற்குப் பிறகு வழங்கப்படும் <b>5-ஆண்டு ஒருங்கிணைந்த மேலாண்மை (IPM - BBA+MBA)</b> பட்டப்படிப்புகள், தேசிய நுழைவுத்தேர்வுகள் (IPMAT Indore, IPMAT Rohtak, JIPMAT - NTA), கல்விக் கட்டண விலக்குகள், தேசிய வங்கிக் கடன் வசதிகள், சராசரி ₹25-35 LPA வளாக வேலைவாய்ப்புகள் மற்றும் அதிகாரப்பூர்வ இணையதள இணைப்புகள் அடங்கிய முழுமையான அடைவுத் தொகுப்பு <b>கூகுள் விரிதாள் (Google Sheet), எக்செல் (Excel) மற்றும் கிடைமட்ட (Landscape) PDF</b> வடிவங்களில் பதிவிறக்கத்திற்குக் கீழே வழங்கப்பட்டுள்ளது.
+  </p>
+<!-- Action Download Buttons Grid -->
+<div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 18px;">
+<!-- Button 1: View Google Sheet -->
+<a class="dir-btn" href="https://docs.google.com/spreadsheets/d/1BhTgHGqsJeuQw8K9olML7Erj_Ue1Aoi_pO_TUC2sz-o/edit?usp=sharing" rel="noopener noreferrer" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #ffffff !important; padding: 12px 22px; font-weight: 800; font-size: 0.92rem; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(5,150,105,0.4); border: 1.2px solid #34d399; transition: all 0.25s ease;" target="_blank">
+<span>📊 கூகுள் விரிதாள் (Google Sheet)</span> ➔
+    </a>
+<!-- Button 2: Download Excel -->
+<a class="dir-btn" href="https://docs.google.com/spreadsheets/d/1BhTgHGqsJeuQw8K9olML7Erj_Ue1Aoi_pO_TUC2sz-o/export?format=xlsx" rel="noopener noreferrer" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff !important; padding: 12px 22px; font-weight: 800; font-size: 0.92rem; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(2,132,199,0.4); border: 1.2px solid #38bdf8; transition: all 0.25s ease;" target="_blank">
+<span>📥 எக்செல் கோப்பு (.xlsx)</span> ➔
+    </a>
+<!-- Button 3: Download Landscape PDF -->
+<a class="dir-btn" href="https://docs.google.com/spreadsheets/d/1BhTgHGqsJeuQw8K9olML7Erj_Ue1Aoi_pO_TUC2sz-o/export?format=pdf&amp;portrait=false&amp;size=A4&amp;fitw=true&amp;gridlines=true&amp;top_margin=0.25&amp;bottom_margin=0.25&amp;left_margin=0.25&amp;right_margin=0.25&amp;sheetnames=false&amp;printtitle=false&amp;fzr=true" rel="noopener noreferrer" style="background: linear-gradient(135deg, #d97706 0%, #b45309 100%); color: #ffffff !important; padding: 12px 22px; font-weight: 800; font-size: 0.92rem; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(217,119,6,0.4); border: 1.2px solid #fde047; transition: all 0.25s ease;" target="_blank" title="Landscape PDF வடிவில் பதிவிறக்கம்">
+<span>📄 கிடைமட்ட பிடிஎப் (Landscape PDF)</span> ➔
+    </a>
+</div>
+<!-- Highlight Notice & Alternate Drive Links -->
+<div style="background: rgba(0, 0, 0, 0.35); border: 1px dashed rgba(250, 204, 21, 0.6); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+<span style="font-size: 0.88rem; color: #fef08a; font-weight: 700;">
+      💡 PDF கோப்பானது அனைத்து நெடுவரிசைகளும் முழுமையாகப் பொருந்தும் வகையில் <b>கிடைமட்டத் தாளில் (Landscape A4)</b> பதிவிறக்கம் ஆகும்.
+    </span>
+<div style="display:flex; gap:12px; font-size:0.83rem;">
+<a href="https://docs.google.com/spreadsheets/d/1BhTgHGqsJeuQw8K9olML7Erj_Ue1Aoi_pO_TUC2sz-o/edit?usp=sharing" rel="noopener noreferrer" style="color:#fde047; text-decoration:none; font-weight:bold;" target="_blank">[ஆன்லைன் விரிதாள்] ↗</a>
+</div>
+</div>
+</section>
 <div class="closing-card">
 <h4>💼 "மேலாண்மை என்பது வெறும் நிர்வாகம் அல்ல; அது மனித வளத்தையும் சமூகத்தையும் வழிநடத்தும் ஆற்றல்!"</h4>
 <p>
@@ -5562,18 +5932,27 @@
 <button class="back-to-top no-print" onclick="window.scrollTo({top:0, behavior:'smooth'});" title="மேலே செல்ல" type="button">
     ▲ மேலே செல்க
   </button>
-<div class="kural-box">
+<nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar no-print">
+<a class="page-nav-btn btn-prev-animated" href="01_07_design_architecture_nata_nift.html" title="வடிவமைப்பு &amp; கட்டிடக்கலை (NATA / NIFT / UCEED)">
+<span class="nav-btn-icon">◀</span>
+<span class="nav-btn-text">வடிவமைப்பு &amp; கட்டிடக்கலை</span>
+</a>
+<a class="page-nav-btn btn-next-animated" href="01_09_hotel_management_nchmct.html" title="ஹோட்டல் மேலாண்மை &amp; கேட்டரிங் (NCHMCT JEE)">
+<span class="nav-btn-text">ஹோட்டல் மேலாண்மை</span>
+<span class="nav-btn-icon">▶</span>
+</a>
+</nav><div class="kural-box">
 <div class="kural-header">
 <span class="kural-icon">📜</span>
 <span class="kural-title">திருக்குறள் — அதிகாரம்: தெரிந்து வினையாடல் (குறள்: 517)</span>
-<span class="kural-sparkle">💼 தலைமைத்துவ ஆளுகை</span>
+<span class="kural-sparkle">💼 தலைமைத்துவம் &amp; தகுதியான பொறுப்பளித்தல்</span>
 </div>
 <div class="kural-verse-text">
     “இதனை இதனால் இவன்முடிக்கும் என்றாய்ந்து<br/>
     அதனை அவன்கண் விடல்.”
   </div>
 <div class="kural-meaning">
-<strong>மு. வரதராசனார் உரை:</strong> இந்தச் செயலை இந்த வழிமுறையினால் இவர் சிறப்பாகச் செய்து முடிப்பார் என்பதை நன்கு ஆராய்ந்து தெளிந்து, அந்தச் செயலை அவரிடம் ஒப்படைக்க வேண்டும்.
+<strong>மு. வரதராசனார் உரை:</strong> “இந்தச் செயலை, இந்தக் கருவியால் அல்லது வழிமுறையால், இவர் செய்து முடிப்பார் என்று தீர ஆராய்ந்து அறிந்து, அவரிடம் அந்தப் பொறுப்பை முழுமையாக ஒப்படைப்பதே தலைமைத்துவம் மற்றும் மேலாண்மையின் மிக உயர்ந்த ரகசியமாகும்” (The Essence of Delegation, Trust &amp; Human Resource Management).
   </div>
 </div><div class="creator-card" style="justify-content: center !important; text-align: center !important;">
 <div class="creator-typewriter-wrapper" style="justify-content: center !important; text-align: center !important; display: inline-flex !important; align-items: center !important;">
@@ -5798,5 +6177,48 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
-</body>
+<script>
+  // Typewriter Flash Ribbon Effect for Management
+  const guidanceMessages = [
+    "IIM இந்தூர், ரோஹ்தக், ராஞ்சி, போத்கயா, ஜம்மு: 5-ஆண்டு ஒருங்கிணைந்த IPM மேலாண்மைப் படிப்புகள்!",
+    "+2 முடித்தவுடன் IIM-ல் சேர IPMAT மற்றும் NTA நடத்தும் JIPMAT தேசிய நுழைவுத்தேர்வுகள்!",
+    "ஆண்டுக்கு ₹25-35 லட்சம் கார்ப்பரேட் தலைமைத்துவ வேலைவாய்ப்புகள் (Executive Leadership Placements)!",
+    "கலை, வணிகம், அறிவியல் என எந்தப் பிரிவு +2 மாணவர்களும் சமவாய்ப்புடன் எழுதக்கூடிய நுழைவுத்தேர்வு!",
+    "கல்விக் கட்டண விலக்குகள், தேசிய உதவித்தொகைகள் மற்றும் 100% பாதுகாப்பான கல்விக் கடன் வசதிகள்!"
+  ];
+
+  let gMsgIdx = 0;
+  let gCharIdx = 0;
+  let gIsDeleting = false;
+  const gTypingTarget = document.getElementById('guidanceTypewriter');
+
+  function typeGuidance() {
+    if (!gTypingTarget) return;
+    const currentMsg = guidanceMessages[gMsgIdx];
+    if (gIsDeleting) {
+      gTypingTarget.textContent = currentMsg.substring(0, gCharIdx - 1);
+      gCharIdx--;
+    } else {
+      gTypingTarget.textContent = currentMsg.substring(0, gCharIdx + 1);
+      gCharIdx++;
+    }
+
+    let typeSpeed = gIsDeleting ? 25 : 50;
+
+    if (!gIsDeleting && gCharIdx === currentMsg.length) {
+      typeSpeed = 2200; // pause at end
+      gIsDeleting = true;
+    } else if (gIsDeleting && gCharIdx === 0) {
+      gIsDeleting = false;
+      gMsgIdx = (gMsgIdx + 1) % guidanceMessages.length;
+      typeSpeed = 400; // pause before next
+    }
+
+    setTimeout(typeGuidance, typeSpeed);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(typeGuidance, 600);
+  });
+</script></body>
 </html>

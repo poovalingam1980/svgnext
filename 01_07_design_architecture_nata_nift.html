@@ -4524,6 +4524,63 @@ body {
     justify-content: center !important;
   }
 }
+
+/* Typing Flash Bar (வழிகாட்டல் பிளாஷ் ரிப்பன்) */
+.typing-banner-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  margin: 14px auto 18px auto !important;
+}
+
+.typing-container {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.95) 0%, rgba(255, 247, 237, 0.92) 100%) !important;
+  border: 1.5px solid #facc15 !important;
+  padding: 8px 22px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.15), inset 0 1px 2px #ffffff !important;
+  min-height: 44px !important;
+  max-width: 96% !important;
+  box-sizing: border-box !important;
+}
+
+.typing-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.84rem !important;
+  font-weight: 800 !important;
+  color: #92400e !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(250, 204, 21, 0.8) !important;
+  padding: 4px 12px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  flex-shrink: 0 !important;
+}
+
+.typing-text {
+  font-size: 0.98rem !important;
+  font-weight: 700 !important;
+  color: #451a03 !important;
+  letter-spacing: 0.2px !important;
+}
+
+.typing-cursor {
+  font-weight: 900 !important;
+  color: #d97706 !important;
+  animation: blinkCursor 0.8s infinite !important;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 </style>
 <style id="distinct-theme-css">
 /* ============================================================
@@ -5444,9 +5501,7 @@ body {
 <span class="nav-menu-btn btn-current-page">📐 வடிவமைப்பு &amp; கட்டிடக்கலை (NATA / NIFT / UCEED)</span>
 </div>
 <div class="breadcrumb-right-stack">
-<a class="nav-menu-btn btn-notice-link" href="#section-portals" title="அதிகாரப்பூர்வ போர்ட்டல்கள் &amp; அட்டவணை">
-<span>🏛️</span><span>அதிகாரப்பூர்வ போர்ட்டல்கள் ➔</span>
-</a>
+<a class="nav-menu-btn btn-sheet-link" href="https://docs.google.com/spreadsheets/d/1dhlOrmwM0aufRpdeCUGl-Pu0ckPUXOPAbJOORGiPZ2I/edit?usp=sharing" rel="noopener noreferrer" style="background: linear-gradient(135deg, #059669 0%, #047857 100%) !important; color: #ffffff !important; border: 1.2px solid #34d399 !important; padding: 5px 14px !important; border-radius: 8px !important; font-weight: 800 !important; font-size: 0.82rem !important; text-decoration: none !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; box-shadow: 0 2px 6px rgba(5, 150, 105, 0.35) !important;" target="_blank" title="தேசிய வடிவமைப்பு, ஃபேஷன் &amp; கட்டிடக்கலை நிறுவனங்கள் கூகுள் ஸ்ப்ரெட்ஷீட் அடைவு"><span class="btn-icon">📊</span><span class="btn-text">Google Sheet அடைவு ↗</span></a>
 </div>
 </nav><header class="portal-header crystal-header">
 <h1 class="portal-title">
@@ -5509,6 +5564,12 @@ body {
 <a class="marquee-pill-btn" href="https://admissions.nid.edu/" rel="noopener noreferrer" target="_blank">💡 NID போர்ட்டல்</a>
 <a class="marquee-pill-btn" href="https://www.coa.gov.in/" rel="noopener noreferrer" target="_blank">🏛️ COA கவுன்சில்</a>
 </div>
+</div>
+</div>
+<div class="typing-banner-wrap no-print">
+<div class="typing-container">
+<div class="typing-badge"><span class="typing-sparkle">✨</span><span>வழிகாட்டல்:</span></div>
+<span class="typing-text" id="guidanceTypewriter"></span><span class="typing-cursor">|</span>
 </div>
 </div>
 <!-- SECTION 1: Introduction -->
@@ -6337,6 +6398,50 @@ body {
 </div>
 </div>
 <!-- Closing Motivation Card -->
+
+<!-- ========================================================
+     தேசிய வடிவமைப்பு, ஃபேஷன் & கட்டிடக்கலை நிறுவனங்கள் அடைவு அறிவிப்புப் பெட்டி (Official Directory Notice Box)
+     ======================================================== -->
+<section class="card filter-item no-print" id="section-design-directory" style="margin-top: 26px; margin-bottom: 26px; border: 2px solid #0d9488; border-top: 6px solid #d97706; background: linear-gradient(135deg, #071f2d 0%, #0e3a53 50%, #071f2d 100%); color: #ffffff; border-radius: 18px; padding: 26px 30px; box-shadow: 0 8px 30px rgba(7, 31, 45, 0.45); scroll-margin-top: 30px;">
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; border-bottom: 1.5px solid rgba(255, 255, 255, 0.2); padding-bottom: 12px;">
+<div style="display: flex; align-items: center; gap: 10px;">
+<span style="font-size: 1.65rem;">📢</span>
+<h3 style="color: #fde047; font-size: 1.30rem; font-weight: 900; margin: 0; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">
+        தேசிய வடிவமைப்பு, ஃபேஷன் &amp; கட்டிடக்கலை நிறுவனங்கள் முழு அடைவு (Official Directory &amp; Spreadsheet)
+      </h3>
+</div>
+<span style="background: #fef08a; color: #713f12; font-weight: 800; font-size: 0.78rem; padding: 4px 14px; border-radius: 999px; text-transform: uppercase; box-shadow: 0 2px 6px rgba(0,0,0,0.25);">
+      அதிகாரப்பூர்வ விரிதாள் அறிவிப்பு
+    </span>
+</div>
+<p style="font-size: 0.94rem; color: #f1f5f9; line-height: 1.75; margin-bottom: 20px;">
+    இந்தியாவின் <b>18 தேசிய NIFT வளாகங்கள்</b> (சென்னை, தில்லி, மும்பை, பெங்களூரு உட்பட), <b>5 தேசிய NID மையங்கள்</b> (அகமதாபாத், ஆந்திரா, ஹரியானா, மத்தியப் பிரதேசம், அசாம்), <b>3 SPAs</b> (School of Planning &amp; Architecture — புதுதில்லி, போபால், விஜயவாடா), <b>IIT காரக்பூர் &amp; ரூர்க்கி B.Arch/B.Des</b>, <b>CEPT பல்கலைக்கழகம் அகமதாபாத்</b>, <b>அண்ணா பல்கலைக்கழக SAP வளாகம் (School of Architecture and Planning)</b> மற்றும் தமிழ்நாடு முழுவதும் செயல்படும் தலைசிறந்த கவுன்சில் ஆஃப் ஆர்க்கிடெக்சர் (COA) அங்கீகாரம் பெற்ற கல்லூரிகள் உட்பட <b>அனைத்து முன்னணி கட்டிடக்கலை மற்றும் வடிவமைப்பு நிறுவனங்களின்</b> பட்டப்படிப்புகள், சேர்க்கை நுழைவுத்தேர்வுகள் (NATA, JEE Main Paper 2, UCEED, CEED, NIFT GAT/CAT, NID DAT), அரசுப் பள்ளி மாணவர்களுக்கான 7.5% இடஒதுக்கீடு சலுகைகள் மற்றும் அதிகாரப்பூர்வ இணையதள இணைப்புகள் அடங்கிய முழுமையான அடைவுத் தொகுப்பு <b>கூகுள் விரிதாள் (Google Sheet), எக்செல் (Excel) மற்றும் கிடைமட்ட (Landscape) PDF</b> வடிவங்களில் பதிவிறக்கத்திற்குக் கீழே வழங்கப்பட்டுள்ளது.
+  </p>
+<!-- Action Download Buttons Grid -->
+<div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 18px;">
+<!-- Button 1: View Google Sheet -->
+<a class="dir-btn" href="https://docs.google.com/spreadsheets/d/1dhlOrmwM0aufRpdeCUGl-Pu0ckPUXOPAbJOORGiPZ2I/edit?usp=sharing" rel="noopener noreferrer" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #ffffff !important; padding: 12px 22px; font-weight: 800; font-size: 0.92rem; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(5,150,105,0.4); border: 1.2px solid #34d399; transition: all 0.25s ease;" target="_blank">
+<span>📊 கூகுள் விரிதாள் (Google Sheet)</span> ➔
+    </a>
+<!-- Button 2: Download Excel -->
+<a class="dir-btn" href="https://docs.google.com/spreadsheets/d/1dhlOrmwM0aufRpdeCUGl-Pu0ckPUXOPAbJOORGiPZ2I/export?format=xlsx" rel="noopener noreferrer" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff !important; padding: 12px 22px; font-weight: 800; font-size: 0.92rem; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(2,132,199,0.4); border: 1.2px solid #38bdf8; transition: all 0.25s ease;" target="_blank">
+<span>📥 எக்செல் கோப்பு (.xlsx)</span> ➔
+    </a>
+<!-- Button 3: Download Landscape PDF -->
+<a class="dir-btn" href="https://docs.google.com/spreadsheets/d/1dhlOrmwM0aufRpdeCUGl-Pu0ckPUXOPAbJOORGiPZ2I/export?format=pdf&amp;portrait=false&amp;size=A4&amp;fitw=true&amp;gridlines=true&amp;top_margin=0.25&amp;bottom_margin=0.25&amp;left_margin=0.25&amp;right_margin=0.25&amp;sheetnames=false&amp;printtitle=false&amp;fzr=true" rel="noopener noreferrer" style="background: linear-gradient(135deg, #d97706 0%, #b45309 100%); color: #ffffff !important; padding: 12px 22px; font-weight: 800; font-size: 0.92rem; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(217,119,6,0.4); border: 1.2px solid #fde047; transition: all 0.25s ease;" target="_blank" title="Landscape PDF வடிவில் பதிவிறக்கம்">
+<span>📄 கிடைமட்ட பிடிஎப் (Landscape PDF)</span> ➔
+    </a>
+</div>
+<!-- Highlight Notice & Alternate Drive Links -->
+<div style="background: rgba(0, 0, 0, 0.35); border: 1px dashed rgba(52, 211, 153, 0.6); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+<span style="font-size: 0.88rem; color: #a7f3d0; font-weight: 700;">
+      💡 PDF கோப்பானது அனைத்து நெடுவரிசைகளும் முழுமையாகப் பொருந்தும் வகையில் <b>கிடைமட்டத் தாளில் (Landscape A4)</b> பதிவிறக்கம் ஆகும்.
+    </span>
+<div style="display:flex; gap:12px; font-size:0.83rem;">
+<a href="https://docs.google.com/spreadsheets/d/1dhlOrmwM0aufRpdeCUGl-Pu0ckPUXOPAbJOORGiPZ2I/edit?usp=sharing" rel="noopener noreferrer" style="color:#fef08a; text-decoration:none; font-weight:bold;" target="_blank">[ஆன்லைன் விரிதாள்] ↗</a>
+</div>
+</div>
+</section>
 <div class="closing-card">
 <h4>🏛️ "கட்டிடக்கலை என்பது கல்லிலும் கண்ணாடியிலும் செதுக்கப்படும் கவிதை!"</h4>
 <p>
@@ -6351,17 +6456,12 @@ body {
 <span class="nav-btn-icon">◀</span>
 <span class="nav-btn-text">சட்டக் கல்வி (CLAT/AILET)</span>
 </a>
-<a class="page-nav-btn btn-home-animated" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முதன்மை மெனு">
-<span class="nav-btn-icon">🏠</span>
-<span class="nav-btn-text">நுழைவுத்தேர்வுகள் முகப்பு</span>
-</a>
 <a class="page-nav-btn btn-next-animated" href="01_08_management_iim_ipm.html" title="நிர்வாகவியல் (IIM IPM / JIPMAT)">
 <span class="nav-btn-text">நிர்வாகவியல் (IIM IPM)</span>
 <span class="nav-btn-icon">▶</span>
 </a>
 </nav>
 <!-- Bottom Print Trigger Button (Dedicated Print Button at the Bottom as instructed) -->
-
 <!-- Footer Section -->
 <!-- ==================================================== -->
 <!-- திருக்குறள் ஊக்கப் பகுதி (Full-Width Responsive Shimmer) -->
@@ -6370,15 +6470,15 @@ body {
 <div class="kural-box">
 <div class="kural-header">
 <span class="kural-icon">📜</span>
-<span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-<span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
+<span class="kural-title">திருக்குறள் — அதிகாரம்: தெரிந்து செயல்வகை (குறள்: 461)</span>
+<span class="kural-sparkle">📐 திட்டமிடல் &amp; வடிவமைப்பு கட்டமைப்பு</span>
 </div>
 <div class="kural-verse-text">
-    “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
-    திண்ணியர் ஆகப் பெறின்.”
+    “அழிவதூஉம் ஆவதூஉம் ஆகி வழிபயக்கும்<br/>
+    ஊதியமும் சூழ்ந்து செயல்.”
   </div>
 <div class="kural-meaning">
-<strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
+<strong>மு. வரதராசனார் உரை:</strong> ஒரு புதிய வடிவமைப்பு அல்லது கட்டிடக் கட்டமைப்பைத் தொடங்கும் முன், அதனால் அழியக்கூடியவை (செலவிடப்படும் மூலப்பொருட்கள்), புதிதாக உருவாகும் ஆக்கம் (கட்டமைப்பு வடிவம்), பின்னர் அதிலிருந்து தொடர்ந்து விளையும் நற்பயன் அனைத்தையும் நுணுக்கமாக முன்கூட்டியே ஆராய்ந்து திட்டமிட்டுச் செயல்படுத்துவதே தலைசிறந்த கட்டிடக்கலைஞரின் அறிவாகும்.
   </div>
 </div><div class="creator-card" style="justify-content: center !important; text-align: center !important;">
 <div class="creator-typewriter-wrapper" style="justify-content: center !important; text-align: center !important; display: inline-flex !important; align-items: center !important;">
@@ -6583,5 +6683,49 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
-</body>
+<script>
+  // Typewriter Flash Ribbon Effect
+  const guidanceMessages = [
+    "NATA & JEE Paper 2: தேசிய அளவிலான தலைசிறந்த B.Arch கட்டிடக்கலை கல்லூரி சேர்க்கை!",
+    "18 தேசிய NIFT வளாகங்கள் & NID-ல் B.Des ஆடை வடிவமைப்பு மற்றும் தொழில்துறை வடிவமைப்பு!",
+    "அரசுப் பள்ளி மாணவர்களுக்கு 7.5% முன்னுரிமை இடஒதுக்கீடு & 100% கல்விக் கட்டண விலக்கு!",
+    "IIT ரூர்க்கி, IIT கரக்பூர் மற்றும் SPA டெல்லி/போபால்/விஜயவாடா உயர் கல்வி வாய்ப்புகள்!",
+    "வரைதல் திறன், முப்பரிமாணக் கற்பனைத்திறன் மற்றும் அழகியல் பார்வைக்கான தேசிய வழிகாட்டி!"
+  ];
+
+  let gMsgIdx = 0;
+  let gCharIdx = 0;
+  let gIsDeleting = false;
+  const gTypingTarget = document.getElementById('guidanceTypewriter');
+
+  function typeGuidance() {
+    if (!gTypingTarget) return;
+    const currentMsg = guidanceMessages[gMsgIdx];
+    if (gIsDeleting) {
+      gTypingTarget.textContent = currentMsg.substring(0, gCharIdx - 1);
+      gCharIdx--;
+    } else {
+      gTypingTarget.textContent = currentMsg.substring(0, gCharIdx + 1);
+      gCharIdx++;
+    }
+
+    let delay = gIsDeleting ? 25 : 55;
+
+    if (!gIsDeleting && gCharIdx === currentMsg.length) {
+      delay = 2400;
+      gIsDeleting = true;
+    } else if (gIsDeleting && gCharIdx === 0) {
+      gIsDeleting = false;
+      gMsgIdx = (gMsgIdx + 1) % guidanceMessages.length;
+      delay = 500;
+    }
+
+    setTimeout(typeGuidance, delay);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', typeGuidance);
+  } else {
+    typeGuidance();
+  }
+</script></body>
 </html>
