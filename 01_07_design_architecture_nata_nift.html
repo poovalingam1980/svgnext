@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>வடிவமைப்பு மற்றும் கட்டிடக்கலை (Design &amp; Architecture - NATA, JEE Paper 2, UCEED, NIFT, NID) முழுமையான வழிகாட்டி - முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
+<title>வடிவமைப்பு மற்றும் கட்டிடக்கலை நுழைவுத்தேர்வுகள் (NATA / JEE Paper 2 / UCEED / NIFT / NID) முழுமையான வழிகாட்டி | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை</title>
 <!-- Google Fonts: Inter & Noto Sans Tamil -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -4097,6 +4097,433 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
     }
 
+
+/* ========================================================
+   CANONICAL FLUID 100% MONITOR FULL-SCREEN SYSTEM (MATCHING MEDICAL NEET)
+   மானிட்டரின் முழு அகலத்தையும் பயன்படுத்தும் நவீன முழுத்திரை கட்டமைப்பு
+   ======================================================== */
+body {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+  background-color: var(--bg-main, #f8fafc) !important;
+}
+
+.portal-layout-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 100vh !important;
+  position: relative !important;
+  align-items: stretch !important;
+  box-sizing: border-box !important;
+}
+
+/* Fixed Left Sidebar on Desktop */
+.desktop-left-sidebar {
+  width: 295px !important;
+  min-width: 295px !important;
+  max-width: 295px !important;
+  background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+  border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  z-index: 1000 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Main Content Column Fluid Width */
+.portal-main-content {
+  margin-left: 295px !important;
+  width: calc(100% - 295px) !important;
+  min-height: 100vh !important;
+  padding: 12px clamp(12px, 1.8vw, 36px) 40px !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+.portal-container,
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.content-section,
+.card.filter-item,
+.card,
+.portal-header,
+.crystal-header,
+.breadcrumb-bar,
+.quick-nav-marquee-container,
+.typing-banner-wrap,
+.bottom-page-nav-bar,
+.sheet-announcement-box,
+.closing-card,
+.kural-box,
+.creator-card,
+.portal-footer,
+.table-container,
+.table-responsive {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.card.filter-item,
+.content-section {
+  padding: 24px clamp(16px, 2vw, 32px) !important;
+  margin: 0 0 24px 0 !important;
+  border-radius: 14px !important;
+}
+
+.portal-subtitle,
+.closing-card p,
+.hero-banner h2,
+.hero-banner p {
+  max-width: 100% !important;
+}
+
+@media (max-width: 1024px) {
+  .desktop-left-sidebar {
+    position: fixed !important;
+    left: -320px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 295px !important;
+    height: 100vh !important;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 9999 !important;
+    box-shadow: 6px 0 35px rgba(0, 0, 0, 0.85) !important;
+  }
+  .desktop-left-sidebar.active,
+  .desktop-left-sidebar.sidebar-open {
+    left: 0 !important;
+  }
+  .portal-main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding: 8px 12px 30px !important;
+  }
+}
+
+/* ========================================================
+   STANDARDIZED BREADCRUMB BAR
+   ======================================================== */
+.breadcrumb-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.4) !important;
+  border-radius: 12px !important;
+  padding: 8px 14px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.breadcrumb-left-stack {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+
+.breadcrumb-right-stack {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-left: auto !important;
+  flex-wrap: wrap !important;
+}
+
+.nav-menu-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.84rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  color: #e2e8f0 !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+.nav-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #fef08a !important;
+}
+
+.nav-menu-btn.btn-current-page {
+  background: rgba(56, 189, 248, 0.22) !important;
+  border: 1px solid #38bdf8 !important;
+  color: #38bdf8 !important;
+  font-weight: 800 !important;
+}
+
+.nav-menu-separator {
+  color: #94a3b8 !important;
+  font-size: 0.75rem !important;
+}
+
+.btn-notice-link {
+  background: rgba(254, 240, 138, 0.15) !important;
+  border: 1px solid #fde047 !important;
+  color: #fef08a !important;
+}
+
+/* ========================================================
+   STANDARDIZED CRYSTAL HERO HEADER
+   ======================================================== */
+.portal-header.crystal-header {
+  background: linear-gradient(135deg, #091a3e 0%, #172554 40%, #1e1b4b 75%, #0f172a 100%) !important;
+  border: 2.2px solid #38bdf8 !important;
+  border-bottom: 4.5px solid #0284c7 !important;
+  border-radius: 18px !important;
+  padding: 32px 26px 26px !important;
+  margin-bottom: 18px !important;
+  box-shadow: 0 0 24px rgba(56, 189, 248, 0.35), 0 0 45px rgba(2, 132, 199, 0.20), 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  outline: 2px solid rgba(56, 189, 248, 0.6) !important;
+  outline-offset: 3px !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.portal-title {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: clamp(1.6rem, 2.6vw, 2.35rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.35 !important;
+  margin: 0 0 12px 0 !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.7) !important;
+}
+
+.highlight-cyan {
+  color: #38bdf8 !important;
+  background: linear-gradient(90deg, #38bdf8, #7dd3fc);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.portal-subtitle {
+  font-size: 1.02rem !important;
+  color: #e2e8f0 !important;
+  line-height: 1.65 !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+
+/* ========================================================
+   STANDARDIZED QUICK NAV MARQUEE CONTAINER
+   ======================================================== */
+.quick-nav-marquee-container {
+  display: flex !important;
+  align-items: center !important;
+  background: #0f172a !important;
+  border: 1.5px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 4px 6px !important;
+  margin: 0 0 18px 0 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.marquee-static-label {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+  margin-right: 8px !important;
+}
+
+.pulse-icon {
+  font-size: 1rem !important;
+  animation: pulseRotate 2s infinite ease-in-out !important;
+}
+
+@keyframes pulseRotate {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.marquee-scroll-track {
+  display: flex !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+.marquee-content-loop {
+  display: flex !important;
+  gap: 8px !important;
+  animation: marqueeScroll 45s linear infinite !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.quick-nav-marquee-container:hover .marquee-content-loop {
+  animation-play-state: paused !important;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-pill-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  padding: 5px 14px !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #e2e8f0 !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+}
+
+.marquee-pill-btn:hover {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+  border-color: #38bdf8 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* ========================================================
+   STANDARDIZED BOTTOM PAGE NAV BAR
+   ======================================================== */
+.bottom-page-nav-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 14px 20px !important;
+  margin: 26px 0 28px 0 !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+}
+
+.page-nav-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 10px 20px !important;
+  border-radius: 10px !important;
+  font-family: inherit !important;
+  font-size: 0.88rem !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  transition: all 0.25s ease !important;
+}
+
+.page-nav-btn.btn-prev-animated {
+  border: 2px solid #059669 !important;
+  background: linear-gradient(135deg, #047857 0%, #065f46 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(4, 120, 87, 0.35) !important;
+  animation: pulseNudgeLeft 3s ease-in-out infinite !important;
+}
+
+.page-nav-btn.btn-prev-animated:hover {
+  background: linear-gradient(135deg, #065f46 0%, #022c22 100%) !important;
+  border-color: #fde047 !important;
+  transform: translateX(-5px) scale(1.04) !important;
+  box-shadow: 0 6px 20px rgba(4, 120, 87, 0.55), 0 0 15px rgba(52, 211, 153, 0.5) !important;
+  color: #ffffff !important;
+}
+
+.page-nav-btn.btn-home-animated {
+  border: 2px solid #4f46e5 !important;
+  background: linear-gradient(135deg, #4338ca 0%, #312e81 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(67, 56, 202, 0.35) !important;
+}
+
+.page-nav-btn.btn-home-animated:hover {
+  background: linear-gradient(135deg, #3730a3 0%, #1e1b4b 100%) !important;
+  border-color: #fde047 !important;
+  transform: translateY(-2px) scale(1.04) !important;
+  box-shadow: 0 6px 20px rgba(67, 56, 202, 0.55) !important;
+  color: #ffffff !important;
+}
+
+.page-nav-btn.btn-next-animated {
+  border: 2px solid #0284c7 !important;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;
+  animation: pulseNudgeRight 3s ease-in-out infinite !important;
+}
+
+.page-nav-btn.btn-next-animated:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #0c4a6e 100%) !important;
+  border-color: #fde047 !important;
+  transform: translateX(5px) scale(1.04) !important;
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.55), 0 0 15px rgba(56, 189, 248, 0.5) !important;
+  color: #ffffff !important;
+}
+
+@keyframes pulseNudgeLeft {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-4px); }
+}
+
+@keyframes pulseNudgeRight {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+
+@media (max-width: 768px) {
+  .bottom-page-nav-bar {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  .page-nav-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
 </style>
 <style id="distinct-theme-css">
 /* ============================================================
@@ -5008,41 +5435,80 @@
 <!-- Hero Header Banner -->
 <!-- Segmented Navigation Menu Bar (ceosvg-portal standard) -->
 <!-- Portal Header (Matching Section 01, 02, 03) -->
-<header class="portal-header">
-<div class="header-badge-row">
-<span class="header-tag primary">பிரிவு 06 (Section 06)</span>
-<span class="header-tag secondary">வடிவமைப்பு &amp; கட்டிடக்கலை (Design &amp; Architecture)</span>
-<span class="header-tag amber">NATA • JEE Main Paper 2A &amp; 2B • UCEED (IITs) • NIFT • NID DAT</span>
+<nav class="breadcrumb-bar no-print">
+<div class="breadcrumb-left-stack">
+<a class="nav-menu-btn" href="index.html" title="வழிகாட்டி முதன்மை முகப்பு">🧭 வழிகாட்டி முகப்பு</a>
+<span class="nav-menu-separator">▶</span>
+<a class="nav-menu-btn" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முதன்மை மெனு">🎯 நுழைவுத்தேர்வுகள்</a>
+<span class="nav-menu-separator">▶</span>
+<span class="nav-menu-btn btn-current-page">📐 வடிவமைப்பு &amp; கட்டிடக்கலை (NATA / NIFT / UCEED)</span>
 </div>
+<div class="breadcrumb-right-stack">
+<a class="nav-menu-btn btn-notice-link" href="#section-portals" title="அதிகாரப்பூர்வ போர்ட்டல்கள் &amp; அட்டவணை">
+<span>🏛️</span><span>அதிகாரப்பூர்வ போர்ட்டல்கள் ➔</span>
+</a>
+</div>
+</nav><header class="portal-header crystal-header">
 <h1 class="portal-title">
-    தேசிய கட்டிடக்கலை &amp; வடிவமைப்பு <span class="accent-gold">(Design &amp; Architecture)</span>
+    வடிவமைப்பு &amp; கட்டிடக்கலை நுழைவுத்தேர்வுகள்
+    <span class="highlight-cyan">(Design &amp; Architecture)</span>
 </h1>
 <p class="portal-subtitle">
-    12-ஆம் வகுப்பு பள்ளி மாணவர்களுக்கான B.Arch (கட்டடக்கலை), B.Planning (நகரத் திட்டமிடல்), B.Des (ஃபேஷன் &amp; தொழில்துறை வடிவமைப்பு) பட்டப்படிப்புகள், தேசியத் தேர்வுகள், போர்ட்ஃபோலியோ வழிகாட்டல் &amp; சேர்க்கை விவரங்கள் அடங்கிய விரிவான தகவல் தொகுப்பு.
+    12-ஆம் வகுப்பு பள்ளி மாணவர்களுக்கான B.Arch (கட்டடக்கலை), B.Planning (நகரத் திட்டமிடல்), B.Des (ஃபேஷன் &amp; தொழில்துறை வடிவமைப்பு) பட்டப்படிப்புகள், தேசியத் தேர்வுகள் (NATA • JEE Main Paper 2A &amp; 2B • UCEED • NIFT • NID DAT), போர்ட்ஃபோலியோ வழிகாட்டல் &amp; சேர்க்கை விவரங்கள் அடங்கிய விரிவான தகவல் தொகுப்பு.
   </p>
 </header>
 <!-- Quick Navigation Card (Matching Section 01, 02, 03) -->
-<div class="quick-nav-card no-print">
-<div class="quick-nav-title">
-<span>🧭 <b>விரைவு வழிசெலுத்தல் (Quick Navigation):</b></span>
-<span style="font-size:12px; color:#0369a1; font-weight:normal;">(தேவையான பகுதிக்கு உடனடியாகச் செல்ல கிளிக் செய்க)</span>
+<div aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை" class="quick-nav-marquee-container">
+<div class="marquee-static-label" title="விரைவு வழிகாட்டல்">
+<span class="pulse-icon">⚡</span>
 </div>
-<div class="quick-nav-grid">
-<a class="nav-btn" href="#section-intro"><span class="badge-no">1</span> 📐 கட்டிடக்கலை &amp; வடிவமைப்பு அறிமுகம்</a>
-<a class="nav-btn" href="#section-arch-focus"><span class="badge-no">2</span> 🏛️ B.Arch கட்டிடக்கலை சிறப்பு வழிகாட்டி</a>
-<a class="nav-btn" href="#section-nata"><span class="badge-no">3</span> 📐 NATA தேர்வு கட்டமைப்பு &amp; நுணுக்கங்கள்</a>
-<a class="nav-btn" href="#section-jeepaper2"><span class="badge-no">4</span> 🏛️ JEE Main Paper 2A &amp; 2B (NIT/SPA)</a>
-<a class="nav-btn" href="#section-aat"><span class="badge-no">5</span> 🌟 IIT AAT தேர்வு - விண்ணப்பம் &amp; தகுதி</a>
-<a class="nav-btn" href="#section-tndalu-tnea"><span class="badge-no">6</span> 🎓 தமிழ்நாடு B.Arch சேர்க்கை (TNEA)</a>
-<a class="nav-btn" href="#section-uceed"><span class="badge-no">7</span> 🎨 IIT UCEED - இளநிலை வடிவமைப்பு (B.Des)</a>
-<a class="nav-btn" href="#section-nift"><span class="badge-no">8</span> 🧵 NIFT ஃபேஷன் &amp; ஆடை வடிவமைப்பு</a>
-<a class="nav-btn" href="#section-nid"><span class="badge-no">9</span> 💡 NID DAT - தேசிய வடிவமைப்பு நிறுவனம்</a>
-<a class="nav-btn" href="#section-institutes"><span class="badge-no">10</span> 🏛️ SPAs, CEPT &amp; சிற்பக்கலை</a>
-<a class="nav-btn" href="#section-drawing-prep"><span class="badge-no">11</span> 🎯 வரைதல் &amp; நுண்ணறிவு தயாரிப்பு உத்திகள்</a>
-<a class="nav-btn" href="#section-scholarships"><span class="badge-no">12</span> 💰 கட்டணம், 7.5% சலுகை &amp; கல்விக் கடன்கள்</a>
-<a class="nav-btn" href="#section-careers"><span class="badge-no">13</span> 💼 வேலைவாய்ப்புகள் &amp; தொழில் உரிமம் (COA)</a>
-<a class="nav-btn" href="#section-portals"><span class="badge-no">14</span> 🌐 அதிகாரப்பூர்வ இணையதளங்கள் &amp; அட்டவணை</a>
-<a class="nav-btn" href="#section-faqs"><span class="badge-no">15</span> ❓ அடிக்கடி கேட்கப்படும் வினாக்கள் (FAQs)</a>
+<div class="marquee-scroll-track">
+<div class="marquee-content-loop">
+<a class="marquee-pill-btn" href="#section-intro">📐 1. கட்டிடக்கலை அறிமுகம்</a>
+<a class="marquee-pill-btn" href="#section-arch-focus">🏛️ 2. B.Arch சிறப்பு வழிகாட்டி</a>
+<a class="marquee-pill-btn" href="#section-nata">📐 3. NATA தேர்வு</a>
+<a class="marquee-pill-btn" href="#section-jeepaper2">🏛️ 4. JEE Main Paper 2 (NIT/SPA)</a>
+<a class="marquee-pill-btn" href="#section-aat">🌟 5. IIT AAT தேர்வு</a>
+<a class="marquee-pill-btn" href="#section-tndalu-tnea">🎓 6. TNEA B.Arch சேர்க்கை</a>
+<a class="marquee-pill-btn" href="#section-uceed">🎨 7. UCEED (IITs B.Des)</a>
+<a class="marquee-pill-btn" href="#section-nift">🧵 8. NIFT தேர்வு</a>
+<a class="marquee-pill-btn" href="#section-nid">💡 9. NID DAT வடிவமைப்பு</a>
+<a class="marquee-pill-btn" href="#section-institutes">🏛️ 10. SPAs, CEPT &amp; மாமல்லபுரம்</a>
+<a class="marquee-pill-btn" href="#section-drawing-prep">🎯 11. வரைதல் தயாரிப்பு</a>
+<a class="marquee-pill-btn" href="#section-scholarships">💰 12. 7.5% இடஒதுக்கீடு &amp; கட்டணம்</a>
+<a class="marquee-pill-btn" href="#section-careers">💼 13. வேலைவாய்ப்பு &amp; COA</a>
+<a class="marquee-pill-btn" href="#section-portals">🌐 14. முக்கிய போர்ட்டல்கள்</a>
+<a class="marquee-pill-btn" href="#section-faqs">❓ 15. வினா-விடைகள் (FAQs)</a>
+<a class="marquee-pill-btn" href="https://www.nata.in/" rel="noopener noreferrer" target="_blank">🌐 NATA போர்ட்டல்</a>
+<a class="marquee-pill-btn" href="https://jeemain.nta.nic.in/" rel="noopener noreferrer" target="_blank">🏛️ NTA JEE Paper 2</a>
+<a class="marquee-pill-btn" href="https://www.uceed.iitb.ac.in/" rel="noopener noreferrer" target="_blank">🎨 UCEED (IIT Bombay)</a>
+<a class="marquee-pill-btn" href="https://www.nift.ac.in/" rel="noopener noreferrer" target="_blank">🧵 NIFT போர்ட்டல்</a>
+<a class="marquee-pill-btn" href="https://admissions.nid.edu/" rel="noopener noreferrer" target="_blank">💡 NID போர்ட்டல்</a>
+<a class="marquee-pill-btn" href="https://www.coa.gov.in/" rel="noopener noreferrer" target="_blank">🏛️ COA கவுன்சில்</a>
+</div>
+<div aria-hidden="true" class="marquee-content-loop">
+<a class="marquee-pill-btn" href="#section-intro">📐 1. கட்டிடக்கலை அறிமுகம்</a>
+<a class="marquee-pill-btn" href="#section-arch-focus">🏛️ 2. B.Arch சிறப்பு வழிகாட்டி</a>
+<a class="marquee-pill-btn" href="#section-nata">📐 3. NATA தேர்வு</a>
+<a class="marquee-pill-btn" href="#section-jeepaper2">🏛️ 4. JEE Main Paper 2 (NIT/SPA)</a>
+<a class="marquee-pill-btn" href="#section-aat">🌟 5. IIT AAT தேர்வு</a>
+<a class="marquee-pill-btn" href="#section-tndalu-tnea">🎓 6. TNEA B.Arch சேர்க்கை</a>
+<a class="marquee-pill-btn" href="#section-uceed">🎨 7. UCEED (IITs B.Des)</a>
+<a class="marquee-pill-btn" href="#section-nift">🧵 8. NIFT தேர்வு</a>
+<a class="marquee-pill-btn" href="#section-nid">💡 9. NID DAT வடிவமைப்பு</a>
+<a class="marquee-pill-btn" href="#section-institutes">🏛️ 10. SPAs, CEPT &amp; மாமல்லபுரம்</a>
+<a class="marquee-pill-btn" href="#section-drawing-prep">🎯 11. வரைதல் தயாரிப்பு</a>
+<a class="marquee-pill-btn" href="#section-scholarships">💰 12. 7.5% இடஒதுக்கீடு &amp; கட்டணம்</a>
+<a class="marquee-pill-btn" href="#section-careers">💼 13. வேலைவாய்ப்பு &amp; COA</a>
+<a class="marquee-pill-btn" href="#section-portals">🌐 14. முக்கிய போர்ட்டல்கள்</a>
+<a class="marquee-pill-btn" href="#section-faqs">❓ 15. வினா-விடைகள் (FAQs)</a>
+<a class="marquee-pill-btn" href="https://www.nata.in/" rel="noopener noreferrer" target="_blank">🌐 NATA போர்ட்டல்</a>
+<a class="marquee-pill-btn" href="https://jeemain.nta.nic.in/" rel="noopener noreferrer" target="_blank">🏛️ NTA JEE Paper 2</a>
+<a class="marquee-pill-btn" href="https://www.uceed.iitb.ac.in/" rel="noopener noreferrer" target="_blank">🎨 UCEED (IIT Bombay)</a>
+<a class="marquee-pill-btn" href="https://www.nift.ac.in/" rel="noopener noreferrer" target="_blank">🧵 NIFT போர்ட்டல்</a>
+<a class="marquee-pill-btn" href="https://admissions.nid.edu/" rel="noopener noreferrer" target="_blank">💡 NID போர்ட்டல்</a>
+<a class="marquee-pill-btn" href="https://www.coa.gov.in/" rel="noopener noreferrer" target="_blank">🏛️ COA கவுன்சில்</a>
+</div>
 </div>
 </div>
 <!-- SECTION 1: Introduction -->
@@ -5880,13 +6346,22 @@
 <div style="margin-top:14px; font-weight:700; color:var(--primary); font-size:14px;">
       முதன்மைக் கல்வி அலுவலர் அலுவலகம், சிவகங்கை மாவட்டம்.
     </div>
-</div>
+</div><nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar no-print">
+<a class="page-nav-btn btn-prev-animated" href="01_06_law_clat_nlu.html" title="சட்டக் கல்வி (CLAT / AILET)">
+<span class="nav-btn-icon">◀</span>
+<span class="nav-btn-text">சட்டக் கல்வி (CLAT/AILET)</span>
+</a>
+<a class="page-nav-btn btn-home-animated" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முதன்மை மெனு">
+<span class="nav-btn-icon">🏠</span>
+<span class="nav-btn-text">நுழைவுத்தேர்வுகள் முகப்பு</span>
+</a>
+<a class="page-nav-btn btn-next-animated" href="01_08_management_iim_ipm.html" title="நிர்வாகவியல் (IIM IPM / JIPMAT)">
+<span class="nav-btn-text">நிர்வாகவியல் (IIM IPM)</span>
+<span class="nav-btn-icon">▶</span>
+</a>
+</nav>
 <!-- Bottom Print Trigger Button (Dedicated Print Button at the Bottom as instructed) -->
-<div class="bottom-print-wrapper no-print">
-<button class="btn-print-bottom" onclick="window.print();" title="அச்சிட அல்லது PDF ஆக சேமிக்க" type="button">
-<span>🖨️</span> அச்சிடுக / PDF ஆகச் சேமிக்க
-    </button>
-</div>
+
 <!-- Footer Section -->
 <!-- ==================================================== -->
 <!-- திருக்குறள் ஊக்கப் பகுதி (Full-Width Responsive Shimmer) -->
@@ -5924,7 +6399,7 @@
 <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important; margin-bottom: 0 !important;">
     © 2026 Chief Educational Office, Sivagangai. All Rights Reserved. • வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
-</footer></div>
+<p class="footer-last-updated" style="font-size: 0.84rem !important; color: #fde047 !important; margin-top: 6px !important; font-weight: 700 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.8) !important;">📅 கடைசியாகப் புதுப்பிக்கப்பட்டது: <span id="portalLastUpdatedDate">அக்டோபர் 2026</span></p></footer></div>
 <!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
 <!-- /.container -->
 </main>
