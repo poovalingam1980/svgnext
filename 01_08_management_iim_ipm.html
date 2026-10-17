@@ -4253,6 +4253,113 @@
   max-width: 100% !important;
   box-sizing: border-box !important;
 }
+
+/* ========================================================
+   FULL SCREEN MONITOR WIDTH ENFORCEMENT (MEDICAL NEET 01_02 MODEL)
+   ======================================================== */
+html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+  background-color: var(--bg-main, #f8fafc) !important;
+}
+
+.portal-layout-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 100vh !important;
+  position: relative !important;
+  align-items: stretch !important;
+  box-sizing: border-box !important;
+}
+
+.desktop-left-sidebar {
+  width: 295px !important;
+  min-width: 295px !important;
+  max-width: 295px !important;
+  background: linear-gradient(180deg, #070b14 0%, #0c1222 35%, #0f172a 70%, #080d1a 100%) !important;
+  border-right: 1.8px solid rgba(212, 175, 55, 0.35) !important;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5) !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  z-index: 1000 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.portal-main-content {
+  margin-left: 295px !important;
+  width: calc(100% - 295px) !important;
+  min-height: 100vh !important;
+  padding: 12px clamp(12px, 1.8vw, 36px) 40px !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+.portal-container,
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.info-card,
+.content-card,
+.content-section,
+section,
+.portal-header,
+.breadcrumb-bar,
+.quick-nav-marquee-container,
+.quick-nav-card,
+.hero-rich-bottom-ribbon,
+.bottom-page-nav-bar,
+.kural-box,
+.traditional-kural-card,
+.creator-card,
+.portal-footer,
+.card,
+.table-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 1024px) {
+  .desktop-left-sidebar {
+    position: fixed !important;
+    left: -320px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 295px !important;
+    height: 100vh !important;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 9999 !important;
+  }
+  .desktop-left-sidebar.active,
+  .desktop-left-sidebar.sidebar-open {
+    left: 0 !important;
+  }
+  .portal-main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding: 8px 12px 30px !important;
+  }
+}
+
 </style>
 <style id="distinct-theme-css">
 /* ============================================================
@@ -5173,16 +5280,10 @@
 </div>
 <div class="breadcrumb-right-stack">
 <a class="nav-menu-btn btn-sheet-link" href="https://docs.google.com/spreadsheets/d/1BhTgHGqsJeuQw8K9olML7Erj_Ue1Aoi_pO_TUC2sz-o/edit?usp=sharing" rel="noopener noreferrer" style="background: linear-gradient(135deg, #059669 0%, #047857 100%) !important; color: #ffffff !important; border: 1.2px solid #34d399 !important; padding: 5px 14px !important; border-radius: 8px !important; font-weight: 800 !important; font-size: 0.82rem !important; text-decoration: none !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; box-shadow: 0 2px 6px rgba(5, 150, 105, 0.35) !important;" target="_blank" title="தேசிய IIM &amp; மேலாண்மை நிறுவனங்கள் கூகுள் ஸ்ப்ரெட்ஷீட் அடைவு">
-<span class="btn-icon">📊</span>
-<span class="btn-text">Google Sheet அடைவு ↗</span>
+<span class="btn-icon">🏛️</span><span class="btn-text">கல்லூரிகள் பட்டியல் ➔</span>
 </a>
 </div>
 </nav><header class="portal-header">
-<div class="header-badge-row">
-<span class="header-tag primary">பிரிவு 07 (Section 07)</span>
-<span class="header-tag secondary">ஐ.ஐ.எம் மேலாண்மை (5-Year Integrated Management - IPM)</span>
-<span class="header-tag amber">IPMAT • JIPMAT • IIMs • IIFT • NALSAR</span>
-</div>
 <h1 class="portal-title">
     ஐ.ஐ.எம் (IIMs) 5 ஆண்டு ஒருங்கிணைந்த மேலாண்மை <span class="accent-gold">(IPM - BBA + MBA)</span>
 </h1>
@@ -5865,7 +5966,6 @@
 </div>
 </div>
 <!-- Closing Motivation Card -->
-
 <!-- ========================================================
      தேசிய மேலாண்மை நிறுவனங்கள் (IIMs & Top B-Schools) அடைவு அறிவிப்புப் பெட்டி
      ======================================================== -->
@@ -5941,19 +6041,22 @@
 <span class="nav-btn-text">ஹோட்டல் மேலாண்மை</span>
 <span class="nav-btn-icon">▶</span>
 </a>
-</nav><div class="kural-box">
-<div class="kural-header">
-<span class="kural-icon">📜</span>
-<span class="kural-title">திருக்குறள் — அதிகாரம்: தெரிந்து வினையாடல் (குறள்: 517)</span>
-<span class="kural-sparkle">💼 தலைமைத்துவம் &amp; தகுதியான பொறுப்பளித்தல்</span>
+</nav><div aria-label="திருக்குறள் வாழ்த்து" class="traditional-kural-card no-print">
+<div class="kural-top-row">
+<div class="kural-chip-wrap">
+<span class="kural-feather-icon">📜</span>
+<span class="kural-chip-text">திருக்குறள் — அதிகாரம்: தெரிந்து வினையாடல் (குறள்: 517)</span>
 </div>
-<div class="kural-verse-text">
-    “இதனை இதனால் இவன்முடிக்கும் என்றாய்ந்து<br/>
-    அதனை அவன்கண் விடல்.”
-  </div>
-<div class="kural-meaning">
-<strong>மு. வரதராசனார் உரை:</strong> “இந்தச் செயலை, இந்தக் கருவியால் அல்லது வழிமுறையால், இவர் செய்து முடிப்பார் என்று தீர ஆராய்ந்து அறிந்து, அவரிடம் அந்தப் பொறுப்பை முழுமையாக ஒப்படைப்பதே தலைமைத்துவம் மற்றும் மேலாண்மையின் மிக உயர்ந்த ரகசியமாகும்” (The Essence of Delegation, Trust &amp; Human Resource Management).
-  </div>
+<span class="kural-topic-badge">💼 தலைமைத்துவம் &amp; தகுதியான பொறுப்பளித்தல்</span>
+</div>
+<div class="kural-couplet-lines">
+<span class="kural-first-line">“இதனை இதனால் இவன்முடிக்கும் என்றாய்ந்து</span>
+<span class="kural-second-line">அதனை அவன்கண் விடல்.”</span>
+</div>
+<div class="kural-meaning-row">
+<span class="kural-meaning-label">மு. வரதராசனார் உரை:</span>
+<span class="kural-meaning-text">இந்தச் செயலை, இந்தக் கருவியால் அல்லது வழிமுறையால், இவர் செய்து முடிப்பார் என்று தீர ஆராய்ந்து அறிந்து, அவரிடம் அந்தப் பொறுப்பை ஒப்படைக்க வேண்டும். நிர்வாகவியல் மற்றும் தலைமைத்துவப் பொறுப்பில் சிறந்து விளங்க விரும்பும் மேலாண்மை மாணவர்களுக்குப் பொருத்தமான மனிதர்களைக் கண்டறிந்து சரியான பொறுப்புகளை வழங்கும் இப்பண்பே உயர்ந்த வெற்றியைத் தரும்.</span>
+</div>
 </div><div class="creator-card" style="justify-content: center !important; text-align: center !important;">
 <div class="creator-typewriter-wrapper" style="justify-content: center !important; text-align: center !important; display: inline-flex !important; align-items: center !important;">
 <span class="creator-typewriter-target" id="creatorTypewriterTarget" style="text-align: center !important;"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role">, பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role">, Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
