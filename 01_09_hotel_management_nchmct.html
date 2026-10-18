@@ -5726,6 +5726,411 @@ section,
   .cg-unified-dual-pill { width: 100% !important; }
   .dual-half { flex: 1 1 50% !important; }
 }
+
+/* ========================================================
+   v4.07 STANDARDIZED PORTAL COMPONENTS CSS
+   ======================================================== */
+/* 1. BREADCRUMB BAR */
+.breadcrumb-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, #091a3e 0%, #0f2b66 50%, #17387d 100%) !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+  border-radius: 12px !important;
+  padding: 8px 14px !important;
+  margin: 0 0 16px 0 !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+.breadcrumb-left-stack {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+.breadcrumb-right-stack {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-left: auto !important;
+  flex-wrap: wrap !important;
+}
+.nav-menu-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.84rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  color: #e2e8f0 !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+.nav-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #fef08a !important;
+}
+.nav-menu-btn.btn-current-page {
+  background: rgba(56, 189, 248, 0.2) !important;
+  border: 1px solid #38bdf8 !important;
+  color: #38bdf8 !important;
+}
+.nav-menu-separator {
+  color: #94a3b8 !important;
+  font-size: 0.75rem !important;
+}
+
+/* 2. QUICK NAV MARQUEE RIBBON */
+@keyframes marqueeScrollLoop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.quick-nav-marquee-container {
+  display: flex !important;
+  align-items: center !important;
+  background: linear-gradient(90deg, #071328 0%, #0f2942 50%, #071328 100%) !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.45) !important;
+  border-radius: 12px !important;
+  padding: 6px 10px !important;
+  margin: 0 0 20px 0 !important;
+  overflow: hidden !important;
+  position: relative !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+.marquee-static-label {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  font-size: 0.95rem !important;
+  padding: 6px 12px !important;
+  border-radius: 8px !important;
+  margin-right: 12px !important;
+  flex-shrink: 0 !important;
+  z-index: 3 !important;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4) !important;
+}
+.marquee-viewport {
+  flex: 1 !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+.marquee-track {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  white-space: nowrap !important;
+  animation: marqueeScrollLoop 32s linear infinite !important;
+}
+.marquee-track:hover {
+  animation-play-state: paused !important;
+}
+.marquee-content-loop {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+.touch-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 6px 14px !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(56, 189, 248, 0.35) !important;
+  color: #f8fafc !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+}
+.touch-pill:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  border-color: #fde047 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+}
+
+/* 3. BOTTOM PAGE NAV BAR & COMPACT DUAL ACTION PILL */
+@keyframes pulseNudgeLeft {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-4px); }
+}
+@keyframes pulseNudgeRight {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+@keyframes dualBorderPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.35), 0 4px 14px rgba(0, 0, 0, 0.45);
+    border-color: #38bdf8;
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.55), 0 0 30px rgba(56, 189, 248, 0.35), 0 6px 18px rgba(0, 0, 0, 0.55);
+    border-color: #facc15;
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.35), 0 4px 14px rgba(0, 0, 0, 0.45);
+    border-color: #38bdf8;
+  }
+}
+.bottom-page-nav-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 12px 20px !important;
+  margin: 26px 0 28px 0 !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  gap: 12px !important;
+}
+.page-nav-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 9px 18px !important;
+  border-radius: 10px !important;
+  font-family: inherit !important;
+  font-size: 0.88rem !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  transition: all 0.25s ease !important;
+  user-select: none !important;
+}
+.page-nav-btn.btn-prev-animated {
+  border: 2px solid #059669 !important;
+  background: linear-gradient(135deg, #047857 0%, #065f46 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(4, 120, 87, 0.35) !important;
+  animation: pulseNudgeLeft 3s ease-in-out infinite !important;
+}
+.page-nav-btn.btn-prev-animated:hover {
+  background: linear-gradient(135deg, #065f46 0%, #022c22 100%) !important;
+  border-color: #fde047 !important;
+  transform: translateX(-5px) scale(1.04) !important;
+  color: #ffffff !important;
+}
+.page-nav-btn.btn-next-animated {
+  border: 2px solid #0284c7 !important;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;
+  animation: pulseNudgeRight 3s ease-in-out infinite !important;
+}
+.page-nav-btn.btn-next-animated:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #0c4a6e 100%) !important;
+  border-color: #fde047 !important;
+  transform: translateX(5px) scale(1.04) !important;
+  color: #ffffff !important;
+}
+.cg-center-dual-wrapper {
+  flex: 0 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 1.8px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 3px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  max-width: 460px !important;
+  width: 100% !important;
+}
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 7px 16px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  box-sizing: border-box !important;
+}
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+}
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+}
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.2px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.58rem !important;
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  line-height: 1.25 !important;
+}
+.dual-title-ta {
+  display: block !important;
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.86rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.1px !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  white-space: nowrap !important;
+}
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+.dual-sub-en {
+  display: block !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.63rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 2px auto 0 auto !important;
+  white-space: nowrap !important;
+}
+
+/* 4. STANDARDIZED KURAL BOX */
+.kural-box {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%) !important;
+  border: 1.8px solid #f59e0b !important;
+  border-left: 6px solid #d97706 !important;
+  border-radius: 14px !important;
+  padding: 18px 22px !important;
+  margin: 24px 0 !important;
+  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.12) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+.kural-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-bottom: 10px !important;
+  border-bottom: 1px dashed rgba(217, 119, 6, 0.35) !important;
+  padding-bottom: 8px !important;
+}
+.kural-title {
+  font-size: 0.92rem !important;
+  font-weight: 800 !important;
+  color: #92400e !important;
+}
+.kural-sparkle {
+  font-size: 0.80rem !important;
+  font-weight: 800 !important;
+  background: rgba(217, 119, 6, 0.15) !important;
+  color: #b45309 !important;
+  padding: 3px 10px !important;
+  border-radius: 999px !important;
+}
+.kural-verse-text {
+  font-size: 1.08rem !important;
+  font-weight: 900 !important;
+  color: #78350f !important;
+  line-height: 1.65 !important;
+  margin: 10px 0 !important;
+  font-style: italic !important;
+}
+.kural-meaning {
+  font-size: 0.88rem !important;
+  color: #451a03 !important;
+  line-height: 1.6 !important;
+}
+
+@media (max-width: 768px) {
+  .bottom-page-nav-bar {
+    flex-direction: column !important;
+    padding: 12px 14px !important;
+    gap: 12px !important;
+  }
+  .page-nav-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .cg-center-dual-wrapper {
+    width: 100% !important;
+    order: -1 !important;
+  }
+  .cg-unified-dual-pill {
+    width: 100% !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -6814,27 +7219,22 @@ section,
     ▲ மேலே செல்க
   </button>
 <nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar no-print">
-<!-- LEFT ANIMATED NAV BUTTON -->
-<a class="page-nav-btn btn-prev-animated" href="01_08_management_iim_ipm.html" title="ஐ.ஐ.எம் மேலாண்மை (IIM IPM)">
+<a class="page-nav-btn btn-prev-animated" href="01_08_management_iim_ipm.html" title="ஐ.ஐ.எம் மேலாண்மை">
 <span class="nav-btn-icon">◀</span>
 <span class="nav-btn-text">ஐ.ஐ.எம் மேலாண்மை</span>
 </a>
-<!-- CENTER COMPACT DUAL ACTION PILL -->
 <div class="cg-center-dual-wrapper">
 <div class="cg-unified-dual-pill">
-<!-- இடதுபுறம்: ஆலோசனை பதிவிட (FEEDBACK) -->
-<a class="dual-half dual-half-left" href="portal_feedback.html" onclick="openPortalFeedbackModal(event)" title="ஆலோசனை / கருத்து பதிவிட">
+<a class="dual-half dual-half-left" href="portal_feedback.html" onclick="if(typeof openPortalFeedbackModal==='function') openPortalFeedbackModal(event);" title="ஆலோசனை / கருத்து தெரிவிக்க">
 <span class="dual-text-group">
 <span class="dual-title-ta">ஆலோசனை பதிவிட</span>
 <span class="dual-sub-en">Feedback &amp; Ideas</span>
 </span>
 </a>
-<!-- GLOWING CENTER DIVIDER -->
 <div class="dual-divider">
 <span class="dual-divider-dot">✦</span>
 </div>
-<!-- வலதுபுறம்: சந்தேகம் கேட்க (QUERIES) -->
-<a class="dual-half dual-half-right" href="student_queries.html" onclick="openStudentQueryModal(event)" title="சந்தேகங்களைக் கேட்க">
+<a class="dual-half dual-half-right" href="student_queries.html" onclick="if(typeof openStudentQueryModal==='function') openStudentQueryModal(event);" title="சந்தேகங்களைக் கேட்க">
 <span class="dual-text-group">
 <span class="dual-title-ta">சந்தேகம் கேட்க</span>
 <span class="dual-sub-en">Ask Student Query</span>
@@ -6842,27 +7242,22 @@ section,
 </a>
 </div>
 </div>
-<!-- RIGHT ANIMATED NAV BUTTON -->
-<a class="page-nav-btn btn-next-animated" href="01_10_maritime_merchant_navy.html" title="கடல்சார் படிப்புகள் &amp; மெர்ச்சன்ட் நேவி">
+<a class="page-nav-btn btn-next-animated" href="01_10_maritime_merchant_navy.html" title="கடல்சார் படிப்புகள்">
 <span class="nav-btn-text">கடல்சார் படிப்புகள்</span>
 <span class="nav-btn-icon">▶</span>
 </a>
-</nav><div aria-label="திருக்குறள் வாழ்த்து" class="traditional-kural-card no-print">
-<div class="kural-top-row">
-<div class="kural-chip-wrap">
-<span class="kural-feather-icon">📜</span>
-<span class="kural-chip-text">திருக்குறள் — அதிகாரம்: விருந்தோம்பல் (குறள்: 81)</span>
+</nav><div class="kural-box">
+<div class="kural-header">
+<span class="kural-icon">📜</span>
+<span class="kural-title">திருக்குறள் — அதிகாரம்: விருந்தோம்பல் (குறள்: 81)</span>
+<span class="kural-sparkle">🏨 விருந்தோம்பல் மாண்பு &amp; சேவை நெறி</span>
 </div>
-<span class="kural-topic-badge">🏨 விருந்தோம்பல் மாண்பு &amp; சேவை நெறி</span>
-</div>
-<div class="kural-couplet-lines">
-<span class="kural-first-line">“இருந்தோம்பி இல்வாழ்வ தெல்லாம் விருந்தோம்பி</span>
-<span class="kural-second-line">வேளாண்மை செய்தற் பொருட்டு.”</span>
-</div>
-<div class="kural-meaning-row">
-<span class="kural-meaning-label">மு. வரதராசனார் உரை:</span>
-<span class="kural-meaning-text">இல்லறத்தில் இருந்து பொருள்களைப் போற்றிக் காத்து வாழ்வதெல்லாம், விருந்தினரைப் போற்றி அவர்களுக்கு உதவி செய்யும் நற்பண்பின் பொருட்டேயாகும். விருந்தோம்பல் மற்றும் உணவக மேலாண்மைத் துறையில் சர்வதேச அளவில் சிறந்து விளங்க விரும்பும் மாணவர்களுக்கு விருந்தினரைத் தெய்வமென மதித்து உபசரிக்கும் இப்பண்பே உயர்ந்த வெற்றியைத் தரும்.</span>
-</div>
+<div class="kural-verse-text">
+    “இருந்தோம்பி இல்வாழ்வ தெல்லாம் விருந்தோம்பி<br/>வேளாண்மை செய்தற் பொருட்டு.”
+  </div>
+<div class="kural-meaning">
+<strong>மு. வரதராசனார் உரை:</strong> இல்லறத்தில் இருந்து பொருள்களைப் போற்றிக் காத்து வாழ்வதெல்லாம், விருந்தினரைப் போற்றி அவர்களுக்கு உதவி செய்யும் நற்பண்பின் பொருட்டேயாகும். விருந்தோம்பல் மற்றும் உணவக மேலாண்மைத் துறையில் சர்வதேச அளவில் சிறந்து விளங்க விரும்பும் மாணவர்களுக்கு விருந்தினரைத் தெய்வமென மதித்து உபசரிக்கும் இப்பண்பே உயர்ந்த வெற்றியைத் தரும்.
+  </div>
 </div><div class="creator-card" style="justify-content: center !important; text-align: center !important;">
 <div class="creator-typewriter-wrapper" style="justify-content: center !important; text-align: center !important; display: inline-flex !important; align-items: center !important;">
 <span class="creator-typewriter-target" id="creatorTypewriterTarget" style="text-align: center !important;"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role">, பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role">, Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
@@ -6882,7 +7277,7 @@ section,
 <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important; margin-bottom: 0 !important;">
     © 2026 Chief Educational Office, Sivagangai. All Rights Reserved. • வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
-</footer></div>
+<p class="footer-last-updated" style="font-size: 0.84rem !important; color: #fde047 !important; margin-top: 6px !important; font-weight: 700 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.8) !important;">📅 கடைசியாகப் புதுப்பிக்கப்பட்டது: <span id="portalLastUpdatedDate">18 அக்டோபர் 2026</span></p></footer></div>
 <!-- JavaScript for Interactive Search, Filtering, Quick Nav, Accordion, and Back-to-Top -->
 <script>
   // Accordion Toggle for FAQs
