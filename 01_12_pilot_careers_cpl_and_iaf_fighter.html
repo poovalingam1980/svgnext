@@ -4646,6 +4646,479 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
     }
 
+
+/* ========================================================
+   STANDARDIZED PILOT CAREERS PAGE (01_12) STYLES
+   FULL MONITOR WIDTH, CRYSTAL RIBBON & ANIMATED NAV
+   ======================================================== */
+.portal-layout-wrapper,
+.portal-main-content,
+.container,
+.portal-top-frame,
+.breadcrumb-bar,
+.portal-header,
+.quick-nav-marquee-container,
+.typing-banner-wrap,
+.bottom-page-nav-bar,
+.kural-box,
+.creator-card,
+.portal-footer {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* TOP BREADCRUMB BAR WITH COMPACT ACTION BUTTONS */
+.breadcrumb-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, #02162e 0%, #08284d 50%, #0d3663 100%) !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.45) !important;
+  border-radius: 12px !important;
+  padding: 8px 14px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 4px 14px rgba(2, 22, 46, 0.3) !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.breadcrumb-left-stack {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+
+.breadcrumb-right-stack {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-left: auto !important;
+  flex-wrap: wrap !important;
+}
+
+.nav-menu-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.84rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  color: #e2e8f0 !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+.nav-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #fef08a !important;
+}
+
+.nav-menu-btn.btn-current-page {
+  background: rgba(56, 189, 248, 0.2) !important;
+  border: 1px solid #38bdf8 !important;
+  color: #38bdf8 !important;
+}
+
+.nav-menu-separator {
+  color: #94a3b8 !important;
+  font-size: 0.75rem !important;
+}
+
+/* Quick Nav Touch Pills Marquee */
+.quick-nav-marquee-container {
+  display: flex !important;
+  align-items: center !important;
+  background: linear-gradient(135deg, #02162e 0%, #08284d 100%) !important;
+  border: 1.5px solid #38bdf8 !important;
+  border-radius: 12px !important;
+  padding: 6px 10px !important;
+  margin: 12px 0 14px 0 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.marquee-static-label {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #38bdf8 !important;
+  color: #02162e !important;
+  font-weight: 900 !important;
+  font-size: 1rem !important;
+  padding: 4px 10px !important;
+  border-radius: 8px !important;
+  margin-right: 10px !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5) !important;
+}
+
+.quick-nav-marquee-viewport {
+  overflow: hidden !important;
+  flex-grow: 1 !important;
+  position: relative !important;
+  white-space: nowrap !important;
+}
+
+.marquee-track-infinite {
+  display: inline-flex !important;
+  gap: 10px !important;
+  animation: marqueeScroll 32s linear infinite !important;
+}
+
+.marquee-track-infinite:hover {
+  animation-play-state: paused !important;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-pill-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: rgba(13, 54, 99, 0.8) !important;
+  border: 1px solid rgba(56, 189, 248, 0.5) !important;
+  color: #e0f2fe !important;
+  padding: 5px 12px !important;
+  border-radius: 999px !important;
+  font-size: 0.80rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  transition: all 0.2s ease !important;
+}
+
+.marquee-pill-btn:hover {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+  border-color: #fde047 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 8px rgba(56, 189, 248, 0.5) !important;
+}
+
+/* Crystal Ribbon Typing Banner (as in Medical NEET Page) */
+.typing-banner-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  margin: 12px auto 16px auto !important;
+}
+
+.typing-container {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, rgba(240, 249, 255, 0.96) 0%, rgba(224, 242, 254, 0.92) 100%) !important;
+  border: 1.5px solid #38bdf8 !important;
+  padding: 8px 24px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.18), inset 0 1px 2px #ffffff !important;
+  min-height: 44px !important;
+  max-width: 96% !important;
+  box-sizing: border-box !important;
+}
+
+.typing-text {
+  font-size: 1.00rem !important;
+  font-weight: 700 !important;
+  color: #0369a1 !important;
+  letter-spacing: 0.2px !important;
+}
+
+.typing-cursor {
+  display: inline-block !important;
+  font-weight: 800 !important;
+  font-size: 1.15rem !important;
+  color: #0284c7 !important;
+  margin-left: 2px !important;
+  animation: blinkCursor 0.8s infinite !important;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* STANDARDIZED BOTTOM PAGE NAV BAR (FULL MONITOR WIDTH) */
+@keyframes pulseNudgeLeft {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-4px); }
+}
+
+@keyframes pulseNudgeRight {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+
+@keyframes dualBorderPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.35), 0 4px 14px rgba(0, 0, 0, 0.45);
+    border-color: #38bdf8;
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.55), 0 0 30px rgba(56, 189, 248, 0.35), 0 6px 18px rgba(0, 0, 0, 0.55);
+    border-color: #facc15;
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.35), 0 4px 14px rgba(0, 0, 0, 0.45);
+    border-color: #38bdf8;
+  }
+}
+
+.bottom-page-nav-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 12px 20px !important;
+  margin: 26px 0 28px 0 !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  gap: 12px !important;
+}
+
+.page-nav-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 9px 18px !important;
+  border-radius: 10px !important;
+  font-family: inherit !important;
+  font-size: 0.88rem !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  transition: all 0.25s ease !important;
+  user-select: none !important;
+}
+
+/* Left Prev Button: Animated Emerald/Olive Gradient */
+.page-nav-btn.btn-prev-animated {
+  border: 2px solid #16a34a !important;
+  background: linear-gradient(135deg, #15803d 0%, #166534 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(22, 101, 52, 0.35) !important;
+  animation: pulseNudgeLeft 3s ease-in-out infinite !important;
+}
+
+.page-nav-btn.btn-prev-animated:hover {
+  background: linear-gradient(135deg, #166534 0%, #052e16 100%) !important;
+  border-color: #fde047 !important;
+  transform: translateX(-5px) scale(1.04) !important;
+  box-shadow: 0 6px 20px rgba(22, 101, 52, 0.55), 0 0 15px rgba(74, 222, 128, 0.5) !important;
+  color: #ffffff !important;
+}
+
+/* Right Next Button: Animated Sky/Navy Gradient */
+.page-nav-btn.btn-next-animated {
+  border: 2px solid #0284c7 !important;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;
+  animation: pulseNudgeRight 3s ease-in-out infinite !important;
+}
+
+.page-nav-btn.btn-next-animated:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #0c4a6e 100%) !important;
+  border-color: #fde047 !important;
+  transform: translateX(5px) scale(1.04) !important;
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.55), 0 0 15px rgba(56, 189, 248, 0.5) !important;
+  color: #ffffff !important;
+}
+
+.nav-btn-icon {
+  font-size: 0.92rem !important;
+  line-height: 1 !important;
+}
+
+.nav-btn-text {
+  letter-spacing: 0.2px !important;
+}
+
+/* CENTER COMPACT DUAL ACTION PILL (NO ICONS, PERFECTLY CENTERED) */
+.cg-center-dual-wrapper {
+  flex: 0 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 1.8px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 3px !important;
+  animation: dualBorderPulse 3.5s infinite ease-in-out !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  max-width: 460px !important;
+  width: 100% !important;
+}
+
+.dual-half {
+  flex: 1 1 50% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 7px 16px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+.dual-half-left {
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.38) 0%, rgba(217, 119, 6, 0.20) 100%) !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 14px rgba(253, 224, 71, 0.4), 0 0 16px rgba(245, 158, 11, 0.5) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+
+.dual-half-right {
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.38) 0%, rgba(3, 105, 161, 0.20) 100%) !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 14px rgba(56, 189, 248, 0.4), 0 0 16px rgba(2, 132, 199, 0.5) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 3 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.2px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.58rem !important;
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.8) !important;
+  line-height: 1 !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  line-height: 1.25 !important;
+}
+
+.dual-title-ta {
+  display: block !important;
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.86rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.1px !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  white-space: nowrap !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  display: block !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.63rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 2px auto 0 auto !important;
+  white-space: nowrap !important;
+}
+
+.dual-half-left:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-left:hover .dual-sub-en {
+  color: #fef08a !important;
+}
+
+.dual-half-right:hover .dual-title-ta {
+  color: #ffffff !important;
+}
+.dual-half-right:hover .dual-sub-en {
+  color: #bae6fd !important;
+}
+
+@media (max-width: 768px) {
+  .bottom-page-nav-bar {
+    flex-direction: column !important;
+    padding: 12px 14px !important;
+    gap: 12px !important;
+  }
+  .page-nav-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .cg-center-dual-wrapper {
+    width: 100% !important;
+    order: -1 !important;
+  }
+  .cg-unified-dual-pill {
+    width: 100% !important;
+  }
+}
 </style>
 <style id="distinct-theme-css">
 /* ============================================================
@@ -5553,42 +6026,78 @@
 <span class="btn-text">வழிகாட்டி முகப்பு</span>
 </a>
 </header>
-<div class="container" id="top">
-<header class="portal-header">
-<div class="header-badge-row">
-<span class="header-tag primary">பிரிவு 11 (Section 11)</span>
-<span class="header-tag secondary">சிவில் ஏவியேஷன் &amp; இந்திய வான்படை (Aviation &amp; IAF)</span>
-<span class="header-tag amber">DGCA CPL • UPSC NDA • CPSS சிமுலேட்டர் • IGRUA &amp; கேடட் தேர்வுகள்</span>
+<nav aria-label="Breadcrumb Navigation" class="breadcrumb-bar no-print">
+<div class="breadcrumb-left-stack">
+<a class="nav-menu-btn" href="index.html" title="வழிகாட்டி முதன்மை முகப்பு">🧭 வழிகாட்டி முகப்பு</a>
+<span class="nav-menu-separator">▶</span>
+<a class="nav-menu-btn" href="01_00_entrance_main.html" title="நுழைவுத்தேர்வுகள் முதன்மை மெனு">🎯 நுழைவுத்தேர்வுகள்</a>
+<span class="nav-menu-separator">▶</span>
+<span class="nav-menu-btn btn-current-page">✈️ 12. வணிக விமானி &amp; போர் விமானி (Pilot Careers)</span>
 </div>
-<h1 class="portal-title">
-    விமானியாவது எப்படி? (வணிக விமானி &amp; போர் விமானி) <span class="accent-gold">(Pilot Careers)</span>
-</h1>
-<p class="portal-subtitle">
-    இந்தியாவில் பயணிகள் விமானங்களை இயக்கும் வணிக விமானி (DGCA CPL) மற்றும் இந்திய விமானப்படையின் போர் விமானி (UPSC NDA) ஆவதற்கான நுழைவுத்தேர்வுகள், CPSS சிமுலேட்டர் தேர்வு, பிளைங் கிளப் பயிற்சிகள் &amp; கேடட் திட்டங்கள் அடங்கிய வழிகாட்டல் தொகுப்பு.
+<div class="breadcrumb-right-stack">
+<a class="nav-menu-btn btn-sheet-link" href="#section-pilot-directory" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important; color: #ffffff !important; border: 1.2px solid #38bdf8 !important; padding: 5px 14px !important; border-radius: 8px !important; font-weight: 800 !important; font-size: 0.82rem !important; text-decoration: none !important; display: inline-flex !important; align-items: center !important; gap: 6px !important; box-shadow: 0 2px 6px rgba(2, 132, 199, 0.35) !important;" title="பயிற்சி அகாடமிகள் &amp; போர்ட்டல்கள் பட்டியலுக்குச் செல்க">
+<span class="btn-icon">🏛️</span>
+<span class="btn-text">அகாடமிகள் பட்டியல் ➔</span>
+</a>
+</div>
+</nav>
+
+<div class="container" id="top">
+
+<header class="portal-header" style="background: linear-gradient(135deg, #02162e 0%, #08284d 45%, #0d3663 75%, #02162e 100%) !important; border: 2.2px solid #38bdf8 !important; border-bottom: 4.5px solid #0284c7 !important; border-radius: 18px !important; padding: 32px 24px 26px !important; margin-bottom: 16px !important; box-shadow: 0 0 24px rgba(56, 189, 248, 0.35), 0 10px 30px rgba(0, 0, 0, 0.5) !important; outline: 2px solid rgba(56, 189, 248, 0.6) !important; outline-offset: 3px !important; text-align: center !important; position: relative !important; overflow: hidden !important; width: 100% !important; box-sizing: border-box !important;">
+<h1 class="portal-title" style="font-size: clamp(1.6rem, 2.8vw, 2.3rem) !important; font-weight: 900 !important; color: #ffffff !important; margin: 0 0 10px 0 !important; text-shadow: 0 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(56, 189, 248, 0.5) !important; letter-spacing: -0.3px !important;">
+    விமானியாவது எப்படி? (வணிக விமானி &amp; போர் விமானி) வழிகாட்டி
+  </h1>
+<p class="portal-subtitle" style="font-size: 1.05rem !important; color: #bae6fd !important; width: 100% !important; max-width: 100% !important; margin: 0 auto !important; line-height: 1.68 !important; font-weight: 600 !important; text-align: center !important;">
+    Commercial Pilot License (DGCA CPL) • IAF Fighter Pilot (UPSC NDA) • Flying Training Organizations (FTO) • High Salary Global Aviation Careers
   </p>
 </header>
+
 <!-- Sticky Quick Jump Bar (விரைவு வழிசெலுத்தல் பட்டை) -->
-<div class="quick-nav-card no-print">
-<div class="quick-nav-title">
-<span>🧭 <b>விரைவு வழிசெலுத்தல் (Quick Navigation):</b></span>
-<span style="font-size:12px; color:#0369a1; font-weight:normal;">(தேவையான பகுதிக்கு உடனடியாகச் செல்ல கிளிக் செய்க)</span>
+
+<!-- Quick Nav Touch Pills Marquee (விரைவு வழிசெலுத்தல் தொடு பொத்தான்கள் பட்டை) -->
+<div aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை" class="quick-nav-marquee-container no-print">
+<div class="marquee-static-label" title="விரைவு வழிசெலுத்தல்">
+<span class="pulse-icon">⚡</span>
 </div>
-<div class="quick-nav-grid">
-<a class="nav-btn" href="#sec-gateways"><span class="badge-no">1</span> 🚪 நுழைவு வாயில்கள்</a>
-<a class="nav-btn" href="#sec-pathways-detail"><span class="badge-no">2</span> 🛫 வாயில் வழிவகைகள்</a>
-<a class="nav-btn" href="#sec-eligibility"><span class="badge-no">3</span> 📋 கல்வி &amp; வயதுத் தகுதிகள்</a>
-<a class="nav-btn" href="#sec-medical"><span class="badge-no">4</span> 🩺 உடற்தகுதி &amp; மெடிக்கல்</a>
-<a class="nav-btn" href="#sec-exams"><span class="badge-no">5</span> 📝 நுழைவு &amp; தியரி தேர்வுகள்</a>
-<a class="nav-btn" href="#sec-licenses"><span class="badge-no">6</span> 📜 உரிம படிநிலைகள்</a>
-<a class="nav-btn" href="#sec-cost"><span class="badge-no">7</span> 💰 கட்டணம் &amp; கல்விக் கடன்</a>
-<a class="nav-btn" href="#sec-schools"><span class="badge-no">8</span> 🏛️ பயிற்சி நிறுவனங்கள் (FTOs)</a>
-<a class="nav-btn" href="#sec-career"><span class="badge-no">9</span> 👨‍✈️ பணி &amp; ஊதிய வளர்ச்சி</a>
-<a class="nav-btn" href="#sec-roadmap"><span class="badge-no">10</span> 🗺️ பள்ளி மாணவர் திட்டம்</a>
-<a class="nav-btn" href="#sec-abbreviations"><span class="badge-no">11</span> 📚 கலைச்சொற்கள்</a>
-<a class="nav-btn" href="#sec-faqs"><span class="badge-no">12</span> ❓ வினா-விடைகள் (FAQs)</a>
-<a class="nav-btn" href="#sec-portals"><span class="badge-no">13</span> 🌐 அதிகாரப்பூர்வ தளங்கள்</a>
+<div class="quick-nav-marquee-viewport">
+<div class="marquee-track-infinite">
+<!-- First set of pills -->
+<a class="marquee-pill-btn" href="#sec-gateways">🚪 1. நுழைவு வாயில்கள்</a>
+<a class="marquee-pill-btn" href="#sec-pathways-detail">🛫 2. CPL &amp; NDA வழிவகைகள்</a>
+<a class="marquee-pill-btn" href="#sec-eligibility">📋 3. கல்வி &amp; வயதுத் தகுதிகள்</a>
+<a class="marquee-pill-btn" href="#sec-medical">🩺 4. Class 1 மருத்துவப் பரிசோதனை</a>
+<a class="marquee-pill-btn" href="#sec-exams">🕹️ 5. தேர்வுகள் &amp; CPSS சிமுலேட்டர்</a>
+<a class="marquee-pill-btn" href="#sec-licenses">📜 6. விமானி உரிமங்கள் &amp; படிகள்</a>
+<a class="marquee-pill-btn" href="#sec-cost">💰 7. பயிற்சிக் கட்டணம் &amp; வங்கிக் கடன்</a>
+<a class="marquee-pill-btn" href="#sec-schools">✈️ 8. முன்னணி FTO பயிற்சிப் பள்ளிகள்</a>
+<a class="marquee-pill-btn" href="#sec-career">💼 9. விமானி பணிநிலைகள் &amp; ஊதியம்</a>
+<a class="marquee-pill-btn" href="#sec-roadmap">🗺️ 10. 4-ஆண்டு இலக்குத் திட்டம்</a>
+<a class="marquee-pill-btn" href="#sec-faqs">❓ 11. அடிக்கடி கேட்கப்படும் வினாக்கள்</a>
+<a class="marquee-pill-btn" href="#section-pilot-directory">🏛️ 12. அகாடமிகள் அடைவு</a>
+<!-- Duplicated set for seamless infinite loop -->
+<a class="marquee-pill-btn" href="#sec-gateways">🚪 1. நுழைவு வாயில்கள்</a>
+<a class="marquee-pill-btn" href="#sec-pathways-detail">🛫 2. CPL &amp; NDA வழிவகைகள்</a>
+<a class="marquee-pill-btn" href="#sec-eligibility">📋 3. கல்வி &amp; வயதுத் தகுதிகள்</a>
+<a class="marquee-pill-btn" href="#sec-medical">🩺 4. Class 1 மருத்துவப் பரிசோதனை</a>
+<a class="marquee-pill-btn" href="#sec-exams">🕹️ 5. தேர்வுகள் &amp; CPSS சிமுலேட்டர்</a>
+<a class="marquee-pill-btn" href="#sec-licenses">📜 6. விமானி உரிமங்கள் &amp; படிகள்</a>
+<a class="marquee-pill-btn" href="#sec-cost">💰 7. பயிற்சிக் கட்டணம் &amp; வங்கிக் கடன்</a>
+<a class="marquee-pill-btn" href="#sec-schools">✈️ 8. முன்னணி FTO பயிற்சிப் பள்ளிகள்</a>
+<a class="marquee-pill-btn" href="#sec-career">💼 9. விமானி பணிநிலைகள் &amp; ஊதியம்</a>
+<a class="marquee-pill-btn" href="#sec-roadmap">🗺️ 10. 4-ஆண்டு இலக்குத் திட்டம்</a>
+<a class="marquee-pill-btn" href="#sec-faqs">❓ 11. அடிக்கடி கேட்கப்படும் வினாக்கள்</a>
+<a class="marquee-pill-btn" href="#section-pilot-directory">🏛️ 12. அகாடமிகள் அடைவு</a>
 </div>
 </div>
+</div>
+<!-- Crystal Ribbon Guidance Typewriter Banner (வழிகாட்டல் அனிமேஷன் பிளாஷ் ரிப்பன்) -->
+<div class="typing-banner-wrap no-print">
+<div class="typing-container">
+<span class="typing-text" id="typingTextPilot"></span><span class="typing-cursor">|</span>
+</div>
+</div>
+
 <div class="content-section" id="sec-gateways" style="border: 2px solid #38bdf8; background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);">
 <div class="section-header">
 <div class="section-icon-box" style="background: #e0f2fe; border-color: #38bdf8; font-size: 26px;">🚪</div>
@@ -7310,6 +7819,58 @@
 </div>
 </div>
 </div>
+
+<!-- ========================================================
+     PILOT TRAINING ACADEMIES & OFFICIAL PORTALS DIRECTORY
+     அதிகாரப்பூர்வ விமானப் பயிற்சி அகாடமிகள் & சேர்க்கை போர்ட்டல்கள் அடைவு 2026
+     ======================================================== -->
+<section class="card filterable-section no-print" id="section-pilot-directory" style="margin-top: 28px; margin-bottom: 28px; border: 2px solid #0284c7; border-top: 6px solid #38bdf8; background: linear-gradient(135deg, #02162e 0%, #08284d 50%, #02162e 100%); color: #ffffff; border-radius: 18px; padding: 26px 30px; box-shadow: 0 8px 30px rgba(2, 22, 46, 0.45); scroll-margin-top: 30px;">
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; border-bottom: 1.5px solid rgba(56, 189, 248, 0.3); padding-bottom: 14px;">
+<div style="display: flex; align-items: center; gap: 12px;">
+<span style="font-size: 2rem; line-height: 1;">🏛️ ✈️ 🎖️ 📊</span>
+<div>
+<h3 style="color: #fde047; font-size: 1.32rem; font-weight: 900; margin: 0; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">
+          விமானப் பயிற்சி அகாடமிகள் &amp; நேரடிச் சேர்க்கை போர்ட்டல்கள் அடைவு 2026
+        </h3>
+<p style="margin: 4px 0 0 0; font-size: 0.88rem; color: #bae6fd; font-weight: 600;">
+          DGCA அங்கீகரிக்கப்பட்ட 35+ FTO பயிற்சிப் பள்ளிகள், மத்திய அரசு IGRUA ராய்பரேலி மற்றும் இந்திய விமானப்படை அதிகாரப்பூர்வ சேர்க்கை போர்ட்டல்கள்
+        </p>
+</div>
+</div>
+<span style="background: rgba(254, 240, 138, 0.2); color: #fde047; border: 1.2px solid #fde047; padding: 4px 14px; border-radius: 999px; font-size: 0.78rem; font-weight: 800; text-transform: uppercase;">
+      DGCA &amp; IAF OFFICIAL PORTALS 2026
+    </span>
+</div>
+<p style="font-size: 0.94rem; line-height: 1.75; color: #f0f9ff; margin-bottom: 22px;">
+    வணிக விமானி உரிமம் (CPL) மற்றும் இந்திய விமானப்படை போர் விமானி ஆவதற்கான அரசு அங்கீகரிக்கப்பட்ட போர்ட்டல்கள், பயிற்சி கையேடுகள் மற்றும் ஆன்லைன் விண்ணப்ப இணையதளங்களை நேரடியாக அணுக கீழே உள்ள பொத்தான்களைப் பயன்படுத்தவும்:
+  </p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 12px;">
+<!-- Action Button 1: DGCA Official Portal -->
+<a href="https://www.dgca.gov.in" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 14px rgba(2, 132, 199, 0.35)';" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 22px rgba(56, 189, 248, 0.45)';" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 14px; background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; text-decoration: none; border: 1.5px solid #38bdf8; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35); transition: all 0.25s ease;" target="_blank">
+<span style="font-size: 2rem; flex-shrink: 0;">✈️</span>
+<div>
+<div style="font-size: 1.05rem; font-weight: 900; color: #ffffff; letter-spacing: -0.2px;">DGCA அதிகாரப்பூர்வ தளம்</div>
+<div style="font-size: 0.80rem; color: #bae6fd; font-weight: 600; margin-top: 2px;">CPL நெறிமுறைகள் &amp; FTO அனுமதிப் பட்டியல் ➔</div>
+</div>
+</a>
+<!-- Action Button 2: IGRUA Entrance Portal -->
+<a href="https://igrua.gov.in" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 14px rgba(217, 119, 6, 0.35)';" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 22px rgba(253, 224, 71, 0.45)';" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 14px; background: linear-gradient(135deg, #b45309 0%, #d97706 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; text-decoration: none; border: 1.5px solid #fde047; box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35); transition: all 0.25s ease;" target="_blank">
+<span style="font-size: 2rem; flex-shrink: 0;">🇮🇳</span>
+<div>
+<div style="font-size: 1.05rem; font-weight: 900; color: #ffffff; letter-spacing: -0.2px;">IGRUA மத்திய அரசு அகாடமி</div>
+<div style="font-size: 0.80rem; color: #fef08a; font-weight: 600; margin-top: 2px;">ராய்பரேலி B.Sc ஏவியேஷன் நுழைவுத்தேர்வு ➔</div>
+</div>
+</a>
+<!-- Action Button 3: IAF Careers Portal -->
+<a href="https://careerindianairforce.cdac.in" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 14px rgba(22, 101, 52, 0.35)';" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 22px rgba(74, 222, 128, 0.45)';" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 14px; background: linear-gradient(135deg, #15803d 0%, #166534 100%); color: #ffffff; padding: 16px 20px; border-radius: 12px; text-decoration: none; border: 1.5px solid #4ade80; box-shadow: 0 4px 14px rgba(22, 101, 52, 0.35); transition: all 0.25s ease;" target="_blank">
+<span style="font-size: 2rem; flex-shrink: 0;">🎖️</span>
+<div>
+<div style="font-size: 1.05rem; font-weight: 900; color: #ffffff; letter-spacing: -0.2px;">இந்திய வான்படை வேலைவாய்ப்பு</div>
+<div style="font-size: 0.80rem; color: #bbf7d0; font-weight: 600; margin-top: 2px;">IAF Flying Branch &amp; NDA விண்ணப்பம் ➔</div>
+</div>
+</a>
+</div>
+</section>
 <div class="content-section" id="sec-portals">
 <div class="section-header">
 <div class="section-icon-box">🌐</div>
@@ -7358,20 +7919,65 @@
 </div>
 </div>
 <!-- ==================================================== -->
+
+<!-- திருக்குறள் பகுதி — மனவுறுதி & இலக்கு வெற்றி (அதிகாரம்: வினைத்திட்பம்) -->
+
+<!-- ========================================================
+     STANDARDIZED BOTTOM PAGE NAV BAR (FULL MONITOR WIDTH)
+     Left: பாதுகாப்புப் படைகள் (01_11)
+     Center: சுருக்கப்பட்ட இரட்டைச் செயல் பொத்தான் (ஆலோசனை | சந்தேகம்)
+     Right: நேரடி சேர்க்கை முகப்பு (02_00)
+     ======================================================== -->
+<nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar no-print">
+<!-- LEFT ANIMATED NAV BUTTON -->
+<a class="page-nav-btn btn-prev-animated" href="01_11_defence_armed_forces.html" title="இந்திய பாதுகாப்புப் படைகள் (UPSC NDA)">
+<span class="nav-btn-icon">◀</span>
+<span class="nav-btn-text">பாதுகாப்புப் படைகள்</span>
+</a>
+<!-- CENTER COMPACT DUAL ACTION PILL -->
+<div class="cg-center-dual-wrapper">
+<div class="cg-unified-dual-pill">
+<!-- இடதுபுறம்: ஆலோசனை பதிவிட (FEEDBACK) -->
+<a class="dual-half dual-half-left" href="portal_feedback.html" onclick="openPortalFeedbackModal(event)" title="ஆலோசனை / கருத்து தெரிவிக்க">
+<span class="dual-text-group">
+<span class="dual-title-ta">ஆலோசனை பதிவிட</span>
+<span class="dual-sub-en">Feedback &amp; Ideas</span>
+</span>
+</a>
+<!-- GLOWING CENTER DIVIDER -->
+<div class="dual-divider">
+<span class="dual-divider-dot">✦</span>
+</div>
+<!-- வலதுபுறம்: சந்தேகம் கேட்க (QUERIES) -->
+<a class="dual-half dual-half-right" href="student_queries.html" onclick="openStudentQueryModal(event)" title="சந்தேகங்களைக் கேட்க">
+<span class="dual-text-group">
+<span class="dual-title-ta">சந்தேகம் கேட்க</span>
+<span class="dual-sub-en">Ask Student Query</span>
+</span>
+</a>
+</div>
+</div>
+<!-- RIGHT ANIMATED NAV BUTTON -->
+<a class="page-nav-btn btn-next-animated" href="02_00_direct_admissions.html" title="நேரடிச் சேர்க்கை முதன்மை முகப்பு">
+<span class="nav-btn-text">நேரடி சேர்க்கை முகப்பு</span>
+<span class="nav-btn-icon">▶</span>
+</a>
+</nav>
 <div class="kural-box">
 <div class="kural-header">
 <span class="kural-icon">📜</span>
 <span class="kural-title">திருக்குறள் — அதிகாரம்: வினைத்திட்பம் (குறள்: 666)</span>
-<span class="kural-sparkle">✨ இலக்கு &amp; மனவுறுதி</span>
+<span class="kural-sparkle">✈️ அசைக்க முடியாத மனவுறுதி &amp; விமானிக் கனவு</span>
 </div>
 <div class="kural-verse-text">
     “எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார்<br/>
     திண்ணியர் ஆகப் பெறின்.”
   </div>
 <div class="kural-meaning">
-<strong>மு. வரதராசனார் உரை:</strong> எண்ணியவர் (செயலை முடிப்பதில்) மனவுறுதியுடையவராக இருந்தால், அவர் தாம் எண்ணியவற்றை எண்ணியவாறே தடையின்றி அடைவர்.
+<strong>விளக்கவுரை:</strong> வானில் பறந்து விமானியாக வேண்டும் என்ற லட்சியத்தைக் கொண்ட மாணவச் செல்வங்கள், அசைக்க முடியாத மன உறுதியுடனும் இடைவிடாத முயற்சியுடனும் படித்தால் எண்ணிய இலக்கை எண்ணியவாறே தடையின்றி நிச்சயம் அடைவர்!
   </div>
-</div><div class="creator-card" style="justify-content: center !important; text-align: center !important;">
+</div>
+<div class="creator-card" style="justify-content: center !important; text-align: center !important;">
 <div class="creator-typewriter-wrapper" style="justify-content: center !important; text-align: center !important; display: inline-flex !important; align-items: center !important;">
 <span class="creator-typewriter-target" id="creatorTypewriterTarget" style="text-align: center !important;"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role">, பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role">, Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
 </div>
@@ -7390,7 +7996,7 @@
 <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important; margin-bottom: 0 !important;">
     © 2026 Chief Educational Office, Sivagangai. All Rights Reserved. • வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
-</footer></div>
+<p class="footer-last-updated" style="font-size: 0.84rem !important; color: #fde047 !important; margin-top: 6px !important; font-weight: 700 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.8) !important;">📅 கடைசியாகப் புதுப்பிக்கப்பட்டது: 18 அக்டோபர் 2026</p></footer></div>
 <!-- திருக்குறள் பகுதி — மாணவர்களை ஈர்க்கும் எழில்மிகு அனிமேஷன் மற்றும் முழு அகல வடிவமைப்பு -->
 <script>
   // Accordion Toggle Script
@@ -7655,6 +8261,44 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     initCreatorObserver();
   }
+})();
+</script>
+
+<script id="pilot_typewriter_script">
+(function() {
+  const pilotTexts = [
+    "DGCA அங்கீகாரம் பெற்ற 35+ பிளைங் கிளப்புகள் (FTO) மற்றும் மத்திய அரசின் IGRUA ராய்பரேலி நுழைவுத்தேர்வு வழிகாட்டி!",
+    "UPSC NDA & NA வான்படை பிரிவு: 100% இலவச விமானி பயிற்சி, பொறியியல் பட்டம் மற்றும் மாதம் ₹56,100 ஸ்டைபண்ட்!",
+    "வணிக விமானி உரிமம் (DGCA CPL): 200 மணிநேர பறக்கும் பயிற்சி முடித்தவுடன் ஏர்லைன்ஸ் தொடக்க ஊதியம் மாதம் ₹1.5 - ₹3.5 லட்சம்!",
+    "விமானப்படை போர் விமானி ஆவதற்கான CPSS (Computerized Pilot Selection System) சிமுலேட்டர் தேர்வு வாழ்நாளில் ஒருமுறை மட்டுமே!",
+    "இன்டிகோ, ஏர் இந்தியா முன்னணி நிறுவனங்களின் வேலை உறுதி கேடட் பைலட் திட்டங்கள் (Cadet Pilot Programs) விவரங்கள்!"
+  ];
+  let pIdx = 0, chIdx = 0, isDel = false;
+  const el = document.getElementById('typingTextPilot');
+  if (!el) return;
+
+  function typeLoop() {
+    const cur = pilotTexts[pIdx];
+    if (isDel) {
+      el.textContent = cur.substring(0, chIdx - 1);
+      chIdx--;
+    } else {
+      el.textContent = cur.substring(0, chIdx + 1);
+      chIdx++;
+    }
+
+    let speed = isDel ? 25 : 55;
+    if (!isDel && chIdx === cur.length) {
+      speed = 2200;
+      isDel = true;
+    } else if (isDel && chIdx === 0) {
+      isDel = false;
+      pIdx = (pIdx + 1) % pilotTexts.length;
+      speed = 400;
+    }
+    setTimeout(typeLoop, speed);
+  }
+  typeLoop();
 })();
 </script>
 </body>
