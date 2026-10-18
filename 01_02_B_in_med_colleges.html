@@ -506,7 +506,6 @@
       .action-buttons-grid {
         grid-template-columns: 1fr;
       }
-    }
       .action-buttons-group {
         justify-content: center;
       }
@@ -5426,6 +5425,427 @@ textarea {
   }
 }
 
+
+/* === MASTER V4.09 PALM-LEAF MANUSCRIPT (ஓலைச்சுவடி) KURAL & FLOATING COMPACT DUAL PILL === */
+
+@keyframes writeKuralLine1 {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    -webkit-clip-path: inset(0 100% 0 0);
+  }
+  26%, 90% {
+    clip-path: inset(0 0% 0 0);
+    -webkit-clip-path: inset(0 0% 0 0);
+  }
+  96%, 100% {
+    clip-path: inset(0 100% 0 0);
+    -webkit-clip-path: inset(0 100% 0 0);
+  }
+}
+
+@keyframes writeKuralLine2 {
+  0%, 24% {
+    clip-path: inset(0 100% 0 0);
+    -webkit-clip-path: inset(0 100% 0 0);
+  }
+  50%, 90% {
+    clip-path: inset(0 0% 0 0);
+    -webkit-clip-path: inset(0 0% 0 0);
+  }
+  96%, 100% {
+    clip-path: inset(0 100% 0 0);
+    -webkit-clip-path: inset(0 100% 0 0);
+  }
+}
+
+@keyframes stylusNibMove {
+  0%, 100% { transform: translateY(0px) rotate(-12deg) scale(1); }
+  50% { transform: translateY(-2px) rotate(4deg) scale(1.1); }
+}
+
+@keyframes olaiLeafGlow {
+  0%, 100% {
+    box-shadow: 0 5px 15px rgba(74, 33, 5, 0.22), 0 0 8px rgba(217, 119, 6, 0.2), inset 0 0 16px rgba(139, 69, 19, 0.16);
+  }
+  50% {
+    box-shadow: 0 8px 22px rgba(74, 33, 5, 0.32), 0 0 16px rgba(217, 119, 6, 0.45), inset 0 0 20px rgba(139, 69, 19, 0.22);
+  }
+}
+
+/* 1. COMPACT PALM-LEAF MANUSCRIPT (ஓலைச்சுவடி) KURAL BOX */
+.kural-box {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 14px 0 12px 0 !important;
+  padding: 8px 34px 9px 34px !important;
+  border-radius: 8px 22px 8px 22px !important;
+  /* Authentic Palm-Leaf Texture + Two Traditional Cord Holes (துளைகள்) on Left & Right */
+  background:
+    radial-gradient(circle at 16px 50%, #3e1b04 0px, #3e1b04 4.5px, #8b4513 5.5px, transparent 6.5px),
+    radial-gradient(circle at calc(100% - 16px) 50%, #3e1b04 0px, #3e1b04 4.5px, #8b4513 5.5px, transparent 6.5px),
+    repeating-linear-gradient(180deg, rgba(120, 60, 12, 0.045) 0px, rgba(120, 60, 12, 0.045) 1.5px, transparent 1.5px, transparent 4px),
+    linear-gradient(90deg, #cda053 0%, #e6c677 5%, #f6e4b2 16%, #fcf2d4 50%, #f6e4b2 84%, #e6c677 95%, #cda053 100%) !important;
+  border-top: 2px solid #8b4513 !important;
+  border-bottom: 2.5px solid #5c2808 !important;
+  border-left: 9px solid #5c2808 !important;
+  border-right: 9px solid #5c2808 !important;
+  animation: olaiLeafGlow 4s ease-in-out infinite !important;
+  position: relative !important;
+  overflow: hidden !important;
+  /* 2-Column Horizontal Grid to Cut Height in Half */
+  display: grid !important;
+  grid-template-columns: minmax(280px, 43%) 1fr !important;
+  column-gap: 14px !important;
+  row-gap: 5px !important;
+  align-items: center !important;
+  text-align: left !important;
+}
+
+.kural-box::before,
+.kural-box::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Slim 1-Line Header Bar Across Top of Palm Leaf */
+.kural-header {
+  grid-column: 1 / -1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+  margin: 0 !important;
+  padding: 0 0 4px 0 !important;
+  border-bottom: 1px dashed rgba(107, 45, 10, 0.35) !important;
+  background: transparent !important;
+}
+
+.kural-icon {
+  font-size: 0.95rem !important;
+  line-height: 1 !important;
+  display: inline-block !important;
+  filter: none !important;
+  margin-right: 4px !important;
+}
+
+.kural-title {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 900 !important;
+  color: #5c1904 !important;
+  -webkit-text-fill-color: #5c1904 !important;
+  background: transparent !important;
+  letter-spacing: 0.1px !important;
+  text-shadow: none !important;
+  filter: none !important;
+  flex: 1 1 auto !important;
+}
+
+.kural-sparkle {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  color: #fef08a !important;
+  -webkit-text-fill-color: #fef08a !important;
+  background: linear-gradient(135deg, #6b2106 0%, #4a1503 100%) !important;
+  border: 1px solid #b45309 !important;
+  padding: 2px 10px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+  text-shadow: none !important;
+  filter: none !important;
+  animation: none !important;
+}
+
+/* Left Column: Engraved Kural Verse with Stylus Writing Animation */
+.kural-verse-text {
+  grid-column: 1 / 2 !important;
+  font-family: 'Noto Sans Tamil', serif !important;
+  font-size: clamp(0.86rem, 1.05vw, 0.96rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.48 !important;
+  color: #1f0a02 !important;
+  -webkit-text-fill-color: #1f0a02 !important;
+  background: rgba(139, 69, 19, 0.07) !important;
+  border: 1px solid rgba(120, 53, 15, 0.25) !important;
+  border-left: 3.5px solid #7c2d12 !important;
+  border-radius: 6px !important;
+  padding: 5px 10px !important;
+  margin: 0 !important;
+  text-align: left !important;
+  text-shadow: 0 0.5px 0 rgba(255, 255, 255, 0.7) !important;
+  filter: none !important;
+  box-shadow: inset 0 1px 3px rgba(60, 20, 5, 0.08) !important;
+  position: relative !important;
+}
+
+.kural-verse-text .kural-line {
+  display: inline-block !important;
+  color: #1f0a02 !important;
+  -webkit-text-fill-color: #1f0a02 !important;
+  font-weight: 900 !important;
+}
+
+.kural-verse-text .kural-line-1 {
+  animation: writeKuralLine1 7.5s cubic-bezier(0.25, 0.1, 0.25, 1) infinite !important;
+}
+
+.kural-verse-text .kural-line-2 {
+  animation: writeKuralLine2 7.5s cubic-bezier(0.25, 0.1, 0.25, 1) infinite !important;
+}
+
+/* Hovering over the palm leaf pauses & reveals full text immediately */
+.kural-box:hover .kural-line-1,
+.kural-box:hover .kural-line-2 {
+  clip-path: inset(0 0% 0 0) !important;
+  -webkit-clip-path: inset(0 0% 0 0) !important;
+}
+
+.kural-verse-text .stylus-nib {
+  display: inline-block !important;
+  font-size: 0.85rem !important;
+  margin-left: 4px !important;
+  animation: stylusNibMove 1.4s ease-in-out infinite !important;
+  vertical-align: middle !important;
+}
+
+/* Right Column: Compact Crisp Meaning (விளக்கவுரை) */
+.kural-meaning {
+  grid-column: 2 / 3 !important;
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.81rem !important;
+  font-weight: 600 !important;
+  line-height: 1.42 !important;
+  color: #2b1103 !important;
+  -webkit-text-fill-color: #2b1103 !important;
+  background: transparent !important;
+  border: none !important;
+  border-left: 1.5px solid rgba(120, 53, 15, 0.28) !important;
+  border-radius: 0 !important;
+  padding: 2px 0 2px 12px !important;
+  margin: 0 !important;
+  text-align: justify !important;
+  text-shadow: none !important;
+  filter: none !important;
+}
+
+.kural-meaning strong,
+.kural-meaning b {
+  color: #7c1d05 !important;
+  -webkit-text-fill-color: #7c1d05 !important;
+  font-weight: 900 !important;
+  margin-right: 4px !important;
+}
+
+@media (max-width: 820px) {
+  .kural-box {
+    grid-template-columns: 1fr !important;
+    padding: 8px 26px 9px 26px !important;
+    row-gap: 6px !important;
+  }
+  .kural-verse-text {
+    grid-column: 1 / -1 !important;
+  }
+  .kural-meaning {
+    grid-column: 1 / -1 !important;
+    border-left: none !important;
+    border-top: 1px dashed rgba(120, 53, 15, 0.25) !important;
+    padding: 4px 0 0 0 !important;
+    text-align: left !important;
+  }
+}
+
+/* ========================================================
+   2. NARROWER, 3D FLOATING UNIFIED DUAL ACTION PILL
+   ======================================================== */
+@keyframes dualPillFloat3D {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-6.5px) scale(1.018);
+  }
+}
+
+@keyframes dualBorderPulseV409 {
+  0%, 100% {
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.45), 0 0 12px rgba(56, 189, 248, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-color: #38bdf8;
+  }
+  50% {
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.55), 0 0 22px rgba(250, 204, 21, 0.8), 0 0 34px rgba(56, 189, 248, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    border-color: #facc15;
+  }
+}
+
+@keyframes dualStarRotatePulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    box-shadow: 0 0 6px rgba(250, 204, 21, 0.8);
+  }
+  50% {
+    transform: scale(1.18) rotate(180deg);
+    box-shadow: 0 0 12px rgba(250, 204, 21, 1), 0 0 18px rgba(56, 189, 248, 0.85);
+  }
+}
+
+.bottom-page-nav-bar {
+  overflow: visible !important;
+}
+
+.cg-center-dual-wrapper,
+.cg-unified-dual-btn-wrapper {
+  flex: 0 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  overflow: visible !important;
+  padding: 4px 0 !important;
+}
+
+.cg-unified-dual-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(145deg, #071328 0%, #0d1e3d 50%, #081328 100%) !important;
+  border: 2px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  padding: 3px !important;
+  /* Both Border Glow Pulse AND 3D Vertical Floating Animation Active Together! */
+  animation: dualBorderPulseV409 2.8s infinite ease-in-out, dualPillFloat3D 2.8s infinite ease-in-out !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  /* Reduced Compact Width while keeping 'ட' 100% clear of the center star */
+  width: auto !important;
+  min-width: 345px !important;
+  max-width: 395px !important;
+}
+
+.dual-half {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: visible !important;
+  user-select: none !important;
+  box-sizing: border-box !important;
+}
+
+/* Left Half: 53% width + 18px right padding so 'ஆலோசனை பதிவிட' ('ட') is completely clear */
+.dual-half-left {
+  flex: 1.14 1 53% !important;
+  padding: 6px 18px 6px 12px !important;
+  border-radius: 999px 0 0 999px !important;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.42) 0%, rgba(217, 119, 6, 0.22) 100%) !important;
+}
+
+.dual-half-left:hover {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%) !important;
+  box-shadow: inset 0 0 14px rgba(253, 224, 71, 0.4), 0 0 16px rgba(245, 158, 11, 0.5) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+
+/* Right Half: 47% width + 18px left padding */
+.dual-half-right {
+  flex: 0.86 1 47% !important;
+  padding: 6px 12px 6px 18px !important;
+  border-radius: 0 999px 999px 0 !important;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.42) 0%, rgba(3, 105, 161, 0.22) 100%) !important;
+}
+
+.dual-half-right:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0284c7 100%) !important;
+  box-shadow: inset 0 0 14px rgba(56, 189, 248, 0.4), 0 0 16px rgba(2, 132, 199, 0.5) !important;
+  transform: scale(1.02) !important;
+  z-index: 2 !important;
+}
+
+.dual-divider {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 2px !important;
+  flex-shrink: 0 !important;
+  background: linear-gradient(180deg, transparent 0%, #fde047 35%, #38bdf8 65%, transparent 100%) !important;
+  z-index: 5 !important;
+}
+
+.dual-divider-dot {
+  position: absolute !important;
+  background: #0f172a !important;
+  border: 1.3px solid #fde047 !important;
+  color: #fde047 !important;
+  font-size: 0.54rem !important;
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  animation: dualStarRotatePulse 3s infinite ease-in-out !important;
+  line-height: 1 !important;
+}
+
+.dual-text-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  line-height: 1.22 !important;
+}
+
+.dual-title-ta {
+  display: block !important;
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: 0.81rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0px !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  white-space: nowrap !important;
+}
+
+.dual-half-left .dual-title-ta {
+  color: #fef08a !important;
+}
+
+.dual-sub-en {
+  display: block !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.57rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.55px !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 1px auto 0 auto !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 768px) {
+  .cg-unified-dual-pill {
+    min-width: 290px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -5449,7 +5869,7 @@ textarea {
 </div>
 <nav class="sidebar-nav-body">
 <!-- 00. முதன்மை முகப்பு (Home) -->
-<a .strip()="" class="sidebar-main-btn" href="index.html">
+<a class="sidebar-main-btn" href="index.html">
 <span class="icon">🏠</span>
 <span class="btn-text-group">
 <span class="menu-ta">முதன்மை முகப்பு</span>
@@ -5457,7 +5877,7 @@ textarea {
 </span>
 </a>
 <!-- 01. நுழைவுத்தேர்வுகள் (Entrance Exams) -->
-<a .strip()="" class="sidebar-main-btn active-page" href="01_00_entrance_main.html">
+<a class="sidebar-main-btn active-page" href="01_00_entrance_main.html">
 <span class="icon">🎯</span>
 <span class="btn-text-group">
 <span class="menu-ta">நுழைவுத்தேர்வுகள்</span>
@@ -5465,7 +5885,7 @@ textarea {
 </span>
 </a>
 <!-- 02. நேரடிச் சேர்க்கை (Direct Admissions) -->
-<a .strip()="" class="sidebar-main-btn" href="02_00_direct_admissions.html">
+<a class="sidebar-main-btn" href="02_00_direct_admissions.html">
 <span class="icon">📈</span>
 <span class="btn-text-group">
 <span class="menu-ta">நேரடிச் சேர்க்கை</span>
@@ -5473,7 +5893,7 @@ textarea {
 </span>
 </a>
 <!-- 03. கல்லூரிகள் அடைவு (Institutes Directory) -->
-<a .strip()="" class="sidebar-main-btn" href="03_institutes.html">
+<a class="sidebar-main-btn" href="03_institutes.html">
 <span class="icon">🏛️</span>
 <span class="btn-text-group">
 <span class="menu-ta">கல்லூரிகள் அடைவு</span>
@@ -5481,7 +5901,7 @@ textarea {
 </span>
 </a>
 <!-- 04. அரசுத் தேர்வுகள் (Govt Competitive Exams) -->
-<a .strip()="" class="sidebar-main-btn" href="04_govt_exams.html">
+<a class="sidebar-main-btn" href="04_govt_exams.html">
 <span class="icon">🏆</span>
 <span class="btn-text-group">
 <span class="menu-ta">அரசுத் தேர்வுகள்</span>
@@ -5489,7 +5909,7 @@ textarea {
 </span>
 </a>
 <!-- 05. திறன் & வேலைவாய்ப்பு (Skills & Careers) -->
-<a .strip()="" class="sidebar-main-btn" href="05_direct_careers.html">
+<a class="sidebar-main-btn" href="05_direct_careers.html">
 <span class="icon">💼</span>
 <span class="btn-text-group">
 <span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span>
@@ -5497,7 +5917,7 @@ textarea {
 </span>
 </a>
 <!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
-<a .strip()="" class="sidebar-main-btn" href="06_student_support.html">
+<a class="sidebar-main-btn" href="06_student_support.html">
 <span class="icon">☎️</span>
 <span class="btn-text-group">
 <span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
@@ -5505,7 +5925,7 @@ textarea {
 </span>
 </a>
 <!-- 07. கல்வி வளங்கள் & போர்ட்டல் (Resources & External Portals) -->
-<a .strip()="" class="sidebar-main-btn" href="07_resources_external_portals.html">
+<a class="sidebar-main-btn" href="07_resources_external_portals.html">
 <span class="icon">📚</span>
 <span class="btn-text-group">
 <span class="menu-ta">கல்வி வளங்கள் &amp; போர்ட்டல்</span>
@@ -7536,7 +7956,7 @@ textarea {
 </td>
 <td><div style="font-size:0.82rem; color:#475569;">📍 Silvassa</div></td>
 <td style="text-align:center;"><b style="color: #059669; font-size: 0.95rem;">177 Seats</b></td>
-<td><div style="font-size: 0.83rem; color: #334155; line-height: 1.5;">மத்திய யூனியன் பிரதேசத்தின் அதிநவீன நியோ மருத்துவக் கல்லூரி.</div></td>
+<td><div style="font-size: 0.83rem; color: #334155; line-height: 1.5;">மத்திய யூனியன் பிரதேசத்தின் அதிநவீன நியோ மருத்துவக் கல்லூரி.</div></td>
 <td>
 <div class="contact-links">
 <span>📞 <a class="contact-btn" href="tel:0260-2642055">0260-2642055</a></span>
@@ -11103,11 +11523,9 @@ textarea {
 <span class="kural-title">திருக்குறள் — அதிகாரம்: மருந்து (குறள்: 950)</span>
 <span class="kural-sparkle">🏥 மருத்துவத்தின் நான்கு தூண்கள்</span>
 </div>
-<div class="kural-verse-text">
-    “உற்றான் அளவும் பிணிஅளவும் காலமும்<br/>கற்றான் கருதிச் செயல்.”
-  </div>
+<div class="kural-verse-text"><span class="kural-line kural-line-1">“உற்றான் அளவும் பிணிஅளவும் காலமும்</span><br/><span class="kural-line kural-line-2">கற்றான் கருதிச் செயல்.” <span aria-hidden="true" class="stylus-nib">🖋️</span></span></div>
 <div class="kural-meaning">
-<strong>மு. வரதராசனார் உரை:</strong> நோயாளியின் உடல் வலிமை, நோயின் அளவு, மற்றும் காலம் ஆகிய மூன்றையும் மருத்துவ நூல் கற்ற மருத்துவர் நன்கு ஆராய்ந்து சிகிச்சை அளிக்க வேண்டும். எய்ம்ஸ் (AIIMS), ஜிப்மர் (JIPMER) போன்ற தேசிய மருத்துவ நிறுவனங்களில் பயின்று தலைசிறந்த மருத்துவர்களாக உருவெடுக்கும் மாணவர்களுக்கு இக்குறள் சிறந்த வழிகாட்டியாகும்.
+<strong>விளக்கவுரை:</strong> நோயாளியின் உடல் வலிமை, நோயின் அளவு, மற்றும் காலம் ஆகிய மூன்றையும் மருத்துவ நூல் கற்ற மருத்துவர் நன்கு ஆராய்ந்து சிகிச்சை அளிக்க வேண்டும். எய்ம்ஸ் (AIIMS), ஜிப்மர் (JIPMER) போன்ற தேசிய மருத்துவ நிறுவனங்களில் பயின்று தலைசிறந்த மருத்துவர்களாக உருவெடுக்கும் மாணவர்களுக்கு இக்குறள் சிறந்த வழிகாட்டியாகும்.
   </div>
 </div><div class="creator-card" style="justify-content: center !important; text-align: center !important;">
 <div class="creator-typewriter-wrapper" style="justify-content: center !important; text-align: center !important; display: inline-flex !important; align-items: center !important;">
