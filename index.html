@@ -6947,12 +6947,12 @@
 <span class="menu-en">SKILLS &amp; CAREERS</span>
 </span>
 </a>
-<!-- 06. உதவி மையம் & தொடர்பு (Helpdesk & Support) -->
+<!-- 06. கட்-ஆஃப் & மாணவர் உதவி (Cutoff Tools & Student Support) -->
 <a class="sidebar-main-btn" href="06_student_support.html">
-<span class="icon">☎️</span>
+<span class="icon">🧮</span>
 <span class="btn-text-group">
-<span class="menu-ta">உதவி மையம் &amp; தொடர்பு</span>
-<span class="menu-en">HELPDESK &amp; SUPPORT</span>
+<span class="menu-ta">கட்-ஆஃப் &amp; மாணவர் உதவி</span>
+<span class="menu-en">CUTOFF TOOLS &amp; STUDENT SUPPORT</span>
 </span>
 </a>
 <!-- 07. கல்வி வளங்கள் & போர்ட்டல் (Resources & External Portals) -->
@@ -7018,7 +7018,7 @@
 <a class="marquee-pill-btn" href="#gateway-colleges">🏛️ 03 / கல்லூரிகள் விவர அடைவு</a>
 <a class="marquee-pill-btn" href="#gateway-competitive">🏆 04 / அரசுப் பணி &amp; போட்டித் தேர்வுகள்</a>
 <a class="marquee-pill-btn" href="#gateway-skills">💼 05 / தனியார் வேலை &amp; திறன் பயிற்சிகள்</a>
-<a class="marquee-pill-btn" href="#gateway-support">🤝 06 / மாணவர் நலத்திட்டங்கள் &amp; உதவி மையம்</a>
+<a class="marquee-pill-btn" href="#gateway-support">🧮 06 / கட்-ஆஃப் கருவிகள் &amp; மாணவர் உதவி</a>
 <a class="marquee-pill-btn" href="#gateway-resources">📚 07 / கல்வி வளங்கள் &amp; மாதிரித் தேர்வுகள்</a>
 </div>
 <!-- Duplicate for infinite seamless scroll -->
@@ -7028,7 +7028,7 @@
 <a class="marquee-pill-btn" href="#gateway-colleges">🏛️ 03 / கல்லூரிகள் விவர அடைவு</a>
 <a class="marquee-pill-btn" href="#gateway-competitive">🏆 04 / அரசுப் பணி &amp; போட்டித் தேர்வுகள்</a>
 <a class="marquee-pill-btn" href="#gateway-skills">💼 05 / தனியார் வேலை &amp; திறன் பயிற்சிகள்</a>
-<a class="marquee-pill-btn" href="#gateway-support">🤝 06 / மாணவர் நலத்திட்டங்கள் &amp; உதவி மையம்</a>
+<a class="marquee-pill-btn" href="#gateway-support">🧮 06 / கட்-ஆஃப் கருவிகள் &amp; மாணவர் உதவி</a>
 <a class="marquee-pill-btn" href="#gateway-resources">📚 07 / கல்வி வளங்கள் &amp; மாதிரித் தேர்வுகள்</a>
 </div>
 </div>
@@ -7209,7 +7209,7 @@
 <div class="card cat-support" id="gateway-support" onclick="window.location.href='06_student_support.html';" style="cursor: pointer;">
 <div>
 <div class="card-top-meta">
-<span class="card-number">👑 06 / STUDENT SUPPORT</span>
+<span class="card-number">👑 06 / CUTOFF TOOLS &amp; STUDENT SUPPORT</span>
 <span class="pillar-badge">சலுகைகள், கருவிகள் &amp; உதவி</span>
 </div>
 <div class="card-header">
@@ -7306,14 +7306,36 @@
       </p>
 <div class="ceo-quote-mark right">”</div>
 </div>
-<!-- Official Sign-off Footer -->
+<!-- Official Sign-off Footer: Left CEO Portrait & Right Official Signature -->
 <div class="ceo-signoff-row">
-<div class="ceo-signature-block">
-<div class="ceo-seal-graphic">🎓 ✨ ✍️</div>
-<div class="ceo-title-name">முதன்மைக் கல்வி அலுவலர்</div>
-<div class="ceo-office-sub">முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்.</div>
-<div class="ceo-tamilnadu-gov">தமிழ்நாடு அரசு • பள்ளிக் கல்வித்துறை</div>
-</div>
+  <!-- Left Side: Chief Educational Officer Portrait Showcase -->
+  <div class="ceo-photo-block">
+    <div class="ceo-portrait-frame" id="ceoPortraitFrame" onclick="triggerCeoPhotoUpload()" title="முதன்மைக் கல்வி அலுவலர் புகைப்படம் (புகைப்படத்தை இணைக்க/மாற்ற கிளிக் செய்யவும்)">
+      <div class="ceo-portrait-glow-ring"></div>
+      <img alt="முதன்மைக் கல்வி அலுவலர், சிவகங்கை மாவட்டம்" class="ceo-portrait-img" id="ceoPortraitImg" onerror="this.style.display='none'; document.getElementById('ceoPortraitFallback').style.display='flex';" src="ceo_sivagangai_photo.jpg"/>
+      <div class="ceo-portrait-fallback" id="ceoPortraitFallback" style="display: none;">
+        <div class="ceo-fallback-emblem">🏛️</div>
+        <div class="ceo-fallback-title">முதன்மைக் கல்வி அலுவலர்</div>
+        <div class="ceo-fallback-sub">சிவகங்கை மாவட்டம்</div>
+        <div class="ceo-fallback-upload-hint">📷 புகைப்படம் இணைக்க</div>
+      </div>
+      <input accept="image/*" id="ceoPhotoFileInput" onchange="handleCeoPhotoSelect(event)" style="display: none;" type="file"/>
+    </div>
+    <div class="ceo-photo-caption-box">
+      <div class="ceo-photo-badge">✨ வாழ்த்துகளுடன் ✨</div>
+      <div class="ceo-photo-role">முதன்மைக் கல்வி அலுவலர்</div>
+      <div class="ceo-photo-dist">சிவகங்கை மாவட்டம்</div>
+    </div>
+  </div>
+
+  <!-- Right Side: Official Signature Block (Aligned Parallel to Left Portrait) -->
+  <div class="ceo-signature-block">
+    <div class="ceo-seal-graphic">🎓 ✨ ✍️</div>
+    <div class="ceo-signature-line"></div>
+    <div class="ceo-title-name">முதன்மைக் கல்வி அலுவலர்</div>
+    <div class="ceo-office-sub">முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்.</div>
+    <div class="ceo-tamilnadu-gov">தமிழ்நாடு அரசு • பள்ளிக் கல்வித்துறை</div>
+  </div>
 </div>
 </div>
 </section>
@@ -7437,10 +7459,11 @@
     const gatewayItems = [
       { text: "🩺 மருத்துவர், ஐஐடி & விமானி ➔ வாயில் 01 (தேசிய நுழைவுத்தேர்வுகள்)", target: "cat-entrance" },
       { text: "📈 நுழைவுத்தேர்வின்றி +2 மதிப்பெண் சேர்க்கை ➔ வாயில் 02 (நேரடிச் சேர்க்கை)", target: "cat-merit" },
-      { text: "🏛️ சிறந்த மத்திய/மாநில அரசு கல்லூரிகள் ➔ வாயில் 03 (கல்லூரிகள் அடைவு)", target: "cat-colleges" },
+      { text: "🏛️ சிறந்த மத்திய / மாநில அரசு கல்லூரிகள் ➔ வாயில் 03 (கல்லூரிகள் அடைவு)", target: "cat-colleges" },
       { text: "👮 அரசுப் பணி & சீருடைப் பணிகள் ➔ வாயில் 04 (போட்டித் தேர்வுகள்)", target: "cat-competitive" },
-      { text: "💼 படித்துக்கொண்டே சம்பாதிக்க (Zoho/HCL) ➔ வாயில் 05 (திறன்சார் பணிகள்)", target: "cat-skills" },
-      { text: "🌟 7.5% சலுகை & உதவி எண் 14417 ➔ வாயில் 06 (மாணவர் நலத்திட்டங்கள்)", target: "cat-support" }
+      { text: "💼 படித்துக்கொண்டே சம்பாதிக்க (Zoho / HCL) ➔ வாயில் 05 (திறன்சார் பணிகள்)", target: "cat-skills" },
+      { text: "🧮 கட்-ஆஃப் கருவிகள் & 14417 உதவி மையம் ➔ வாயில் 06 (கட்-ஆஃப் & மாணவர் உதவி)", target: "cat-support" },
+      { text: "📚 மாதிரித் தேர்வுகள் & கல்வி இணையதளங்கள் ➔ வாயில் 07 (கல்வி வளங்கள் & போர்ட்டல்)", target: "cat-resources" }
     ];
 
     let currentFlipIdx = 0;
@@ -7454,8 +7477,9 @@
       if (isFlipping || !flipCard || !flipContent) return;
       isFlipping = true;
 
-      flipCard.style.transition = 'opacity 0.22s ease';
+      flipCard.style.transition = 'opacity 0.22s ease, transform 0.22s ease';
       flipCard.style.opacity = '0';
+      flipCard.style.transform = 'translateY(4px)';
 
       setTimeout(() => {
         currentFlipIdx = (index + gatewayItems.length) % gatewayItems.length;
@@ -7466,12 +7490,13 @@
           const targetPart = itemText.substring(arrowIdx + 3).trim();
           flipContent.innerHTML = `<span class="flip-part-title">${mainPart}</span> <span class="flip-gateway-badge">➔ ${targetPart}</span>`;
         } else {
-          flipContent.textContent = itemText;
+          flipContent.innerHTML = `<span class="flip-part-title">${itemText}</span>`;
         }
-        
+
         flipCard.style.opacity = '1';
+        flipCard.style.transform = 'translateY(0)';
         isFlipping = false;
-      }, 240);
+      }, 220);
     }
 
     function nextFlipGateway(e) {
@@ -10298,5 +10323,392 @@ async function handlePopupFeedbackSubmit(e) {
   }, 3500);
 }
 </script>
+
+<style id="v411-index-master-fixes">
+/* ============================================================================
+   v4.11 MASTER FIXES FOR INDEX.HTML:
+   1. 2-LINE GATEWAY ANIMATION 100% VISIBILITY & UNCLIPPED HEIGHT
+   2. CRISP HIGH-CONTRAST CEO GREETING HEADING ("முதன்மைக் கல்வி அலுவலரின் வாழ்த்துச் செய்தி")
+   3. PARALLEL LEFT CEO PORTRAIT FRAME & RIGHT SIGNATURE BLOCK IN CEO SIGN-OFF ROW
+   ============================================================================ */
+
+/* 1. Title Banner Typing & 2-Line Gateway Animation Visibility Fix */
+.control-panel {
+  overflow: visible !important;
+  padding: 18px 22px 18px 22px !important;
+}
+
+.typing-container {
+  height: auto !important;
+  min-height: 2.2em !important;
+  max-height: none !important;
+  overflow: visible !important;
+  padding: 2px 8px !important;
+}
+
+.typing-text {
+  color: #38bdf8 !important;
+  -webkit-text-fill-color: #38bdf8 !important;
+  font-weight: 800 !important;
+  line-height: 1.45 !important;
+  white-space: normal !important;
+}
+
+.lead-title {
+  color: #fef08a !important;
+  -webkit-text-fill-color: #fef08a !important;
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.92), 0 0 14px rgba(250, 204, 21, 0.32) !important;
+  filter: none !important;
+  font-weight: 900 !important;
+  line-height: 1.4 !important;
+}
+
+.compass-flip-strip {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  background: linear-gradient(90deg, #04091a 0%, #0f1d3a 50%, #04091a 100%) !important;
+  border: 2px solid #facc15 !important;
+  border-radius: 18px !important;
+  padding: 8px 14px !important;
+  margin: 8px auto 4px auto !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.65), 0 0 18px rgba(250, 204, 21, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  width: 100% !important;
+  max-width: 920px !important;
+  height: auto !important;
+  min-height: 54px !important;
+  max-height: none !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+}
+
+.compass-flip-viewport {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  height: auto !important;
+  min-height: 42px !important;
+  max-height: none !important;
+  overflow: visible !important;
+  perspective: none !important;
+  padding: 2px 4px !important;
+}
+
+.compass-flip-card {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 40px !important;
+  max-height: none !important;
+  overflow: visible !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  transform: none !important;
+  transform-style: flat !important;
+}
+
+.compass-flip-content {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 6px 12px !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 38px !important;
+  max-height: none !important;
+  overflow: visible !important;
+  white-space: normal !important;
+  padding: 6px 16px !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.92) 0%, rgba(15, 23, 42, 0.95) 100%) !important;
+  border: 1.5px solid rgba(250, 204, 21, 0.65) !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45) !important;
+  line-height: 1.45 !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+
+.flip-part-title {
+  display: inline-block !important;
+  font-family: 'Noto Sans Tamil', 'Plus Jakarta Sans', sans-serif !important;
+  font-size: clamp(0.88rem, 1.1vw, 1.0rem) !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95) !important;
+  line-height: 1.4 !important;
+  white-space: normal !important;
+}
+
+.flip-gateway-badge {
+  display: inline-block !important;
+  font-family: 'Noto Sans Tamil', 'Plus Jakarta Sans', sans-serif !important;
+  font-size: clamp(0.82rem, 1.0vw, 0.92rem) !important;
+  font-weight: 900 !important;
+  color: #fef08a !important;
+  -webkit-text-fill-color: #fef08a !important;
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%) !important;
+  border: 1.2px solid #facc15 !important;
+  padding: 3px 14px !important;
+  border-radius: 999px !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35) !important;
+  line-height: 1.35 !important;
+  white-space: normal !important;
+}
+
+/* 2. High-Contrast Crisp Visibility for "முதன்மைக் கல்வி அலுவலரின் வாழ்த்துச் செய்தி" */
+.ceo-main-title {
+  font-family: 'Noto Sans Tamil', sans-serif !important;
+  font-size: clamp(1.4rem, 2.3vw, 1.95rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.4 !important;
+  margin: 4px auto 8px auto !important;
+  padding: 6px 22px !important;
+  color: #fef08a !important;
+  -webkit-text-fill-color: #fef08a !important;
+  background: linear-gradient(90deg, rgba(250, 204, 21, 0.08) 0%, rgba(250, 204, 21, 0.22) 50%, rgba(250, 204, 21, 0.08) 100%) !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  border-top: 1.5px solid rgba(250, 204, 21, 0.5) !important;
+  border-bottom: 1.5px solid rgba(250, 204, 21, 0.5) !important;
+  border-radius: 10px !important;
+  display: inline-block !important;
+  letter-spacing: 0.4px !important;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.95), 0 0 16px rgba(250, 204, 21, 0.45) !important;
+  filter: none !important;
+}
+
+.ceo-sub-tagline {
+  color: #38bdf8 !important;
+  -webkit-text-fill-color: #38bdf8 !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.4px !important;
+  margin-top: 2px !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85) !important;
+}
+
+/* 3. Parallel Left CEO Portrait Frame & Right Official Signature Block */
+.ceo-signoff-row {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 24px !important;
+  margin-top: 24px !important;
+  padding: 20px 24px 12px 24px !important;
+  border-top: 1.5px dashed rgba(250, 204, 21, 0.45) !important;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.65) 0%, rgba(30, 58, 138, 0.25) 50%, rgba(15, 23, 42, 0.65) 100%) !important;
+  border-radius: 14px !important;
+}
+
+.ceo-photo-block {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 16px !important;
+  text-align: left !important;
+}
+
+.ceo-portrait-frame {
+  position: relative !important;
+  width: 126px !important;
+  height: 148px !important;
+  border-radius: 16px !important;
+  padding: 4px !important;
+  background: linear-gradient(135deg, #fef08a 0%, #d4af37 50%, #b45309 100%) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 18px rgba(250, 204, 21, 0.45) !important;
+  cursor: pointer !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.ceo-portrait-frame:hover {
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.7), 0 0 24px rgba(250, 204, 21, 0.75) !important;
+}
+
+.ceo-portrait-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  border-radius: 12px !important;
+  border: 2px solid #0f172a !important;
+  display: block !important;
+  background: #0f172a !important;
+}
+
+.ceo-portrait-fallback {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 12px !important;
+  background: radial-gradient(circle at 50% 30%, #1e3a8a 0%, #091326 100%) !important;
+  border: 2px solid rgba(250, 204, 21, 0.4) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 8px 6px !important;
+  box-sizing: border-box !important;
+}
+
+.ceo-fallback-emblem {
+  font-size: 2.1rem !important;
+  line-height: 1 !important;
+  margin-bottom: 6px !important;
+  filter: drop-shadow(0 2px 6px rgba(250, 204, 21, 0.5)) !important;
+}
+
+.ceo-fallback-title {
+  font-size: 0.68rem !important;
+  font-weight: 900 !important;
+  color: #fef08a !important;
+  line-height: 1.25 !important;
+}
+
+.ceo-fallback-sub {
+  font-size: 0.62rem !important;
+  font-weight: 700 !important;
+  color: #cbd5e1 !important;
+  margin-top: 2px !important;
+}
+
+.ceo-fallback-upload-hint {
+  margin-top: 6px !important;
+  font-size: 0.58rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  background: rgba(2, 132, 199, 0.85) !important;
+  border: 1px solid #38bdf8 !important;
+  padding: 2px 7px !important;
+  border-radius: 999px !important;
+}
+
+.ceo-photo-caption-box {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+}
+
+.ceo-photo-badge {
+  display: inline-block !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  color: #38bdf8 !important;
+  letter-spacing: 0.4px !important;
+}
+
+.ceo-photo-role {
+  font-size: 1.05rem !important;
+  font-weight: 900 !important;
+  color: #fef08a !important;
+  letter-spacing: 0.2px !important;
+}
+
+.ceo-photo-dist {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  color: #e2e8f0 !important;
+}
+
+.ceo-signature-block {
+  text-align: right !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  margin-left: auto !important;
+}
+
+.ceo-signature-line {
+  width: 170px !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, transparent 0%, #facc15 100%) !important;
+  margin: 4px 0 6px 0 !important;
+}
+
+@media (max-width: 768px) {
+  .compass-flip-content {
+    flex-direction: column !important;
+    gap: 4px !important;
+    padding: 6px 10px !important;
+  }
+  .ceo-signoff-row {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 16px 14px !important;
+  }
+  .ceo-photo-block {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+  .ceo-signature-block {
+    text-align: center !important;
+    align-items: center !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+    border-top: 1px dashed rgba(255, 255, 255, 0.15) !important;
+    padding-top: 14px !important;
+  }
+  .ceo-signature-line {
+    background: linear-gradient(90deg, transparent 0%, #facc15 50%, transparent 100%) !important;
+  }
+}
+</style>
+<script id="v411-ceo-photo-loader">
+function triggerCeoPhotoUpload() {
+  var inp = document.getElementById('ceoPhotoFileInput');
+  if (inp) inp.click();
+}
+function handleCeoPhotoSelect(e) {
+  var file = e.target.files && e.target.files[0];
+  if (!file) return;
+  var reader = new FileReader();
+  reader.onload = function(evt) {
+    var dataUrl = evt.target.result;
+    var img = document.getElementById('ceoPortraitImg');
+    var fb = document.getElementById('ceoPortraitFallback');
+    if (img) {
+      img.src = dataUrl;
+      img.style.display = 'block';
+    }
+    if (fb) fb.style.display = 'none';
+    try { localStorage.setItem('cg_ceo_portrait_data', dataUrl); } catch (err) {}
+  };
+  reader.readAsDataURL(file);
+}
+document.addEventListener('DOMContentLoaded', function() {
+  try {
+    var savedPhoto = localStorage.getItem('cg_ceo_portrait_data');
+    if (savedPhoto) {
+      var img = document.getElementById('ceoPortraitImg');
+      var fb = document.getElementById('ceoPortraitFallback');
+      if (img) {
+        img.src = savedPhoto;
+        img.style.display = 'block';
+      }
+      if (fb) fb.style.display = 'none';
+    }
+  } catch (err) {}
+});
+</script>
+
 </body>
 </html>
