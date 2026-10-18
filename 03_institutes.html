@@ -4153,6 +4153,154 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
     }
 
+
+/* === v4.12 MEDICAL-STYLE TYPEWRITER ANIMATION RIBBON === */
+@keyframes borderShimmerRibbon {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+@keyframes sparklePulseRibbon {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.18) rotate(12deg); }
+}
+@keyframes cursorBlinkRibbon {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.typing-banner-wrap {
+  padding: 2.5px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, #1e3a8a, #2563eb, #0d9488, #d97706, #7c3aed, #2563eb, #1e3a8a) !important;
+  background-size: 300% 100% !important;
+  animation: borderShimmerRibbon 6s linear infinite !important;
+  margin: 0 0 18px 0 !important;
+  box-shadow: 0 4px 16px rgba(30, 58, 138, 0.14) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.typing-banner-wrap .typing-container {
+  background: linear-gradient(90deg, #ffffff 0%, #f0f7ff 50%, #ffffff 100%) !important;
+  border-radius: 999px !important;
+  padding: 8px 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  min-height: 40px !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+.typing-banner-wrap .typing-badge {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #0284c7 100%) !important;
+  color: #ffffff !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  padding: 4px 12px !important;
+  border-radius: 999px !important;
+  white-space: nowrap !important;
+  letter-spacing: 0.3px !important;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  flex-shrink: 0 !important;
+}
+.typing-banner-wrap .sparkle-icon {
+  display: inline-block !important;
+  animation: sparklePulseRibbon 1.6s infinite ease-in-out !important;
+}
+.typing-banner-wrap .typing-text {
+  font-size: 0.90rem !important;
+  font-weight: 800 !important;
+  color: #1e3a8a !important;
+  line-height: 1.4 !important;
+}
+.typing-banner-wrap .typing-cursor {
+  display: inline-block !important;
+  font-weight: 900 !important;
+  color: #2563eb !important;
+  animation: cursorBlinkRibbon 0.75s infinite !important;
+  margin-left: 2px !important;
+}
+@media (max-width: 680px) {
+  .typing-banner-wrap {
+    border-radius: 14px !important;
+  }
+  .typing-banner-wrap .typing-container {
+    border-radius: 12px !important;
+    padding: 8px 12px !important;
+    flex-wrap: wrap !important;
+  }
+  .typing-banner-wrap .typing-text {
+    font-size: 0.82rem !important;
+  }
+}
+
+
+/* === v4.12 UNIVERSAL FLOATING BACK-TO-TOP BUTTON === */
+.floating-back-to-top {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 99999 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  padding: 9px 18px !important;
+  background: linear-gradient(135deg, #0284c7 0%, #1e40af 100%) !important;
+  color: #ffffff !important;
+  border: 1.8px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), 0 0 12px rgba(56, 189, 248, 0.4) !important;
+  font-family: 'Noto Sans Tamil', 'Plus Jakarta Sans', 'Inter', sans-serif !important;
+  font-size: 0.86rem !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  outline: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(14px) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  backdrop-filter: blur(8px) !important;
+  text-decoration: none !important;
+}
+.floating-back-to-top.visible {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+.floating-back-to-top:hover {
+  transform: translateY(-3px) scale(1.04) !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(56, 189, 248, 0.6) !important;
+  background: linear-gradient(135deg, #0369a1 0%, #1e3a8a 100%) !important;
+  border-color: #facc15 !important;
+}
+.floating-btn-arrow {
+  font-size: 0.92rem !important;
+  line-height: 1 !important;
+  color: #facc15 !important;
+}
+.floating-btn-text {
+  letter-spacing: 0.3px !important;
+  color: #ffffff !important;
+}
+/* Hide any legacy duplicate fixed back-to-top buttons so only #floatingBackToTop shows */
+.back-to-top:not(#floatingBackToTop),
+.back-to-top-btn:not(#floatingBackToTop),
+#masterBackTopBtn,
+#backToTopBtn:not(#floatingBackToTop) {
+  display: none !important;
+}
+@media (max-width: 680px) {
+  .floating-back-to-top {
+    bottom: 16px !important;
+    right: 14px !important;
+    padding: 7px 14px !important;
+    font-size: 0.78rem !important;
+  }
+}
+
 </style>
 <style id="robust-layout-override">
 /* ========================================================
@@ -5991,7 +6139,7 @@
 <a class="sidebar-main-btn" href="06_student_support.html">
 <span class="icon">🧮</span>
 <span class="btn-text-group">
-<span class="menu-ta">கட்-ஆஃப் &amp; மாணவர் உதவி</span>
+<span class="menu-ta">கட்-ஆஃப் கருவிகள் &amp; உதவி மையம்</span>
 <span class="menu-en">CUTOFF TOOLS &amp; STUDENT SUPPORT</span>
 </span>
 </a>
@@ -6051,55 +6199,17 @@
 <!-- Animated Student-Attractive Hero Banner (Compact & Sleek) -->
 <div class="header-banner-wrap">
 <header class="header-banner">
-<!-- Animated Glow Sparkle Badge (Year 2026 removed) -->
-<div class="banner-top-badge">
-<span class="badge-pulse-dot"></span>
-<span class="badge-icon">🏛️</span>
-<span class="badge-text">அகில இந்திய &amp; தமிழக உயர்கல்வி அடைவுகள்</span>
-<span class="badge-sparkle">✨ 16 விரிவான கையேடுகள்</span>
-</div>
-<!-- Crystal Clear Glowing Main Title (Year 2026 removed) -->
-<h1 class="banner-main-title">
-      உயர் கல்வி நிறுவனங்களின் முழு அடைவுத் தொகுப்பு
-    </h1>
-<!-- Prominent Subtitle Highlighting All Major Fields -->
-<div class="banner-fields-pill-row">
-<span class="field-pill pill-med">🩺 மருத்துவம்</span>
-<span class="field-pill pill-eng">⚙️ பொறியியல்</span>
-<span class="field-pill pill-sci">🔬 ஆராய்ச்சி</span>
-<span class="field-pill pill-cuet">🏛️ மத்திய பல்கலை</span>
-<span class="field-pill pill-law">⚖️ சட்டம்</span>
-<span class="field-pill pill-agri">🌾 வேளாண்மை</span>
-<span class="field-pill pill-arts">📚 கலை &amp; அறிவியல்</span>
-<span class="field-pill pill-poly">🛠️ பாலிடெக்னிக் &amp; ITI</span>
-</div>
-<!-- Informative & Student-Friendly Subtitle -->
+<h1 class="banner-main-title">உயர்கல்வி நிறுவனங்கள் &amp; பல்கலைக்கழகங்கள் முழுமையான அடைவு</h1>
 <p class="banner-desc">
-      அகில இந்திய மற்றும் தமிழ்நாடு அளவிலான <strong>1,200-க்கும் மேற்பட்ட</strong> முன்னணி அரசு &amp; பல்கலைக்கழகங்களின் முழு விவரங்கள், இடங்கள், சேர்க்கை விதிமுறைகள் மற்றும் <strong>16 பிரத்யேக கூகுள் தாள்கள்</strong> (Landscape PDF &amp; Excel பதிவிறக்க வசதியுடன்).
+      தமிழ்நாடு மற்றும் இந்திய அளவிலான <strong>820+ தலைசிறந்த அரசு மற்றும் முன்னணி உயர்கல்வி நிறுவனங்களின்</strong> சேர்க்கை முறை, நுழைவுத்தேர்வு, இருப்பிடம் மற்றும் அதிகாரப்பூர்வ இணையதளங்களின் ஒருங்கிணைந்த தொகுப்பு.
     </p>
-<!-- Compact Interactive Highlights Ribbon -->
-<div class="banner-features-ribbon">
-<div class="ribbon-item">
-<span class="ribbon-icon">📊</span>
-<span>16 Google Sheets நேரடிப் பார்வை</span>
-</div>
-<div class="ribbon-dot">•</div>
-<div class="ribbon-item">
-<span class="ribbon-icon">📄</span>
-<span>Landscape A4 PDF பதிவிறக்கம்</span>
-</div>
-<div class="ribbon-dot">•</div>
-<div class="ribbon-item">
-<span class="ribbon-icon">📗</span>
-<span>Excel (.xlsx) கோப்புகள்</span>
-</div>
-<div class="ribbon-dot">•</div>
-<div class="ribbon-item">
-<span class="ribbon-icon">🎯</span>
-<span>7.5% அரசுப்பள்ளி இடஒதுக்கீடு</span>
-</div>
-</div>
 </header>
+</div>
+<div class="typing-banner-wrap" id="institutesHighlightsRibbon">
+<div class="typing-container">
+<span aria-label="முக்கியத் தகவல்கள்" class="typing-badge"><span class="sparkle-icon">✨</span> 820+ கல்வி நிறுவனங்கள்</span>
+<span class="typing-text" id="heroRibbonTypingText">🩺 மருத்துவம் (AIIMS, JIPMER, 36 அரசு மருத்துவக் கல்லூரிகள்) & துணை மருத்துவக் கல்வி நிறுவனங்களின் முழுப் பட்டியல்!</span><span class="typing-cursor">|</span>
+</div>
 </div><div aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை" class="quick-nav-marquee-container no-print">
 <div class="marquee-static-label" title="விரைவு வழிசெலுத்தல்">
 <span class="pulse-icon">⚡</span>
@@ -7299,5 +7409,73 @@ if (document.readyState === 'loading') {
   }
 }
 </script>
+
+<script id="script-heroRibbonTypingText">
+(function() {
+  var phrases = ["🩺 மருத்துவம் (AIIMS, JIPMER, 36 அரசு மருத்துவக் கல்லூரிகள்) & துணை மருத்துவக் கல்வி நிறுவனங்களின் முழுப் பட்டியல்!", "⚙️ பொறியியல் & தொழில்நுட்பம்: IITs, NITs, IIITs, அண்ணா பல்கலைக்கழக வளாகங்கள் & அரசுப் பொறியியல் கல்லூரிகள்!", "🌾 வேளாண்மை (TNAU), கால்நடை (TANUVAS), மீன்வளம் (TNJFU), சட்டம் (TNDALU/NLU) & கடல்சார் (IMU) பல்கலைக்கழகங்கள்!", "🎨 கலை & அறிவியல் (164+ TNGASA அரசுக் கல்லூரிகள்), மத்தியப் பல்கலைக்கழகங்கள் (CUTN, PU) & ஆராய்ச்சி நிறுவனங்கள் (IISER, IISc)!", "📍 சிவகங்கை மற்றும் தென் மாவட்ட மாணவர்களுக்கான அருகாமையிலுள்ள அரசுக் கல்லூரிகள் & உடனடித் தேடல் வசதி!"];
+  var target = document.getElementById('heroRibbonTypingText');
+  if (!target || !phrases.length) return;
+  var pIdx = 0, cIdx = 0, isDel = false;
+  function tick() {
+    var current = phrases[pIdx];
+    if (isDel) {
+      cIdx--;
+      target.textContent = current.substring(0, cIdx);
+    } else {
+      cIdx++;
+      target.textContent = current.substring(0, cIdx);
+    }
+    var speed = isDel ? 18 : 34;
+    if (!isDel && cIdx === current.length) {
+      speed = 2400;
+      isDel = true;
+    } else if (isDel && cIdx === 0) {
+      isDel = false;
+      pIdx = (pIdx + 1) % phrases.length;
+      speed = 350;
+    }
+    setTimeout(tick, speed);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', tick);
+  } else {
+    tick();
+  }
+})();
+</script>
+
+<button aria-label="பக்கத்தின் மேலே செல்" class="floating-back-to-top" id="floatingBackToTop" title="பக்கத்தின் மேலே செல்" type="button">
+<span class="floating-btn-arrow">▲</span>
+<span class="floating-btn-text">மேலே செல்</span>
+</button>
+
+<script id="universalFloatingBttScript">
+(function() {
+  function initFloatingBtt() {
+    var btt = document.getElementById('floatingBackToTop');
+    if (!btt) return;
+    function checkScroll() {
+      var sy = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      if (sy > 100) {
+        btt.classList.add('visible');
+      } else {
+        btt.classList.remove('visible');
+      }
+    }
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    btt.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    checkScroll();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFloatingBtt);
+  } else {
+    initFloatingBtt();
+  }
+})();
+</script>
+
 </body>
 </html>

@@ -3644,6 +3644,71 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
     }
 
+
+/* === v4.12 UNIVERSAL FLOATING BACK-TO-TOP BUTTON === */
+.floating-back-to-top {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 99999 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  padding: 9px 18px !important;
+  background: linear-gradient(135deg, #0284c7 0%, #1e40af 100%) !important;
+  color: #ffffff !important;
+  border: 1.8px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), 0 0 12px rgba(56, 189, 248, 0.4) !important;
+  font-family: 'Noto Sans Tamil', 'Plus Jakarta Sans', 'Inter', sans-serif !important;
+  font-size: 0.86rem !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  outline: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(14px) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  backdrop-filter: blur(8px) !important;
+  text-decoration: none !important;
+}
+.floating-back-to-top.visible {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+.floating-back-to-top:hover {
+  transform: translateY(-3px) scale(1.04) !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(56, 189, 248, 0.6) !important;
+  background: linear-gradient(135deg, #0369a1 0%, #1e3a8a 100%) !important;
+  border-color: #facc15 !important;
+}
+.floating-btn-arrow {
+  font-size: 0.92rem !important;
+  line-height: 1 !important;
+  color: #facc15 !important;
+}
+.floating-btn-text {
+  letter-spacing: 0.3px !important;
+  color: #ffffff !important;
+}
+/* Hide any legacy duplicate fixed back-to-top buttons so only #floatingBackToTop shows */
+.back-to-top:not(#floatingBackToTop),
+.back-to-top-btn:not(#floatingBackToTop),
+#masterBackTopBtn,
+#backToTopBtn:not(#floatingBackToTop) {
+  display: none !important;
+}
+@media (max-width: 680px) {
+  .floating-back-to-top {
+    bottom: 16px !important;
+    right: 14px !important;
+    padding: 7px 14px !important;
+    font-size: 0.78rem !important;
+  }
+}
+
 </style>
 <style id="robust-layout-override">
 /* ========================================================
@@ -5510,7 +5575,7 @@
 <a class="sidebar-main-btn" href="06_student_support.html">
 <span class="icon">🧮</span>
 <span class="btn-text-group">
-<span class="menu-ta">கட்-ஆஃப் &amp; மாணவர் உதவி</span>
+<span class="menu-ta">கட்-ஆஃப் கருவிகள் &amp; உதவி மையம்</span>
 <span class="menu-en">CUTOFF TOOLS &amp; STUDENT SUPPORT</span>
 </span>
 </a>
@@ -7656,5 +7721,38 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
+<button aria-label="பக்கத்தின் மேலே செல்" class="floating-back-to-top" id="floatingBackToTop" title="பக்கத்தின் மேலே செல்" type="button">
+<span class="floating-btn-arrow">▲</span>
+<span class="floating-btn-text">மேலே செல்</span>
+</button>
+
+<script id="universalFloatingBttScript">
+(function() {
+  function initFloatingBtt() {
+    var btt = document.getElementById('floatingBackToTop');
+    if (!btt) return;
+    function checkScroll() {
+      var sy = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      if (sy > 100) {
+        btt.classList.add('visible');
+      } else {
+        btt.classList.remove('visible');
+      }
+    }
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    btt.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    checkScroll();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFloatingBtt);
+  } else {
+    initFloatingBtt();
+  }
+})();
+</script>
+
 </body>
 </html>

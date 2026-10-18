@@ -6911,6 +6911,154 @@
   color: #bae6fd !important;
 }
 
+
+/* === v4.12 MEDICAL-STYLE TYPEWRITER ANIMATION RIBBON === */
+@keyframes borderShimmerRibbon {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+@keyframes sparklePulseRibbon {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.18) rotate(12deg); }
+}
+@keyframes cursorBlinkRibbon {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.typing-banner-wrap {
+  padding: 2.5px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, #1e3a8a, #2563eb, #0d9488, #d97706, #7c3aed, #2563eb, #1e3a8a) !important;
+  background-size: 300% 100% !important;
+  animation: borderShimmerRibbon 6s linear infinite !important;
+  margin: 0 0 18px 0 !important;
+  box-shadow: 0 4px 16px rgba(30, 58, 138, 0.14) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.typing-banner-wrap .typing-container {
+  background: linear-gradient(90deg, #ffffff 0%, #f0f7ff 50%, #ffffff 100%) !important;
+  border-radius: 999px !important;
+  padding: 8px 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  min-height: 40px !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+.typing-banner-wrap .typing-badge {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #0284c7 100%) !important;
+  color: #ffffff !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  padding: 4px 12px !important;
+  border-radius: 999px !important;
+  white-space: nowrap !important;
+  letter-spacing: 0.3px !important;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  flex-shrink: 0 !important;
+}
+.typing-banner-wrap .sparkle-icon {
+  display: inline-block !important;
+  animation: sparklePulseRibbon 1.6s infinite ease-in-out !important;
+}
+.typing-banner-wrap .typing-text {
+  font-size: 0.90rem !important;
+  font-weight: 800 !important;
+  color: #1e3a8a !important;
+  line-height: 1.4 !important;
+}
+.typing-banner-wrap .typing-cursor {
+  display: inline-block !important;
+  font-weight: 900 !important;
+  color: #2563eb !important;
+  animation: cursorBlinkRibbon 0.75s infinite !important;
+  margin-left: 2px !important;
+}
+@media (max-width: 680px) {
+  .typing-banner-wrap {
+    border-radius: 14px !important;
+  }
+  .typing-banner-wrap .typing-container {
+    border-radius: 12px !important;
+    padding: 8px 12px !important;
+    flex-wrap: wrap !important;
+  }
+  .typing-banner-wrap .typing-text {
+    font-size: 0.82rem !important;
+  }
+}
+
+
+/* === v4.12 UNIVERSAL FLOATING BACK-TO-TOP BUTTON === */
+.floating-back-to-top {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 99999 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  padding: 9px 18px !important;
+  background: linear-gradient(135deg, #0284c7 0%, #1e40af 100%) !important;
+  color: #ffffff !important;
+  border: 1.8px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), 0 0 12px rgba(56, 189, 248, 0.4) !important;
+  font-family: 'Noto Sans Tamil', 'Plus Jakarta Sans', 'Inter', sans-serif !important;
+  font-size: 0.86rem !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  outline: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(14px) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  backdrop-filter: blur(8px) !important;
+  text-decoration: none !important;
+}
+.floating-back-to-top.visible {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+.floating-back-to-top:hover {
+  transform: translateY(-3px) scale(1.04) !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(56, 189, 248, 0.6) !important;
+  background: linear-gradient(135deg, #0369a1 0%, #1e3a8a 100%) !important;
+  border-color: #facc15 !important;
+}
+.floating-btn-arrow {
+  font-size: 0.92rem !important;
+  line-height: 1 !important;
+  color: #facc15 !important;
+}
+.floating-btn-text {
+  letter-spacing: 0.3px !important;
+  color: #ffffff !important;
+}
+/* Hide any legacy duplicate fixed back-to-top buttons so only #floatingBackToTop shows */
+.back-to-top:not(#floatingBackToTop),
+.back-to-top-btn:not(#floatingBackToTop),
+#masterBackTopBtn,
+#backToTopBtn:not(#floatingBackToTop) {
+  display: none !important;
+}
+@media (max-width: 680px) {
+  .floating-back-to-top {
+    bottom: 16px !important;
+    right: 14px !important;
+    padding: 7px 14px !important;
+    font-size: 0.78rem !important;
+  }
+}
+
 </style>
 <style id="robust-layout-override">
 /* ========================================================
@@ -8347,7 +8495,7 @@
 <a class="sidebar-main-btn active-page" href="06_student_support.html">
 <span class="icon">🧮</span>
 <span class="btn-text-group">
-<span class="menu-ta">கட்-ஆஃப் &amp; மாணவர் உதவி</span>
+<span class="menu-ta">கட்-ஆஃப் கருவிகள் &amp; உதவி மையம்</span>
 <span class="menu-en">CUTOFF TOOLS &amp; STUDENT SUPPORT</span>
 </span>
 </a>
@@ -8393,27 +8541,17 @@
 </span>
 </nav><div class="header-banner-wrap">
 <header class="header-banner">
-<!-- Crystal Clear Glowing Main Title (No Year 2026) -->
-<h1 class="banner-main-title">ஒருங்கிணைந்த உயர்கல்வி சேர்க்கை வழிகாட்டல் &amp; உதவி மையம்</h1>
-<div style="font-family: 'Inter', sans-serif; font-size: clamp(0.80rem, 1.05vw, 0.95rem); font-weight: 800; color: #cbd5e1; letter-spacing: 1.5px; margin: 0 0 6px 0; text-transform: uppercase; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
-      Integrated Higher Education Admissions, Cut-off &amp; Helpline Portal
-    </div>
-<!-- Prominent Subtitle Highlighting Major Services / Stream Pills -->
-<!-- Informative & Student-Friendly Subtitle -->
+<h1 class="banner-main-title">ஒருங்கிணைந்த உயர்கல்வி சேர்க்கை கட்-ஆஃப் கருவிகள் &amp; உதவி மையம்</h1>
 <p class="banner-desc">
-      தேசிய அளவிலான நுழைவுத் தேர்வுகள் (NEET, JEE, CUET), தமிழ்நாடு ஒற்றைச் சாளர சேர்க்கைகள் (TNEA, TNGASA, TANUVAS, TNDALU, TNAU), 7.5% முன்னுரிமை, ஆவண சரிபார்ப்பு, <strong>14417 இலவச உதவி மையம்</strong> மற்றும் மாவட்ட வழிகாட்டல் குழுக்களின் ஒருங்கிணைந்த உதவித் தளம்.
+      உயர்கல்வி சேர்க்கைக்கான துல்லிய கட்-ஆஃப் கணக்கீடு, விளையாட்டு வீரர்கள் சான்றிதழ் மதிப்பெண் கால்குலேட்டர், 7.5% அரசுப் பள்ளி முன்னுரிமை, சான்றிதழ் சரிபார்ப்பு மற்றும் <strong>14417 இலவச உதவி மையத்தின்</strong> ஒருங்கிணைந்த வழிகாட்டுதல் தளம்.
     </p>
-<!-- Compact Interactive Highlights Ribbon -->
-<div class="banner-features-ribbon">
-<div class="ribbon-item"><span class="ribbon-icon">⚡</span><span>துல்லிய கட்-ஆஃப் கணக்கீடு</span></div>
-<div class="ribbon-dot">•</div>
-<div class="ribbon-item"><span class="ribbon-icon">☎️</span><span>14417 இலவச உதவி மையம்</span></div>
-<div class="ribbon-dot">•</div>
-<div class="ribbon-item"><span class="ribbon-icon">📄</span><span>தேவையான ஆவண வழிகாட்டி</span></div>
-<div class="ribbon-dot">•</div>
-<div class="ribbon-item"><span class="ribbon-icon">💡</span><span>நேரடி சந்தேகத் தீர்வு</span></div>
-</div>
 </header>
+</div>
+<div class="typing-banner-wrap" id="supportHighlightsRibbon">
+<div class="typing-container">
+<span aria-label="முக்கியத் தகவல்கள்" class="typing-badge"><span class="sparkle-icon">✨</span> முக்கியச் சேவைகள்</span>
+<span class="typing-text" id="heroRibbonTypingText">⚡ துல்லிய கட்-ஆஃப் கால்குலேட்டர்: பொறியியல் (TNEA), துணை மருத்துவம், வேளாண்மை (TNAU), கால்நடை (TANUVAS), கலை & சட்டம்!</span><span class="typing-cursor">|</span>
+</div>
 </div><div class="helpline-bento-grid" id="helpline-bento-sec">
 <!-- Card 1: 14417 -->
 <div class="bento-helpline-card mint">
@@ -13870,6 +14008,70 @@ async function handlePopupFeedbackSubmit(e) {
   }, 3500);
 }
 </script>
+
+<script id="script-heroRibbonTypingText">
+(function() {
+  var phrases = ["⚡ துல்லிய கட்-ஆஃப் கால்குலேட்டர்: பொறியியல் (TNEA), துணை மருத்துவம், வேளாண்மை (TNAU), கால்நடை (TANUVAS), கலை & சட்டம்!", "🏆 விளையாட்டு வீரர்கள் பிரிவு (Sports Quota): 4-ஆண்டு சான்றிதழ் மதிப்பெண் கணக்கீடு & அதிகாரப்பூர்வ A4 PDF படிவப் பதிவிறக்கம்!", "☎️ 14417 பள்ளிக் கல்வி 24x7 இலவச உதவி மையம், 14416 மனநல ஆலோசனை & சிவகங்கை மாவட்ட வழிகாட்டி ஆசிரியர் குழு!", "🏫 7.5% அரசுப் பள்ளி மாணவர் முன்னுரிமை இடஒதுக்கீடு — மருத்துவம் & தொழிற்கல்வியில் 100% முழுக் கட்டண விலக்கு!", "💰 புதுமைப் பெண் & தமிழ்ப் புதல்வன் (மாதம் ₹1,000), முதல் பட்டதாரி சலுகை & PM-Vidyalaxmi கல்விக் கடன் வழிகாட்டி!", "📄 ஒற்றைச் சாளர கலந்தாய்வு 6 முக்கிய படிநிலைகள் & சேர்க்கைக்குத் தேவையான 14 அசல் ஆவணங்கள் சரிபார்ப்புப் பட்டியல்!"];
+  var target = document.getElementById('heroRibbonTypingText');
+  if (!target || !phrases.length) return;
+  var pIdx = 0, cIdx = 0, isDel = false;
+  function tick() {
+    var current = phrases[pIdx];
+    if (isDel) {
+      cIdx--;
+      target.textContent = current.substring(0, cIdx);
+    } else {
+      cIdx++;
+      target.textContent = current.substring(0, cIdx);
+    }
+    var speed = isDel ? 18 : 34;
+    if (!isDel && cIdx === current.length) {
+      speed = 2400;
+      isDel = true;
+    } else if (isDel && cIdx === 0) {
+      isDel = false;
+      pIdx = (pIdx + 1) % phrases.length;
+      speed = 350;
+    }
+    setTimeout(tick, speed);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', tick);
+  } else {
+    tick();
+  }
+})();
+</script>
+
+
+<script id="universalFloatingBttScript">
+(function() {
+  function initFloatingBtt() {
+    var btt = document.getElementById('floatingBackToTop');
+    if (!btt) return;
+    function checkScroll() {
+      var sy = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      if (sy > 100) {
+        btt.classList.add('visible');
+      } else {
+        btt.classList.remove('visible');
+      }
+    }
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    btt.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    checkScroll();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFloatingBtt);
+  } else {
+    initFloatingBtt();
+  }
+})();
+</script>
+
 </body>
 </html>
 <canvas id="popupCelebrationCanvas" style="display:none; position:fixed; inset:0; pointer-events:none; z-index:10002;"></canvas>
