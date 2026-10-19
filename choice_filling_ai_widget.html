@@ -1120,7 +1120,6 @@
 }
 
 </style>
-
 <style id="v414-crystal-typing-ribbon-css">
 /* ============================================================================
    v4.14 UNIFIED TRANSPARENT CRYSTAL GUIDANCE ANIMATION RIBBON
@@ -1231,9 +1230,436 @@
   }
 }
 </style>
+<style id="v415-portal-master-stabilizer">
+/* ============================================================================
+   v4.15 MASTER STABILIZER, ZERO-CLS TYPEWRITER, STEADY THIRUKKURAL,
+   MOBILE RESPONSIVENESS & UNIVERSAL PRINT STYLES
+   ============================================================================ */
 
-</head>
-<body>
+/* --- A. 100% STILL, EYE-FRIENDLY THIRUKKURAL PALM-LEAF MANUSCRIPT --- */
+.kural-box,
+.kural-box::before,
+.kural-box::after,
+.kural-header,
+.kural-icon,
+.kural-title,
+.kural-sparkle,
+.kural-verse-text,
+.kural-verse-text .kural-line,
+.kural-verse-text .kural-line-1,
+.kural-verse-text .kural-line-2,
+.kural-verse-text .stylus-nib,
+.kural-meaning {
+  animation: none !important;
+  -webkit-animation: none !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+  transition: none !important;
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
+}
+
+.kural-box {
+  box-shadow: 0 5px 16px rgba(74, 33, 5, 0.22), inset 0 0 14px rgba(139, 69, 19, 0.14) !important;
+}
+
+.kural-verse-text .stylus-nib {
+  display: inline-block !important;
+  opacity: 0.85 !important;
+}
+
+/* --- B. ZERO LAYOUT SHIFT (CLS = 0) FOR ALL TYPEWRITER BANNERS (1 OR 2 LINES) --- */
+.typing-banner-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 64px !important;
+  min-height: 64px !important;
+  max-height: 64px !important;
+  margin: 12px auto 14px auto !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  animation: none !important;
+}
+
+.typing-banner-wrap .typing-container,
+body:not(.is-home-page) .typing-container {
+  height: 58px !important;
+  min-height: 58px !important;
+  max-height: 58px !important;
+  width: 100% !important;
+  max-width: 980px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+  gap: 10px !important;
+  padding: 4px 20px !important;
+  margin: 0 auto !important;
+  border-radius: 16px !important;
+  background: linear-gradient(135deg, rgba(236, 253, 245, 0.94) 0%, rgba(240, 249, 255, 0.92) 100%) !important;
+  border: 1.5px solid #6ee7b7 !important;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.95) !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.typing-banner-wrap .typing-badge {
+  flex-shrink: 0 !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+.sparkle-icon,
+.typing-sparkle,
+.pulse-sparkle {
+  animation: none !important;
+  transform: none !important;
+}
+
+.typing-banner-wrap .typing-text,
+body:not(.is-home-page) .typing-text {
+  font-size: 0.92rem !important;
+  font-weight: 800 !important;
+  color: #0c4a6e !important;
+  line-height: 1.32 !important;
+  max-height: 2.68em !important;
+  overflow: hidden !important;
+  text-align: center !important;
+  display: inline-block !important;
+  white-space: normal !important;
+}
+
+/* Home Page (index.html) Control Panel Typewriter & Gateway Flip Box Fixed Heights */
+.control-panel .typing-container {
+  width: 100% !important;
+  max-width: 960px !important;
+  height: 52px !important;
+  min-height: 52px !important;
+  max-height: 52px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  margin: 0 auto 4px auto !important;
+  padding: 2px 12px !important;
+  box-sizing: border-box !important;
+}
+
+.control-panel .typing-text {
+  font-size: clamp(0.84rem, 1.02vw, 0.94rem) !important;
+  font-weight: 800 !important;
+  color: #38bdf8 !important;
+  -webkit-text-fill-color: #38bdf8 !important;
+  line-height: 1.32 !important;
+  max-height: 2.68em !important;
+  overflow: hidden !important;
+  text-align: center !important;
+}
+
+.compass-flip-strip {
+  height: 68px !important;
+  min-height: 68px !important;
+  max-height: 68px !important;
+  width: 100% !important;
+  max-width: 920px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  padding: 6px 14px !important;
+  margin: 8px auto 4px auto !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.compass-flip-viewport {
+  flex: 1 1 auto !important;
+  height: 54px !important;
+  min-height: 54px !important;
+  max-height: 54px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 0 4px !important;
+  box-sizing: border-box !important;
+}
+
+.compass-flip-card {
+  width: 100% !important;
+  height: 54px !important;
+  min-height: 54px !important;
+  max-height: 54px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  transform: none !important;
+  box-sizing: border-box !important;
+}
+
+.compass-flip-content {
+  width: 100% !important;
+  height: 52px !important;
+  min-height: 52px !important;
+  max-height: 52px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  align-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 4px 10px !important;
+  padding: 4px 14px !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  line-height: 1.28 !important;
+}
+
+/* Creator Card & Unified Dual Pill Zero-Bounce Stabilization */
+.creator-card {
+  min-height: 54px !important;
+  box-sizing: border-box !important;
+}
+
+.creator-typewriter-wrapper {
+  min-height: 32px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.cg-unified-dual-pill {
+  animation: dualBorderPulseV409 3.5s infinite ease-in-out !important;
+  transform: none !important;
+}
+
+/* --- C. COMPREHENSIVE MOBILE PHONE OPTIMIZATION (<= 1024px & <= 768px) --- */
+.cg-responsive-grid-4,
+.cg-responsive-grid-5 {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.cg-responsive-grid-3 {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.cg-responsive-grid-2 {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 1024px) {
+  .desktop-left-sidebar {
+    position: fixed !important;
+    left: -320px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 290px !important;
+    max-width: 85vw !important;
+    height: 100vh !important;
+    transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 10005 !important;
+  }
+  .desktop-left-sidebar.sidebar-open,
+  .desktop-left-sidebar.active {
+    left: 0 !important;
+  }
+  .sidebar-backdrop {
+    z-index: 10004 !important;
+  }
+  .sidebar-backdrop.active {
+    display: block !important;
+  }
+  .sidebar-close-btn {
+    display: inline-flex !important;
+  }
+  .portal-main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 8px 10px 75px 10px !important;
+  }
+  /* Keep Menu Button on Bottom-Left and Back-to-Top on Bottom-Right (Zero Overlap!) */
+  .mobile-menu-floating-btn {
+    display: inline-flex !important;
+    position: fixed !important;
+    bottom: 16px !important;
+    left: 14px !important;
+    right: auto !important;
+    z-index: 9998 !important;
+    padding: 9px 16px !important;
+    font-size: 0.84rem !important;
+  }
+  .floating-back-to-top {
+    bottom: 16px !important;
+    right: 14px !important;
+    left: auto !important;
+    z-index: 9998 !important;
+    padding: 8px 15px !important;
+    font-size: 0.80rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Fixed height on mobile for typewriter and gateway flip box so 1-line and 2-line never shift */
+  .typing-banner-wrap {
+    height: 74px !important;
+    min-height: 74px !important;
+    max-height: 74px !important;
+    margin: 8px auto 10px auto !important;
+  }
+  .typing-banner-wrap .typing-container,
+  body:not(.is-home-page) .typing-container {
+    height: 66px !important;
+    min-height: 66px !important;
+    max-height: 66px !important;
+    padding: 4px 12px !important;
+    border-radius: 14px !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+  }
+  .typing-banner-wrap .typing-text,
+  body:not(.is-home-page) .typing-text {
+    font-size: 0.80rem !important;
+    line-height: 1.28 !important;
+    max-height: 2.6em !important;
+  }
+  .control-panel .typing-container {
+    height: 58px !important;
+    min-height: 58px !important;
+    max-height: 58px !important;
+    padding: 2px 8px !important;
+  }
+  .control-panel .typing-text {
+    font-size: 0.80rem !important;
+    line-height: 1.28 !important;
+    max-height: 2.6em !important;
+  }
+  .compass-flip-strip {
+    height: 82px !important;
+    min-height: 82px !important;
+    max-height: 82px !important;
+    padding: 5px 8px !important;
+    gap: 6px !important;
+    border-radius: 14px !important;
+  }
+  .compass-flip-viewport,
+  .compass-flip-card,
+  .compass-flip-content {
+    height: 68px !important;
+    min-height: 68px !important;
+    max-height: 68px !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 3px !important;
+    padding: 2px 6px !important;
+    overflow: hidden !important;
+  }
+  .flip-part-title {
+    font-size: 0.78rem !important;
+    line-height: 1.22 !important;
+    text-align: center !important;
+  }
+  .flip-gateway-badge {
+    font-size: 0.70rem !important;
+    line-height: 1.2 !important;
+    padding: 2px 10px !important;
+  }
+  .creator-card {
+    min-height: 84px !important;
+    padding: 10px 12px !important;
+  }
+  .creator-typewriter-wrapper {
+    min-height: 40px !important;
+    height: 40px !important;
+    font-size: 0.78rem !important;
+    line-height: 1.25 !important;
+  }
+  /* Responsive Tables & Touch Scroll */
+  .table-container,
+  .table-responsive,
+  .table-wrapper,
+  .directory-table-container,
+  .college-table-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  table th,
+  table td {
+    font-size: 0.80rem !important;
+    padding: 8px 8px !important;
+  }
+  .cg-responsive-grid-4,
+  .cg-responsive-grid-5,
+  .cg-responsive-grid-3,
+  .cg-responsive-grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  #bottomStudentQueryBtn,
+  #bottomPortalFeedbackBtn {
+    min-width: 0 !important;
+    width: 100% !important;
+    padding: 12px 16px !important;
+  }
+}
+
+/* --- D. UNIVERSAL PRINT STYLES (@media print) --- */
+@media print {
+  .desktop-left-sidebar,
+  .mobile-menu-floating-btn,
+  .floating-back-to-top,
+  .sidebar-backdrop,
+  .quick-nav-marquee-container,
+  .bottom-page-nav-bar,
+  .portal-bottom-action-hub,
+  .cg-portal-modal-overlay,
+  .no-print {
+    display: none !important;
+  }
+  html, body, .portal-layout-wrapper, .portal-main-content, .container, .portal-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+  .card, .section-card, .kural-box, .creator-card, .portal-footer, table, th, td {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    box-shadow: none !important;
+  }
+}
+</style></head>
+<body class="">
 <div class="cf-wrapper">
 <!-- HEADER -->
 <div class="cf-header-box">

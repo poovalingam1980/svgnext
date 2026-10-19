@@ -5604,7 +5604,6 @@
   background: #f8fafc !important;
 }
 </style>
-
 <style id="v414-crystal-typing-ribbon-css">
 /* ============================================================================
    v4.14 UNIFIED TRANSPARENT CRYSTAL GUIDANCE ANIMATION RIBBON
@@ -5715,9 +5714,436 @@
   }
 }
 </style>
+<style id="v415-portal-master-stabilizer">
+/* ============================================================================
+   v4.15 MASTER STABILIZER, ZERO-CLS TYPEWRITER, STEADY THIRUKKURAL,
+   MOBILE RESPONSIVENESS & UNIVERSAL PRINT STYLES
+   ============================================================================ */
 
-</head>
-<body>
+/* --- A. 100% STILL, EYE-FRIENDLY THIRUKKURAL PALM-LEAF MANUSCRIPT --- */
+.kural-box,
+.kural-box::before,
+.kural-box::after,
+.kural-header,
+.kural-icon,
+.kural-title,
+.kural-sparkle,
+.kural-verse-text,
+.kural-verse-text .kural-line,
+.kural-verse-text .kural-line-1,
+.kural-verse-text .kural-line-2,
+.kural-verse-text .stylus-nib,
+.kural-meaning {
+  animation: none !important;
+  -webkit-animation: none !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+  transition: none !important;
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
+}
+
+.kural-box {
+  box-shadow: 0 5px 16px rgba(74, 33, 5, 0.22), inset 0 0 14px rgba(139, 69, 19, 0.14) !important;
+}
+
+.kural-verse-text .stylus-nib {
+  display: inline-block !important;
+  opacity: 0.85 !important;
+}
+
+/* --- B. ZERO LAYOUT SHIFT (CLS = 0) FOR ALL TYPEWRITER BANNERS (1 OR 2 LINES) --- */
+.typing-banner-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 64px !important;
+  min-height: 64px !important;
+  max-height: 64px !important;
+  margin: 12px auto 14px auto !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  animation: none !important;
+}
+
+.typing-banner-wrap .typing-container,
+body:not(.is-home-page) .typing-container {
+  height: 58px !important;
+  min-height: 58px !important;
+  max-height: 58px !important;
+  width: 100% !important;
+  max-width: 980px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+  gap: 10px !important;
+  padding: 4px 20px !important;
+  margin: 0 auto !important;
+  border-radius: 16px !important;
+  background: linear-gradient(135deg, rgba(236, 253, 245, 0.94) 0%, rgba(240, 249, 255, 0.92) 100%) !important;
+  border: 1.5px solid #6ee7b7 !important;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.95) !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.typing-banner-wrap .typing-badge {
+  flex-shrink: 0 !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+.sparkle-icon,
+.typing-sparkle,
+.pulse-sparkle {
+  animation: none !important;
+  transform: none !important;
+}
+
+.typing-banner-wrap .typing-text,
+body:not(.is-home-page) .typing-text {
+  font-size: 0.92rem !important;
+  font-weight: 800 !important;
+  color: #0c4a6e !important;
+  line-height: 1.32 !important;
+  max-height: 2.68em !important;
+  overflow: hidden !important;
+  text-align: center !important;
+  display: inline-block !important;
+  white-space: normal !important;
+}
+
+/* Home Page (index.html) Control Panel Typewriter & Gateway Flip Box Fixed Heights */
+.control-panel .typing-container {
+  width: 100% !important;
+  max-width: 960px !important;
+  height: 52px !important;
+  min-height: 52px !important;
+  max-height: 52px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  margin: 0 auto 4px auto !important;
+  padding: 2px 12px !important;
+  box-sizing: border-box !important;
+}
+
+.control-panel .typing-text {
+  font-size: clamp(0.84rem, 1.02vw, 0.94rem) !important;
+  font-weight: 800 !important;
+  color: #38bdf8 !important;
+  -webkit-text-fill-color: #38bdf8 !important;
+  line-height: 1.32 !important;
+  max-height: 2.68em !important;
+  overflow: hidden !important;
+  text-align: center !important;
+}
+
+.compass-flip-strip {
+  height: 68px !important;
+  min-height: 68px !important;
+  max-height: 68px !important;
+  width: 100% !important;
+  max-width: 920px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  padding: 6px 14px !important;
+  margin: 8px auto 4px auto !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.compass-flip-viewport {
+  flex: 1 1 auto !important;
+  height: 54px !important;
+  min-height: 54px !important;
+  max-height: 54px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 0 4px !important;
+  box-sizing: border-box !important;
+}
+
+.compass-flip-card {
+  width: 100% !important;
+  height: 54px !important;
+  min-height: 54px !important;
+  max-height: 54px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  transform: none !important;
+  box-sizing: border-box !important;
+}
+
+.compass-flip-content {
+  width: 100% !important;
+  height: 52px !important;
+  min-height: 52px !important;
+  max-height: 52px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  align-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 4px 10px !important;
+  padding: 4px 14px !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  line-height: 1.28 !important;
+}
+
+/* Creator Card & Unified Dual Pill Zero-Bounce Stabilization */
+.creator-card {
+  min-height: 54px !important;
+  box-sizing: border-box !important;
+}
+
+.creator-typewriter-wrapper {
+  min-height: 32px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.cg-unified-dual-pill {
+  animation: dualBorderPulseV409 3.5s infinite ease-in-out !important;
+  transform: none !important;
+}
+
+/* --- C. COMPREHENSIVE MOBILE PHONE OPTIMIZATION (<= 1024px & <= 768px) --- */
+.cg-responsive-grid-4,
+.cg-responsive-grid-5 {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.cg-responsive-grid-3 {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.cg-responsive-grid-2 {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 1024px) {
+  .desktop-left-sidebar {
+    position: fixed !important;
+    left: -320px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 290px !important;
+    max-width: 85vw !important;
+    height: 100vh !important;
+    transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 10005 !important;
+  }
+  .desktop-left-sidebar.sidebar-open,
+  .desktop-left-sidebar.active {
+    left: 0 !important;
+  }
+  .sidebar-backdrop {
+    z-index: 10004 !important;
+  }
+  .sidebar-backdrop.active {
+    display: block !important;
+  }
+  .sidebar-close-btn {
+    display: inline-flex !important;
+  }
+  .portal-main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 8px 10px 75px 10px !important;
+  }
+  /* Keep Menu Button on Bottom-Left and Back-to-Top on Bottom-Right (Zero Overlap!) */
+  .mobile-menu-floating-btn {
+    display: inline-flex !important;
+    position: fixed !important;
+    bottom: 16px !important;
+    left: 14px !important;
+    right: auto !important;
+    z-index: 9998 !important;
+    padding: 9px 16px !important;
+    font-size: 0.84rem !important;
+  }
+  .floating-back-to-top {
+    bottom: 16px !important;
+    right: 14px !important;
+    left: auto !important;
+    z-index: 9998 !important;
+    padding: 8px 15px !important;
+    font-size: 0.80rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Fixed height on mobile for typewriter and gateway flip box so 1-line and 2-line never shift */
+  .typing-banner-wrap {
+    height: 74px !important;
+    min-height: 74px !important;
+    max-height: 74px !important;
+    margin: 8px auto 10px auto !important;
+  }
+  .typing-banner-wrap .typing-container,
+  body:not(.is-home-page) .typing-container {
+    height: 66px !important;
+    min-height: 66px !important;
+    max-height: 66px !important;
+    padding: 4px 12px !important;
+    border-radius: 14px !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+  }
+  .typing-banner-wrap .typing-text,
+  body:not(.is-home-page) .typing-text {
+    font-size: 0.80rem !important;
+    line-height: 1.28 !important;
+    max-height: 2.6em !important;
+  }
+  .control-panel .typing-container {
+    height: 58px !important;
+    min-height: 58px !important;
+    max-height: 58px !important;
+    padding: 2px 8px !important;
+  }
+  .control-panel .typing-text {
+    font-size: 0.80rem !important;
+    line-height: 1.28 !important;
+    max-height: 2.6em !important;
+  }
+  .compass-flip-strip {
+    height: 82px !important;
+    min-height: 82px !important;
+    max-height: 82px !important;
+    padding: 5px 8px !important;
+    gap: 6px !important;
+    border-radius: 14px !important;
+  }
+  .compass-flip-viewport,
+  .compass-flip-card,
+  .compass-flip-content {
+    height: 68px !important;
+    min-height: 68px !important;
+    max-height: 68px !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 3px !important;
+    padding: 2px 6px !important;
+    overflow: hidden !important;
+  }
+  .flip-part-title {
+    font-size: 0.78rem !important;
+    line-height: 1.22 !important;
+    text-align: center !important;
+  }
+  .flip-gateway-badge {
+    font-size: 0.70rem !important;
+    line-height: 1.2 !important;
+    padding: 2px 10px !important;
+  }
+  .creator-card {
+    min-height: 84px !important;
+    padding: 10px 12px !important;
+  }
+  .creator-typewriter-wrapper {
+    min-height: 40px !important;
+    height: 40px !important;
+    font-size: 0.78rem !important;
+    line-height: 1.25 !important;
+  }
+  /* Responsive Tables & Touch Scroll */
+  .table-container,
+  .table-responsive,
+  .table-wrapper,
+  .directory-table-container,
+  .college-table-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  table th,
+  table td {
+    font-size: 0.80rem !important;
+    padding: 8px 8px !important;
+  }
+  .cg-responsive-grid-4,
+  .cg-responsive-grid-5,
+  .cg-responsive-grid-3,
+  .cg-responsive-grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  #bottomStudentQueryBtn,
+  #bottomPortalFeedbackBtn {
+    min-width: 0 !important;
+    width: 100% !important;
+    padding: 12px 16px !important;
+  }
+}
+
+/* --- D. UNIVERSAL PRINT STYLES (@media print) --- */
+@media print {
+  .desktop-left-sidebar,
+  .mobile-menu-floating-btn,
+  .floating-back-to-top,
+  .sidebar-backdrop,
+  .quick-nav-marquee-container,
+  .bottom-page-nav-bar,
+  .portal-bottom-action-hub,
+  .cg-portal-modal-overlay,
+  .no-print {
+    display: none !important;
+  }
+  html, body, .portal-layout-wrapper, .portal-main-content, .container, .portal-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+  .card, .section-card, .kural-box, .creator-card, .portal-footer, table, th, td {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    box-shadow: none !important;
+  }
+}
+</style></head>
+<body class="">
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
 <button class="mobile-menu-floating-btn" id="mobileMenuFloatingBtn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
 <span style="font-size: 1.15rem; line-height: 1;">☰</span>
@@ -5849,7 +6275,7 @@
 </header>
 </div>
 <div class="typing-banner-wrap no-print" id="skillsHighlightsRibbon" style="text-align: center; margin: 14px auto 16px auto;">
-<div class="typing-container"><span aria-label="தகவல்கள்" class="typing-badge"><span class="sparkle-icon">✨</span></span><span class="typing-text" id="heroRibbonTypingText">💡 நான் முதல்வன் (Naan Mudhalvan) &amp; தமிழ்நாடு திறன் மேம்பாட்டுக் கழகம் (TNSDC) — இலவசத் திறன் சான்றிதழ் பயிற்சிகள்!</span><span class="typing-cursor">|</span></div>
+<div class="typing-container"><span aria-label="தகவல்கள்" class="typing-badge"><span class="sparkle-icon">✨</span></span><span class="typing-text" id="heroRibbonTypingText">💡 திறன் தமிழ்நாடு (Thiran Tamil Nadu) &amp; தமிழ்நாடு திறன் மேம்பாட்டுக் கழகம் (TNSDC) — இலவசத் திறன் சான்றிதழ் பயிற்சிகள்!</span><span class="typing-cursor">|</span></div>
 </div><div aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை" class="quick-nav-marquee-container no-print">
 <div class="marquee-static-label" title="விரைவு வழிசெலுத்தல்">
 <span class="pulse-icon">⚡</span>
@@ -5859,7 +6285,7 @@
 <div class="marquee-content-loop">
 <a class="touch-pill" href="#intro">📖 1. முன்னுரை &amp; நோக்கம்</a>
 <a class="touch-pill" href="#work-learn">💼 2. Zoho &amp; HCL படிப்பு+வேலை</a>
-<a class="touch-pill" href="#thiran-tn">🌟 3. திறன் தமிழ்நாடு (நான் முதல்வன்)</a>
+<a class="touch-pill" href="#thiran-tn">🌟 3. திறன் தமிழ்நாடு (Thiran Tamil Nadu)</a>
 <a class="touch-pill" href="#short-term-courses">⏱️ 4. குறுகிய காலப் பயிற்சிகள்</a>
 <a class="touch-pill" href="#apprenticeship">⚙️ 5. தொழிற்பழகுநர் பயிற்சி (NAPS)</a>
 <a class="touch-pill" href="#job-fairs">🏢 6. மாவட்ட வேலைவாய்ப்பு முகாம்கள்</a>
@@ -5871,7 +6297,7 @@
 <div aria-hidden="true" class="marquee-content-loop">
 <a class="touch-pill" href="#intro">📖 1. முன்னுரை &amp; நோக்கம்</a>
 <a class="touch-pill" href="#work-learn">💼 2. Zoho &amp; HCL படிப்பு+வேலை</a>
-<a class="touch-pill" href="#thiran-tn">🌟 3. திறன் தமிழ்நாடு (நான் முதல்வன்)</a>
+<a class="touch-pill" href="#thiran-tn">🌟 3. திறன் தமிழ்நாடு (Thiran Tamil Nadu)</a>
 <a class="touch-pill" href="#short-term-courses">⏱️ 4. குறுகிய காலப் பயிற்சிகள்</a>
 <a class="touch-pill" href="#apprenticeship">⚙️ 5. தொழிற்பழகுநர் பயிற்சி (NAPS)</a>
 <a class="touch-pill" href="#job-fairs">🏢 6. மாவட்ட வேலைவாய்ப்பு முகாம்கள்</a>
@@ -5970,7 +6396,7 @@
 <div class="section-header">
 <div class="section-icon-badge badge-green">🌟</div>
 <div>
-<h2 class="section-title">3. 'திறன் தமிழ்நாடு' (முன்னர் நான் முதல்வன்) &amp; TNSDC இலவச திறன் பயிற்சிகள்</h2>
+<h2 class="section-title">3. 'திறன் தமிழ்நாடு' (Thiran Tamil Nadu) &amp; TNSDC இலவச திறன் பயிற்சிகள்</h2>
 </div>
 </div>
 <div class="notice-banner" style="background: #ecfdf5; border-color: #a7f3d0; border-left-color: #059669;">
@@ -5978,7 +6404,7 @@
 <div class="notice-content">
 <h4>முக்கியப் பெயர் மாற்றம் அறிவிப்பு:</h4>
 <p>
-          தமிழ்நாடு அரசால் பள்ளி மற்றும் கல்லூரி மாணவர்களுக்காகத் தொடங்கப்பட்ட முதன்மைத் திட்டமான <strong>'நான் முதல்வன்'</strong> தற்போது <strong>'திறன் தமிழ்நாடு' (Thiran Tamil Nadu - Thiran TN)</strong> என மறுபெயரிடப்பட்டு, அதிநவீன தொழில்நுட்பம் மற்றும் வேலைவாய்ப்பு இணைப்புகளுடன் விரிவுபடுத்தப்பட்டுள்ளது!
+          தமிழ்நாடு அரசின் முதன்மைத் திறன் மேம்பாட்டுத் திட்டமான <strong>'திறன் தமிழ்நாடு' (Thiran Tamil Nadu - Thiran TN)</strong> பள்ளி மற்றும் கல்லூரி மாணவர்களுக்கு அதிநவீன தொழில்நுட்பப் பயிற்சிகள் மற்றும் நேரடி வேலைவாய்ப்பு இணைப்புகளுடன் விரிவுபடுத்தப்பட்டுள்ளது!
         </p>
 </div>
 </div>
@@ -5992,13 +6418,13 @@
 <li><strong>🏛️ பயிற்சி வழங்கும் நிறுவனங்கள்:</strong> தமிழ்நாடு திறன் மேம்பாட்டுக் கழகத்தின் (TNSDC) அங்கீகரிக்கப்பட்ட தொழிற்கல்வி நிறுவனங்கள், அரசு ஐடிஐ (ITI), அரசு கலை &amp; அறிவியல் கல்லூரிகள் மற்றும் மாவட்ட திறன் பயிற்சி மையங்கள் (சிவகங்கை, காரைக்குடி, தேவகோட்டை).</li>
 <li><strong>🎓 தகுதிகள்:</strong> 10-ஆம் வகுப்பு, 12-ஆம் வகுப்பு, ஐடிஐ, பாலிடெக்னிக் அல்லது பட்டப்படிப்பு முடித்த / பயிலும் மாணவர்கள்.</li>
 <li><strong>🎯 சேர்க்கை முறை (Admission Process):</strong>
-<br/>• நிலை 1: <strong>thiran.tn.gov.in</strong> அல்லது <strong>naanmudhalvan.tn.gov.in</strong> போர்ட்டலில் ஆதார் எண் மற்றும் கல்வி விவரங்களுடன் பதிவு.
+<br/>• நிலை 1: <strong>thiran.tn.gov.in</strong> அதிகாரப்பூர்வ போர்ட்டலில் ஆதார் எண் மற்றும் கல்வி விவரங்களுடன் பதிவு.
             <br/>• நிலை 2: விருப்பமான பாடப்பிரிவு மற்றும் அருகிலுள்ள மாவட்ட பயிற்சி மையத்தைத் தேர்ந்தெடுத்தல்.
             <br/>• நிலை 3: சேர்க்கை அறிவிப்பு வரப்பெற்றவுடன் அசல் சான்றிதழ்களுடன் பயிற்சி மையத்தில் நேரடிச் சேர்க்கை.
           </li>
 <li><strong>💰 கல்விக் கட்டணம்:</strong> <strong>100% முற்றிலும் இலவசம் (ரூபாய் 0 கட்டணம்)</strong>. பயிற்சி, ஆய்வுக்கூடப் பயன்பாடு மற்றும் சான்றிதழ் கட்டணம் முழுவதையும் தமிழ்நாடு அரசே ஏற்கிறது.</li>
 </ul>
-<a class="feature-btn" href="https://www.naanmudhalvan.tn.gov.in" rel="noopener noreferrer" style="background: #059669;" target="_blank">
+<a class="feature-btn" href="https://www.thiran.tn.gov.in" rel="noopener noreferrer" style="background: #059669;" target="_blank">
           திறன் தமிழ்நாடு பதிவு போர்ட்டல் ➔
         </a>
 </div>
@@ -6446,9 +6872,9 @@
 </div>
 </div>
 <div class="faq-item">
-<div class="faq-question">1. நான் முதல்வன் திட்டத்திற்கும் திறன் தமிழ்நாடு திட்டத்திற்கும் என்ன தொடர்பு? ▾</div>
+<div class="faq-question">1. திறன் தமிழ்நாடு (Thiran Tamil Nadu) திட்டத்தின் முக்கிய நோக்கம் என்ன? ▾</div>
 <div class="faq-answer">
-        தமிழ்நாடு அரசால் தொடங்கப்பட்ட 'நான் முதல்வன்' திட்டமே தற்போது <strong>'திறன் தமிழ்நாடு' (Thiran Tamil Nadu - Thiran TN)</strong> என அதிகாரப்பூர்வமாகப் பெயர் மாற்றம் செய்யப்பட்டுள்ளது. இத்திட்டம் பள்ளி, கல்லூரி மாணவர்கள் மற்றும் வேலைதேடும் இளைஞர்களுக்கு உலகத்தரம் வாய்ந்த இலவசத் தொழில்நுட்பப் பயிற்சிகளை வழங்கி வேலைவாய்ப்புகளை உறுதி செய்கிறது.
+        தமிழ்நாடு அரசின் <strong>'திறன் தமிழ்நாடு' (Thiran Tamil Nadu - Thiran TN)</strong> திட்டம் பள்ளி, கல்லூரி மாணவர்கள் மற்றும் வேலைதேடும் இளைஞர்களுக்கு உலகத்தரம் வாய்ந்த இலவசத் தொழில்நுட்பப் பயிற்சிகளை வழங்கி நேரடி வேலைவாய்ப்புகளை உறுதி செய்கிறது.
       </div>
 </div>
 <div class="faq-item">
@@ -6527,6 +6953,31 @@
 </div>
 </div>
 </section>
+
+<section class="section-card" id="sec-naps-ommc" style="background: #ffffff; border: 2px solid #0284c7; border-top: 5px solid #0284c7; border-radius: 16px; padding: 20px 22px; margin: 22px 0; box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);">
+<div style="display: inline-flex; align-items: center; gap: 8px; background: #e0f2fe; border: 1px solid #38bdf8; color: #0369a1; font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 999px; margin-bottom: 8px;">
+    🏭 மத்திய அரசுப் பழகுநர் பயிற்சி (NAPS / NATS) &amp; ✈️ அயல்நாட்டு வேலைவாய்ப்பு (OMMC)
+  </div>
+<h2 style="font-size: clamp(1.15rem, 1.8vw, 1.42rem); font-weight: 900; color: #0f172a; margin: 0 0 10px 0;">
+    💰 உதவித்தொகையுடன் கூடிய மத்திய அரசுப் பழகுநர் பயிற்சி (Apprenticeship) &amp; அரசு வழி வெளிநாட்டு வேலைவாய்ப்புகள்
+  </h2>
+<div class="cg-responsive-grid-2" style="margin-top: 12px;">
+<div style="background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 12px; padding: 16px;">
+<h3 style="font-size: 1.0rem; font-weight: 900; color: #065f46; margin: 0 0 8px 0;">🛠️ 1. NAPS &amp; NATS பழகுநர் பயிற்சித் திட்டம் (மாதம் ₹9,000 – ₹15,000 Stipend)</h3>
+<ul style="font-size: 0.84rem; color: #1e293b; line-height: 1.65; padding-left: 18px; margin: 0;">
+<li><strong>NAPS (apprenticeshipindia.gov.in):</strong> 10th / +2 / ITI முடித்தவர்கள் இரயில்வே (Southern Railway), BHEL திருச்சி, NLC நெய்வேலி, கப்பல் கட்டும் தளம் மற்றும் முன்னணித் தொழிற்சாலைகளில் 1 ஆண்டு பயிற்சி + <strong>தேசிய பழகுநர் சான்றிதழ் (NAC)</strong> பெறலாம். இரயில்வே Level-1 பணிகளில் <strong>20% இடஒதுக்கீடு</strong> உண்டு!</li>
+<li><strong>NATS 2.0 (nats.education.gov.in):</strong> பாலிடெக்னிக் டிப்ளமோ, பொறியியல் (B.E/B.Tech) மற்றும் கலை அறிவியல் (B.Sc/B.Com/B.A/BCA) பட்டதாரிகளுக்கு பொதுத்துறை மற்றும் பன்னாட்டு நிறுவனங்களில் மாதம் <strong>₹9,000 முதல் ₹15,000 வரை உதவித்தொகையுடன்</strong> 1 ஆண்டு பணி அனுபவச் சான்றிதழ் (BOAT தென் மண்டலம், சென்னை).</li>
+</ul>
+</div>
+<div style="background: #eff6ff; border: 1.5px solid #93c5fd; border-radius: 12px; padding: 16px;">
+<h3 style="font-size: 1.0rem; font-weight: 900; color: #1e3a8a; margin: 0 0 8px 0;">✈️ 2. தமிழ்நாடு அரசு அயல்நாட்டு வேலைவாய்ப்பு நிறுவனம் (OMMC &amp; அயல்நாட்டு மொழிப் பயிற்சி)</h3>
+<ul style="font-size: 0.84rem; color: #1e293b; line-height: 1.65; padding-left: 18px; margin: 0;">
+<li><strong>OMMC (omcmanpower.tn.gov.in):</strong> தமிழக அரசின் தொழிலாளர் நலத்துறை கீழ் இயங்கும் அதிகாரப்பூர்வ நிறுவனம். <strong>B.Sc. Nursing / GNM செவிலியர்கள், மருந்தாளுநர்கள், பொறியாளர்கள், டிப்ளமோ மற்றும் ITI</strong> முடித்தவர்களுக்கு இங்கிலாந்து (UK NHS), ஜப்பான், ஜெர்மனி, சிங்கப்பூர் மற்றும் வளைகுடா நாடுகளில் பாதுகாப்பான அரசு வழி வேலைவாய்ப்பு.</li>
+<li><strong>திறன் தமிழ்நாடு &amp; TNSDC ஜப்பான் (JLPT N4/N3) / ஜெர்மன் (B1/B2) மொழிப் பயிற்சி:</strong> கல்லூரி மற்றும் பாலிடெக்னிக் மாணவர்களுக்கு இலவச அயல்நாட்டு மொழிப் பயிற்சி வழங்கப்பட்டு நேரடி வெளிநாட்டுப் பணி வழங்கப்படுகிறது.</li>
+</ul>
+</div>
+</div>
+</section>
 <nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar no-print">
 <a class="page-nav-btn btn-prev-animated" href="04_govt_exams.html" title="அரசுப் பணித் தேர்வுகள்">
 <span class="nav-btn-icon">◀</span>
@@ -6589,7 +7040,7 @@
 function toggleSidebarMenu() {
   var sidebar = document.getElementById('desktopLeftSidebar');
   var backdrop = document.getElementById('sidebarBackdrop');
-  if (sidebar) sidebar.classList.toggle('sidebar-open');
+  if (sidebar) { sidebar.classList.toggle('sidebar-open'); sidebar.classList.toggle('active'); }
   if (backdrop) backdrop.classList.toggle('active');
 }
 
@@ -6770,7 +7221,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </button>
 <script id="script-heroRibbonTypingText">
 (function() {
-  var phrases = ["💡 நான் முதல்வன் (Naan Mudhalvan) & தமிழ்நாடு திறன் மேம்பாட்டுக் கழகம் (TNSDC) — இலவசத் திறன் சான்றிதழ் பயிற்சிகள்!", "🛠️ அரசு தொழிற்பயிற்சி நிலையங்கள் (Govt ITI) & பாலிடெக்னிக் கல்லூரிகள் — மாதந்தோறும் ₹750 உதவித்தொகை & உடனடி வேலை!", "⚓ இந்திய கடற்படை (Merchant Navy), விமானப் போக்குவரத்து (Aviation) & நட்சத்திர ஹோட்டல் மேலாண்மை வேலைவாய்ப்புகள்!", "💻 மென்பொருள் (IT/AI/Data Science), டிஜிட்டல் மார்க்கெட்டிங் & வங்கி/நிதித்துறை (BFSI) நவீனத் தொழில்முறைப் பாதைகள்!", "🚀 சுயதொழில் & தொழில்முனைவோர் (StartupTN, PMEGP, MUDRA) அரசின் மானியக் கடன் திட்டங்கள் & வழிகாட்டுதல்!"];
+  var phrases = ["💡 திறன் தமிழ்நாடு (Thiran Tamil Nadu) & தமிழ்நாடு திறன் மேம்பாட்டுக் கழகம் (TNSDC) — இலவசத் திறன் சான்றிதழ் பயிற்சிகள்!", "🛠️ அரசு தொழிற்பயிற்சி நிலையங்கள் (Govt ITI) & பாலிடெக்னிக் கல்லூரிகள் — மாதந்தோறும் ₹750 உதவித்தொகை & உடனடி வேலை!", "⚓ இந்திய கடற்படை (Merchant Navy), விமானப் போக்குவரத்து (Aviation) & நட்சத்திர ஹோட்டல் மேலாண்மை வேலைவாய்ப்புகள்!", "💻 மென்பொருள் (IT/AI/Data Science), டிஜிட்டல் மார்க்கெட்டிங் & வங்கி/நிதித்துறை (BFSI) நவீனத் தொழில்முறைப் பாதைகள்!", "🚀 சுயதொழில் & தொழில்முனைவோர் (StartupTN, PMEGP, MUDRA) அரசின் மானியக் கடன் திட்டங்கள் & வழிகாட்டுதல்!"];
   var target = document.getElementById('heroRibbonTypingText');
   if (!target || !phrases.length) return;
   var pIdx = 0, cIdx = 0, isDel = false;
