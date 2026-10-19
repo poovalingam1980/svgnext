@@ -8422,6 +8422,118 @@
 }
 
 </style>
+
+<style id="v414-crystal-typing-ribbon-css">
+/* ============================================================================
+   v4.14 UNIFIED TRANSPARENT CRYSTAL GUIDANCE ANIMATION RIBBON
+   (மருத்துவ நுழைவுத்தேர்வுப் பக்க மாதிரி — Transparent Crystal Design)
+   ============================================================================ */
+.typing-banner-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  margin: 14px auto 16px auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  animation: none !important;
+}
+
+.typing-container,
+.typing-banner-wrap .typing-container {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, rgba(255, 241, 242, 0.88) 0%, rgba(238, 242, 255, 0.82) 100%) !important;
+  backdrop-filter: blur(12px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(160%) !important;
+  border: 1.5px solid #fda4af !important;
+  padding: 8px 22px !important;
+  border-radius: 999px !important;
+  margin-bottom: 4px !important;
+  box-shadow: 0 4px 16px rgba(225, 29, 72, 0.16), inset 0 1.5px 2px rgba(255, 255, 255, 0.96) !important;
+  min-height: 44px !important;
+  max-width: 96% !important;
+  width: auto !important;
+  box-sizing: border-box !important;
+}
+
+.typing-badge,
+.typing-banner-wrap .typing-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  font-size: 0.86rem !important;
+  font-weight: 800 !important;
+  color: #312e81 !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid rgba(253, 164, 175, 0.85) !important;
+  padding: 4px 10px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), inset 0 1px 1px #ffffff !important;
+  flex-shrink: 0 !important;
+}
+
+.typing-text,
+.typing-banner-wrap .typing-text {
+  font-size: 0.98rem !important;
+  font-weight: 700 !important;
+  color: #312e81 !important;
+  letter-spacing: 0.2px !important;
+  line-height: 1.4 !important;
+}
+
+.typing-cursor,
+.typing-banner-wrap .typing-cursor {
+  display: inline-block !important;
+  font-weight: 800 !important;
+  font-size: 1.15rem !important;
+  color: #e11d48 !important;
+  margin-left: 2px !important;
+  animation: blinkCursorV414 0.8s infinite !important;
+}
+
+@keyframes blinkCursorV414 {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.sparkle-icon,
+.typing-sparkle,
+.pulse-sparkle {
+  display: inline-block !important;
+  animation: sparkleSpinV414 3s linear infinite !important;
+}
+
+@keyframes sparkleSpinV414 {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.15) rotate(15deg); }
+}
+
+@media (max-width: 768px) {
+  .typing-container,
+  .typing-banner-wrap .typing-container {
+    padding: 6px 14px !important;
+    min-height: 40px !important;
+    border-radius: 14px !important;
+    flex-wrap: wrap !important;
+  }
+  .typing-badge,
+  .typing-banner-wrap .typing-badge {
+    font-size: 0.74rem !important;
+    padding: 2px 8px !important;
+  }
+  .typing-text,
+  .typing-banner-wrap .typing-text {
+    font-size: 0.86rem !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
@@ -8547,11 +8659,8 @@
     </p>
 </header>
 </div>
-<div class="typing-banner-wrap" id="supportHighlightsRibbon">
-<div class="typing-container">
-<span aria-label="முக்கியத் தகவல்கள்" class="typing-badge"><span class="sparkle-icon">✨</span> முக்கியச் சேவைகள்</span>
-<span class="typing-text" id="heroRibbonTypingText">⚡ துல்லிய கட்-ஆஃப் கால்குலேட்டர்: பொறியியல் (TNEA), துணை மருத்துவம், வேளாண்மை (TNAU), கால்நடை (TANUVAS), கலை & சட்டம்!</span><span class="typing-cursor">|</span>
-</div>
+<div class="typing-banner-wrap no-print" id="supportHighlightsRibbon" style="text-align: center; margin: 14px auto 16px auto;">
+<div class="typing-container"><span aria-label="தகவல்கள்" class="typing-badge"><span class="sparkle-icon">✨</span></span><span class="typing-text" id="heroRibbonTypingText">⚡ துல்லிய கட்-ஆஃப் கால்குலேட்டர்: பொறியியல் (TNEA), துணை மருத்துவம், வேளாண்மை (TNAU), கால்நடை (TANUVAS), கலை &amp; சட்டம்!</span><span class="typing-cursor">|</span></div>
 </div><div class="helpline-bento-grid" id="helpline-bento-sec">
 <!-- Card 1: 14417 -->
 <div class="bento-helpline-card mint">
@@ -10388,7 +10497,6 @@ CAREER GUIDANCE CENTER • DISCOVER | PLAN | SUCCEED
 <span class="nav-btn-icon">▶</span>
 </a>
 </nav>
-
 <div class="kural-box">
 <div class="kural-header">
 <span class="kural-icon">📜</span>
@@ -10405,7 +10513,7 @@ CAREER GUIDANCE CENTER • DISCOVER | PLAN | SUCCEED
 </div>
 <div class="creator-card" style="justify-content: center !important; text-align: center !important;">
 <div class="creator-typewriter-wrapper" style="justify-content: center !important; text-align: center !important; display: inline-flex !important; align-items: center !important;">
-<span class="creator-typewriter-target" id="creatorTypewriterTarget"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role">, பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role">, Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
+<span class="creator-typewriter-target" id="creatorTypewriterTarget"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role"> பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role"> Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
 </div>
 <a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
 <span class="phone-icon">📱</span>
@@ -10874,9 +10982,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const creatorSegments = [
     { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
     { text: "கூ. பூவலிங்கம்", tag: "span", class: "creator-name-ta" },
-    { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
+    { text: " பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
     { text: "K. Poovalingam", tag: "span", class: "creator-name-en" },
-    { text: ", Deputy Inspector of Schools", tag: "span", class: "creator-role" }
+    { text: " Deputy Inspector of Schools", tag: "span", class: "creator-role" }
   ];
 
   function runCreatorTypewriter() {
@@ -14008,7 +14116,6 @@ async function handlePopupFeedbackSubmit(e) {
   }, 3500);
 }
 </script>
-
 <script id="script-heroRibbonTypingText">
 (function() {
   var phrases = ["⚡ துல்லிய கட்-ஆஃப் கால்குலேட்டர்: பொறியியல் (TNEA), துணை மருத்துவம், வேளாண்மை (TNAU), கால்நடை (TANUVAS), கலை & சட்டம்!", "🏆 விளையாட்டு வீரர்கள் பிரிவு (Sports Quota): 4-ஆண்டு சான்றிதழ் மதிப்பெண் கணக்கீடு & அதிகாரப்பூர்வ A4 PDF படிவப் பதிவிறக்கம்!", "☎️ 14417 பள்ளிக் கல்வி 24x7 இலவச உதவி மையம், 14416 மனநல ஆலோசனை & சிவகங்கை மாவட்ட வழிகாட்டி ஆசிரியர் குழு!", "🏫 7.5% அரசுப் பள்ளி மாணவர் முன்னுரிமை இடஒதுக்கீடு — மருத்துவம் & தொழிற்கல்வியில் 100% முழுக் கட்டண விலக்கு!", "💰 புதுமைப் பெண் & தமிழ்ப் புதல்வன் (மாதம் ₹1,000), முதல் பட்டதாரி சலுகை & PM-Vidyalaxmi கல்விக் கடன் வழிகாட்டி!", "📄 ஒற்றைச் சாளர கலந்தாய்வு 6 முக்கிய படிநிலைகள் & சேர்க்கைக்குத் தேவையான 14 அசல் ஆவணங்கள் சரிபார்ப்புப் பட்டியல்!"];
@@ -14042,8 +14149,6 @@ async function handlePopupFeedbackSubmit(e) {
   }
 })();
 </script>
-
-
 <script id="universalFloatingBttScript">
 (function() {
   function initFloatingBtt() {
@@ -14071,7 +14176,6 @@ async function handlePopupFeedbackSubmit(e) {
   }
 })();
 </script>
-
 </body>
 </html>
 <canvas id="popupCelebrationCanvas" style="display:none; position:fixed; inset:0; pointer-events:none; z-index:10002;"></canvas>

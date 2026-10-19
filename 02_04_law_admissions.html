@@ -6227,6 +6227,118 @@
   }
 }
 </style>
+
+<style id="v414-crystal-typing-ribbon-css">
+/* ============================================================================
+   v4.14 UNIFIED TRANSPARENT CRYSTAL GUIDANCE ANIMATION RIBBON
+   (மருத்துவ நுழைவுத்தேர்வுப் பக்க மாதிரி — Transparent Crystal Design)
+   ============================================================================ */
+.typing-banner-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  margin: 14px auto 16px auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  animation: none !important;
+}
+
+.typing-container,
+.typing-banner-wrap .typing-container {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, rgba(255, 251, 235, 0.88) 0%, rgba(254, 243, 199, 0.82) 100%) !important;
+  backdrop-filter: blur(12px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(160%) !important;
+  border: 1.5px solid #fcd34d !important;
+  padding: 8px 22px !important;
+  border-radius: 999px !important;
+  margin-bottom: 4px !important;
+  box-shadow: 0 4px 16px rgba(180, 83, 9, 0.16), inset 0 1.5px 2px rgba(255, 255, 255, 0.96) !important;
+  min-height: 44px !important;
+  max-width: 96% !important;
+  width: auto !important;
+  box-sizing: border-box !important;
+}
+
+.typing-badge,
+.typing-banner-wrap .typing-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  font-size: 0.86rem !important;
+  font-weight: 800 !important;
+  color: #78350f !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid rgba(252, 211, 77, 0.85) !important;
+  padding: 4px 10px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), inset 0 1px 1px #ffffff !important;
+  flex-shrink: 0 !important;
+}
+
+.typing-text,
+.typing-banner-wrap .typing-text {
+  font-size: 0.98rem !important;
+  font-weight: 700 !important;
+  color: #78350f !important;
+  letter-spacing: 0.2px !important;
+  line-height: 1.4 !important;
+}
+
+.typing-cursor,
+.typing-banner-wrap .typing-cursor {
+  display: inline-block !important;
+  font-weight: 800 !important;
+  font-size: 1.15rem !important;
+  color: #d97706 !important;
+  margin-left: 2px !important;
+  animation: blinkCursorV414 0.8s infinite !important;
+}
+
+@keyframes blinkCursorV414 {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.sparkle-icon,
+.typing-sparkle,
+.pulse-sparkle {
+  display: inline-block !important;
+  animation: sparkleSpinV414 3s linear infinite !important;
+}
+
+@keyframes sparkleSpinV414 {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.15) rotate(15deg); }
+}
+
+@media (max-width: 768px) {
+  .typing-container,
+  .typing-banner-wrap .typing-container {
+    padding: 6px 14px !important;
+    min-height: 40px !important;
+    border-radius: 14px !important;
+    flex-wrap: wrap !important;
+  }
+  .typing-badge,
+  .typing-banner-wrap .typing-badge {
+    font-size: 0.74rem !important;
+    padding: 2px 8px !important;
+  }
+  .typing-text,
+  .typing-banner-wrap .typing-text {
+    font-size: 0.86rem !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
@@ -6396,7 +6508,7 @@
 <a class="marquee-pill-btn" href="#careers">💼 சட்டத்துறை வேலைவாய்ப்புகள்</a>
 </div>
 </div>
-</div>
+</div><div class="typing-banner-wrap no-print" style="text-align: center; margin: 14px auto 16px auto;"><div class="typing-container"><span aria-label="தகவல்கள்" class="typing-badge"><span class="sparkle-icon">✨</span></span><span class="typing-text" id="typingText">TNDALU: நுழைவுத்தேர்வின்றி +2 மதிப்பெண் அடிப்படையில் 5-ஆண்டு ஒருங்கிணைந்த சட்டப் பட்டப்படிப்புகள் (B.A. LL.B / B.Com LL.B / B.B.A. LL.B)!</span><span class="typing-cursor">|</span></div></div>
 <!-- Notice -->
 <div class="notice-box notice-gold">
 <span style="font-size: 1.5rem;">⚖️</span>
@@ -6931,7 +7043,7 @@
 </div>
 <div class="creator-card" style="justify-content: center !important; text-align: center !important;">
 <div class="creator-typewriter-wrapper" style="justify-content: center !important; text-align: center !important; display: inline-flex !important; align-items: center !important;">
-<span class="creator-typewriter-target" id="creatorTypewriterTarget" style="text-align: center !important;"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role">, பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role">, Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
+<span class="creator-typewriter-target" id="creatorTypewriterTarget" style="text-align: center !important;"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role"> பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role"> Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
 </div>
 <a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
 <span class="phone-icon">📱</span>
@@ -7221,9 +7333,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const creatorSegments = [
     { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
     { text: "கூ. பூவலிங்கம்", tag: "span", class: "creator-name-ta" },
-    { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
+    { text: " பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
     { text: "K. Poovalingam", tag: "span", class: "creator-name-en" },
-    { text: ", Deputy Inspector of Schools", tag: "span", class: "creator-role" }
+    { text: " Deputy Inspector of Schools", tag: "span", class: "creator-role" }
   ];
 
   function runCreatorTypewriter() {
@@ -7308,7 +7420,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
-
 <script id="universalFloatingBttScript">
 (function() {
   function initFloatingBtt() {
@@ -7336,6 +7447,39 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
-
-</body>
+<script id="v414-crystal-typing-script">
+(function() {
+  const crystalPhrases = ["TNDALU: நுழைவுத்தேர்வின்றி +2 மதிப்பெண் அடிப்படையில் 5-ஆண்டு ஒருங்கிணைந்த சட்டப் பட்டப்படிப்புகள் (B.A. LL.B / B.Com LL.B / B.B.A. LL.B)!", "சென்னை சீர்மிகு சட்டப் பள்ளி (SOEL) மற்றும் மதுரை, திருச்சி, கோவை, நெல்லை உள்ளிட்ட 15+ அரசு சட்டக் கல்லூரிகள்!", "அரசு சட்டக் கல்லூரிகளில் மிகக் குறைந்த கல்விக் கட்டணம் மற்றும் அரசுப் பள்ளி மாணவர்களுக்கு ⭐ 7.5% முன்னுரிமை இடஒதுக்கீடு!", "நீதித்துறை நடுவர் (Civil Judge), அரசு வழக்கறிஞர், கார்ப்பரேட் சட்ட ஆலோசகர் மற்றும் உயர் நீதிமன்ற வழக்கறிஞர் பணி வாய்ப்புகள்!"];
+  const target = document.getElementById('typingText');
+  if (!target || !crystalPhrases.length) return;
+  let phraseIdx = 0;
+  let charIdx = 0;
+  let isDeleting = false;
+  function typeCrystalEffect() {
+    const currentPhrase = crystalPhrases[phraseIdx];
+    if (isDeleting) {
+      charIdx--;
+      target.textContent = currentPhrase.substring(0, charIdx);
+    } else {
+      charIdx++;
+      target.textContent = currentPhrase.substring(0, charIdx);
+    }
+    let speed = isDeleting ? 30 : 65;
+    if (!isDeleting && charIdx === currentPhrase.length) {
+      speed = 2200;
+      isDeleting = true;
+    } else if (isDeleting && charIdx === 0) {
+      isDeleting = false;
+      phraseIdx = (phraseIdx + 1) % crystalPhrases.length;
+      speed = 450;
+    }
+    setTimeout(typeCrystalEffect, speed);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', typeCrystalEffect);
+  } else {
+    typeCrystalEffect();
+  }
+})();
+</script></body>
 </html>
