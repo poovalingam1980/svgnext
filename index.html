@@ -3336,6 +3336,102 @@
 /* [removed legacy kural rule] */
     }
 
+
+/* ========================================================
+   MODERN STATIC TOP FRAME — CLEAN GOVERNMENT PORTAL STYLE
+   ======================================================== */
+.portal-top-frame {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 116px !important;
+  margin: 0 0 16px 0 !important;
+  padding: 18px 28px !important;
+  border: 1px solid rgba(56, 189, 248, 0.65) !important;
+  border-radius: 18px !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(56, 189, 248, 0.18), transparent 28%),
+    radial-gradient(circle at 88% 15%, rgba(167, 139, 250, 0.16), transparent 30%),
+    linear-gradient(135deg, #07111f 0%, #0b1d32 48%, #071525 100%) !important;
+  box-shadow: 0 12px 32px rgba(2, 8, 23, 0.34), inset 0 1px 0 rgba(255,255,255,0.10) !important;
+}
+
+.portal-top-frame::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(90deg, transparent 0%, rgba(56,189,248,0.07) 50%, transparent 100%) !important;
+  pointer-events: none !important;
+}
+
+.portal-top-frame::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 8% !important;
+  right: 8% !important;
+  bottom: 0 !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, transparent, #38bdf8 22%, #facc15 50%, #38bdf8 78%, transparent) !important;
+  opacity: 0.85 !important;
+}
+
+.top-frame-center-stack {
+  gap: 5px !important;
+  padding: 0 70px !important;
+}
+
+.banner-title-tamil {
+  font-size: clamp(1.55rem, 2.5vw, 2.25rem) !important;
+  letter-spacing: 0.8px !important;
+  background: linear-gradient(180deg, #ffffff 0%, #fef08a 48%, #facc15 100%) !important;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.75)) !important;
+}
+
+.banner-tagline-aurora {
+  font-size: clamp(0.86rem, 1.15vw, 1rem) !important;
+  color: #bae6fd !important;
+  background: none !important;
+  -webkit-text-fill-color: #bae6fd !important;
+  animation: none !important;
+  filter: none !important;
+  font-weight: 700 !important;
+}
+
+.banner-english-row {
+  gap: 9px !important;
+  margin-top: 2px !important;
+}
+
+.banner-title-english,
+.banner-slogan-english {
+  font-size: clamp(0.72rem, 1vw, 0.88rem) !important;
+  letter-spacing: 1.5px !important;
+  background: none !important;
+  -webkit-text-fill-color: #e2e8f0 !important;
+  animation: none !important;
+  filter: none !important;
+}
+
+.banner-title-english { color: #7dd3fc !important; }
+.banner-slogan-english { color: #cbd5e1 !important; }
+.banner-english-dot { color: #facc15 !important; filter: none !important; }
+
+@media (max-width: 768px) {
+  .portal-top-frame {
+    min-height: 108px !important;
+    padding: 14px 12px !important;
+    border-radius: 14px !important;
+  }
+  .top-frame-center-stack { padding: 0 8px !important; gap: 4px !important; }
+  .banner-title-tamil { font-size: 1.42rem !important; }
+  .banner-tagline-aurora { font-size: 0.78rem !important; }
+  .banner-english-row { gap: 6px !important; }
+  .banner-title-english,
+  .banner-slogan-english { font-size: 0.64rem !important; letter-spacing: 0.8px !important; }
+}
+
 /* ========================================================
    STANDARDIZED TOP FRAME BANNER (AS IN GOVT EXAMS)
    ======================================================== */
@@ -5506,19 +5602,7 @@ body:not(.is-home-page) .typing-text {
 <h2 class="lead-title">12-ஆம் வகுப்பிற்குப் பிந்தைய உயர்கல்வி, வேலைவாய்ப்புகள் &amp; வழிகாட்டல் போர்டல்</h2>
 <p class="lead-subtitle">பள்ளிப் படிப்பை முடிக்கும் மாணவ, மாணவியர் தங்களுக்குப் பொருத்தமான உயர் கல்வி மற்றும் சிறந்த தொழில்முறை எதிர்காலத்தைத் தேர்ந்தெடுக்க உதவும் 7 முதன்மை வழிகாட்டி வாயில்கள்.</p>
 </div>
-<!-- 3D Flip Ribbon -->
-<div class="compass-flip-strip">
-<button class="btn-flip-nav" onclick="prevFlipGateway(event)" title="முந்தைய வழிகாட்டல் செய்தி" type="button">◀</button>
-<div class="compass-flip-viewport" id="compassFlipViewport" onclick="triggerCurrentGateway()" title="இவ்வாயிலைக் காண கிளிக் செய்யவும்">
-<div class="compass-flip-card" id="compassFlipCard">
-<span class="compass-flip-content" id="flipContent">
-<span class="flip-part-title">🩺 மருத்துவர், ஐஐடி &amp; விமானி</span> <span class="flip-gateway-badge">➔ வாயில் 01 (தேசிய நுழைவுத்தேர்வுகள்)</span>
-</span>
-</div>
-</div>
-<button class="btn-flip-nav" onclick="nextFlipGateway(event)" title="அடுத்த வழிகாட்டல் செய்தி" type="button">▶</button>
-</div>
-</div>
+<!-- Gateway animation strip removed: cleaner modern header -->
 <!-- 6 Macro Portal Cards -->
 <!-- Quick Navigation Marquee Bar (ஓடும் விரைவு வழிசெலுத்தல் பட்டை) -->
 <div aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை" class="quick-nav-marquee-container">
@@ -6410,80 +6494,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     document.addEventListener('DOMContentLoaded', typeEffect);
 
-    // 2. Fast 3D Flip Card Effect
-    const gatewayItems = [
-      { text: "🩺 மருத்துவர், ஐஐடி & விமானி ➔ வாயில் 01 (தேசிய நுழைவுத்தேர்வுகள்)", target: "cat-entrance" },
-      { text: "📈 நுழைவுத்தேர்வின்றி +2 மதிப்பெண் சேர்க்கை ➔ வாயில் 02 (நேரடிச் சேர்க்கை)", target: "cat-merit" },
-      { text: "🏛️ சிறந்த மத்திய / மாநில அரசு கல்லூரிகள் ➔ வாயில் 03 (கல்லூரிகள் அடைவு)", target: "cat-colleges" },
-      { text: "👮 அரசுப் பணி & சீருடைப் பணிகள் ➔ வாயில் 04 (போட்டித் தேர்வுகள்)", target: "cat-competitive" },
-      { text: "💼 படித்துக்கொண்டே சம்பாதிக்க (Zoho / HCL) ➔ வாயில் 05 (திறன்சார் பணிகள்)", target: "cat-skills" },
-      { text: "🧮 கட்-ஆஃப் கருவிகள் & 14417 உதவி மையம் ➔ வாயில் 06 (கட்-ஆஃப் & மாணவர் உதவி)", target: "cat-support" },
-      { text: "📚 மாதிரித் தேர்வுகள் & கல்வி இணையதளங்கள் ➔ வாயில் 07 (கல்வி வளங்கள் & போர்ட்டல்)", target: "cat-resources" }
-    ];
-
-    let currentFlipIdx = 0;
-    let flipTimer = null;
-    let isFlipping = false;
-
-    const flipCard = document.getElementById('compassFlipCard');
-    const flipContent = document.getElementById('flipContent');
-
-    function renderFlipItem(index, direction) {
-      if (isFlipping || !flipCard || !flipContent) return;
-      isFlipping = true;
-
-      flipCard.style.transition = 'opacity 0.22s ease, transform 0.22s ease';
-      flipCard.style.opacity = '0';
-      flipCard.style.transform = 'none';
-
-      setTimeout(() => {
-        currentFlipIdx = (index + gatewayItems.length) % gatewayItems.length;
-        const itemText = gatewayItems[currentFlipIdx].text;
-        const arrowIdx = itemText.indexOf(' ➔ ');
-        if (arrowIdx !== -1) {
-          const mainPart = itemText.substring(0, arrowIdx).trim();
-          const targetPart = itemText.substring(arrowIdx + 3).trim();
-          flipContent.innerHTML = `<span class="flip-part-title">${mainPart}</span> <span class="flip-gateway-badge">➔ ${targetPart}</span>`;
-        } else {
-          flipContent.innerHTML = `<span class="flip-part-title">${itemText}</span>`;
-        }
-
-        flipCard.style.opacity = '1';
-        flipCard.style.transform = 'none';
-        isFlipping = false;
-      }, 220);
-    }
-
-    function nextFlipGateway(e) {
-      if (e) e.stopPropagation();
-      renderFlipItem(currentFlipIdx + 1, 'next');
-      resetFlipTimer();
-    }
-
-    function prevFlipGateway(e) {
-      if (e) e.stopPropagation();
-      renderFlipItem(currentFlipIdx - 1, 'prev');
-      resetFlipTimer();
-    }
-
-    function triggerCurrentGateway() {
-      const targetClass = gatewayItems[currentFlipIdx].target;
-      scrollToGateway(targetClass);
-    }
-
-    function resetFlipTimer() {
-      if (flipTimer) clearInterval(flipTimer);
-      flipTimer = setInterval(() => {
-        renderFlipItem(currentFlipIdx + 1, 'next');
-      }, 5000);
-    }
-
-    const flipViewport = document.getElementById('compassFlipViewport');
-    if (flipViewport) {
-      flipViewport.addEventListener('mouseenter', () => clearInterval(flipTimer));
-      flipViewport.addEventListener('mouseleave', resetFlipTimer);
-    }
-    document.addEventListener('DOMContentLoaded', resetFlipTimer);
+    // Gateway flip animation removed to keep the header clean and distraction-free.
 
     function scrollToGateway(cardClass) {
       const card = document.querySelector('.' + cardClass);
