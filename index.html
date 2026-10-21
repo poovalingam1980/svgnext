@@ -322,13 +322,216 @@ html, body {
    (நகர்ந்து செல்லாமல் பாய் விரிவது போல் தோன்றி நிலைத்து நிற்கும் வண்ணமயமான Flash News பட்டைகள்)
    ============================================================================ */
 .hgl-mat-flash-section {
-  margin-top: 9px;
-  padding-top: 7px;
-  border-top: 1px dashed rgba(250, 204, 21, 0.32);
+  margin-bottom: 9px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed rgba(250, 204, 21, 0.35);
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
+
+/* ============================================================================
+   UNIFIED SEGMENTED TRI-BUTTON BAR (தலைப்பு பேனருக்கு அடுத்து ஒருங்கிணைந்த டிரை-பொத்தான்)
+   ============================================================================ */
+.hero-tri-btn-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2px 0 12px 0;
+}
+.hero-tri-pill-bar {
+  display: inline-grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  max-width: 1040px;
+  background: linear-gradient(135deg, #060d1d 0%, #0f1f3d 50%, #071124 100%);
+  border: 2px solid #facc15;
+  border-radius: 999px;
+  padding: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55), 0 0 18px rgba(250, 204, 21, 0.28), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+.hero-tri-segment {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: #f8fafc;
+  padding: 9px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-family: inherit;
+  text-align: left;
+  transition: all 0.22s cubic-bezier(0.25, 0.85, 0.25, 1);
+  position: relative;
+}
+.hero-tri-segment:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 16%;
+  height: 68%;
+  width: 1.5px;
+  background: linear-gradient(180deg, transparent, rgba(250, 204, 21, 0.65), transparent);
+}
+.hero-tri-segment.seg-search:hover,
+.hero-tri-segment.seg-search:focus-visible {
+  background: linear-gradient(135deg, #0284c7 0%, #1e40af 100%);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.45);
+  transform: translateY(-1px);
+}
+.hero-tri-segment.seg-stream:hover,
+.hero-tri-segment.seg-stream:focus-visible {
+  background: linear-gradient(135deg, #059669 0%, #065f46 100%);
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.45);
+  transform: translateY(-1px);
+}
+.hero-tri-segment.seg-matcher {
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.28) 0%, rgba(147, 51, 234, 0.32) 100%);
+}
+.hero-tri-segment.seg-matcher:hover,
+.hero-tri-segment.seg-matcher:focus-visible {
+  background: linear-gradient(135deg, #d97706 0%, #7c3aed 100%);
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.5);
+  transform: translateY(-1px);
+}
+.hero-tri-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(250, 204, 21, 0.55);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.25);
+}
+.hero-tri-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.22;
+  min-width: 0;
+}
+.hero-tri-title {
+  font-size: clamp(0.78rem, 1.08vw, 0.90rem);
+  font-weight: 900;
+  color: #fef08a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hero-tri-sub {
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hero-tri-badge {
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 0.58rem;
+  font-weight: 900;
+  padding: 1px 6px;
+  border-radius: 999px;
+  margin-left: 4px;
+  letter-spacing: 0.3px;
+  vertical-align: middle;
+}
+@media (max-width: 860px) {
+  .hero-tri-pill-bar {
+    grid-template-columns: 1fr;
+    border-radius: 16px;
+    gap: 4px;
+    padding: 6px;
+  }
+  .hero-tri-segment {
+    border-radius: 10px;
+    justify-content: flex-start;
+    padding: 8px 12px;
+  }
+  .hero-tri-segment:not(:last-child)::after {
+    display: none;
+  }
+  .hero-tri-segment:not(:last-child) {
+    border-bottom: 1px dashed rgba(250, 204, 21, 0.3);
+  }
+}
+
+/* Unified Tri-Tool Modal & O*NET Smart Matcher Styles */
+.tri-modal-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  background: #0f172a;
+  padding: 6px;
+  border-radius: 12px;
+  border: 1.5px solid #334155;
+  margin-bottom: 16px;
+}
+.tri-modal-tab-btn {
+  border: none;
+  background: transparent;
+  color: #cbd5e1;
+  font-family: inherit;
+  font-size: 0.84rem;
+  font-weight: 800;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+.tri-modal-tab-btn.active {
+  background: linear-gradient(135deg, #1e40af 0%, #0284c7 100%);
+  color: #fef08a;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+}
+@media (max-width: 720px) {
+  .tri-modal-tabs { grid-template-columns: 1fr; }
+}
+.onet-step-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.onet-field-card {
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.onet-field-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+.onet-select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1.5px solid #94a3b8;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
 .hgl-mat-flash-header {
   display: flex;
   align-items: center;
@@ -806,6 +1009,33 @@ html, body {
           <p class="lead-subtitle">பள்ளிப் படிப்பை முடிக்கும் மாணவ, மாணவியர் தங்களுக்குப் பொருத்தமான உயர் கல்வி மற்றும் சிறந்த தொழில்முறை எதிர்காலத்தைத் தேர்ந்தெடுக்க உதவும் 7 முதன்மை வழிகாட்டி வாயில்கள்.</p>
         </div>
 
+        <!-- தலைப்பு பேனருக்கு அடுத்து: ஒருங்கிணைந்த மும்முனை டிரை-பொத்தான் (Unified Smart Tri-Button Bar) -->
+        <div class="hero-tri-btn-wrapper no-print" id="heroSmartTriButtonBar" aria-label="உடனடித் தேடுபொறி, +2 குரூப் வழிகாட்டி மற்றும் 60-வினாடி தகுதி வழிகாட்டி டிரை-பொத்தான்">
+          <div class="hero-tri-pill-bar" role="group" aria-label="மும்முனை வழிகாட்டி பொத்தான்">
+            <button type="button" class="hero-tri-segment seg-search" onclick="openTriToolModal('search')" title="35 பக்கங்களில் உள்ள படிப்புகள் மற்றும் தேர்வுகளை உடனடியாகத் தேட">
+              <span class="hero-tri-icon">🔍</span>
+              <span class="hero-tri-text">
+                <span class="hero-tri-title">உடனடித் தேடுபொறி</span>
+                <span class="hero-tri-sub">35 பக்கங்களின் ஒருங்கிணைந்த தேடல்</span>
+              </span>
+            </button>
+            <button type="button" class="hero-tri-segment seg-stream" onclick="openTriToolModal('stream')" title="உங்கள் +2 பாடப்பிரிவிற்கான உயர்கல்வி வாய்ப்புகளைக் காண">
+              <span class="hero-tri-icon">🧭</span>
+              <span class="hero-tri-text">
+                <span class="hero-tri-title">+2 குரூப் வழிகாட்டி</span>
+                <span class="hero-tri-sub">பாடப்பிரிவு வாரியான படிப்புகள்</span>
+              </span>
+            </button>
+            <button type="button" class="hero-tri-segment seg-matcher" onclick="openTriToolModal('matcher')" title="O*NET MyNextMove மாதிரியில் 60 வினாடிகளில் உங்களுக்கான உயர்கல்வி & தகுதி வழிகாட்டி">
+              <span class="hero-tri-icon">🎯</span>
+              <span class="hero-tri-text">
+                <span class="hero-tri-title">60-வினாடி தகுதி வழிகாட்டி <span class="hero-tri-badge">O*NET</span></span>
+                <span class="hero-tri-sub">Smart Career &amp; Quota Matcher</span>
+              </span>
+            </button>
+          </div>
+        </div>
+
         <!-- விரைவு வழிசெலுத்தல் பட்டை (Quick Navigation Marquee Bar) -->
         <div aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை" class="quick-nav-marquee-container">
           <div class="marquee-static-label" title="விரைவு வழிகாட்டல்"><span>⚡</span></div>
@@ -819,7 +1049,7 @@ html, body {
               <a class="marquee-pill-btn" href="#gateway-skills">💼 05 / தனியார் வேலை &amp; திறன் பயிற்சிகள்</a>
               <a class="marquee-pill-btn" href="#gateway-support">🧮 06 / கட்-ஆஃப் கருவிகள் &amp; மாணவர் உதவி</a>
               <a class="marquee-pill-btn" href="#gateway-resources">📚 07 / கல்வி வளங்கள் &amp; மாதிரித் தேர்வுகள்</a>
-              <a class="marquee-pill-btn" href="#globalPortalSearchSec">🔍 உடனடித் தேடுபொறி &amp; +2 குரூப் வழிகாட்டி</a>
+              <a class="marquee-pill-btn" href="#heroSmartTriButtonBar" onclick="openTriToolModal('search'); return false;">🔍 உடனடித் தேடுபொறி</a><a class="marquee-pill-btn" href="#heroSmartTriButtonBar" onclick="openTriToolModal('stream'); return false;">🧭 +2 குரூப் வழிகாட்டி</a><a class="marquee-pill-btn" href="#heroSmartTriButtonBar" onclick="openTriToolModal('matcher'); return false;">🎯 60-வினாடி தகுதி வழிகாட்டி (O*NET)</a>
               <a class="marquee-pill-btn" href="#admissionTimelineSec">📅 விண்ணப்ப கால அட்டவணை</a>
             </div>
             <div aria-hidden="true" class="marquee-content-loop">
@@ -831,30 +1061,30 @@ html, body {
               <a class="marquee-pill-btn" href="#gateway-skills">💼 05 / தனியார் வேலை &amp; திறன் பயிற்சிகள்</a>
               <a class="marquee-pill-btn" href="#gateway-support">🧮 06 / கட்-ஆஃப் கருவிகள் &amp; மாணவர் உதவி</a>
               <a class="marquee-pill-btn" href="#gateway-resources">📚 07 / கல்வி வளங்கள் &amp; மாதிரித் தேர்வுகள்</a>
-              <a class="marquee-pill-btn" href="#globalPortalSearchSec">🔍 உடனடித் தேடுபொறி &amp; +2 குரூப் வழிகாட்டி</a>
+              <a class="marquee-pill-btn" href="#heroSmartTriButtonBar" onclick="openTriToolModal('search'); return false;">🔍 உடனடித் தேடுபொறி</a><a class="marquee-pill-btn" href="#heroSmartTriButtonBar" onclick="openTriToolModal('stream'); return false;">🧭 +2 குரூப் வழிகாட்டி</a><a class="marquee-pill-btn" href="#heroSmartTriButtonBar" onclick="openTriToolModal('matcher'); return false;">🎯 60-வினாடி தகுதி வழிகாட்டி (O*NET)</a>
               <a class="marquee-pill-btn" href="#admissionTimelineSec">📅 விண்ணப்ப கால அட்டவணை</a>
             </div>
           </div>
         </div>
 
         <!-- ============================================================================
-             3. தலைப்பு ஹீரோ பேனருக்கு அடுத்ததாக: சமீபத்திய தேர்வு அறிவிக்கைகள், நாட்கள் கவுண்ட்டவுன் & MAT-UNROLL FLASH NEWS
+             3. தலைப்பு ஹீரோ பேனருக்கு அடுத்ததாக: 2027 விண்ணப்ப அறிவிக்கை வெளியிடப்பட்ட படிப்புகளுக்கான பிளாஷ் பட்டை (மேல்) & கவுண்ட்டவுன் பெட்டிகள் (கீழ்)
              ============================================================================ -->
-        <section class="hero-gemini-live-strip no-print" id="heroGeminiLiveAlerts" aria-label="சமீபத்திய உயர்கல்வி நுழைவுத்தேர்வு அறிவிக்கைகள் மற்றும் கவுண்ட்டவுன்">
-          <div class="hgl-header-bar">
+        <section class="hero-gemini-live-strip no-print" id="heroGeminiLiveAlerts" aria-label="2027 விண்ணப்ப அறிவிக்கை வெளியிடப்பட்ட உயர்கல்வி நுழைவுத்தேர்வுகள் மற்றும் கவுண்ட்டவுன்">
+          <div class="hgl-header-bar" style="justify-content: space-between; flex-wrap: wrap; gap: 6px;">
             <h3 class="hgl-heading">
-              <span class="hgl-blink-red-dot" title="நேரலை அறிவிப்புகள்"></span>
-              <span>தற்போது விண்ணப்பம் நடைபெறும் &amp; சமீபத்தில் அறிவிக்கப்பட்ட உயர்கல்வித் தேர்வுகள்</span>
+              <span class="hgl-blink-red-dot" title="2027 அதிகாரப்பூர்வ விண்ணப்ப அறிவிப்புகள்"></span>
+              <span>2027-ஆம் ஆண்டிற்கான விண்ணப்ப அறிவிக்கை வெளியிடப்பட்ட உயர்கல்விப் படிப்புகள் &amp; நுழைவுத்தேர்வுகள்</span>
             </h3>
+            <span style="font-size: 0.68rem; font-weight: 800; color: #86efac; background: rgba(6, 78, 59, 0.7); border: 1px solid #10b981; padding: 2px 9px; border-radius: 999px;">✅ அதிகாரப்பூர்வ அறிவிக்கை வெளியானவை மட்டும் (6 தேர்வுகள்)</span>
           </div>
-          <div class="hgl-cards-row" id="hglActiveExamsGrid"></div>
 
-          <!-- News_Banner.html மாதிரியில் நகர்ந்து செல்லாமல் பாய் விரிவது போல் தோன்றும் Flash News பகுதி -->
-          <div class="hgl-mat-flash-section" id="hglMatFlashContainer" aria-label="கூடுதல் நுழைவுத்தேர்வு அறிவிப்புகள் - Flash News">
+          <!-- கவுண்ட்டவுன் பெட்டிக்கு மேல்: News_Banner.html மாதிரியில் பாய் விரிவது போல் தோன்றும் நிலையான Flash News பட்டை -->
+          <div class="hgl-mat-flash-section" id="hglMatFlashContainer" aria-label="2027 விண்ணப்ப அறிவிக்கை வெளியான நுழைவுத்தேர்வுகள் - Flash News">
             <div class="hgl-mat-flash-header">
               <div class="hgl-mat-flash-title">
-                <span class="hgl-mat-flash-badge">⚡ FLASH NEWS</span>
-                <span>கூடுதல் நுழைவுத்தேர்வு &amp; உயர்கல்விச் சேர்க்கை அறிவிப்புகள் (கிளிக் செய்து விண்ணப்பிக்கலாம்)</span>
+                <span class="hgl-mat-flash-badge">⚡ 2027 FLASH NEWS</span>
+                <span>2027 விண்ணப்பப் பதிவு நடைபெறும் படிப்புகள் (கிளிக் செய்து நேரடியாக விண்ணப்பிக்கலாம்)</span>
               </div>
               <div class="hgl-mat-controls">
                 <button type="button" class="hgl-mat-ctrl-btn" id="btnHglPrevFlash" title="முந்தைய அறிவிப்பு">◀ முந்தையது</button>
@@ -865,6 +1095,16 @@ html, body {
               <div class="hgl-news-cards-flow" id="hglNewsCardsFlow"></div>
             </div>
           </div>
+
+          <!-- பிளாஷ் பட்டைக்குக் கீழ்: 50% சுருக்கப்பட்ட நாட்கள்-மட்டும் கவுண்ட்டவுன் பெட்டிகள் (3+3 மாற்றும் வசதியுடன்) -->
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
+            <span style="font-size: 0.74rem; font-weight: 900; color: #fde047;">⏱️ 2027 நுழைவுத்தேர்வு நாட்கள் கவுண்ட்டவுன் &amp; முக்கியத் தேதிகள்:</span>
+            <div style="display: inline-flex; gap: 5px;">
+              <button type="button" class="hgl-mat-ctrl-btn" id="btnHglSet1" onclick="switchHglExamPage(0)" style="background: #facc15; color: #090d16;">1–3 தேர்வுகள் (VITEEE / CLAT / UCEED)</button>
+              <button type="button" class="hgl-mat-ctrl-btn" id="btnHglSet2" onclick="switchHglExamPage(1)">4–6 தேர்வுகள் (AILET / NID / SLAT)</button>
+            </div>
+          </div>
+          <div class="hgl-cards-row" id="hglActiveExamsGrid"></div>
         </section>
 
         <!-- 4. 7 முதன்மை வழிகாட்டி வாயில்கள் (7 Macro Portal Cards) -->
@@ -1097,59 +1337,133 @@ html, body {
         </div>
       </div> <!-- /.control-panel -->
 
-      <!-- 5. உடனடித் தேடுபொறி & +2 குரூப் வழிகாட்டி (Instant Search & Stream Selector) -->
-      <section aria-label="உயர்கல்வி உடனடித் தேடுபொறி மற்றும் +2 பாடப்பிரிவு வழிகாட்டி" class="index-interactive-discovery-hub no-print" id="globalPortalSearchSec" style="width: 100%; margin: 0 0 20px 0;">
-        <div style="background: linear-gradient(135deg, #071328 0%, #0f2547 55%, #091936 100%); border: 2px solid #38bdf8; border-radius: 16px; padding: 18px 20px; margin-bottom: 16px; box-shadow: 0 8px 26px rgba(15, 23, 42, 0.25);">
-          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+      <!-- 5. மும்முனை வழிகாட்டி பாப்-அப் சாளரம் (Tri-Button Interactive Modal: Search + Stream Guide + 60s O*NET Career Matcher) -->
+      <div class="cg-portal-modal-overlay no-print" id="triToolModal" style="display: none; position: fixed; inset: 0; background: rgba(6, 13, 26, 0.88); z-index: 10002; align-items: flex-start; justify-content: center; padding: 68px 14px 28px 14px; overflow-y: auto; backdrop-filter: blur(4px);">
+        <div style="position: relative; width: 100%; max-width: 1020px; background: #ffffff; border: 2.5px solid #facc15; border-radius: 18px; padding: 20px 20px 22px 20px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1.5px solid #e2e8f0;">
             <div style="display: flex; align-items: center; gap: 10px;">
-              <span style="font-size: 1.55rem; background: rgba(56, 189, 248, 0.15); border: 1.5px solid #38bdf8; border-radius: 10px; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;">🔍</span>
+              <span style="font-size: 1.45rem;">🚀</span>
               <div>
-                <h3 style="margin: 0; font-size: clamp(1.05rem, 1.5vw, 1.25rem); font-weight: 900; color: #fef08a;">உடனடித் தேடுபொறி (Career &amp; Portal Instant Search)</h3>
-                <p style="margin: 2px 0 0 0; font-size: 0.80rem; color: #cbd5e1; font-weight: 600;">35 பக்கங்களில் உள்ள படிப்புகள், நுழைவுத் தேர்வுகள், கல்லூரிகள், உதவித்தொகைகள் &amp; அரசுப் பணிகளை உடனடியாகத் தேடுங்கள்</p>
+                <h3 style="margin: 0; font-size: clamp(1.02rem, 1.45vw, 1.22rem); font-weight: 900; color: #0f172a;">உயர்கல்வி மும்முனை வழிகாட்டி மையம் (Smart Tri-Tool Hub)</h3>
+                <p style="margin: 1px 0 0 0; font-size: 0.76rem; color: #475569; font-weight: 700;">தேடுபொறி • +2 குரூப் வழிகாட்டி • 60-வினாடி சுயவிவர &amp; தகுதி வழிகாட்டி (O*NET MyNextMove மாதிரி)</p>
               </div>
             </div>
-            <span style="background: rgba(250, 204, 21, 0.16); border: 1px solid #facc15; color: #fef08a; font-size: 0.74rem; font-weight: 800; padding: 4px 12px; border-radius: 999px;">⚡ 35 பக்கங்களின் ஒருங்கிணைந்த தேடல்</span>
+            <button onclick="closeTriToolModal()" style="background: #dc2626; color: #ffffff; border: none; padding: 6px 14px; border-radius: 999px; font-size: 0.80rem; font-weight: 900; cursor: pointer; display: inline-flex; align-items: center; gap: 5px;" type="button">மூடுக ✕</button>
           </div>
-          <div style="position: relative; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-            <div style="position: relative; flex: 1 1 280px;">
-              <input id="globalPortalSearchInput" oninput="runGlobalPortalSearch(this.value)" placeholder="தேடுக: NEET, TNEA, வேளாண்மை, சட்டம், விமானி, தடய அறிவியல், B.Pharm, Zoho, TNPSC, TRB, 7.5%, சிவகங்கை, இ-சேவை..." style="width: 100%; padding: 12px 42px 12px 16px; border-radius: 12px; border: 2px solid #facc15; background: #ffffff; color: #0f172a; font-size: 0.94rem; font-weight: 700; outline: none;" type="search"/>
-              <button aria-label="தேடலை அழிக்க" id="globalSearchClearBtn" onclick="clearGlobalPortalSearch()" style="display: none; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: #e2e8f0; border: none; color: #334155; width: 26px; height: 26px; border-radius: 50%; font-weight: 900; cursor: pointer;" type="button">✕</button>
-            </div>
-          </div>
-          <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
-            <span style="font-size: 0.76rem; font-weight: 800; color: #93c5fd; margin-right: 4px;">பிரபலத் தேடல்கள்:</span>
-            <button class="quick-search-chip" onclick="triggerQuickSearch('NEET மருத்துவம்')" type="button">🩺 NEET மருத்துவம்</button>
-            <button class="quick-search-chip" onclick="triggerQuickSearch('TNEA பொறியியல்')" type="button">⚙️ TNEA பொறியியல்</button>
-            <button class="quick-search-chip" onclick="triggerQuickSearch('வேளாண்மை ICAR')" type="button">🌾 வேளாண்மை &amp; ICAR</button>
-            <button class="quick-search-chip" onclick="triggerQuickSearch('தடய அறிவியல் Forensic')" type="button">🕵️ தடய அறிவியல்</button>
-            <button class="quick-search-chip" onclick="triggerQuickSearch('B.Pharm மருந்தியல்')" type="button">💊 B.Pharm / துணை மருத்துவம்</button>
-            <button class="quick-search-chip" onclick="triggerQuickSearch('ஆசிரியர் ITEP TRB TTC')" type="button">👩‍🏫 ஆசிரியர் (ITEP/TTC/TRB)</button>
-            <button class="quick-search-chip" onclick="triggerQuickSearch('சிவகங்கை காரைக்குடி')" type="button">🏛️ சிவகங்கை மாவட்டக் கல்லூரிகள்</button>
-            <button class="quick-search-chip" onclick="triggerQuickSearch('உதவித்தொகை 7.5% இ-சேவை')" type="button">🎓 7.5% &amp; உதவித்தொகை</button>
-            <button class="quick-search-chip" onclick="triggerQuickSearch('Zoho HCL NAPS OMMC')" type="button">💼 Zoho / NAPS / வெளிநாட்டு வேலை</button>
-          </div>
-          <div id="globalSearchResultsBox" style="display: none; margin-top: 14px; background: #f8fafc; border: 2px solid #38bdf8; border-radius: 12px; padding: 14px; max-height: 420px; overflow-y: auto;">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; border-bottom: 1.5px solid #cbd5e1; padding-bottom: 6px;">
-              <span id="globalSearchCountText" style="font-size: 0.86rem; font-weight: 900; color: #0f172a;">தேடல் முடிவுகள்</span>
-              <button onclick="clearGlobalPortalSearch()" style="background: #dc2626; color: #ffffff; border: none; padding: 4px 12px; border-radius: 6px; font-size: 0.76rem; font-weight: 800; cursor: pointer;" type="button">மூடுக ✕</button>
-            </div>
-            <div id="globalSearchResultsGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px;"></div>
-          </div>
-        </div>
 
-        <div id="streamSelectorSec" style="background: #ffffff; border: 2px solid #cbd5e1; border-top: 5px solid #0284c7; border-radius: 16px; padding: 16px 18px; box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08);">
-          <h3 style="margin: 0 0 4px 0; font-size: clamp(1.02rem, 1.4vw, 1.18rem); font-weight: 900; color: #0f172a;">🧭 +2 பாடப்பிரிவு (Group) வாரியான உடனடி வழிகாட்டி (Stream-Wise Career Finder)</h3>
-          <p style="margin: 0 0 12px 0; font-size: 0.80rem; color: #475569; font-weight: 600;">உங்கள் 12-ஆம் வகுப்பு பாடப்பிரிவைத் தேர்வு செய்து, உங்களுக்கான நுழைவுத் தேர்வுகள், நேரடிச் சேர்க்கைப் படிப்புகள் &amp; உதவித்தொகைகளைக் காணுங்கள்:</p>
-          <div role="tablist" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;">
-            <button class="stream-tab-pill active" onclick="selectPlusTwoStream('biomaths', this)" type="button">🧬 கணிதம் + உயிரியல் (Bio-Maths)</button>
-            <button class="stream-tab-pill" onclick="selectPlusTwoStream('puresci', this)" type="button">🌿 தூய அறிவியல் (Pure Science)</button>
-            <button class="stream-tab-pill" onclick="selectPlusTwoStream('compsci', this)" type="button">💻 கணிதம் + கணினி (Computer Science)</button>
-            <button class="stream-tab-pill" onclick="selectPlusTwoStream('commerce', this)" type="button">📊 வணிகவியல் &amp; கலை (Commerce / Arts)</button>
-            <button class="stream-tab-pill" onclick="selectPlusTwoStream('vocational', this)" type="button">🛠️ தொழிற்கல்வி (+2 Vocational) &amp; 10th</button>
+          <!-- 3-Tab Switcher inside Modal -->
+          <div class="tri-modal-tabs" role="tablist">
+            <button type="button" class="tri-modal-tab-btn active" id="triTabBtnSearch" onclick="switchTriToolTab('search')">🔍 1. உடனடித் தேடுபொறி (35 பக்கங்கள்)</button>
+            <button type="button" class="tri-modal-tab-btn" id="triTabBtnStream" onclick="switchTriToolTab('stream')">🧭 2. +2 குரூப் வழிகாட்டி</button>
+            <button type="button" class="tri-modal-tab-btn" id="triTabBtnMatcher" onclick="switchTriToolTab('matcher')">🎯 3. 60-வினாடி தகுதி வழிகாட்டி (O*NET)</button>
           </div>
-          <div id="streamRecommendationPanel" style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 14px;"></div>
+
+          <!-- TAB 1: INSTANT SEARCH -->
+          <div id="triPaneSearch" style="display: block;">
+            <div style="background: linear-gradient(135deg, #071328 0%, #0f2547 55%, #091936 100%); border: 2px solid #38bdf8; border-radius: 14px; padding: 16px 18px;">
+              <div style="position: relative; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                <div style="position: relative; flex: 1 1 280px;">
+                  <input id="globalPortalSearchInput" oninput="runGlobalPortalSearch(this.value)" placeholder="தேடுக: VITEEE, CLAT, UCEED, NEET, TNEA, வேளாண்மை, சட்டம், விமானி, தடய அறிவியல், B.Pharm, Zoho, TNPSC, 7.5%..." style="width: 100%; padding: 12px 42px 12px 16px; border-radius: 12px; border: 2px solid #facc15; background: #ffffff; color: #0f172a; font-size: 0.94rem; font-weight: 700; outline: none;" type="search"/>
+                  <button aria-label="தேடலை அழிக்க" id="globalSearchClearBtn" onclick="clearGlobalPortalSearch()" style="display: none; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: #e2e8f0; border: none; color: #334155; width: 26px; height: 26px; border-radius: 50%; font-weight: 900; cursor: pointer;" type="button">✕</button>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
+                <span style="font-size: 0.76rem; font-weight: 800; color: #93c5fd; margin-right: 4px;">பிரபலத் தேடல்கள்:</span>
+                <button class="quick-search-chip" onclick="triggerQuickSearch('VITEEE பொறியியல்')" type="button">⚙️ VITEEE 2027</button>
+                <button class="quick-search-chip" onclick="triggerQuickSearch('CLAT சட்டம்')" type="button">⚖️ CLAT / AILET 2027</button>
+                <button class="quick-search-chip" onclick="triggerQuickSearch('NEET மருத்துவம்')" type="button">🩺 NEET மருத்துவம்</button>
+                <button class="quick-search-chip" onclick="triggerQuickSearch('TNEA பொறியியல்')" type="button">⚙️ TNEA பொறியியல்</button>
+                <button class="quick-search-chip" onclick="triggerQuickSearch('வேளாண்மை ICAR')" type="button">🌾 வேளாண்மை &amp; ICAR</button>
+                <button class="quick-search-chip" onclick="triggerQuickSearch('தடய அறிவியல் Forensic')" type="button">🕵️ தடய அறிவியல்</button>
+                <button class="quick-search-chip" onclick="triggerQuickSearch('B.Pharm மருந்தியல்')" type="button">💊 B.Pharm / துணை மருத்துவம்</button>
+                <button class="quick-search-chip" onclick="triggerQuickSearch('ஆசிரியர் ITEP TRB TTC')" type="button">👩‍🏫 ஆசிரியர் (ITEP/TTC/TRB)</button>
+                <button class="quick-search-chip" onclick="triggerQuickSearch('சிவகங்கை காரைக்குடி')" type="button">🏛️ சிவகங்கை மாவட்டக் கல்லூரிகள்</button>
+                <button class="quick-search-chip" onclick="triggerQuickSearch('உதவித்தொகை 7.5% இ-சேவை')" type="button">🎓 7.5% &amp; உதவித்தொகை</button>
+                <button class="quick-search-chip" onclick="triggerQuickSearch('Zoho HCL NAPS OMMC')" type="button">💼 Zoho / NAPS / வெளிநாட்டு வேலை</button>
+              </div>
+              <div id="globalSearchResultsBox" style="display: block; margin-top: 14px; background: #f8fafc; border: 2px solid #38bdf8; border-radius: 12px; padding: 14px; max-height: 390px; overflow-y: auto;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; border-bottom: 1.5px solid #cbd5e1; padding-bottom: 6px;">
+                  <span id="globalSearchCountText" style="font-size: 0.86rem; font-weight: 900; color: #0f172a;">அனைத்து முதன்மை வழிகாட்டிப் பக்கங்கள் (தேடச் சொல்லை உள்ளிடவும்)</span>
+                  <button onclick="clearGlobalPortalSearch()" style="background: #64748b; color: #ffffff; border: none; padding: 3px 10px; border-radius: 6px; font-size: 0.73rem; font-weight: 800; cursor: pointer;" type="button">மீட்டமை</button>
+                </div>
+                <div id="globalSearchResultsGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: +2 GROUP STREAM SELECTOR -->
+          <div id="triPaneStream" style="display: none;">
+            <div id="streamSelectorSec" style="background: #ffffff; border: 2px solid #cbd5e1; border-top: 5px solid #059669; border-radius: 14px; padding: 16px;">
+              <h4 style="margin: 0 0 4px 0; font-size: 1.05rem; font-weight: 900; color: #0f172a;">🧭 +2 பாடப்பிரிவு (Group) வாரியான உடனடி வழிகாட்டி (Stream-Wise Career Finder)</h4>
+              <p style="margin: 0 0 12px 0; font-size: 0.80rem; color: #475569; font-weight: 600;">உங்கள் 12-ஆம் வகுப்பு பாடப்பிரிவைத் தேர்வு செய்து, உங்களுக்கான நுழைவுத் தேர்வுகள், நேரடிச் சேர்க்கைப் படிப்புகள் &amp; உதவித்தொகைகளைக் காணுங்கள்:</p>
+              <div role="tablist" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;">
+                <button class="stream-tab-pill active" onclick="selectPlusTwoStream('biomaths', this)" type="button">🧬 கணிதம் + உயிரியல் (Bio-Maths)</button>
+                <button class="stream-tab-pill" onclick="selectPlusTwoStream('puresci', this)" type="button">🌿 தூய அறிவியல் (Pure Science)</button>
+                <button class="stream-tab-pill" onclick="selectPlusTwoStream('compsci', this)" type="button">💻 கணிதம் + கணினி (Computer Science)</button>
+                <button class="stream-tab-pill" onclick="selectPlusTwoStream('commerce', this)" type="button">📊 வணிகவியல் &amp; கலை (Commerce / Arts)</button>
+                <button class="stream-tab-pill" onclick="selectPlusTwoStream('vocational', this)" type="button">🛠️ தொழிற்கல்வி (+2 Vocational) &amp; 10th</button>
+              </div>
+              <div id="streamRecommendationPanel" style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 14px;"></div>
+            </div>
+          </div>
+
+          <!-- TAB 3: 60-SECOND SMART CAREER MATCHER (O*NET MyNextMove MODEL) -->
+          <div id="triPaneMatcher" style="display: none;">
+            <div style="background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%); border: 2px solid #f59e0b; border-top: 5px solid #7c3aed; border-radius: 14px; padding: 16px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+                <div>
+                  <h4 style="margin: 0; font-size: 1.06rem; font-weight: 900; color: #4c1d95;">🎯 60-வினாடி சுயவிவர &amp; தகுதி வழிகாட்டி (Smart Career Matcher — O*NET MyNextMove மாதிரி)</h4>
+                  <p style="margin: 2px 0 0 0; font-size: 0.79rem; color: #475569; font-weight: 600;">உங்கள் பாடப்பிரிவு, எதிர்பார்க்கும் மதிப்பெண், ஆர்வம் மற்றும் பள்ளி வகையைத் தேர்ந்தெடுத்தவுடன் உங்களுக்கான துல்லியமான உயர்கல்விப் பாதை உருவாக்கப்படும்:</p>
+                </div>
+                <span style="background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd; font-size: 0.72rem; font-weight: 900; padding: 4px 10px; border-radius: 999px;">⚡ O*NET Interest &amp; Eligibility Engine</span>
+              </div>
+
+              <div class="onet-step-grid">
+                <div class="onet-field-card">
+                  <label class="onet-field-label" for="onetStreamSel">1. உங்கள் +2 பாடப்பிரிவு (Stream):</label>
+                  <select id="onetStreamSel" class="onet-select" onchange="runOnetCareerMatcher()">
+                    <option value="biomaths">🧬 கணிதம் + உயிரியல் (Bio-Maths)</option>
+                    <option value="puresci">🌿 தூய அறிவியல் (Pure Science)</option>
+                    <option value="compsci">💻 கணிதம் + கணினி (Computer Science)</option>
+                    <option value="commerce">📊 வணிகவியல் &amp; கலை (Commerce / Arts)</option>
+                    <option value="vocational">🛠️ தொழிற்கல்வி (+2 Vocational) / 10th</option>
+                  </select>
+                </div>
+                <div class="onet-field-card">
+                  <label class="onet-field-label" for="onetInterestSel">2. உங்கள் முதன்மை ஆர்வம் (O*NET डोमेन):</label>
+                  <select id="onetInterestSel" class="onet-select" onchange="runOnetCareerMatcher()">
+                    <option value="all">🌟 அனைத்துப் பொருத்தமான துறைகளும்</option>
+                    <option value="medical">🩺 மருத்துவம், நர்சிங் &amp; மருந்தியல் (Healthcare)</option>
+                    <option value="engineering">⚙️ பொறியியல், AI, மென்பொருள் &amp; டிசைன் (Tech)</option>
+                    <option value="agri_research">🌾 வேளாண்மை, அறிவியல் ஆராய்ச்சி &amp; தடய அறிவியல்</option>
+                    <option value="law_mgmt">⚖️ சட்டம், வணிகம், CA/CMA &amp; மேலாண்மை</option>
+                    <option value="govt_defence">🎖️ அரசுப் பணி (TNPSC/UPSC), முப்படை &amp; விமானி</option>
+                    <option value="direct_job">💼 உடனடி வேலை (Zoho/HCL), பாலிடெக்னிக் &amp; சுயதொழில்</option>
+                  </select>
+                </div>
+                <div class="onet-field-card">
+                  <label class="onet-field-label" for="onetMarksSel">3. எதிர்பார்க்கும் மதிப்பெண் / கட்-ஆஃப்:</label>
+                  <select id="onetMarksSel" class="onet-select" onchange="runOnetCareerMatcher()">
+                    <option value="high">🏆 185 – 200 கட்-ஆஃப் (550+ / 600 மதிப்பெண்)</option>
+                    <option value="mid" selected>📈 155 – 184 கட்-ஆஃப் (450 – 549 மதிப்பெண்)</option>
+                    <option value="mod">🎯 தேர்ச்சி – 154 கட்-ஆஃப் (350 – 449 மதிப்பெண்)</option>
+                  </select>
+                </div>
+                <div class="onet-field-card">
+                  <label class="onet-field-label" for="onetQuotaSel">4. பள்ளி வகை &amp; சிறப்பு இடஒதுக்கீடு:</label>
+                  <select id="onetQuotaSel" class="onet-select" onchange="runOnetCareerMatcher()">
+                    <option value="govt75">🏫 6–12 அரசுப் பள்ளி (7.5% இடஒதுக்கீடு + ₹1,000/மாதம்)</option>
+                    <option value="fg">📜 முதல் தலைமுறைப் பட்டதாரி (First Graduate சலுகை)</option>
+                    <option value="general">🎓 அரசு உதவிபெறும் / தனியார் பள்ளி (NSP / Pragati)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div id="onetMatcherResultBox" style="background: #f8fafc; border: 2px solid #8b5cf6; border-radius: 12px; padding: 14px;"></div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
 
       <!-- 6. 4-கட்ட விண்ணப்ப & கலந்தாய்வு கால அட்டவணை (Annual Admission Roadmap) -->
       <section aria-label="ஆண்டு முழுவதும் உயர்கல்வி விண்ணப்ப மற்றும் கலந்தாய்வு கால அட்டவணை" class="no-print" id="admissionTimelineSec" style="width: 100%; margin: 0 0 24px 0; background: #ffffff; border: 2px solid #cbd5e1; border-top: 5px solid #d97706; border-radius: 16px; padding: 18px 20px; box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);">
@@ -1375,21 +1689,12 @@ html, body {
      ============================================================================ -->
 <script id="direct-gemini-flash-instant-engine">
 (function() {
-  // Safe Obfuscated Dynamic Key Construction (Protected from Automated GitHub Scanners)
-  const _k1 = "AQ.Ab8RN6Lc54eJBg";
-  const _k2 = "V8cMY2LpDN7tU2osE";
-  const _k3 = "5UV4HLhaGFNZe9mVbfw";
-  const GEMINI_API_KEY = _k1 + _k2 + _k3;
-
-  const GEMINI_MODELS  = ["gemini-2.5-flash", "gemini-2.0-flash"];
-  const CACHE_KEY      = "svgnext_direct_ai_recent_exams_v422";
-
-  // முதன்மை 3 சுருக்கப்பட்ட பெட்டிகளுக்கான சமீபத்திய நுழைவுத்தேர்வுகள் (VITEEE 2027, CLAT 2027, JEE Main 2027)
-  const RECENTLY_NOTIFIED_SEED = [
+  // 2027-ஆம் ஆண்டிற்கு அதிகாரப்பூர்வமாக விண்ணப்ப அறிவிக்கை வெளியிடப்பட்ட 6 படிப்புகள் மட்டுமே (அக்டோபர் 2026 நிலவரப்படி)
+  const OFFICIALLY_NOTIFIED_2027_EXAMS = [
     {
       id: "viteee-2027",
-      nameTa: "VITEEE 2027 — VIT B.Tech பொறியியல் நுழைவுத்தேர்வு",
-      body: "VIT (வேலூர் & சென்னை)",
+      nameTa: "VITEEE 2027 — VIT வேலூர் & சென்னை B.Tech பொறியியல்",
+      body: "VIT பல்கலைக்கழகம்",
       appStartDate: "2026-10-20",
       appEndDate: "2027-03-31",
       examDate: "2027-04-28",
@@ -1399,83 +1704,99 @@ html, body {
     },
     {
       id: "clat-2027",
-      nameTa: "CLAT 2027 — தேசிய சட்டப் பல்கலைக்கழக நுழைவுத்தேர்வு",
-      body: "24 NLUs (TNNLU திருச்சி)",
+      nameTa: "CLAT 2027 — 24 தேசிய சட்டப் பல்கலைக்கழகங்கள் (5-ஆண்டு சட்டம்)",
+      body: "Consortium of NLUs (TNNLU)",
       appStartDate: "2026-07-15",
       appEndDate: "2026-10-31",
       examDate: "2026-12-06",
-      officialUrl: "https://consortiumofnlus.ac.in/",
+      officialUrl: "https://consortiumofnlus.ac.in/clat-2027/",
       guideUrl: "01_06_law_clat_nlu.html"
     },
     {
-      id: "jee-main-s1-2027",
-      nameTa: "JEE Main 2027 (அமர்வு 1) — IIT / NIT / IIIT பொறியியல்",
-      body: "NTA (தேசியத் தேர்வு முகமை)",
-      appStartDate: "2026-10-28",
-      appEndDate: "2026-11-27",
-      examDate: "2027-01-24",
-      officialUrl: "https://jeemain.nta.nic.in/",
-      guideUrl: "01_03_engineering_jee.html"
+      id: "uceed-2027",
+      nameTa: "IIT UCEED 2027 — ஐஐடி இளங்கலை வடிவமைப்பு (B.Des)",
+      body: "IIT Bombay & ஐஐடிக்கள்",
+      appStartDate: "2026-10-01",
+      appEndDate: "2026-10-31",
+      examDate: "2027-01-17",
+      officialUrl: "https://www.uceed.iitb.ac.in/2027/important-dates.html",
+      guideUrl: "01_07_design_architecture_nata_nift.html"
+    },
+    {
+      id: "ailet-2027",
+      nameTa: "AILET 2027 — தேசிய சட்டப் பல்கலைக்கழகம் புதுடெல்லி (B.A.LL.B)",
+      body: "NLU Delhi (புதுடெல்லி)",
+      appStartDate: "2026-08-07",
+      appEndDate: "2026-11-10",
+      examDate: "2026-12-13",
+      officialUrl: "https://nationallawuniversitydelhi.in/",
+      guideUrl: "01_06_law_clat_nlu.html"
+    },
+    {
+      id: "nid-dat-2027",
+      nameTa: "NID DAT 2027 — தேசிய வடிவமைப்பு நிறுவனம் (4-ஆண்டு B.Des)",
+      body: "NID (மத்திய வர்த்தக அமைச்சகம்)",
+      appStartDate: "2026-09-10",
+      appEndDate: "2026-11-30",
+      examDate: "2026-12-20",
+      officialUrl: "https://admissions.nid.edu/",
+      guideUrl: "01_07_design_architecture_nata_nift.html"
+    },
+    {
+      id: "slat-2027",
+      nameTa: "SLAT 2027 — சிம்பயாசிஸ் பல்கலை 5-ஆண்டு சட்டம் (B.A/B.B.A LL.B)",
+      body: "Symbiosis Law Schools",
+      appStartDate: "2026-08-12",
+      appEndDate: "2026-12-04",
+      examDate: "2026-12-19",
+      officialUrl: "https://www.slat-test.org/",
+      guideUrl: "01_06_law_clat_nlu.html"
     }
   ];
 
-  // News_Banner.html மாதிரியில் பாய் விரிவது போல் தோன்றும் கூடுதல் அறிவிப்புகள் (Stationary Mat-Unroll Flash News)
-  const FLASH_NEWS_SEED = [
+  // News_Banner.html மாதிரியில் பாய் விரிவது போல் தோன்றும் 2027 அதிகாரப்பூர்வ அறிவிப்புகள் மட்டுமே (6 அறிவிப்புகள்)
+  const FLASH_NEWS_2027_ONLY = [
     {
       num: "01",
-      badge: "புதிய வெளியீடு • VITEEE 2027",
-      title: "விண்ணப்பத் தொடக்கம்: 20.10.2026 | கடைசி நாள்: 31.03.2027 | தேர்வு: 28.04.2027 – 03.05.2027",
-      desc: "வேலூர் மற்றும் சென்னை VIT பல்கலைக்கழக வளாகங்களில் 4-ஆண்டு B.Tech பொறியியல் பட்டப்படிப்பு சேர்க்கைக்கான ஆன்லைன் விண்ணப்பப் பதிவு தொடங்கியுள்ளது.",
+      badge: "அறிவிக்கை வெளியானது • VITEEE 2027 (B.Tech)",
+      title: "தொடக்கம்: 20.10.2026 | கடைசி நாள்: 31.03.2027 | தேர்வு நாள்: 28.04.2027 – 03.05.2027",
+      desc: "வேலூர் மற்றும் சென்னை VIT வளாகங்களில் 2027–28 கல்வியாண்டு B.Tech பொறியியல் சேர்க்கைக்கான அதிகாரப்பூர்வ ஆன்லைன் விண்ணப்பப் பதிவு நடைபெறுகிறது.",
       link: "https://viteee.vit.ac.in/"
     },
     {
       num: "02",
-      badge: "வடிவமைப்பு • IIT UCEED & NID 2027",
-      title: "விண்ணப்பத் தொடக்கம்: 01.10.2026 | கடைசி நாள்: 18.11.2026 | தேர்வு நாள்: 17.01.2027",
-      desc: "ஐஐடி (IIT Bombay, Delhi, Guwahati, Hyderabad) மற்றும் தேசிய வடிவமைப்பு நிறுவனங்களில் (NID) இளங்கலை வடிவமைப்பு (B.Des) சேர்க்கைக்கான விண்ணப்பப் பதிவு நடைபெறுகிறது.",
-      link: "https://www.uceed.iitb.ac.in/"
+      badge: "கடைசி 10 நாட்கள் • CLAT 2027 (தேசிய சட்டம்)",
+      title: "தொடக்கம்: 15.07.2026 | கடைசி நாள்: 31.10.2026 | தேர்வு நாள்: 06.12.2026",
+      desc: "திருச்சி தேசிய சட்டப் பல்கலைக்கழகம் (TNNLU) உள்ளிட்ட 24 NLU-களில் 2027–28 ஆம் ஆண்டு 5-ஆண்டு ஒருங்கிணைந்த B.A.LL.B சேர்க்கைக்கு விண்ணப்பிக்கலாம்.",
+      link: "https://consortiumofnlus.ac.in/clat-2027/"
     },
     {
       num: "03",
-      badge: "கடைசி வாரம் • CLAT 2027 (சட்டம்)",
-      title: "விண்ணப்பத் தொடக்கம்: 15.07.2026 | கடைசி நாள்: 31.10.2026 | தேர்வு நாள்: 06.12.2026",
-      desc: "திருச்சி தேசிய சட்டப் பல்கலைக்கழகம் (TNNLU) உள்ளிட்ட 24 தேசிய சட்டப் பல்கலைக்கழகங்களில் 5-ஆண்டு ஒருங்கிணைந்த B.A.LL.B. (Hons) சேர்க்கைக்கு விண்ணப்பிக்க கடைசி வாய்ப்பு.",
-      link: "https://consortiumofnlus.ac.in/"
+      badge: "ஐஐடி வடிவமைப்பு • IIT UCEED 2027 (B.Des)",
+      title: "தொடக்கம்: 01.10.2026 | கடைசி நாள்: 31.10.2026 | தேர்வு நாள்: 17.01.2027",
+      desc: "IIT Bombay, Delhi, Guwahati, Hyderabad, Roorkee நிறுவனங்களில் 2027-ஆம் ஆண்டு 4-ஆண்டு இளங்கலை வடிவமைப்பு (B.Des) பட்டப்படிப்பு விண்ணப்பப் பதிவு.",
+      link: "https://www.uceed.iitb.ac.in/2027/important-dates.html"
     },
     {
       num: "04",
-      badge: "தேசியத் தேர்வு • JEE MAIN 2027 (அமர்வு 1)",
-      title: "விண்ணப்பத் தொடக்கம்: 28.10.2026 | கடைசி நாள்: 27.11.2026 | தேர்வு நாள்: 24.01.2027",
-      desc: "திருச்சி NIT, IIIT மற்றும் மத்திய அரசு தொழில்நுட்ப நிறுவனங்களில் B.E./B.Tech சேர்க்கை மற்றும் IIT JEE Advanced தகுதிக்கான முதற்கட்டத் தேர்வு அறிவிப்பு.",
-      link: "https://jeemain.nta.nic.in/"
+      badge: "தேசிய சட்டம் • NLU DELHI AILET 2027",
+      title: "தொடக்கம்: 07.08.2026 | கடைசி நாள்: 10.11.2026 | தேர்வு நாள்: 13.12.2026",
+      desc: "புதுடெல்லி தேசிய சட்டப் பல்கலைக்கழகத்தில் (NLU Delhi) 2027–28 கல்வியாண்டு 5-ஆண்டு B.A.LL.B (Hons.) படிப்பிற்கான ஆன்லைன் விண்ணப்பப் பதிவு.",
+      link: "https://nationallawuniversitydelhi.in/"
     },
     {
       num: "05",
-      badge: "ஆடை வடிவமைப்பு • NIFT 2027",
-      title: "விண்ணப்பத் தொடக்கம்: நவம்பர் 2026 | கடைசி நாள்: ஜனவரி 2027 | தேர்வு நாள்: பிப்ரவரி 2027",
-      desc: "சென்னை உள்ளிட்ட மத்திய ஜவுளி அமைச்சகத்தின் தேசிய ஆடை வடிவமைப்புத் தொழில்நுட்ப நிறுவனங்களில் (NIFT) B.Des & B.FTech படிப்புகளுக்கான நுழைவுத்தேர்வு.",
-      link: "https://exams.nta.ac.in/NIFT/"
+      badge: "தேசிய வடிவமைப்பு • NID DAT 2027 (B.Des)",
+      title: "தொடக்கம்: 10.09.2026 | கடைசி நாள்: 30.11.2026 | முதல்நிலைத் தேர்வு: 20.12.2026",
+      desc: "மத்திய அரசின் தேசிய வடிவமைப்பு நிறுவனங்களில் (NID Ahmedabad, AP, Assam, Haryana, MP) 2027 இளங்கலை டிசைன் (B.Des) சேர்க்கை அறிவிக்கை.",
+      link: "https://admissions.nid.edu/"
     },
     {
       num: "06",
-      badge: "நிகர்நிலைப் பல்கலை • SRMJEEE & AEEE 2027",
-      title: "விண்ணப்பத் தொடக்கம்: நவம்பர் 2026 | கடைசி நாள்: ஏப்ரல் 2027 | தேர்வு நாள்: ஏப்ரல் / மே 2027",
-      desc: "SRM பல்கலைக்கழகம் (SRMJEEE) மற்றும் அமிர்தா பல்கலைக்கழக (AEEE) B.Tech பொறியியல் பட்டப்படிப்புகளுக்கான ஆன்லைன் விண்ணப்பப் பதிவு விவரங்கள்.",
-      link: "https://www.srmist.edu.in/"
-    },
-    {
-      num: "07",
-      badge: "பாதுகாப்புப் படை • UPSC NDA & NA (I) 2027",
-      title: "விண்ணப்பத் தொடக்கம்: டிசம்பர் 2026 | கடைசி நாள்: ஜனவரி 2027 | தேர்வு நாள்: ஏப்ரல் 2027",
-      desc: "12-ஆம் வகுப்பு முடிக்கும் மாணவ, மாணவியர் இந்திய ராணுவம், கடற்படை மற்றும் விமானப்படையில் அதிகாரியாகச் சேர நடத்தப்படும் தேசிய பாதுகாப்பு அகாடமி தேர்வு.",
-      link: "https://upsc.gov.in/"
-    },
-    {
-      num: "08",
-      badge: "மருத்துவம் & மத்திய பல்கலை • NEET UG / CUET UG 2027",
-      title: "விண்ணப்பத் தொடக்கம்: பிப்ரவரி 2027 | கடைசி நாள்: மார்ச் 2027 | தேர்வு நாள்: மே 2027",
-      desc: "MBBS/BDS/AYUSH மருத்துவப் படிப்புகளுக்கான NEET UG மற்றும் மத்தியப் பல்கலைக்கழக இளங்கலைச் சேர்க்கைக்கான CUET UG தேர்வு கால அட்டவணை மற்றும் பாடத்திட்டம்.",
-      link: "https://nta.ac.in/"
+      badge: "சட்டப் பல்கலை • SLAT 2027 (5-ஆண்டு LL.B)",
+      title: "தொடக்கம்: 12.08.2026 | கடைசி நாள்: 04.12.2026 | தேர்வு: 19.12.2026 & 26.12.2026",
+      desc: "சிம்பயாசிஸ் சட்டப் பள்ளிகளில் (Pune, Noida, Hyderabad, Nagpur) 2027–28 கல்வியாண்டு 5-ஆண்டு ஒருங்கிணைந்த B.A.LL.B / B.B.A.LL.B விண்ணப்பப் பதிவு.",
+      link: "https://www.slat-test.org/"
     }
   ];
 
@@ -1487,22 +1808,9 @@ html, body {
     return parseInt(p[2], 10) + " " + (TA_MONTHS[parseInt(p[1], 10) - 1] || "") + " " + p[0];
   }
 
-  let activeExams = [];
-  let allFlashNewsItems = FLASH_NEWS_SEED.slice();
-
-  function loadInstantCache() {
-    try {
-      const raw = localStorage.getItem(CACHE_KEY);
-      if (raw) {
-        const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed) && parsed.length >= 3) {
-          activeExams = parsed.slice(0, 3);
-          return;
-        }
-      }
-    } catch (e) {}
-    activeExams = RECENTLY_NOTIFIED_SEED.slice(0, 3);
-  }
+  let activeExams = OFFICIALLY_NOTIFIED_2027_EXAMS.slice();
+  let currentExamPage = 0; // 0 => exams 0..2, 1 => exams 3..5
+  let allFlashNewsItems = FLASH_NEWS_2027_ONLY.slice();
 
   // கவுண்ட்டவுன் நாட்கள் மட்டும் கணக்கிடும் முறை (மணி, நிமிடம், விநாடி தேவையில்லை)
   function calcDaysOnlyCountdown(exam, nowMs) {
@@ -1515,8 +1823,8 @@ html, body {
     const statusText = daysLeftToApply > 0
       ? (isUrgent
           ? "🚨 விண்ணப்பிக்க " + daysLeftToApply + " நாட்களே!"
-          : (isNew ? "🆕 புதிய விண்ணப்பம் (" + daysLeftToApply + " நாட்கள்)" : "🟢 விண்ணப்பம் (" + daysLeftToApply + " நாட்கள்)"))
-      : "🔔 சமீபத்திய அறிவிப்பு";
+          : (isNew ? "🆕 புதிய அறிவிக்கை (" + daysLeftToApply + " நாட்கள்)" : "🟢 விண்ணப்பம் (" + daysLeftToApply + " நாட்கள்)"))
+      : "🔔 2027 அதிகாரப்பூர்வ அறிவிப்பு";
 
     return {
       isUrgent: isUrgent,
@@ -1530,7 +1838,10 @@ html, body {
     const grid = document.getElementById("hglActiveExamsGrid");
     if (!grid) return;
     const nowMs = Date.now();
-    grid.innerHTML = activeExams.slice(0, 3).map(function(ex) {
+    const sliceStart = currentExamPage * 3;
+    const visibleSlice = activeExams.slice(sliceStart, sliceStart + 3);
+
+    grid.innerHTML = visibleSlice.map(function(ex) {
       const c = calcDaysOnlyCountdown(ex, nowMs);
       const cardClass = c.isUrgent ? "urgent" : (c.isNew ? "new-release" : "");
       const tagClass  = c.isUrgent ? "urgent" : (c.isNew ? "new-release" : "");
@@ -1559,6 +1870,22 @@ html, body {
     }).join("");
   }
 
+  window.switchHglExamPage = function(pageIdx) {
+    currentExamPage = pageIdx === 1 ? 1 : 0;
+    const b1 = document.getElementById("btnHglSet1");
+    const b2 = document.getElementById("btnHglSet2");
+    if (b1 && b2) {
+      if (currentExamPage === 0) {
+        b1.style.background = "#facc15"; b1.style.color = "#090d16";
+        b2.style.background = "rgba(255,255,255,0.1)"; b2.style.color = "#fef08a";
+      } else {
+        b2.style.background = "#facc15"; b2.style.color = "#090d16";
+        b1.style.background = "rgba(255,255,255,0.1)"; b1.style.color = "#fef08a";
+      }
+    }
+    renderActiveExamCards();
+  };
+
   function tickDaysClocks() {
     const nowMs = Date.now();
     activeExams.forEach(function(ex) {
@@ -1568,10 +1895,10 @@ html, body {
   }
 
   // ============================================================================
-  // News_Banner.html MAT-UNROLL FLASH NEWS CONTROLLER (2 Visible Stationary Ribbons)
+  // News_Banner.html MAT-UNROLL FLASH NEWS CONTROLLER (2 Visible Stationary Ribbons ABOVE Countdown)
   // ============================================================================
   const VISIBLE_FLASH_COUNT = 2;
-  const FLASH_SCROLL_INTERVAL = 7500; // 7.5 seconds comfortable stationary reading time
+  const FLASH_SCROLL_INTERVAL = 7500;
   const FLASH_GAP = 6;
 
   const flowContainer = document.getElementById("hglNewsCardsFlow");
@@ -1721,47 +2048,9 @@ html, body {
   if (btnPrev) btnPrev.addEventListener("click", function() { shiftFlashPrev(); });
   if (btnNext) btnNext.addEventListener("click", function() { shiftFlashUp(true); });
 
-  async function verifyRecentExamsViaGeminiFlash() {
-    const todayIso = new Date().toISOString().split("T")[0];
-    const prompt = "Today is " + todayIso + ". Return ONLY a JSON array of the 6 most recently notified or currently open Indian / Tamil Nadu higher education entrance exams after 12th standard (ensure VITEEE 2027 https://viteee.vit.ac.in/, CLAT 2027, JEE Main 2027, UCEED/NID, NIFT are included). Format each item with exact keys: id, nameTa, body, appStartDate (YYYY-MM-DD), appEndDate (YYYY-MM-DD), examDate (YYYY-MM-DD), officialUrl, guideUrl.";
-
-    for (let i = 0; i < GEMINI_MODELS.length; i++) {
-      try {
-        const res = await fetch(
-          "https://generativelanguage.googleapis.com/v1beta/models/" + GEMINI_MODELS[i] + ":generateContent?key=" + encodeURIComponent(GEMINI_API_KEY),
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              contents: [{ parts: [{ text: prompt }] }],
-              tools: [{ google_search: {} }],
-              generationConfig: { temperature: 0.1 }
-            })
-          }
-        );
-        if (res.ok) {
-          const data = await res.json();
-          const txt = data && data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts && data.candidates[0].content.parts[0].text;
-          if (txt) {
-            const cleaned = txt.replace(/```json/gi, "").replace(/```/g, "").trim();
-            const parsed = JSON.parse(cleaned);
-            if (Array.isArray(parsed) && parsed.length >= 3) {
-              activeExams = parsed.slice(0, 3);
-              try { localStorage.setItem(CACHE_KEY, JSON.stringify(activeExams)); } catch (e) {}
-              renderActiveExamCards();
-              return;
-            }
-          }
-        }
-      } catch (err) {}
-    }
-  }
-
-  loadInstantCache();
   renderActiveExamCards();
   initFlashMatDisplay();
   setInterval(tickDaysClocks, 60000);
-  setTimeout(function() { verifyRecentExamsViaGeminiFlash(); }, 60);
 })();
 </script>
 
@@ -1814,7 +2103,7 @@ function runGlobalPortalSearch(query) {
   const countText = document.getElementById('globalSearchCountText');
   const q = (query || '').trim().toLowerCase();
   if (clearBtn) clearBtn.style.display = q.length > 0 ? 'inline-block' : 'none';
-  if (!q) { if (resultsBox) resultsBox.style.display = 'none'; return; }
+  if (!q) { runGlobalPortalSearchAllDefault(); return; }
   const tokens = q.split(/\s+/).filter(Boolean);
   const matches = PORTAL_SEARCH_INDEX.filter(item => {
     const hay = (item.title + ' ' + item.cat + ' ' + item.desc + ' ' + item.kw).toLowerCase();
@@ -1837,10 +2126,225 @@ function triggerQuickSearch(term) {
   const inp = document.getElementById('globalPortalSearchInput');
   if (inp) { inp.value = term; runGlobalPortalSearch(term); }
 }
+function runGlobalPortalSearchAllDefault() {
+  const resultsBox = document.getElementById('globalSearchResultsBox');
+  const resultsGrid = document.getElementById('globalSearchResultsGrid');
+  const countText = document.getElementById('globalSearchCountText');
+  if (!resultsGrid) return;
+  if (resultsBox) resultsBox.style.display = 'block';
+  if (countText) countText.textContent = '📚 35 பக்கங்களின் முதன்மை வழிகாட்டித் தொகுப்பு (' + PORTAL_SEARCH_INDEX.length + '):';
+  resultsGrid.innerHTML = PORTAL_SEARCH_INDEX.map(m => `
+    <a href="${m.url}" style="display:flex;flex-direction:column;justify-content:space-between;background:#ffffff;border:1.5px solid #cbd5e1;border-left:4px solid #0284c7;border-radius:10px;padding:10px 12px;text-decoration:none;color:#0f172a;">
+      <div>
+        <div style="font-size:0.70rem;font-weight:800;color:#0284c7;">${m.cat}</div>
+        <div style="font-size:0.90rem;font-weight:900;margin:3px 0;">${m.title}</div>
+        <div style="font-size:0.78rem;color:#475569;">${m.desc}</div>
+      </div>
+      <div style="margin-top:6px;font-size:0.76rem;font-weight:800;color:#047857;">பக்கத்தைத் திறக்க ➔</div>
+    </a>
+  `).join('');
+}
+
 function clearGlobalPortalSearch() {
   const inp = document.getElementById('globalPortalSearchInput');
+  const clearBtn = document.getElementById('globalSearchClearBtn');
   if (inp) inp.value = '';
-  runGlobalPortalSearch('');
+  if (clearBtn) clearBtn.style.display = 'none';
+  runGlobalPortalSearchAllDefault();
+}
+
+function openTriToolModal(tabKey) {
+  const modal = document.getElementById('triToolModal');
+  if (!modal) return;
+  modal.style.display = 'flex';
+  switchTriToolTab(tabKey || 'search');
+}
+
+function closeTriToolModal() {
+  const modal = document.getElementById('triToolModal');
+  if (modal) modal.style.display = 'none';
+}
+
+function switchTriToolTab(tabKey) {
+  const tabs = ['search', 'stream', 'matcher'];
+  tabs.forEach(function(k) {
+    const pane = document.getElementById('triPane' + k.charAt(0).toUpperCase() + k.slice(1));
+    const btn  = document.getElementById('triTabBtn' + k.charAt(0).toUpperCase() + k.slice(1));
+    if (pane) pane.style.display = (k === tabKey) ? 'block' : 'none';
+    if (btn) btn.classList.toggle('active', k === tabKey);
+  });
+  if (tabKey === 'search') {
+    const inp = document.getElementById('globalPortalSearchInput');
+    if (inp && !inp.value.trim()) runGlobalPortalSearchAllDefault();
+    setTimeout(function() { if (inp) inp.focus(); }, 80);
+  } else if (tabKey === 'stream') {
+    const panel = document.getElementById('streamRecommendationPanel');
+    if (panel && !panel.innerHTML.trim()) {
+      const firstBtn = document.querySelector('#streamSelectorSec .stream-tab-pill');
+      selectPlusTwoStream('biomaths', firstBtn);
+    }
+  } else if (tabKey === 'matcher') {
+    runOnetCareerMatcher();
+  }
+}
+
+// O*NET MyNextMove 60-Second Smart Career & Quota Matcher Engine
+const ONET_CAREER_DATABASE = [
+  {
+    title: "MBBS / BDS / சித்தா & ஆயுஷ் மருத்துவம் (NEET UG)",
+    domain: "medical",
+    streams: ["biomaths", "puresci"],
+    marks: ["high", "mid"],
+    entrance: "NEET UG (தேசிய மருத்துவ நுழைவுத்தேர்வு)",
+    merit: "7.5% அரசுப் பள்ளி இடஒதுக்கீட்டில் முழுக் கல்விக்கட்டண விலக்கு",
+    career: "அரசு மருத்துவர் (MRB), மருத்துவப் பேராசிரியர், சிறப்பு மருத்துவர் (₹80,000 – ₹2.5 லட்சம்/மாதம்)",
+    url: "01_02_medical_neet_ug.html"
+  },
+  {
+    title: "B.V.Sc கால்நடை மருத்துவம், B.Sc Nursing & B.Pharm / Pharm.D",
+    domain: "medical",
+    streams: ["biomaths", "puresci"],
+    marks: ["high", "mid", "mod"],
+    entrance: "நுழைவுத்தேர்வு இல்லை (+2 கட்-ஆஃப் நேரடி கலந்தாய்வு)",
+    merit: "TANUVAS & தமிழ்நாடு மருத்துவக் கல்வி இயக்கக (DME) ஒற்றைச் சாளர சேர்க்கை",
+    career: "கால்நடை உதவி மருத்துவர், அரசு செவிலியர், வெளிநாட்டு நர்சிங் (OMMC), மருந்தாளுநர்",
+    url: "02_02_veterinary_allied_health.html"
+  },
+  {
+    title: "IIT / NIT / IIIT & VITEEE B.Tech பொறியியல் (CSE, AI & DS, ECE, VLSI)",
+    domain: "engineering",
+    streams: ["biomaths", "compsci"],
+    marks: ["high", "mid"],
+    entrance: "JEE Main & Advanced / VITEEE 2027 (விண்ணப்பம் நடைபெறுகிறது)",
+    merit: "தேசியத் தொழில்நுட்ப நிறுவனங்கள் (NIT திருச்சி) & VIT வேலூர்/சென்னை",
+    career: "மென்பொருள் பொறியாளர், AI விஞ்ஞானி, பொதுத்துறை நிறுவன அதிகாரி (₹10 – ₹35 லட்சம்/ஆண்டு)",
+    url: "01_03_engineering_jee.html"
+  },
+  {
+    title: "TNEA அண்ணா பல்கலைக்கழக நேரடிப் பொறியியல் சேர்க்கை (B.E. / B.Tech)",
+    domain: "engineering",
+    streams: ["biomaths", "compsci", "vocational"],
+    marks: ["high", "mid", "mod"],
+    entrance: "நுழைவுத்தேர்வு இல்லை (+2 கணிதம், இயற்பியல், வேதியியல் கட்-ஆஃப் 200-க்கு)",
+    merit: "CEG கிண்டி, MIT, காரைக்குடி ACCET & அரசுப் பொறியியல் கல்லூரிகள் (+2 தொழிற்கல்விக்கு 4% இடஒதுக்கீடு)",
+    career: "IT துறை, உற்பத்தித் துறை, TNEB / TNPSC பொறியாளர், தொழில்முனைவோர்",
+    url: "02_01_tnea_engineering.html"
+  },
+  {
+    title: "B.Des இளங்கலை வடிவமைப்பு (IIT UCEED 2027 / NID DAT 2027) & NATA கட்டிடக்கலை",
+    domain: "engineering",
+    streams: ["biomaths", "compsci", "commerce", "puresci"],
+    marks: ["high", "mid"],
+    entrance: "IIT UCEED 2027 (கடைசி: 31 அக் 2026) & NID DAT 2027 (கடைசி: 30 நவ 2026)",
+    merit: "ஐஐடி மற்றும் தேசிய வடிவமைப்பு நிறுவனங்களில் (NID) UI/UX, Product & Animation Design",
+    career: "UI/UX வடிவமைப்பாளர், கட்டிடக்கலை நிபுணர் (Architect), தொழில்துறை டிசைனர்",
+    url: "01_07_design_architecture_nata_nift.html"
+  },
+  {
+    title: "TNAU B.Sc. வேளாண்மை, தோட்டக்கலை, மீன்வளம் & ICAR தேசிய வேளாண்மை",
+    domain: "agri_research",
+    streams: ["biomaths", "puresci", "vocational"],
+    marks: ["high", "mid"],
+    entrance: "TNAU (+2 மதிப்பெண் நேரடிச் சேர்க்கை) & CUET-ICAR (தேசிய இடஒதுக்கீடு)",
+    merit: "கோவை TNAU, மதுரை, கிள்ளிகுளம் வேளாண் கல்லூரிகள் (7.5% அரசுப் பள்ளி இடஒதுக்கீடு உண்டு)",
+    career: "வேளாண் அலுவலர் (TNPSC AO/HO), வங்கி வேளாண் அதிகாரி (IBPS AFO), ஆராய்ச்சியாளர்",
+    url: "02_03_agriculture_fisheries.html"
+  },
+  {
+    title: "IISER / NISER அறிவியல் ஆராய்ச்சி (BS-MS) & B.Sc. தடய அறிவியல் (Forensic)",
+    domain: "agri_research",
+    streams: ["biomaths", "puresci", "compsci"],
+    marks: ["high", "mid"],
+    entrance: "IISER IAT / NISER NEST / NFAT தடய அறிவியல் & TNGASA நேரடி B.Sc.",
+    merit: "மாத ஊக்கத்தொகையுடன் (INSPIRE ₹5,000) ஒருங்கிணைந்த ஆராய்ச்சிப் படிப்புகள்",
+    career: "விஞ்ஞானி (ISRO/DRDO/CECRI), தடய அறிவியல் நிபுணர் (TNPSC Forensic), பேராசிரியர்",
+    url: "01_04_science_research_iiser.html"
+  },
+  {
+    title: "5-ஆண்டு ஒருங்கிணைந்த சட்டப் படிப்பு — CLAT 2027 / AILET 2027 / TNDALU அரசு சட்டம்",
+    domain: "law_mgmt",
+    streams: ["commerce", "biomaths", "puresci", "compsci"],
+    marks: ["high", "mid", "mod"],
+    entrance: "CLAT 2027 (கடைசி: 31 அக் 2026), AILET 2027 (கடைசி: 10 நவ 2026) & TNDALU (+2 நேரடிச் சேர்க்கை)",
+    merit: "திருச்சி தேசிய சட்டப் பல்கலை (TNNLU), காரைக்குடி & மதுரை அரசு சட்டக் கல்லூரிகள்",
+    career: "உயர்நீதிமன்ற வழக்கறிஞர், உரிமையியல் நீதிபதி (Civil Judge), நிறுவன சட்ட ஆலோசகர்",
+    url: "01_06_law_clat_nlu.html"
+  },
+  {
+    title: "B.Com, CA / CMA / CS பட்டயக் கணக்காளர், IIM IPMAT & BCA கணினிப் பயன்பாடு",
+    domain: "law_mgmt",
+    streams: ["commerce", "compsci", "biomaths"],
+    marks: ["high", "mid", "mod"],
+    entrance: "TNGASA நேரடிச் சேர்க்கை (B.Com/BCA/BBA) & IIM IPMAT / CA Foundation",
+    merit: "அரசு கலை மற்றும் அறிவியல் கல்லூரிகளில் ₹50 ஒற்றைப் பதிவுக் கட்டணத்தில் சேர்க்கை",
+    career: "பட்டயக் கணக்காளர் (Auditor), வங்கி அதிகாரி, நிதி ஆய்வாளர், மென்பொருள் வல்லுநர்",
+    url: "02_08_commerce_management.html"
+  },
+  {
+    title: "UPSC NDA முப்படை அதிகாரிகள், வணிக விமானி (Pilot CPL), TNPSC & ரயில்வே",
+    domain: "govt_defence",
+    streams: ["biomaths", "compsci", "puresci", "commerce", "vocational"],
+    marks: ["high", "mid", "mod"],
+    entrance: "UPSC NDA, TNPSC Group 4/2, RRB ரயில்வே, SSC CHSL & அக்னிவீர்",
+    merit: "+2 முடித்தவுடன் மத்திய/மாநில அரசு மற்றும் பாதுகாப்புப் படைகளில் நேரடி அதிகாரிப் பணி",
+    career: "ராணுவ/கடற்படை/விமானப்படை அதிகாரி, வணிக விமானி, அரசுத் துறை அலுவலர்",
+    url: "04_govt_exams.html"
+  },
+  {
+    title: "Zoho Schools, HCL TechBee (படித்துக்கொண்டே சம்பளம்), பாலிடெக்னிக், ITI & NAPS",
+    domain: "direct_job",
+    streams: ["compsci", "biomaths", "puresci", "commerce", "vocational"],
+    marks: ["high", "mid", "mod"],
+    entrance: "நிறுவனத் திறனறித் தேர்வு (Zoho/HCL) & நேரடி சேர்க்கை (பாலிடெக்னிக் / அரசு ITI)",
+    merit: "கல்லூரிக் கட்டணமின்றி மாதம் ₹10,000 உதவித்தொகையுடன் IT வேலை & NAPS பழகுநர் பயிற்சி",
+    career: "இளநிலை மென்பொருள் பொறியாளர், தொழில்நுட்ப வல்லுநர், UYEGP/PMEGP மானியத் தொழில்முனைவோர்",
+    url: "05_direct_careers.html"
+  }
+];
+
+function runOnetCareerMatcher() {
+  const stream = document.getElementById('onetStreamSel')?.value || 'biomaths';
+  const interest = document.getElementById('onetInterestSel')?.value || 'all';
+  const marks = document.getElementById('onetMarksSel')?.value || 'mid';
+  const quota = document.getElementById('onetQuotaSel')?.value || 'govt75';
+  const box = document.getElementById('onetMatcherResultBox');
+  if (!box) return;
+
+  const matched = ONET_CAREER_DATABASE.filter(function(item) {
+    const streamOk = item.streams.includes(stream);
+    const interestOk = (interest === 'all') || (item.domain === interest);
+    const marksOk = item.marks.includes(marks);
+    return streamOk && interestOk && marksOk;
+  });
+
+  const finalMatches = matched.length > 0 ? matched : ONET_CAREER_DATABASE.filter(function(item) {
+    return item.streams.includes(stream);
+  });
+
+  let quotaBanner = '';
+  if (quota === 'govt75') {
+    quotaBanner = '<div style="background:#ecfdf5;border:1.5px solid #10b981;border-radius:10px;padding:9px 12px;margin-bottom:12px;font-size:0.80rem;color:#065f46;font-weight:800;">🎯 <strong>உங்களுக்கான அரசுப் பள்ளி சிறப்புச் சலுகை:</strong> மருத்துவம், பொறியியல், வேளாண்மை, கால்நடை, சட்டம் ஆகிய தொழிற்படிப்புகளில் <strong>7.5% முன்னுரிமை இடஒதுக்கீட்டின் கீழ் 100% கல்வி மற்றும் விடுதிக் கட்டண விலக்கு</strong> + <strong>புதுமைப் பெண் / தமிழ்ப் புதல்வன் திட்டத்தில் மாதம் ₹1,000</strong> பெறுவீர்கள்! (<a href="06_student_support.html#quota-7point5-sec" style="color:#047857;text-decoration:underline;">முழு விவரம் ➔</a>)</div>';
+  } else if (quota === 'fg') {
+    quotaBanner = '<div style="background:#eff6ff;border:1.5px solid #3b82f6;border-radius:10px;padding:9px 12px;margin-bottom:12px;font-size:0.80rem;color:#1e3a8a;font-weight:800;">📜 <strong>முதல் தலைமுறைப் பட்டதாரி சலுகை:</strong> TNEA பொறியியல் மற்றும் தொழில்முறைக் கலந்தாய்வில் <strong>ஆண்டுதோறும் ₹25,000 முதல் ₹27,500 வரை கல்விக்கட்டணத் தள்ளுபடி</strong> + AICTE Pragati (பெண்களுக்கு ₹50,000/ஆண்டு) பெறத் தகுதியுடையவர்! (<a href="06_student_support.html#reservation-sec" style="color:#1d4ed8;text-decoration:underline;">முழு விவரம் ➔</a>)</div>';
+  } else {
+    quotaBanner = '<div style="background:#faf5ff;border:1.5px solid #a855f7;border-radius:10px;padding:9px 12px;margin-bottom:12px;font-size:0.80rem;color:#581c87;font-weight:800;">🎓 <strong>மத்திய / மாநில உதவித்தொகை வாய்ப்புகள்:</strong> தேசிய உதவித்தொகை (NSP Central Sector ₹12,000–₹20,000/ஆண்டு), AICTE Pragati (பெண்களுக்கு ₹50,000/ஆண்டு) மற்றும் வட்டியில்லா வித்யாலட்சுமி கல்விக்கடன் பெறலாம்! (<a href="06_student_support.html#sec-nsp-esevai-checklist" style="color:#6b21a8;text-decoration:underline;">முழு விவரம் ➔</a>)</div>';
+  }
+
+  box.innerHTML = quotaBanner +
+    '<div style="font-size:0.85rem;font-weight:900;color:#1e293b;margin-bottom:8px;">✨ உங்களுடைய சுயவிவரத்திற்குப் பொருந்தும் உயர்கல்வி &amp; தொழில் பாதைகள் (' + finalMatches.length + '):</div>' +
+    '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;">' +
+    finalMatches.map(function(m) {
+      return '<div style="background:#ffffff;border:1.5px solid #cbd5e1;border-left:4px solid #7c3aed;border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;justify-content:space-between;gap:6px;">' +
+        '<div>' +
+          '<div style="font-size:0.88rem;font-weight:900;color:#0f172a;margin-bottom:4px;">' + m.title + '</div>' +
+          '<div style="font-size:0.75rem;color:#334155;margin-bottom:3px;"><strong>📝 சேர்க்கை முறை:</strong> ' + m.entrance + '</div>' +
+          '<div style="font-size:0.75rem;color:#047857;margin-bottom:3px;"><strong>🏛️ சிறப்பம்சம்:</strong> ' + m.merit + '</div>' +
+          '<div style="font-size:0.75rem;color:#4c1d95;"><strong>💼 பணி வாய்ப்பு:</strong> ' + m.career + '</div>' +
+        '</div>' +
+        '<a href="' + m.url + '" style="display:inline-flex;align-items:center;justify-content:space-between;background:#f5f3ff;border:1px solid #c4b5fd;color:#5b21b6;text-decoration:none;font-size:0.76rem;font-weight:900;padding:5px 10px;border-radius:6px;margin-top:4px;"><span>வழிகாட்டிப் பக்கத்தைத் திறக்க</span><span>➔</span></a>' +
+      '</div>';
+    }).join('') +
+    '</div>';
 }
 
 const STREAM_RECOMMENDATIONS = {
@@ -1992,6 +2496,14 @@ function handlePopupFeedbackSubmit(e) {
   alert('தங்கள் மேலான ஆலோசனைக்கு நன்றி!');
   closeFeedbackModal();
 }
+
+
+window.addEventListener('click', function(ev) {
+  const triModal = document.getElementById('triToolModal');
+  if (triModal && ev.target === triModal) {
+    closeTriToolModal();
+  }
+});
 
 document.addEventListener('DOMContentLoaded', function() {
   typeEffect();
