@@ -101,6 +101,200 @@ html, body {
 }
 .container { width: 100% !important; max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
 
+
+/* ============================================================================
+   INTERNATIONAL ACCESSIBILITY TOOLBAR, BILINGUAL UI & VOICE SEARCH STYLES
+   (சர்வதேச அணுகல்தன்மைப் பட்டை, இருமொழி மாற்றி & குரல் வழித் தேடல்)
+   ============================================================================ */
+.intl-a11y-toolbar {
+  width: 100%;
+  background: linear-gradient(90deg, #040914 0%, #0b172e 50%, #040914 100%);
+  border: 1.5px solid rgba(56, 189, 248, 0.45);
+  border-radius: 12px;
+  padding: 6px 12px;
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  z-index: 10002;
+}
+.a11y-left-group, .a11y-right-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.a11y-label-tag {
+  font-size: 0.70rem;
+  font-weight: 800;
+  color: #93c5fd;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: 2px;
+}
+.a11y-btn {
+  appearance: none;
+  background: rgba(30, 41, 59, 0.9);
+  color: #f8fafc;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  border-radius: 7px;
+  padding: 4px 9px;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.18s ease;
+  line-height: 1.2;
+}
+.a11y-btn:hover, .a11y-btn:focus-visible {
+  background: #facc15;
+  color: #090d16;
+  border-color: #ffffff;
+  transform: translateY(-1px);
+}
+.a11y-btn.active {
+  background: linear-gradient(135deg, #0284c7 0%, #1d4ed8 100%);
+  color: #fef08a;
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.45);
+}
+.a11y-btn.lang-switch-btn {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #ffffff;
+  border-color: #6ee7b7;
+  padding: 4px 11px;
+}
+.a11y-btn.voice-quick-btn {
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  color: #fef08a;
+  border-color: #fca5a5;
+  padding: 4px 11px;
+}
+.a11y-btn.pdf-quick-btn {
+  background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+  color: #fef08a;
+  border-color: #c4b5fd;
+  padding: 4px 11px;
+}
+
+/* Voice Search Microphone Button inside Search Input & Tri-Button */
+.voice-mic-btn {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: #ffffff;
+  border: 2px solid #fde047;
+  border-radius: 10px;
+  padding: 9px 14px;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.voice-mic-btn:hover {
+  transform: scale(1.03);
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+.voice-mic-btn.listening {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  border-color: #86efac;
+  animation: voicePulseGlow 1.1s infinite ease-in-out;
+}
+@keyframes voicePulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); transform: scale(1); }
+  50% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); transform: scale(1.04); }
+}
+.voice-status-banner {
+  display: none;
+  margin-top: 8px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  background: rgba(16, 185, 129, 0.2);
+  border: 1.5px solid #34d399;
+  color: #ecfdf5;
+  font-size: 0.80rem;
+  font-weight: 800;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* 1-Click Career Plan PDF Generator Button */
+.btn-career-pdf-download {
+  background: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%);
+  color: #fef08a;
+  border: 2px solid #6ee7b7;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 6px 18px rgba(5, 150, 105, 0.35);
+  transition: all 0.2s ease;
+}
+.btn-career-pdf-download:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+}
+
+/* High Contrast Accessibility Mode (WCAG AAA) */
+body.a11y-high-contrast,
+body.a11y-high-contrast .portal-main-content {
+  background: #000000 !important;
+  color: #ffff00 !important;
+}
+body.a11y-high-contrast .card,
+body.a11y-high-contrast #admissionTimelineSec,
+body.a11y-high-contrast .onet-field-card {
+  background: #050505 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffff00 !important;
+}
+body.a11y-high-contrast .card-title,
+body.a11y-high-contrast h1,
+body.a11y-high-contrast h2,
+body.a11y-high-contrast h3,
+body.a11y-high-contrast h4 {
+  color: #ffff00 !important;
+}
+body.a11y-high-contrast .card-summary,
+body.a11y-high-contrast p,
+body.a11y-high-contrast li {
+  color: #ffffff !important;
+}
+body.a11y-high-contrast .tag {
+  background: #111111 !important;
+  color: #00ffff !important;
+  border: 1.5px solid #00ffff !important;
+}
+
+/* Readable Spacing & Dyslexia-Friendly Mode */
+body.a11y-readable-spacing,
+body.a11y-readable-spacing p,
+body.a11y-readable-spacing .card-summary,
+body.a11y-readable-spacing li {
+  letter-spacing: 0.04em !important;
+  word-spacing: 0.12em !important;
+  line-height: 1.85 !important;
+}
+
 /* Top Frame (மேல்சட்டம்) */
 @keyframes auroraTextFlow {
   0% { background-position: 0% 50%; }
@@ -984,6 +1178,24 @@ html, body {
   <main class="portal-main-content">
     <div class="container">
 
+      <!-- 0. சர்வதேச அணுகல்தன்மைப் பட்டை, இருமொழி மாற்றி, குரல் தேடல் & 1-Click PDF (International Accessibility & Bilingual Toolbar) -->
+      <div class="intl-a11y-toolbar no-print" id="intlAccessibilityToolbar" role="region" aria-label="சர்வதேச அணுகல்தன்மை மற்றும் இருமொழி மாற்றி பட்டை">
+        <div class="a11y-left-group">
+          <span class="a11y-label-tag">♿ அணுகல்தன்மை (Accessibility):</span>
+          <button type="button" class="a11y-btn" onclick="adjustPortalFontSize(-1)" title="எழுத்து அளவைக் குறைக்க (Decrease Font Size)">அ- (A-)</button>
+          <button type="button" class="a11y-btn active" id="btnFontNormal" onclick="adjustPortalFontSize(0)" title="இயல்பான எழுத்து அளவு (Default Font Size)">அ (A)</button>
+          <button type="button" class="a11y-btn" onclick="adjustPortalFontSize(1)" title="எழுத்து அளவைப் பெரிதாக்க (Increase Font Size)">அ+ (A+)</button>
+          <button type="button" class="a11y-btn" id="btnHighContrast" onclick="toggleHighContrastMode()" title="உயர் நிறமாறுபாடு (WCAG High Contrast Mode)">🌓 உயர் நிறமாறுபாடு</button>
+          <button type="button" class="a11y-btn" id="btnReadableSpacing" onclick="toggleReadableSpacing()" title="எளிய வாசிப்பு இடைவெளி (Readable Line Spacing)">📖 எளிய வாசிப்பு</button>
+          <button type="button" class="a11y-btn" id="btnAudioGuide" onclick="togglePortalAudioGuide()" title="பக்கத்தின் சுருக்கத்தைக் குரல் வழியாகக் கேட்க (Audio Screen Reader)">🔊 குரல் வழிகாட்டி</button>
+        </div>
+        <div class="a11y-right-group">
+          <button type="button" class="a11y-btn voice-quick-btn" onclick="openVoiceSearchDirectly()" title="MDN Web Speech API குரல் வழித் தேடல் (Tamil & English Voice Search)">🎤 குரல் வழித் தேடல்</button>
+          <button type="button" class="a11y-btn pdf-quick-btn" onclick="openTriToolModal('matcher')" title="1-Click தனிப்பயன் உயர்கல்வி வழிகாட்டி PDF உருவாக்கி">📥 1-Click வழிகாட்டி PDF</button>
+          <button type="button" class="a11y-btn lang-switch-btn" id="btnBilingualToggle" onclick="toggleBilingualMode()" title="தமிழ் மற்றும் ஆங்கிலம் இருமொழி மாற்றி (Switch Tamil / English UI)">🌐 மொழி: தமிழ் ⇄ English</button>
+        </div>
+      </div>
+
       <!-- 1. மேல்சட்டம் (Official Portal Top Frame) -->
       <header class="portal-top-frame no-print">
         <div class="top-frame-center-stack">
@@ -1362,10 +1574,22 @@ html, body {
           <div id="triPaneSearch" style="display: block;">
             <div style="background: linear-gradient(135deg, #071328 0%, #0f2547 55%, #091936 100%); border: 2px solid #38bdf8; border-radius: 14px; padding: 16px 18px;">
               <div style="position: relative; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-                <div style="position: relative; flex: 1 1 280px;">
-                  <input id="globalPortalSearchInput" oninput="runGlobalPortalSearch(this.value)" placeholder="தேடுக: VITEEE, CLAT, UCEED, NEET, TNEA, வேளாண்மை, சட்டம், விமானி, தடய அறிவியல், B.Pharm, Zoho, TNPSC, 7.5%..." style="width: 100%; padding: 12px 42px 12px 16px; border-radius: 12px; border: 2px solid #facc15; background: #ffffff; color: #0f172a; font-size: 0.94rem; font-weight: 700; outline: none;" type="search"/>
+                <div style="position: relative; flex: 1 1 260px;">
+                  <input id="globalPortalSearchInput" oninput="runGlobalPortalSearch(this.value)" placeholder="தேடுக அல்லது 🎤 குரலில் பேசுக: NEET, TNEA, VITEEE, CLAT, வேளாண்மை, சட்டம், 7.5%..." style="width: 100%; padding: 12px 42px 12px 16px; border-radius: 12px; border: 2px solid #facc15; background: #ffffff; color: #0f172a; font-size: 0.94rem; font-weight: 700; outline: none;" type="search"/>
                   <button aria-label="தேடலை அழிக்க" id="globalSearchClearBtn" onclick="clearGlobalPortalSearch()" style="display: none; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: #e2e8f0; border: none; color: #334155; width: 26px; height: 26px; border-radius: 50%; font-weight: 900; cursor: pointer;" type="button">✕</button>
                 </div>
+                <select id="voiceSearchLangSelect" aria-label="குரல் தேடல் மொழி" style="padding: 10px 10px; border-radius: 10px; border: 1.5px solid #38bdf8; background: #0f172a; color: #fef08a; font-family: inherit; font-size: 0.80rem; font-weight: 800; cursor: pointer;">
+                  <option value="ta-IN">🎙️ தமிழ் (ta-IN)</option>
+                  <option value="en-IN">🎙️ English (en-IN)</option>
+                </select>
+                <button type="button" class="voice-mic-btn" id="btnStartVoiceSearch" onclick="toggleWebSpeechVoiceSearch()" title="MDN Web Speech API மூலம் தமிழ் அல்லது ஆங்கிலத்தில் பேசித் தேடவும்">
+                  <span id="voiceMicIcon">🎤</span>
+                  <span id="voiceMicLabel">குரல் தேடல் (Voice)</span>
+                </button>
+              </div>
+              <div class="voice-status-banner" id="voiceSearchStatusBanner" role="status" aria-live="polite">
+                <span id="voiceSearchStatusText">🔴 கேட்கிறது... இப்போது தமிழ் அல்லது ஆங்கிலத்தில் பேசுங்கள் (எ.கா: "மருத்துவம்", "பொறியியல்", "வேளாண்மை", "NEET", "CLAT")</span>
+                <button type="button" onclick="stopWebSpeechVoiceSearch()" style="background:#dc2626;color:#fff;border:none;border-radius:6px;padding:3px 10px;font-size:0.74rem;font-weight:800;cursor:pointer;">நிறுத்து ⏹</button>
               </div>
               <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 10px;">
                 <span style="font-size: 0.76rem; font-weight: 800; color: #93c5fd; margin-right: 4px;">பிரபலத் தேடல்கள்:</span>
@@ -1410,12 +1634,31 @@ html, body {
           <!-- TAB 3: 60-SECOND SMART CAREER MATCHER (O*NET MyNextMove MODEL) -->
           <div id="triPaneMatcher" style="display: none;">
             <div style="background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%); border: 2px solid #f59e0b; border-top: 5px solid #7c3aed; border-radius: 14px; padding: 16px;">
-              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1.5px dashed #cbd5e1;">
                 <div>
                   <h4 style="margin: 0; font-size: 1.06rem; font-weight: 900; color: #4c1d95;">🎯 60-வினாடி சுயவிவர &amp; தகுதி வழிகாட்டி (Smart Career Matcher — O*NET MyNextMove மாதிரி)</h4>
-                  <p style="margin: 2px 0 0 0; font-size: 0.79rem; color: #475569; font-weight: 600;">உங்கள் பாடப்பிரிவு, எதிர்பார்க்கும் மதிப்பெண், ஆர்வம் மற்றும் பள்ளி வகையைத் தேர்ந்தெடுத்தவுடன் உங்களுக்கான துல்லியமான உயர்கல்விப் பாதை உருவாக்கப்படும்:</p>
+                  <p style="margin: 2px 0 0 0; font-size: 0.79rem; color: #475569; font-weight: 600;">உங்கள் விவரங்களைத் தேர்ந்தெடுத்து, <strong>1-Click தனிப்பயன் உயர்கல்வி வழிகாட்டி PDF</strong> அறிக்கையை உடனடியாகப் பதிவிறக்கம் செய்யுங்கள்:</p>
                 </div>
-                <span style="background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd; font-size: 0.72rem; font-weight: 900; padding: 4px 10px; border-radius: 999px;">⚡ O*NET Interest &amp; Eligibility Engine</span>
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                  <button type="button" onclick="speakMatchedCareerPlan()" style="background: #1e3a8a; color: #fef08a; border: 1.5px solid #38bdf8; border-radius: 9px; padding: 8px 13px; font-family: inherit; font-size: 0.78rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 5px;" title="பரிந்துரைக்கப்பட்ட உயர்கல்வித் திட்டத்தைக் குரல் வழியாகக் கேட்க">
+                    <span>🔊</span><span>குரலில் கேள்</span>
+                  </button>
+                  <button type="button" class="btn-career-pdf-download" onclick="generateAndDownloadCareerPlanPdf()" title="உங்களுக்கான தனிப்பயன் உயர்கல்வி வழிகாட்டித் திட்டத்தை A4 PDF கோப்பாகப் பதிவிறக்க">
+                    <span>📥</span><span>1-Click தனிப்பயன் வழிகாட்டி PDF பதிவிறக்கம்</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Optional Student Name & School Name for Personalized PDF Header -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-bottom: 12px; background: #f5f3ff; border: 1.5px solid #ddd6fe; border-radius: 10px; padding: 10px 12px;">
+                <div>
+                  <label style="display:block;font-size:0.74rem;font-weight:900;color:#4c1d95;margin-bottom:3px;" for="onetStudentName">👤 மாணவர் பெயர் (PDF அறிக்கையில் இடம்பெற):</label>
+                  <input id="onetStudentName" type="text" placeholder="எ.கா: க. பூவலிங்கம் / K. Poovalingam" style="width:100%;padding:7px 10px;border-radius:7px;border:1.5px solid #a78bfa;font-family:inherit;font-size:0.82rem;font-weight:700;color:#0f172a;background:#ffffff;"/>
+                </div>
+                <div>
+                  <label style="display:block;font-size:0.74rem;font-weight:900;color:#4c1d95;margin-bottom:3px;" for="onetSchoolName">🏫 பள்ளியின் பெயர் / ஊர்:</label>
+                  <input id="onetSchoolName" type="text" placeholder="எ.கா: அரசு மேல்நிலைப்பள்ளி, சிவகங்கை" style="width:100%;padding:7px 10px;border-radius:7px;border:1.5px solid #a78bfa;font-family:inherit;font-size:0.82rem;font-weight:700;color:#0f172a;background:#ffffff;"/>
+                </div>
               </div>
 
               <div class="onet-step-grid">
@@ -2497,6 +2740,534 @@ function handlePopupFeedbackSubmit(e) {
   closeFeedbackModal();
 }
 
+
+
+// ============================================================================
+// 1. INTERNATIONAL ACCESSIBILITY TOOLBAR (WCAG 2.1) & AUDIO GUIDE ENGINE
+// ============================================================================
+let currentFontZoomStep = 0; // -1 (92%), 0 (100%), 1 (110%), 2 (118%)
+function adjustPortalFontSize(stepDelta) {
+  if (stepDelta === 0) {
+    currentFontZoomStep = 0;
+  } else {
+    currentFontZoomStep = Math.max(-1, Math.min(2, currentFontZoomStep + stepDelta));
+  }
+  const scaleMap = { "-1": "92%", "0": "100%", "1": "110%", "2": "118%" };
+  document.documentElement.style.fontSize = scaleMap[String(currentFontZoomStep)] || "100%";
+  const btnNorm = document.getElementById("btnFontNormal");
+  if (btnNorm) btnNorm.classList.toggle("active", currentFontZoomStep === 0);
+}
+
+function toggleHighContrastMode() {
+  document.body.classList.toggle("a11y-high-contrast");
+  const isHc = document.body.classList.contains("a11y-high-contrast");
+  const btn = document.getElementById("btnHighContrast");
+  if (btn) btn.classList.toggle("active", isHc);
+}
+
+function toggleReadableSpacing() {
+  document.body.classList.toggle("a11y-readable-spacing");
+  const isRs = document.body.classList.contains("a11y-readable-spacing");
+  const btn = document.getElementById("btnReadableSpacing");
+  if (btn) btn.classList.toggle("active", isRs);
+}
+
+let isSpeakingAudioGuide = false;
+function togglePortalAudioGuide() {
+  const btn = document.getElementById("btnAudioGuide");
+  if (!("speechSynthesis" in window)) {
+    alert("உங்கள் உலாவியில் குரல் வாசிப்பு வசதி (Web Speech Synthesis) இல்லை.");
+    return;
+  }
+  if (isSpeakingAudioGuide) {
+    window.speechSynthesis.cancel();
+    isSpeakingAudioGuide = false;
+    if (btn) { btn.classList.remove("active"); btn.innerHTML = "🔊 குரல் வழிகாட்டி"; }
+    return;
+  }
+  window.speechSynthesis.cancel();
+  const textTa = "சிவகங்கை மாவட்ட முதன்மைக் கல்வி அலுவலகத்தின் உயர்கல்வி வழிகாட்டி தளத்திற்கு உங்களை வரவேற்கிறோம். இத்தளத்தில் 12-ஆம் வகுப்பிற்குப் பிந்தைய தேசிய நுழைவுத்தேர்வுகள், நேரடிச் சேர்க்கைப் படிப்புகள், கல்லூரிகள் அடைவு, அரசுப் போட்டித் தேர்வுகள், திறன் பயிற்சிகள் மற்றும் 7.5 சதவீத இடஒதுக்கீடு உள்ளிட்ட உதவித்தொகை விவரங்களை அறியலாம்.";
+  const textEn = "Welcome to the Higher Education and Career Guidance Portal of the Chief Educational Office, Sivagangai District. Explore 2027 entrance exams, direct merit admissions, colleges directory, government exams, and scholarships.";
+  const utter = new SpeechSynthesisUtterance(currentPortalLang === "en" ? textEn : textTa);
+  utter.lang = currentPortalLang === "en" ? "en-IN" : "ta-IN";
+  utter.rate = 0.96;
+  utter.onend = function() {
+    isSpeakingAudioGuide = false;
+    if (btn) { btn.classList.remove("active"); btn.innerHTML = "🔊 குரல் வழிகாட்டி"; }
+  };
+  isSpeakingAudioGuide = true;
+  if (btn) { btn.classList.add("active"); btn.innerHTML = "⏹ குரல் நிறுத்து"; }
+  window.speechSynthesis.speak(utter);
+}
+
+function speakMatchedCareerPlan() {
+  if (!("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const box = document.getElementById("onetMatcherResultBox");
+  if (!box) return;
+  const plainText = box.innerText.replace(/\s+/g, " ").trim().slice(0, 550);
+  const utter = new SpeechSynthesisUtterance(plainText);
+  utter.lang = currentPortalLang === "en" ? "en-IN" : "ta-IN";
+  utter.rate = 0.96;
+  window.speechSynthesis.speak(utter);
+}
+
+// ============================================================================
+// 2. BILINGUAL UI SWITCHER (இருமொழி மாற்றி: தமிழ் ⇄ English)
+// ============================================================================
+let currentPortalLang = "ta";
+const BILINGUAL_UI_MAP = [
+  { sel: ".banner-title-tamil", ta: "உயர்கல்வி வழிகாட்டி", en: "HIGHER EDUCATION & CAREER GUIDE" },
+  { sel: ".banner-tagline-aurora", ta: "உங்கள் சிறந்த எதிர்காலத்திற்கான திறவுகோல்", en: "Chief Educational Office • Sivagangai District" },
+  { sel: ".lead-title", ta: "12-ஆம் வகுப்பிற்குப் பிந்தைய உயர்கல்வி, வேலைவாய்ப்புகள் & வழிகாட்டல் போர்டல்", en: "Post-12th Higher Education, Career Pathways & Admission Guidance Portal" },
+  { sel: ".lead-subtitle", ta: "பள்ளிப் படிப்பை முடிக்கும் மாணவ, மாணவியர் தங்களுக்குப் பொருத்தமான உயர் கல்வி மற்றும் சிறந்த தொழில்முறை எதிர்காலத்தைத் தேர்ந்தெடுக்க உதவும் 7 முதன்மை வழிகாட்டி வாயில்கள்.", en: "7 comprehensive guidance gateways helping 10th & 12th standard students choose the right higher education courses, entrance exams, scholarships, and career paths." },
+  { sel: ".seg-search .hero-tri-title", ta: "உடனடித் தேடுபொறி", en: "Instant Portal Search" },
+  { sel: ".seg-search .hero-tri-sub", ta: "35 பக்கங்களின் ஒருங்கிணைந்த தேடல்", en: "Search across all 35 guidance pages" },
+  { sel: ".seg-stream .hero-tri-title", ta: "+2 குரூப் வழிகாட்டி", en: "+2 Stream Career Guide" },
+  { sel: ".seg-stream .hero-tri-sub", ta: "பாடப்பிரிவு வாரியான படிப்புகள்", en: "Bio-Maths, Pure Sci, CS, Commerce, Voc" },
+  { sel: ".seg-matcher .hero-tri-title", ta: '60-வினாடி தகுதி வழிகாட்டி <span class="hero-tri-badge">O*NET</span>', en: '60-Sec Career Matcher <span class="hero-tri-badge">O*NET</span>', html: true },
+  { sel: ".seg-matcher .hero-tri-sub", ta: "Smart Career & Quota Matcher", en: "Personalized Course & PDF Plan" },
+  { sel: "#heroGeminiLiveAlerts .hgl-heading span:last-child", ta: "2027-ஆம் ஆண்டிற்கான விண்ணப்ப அறிவிக்கை வெளியிடப்பட்ட உயர்கல்விப் படிப்புகள் & நுழைவுத்தேர்வுகள்", en: "2027 Officially Notified Higher Education Entrance Exams & Live Countdowns" },
+  { sel: "#hglMatFlashContainer .hgl-mat-flash-title span:last-child", ta: "2027 விண்ணப்பப் பதிவு நடைபெறும் படிப்புகள் (கிளிக் செய்து நேரடியாக விண்ணப்பிக்கலாம்)", en: "2027 Open Entrance Exam Notifications (Click any ribbon to apply directly)" },
+  { sel: "#gateway-entrance .pillar-badge", ta: "தேசிய நுழைவுத்தேர்வுகள்", en: "National & State Entrance Exams" },
+  { sel: "#gateway-entrance .card-summary", ta: "அகில இந்திய மற்றும் முன்னணி மாநில அரசு கல்வி நிறுவனங்களில் மருத்துவம், பொறியியல், அறிவியல் ஆராய்ச்சி, சட்டம், வடிவமைப்பு, மேலாண்மை, உணவக நிர்வாகம் மற்றும் கடல்சார் படிப்புகளுக்கான தேசிய நுழைவுத்தேர்வுகள்.", en: "National & State entrance exams for Medicine (NEET), Engineering (JEE/VITEEE), Research (IISER), Central Universities (CUET), Law (CLAT), Design (UCEED/NID), Defence (NDA) & Aviation." },
+  { sel: "#gateway-merit .pillar-badge", ta: "+2 மதிப்பெண் சேர்க்கை", en: "+2 Marks Direct Counselling" },
+  { sel: "#gateway-merit .card-summary", ta: "எந்தவித நுழைவுத்தேர்வும் இன்றி, 12-ஆம் வகுப்பு பொதுத்தேர்வு மதிப்பெண் மற்றும் கட்-ஆஃப் அடிப்படையில் ஒற்றைச் சாளர கலந்தாய்வு மூலம் நேரடியாகச் சேர்க்கப்படும் முதன்மைப் பட்டப்படிப்புகள்.", en: "Direct single-window admission degrees based on 12th board marks without entrance exams: TNEA Engineering, TANUVAS Veterinary, Paramedical, TNAU Agriculture, Law & TNGASA Arts/Science." },
+  { sel: "#gateway-colleges .pillar-badge", ta: "கல்லூரிகள் விவரக் குறிப்பேடு", en: "Colleges & Institutes Directory" },
+  { sel: "#gateway-colleges .card-summary", ta: "அகில இந்திய மற்றும் தமிழக அளவிலான தலைசிறந்த மத்திய/மாநில அரசு நிறுவனங்கள், அரசு மருத்துவ, பொறியியல் மற்றும் மாவட்ட வாரியான அரசு கலை மற்றும் அறிவியல் கல்லூரிகள் பட்டியல்.", en: "Complete directory of IITs/NITs, Tamil Nadu Government Medical & Engineering Colleges, Alagappa University, CECRI, and Sivagangai & neighboring district colleges." },
+  { sel: "#gateway-competitive .pillar-badge", ta: "அரசுப் பணி & சீருடைத் தேர்வுகள்", en: "Govt & Uniformed Services Exams" },
+  { sel: "#gateway-competitive .card-summary", ta: "10-ஆம் வகுப்பு, 12-ஆம் வகுப்பு மற்றும் பட்டப்படிப்பு தகுதிக்கான TNPSC, SSC, ரயில்வே (RRB), சீருடைப் பணியாளர் (காவலர்) மற்றும் முப்படை அக்னிவீர் நேரடிப் பணிகளுக்கான போட்டித் தேர்வுகள் வழிகாட்டி.", en: "Competitive exams after 10th, 12th & Degree: TNPSC Group 1/2/4, Railways (RRB), Banking (IBPS/SBI), SSC, UPSC (Naan Mudhalvan ₹7,500), Police & Defence Agniveer." },
+  { sel: "#gateway-skills .pillar-badge", ta: "தேர்வில்லா வேலை & சுயதொழில்", en: "Skill Training & Direct Jobs" },
+  { sel: "#gateway-skills .card-summary", ta: "போட்டித்தேர்வு இல்லாத நேரடி வேலைவாய்ப்புகள், படித்துக்கொண்டே சம்பாதிக்கும் Work & Learn திட்டங்கள், தொழில் முனைவோர் கடன் திட்டங்கள் மற்றும் தனியார் வேலைவாய்ப்பு முகாம்கள்.", en: "Earn-while-you-learn IT programs (Zoho Schools, HCL TechBee), NAPS/NATS Apprenticeships, OMMC Overseas Jobs, and MSME subsidy loans (UYEGP/PMEGP/Mudra)." },
+  { sel: "#gateway-support .pillar-badge", ta: "சலுகைகள், கருவிகள் & உதவி", en: "7.5% Quota, Scholarships & Tools" },
+  { sel: "#gateway-support .card-summary", ta: "அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு, அரசின் கல்வி உதவித்தொகைகள், கட்-ஆஃப் கணக்கீட்டுக் கருவிகள், வழிகாட்டிக் கையேடுகள் பதிவிறக்கம் மற்றும் உதவி மையம்.", en: "7.5% Govt School Preferential Quota (100% Free Education), Pudhumai Penn & Tamil Pudhalvan (₹1,000/month), AICTE Pragati (₹50,000), Cut-off Calculator & 14417 Helpdesk." },
+  { sel: "#admissionTimelineSec h3", ta: "உயர்கல்வி விண்ணப்ப & கலந்தாய்வு காலக்கெடு வழிகாட்டி (Annual Admission & Exam Roadmap)", en: "Annual Higher Education Application & Counselling Roadmap (4-Phase Calendar)" },
+  { sel: "#ceoGreetingMessageSec h3", ta: "முதன்மைக்கல்வி அலுவலரின் வாழ்த்துச் செய்தி", en: "Chief Educational Officer's Message to Students" },
+  { sel: "#bottomActionHub h3", ta: "மாணவர் சந்தேகங்கள் & இணையதள ஆலோசனைகள்", en: "Student Queries & Portal Advisory Desk" }
+];
+
+function toggleBilingualMode() {
+  currentPortalLang = (currentPortalLang === "ta") ? "en" : "ta";
+  const btn = document.getElementById("btnBilingualToggle");
+  if (btn) {
+    btn.innerHTML = currentPortalLang === "en" ? "🌐 மொழி: English ➔ தமிழ்" : "🌐 மொழி: தமிழ் ⇄ English";
+    btn.classList.toggle("active", currentPortalLang === "en");
+  }
+  BILINGUAL_UI_MAP.forEach(function(item) {
+    const el = document.querySelector(item.sel);
+    if (!el) return;
+    const val = currentPortalLang === "en" ? item.en : item.ta;
+    if (item.html) el.innerHTML = val;
+    else el.textContent = val;
+  });
+}
+
+// ============================================================================
+// 3. MDN WEB SPEECH API VOICE SEARCH (தமிழ் ta-IN & ஆங்கிலம் en-IN குரல் வழித் தேடல்)
+// ============================================================================
+let portalSpeechRecognizer = null;
+let isVoiceListening = false;
+
+// Smart Tamil-to-Keyword mapping so spoken Tamil terms match all relevant pages
+const VOICE_TAMIL_SYNONYMS = {
+  "மருத்துவம்": "NEET மருத்துவம்",
+  "நீட்": "NEET மருத்துவம்",
+  "பொறியியல்": "TNEA பொறியியல் VITEEE JEE",
+  "இன்ஜினியரிங்": "TNEA பொறியியல் VITEEE JEE",
+  "வேளாண்மை": "வேளாண்மை ICAR TNAU",
+  "விவசாயம்": "வேளாண்மை ICAR TNAU",
+  "சட்டம்": "CLAT சட்டம் TNDALU",
+  "வக்கீல்": "CLAT சட்டம் TNDALU",
+  "கால்நடை": "TANUVAS கால்நடை",
+  "நர்சிங்": "Nursing துணை மருத்துவம்",
+  "மருந்தியல்": "B.Pharm மருந்தியல்",
+  "தடய அறிவியல்": "தடய அறிவியல் Forensic",
+  "ஆசிரியர்": "ஆசிரியர் ITEP TRB TTC",
+  "உதவித்தொகை": "உதவித்தொகை 7.5% இ-சேவை",
+  "கல்லூரி": "சிவகங்கை காரைக்குடி",
+  "அரசு பணி": "TNPSC ரயில்வே காவலர்",
+  "விமானி": "விமானி Pilot NDA"
+};
+
+function openVoiceSearchDirectly() {
+  openTriToolModal("search");
+  setTimeout(function() {
+    if (!isVoiceListening) toggleWebSpeechVoiceSearch();
+  }, 220);
+}
+
+function toggleWebSpeechVoiceSearch() {
+  if (isVoiceListening) {
+    stopWebSpeechVoiceSearch();
+  } else {
+    startWebSpeechVoiceSearch();
+  }
+}
+
+function startWebSpeechVoiceSearch() {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const statusBanner = document.getElementById("voiceSearchStatusBanner");
+  const statusText = document.getElementById("voiceSearchStatusText");
+  const micBtn = document.getElementById("btnStartVoiceSearch");
+  const micLabel = document.getElementById("voiceMicLabel");
+
+  if (!SpeechRecognition) {
+    if (statusBanner) {
+      statusBanner.style.display = "flex";
+      statusText.textContent = "⚠️ உங்கள் உலாவியில் Web Speech API குரல் தேடல் ஆதரவு இல்லை (Chrome / Edge பயன்படுத்தவும்).";
+    }
+    return;
+  }
+
+  try {
+    if (portalSpeechRecognizer) {
+      portalSpeechRecognizer.abort();
+    }
+    portalSpeechRecognizer = new SpeechRecognition();
+    const langSel = document.getElementById("voiceSearchLangSelect");
+    portalSpeechRecognizer.lang = langSel ? langSel.value : "ta-IN";
+    portalSpeechRecognizer.continuous = false;
+    portalSpeechRecognizer.interimResults = true;
+    portalSpeechRecognizer.maxAlternatives = 3;
+
+    portalSpeechRecognizer.onstart = function() {
+      isVoiceListening = true;
+      if (micBtn) micBtn.classList.add("listening");
+      if (micLabel) micLabel.textContent = "கேட்கிறது... (Listening)";
+      if (statusBanner) statusBanner.style.display = "flex";
+      if (statusText) {
+        statusText.textContent = "🔴 கேட்கிறது (" + portalSpeechRecognizer.lang + ")... இப்போது பேசுங்கள் (எ.கா: 'மருத்துவம்', 'பொறியியல்', 'வேளாண்மை', 'சட்டம்', '7.5%')";
+      }
+    };
+
+    portalSpeechRecognizer.onresult = function(event) {
+      let transcript = "";
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        transcript += event.results[i][0].transcript;
+      }
+      const cleanSpoken = transcript.trim().replace(/[.,?!]/g, "");
+      if (!cleanSpoken) return;
+
+      // Map spoken Tamil terms to rich search keywords if applicable
+      let queryToRun = cleanSpoken;
+      Object.keys(VOICE_TAMIL_SYNONYMS).forEach(function(k) {
+        if (cleanSpoken.toLowerCase().includes(k.toLowerCase())) {
+          queryToRun = VOICE_TAMIL_SYNONYMS[k];
+        }
+      });
+
+      const inp = document.getElementById("globalPortalSearchInput");
+      if (inp) inp.value = cleanSpoken;
+      if (statusText) {
+        statusText.textContent = '✅ குரல் பதிவு: "' + cleanSpoken + '" — தேடல் முடிவுகள் கீழே கொடுக்கப்பட்டுள்ளன:';
+      }
+      runGlobalPortalSearch(queryToRun);
+    };
+
+    portalSpeechRecognizer.onerror = function(event) {
+      isVoiceListening = false;
+      if (micBtn) micBtn.classList.remove("listening");
+      if (micLabel) micLabel.textContent = "குரல் தேடல் (Voice)";
+      if (statusText) {
+        statusText.textContent = "ℹ️ குரல் பதிவு நிறைவடைந்தது அல்லது ஒலிவாங்கி அனுமதி தேவை (" + (event.error || "ready") + "). மீண்டும் 🎤 பொத்தானை அழுத்திப் பேசலாம்.";
+      }
+    };
+
+    portalSpeechRecognizer.onend = function() {
+      isVoiceListening = false;
+      if (micBtn) micBtn.classList.remove("listening");
+      if (micLabel) micLabel.textContent = "குரல் தேடல் (Voice)";
+    };
+
+    portalSpeechRecognizer.start();
+  } catch (err) {
+    isVoiceListening = false;
+  }
+}
+
+function stopWebSpeechVoiceSearch() {
+  if (portalSpeechRecognizer) {
+    try { portalSpeechRecognizer.stop(); } catch (e) {}
+  }
+  isVoiceListening = false;
+  const micBtn = document.getElementById("btnStartVoiceSearch");
+  const micLabel = document.getElementById("voiceMicLabel");
+  const statusBanner = document.getElementById("voiceSearchStatusBanner");
+  if (micBtn) micBtn.classList.remove("listening");
+  if (micLabel) micLabel.textContent = "குரல் தேடல் (Voice)";
+  if (statusBanner) statusBanner.style.display = "none";
+}
+
+// ============================================================================
+// 4. 1-CLICK PERSONALIZED CAREER PLAN PDF GENERATOR (தனிப்பயன் PDF வழிகாட்டி உருவாக்கி)
+// ============================================================================
+function generateAndDownloadCareerPlanPdf() {
+  const studentName = (document.getElementById("onetStudentName")?.value || "").trim() || "மாணவர் / Student";
+  const schoolName  = (document.getElementById("onetSchoolName")?.value || "").trim() || "சிவகங்கை மாவட்டம் (Sivagangai District)";
+  const streamSel   = document.getElementById("onetStreamSel");
+  const interestSel = document.getElementById("onetInterestSel");
+  const marksSel    = document.getElementById("onetMarksSel");
+  const quotaSel    = document.getElementById("onetQuotaSel");
+
+  const streamKey   = streamSel ? streamSel.value : "biomaths";
+  const interestKey = interestSel ? interestSel.value : "all";
+  const marksKey    = marksSel ? marksSel.value : "mid";
+  const quotaKey    = quotaSel ? quotaSel.value : "govt75";
+
+  const streamLabel   = streamSel ? streamSel.options[streamSel.selectedIndex].text : "Bio-Maths";
+  const interestLabel = interestSel ? interestSel.options[interestSel.selectedIndex].text : "அனைத்துத் துறைகள்";
+  const marksLabel    = marksSel ? marksSel.options[marksSel.selectedIndex].text : "155 - 184 கட்-ஆஃப்";
+  const quotaLabel    = quotaSel ? quotaSel.options[quotaSel.selectedIndex].text : "7.5% அரசுப் பள்ளி இடஒதுக்கீடு";
+
+  let matched = ONET_CAREER_DATABASE.filter(function(item) {
+    return item.streams.includes(streamKey) &&
+           ((interestKey === "all") || (item.domain === interestKey)) &&
+           item.marks.includes(marksKey);
+  });
+  if (matched.length === 0) {
+    matched = ONET_CAREER_DATABASE.filter(function(item) { return item.streams.includes(streamKey); });
+  }
+
+  // Create high-resolution A4 Portrait Canvas (1240 x 1754 px @ 150 DPI)
+  const canvas = document.createElement("canvas");
+  canvas.width = 1240;
+  canvas.height = 1754;
+  const ctx = canvas.getContext("2d");
+
+  // White background + Royal Gold & Navy Border
+  ctx.fillStyle = "#ffffff";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.strokeStyle = "#0f172a";
+  ctx.lineWidth = 4;
+  ctx.strokeRect(28, 28, 1184, 1698);
+
+  ctx.strokeStyle = "#d97706";
+  ctx.lineWidth = 2;
+  ctx.strokeRect(36, 36, 1168, 1682);
+
+  // Top Header Banner
+  const hdrGrad = ctx.createLinearGradient(42, 42, 1198, 195);
+  hdrGrad.addColorStop(0, "#071328");
+  hdrGrad.addColorStop(0.5, "#1e3a8a");
+  hdrGrad.addColorStop(1, "#071328");
+  ctx.fillStyle = hdrGrad;
+  ctx.fillRect(42, 42, 1156, 152);
+
+  ctx.textAlign = "center";
+  ctx.fillStyle = "#fde047";
+  ctx.font = "bold 24px 'Noto Sans Tamil', sans-serif";
+  ctx.fillText("தமிழ்நாடு பள்ளிக்கல்வித்துறை – முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்", 620, 82, 1100);
+
+  ctx.fillStyle = "#ffffff";
+  ctx.font = "900 30px 'Noto Sans Tamil', sans-serif";
+  ctx.fillText("உயர்கல்வி வழிகாட்டி — தனிப்பயன் உயர்கல்வி & தொழில் திட்ட அறிக்கை (2027)", 620, 126, 1100);
+
+  ctx.fillStyle = "#93c5fd";
+  ctx.font = "bold 17px 'Inter', sans-serif";
+  ctx.fillText("PERSONALIZED HIGHER EDUCATION & CAREER GUIDANCE PLAN (O*NET SMART MATCHER)", 620, 162, 1100);
+
+  let y = 220;
+
+  // Student Profile Summary Card
+  ctx.fillStyle = "#f0f9ff";
+  ctx.fillRect(52, y, 1136, 145);
+  ctx.strokeStyle = "#0284c7";
+  ctx.lineWidth = 2;
+  ctx.strokeRect(52, y, 1136, 145);
+
+  ctx.textAlign = "left";
+  ctx.fillStyle = "#0c4a6e";
+  ctx.font = "bold 21px 'Noto Sans Tamil', sans-serif";
+  ctx.fillText("1. மாணவர் சுயவிவரம் & தகுதி விவரம் (Student Profile & Eligibility Summary):", 70, y + 32);
+
+  ctx.fillStyle = "#0f172a";
+  ctx.font = "bold 18px 'Noto Sans Tamil', sans-serif";
+  ctx.fillText("👤 மாணவர் பெயர்: " + studentName, 70, y + 66, 520);
+  ctx.fillText("🏫 பள்ளி / மாவட்டம்: " + schoolName, 610, y + 66, 560);
+  ctx.fillText("🧭 +2 பாடப்பிரிவு: " + streamLabel, 70, y + 98, 520);
+  ctx.fillText("📊 எதிர்பார்க்கும் கட்-ஆஃப்: " + marksLabel, 610, y + 98, 560);
+  ctx.fillStyle = "#047857";
+  ctx.fillText("🎯 ஆர்வம்: " + interestLabel + "   |   சலுகை: " + quotaLabel, 70, y + 130, 1100);
+
+  y += 168;
+
+  // Section 2: Matched Courses & Career Pathways
+  ctx.fillStyle = "#1e1b4b";
+  ctx.fillRect(52, y, 1136, 38);
+  ctx.fillStyle = "#fef08a";
+  ctx.font = "bold 20px 'Noto Sans Tamil', sans-serif";
+  ctx.fillText("2. உங்களுடைய சுயவிவரத்திற்குப் பரிந்துரைக்கப்படும் உயர்கல்விப் படிப்புகள் & பணி வாய்ப்புகள்:", 70, y + 26);
+  y += 48;
+
+  const maxCourses = Math.min(matched.length, 5);
+  for (let i = 0; i < maxCourses; i++) {
+    const item = matched[i];
+    const cardH = 126;
+    ctx.fillStyle = (i % 2 === 0) ? "#ffffff" : "#f8fafc";
+    ctx.fillRect(52, y, 1136, cardH);
+    ctx.strokeStyle = "#cbd5e1";
+    ctx.lineWidth = 1.5;
+    ctx.strokeRect(52, y, 1136, cardH);
+
+    // Left accent bar
+    ctx.fillStyle = "#7c3aed";
+    ctx.fillRect(52, y, 8, cardH);
+
+    ctx.fillStyle = "#1e3a8a";
+    ctx.font = "bold 19px 'Noto Sans Tamil', sans-serif";
+    ctx.fillText((i + 1) + ". " + item.title, 74, y + 28, 1095);
+
+    ctx.fillStyle = "#334155";
+    ctx.font = "bold 16.5px 'Noto Sans Tamil', sans-serif";
+    ctx.fillText("📝 சேர்க்கை முறை: " + item.entrance, 82, y + 58, 1085);
+
+    ctx.fillStyle = "#047857";
+    ctx.fillText("🏛️ சிறப்பம்சம்: " + item.merit, 82, y + 86, 1085);
+
+    ctx.fillStyle = "#6d28d9";
+    ctx.fillText("💼 எதிர்காலப் பணி வாய்ப்பு: " + item.career, 82, y + 114, 1085);
+
+    y += cardH + 10;
+  }
+
+  y += 6;
+
+  // Section 3: Scholarship & Quota Benefits Box
+  ctx.fillStyle = "#ecfdf5";
+  ctx.fillRect(52, y, 1136, 136);
+  ctx.strokeStyle = "#059669";
+  ctx.lineWidth = 2;
+  ctx.strokeRect(52, y, 1136, 136);
+
+  ctx.fillStyle = "#065f46";
+  ctx.font = "bold 20px 'Noto Sans Tamil', sans-serif";
+  ctx.fillText("3. உங்களுக்கான அரசு கல்வி உதவித்தொகைகள் & தயாராக வைத்திருக்க வேண்டிய சான்றிதழ்கள்:", 70, y + 30);
+
+  ctx.fillStyle = "#0f172a";
+  ctx.font = "bold 16.5px 'Noto Sans Tamil', sans-serif";
+  if (quotaKey === "govt75") {
+    ctx.fillText("✅ 7.5% அரசுப் பள்ளி முன்னுரிமை இடஒதுக்கீடு: மருத்துவம், பொறியியல், வேளாண்மை, கால்நடை, சட்டம் ஆகியவற்றில் 100% கட்டண விலக்கு.", 70, y + 60, 1100);
+    ctx.fillText("✅ புதுமைப் பெண் / தமிழ்ப் புதல்வன் திட்டம்: உயர்கல்வி பயிலும் காலத்தில் மாதம் ₹1,000 வங்கி கணக்கில் நேரடி வரவு.", 70, y + 88, 1100);
+  } else if (quotaKey === "fg") {
+    ctx.fillText("✅ முதல் தலைமுறைப் பட்டதாரி (First Graduate) சலுகை: தொழில்முறைப் பட்டப்படிப்புகளில் ஆண்டுதோறும் ₹25,000 – ₹27,500 கட்டண விலக்கு.", 70, y + 60, 1100);
+    ctx.fillText("✅ AICTE Pragati (பெண்களுக்கு ஆண்டுக்கு ₹50,000) & தேசிய உதவித்தொகை போர்ட்டல் (NSP) உதவித்தொகைகள்.", 70, y + 88, 1100);
+  } else {
+    ctx.fillText("✅ தேசிய உதவித்தொகை (NSP Central Sector ₹12,000–₹20,000/ஆண்டு) & AICTE Pragati (பெண்களுக்கு ₹50,000/ஆண்டு).", 70, y + 60, 1100);
+    ctx.fillText("✅ வித்யாலட்சுமி கல்விக்கடன் போர்ட்டல் & தமிழக அரசு சிறுபான்மையினர் / பிற்படுத்தப்பட்டோர் நல உதவித்தொகைகள்.", 70, y + 88, 1100);
+  }
+  ctx.fillStyle = "#b91c1c";
+  ctx.fillText("📌 அவசியமான இ-சேவை சான்றிதழ்கள்: சாதிச் சான்றிதழ், வருமானச் சான்றிதழ், இருப்பிடச் சான்றிதழ், முதல் பட்டதாரி சான்று & ஆதாருடன் இணைந்த வங்கி கணக்கு.", 70, y + 118, 1100);
+
+  y += 154;
+
+  // Section 4: 2027 Notified Entrance Exams Quick Reference Table
+  ctx.fillStyle = "#fffbeb";
+  ctx.fillRect(52, y, 1136, 175);
+  ctx.strokeStyle = "#d97706";
+  ctx.lineWidth = 2;
+  ctx.strokeRect(52, y, 1136, 175);
+
+  ctx.fillStyle = "#92400e";
+  ctx.font = "bold 19.5px 'Noto Sans Tamil', sans-serif";
+  ctx.fillText("4. தற்போது விண்ணப்ப அறிவிக்கை வெளியிடப்பட்டுள்ள 2027 உயர்கல்வி நுழைவுத்தேர்வுகள் (Quick Dates):", 70, y + 28);
+
+  ctx.fillStyle = "#1e293b";
+  ctx.font = "bold 15.5px 'Noto Sans Tamil', sans-serif";
+  const examRows = [
+    "• 01. VITEEE 2027 (VIT B.Tech பொறியியல்) — தொடக்கம்: 20.10.2026 | கடைசி நாள்: 31.03.2027 | தேர்வு: 28.04.2027 (viteee.vit.ac.in)",
+    "• 02. CLAT 2027 (24 தேசிய சட்டப் பல்கலை) — தொடக்கம்: 15.07.2026 | கடைசி நாள்: 31.10.2026 | தேர்வு: 06.12.2026 (consortiumofnlus.ac.in)",
+    "• 03. IIT UCEED 2027 (ஐஐடி B.Des வடிவமைப்பு) — தொடக்கம்: 01.10.2026 | கடைசி நாள்: 31.10.2026 | தேர்வு: 17.01.2027 (uceed.iitb.ac.in)",
+    "• 04. AILET 2027 (NLU புதுடெல்லி சட்டம்) — தொடக்கம்: 07.08.2026 | கடைசி நாள்: 10.11.2026 | தேர்வு: 13.12.2026 (nationallawuniversitydelhi.in)",
+    "• 05. NID DAT 2027 (தேசிய டிசைன் B.Des) — கடைசி நாள்: 30.11.2026 | தேர்வு: 20.12.2026  |  06. SLAT 2027 (சட்டம்) — கடைசி நாள்: 04.12.2026"
+  ];
+  for (let r = 0; r < examRows.length; r++) {
+    ctx.fillText(examRows[r], 74, y + 56 + (r * 25), 1100);
+  }
+
+  // Footer
+  const footerY = 1665;
+  ctx.fillStyle = "#0f172a";
+  ctx.fillRect(42, footerY, 1156, 48);
+  ctx.textAlign = "center";
+  ctx.fillStyle = "#fde047";
+  ctx.font = "bold 16px 'Noto Sans Tamil', sans-serif";
+  ctx.fillText("📞 மாணவர் கட்டணமில்லா உதவி எண்: 14417  |  முதன்மைக் கல்வி அலுவலகம், சிவகங்கை (04575-240408)  |  வடிவமைப்பு: கூ. பூவலிங்கம், பள்ளித் துணை ஆய்வாளர்", 620, footerY + 30, 1120);
+
+  // Convert Canvas to JPEG and package into a genuine A4 PDF binary
+  const dataUrl = canvas.toDataURL("image/jpeg", 0.95);
+  const b64 = dataUrl.split(",")[1];
+  const binary = atob(b64);
+  const imgBytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) {
+    imgBytes[i] = binary.charCodeAt(i);
+  }
+
+  const widthPt = 595.28;
+  const heightPt = 841.89;
+  const pdfHeader = "%PDF-1.4\n";
+  const obj1 = "1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n";
+  const obj2 = "2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n";
+  const obj3 = "3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 " + widthPt + " " + heightPt + "] /Resources << /XObject << /Im1 5 0 R >> >> /Contents 4 0 R >>\nendobj\n";
+  const streamContent = "q\n" + widthPt + " 0 0 " + heightPt + " 0 0 cm\n/Im1 Do\nQ\n";
+  const obj4 = "4 0 obj\n<< /Length " + streamContent.length + " >>\nstream\n" + streamContent + "endstream\nendobj\n";
+  const obj5Header = "5 0 obj\n<< /Type /XObject /Subtype /Image /Width 1240 /Height 1754 /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length " + imgBytes.length + " >>\nstream\n";
+  const obj5Footer = "\nendstream\nendobj\n";
+
+  const enc = new TextEncoder();
+  const bHdr = enc.encode(pdfHeader);
+  const bO1 = enc.encode(obj1);
+  const bO2 = enc.encode(obj2);
+  const bO3 = enc.encode(obj3);
+  const bO4 = enc.encode(obj4);
+  const bO5H = enc.encode(obj5Header);
+  const bO5F = enc.encode(obj5Footer);
+
+  let offset = bHdr.length;
+  const off1 = offset; offset += bO1.length;
+  const off2 = offset; offset += bO2.length;
+  const off3 = offset; offset += bO3.length;
+  const off4 = offset; offset += bO4.length;
+  const off5 = offset; offset += bO5H.length + imgBytes.length + bO5F.length;
+
+  const pad10 = function(n) { return String(n).padStart(10, "0"); };
+  const xref = "xref\n0 6\n0000000000 65535 f \n" +
+    pad10(off1) + " 00000 n \n" +
+    pad10(off2) + " 00000 n \n" +
+    pad10(off3) + " 00000 n \n" +
+    pad10(off4) + " 00000 n \n" +
+    pad10(off5) + " 00000 n \n";
+  const trailer = "trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n" + offset + "\n%%EOF";
+
+  const bXref = enc.encode(xref);
+  const bTrl = enc.encode(trailer);
+
+  const pdfBuffer = new Uint8Array(offset + bXref.length + bTrl.length);
+  let pos = 0;
+  pdfBuffer.set(bHdr, pos); pos += bHdr.length;
+  pdfBuffer.set(bO1, pos); pos += bO1.length;
+  pdfBuffer.set(bO2, pos); pos += bO2.length;
+  pdfBuffer.set(bO3, pos); pos += bO3.length;
+  pdfBuffer.set(bO4, pos); pos += bO4.length;
+  pdfBuffer.set(bO5H, pos); pos += bO5H.length;
+  pdfBuffer.set(imgBytes, pos); pos += imgBytes.length;
+  pdfBuffer.set(bO5F, pos); pos += bO5F.length;
+  pdfBuffer.set(bXref, pos); pos += bXref.length;
+  pdfBuffer.set(bTrl, pos);
+
+  const blob = new Blob([pdfBuffer], { type: "application/pdf" });
+  const blobUrl = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.style.display = "none";
+  link.href = blobUrl;
+  link.download = "Sivagangai_Career_Guidance_Plan_2027.pdf";
+  document.body.appendChild(link);
+  link.click();
+  setTimeout(function() {
+    if (link.parentNode) document.body.removeChild(link);
+    URL.revokeObjectURL(blobUrl);
+  }, 5000);
+}
 
 window.addEventListener('click', function(ev) {
   const triModal = document.getElementById('triToolModal');
