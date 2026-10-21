@@ -193,19 +193,19 @@ html, body {
 .marquee-pill-btn:hover { background: rgba(251, 191, 36, 0.25) !important; color: #fde047 !important; border-color: #fbbf24 !important; }
 
 /* ============================================================================
-   HERO-ADJACENT COMPACT LIVE EXAM NOTIFICATION, 50%-SLIM CARDS & FLASH NEWS BAR
-   (தலைப்பு ஹீரோ பேனருக்கு அடுத்ததாக அமைக்கப்பட்ட 50% உயரம் குறைக்கப்பட்ட சமீபத்திய தேர்வுகள் & Flash News பட்டி)
+   HERO-ADJACENT COMPACT LIVE EXAM NOTIFICATION, DAYS-ONLY COUNTDOWN & MAT-UNROLL FLASH NEWS
+   (தலைப்பு ஹீரோ பேனருக்கு அடுத்ததாக அமைக்கப்பட்ட சமீபத்திய தேர்வுகள் & News_Banner மாதிரி Flash News)
    ============================================================================ */
 .hero-gemini-live-strip {
   width: 100%;
-  margin: 0 0 14px 0;
+  margin: 0 0 16px 0;
   background: radial-gradient(circle at 15% 0%, rgba(16, 185, 129, 0.16) 0%, transparent 55%),
               radial-gradient(circle at 85% 100%, rgba(245, 158, 11, 0.16) 0%, transparent 55%),
               linear-gradient(145deg, #060b16 0%, #0f172a 55%, #09152b 100%);
   border: 1.8px solid #facc15;
-  border-radius: 12px;
-  padding: 8px 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55), 0 0 16px rgba(250, 204, 21, 0.2);
+  border-radius: 14px;
+  padding: 10px 12px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.55), 0 0 18px rgba(250, 204, 21, 0.2);
   position: relative;
   overflow: hidden;
   text-align: left;
@@ -216,19 +216,19 @@ html, body {
 }
 .hgl-header-bar {
   display: flex; align-items: center; justify-content: flex-start;
-  margin-bottom: 6px; padding-bottom: 5px;
-  border-bottom: 1px solid rgba(250, 204, 21, 0.25);
+  margin-bottom: 8px; padding-bottom: 5px;
+  border-bottom: 1px solid rgba(250, 204, 21, 0.28);
 }
 .hgl-heading {
   display: flex; align-items: center; gap: 8px;
-  font-size: clamp(0.86rem, 1.2vw, 1.0rem); font-weight: 900; color: #fef08a; margin: 0;
-  line-height: 1.25;
+  font-size: clamp(0.90rem, 1.25vw, 1.04rem); font-weight: 900; color: #fef08a; margin: 0;
+  line-height: 1.3;
 }
 .hgl-blink-red-dot {
-  width: 10px; height: 10px; border-radius: 50%;
+  width: 11px; height: 11px; border-radius: 50%;
   background: #ff2a2a;
   border: 1.5px solid #fecaca;
-  box-shadow: 0 0 8px #ef4444, 0 0 16px rgba(239, 68, 68, 0.9);
+  box-shadow: 0 0 8px #ef4444, 0 0 16px rgba(239, 68, 68, 0.95);
   display: inline-block; flex-shrink: 0;
   animation: hglRedBlink 1.1s infinite ease-in-out;
 }
@@ -237,128 +237,326 @@ html, body {
   50% { opacity: 0.18; transform: scale(0.82); box-shadow: 0 0 2px #ef4444; }
 }
 
-/* 50% Height-Reduced Ultra-Compact 3-Card Row */
+/* Compact 3-Card Row with Full Visibility of All Details & Days-Only Countdown */
 .hgl-cards-row {
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px;
 }
 .hgl-card {
-  background: linear-gradient(155deg, rgba(15, 23, 42, 0.96) 0%, rgba(23, 37, 84, 0.55) 100%);
-  border: 1.2px solid rgba(212, 175, 55, 0.5); border-left: 3.5px solid #10b981;
-  border-radius: 8px; padding: 5px 8px;
-  display: flex; flex-direction: column; justify-content: center; gap: 4px;
+  background: linear-gradient(155deg, rgba(15, 23, 42, 0.98) 0%, rgba(23, 37, 84, 0.6) 100%);
+  border: 1.4px solid rgba(212, 175, 55, 0.55); border-left: 4px solid #10b981;
+  border-radius: 10px; padding: 7px 9px;
+  display: flex; flex-direction: column; justify-content: space-between; gap: 5px;
   transition: transform 0.18s ease, border-color 0.18s ease;
 }
 .hgl-card.urgent { border-left-color: #ef4444; }
 .hgl-card.new-release { border-left-color: #f59e0b; }
-.hgl-card:hover { transform: translateY(-1px); border-color: #fef08a; }
+.hgl-card:hover { transform: translateY(-1.5px); border-color: #fef08a; }
 
-.hgl-card-row1 {
-  display: flex; align-items: center; justify-content: space-between; gap: 6px;
-}
-.hgl-exam-title-wrap {
-  display: flex; align-items: center; gap: 5px; min-width: 0; flex: 1 1 auto;
+.hgl-card-top {
+  display: flex; align-items: center; justify-content: space-between; gap: 5px; flex-wrap: wrap;
 }
 .hgl-agency-mini {
-  font-size: 0.60rem; font-weight: 800; color: #93c5fd;
-  background: rgba(30, 58, 138, 0.65); padding: 1px 6px; border-radius: 4px;
-  border: 1px solid rgba(96, 165, 250, 0.35); white-space: nowrap; flex-shrink: 0;
-}
-.hgl-exam-name {
-  font-size: 0.78rem; font-weight: 900; color: #ffffff; line-height: 1.2;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  font-size: 0.65rem; font-weight: 800; color: #93c5fd;
+  background: rgba(30, 58, 138, 0.65); padding: 1.5px 7px; border-radius: 999px;
+  border: 1px solid rgba(96, 165, 250, 0.4);
 }
 .hgl-status-tag {
-  font-size: 0.60rem; font-weight: 900; padding: 1px 6px; border-radius: 999px;
-  background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid #10b981;
-  white-space: nowrap; flex-shrink: 0;
+  font-size: 0.64rem; font-weight: 900; padding: 1.5px 7px; border-radius: 999px;
+  background: rgba(16, 185, 129, 0.22); color: #6ee7b7; border: 1px solid #10b981;
 }
-.hgl-status-tag.urgent { background: rgba(239, 68, 68, 0.22); color: #fca5a5; border-color: #ef4444; }
-.hgl-status-tag.new-release { background: rgba(245, 158, 11, 0.22); color: #fde047; border-color: #f59e0b; }
+.hgl-status-tag.urgent { background: rgba(239, 68, 68, 0.24); color: #fca5a5; border-color: #ef4444; }
+.hgl-status-tag.new-release { background: rgba(245, 158, 11, 0.24); color: #fde047; border-color: #f59e0b; }
 
-.hgl-card-row2 {
-  display: flex; align-items: center; justify-content: space-between; gap: 5px;
-  background: rgba(4, 8, 16, 0.72); border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px; padding: 3px 6px; flex-wrap: nowrap;
+.hgl-exam-name {
+  font-size: 0.83rem; font-weight: 900; color: #ffffff; line-height: 1.28;
+  white-space: normal; word-break: break-word;
 }
-.hgl-compact-dates {
-  font-size: 0.64rem; color: #cbd5e1; font-weight: 700; white-space: nowrap;
-  display: inline-flex; align-items: center; gap: 4px;
+
+/* Clear 3-Date Strip: விண்ணப்பப் பதிவு தொடங்கும் நாள், கடைசி நாள், தேர்வு நாள் */
+.hgl-dates-strip {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px;
+  background: rgba(5, 9, 18, 0.85); border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 7px; padding: 4px 5px; text-align: center;
 }
-.hgl-compact-dates strong.last { color: #fca5a5; font-weight: 900; }
-.hgl-compact-dates strong.exam { color: #38bdf8; font-weight: 900; }
+.hgl-d-box {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  line-height: 1.2; padding: 1px 2px;
+}
+.hgl-d-box:not(:last-child) {
+  border-right: 1px dashed rgba(148, 163, 184, 0.25);
+}
+.hgl-d-lbl { font-size: 0.62rem; color: #cbd5e1; font-weight: 700; white-space: nowrap; }
+.hgl-d-val { font-size: 0.72rem; font-weight: 900; color: #ffffff; white-space: nowrap; margin-top: 1px; }
+.hgl-d-val.start { color: #86efac; }
+.hgl-d-val.last { color: #fca5a5; }
+.hgl-d-val.exam { color: #38bdf8; }
+
+/* Slim Bottom Row: Days-Only Countdown + Guide & Apply Buttons */
+.hgl-bottom-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 6px;
+  background: rgba(0, 0, 0, 0.45); border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 7px; padding: 4px 7px; flex-wrap: wrap;
+}
+.hgl-cd-wrap { display: inline-flex; align-items: center; gap: 5px; }
+.hgl-cd-label { font-size: 0.68rem; font-weight: 800; color: #fde047; }
 .hgl-cd-digits {
-  font-size: 0.66rem; font-weight: 900; color: #fde047;
-  background: rgba(250, 204, 21, 0.12); border: 1px solid rgba(250, 204, 21, 0.35);
-  padding: 1px 5px; border-radius: 4px; font-variant-numeric: tabular-nums; white-space: nowrap;
+  font-size: 0.74rem; font-weight: 900; color: #ffffff;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.85) 0%, rgba(153, 27, 27, 0.95) 100%);
+  border: 1px solid #fca5a5; padding: 1px 8px; border-radius: 999px;
+  white-space: nowrap;
 }
-.hgl-btn-group { display: inline-flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.hgl-btn-group { display: inline-flex; align-items: center; gap: 5px; margin-left: auto; }
 .hgl-guide-btn {
-  background: rgba(30, 58, 138, 0.8); color: #e0f2fe !important;
-  text-decoration: none; font-size: 0.64rem; font-weight: 800;
-  padding: 2px 6px; border-radius: 4px; border: 1px solid #38bdf8; white-space: nowrap;
+  background: rgba(30, 58, 138, 0.85); color: #e0f2fe !important;
+  text-decoration: none; font-size: 0.68rem; font-weight: 800;
+  padding: 3px 8px; border-radius: 5px; border: 1px solid #38bdf8; white-space: nowrap;
 }
 .hgl-apply-btn {
   background: linear-gradient(135deg, #d4af37 0%, #fef08a 50%, #aa771c 100%);
-  color: #070e22 !important; text-decoration: none; font-size: 0.65rem; font-weight: 900;
-  padding: 2px 7px; border-radius: 4px; white-space: nowrap; border: 1px solid #ffffff;
+  color: #070e22 !important; text-decoration: none; font-size: 0.69rem; font-weight: 900;
+  padding: 3px 9px; border-radius: 5px; white-space: nowrap; border: 1px solid #ffffff;
 }
 
-/* Flash News Scrolling Ticker Strip (கூடுதல் அறிவிப்புகளுக்கான Flash News பட்டி) */
-.hgl-flash-news-bar {
-  margin-top: 6px;
-  background: linear-gradient(90deg, rgba(127, 29, 29, 0.75) 0%, rgba(9, 18, 36, 0.95) 18%, rgba(9, 18, 36, 0.95) 100%);
-  border: 1px solid rgba(250, 204, 21, 0.45);
-  border-radius: 7px;
-  padding: 3px 8px;
-  display: flex; align-items: center; gap: 8px;
-  overflow: hidden;
-  height: 27px;
+/* ============================================================================
+   STATIONARY MAT-UNROLL FLASH NEWS RIBBONS (News_Banner.html Model)
+   (நகர்ந்து செல்லாமல் பாய் விரிவது போல் தோன்றி நிலைத்து நிற்கும் வண்ணமயமான Flash News பட்டைகள்)
+   ============================================================================ */
+.hgl-mat-flash-section {
+  margin-top: 9px;
+  padding-top: 7px;
+  border-top: 1px dashed rgba(250, 204, 21, 0.32);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
-.hgl-fn-badge {
-  display: inline-flex; align-items: center; gap: 4px;
+.hgl-mat-flash-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.hgl-mat-flash-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 900;
+  color: #fef08a;
+}
+.hgl-mat-flash-badge {
   background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
-  color: #fef08a; font-size: 0.63rem; font-weight: 900; letter-spacing: 0.4px;
-  padding: 2px 8px; border-radius: 4px; border: 1px solid #fca5a5;
-  white-space: nowrap; flex-shrink: 0;
-  box-shadow: 0 0 8px rgba(220, 38, 38, 0.45);
+  color: #fef08a;
+  font-size: 0.62rem;
+  font-weight: 900;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid #fca5a5;
+  letter-spacing: 0.4px;
 }
-.hgl-fn-track-wrap {
-  flex: 1 1 auto; overflow: hidden; position: relative; height: 100%;
-  display: flex; align-items: center;
+.hgl-mat-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
-.hgl-fn-track {
-  display: inline-flex; align-items: center; gap: 28px;
+.hgl-mat-ctrl-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fef08a;
+  border: 1px solid rgba(250, 204, 21, 0.45);
+  border-radius: 5px;
+  padding: 1px 8px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.18s ease;
+}
+.hgl-mat-ctrl-btn:hover {
+  background: #facc15;
+  color: #090d16;
+}
+
+.hgl-news-viewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  will-change: height;
+}
+.hgl-news-cards-flow {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+/* Each News Card Ribbon with Smooth Mat-Roll Clip-Path Effect (Exact News_Banner.html Design) */
+.hgl-banner-ribbon {
+  width: 100%;
+  min-height: 48px;
+  height: auto;
+  display: flex;
+  align-items: stretch;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  filter: drop-shadow(0 3px 9px rgba(0, 0, 0, 0.42));
+  clip-path: inset(0 0 0 100%);
+  opacity: 0;
+  transition: clip-path 1.8s cubic-bezier(0.25, 0.85, 0.25, 1), opacity 0.9s ease;
+  will-change: clip-path, opacity, margin-top;
+}
+.hgl-banner-ribbon.rolled-out {
+  clip-path: inset(0 0 0 0%);
+  opacity: 1;
+}
+.hgl-banner-ribbon.rolled-in {
+  clip-path: inset(0 0 0 100%);
+  opacity: 0;
+}
+.hgl-banner-ribbon.sliding-out-top {
+  transition: margin-top 1.4s cubic-bezier(0.25, 0.85, 0.25, 1), clip-path 1.2s cubic-bezier(0.35, 0, 0.25, 1), opacity 1.0s ease;
+  clip-path: inset(0 0 0 100%) !important;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+.hgl-banner-ribbon:hover {
+  filter: drop-shadow(0 5px 15px rgba(255, 255, 255, 0.28));
+  transform: translateY(-1px);
+}
+
+/* 8 Distinct Color Palettes from News_Banner.html */
+.hgl-theme-1 .hgl-main-content-body { background: linear-gradient(135deg, #0284c7 0%, #1e40af 40%, #1e3a8a 75%, #0f172a 100%); }
+.hgl-theme-1 .hgl-silver-accent-block { background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 35%, #93c5fd 75%, #3b82f6 100%); border-right: 2px solid #38bdf8; }
+.hgl-theme-1 .hgl-silver-num { color: #1e3a8a; text-shadow: 0 0 10px rgba(56, 189, 248, 0.6); }
+.hgl-theme-1 .hgl-news-type-pill { background: linear-gradient(90deg, #dc2626, #991b1b); color: #fef08a; }
+
+.hgl-theme-2 .hgl-main-content-body { background: linear-gradient(135deg, #059669 0%, #047857 40%, #064e3b 75%, #022c22 100%); }
+.hgl-theme-2 .hgl-silver-accent-block { background: linear-gradient(135deg, #ffffff 0%, #d1fae5 35%, #a7f3d0 75%, #10b981 100%); border-right: 2px solid #34d399; }
+.hgl-theme-2 .hgl-silver-num { color: #064e3b; text-shadow: 0 0 10px rgba(52, 211, 153, 0.6); }
+.hgl-theme-2 .hgl-news-type-pill { background: linear-gradient(90deg, #d97706, #b45309); color: #ffffff; }
+
+.hgl-theme-3 .hgl-main-content-body { background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 40%, #4c1d95 75%, #2e1065 100%); }
+.hgl-theme-3 .hgl-silver-accent-block { background: linear-gradient(135deg, #ffffff 0%, #ede9fe 35%, #c4b5fd 75%, #8b5cf6 100%); border-right: 2px solid #c084fc; }
+.hgl-theme-3 .hgl-silver-num { color: #4c1d95; text-shadow: 0 0 10px rgba(192, 132, 252, 0.6); }
+.hgl-theme-3 .hgl-news-type-pill { background: linear-gradient(90deg, #db2777, #9d174d); color: #ffffff; }
+
+.hgl-theme-4 .hgl-main-content-body { background: linear-gradient(135deg, #dc2626 0%, #b91c1c 40%, #881337 75%, #450a0a 100%); }
+.hgl-theme-4 .hgl-silver-accent-block { background: linear-gradient(135deg, #ffffff 0%, #fee2e2 35%, #fca5a5 75%, #ef4444 100%); border-right: 2px solid #f87171; }
+.hgl-theme-4 .hgl-silver-num { color: #881337; text-shadow: 0 0 10px rgba(248, 113, 113, 0.6); }
+.hgl-theme-4 .hgl-news-type-pill { background: linear-gradient(90deg, #f59e0b, #d97706); color: #1e1b4b; }
+
+.hgl-theme-5 .hgl-main-content-body { background: linear-gradient(135deg, #0d9488 0%, #0f766e 40%, #134e4a 75%, #042f2e 100%); }
+.hgl-theme-5 .hgl-silver-accent-block { background: linear-gradient(135deg, #ffffff 0%, #ccfbf1 35%, #99f6e4 75%, #14b8a6 100%); border-right: 2px solid #2dd4bf; }
+.hgl-theme-5 .hgl-silver-num { color: #134e4a; text-shadow: 0 0 10px rgba(45, 212, 191, 0.6); }
+.hgl-theme-5 .hgl-news-type-pill { background: linear-gradient(90deg, #0284c7, #0369a1); color: #ffffff; }
+
+.hgl-theme-6 .hgl-main-content-body { background: linear-gradient(135deg, #d97706 0%, #b45309 40%, #78350f 75%, #451a03 100%); }
+.hgl-theme-6 .hgl-silver-accent-block { background: linear-gradient(135deg, #ffffff 0%, #fef3c7 35%, #fde68a 75%, #f59e0b 100%); border-right: 2px solid #fbbf24; }
+.hgl-theme-6 .hgl-silver-num { color: #78350f; text-shadow: 0 0 10px rgba(251, 191, 36, 0.6); }
+.hgl-theme-6 .hgl-news-type-pill { background: linear-gradient(90deg, #dc2626, #b91c1c); color: #ffffff; }
+
+.hgl-theme-7 .hgl-main-content-body { background: linear-gradient(135deg, #4f46e5 0%, #4338ca 40%, #312e81 75%, #1e1b4b 100%); }
+.hgl-theme-7 .hgl-silver-accent-block { background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 35%, #c7d2fe 75%, #6366f1 100%); border-right: 2px solid #818cf8; }
+.hgl-theme-7 .hgl-silver-num { color: #312e81; text-shadow: 0 0 10px rgba(129, 140, 248, 0.6); }
+.hgl-theme-7 .hgl-news-type-pill { background: linear-gradient(90deg, #10b981, #047857); color: #ffffff; }
+
+.hgl-theme-8 .hgl-main-content-body { background: linear-gradient(135deg, #c026d3 0%, #9333ea 40%, #581c87 75%, #3b0764 100%); }
+.hgl-theme-8 .hgl-silver-accent-block { background: linear-gradient(135deg, #ffffff 0%, #fae8ff 35%, #f5d0fe 75%, #d946ef 100%); border-right: 2px solid #e879f9; }
+.hgl-theme-8 .hgl-silver-num { color: #581c87; text-shadow: 0 0 10px rgba(232, 121, 249, 0.6); }
+.hgl-theme-8 .hgl-news-type-pill { background: linear-gradient(90deg, #f59e0b, #ea580c); color: #ffffff; }
+
+.hgl-main-content-body {
+  flex: 1;
+  min-height: 100%;
+  position: relative;
+  clip-path: polygon(18px 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6px 24px 6px 26px;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.35);
+}
+.hgl-main-content-body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+}
+.hgl-silver-accent-block {
+  width: clamp(62px, 8vw, 84px);
+  margin-left: -16px;
+  clip-path: polygon(18px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+}
+.hgl-silver-num {
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  font-weight: 900;
+  line-height: 1;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  z-index: 2;
+  animation: hglNumberGlow 2.5s infinite ease-in-out;
+}
+@keyframes hglNumberGlow {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+.hgl-num-glow-ring {
+  position: absolute;
+  width: 38px; height: 38px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.42) 0%, transparent 70%);
+  z-index: 1; pointer-events: none;
+}
+.hgl-headline-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 2px;
+  flex-wrap: wrap;
+}
+.hgl-news-type-pill {
+  font-size: 0.62rem;
+  font-weight: 900;
+  padding: 1.5px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
   white-space: nowrap;
-  animation: hglFlashTicker 42s linear infinite;
+  flex-shrink: 0;
 }
-.hgl-flash-news-bar:hover .hgl-fn-track {
-  animation-play-state: paused;
+.hgl-news-title-text {
+  font-size: clamp(0.80rem, 1.35vw, 0.94rem);
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+  line-height: 1.25;
 }
-@keyframes hglFlashTicker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.hgl-news-desc-text {
+  font-size: clamp(0.72rem, 1.15vw, 0.82rem);
+  font-weight: 600;
+  color: #f1f5f9;
+  line-height: 1.35;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
 }
-.hgl-fn-item {
-  display: inline-flex; align-items: center; gap: 6px;
-  color: #f8fafc; font-size: 0.72rem; font-weight: 700;
-  text-decoration: none; transition: color 0.15s ease;
-}
-.hgl-fn-item:hover { color: #fef08a; }
-.hgl-fn-tag {
-  font-size: 0.58rem; font-weight: 900; padding: 1px 5px; border-radius: 3px;
-  text-transform: uppercase;
-}
-.hgl-fn-tag.new { background: #f59e0b; color: #090d16; }
-.hgl-fn-tag.open { background: #10b981; color: #052e16; }
-.hgl-fn-tag.urgent { background: #ef4444; color: #ffffff; }
-.hgl-fn-tag.info { background: #38bdf8; color: #082f49; }
-.hgl-fn-cta {
-  color: #fde047; font-weight: 900; text-decoration: underline; font-size: 0.68rem;
+.hgl-news-cta-inline {
+  display: inline-block;
+  margin-left: 6px;
+  color: #fde047;
+  font-weight: 900;
+  text-decoration: underline;
 }
 
 @media (max-width: 980px) {
-  .hgl-cards-row { grid-template-columns: 1fr; gap: 6px; }
-  .hgl-card-row2 { flex-wrap: wrap; }
+  .hgl-cards-row { grid-template-columns: 1fr; gap: 8px; }
 }
 
 /* 7 Gateway Cards Grid */
@@ -640,9 +838,9 @@ html, body {
         </div>
 
         <!-- ============================================================================
-             3. தலைப்பு ஹீரோ பேனருக்கு அடுத்ததாக: சமீபத்திய தேர்வு அறிவிக்கைகள், கவுண்ட்டவுன் & FLASH NEWS பட்டி
+             3. தலைப்பு ஹீரோ பேனருக்கு அடுத்ததாக: சமீபத்திய தேர்வு அறிவிக்கைகள், நாட்கள் கவுண்ட்டவுன் & MAT-UNROLL FLASH NEWS
              ============================================================================ -->
-        <section class="hero-gemini-live-strip no-print" id="heroGeminiLiveAlerts" aria-label="சமீபத்திய உயர்கல்வி நுழைவுத்தேர்வு அறிவிக்கைகள் மற்றும் நேரலை கவுண்ட்டவுன்">
+        <section class="hero-gemini-live-strip no-print" id="heroGeminiLiveAlerts" aria-label="சமீபத்திய உயர்கல்வி நுழைவுத்தேர்வு அறிவிக்கைகள் மற்றும் கவுண்ட்டவுன்">
           <div class="hgl-header-bar">
             <h3 class="hgl-heading">
               <span class="hgl-blink-red-dot" title="நேரலை அறிவிப்புகள்"></span>
@@ -650,10 +848,21 @@ html, body {
             </h3>
           </div>
           <div class="hgl-cards-row" id="hglActiveExamsGrid"></div>
-          <div class="hgl-flash-news-bar" aria-label="கூடுதல் நுழைவுத்தேர்வு அறிவிப்புகள் - Flash News">
-            <span class="hgl-fn-badge">⚡ FLASH NEWS</span>
-            <div class="hgl-fn-track-wrap">
-              <div class="hgl-fn-track" id="hglFlashNewsTrack"></div>
+
+          <!-- News_Banner.html மாதிரியில் நகர்ந்து செல்லாமல் பாய் விரிவது போல் தோன்றும் Flash News பகுதி -->
+          <div class="hgl-mat-flash-section" id="hglMatFlashContainer" aria-label="கூடுதல் நுழைவுத்தேர்வு அறிவிப்புகள் - Flash News">
+            <div class="hgl-mat-flash-header">
+              <div class="hgl-mat-flash-title">
+                <span class="hgl-mat-flash-badge">⚡ FLASH NEWS</span>
+                <span>கூடுதல் நுழைவுத்தேர்வு &amp; உயர்கல்விச் சேர்க்கை அறிவிப்புகள் (கிளிக் செய்து விண்ணப்பிக்கலாம்)</span>
+              </div>
+              <div class="hgl-mat-controls">
+                <button type="button" class="hgl-mat-ctrl-btn" id="btnHglPrevFlash" title="முந்தைய அறிவிப்பு">◀ முந்தையது</button>
+                <button type="button" class="hgl-mat-ctrl-btn" id="btnHglNextFlash" title="அடுத்த அறிவிப்பு">அடுத்தது ▶</button>
+              </div>
+            </div>
+            <div class="hgl-news-viewport" id="hglNewsViewport">
+              <div class="hgl-news-cards-flow" id="hglNewsCardsFlow"></div>
             </div>
           </div>
         </section>
@@ -1173,9 +1382,9 @@ html, body {
   const GEMINI_API_KEY = _k1 + _k2 + _k3;
 
   const GEMINI_MODELS  = ["gemini-2.5-flash", "gemini-2.0-flash"];
-  const CACHE_KEY      = "svgnext_direct_ai_recent_exams_v421";
+  const CACHE_KEY      = "svgnext_direct_ai_recent_exams_v422";
 
-  // முதன்மை 3 சுருக்கப்பட்ட பெட்டிகளுக்கான சமீபத்திய நுழைவுத்தேர்வுகள் (VITEEE 2027 உட்பட)
+  // முதன்மை 3 சுருக்கப்பட்ட பெட்டிகளுக்கான சமீபத்திய நுழைவுத்தேர்வுகள் (VITEEE 2027, CLAT 2027, JEE Main 2027)
   const RECENTLY_NOTIFIED_SEED = [
     {
       id: "viteee-2027",
@@ -1210,69 +1419,76 @@ html, body {
     }
   ];
 
-  // கூடுதலாக வரும் அறிவிப்புகளுக்கான FLASH NEWS பட்டித் தரவுகள்
+  // News_Banner.html மாதிரியில் பாய் விரிவது போல் தோன்றும் கூடுதல் அறிவிப்புகள் (Stationary Mat-Unroll Flash News)
   const FLASH_NEWS_SEED = [
     {
-      tag: "புதிய வெளியீடு",
-      tagType: "new",
-      text: "VITEEE 2027: வேலூர் & சென்னை VIT பல்கலைக்கழக B.Tech பொறியியல் நுழைவுத்தேர்வு ஆன்லைன் விண்ணப்பம் வெளியீடு (கடைசி நாள்: 31 மார்ச் 2027 • தேர்வு: 28 ஏப் – 03 மே 2027)",
-      url: "https://viteee.vit.ac.in/",
-      cta: "viteee.vit.ac.in ↗"
+      num: "01",
+      badge: "புதிய வெளியீடு • VITEEE 2027",
+      title: "விண்ணப்பத் தொடக்கம்: 20.10.2026 | கடைசி நாள்: 31.03.2027 | தேர்வு: 28.04.2027 – 03.05.2027",
+      desc: "வேலூர் மற்றும் சென்னை VIT பல்கலைக்கழக வளாகங்களில் 4-ஆண்டு B.Tech பொறியியல் பட்டப்படிப்பு சேர்க்கைக்கான ஆன்லைன் விண்ணப்பப் பதிவு தொடங்கியுள்ளது.",
+      link: "https://viteee.vit.ac.in/"
     },
     {
-      tag: "விண்ணப்பம்",
-      tagType: "open",
-      text: "IIT UCEED & NID DAT 2027: இளங்கலை வடிவமைப்பு (B.Des) நுழைவுத்தேர்வு ஆன்லைன் விண்ணப்பப் பதிவு நடைபெறுகிறது (கடைசி நாள்: 18 நவ 2026 • தேர்வு: 17 ஜன 2027)",
-      url: "https://www.uceed.iitb.ac.in/",
-      cta: "uceed.iitb.ac.in ↗"
+      num: "02",
+      badge: "வடிவமைப்பு • IIT UCEED & NID 2027",
+      title: "விண்ணப்பத் தொடக்கம்: 01.10.2026 | கடைசி நாள்: 18.11.2026 | தேர்வு நாள்: 17.01.2027",
+      desc: "ஐஐடி (IIT Bombay, Delhi, Guwahati, Hyderabad) மற்றும் தேசிய வடிவமைப்பு நிறுவனங்களில் (NID) இளங்கலை வடிவமைப்பு (B.Des) சேர்க்கைக்கான விண்ணப்பப் பதிவு நடைபெறுகிறது.",
+      link: "https://www.uceed.iitb.ac.in/"
     },
     {
-      tag: "கடைசி வாரம்",
-      tagType: "urgent",
-      text: "CLAT 2027: திருச்சி தேசிய சட்டப் பல்கலைக்கழகம் (TNNLU) உள்ளிட்ட 24 NLU-களில் 5-ஆண்டு B.A.LL.B சேர்க்கை விண்ணப்பம் அக் 31 அன்று நிறைவு (தேர்வு: 06 டிச 2026)",
-      url: "https://consortiumofnlus.ac.in/",
-      cta: "consortiumofnlus.ac.in ↗"
+      num: "03",
+      badge: "கடைசி வாரம் • CLAT 2027 (சட்டம்)",
+      title: "விண்ணப்பத் தொடக்கம்: 15.07.2026 | கடைசி நாள்: 31.10.2026 | தேர்வு நாள்: 06.12.2026",
+      desc: "திருச்சி தேசிய சட்டப் பல்கலைக்கழகம் (TNNLU) உள்ளிட்ட 24 தேசிய சட்டப் பல்கலைக்கழகங்களில் 5-ஆண்டு ஒருங்கிணைந்த B.A.LL.B. (Hons) சேர்க்கைக்கு விண்ணப்பிக்க கடைசி வாய்ப்பு.",
+      link: "https://consortiumofnlus.ac.in/"
     },
     {
-      tag: "தேசியத் தேர்வு",
-      tagType: "open",
-      text: "JEE Main 2027 (அமர்வு 1): NIT திருச்சி, IIIT & IIT சேர்க்கைக்கான முதற்கட்டத் தேர்வு விண்ணப்பம் அக் 28 முதல் நவ 27 வரை (தேர்வு: ஜனவரி 2027)",
-      url: "https://jeemain.nta.nic.in/",
-      cta: "jeemain.nta.nic.in ↗"
+      num: "04",
+      badge: "தேசியத் தேர்வு • JEE MAIN 2027 (அமர்வு 1)",
+      title: "விண்ணப்பத் தொடக்கம்: 28.10.2026 | கடைசி நாள்: 27.11.2026 | தேர்வு நாள்: 24.01.2027",
+      desc: "திருச்சி NIT, IIIT மற்றும் மத்திய அரசு தொழில்நுட்ப நிறுவனங்களில் B.E./B.Tech சேர்க்கை மற்றும் IIT JEE Advanced தகுதிக்கான முதற்கட்டத் தேர்வு அறிவிப்பு.",
+      link: "https://jeemain.nta.nic.in/"
     },
     {
-      tag: "ஆடை வடிவமைப்பு",
-      tagType: "info",
-      text: "NIFT 2027: சென்னை உள்ளிட்ட தேசிய ஆடை வடிவமைப்புத் தொழில்நுட்ப நிறுவன B.Des / B.FTech சேர்க்கை அறிவிப்பு (தேர்வு: பிப்ரவரி 2027)",
-      url: "https://exams.nta.ac.in/NIFT/",
-      cta: "exams.nta.ac.in/NIFT ↗"
+      num: "05",
+      badge: "ஆடை வடிவமைப்பு • NIFT 2027",
+      title: "விண்ணப்பத் தொடக்கம்: நவம்பர் 2026 | கடைசி நாள்: ஜனவரி 2027 | தேர்வு நாள்: பிப்ரவரி 2027",
+      desc: "சென்னை உள்ளிட்ட மத்திய ஜவுளி அமைச்சகத்தின் தேசிய ஆடை வடிவமைப்புத் தொழில்நுட்ப நிறுவனங்களில் (NIFT) B.Des & B.FTech படிப்புகளுக்கான நுழைவுத்தேர்வு.",
+      link: "https://exams.nta.ac.in/NIFT/"
     },
     {
-      tag: "நிகர்நிலைப் பல்கலை",
-      tagType: "info",
-      text: "SRMJEEE & Amrita AEEE 2027: B.Tech பொறியியல் நுழைவுத்தேர்வுகளுக்கான முன்பதிவு மற்றும் விண்ணப்ப அறிவிப்புகள் வெளியீடு",
-      url: "https://www.srmist.edu.in/",
-      cta: "விவரம் காண்க ↗"
+      num: "06",
+      badge: "நிகர்நிலைப் பல்கலை • SRMJEEE & AEEE 2027",
+      title: "விண்ணப்பத் தொடக்கம்: நவம்பர் 2026 | கடைசி நாள்: ஏப்ரல் 2027 | தேர்வு நாள்: ஏப்ரல் / மே 2027",
+      desc: "SRM பல்கலைக்கழகம் (SRMJEEE) மற்றும் அமிர்தா பல்கலைக்கழக (AEEE) B.Tech பொறியியல் பட்டப்படிப்புகளுக்கான ஆன்லைன் விண்ணப்பப் பதிவு விவரங்கள்.",
+      link: "https://www.srmist.edu.in/"
     },
     {
-      tag: "முப்படை அதிகாரி",
-      tagType: "info",
-      text: "UPSC NDA & NA (I) 2027: 12-ஆம் வகுப்பு முடிக்கும் மாணவர்களுக்கான முப்படை அதிகாரிகள் நுழைவுத்தேர்வு அறிவிக்கை டிசம்பர் 2026-ல் வெளியீடு",
-      url: "https://upsc.gov.in/",
-      cta: "upsc.gov.in ↗"
+      num: "07",
+      badge: "பாதுகாப்புப் படை • UPSC NDA & NA (I) 2027",
+      title: "விண்ணப்பத் தொடக்கம்: டிசம்பர் 2026 | கடைசி நாள்: ஜனவரி 2027 | தேர்வு நாள்: ஏப்ரல் 2027",
+      desc: "12-ஆம் வகுப்பு முடிக்கும் மாணவ, மாணவியர் இந்திய ராணுவம், கடற்படை மற்றும் விமானப்படையில் அதிகாரியாகச் சேர நடத்தப்படும் தேசிய பாதுகாப்பு அகாடமி தேர்வு.",
+      link: "https://upsc.gov.in/"
+    },
+    {
+      num: "08",
+      badge: "மருத்துவம் & மத்திய பல்கலை • NEET UG / CUET UG 2027",
+      title: "விண்ணப்பத் தொடக்கம்: பிப்ரவரி 2027 | கடைசி நாள்: மார்ச் 2027 | தேர்வு நாள்: மே 2027",
+      desc: "MBBS/BDS/AYUSH மருத்துவப் படிப்புகளுக்கான NEET UG மற்றும் மத்தியப் பல்கலைக்கழக இளங்கலைச் சேர்க்கைக்கான CUET UG தேர்வு கால அட்டவணை மற்றும் பாடத்திட்டம்.",
+      link: "https://nta.ac.in/"
     }
   ];
 
   const TA_MONTHS = ["ஜன", "பிப்", "மார்", "ஏப்", "மே", "ஜூன்", "ஜூலை", "ஆக", "செப்", "அக்", "நவ", "டிச"];
-  function fmtShortDateTa(iso) {
+  function fmtDateTa(iso) {
     if (!iso) return "--";
     const p = String(iso).split("-");
     if (p.length !== 3) return iso;
-    return parseInt(p[2], 10) + " " + (TA_MONTHS[parseInt(p[1], 10) - 1] || "") + " " + p[0].slice(-2);
+    return parseInt(p[2], 10) + " " + (TA_MONTHS[parseInt(p[1], 10) - 1] || "") + " " + p[0];
   }
 
   let activeExams = [];
-  let extraFlashItems = [];
+  let allFlashNewsItems = FLASH_NEWS_SEED.slice();
 
   function loadInstantCache() {
     try {
@@ -1288,28 +1504,25 @@ html, body {
     activeExams = RECENTLY_NOTIFIED_SEED.slice(0, 3);
   }
 
-  function calcCountdown(exam, nowMs) {
+  // கவுண்ட்டவுன் நாட்கள் மட்டும் கணக்கிடும் முறை (மணி, நிமிடம், விநாடி தேவையில்லை)
+  function calcDaysOnlyCountdown(exam, nowMs) {
     const endMs  = new Date(exam.appEndDate + "T23:59:59+05:30").getTime();
     const examMs = new Date(exam.examDate + "T09:00:00+05:30").getTime();
     const daysLeftToApply = Math.ceil((endMs - nowMs) / 86400000);
-    const diff = Math.max(0, examMs - nowMs);
-    const d = Math.floor(diff / 86400000);
-    const h = Math.floor((diff % 86400000) / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
+    const examDaysLeft    = Math.max(0, Math.ceil((examMs - nowMs) / 86400000));
     const isUrgent = daysLeftToApply >= 0 && daysLeftToApply <= 12;
     const isNew = Boolean(exam.isNewRelease);
     const statusText = daysLeftToApply > 0
       ? (isUrgent
-          ? "🚨 " + daysLeftToApply + " நாட்களே!"
-          : (isNew ? "🆕 விண்ணப்பம் வெளியீடு" : "🟢 விண்ணப்பம் (" + daysLeftToApply + " நா)"))
+          ? "🚨 விண்ணப்பிக்க " + daysLeftToApply + " நாட்களே!"
+          : (isNew ? "🆕 புதிய விண்ணப்பம் (" + daysLeftToApply + " நாட்கள்)" : "🟢 விண்ணப்பம் (" + daysLeftToApply + " நாட்கள்)"))
       : "🔔 சமீபத்திய அறிவிப்பு";
 
     return {
       isUrgent: isUrgent,
       isNew: isNew,
       statusText: statusText,
-      cdCompact: String(d).padStart(2, "0") + "நா:" + String(h).padStart(2, "0") + "ம:" + String(m).padStart(2, "0") + "நி:" + String(s).padStart(2, "0") + "வி"
+      daysText: examDaysLeft + " நாட்கள்"
     };
   }
 
@@ -1318,54 +1531,195 @@ html, body {
     if (!grid) return;
     const nowMs = Date.now();
     grid.innerHTML = activeExams.slice(0, 3).map(function(ex) {
-      const c = calcCountdown(ex, nowMs);
+      const c = calcDaysOnlyCountdown(ex, nowMs);
       const cardClass = c.isUrgent ? "urgent" : (c.isNew ? "new-release" : "");
       const tagClass  = c.isUrgent ? "urgent" : (c.isNew ? "new-release" : "");
       return '<article class="hgl-card ' + cardClass + '">' +
-        '<div class="hgl-card-row1">' +
-          '<div class="hgl-exam-title-wrap">' +
-            '<span class="hgl-agency-mini">' + ex.body + '</span>' +
-            '<span class="hgl-exam-name" title="' + ex.nameTa + '">' + ex.nameTa + '</span>' +
-          '</div>' +
+        '<div class="hgl-card-top">' +
+          '<span class="hgl-agency-mini">🏛️ ' + ex.body + '</span>' +
           '<span class="hgl-status-tag ' + tagClass + '">' + c.statusText + '</span>' +
         '</div>' +
-        '<div class="hgl-card-row2">' +
-          '<span class="hgl-compact-dates">' +
-            '⏰ கடைசி: <strong class="last">' + fmtShortDateTa(ex.appEndDate) + '</strong>' +
-            ' &bull; 🎯 தேர்வு: <strong class="exam">' + fmtShortDateTa(ex.examDate) + '</strong>' +
-          '</span>' +
-          '<span class="hgl-cd-digits" data-hgl-clock="' + ex.id + '" title="தேர்வு கவுண்ட்டவுன்">⏱️ ' + c.cdCompact + '</span>' +
-          '<span class="hgl-btn-group">' +
-            (ex.guideUrl ? '<a href="' + ex.guideUrl + '" class="hgl-guide-btn" title="வழிகாட்டி பக்கம்">📖</a>' : '') +
+        '<div class="hgl-exam-name">' + ex.nameTa + '</div>' +
+        '<div class="hgl-dates-strip">' +
+          '<div class="hgl-d-box"><span class="hgl-d-lbl">📅 தொடக்கம்</span><span class="hgl-d-val start">' + fmtDateTa(ex.appStartDate) + '</span></div>' +
+          '<div class="hgl-d-box"><span class="hgl-d-lbl">⏰ கடைசி நாள்</span><span class="hgl-d-val last">' + fmtDateTa(ex.appEndDate) + '</span></div>' +
+          '<div class="hgl-d-box"><span class="hgl-d-lbl">🎯 தேர்வு நாள்</span><span class="hgl-d-val exam">' + fmtDateTa(ex.examDate) + '</span></div>' +
+        '</div>' +
+        '<div class="hgl-bottom-bar">' +
+          '<div class="hgl-cd-wrap">' +
+            '<span class="hgl-cd-label">⏱️ தேர்வு கவுண்ட்டவுன்:</span>' +
+            '<span class="hgl-cd-digits" data-hgl-clock="' + ex.id + '">' + c.daysText + '</span>' +
+          '</div>' +
+          '<div class="hgl-btn-group">' +
+            (ex.guideUrl ? '<a href="' + ex.guideUrl + '" class="hgl-guide-btn">📖 வழிகாட்டி</a>' : '') +
             '<a href="' + ex.officialUrl + '" target="_blank" rel="noopener noreferrer" class="hgl-apply-btn">விண்ணப்பிக்க ➔</a>' +
-          '</span>' +
+          '</div>' +
         '</div>' +
       '</article>';
     }).join("");
   }
 
-  function renderFlashNewsStrip() {
-    const track = document.getElementById("hglFlashNewsTrack");
-    if (!track) return;
-    const combined = extraFlashItems.concat(FLASH_NEWS_SEED);
-    const itemsHtml = combined.map(function(item) {
-      return '<a class="hgl-fn-item" href="' + item.url + '" target="_blank" rel="noopener noreferrer">' +
-        '<span class="hgl-fn-tag ' + (item.tagType || 'info') + '">' + item.tag + '</span>' +
-        '<span>' + item.text + '</span>' +
-        '<span class="hgl-fn-cta">' + (item.cta || 'விண்ணப்பிக்க ↗') + '</span>' +
-      '</a>';
-    }).join('<span style="color:#facc15;font-weight:900;">✦</span>');
-    // Duplicate for seamless infinite loop
-    track.innerHTML = itemsHtml + '<span style="color:#facc15;font-weight:900;margin:0 14px;">✦</span>' + itemsHtml;
-  }
-
-  function tickClocks() {
+  function tickDaysClocks() {
     const nowMs = Date.now();
     activeExams.forEach(function(ex) {
       const el = document.querySelector('[data-hgl-clock="' + ex.id + '"]');
-      if (el) el.textContent = "⏱️ " + calcCountdown(ex, nowMs).cdCompact;
+      if (el) el.textContent = calcDaysOnlyCountdown(ex, nowMs).daysText;
     });
   }
+
+  // ============================================================================
+  // News_Banner.html MAT-UNROLL FLASH NEWS CONTROLLER (2 Visible Stationary Ribbons)
+  // ============================================================================
+  const VISIBLE_FLASH_COUNT = 2;
+  const FLASH_SCROLL_INTERVAL = 7500; // 7.5 seconds comfortable stationary reading time
+  const FLASH_GAP = 6;
+
+  const flowContainer = document.getElementById("hglNewsCardsFlow");
+  const viewport      = document.getElementById("hglNewsViewport");
+  const matContainer  = document.getElementById("hglMatFlashContainer");
+
+  let nextInsertIdx = VISIBLE_FLASH_COUNT;
+  let flashScrollTimer = null;
+  let isFlashPaused = false;
+  let isFlashTransitioning = false;
+
+  function getFlashThemeClass(item, index) {
+    let numInt = parseInt(item.num, 10);
+    if (isNaN(numInt) || numInt <= 0) numInt = index + 1;
+    const themeIndex = ((numInt - 1) % 8) + 1;
+    return "hgl-theme-" + themeIndex;
+  }
+
+  function createFlashCardDOM(item, index, initiallyRolledOut) {
+    const a = document.createElement("a");
+    a.href = item.link || "01_00_entrance_main.html";
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    const themeClass = getFlashThemeClass(item, index);
+    a.className = "hgl-banner-ribbon " + themeClass + (initiallyRolledOut ? " rolled-out" : " rolled-in");
+    const formattedNum = String(item.num || (index + 1)).padStart(2, "0");
+
+    a.innerHTML =
+      '<div class="hgl-main-content-body">' +
+        '<div class="hgl-headline-row">' +
+          (item.badge ? '<span class="hgl-news-type-pill">' + item.badge + '</span>' : '') +
+          (item.title ? '<div class="hgl-news-title-text">' + item.title + '</div>' : '') +
+        '</div>' +
+        (item.desc ? '<div class="hgl-news-desc-text">' + item.desc + ' <span class="hgl-news-cta-inline">விண்ணப்பிக்க ↗</span></div>' : '') +
+      '</div>' +
+      '<div class="hgl-silver-accent-block">' +
+        '<div class="hgl-num-glow-ring"></div>' +
+        '<span class="hgl-silver-num">' + formattedNum + '</span>' +
+      '</div>';
+    return a;
+  }
+
+  function initFlashMatDisplay() {
+    if (!flowContainer) return;
+    stopFlashAutoScroll();
+    flowContainer.innerHTML = "";
+    const count = Math.min(allFlashNewsItems.length, VISIBLE_FLASH_COUNT);
+    const elements = [];
+
+    for (let i = 0; i < count; i++) {
+      const card = createFlashCardDOM(allFlashNewsItems[i], i, false);
+      flowContainer.appendChild(card);
+      elements.push(card);
+    }
+
+    elements.forEach(function(card, idx) {
+      setTimeout(function() {
+        card.classList.remove("rolled-in");
+        card.classList.add("rolled-out");
+      }, 150 + idx * 500);
+    });
+
+    nextInsertIdx = count % allFlashNewsItems.length;
+    setTimeout(function() {
+      startFlashAutoScroll();
+    }, 150 + count * 500 + 1800);
+  }
+
+  function shiftFlashUp(forceStep) {
+    if ((!forceStep && isFlashPaused) || isFlashTransitioning || !flowContainer || !viewport) return;
+    if (allFlashNewsItems.length < 2) return;
+
+    const firstCard = flowContainer.firstElementChild;
+    if (!firstCard) return;
+    isFlashTransitioning = true;
+
+    const currentViewportHeight = flowContainer.offsetHeight;
+    viewport.style.height = currentViewportHeight + "px";
+
+    const nextItem = allFlashNewsItems[nextInsertIdx];
+    const nextCard = createFlashCardDOM(nextItem, nextInsertIdx, false);
+    flowContainer.appendChild(nextCard);
+    nextInsertIdx = (nextInsertIdx + 1) % allFlashNewsItems.length;
+
+    const firstCardHeight = firstCard.offsetHeight;
+    const nextCardHeight  = nextCard.offsetHeight;
+    const targetViewportHeight = currentViewportHeight - firstCardHeight + nextCardHeight;
+
+    requestAnimationFrame(function() {
+      viewport.style.transition = "height 1.4s cubic-bezier(0.25, 0.85, 0.25, 1)";
+      viewport.style.height = targetViewportHeight + "px";
+
+      firstCard.classList.add("sliding-out-top");
+      firstCard.style.marginTop = "-" + (firstCardHeight + FLASH_GAP) + "px";
+
+      setTimeout(function() {
+        nextCard.classList.remove("rolled-in");
+        nextCard.classList.add("rolled-out");
+      }, 200);
+
+      setTimeout(function() {
+        if (firstCard && firstCard.parentNode === flowContainer) {
+          flowContainer.removeChild(firstCard);
+        }
+        viewport.style.transition = "";
+        viewport.style.height = "auto";
+        isFlashTransitioning = false;
+      }, 1450);
+    });
+  }
+
+  function shiftFlashPrev() {
+    if (isFlashTransitioning || !flowContainer) return;
+    const total = allFlashNewsItems.length;
+    nextInsertIdx = (nextInsertIdx - VISIBLE_FLASH_COUNT - 1 + total * 2) % total;
+    flowContainer.innerHTML = "";
+    const count = Math.min(total, VISIBLE_FLASH_COUNT);
+    for (let i = 0; i < count; i++) {
+      const idx = (nextInsertIdx + i) % total;
+      const card = createFlashCardDOM(allFlashNewsItems[idx], idx, true);
+      flowContainer.appendChild(card);
+    }
+    nextInsertIdx = (nextInsertIdx + count) % total;
+  }
+
+  function startFlashAutoScroll() {
+    stopFlashAutoScroll();
+    flashScrollTimer = setInterval(function() { shiftFlashUp(false); }, FLASH_SCROLL_INTERVAL);
+  }
+
+  function stopFlashAutoScroll() {
+    if (flashScrollTimer) {
+      clearInterval(flashScrollTimer);
+      flashScrollTimer = null;
+    }
+  }
+
+  if (matContainer) {
+    matContainer.addEventListener("mouseenter", function() { isFlashPaused = true; });
+    matContainer.addEventListener("mouseleave", function() { isFlashPaused = false; });
+    matContainer.addEventListener("touchstart", function() { isFlashPaused = true; }, { passive: true });
+    matContainer.addEventListener("touchend", function() { isFlashPaused = false; });
+  }
+
+  const btnPrev = document.getElementById("btnHglPrevFlash");
+  const btnNext = document.getElementById("btnHglNextFlash");
+  if (btnPrev) btnPrev.addEventListener("click", function() { shiftFlashPrev(); });
+  if (btnNext) btnNext.addEventListener("click", function() { shiftFlashUp(true); });
 
   async function verifyRecentExamsViaGeminiFlash() {
     const todayIso = new Date().toISOString().split("T")[0];
@@ -1395,18 +1749,6 @@ html, body {
               activeExams = parsed.slice(0, 3);
               try { localStorage.setItem(CACHE_KEY, JSON.stringify(activeExams)); } catch (e) {}
               renderActiveExamCards();
-              if (parsed.length > 3) {
-                extraFlashItems = parsed.slice(3).map(function(ex) {
-                  return {
-                    tag: "நேரலை அறிவிப்பு",
-                    tagType: "new",
-                    text: ex.nameTa + " (" + ex.body + ") — கடைசி நாள்: " + fmtShortDateTa(ex.appEndDate) + " • தேர்வு: " + fmtShortDateTa(ex.examDate),
-                    url: ex.officialUrl || "01_00_entrance_main.html",
-                    cta: "விண்ணப்பிக்க ↗"
-                  };
-                });
-                renderFlashNewsStrip();
-              }
               return;
             }
           }
@@ -1417,8 +1759,8 @@ html, body {
 
   loadInstantCache();
   renderActiveExamCards();
-  renderFlashNewsStrip();
-  setInterval(tickClocks, 1000);
+  initFlashMatDisplay();
+  setInterval(tickDaysClocks, 60000);
   setTimeout(function() { verifyRecentExamsViaGeminiFlash(); }, 60);
 })();
 </script>
