@@ -4153,154 +4153,6 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
     }
 
-
-/* === v4.12 MEDICAL-STYLE TYPEWRITER ANIMATION RIBBON === */
-@keyframes borderShimmerRibbon {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 300% 50%; }
-}
-@keyframes sparklePulseRibbon {
-  0%, 100% { transform: scale(1) rotate(0deg); }
-  50% { transform: scale(1.18) rotate(12deg); }
-}
-@keyframes cursorBlinkRibbon {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-.typing-banner-wrap {
-  padding: 2.5px !important;
-  border-radius: 999px !important;
-  background: linear-gradient(90deg, #1e3a8a, #2563eb, #0d9488, #d97706, #7c3aed, #2563eb, #1e3a8a) !important;
-  background-size: 300% 100% !important;
-  animation: borderShimmerRibbon 6s linear infinite !important;
-  margin: 0 0 18px 0 !important;
-  box-shadow: 0 4px 16px rgba(30, 58, 138, 0.14) !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-.typing-banner-wrap .typing-container {
-  background: linear-gradient(90deg, #ffffff 0%, #f0f7ff 50%, #ffffff 100%) !important;
-  border-radius: 999px !important;
-  padding: 8px 18px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 10px !important;
-  min-height: 40px !important;
-  text-align: center !important;
-  box-sizing: border-box !important;
-}
-.typing-banner-wrap .typing-badge {
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #0284c7 100%) !important;
-  color: #ffffff !important;
-  font-size: 0.78rem !important;
-  font-weight: 800 !important;
-  padding: 4px 12px !important;
-  border-radius: 999px !important;
-  white-space: nowrap !important;
-  letter-spacing: 0.3px !important;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35) !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 4px !important;
-  flex-shrink: 0 !important;
-}
-.typing-banner-wrap .sparkle-icon {
-  display: inline-block !important;
-  animation: sparklePulseRibbon 1.6s infinite ease-in-out !important;
-}
-.typing-banner-wrap .typing-text {
-  font-size: 0.90rem !important;
-  font-weight: 800 !important;
-  color: #1e3a8a !important;
-  line-height: 1.4 !important;
-}
-.typing-banner-wrap .typing-cursor {
-  display: inline-block !important;
-  font-weight: 900 !important;
-  color: #2563eb !important;
-  animation: cursorBlinkRibbon 0.75s infinite !important;
-  margin-left: 2px !important;
-}
-@media (max-width: 680px) {
-  .typing-banner-wrap {
-    border-radius: 14px !important;
-  }
-  .typing-banner-wrap .typing-container {
-    border-radius: 12px !important;
-    padding: 8px 12px !important;
-    flex-wrap: wrap !important;
-  }
-  .typing-banner-wrap .typing-text {
-    font-size: 0.82rem !important;
-  }
-}
-
-
-/* === v4.12 UNIVERSAL FLOATING BACK-TO-TOP BUTTON === */
-.floating-back-to-top {
-  position: fixed !important;
-  bottom: 24px !important;
-  right: 24px !important;
-  z-index: 99999 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 7px !important;
-  padding: 9px 18px !important;
-  background: linear-gradient(135deg, #0284c7 0%, #1e40af 100%) !important;
-  color: #ffffff !important;
-  border: 1.8px solid #38bdf8 !important;
-  border-radius: 999px !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), 0 0 12px rgba(56, 189, 248, 0.4) !important;
-  font-family: 'Noto Sans Tamil', 'Plus Jakarta Sans', 'Inter', sans-serif !important;
-  font-size: 0.86rem !important;
-  font-weight: 800 !important;
-  cursor: pointer !important;
-  outline: none !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-  transform: translateY(14px) !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  backdrop-filter: blur(8px) !important;
-  text-decoration: none !important;
-}
-.floating-back-to-top.visible {
-  opacity: 1 !important;
-  pointer-events: auto !important;
-  transform: translateY(0) !important;
-}
-.floating-back-to-top:hover {
-  transform: translateY(-3px) scale(1.04) !important;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(56, 189, 248, 0.6) !important;
-  background: linear-gradient(135deg, #0369a1 0%, #1e3a8a 100%) !important;
-  border-color: #facc15 !important;
-}
-.floating-btn-arrow {
-  font-size: 0.92rem !important;
-  line-height: 1 !important;
-  color: #facc15 !important;
-}
-.floating-btn-text {
-  letter-spacing: 0.3px !important;
-  color: #ffffff !important;
-}
-/* Hide any legacy duplicate fixed back-to-top buttons so only #floatingBackToTop shows */
-.back-to-top:not(#floatingBackToTop),
-.back-to-top-btn:not(#floatingBackToTop),
-#masterBackTopBtn,
-#backToTopBtn:not(#floatingBackToTop) {
-  display: none !important;
-}
-@media (max-width: 680px) {
-  .floating-back-to-top {
-    bottom: 16px !important;
-    right: 14px !important;
-    padding: 7px 14px !important;
-    font-size: 0.78rem !important;
-  }
-}
-
 </style>
 <style id="robust-layout-override">
 /* ========================================================
@@ -6066,546 +5918,434 @@
   }
 }
 </style>
-<style id="v414-crystal-typing-ribbon-css">
+
+<style id="v428-universal-mobile-responsive">
 /* ============================================================================
-   v4.14 UNIFIED TRANSPARENT CRYSTAL GUIDANCE ANIMATION RIBBON
-   (மருத்துவ நுழைவுத்தேர்வுப் பக்க மாதிரி — Transparent Crystal Design)
+   v4.28 UNIVERSAL MOBILE-FIRST EDGE-TO-EDGE & ZERO-CLIPPING ENGINE (ALL PAGES)
+   Fixes:
+   1. Eliminates triple/quadruple nested left-right padding on mobile (image_4fc1ff & image_4fc220)
+   2. Fixes CSS Grid 1fr (minmax(auto, 1fr)) right-side card cutoff by enforcing minmax(0, 1fr)
+      and min-width: 0 on all cards, flex children, and images/SVGs (image_4fc1ff)
+   3. Fixes Breadcrumb bar & current-page pill horizontal overflow by allowing text wrapping (image_4fc220)
+   4. Fixes Accessibility Toolbar (#intlAccessibilityToolbar) button text clipping on mobile using a
+      6-column grid: 3 short buttons in Row 1 (span 2) + 2 wide buttons per row in Rows 2-4 (span 3) (image_4fc9a1)
+   5. Makes sticky top header relative on mobile so it never blocks viewport while scrolling
    ============================================================================ */
-.typing-banner-wrap {
-  width: 100% !important;
-  max-width: 100% !important;
-  box-sizing: border-box !important;
-  text-align: center !important;
-  margin: 14px auto 16px auto !important;
-  padding: 0 !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  animation: none !important;
-}
-
-.typing-container,
-.typing-banner-wrap .typing-container {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 10px !important;
-  background: linear-gradient(135deg, rgba(255, 251, 235, 0.88) 0%, rgba(239, 246, 255, 0.82) 100%) !important;
-  backdrop-filter: blur(12px) saturate(160%) !important;
-  -webkit-backdrop-filter: blur(12px) saturate(160%) !important;
-  border: 1.5px solid #fcd34d !important;
-  padding: 8px 22px !important;
-  border-radius: 999px !important;
-  margin-bottom: 4px !important;
-  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.16), inset 0 1.5px 2px rgba(255, 255, 255, 0.96) !important;
-  min-height: 44px !important;
-  max-width: 96% !important;
-  width: auto !important;
-  box-sizing: border-box !important;
-}
-
-.typing-badge,
-.typing-banner-wrap .typing-badge {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 4px !important;
-  font-size: 0.86rem !important;
-  font-weight: 800 !important;
-  color: #1e3a8a !important;
-  background: rgba(255, 255, 255, 0.92) !important;
-  border: 1px solid rgba(252, 211, 77, 0.85) !important;
-  padding: 4px 10px !important;
-  border-radius: 999px !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), inset 0 1px 1px #ffffff !important;
-  flex-shrink: 0 !important;
-}
-
-.typing-text,
-.typing-banner-wrap .typing-text {
-  font-size: 0.98rem !important;
-  font-weight: 700 !important;
-  color: #1e3a8a !important;
-  letter-spacing: 0.2px !important;
-  line-height: 1.4 !important;
-}
-
-.typing-cursor,
-.typing-banner-wrap .typing-cursor {
-  display: inline-block !important;
-  font-weight: 800 !important;
-  font-size: 1.15rem !important;
-  color: #d97706 !important;
-  margin-left: 2px !important;
-  animation: blinkCursorV414 0.8s infinite !important;
-}
-
-@keyframes blinkCursorV414 {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.sparkle-icon,
-.typing-sparkle,
-.pulse-sparkle {
-  display: inline-block !important;
-  animation: sparkleSpinV414 3s linear infinite !important;
-}
-
-@keyframes sparkleSpinV414 {
-  0%, 100% { transform: scale(1) rotate(0deg); }
-  50% { transform: scale(1.15) rotate(15deg); }
-}
-
 @media (max-width: 768px) {
-  .typing-container,
-  .typing-banner-wrap .typing-container {
-    padding: 6px 14px !important;
-    min-height: 40px !important;
-    border-radius: 14px !important;
-    flex-wrap: wrap !important;
+  html, body {
+    margin: 0 !important;
+    padding: 2px 2px !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+    -webkit-text-size-adjust: 100% !important;
   }
-  .typing-badge,
-  .typing-banner-wrap .typing-badge {
-    font-size: 0.74rem !important;
-    padding: 2px 8px !important;
+
+  .portal-layout-wrapper,
+  .portal-container,
+  .portal-executive-wrapper,
+  .container,
+  .page-wrapper,
+  .main-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
   }
-  .typing-text,
-  .typing-banner-wrap .typing-text {
-    font-size: 0.86rem !important;
-  }
-}
-</style>
-<style id="v415-portal-master-stabilizer">
-/* ============================================================================
-   v4.15 MASTER STABILIZER, ZERO-CLS TYPEWRITER, STEADY THIRUKKURAL,
-   MOBILE RESPONSIVENESS & UNIVERSAL PRINT STYLES
-   ============================================================================ */
 
-/* --- A. 100% STILL, EYE-FRIENDLY THIRUKKURAL PALM-LEAF MANUSCRIPT --- */
-.kural-box,
-.kural-box::before,
-.kural-box::after,
-.kural-header,
-.kural-icon,
-.kural-title,
-.kural-sparkle,
-.kural-verse-text,
-.kural-verse-text .kural-line,
-.kural-verse-text .kural-line-1,
-.kural-verse-text .kural-line-2,
-.kural-verse-text .stylus-nib,
-.kural-meaning {
-  animation: none !important;
-  -webkit-animation: none !important;
-  transform: none !important;
-  -webkit-transform: none !important;
-  transition: none !important;
-  clip-path: none !important;
-  -webkit-clip-path: none !important;
-}
-
-.kural-box {
-  box-shadow: 0 5px 16px rgba(74, 33, 5, 0.22), inset 0 0 14px rgba(139, 69, 19, 0.14) !important;
-}
-
-.kural-verse-text .stylus-nib {
-  display: inline-block !important;
-  opacity: 0.85 !important;
-}
-
-/* --- B. ZERO LAYOUT SHIFT (CLS = 0) FOR ALL TYPEWRITER BANNERS (1 OR 2 LINES) --- */
-.typing-banner-wrap {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 64px !important;
-  min-height: 64px !important;
-  max-height: 64px !important;
-  margin: 12px auto 14px auto !important;
-  padding: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  overflow: hidden !important;
-  box-sizing: border-box !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  animation: none !important;
-}
-
-.typing-banner-wrap .typing-container,
-body:not(.is-home-page) .typing-container {
-  height: 58px !important;
-  min-height: 58px !important;
-  max-height: 58px !important;
-  width: 100% !important;
-  max-width: 980px !important;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex-wrap: nowrap !important;
-  gap: 10px !important;
-  padding: 4px 20px !important;
-  margin: 0 auto !important;
-  border-radius: 16px !important;
-  background: linear-gradient(135deg, rgba(236, 253, 245, 0.94) 0%, rgba(240, 249, 255, 0.92) 100%) !important;
-  border: 1.5px solid #6ee7b7 !important;
-  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.95) !important;
-  overflow: hidden !important;
-  box-sizing: border-box !important;
-}
-
-.typing-banner-wrap .typing-badge {
-  flex-shrink: 0 !important;
-  animation: none !important;
-  transform: none !important;
-}
-
-.sparkle-icon,
-.typing-sparkle,
-.pulse-sparkle {
-  animation: none !important;
-  transform: none !important;
-}
-
-.typing-banner-wrap .typing-text,
-body:not(.is-home-page) .typing-text {
-  font-size: 0.92rem !important;
-  font-weight: 800 !important;
-  color: #0c4a6e !important;
-  line-height: 1.32 !important;
-  max-height: 2.68em !important;
-  overflow: hidden !important;
-  text-align: center !important;
-  display: inline-block !important;
-  white-space: normal !important;
-}
-
-/* Home Page (index.html) Control Panel Typewriter & Gateway Flip Box Fixed Heights */
-.control-panel .typing-container {
-  width: 100% !important;
-  max-width: 960px !important;
-  height: 52px !important;
-  min-height: 52px !important;
-  max-height: 52px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  overflow: hidden !important;
-  margin: 0 auto 4px auto !important;
-  padding: 2px 12px !important;
-  box-sizing: border-box !important;
-}
-
-.control-panel .typing-text {
-  font-size: clamp(0.84rem, 1.02vw, 0.94rem) !important;
-  font-weight: 800 !important;
-  color: #38bdf8 !important;
-  -webkit-text-fill-color: #38bdf8 !important;
-  line-height: 1.32 !important;
-  max-height: 2.68em !important;
-  overflow: hidden !important;
-  text-align: center !important;
-}
-
-.compass-flip-strip {
-  height: 68px !important;
-  min-height: 68px !important;
-  max-height: 68px !important;
-  width: 100% !important;
-  max-width: 920px !important;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 10px !important;
-  padding: 6px 14px !important;
-  margin: 8px auto 4px auto !important;
-  border-radius: 18px !important;
-  overflow: hidden !important;
-  box-sizing: border-box !important;
-}
-
-.compass-flip-viewport {
-  flex: 1 1 auto !important;
-  height: 54px !important;
-  min-height: 54px !important;
-  max-height: 54px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  overflow: hidden !important;
-  padding: 0 4px !important;
-  box-sizing: border-box !important;
-}
-
-.compass-flip-card {
-  width: 100% !important;
-  height: 54px !important;
-  min-height: 54px !important;
-  max-height: 54px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  overflow: hidden !important;
-  transform: none !important;
-  box-sizing: border-box !important;
-}
-
-.compass-flip-content {
-  width: 100% !important;
-  height: 52px !important;
-  min-height: 52px !important;
-  max-height: 52px !important;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: center !important;
-  align-content: center !important;
-  flex-wrap: wrap !important;
-  gap: 4px 10px !important;
-  padding: 4px 14px !important;
-  border-radius: 14px !important;
-  overflow: hidden !important;
-  box-sizing: border-box !important;
-  line-height: 1.28 !important;
-}
-
-/* Creator Card & Unified Dual Pill Zero-Bounce Stabilization */
-.creator-card {
-  min-height: 54px !important;
-  box-sizing: border-box !important;
-}
-
-.creator-typewriter-wrapper {
-  min-height: 32px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.cg-unified-dual-pill {
-  animation: dualBorderPulseV409 3.5s infinite ease-in-out !important;
-  transform: none !important;
-}
-
-/* --- C. COMPREHENSIVE MOBILE PHONE OPTIMIZATION (<= 1024px & <= 768px) --- */
-.cg-responsive-grid-4,
-.cg-responsive-grid-5 {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
-  gap: 12px !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-.cg-responsive-grid-3 {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)) !important;
-  gap: 12px !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-.cg-responsive-grid-2 {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
-  gap: 12px !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-@media (max-width: 1024px) {
-  .desktop-left-sidebar {
-    position: fixed !important;
-    left: -320px !important;
-    top: 0 !important;
-    bottom: 0 !important;
-    width: 290px !important;
-    max-width: 85vw !important;
-    height: 100vh !important;
-    transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    z-index: 10005 !important;
-  }
-  .desktop-left-sidebar.sidebar-open,
-  .desktop-left-sidebar.active {
-    left: 0 !important;
-  }
-  .sidebar-backdrop {
-    z-index: 10004 !important;
-  }
-  .sidebar-backdrop.active {
-    display: block !important;
-  }
-  .sidebar-close-btn {
-    display: inline-flex !important;
-  }
-  .portal-main-content {
+  .portal-main-content,
+  main.portal-main-content {
     margin-left: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
-    padding: 8px 10px 75px 10px !important;
+    padding: 2px 2px 68px 2px !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
   }
-  /* Keep Menu Button on Bottom-Left and Back-to-Top on Bottom-Right (Zero Overlap!) */
-  .mobile-menu-floating-btn {
-    display: inline-flex !important;
-    position: fixed !important;
-    bottom: 16px !important;
-    left: 14px !important;
-    right: auto !important;
-    z-index: 9998 !important;
-    padding: 9px 16px !important;
-    font-size: 0.84rem !important;
-  }
-  .floating-back-to-top {
-    bottom: 16px !important;
-    right: 14px !important;
-    left: auto !important;
-    z-index: 9998 !important;
-    padding: 8px 15px !important;
-    font-size: 0.80rem !important;
-  }
-}
 
-@media (max-width: 768px) {
-  /* Fixed height on mobile for typewriter and gateway flip box so 1-line and 2-line never shift */
-  .typing-banner-wrap {
-    height: 74px !important;
-    min-height: 74px !important;
-    max-height: 74px !important;
-    margin: 8px auto 10px auto !important;
+  /* Accessibility Toolbar (#intlAccessibilityToolbar) - Zero Text Clipping */
+  .intl-a11y-toolbar,
+  #intlAccessibilityToolbar {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 5px !important;
+    padding: 6px !important;
+    margin: 0 0 8px 0 !important;
+    border-radius: 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
-  .typing-banner-wrap .typing-container,
-  body:not(.is-home-page) .typing-container {
-    height: 66px !important;
-    min-height: 66px !important;
-    max-height: 66px !important;
-    padding: 4px 12px !important;
-    border-radius: 14px !important;
-    gap: 6px !important;
-    flex-wrap: nowrap !important;
-  }
-  .typing-banner-wrap .typing-text,
-  body:not(.is-home-page) .typing-text {
-    font-size: 0.80rem !important;
-    line-height: 1.28 !important;
-    max-height: 2.6em !important;
-  }
-  .control-panel .typing-container {
-    height: 58px !important;
-    min-height: 58px !important;
-    max-height: 58px !important;
-    padding: 2px 8px !important;
-  }
-  .control-panel .typing-text {
-    font-size: 0.80rem !important;
-    line-height: 1.28 !important;
-    max-height: 2.6em !important;
-  }
-  .compass-flip-strip {
-    height: 82px !important;
-    min-height: 82px !important;
-    max-height: 82px !important;
-    padding: 5px 8px !important;
-    gap: 6px !important;
-    border-radius: 14px !important;
-  }
-  .compass-flip-viewport,
-  .compass-flip-card,
-  .compass-flip-content {
-    height: 68px !important;
-    min-height: 68px !important;
-    max-height: 68px !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 3px !important;
-    padding: 2px 6px !important;
-    overflow: hidden !important;
-  }
-  .flip-part-title {
-    font-size: 0.78rem !important;
+  .intl-a11y-toolbar .a11y-btn,
+  #intlAccessibilityToolbar .a11y-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding: 6px 6px !important;
+    font-size: 0.72rem !important;
+    border-radius: 8px !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
     line-height: 1.22 !important;
     text-align: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
   }
-  .flip-gateway-badge {
-    font-size: 0.70rem !important;
-    line-height: 1.2 !important;
-    padding: 2px 10px !important;
+  .intl-a11y-toolbar .a11y-btn:nth-child(-n+3),
+  #intlAccessibilityToolbar .a11y-btn:nth-child(-n+3) {
+    grid-column: span 2 !important;
   }
-  .creator-card {
-    min-height: 84px !important;
-    padding: 10px 12px !important;
+  .intl-a11y-toolbar .a11y-btn:nth-child(n+4),
+  #intlAccessibilityToolbar .a11y-btn:nth-child(n+4) {
+    grid-column: span 3 !important;
   }
-  .creator-typewriter-wrapper {
-    min-height: 40px !important;
-    height: 40px !important;
-    font-size: 0.78rem !important;
+
+  /* Top Frame Banner - Relative on mobile, compact padding */
+  .portal-top-frame {
+    position: relative !important;
+    top: 0 !important;
+    padding: 10px 8px !important;
+    margin: 0 0 8px 0 !important;
+    border-radius: 12px !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .banner-title-tamil {
+    font-size: clamp(1.15rem, 5vw, 1.38rem) !important;
+    line-height: 1.28 !important;
+  }
+  .banner-tagline-aurora {
+    font-size: 0.74rem !important;
     line-height: 1.25 !important;
   }
-  /* Responsive Tables & Touch Scroll */
-  .table-container,
-  .table-responsive,
-  .table-wrapper,
-  .directory-table-container,
-  .college-table-wrap {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
+  .banner-english-row,
+  .banner-title-english,
+  .banner-slogan-english {
+    font-size: 0.62rem !important;
+    letter-spacing: 0.6px !important;
+    line-height: 1.2 !important;
   }
-  table th,
-  table td {
-    font-size: 0.80rem !important;
-    padding: 8px 8px !important;
+  .top-frame-side-btn,
+  .top-frame-side-btn.btn-home {
+    position: static !important;
+    transform: none !important;
+    padding: 5px 12px !important;
+    font-size: 0.76rem !important;
+    margin-top: 2px !important;
   }
-  .cg-responsive-grid-4,
-  .cg-responsive-grid-5,
-  .cg-responsive-grid-3,
-  .cg-responsive-grid-2 {
-    grid-template-columns: 1fr !important;
-    gap: 10px !important;
-  }
-  #bottomStudentQueryBtn,
-  #bottomPortalFeedbackBtn {
-    min-width: 0 !important;
-    width: 100% !important;
-    padding: 12px 16px !important;
-  }
-}
 
-/* --- D. UNIVERSAL PRINT STYLES (@media print) --- */
-@media print {
-  .desktop-left-sidebar,
-  .mobile-menu-floating-btn,
-  .floating-back-to-top,
-  .sidebar-backdrop,
-  .quick-nav-marquee-container,
-  .bottom-page-nav-bar,
-  .portal-bottom-action-hub,
-  .cg-portal-modal-overlay,
-  .no-print {
-    display: none !important;
-  }
-  html, body, .portal-layout-wrapper, .portal-main-content, .container, .portal-container {
-    margin: 0 !important;
-    padding: 0 !important;
+  /* Breadcrumb Bar - Full wrapping, zero right-edge overflow (image_4fc220 fix) */
+  .breadcrumb-bar,
+  .top-breadcrumb-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 6px !important;
+    padding: 8px 8px !important;
+    margin: 0 0 8px 0 !important;
+    border-radius: 10px !important;
     width: 100% !important;
     max-width: 100% !important;
-    background: #ffffff !important;
-    color: #000000 !important;
-    box-shadow: none !important;
+    box-sizing: border-box !important;
   }
-  .card, .section-card, .kural-box, .creator-card, .portal-footer, table, th, td {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-    box-shadow: none !important;
+  .breadcrumb-left-stack,
+  .breadcrumb-right-stack {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 5px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .nav-menu-btn,
+  .nav-menu-btn.btn-current-page,
+  .nav-menu-btn.btn-guidance-home,
+  .nav-menu-btn.btn-notice-link,
+  .breadcrumb-link,
+  .breadcrumb-current {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    font-size: 0.76rem !important;
+    line-height: 1.3 !important;
+    padding: 5px 9px !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+  }
+  .nav-menu-btn .btn-text {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    min-width: 0 !important;
+  }
+
+  /* Hero Banner & Section Cards - Compact padding to maximize card width */
+  .header-banner-wrap {
+    margin: 0 0 10px 0 !important;
+    border-radius: 12px !important;
+  }
+  .header-banner,
+  .header-banner.aurora-theme,
+  .hero-banner,
+  .crystal-hero-banner {
+    padding: 12px 10px !important;
+    border-radius: 10px !important;
+  }
+  .banner-main-title {
+    font-size: clamp(1.08rem, 4.6vw, 1.32rem) !important;
+    line-height: 1.32 !important;
+  }
+  .banner-sub-english {
+    font-size: 0.68rem !important;
+    letter-spacing: 0.6px !important;
+  }
+  .banner-desc {
+    font-size: 0.78rem !important;
+    line-height: 1.48 !important;
+  }
+
+  .content-card,
+  .section-card,
+  .section-container,
+  .card-section,
+  .feedback-section {
+    padding: 10px 8px !important;
+    margin: 0 0 12px 0 !important;
+    border-radius: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .section-header-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    margin-bottom: 10px !important;
+    padding-bottom: 8px !important;
+  }
+  .section-title {
+    font-size: 0.96rem !important;
+    line-height: 1.35 !important;
+    word-break: break-word !important;
+  }
+  .section-badge-pill {
+    font-size: 0.72rem !important;
+    padding: 3px 9px !important;
+    white-space: normal !important;
+  }
+
+  /* Universal Single-Column Grid Collapse with minmax(0, 1fr) (image_4fc1ff fix) */
+  .resource-grid,
+  .cards-grid,
+  .portal-grid,
+  .portals-grid,
+  .portal-links-grid,
+  .grid-container,
+  #cardsGrid,
+  .gateway-grid,
+  .exam-grid,
+  .courses-grid,
+  .colleges-grid,
+  .branch-grid,
+  .departments-grid,
+  .comparison-grid,
+  .features-grid,
+  .feature-grid-4,
+  .highlights-grid,
+  .iiser-highlights-grid,
+  .loan-grid,
+  .metrics-grid,
+  .metrics-bar,
+  .official-portals-showcase,
+  .quick-nav-grid,
+  .quota-features-grid,
+  .roadmap-grid,
+  .showcase-grid,
+  .sports-4year-grid,
+  .stats-grid,
+  .stats-matrix,
+  .steps-container,
+  .strategy-flex-grid,
+  .strategy-subject-grid,
+  .sub-grid,
+  .sub-grid-3,
+  .tanuvas-2yr-diploma-grid,
+  .tri-directory-grid,
+  .dual-directory-grid,
+  .v410-advisory-grid,
+  .action-buttons-grid,
+  .action-row-split,
+  .boundary-grid,
+  .calc-grid,
+  .calc-inputs,
+  .calc-inputs-grid,
+  .calc-inputs-row,
+  .cards-2col,
+  .cards-3col,
+  .cards-4col,
+  .cf-filters-panel,
+  .cf-inputs-grid,
+  .checklist-grid,
+  .core-7-degrees-grid,
+  .dab-grid,
+  .district-center-info-grid,
+  .fb-grid,
+  .finder-select-grid,
+  .focus-blueprint-grid,
+  .form-inputs-grid,
+  .four-boxes-fluid-grid,
+  .grid-2,
+  .grid-2col,
+  .grid-3,
+  .grid-4,
+  .helpline-bento-grid,
+  .hero-luxury-cards-grid,
+  .nav-button-menu-container,
+  .sq-grid,
+  .cg-responsive-grid-2,
+  .cg-responsive-grid-3,
+  .cg-responsive-grid-4,
+  .cg-responsive-grid-5 {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Also collapse any inline grid-template-columns inside sections/cards */
+  .content-card [style*="grid-template-columns"]:not(.manarkeni-stat-grid),
+  .section-card [style*="grid-template-columns"]:not(.manarkeni-stat-grid) {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Resource Cards & Portal Cards - Strict 100% width & zero horizontal overflow */
+  .resource-card,
+  .card,
+  .portal-card,
+  .exam-card,
+  .course-card,
+  .college-card,
+  .bento-card,
+  .feature-card,
+  .info-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 12px 10px !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .resource-card *,
+  .content-card *,
+  .section-card * {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .resource-card-header {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  .resource-card-icon {
+    font-size: 1.5rem !important;
+    padding: 6px !important;
+    flex-shrink: 0 !important;
+  }
+  .resource-card-title {
+    font-size: 0.96rem !important;
+    line-height: 1.32 !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+  .resource-card-sub {
+    font-size: 0.68rem !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+  .resource-card-desc {
+    font-size: 0.82rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 10px !important;
+  }
+  .resource-card-banner-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 6px 8px !important;
+    margin-bottom: 10px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  .resource-card-banner-img img,
+  .resource-card-banner-img svg {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 76px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+  .action-btn {
+    padding: 9px 10px !important;
+    font-size: 0.82rem !important;
+    white-space: normal !important;
+    line-height: 1.25 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Compact Floating Bottom Buttons so they don't cover bottom content */
+  .mobile-menu-floating-btn,
+  .mobile-sidebar-toggle {
+    bottom: 10px !important;
+    left: 8px !important;
+    padding: 6px 12px !important;
+    font-size: 0.75rem !important;
+    border-radius: 999px !important;
+  }
+  .floating-back-to-top {
+    bottom: 10px !important;
+    right: 8px !important;
+    padding: 6px 12px !important;
+    font-size: 0.74rem !important;
+    border-radius: 999px !important;
   }
 }
-</style></head>
-<body class="">
+</style>
+
+</head>
+<body>
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
 <button class="mobile-menu-floating-btn" id="mobileMenuFloatingBtn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
 <span style="font-size: 1.15rem; line-height: 1;">☰</span>
@@ -6677,7 +6417,7 @@ body:not(.is-home-page) .typing-text {
 <a class="sidebar-main-btn" href="06_student_support.html">
 <span class="icon">🧮</span>
 <span class="btn-text-group">
-<span class="menu-ta">கட்-ஆஃப் கருவிகள் &amp; உதவி மையம்</span>
+<span class="menu-ta">கட்-ஆஃப் &amp; மாணவர் உதவி</span>
 <span class="menu-en">CUTOFF TOOLS &amp; STUDENT SUPPORT</span>
 </span>
 </a>
@@ -6737,14 +6477,55 @@ body:not(.is-home-page) .typing-text {
 <!-- Animated Student-Attractive Hero Banner (Compact & Sleek) -->
 <div class="header-banner-wrap">
 <header class="header-banner">
-<h1 class="banner-main-title">உயர்கல்வி நிறுவனங்கள் &amp; பல்கலைக்கழகங்கள் முழுமையான அடைவு</h1>
-<p class="banner-desc">
-      தமிழ்நாடு மற்றும் இந்திய அளவிலான <strong>820+ தலைசிறந்த அரசு மற்றும் முன்னணி உயர்கல்வி நிறுவனங்களின்</strong> சேர்க்கை முறை, நுழைவுத்தேர்வு, இருப்பிடம் மற்றும் அதிகாரப்பூர்வ இணையதளங்களின் ஒருங்கிணைந்த தொகுப்பு.
-    </p>
-</header>
+<!-- Animated Glow Sparkle Badge (Year 2026 removed) -->
+<div class="banner-top-badge">
+<span class="badge-pulse-dot"></span>
+<span class="badge-icon">🏛️</span>
+<span class="badge-text">அகில இந்திய &amp; தமிழக உயர்கல்வி அடைவுகள்</span>
+<span class="badge-sparkle">✨ 16 விரிவான கையேடுகள்</span>
 </div>
-<div class="typing-banner-wrap no-print" id="institutesHighlightsRibbon" style="text-align: center; margin: 14px auto 16px auto;">
-<div class="typing-container"><span aria-label="தகவல்கள்" class="typing-badge"><span class="sparkle-icon">✨</span></span><span class="typing-text" id="heroRibbonTypingText">🩺 மருத்துவம் (AIIMS, JIPMER, 36 அரசு மருத்துவக் கல்லூரிகள்) &amp; துணை மருத்துவக் கல்வி நிறுவனங்களின் முழுப் பட்டியல்!</span><span class="typing-cursor">|</span></div>
+<!-- Crystal Clear Glowing Main Title (Year 2026 removed) -->
+<h1 class="banner-main-title">
+      உயர் கல்வி நிறுவனங்களின் முழு அடைவுத் தொகுப்பு
+    </h1>
+<!-- Prominent Subtitle Highlighting All Major Fields -->
+<div class="banner-fields-pill-row">
+<span class="field-pill pill-med">🩺 மருத்துவம்</span>
+<span class="field-pill pill-eng">⚙️ பொறியியல்</span>
+<span class="field-pill pill-sci">🔬 ஆராய்ச்சி</span>
+<span class="field-pill pill-cuet">🏛️ மத்திய பல்கலை</span>
+<span class="field-pill pill-law">⚖️ சட்டம்</span>
+<span class="field-pill pill-agri">🌾 வேளாண்மை</span>
+<span class="field-pill pill-arts">📚 கலை &amp; அறிவியல்</span>
+<span class="field-pill pill-poly">🛠️ பாலிடெக்னிக் &amp; ITI</span>
+</div>
+<!-- Informative & Student-Friendly Subtitle -->
+<p class="banner-desc">
+      அகில இந்திய மற்றும் தமிழ்நாடு அளவிலான <strong>1,200-க்கும் மேற்பட்ட</strong> முன்னணி அரசு &amp; பல்கலைக்கழகங்களின் முழு விவரங்கள், இடங்கள், சேர்க்கை விதிமுறைகள் மற்றும் <strong>16 பிரத்யேக கூகுள் தாள்கள்</strong> (Landscape PDF &amp; Excel பதிவிறக்க வசதியுடன்).
+    </p>
+<!-- Compact Interactive Highlights Ribbon -->
+<div class="banner-features-ribbon">
+<div class="ribbon-item">
+<span class="ribbon-icon">📊</span>
+<span>16 Google Sheets நேரடிப் பார்வை</span>
+</div>
+<div class="ribbon-dot">•</div>
+<div class="ribbon-item">
+<span class="ribbon-icon">📄</span>
+<span>Landscape A4 PDF பதிவிறக்கம்</span>
+</div>
+<div class="ribbon-dot">•</div>
+<div class="ribbon-item">
+<span class="ribbon-icon">📗</span>
+<span>Excel (.xlsx) கோப்புகள்</span>
+</div>
+<div class="ribbon-dot">•</div>
+<div class="ribbon-item">
+<span class="ribbon-icon">🎯</span>
+<span>7.5% அரசுப்பள்ளி இடஒதுக்கீடு</span>
+</div>
+</div>
+</header>
 </div><div aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை" class="quick-nav-marquee-container no-print">
 <div class="marquee-static-label" title="விரைவு வழிசெலுத்தல்">
 <span class="pulse-icon">⚡</span>
@@ -6773,192 +6554,6 @@ body:not(.is-home-page) .typing-text {
 </div>
 </div>
 <!-- Table Container -->
-
-<section class="section-card" id="sec-sivagangai-neighbor-filter" style="background: #ffffff; border: 2px solid #d97706; border-top: 5px solid #d97706; border-radius: 16px; padding: 20px 22px; margin: 22px 0; box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);">
-<div style="display: inline-flex; align-items: center; gap: 8px; background: #fffbeb; border: 1px solid #f59e0b; color: #b45309; font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 999px; margin-bottom: 8px;">
-    📍 சிவகங்கை மற்றும் அண்டை மாவட்ட அரசு &amp; உதவிபெறும் கல்வி நிறுவனங்கள் அடைவு
-  </div>
-<h2 style="font-size: clamp(1.15rem, 1.8vw, 1.42rem); font-weight: 900; color: #0f172a; margin: 0 0 8px 0;">
-    🏛️ சிவகங்கை, காரைக்குடி மற்றும் அண்டை மாவட்டக் கல்லூரிகள் உடனடி வடிகட்டி (Regional College Finder)
-  </h2>
-<p style="font-size: 0.86rem; color: #334155; line-height: 1.6; margin-bottom: 12px;">
-    சிவகங்கை மாவட்ட மாணவர்கள் தங்கள் சொந்த மாவட்டத்திலும், அருகிலுள்ள மதுரை, ராமநாதபுரம், புதுக்கோட்டை, திருச்சி மாவட்டங்களிலும் உள்ள <strong>அரசுப் பல்கலைக்கழகங்கள், மருத்துவம், பொறியியல், வேளாண்மை, சட்டம், பாலிடெக்னிக் மற்றும் கலை அறிவியல் கல்லூரிகளை</strong> மாவட்ட வாரியாக வடிகட்டிப் பார்க்கலாம்:
-  </p>
-<!-- District Filter Pills & Search -->
-<div class="no-print" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; background: #f8fafc; padding: 10px 12px; border-radius: 12px; border: 1.5px solid #e2e8f0;">
-<div style="display: flex; flex-wrap: wrap; gap: 6px;">
-<button class="svg-dist-btn active" onclick="filterRegionalColleges('ALL', this)" type="button">🌐 அனைத்தும் (18)</button>
-<button class="svg-dist-btn" onclick="filterRegionalColleges('சிவகங்கை', this)" type="button">🏛️ சிவகங்கை &amp; காரைக்குடி (11)</button>
-<button class="svg-dist-btn" onclick="filterRegionalColleges('மதுரை', this)" type="button">🏯 மதுரை (3)</button>
-<button class="svg-dist-btn" onclick="filterRegionalColleges('ராமநாதபுரம்', this)" type="button">🌊 ராமநாதபுரம் &amp; புதுக்கோட்டை (2)</button>
-<button class="svg-dist-btn" onclick="filterRegionalColleges('திருச்சி', this)" type="button">🎓 திருச்சி (2)</button>
-</div>
-<input id="svgRegionalSearchInput" oninput="searchRegionalColleges(this.value)" placeholder="கல்லூரி / ஊர் / படிப்பு தேடுக..." style="padding: 7px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.84rem; font-weight: 700; min-width: 210px;" type="search"/>
-</div>
-<div class="table-container" style="overflow-x: auto;">
-<table id="svgRegionalCollegesTable" style="width: 100%; border-collapse: collapse; font-size: 0.83rem; text-align: left;">
-<thead>
-<tr style="background: linear-gradient(135deg, #1f0d02 0%, #92400e 100%); color: #fef08a;">
-<th style="padding: 9px 10px; border: 1px solid #cbd5e1;">கல்லூரி / பல்கலைக்கழகத்தின் பெயர்</th>
-<th style="padding: 9px 10px; border: 1px solid #cbd5e1;">இடம் / மாவட்டம்</th>
-<th style="padding: 9px 10px; border: 1px solid #cbd5e1;">வகை &amp; முதன்மைப் படிப்புகள்</th>
-<th style="padding: 9px 10px; border: 1px solid #cbd5e1;">சேர்க்கை முறை &amp; விடுதி வசதி</th>
-</tr>
-</thead>
-<tbody>
-<tr data-dist="சிவகங்கை">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">🏛️ அழகப்பா பல்கலைக்கழகம் (Alagappa University - NAAC A++)</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">காரைக்குடி, சிவகங்கை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">மாநில அரசுப் பல்கலைக்கழகம் • B.Sc., B.Com., B.Ed., B.P.Ed., M.Sc., MBA, ஆராய்ச்சிப் படிப்புகள்</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">+2 மதிப்பெண் / பல்கலை நுழைவுத் தேர்வு • 🏠 இருபாலர் விடுதி உண்டு</td>
-</tr>
-<tr data-dist="சிவகங்கை">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">🔬 மத்திய மின்வேதியியல் ஆராய்ச்சி நிறுவனம் (CSIR-CECRI)</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">காரைக்குடி, சிவகங்கை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">மத்திய அரசு நிறுவனம் • <strong>B.Tech. Chemical &amp; Electrochemical Engineering</strong></td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">TNEA பொறியியல் கலந்தாய்வு (+2 கட்-ஆஃப்) • 🏠 விடுதி வசதி உண்டு</td>
-</tr>
-<tr data-dist="சிவகங்கை">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">🏥 அரசு மருத்துவக் கல்லூரி மற்றும் மருத்துவமனை, சிவகங்கை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">சிவகங்கை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">அரசு மருத்துவம் • <strong>MBBS (100 இடங்கள்)</strong>, B.Sc. துணை மருத்துவப் படிப்புகள் &amp; டிப்ளமோ</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">NEET UG (MBBS) &amp; DME (+2 கட்-ஆஃப்) • 🏠 இருபாலர் விடுதி உண்டு</td>
-</tr>
-<tr data-dist="சிவகங்கை">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">⚙️ அழகப்ப செட்டியார் அரசு பொறியியல் மற்றும் தொழில்நுட்பக் கல்லூரி (ACCET)</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">காரைக்குடி, சிவகங்கை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">அரசு தன்னாட்சி பொறியியல் • B.E. Civil, Mech, EEE, ECE, CSE (ஆண்டுக் கட்டணம் ~₹9,500)</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">TNEA கலந்தாய்வு (7.5% ஒதுக்கீடு உட்பட) • 🏠 இருபாலர் விடுதி உண்டு</td>
-</tr>
-<tr data-dist="சிவகங்கை">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">⚖️ அரசு சட்டக் கல்லூரி, காரைக்குடி</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">காரைக்குடி, சிவகங்கை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">அரசு சட்டக் கல்லூரி • 5-ஆண்டு B.A.LL.B. மற்றும் 3-ஆண்டு LL.B. சட்டப் படிப்புகள்</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">TNDALU ஒற்றைச் சாளர கலந்தாய்வு (+2 மதிப்பெண்) • 🏠 விடுதி வசதி</td>
-</tr>
-<tr data-dist="சிவகங்கை">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">🌾 செட்டிநாடு வேளாண்மைக் கல்லூரி &amp; ஆராய்ச்சி நிலையம் (TNAU உறுப்புக் கல்லூரி)</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">செட்டிநாடு (காரைக்குடி), சிவகங்கை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">அரசு வேளாண் கல்லூரி • <strong>B.Sc. (Hons) Agriculture</strong></td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">TNAU கலந்தாய்வு (+2 கட்-ஆஃப்) • 🏠 இருபாலர் விடுதி உண்டு</td>
-</tr>
-<tr data-dist="சிவகங்கை">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">🏫 மன்னர் துரைசிங்கம் அரசு கலைக் கல்லூரி (RDM Govt Arts College)</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">சிவகங்கை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">அரசு கலை &amp; அறிவியல் • B.A., B.Sc. (Maths, Physics, Chem, CS, Bot, Zoo), B.Com, BBA</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">TNGASA ஒற்றைச் சாளர சேர்க்கை (tngasa.in) • 🏠 பிற்படுத்தப்பட்டோர்/ஆதிதிராவிடர் நல விடுதி</td>
-</tr>
-<tr data-dist="சிவகங்கை">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">🏫 அழகப்பா அரசு கலைக் கல்லூரி, காரைக்குடி</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">காரைக்குடி, சிவகங்கை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">அரசு கலை &amp; அறிவியல் • B.A., B.Sc. (Geology, CS, Physics, Chemistry, Maths), B.Com, BBA</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">TNGASA சேர்க்கை • 🏠 விடுதி வசதி உண்டு</td>
-</tr>
-<tr data-dist="சிவகங்கை">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">🏫 அரசு மகளிர் கலைக் கல்லூரி, சிவகங்கை &amp; அரசு கலைக் கல்லூரி, பூலாங்குறிச்சி / திருப்பத்தூர் / தேவகோட்டை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">சிவகங்கை / திருப்பத்தூர் / தேவகோட்டை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">அரசு கலை &amp; அறிவியல் கல்லூரிகள் • B.A., B.Sc., B.Com., BCA (கட்டணமில்லா இளங்கலைக் கல்வி)</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">TNGASA ஒற்றைச் சாளர சேர்க்கை • புதுமைப் பெண் / தமிழ்ப் புதல்வன் ₹1,000</td>
-</tr>
-<tr data-dist="சிவகங்கை">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">🛠️ அழகப்பா அரசு பாலிடெக்னிக் கல்லூரி (காரைக்குடி) &amp; அரசு ITI (சிவகங்கை / காரைக்குடி)</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">காரைக்குடி &amp; சிவகங்கை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">அரசு தொழில்நுட்பக் கல்வி • 3-ஆண்டு டிப்ளமோ &amp; ITI தொழிற்பயிற்சிகள்</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">10th / +2 மதிப்பெண் சேர்க்கை • 🏠 விடுதி வசதி உண்டு</td>
-</tr>
-<tr data-dist="சிவகங்கை">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">👩‍🏫 மாவட்ட ஆசிரியர் கல்வி மற்றும் பயிற்சி நிறுவனம் (DIET), காளையார்கோவில்</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">காளையார்கோவில், சிவகங்கை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">அரசு ஆசிரியர் பயிற்சி • 2-ஆண்டு D.El.Ed. தொடக்கக் கல்வி ஆசிரியர் பட்டயப் படிப்பு</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">SCERT ஆன்லைன் கலந்தாய்வு (+2 மதிப்பெண்)</td>
-</tr>
-<tr data-dist="மதுரை">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">🏥 மதுரை மருத்துவக் கல்லூரி (MMC) &amp; AIIMS மதுரை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">மதுரை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">மத்திய/மாநில அரசு மருத்துவம் • MBBS (250 + 50 இடங்கள்), B.Pharm, B.Sc. Nursing</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">NEET UG &amp; DME கலந்தாய்வு • 🏠 விடுதி உண்டு</td>
-</tr>
-<tr data-dist="மதுரை">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">🌾 வேளாண்மைக் கல்லூரி மற்றும் ஆராய்ச்சி நிலையம் (AC&amp;RI - TNAU), மதுரை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">மதுரை (ஒத்தக்கடை)</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">அரசு வேளாண் கல்லூரி • B.Sc. (Hons) Agriculture &amp; B.Sc. Community Science</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">TNAU கலந்தாய்வு • 🏠 இருபாலர் விடுதி உண்டு</td>
-</tr>
-<tr data-dist="மதுரை">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">⚙️ தியாகராஜர் பொறியியல் கல்லூரி (TCE - அரசு உதவிபெறும்) &amp; அரசு சட்டக் கல்லூரி, மதுரை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">மதுரை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">B.E. / B.Tech, B.Arch (NATA) மற்றும் 5-ஆண்டு B.A.LL.B சட்டப் படிப்புகள்</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">TNEA / TNDALU கலந்தாய்வு • 🏠 விடுதி உண்டு</td>
-</tr>
-<tr data-dist="ராமநாதபுரம்">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">🏥 அரசு மருத்துவக் கல்லூரி, ராமநாதபுரம் &amp; சேதுபதி அரசு கலைக் கல்லூரி</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">ராமநாதபுரம்</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">MBBS, துணை மருத்துவம், B.Sc. Marine Biology, B.A., B.Com</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">NEET UG / TNGASA • 🏠 விடுதி வசதி உண்டு</td>
-</tr>
-<tr data-dist="ராமநாதபுரம்">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">🏥 அரசு மருத்துவக் கல்லூரி, புதுக்கோட்டை &amp; மன்னர் கல்லூரி (அரசு கலை), புதுக்கோட்டை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">புதுக்கோட்டை</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">MBBS (150 இடங்கள்), B.Sc. Nursing, B.A., B.Sc., B.Com</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">NEET UG / TNGASA • 🏠 விடுதி வசதி உண்டு</td>
-</tr>
-<tr data-dist="திருச்சி">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">🏛️ NIT திருச்சி, IIIT திருச்சி &amp; தமிழ்நாடு தேசிய சட்டப் பல்கலைக்கழகம் (TNNLU)</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">திருச்சிராப்பள்ளி</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">தேசிய நிறுவனங்கள் • B.Tech, B.Arch, 4-ஆண்டு ITEP B.Sc.B.Ed. &amp; 5-ஆண்டு B.A.LL.B (CLAT)</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">JEE Main / NCET / CLAT • 🏠 வளாக விடுதி உண்டு</td>
-</tr>
-<tr data-dist="திருச்சி">
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1; font-weight: 800; color: #0f172a;">⚙️ அரசு பொறியியல் கல்லூரி (GCE Srirangam) &amp; அன்பில் தர்மலிங்கம் வேளாண்மைக் கல்லூரி (TNAU)</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">திருச்சிராப்பள்ளி</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">B.E. பொறியியல் மற்றும் B.Sc. (Hons) Agriculture / Horticulture</td>
-<td style="padding: 9px 10px; border: 1px solid #cbd5e1;">TNEA / TNAU கலந்தாய்வு • 🏠 விடுதி வசதி உண்டு</td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<style>
-.svg-dist-btn {
-  background: #ffffff;
-  border: 1.5px solid #cbd5e1;
-  color: #1e293b;
-  font-family: inherit;
-  font-size: 0.78rem;
-  font-weight: 800;
-  padding: 6px 12px;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.svg-dist-btn:hover, .svg-dist-btn.active {
-  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
-  border-color: #b45309;
-  color: #ffffff;
-}
-</style>
-<script>
-let currentRegionalDist = 'ALL';
-function filterRegionalColleges(dist, btnEl) {
-  currentRegionalDist = dist;
-  document.querySelectorAll('.svg-dist-btn').forEach(b => b.classList.remove('active'));
-  if (btnEl) btnEl.classList.add('active');
-  applyRegionalCollegeFilter();
-}
-function searchRegionalColleges(val) {
-  applyRegionalCollegeFilter();
-}
-function applyRegionalCollegeFilter() {
-  const q = (document.getElementById('svgRegionalSearchInput')?.value || '').trim().toLowerCase();
-  const rows = document.querySelectorAll('#svgRegionalCollegesTable tbody tr');
-  rows.forEach(r => {
-    const rDist = r.getAttribute('data-dist') || '';
-    const matchDist = (currentRegionalDist === 'ALL') || (rDist === currentRegionalDist);
-    const matchText = !q || r.textContent.toLowerCase().includes(q);
-    r.style.display = (matchDist && matchText) ? '' : 'none';
-  });
-}
-</script>
 <div class="table-container">
 <div class="table-top-bar">
 <div class="table-top-title">
@@ -7651,7 +7246,7 @@ function applyRegionalCollegeFilter() {
 <!-- இணையதள வடிவமைப்பு மற்றும் வழிகாட்டல் ஒருங்கிணைப்பாளர் விவரம் -->
 <div class="creator-card" style="justify-content: center !important; text-align: center !important;">
 <div class="creator-typewriter-wrapper" style="justify-content: center !important; text-align: center !important; display: inline-flex !important; align-items: center !important;">
-<span class="creator-typewriter-target" id="creatorTypewriterTarget" style="text-align: center !important;"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role"> பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role"> Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
+<span class="creator-typewriter-target" id="creatorTypewriterTarget" style="text-align: center !important;"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role">, பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role">, Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
 </div>
 <a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
 <span class="phone-icon">📱</span>
@@ -7809,7 +7404,7 @@ function applyRegionalCollegeFilter() {
 function toggleSidebarMenu() {
   var sidebar = document.getElementById('desktopLeftSidebar');
   var backdrop = document.getElementById('sidebarBackdrop');
-  if (sidebar) { sidebar.classList.toggle('sidebar-open'); sidebar.classList.toggle('active'); }
+  if (sidebar) sidebar.classList.toggle('sidebar-open');
   if (backdrop) backdrop.classList.toggle('active');
 }
 
@@ -7897,9 +7492,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const creatorSegments = [
     { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
     { text: "கூ. பூவலிங்கம்", tag: "span", class: "creator-name-ta" },
-    { text: " பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
+    { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
     { text: "K. Poovalingam", tag: "span", class: "creator-name-en" },
-    { text: " Deputy Inspector of Schools", tag: "span", class: "creator-role" }
+    { text: ", Deputy Inspector of Schools", tag: "span", class: "creator-role" }
   ];
 
   function runCreatorTypewriter() {
@@ -8129,70 +7724,6 @@ if (document.readyState === 'loading') {
     fbForm.addEventListener('submit', handleEnquiryFormSubmit);
   }
 }
-</script>
-<script id="script-heroRibbonTypingText">
-(function() {
-  var phrases = ["🩺 மருத்துவம் (AIIMS, JIPMER, 36 அரசு மருத்துவக் கல்லூரிகள்) & துணை மருத்துவக் கல்வி நிறுவனங்களின் முழுப் பட்டியல்!", "⚙️ பொறியியல் & தொழில்நுட்பம்: IITs, NITs, IIITs, அண்ணா பல்கலைக்கழக வளாகங்கள் & அரசுப் பொறியியல் கல்லூரிகள்!", "🌾 வேளாண்மை (TNAU), கால்நடை (TANUVAS), மீன்வளம் (TNJFU), சட்டம் (TNDALU/NLU) & கடல்சார் (IMU) பல்கலைக்கழகங்கள்!", "🎨 கலை & அறிவியல் (164+ TNGASA அரசுக் கல்லூரிகள்), மத்தியப் பல்கலைக்கழகங்கள் (CUTN, PU) & ஆராய்ச்சி நிறுவனங்கள் (IISER, IISc)!", "📍 சிவகங்கை மற்றும் தென் மாவட்ட மாணவர்களுக்கான அருகாமையிலுள்ள அரசுக் கல்லூரிகள் & உடனடித் தேடல் வசதி!"];
-  var target = document.getElementById('heroRibbonTypingText');
-  if (!target || !phrases.length) return;
-  var pIdx = 0, cIdx = 0, isDel = false;
-  function tick() {
-    var current = phrases[pIdx];
-    if (isDel) {
-      cIdx--;
-      target.textContent = current.substring(0, cIdx);
-    } else {
-      cIdx++;
-      target.textContent = current.substring(0, cIdx);
-    }
-    var speed = isDel ? 18 : 34;
-    if (!isDel && cIdx === current.length) {
-      speed = 2400;
-      isDel = true;
-    } else if (isDel && cIdx === 0) {
-      isDel = false;
-      pIdx = (pIdx + 1) % phrases.length;
-      speed = 350;
-    }
-    setTimeout(tick, speed);
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', tick);
-  } else {
-    tick();
-  }
-})();
-</script>
-<button aria-label="பக்கத்தின் மேலே செல்" class="floating-back-to-top" id="floatingBackToTop" title="பக்கத்தின் மேலே செல்" type="button">
-<span class="floating-btn-arrow">▲</span>
-<span class="floating-btn-text">மேலே செல்</span>
-</button>
-<script id="universalFloatingBttScript">
-(function() {
-  function initFloatingBtt() {
-    var btt = document.getElementById('floatingBackToTop');
-    if (!btt) return;
-    function checkScroll() {
-      var sy = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      if (sy > 100) {
-        btt.classList.add('visible');
-      } else {
-        btt.classList.remove('visible');
-      }
-    }
-    window.addEventListener('scroll', checkScroll, { passive: true });
-    btt.addEventListener('click', function(e) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    checkScroll();
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initFloatingBtt);
-  } else {
-    initFloatingBtt();
-  }
-})();
 </script>
 </body>
 </html>

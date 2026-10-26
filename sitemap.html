@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>உயர்கல்வி வழிகாட்டி — சுருக்கமான பாய்வு வரைபடம் (Flow Chart Site Map v4.25)</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=JetBrains+Mono:wght@600;700&family=Noto+Sans+Tamil:wght@500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg-mesh: radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.12) 0px, transparent 50%),
+             radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.14) 0px, transparent 50%),
+             linear-gradient(180deg, #f1f5f9 0%, #eef2ff 50%, #f8fafc 100%);
+  --line-color: #6366f1;
+}
+body.theme-dark {
+  --bg-mesh: radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.25) 0px, transparent 50%),
+             radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.22) 0px, transparent 50%),
+             #070b14;
+  --line-color: #38bdf8;
+  color: #f8fafc;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  width: 100%; overflow-x: hidden;
+  font-family: 'Noto Sans Tamil', 'Inter', sans-serif;
+  background: var(--bg-mesh);
+  color: #0f172a;
+  line-height: 1.5;
+}
+
+.page-wrapper {
+  max-width: 1440px; margin: 0 auto; padding: 14px clamp(10px, 2vw, 24px) 40px;
+}
+
+/* Top Control Bar */
+.top-toolbar {
+  background: linear-gradient(90deg, #0b1120 0%, #1e1b4b 50%, #0b1120 100%);
+  border: 1.5px solid rgba(56, 189, 248, 0.5);
+  border-radius: 14px; padding: 8px 14px; margin-bottom: 12px;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.25);
+}
+.toolbar-group { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.tool-btn {
+  appearance: none; background: rgba(30, 41, 59, 0.9); color: #f8fafc;
+  border: 1px solid rgba(148, 163, 184, 0.4); border-radius: 8px;
+  padding: 6px 12px; font-family: inherit; font-size: 0.76rem; font-weight: 800;
+  cursor: pointer; display: inline-flex; align-items: center; gap: 5px; transition: all 0.18s ease;
+}
+.tool-btn:hover { background: #facc15; color: #090d16; border-color: #fff; transform: translateY(-1px); }
+.tool-btn.active { background: linear-gradient(135deg, #4f46e5 0%, #0284c7 100%); color: #fef08a; border-color: #38bdf8; }
+.tool-btn.btn-pdf { background: linear-gradient(135deg, #059669 0%, #047857 100%); border-color: #6ee7b7; color: #fef08a; }
+.tool-btn.btn-png { background: linear-gradient(135deg, #d97706 0%, #b45309 100%); border-color: #fde68a; color: #fff; }
+
+/* Header Banner */
+.header-banner {
+  background: linear-gradient(135deg, #0b1120 0%, #1e1b4b 50%, #0f2942 100%);
+  border: 2px solid #38bdf8; border-radius: 16px;
+  padding: 14px 20px; text-align: center; margin-bottom: 18px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.3);
+}
+.header-banner h1 {
+  font-size: clamp(1.22rem, 2vw, 1.65rem); font-weight: 900;
+  background: linear-gradient(180deg, #ffffff 0%, #fef08a 50%, #fbbf24 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.header-banner p {
+  font-size: 0.82rem; font-weight: 700; color: #7dd3fc; margin-top: 2px;
+}
+
+/* ============================================================================
+   FLOW CHART ARCHITECTURE (TOP-DOWN VISUAL FLOW)
+   ============================================================================ */
+.flowchart-stage {
+  display: flex; flex-direction: column; align-items: center; width: 100%;
+}
+
+/* Connector Lines & Arrows */
+.v-line {
+  width: 3.5px; height: 22px; background: var(--line-color); position: relative;
+}
+.v-arrow {
+  width: 0; height: 0;
+  border-left: 7px solid transparent; border-right: 7px solid transparent;
+  border-top: 9px solid var(--line-color);
+  margin-bottom: 2px;
+}
+.level-pill {
+  background: #1e1b4b; color: #fef08a; border: 1.5px solid #38bdf8;
+  font-size: 0.70rem; font-weight: 900; padding: 2px 12px; border-radius: 999px;
+  letter-spacing: 0.5px; margin-bottom: 6px;
+}
+
+/* LEVEL 1: ROOT NODE */
+.root-node-box {
+  background: linear-gradient(135deg, #0b1120 0%, #1e3a8a 50%, #0284c7 100%);
+  color: #ffffff; border: 2.5px solid #facc15; border-radius: 16px;
+  padding: 14px 26px; text-align: center; max-width: 680px; width: 100%;
+  box-shadow: 0 12px 30px rgba(2, 132, 199, 0.35);
+  cursor: pointer; transition: transform 0.2s ease;
+}
+.root-node-box:hover { transform: scale(1.015); }
+.root-node-title { font-size: 1.15rem; font-weight: 900; color: #fef08a; }
+.root-node-sub { font-size: 0.80rem; color: #e0f2fe; font-weight: 700; margin-top: 2px; }
+.code-badge {
+  display: inline-block; font-family: 'JetBrains Mono', monospace;
+  font-size: 0.70rem; font-weight: 700; background: rgba(15, 23, 42, 0.85);
+  color: #38bdf8; border: 1px solid #7dd3fc; padding: 1px 8px; border-radius: 6px; margin-top: 4px;
+}
+
+/* LEVEL 2: HOME SMART TOOLS ROW (4 NODES) */
+.home-tools-hbar {
+  width: 78%; height: 3.5px; background: var(--line-color); border-radius: 2px;
+}
+.home-tools-grid {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; width: 100%; max-width: 1180px;
+}
+.tool-flow-col { display: flex; flex-direction: column; align-items: center; }
+.tool-flow-card {
+  width: 100%; background: #ffffff; border: 2px solid #38bdf8; border-top: 4px solid #0284c7;
+  border-radius: 12px; padding: 10px 12px; text-align: center;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08); cursor: pointer; transition: all 0.2s ease;
+}
+body.theme-dark .tool-flow-card { background: #0f172a; color: #f8fafc; }
+.tool-flow-card:hover { transform: translateY(-2px); border-color: #4f46e5; }
+.tool-flow-title { font-size: 0.84rem; font-weight: 900; color: #0f172a; }
+body.theme-dark .tool-flow-title { color: #fef08a; }
+.tool-flow-desc { font-size: 0.72rem; color: #475569; font-weight: 600; margin-top: 3px; }
+body.theme-dark .tool-flow-desc { color: #cbd5e1; }
+
+/* LEVEL 3 & 4: 7 MACRO GATEWAYS BRANCHING INTO SUB-PAGES */
+.gateways-hbar {
+  width: 92%; height: 4px;
+  background: linear-gradient(90deg, #4f46e5, #059669, #d97706, #7c3aed, #0891b2, #e11d48, #2563eb);
+  border-radius: 4px;
+}
+.gateways-7-grid {
+  display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; width: 100%; align-items: start;
+}
+.gw-column {
+  display: flex; flex-direction: column; align-items: center; width: 100%;
+}
+.gw-node-header {
+  width: 100%; border-radius: 13px; padding: 10px 8px; text-align: center;
+  color: #ffffff; cursor: pointer; box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+  border: 2px solid rgba(255, 255, 255, 0.65); transition: transform 0.2s ease;
+}
+.gw-node-header:hover { transform: translateY(-2px); }
+.gw-num-tag {
+  font-size: 0.66rem; font-weight: 900; background: rgba(0, 0, 0, 0.35);
+  padding: 1px 7px; border-radius: 999px; display: inline-block; margin-bottom: 3px;
+}
+.gw-node-title { font-size: 0.84rem; font-weight: 900; line-height: 1.25; }
+.gw-node-file {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.63rem; color: #fef08a;
+  margin-top: 3px; display: block; word-break: break-all;
+}
+
+/* Vertical Spine & Sub-page Leaf Nodes inside each Gateway Column */
+.gw-leaves-stack {
+  width: 100%; display: flex; flex-direction: column; gap: 6px;
+  padding-top: 8px; padding-left: 10px;
+  border-left: 3px solid #94a3b8; margin-left: 8px;
+}
+.leaf-node-box {
+  background: #ffffff; border: 1.5px solid #cbd5e1; border-left: 4px solid #4f46e5;
+  border-radius: 9px; padding: 6px 8px; position: relative;
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.05); cursor: pointer;
+  transition: all 0.16s ease;
+}
+body.theme-dark .leaf-node-box { background: #1e293b; border-color: #334155; color: #f8fafc; }
+.leaf-node-box::before {
+  content: ""; position: absolute; left: -13px; top: 50%;
+  width: 10px; height: 2.5px; background: #94a3b8;
+}
+.leaf-node-box:hover {
+  transform: translateX(3px); border-color: #0284c7;
+  box-shadow: 0 6px 14px rgba(2, 132, 199, 0.15);
+}
+.leaf-title { font-size: 0.74rem; font-weight: 800; color: #0f172a; line-height: 1.25; }
+body.theme-dark .leaf-title { color: #f1f5f9; }
+.leaf-code {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; font-weight: 700;
+  color: #0284c7; display: block; margin-top: 1px;
+}
+body.theme-dark .leaf-code { color: #38bdf8; }
+
+/* ============================================================================
+   VIEW 2: HORIZONTAL LEFT-TO-RIGHT COMPACT MIND-MAP FLOW CHART
+   ============================================================================ */
+.horiz-flowchart-box {
+  background: #ffffff; border: 2px solid #cbd5e1; border-radius: 18px;
+  padding: 20px; box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+body.theme-dark .horiz-flowchart-box { background: #0f172a; border-color: #334155; }
+.horiz-row {
+  display: grid; grid-template-columns: 230px 36px 1fr; align-items: center;
+  padding: 12px 0; border-bottom: 1.5px dashed #e2e8f0;
+}
+body.theme-dark .horiz-row { border-bottom-color: #1e293b; }
+.horiz-row:last-child { border-bottom: none; }
+.horiz-arrow-cell {
+  text-align: center; font-size: 1.2rem; font-weight: 900; color: var(--line-color);
+}
+.horiz-pills-wrap {
+  display: flex; flex-wrap: wrap; gap: 7px; align-items: center;
+}
+.horiz-leaf-pill {
+  background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 8px;
+  padding: 5px 10px; font-size: 0.76rem; font-weight: 800; color: #0f172a;
+  cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+  transition: all 0.16s ease;
+}
+body.theme-dark .horiz-leaf-pill { background: #1e293b; border-color: #475569; color: #f8fafc; }
+.horiz-leaf-pill:hover { border-color: #4f46e5; background: #eef2ff; transform: translateY(-1px); }
+
+/* Palm-Leaf Thirukkural & Footer */
+.kural-box {
+  width: 100%; margin: 22px 0 14px; padding: 10px 24px;
+  border-radius: 10px 20px 10px 20px;
+  background: linear-gradient(90deg, #d4a359 0%, #fbf0cf 20%, #fffdf5 50%, #fbf0cf 80%, #d4a359 100%);
+  border-top: 2px solid #b45309; border-bottom: 2px solid #78350f;
+  border-left: 8px solid #78350f; border-right: 8px solid #78350f;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  color: #1f0a02;
+}
+.footer-bar {
+  background: linear-gradient(135deg, #0b1120 0%, #1e1b4b 50%, #0f2942 100%);
+  border: 1.5px solid #38bdf8; border-radius: 14px; padding: 12px 18px;
+  text-align: center; color: #f8fafc; font-size: 0.80rem; font-weight: 700;
+}
+
+/* Modal Inspector */
+.modal-backdrop {
+  display: none; position: fixed; inset: 0; background: rgba(7, 11, 20, 0.8);
+  z-index: 9999; align-items: center; justify-content: center; padding: 16px;
+}
+.modal-card {
+  background: #ffffff; color: #0f172a; max-width: 560px; width: 100%;
+  border-radius: 16px; border: 2.5px solid #38bdf8; padding: 20px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.toast-msg {
+  position: fixed; bottom: 20px; right: 20px; z-index: 10000;
+  background: #059669; color: #fff; padding: 9px 16px; border-radius: 10px;
+  font-size: 0.82rem; font-weight: 800; display: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 1200px) {
+  .gateways-7-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  .gateways-hbar { display: none; }
+}
+@media (max-width: 820px) {
+  .home-tools-grid { grid-template-columns: repeat(2, 1fr); }
+  .gateways-7-grid { grid-template-columns: repeat(2, 1fr); }
+  .horiz-row { grid-template-columns: 1fr; gap: 8px; }
+  .horiz-arrow-cell { display: none; }
+}
+@media (max-width: 540px) {
+  .home-tools-grid, .gateways-7-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<style id="v428-universal-mobile-responsive">
+/* ============================================================================
+   v4.28 UNIVERSAL MOBILE-FIRST EDGE-TO-EDGE & ZERO-CLIPPING ENGINE (ALL PAGES)
+   Fixes:
+   1. Eliminates triple/quadruple nested left-right padding on mobile (image_4fc1ff & image_4fc220)
+   2. Fixes CSS Grid 1fr (minmax(auto, 1fr)) right-side card cutoff by enforcing minmax(0, 1fr)
+      and min-width: 0 on all cards, flex children, and images/SVGs (image_4fc1ff)
+   3. Fixes Breadcrumb bar & current-page pill horizontal overflow by allowing text wrapping (image_4fc220)
+   4. Fixes Accessibility Toolbar (#intlAccessibilityToolbar) button text clipping on mobile using a
+      6-column grid: 3 short buttons in Row 1 (span 2) + 2 wide buttons per row in Rows 2-4 (span 3) (image_4fc9a1)
+   5. Makes sticky top header relative on mobile so it never blocks viewport while scrolling
+   ============================================================================ */
+@media (max-width: 768px) {
+  html, body {
+    margin: 0 !important;
+    padding: 2px 2px !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  .portal-layout-wrapper,
+  .portal-container,
+  .portal-executive-wrapper,
+  .container,
+  .page-wrapper,
+  .main-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  .portal-main-content,
+  main.portal-main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 2px 2px 68px 2px !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Accessibility Toolbar (#intlAccessibilityToolbar) - Zero Text Clipping */
+  .intl-a11y-toolbar,
+  #intlAccessibilityToolbar {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 5px !important;
+    padding: 6px !important;
+    margin: 0 0 8px 0 !important;
+    border-radius: 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .intl-a11y-toolbar .a11y-btn,
+  #intlAccessibilityToolbar .a11y-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding: 6px 6px !important;
+    font-size: 0.72rem !important;
+    border-radius: 8px !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    line-height: 1.22 !important;
+    text-align: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+  .intl-a11y-toolbar .a11y-btn:nth-child(-n+3),
+  #intlAccessibilityToolbar .a11y-btn:nth-child(-n+3) {
+    grid-column: span 2 !important;
+  }
+  .intl-a11y-toolbar .a11y-btn:nth-child(n+4),
+  #intlAccessibilityToolbar .a11y-btn:nth-child(n+4) {
+    grid-column: span 3 !important;
+  }
+
+  /* Top Frame Banner - Relative on mobile, compact padding */
+  .portal-top-frame {
+    position: relative !important;
+    top: 0 !important;
+    padding: 10px 8px !important;
+    margin: 0 0 8px 0 !important;
+    border-radius: 12px !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .banner-title-tamil {
+    font-size: clamp(1.15rem, 5vw, 1.38rem) !important;
+    line-height: 1.28 !important;
+  }
+  .banner-tagline-aurora {
+    font-size: 0.74rem !important;
+    line-height: 1.25 !important;
+  }
+  .banner-english-row,
+  .banner-title-english,
+  .banner-slogan-english {
+    font-size: 0.62rem !important;
+    letter-spacing: 0.6px !important;
+    line-height: 1.2 !important;
+  }
+  .top-frame-side-btn,
+  .top-frame-side-btn.btn-home {
+    position: static !important;
+    transform: none !important;
+    padding: 5px 12px !important;
+    font-size: 0.76rem !important;
+    margin-top: 2px !important;
+  }
+
+  /* Breadcrumb Bar - Full wrapping, zero right-edge overflow (image_4fc220 fix) */
+  .breadcrumb-bar,
+  .top-breadcrumb-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 6px !important;
+    padding: 8px 8px !important;
+    margin: 0 0 8px 0 !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .breadcrumb-left-stack,
+  .breadcrumb-right-stack {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 5px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .nav-menu-btn,
+  .nav-menu-btn.btn-current-page,
+  .nav-menu-btn.btn-guidance-home,
+  .nav-menu-btn.btn-notice-link,
+  .breadcrumb-link,
+  .breadcrumb-current {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    font-size: 0.76rem !important;
+    line-height: 1.3 !important;
+    padding: 5px 9px !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+  }
+  .nav-menu-btn .btn-text {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    min-width: 0 !important;
+  }
+
+  /* Hero Banner & Section Cards - Compact padding to maximize card width */
+  .header-banner-wrap {
+    margin: 0 0 10px 0 !important;
+    border-radius: 12px !important;
+  }
+  .header-banner,
+  .header-banner.aurora-theme,
+  .hero-banner,
+  .crystal-hero-banner {
+    padding: 12px 10px !important;
+    border-radius: 10px !important;
+  }
+  .banner-main-title {
+    font-size: clamp(1.08rem, 4.6vw, 1.32rem) !important;
+    line-height: 1.32 !important;
+  }
+  .banner-sub-english {
+    font-size: 0.68rem !important;
+    letter-spacing: 0.6px !important;
+  }
+  .banner-desc {
+    font-size: 0.78rem !important;
+    line-height: 1.48 !important;
+  }
+
+  .content-card,
+  .section-card,
+  .section-container,
+  .card-section,
+  .feedback-section {
+    padding: 10px 8px !important;
+    margin: 0 0 12px 0 !important;
+    border-radius: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .section-header-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    margin-bottom: 10px !important;
+    padding-bottom: 8px !important;
+  }
+  .section-title {
+    font-size: 0.96rem !important;
+    line-height: 1.35 !important;
+    word-break: break-word !important;
+  }
+  .section-badge-pill {
+    font-size: 0.72rem !important;
+    padding: 3px 9px !important;
+    white-space: normal !important;
+  }
+
+  /* Universal Single-Column Grid Collapse with minmax(0, 1fr) (image_4fc1ff fix) */
+  .resource-grid,
+  .cards-grid,
+  .portal-grid,
+  .portals-grid,
+  .portal-links-grid,
+  .grid-container,
+  #cardsGrid,
+  .gateway-grid,
+  .exam-grid,
+  .courses-grid,
+  .colleges-grid,
+  .branch-grid,
+  .departments-grid,
+  .comparison-grid,
+  .features-grid,
+  .feature-grid-4,
+  .highlights-grid,
+  .iiser-highlights-grid,
+  .loan-grid,
+  .metrics-grid,
+  .metrics-bar,
+  .official-portals-showcase,
+  .quick-nav-grid,
+  .quota-features-grid,
+  .roadmap-grid,
+  .showcase-grid,
+  .sports-4year-grid,
+  .stats-grid,
+  .stats-matrix,
+  .steps-container,
+  .strategy-flex-grid,
+  .strategy-subject-grid,
+  .sub-grid,
+  .sub-grid-3,
+  .tanuvas-2yr-diploma-grid,
+  .tri-directory-grid,
+  .dual-directory-grid,
+  .v410-advisory-grid,
+  .action-buttons-grid,
+  .action-row-split,
+  .boundary-grid,
+  .calc-grid,
+  .calc-inputs,
+  .calc-inputs-grid,
+  .calc-inputs-row,
+  .cards-2col,
+  .cards-3col,
+  .cards-4col,
+  .cf-filters-panel,
+  .cf-inputs-grid,
+  .checklist-grid,
+  .core-7-degrees-grid,
+  .dab-grid,
+  .district-center-info-grid,
+  .fb-grid,
+  .finder-select-grid,
+  .focus-blueprint-grid,
+  .form-inputs-grid,
+  .four-boxes-fluid-grid,
+  .grid-2,
+  .grid-2col,
+  .grid-3,
+  .grid-4,
+  .helpline-bento-grid,
+  .hero-luxury-cards-grid,
+  .nav-button-menu-container,
+  .sq-grid,
+  .cg-responsive-grid-2,
+  .cg-responsive-grid-3,
+  .cg-responsive-grid-4,
+  .cg-responsive-grid-5 {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Also collapse any inline grid-template-columns inside sections/cards */
+  .content-card [style*="grid-template-columns"]:not(.manarkeni-stat-grid),
+  .section-card [style*="grid-template-columns"]:not(.manarkeni-stat-grid) {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Resource Cards & Portal Cards - Strict 100% width & zero horizontal overflow */
+  .resource-card,
+  .card,
+  .portal-card,
+  .exam-card,
+  .course-card,
+  .college-card,
+  .bento-card,
+  .feature-card,
+  .info-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 12px 10px !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .resource-card *,
+  .content-card *,
+  .section-card * {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .resource-card-header {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  .resource-card-icon {
+    font-size: 1.5rem !important;
+    padding: 6px !important;
+    flex-shrink: 0 !important;
+  }
+  .resource-card-title {
+    font-size: 0.96rem !important;
+    line-height: 1.32 !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+  .resource-card-sub {
+    font-size: 0.68rem !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+  .resource-card-desc {
+    font-size: 0.82rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 10px !important;
+  }
+  .resource-card-banner-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 6px 8px !important;
+    margin-bottom: 10px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  .resource-card-banner-img img,
+  .resource-card-banner-img svg {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 76px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+  .action-btn {
+    padding: 9px 10px !important;
+    font-size: 0.82rem !important;
+    white-space: normal !important;
+    line-height: 1.25 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Compact Floating Bottom Buttons so they don't cover bottom content */
+  .mobile-menu-floating-btn,
+  .mobile-sidebar-toggle {
+    bottom: 10px !important;
+    left: 8px !important;
+    padding: 6px 12px !important;
+    font-size: 0.75rem !important;
+    border-radius: 999px !important;
+  }
+  .floating-back-to-top {
+    bottom: 10px !important;
+    right: 8px !important;
+    padding: 6px 12px !important;
+    font-size: 0.74rem !important;
+    border-radius: 999px !important;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div class="page-wrapper">
+  <!-- TOP CONTROL BAR -->
+  <div class="top-toolbar">
+    <div class="toolbar-group">
+      <button type="button" class="tool-btn active" id="btnViewVertical" onclick="switchFlowView('vertical')">⬇️ மேலிருந்து கீழ் பாய்வு வரைபடம் (Top-Down Flow Chart)</button>
+      <button type="button" class="tool-btn" id="btnViewHoriz" onclick="switchFlowView('horizontal')">➡️ இடமிருந்து வலம் கிளை வரைபடம் (Mind-Map Flow)</button>
+    </div>
+    <div class="toolbar-group">
+      <button type="button" class="tool-btn" onclick="document.body.classList.toggle('theme-dark')">🌓 Dark / Light வண்ணம்</button>
+      <button type="button" class="tool-btn btn-png" onclick="downloadFlowchartImage()">🖼️ Flow Chart PNG படம்</button>
+      <button type="button" class="tool-btn btn-pdf" onclick="downloadFlowchartPdf()">📥 A4 Flow Chart PDF</button>
+    </div>
+  </div>
+
+  <!-- HEADER BANNER -->
+  <header class="header-banner">
+    <h1>🗺️ உயர்கல்வி வழிகாட்டி — சுருக்கமான பாய்வு வரைபடம் (Flow Chart Site Map v4.25)</h1>
+    <p>முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் • முகப்பு + 7 வழிகாட்டி வாயில்கள் + 35 பக்கங்களின் ஒருபார்வை கட்டமைப்பு</p>
+  </header>
+
+  <!-- ============================================================================
+       VIEW 1: TOP-DOWN VISUAL FLOW CHART
+       ============================================================================ -->
+  <section id="verticalFlowSection" class="flowchart-stage">
+    <span class="level-pill">நிலை 1 (LEVEL 1): முதன்மை நுழைவாயில் (ROOT GATEWAY)</span>
+
+    <!-- ROOT NODE -->
+    <div class="root-node-box" onclick="showNodeDetail('🏠 முதன்மை முகப்பு (Main Home Portal)', 'index.html', '7 முதன்மை வழிகாட்டி வாயில்கள், சர்வதேச Neo-Aurora Bento வண்ணத்திட்டம், அணுகல்தன்மைப் பட்டை, முதன்மைக் கல்வி அலுவலர் செய்தி மற்றும் திருக்குறள் 666.')">
+      <div class="root-node-title">🏛️ உயர்கல்வி வழிகாட்டுதல் தளம் — முதன்மை முகப்பு</div>
+      <div class="root-node-sub">Higher Education &amp; Career Guidance Portal • Sivagangai District</div>
+      <span class="code-badge">https://www.ceosvg.in/index.html</span>
+    </div>
+
+    <div class="v-line"></div>
+    <div class="v-arrow"></div>
+    <span class="level-pill">நிலை 2 (LEVEL 2): முகப்புப் பக்க ஒருங்கிணைந்த ஸ்மார்ட் கருவிகள் (HOME SMART TOOLS)</span>
+    <div class="home-tools-hbar"></div>
+
+    <!-- LEVEL 2: 4 HOME SMART TOOLS -->
+    <div class="home-tools-grid">
+      <div class="tool-flow-col">
+        <div class="v-line" style="height:12px;"></div>
+        <div class="v-arrow"></div>
+        <div class="tool-flow-card" onclick="showNodeDetail('♿ சர்வதேச அணுகல்தன்மை & வண்ண மாற்றி', 'index.html#intlAccessibilityToolbar', 'எழுத்து அளவு (A-, A, A+), உயர் நிறமாறுபாடு, குரல் வழிகாட்டி, 4 வண்ணத் தீம்கள் மற்றும் தமிழ் ⇄ English இருமொழி மாற்றி.')">
+          <div class="tool-flow-title">♿ அணுகல்தன்மை &amp; இருமொழி</div>
+          <div class="tool-flow-desc">4 வண்ண தீம் • தமிழ் ⇄ English • குரல் வாசிப்பு</div>
+          <span class="code-badge">#intlAccessibilityToolbar</span>
+        </div>
+      </div>
+      <div class="tool-flow-col">
+        <div class="v-line" style="height:12px;"></div>
+        <div class="v-arrow"></div>
+        <div class="tool-flow-card" style="border-top-color:#4f46e5;" onclick="showNodeDetail('🚀 மும்முனை வழிகாட்டி மையம் (Tri-Tool Hub)', 'index.html#heroSmartTriButtonBar', '1) 35 பக்க உடனடித் தேடுபொறி + 🎤 குரல் தேடல், 2) +2 குரூப் வழிகாட்டி, 3) 60-வினாடி O*NET தகுதி வழிகாட்டி & 1-Click PDF.')">
+          <div class="tool-flow-title">🚀 மும்முனை வழிகாட்டி மையம்</div>
+          <div class="tool-flow-desc">🔍 தேடல் + 🧭 +2 குரூப் + 🎯 O*NET PDF</div>
+          <span class="code-badge">#heroSmartTriButtonBar</span>
+        </div>
+      </div>
+      <div class="tool-flow-col">
+        <div class="v-line" style="height:12px;"></div>
+        <div class="v-arrow"></div>
+        <div class="tool-flow-card" style="border-top-color:#e11d48;" onclick="showNodeDetail('⏱️ 2027 நேரலை நுழைவுத்தேர்வு அறிவிக்கைகள்', 'index.html#heroGeminiLiveAlerts', 'VITEEE 2027, CLAT 2027, IIT UCEED 2027, AILET 2027, NID DAT 2027, SLAT 2027 ஆகிய 6 தேர்வுகளின் Flash News & நாட்கள் கவுண்ட்டவுன்.')">
+          <div class="tool-flow-title">⏱️ 2027 நேரலை கவுண்ட்டவுன்</div>
+          <div class="tool-flow-desc">Flash News பட்டை + 6 தேர்வுகள் கவுண்ட்டவுன்</div>
+          <span class="code-badge">#heroGeminiLiveAlerts</span>
+        </div>
+      </div>
+      <div class="tool-flow-col">
+        <div class="v-line" style="height:12px;"></div>
+        <div class="v-arrow"></div>
+        <div class="tool-flow-card" style="border-top-color:#059669;" onclick="showNodeDetail('📅 4-கட்ட விண்ணப்ப கால அட்டவணை & சந்தேகப் படிவம்', 'index.html#admissionTimelineSec', 'நவ–பிப், பிப்–மே, மே–ஜூன், ஜூலை–அக் ஆகிய 4-கட்ட கால அட்டவணை மற்றும் மாணவர் சந்தேகப் படிவம் (#modalStudentQuery).')">
+          <div class="tool-flow-title">📅 4-கட்ட கால அட்டவணை &amp; உதவி</div>
+          <div class="tool-flow-desc">ஆண்டு வழிகாட்டி + மாணவர் சந்தேகப் படிவம்</div>
+          <span class="code-badge">#admissionTimelineSec</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="v-line" style="height:26px;"></div>
+    <div class="v-arrow"></div>
+    <span class="level-pill">நிலை 3 &amp; 4 (LEVEL 3 &amp; 4): 7 முதன்மை வழிகாட்டி வாயில்கள் ➔ உள்பக்கங்கள் (7 MACRO GATEWAYS ➔ SUB-PAGES)</span>
+    <div class="gateways-hbar"></div>
+
+    <!-- LEVEL 3 & 4: 7 COLUMNS FLOW CHART -->
+    <div class="gateways-7-grid" id="verticalColumnsMount"></div>
+  </section>
+
+  <!-- ============================================================================
+       VIEW 2: HORIZONTAL LEFT-TO-RIGHT MIND-MAP FLOW CHART
+       ============================================================================ -->
+  <section id="horizontalFlowSection" style="display:none;">
+    <div class="horiz-flowchart-box" id="horizRowsMount"></div>
+  </section>
+
+  <!-- PALM-LEAF THIRUKKURAL & FOOTER -->
+  <div class="kural-box">
+    <div style="font-size:0.86rem; font-weight:900;">
+      📜 திருக்குறள் (666 — வினைத்திட்பம்): <span style="color:#7c2d12;">“எண்ணிய எண்ணியாங்கு எய்துப எண்ணியார் திண்ணியர் ஆகப் பெறின்.”</span>
+    </div>
+    <div style="font-size:0.78rem; font-weight:700; color:#451a03;">
+      🎯 மனவலிமையுடன் திட்டமிட்டுச் செயல்பட்டால் எண்ணிய உயர்கல்வி இலக்கை எண்ணியவாறே அடையலாம்.
+    </div>
+  </div>
+
+  <footer class="footer-bar">
+    <div>இணையதள வடிவமைப்பு: <span style="color:#fef08a;">கூ. பூவலிங்கம்</span>, பள்ளித் துணை ஆய்வாளர் (📱 9626471035) | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் • ☎️ 04575-240408 | உதவி எண்: 14417</div>
+  </footer>
+</div>
+
+<!-- NODE INSPECTOR MODAL -->
+<div class="modal-backdrop" id="nodeModal" onclick="if(event.target===this) closeNodeModal()">
+  <div class="modal-card">
+    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1.5px solid #e2e8f0; padding-bottom:10px; margin-bottom:12px;">
+      <h3 id="modalTitle" style="font-size:1.05rem; font-weight:900; color:#1e3a8a;"></h3>
+      <button type="button" onclick="closeNodeModal()" style="background:#dc2626; color:#fff; border:none; border-radius:999px; padding:4px 12px; font-weight:800; cursor:pointer;">✕</button>
+    </div>
+    <div style="margin-bottom:10px;">
+      <span style="font-size:0.76rem; font-weight:800; color:#475569;">📄 கோப்பு / இணைப்பு (File Path): </span>
+      <code id="modalCode" style="background:#eff6ff; color:#0284c7; padding:3px 8px; border-radius:6px; font-weight:700; font-size:0.80rem;"></code>
+    </div>
+    <p id="modalDesc" style="font-size:0.86rem; color:#1e293b; line-height:1.55; background:#f8fafc; padding:12px; border-radius:10px; border-left:4px solid #4f46e5;"></p>
+  </div>
+</div>
+
+<div class="toast-msg" id="toastMsg"></div>
+
+<script>
+const FLOWCHART_GATEWAYS = [
+  {
+    num: "வாயில் 01",
+    icon: "🎯",
+    title: "தேசிய நுழைவுத்தேர்வுகள்",
+    file: "01_00_entrance_main.html",
+    color: "#4f46e5",
+    leaves: [
+      { t: "📅 முழுத் தேர்வு காலண்டர்", c: "01_01_master_schedule.html", d: "ஆண்டு முழுவதுமான நுழைவுத்தேர்வு கால அட்டவணை" },
+      { t: "🩺 NEET UG மருத்துவம்", c: "01_02_medical_neet_ug.html", d: "MBBS, BDS, AYUSH & 7.5% அரசுப் பள்ளி இடஒதுக்கீடு" },
+      { t: "🏥 தமிழக மருத்துவக் கல்லூரிகள் (90)", c: "01_02_A_tn_med_colleges.html", d: "37 அரசு மருத்துவக் கல்லூரிகள் & சுயநிதி கல்லூரிகள்" },
+      { t: "🏛️ AIIMS / JIPMER அடைவு (685)", c: "01_02_B_in_med_colleges.html", d: "அகில இந்திய மருத்துவக் கல்லூரிகள் பட்டியல்" },
+      { t: "🧮 நீட் சாய்ஸ் ஃபில்லிங் கருவி", c: "01_02_C_Choice_Filling_App.html", d: "மருத்துவக் கலந்தாய்வு இடத் தேர்வு சிமுலேட்டர்" },
+      { t: "⚙️ JEE Main/Adv & VITEEE", c: "01_03_engineering_jee.html", d: "IIT, NIT, IIIT & நிகர்நிலைப் பல்கலை பொறியியல்" },
+      { t: "🏛️ 119 AIQ பொறியியல் நிறுவனங்கள்", c: "01_03_aiq_eng_colleges.html", d: "23 IIT, 32 NIT, 26 IIIT & 38 GFTI அடைவு" },
+      { t: "🔬 IISER / NISER / IISc ஆராய்ச்சி", c: "01_04_science_research_iiser.html", d: "BS-MS அறிவியல் ஆராய்ச்சி & INSPIRE ஊக்கத்தொகை" },
+      { t: "🏛️ CUET / ICAR / NFAT / ITEP", c: "01_05_central_universities_cuet.html", d: "மத்திய பல்கலை, தேசிய வேளாண்மை, தடய அறிவியல் & 4-ஆண்டு B.Ed" },
+      { t: "⚖️ CLAT / AILET / SLAT சட்டம்", c: "01_06_law_clat_nlu.html", d: "TNNLU திருச்சி உட்பட 24 தேசிய சட்டப் பல்கலைக்கழகங்கள்" },
+      { t: "📐 NATA / UCEED / NID / NIFT", c: "01_07_design_architecture_nata_nift.html", d: "B.Arch கட்டிடக்கலை & B.Des வடிவமைப்பு" },
+      { t: "📊 IIM IPMAT 5-ஆண்டு MBA", c: "01_08_management_iim_ipm.html", d: "+2-க்குப் பின் IIM ஒருங்கிணைந்த மேலாண்மை" },
+      { t: "🏨 NCHMCT உணவக மேலாண்மை", c: "01_09_hotel_management_nchmct.html", d: "IHM சென்னை கேட்டரிங் & ஹோட்டல் மேனேஜ்மென்ட்" },
+      { t: "⚓ IMU-CET கடல்சார் கல்வி", c: "01_10_maritime_merchant_navy.html", d: "Merchant Navy, B.Sc Nautical & Marine Engg" },
+      { t: "🎖️ UPSC NDA & முப்படை அதிகாரி", c: "01_11_defence_armed_forces.html", d: "ராணுவம், கடற்படை, விமானப்படை அதிகாரி & AFMC" },
+      { t: "✈️ விமானி (CPL) & Cabin Crew", c: "01_12_pilot_careers_cpl_and_iaf_fighter.html", d: "வணிக விமானி (CPL), IAF & விமான பணிப்பெண்" }
+    ]
+  },
+  {
+    num: "வாயில் 02",
+    icon: "📈",
+    title: "நேரடிச் சேர்க்கை (+2 மதிப்பெண்)",
+    file: "02_00_direct_admissions.html",
+    color: "#059669",
+    leaves: [
+      { t: "⚙️ TNEA பொறியியல் & 4% தொழிற்கல்வி", c: "02_01_tnea_engineering.html", d: "அண்ணா பல்கலை ஒற்றைச் சாளர கலந்தாய்வு (B.E/B.Tech)" },
+      { t: "🐄 TANUVAS கால்நடை மருத்துவம்", c: "02_02_veterinary_allied_health.html", d: "B.V.Sc & AH மற்றும் B.Tech உணவு/பால்வளத் தொழில்நுட்பம்" },
+      { t: "🩺 B.Sc நர்சிங் & B.Pharm மருந்தியல்", c: "02_02_veterinary_allied_health.html#sec-pharmacy-detail", d: "19 துணை மருத்துவப் படிப்புகள், B.Pharm & Pharm.D" },
+      { t: "🌾 TNAU வேளாண்மை & மீன்வளம்", c: "02_03_agriculture_fisheries.html", d: "B.Sc வேளாண்மை, தோட்டக்கலை & TNJFU மீன்வள அறிவியல்" },
+      { t: "⚖️ TNDALU 5-ஆண்டு அரசு சட்டம்", c: "02_04_law_admissions.html", d: "காரைக்குடி, மதுரை, சென்னை (SOEL) அரசு சட்டக் கல்லூரிகள்" },
+      { t: "🔬 TNGASA B.Sc & தடய அறிவியல்", c: "02_05_pure_applied_sciences.html", d: "அரசு கலை & அறிவியல் கல்லூரிகள் (₹50 ஒற்றைப் பதிவு)" },
+      { t: "💻 BCA, B.Sc CS, AI & Data Science", c: "02_06_computer_applications_it.html", d: "கணினி அறிவியல், செயற்கை நுண்ணறிவு & சைபர் செக்யூரிட்டி" },
+      { t: "📚 B.A தமிழ், ஆங்கிலம், வரலாறு, பொருளியல்", c: "02_07_arts_humanities.html", d: "கலை, மானுடவியல், இதழியல் & சமூகப் பணி" },
+      { t: "📊 B.Com, BBA & CA / CMA / CS", c: "02_08_commerce_management.html", d: "வணிகவியல் பிரிவுகள் மற்றும் பட்டயக் கணக்காளர் படிப்புகள்" },
+      { t: "🛠️ பாலிடெக்னிக், அரசு ITI & D.El.Ed", c: "02_09_polytechnic_iti.html", d: "டிப்ளமோ, ITI (₹1,000/மாதம்), சிறப்பாசிரியர் TTC & RCI" }
+    ]
+  },
+  {
+    num: "வாயில் 03",
+    icon: "🏛️",
+    title: "கல்லூரிகள் விவர அடைவு",
+    file: "03_institutes.html",
+    color: "#d97706",
+    leaves: [
+      { t: "📍 சிவகங்கை மாவட்டக் கல்லூரிகள் வடிகட்டி", c: "03_institutes.html#sec-sivagangai-neighbor-filter", d: "அழகப்பா பல்கலை, CECRI, ACCET, அரசு மருத்துவம், சட்டம் & கலைக் கல்லூரிகள்" },
+      { t: "🏛️ மத்திய அரசு உயர்கல்வி நிறுவனங்கள்", c: "03_institutes.html#central-inst", d: "IIT மெட்ராஸ், NIT திருச்சி, AIIMS மதுரை, CUTN திருவாரூர்" },
+      { t: "🏫 தமிழக அரசுப் பல்கலைக்கழகங்கள்", c: "03_institutes.html#tn-universities", d: "அண்ணா, சென்னை, மதுரை காமராசர், அழகப்பா பல்கலைக்கழகங்கள்" },
+      { t: "🎓 அரசு கலை, அறிவியல் & பாலிடெக்னிக்", c: "03_institutes.html#govt-arts-poly", d: "மாவட்ட வாரியான அரசு கலை மற்றும் பாலிடெக்னிக் கல்லூரிகள்" }
+    ]
+  },
+  {
+    num: "வாயில் 04",
+    icon: "🏆",
+    title: "அரசுப் பணி & போட்டித் தேர்வுகள்",
+    file: "04_govt_exams.html",
+    color: "#7c3aed",
+    leaves: [
+      { t: "📗 10th / 📘 +2 / 🎓 பட்டப்படிப்பு தகுதி", c: "04_govt_exams.html#hub-qual-10th", d: "கல்வித் தகுதி வாரியான மத்திய & மாநில அரசுப் பணிகள்" },
+      { t: "🏛️ TNPSC Group 1, 2, 2A, 4 & VAO", c: "04_govt_exams.html#hub-sec-tnpsc", d: "தமிழ்நாடு அரசுப் பணியாளர் தேர்வாணையத் தேர்வுகள்" },
+      { t: "🚆 ரயில்வே RRB (NTPC, ALP, Group D)", c: "04_govt_exams.html#hub-sec-railway", d: "ரயில்வே தொழில்நுட்ப மற்றும் நிர்வாகப் பணிகள்" },
+      { t: "🏦 வங்கித் தேர்வுகள் (IBPS / SBI / RBI)", c: "04_govt_exams.html#hub-sec-bank", d: "வங்கி எழுத்தர் (Clerk) மற்றும் நன்னடத்தை அதிகாரி (PO)" },
+      { t: "🇮🇳 UPSC குடிமைப் பணி (₹7,500 ஊக்கத்தொகை)", c: "04_govt_exams.html#hub-sec-upsc", d: "IAS/IPS & திறன் தமிழ்நாடு மாதம் ₹7,500 ஊக்கத்தொகை" },
+      { t: "🏢 மத்திய அரசு SSC (CHSL, MTS, CGL)", c: "04_govt_exams.html#hub-sec-ssc", d: "மத்திய அரசு அமைச்சக மற்றும் துறைப் பணிகள்" },
+      { t: "👮 காவலர் (TNUSRB), TRB ஆசிரியர் & ATC", c: "04_govt_exams.html#hub-sec-others", d: "சீருடைப் பணியாளர், அக்னிவீர், ஆசிரியர் & வான் போக்குவரத்து" }
+    ]
+  },
+  {
+    num: "வாயில் 05",
+    icon: "💼",
+    title: "திறன் & நேரடி வேலைவாய்ப்பு",
+    file: "05_direct_careers.html",
+    color: "#0891b2",
+    leaves: [
+      { t: "💻 Zoho Schools & HCL TechBee", c: "05_direct_careers.html#work-learn", d: "+2 முடித்தவுடன் கட்டணமின்றி உதவித்தொகையுடன் IT பணி" },
+      { t: "🚀 திறன் தமிழ்நாடு & TNSDC", c: "05_direct_careers.html#thiran-tn", d: "TNSDC இலவசத் திறன் மேம்பாட்டுப் பயிற்சிகள்" },
+      { t: "🤝 மாவட்டத் தனியார் வேலைவாய்ப்பு முகாம்", c: "05_direct_careers.html#job-fairs", d: "TN Private Jobs போர்ட்டல் & வேலைவாய்ப்பு முகாம்கள்" },
+      { t: "💰 சுயதொழில் கடன் (UYEGP / PMEGP / முத்ரா)", c: "05_direct_careers.html#self-employment", d: "அரசு மானியத்துடன் கூடிய தொழில் முனைவோர் கடன்கள்" },
+      { t: "✈️ NAPS பழகுநர் & OMMC வெளிநாட்டு வேலை", c: "05_direct_careers.html#sec-naps-ommc", d: "மத்திய அரசு ஸ்டைபண்ட் பயிற்சி & வெளிநாட்டு நர்சிங் பணி" }
+    ]
+  },
+  {
+    num: "வாயில் 06",
+    icon: "🧮",
+    title: "கட்-ஆஃப் & மாணவர் உதவி மையம்",
+    file: "06_student_support.html",
+    color: "#e11d48",
+    leaves: [
+      { t: "🎯 7.5% அரசுப் பள்ளி இடஒதுக்கீடு", c: "06_student_support.html#quota-7point5-sec", d: "மருத்துவம், பொறியியல், வேளாண்மை, சட்டத்தில் 100% கட்டண விலக்கு" },
+      { t: "🎓 புதுமைப் பெண் & தமிழ்ப் புதல்வன் (₹1,000)", c: "06_student_support.html#reservation-sec", d: "மாதம் ₹1,000 உதவித்தொகை & முதல் தலைமுறைப் பட்டதாரி சலுகை" },
+      { t: "🧮 உயர்கல்வி கட்-ஆஃப் கால்குலேட்டர்", c: "06_student_support.html#cutoff-tools-sec", d: "பொறியியல், வேளாண்மை, கால்நடை, கலை கட்-ஆஃப் கணிப்பான்" },
+      { t: "✅ AICTE Pragati (₹50,000) & NSP போர்ட்டல்", c: "06_student_support.html#sec-nsp-esevai-checklist", d: "தேசிய உதவித்தொகைகள் & வித்யாலட்சுமி கல்விக்கடன்" },
+      { t: "📋 இ-சேவை சான்றிதழ்கள் சரிபார்ப்புப் பட்டியல்", c: "06_student_support.html#sec-nsp-esevai-checklist", d: "கலந்தாய்விற்குத் தேவையான சான்றிதழ்கள் பட்டியல்" },
+      { t: "📞 மாணவர் உதவி எண் 14417 & PDF கையேடு", c: "06_student_support.html#services-14417-sec", d: "24x7 கட்டணமில்லா வழிகாட்டல் மையம்" }
+    ]
+  },
+  {
+    num: "வாயில் 07",
+    icon: "📚",
+    title: "கல்வி வளங்கள் & மாதிரித் தேர்வு",
+    file: "07_resources_external_portals.html",
+    color: "#2563eb",
+    leaves: [
+      { t: "🎓 சிவகங்கை PG ஆசிரியர்கள் தளம்", c: "07_resources_external_portals.html#svg-pg-horizon", d: "SVG Horizon வினா வங்கி மற்றும் கற்றல் வளங்கள்" },
+      { t: "🌊 மணற்கேணி (Manarkeni — கற்றனைத் தூறும் அறிவு)", c: "07_resources_external_portals.html#manarkeni-portal", d: "Classes 1–12 • State Board • Tamil & English (manarkeni.tnschools.gov.in)" },
+      { t: "📗 NCERT & தமிழகப் பாடநூல்கள் (PDF)", c: "07_resources_external_portals.html#ncert-tn-books", d: "நுழைவுத்தேர்வுகளுக்கான அதிகாரப்பூர்வப் பாடநூல்கள்" },
+      { t: "💻 NTA Abhyas & IIT SATHEE இலவச CBT", c: "07_resources_external_portals.html#nta-cbt-sathee", d: "NEET, JEE, CUET கணினி வழி மாதிரித் தேர்வுகள்" },
+      { t: "🌐 SWAYAM / NPTEL / NDLI மின்னூலகம்", c: "07_resources_external_portals.html#sec-swayam-ndli-tva", d: "மத்திய அரசு ஆன்லைன் சான்றிதழ் படிப்புகள் & தமிழ் இணையக் கழகம்" }
+    ]
+  }
+];
+
+function renderFlowcharts() {
+  // 1. Vertical 7-Column Top-Down Flow Chart
+  const vMount = document.getElementById("verticalColumnsMount");
+  if (vMount) {
+    vMount.innerHTML = FLOWCHART_GATEWAYS.map(function(gw) {
+      const leavesHtml = gw.leaves.map(function(lf) {
+        const safeT = lf.t.replace(/'/g, "\\'");
+        const safeC = lf.c.replace(/'/g, "\\'");
+        const safeD = lf.d.replace(/'/g, "\\'");
+        return '<div class="leaf-node-box" style="border-left-color:' + gw.color + ';" onclick="showNodeDetail(\'' + safeT + '\', \'' + safeC + '\', \'' + safeD + '\')">' +
+          '<div class="leaf-title">' + lf.t + '</div>' +
+          '<span class="leaf-code">' + lf.c.split("#")[0] + '</span>' +
+        '</div>';
+      }).join("");
+
+      return '<div class="gw-column">' +
+        '<div class="v-line" style="height:14px; background:' + gw.color + ';"></div>' +
+        '<div class="v-arrow" style="border-top-color:' + gw.color + ';"></div>' +
+        '<div class="gw-node-header" style="background:' + gw.color + ';" onclick="showNodeDetail(\'' + gw.num + ': ' + gw.title + '\', \'' + gw.file + '\', \'இவ்வாயிலில் மொத்தம் ' + gw.leaves.length + ' வழிகாட்டிப் பிரிவுகள் உள்ளன.\')">' +
+          '<span class="gw-num-tag">' + gw.icon + ' ' + gw.num + '</span>' +
+          '<div class="gw-node-title">' + gw.title + '</div>' +
+          '<span class="gw-node-file">' + gw.file + '</span>' +
+        '</div>' +
+        '<div class="gw-leaves-stack" style="border-left-color:' + gw.color + ';">' +
+          leavesHtml +
+        '</div>' +
+      '</div>';
+    }).join("");
+  }
+
+  // 2. Horizontal Left-to-Right Mind-Map Flow Chart
+  const hMount = document.getElementById("horizRowsMount");
+  if (hMount) {
+    hMount.innerHTML =
+      '<div style="text-align:center; padding-bottom:14px; margin-bottom:10px; border-bottom:2px solid #cbd5e1;">' +
+        '<span style="background:#0b1120; color:#fef08a; padding:6px 18px; border-radius:999px; font-size:0.90rem; font-weight:900; border:1.5px solid #38bdf8;">🏛️ ROOT: முதன்மை முகப்பு (index.html) ➔ 7 முதன்மை வழிகாட்டி வாயில்கள் ➔ 35 வழிகாட்டிப் பக்கங்கள்</span>' +
+      '</div>' +
+      FLOWCHART_GATEWAYS.map(function(gw) {
+        const pillsHtml = gw.leaves.map(function(lf) {
+          const safeT = lf.t.replace(/'/g, "\\'");
+          const safeC = lf.c.replace(/'/g, "\\'");
+          const safeD = lf.d.replace(/'/g, "\\'");
+          return '<span class="horiz-leaf-pill" style="border-left:4px solid ' + gw.color + ';" onclick="showNodeDetail(\'' + safeT + '\', \'' + safeC + '\', \'' + safeD + '\')">' +
+            '<span>' + lf.t + '</span>' +
+          '</span>';
+        }).join("");
+
+        return '<div class="horiz-row">' +
+          '<div class="gw-node-header" style="background:' + gw.color + ';">' +
+            '<span class="gw-num-tag">' + gw.icon + ' ' + gw.num + '</span>' +
+            '<div class="gw-node-title">' + gw.title + '</div>' +
+            '<span class="gw-node-file">' + gw.file + '</span>' +
+          '</div>' +
+          '<div class="horiz-arrow-cell">➔</div>' +
+          '<div class="horiz-pills-wrap">' + pillsHtml + '</div>' +
+        '</div>';
+      }).join("");
+  }
+}
+
+function switchFlowView(mode) {
+  document.getElementById("verticalFlowSection").style.display = (mode === "vertical") ? "flex" : "none";
+  document.getElementById("horizontalFlowSection").style.display = (mode === "horizontal") ? "block" : "none";
+  document.getElementById("btnViewVertical").classList.toggle("active", mode === "vertical");
+  document.getElementById("btnViewHoriz").classList.toggle("active", mode === "horizontal");
+}
+
+function showNodeDetail(title, code, desc) {
+  document.getElementById("modalTitle").textContent = title;
+  document.getElementById("modalCode").textContent = "https://www.ceosvg.in/" + code;
+  document.getElementById("modalDesc").textContent = desc;
+  document.getElementById("nodeModal").style.display = "flex";
+}
+
+function closeNodeModal() {
+  document.getElementById("nodeModal").style.display = "none";
+}
+
+function showToast(msg) {
+  const el = document.getElementById("toastMsg");
+  if (!el) return;
+  el.textContent = msg;
+  el.style.display = "block";
+  clearTimeout(window.__tTimer);
+  window.__tTimer = setTimeout(function() { el.style.display = "none"; }, 3200);
+}
+
+// ============================================================================
+// GENERATE CRISP VISUAL FLOW CHART CANVAS (FOR BOTH PNG & A4 LANDSCAPE PDF)
+// ============================================================================
+function buildFlowchartCanvas() {
+  const canvas = document.createElement("canvas");
+  canvas.width = 1754;
+  canvas.height = 1240;
+  const ctx = canvas.getContext("2d");
+
+  // Background
+  ctx.fillStyle = "#f8fafc";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.strokeStyle = "#1e1b4b";
+  ctx.lineWidth = 4;
+  ctx.strokeRect(20, 20, 1714, 1200);
+
+  // Header Banner
+  const hdrGrad = ctx.createLinearGradient(30, 30, 1724, 130);
+  hdrGrad.addColorStop(0, "#0b1120");
+  hdrGrad.addColorStop(0.5, "#1e1b4b");
+  hdrGrad.addColorStop(1, "#0f2942");
+  ctx.fillStyle = hdrGrad;
+  ctx.fillRect(30, 30, 1694, 96);
+
+  ctx.textAlign = "center";
+  ctx.fillStyle = "#fef08a";
+  ctx.font = "900 26px 'Noto Sans Tamil', sans-serif";
+  ctx.fillText("உயர்கல்வி வழிகாட்டுதல் தளம் (v4.25) — இணையதள பாய்வு வரைபடம் (FLOW CHART SITE MAP)", 877, 72, 1640);
+
+  ctx.fillStyle = "#7dd3fc";
+  ctx.font = "bold 16px 'Noto Sans Tamil', sans-serif";
+  ctx.fillText("தமிழ்நாடு பள்ளிக் கல்வித்துறை | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் (https://www.ceosvg.in)", 877, 106, 1640);
+
+  // ROOT BOX
+  ctx.fillStyle = "#0284c7";
+  ctx.fillRect(537, 144, 680, 56);
+  ctx.strokeStyle = "#facc15";
+  ctx.lineWidth = 2.5;
+  ctx.strokeRect(537, 144, 680, 56);
+
+  ctx.fillStyle = "#ffffff";
+  ctx.font = "900 19px 'Noto Sans Tamil', sans-serif";
+  ctx.fillText("🏠 நிலை 1: முதன்மை முகப்பு (index.html) + மும்முனை வழிகாட்டி & 2027 கவுண்ட்டவுன்", 877, 179, 660);
+
+  // Connector from Root to Horizontal Spine
+  ctx.strokeStyle = "#4f46e5";
+  ctx.lineWidth = 3.5;
+  ctx.beginPath();
+  ctx.moveTo(877, 200);
+  ctx.lineTo(877, 224);
+  ctx.moveTo(150, 224);
+  ctx.lineTo(1604, 224);
+  ctx.stroke();
+
+  // 7 Gateway Columns
+  const colW = 228;
+  const gap = 13;
+  const startX = 40;
+
+  FLOWCHART_GATEWAYS.forEach(function(gw, idx) {
+    const cx = startX + idx * (colW + gap);
+    const midX = cx + colW / 2;
+
+    // Vertical drop from spine
+    ctx.strokeStyle = gw.color;
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(midX, 224);
+    ctx.lineTo(midX, 246);
+    ctx.stroke();
+
+    // Gateway Header Box
+    ctx.fillStyle = gw.color;
+    ctx.fillRect(cx, 246, colW, 64);
+
+    ctx.textAlign = "center";
+    ctx.fillStyle = "#fef08a";
+    ctx.font = "bold 13px 'Noto Sans Tamil', sans-serif";
+    ctx.fillText(gw.num + " (" + gw.file.split(".")[0] + ")", midX, 267, colW - 10);
+
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "bold 14.5px 'Noto Sans Tamil', sans-serif";
+    ctx.fillText(gw.title, midX, 294, colW - 10);
+
+    // Leaf boxes
+    let ly = 322;
+    const leafH = (gw.leaves.length > 10) ? 44 : 56;
+    ctx.textAlign = "left";
+
+    gw.leaves.forEach(function(lf) {
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(cx + 6, ly, colW - 12, leafH - 6);
+      ctx.strokeStyle = "#cbd5e1";
+      ctx.lineWidth = 1.2;
+      ctx.strokeRect(cx + 6, ly, colW - 12, leafH - 6);
+
+      ctx.fillStyle = gw.color;
+      ctx.fillRect(cx + 6, ly, 5, leafH - 6);
+
+      ctx.fillStyle = "#0f172a";
+      ctx.font = "bold 12.5px 'Noto Sans Tamil', sans-serif";
+      ctx.fillText(lf.t, cx + 16, ly + 19, colW - 26);
+
+      ctx.fillStyle = "#0284c7";
+      ctx.font = "bold 10.5px 'JetBrains Mono', monospace";
+      ctx.fillText(lf.c.split("#")[0], cx + 16, ly + 34, colW - 26);
+
+      ly += leafH;
+    });
+  });
+
+  // Footer
+  ctx.fillStyle = "#0b1120";
+  ctx.fillRect(30, 1164, 1694, 44);
+  ctx.textAlign = "center";
+  ctx.fillStyle = "#fef08a";
+  ctx.font = "bold 15px 'Noto Sans Tamil', sans-serif";
+  ctx.fillText("இணையதள வடிவமைப்பு: கூ. பூவலிங்கம், பள்ளித் துணை ஆய்வாளர் (9626471035) | முதன்மைக் கல்வி அலுவலகம், சிவகங்கை (04575-240408) | உதவி எண்: 14417", 877, 1192, 1650);
+
+  return canvas;
+}
+
+function downloadFlowchartImage() {
+  const cvs = buildFlowchartCanvas();
+  const url = cvs.toDataURL("image/png");
+  const a = document.createElement("a");
+  a.style.display = "none";
+  a.href = url;
+  a.download = "Higher_Education_Portal_Flowchart_Sitemap.png";
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(function() { if (a.parentNode) document.body.removeChild(a); }, 3000);
+  showToast("🖼️ Flow Chart PNG படம் பதிவிறக்கப்பட்டது!");
+}
+
+function downloadFlowchartPdf() {
+  const cvs = buildFlowchartCanvas();
+  const dataUrl = cvs.toDataURL("image/jpeg", 0.95);
+  const b64 = dataUrl.split(",")[1];
+  const bin = atob(b64);
+  const imgBytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) imgBytes[i] = bin.charCodeAt(i);
+
+  const wPt = 841.89, hPt = 595.28; // A4 Landscape
+  const pdfHeader = "%PDF-1.4\n";
+  const obj1 = "1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n";
+  const obj2 = "2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n";
+  const obj3 = "3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 " + wPt + " " + hPt + "] /Resources << /XObject << /Im1 5 0 R >> >> /Contents 4 0 R >>\nendobj\n";
+  const streamContent = "q\n" + wPt + " 0 0 " + hPt + " 0 0 cm\n/Im1 Do\nQ\n";
+  const obj4 = "4 0 obj\n<< /Length " + streamContent.length + " >>\nstream\n" + streamContent + "endstream\nendobj\n";
+  const obj5Header = "5 0 obj\n<< /Type /XObject /Subtype /Image /Width 1754 /Height 1240 /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length " + imgBytes.length + " >>\nstream\n";
+  const obj5Footer = "\nendstream\nendobj\n";
+
+  const enc = new TextEncoder();
+  const bHdr = enc.encode(pdfHeader), bO1 = enc.encode(obj1), bO2 = enc.encode(obj2), bO3 = enc.encode(obj3), bO4 = enc.encode(obj4), bO5H = enc.encode(obj5Header), bO5F = enc.encode(obj5Footer);
+  let offset = bHdr.length;
+  const off1 = offset; offset += bO1.length;
+  const off2 = offset; offset += bO2.length;
+  const off3 = offset; offset += bO3.length;
+  const off4 = offset; offset += bO4.length;
+  const off5 = offset; offset += bO5H.length + imgBytes.length + bO5F.length;
+  const pad10 = function(n) { return String(n).padStart(10, "0"); };
+  const xref = "xref\n0 6\n0000000000 65535 f \n" + pad10(off1) + " 00000 n \n" + pad10(off2) + " 00000 n \n" + pad10(off3) + " 00000 n \n" + pad10(off4) + " 00000 n \n" + pad10(off5) + " 00000 n \n";
+  const trailer = "trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n" + offset + "\n%%EOF";
+  const bXref = enc.encode(xref), bTrl = enc.encode(trailer);
+
+  const pdfBuffer = new Uint8Array(offset + bXref.length + bTrl.length);
+  let pos = 0;
+  [bHdr, bO1, bO2, bO3, bO4, bO5H, imgBytes, bO5F, bXref, bTrl].forEach(function(arr) {
+    pdfBuffer.set(arr, pos); pos += arr.length;
+  });
+
+  const blob = new Blob([pdfBuffer], { type: "application/pdf" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.style.display = "none";
+  a.href = url;
+  a.download = "Higher_Education_Portal_Flowchart_Sitemap_A4.pdf";
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(function() { if (a.parentNode) document.body.removeChild(a); URL.revokeObjectURL(url); }, 4000);
+  showToast("📥 A4 Flow Chart PDF பதிவிறக்கப்பட்டது!");
+}
+
+document.addEventListener("DOMContentLoaded", renderFlowcharts);
+</script>
+</body>
+</html>

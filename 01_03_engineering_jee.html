@@ -5421,71 +5421,6 @@
       }
     }
 
-
-/* === v4.12 UNIVERSAL FLOATING BACK-TO-TOP BUTTON === */
-.floating-back-to-top {
-  position: fixed !important;
-  bottom: 24px !important;
-  right: 24px !important;
-  z-index: 99999 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 7px !important;
-  padding: 9px 18px !important;
-  background: linear-gradient(135deg, #0284c7 0%, #1e40af 100%) !important;
-  color: #ffffff !important;
-  border: 1.8px solid #38bdf8 !important;
-  border-radius: 999px !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), 0 0 12px rgba(56, 189, 248, 0.4) !important;
-  font-family: 'Noto Sans Tamil', 'Plus Jakarta Sans', 'Inter', sans-serif !important;
-  font-size: 0.86rem !important;
-  font-weight: 800 !important;
-  cursor: pointer !important;
-  outline: none !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-  transform: translateY(14px) !important;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  backdrop-filter: blur(8px) !important;
-  text-decoration: none !important;
-}
-.floating-back-to-top.visible {
-  opacity: 1 !important;
-  pointer-events: auto !important;
-  transform: translateY(0) !important;
-}
-.floating-back-to-top:hover {
-  transform: translateY(-3px) scale(1.04) !important;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(56, 189, 248, 0.6) !important;
-  background: linear-gradient(135deg, #0369a1 0%, #1e3a8a 100%) !important;
-  border-color: #facc15 !important;
-}
-.floating-btn-arrow {
-  font-size: 0.92rem !important;
-  line-height: 1 !important;
-  color: #facc15 !important;
-}
-.floating-btn-text {
-  letter-spacing: 0.3px !important;
-  color: #ffffff !important;
-}
-/* Hide any legacy duplicate fixed back-to-top buttons so only #floatingBackToTop shows */
-.back-to-top:not(#floatingBackToTop),
-.back-to-top-btn:not(#floatingBackToTop),
-#masterBackTopBtn,
-#backToTopBtn:not(#floatingBackToTop) {
-  display: none !important;
-}
-@media (max-width: 680px) {
-  .floating-back-to-top {
-    bottom: 16px !important;
-    right: 14px !important;
-    padding: 7px 14px !important;
-    font-size: 0.78rem !important;
-  }
-}
-
 </style>
 <style id="distinct-theme-css">
 /* ============================================================
@@ -7582,546 +7517,434 @@
   background: #f8fafc !important;
 }
 </style>
-<style id="v414-crystal-typing-ribbon-css">
+
+<style id="v428-universal-mobile-responsive">
 /* ============================================================================
-   v4.14 UNIFIED TRANSPARENT CRYSTAL GUIDANCE ANIMATION RIBBON
-   (மருத்துவ நுழைவுத்தேர்வுப் பக்க மாதிரி — Transparent Crystal Design)
+   v4.28 UNIVERSAL MOBILE-FIRST EDGE-TO-EDGE & ZERO-CLIPPING ENGINE (ALL PAGES)
+   Fixes:
+   1. Eliminates triple/quadruple nested left-right padding on mobile (image_4fc1ff & image_4fc220)
+   2. Fixes CSS Grid 1fr (minmax(auto, 1fr)) right-side card cutoff by enforcing minmax(0, 1fr)
+      and min-width: 0 on all cards, flex children, and images/SVGs (image_4fc1ff)
+   3. Fixes Breadcrumb bar & current-page pill horizontal overflow by allowing text wrapping (image_4fc220)
+   4. Fixes Accessibility Toolbar (#intlAccessibilityToolbar) button text clipping on mobile using a
+      6-column grid: 3 short buttons in Row 1 (span 2) + 2 wide buttons per row in Rows 2-4 (span 3) (image_4fc9a1)
+   5. Makes sticky top header relative on mobile so it never blocks viewport while scrolling
    ============================================================================ */
-.typing-banner-wrap {
-  width: 100% !important;
-  max-width: 100% !important;
-  box-sizing: border-box !important;
-  text-align: center !important;
-  margin: 14px auto 16px auto !important;
-  padding: 0 !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  animation: none !important;
-}
-
-.typing-container,
-.typing-banner-wrap .typing-container {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 10px !important;
-  background: linear-gradient(135deg, rgba(239, 246, 255, 0.88) 0%, rgba(245, 243, 255, 0.82) 100%) !important;
-  backdrop-filter: blur(12px) saturate(160%) !important;
-  -webkit-backdrop-filter: blur(12px) saturate(160%) !important;
-  border: 1.5px solid #93c5fd !important;
-  padding: 8px 22px !important;
-  border-radius: 999px !important;
-  margin-bottom: 4px !important;
-  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.16), inset 0 1.5px 2px rgba(255, 255, 255, 0.96) !important;
-  min-height: 44px !important;
-  max-width: 96% !important;
-  width: auto !important;
-  box-sizing: border-box !important;
-}
-
-.typing-badge,
-.typing-banner-wrap .typing-badge {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 4px !important;
-  font-size: 0.86rem !important;
-  font-weight: 800 !important;
-  color: #1e3a8a !important;
-  background: rgba(255, 255, 255, 0.92) !important;
-  border: 1px solid rgba(147, 197, 253, 0.85) !important;
-  padding: 4px 10px !important;
-  border-radius: 999px !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), inset 0 1px 1px #ffffff !important;
-  flex-shrink: 0 !important;
-}
-
-.typing-text,
-.typing-banner-wrap .typing-text {
-  font-size: 0.98rem !important;
-  font-weight: 700 !important;
-  color: #1e3a8a !important;
-  letter-spacing: 0.2px !important;
-  line-height: 1.4 !important;
-}
-
-.typing-cursor,
-.typing-banner-wrap .typing-cursor {
-  display: inline-block !important;
-  font-weight: 800 !important;
-  font-size: 1.15rem !important;
-  color: #2563eb !important;
-  margin-left: 2px !important;
-  animation: blinkCursorV414 0.8s infinite !important;
-}
-
-@keyframes blinkCursorV414 {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.sparkle-icon,
-.typing-sparkle,
-.pulse-sparkle {
-  display: inline-block !important;
-  animation: sparkleSpinV414 3s linear infinite !important;
-}
-
-@keyframes sparkleSpinV414 {
-  0%, 100% { transform: scale(1) rotate(0deg); }
-  50% { transform: scale(1.15) rotate(15deg); }
-}
-
 @media (max-width: 768px) {
-  .typing-container,
-  .typing-banner-wrap .typing-container {
-    padding: 6px 14px !important;
-    min-height: 40px !important;
-    border-radius: 14px !important;
-    flex-wrap: wrap !important;
+  html, body {
+    margin: 0 !important;
+    padding: 2px 2px !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+    -webkit-text-size-adjust: 100% !important;
   }
-  .typing-badge,
-  .typing-banner-wrap .typing-badge {
-    font-size: 0.74rem !important;
-    padding: 2px 8px !important;
+
+  .portal-layout-wrapper,
+  .portal-container,
+  .portal-executive-wrapper,
+  .container,
+  .page-wrapper,
+  .main-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
   }
-  .typing-text,
-  .typing-banner-wrap .typing-text {
-    font-size: 0.86rem !important;
-  }
-}
-</style>
-<style id="v415-portal-master-stabilizer">
-/* ============================================================================
-   v4.15 MASTER STABILIZER, ZERO-CLS TYPEWRITER, STEADY THIRUKKURAL,
-   MOBILE RESPONSIVENESS & UNIVERSAL PRINT STYLES
-   ============================================================================ */
 
-/* --- A. 100% STILL, EYE-FRIENDLY THIRUKKURAL PALM-LEAF MANUSCRIPT --- */
-.kural-box,
-.kural-box::before,
-.kural-box::after,
-.kural-header,
-.kural-icon,
-.kural-title,
-.kural-sparkle,
-.kural-verse-text,
-.kural-verse-text .kural-line,
-.kural-verse-text .kural-line-1,
-.kural-verse-text .kural-line-2,
-.kural-verse-text .stylus-nib,
-.kural-meaning {
-  animation: none !important;
-  -webkit-animation: none !important;
-  transform: none !important;
-  -webkit-transform: none !important;
-  transition: none !important;
-  clip-path: none !important;
-  -webkit-clip-path: none !important;
-}
-
-.kural-box {
-  box-shadow: 0 5px 16px rgba(74, 33, 5, 0.22), inset 0 0 14px rgba(139, 69, 19, 0.14) !important;
-}
-
-.kural-verse-text .stylus-nib {
-  display: inline-block !important;
-  opacity: 0.85 !important;
-}
-
-/* --- B. ZERO LAYOUT SHIFT (CLS = 0) FOR ALL TYPEWRITER BANNERS (1 OR 2 LINES) --- */
-.typing-banner-wrap {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 64px !important;
-  min-height: 64px !important;
-  max-height: 64px !important;
-  margin: 12px auto 14px auto !important;
-  padding: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  overflow: hidden !important;
-  box-sizing: border-box !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  animation: none !important;
-}
-
-.typing-banner-wrap .typing-container,
-body:not(.is-home-page) .typing-container {
-  height: 58px !important;
-  min-height: 58px !important;
-  max-height: 58px !important;
-  width: 100% !important;
-  max-width: 980px !important;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex-wrap: nowrap !important;
-  gap: 10px !important;
-  padding: 4px 20px !important;
-  margin: 0 auto !important;
-  border-radius: 16px !important;
-  background: linear-gradient(135deg, rgba(236, 253, 245, 0.94) 0%, rgba(240, 249, 255, 0.92) 100%) !important;
-  border: 1.5px solid #6ee7b7 !important;
-  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.95) !important;
-  overflow: hidden !important;
-  box-sizing: border-box !important;
-}
-
-.typing-banner-wrap .typing-badge {
-  flex-shrink: 0 !important;
-  animation: none !important;
-  transform: none !important;
-}
-
-.sparkle-icon,
-.typing-sparkle,
-.pulse-sparkle {
-  animation: none !important;
-  transform: none !important;
-}
-
-.typing-banner-wrap .typing-text,
-body:not(.is-home-page) .typing-text {
-  font-size: 0.92rem !important;
-  font-weight: 800 !important;
-  color: #0c4a6e !important;
-  line-height: 1.32 !important;
-  max-height: 2.68em !important;
-  overflow: hidden !important;
-  text-align: center !important;
-  display: inline-block !important;
-  white-space: normal !important;
-}
-
-/* Home Page (index.html) Control Panel Typewriter & Gateway Flip Box Fixed Heights */
-.control-panel .typing-container {
-  width: 100% !important;
-  max-width: 960px !important;
-  height: 52px !important;
-  min-height: 52px !important;
-  max-height: 52px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  overflow: hidden !important;
-  margin: 0 auto 4px auto !important;
-  padding: 2px 12px !important;
-  box-sizing: border-box !important;
-}
-
-.control-panel .typing-text {
-  font-size: clamp(0.84rem, 1.02vw, 0.94rem) !important;
-  font-weight: 800 !important;
-  color: #38bdf8 !important;
-  -webkit-text-fill-color: #38bdf8 !important;
-  line-height: 1.32 !important;
-  max-height: 2.68em !important;
-  overflow: hidden !important;
-  text-align: center !important;
-}
-
-.compass-flip-strip {
-  height: 68px !important;
-  min-height: 68px !important;
-  max-height: 68px !important;
-  width: 100% !important;
-  max-width: 920px !important;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 10px !important;
-  padding: 6px 14px !important;
-  margin: 8px auto 4px auto !important;
-  border-radius: 18px !important;
-  overflow: hidden !important;
-  box-sizing: border-box !important;
-}
-
-.compass-flip-viewport {
-  flex: 1 1 auto !important;
-  height: 54px !important;
-  min-height: 54px !important;
-  max-height: 54px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  overflow: hidden !important;
-  padding: 0 4px !important;
-  box-sizing: border-box !important;
-}
-
-.compass-flip-card {
-  width: 100% !important;
-  height: 54px !important;
-  min-height: 54px !important;
-  max-height: 54px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  overflow: hidden !important;
-  transform: none !important;
-  box-sizing: border-box !important;
-}
-
-.compass-flip-content {
-  width: 100% !important;
-  height: 52px !important;
-  min-height: 52px !important;
-  max-height: 52px !important;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: center !important;
-  align-content: center !important;
-  flex-wrap: wrap !important;
-  gap: 4px 10px !important;
-  padding: 4px 14px !important;
-  border-radius: 14px !important;
-  overflow: hidden !important;
-  box-sizing: border-box !important;
-  line-height: 1.28 !important;
-}
-
-/* Creator Card & Unified Dual Pill Zero-Bounce Stabilization */
-.creator-card {
-  min-height: 54px !important;
-  box-sizing: border-box !important;
-}
-
-.creator-typewriter-wrapper {
-  min-height: 32px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.cg-unified-dual-pill {
-  animation: dualBorderPulseV409 3.5s infinite ease-in-out !important;
-  transform: none !important;
-}
-
-/* --- C. COMPREHENSIVE MOBILE PHONE OPTIMIZATION (<= 1024px & <= 768px) --- */
-.cg-responsive-grid-4,
-.cg-responsive-grid-5 {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
-  gap: 12px !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-.cg-responsive-grid-3 {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)) !important;
-  gap: 12px !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-.cg-responsive-grid-2 {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
-  gap: 12px !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-@media (max-width: 1024px) {
-  .desktop-left-sidebar {
-    position: fixed !important;
-    left: -320px !important;
-    top: 0 !important;
-    bottom: 0 !important;
-    width: 290px !important;
-    max-width: 85vw !important;
-    height: 100vh !important;
-    transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    z-index: 10005 !important;
-  }
-  .desktop-left-sidebar.sidebar-open,
-  .desktop-left-sidebar.active {
-    left: 0 !important;
-  }
-  .sidebar-backdrop {
-    z-index: 10004 !important;
-  }
-  .sidebar-backdrop.active {
-    display: block !important;
-  }
-  .sidebar-close-btn {
-    display: inline-flex !important;
-  }
-  .portal-main-content {
+  .portal-main-content,
+  main.portal-main-content {
     margin-left: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
-    padding: 8px 10px 75px 10px !important;
+    padding: 2px 2px 68px 2px !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
   }
-  /* Keep Menu Button on Bottom-Left and Back-to-Top on Bottom-Right (Zero Overlap!) */
-  .mobile-menu-floating-btn {
-    display: inline-flex !important;
-    position: fixed !important;
-    bottom: 16px !important;
-    left: 14px !important;
-    right: auto !important;
-    z-index: 9998 !important;
-    padding: 9px 16px !important;
-    font-size: 0.84rem !important;
-  }
-  .floating-back-to-top {
-    bottom: 16px !important;
-    right: 14px !important;
-    left: auto !important;
-    z-index: 9998 !important;
-    padding: 8px 15px !important;
-    font-size: 0.80rem !important;
-  }
-}
 
-@media (max-width: 768px) {
-  /* Fixed height on mobile for typewriter and gateway flip box so 1-line and 2-line never shift */
-  .typing-banner-wrap {
-    height: 74px !important;
-    min-height: 74px !important;
-    max-height: 74px !important;
-    margin: 8px auto 10px auto !important;
+  /* Accessibility Toolbar (#intlAccessibilityToolbar) - Zero Text Clipping */
+  .intl-a11y-toolbar,
+  #intlAccessibilityToolbar {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 5px !important;
+    padding: 6px !important;
+    margin: 0 0 8px 0 !important;
+    border-radius: 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
-  .typing-banner-wrap .typing-container,
-  body:not(.is-home-page) .typing-container {
-    height: 66px !important;
-    min-height: 66px !important;
-    max-height: 66px !important;
-    padding: 4px 12px !important;
-    border-radius: 14px !important;
-    gap: 6px !important;
-    flex-wrap: nowrap !important;
-  }
-  .typing-banner-wrap .typing-text,
-  body:not(.is-home-page) .typing-text {
-    font-size: 0.80rem !important;
-    line-height: 1.28 !important;
-    max-height: 2.6em !important;
-  }
-  .control-panel .typing-container {
-    height: 58px !important;
-    min-height: 58px !important;
-    max-height: 58px !important;
-    padding: 2px 8px !important;
-  }
-  .control-panel .typing-text {
-    font-size: 0.80rem !important;
-    line-height: 1.28 !important;
-    max-height: 2.6em !important;
-  }
-  .compass-flip-strip {
-    height: 82px !important;
-    min-height: 82px !important;
-    max-height: 82px !important;
-    padding: 5px 8px !important;
-    gap: 6px !important;
-    border-radius: 14px !important;
-  }
-  .compass-flip-viewport,
-  .compass-flip-card,
-  .compass-flip-content {
-    height: 68px !important;
-    min-height: 68px !important;
-    max-height: 68px !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 3px !important;
-    padding: 2px 6px !important;
-    overflow: hidden !important;
-  }
-  .flip-part-title {
-    font-size: 0.78rem !important;
+  .intl-a11y-toolbar .a11y-btn,
+  #intlAccessibilityToolbar .a11y-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding: 6px 6px !important;
+    font-size: 0.72rem !important;
+    border-radius: 8px !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
     line-height: 1.22 !important;
     text-align: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
   }
-  .flip-gateway-badge {
-    font-size: 0.70rem !important;
-    line-height: 1.2 !important;
-    padding: 2px 10px !important;
+  .intl-a11y-toolbar .a11y-btn:nth-child(-n+3),
+  #intlAccessibilityToolbar .a11y-btn:nth-child(-n+3) {
+    grid-column: span 2 !important;
   }
-  .creator-card {
-    min-height: 84px !important;
-    padding: 10px 12px !important;
+  .intl-a11y-toolbar .a11y-btn:nth-child(n+4),
+  #intlAccessibilityToolbar .a11y-btn:nth-child(n+4) {
+    grid-column: span 3 !important;
   }
-  .creator-typewriter-wrapper {
-    min-height: 40px !important;
-    height: 40px !important;
-    font-size: 0.78rem !important;
+
+  /* Top Frame Banner - Relative on mobile, compact padding */
+  .portal-top-frame {
+    position: relative !important;
+    top: 0 !important;
+    padding: 10px 8px !important;
+    margin: 0 0 8px 0 !important;
+    border-radius: 12px !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .banner-title-tamil {
+    font-size: clamp(1.15rem, 5vw, 1.38rem) !important;
+    line-height: 1.28 !important;
+  }
+  .banner-tagline-aurora {
+    font-size: 0.74rem !important;
     line-height: 1.25 !important;
   }
-  /* Responsive Tables & Touch Scroll */
-  .table-container,
-  .table-responsive,
-  .table-wrapper,
-  .directory-table-container,
-  .college-table-wrap {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
+  .banner-english-row,
+  .banner-title-english,
+  .banner-slogan-english {
+    font-size: 0.62rem !important;
+    letter-spacing: 0.6px !important;
+    line-height: 1.2 !important;
   }
-  table th,
-  table td {
-    font-size: 0.80rem !important;
-    padding: 8px 8px !important;
+  .top-frame-side-btn,
+  .top-frame-side-btn.btn-home {
+    position: static !important;
+    transform: none !important;
+    padding: 5px 12px !important;
+    font-size: 0.76rem !important;
+    margin-top: 2px !important;
   }
-  .cg-responsive-grid-4,
-  .cg-responsive-grid-5,
-  .cg-responsive-grid-3,
-  .cg-responsive-grid-2 {
-    grid-template-columns: 1fr !important;
-    gap: 10px !important;
-  }
-  #bottomStudentQueryBtn,
-  #bottomPortalFeedbackBtn {
-    min-width: 0 !important;
-    width: 100% !important;
-    padding: 12px 16px !important;
-  }
-}
 
-/* --- D. UNIVERSAL PRINT STYLES (@media print) --- */
-@media print {
-  .desktop-left-sidebar,
-  .mobile-menu-floating-btn,
-  .floating-back-to-top,
-  .sidebar-backdrop,
-  .quick-nav-marquee-container,
-  .bottom-page-nav-bar,
-  .portal-bottom-action-hub,
-  .cg-portal-modal-overlay,
-  .no-print {
-    display: none !important;
-  }
-  html, body, .portal-layout-wrapper, .portal-main-content, .container, .portal-container {
-    margin: 0 !important;
-    padding: 0 !important;
+  /* Breadcrumb Bar - Full wrapping, zero right-edge overflow (image_4fc220 fix) */
+  .breadcrumb-bar,
+  .top-breadcrumb-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 6px !important;
+    padding: 8px 8px !important;
+    margin: 0 0 8px 0 !important;
+    border-radius: 10px !important;
     width: 100% !important;
     max-width: 100% !important;
-    background: #ffffff !important;
-    color: #000000 !important;
-    box-shadow: none !important;
+    box-sizing: border-box !important;
   }
-  .card, .section-card, .kural-box, .creator-card, .portal-footer, table, th, td {
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-    box-shadow: none !important;
+  .breadcrumb-left-stack,
+  .breadcrumb-right-stack {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 5px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .nav-menu-btn,
+  .nav-menu-btn.btn-current-page,
+  .nav-menu-btn.btn-guidance-home,
+  .nav-menu-btn.btn-notice-link,
+  .breadcrumb-link,
+  .breadcrumb-current {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    font-size: 0.76rem !important;
+    line-height: 1.3 !important;
+    padding: 5px 9px !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+  }
+  .nav-menu-btn .btn-text {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    min-width: 0 !important;
+  }
+
+  /* Hero Banner & Section Cards - Compact padding to maximize card width */
+  .header-banner-wrap {
+    margin: 0 0 10px 0 !important;
+    border-radius: 12px !important;
+  }
+  .header-banner,
+  .header-banner.aurora-theme,
+  .hero-banner,
+  .crystal-hero-banner {
+    padding: 12px 10px !important;
+    border-radius: 10px !important;
+  }
+  .banner-main-title {
+    font-size: clamp(1.08rem, 4.6vw, 1.32rem) !important;
+    line-height: 1.32 !important;
+  }
+  .banner-sub-english {
+    font-size: 0.68rem !important;
+    letter-spacing: 0.6px !important;
+  }
+  .banner-desc {
+    font-size: 0.78rem !important;
+    line-height: 1.48 !important;
+  }
+
+  .content-card,
+  .section-card,
+  .section-container,
+  .card-section,
+  .feedback-section {
+    padding: 10px 8px !important;
+    margin: 0 0 12px 0 !important;
+    border-radius: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .section-header-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    margin-bottom: 10px !important;
+    padding-bottom: 8px !important;
+  }
+  .section-title {
+    font-size: 0.96rem !important;
+    line-height: 1.35 !important;
+    word-break: break-word !important;
+  }
+  .section-badge-pill {
+    font-size: 0.72rem !important;
+    padding: 3px 9px !important;
+    white-space: normal !important;
+  }
+
+  /* Universal Single-Column Grid Collapse with minmax(0, 1fr) (image_4fc1ff fix) */
+  .resource-grid,
+  .cards-grid,
+  .portal-grid,
+  .portals-grid,
+  .portal-links-grid,
+  .grid-container,
+  #cardsGrid,
+  .gateway-grid,
+  .exam-grid,
+  .courses-grid,
+  .colleges-grid,
+  .branch-grid,
+  .departments-grid,
+  .comparison-grid,
+  .features-grid,
+  .feature-grid-4,
+  .highlights-grid,
+  .iiser-highlights-grid,
+  .loan-grid,
+  .metrics-grid,
+  .metrics-bar,
+  .official-portals-showcase,
+  .quick-nav-grid,
+  .quota-features-grid,
+  .roadmap-grid,
+  .showcase-grid,
+  .sports-4year-grid,
+  .stats-grid,
+  .stats-matrix,
+  .steps-container,
+  .strategy-flex-grid,
+  .strategy-subject-grid,
+  .sub-grid,
+  .sub-grid-3,
+  .tanuvas-2yr-diploma-grid,
+  .tri-directory-grid,
+  .dual-directory-grid,
+  .v410-advisory-grid,
+  .action-buttons-grid,
+  .action-row-split,
+  .boundary-grid,
+  .calc-grid,
+  .calc-inputs,
+  .calc-inputs-grid,
+  .calc-inputs-row,
+  .cards-2col,
+  .cards-3col,
+  .cards-4col,
+  .cf-filters-panel,
+  .cf-inputs-grid,
+  .checklist-grid,
+  .core-7-degrees-grid,
+  .dab-grid,
+  .district-center-info-grid,
+  .fb-grid,
+  .finder-select-grid,
+  .focus-blueprint-grid,
+  .form-inputs-grid,
+  .four-boxes-fluid-grid,
+  .grid-2,
+  .grid-2col,
+  .grid-3,
+  .grid-4,
+  .helpline-bento-grid,
+  .hero-luxury-cards-grid,
+  .nav-button-menu-container,
+  .sq-grid,
+  .cg-responsive-grid-2,
+  .cg-responsive-grid-3,
+  .cg-responsive-grid-4,
+  .cg-responsive-grid-5 {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Also collapse any inline grid-template-columns inside sections/cards */
+  .content-card [style*="grid-template-columns"]:not(.manarkeni-stat-grid),
+  .section-card [style*="grid-template-columns"]:not(.manarkeni-stat-grid) {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Resource Cards & Portal Cards - Strict 100% width & zero horizontal overflow */
+  .resource-card,
+  .card,
+  .portal-card,
+  .exam-card,
+  .course-card,
+  .college-card,
+  .bento-card,
+  .feature-card,
+  .info-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 12px 10px !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .resource-card *,
+  .content-card *,
+  .section-card * {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .resource-card-header {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  .resource-card-icon {
+    font-size: 1.5rem !important;
+    padding: 6px !important;
+    flex-shrink: 0 !important;
+  }
+  .resource-card-title {
+    font-size: 0.96rem !important;
+    line-height: 1.32 !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+  .resource-card-sub {
+    font-size: 0.68rem !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+  .resource-card-desc {
+    font-size: 0.82rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 10px !important;
+  }
+  .resource-card-banner-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 6px 8px !important;
+    margin-bottom: 10px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  .resource-card-banner-img img,
+  .resource-card-banner-img svg {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 76px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+  .action-btn {
+    padding: 9px 10px !important;
+    font-size: 0.82rem !important;
+    white-space: normal !important;
+    line-height: 1.25 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Compact Floating Bottom Buttons so they don't cover bottom content */
+  .mobile-menu-floating-btn,
+  .mobile-sidebar-toggle {
+    bottom: 10px !important;
+    left: 8px !important;
+    padding: 6px 12px !important;
+    font-size: 0.75rem !important;
+    border-radius: 999px !important;
+  }
+  .floating-back-to-top {
+    bottom: 10px !important;
+    right: 8px !important;
+    padding: 6px 12px !important;
+    font-size: 0.74rem !important;
+    border-radius: 999px !important;
   }
 }
-</style></head>
-<body class="">
+</style>
+
+</head>
+<body>
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
 <button class="mobile-menu-floating-btn" id="mobileMenuFloatingBtn" onclick="toggleSidebarMenu()" title="வழிகாட்டல் பக்கப்பட்டை மெனு" type="button">
 <span style="font-size: 1.15rem; line-height: 1;">☰</span>
@@ -8193,7 +8016,7 @@ body:not(.is-home-page) .typing-text {
 <a class="sidebar-main-btn" href="06_student_support.html">
 <span class="icon">🧮</span>
 <span class="btn-text-group">
-<span class="menu-ta">கட்-ஆஃப் கருவிகள் &amp; உதவி மையம்</span>
+<span class="menu-ta">கட்-ஆஃப் &amp; மாணவர் உதவி</span>
 <span class="menu-en">CUTOFF TOOLS &amp; STUDENT SUPPORT</span>
 </span>
 </a>
@@ -8270,8 +8093,11 @@ body:not(.is-home-page) .typing-text {
 </header>
 <!-- Hero Rich Bottom Ribbon -->
 <!-- துடிப்பான தட்டச்சு வழிகாட்டல் வாசகம் (Dynamic Typing Effect - Animated Flash Bar) -->
-<div class="typing-banner-wrap no-print" style="text-align: center; margin: 14px auto 16px auto;">
-<div class="typing-container"><span aria-label="தகவல்கள்" class="typing-badge"><span class="sparkle-icon">✨</span></span><span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span></div>
+<div class="typing-banner-wrap" style="text-align: center; margin: 14px auto 16px auto;">
+<div class="typing-container">
+<span class="typing-badge"><span class="sparkle-icon">✨</span> வழிகாட்டல்:</span>
+<span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span>
+</div>
 </div>
 <!-- Quick Navigation Marquee Bar (ஓடும் விரைவு வழிசெலுத்தல் பட்டை) -->
 <div aria-label="பக்கத்தின் விரைவு வழிசெலுத்தல் பட்டை" class="quick-nav-marquee-container">
@@ -9380,6 +9206,7 @@ body:not(.is-home-page) .typing-text {
 </div>
 </section>
 <!-- Bottom Chapter Navigation Bar: Animated Edge-to-Edge Navigation -->
+
 <section class="v410-advisory-section" id="sec-sca-tfw-guide">
 <div class="v410-advisory-header">
 <h2 class="v410-advisory-title"><span>🎓</span><span>AICTE TFW (100% கல்விக் கட்டண விலக்கு) &amp; அருந்ததியர் உள்-இடஒதுக்கீடு (SCA to SC Conversion Rule)</span></h2>
@@ -9446,7 +9273,7 @@ body:not(.is-home-page) .typing-text {
 <!-- உருவாக்கியவர் பெட்டி (Classic Dark Theme & Aurora Animation, Centered Flow) -->
 <div class="creator-card">
 <div class="creator-typewriter-wrapper">
-<span class="creator-typewriter-target" id="creatorTypewriterTarget"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role"> பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role"> Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
+<span class="creator-typewriter-target" id="creatorTypewriterTarget"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role">, பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role">, Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
 </div>
 <a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
 <span class="phone-icon">📱</span>
@@ -9473,7 +9300,7 @@ body:not(.is-home-page) .typing-text {
 function toggleSidebarMenu() {
   var sidebar = document.getElementById('desktopLeftSidebar');
   var backdrop = document.getElementById('sidebarBackdrop');
-  if (sidebar) { sidebar.classList.toggle('sidebar-open'); sidebar.classList.toggle('active'); }
+  if (sidebar) sidebar.classList.toggle('sidebar-open');
   if (backdrop) backdrop.classList.toggle('active');
 }
 
@@ -9561,9 +9388,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const creatorSegments = [
     { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
     { text: "கூ. பூவலிங்கம்", tag: "span", class: "creator-name-ta" },
-    { text: " பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
+    { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
     { text: "K. Poovalingam", tag: "span", class: "creator-name-en" },
-    { text: " Deputy Inspector of Schools", tag: "span", class: "creator-role" }
+    { text: ", Deputy Inspector of Schools", tag: "span", class: "creator-role" }
   ];
 
   function runCreatorTypewriter() {
@@ -9726,32 +9553,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </script>
 <button aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" id="floatingBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="மேலே செல்க">↑ மேலே செல்க</button>
-<script id="universalFloatingBttScript">
-(function() {
-  function initFloatingBtt() {
-    var btt = document.getElementById('floatingBackToTop');
-    if (!btt) return;
-    function checkScroll() {
-      var sy = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      if (sy > 100) {
-        btt.classList.add('visible');
-      } else {
-        btt.classList.remove('visible');
-      }
-    }
-    window.addEventListener('scroll', checkScroll, { passive: true });
-    btt.addEventListener('click', function(e) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    checkScroll();
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initFloatingBtt);
-  } else {
-    initFloatingBtt();
-  }
-})();
-</script>
 </body>
 </html>
