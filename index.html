@@ -485,6 +485,170 @@ body.a11y-readable-spacing li {
 .hgl-card.new-release { border-left-color: #f59e0b; }
 .hgl-card.exam-soon { border-left-color: #38bdf8; }
 .hgl-card:hover { border-color: #fef08a; box-shadow: 0 4px 14px rgba(250, 204, 21, 0.18); }
+
+/* Animated Countdown Icon Badge & Unified 3-Segment Control Pill (◀⏸▶) */
+.hgl-countdown-subbar {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  margin-bottom: 6px !important;
+}
+.hgl-cd-anim-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.28) 0%, rgba(15, 23, 42, 0.92) 75%);
+  border: 1.5px solid #facc15;
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.45), inset 0 0 6px rgba(250, 204, 21, 0.25);
+  flex-shrink: 0;
+}
+.hgl-cd-pulse-ring {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1.5px dashed #38bdf8;
+  animation: hglClockSpin 6s linear infinite;
+  pointer-events: none;
+}
+.hgl-cd-clock-icon {
+  font-size: 1.02rem;
+  line-height: 1;
+  display: inline-block;
+  animation: hglClockTick 1.4s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px rgba(250, 204, 21, 0.8));
+}
+@keyframes hglClockSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes hglClockTick {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.12) rotate(-8deg); }
+  75% { transform: scale(1.12) rotate(8deg); }
+}
+.hgl-unified-ctrl-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(135deg, #060d1d 0%, #0f1f3d 50%, #071124 100%) !important;
+  border: 1.5px solid rgba(250, 204, 21, 0.65) !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45), 0 0 8px rgba(56, 189, 248, 0.22) !important;
+  flex-shrink: 0 !important;
+}
+.hgl-unified-seg-btn {
+  appearance: none;
+  background: transparent;
+  color: #fef08a;
+  border: none;
+  padding: 4px 11px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: all 0.18s ease;
+  font-family: inherit;
+}
+.hgl-unified-seg-btn:not(:last-child) {
+  border-right: 1px solid rgba(250, 204, 21, 0.32);
+}
+.hgl-unified-seg-btn:hover,
+.hgl-unified-seg-btn:focus-visible {
+  background: #facc15;
+  color: #090d16;
+}
+
+
+/* Animated Countdown Icon Badge & Unified 3-Segment Control Pill (◀⏸▶) */
+.hgl-countdown-subbar {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  margin-bottom: 6px !important;
+}
+.hgl-cd-anim-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.28) 0%, rgba(15, 23, 42, 0.92) 75%);
+  border: 1.5px solid #facc15;
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.45), inset 0 0 6px rgba(250, 204, 21, 0.25);
+  flex-shrink: 0;
+}
+.hgl-cd-pulse-ring {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1.5px dashed #38bdf8;
+  animation: hglClockSpin 6s linear infinite;
+  pointer-events: none;
+}
+.hgl-cd-clock-icon {
+  font-size: 1.02rem;
+  line-height: 1;
+  display: inline-block;
+  animation: hglClockTick 1.4s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px rgba(250, 204, 21, 0.8));
+}
+@keyframes hglClockSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes hglClockTick {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.12) rotate(-8deg); }
+  75% { transform: scale(1.12) rotate(8deg); }
+}
+.hgl-unified-ctrl-pill {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  background: linear-gradient(135deg, #060d1d 0%, #0f1f3d 50%, #071124 100%) !important;
+  border: 1.5px solid rgba(250, 204, 21, 0.65) !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45), 0 0 8px rgba(56, 189, 248, 0.22) !important;
+  flex-shrink: 0 !important;
+}
+.hgl-unified-seg-btn {
+  appearance: none;
+  background: transparent;
+  color: #fef08a;
+  border: none;
+  padding: 4px 11px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: all 0.18s ease;
+  font-family: inherit;
+}
+.hgl-unified-seg-btn:not(:last-child) {
+  border-right: 1px solid rgba(250, 204, 21, 0.32);
+}
+.hgl-unified-seg-btn:hover,
+.hgl-unified-seg-btn:focus-visible {
+  background: #facc15;
+  color: #090d16;
+}
+
 .hgl-priority-pill {
   font-size: 0.60rem;
   font-weight: 900;
@@ -1771,11 +1935,7 @@ body.theme-cyber-dark #admissionTimelineSec p {
   }
 
   /* 6. கவுண்ட்டவுன் தேர்வு மாற்றி பொத்தான்கள் (1-3 / 4-6 தேர்வுகள்) & அட்டைகள் */
-  .hgl-countdown-subbar {
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 6px !important;
-  }
+  .hgl-countdown-subbar { flex-direction: row !important; align-items: center !important; justify-content: space-between !important; gap: 8px !important; }
   .hgl-set-btn-group {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
@@ -2442,23 +2602,18 @@ body.theme-cyber-dark #admissionTimelineSec p {
           </div>
 
           <!-- பிளாஷ் பட்டைக்குக் கீழ்: வலமிருந்து இடமாக நகரும் தானியங்கி கவுண்ட்டவுன் பெட்டிகள் (Mobile: 1x1 | Desktop: 1x3 / 1x4) -->
-          <div class="hgl-countdown-subbar" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
-            <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
-              <span style="font-size: 0.74rem; font-weight: 900; color: #fde047;">⏱️ 2027 நுழைவுத்தேர்வு நாட்கள் கவுண்ட்டவுன் &amp; முக்கியத் தேதிகள்:</span>
-              <div class="hgl-priority-legend" aria-label="காட்சிப்படுத்தப்படும் வரிசை முறை">
-                <span style="border-color: #f59e0b; color: #fde047;">1️⃣ சமீபத்திய அறிவிப்பு</span>
-                <span style="border-color: #ef4444; color: #fca5a5;">2️⃣ விண்ணப்பிக்க குறைந்த நாட்கள்</span>
-                <span style="border-color: #38bdf8; color: #93c5fd;">3️⃣ தேர்வுக்கு குறைந்த நாட்கள்</span>
-              </div>
-            </div>
-            <div class="hgl-mat-controls" style="display: inline-flex; align-items: center; gap: 5px;">
-              <span id="hglLayoutModeBadge" style="font-size: 0.63rem; font-weight: 800; color: #cbd5e1; background: rgba(255,255,255,0.08); padding: 1.5px 7px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.18);">↔ தானியங்கி நகர்வு</span>
-              <button type="button" class="hgl-mat-ctrl-btn" id="btnHglCarouselPrev" title="முந்தைய தேர்வுப் பெட்டி">◀</button>
-              <button type="button" class="hgl-mat-ctrl-btn" id="btnHglCarouselPause" title="தானியங்கி நகர்வை நிறுத்த / தொடர">⏸</button>
-              <button type="button" class="hgl-mat-ctrl-btn" id="btnHglCarouselNext" title="அடுத்த தேர்வுப் பெட்டி (வலமிருந்து இடமாக)">▶</button>
+          <div class="hgl-countdown-subbar">
+            <span class="hgl-cd-anim-badge" title="2027 நுழைவுத்தேர்வு நாட்கள் கவுண்ட்டவுன்" aria-label="2027 நுழைவுத்தேர்வு நாட்கள் கவுண்ட்டவுன்">
+              <span class="hgl-cd-pulse-ring" aria-hidden="true"></span>
+              <span class="hgl-cd-clock-icon" aria-hidden="true">⏱️</span>
+            </span>
+            <div class="hgl-unified-ctrl-pill" role="group" aria-label="கவுண்ட்டவுன் நகர்வு கட்டுப்பாடு">
+              <button type="button" class="hgl-unified-seg-btn" id="btnHglCarouselPrev" title="முந்தைய தேர்வுப் பெட்டி" aria-label="Previous Exam">◀</button>
+              <button type="button" class="hgl-unified-seg-btn" id="btnHglCarouselPause" title="தானியங்கி நகர்வை நிறுத்த / தொடர" aria-label="Pause or Play">⏸</button>
+              <button type="button" class="hgl-unified-seg-btn" id="btnHglCarouselNext" title="அடுத்த தேர்வுப் பெட்டி" aria-label="Next Exam">▶</button>
             </div>
           </div>
-          <div class="hgl-carousel-viewport" id="hglCarouselViewport" aria-live="polite">
+          <div class="hgl-carousel-viewport"   id="hglCarouselViewport" aria-live="polite">
             <div class="hgl-carousel-track" id="hglActiveExamsGrid"></div>
           </div>
         </section>
@@ -3403,7 +3558,7 @@ body.theme-cyber-dark #admissionTimelineSec p {
     return '<article class="hgl-card ' + c.cardClass + '" data-exam-id="' + ex.id + '" data-priority-rank="' + rankNum + '">' +
       '<div class="hgl-card-top">' +
         '<span class="hgl-agency-mini">🏛️ ' + ex.body + '</span>' +
-        '<span class="hgl-priority-pill" title="காட்சி வரிசை எண் மற்றும் முன்னுரிமை">#' + rankNum + ' • ' + c.priorityLabelTa + '</span>' +
+        
         '<span class="hgl-status-tag ' + c.tagClass + '">' + c.statusText + '</span>' +
       '</div>' +
       '<div class="hgl-exam-name">' + ex.nameTa + '</div>' +
