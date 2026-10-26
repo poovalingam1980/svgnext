@@ -9189,7 +9189,8 @@ body.theme-cyber-dark li {
 <div class="nav-marquee-content" id="navMarqueeContent">
 <!-- Group 1 -->
 <div class="nav-marquee-group">
-<button class="nav-anchor-pill active" onclick="smoothScrollToAnchor('cutoff-tools-sec', this)" type="button">🧮 கட்-ஆஃப் கருவிகள்</button>
+<button class="nav-anchor-pill active" onclick="smoothScrollToAnchor('scholarship-matcher-sec', this)" type="button">🎁 60-நொடி சலுகை வழிகாட்டி (PDF)</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('cutoff-tools-sec', this)" type="button">🧮 கட்-ஆஃப் கருவிகள்</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('sports-tools-sec', this)" type="button">🏆 விளையாட்டுப் பிரிவு</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('entrance-stream-sec', this)" type="button">✍️ நுழைவுத்தேர்வுகள்</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('direct-stream-sec', this)" type="button">🎯 நேரடிச் சேர்க்கை</button>
@@ -9203,6 +9204,7 @@ body.theme-cyber-dark li {
 </div>
 <!-- Group 2 (Duplicate for infinite seamless loop) -->
 <div aria-hidden="true" class="nav-marquee-group">
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('scholarship-matcher-sec', this)" type="button">🎁 60-நொடி சலுகை வழிகாட்டி (PDF)</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('cutoff-tools-sec', this)" type="button">🧮 கட்-ஆஃப் கருவிகள்</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('sports-tools-sec', this)" type="button">🏆 விளையாட்டுப் பிரிவு</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('entrance-stream-sec', this)" type="button">✍️ நுழைவுத்தேர்வுகள்</button>
@@ -9217,7 +9219,119 @@ body.theme-cyber-dark li {
 </div>
 </div>
 </div>
-</nav><section class="section-card" id="cutoff-tools-sec">
+</nav><span id="sec-nsp-esevai-checklist"></span><section class="section-card" id="scholarship-matcher-sec" style="border: 2px solid #7c3aed; border-top: 6px solid #6d28d9; background: linear-gradient(180deg, #faf5ff 0%, #ffffff 35%, #f8fafc 100%); box-shadow: 0 14px 34px rgba(109, 40, 217, 0.10);">
+<div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 2px dashed #c4b5fd;">
+  <div style="flex: 1; min-width: 260px;">
+    <div style="display: inline-flex; align-items: center; gap: 6px; background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd; padding: 4px 12px; border-radius: 999px; font-size: 0.76rem; font-weight: 900; margin-bottom: 8px;">
+      <span>⚡ SMART SCHOLARSHIP &amp; CONCESSION FINDER</span>
+      <span>•</span>
+      <span>1-CLICK A4 PDF REPORT</span>
+    </div>
+    <h2 class="card-top-title" style="margin: 0; color: #3b0764; font-size: clamp(1.15rem, 2.2vw, 1.48rem);">🎁 60-வினாடி உயர்கல்விச் சலுகைகள், இடஒதுக்கீடு &amp; உதவித்தொகை தகுதி வழிகாட்டி</h2>
+    <p class="box-desc" style="margin: 6px 0 0 0; color: #475569; font-weight: 600;">ஒரு மாணவரின் <strong>பள்ளி வகை (அரசு / அரசு உதவி / தனியார்), வகுப்பு (Community), குடும்ப ஆண்டு வருமானம், குடும்பப் பின்னணி (முதல் பட்டதாரி / மாற்றுத்திறனாளி / பெற்றோரை இழந்தவர் / விவசாயி நல வாரியம்) மற்றும் பாலினம்</strong> ஆகியவற்றைத் தேர்ந்தெடுத்து, அவருக்குக் கிடைக்கும் அனைத்து அரசுச் சலுகைகளையும் <strong>Single-Click PDF அறிக்கையாக</strong> உடனடியாகப் பதிவிறக்கம் செய்யுங்கள்:</p>
+  </div>
+  <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+    <button type="button" onclick="speakStudentScholarshipSummary()" style="background: #1e3a8a; color: #fef08a; border: 1.5px solid #38bdf8; border-radius: 10px; padding: 10px 15px; font-family: inherit; font-size: 0.82rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);" title="பொருந்தும் உதவித்தொகை மற்றும் சலுகைகளைக் குரல் வழியாகக் கேட்க">
+      <span>🔊</span><span>குரலில் கேள்</span>
+    </button>
+    <button type="button" onclick="generateAndDownloadScholarshipPdf()" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #ffffff; border: 1.5px solid #34d399; border-radius: 10px; padding: 10px 18px; font-family: inherit; font-size: 0.85rem; font-weight: 900; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 6px 18px rgba(5, 150, 105, 0.28);" title="மாணவருக்கான தனிப்பயன் உயர்கல்விச் சலுகைகள் &amp; உதவித்தொகை பட்டியலை A4 PDF கோப்பாகப் பதிவிறக்க">
+      <span>📥</span><span>1-Click சலுகைகள் &amp; உதவித்தொகை PDF பதிவிறக்கம்</span>
+    </button>
+  </div>
+</div>
+
+<!-- Student Name & School Name Input Row -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-bottom: 14px; background: #f5f3ff; border: 1.5px solid #ddd6fe; border-radius: 12px; padding: 12px 14px;">
+  <div>
+    <label for="schStudentName" style="display: block; font-size: 0.78rem; font-weight: 900; color: #4c1d95; margin-bottom: 4px;">👤 மாணவர் பெயர் (PDF சான்றறிக்கையில் இடம்பெற):</label>
+    <input id="schStudentName" type="text" placeholder="எ.கா: க. பூவலிங்கம் / மு. கயல்விழி" style="width: 100%; padding: 8px 12px; border-radius: 8px; border: 1.5px solid #a78bfa; font-family: inherit; font-size: 0.85rem; font-weight: 700; color: #0f172a; background: #ffffff;" />
+  </div>
+  <div>
+    <label for="schSchoolName" style="display: block; font-size: 0.78rem; font-weight: 900; color: #4c1d95; margin-bottom: 4px;">🏫 பயின்ற பள்ளி / ஊர் (School &amp; Block):</label>
+    <input id="schSchoolName" type="text" placeholder="எ.கா: அரசு மேல்நிலைப்பள்ளி, சிவகங்கை" style="width: 100%; padding: 8px 12px; border-radius: 8px; border: 1.5px solid #a78bfa; font-family: inherit; font-size: 0.85rem; font-weight: 700; color: #0f172a; background: #ffffff;" />
+  </div>
+</div>
+
+<!-- 6-Parameter Eligibility Filter Grid -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin-bottom: 16px;">
+  <!-- 1. School Type -->
+  <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-top: 4px solid #059669; border-radius: 10px; padding: 10px 12px;">
+    <label for="schSchoolType" style="display: block; font-size: 0.78rem; font-weight: 900; color: #065f46; margin-bottom: 5px;">1. 🏫 பள்ளி வகை &amp; பயின்ற மொழி (6–12 வகுப்பு):</label>
+    <select id="schSchoolType" onchange="runScholarshipEligibilityMatcher()" style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.82rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
+      <option value="govt_6_12" selected>🏫 6–12 அரசுப் பள்ளி (7.5% இடஒதுக்கீடு + ₹1,000/மாதம்)</option>
+      <option value="aided_tamil">📘 அரசு உதவிபெறும் பள்ளி — தமிழ் வழி (₹1,000/மாதம் தகுதி)</option>
+      <option value="aided_eng">📗 அரசு உதவிபெறும் பள்ளி — ஆங்கில வழி (Govt Aided)</option>
+      <option value="private_rte">📙 தனியார் பள்ளி — RTE 25% ஒதுக்கீட்டில் பயின்றவர்</option>
+      <option value="private_gen">🏢 தனியார் சுயநிதிப் பள்ளி (Matric / CBSE / ICSE)</option>
+    </select>
+  </div>
+
+  <!-- 2. Community -->
+  <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-top: 4px solid #2563eb; border-radius: 10px; padding: 10px 12px;">
+    <label for="schCommunity" style="display: block; font-size: 0.78rem; font-weight: 900; color: #1e3a8a; margin-bottom: 5px;">2. 🏛️ வகுப்பு / சமூகப் பிரிவு (Community):</label>
+    <select id="schCommunity" onchange="runScholarshipEligibilityMatcher()" style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.82rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
+      <option value="bc" selected>🏛️ BC — பிற்படுத்தப்பட்டோர் (26.5% இடஒதுக்கீடு)</option>
+      <option value="mbc_dnc">🏛️ MBC / DNC — மிகவும் பிற்படுத்தப்பட்டோர் / சீர்மரபினர் (20%)</option>
+      <option value="sc_st">🏛️ SC / SCA / ST — ஆதிதிராவிடர் / பழங்குடியினர் (18% + 1%)</option>
+      <option value="bcm">🕌 BCM — பிற்படுத்தப்பட்ட இஸ்லாமியர் (3.5% இடஒதுக்கீடு)</option>
+      <option value="oc_ews">🌐 OC / EWS — பொதுப்பிரிவு / பொருளாதாரத்தில் பின்தங்கியோர் (10%)</option>
+    </select>
+  </div>
+
+  <!-- 3. Family Annual Income -->
+  <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-top: 4px solid #d97706; border-radius: 10px; padding: 10px 12px;">
+    <label for="schIncome" style="display: block; font-size: 0.78rem; font-weight: 900; color: #92400e; margin-bottom: 5px;">3. 💰 குடும்ப ஆண்டு வருமானம் (Family Annual Income):</label>
+    <select id="schIncome" onchange="runScholarshipEligibilityMatcher()" style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.82rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
+      <option value="inc_1l">💵 ₹1,00,000-க்குள் (அனைத்து உதவித்தொகைகளுக்கும் முழுத் தகுதி)</option>
+      <option value="inc_2_5l" selected>💵 ₹1,00,000 முதல் ₹2,50,000 வரை (Post-Matric / PM-YASASVI தகுதி)</option>
+      <option value="inc_8l">💵 ₹2,50,000 முதல் ₹8,00,000 வரை (Pragati / NSP / EWS தகுதி)</option>
+      <option value="inc_above8l">💵 ₹8,00,000-க்கு மேல் (தகுதி / மெரிட் &amp; FG சலுகைகள்)</option>
+    </select>
+  </div>
+
+  <!-- 4. Family Background & Special Category -->
+  <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-top: 4px solid #7c3aed; border-radius: 10px; padding: 10px 12px;">
+    <label for="schBackground" style="display: block; font-size: 0.78rem; font-weight: 900; color: #4c1d95; margin-bottom: 5px;">4. 👨‍👩‍👧 குடும்பப் பின்னணி &amp; சிறப்புத் தகுதி:</label>
+    <select id="schBackground" onchange="runScholarshipEligibilityMatcher()" style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.82rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
+      <option value="fg" selected>📜 முதல் தலைமுறைப் பட்டதாரி (First Graduate — FG)</option>
+      <option value="welfare_board">🌾 விவசாயி / கட்டுமானம் / அமைப்புசாரா தொழிலாளர் நல வாரியம்</option>
+      <option value="single_orphan">🤲 பெற்றோரை இழந்தவர் / ஒற்றைப் பெற்றோர் (Orphan / Single Parent)</option>
+      <option value="pwd">♿ மாற்றுத்திறனாளி மாணவர் (Differently Abled — 5% + Saksham)</option>
+      <option value="ex_service">🎖️ முன்னாள் படைவீரர் வாரிசு (Ex-Servicemen + PMSS)</option>
+      <option value="sports">🏆 சிறந்த விளையாட்டு வீரர் (Sports Quota — மாநில/தேசிய/மாவட்டம்)</option>
+      <option value="minority">⛪ சிறுபான்மையினர் (கிறிஸ்தவர் / இஸ்லாமியர் / பிற சிறுபான்மையினர்)</option>
+      <option value="general_bg">👨‍👩‍👧 பொதுவான குடும்பப் பின்னணி (பிற பட்டதாரிகள் உள்ள குடும்பம்)</option>
+    </select>
+  </div>
+
+  <!-- 5. Gender -->
+  <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-top: 4px solid #db2777; border-radius: 10px; padding: 10px 12px;">
+    <label for="schGender" style="display: block; font-size: 0.78rem; font-weight: 900; color: #9d174d; margin-bottom: 5px;">5. 🚻 பாலினம் (Gender — சிறப்புத் திட்டங்கள்):</label>
+    <select id="schGender" onchange="runScholarshipEligibilityMatcher()" style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.82rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
+      <option value="female" selected>👩‍🎓 மாணவி (புதுமைப் பெண் ₹1,000 + AICTE Pragati ₹50,000)</option>
+      <option value="male">👨‍🎓 மாணவன் (தமிழ்ப் புதல்வன் ₹1,000 + மத்திய/மாநில உதவித்தொகை)</option>
+    </select>
+  </div>
+
+  <!-- 6. Target Higher Education Stream -->
+  <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-top: 4px solid #0284c7; border-radius: 10px; padding: 10px 12px;">
+    <label for="schStream" style="display: block; font-size: 0.78rem; font-weight: 900; color: #075985; margin-bottom: 5px;">6. 🎓 சேர விரும்பும் உயர்கல்விப் பிரிவு (Target Course):</label>
+    <select id="schStream" onchange="runScholarshipEligibilityMatcher()" style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.82rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
+      <option value="eng" selected>⚙️ பொறியியல் &amp; தொழில்நுட்பம் (B.E. / B.Tech / B.Arch)</option>
+      <option value="med">🩺 மருத்துவம், கால்நடை &amp; துணை மருத்துவம் (MBBS / Nursing / Pharm)</option>
+      <option value="agri">🌾 வேளாண்மை, தோட்டக்கலை &amp; மீன்வளம் (TNAU / TNJFU)</option>
+      <option value="law">⚖️ சட்டம் (5-ஆண்டு B.A. LL.B / B.Com LL.B / TNDALU / CLAT)</option>
+      <option value="arts_sci">📚 கலை, அறிவியல், வணிகவியல் &amp; CA/CMA/CS (B.A./B.Sc./B.Com)</option>
+      <option value="poly_iti">🛠️ பாலிடெக்னிக் டிப்ளமோ (Polytechnic) &amp; அரசு ITI</option>
+    </select>
+  </div>
+</div>
+
+<!-- Dynamic Output Container -->
+<div id="schMatcherOutputContainer" style="background: #ffffff; border: 2px solid #c4b5fd; border-radius: 14px; padding: 16px;"></div>
+</section>
+
+<section class="section-card" id="cutoff-tools-sec">
 <div class="card-top-header">
 <h2 class="card-top-title">🧮 உயர்கல்வி சேர்க்கை கட்-ஆஃப் கால்குலேட்டர் (Academic Cut-off Tools)</h2>
 </div>
@@ -14958,6 +15072,703 @@ async function handlePopupFeedbackSubmit(e) {
   });
 })();
 </script>
+
+<script id="scholarshipMatcherEngineScript">
+(function() {
+  const SCHOLARSHIP_DATABASE = [
+    {
+      id: "govt_7_5_quota",
+      title: "🏫 7.5% அரசுப் பள்ளி மாணவர் முன்னுரிமை இடஒதுக்கீடு & 100% முழுக் கட்டண விலக்கு (TN Govt 7.5% Preferential Quota)",
+      category: "இடஒதுக்கீடு & 100% கட்டண விலக்கு",
+      badgeColor: "#047857",
+      bgLight: "#ecfdf5",
+      borderColor: "#10b981",
+      amountText: "100% கல்வி + விடுதி + பேருந்து + புத்தகக் கட்டண முழு விலக்கு (ஆண்டுக்கு ₹50,000 – ₹1,50,000 மதிப்பு)",
+      annualNumeric: 75000,
+      portalName: "TNEA / TN Medical / TNAU / TANUVAS / TNDALU கலந்தாய்வு",
+      portalUrl: "https://www.tneaonline.org/",
+      matchFn: function(p) {
+        return p.school === "govt_6_12" && ["eng", "med", "agri", "law", "poly_iti"].includes(p.stream);
+      },
+      details: "6 முதல் 12-ஆம் வகுப்பு வரை தொடர்ந்து அரசுப் பள்ளியில் பயின்ற மாணவர்களுக்கு மருத்துவம் (MBBS/BDS/AYUSH), பொறியியல் (TNEA), வேளாண்மை (TNAU), கால்நடை (TANUVAS), மீன்வளம், சட்டம் (TNDALU) மற்றும் துணை மருத்துவப் படிப்புகளில் 7.5% உள் இடஒதுக்கீடும், கல்விக் கட்டணம், விடுதிக் கட்டணம், கலந்தாய்வுக் கட்டணம் என அனைத்தும் அரசே ஏற்கும் 100% முழுக் கட்டண விலக்கும் வழங்கப்படுகிறது.",
+      certs: ["6–12 அரசுப் பள்ளி பயின்ற சான்றிதழ் (EMIS Bonafide Certificate - தலைமை ஆசிரியர் கையொப்பம்)", "சாதிச் சான்றிதழ் (Community Certificate)", "+2 மதிப்பெண் சான்றிதழ் & மாற்றுச் சான்றிதழ் (TC)"]
+    },
+    {
+      id: "pudhumai_penn",
+      title: "👩‍🎓 புதுமைப் பெண் திட்டம் — மூவலூர் இராமாமிர்தம் அம்மையார் உயர்கல்வி உறுதித் திட்டம் (Pudhumai Penn Scheme)",
+      category: "மாதாந்திர நேரடி உதவித்தொகை (DBT)",
+      badgeColor: "#be185d",
+      bgLight: "#fdf2f8",
+      borderColor: "#f472b6",
+      amountText: "மாதம் ₹1,000 (ஆண்டுக்கு ₹12,000 — படிப்பு முடியும் வரை நேரடியாக வங்கி கணக்கில்)",
+      annualNumeric: 12000,
+      portalName: "UMIS / தமிழ்நாடு மாநில உதவித்தொகை தளம் (ssp.tn.gov.in)",
+      portalUrl: "https://ssp.tn.gov.in/",
+      matchFn: function(p) {
+        return p.gender === "female" && (p.school === "govt_6_12" || p.school === "aided_tamil");
+      },
+      details: "6 முதல் 12-ஆம் வகுப்பு வரை அரசுப் பள்ளிகளில் அல்லது அரசு உதவிபெறும் பள்ளிகளில் தமிழ் வழியில் பயின்று, கல்லூரி / பாலிடெக்னிக் / ITI உயர்கல்வியில் சேரும் அனைத்து மாணவிகளுக்கும் குடும்ப வருமான வரம்பின்றி மாதம் ₹1,000 வங்கி கணக்கில் நேரடியாக வழங்கப்படுகிறது.",
+      certs: ["EMIS எண் & 6–12 அரசு / அரசு உதவி தமிழ் வழி பயின்ற சான்று", "ஆதாருடன் இணைக்கப்பட்ட மாணவியின் வங்கி கணக்கு (NPCI Seeded Bank Passbook)", "கல்லூரி சேர்க்கை சான்று (UMIS Bonafide)"]
+    },
+    {
+      id: "tamil_pudhalvan",
+      title: "👨‍🎓 தமிழ்ப் புதல்வன் திட்டம் — அரசு & தமிழ் வழிப் பள்ளி மாணவர்களுக்கு உயர்கல்வி உதவித்தொகை (Tamil Pudhalvan Scheme)",
+      category: "மாதாந்திர நேரடி உதவித்தொகை (DBT)",
+      badgeColor: "#1d4ed8",
+      bgLight: "#eff6ff",
+      borderColor: "#60a5fa",
+      amountText: "மாதம் ₹1,000 (ஆண்டுக்கு ₹12,000 — படிப்பு முடியும் வரை நேரடியாக வங்கி கணக்கில்)",
+      annualNumeric: 12000,
+      portalName: "UMIS / தமிழ்நாடு மாநில உதவித்தொகை தளம் (ssp.tn.gov.in)",
+      portalUrl: "https://ssp.tn.gov.in/",
+      matchFn: function(p) {
+        return p.gender === "male" && (p.school === "govt_6_12" || p.school === "aided_tamil");
+      },
+      details: "6 முதல் 12-ஆம் வகுப்பு வரை அரசுப் பள்ளிகளில் அல்லது அரசு உதவிபெறும் பள்ளிகளில் தமிழ் வழியில் பயின்று, இளங்கலைப் பட்டப்படிப்பு, பொறியியல், மருத்துவம், சட்டம், பாலிடெக்னிக், ITI உள்ளிட்ட உயர்கல்வியில் சேரும் அனைத்து மாணவர்களுக்கும் வருமான வரம்பின்றி மாதம் ₹1,000 வழங்கப்படுகிறது.",
+      certs: ["EMIS எண் & 6–12 அரசு / அரசு உதவி தமிழ் வழி பயின்ற சான்று", "ஆதாருடன் இணைக்கப்பட்ட மாணவரின் வங்கி கணக்கு (NPCI Seeded Bank Account)", "கல்லூரி சேர்க்கை சான்று (UMIS ID)"]
+    },
+    {
+      id: "first_graduate",
+      title: "📜 முதல் தலைமுறைப் பட்டதாரி கல்விக் கட்டணச் சலுகை (First Graduate Tuition Fee Concession)",
+      category: "கல்விக் கட்டணத் தள்ளுபடி",
+      badgeColor: "#4c1d95",
+      bgLight: "#f5f3ff",
+      borderColor: "#a78bfa",
+      amountText: "ஆண்டுக்கு ₹25,000 முதல் ₹27,500 வரை கல்விக் கட்டணத் தள்ளுபடி (4 ஆண்டுகளுக்கு ₹1,00,000+ சலுகை)",
+      annualNumeric: 25000,
+      portalName: "TNEA / தொழில்முறைக் கல்வி கலந்தாய்வு & tnesevai.tn.gov.in",
+      portalUrl: "https://www.tnesevai.tn.gov.in/",
+      matchFn: function(p) {
+        return p.bg === "fg" && ["eng", "med", "agri", "law"].includes(p.stream);
+      },
+      details: "குடும்பத்தில் (தாய், தந்தை, உடன்பிறந்தோர், தாத்தா, பாட்டி) எவரும் இதுவரை பட்டதாரியாக இல்லாத நிலையில், அரசு ஒதுக்கீட்டுக் கலந்தாய்வு (Counselling) மூலம் பொறியியல், மருத்துவம், வேளாண்மை, கால்நடை, சட்டம் ஆகிய தொழில்முறைப் படிப்புகளில் சேரும் அனைத்து வகுப்பு மாணவர்களுக்கும் வருமான வரம்பின்றி கல்விக் கட்டணத் தள்ளுபடி வழங்கப்படுகிறது.",
+      certs: ["இ-சேவை முதல் பட்டதாரி சான்றிதழ் (First Graduate Certificate)", "பெற்றோர் & உடன்பிறந்தோர் கல்வித் தகுதி உறுதிமொழிப் படிவம்", "குடும்ப அட்டை (Smart Ration Card) & ஆதார் அட்டை"]
+    },
+    {
+      id: "govt_arts_free_ed",
+      title: "📚 அரசு மற்றும் அரசு உதவிபெறும் கலை & அறிவியல் கல்லூரிகளில் 100% இலவசக் கல்வி (TN Free Higher Education)",
+      category: "கல்விக் கட்டண விலக்கு",
+      badgeColor: "#0f766e",
+      bgLight: "#f0fdfa",
+      borderColor: "#2dd4bf",
+      amountText: "அரசுக் கல்லூரிகளில் கல்விக் கட்டணம் ₹0 (100% இலவசம்) + இலவசப் பேருந்து பயண அட்டை",
+      annualNumeric: 10000,
+      portalName: "TNGASA அரசு கலை & அறிவியல் கலந்தாய்வு (tngasa.in)",
+      portalUrl: "https://www.tngasa.in/",
+      matchFn: function(p) {
+        return p.stream === "arts_sci" || p.stream === "poly_iti";
+      },
+      details: "தமிழ்நாடு அரசு கலை மற்றும் அறிவியல் கல்லூரிகள் (B.A., B.Sc., B.Com, BCA, BBA), அரசு பாலிடெக்னிக் மற்றும் அரசு ITI-களில் இளங்கலைப் படிப்புகளுக்கு எவ்விதக் கல்விக் கட்டணமும் (Tuition Fee) வசூலிக்கப்படுவதில்லை; மேலும் அரசுப் பேருந்துகளில் 100% இலவசப் பயண அட்டை வழங்கப்படுகிறது.",
+      certs: ["+2 / 10-ஆம் வகுப்பு மதிப்பெண் சான்றிதழ்", "சாதிச் சான்றிதழ் & மாற்றுச் சான்றிதழ் (TC)"]
+    },
+    {
+      id: "sc_st_post_matric",
+      title: "🏛️ SC / SCA / ST போஸ்ட்-மெட்ரிக் முழுக் கல்விக் கட்டண விலக்கு & விடுதி உதவித்தொகை (Post-Matric Scholarship for SC/ST)",
+      category: "SC/ST சிறப்பு கல்வி உரிமை",
+      badgeColor: "#1e40af",
+      bgLight: "#eff6ff",
+      borderColor: "#3b82f6",
+      amountText: "100% கல்விக் கட்டண விலக்கு + ஆண்டுக்கு ₹7,500 – ₹13,500 பராமரிப்புத் தொகை + இலவச விடுதி",
+      annualNumeric: 35000,
+      portalName: "தமிழ்நாடு மாநில உதவித்தொகை தளம் (ssp.tn.gov.in)",
+      portalUrl: "https://ssp.tn.gov.in/",
+      matchFn: function(p) {
+        return p.community === "sc_st" && (p.income === "inc_1l" || p.income === "inc_2_5l");
+      },
+      details: "குடும்ப ஆண்டு வருமானம் ₹2,50,000-க்குள் உள்ள ஆதிதிராவிடர் (SC), அருந்ததியர் (SCA) மற்றும் பழங்குடியினர் (ST) மாணவர்களுக்கு அரசு மற்றும் சுயநிதிக் கல்லூரிகளில் கல்விக் கட்டணம் முழுமையாக விலக்கு அளிக்கப்படுவதுடன், விடுதி மற்றும் புத்தகப் பராமரிப்புத் தொகையும் நேரடியாக வழங்கப்படுகிறது.",
+      certs: ["SC / SCA / ST நிரந்தரச் சாதிச் சான்றிதழ்", "வட்டாட்சியர் வழங்கிய வருமானச் சான்றிதழ் (₹2.50 லட்சத்திற்குள்)", "UMIS எண் & ஆதாருடன் இணைந்த வங்கி கணக்கு"]
+    },
+    {
+      id: "bc_mbc_post_matric",
+      title: "🏛️ BC / BCM / MBC / DNC போஸ்ட்-மெட்ரிக் & PM-YASASVI கல்வி உதவித்தொகை (BC/MBC Welfare Scholarship)",
+      category: "BC / MBC / DNC நலத்துறை உதவித்தொகை",
+      badgeColor: "#0369a1",
+      bgLight: "#f0f9ff",
+      borderColor: "#38bdf8",
+      amountText: "ஆண்டுக்கு ₹4,000 முதல் ₹15,000 வரை கல்வி/தேர்வுக் கட்டணம் + இலவச சமூகநீதி விடுதி",
+      annualNumeric: 10000,
+      portalName: "தமிழ்நாடு மாநில உதவித்தொகை தளம் (ssp.tn.gov.in)",
+      portalUrl: "https://ssp.tn.gov.in/",
+      matchFn: function(p) {
+        return ["bc", "bcm", "mbc_dnc"].includes(p.community) && (p.income === "inc_1l" || p.income === "inc_2_5l");
+      },
+      details: "பிற்படுத்தப்பட்டோர் (BC), பிற்படுத்தப்பட்ட இஸ்லாமியர் (BCM), மிகவும் பிற்படுத்தப்பட்டோர் (MBC) மற்றும் சீர்மரபினர் (DNC) வகுப்பைச் சார்ந்த, குடும்ப ஆண்டு வருமானம் ₹2,50,000-க்குள் உள்ள மாணவர்களுக்குத் தேர்வுக் கட்டணம், புத்தகக் கட்டணம் மற்றும் விடுதிப் பராமரிப்பு உதவித்தொகை வழங்கப்படுகிறது.",
+      certs: ["BC / BCM / MBC / DNC சாதிச் சான்றிதழ்", "வருமானச் சான்றிதழ் (ஆண்டு வருமானம் ₹2,50,000-க்குள்)", "ஆதாருடன் இணைந்த வங்கி கணக்கு & UMIS ID"]
+    },
+    {
+      id: "aicte_pragati",
+      title: "🌸 AICTE பிரகதி (Pragati) பெண்கள் தொழில்நுட்பக் கல்வி உதவித்தொகை (AICTE Pragati Scholarship for Girls)",
+      category: "மத்திய அரசு பெண்கள் உதவித்தொகை",
+      badgeColor: "#9d174d",
+      bgLight: "#fdf2f8",
+      borderColor: "#ec4899",
+      amountText: "ஆண்டுக்கு ₹50,000 (4 ஆண்டுகளுக்கு மொத்தம் ₹2,00,000 நேரடியாக வங்கி கணக்கில்)",
+      annualNumeric: 50000,
+      portalName: "தேசிய உதவித்தொகை போர்ட்டல் (scholarships.gov.in)",
+      portalUrl: "https://scholarships.gov.in/",
+      matchFn: function(p) {
+        return p.gender === "female" && (p.stream === "eng" || p.stream === "poly_iti") && p.income !== "inc_above8l";
+      },
+      details: "AICTE அங்கீகாரம் பெற்ற பொறியியல் (B.E./B.Tech) அல்லது பாலிடெக்னிக் டிப்ளமோ முதலாம் ஆண்டு / இரண்டாம் ஆண்டு (Lateral Entry) சேரும் மாணவிகளுக்கு (குடும்ப ஆண்டு வருமானம் ₹8 லட்சத்திற்குள்; ஒரு குடும்பத்தில் 2 பெண் குழந்தைகள் வரை) ஆண்டுதோறும் ₹50,000 வழங்கப்படுகிறது.",
+      certs: ["குடும்ப வருமானச் சான்றிதழ் (₹8,00,000-க்குள்)", "TNEA / DTE கலந்தாய்வு ஒதுக்கீட்டு ஆணை (Allotment Order)", "கல்லூரி Bonafide சான்று & NSP OTR பதிவு எண்"]
+    },
+    {
+      id: "aicte_saksham",
+      title: "♿ AICTE சக்ஷம் (Saksham) & மாற்றுத்திறனாளி மாணவர் 5% இடஒதுக்கீடு + ₹50,000 உதவித்தொகை",
+      category: "மாற்றுத்திறனாளி சிறப்புச் சலுகை",
+      badgeColor: "#4338ca",
+      bgLight: "#eef2ff",
+      borderColor: "#818cf8",
+      amountText: "ஆண்டுக்கு ₹50,000 (AICTE Saksham) + அரசுக் கல்லூரிகளில் 100% கல்விக் கட்டண விலக்கு + 5% இடஒதுக்கீடு",
+      annualNumeric: 50000,
+      portalName: "தேசிய உதவித்தொகை தளம் (scholarships.gov.in)",
+      portalUrl: "https://scholarships.gov.in/",
+      matchFn: function(p) {
+        return p.bg === "pwd";
+      },
+      details: "40% அல்லது அதற்கு மேல் மாற்றுத்திறன் கொண்ட மாணவர்களுக்கு அனைத்து அரசு உயர்கல்வி நிறுவனங்களிலும் 5% இடஒதுக்கீடு, கல்விக் கட்டண விலக்கு, வாசிப்பாளர் படி (Reader Allowance) மற்றும் AICTE தொழில்நுட்பக் கல்லூரிகளில் ஆண்டுக்கு ₹50,000 Saksham உதவித்தொகை வழங்கப்படுகிறது.",
+      certs: ["UDID தேசிய மாற்றுத்திறனாளி அடையாள அட்டை (40%+ Disability Certificate)", "வருமானச் சான்றிதழ் (₹8 லட்சத்திற்குள்)", "கல்லூரி சேர்க்கை சான்று & வங்கி கணக்கு"]
+    },
+    {
+      id: "aicte_swanath_orphan",
+      title: "🤲 AICTE ஸ்வநாத் (Swanath) / பெற்றோரை இழந்த & ஒற்றைப் பெற்றோர் குழந்தைகளுக்கான சிறப்பு உதவித்தொகை",
+      category: "பெற்றோரை இழந்தோர் சிறப்புப் பாதுகாப்பு",
+      badgeColor: "#b45309",
+      bgLight: "#fffbeb",
+      borderColor: "#f59e0b",
+      amountText: "ஆண்டுக்கு ₹50,000 (AICTE Swanath) / தமிழ்நாடு அரசு அன்புக்கரங்கள் (மாதம் ₹2,000) உதவித்தொகை",
+      annualNumeric: 50000,
+      portalName: "scholarships.gov.in & மாவட்ட குழந்தைகள் பாதுகாப்பு அலகு",
+      portalUrl: "https://scholarships.gov.in/",
+      matchFn: function(p) {
+        return p.bg === "single_orphan";
+      },
+      details: "பெற்றோர் இருவரையும் இழந்த மாணவர்கள், கோவிட்-19 பெருந்தொற்றால் பெற்றோரை இழந்தவர்கள் அல்லது போரில் வீரமரணம் அடைந்த படைவீரர் குழந்தைகளுக்கு AICTE Swanath திட்டத்தின் கீழ் ஆண்டுக்கு ₹50,000-ம், தமிழக அரசின் சமூகப் பாதுகாப்புத் திட்டங்களின் கீழ் மாதாந்திரக் கல்வி உதவித்தொகையும் வழங்கப்படுகிறது.",
+      certs: ["பெற்றோர் இறப்புச் சான்றிதழ் (Death Certificate) / ஒற்றைப் பெற்றோர் சான்று", "வருமானச் சான்றிதழ்", "கல்லூரி சேர்க்கை சான்று & வங்கி கணக்கு"]
+    },
+    {
+      id: "welfare_board_scholarship",
+      title: "🌾 முதலமைச்சரின் உழவர் பாதுகாப்புத் திட்டம் & கட்டுமானத் தொழிலாளர் நல வாரிய உயர்கல்வி உதவித்தொகை",
+      category: "நல வாரிய உறுப்பினர் வாரிசு சலுகை",
+      badgeColor: "#15803d",
+      bgLight: "#f0fdf4",
+      borderColor: "#4ade80",
+      amountText: "ஆண்டுக்கு ₹4,000 முதல் ₹12,000 வரை (பட்டப்படிப்பு / தொழிற்கல்வி & விடுதிச் சலுகை)",
+      annualNumeric: 8000,
+      portalName: "தமிழ்நாடு தொழிலாளர் நல வாரியம் (tnuwwb.tn.gov.in) / வருவாய்த்துறை",
+      portalUrl: "https://tnuwwb.tn.gov.in/",
+      matchFn: function(p) {
+        return p.bg === "welfare_board";
+      },
+      details: "விவசாயத் தொழிலாளர் (உழவர் பாதுகாப்பு அட்டை), கட்டுமானத் தொழிலாளர் அல்லது அமைப்புசாரா தொழிலாளர் நல வாரியத்தில் உறுப்பினராக உள்ள பெற்றோரின் குழந்தைகளுக்கு ITI, பாலிடெக்னிக், கலை & அறிவியல், பொறியியல், மருத்துவம் பயில ஆண்டுதோறும் சிறப்புக் கல்வி உதவித்தொகை வழங்கப்படுகிறது.",
+      certs: ["பெற்றோரின் நல வாரிய உறுப்பினர் அடையாள அட்டை / உழவர் பாதுகாப்பு அட்டை", "கல்லூரி முதல்வரின் Bonafide சான்றிதழ்", "மாணவர் வங்கி கணக்கு & ஆதார் அட்டை"]
+    },
+    {
+      id: "ex_servicemen_pmss",
+      title: "🎖️ முன்னாள் படைவீரர் வாரிசு இடஒதுக்கீடு & பிரதம மந்திரி கல்வி உதவித்தொகை (PMSS - KSB)",
+      category: "முன்னாள் படைவீரர் வாரிசு சலுகை",
+      badgeColor: "#1e3a8a",
+      bgLight: "#eff6ff",
+      borderColor: "#3b82f6",
+      amountText: "மாணவிகளுக்கு ஆண்டுக்கு ₹36,000 (₹3,000/மாதம்) | மாணவர்களுக்கு ₹30,000 (₹2,500/மாதம்) + சிறப்பு இடஒதுக்கீடு",
+      annualNumeric: 36000,
+      portalName: "கேந்திரிய சைனிக் போர்டு (ksb.gov.in) & TNEA / TN Medical",
+      portalUrl: "https://ksb.gov.in/",
+      matchFn: function(p) {
+        return p.bg === "ex_service";
+      },
+      details: "முன்னாள் படைவீரர் (Ex-Servicemen) மற்றும் கடலோரக் காவல்படை வீரர்களின் வாரிசுகளுக்கு TNEA பொறியியல் (150 இடங்கள்), மருத்துவம் மற்றும் கால்நடைப் படிப்புகளில் சிறப்பு இடஒதுக்கீடும், தொழில்முறைப் படிப்புகளில் PMSS திட்டத்தின் கீழ் ஆண்டுக்கு ₹30,000–₹36,000 உதவித்தொகையும் வழங்கப்படுகிறது.",
+      certs: ["முன்னாள் படைவீரர் Discharge Book & அடையாள அட்டை", "மாவட்ட முன்னாள் படைவீரர் நல துணை இயக்குநர் சான்றிதழ் (Ex-Servicemen Dependency Certificate)", "+2 மதிப்பெண் சான்றிதழ் (குறைந்தது 60% மதிப்பெண்)"]
+    },
+    {
+      id: "sports_quota_stipend",
+      title: "🏆 சிறந்த விளையாட்டு வீரர் சிறப்பு இடஒதுக்கீடு (Sports Quota) & SDAT கல்வி உதவித்தொகை",
+      category: "விளையாட்டு வீரர் சிறப்புச் சலுகை",
+      badgeColor: "#b45309",
+      bgLight: "#fffbeb",
+      borderColor: "#f59e0b",
+      amountText: "TNEA (500 இடங்கள்) / மருத்துவம் / வேளாண்மை சிறப்பு இடஒதுக்கீடு + SDAT ஊக்கத்தொகை (₹10,000–₹30,000)",
+      annualNumeric: 15000,
+      portalName: "தமிழ்நாடு விளையாட்டு மேம்பாட்டு ஆணையம் (sdat.tn.gov.in) & TNEA",
+      portalUrl: "https://www.sdat.tn.gov.in/",
+      matchFn: function(p) {
+        return p.bg === "sports";
+      },
+      details: "கடந்த 4 ஆண்டுகளில் சர்வதேச, தேசிய, மாநில அல்லது மாவட்ட அளவிலான அங்கீகரிக்கப்பட்ட விளையாட்டுப் போட்டிகளில் வெற்றி பெற்ற மாணவர்களுக்குப் பொறியியல், மருத்துவம், சட்டம், வேளாண்மை, கலை & அறிவியல் கல்லூரிகளில் சிறப்பு விளையாட்டு இடஒதுக்கீடும் SDAT ஊக்கத்தொகையும் வழங்கப்படுகிறது.",
+      certs: ["Form-I / Form-II / Form-III / Form-IV அதிகாரப்பூர்வ விளையாட்டுச் சான்றிதழ்கள்", "TNEA / மருத்துவ நேரில் சான்றிதழ் சரிபார்ப்பு (In-person Sports Verification)", "+2 மதிப்பெண் சான்றிதழ்"]
+    },
+    {
+      id: "minority_scholarship",
+      title: "🕌 சிறுபான்மையினர் போஸ்ட்-மெட்ரிக் & மெரிட்-கம்-மீன்ஸ் உதவித்தொகை (Minority Post-Matric / Merit-cum-Means)",
+      category: "சிறுபான்மையினர் நல உதவித்தொகை",
+      badgeColor: "#065f46",
+      bgLight: "#ecfdf5",
+      borderColor: "#34d399",
+      amountText: "ஆண்டுக்கு ₹10,000 முதல் ₹30,000 வரை (தொழில்முறை & பட்டப்படிப்பு உதவித்தொகை)",
+      annualNumeric: 20000,
+      portalName: "தேசிய உதவித்தொகை தளம் (scholarships.gov.in) & சிறுபான்மையினர் நலத்துறை",
+      portalUrl: "https://scholarships.gov.in/",
+      matchFn: function(p) {
+        return (p.bg === "minority" || p.community === "bcm") && (p.income === "inc_1l" || p.income === "inc_2_5l");
+      },
+      details: "இஸ்லாமியர், கிறிஸ்தவர், சீக்கியர், பௌத்தர், சமணர் மற்றும் பார்சி சமூகத்தைச் சார்ந்த மாணவர்களுக்கு (குடும்ப ஆண்டு வருமானம் ₹2.50 லட்சத்திற்குள்) உயர்கல்வி மற்றும் தொழில்முறைப் படிப்புகளுக்கு உதவித்தொகை வழங்கப்படுகிறது.",
+      certs: ["சிறுபான்மையினர் மத / சாதிச் சான்றிதழ்", "வருமானச் சான்றிதழ் (₹2.50 லட்சத்திற்குள்)", "கல்லூரி Bonafide & ஆதாருடன் இணைந்த வங்கி கணக்கு"]
+    },
+    {
+      id: "nsp_central_sector",
+      title: "🇮🇳 மத்திய அரசு உயர்கல்வி உதவித்தொகை — NSP Central Sector Scheme of Scholarship (CSSS)",
+      category: "மத்திய அரசு மெரிட் உதவித்தொகை",
+      badgeColor: "#1e3a8a",
+      bgLight: "#eff6ff",
+      borderColor: "#60a5fa",
+      amountText: "ஆண்டுக்கு ₹12,000 (இளங்கலை முதல் 3 ஆண்டுகள்) & ₹20,000 (4, 5-ஆம் ஆண்டு / முதுகலை)",
+      annualNumeric: 12000,
+      portalName: "தேசிய உதவித்தொகை போர்ட்டல் (scholarships.gov.in)",
+      portalUrl: "https://scholarships.gov.in/",
+      matchFn: function(p) {
+        return p.income !== "inc_above8l" && p.stream !== "poly_iti";
+      },
+      details: "+2 பொதுத்தேர்வில் முதல் 20 சதவீதத்திற்குள் (Top 20th Percentile) மதிப்பெண் பெற்று, குடும்ப ஆண்டு வருமானம் ₹4.50 லட்சம் முதல் ₹8 லட்சத்திற்குள் உள்ள அனைத்து வகுப்பு (OC/BC/MBC/SC/ST) கல்லூரி மாணவர்களுக்கும் ஆண்டுக்கு ₹12,000 முதல் ₹20,000 வரை வழங்கப்படுகிறது.",
+      certs: ["+2 மதிப்பெண் சான்றிதழ் (80%+ மதிப்பெண்)", "வருமானச் சான்றிதழ்", "NSP One-Time Registration (OTR) எண் & ஆதார் வங்கி இணைப்பு"]
+    },
+    {
+      id: "vidyalakshmi_csis_loan",
+      title: "🏦 PM-Vidyalaxmi & CSIS வட்டியில்லா கல்விக்கடன் மானியம் (100% Interest Subsidy Education Loan)",
+      category: "வட்டியில்லா வங்கிக் கல்விக்கடன்",
+      badgeColor: "#334155",
+      bgLight: "#f8fafc",
+      borderColor: "#94a3b8",
+      amountText: "₹7.5 லட்சம் வரை பிணையமில்லா கடன் + படிப்புக் காலத்தில் 100% வட்டி மானியம் (CSIS)",
+      annualNumeric: 0,
+      portalName: "பிரதம மந்திரி வித்யாலட்சுமி தளம் (pmvidyalaxmi.co.in)",
+      portalUrl: "https://pmvidyalaxmi.co.in/",
+      matchFn: function(p) {
+        return true;
+      },
+      details: "குடும்ப ஆண்டு வருமானம் ₹4.50 லட்சத்திற்குள் உள்ள மாணவர்களுக்கு CSIS திட்டத்தின் கீழ் படிப்புக் காலம் + 1 ஆண்டு (Moratorium Period) வரை 100% வட்டி மானியமும், ₹8 லட்சத்திற்குள் உள்ளவர்களுக்கு PM-Vidyalaxmi திட்டத்தின் கீழ் ₹10 லட்சம் வரை 3% வட்டி மானியத்துடன் எந்தச் சொத்துப் பிணையமும் இன்றி கல்விக்கடன் வழங்கப்படுகிறது.",
+      certs: ["கல்லூரி சேர்க்கை கடிதம் & கட்டண விவரப் பட்டியல் (Fee Structure)", "வருமானச் சான்றிதழ் (வட்டாட்சியர் வழங்கியது)", "மாணவர் & பெற்றோர் PAN அட்டை, ஆதார் அட்டை"]
+    }
+  ];
+
+  function getReservationSummaryText(community, school, bg) {
+    let baseQuota = "";
+    if (community === "sc_st") baseQuota = "SC (15%) / SCA (3%) / ST (1%) இடஒதுக்கீடு";
+    else if (community === "mbc_dnc") baseQuota = "MBC / DNC (20% இடஒதுக்கீடு)";
+    else if (community === "bc") baseQuota = "BC பிற்படுத்தப்பட்டோர் (26.5% இடஒதுக்கீடு)";
+    else if (community === "bcm") baseQuota = "BCM இஸ்லாமியர் (3.5% இடஒதுக்கீடு)";
+    else baseQuota = "OC பொதுப் போட்டி (31%) / மத்திய கல்வி நிறுவனங்களில் 10% EWS";
+
+    let extras = [];
+    if (school === "govt_6_12") extras.push("7.5% அரசுப் பள்ளி உள் இடஒதுக்கீடு");
+    if (bg === "pwd") extras.push("5% மாற்றுத்திறனாளி இடஒதுக்கீடு");
+    if (bg === "ex_service") extras.push("முன்னாள் படைவீரர் சிறப்பு இடஒதுக்கீடு");
+    if (bg === "sports") extras.push("விளையாட்டு வீரர் (Sports Quota) இடஒதுக்கீடு");
+
+    return extras.length > 0 ? (baseQuota + " + " + extras.join(" + ")) : baseQuota;
+  }
+
+  window.getMatchedScholarshipsData = function() {
+    const studentName = (document.getElementById("schStudentName")?.value || "").trim() || "மாணவர் / Student";
+    const schoolName  = (document.getElementById("schSchoolName")?.value || "").trim() || "சிவகங்கை மாவட்டம்";
+    const schoolEl    = document.getElementById("schSchoolType");
+    const commEl      = document.getElementById("schCommunity");
+    const incEl       = document.getElementById("schIncome");
+    const bgEl        = document.getElementById("schBackground");
+    const genEl       = document.getElementById("schGender");
+    const streamEl    = document.getElementById("schStream");
+
+    const profile = {
+      studentName: studentName,
+      schoolName: schoolName,
+      school: schoolEl ? schoolEl.value : "govt_6_12",
+      community: commEl ? commEl.value : "bc",
+      income: incEl ? incEl.value : "inc_2_5l",
+      bg: bgEl ? bgEl.value : "fg",
+      gender: genEl ? genEl.value : "female",
+      stream: streamEl ? streamEl.value : "eng",
+      schoolLabel: schoolEl ? schoolEl.options[schoolEl.selectedIndex].text : "",
+      commLabel: commEl ? commEl.options[commEl.selectedIndex].text : "",
+      incLabel: incEl ? incEl.options[incEl.selectedIndex].text : "",
+      bgLabel: bgEl ? bgEl.options[bgEl.selectedIndex].text : "",
+      genLabel: genEl ? genEl.options[genEl.selectedIndex].text : "",
+      streamLabel: streamEl ? streamEl.options[streamEl.selectedIndex].text : ""
+    };
+
+    const matched = SCHOLARSHIP_DATABASE.filter(function(item) {
+      return item.matchFn(profile);
+    });
+
+    let totalAnnualBenefit = 0;
+    const certSet = new Set();
+    matched.forEach(function(m) {
+      totalAnnualBenefit += (m.annualNumeric || 0);
+      (m.certs || []).forEach(function(c) { certSet.add(c); });
+    });
+
+    let feeWaiverStatus = "வழக்கமான அரசுக் கட்டணம் (Standard Govt Fee)";
+    if (profile.school === "govt_6_12" && ["eng", "med", "agri", "law", "poly_iti"].includes(profile.stream)) {
+      feeWaiverStatus = "100% முழுக் கட்டண விலக்கு (7.5% அரசுப் பள்ளி இடஒதுக்கீடு)";
+    } else if (profile.community === "sc_st" && (profile.income === "inc_1l" || profile.income === "inc_2_5l")) {
+      feeWaiverStatus = "100% கல்விக் கட்டண விலக்கு (SC/ST Post-Matric Scholarship)";
+    } else if (profile.stream === "arts_sci" || profile.stream === "poly_iti") {
+      feeWaiverStatus = "100% இலவசக் கல்வி (அரசு கலை & அறிவியல் / பாலிடெக்னிக் / ITI)";
+    } else if (profile.bg === "fg" && ["eng", "med", "agri", "law"].includes(profile.stream)) {
+      feeWaiverStatus = "ஆண்டுக்கு ₹25,000 – ₹27,500 கட்டணத் தள்ளுபடி (முதல் பட்டதாரி FG)";
+    } else if (profile.bg === "pwd") {
+      feeWaiverStatus = "100% அரசுக் கல்லூரி கல்விக் கட்டண விலக்கு (5% மாற்றுத்திறனாளி சலுகை)";
+    }
+
+    return {
+      profile: profile,
+      matched: matched,
+      totalAnnualBenefit: totalAnnualBenefit,
+      feeWaiverStatus: feeWaiverStatus,
+      reservationSummary: getReservationSummaryText(profile.community, profile.school, profile.bg),
+      certList: Array.from(certSet)
+    };
+  };
+
+  window.runScholarshipEligibilityMatcher = function() {
+    const out = document.getElementById("schMatcherOutputContainer");
+    if (!out) return;
+    const data = window.getMatchedScholarshipsData();
+
+    const formattedTotal = "₹" + data.totalAnnualBenefit.toLocaleString("en-IN") + "+ / ஆண்டுக்கு";
+
+    let html = '';
+    // Top Summary Dashboard Cards
+    html += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; margin-bottom: 16px;">' +
+      '<div style="background: linear-gradient(135deg, #065f46 0%, #047857 100%); color: #ffffff; border-radius: 10px; padding: 12px 14px;">' +
+        '<div style="font-size: 0.74rem; color: #a7f3d0; font-weight: 800;">🎯 தகுதியான திட்டங்கள்</div>' +
+        '<div style="font-size: 1.35rem; font-weight: 900; margin-top: 2px;">' + data.matched.length + ' அரசுச் சலுகைகள்</div>' +
+        '<div style="font-size: 0.72rem; color: #ecfdf5; margin-top: 2px;">மாநில &amp; மத்திய அரசுத் திட்டங்கள்</div>' +
+      '</div>' +
+      '<div style="background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%); color: #ffffff; border-radius: 10px; padding: 12px 14px;">' +
+        '<div style="font-size: 0.74rem; color: #bfdbfe; font-weight: 800;">💰 மதிப்பிடப்பட்ட ஆண்டு நிதிப் பலன்</div>' +
+        '<div style="font-size: 1.30rem; font-weight: 900; color: #fde047; margin-top: 2px;">' + formattedTotal + '</div>' +
+        '<div style="font-size: 0.72rem; color: #e0f2fe; margin-top: 2px;">உதவித்தொகை + கட்டண விலக்கு மதிப்பு</div>' +
+      '</div>' +
+      '<div style="background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 100%); color: #ffffff; border-radius: 10px; padding: 12px 14px;">' +
+        '<div style="font-size: 0.74rem; color: #ddd6fe; font-weight: 800;">🎓 கல்விக் கட்டணச் சலுகை நிலை</div>' +
+        '<div style="font-size: 0.86rem; font-weight: 900; color: #fef08a; margin-top: 4px; line-height: 1.35;">' + data.feeWaiverStatus + '</div>' +
+      '</div>' +
+      '<div style="background: linear-gradient(135deg, #7c2d12 0%, #b45309 100%); color: #ffffff; border-radius: 10px; padding: 12px 14px;">' +
+        '<div style="font-size: 0.74rem; color: #fde68a; font-weight: 800;">🏛️ உங்களுக்கான இடஒதுக்கீடு (Quota)</div>' +
+        '<div style="font-size: 0.83rem; font-weight: 900; color: #ffffff; margin-top: 4px; line-height: 1.35;">' + data.reservationSummary + '</div>' +
+      '</div>' +
+    '</div>';
+
+    // Matched Scheme Cards
+    html += '<div style="font-size: 0.92rem; font-weight: 900; color: #1e293b; margin-bottom: 10px;">✨ உங்களுடைய தகுதிக்குப் பொருந்தும் உயர்கல்வி உதவித்தொகைகள் &amp; சலுகைகள் (' + data.matched.length + '):</div>';
+    html += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 12px; margin-bottom: 16px;">';
+    data.matched.forEach(function(m, idx) {
+      html += '<div style="background: ' + m.bgLight + '; border: 1.5px solid ' + m.borderColor + '; border-left: 5px solid ' + m.badgeColor + '; border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">' +
+        '<div>' +
+          '<div style="display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 6px;">' +
+            '<span style="background: ' + m.badgeColor + '; color: #ffffff; font-size: 0.70rem; font-weight: 800; padding: 3px 9px; border-radius: 999px;">' + (idx + 1) + '. ' + m.category + '</span>' +
+          '</div>' +
+          '<div style="font-size: 0.90rem; font-weight: 900; color: #0f172a; margin-bottom: 6px; line-height: 1.38;">' + m.title + '</div>' +
+          '<div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 10px; font-size: 0.78rem; font-weight: 900; color: #047857; margin-bottom: 6px;">💎 <strong>சலுகை / தொகை:</strong> ' + m.amountText + '</div>' +
+          '<p style="margin: 0 0 6px 0; font-size: 0.77rem; color: #334155; line-height: 1.45; font-weight: 600;">' + m.details + '</p>' +
+        '</div>' +
+        '<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; padding-top: 6px; border-top: 1px dashed #cbd5e1; font-size: 0.75rem;">' +
+          '<span style="color: #475569; font-weight: 800;">🌐 ' + m.portalName + '</span>' +
+          '<a href="' + m.portalUrl + '" target="_blank" rel="noopener noreferrer" style="background: #ffffff; color: ' + m.badgeColor + '; border: 1px solid ' + m.badgeColor + '; border-radius: 6px; padding: 4px 10px; text-decoration: none; font-weight: 900;">விண்ணப்ப தளம் ↗</a>' +
+        '</div>' +
+      '</div>';
+    });
+    html += '</div>';
+
+    // Customized Required Certificates Checklist
+    html += '<div style="background: #fffbeb; border: 1.5px solid #f59e0b; border-radius: 12px; padding: 12px 16px;">' +
+      '<div style="font-size: 0.88rem; font-weight: 900; color: #92400e; margin-bottom: 8px;">📋 மேற்கண்ட சலுகைகளைப் பெற நீங்கள் இப்போதே தயாராக வைத்திருக்க வேண்டிய சான்றிதழ்கள் (Customized Checklist):</div>' +
+      '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 6px;">';
+    data.certList.forEach(function(c) {
+      html += '<div style="font-size: 0.78rem; font-weight: 700; color: #1e293b; display: flex; align-items: flex-start; gap: 6px;"><span>✅</span><span>' + c + '</span></div>';
+    });
+    html += '</div></div>';
+
+    out.innerHTML = html;
+  };
+
+  window.speakStudentScholarshipSummary = function() {
+    if (!("speechSynthesis" in window)) return;
+    window.speechSynthesis.cancel();
+    const data = window.getMatchedScholarshipsData();
+    const names = data.matched.slice(0, 4).map(function(m) { return m.title.replace(/[^஀-௿a-zA-Z0-9\s.,₹%-]/g, ""); }).join(". ");
+    const msg = new SpeechSynthesisUtterance(
+      "உங்களுடைய சுயவிவரத்திற்கு மொத்தம் " + data.matched.length + " உயர்கல்விச் சலுகைகள் மற்றும் உதவித்தொகைகள் பொருந்துகின்றன. " +
+      "கல்விக் கட்டணச் சலுகை: " + data.feeWaiverStatus + ". " +
+      "முக்கியத் திட்டங்கள்: " + names
+    );
+    msg.lang = "ta-IN";
+    msg.rate = 0.95;
+    window.speechSynthesis.speak(msg);
+  };
+
+  window.generateAndDownloadScholarshipPdf = function() {
+    const data = window.getMatchedScholarshipsData();
+    const p = data.profile;
+
+    // Create high-resolution A4 Portrait Canvas (1240 x 1754 px @ 150 DPI)
+    const canvas = document.createElement("canvas");
+    canvas.width = 1240;
+    canvas.height = 1754;
+    const ctx = canvas.getContext("2d");
+
+    // White background + Dual Royal Border
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.strokeStyle = "#1e1b4b";
+    ctx.lineWidth = 4;
+    ctx.strokeRect(26, 26, 1188, 1702);
+
+    ctx.strokeStyle = "#d97706";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(34, 34, 1172, 1686);
+
+    // Header Banner
+    const hdrGrad = ctx.createLinearGradient(40, 40, 1200, 192);
+    hdrGrad.addColorStop(0, "#1e1b4b");
+    hdrGrad.addColorStop(0.5, "#4c1d95");
+    hdrGrad.addColorStop(1, "#0f172a");
+    ctx.fillStyle = hdrGrad;
+    ctx.fillRect(40, 40, 1160, 150);
+
+    ctx.textAlign = "center";
+    ctx.fillStyle = "#fde047";
+    ctx.font = "bold 23px 'Noto Sans Tamil', sans-serif";
+    ctx.fillText("தமிழ்நாடு பள்ளிக்கல்வித்துறை – முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்", 620, 78, 1120);
+
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "900 28px 'Noto Sans Tamil', sans-serif";
+    ctx.fillText("தனிப்பயன் உயர்கல்விச் சலுகைகள், இடஒதுக்கீடு & உதவித்தொகை தகுதி அறிக்கை (2027)", 620, 120, 1120);
+
+    ctx.fillStyle = "#a7f3d0";
+    ctx.font = "bold 16.5px 'Inter', sans-serif";
+    ctx.fillText("PERSONALIZED HIGHER EDUCATION SCHOLARSHIP, FEE WAIVER & RESERVATION ELIGIBILITY REPORT", 620, 156, 1120);
+
+    let y = 208;
+
+    // 1. Student Profile Summary Box
+    ctx.fillStyle = "#f5f3ff";
+    ctx.fillRect(50, y, 1140, 166);
+    ctx.strokeStyle = "#7c3aed";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(50, y, 1140, 166);
+
+    ctx.textAlign = "left";
+    ctx.fillStyle = "#4c1d95";
+    ctx.font = "bold 20px 'Noto Sans Tamil', sans-serif";
+    ctx.fillText("1. மாணவர் சுயவிவரம் & இடஒதுக்கீடு தகுதி விவரம் (Student Eligibility Profile):", 68, y + 30);
+
+    ctx.fillStyle = "#0f172a";
+    ctx.font = "bold 17px 'Noto Sans Tamil', sans-serif";
+    ctx.fillText("👤 மாணவர் பெயர்: " + p.studentName, 68, y + 62, 530);
+    ctx.fillText("🏫 பள்ளி / ஊர்: " + p.schoolName, 615, y + 62, 555);
+    ctx.fillText("🏫 பள்ளி வகை: " + p.schoolLabel, 68, y + 92, 530);
+    ctx.fillText("🏛️ சமூகப் பிரிவு: " + p.commLabel, 615, y + 92, 555);
+    ctx.fillText("💰 ஆண்டு வருமானம்: " + p.incLabel, 68, y + 122, 530);
+    ctx.fillText("👨‍👩‍👧 குடும்பப் பின்னணி: " + p.bgLabel, 615, y + 122, 555);
+
+    ctx.fillStyle = "#047857";
+    ctx.font = "bold 17px 'Noto Sans Tamil', sans-serif";
+    ctx.fillText("🎓 உயர்கல்விப் பிரிவு: " + p.streamLabel + "  |  கல்விக் கட்டணச் சலுகை: " + data.feeWaiverStatus, 68, y + 152, 1105);
+
+    y += 184;
+
+    // 2. Matched Scholarships & Concessions Header
+    ctx.fillStyle = "#065f46";
+    ctx.fillRect(50, y, 1140, 36);
+    ctx.fillStyle = "#fef08a";
+    ctx.font = "bold 19px 'Noto Sans Tamil', sans-serif";
+    ctx.fillText("2. உங்களுக்குத் தகுதியான அரசு உயர்கல்விச் சலுகைகள் & உதவித்தொகைகள் (மொத்தம்: " + data.matched.length + " திட்டங்கள்):", 68, y + 25);
+    y += 46;
+
+    const maxSchemes = Math.min(data.matched.length, 6);
+    for (let i = 0; i < maxSchemes; i++) {
+      const m = data.matched[i];
+      const cardH = 114;
+      ctx.fillStyle = (i % 2 === 0) ? "#ffffff" : "#f8fafc";
+      ctx.fillRect(50, y, 1140, cardH);
+      ctx.strokeStyle = "#cbd5e1";
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(50, y, 1140, cardH);
+
+      ctx.fillStyle = m.badgeColor || "#047857";
+      ctx.fillRect(50, y, 8, cardH);
+
+      ctx.fillStyle = "#0f172a";
+      ctx.font = "bold 18px 'Noto Sans Tamil', sans-serif";
+      ctx.fillText((i + 1) + ". " + m.title, 70, y + 27, 1100);
+
+      ctx.fillStyle = "#047857";
+      ctx.font = "bold 16.5px 'Noto Sans Tamil', sans-serif";
+      ctx.fillText("💎 சலுகை / உதவித்தொகை: " + m.amountText, 78, y + 56, 1090);
+
+      ctx.fillStyle = "#334155";
+      ctx.font = "bold 15.5px 'Noto Sans Tamil', sans-serif";
+      const shortDetail = m.details.length > 135 ? (m.details.substring(0, 132) + "...") : m.details;
+      ctx.fillText("📌 விவரம்: " + shortDetail, 78, y + 82, 1090);
+
+      ctx.fillStyle = "#1d4ed8";
+      ctx.font = "bold 15px 'Noto Sans Tamil', sans-serif";
+      ctx.fillText("🌐 விண்ணப்பிக்கும் தளம்: " + m.portalName + " (" + m.portalUrl + ")", 78, y + 105, 1090);
+
+      y += cardH + 8;
+    }
+
+    y += 6;
+
+    // 3. Required e-Sevai Certificates Checklist Box
+    const certBoxH = Math.max(155, 1650 - y - 10);
+    ctx.fillStyle = "#fffbeb";
+    ctx.fillRect(50, y, 1140, certBoxH);
+    ctx.strokeStyle = "#d97706";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(50, y, 1140, certBoxH);
+
+    ctx.fillStyle = "#92400e";
+    ctx.font = "bold 19px 'Noto Sans Tamil', sans-serif";
+    ctx.fillText("3. மேற்கண்ட சலுகைகளைப் பெறத் தயாராக வைத்திருக்க வேண்டிய ஆவணங்கள் (e-Sevai & Bank Checklist):", 68, y + 28);
+
+    ctx.fillStyle = "#1e293b";
+    ctx.font = "bold 15.5px 'Noto Sans Tamil', sans-serif";
+    const maxCerts = Math.min(data.certList.length, 6);
+    for (let c = 0; c < maxCerts; c++) {
+      ctx.fillText("✅ " + (c + 1) + ". " + data.certList[c], 74, y + 56 + (c * 24), 1095);
+    }
+
+    // Footer
+    const footerY = 1664;
+    ctx.fillStyle = "#0f172a";
+    ctx.fillRect(40, footerY, 1160, 48);
+    ctx.textAlign = "center";
+    ctx.fillStyle = "#fde047";
+    ctx.font = "bold 16px 'Noto Sans Tamil', sans-serif";
+    ctx.fillText("📞 மாணவர் கட்டணமில்லா உதவி எண்: 14417  |  முதன்மைக் கல்வி அலுவலகம், சிவகங்கை (04575-240408)  |  ssp.tn.gov.in • scholarships.gov.in", 620, footerY + 30, 1130);
+
+    // Convert Canvas to JPEG and package into a genuine A4 PDF binary
+    const dataUrl = canvas.toDataURL("image/jpeg", 0.95);
+    const b64 = dataUrl.split(",")[1];
+    const binary = atob(b64);
+    const imgBytes = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) {
+      imgBytes[i] = binary.charCodeAt(i);
+    }
+
+    const widthPt = 595.28;
+    const heightPt = 841.89;
+    const pdfHeader = "%PDF-1.4
+";
+    const obj1 = "1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+";
+    const obj2 = "2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+";
+    const obj3 = "3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 " + widthPt + " " + heightPt + "] /Resources << /XObject << /Im1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+";
+    const streamContent = "q
+" + widthPt + " 0 0 " + heightPt + " 0 0 cm
+/Im1 Do
+Q
+";
+    const obj4 = "4 0 obj
+<< /Length " + streamContent.length + " >>
+stream
+" + streamContent + "endstream
+endobj
+";
+    const obj5Header = "5 0 obj
+<< /Type /XObject /Subtype /Image /Width 1240 /Height 1754 /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length " + imgBytes.length + " >>
+stream
+";
+    const obj5Footer = "
+endstream
+endobj
+";
+
+    const enc = new TextEncoder();
+    const bHdr = enc.encode(pdfHeader);
+    const bO1 = enc.encode(obj1);
+    const bO2 = enc.encode(obj2);
+    const bO3 = enc.encode(obj3);
+    const bO4 = enc.encode(obj4);
+    const bO5H = enc.encode(obj5Header);
+    const bO5F = enc.encode(obj5Footer);
+
+    let offset = bHdr.length;
+    const off1 = offset; offset += bO1.length;
+    const off2 = offset; offset += bO2.length;
+    const off3 = offset; offset += bO3.length;
+    const off4 = offset; offset += bO4.length;
+    const off5 = offset; offset += bO5H.length + imgBytes.length + bO5F.length;
+
+    const pad10 = function(n) { return String(n).padStart(10, "0"); };
+    const xref = "xref
+0 6
+0000000000 65535 f 
+" +
+      pad10(off1) + " 00000 n 
+" +
+      pad10(off2) + " 00000 n 
+" +
+      pad10(off3) + " 00000 n 
+" +
+      pad10(off4) + " 00000 n 
+" +
+      pad10(off5) + " 00000 n 
+";
+    const trailer = "trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+" + offset + "
+%%EOF";
+
+    const bXref = enc.encode(xref);
+    const bTrl = enc.encode(trailer);
+
+    const pdfBuffer = new Uint8Array(offset + bXref.length + bTrl.length);
+    let pos = 0;
+    pdfBuffer.set(bHdr, pos); pos += bHdr.length;
+    pdfBuffer.set(bO1, pos); pos += bO1.length;
+    pdfBuffer.set(bO2, pos); pos += bO2.length;
+    pdfBuffer.set(bO3, pos); pos += bO3.length;
+    pdfBuffer.set(bO4, pos); pos += bO4.length;
+    pdfBuffer.set(bO5H, pos); pos += bO5H.length;
+    pdfBuffer.set(imgBytes, pos); pos += imgBytes.length;
+    pdfBuffer.set(bO5F, pos); pos += bO5F.length;
+    pdfBuffer.set(bXref, pos); pos += bXref.length;
+    pdfBuffer.set(bTrl, pos);
+
+    const blob = new Blob([pdfBuffer], { type: "application/pdf" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    const cleanName = p.studentName.replace(/[^a-zA-Z0-9஀-௿_-]/g, "_").substring(0, 24) || "Student";
+    a.href = url;
+    a.download = "Sivagangai_Scholarship_Concession_Guide_2027_" + cleanName + ".pdf";
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function() {
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }, 500);
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function() { window.runScholarshipEligibilityMatcher(); });
+  } else {
+    window.runScholarshipEligibilityMatcher();
+  }
+})();
+</script>
+
 </body>
 </html>
 <canvas id="popupCelebrationCanvas" style="display:none; position:fixed; inset:0; pointer-events:none; z-index:10002;"></canvas>
