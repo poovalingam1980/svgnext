@@ -1487,6 +1487,266 @@ body.theme-cyber-dark #admissionTimelineSec p {
   box-shadow: 0 10px 28px rgba(15, 23, 42, 0.35) !important;
 }
 
+
+/* ============================================================================
+   MOBILE-FIRST EDGE-TO-EDGE OPTIMIZATION & USABILITY FIXES (<= 768px & <= 480px)
+   (மொபைல் போனில் வலது/இடது ஓர வெற்றிடங்களை நீக்கி, 100% திரை அகலப் பயன்பாடு & எளிய வாசிப்பு)
+   ============================================================================ */
+.hgl-main-content-body {
+  min-width: 0 !important;
+}
+.hgl-news-title-text,
+.hgl-news-desc-text {
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+}
+
+@media (max-width: 768px) {
+  /* 1. பக்கத்தின் வலது மற்றும் இடது ஓர வெற்றிடங்களை முழுமையாக நீக்குதல் (Edge-to-Edge Full Width) */
+  html, body {
+    overflow-x: hidden !important;
+  }
+  .portal-main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding: 4px 4px 72px 4px !important;
+  }
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* 2. ஒருங்கிணைந்த அணுகல்தன்மைப் பட்டை (9 பொத்தான்கள் கொண்ட 3x3 கச்சிதமான கட்டம்) */
+  .intl-a11y-toolbar {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+    padding: 6px !important;
+    margin-bottom: 6px !important;
+    border-radius: 10px !important;
+  }
+  .a11y-btn {
+    width: 100% !important;
+    padding: 5px 3px !important;
+    font-size: 0.66rem !important;
+    border-radius: 6px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* 3. மேல்சட்டம் (Top Header Frame): மொபைலில் ஸ்க்ரோல் செய்யும்போது திரையை மறைக்காமல் இருக்க relative நிலை */
+  .portal-top-frame {
+    position: relative !important;
+    top: 0 !important;
+    padding: 10px 10px !important;
+    margin-bottom: 8px !important;
+    border-radius: 12px !important;
+  }
+  .banner-title-tamil {
+    font-size: 1.18rem !important;
+  }
+  .banner-tagline-aurora {
+    font-size: 0.72rem !important;
+    padding: 2px 10px !important;
+  }
+  .banner-english-row {
+    font-size: 0.60rem !important;
+    letter-spacing: 0.6px !important;
+  }
+
+  /* 4. முதன்மைக் கட்டுப்பாட்டுப் பலகை (Hero Control Panel) & மும்முனை வழிகாட்டி பொத்தான்கள் */
+  .control-panel {
+    padding: 10px 8px !important;
+    margin-bottom: 8px !important;
+    border-radius: 12px !important;
+  }
+  .hero-compact-banner {
+    padding: 10px 8px !important;
+    margin-bottom: 6px !important;
+    border-radius: 10px !important;
+  }
+  .hero-main-heading {
+    font-size: 1.02rem !important;
+    line-height: 1.3 !important;
+  }
+  .hero-sub-caption {
+    font-size: 0.75rem !important;
+    line-height: 1.35 !important;
+  }
+  .tri-btn-grid {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+  }
+  .tri-action-btn {
+    padding: 8px 10px !important;
+    border-radius: 10px !important;
+  }
+  .tri-btn-icon {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 0.95rem !important;
+  }
+  .tri-btn-title {
+    font-size: 0.80rem !important;
+  }
+  .tri-btn-sub {
+    font-size: 0.67rem !important;
+  }
+  .quick-nav-marquee-container {
+    margin-bottom: 2px !important;
+    border-radius: 8px !important;
+  }
+
+  /* 5. 2027 நேரலை அறிவிக்கை & Flash News பட்டை (வலதுபுற எண் 01-06 வெட்டப்படுவதைத் தடுத்தல்) */
+  .hero-gemini-live-strip {
+    padding: 10px 8px !important;
+    margin-bottom: 10px !important;
+    border-radius: 12px !important;
+  }
+  .hgl-header-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 5px !important;
+  }
+  .hgl-heading {
+    font-size: 0.82rem !important;
+    line-height: 1.3 !important;
+  }
+  .hgl-mat-flash-section {
+    padding: 6px 6px !important;
+    border-radius: 10px !important;
+  }
+  .hgl-mat-flash-header {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 6px !important;
+  }
+  .hgl-mat-flash-title {
+    font-size: 0.72rem !important;
+    line-height: 1.3 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 5px !important;
+  }
+  .hgl-mat-controls {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+  }
+  .hgl-mat-ctrl-btn {
+    padding: 4px 8px !important;
+    font-size: 0.70rem !important;
+    text-align: center !important;
+  }
+  .hgl-banner-ribbon {
+    border-radius: 8px !important;
+    overflow: hidden !important;
+  }
+  .hgl-main-content-body {
+    clip-path: none !important;
+    padding: 7px 8px 7px 10px !important;
+    border-radius: 8px 0 0 8px !important;
+    min-width: 0 !important;
+  }
+  .hgl-silver-accent-block {
+    clip-path: none !important;
+    margin-left: 0 !important;
+    width: 38px !important;
+    border-radius: 0 8px 8px 0 !important;
+  }
+  .hgl-silver-num {
+    font-size: 1.02rem !important;
+  }
+  .hgl-news-title-text {
+    font-size: 0.78rem !important;
+  }
+  .hgl-news-desc-text {
+    font-size: 0.70rem !important;
+  }
+
+  /* 6. கவுண்ட்டவுன் தேர்வு மாற்றி பொத்தான்கள் (1-3 / 4-6 தேர்வுகள்) & அட்டைகள் */
+  .hgl-countdown-subbar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 6px !important;
+  }
+  .hgl-set-btn-group {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    width: 100% !important;
+    gap: 6px !important;
+  }
+  .hgl-set-btn-group .hgl-mat-ctrl-btn {
+    padding: 6px 4px !important;
+    font-size: 0.68rem !important;
+    white-space: normal !important;
+    line-height: 1.2 !important;
+  }
+  .hgl-card {
+    padding: 8px 8px !important;
+    border-radius: 10px !important;
+  }
+  .hgl-dates-strip {
+    gap: 3px !important;
+    padding: 4px 4px !important;
+  }
+  .hgl-date-val {
+    font-size: 0.66rem !important;
+    white-space: normal !important;
+  }
+
+  /* 7. 7 முதன்மை வழிகாட்டி வாயில்கள் (7 Gateway Cards) & கீழ்ப்பகுதிப் பெட்டிகள் */
+  .grid-container, #cardsGrid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    margin-bottom: 12px !important;
+  }
+  .card {
+    padding: 12px 10px !important;
+    border-radius: 12px !important;
+  }
+  #admissionTimelineSec,
+  #ceoMessageCardSection,
+  #bottomActionHub,
+  .portal-footer-frame {
+    padding: 12px 10px !important;
+    margin: 10px 0 !important;
+    border-radius: 12px !important;
+  }
+  .kural-box {
+    grid-template-columns: 1fr !important;
+    padding: 10px 12px !important;
+    margin-bottom: 10px !important;
+    border-radius: 10px !important;
+  }
+
+  /* 8. பாப்-அப் சாளரங்கள் (Modals) & மிதக்கும் பொத்தான்கள் (Floating Buttons) */
+  .cg-portal-modal-overlay {
+    padding: 10px 4px 20px 4px !important;
+  }
+  .cg-portal-modal-overlay > div {
+    padding: 12px 10px !important;
+    border-radius: 14px !important;
+  }
+  .mobile-menu-floating-btn {
+    bottom: 10px !important;
+    left: 8px !important;
+    padding: 7px 13px !important;
+    font-size: 0.78rem !important;
+  }
+  .floating-back-to-top {
+    bottom: 10px !important;
+    right: 8px !important;
+    padding: 7px 13px !important;
+    font-size: 0.75rem !important;
+  }
+}
+
 </style>
 </head>
 <body class="is-home-page">
@@ -1619,6 +1879,7 @@ body.theme-cyber-dark #admissionTimelineSec p {
             </div>
           </div>
         </div>
+      </div> <!-- /.control-panel -->
 
         <!-- ============================================================================
              3. தலைப்பு ஹீரோ பேனருக்கு அடுத்ததாக: 2027 விண்ணப்ப அறிவிக்கை வெளியிடப்பட்ட படிப்புகளுக்கான பிளாஷ் பட்டை (மேல்) & கவுண்ட்டவுன் பெட்டிகள் (கீழ்)
@@ -1650,9 +1911,9 @@ body.theme-cyber-dark #admissionTimelineSec p {
           </div>
 
           <!-- பிளாஷ் பட்டைக்குக் கீழ்: 50% சுருக்கப்பட்ட நாட்கள்-மட்டும் கவுண்ட்டவுன் பெட்டிகள் (3+3 மாற்றும் வசதியுடன்) -->
-          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
+          <div class="hgl-countdown-subbar" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
             <span style="font-size: 0.74rem; font-weight: 900; color: #fde047;">⏱️ 2027 நுழைவுத்தேர்வு நாட்கள் கவுண்ட்டவுன் &amp; முக்கியத் தேதிகள்:</span>
-            <div style="display: inline-flex; gap: 5px;">
+            <div class="hgl-set-btn-group" style="display: inline-flex; gap: 5px;">
               <button type="button" class="hgl-mat-ctrl-btn" id="btnHglSet1" onclick="switchHglExamPage(0)" style="background: #facc15; color: #090d16;">1–3 தேர்வுகள் (VITEEE / CLAT / UCEED)</button>
               <button type="button" class="hgl-mat-ctrl-btn" id="btnHglSet2" onclick="switchHglExamPage(1)">4–6 தேர்வுகள் (AILET / NID / SLAT)</button>
             </div>
@@ -1889,7 +2150,6 @@ body.theme-cyber-dark #admissionTimelineSec p {
             </a>
           </div>
         </div>
-      </div> <!-- /.control-panel -->
 
       <!-- 5. மும்முனை வழிகாட்டி பாப்-அப் சாளரம் (Tri-Button Interactive Modal: Search + Stream Guide + 60s O*NET Career Matcher) -->
       <div class="cg-portal-modal-overlay no-print" id="triToolModal" style="display: none; position: fixed; inset: 0; background: rgba(6, 13, 26, 0.88); z-index: 10002; align-items: flex-start; justify-content: center; padding: 68px 14px 28px 14px; overflow-y: auto; backdrop-filter: blur(4px);">
@@ -2917,7 +3177,7 @@ function runOnetCareerMatcher() {
 
   box.innerHTML = quotaBanner +
     '<div style="font-size:0.85rem;font-weight:900;color:#1e293b;margin-bottom:8px;">✨ உங்களுடைய சுயவிவரத்திற்குப் பொருந்தும் உயர்கல்வி &amp; தொழில் பாதைகள் (' + finalMatches.length + '):</div>' +
-    '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;">' +
+    '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;">' +
     finalMatches.map(function(m) {
       return '<div style="background:#ffffff;border:1.5px solid #cbd5e1;border-left:4px solid #7c3aed;border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;justify-content:space-between;gap:6px;">' +
         '<div>' +
@@ -3050,9 +3310,9 @@ function switchCalcCourse(courseKey, btn) {
   const c = document.getElementById('calcInputsContainer');
   document.getElementById('cutoffResultBox').style.display = 'none';
   if (courseKey === 'eng') {
-    c.innerHTML = `<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;"><input type="number" id="calc_m" placeholder="கணிதம் (100)" style="padding:8px;border:1px solid #cbd5e1;border-radius:6px;"/><input type="number" id="calc_p" placeholder="இயற்பியல் (100)" style="padding:8px;border:1px solid #cbd5e1;border-radius:6px;"/><input type="number" id="calc_c" placeholder="வேதியியல் (100)" style="padding:8px;border:1px solid #cbd5e1;border-radius:6px;"/></div>`;
+    c.innerHTML = `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;"><input type="number" id="calc_m" placeholder="கணிதம் (100)" style="padding:8px;border:1px solid #cbd5e1;border-radius:6px;"/><input type="number" id="calc_p" placeholder="இயற்பியல் (100)" style="padding:8px;border:1px solid #cbd5e1;border-radius:6px;"/><input type="number" id="calc_c" placeholder="வேதியியல் (100)" style="padding:8px;border:1px solid #cbd5e1;border-radius:6px;"/></div>`;
   } else {
-    c.innerHTML = `<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;"><input type="number" id="calc_b" placeholder="உயிரியல் / முதன்மை (100)" style="padding:8px;border:1px solid #cbd5e1;border-radius:6px;"/><input type="number" id="calc_p" placeholder="இயற்பியல் / பாடம் 2 (100)" style="padding:8px;border:1px solid #cbd5e1;border-radius:6px;"/><input type="number" id="calc_c" placeholder="வேதியியல் / பாடம் 3 (100)" style="padding:8px;border:1px solid #cbd5e1;border-radius:6px;"/></div>`;
+    c.innerHTML = `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;"><input type="number" id="calc_b" placeholder="உயிரியல் / முதன்மை (100)" style="padding:8px;border:1px solid #cbd5e1;border-radius:6px;"/><input type="number" id="calc_p" placeholder="இயற்பியல் / பாடம் 2 (100)" style="padding:8px;border:1px solid #cbd5e1;border-radius:6px;"/><input type="number" id="calc_c" placeholder="வேதியியல் / பாடம் 3 (100)" style="padding:8px;border:1px solid #cbd5e1;border-radius:6px;"/></div>`;
   }
 }
 function calculateUniversalCutoff() {
