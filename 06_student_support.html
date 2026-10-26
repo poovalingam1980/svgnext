@@ -9189,7 +9189,7 @@ body.theme-cyber-dark li {
 <div class="nav-marquee-content" id="navMarqueeContent">
 <!-- Group 1 -->
 <div class="nav-marquee-group">
-<button class="nav-anchor-pill active" onclick="smoothScrollToAnchor('scholarship-matcher-sec', this)" type="button">🎁 60-நொடி சலுகை வழிகாட்டி (PDF)</button>
+<button class="nav-anchor-pill active" onclick="smoothScrollToAnchor('scholarship-matcher-sec', this)" type="button">🎁 சலுகை &amp; உதவித்தொகை வழிகாட்டி</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('cutoff-tools-sec', this)" type="button">🧮 கட்-ஆஃப் கருவிகள்</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('sports-tools-sec', this)" type="button">🏆 விளையாட்டுப் பிரிவு</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('entrance-stream-sec', this)" type="button">✍️ நுழைவுத்தேர்வுகள்</button>
@@ -9204,7 +9204,7 @@ body.theme-cyber-dark li {
 </div>
 <!-- Group 2 (Duplicate for infinite seamless loop) -->
 <div aria-hidden="true" class="nav-marquee-group">
-<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('scholarship-matcher-sec', this)" type="button">🎁 60-நொடி சலுகை வழிகாட்டி (PDF)</button>
+<button class="nav-anchor-pill" onclick="smoothScrollToAnchor('scholarship-matcher-sec', this)" type="button">🎁 சலுகை &amp; உதவித்தொகை வழிகாட்டி</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('cutoff-tools-sec', this)" type="button">🧮 கட்-ஆஃப் கருவிகள்</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('sports-tools-sec', this)" type="button">🏆 விளையாட்டுப் பிரிவு</button>
 <button class="nav-anchor-pill" onclick="smoothScrollToAnchor('entrance-stream-sec', this)" type="button">✍️ நுழைவுத்தேர்வுகள்</button>
@@ -9219,45 +9219,102 @@ body.theme-cyber-dark li {
 </div>
 </div>
 </div>
-</nav><span id="sec-nsp-esevai-checklist"></span><section class="section-card" id="scholarship-matcher-sec" style="border: 2px solid #7c3aed; border-top: 6px solid #6d28d9; background: linear-gradient(180deg, #faf5ff 0%, #ffffff 35%, #f8fafc 100%); box-shadow: 0 14px 34px rgba(109, 40, 217, 0.10);">
-<div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 2px dashed #c4b5fd;">
-  <div style="flex: 1; min-width: 260px;">
-    <div style="display: inline-flex; align-items: center; gap: 6px; background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd; padding: 4px 12px; border-radius: 999px; font-size: 0.76rem; font-weight: 900; margin-bottom: 8px;">
-      <span>⚡ SMART SCHOLARSHIP &amp; CONCESSION FINDER</span>
-      <span>•</span>
-      <span>1-CLICK A4 PDF REPORT</span>
-    </div>
-    <h2 class="card-top-title" style="margin: 0; color: #3b0764; font-size: clamp(1.15rem, 2.2vw, 1.48rem);">🎁 60-வினாடி உயர்கல்விச் சலுகைகள், இடஒதுக்கீடு &amp; உதவித்தொகை தகுதி வழிகாட்டி</h2>
-    <p class="box-desc" style="margin: 6px 0 0 0; color: #475569; font-weight: 600;">ஒரு மாணவரின் <strong>பள்ளி வகை (அரசு / அரசு உதவி / தனியார்), வகுப்பு (Community), குடும்ப ஆண்டு வருமானம், குடும்பப் பின்னணி (முதல் பட்டதாரி / மாற்றுத்திறனாளி / பெற்றோரை இழந்தவர் / விவசாயி நல வாரியம்) மற்றும் பாலினம்</strong> ஆகியவற்றைத் தேர்ந்தெடுத்து, அவருக்குக் கிடைக்கும் அனைத்து அரசுச் சலுகைகளையும் <strong>Single-Click PDF அறிக்கையாக</strong> உடனடியாகப் பதிவிறக்கம் செய்யுங்கள்:</p>
+</nav><span id="sec-nsp-esevai-checklist"></span><section class="section-card compact-calc-card" id="scholarship-matcher-sec" style="border: 2px solid #7c3aed; border-top: 5px solid #6d28d9; background: linear-gradient(180deg, #faf5ff 0%, #ffffff 45%, #f8fafc 100%); box-shadow: 0 10px 26px rgba(109, 40, 217, 0.09); padding: 16px 18px !important; margin-bottom: 20px !important;">
+<style>
+  #scholarship-matcher-sec .sch-name-school-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 10px;
+    background: #f5f3ff;
+    border: 1.5px solid #ddd6fe;
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+  #scholarship-matcher-sec .sch-6field-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  #scholarship-matcher-sec .sch-field-card {
+    background: #ffffff;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 9px 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #scholarship-matcher-sec .sch-cta-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 50%, #059669 100%);
+    color: #ffffff;
+    border: 2px solid #fde047;
+    border-radius: 12px;
+    padding: 13px 20px;
+    font-family: inherit;
+    font-size: clamp(0.92rem, 1.3vw, 1.06rem);
+    font-weight: 900;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    box-shadow: 0 8px 22px rgba(109, 40, 217, 0.28);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  #scholarship-matcher-sec .sch-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(5, 150, 105, 0.36);
+  }
+  @media (max-width: 920px) {
+    #scholarship-matcher-sec .sch-6field-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 600px) {
+    #scholarship-matcher-sec .sch-name-school-grid,
+    #scholarship-matcher-sec .sch-6field-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<!-- Compact Full-Width Header (Zero Right-Side Gap) -->
+<div style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1.5px dashed #c4b5fd;">
+  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 4px;">
+    <h2 class="card-top-title" style="margin: 0; color: #3b0764; font-size: clamp(1.08rem, 1.8vw, 1.34rem); display: flex; align-items: center; gap: 8px;">
+      <span>🎁</span><span>உயர்கல்விச் சலுகைகள், இடஒதுக்கீடு &amp; உதவித்தொகை தகுதி வழிகாட்டி</span>
+    </h2>
+    <span style="display: inline-flex; align-items: center; gap: 6px; background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd; padding: 3px 10px; border-radius: 999px; font-size: 0.73rem; font-weight: 900;">
+      ⚡ SMART ELIGIBILITY &amp; 1-CLICK PDF
+    </span>
   </div>
-  <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-    <button type="button" onclick="speakStudentScholarshipSummary()" style="background: #1e3a8a; color: #fef08a; border: 1.5px solid #38bdf8; border-radius: 10px; padding: 10px 15px; font-family: inherit; font-size: 0.82rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);" title="பொருந்தும் உதவித்தொகை மற்றும் சலுகைகளைக் குரல் வழியாகக் கேட்க">
-      <span>🔊</span><span>குரலில் கேள்</span>
-    </button>
-    <button type="button" onclick="generateAndDownloadScholarshipPdf()" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #ffffff; border: 1.5px solid #34d399; border-radius: 10px; padding: 10px 18px; font-family: inherit; font-size: 0.85rem; font-weight: 900; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 6px 18px rgba(5, 150, 105, 0.28);" title="மாணவருக்கான தனிப்பயன் உயர்கல்விச் சலுகைகள் &amp; உதவித்தொகை பட்டியலை A4 PDF கோப்பாகப் பதிவிறக்க">
-      <span>📥</span><span>1-Click சலுகைகள் &amp; உதவித்தொகை PDF பதிவிறக்கம்</span>
-    </button>
+  <p class="box-desc" style="margin: 0; color: #475569; font-size: 0.83rem; font-weight: 600; line-height: 1.45;">
+    மாணவரின் <strong>பள்ளி வகை, வகுப்பு (Community), குடும்ப ஆண்டு வருமானம், குடும்பப் பின்னணி, பாலினம் மற்றும் உயர்கல்விப் பிரிவு</strong> ஆகியவற்றைத் தேர்ந்தெடுத்து, கீழே உள்ள பொத்தானை அழுத்தி அனைத்து அரசுச் சலுகைகளையும் <strong>பாப்பப் (Popup) திரையில் காணவும், குரலில் கேட்கவும் &amp; Single-Click PDF ஆகப் பதிவிறக்கவும்</strong>:
+  </p>
+</div>
+
+<!-- Row 1: Student Name & School Name (2-Column Balanced Grid) -->
+<div class="sch-name-school-grid">
+  <div>
+    <label for="schStudentName" style="display: block; font-size: 0.77rem; font-weight: 900; color: #4c1d95; margin-bottom: 3px;">👤 மாணவர் பெயர் (PDF சான்றறிக்கையில் இடம்பெற):</label>
+    <input id="schStudentName" type="text" placeholder="எ.கா: க. பூவலிங்கம் / மு. கயல்விழி" style="width: 100%; padding: 7px 10px; border-radius: 7px; border: 1.5px solid #a78bfa; font-family: inherit; font-size: 0.83rem; font-weight: 700; color: #0f172a; background: #ffffff; box-sizing: border-box;" />
+  </div>
+  <div>
+    <label for="schSchoolName" style="display: block; font-size: 0.77rem; font-weight: 900; color: #4c1d95; margin-bottom: 3px;">🏫 பயின்ற பள்ளி / ஊர் (School &amp; Block):</label>
+    <input id="schSchoolName" type="text" placeholder="எ.கா: அரசு மேல்நிலைப்பள்ளி, சிவகங்கை" style="width: 100%; padding: 7px 10px; border-radius: 7px; border: 1.5px solid #a78bfa; font-family: inherit; font-size: 0.83rem; font-weight: 700; color: #0f172a; background: #ffffff; box-sizing: border-box;" />
   </div>
 </div>
 
-<!-- Student Name & School Name Input Row -->
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-bottom: 14px; background: #f5f3ff; border: 1.5px solid #ddd6fe; border-radius: 12px; padding: 12px 14px;">
-  <div>
-    <label for="schStudentName" style="display: block; font-size: 0.78rem; font-weight: 900; color: #4c1d95; margin-bottom: 4px;">👤 மாணவர் பெயர் (PDF சான்றறிக்கையில் இடம்பெற):</label>
-    <input id="schStudentName" type="text" placeholder="எ.கா: க. பூவலிங்கம் / மு. கயல்விழி" style="width: 100%; padding: 8px 12px; border-radius: 8px; border: 1.5px solid #a78bfa; font-family: inherit; font-size: 0.85rem; font-weight: 700; color: #0f172a; background: #ffffff;" />
-  </div>
-  <div>
-    <label for="schSchoolName" style="display: block; font-size: 0.78rem; font-weight: 900; color: #4c1d95; margin-bottom: 4px;">🏫 பயின்ற பள்ளி / ஊர் (School &amp; Block):</label>
-    <input id="schSchoolName" type="text" placeholder="எ.கா: அரசு மேல்நிலைப்பள்ளி, சிவகங்கை" style="width: 100%; padding: 8px 12px; border-radius: 8px; border: 1.5px solid #a78bfa; font-family: inherit; font-size: 0.85rem; font-weight: 700; color: #0f172a; background: #ffffff;" />
-  </div>
-</div>
-
-<!-- 6-Parameter Eligibility Filter Grid -->
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin-bottom: 16px;">
+<!-- Row 2 & 3: 6-Parameter Eligibility Filter Grid (3x2 Balanced Grid — Zero Whitespace) -->
+<div class="sch-6field-grid">
   <!-- 1. School Type -->
-  <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-top: 4px solid #059669; border-radius: 10px; padding: 10px 12px;">
-    <label for="schSchoolType" style="display: block; font-size: 0.78rem; font-weight: 900; color: #065f46; margin-bottom: 5px;">1. 🏫 பள்ளி வகை &amp; பயின்ற மொழி (6–12 வகுப்பு):</label>
-    <select id="schSchoolType" onchange="runScholarshipEligibilityMatcher()" style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.82rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
+  <div class="sch-field-card" style="border-top: 3.5px solid #059669;">
+    <label for="schSchoolType" style="display: block; font-size: 0.77rem; font-weight: 900; color: #065f46; margin-bottom: 4px;">1. 🏫 பள்ளி வகை &amp; பயின்ற மொழி (6–12):</label>
+    <select id="schSchoolType" onchange="updateScholarshipButtonBadge()" style="width: 100%; padding: 7px 9px; border-radius: 7px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.81rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
       <option value="govt_6_12" selected>🏫 6–12 அரசுப் பள்ளி (7.5% இடஒதுக்கீடு + ₹1,000/மாதம்)</option>
       <option value="aided_tamil">📘 அரசு உதவிபெறும் பள்ளி — தமிழ் வழி (₹1,000/மாதம் தகுதி)</option>
       <option value="aided_eng">📗 அரசு உதவிபெறும் பள்ளி — ஆங்கில வழி (Govt Aided)</option>
@@ -9267,9 +9324,9 @@ body.theme-cyber-dark li {
   </div>
 
   <!-- 2. Community -->
-  <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-top: 4px solid #2563eb; border-radius: 10px; padding: 10px 12px;">
-    <label for="schCommunity" style="display: block; font-size: 0.78rem; font-weight: 900; color: #1e3a8a; margin-bottom: 5px;">2. 🏛️ வகுப்பு / சமூகப் பிரிவு (Community):</label>
-    <select id="schCommunity" onchange="runScholarshipEligibilityMatcher()" style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.82rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
+  <div class="sch-field-card" style="border-top: 3.5px solid #2563eb;">
+    <label for="schCommunity" style="display: block; font-size: 0.77rem; font-weight: 900; color: #1e3a8a; margin-bottom: 4px;">2. 🏛️ வகுப்பு / சமூகப் பிரிவு (Community):</label>
+    <select id="schCommunity" onchange="updateScholarshipButtonBadge()" style="width: 100%; padding: 7px 9px; border-radius: 7px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.81rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
       <option value="bc" selected>🏛️ BC — பிற்படுத்தப்பட்டோர் (26.5% இடஒதுக்கீடு)</option>
       <option value="mbc_dnc">🏛️ MBC / DNC — மிகவும் பிற்படுத்தப்பட்டோர் / சீர்மரபினர் (20%)</option>
       <option value="sc_st">🏛️ SC / SCA / ST — ஆதிதிராவிடர் / பழங்குடியினர் (18% + 1%)</option>
@@ -9279,20 +9336,20 @@ body.theme-cyber-dark li {
   </div>
 
   <!-- 3. Family Annual Income -->
-  <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-top: 4px solid #d97706; border-radius: 10px; padding: 10px 12px;">
-    <label for="schIncome" style="display: block; font-size: 0.78rem; font-weight: 900; color: #92400e; margin-bottom: 5px;">3. 💰 குடும்ப ஆண்டு வருமானம் (Family Annual Income):</label>
-    <select id="schIncome" onchange="runScholarshipEligibilityMatcher()" style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.82rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
-      <option value="inc_1l">💵 ₹1,00,000-க்குள் (அனைத்து உதவித்தொகைகளுக்கும் முழுத் தகுதி)</option>
-      <option value="inc_2_5l" selected>💵 ₹1,00,000 முதல் ₹2,50,000 வரை (Post-Matric / PM-YASASVI தகுதி)</option>
+  <div class="sch-field-card" style="border-top: 3.5px solid #d97706;">
+    <label for="schIncome" style="display: block; font-size: 0.77rem; font-weight: 900; color: #92400e; margin-bottom: 4px;">3. 💰 குடும்ப ஆண்டு வருமானம் (Annual Income):</label>
+    <select id="schIncome" onchange="updateScholarshipButtonBadge()" style="width: 100%; padding: 7px 9px; border-radius: 7px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.81rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
+      <option value="inc_1l">💵 ₹1,00,000-க்குள் (அனைத்து உதவித்தொகைகளுக்கும் தகுதி)</option>
+      <option value="inc_2_5l" selected>💵 ₹1,00,000 முதல் ₹2,50,000 வரை (Post-Matric தகுதி)</option>
       <option value="inc_8l">💵 ₹2,50,000 முதல் ₹8,00,000 வரை (Pragati / NSP / EWS தகுதி)</option>
-      <option value="inc_above8l">💵 ₹8,00,000-க்கு மேல் (தகுதி / மெரிட் &amp; FG சலுகைகள்)</option>
+      <option value="inc_above8l">💵 ₹8,00,000-க்கு மேல் (மெரிட் &amp; முதல் பட்டதாரி சலுகை)</option>
     </select>
   </div>
 
   <!-- 4. Family Background & Special Category -->
-  <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-top: 4px solid #7c3aed; border-radius: 10px; padding: 10px 12px;">
-    <label for="schBackground" style="display: block; font-size: 0.78rem; font-weight: 900; color: #4c1d95; margin-bottom: 5px;">4. 👨‍👩‍👧 குடும்பப் பின்னணி &amp; சிறப்புத் தகுதி:</label>
-    <select id="schBackground" onchange="runScholarshipEligibilityMatcher()" style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.82rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
+  <div class="sch-field-card" style="border-top: 3.5px solid #7c3aed;">
+    <label for="schBackground" style="display: block; font-size: 0.77rem; font-weight: 900; color: #4c1d95; margin-bottom: 4px;">4. 👨‍👩‍👧 குடும்பப் பின்னணி &amp; சிறப்புத் தகுதி:</label>
+    <select id="schBackground" onchange="updateScholarshipButtonBadge()" style="width: 100%; padding: 7px 9px; border-radius: 7px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.81rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
       <option value="fg" selected>📜 முதல் தலைமுறைப் பட்டதாரி (First Graduate — FG)</option>
       <option value="welfare_board">🌾 விவசாயி / கட்டுமானம் / அமைப்புசாரா தொழிலாளர் நல வாரியம்</option>
       <option value="single_orphan">🤲 பெற்றோரை இழந்தவர் / ஒற்றைப் பெற்றோர் (Orphan / Single Parent)</option>
@@ -9304,19 +9361,19 @@ body.theme-cyber-dark li {
     </select>
   </div>
 
-  <!-- 5. Gender -->
-  <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-top: 4px solid #db2777; border-radius: 10px; padding: 10px 12px;">
-    <label for="schGender" style="display: block; font-size: 0.78rem; font-weight: 900; color: #9d174d; margin-bottom: 5px;">5. 🚻 பாலினம் (Gender — சிறப்புத் திட்டங்கள்):</label>
-    <select id="schGender" onchange="runScholarshipEligibilityMatcher()" style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.82rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
-      <option value="female" selected>👩‍🎓 மாணவி (புதுமைப் பெண் ₹1,000 + AICTE Pragati ₹50,000)</option>
-      <option value="male">👨‍🎓 மாணவன் (தமிழ்ப் புதல்வன் ₹1,000 + மத்திய/மாநில உதவித்தொகை)</option>
+  <!-- 5. Gender (Simplified to Male / Female as requested) -->
+  <div class="sch-field-card" style="border-top: 3.5px solid #db2777;">
+    <label for="schGender" style="display: block; font-size: 0.77rem; font-weight: 900; color: #9d174d; margin-bottom: 4px;">5. 🚻 பாலினம் (Gender):</label>
+    <select id="schGender" onchange="updateScholarshipButtonBadge()" style="width: 100%; padding: 7px 9px; border-radius: 7px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.81rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
+      <option value="male">ஆண் (Male)</option>
+      <option value="female" selected>பெண் (Female)</option>
     </select>
   </div>
 
   <!-- 6. Target Higher Education Stream -->
-  <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-top: 4px solid #0284c7; border-radius: 10px; padding: 10px 12px;">
-    <label for="schStream" style="display: block; font-size: 0.78rem; font-weight: 900; color: #075985; margin-bottom: 5px;">6. 🎓 சேர விரும்பும் உயர்கல்விப் பிரிவு (Target Course):</label>
-    <select id="schStream" onchange="runScholarshipEligibilityMatcher()" style="width: 100%; padding: 8px 10px; border-radius: 8px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.82rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
+  <div class="sch-field-card" style="border-top: 3.5px solid #0284c7;">
+    <label for="schStream" style="display: block; font-size: 0.77rem; font-weight: 900; color: #075985; margin-bottom: 4px;">6. 🎓 சேர விரும்பும் உயர்கல்விப் பிரிவு (Target Course):</label>
+    <select id="schStream" onchange="updateScholarshipButtonBadge()" style="width: 100%; padding: 7px 9px; border-radius: 7px; border: 1.5px solid #94a3b8; font-family: inherit; font-size: 0.81rem; font-weight: 700; color: #0f172a; background: #f8fafc;">
       <option value="eng" selected>⚙️ பொறியியல் &amp; தொழில்நுட்பம் (B.E. / B.Tech / B.Arch)</option>
       <option value="med">🩺 மருத்துவம், கால்நடை &amp; துணை மருத்துவம் (MBBS / Nursing / Pharm)</option>
       <option value="agri">🌾 வேளாண்மை, தோட்டக்கலை &amp; மீன்வளம் (TNAU / TNJFU)</option>
@@ -9327,8 +9384,63 @@ body.theme-cyber-dark li {
   </div>
 </div>
 
-<!-- Dynamic Output Container -->
-<div id="schMatcherOutputContainer" style="background: #ffffff; border: 2px solid #c4b5fd; border-radius: 14px; padding: 16px;"></div>
+<!-- Single Unified CTA Button to Open Popup Modal -->
+<button type="button" class="sch-cta-btn" onclick="openScholarshipEligibilityModal()" id="btnOpenScholarshipModal">
+  <span style="font-size: 1.2rem;">🎁</span>
+  <span>உங்களுக்கான சலுகை மற்றும் கல்வி உதவித்தொகை விவரங்களை தெரிந்துகொள்ள Click செய்யவும்</span>
+  <span id="schMatchedCountBadge" style="background: #fde047; color: #1e1b4b; font-size: 0.78rem; font-weight: 900; padding: 3px 10px; border-radius: 999px; border: 1px solid #f59e0b;">✨ விவரங்களைக் காண்க ➔</span>
+</button>
+
+<!-- POPUP MODAL FOR SCHOLARSHIP & CONCESSION DETAILS + AUDIO + 1-CLICK PDF -->
+<div id="schEligibilityPopupModal" role="dialog" aria-modal="true" aria-labelledby="schModalHeaderTitle" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.82); backdrop-filter: blur(6px); z-index: 10005; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+  <div style="background: #ffffff; width: 100%; max-width: 980px; max-height: 92vh; border-radius: 18px; border: 2.5px solid #7c3aed; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55); display: flex; flex-direction: column; overflow: hidden; animation: modalPopZoom 0.22s ease-out;">
+    
+    <!-- Modal Sticky Header with Audio & 1-Click PDF Buttons -->
+    <div style="background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 55%, #065f46 100%); color: #ffffff; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-bottom: 2px solid #fde047;">
+      <div style="flex: 1; min-width: 240px;">
+        <div id="schModalHeaderTitle" style="font-size: clamp(1.0rem, 1.5vw, 1.22rem); font-weight: 900; color: #fef08a; display: flex; align-items: center; gap: 8px;">
+          <span>🎁</span><span>உங்களுக்கான உயர்கல்விச் சலுகைகள் &amp; கல்வி உதவித்தொகை விவரங்கள்</span>
+        </div>
+        <div id="schModalProfileSub" style="font-size: 0.78rem; color: #e0f2fe; font-weight: 700; margin-top: 3px;">
+          மாணவர் தகுதி அறிக்கை • உடனடி குரல் வழிகாட்டி &amp; A4 PDF பதிவிறக்கம்
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+        <button type="button" id="btnSchSpeakTop" onclick="speakStudentScholarshipSummary()" style="background: #1e3a8a; color: #fef08a; border: 1.5px solid #38bdf8; border-radius: 9px; padding: 8px 14px; font-family: inherit; font-size: 0.82rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 3px 10px rgba(0,0,0,0.25);">
+          <span>🔊</span><span id="lblSchSpeakTop">குரலில் கேள்</span>
+        </button>
+        <button type="button" onclick="generateAndDownloadScholarshipPdf()" style="background: linear-gradient(135deg, #10b981 0%, #047857 100%); color: #ffffff; border: 1.5px solid #fde047; border-radius: 9px; padding: 8px 15px; font-family: inherit; font-size: 0.83rem; font-weight: 900; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+          <span>📥</span><span>1-Click சலுகைகள் &amp; உதவித்தொகை PDF பதிவிறக்கம்</span>
+        </button>
+        <button type="button" onclick="closeScholarshipEligibilityModal()" style="background: rgba(255,255,255,0.15); color: #ffffff; border: 1.5px solid rgba(255,255,255,0.4); border-radius: 9px; padding: 8px 12px; font-family: inherit; font-size: 0.82rem; font-weight: 900; cursor: pointer;" title="மூடுக (Close)">
+          ✕ மூடுக
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal Scrollable Content -->
+    <div id="schMatcherOutputContainer" style="padding: 16px 18px; overflow-y: auto; flex: 1; background: #f8fafc;"></div>
+
+    <!-- Modal Sticky Footer with Action Buttons -->
+    <div style="background: #f1f5f9; border-top: 1.5px solid #cbd5e1; padding: 10px 18px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+      <div style="font-size: 0.78rem; font-weight: 800; color: #475569;">
+        📞 கட்டணமில்லா உயர்கல்வி உதவி மையம்: <strong style="color: #0f172a;">14417</strong> | சிவகங்கை வழிகாட்டி மையம்: <strong style="color: #0f172a;">04575-246233</strong>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+        <button type="button" onclick="speakStudentScholarshipSummary()" style="background: #1e3a8a; color: #fef08a; border: 1.5px solid #38bdf8; border-radius: 8px; padding: 7px 14px; font-family: inherit; font-size: 0.80rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
+          <span>🔊</span><span>குரலில் கேள்</span>
+        </button>
+        <button type="button" onclick="generateAndDownloadScholarshipPdf()" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: #ffffff; border: 1.5px solid #065f46; border-radius: 8px; padding: 7px 16px; font-family: inherit; font-size: 0.82rem; font-weight: 900; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
+          <span>📥</span><span>1-Click சலுகைகள் &amp; உதவித்தொகை PDF பதிவிறக்கம்</span>
+        </button>
+        <button type="button" onclick="closeScholarshipEligibilityModal()" style="background: #ffffff; color: #334155; border: 1.5px solid #94a3b8; border-radius: 8px; padding: 7px 14px; font-family: inherit; font-size: 0.80rem; font-weight: 800; cursor: pointer;">
+          ✕ மூடுக (Close)
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
 </section>
 
 <section class="section-card" id="cutoff-tools-sec">
@@ -15428,50 +15540,106 @@ async function handlePopupFeedbackSubmit(e) {
     };
   };
 
+  window.updateScholarshipButtonBadge = function() {
+    const data = window.getMatchedScholarshipsData();
+    const badge = document.getElementById("schMatchedCountBadge");
+    if (badge) {
+      badge.textContent = "✨ " + data.matched.length + " தகுதியான திட்டங்கள் ➔";
+    }
+    const modal = document.getElementById("schEligibilityPopupModal");
+    if (modal && modal.style.display === "flex") {
+      window.runScholarshipEligibilityMatcher();
+    }
+  };
+
+  window.openScholarshipEligibilityModal = function() {
+    window.runScholarshipEligibilityMatcher();
+    const modal = document.getElementById("schEligibilityPopupModal");
+    if (modal) {
+      modal.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
+  };
+
+  window.closeScholarshipEligibilityModal = function() {
+    const modal = document.getElementById("schEligibilityPopupModal");
+    if (modal) {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+    }
+    const lblTop = document.getElementById("lblSchSpeakTop");
+    if (lblTop) lblTop.textContent = "குரலில் கேள்";
+  };
+
+  window.addEventListener("click", function(e) {
+    const modal = document.getElementById("schEligibilityPopupModal");
+    if (modal && e.target === modal) {
+      window.closeScholarshipEligibilityModal();
+    }
+  });
+
+  window.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+      const modal = document.getElementById("schEligibilityPopupModal");
+      if (modal && modal.style.display === "flex") {
+        window.closeScholarshipEligibilityModal();
+      }
+    }
+  });
+
   window.runScholarshipEligibilityMatcher = function() {
     const out = document.getElementById("schMatcherOutputContainer");
     if (!out) return;
     const data = window.getMatchedScholarshipsData();
+    const p = data.profile;
+
+    const sub = document.getElementById("schModalProfileSub");
+    if (sub) {
+      sub.textContent = "👤 " + p.studentName + " • " + p.genLabel + " • " + p.commLabel.split("—")[0].trim() + " • " + p.streamLabel.split("(")[0].trim();
+    }
 
     const formattedTotal = "₹" + data.totalAnnualBenefit.toLocaleString("en-IN") + "+ / ஆண்டுக்கு";
 
     let html = '';
     // Top Summary Dashboard Cards
-    html += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; margin-bottom: 16px;">' +
-      '<div style="background: linear-gradient(135deg, #065f46 0%, #047857 100%); color: #ffffff; border-radius: 10px; padding: 12px 14px;">' +
+    html += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 14px;">' +
+      '<div style="background: linear-gradient(135deg, #065f46 0%, #047857 100%); color: #ffffff; border-radius: 10px; padding: 11px 13px;">' +
         '<div style="font-size: 0.74rem; color: #a7f3d0; font-weight: 800;">🎯 தகுதியான திட்டங்கள்</div>' +
-        '<div style="font-size: 1.35rem; font-weight: 900; margin-top: 2px;">' + data.matched.length + ' அரசுச் சலுகைகள்</div>' +
+        '<div style="font-size: 1.30rem; font-weight: 900; margin-top: 2px;">' + data.matched.length + ' அரசுச் சலுகைகள்</div>' +
         '<div style="font-size: 0.72rem; color: #ecfdf5; margin-top: 2px;">மாநில &amp; மத்திய அரசுத் திட்டங்கள்</div>' +
       '</div>' +
-      '<div style="background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%); color: #ffffff; border-radius: 10px; padding: 12px 14px;">' +
+      '<div style="background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%); color: #ffffff; border-radius: 10px; padding: 11px 13px;">' +
         '<div style="font-size: 0.74rem; color: #bfdbfe; font-weight: 800;">💰 மதிப்பிடப்பட்ட ஆண்டு நிதிப் பலன்</div>' +
-        '<div style="font-size: 1.30rem; font-weight: 900; color: #fde047; margin-top: 2px;">' + formattedTotal + '</div>' +
+        '<div style="font-size: 1.25rem; font-weight: 900; color: #fde047; margin-top: 2px;">' + formattedTotal + '</div>' +
         '<div style="font-size: 0.72rem; color: #e0f2fe; margin-top: 2px;">உதவித்தொகை + கட்டண விலக்கு மதிப்பு</div>' +
       '</div>' +
-      '<div style="background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 100%); color: #ffffff; border-radius: 10px; padding: 12px 14px;">' +
+      '<div style="background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 100%); color: #ffffff; border-radius: 10px; padding: 11px 13px;">' +
         '<div style="font-size: 0.74rem; color: #ddd6fe; font-weight: 800;">🎓 கல்விக் கட்டணச் சலுகை நிலை</div>' +
-        '<div style="font-size: 0.86rem; font-weight: 900; color: #fef08a; margin-top: 4px; line-height: 1.35;">' + data.feeWaiverStatus + '</div>' +
+        '<div style="font-size: 0.84rem; font-weight: 900; color: #fef08a; margin-top: 4px; line-height: 1.35;">' + data.feeWaiverStatus + '</div>' +
       '</div>' +
-      '<div style="background: linear-gradient(135deg, #7c2d12 0%, #b45309 100%); color: #ffffff; border-radius: 10px; padding: 12px 14px;">' +
+      '<div style="background: linear-gradient(135deg, #7c2d12 0%, #b45309 100%); color: #ffffff; border-radius: 10px; padding: 11px 13px;">' +
         '<div style="font-size: 0.74rem; color: #fde68a; font-weight: 800;">🏛️ உங்களுக்கான இடஒதுக்கீடு (Quota)</div>' +
-        '<div style="font-size: 0.83rem; font-weight: 900; color: #ffffff; margin-top: 4px; line-height: 1.35;">' + data.reservationSummary + '</div>' +
+        '<div style="font-size: 0.82rem; font-weight: 900; color: #ffffff; margin-top: 4px; line-height: 1.35;">' + data.reservationSummary + '</div>' +
       '</div>' +
     '</div>';
 
     // Matched Scheme Cards
-    html += '<div style="font-size: 0.92rem; font-weight: 900; color: #1e293b; margin-bottom: 10px;">✨ உங்களுடைய தகுதிக்குப் பொருந்தும் உயர்கல்வி உதவித்தொகைகள் &amp; சலுகைகள் (' + data.matched.length + '):</div>';
-    html += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 12px; margin-bottom: 16px;">';
+    html += '<div style="font-size: 0.90rem; font-weight: 900; color: #1e293b; margin-bottom: 10px;">✨ உங்களுடைய தகுதிக்குப் பொருந்தும் உயர்கல்வி உதவித்தொகைகள் &amp; சலுகைகள் (' + data.matched.length + '):</div>';
+    html += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-bottom: 14px;">';
     data.matched.forEach(function(m, idx) {
       html += '<div style="background: ' + m.bgLight + '; border: 1.5px solid ' + m.borderColor + '; border-left: 5px solid ' + m.badgeColor + '; border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; justify-content: space-between; gap: 8px;">' +
         '<div>' +
           '<div style="display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 6px;">' +
             '<span style="background: ' + m.badgeColor + '; color: #ffffff; font-size: 0.70rem; font-weight: 800; padding: 3px 9px; border-radius: 999px;">' + (idx + 1) + '. ' + m.category + '</span>' +
           '</div>' +
-          '<div style="font-size: 0.90rem; font-weight: 900; color: #0f172a; margin-bottom: 6px; line-height: 1.38;">' + m.title + '</div>' +
-          '<div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 10px; font-size: 0.78rem; font-weight: 900; color: #047857; margin-bottom: 6px;">💎 <strong>சலுகை / தொகை:</strong> ' + m.amountText + '</div>' +
-          '<p style="margin: 0 0 6px 0; font-size: 0.77rem; color: #334155; line-height: 1.45; font-weight: 600;">' + m.details + '</p>' +
+          '<div style="font-size: 0.88rem; font-weight: 900; color: #0f172a; margin-bottom: 6px; line-height: 1.38;">' + m.title + '</div>' +
+          '<div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 6px 10px; font-size: 0.77rem; font-weight: 900; color: #047857; margin-bottom: 6px;">💎 <strong>சலுகை / தொகை:</strong> ' + m.amountText + '</div>' +
+          '<p style="margin: 0 0 6px 0; font-size: 0.76rem; color: #334155; line-height: 1.45; font-weight: 600;">' + m.details + '</p>' +
         '</div>' +
-        '<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; padding-top: 6px; border-top: 1px dashed #cbd5e1; font-size: 0.75rem;">' +
+        '<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; padding-top: 6px; border-top: 1px dashed #cbd5e1; font-size: 0.74rem;">' +
           '<span style="color: #475569; font-weight: 800;">🌐 ' + m.portalName + '</span>' +
           '<a href="' + m.portalUrl + '" target="_blank" rel="noopener noreferrer" style="background: #ffffff; color: ' + m.badgeColor + '; border: 1px solid ' + m.badgeColor + '; border-radius: 6px; padding: 4px 10px; text-decoration: none; font-weight: 900;">விண்ணப்ப தளம் ↗</a>' +
         '</div>' +
@@ -15481,21 +15649,34 @@ async function handlePopupFeedbackSubmit(e) {
 
     // Customized Required Certificates Checklist
     html += '<div style="background: #fffbeb; border: 1.5px solid #f59e0b; border-radius: 12px; padding: 12px 16px;">' +
-      '<div style="font-size: 0.88rem; font-weight: 900; color: #92400e; margin-bottom: 8px;">📋 மேற்கண்ட சலுகைகளைப் பெற நீங்கள் இப்போதே தயாராக வைத்திருக்க வேண்டிய சான்றிதழ்கள் (Customized Checklist):</div>' +
-      '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 6px;">';
+      '<div style="font-size: 0.86rem; font-weight: 900; color: #92400e; margin-bottom: 8px;">📋 மேற்கண்ட சலுகைகளைப் பெற நீங்கள் தயாராக வைத்திருக்க வேண்டிய சான்றிதழ்கள் (e-Sevai &amp; Bank Checklist):</div>' +
+      '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 6px;">';
     data.certList.forEach(function(c) {
-      html += '<div style="font-size: 0.78rem; font-weight: 700; color: #1e293b; display: flex; align-items: flex-start; gap: 6px;"><span>✅</span><span>' + c + '</span></div>';
+      html += '<div style="font-size: 0.77rem; font-weight: 700; color: #1e293b; display: flex; align-items: flex-start; gap: 6px;"><span>✅</span><span>' + c + '</span></div>';
     });
     html += '</div></div>';
 
     out.innerHTML = html;
   };
 
+  let isSpeakingScholarship = false;
   window.speakStudentScholarshipSummary = function() {
-    if (!("speechSynthesis" in window)) return;
+    if (!("speechSynthesis" in window)) {
+      alert("உங்கள் உலாவியில் குரல் வழிகாட்டி வசதி (Web Speech Synthesis) இல்லை.");
+      return;
+    }
+    const lblTop = document.getElementById("lblSchSpeakTop");
+    if (isSpeakingScholarship) {
+      window.speechSynthesis.cancel();
+      isSpeakingScholarship = false;
+      if (lblTop) lblTop.textContent = "குரலில் கேள்";
+      return;
+    }
     window.speechSynthesis.cancel();
     const data = window.getMatchedScholarshipsData();
-    const names = data.matched.slice(0, 4).map(function(m) { return m.title.replace(/[^஀-௿a-zA-Z0-9\s.,₹%-]/g, ""); }).join(". ");
+    const names = data.matched.slice(0, 4).map(function(m) {
+      return m.title.replace(/[^஀-௿a-zA-Z0-9\s.,₹%-]/g, "");
+    }).join(". ");
     const msg = new SpeechSynthesisUtterance(
       "உங்களுடைய சுயவிவரத்திற்கு மொத்தம் " + data.matched.length + " உயர்கல்விச் சலுகைகள் மற்றும் உதவித்தொகைகள் பொருந்துகின்றன. " +
       "கல்விக் கட்டணச் சலுகை: " + data.feeWaiverStatus + ". " +
@@ -15503,267 +15684,250 @@ async function handlePopupFeedbackSubmit(e) {
     );
     msg.lang = "ta-IN";
     msg.rate = 0.95;
+    msg.onend = function() {
+      isSpeakingScholarship = false;
+      if (lblTop) lblTop.textContent = "குரலில் கேள்";
+    };
+    msg.onerror = function() {
+      isSpeakingScholarship = false;
+      if (lblTop) lblTop.textContent = "குரலில் கேள்";
+    };
+    isSpeakingScholarship = true;
+    if (lblTop) lblTop.textContent = "⏹️ நிறுத்து";
     window.speechSynthesis.speak(msg);
   };
 
   window.generateAndDownloadScholarshipPdf = function() {
-    const data = window.getMatchedScholarshipsData();
-    const p = data.profile;
+    try {
+      const data = window.getMatchedScholarshipsData();
+      const p = data.profile;
 
-    // Create high-resolution A4 Portrait Canvas (1240 x 1754 px @ 150 DPI)
-    const canvas = document.createElement("canvas");
-    canvas.width = 1240;
-    canvas.height = 1754;
-    const ctx = canvas.getContext("2d");
+      // Create high-resolution A4 Portrait Canvas (1240 x 1754 px @ 150 DPI)
+      const canvas = document.createElement("canvas");
+      canvas.width = 1240;
+      canvas.height = 1754;
+      const ctx = canvas.getContext("2d");
 
-    // White background + Dual Royal Border
-    ctx.fillStyle = "#ffffff";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // White background + Dual Royal Border
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.strokeStyle = "#1e1b4b";
-    ctx.lineWidth = 4;
-    ctx.strokeRect(26, 26, 1188, 1702);
+      ctx.strokeStyle = "#1e1b4b";
+      ctx.lineWidth = 4;
+      ctx.strokeRect(26, 26, 1188, 1702);
 
-    ctx.strokeStyle = "#d97706";
-    ctx.lineWidth = 2;
-    ctx.strokeRect(34, 34, 1172, 1686);
+      ctx.strokeStyle = "#d97706";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(34, 34, 1172, 1686);
 
-    // Header Banner
-    const hdrGrad = ctx.createLinearGradient(40, 40, 1200, 192);
-    hdrGrad.addColorStop(0, "#1e1b4b");
-    hdrGrad.addColorStop(0.5, "#4c1d95");
-    hdrGrad.addColorStop(1, "#0f172a");
-    ctx.fillStyle = hdrGrad;
-    ctx.fillRect(40, 40, 1160, 150);
+      // Header Banner
+      const hdrGrad = ctx.createLinearGradient(40, 40, 1200, 192);
+      hdrGrad.addColorStop(0, "#1e1b4b");
+      hdrGrad.addColorStop(0.5, "#4c1d95");
+      hdrGrad.addColorStop(1, "#0f172a");
+      ctx.fillStyle = hdrGrad;
+      ctx.fillRect(40, 40, 1160, 150);
 
-    ctx.textAlign = "center";
-    ctx.fillStyle = "#fde047";
-    ctx.font = "bold 23px 'Noto Sans Tamil', sans-serif";
-    ctx.fillText("தமிழ்நாடு பள்ளிக்கல்வித்துறை – முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்", 620, 78, 1120);
+      ctx.textAlign = "center";
+      ctx.fillStyle = "#fde047";
+      ctx.font = "bold 23px 'Noto Sans Tamil', sans-serif";
+      ctx.fillText("தமிழ்நாடு பள்ளிக்கல்வித்துறை – முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம்", 620, 78, 1120);
 
-    ctx.fillStyle = "#ffffff";
-    ctx.font = "900 28px 'Noto Sans Tamil', sans-serif";
-    ctx.fillText("தனிப்பயன் உயர்கல்விச் சலுகைகள், இடஒதுக்கீடு & உதவித்தொகை தகுதி அறிக்கை (2027)", 620, 120, 1120);
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "900 28px 'Noto Sans Tamil', sans-serif";
+      ctx.fillText("தனிப்பயன் உயர்கல்விச் சலுகைகள், இடஒதுக்கீடு & உதவித்தொகை தகுதி அறிக்கை (2027)", 620, 120, 1120);
 
-    ctx.fillStyle = "#a7f3d0";
-    ctx.font = "bold 16.5px 'Inter', sans-serif";
-    ctx.fillText("PERSONALIZED HIGHER EDUCATION SCHOLARSHIP, FEE WAIVER & RESERVATION ELIGIBILITY REPORT", 620, 156, 1120);
+      ctx.fillStyle = "#a7f3d0";
+      ctx.font = "bold 16.5px 'Inter', sans-serif";
+      ctx.fillText("PERSONALIZED HIGHER EDUCATION SCHOLARSHIP, FEE WAIVER & RESERVATION ELIGIBILITY REPORT", 620, 156, 1120);
 
-    let y = 208;
+      let y = 208;
 
-    // 1. Student Profile Summary Box
-    ctx.fillStyle = "#f5f3ff";
-    ctx.fillRect(50, y, 1140, 166);
-    ctx.strokeStyle = "#7c3aed";
-    ctx.lineWidth = 2;
-    ctx.strokeRect(50, y, 1140, 166);
+      // 1. Student Profile Summary Box
+      ctx.fillStyle = "#f5f3ff";
+      ctx.fillRect(50, y, 1140, 166);
+      ctx.strokeStyle = "#7c3aed";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(50, y, 1140, 166);
 
-    ctx.textAlign = "left";
-    ctx.fillStyle = "#4c1d95";
-    ctx.font = "bold 20px 'Noto Sans Tamil', sans-serif";
-    ctx.fillText("1. மாணவர் சுயவிவரம் & இடஒதுக்கீடு தகுதி விவரம் (Student Eligibility Profile):", 68, y + 30);
-
-    ctx.fillStyle = "#0f172a";
-    ctx.font = "bold 17px 'Noto Sans Tamil', sans-serif";
-    ctx.fillText("👤 மாணவர் பெயர்: " + p.studentName, 68, y + 62, 530);
-    ctx.fillText("🏫 பள்ளி / ஊர்: " + p.schoolName, 615, y + 62, 555);
-    ctx.fillText("🏫 பள்ளி வகை: " + p.schoolLabel, 68, y + 92, 530);
-    ctx.fillText("🏛️ சமூகப் பிரிவு: " + p.commLabel, 615, y + 92, 555);
-    ctx.fillText("💰 ஆண்டு வருமானம்: " + p.incLabel, 68, y + 122, 530);
-    ctx.fillText("👨‍👩‍👧 குடும்பப் பின்னணி: " + p.bgLabel, 615, y + 122, 555);
-
-    ctx.fillStyle = "#047857";
-    ctx.font = "bold 17px 'Noto Sans Tamil', sans-serif";
-    ctx.fillText("🎓 உயர்கல்விப் பிரிவு: " + p.streamLabel + "  |  கல்விக் கட்டணச் சலுகை: " + data.feeWaiverStatus, 68, y + 152, 1105);
-
-    y += 184;
-
-    // 2. Matched Scholarships & Concessions Header
-    ctx.fillStyle = "#065f46";
-    ctx.fillRect(50, y, 1140, 36);
-    ctx.fillStyle = "#fef08a";
-    ctx.font = "bold 19px 'Noto Sans Tamil', sans-serif";
-    ctx.fillText("2. உங்களுக்குத் தகுதியான அரசு உயர்கல்விச் சலுகைகள் & உதவித்தொகைகள் (மொத்தம்: " + data.matched.length + " திட்டங்கள்):", 68, y + 25);
-    y += 46;
-
-    const maxSchemes = Math.min(data.matched.length, 6);
-    for (let i = 0; i < maxSchemes; i++) {
-      const m = data.matched[i];
-      const cardH = 114;
-      ctx.fillStyle = (i % 2 === 0) ? "#ffffff" : "#f8fafc";
-      ctx.fillRect(50, y, 1140, cardH);
-      ctx.strokeStyle = "#cbd5e1";
-      ctx.lineWidth = 1.5;
-      ctx.strokeRect(50, y, 1140, cardH);
-
-      ctx.fillStyle = m.badgeColor || "#047857";
-      ctx.fillRect(50, y, 8, cardH);
+      ctx.textAlign = "left";
+      ctx.fillStyle = "#4c1d95";
+      ctx.font = "bold 20px 'Noto Sans Tamil', sans-serif";
+      ctx.fillText("1. மாணவர் சுயவிவரம் & இடஒதுக்கீடு தகுதி விவரம் (Student Eligibility Profile):", 68, y + 30);
 
       ctx.fillStyle = "#0f172a";
-      ctx.font = "bold 18px 'Noto Sans Tamil', sans-serif";
-      ctx.fillText((i + 1) + ". " + m.title, 70, y + 27, 1100);
+      ctx.font = "bold 17px 'Noto Sans Tamil', sans-serif";
+      ctx.fillText("👤 மாணவர் பெயர்: " + p.studentName + " (" + p.genLabel + ")", 68, y + 62, 530);
+      ctx.fillText("🏫 பள்ளி / ஊர்: " + p.schoolName, 615, y + 62, 555);
+      ctx.fillText("🏫 பள்ளி வகை: " + p.schoolLabel, 68, y + 92, 530);
+      ctx.fillText("🏛️ சமூகப் பிரிவு: " + p.commLabel, 615, y + 92, 555);
+      ctx.fillText("💰 ஆண்டு வருமானம்: " + p.incLabel, 68, y + 122, 530);
+      ctx.fillText("👨‍👩‍👧 குடும்பப் பின்னணி: " + p.bgLabel, 615, y + 122, 555);
 
       ctx.fillStyle = "#047857";
-      ctx.font = "bold 16.5px 'Noto Sans Tamil', sans-serif";
-      ctx.fillText("💎 சலுகை / உதவித்தொகை: " + m.amountText, 78, y + 56, 1090);
+      ctx.font = "bold 17px 'Noto Sans Tamil', sans-serif";
+      ctx.fillText("🎓 உயர்கல்விப் பிரிவு: " + p.streamLabel + "  |  கல்விக் கட்டணச் சலுகை: " + data.feeWaiverStatus, 68, y + 152, 1105);
 
-      ctx.fillStyle = "#334155";
+      y += 184;
+
+      // 2. Matched Scholarships & Concessions Header
+      ctx.fillStyle = "#065f46";
+      ctx.fillRect(50, y, 1140, 36);
+      ctx.fillStyle = "#fef08a";
+      ctx.font = "bold 19px 'Noto Sans Tamil', sans-serif";
+      ctx.fillText("2. உங்களுக்குத் தகுதியான அரசு உயர்கல்விச் சலுகைகள் & உதவித்தொகைகள் (மொத்தம்: " + data.matched.length + " திட்டங்கள்):", 68, y + 25);
+      y += 46;
+
+      const maxSchemes = Math.min(data.matched.length, 6);
+      for (let i = 0; i < maxSchemes; i++) {
+        const m = data.matched[i];
+        const cardH = 114;
+        ctx.fillStyle = (i % 2 === 0) ? "#ffffff" : "#f8fafc";
+        ctx.fillRect(50, y, 1140, cardH);
+        ctx.strokeStyle = "#cbd5e1";
+        ctx.lineWidth = 1.5;
+        ctx.strokeRect(50, y, 1140, cardH);
+
+        ctx.fillStyle = m.badgeColor || "#047857";
+        ctx.fillRect(50, y, 8, cardH);
+
+        ctx.fillStyle = "#0f172a";
+        ctx.font = "bold 18px 'Noto Sans Tamil', sans-serif";
+        ctx.fillText((i + 1) + ". " + m.title, 70, y + 27, 1100);
+
+        ctx.fillStyle = "#047857";
+        ctx.font = "bold 16.5px 'Noto Sans Tamil', sans-serif";
+        ctx.fillText("💎 சலுகை / உதவித்தொகை: " + m.amountText, 78, y + 56, 1090);
+
+        ctx.fillStyle = "#334155";
+        ctx.font = "bold 15.5px 'Noto Sans Tamil', sans-serif";
+        const shortDetail = m.details.length > 135 ? (m.details.substring(0, 132) + "...") : m.details;
+        ctx.fillText("📌 விவரம்: " + shortDetail, 78, y + 82, 1090);
+
+        ctx.fillStyle = "#1d4ed8";
+        ctx.font = "bold 15px 'Noto Sans Tamil', sans-serif";
+        ctx.fillText("🌐 விண்ணப்பிக்கும் தளம்: " + m.portalName + " (" + m.portalUrl + ")", 78, y + 105, 1090);
+
+        y += cardH + 8;
+      }
+
+      y += 6;
+
+      // 3. Required e-Sevai Certificates Checklist Box
+      const certBoxH = Math.max(155, 1650 - y - 10);
+      ctx.fillStyle = "#fffbeb";
+      ctx.fillRect(50, y, 1140, certBoxH);
+      ctx.strokeStyle = "#d97706";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(50, y, 1140, certBoxH);
+
+      ctx.fillStyle = "#92400e";
+      ctx.font = "bold 19px 'Noto Sans Tamil', sans-serif";
+      ctx.fillText("3. மேற்கண்ட சலுகைகளைப் பெறத் தயாராக வைத்திருக்க வேண்டிய ஆவணங்கள் (e-Sevai & Bank Checklist):", 68, y + 28);
+
+      ctx.fillStyle = "#1e293b";
       ctx.font = "bold 15.5px 'Noto Sans Tamil', sans-serif";
-      const shortDetail = m.details.length > 135 ? (m.details.substring(0, 132) + "...") : m.details;
-      ctx.fillText("📌 விவரம்: " + shortDetail, 78, y + 82, 1090);
+      const maxCerts = Math.min(data.certList.length, 6);
+      for (let c = 0; c < maxCerts; c++) {
+        ctx.fillText("✅ " + (c + 1) + ". " + data.certList[c], 74, y + 56 + (c * 24), 1095);
+      }
 
-      ctx.fillStyle = "#1d4ed8";
-      ctx.font = "bold 15px 'Noto Sans Tamil', sans-serif";
-      ctx.fillText("🌐 விண்ணப்பிக்கும் தளம்: " + m.portalName + " (" + m.portalUrl + ")", 78, y + 105, 1090);
+      // Footer
+      const footerY = 1664;
+      ctx.fillStyle = "#0f172a";
+      ctx.fillRect(40, footerY, 1160, 48);
+      ctx.textAlign = "center";
+      ctx.fillStyle = "#fde047";
+      ctx.font = "bold 16px 'Noto Sans Tamil', sans-serif";
+      ctx.fillText("📞 மாணவர் கட்டணமில்லா உதவி எண்: 14417  |  முதன்மைக் கல்வி அலுவலகம், சிவகங்கை (04575-240408)  |  ssp.tn.gov.in • scholarships.gov.in", 620, footerY + 30, 1130);
 
-      y += cardH + 8;
+      // Convert Canvas to JPEG and package into a genuine A4 PDF binary
+      const dataUrl = canvas.toDataURL("image/jpeg", 0.95);
+      const b64 = dataUrl.split(",")[1];
+      const binary = atob(b64);
+      const imgBytes = new Uint8Array(binary.length);
+      for (let i = 0; i < binary.length; i++) {
+        imgBytes[i] = binary.charCodeAt(i);
+      }
+
+      const NL = String.fromCharCode(10);
+      const widthPt = 595.28;
+      const heightPt = 841.89;
+      const pdfHeader = "%PDF-1.4" + NL;
+      const obj1 = "1 0 obj" + NL + "<< /Type /Catalog /Pages 2 0 R >>" + NL + "endobj" + NL;
+      const obj2 = "2 0 obj" + NL + "<< /Type /Pages /Kids [3 0 R] /Count 1 >>" + NL + "endobj" + NL;
+      const obj3 = "3 0 obj" + NL + "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 " + widthPt + " " + heightPt + "] /Resources << /XObject << /Im1 5 0 R >> >> /Contents 4 0 R >>" + NL + "endobj" + NL;
+      const streamContent = "q" + NL + widthPt + " 0 0 " + heightPt + " 0 0 cm" + NL + "/Im1 Do" + NL + "Q" + NL;
+      const obj4 = "4 0 obj" + NL + "<< /Length " + streamContent.length + " >>" + NL + "stream" + NL + streamContent + "endstream" + NL + "endobj" + NL;
+      const obj5Header = "5 0 obj" + NL + "<< /Type /XObject /Subtype /Image /Width 1240 /Height 1754 /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length " + imgBytes.length + " >>" + NL + "stream" + NL;
+      const obj5Footer = NL + "endstream" + NL + "endobj" + NL;
+
+      const enc = new TextEncoder();
+      const bHdr = enc.encode(pdfHeader);
+      const bO1 = enc.encode(obj1);
+      const bO2 = enc.encode(obj2);
+      const bO3 = enc.encode(obj3);
+      const bO4 = enc.encode(obj4);
+      const bO5H = enc.encode(obj5Header);
+      const bO5F = enc.encode(obj5Footer);
+
+      let offset = bHdr.length;
+      const off1 = offset; offset += bO1.length;
+      const off2 = offset; offset += bO2.length;
+      const off3 = offset; offset += bO3.length;
+      const off4 = offset; offset += bO4.length;
+      const off5 = offset; offset += bO5H.length + imgBytes.length + bO5F.length;
+
+      const pad10 = function(n) { return String(n).padStart(10, "0"); };
+      const xref = "xref" + NL + "0 6" + NL + "0000000000 65535 f " + NL +
+        pad10(off1) + " 00000 n " + NL +
+        pad10(off2) + " 00000 n " + NL +
+        pad10(off3) + " 00000 n " + NL +
+        pad10(off4) + " 00000 n " + NL +
+        pad10(off5) + " 00000 n " + NL;
+      const trailer = "trailer" + NL + "<< /Size 6 /Root 1 0 R >>" + NL + "startxref" + NL + offset + NL + "%%EOF";
+
+      const bXref = enc.encode(xref);
+      const bTrl = enc.encode(trailer);
+
+      const pdfBuffer = new Uint8Array(offset + bXref.length + bTrl.length);
+      let pos = 0;
+      pdfBuffer.set(bHdr, pos); pos += bHdr.length;
+      pdfBuffer.set(bO1, pos); pos += bO1.length;
+      pdfBuffer.set(bO2, pos); pos += bO2.length;
+      pdfBuffer.set(bO3, pos); pos += bO3.length;
+      pdfBuffer.set(bO4, pos); pos += bO4.length;
+      pdfBuffer.set(bO5H, pos); pos += bO5H.length;
+      pdfBuffer.set(imgBytes, pos); pos += imgBytes.length;
+      pdfBuffer.set(bO5F, pos); pos += bO5F.length;
+      pdfBuffer.set(bXref, pos); pos += bXref.length;
+      pdfBuffer.set(bTrl, pos);
+
+      const blob = new Blob([pdfBuffer], { type: "application/pdf" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      const cleanName = p.studentName.replace(/[^a-zA-Z0-9஀-௿_-]/g, "_").substring(0, 24) || "Student";
+      a.href = url;
+      a.download = "Sivagangai_Scholarship_Concession_Guide_2027_" + cleanName + ".pdf";
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function() {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, 500);
+    } catch (err) {
+      console.error("PDF generation error:", err);
+      alert("PDF பதிவிறக்கத்தில் பிழை: " + err.message);
     }
-
-    y += 6;
-
-    // 3. Required e-Sevai Certificates Checklist Box
-    const certBoxH = Math.max(155, 1650 - y - 10);
-    ctx.fillStyle = "#fffbeb";
-    ctx.fillRect(50, y, 1140, certBoxH);
-    ctx.strokeStyle = "#d97706";
-    ctx.lineWidth = 2;
-    ctx.strokeRect(50, y, 1140, certBoxH);
-
-    ctx.fillStyle = "#92400e";
-    ctx.font = "bold 19px 'Noto Sans Tamil', sans-serif";
-    ctx.fillText("3. மேற்கண்ட சலுகைகளைப் பெறத் தயாராக வைத்திருக்க வேண்டிய ஆவணங்கள் (e-Sevai & Bank Checklist):", 68, y + 28);
-
-    ctx.fillStyle = "#1e293b";
-    ctx.font = "bold 15.5px 'Noto Sans Tamil', sans-serif";
-    const maxCerts = Math.min(data.certList.length, 6);
-    for (let c = 0; c < maxCerts; c++) {
-      ctx.fillText("✅ " + (c + 1) + ". " + data.certList[c], 74, y + 56 + (c * 24), 1095);
-    }
-
-    // Footer
-    const footerY = 1664;
-    ctx.fillStyle = "#0f172a";
-    ctx.fillRect(40, footerY, 1160, 48);
-    ctx.textAlign = "center";
-    ctx.fillStyle = "#fde047";
-    ctx.font = "bold 16px 'Noto Sans Tamil', sans-serif";
-    ctx.fillText("📞 மாணவர் கட்டணமில்லா உதவி எண்: 14417  |  முதன்மைக் கல்வி அலுவலகம், சிவகங்கை (04575-240408)  |  ssp.tn.gov.in • scholarships.gov.in", 620, footerY + 30, 1130);
-
-    // Convert Canvas to JPEG and package into a genuine A4 PDF binary
-    const dataUrl = canvas.toDataURL("image/jpeg", 0.95);
-    const b64 = dataUrl.split(",")[1];
-    const binary = atob(b64);
-    const imgBytes = new Uint8Array(binary.length);
-    for (let i = 0; i < binary.length; i++) {
-      imgBytes[i] = binary.charCodeAt(i);
-    }
-
-    const widthPt = 595.28;
-    const heightPt = 841.89;
-    const pdfHeader = "%PDF-1.4
-";
-    const obj1 = "1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
-endobj
-";
-    const obj2 = "2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
-endobj
-";
-    const obj3 = "3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 " + widthPt + " " + heightPt + "] /Resources << /XObject << /Im1 5 0 R >> >> /Contents 4 0 R >>
-endobj
-";
-    const streamContent = "q
-" + widthPt + " 0 0 " + heightPt + " 0 0 cm
-/Im1 Do
-Q
-";
-    const obj4 = "4 0 obj
-<< /Length " + streamContent.length + " >>
-stream
-" + streamContent + "endstream
-endobj
-";
-    const obj5Header = "5 0 obj
-<< /Type /XObject /Subtype /Image /Width 1240 /Height 1754 /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length " + imgBytes.length + " >>
-stream
-";
-    const obj5Footer = "
-endstream
-endobj
-";
-
-    const enc = new TextEncoder();
-    const bHdr = enc.encode(pdfHeader);
-    const bO1 = enc.encode(obj1);
-    const bO2 = enc.encode(obj2);
-    const bO3 = enc.encode(obj3);
-    const bO4 = enc.encode(obj4);
-    const bO5H = enc.encode(obj5Header);
-    const bO5F = enc.encode(obj5Footer);
-
-    let offset = bHdr.length;
-    const off1 = offset; offset += bO1.length;
-    const off2 = offset; offset += bO2.length;
-    const off3 = offset; offset += bO3.length;
-    const off4 = offset; offset += bO4.length;
-    const off5 = offset; offset += bO5H.length + imgBytes.length + bO5F.length;
-
-    const pad10 = function(n) { return String(n).padStart(10, "0"); };
-    const xref = "xref
-0 6
-0000000000 65535 f 
-" +
-      pad10(off1) + " 00000 n 
-" +
-      pad10(off2) + " 00000 n 
-" +
-      pad10(off3) + " 00000 n 
-" +
-      pad10(off4) + " 00000 n 
-" +
-      pad10(off5) + " 00000 n 
-";
-    const trailer = "trailer
-<< /Size 6 /Root 1 0 R >>
-startxref
-" + offset + "
-%%EOF";
-
-    const bXref = enc.encode(xref);
-    const bTrl = enc.encode(trailer);
-
-    const pdfBuffer = new Uint8Array(offset + bXref.length + bTrl.length);
-    let pos = 0;
-    pdfBuffer.set(bHdr, pos); pos += bHdr.length;
-    pdfBuffer.set(bO1, pos); pos += bO1.length;
-    pdfBuffer.set(bO2, pos); pos += bO2.length;
-    pdfBuffer.set(bO3, pos); pos += bO3.length;
-    pdfBuffer.set(bO4, pos); pos += bO4.length;
-    pdfBuffer.set(bO5H, pos); pos += bO5H.length;
-    pdfBuffer.set(imgBytes, pos); pos += imgBytes.length;
-    pdfBuffer.set(bO5F, pos); pos += bO5F.length;
-    pdfBuffer.set(bXref, pos); pos += bXref.length;
-    pdfBuffer.set(bTrl, pos);
-
-    const blob = new Blob([pdfBuffer], { type: "application/pdf" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    const cleanName = p.studentName.replace(/[^a-zA-Z0-9஀-௿_-]/g, "_").substring(0, 24) || "Student";
-    a.href = url;
-    a.download = "Sivagangai_Scholarship_Concession_Guide_2027_" + cleanName + ".pdf";
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(function() {
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }, 500);
   };
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function() { window.runScholarshipEligibilityMatcher(); });
+    document.addEventListener("DOMContentLoaded", function() {
+      window.updateScholarshipButtonBadge();
+      window.runScholarshipEligibilityMatcher();
+    });
   } else {
+    window.updateScholarshipButtonBadge();
     window.runScholarshipEligibilityMatcher();
   }
 })();
@@ -15771,247 +15935,3 @@ startxref
 
 </body>
 </html>
-<canvas id="popupCelebrationCanvas" style="display:none; position:fixed; inset:0; pointer-events:none; z-index:10002;"></canvas>
-<script>
-// ==============================================================================
-// MODAL CONTROLLER & MULTI-CHANNEL GOOGLE SHEET SUBMISSION
-// ==============================================================================
-const APPS_SCRIPT_FEEDBACK_URL = "https://script.google.com/macros/s/AKfycbweLUerXxEKeOq0lncL35mAJKQQwKnHKKMzzAiHTiDZnmsyuWEx0xm-8Dr-ZVM0ngw/exec";
-const APPS_SCRIPT_QUERIES_URL  = "https://script.google.com/macros/s/AKfycbwM7YF6emrFge4Xg3o2nt7dj4iTcnjpmnirjsfwAREtWsifhXrZ4QBqowDV2NB5FN8y8w/exec";
-
-function openStudentQueryModal() {
-  const m = document.getElementById('modalStudentQuery');
-  if (m) {
-    m.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-    document.getElementById('modalSqSuccessCard').style.display = 'none';
-    document.getElementById('popupStudentQueryForm').style.display = 'block';
-  }
-}
-function closeStudentQueryModal() {
-  const m = document.getElementById('modalStudentQuery');
-  if (m) {
-    m.style.display = 'none';
-    document.body.style.overflow = 'auto';
-  }
-}
-
-function openFeedbackModal() {
-  const m = document.getElementById('modalPortalFeedback');
-  if (m) {
-    m.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-    document.getElementById('modalFbSuccessCard').style.display = 'none';
-    document.getElementById('popupFeedbackForm').style.display = 'block';
-  }
-}
-function closeFeedbackModal() {
-  const m = document.getElementById('modalPortalFeedback');
-  if (m) {
-    m.style.display = 'none';
-    document.body.style.overflow = 'auto';
-  }
-}
-
-// Close modals when clicking outside
-window.addEventListener('click', function(e) {
-  const mSq = document.getElementById('modalStudentQuery');
-  const mFb = document.getElementById('modalPortalFeedback');
-  if (e.target === mSq) closeStudentQueryModal();
-  if (e.target === mFb) closeFeedbackModal();
-});
-
-// Close on Escape key
-window.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    closeStudentQueryModal();
-    closeFeedbackModal();
-  }
-});
-
-// Multi-Channel Google Sheet Submission Helper
-async function postToGoogleSheet(payload) {
-  const targetUrl = payload.formType === 'student_query' ? APPS_SCRIPT_QUERIES_URL : APPS_SCRIPT_FEEDBACK_URL;
-
-  // 1. LocalStorage Persistent Backup
-  try {
-    const storeKey = payload.formType === 'student_query' ? 'student_query_records' : 'portal_feedback_records';
-    const existing = JSON.parse(localStorage.getItem(storeKey) || '[]');
-    existing.push(payload);
-    localStorage.setItem(storeKey, JSON.stringify(existing));
-  } catch (err) {
-    console.warn("Storage notice:", err);
-  }
-
-  // 2. Fetch POST with no-cors to dedicated Web App URL
-  try {
-    await fetch(targetUrl, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-      body: JSON.stringify(payload)
-    });
-  } catch (err) {
-    console.warn("Fetch notice:", err);
-  }
-
-  // 3. Fallback form post via hidden iframe for guaranteed delivery
-  try {
-    const iframe = document.getElementById('hidden_form_sink');
-    if (iframe) {
-      const form = document.createElement('form');
-      form.method = 'POST';
-      form.action = targetUrl;
-      form.target = 'hidden_form_sink';
-      for (const k in payload) {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = k;
-        input.value = typeof payload[k] === 'object' ? JSON.stringify(payload[k]) : payload[k];
-        form.appendChild(input);
-      }
-      document.body.appendChild(form);
-      form.submit();
-      setTimeout(() => form.remove(), 1000);
-    }
-  } catch (iframeErr) {
-    console.warn("Iframe submit notice:", iframeErr);
-  }
-}
-
-// Student Query Submit
-async function handlePopupStudentQuerySubmit(e) {
-  e.preventDefault();
-  const btn = document.getElementById('popupSqSubmitBtn');
-  const origText = btn.innerHTML;
-  btn.disabled = true;
-  btn.innerHTML = '<span>⏳ பதிவாகிறது...</span>';
-
-  const ticketId = 'TN-CG-2026-' + Math.floor(1000 + Math.random() * 9000);
-  const payload = {
-    formType: 'student_query',
-    ticketId: ticketId,
-    name: document.getElementById('modal_sq_name').value.trim(),
-    studentClass: document.getElementById('modal_sq_class').value,
-    schoolType: document.getElementById('modal_sq_school').value,
-    district: document.getElementById('modal_sq_district').value.trim(),
-    phone: document.getElementById('modal_sq_phone').value.trim(),
-    email: document.getElementById('modal_sq_email').value.trim(),
-    category: document.getElementById('modal_sq_category').value,
-    query: document.getElementById('modal_sq_query').value.trim(),
-    spreadsheetId: '1-nkKQyAqE2IK31Rf4-qXBDVjLD88S2U3d_uF0AGrOZQ',
-    sheetName: 'Sheet1',
-    timestamp: new Date().toLocaleString('ta-IN', { timeZone: 'Asia/Kolkata' })
-  };
-
-  await postToGoogleSheet(payload);
-
-  document.getElementById('modalTicketIdDisplay').innerText = ticketId;
-  document.getElementById('popupStudentQueryForm').style.display = 'none';
-  document.getElementById('modalSqSuccessCard').style.display = 'block';
-  btn.disabled = false;
-  btn.innerHTML = origText;
-  document.getElementById('popupStudentQueryForm').reset();
-
-  // Auto-close modal after 3 seconds as requested by user
-  setTimeout(function() {
-    closeStudentQueryModal();
-  }, 3200);
-}
-
-// Celebration Crackers for Modal
-function firePopupCelebrationCrackers() {
-  const canvas = document.getElementById('popup_fb_crackers_canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  canvas.width = canvas.parentElement.offsetWidth;
-  canvas.height = canvas.parentElement.offsetHeight;
-  canvas.style.display = 'block';
-
-  const particles = [];
-  const colors = ['#f43f5e', '#ec4899', '#d946ef', '#a855f7', '#6366f1', '#3b82f6', '#06b6d4', '#10b981', '#eab308', '#f97316'];
-  for (let i = 0; i < 90; i++) {
-    const angle = Math.random() * Math.PI * 2;
-    const speed = Math.random() * 8 + 3;
-    particles.push({
-      x: canvas.width * 0.5,
-      y: canvas.height * 0.35,
-      vx: Math.cos(angle) * speed,
-      vy: Math.sin(angle) * speed - 2,
-      radius: Math.random() * 3.5 + 2,
-      color: colors[Math.floor(Math.random() * colors.length)],
-      gravity: 0.16,
-      alpha: 1,
-      decay: Math.random() * 0.015 + 0.01
-    });
-  }
-
-  function render() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    let alive = false;
-    particles.forEach(p => {
-      if (p.alpha > 0) {
-        alive = true;
-        p.x += p.vx;
-        p.y += p.vy;
-        p.vy += p.gravity;
-        p.alpha -= p.decay;
-        ctx.save();
-        ctx.globalAlpha = Math.max(p.alpha, 0);
-        ctx.fillStyle = p.color;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
-      }
-    });
-    if (alive) requestAnimationFrame(render);
-    else { canvas.style.display = 'none'; }
-  }
-  render();
-}
-
-// Feedback Submit
-async function handlePopupFeedbackSubmit(e) {
-  e.preventDefault();
-  const email = document.getElementById('modal_fb_email').value.trim();
-  if (!email || !email.includes('@') || !email.includes('.')) {
-    alert('தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்.');
-    return;
-  }
-
-  const btn = document.getElementById('popupFbSubmitBtn');
-  const origText = btn.innerHTML;
-  btn.disabled = true;
-  btn.innerHTML = '<span>⏳ பதிவாகிறது...</span>';
-
-  const refId = 'TN-FB-2026-' + Math.floor(1000 + Math.random() * 9000);
-  const payload = {
-    formType: 'portal_feedback',
-    refId: refId,
-    name: document.getElementById('modal_fb_name').value.trim(),
-    place: document.getElementById('modal_fb_place').value.trim(),
-    phone: document.getElementById('modal_fb_phone').value.trim(),
-    email: email,
-    link: document.getElementById('modal_fb_link').value.trim() || 'இல்லை',
-    message: document.getElementById('modal_fb_message').value.trim(),
-    spreadsheetId: '1fSIyCI4AsqA2-8aqRr5XQb7KODEA6pvnyNhjKO_PBSc',
-    sheetName: 'Sheet1',
-    timestamp: new Date().toLocaleString('ta-IN', { timeZone: 'Asia/Kolkata' })
-  };
-
-  await postToGoogleSheet(payload);
-
-  document.getElementById('popupFeedbackForm').style.display = 'none';
-  document.getElementById('modalFbSuccessCard').style.display = 'block';
-  firePopupCelebrationCrackers();
-  btn.disabled = false;
-  btn.innerHTML = origText;
-  document.getElementById('popupFeedbackForm').reset();
-
-  // Auto-close modal after 3.5 seconds as requested by user
-  setTimeout(function() {
-    closeFeedbackModal();
-  }, 3500);
-}
-</script>
