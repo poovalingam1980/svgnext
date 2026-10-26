@@ -110,48 +110,43 @@ html, body {
   width: 100%;
   background: linear-gradient(90deg, #040914 0%, #0b172e 50%, #040914 100%);
   border: 1.5px solid rgba(56, 189, 248, 0.45);
-  border-radius: 12px;
-  padding: 6px 12px;
+  border-radius: 999px;
+  padding: 6px 10px;
   margin: 0 0 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-wrap: nowrap;
+  gap: 6px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
   z-index: 10002;
 }
-.a11y-left-group, .a11y-right-group {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.a11y-label-tag {
-  font-size: 0.70rem;
-  font-weight: 800;
-  color: #93c5fd;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  margin-right: 2px;
-}
 .a11y-btn {
   appearance: none;
-  background: rgba(30, 41, 59, 0.9);
+  background: rgba(30, 41, 59, 0.92);
   color: #f8fafc;
-  border: 1px solid rgba(148, 163, 184, 0.4);
-  border-radius: 7px;
-  padding: 4px 9px;
+  border: 1px solid rgba(148, 163, 184, 0.42);
+  border-radius: 999px;
+  padding: 5px 10px;
   font-family: inherit;
   font-size: 0.72rem;
   font-weight: 800;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  white-space: nowrap;
   gap: 4px;
   transition: all 0.18s ease;
   line-height: 1.2;
+}
+@media (max-width: 1180px) {
+  .intl-a11y-toolbar {
+    flex-wrap: wrap;
+    border-radius: 14px;
+    padding: 8px 10px;
+  }
 }
 .a11y-btn:hover, .a11y-btn:focus-visible {
   background: #facc15;
@@ -1254,8 +1249,13 @@ body.theme-cyber-dark #admissionTimelineSec p {
 .intl-a11y-toolbar {
   background: linear-gradient(90deg, #0b1120 0%, #1e1b4b 50%, #0b1120 100%) !important;
   border: 1.5px solid var(--intl-border-glow) !important;
-  border-radius: 14px !important;
+  border-radius: 999px !important;
   box-shadow: 0 6px 20px rgba(15, 23, 42, 0.25) !important;
+}
+@media (max-width: 1180px) {
+  .intl-a11y-toolbar {
+    border-radius: 14px !important;
+  }
 }
 .a11y-btn.theme-palette-btn {
   background: linear-gradient(135deg, #4f46e5 0%, #ec4899 100%);
@@ -1525,22 +1525,16 @@ body.theme-cyber-dark #admissionTimelineSec p {
     <div class="container">
 
       <!-- 0. சர்வதேச அணுகல்தன்மைப் பட்டை, இருமொழி மாற்றி, குரல் தேடல் & 1-Click PDF (International Accessibility & Bilingual Toolbar) -->
-      <div class="intl-a11y-toolbar no-print" id="intlAccessibilityToolbar" role="region" aria-label="சர்வதேச அணுகல்தன்மை மற்றும் இருமொழி மாற்றி பட்டை">
-        <div class="a11y-left-group">
-          <span class="a11y-label-tag">♿ அணுகல்தன்மை (Accessibility):</span>
-          <button type="button" class="a11y-btn" onclick="adjustPortalFontSize(-1)" title="எழுத்து அளவைக் குறைக்க (Decrease Font Size)">அ- (A-)</button>
-          <button type="button" class="a11y-btn active" id="btnFontNormal" onclick="adjustPortalFontSize(0)" title="இயல்பான எழுத்து அளவு (Default Font Size)">அ (A)</button>
-          <button type="button" class="a11y-btn" onclick="adjustPortalFontSize(1)" title="எழுத்து அளவைப் பெரிதாக்க (Increase Font Size)">அ+ (A+)</button>
-          <button type="button" class="a11y-btn" id="btnHighContrast" onclick="toggleHighContrastMode()" title="உயர் நிறமாறுபாடு (WCAG High Contrast Mode)">🌓 உயர் நிறமாறுபாடு</button>
-          <button type="button" class="a11y-btn" id="btnReadableSpacing" onclick="toggleReadableSpacing()" title="எளிய வாசிப்பு இடைவெளி (Readable Line Spacing)">📖 எளிய வாசிப்பு</button>
-          <button type="button" class="a11y-btn" id="btnAudioGuide" onclick="togglePortalAudioGuide()" title="பக்கத்தின் சுருக்கத்தைக் குரல் வழியாகக் கேட்க (Audio Screen Reader)">🔊 குரல் வழிகாட்டி</button>
-        </div>
-        <div class="a11y-right-group">
-          <button type="button" class="a11y-btn theme-palette-btn" id="btnThemePalette" onclick="cyclePortalColorTheme()" title="சர்வதேச டிரெண்டிங் வண்ணத்திட்ட மாற்றி (Switch International Trending Color Theme)">🎨 வண்ணம்: Neo-Aurora</button>
-          <button type="button" class="a11y-btn voice-quick-btn" onclick="openVoiceSearchDirectly()" title="MDN Web Speech API குரல் வழித் தேடல் (Tamil & English Voice Search)">🎤 குரல் வழித் தேடல்</button>
-          <button type="button" class="a11y-btn pdf-quick-btn" onclick="openTriToolModal('matcher')" title="1-Click தனிப்பயன் உயர்கல்வி வழிகாட்டி PDF உருவாக்கி">📥 1-Click வழிகாட்டி PDF</button>
-          <button type="button" class="a11y-btn lang-switch-btn" id="btnBilingualToggle" onclick="toggleBilingualMode()" title="தமிழ் மற்றும் ஆங்கிலம் இருமொழி மாற்றி (Switch Tamil / English UI)">🌐 மொழி: தமிழ் ⇄ English</button>
-        </div>
+      <div class="intl-a11y-toolbar no-print" id="intlAccessibilityToolbar" role="toolbar" aria-label="ஒருங்கிணைந்த அணுகல்தன்மை மற்றும் இருமொழி மாற்றி பட்டை">
+        <button type="button" class="a11y-btn" onclick="adjustPortalFontSize(-1)" title="எழுத்து அளவைக் குறைக்க (Decrease Font Size)">அ- (A-)</button>
+        <button type="button" class="a11y-btn active" id="btnFontNormal" onclick="adjustPortalFontSize(0)" title="இயல்பான எழுத்து அளவு (Default Font Size)">அ (A)</button>
+        <button type="button" class="a11y-btn" onclick="adjustPortalFontSize(1)" title="எழுத்து அளவைப் பெரிதாக்க (Increase Font Size)">அ+ (A+)</button>
+        <button type="button" class="a11y-btn" id="btnHighContrast" onclick="toggleHighContrastMode()" title="உயர் நிறமாறுபாடு (WCAG High Contrast Mode)">🌓 உயர் நிறமாறுபாடு</button>
+        <button type="button" class="a11y-btn" id="btnReadableSpacing" onclick="toggleReadableSpacing()" title="எளிய வாசிப்பு இடைவெளி (Readable Line Spacing)">📖 எளிய வாசிப்பு</button>
+        <button type="button" class="a11y-btn" id="btnAudioGuide" onclick="togglePortalAudioGuide()" title="பக்கத்தின் சுருக்கத்தைக் குரல் வழியாகக் கேட்க (Audio Screen Reader)">🔊 குரல் வழிகாட்டி</button>
+        <button type="button" class="a11y-btn theme-palette-btn" id="btnThemePalette" onclick="cyclePortalColorTheme()" title="சர்வதேச டிரெண்டிங் வண்ணத்திட்ட மாற்றி (Switch International Trending Color Theme)">🎨 வண்ணம்: Neo-Aurora</button>
+        <button type="button" class="a11y-btn voice-quick-btn" onclick="openVoiceSearchDirectly()" title="MDN Web Speech API குரல் வழித் தேடல் (Tamil & English Voice Search)">🎤 குரல் வழித் தேடல்</button>
+        <button type="button" class="a11y-btn lang-switch-btn" id="btnBilingualToggle" onclick="toggleBilingualMode()" title="தமிழ் மற்றும் ஆங்கிலம் இருமொழி மாற்றி (Switch Tamil / English UI)">🌐 மொழி: தமிழ் ⇄ English</button>
       </div>
 
       <!-- 1. மேல்சட்டம் (Official Portal Top Frame) -->
@@ -1878,9 +1872,10 @@ body.theme-cyber-dark #admissionTimelineSec p {
                   <a class="card-title" href="07_resources_external_portals.html">கல்வி வளங்கள், பாடநூல்கள் &amp; மாதிரித் தேர்வு போர்ட்டல்கள்<small>Official Textbooks, Free CBT Mock Tests &amp; National Learning Portals</small></a>
                 </div>
               </div>
-              <p class="card-summary">சிவகங்கை PG ஆசிரியர்கள் கல்வி வள தளம் (SVG Horizon), மத்திய NCERT புத்தகங்கள் (PDF) மற்றும் NTA Abhyas, IIT JEE, SATHEE உள்ளிட்ட விளம்பரமற்ற 100% இலவச கணினி வழி மாதிரித் தேர்வு (CBT) போர்ட்டல்கள்.</p>
+              <p class="card-summary">சிவகங்கை PG ஆசிரியர்கள் கல்வி வள தளம் (SVG Horizon), தமிழ்நாடு பள்ளிக் கல்வித்துறையின் மணற்கேணி (Classes 1–12), மத்திய NCERT புத்தகங்கள் (PDF) மற்றும் NTA Abhyas, IIT JEE, SATHEE உள்ளிட்ட 100% இலவச CBT மாதிரித் தேர்வு போர்ட்டல்கள்.</p>
               <div class="tags" onclick="event.stopPropagation();">
-                <a class="tag" href="07_resources_external_portals.html">🎓 சிவகங்கை PG ஆசிரியர்கள் தளம்</a>
+                <a class="tag" href="07_resources_external_portals.html#svg-pg-horizon">🎓 சிவகங்கை PG ஆசிரியர்கள் தளம்</a>
+                <a class="tag" href="07_resources_external_portals.html#manarkeni-portal" style="background:#ccfbf1; color:#115e59; border-color:#5eead4; font-weight:800;">🌊 மணற்கேணி (Manarkeni 1–12)</a>
                 <a class="tag" href="07_resources_external_portals.html">📗 NCERT Books</a>
                 <a class="tag" href="07_resources_external_portals.html">💻 NTA CBT Mock Test</a>
                 <a class="tag" href="07_resources_external_portals.html">🎓 SATHEE போர்ட்டல்</a>
@@ -3183,7 +3178,7 @@ const BILINGUAL_UI_MAP = [
   { sel: "#gateway-colleges .pillar-badge", ta: "கல்லூரிகள் விவரக் குறிப்பேடு", en: "Colleges & Institutes Directory" },
   { sel: "#gateway-colleges .card-summary", ta: "அகில இந்திய மற்றும் தமிழக அளவிலான தலைசிறந்த மத்திய/மாநில அரசு நிறுவனங்கள், அரசு மருத்துவ, பொறியியல் மற்றும் மாவட்ட வாரியான அரசு கலை மற்றும் அறிவியல் கல்லூரிகள் பட்டியல்.", en: "Complete directory of IITs/NITs, Tamil Nadu Government Medical & Engineering Colleges, Alagappa University, CECRI, and Sivagangai & neighboring district colleges." },
   { sel: "#gateway-competitive .pillar-badge", ta: "அரசுப் பணி & சீருடைத் தேர்வுகள்", en: "Govt & Uniformed Services Exams" },
-  { sel: "#gateway-competitive .card-summary", ta: "10-ஆம் வகுப்பு, 12-ஆம் வகுப்பு மற்றும் பட்டப்படிப்பு தகுதிக்கான TNPSC, SSC, ரயில்வே (RRB), சீருடைப் பணியாளர் (காவலர்) மற்றும் முப்படை அக்னிவீர் நேரடிப் பணிகளுக்கான போட்டித் தேர்வுகள் வழிகாட்டி.", en: "Competitive exams after 10th, 12th & Degree: TNPSC Group 1/2/4, Railways (RRB), Banking (IBPS/SBI), SSC, UPSC (Naan Mudhalvan ₹7,500), Police & Defence Agniveer." },
+  { sel: "#gateway-competitive .card-summary", ta: "10-ஆம் வகுப்பு, 12-ஆம் வகுப்பு மற்றும் பட்டப்படிப்பு தகுதிக்கான TNPSC, SSC, ரயில்வே (RRB), சீருடைப் பணியாளர் (காவலர்) மற்றும் முப்படை அக்னிவீர் நேரடிப் பணிகளுக்கான போட்டித் தேர்வுகள் வழிகாட்டி.", en: "Competitive exams after 10th, 12th & Degree: TNPSC Group 1/2/4, Railways (RRB), Banking (IBPS/SBI), SSC, UPSC (Thiran Tamil Nadu ₹7,500), Police & Defence Agniveer." },
   { sel: "#gateway-skills .pillar-badge", ta: "தேர்வில்லா வேலை & சுயதொழில்", en: "Skill Training & Direct Jobs" },
   { sel: "#gateway-skills .card-summary", ta: "போட்டித்தேர்வு இல்லாத நேரடி வேலைவாய்ப்புகள், படித்துக்கொண்டே சம்பாதிக்கும் Work & Learn திட்டங்கள், தொழில் முனைவோர் கடன் திட்டங்கள் மற்றும் தனியார் வேலைவாய்ப்பு முகாம்கள்.", en: "Earn-while-you-learn IT programs (Zoho Schools, HCL TechBee), NAPS/NATS Apprenticeships, OMMC Overseas Jobs, and MSME subsidy loans (UYEGP/PMEGP/Mudra)." },
   { sel: "#gateway-support .pillar-badge", ta: "சலுகைகள், கருவிகள் & உதவி", en: "7.5% Quota, Scholarships & Tools" },
