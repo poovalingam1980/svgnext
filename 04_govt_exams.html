@@ -6513,6 +6513,293 @@
 }
 </style>
 
+<style id="universalIntlA11yToolbarCss">
+/* ==========================================================================
+   UNIFIED 9-BUTTON ACCESSIBILITY, THEME, VOICE SEARCH & BILINGUAL TOOLBAR
+   Matches index.html 100% on Desktop (Pill Bar) & Mobile (6-Col 3+2+2+2 Grid)
+   ========================================================================== */
+.intl-a11y-toolbar,
+#intlAccessibilityToolbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: nowrap !important;
+  gap: 6px !important;
+  background: linear-gradient(90deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%) !important;
+  color: #f8fafc !important;
+  padding: 7px 12px !important;
+  border-radius: 999px !important;
+  margin: 0 auto 12px auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  font-size: 0.78rem !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18) !important;
+  border: 1px solid rgba(99, 102, 241, 0.35) !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+  box-sizing: border-box !important;
+}
+.intl-a11y-toolbar::-webkit-scrollbar,
+#intlAccessibilityToolbar::-webkit-scrollbar {
+  display: none !important;
+}
+.intl-a11y-toolbar .a11y-btn,
+#intlAccessibilityToolbar .a11y-btn {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  padding: 5px 11px !important;
+  border-radius: 999px !important;
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.18s ease !important;
+  font-family: inherit !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  white-space: nowrap !important;
+  flex: 1 1 auto !important;
+  line-height: 1.2 !important;
+}
+.intl-a11y-toolbar .a11y-btn:hover,
+.intl-a11y-toolbar .a11y-btn.active,
+#intlAccessibilityToolbar .a11y-btn:hover,
+#intlAccessibilityToolbar .a11y-btn.active {
+  background: #fbbf24 !important;
+  color: #0f172a !important;
+  border-color: #fbbf24 !important;
+  transform: translateY(-1px) !important;
+}
+.intl-a11y-toolbar .a11y-btn.lang-switch-btn,
+#intlAccessibilityToolbar .a11y-btn.lang-switch-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  color: #ffffff !important;
+  border-color: #34d399 !important;
+}
+.intl-a11y-toolbar .a11y-btn.voice-quick-btn,
+#intlAccessibilityToolbar .a11y-btn.voice-quick-btn {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
+  color: #ffffff !important;
+  border-color: #818cf8 !important;
+}
+.intl-a11y-toolbar .a11y-btn.theme-palette-btn,
+#intlAccessibilityToolbar .a11y-btn.theme-palette-btn {
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%) !important;
+  color: #ffffff !important;
+  border-color: #f472b6 !important;
+}
+
+@media (max-width: 768px) {
+  .intl-a11y-toolbar,
+  #intlAccessibilityToolbar {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 5px !important;
+    padding: 6px !important;
+    margin: 0 0 8px 0 !important;
+    border-radius: 12px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+  .intl-a11y-toolbar .a11y-btn,
+  #intlAccessibilityToolbar .a11y-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding: 6px 6px !important;
+    font-size: 0.72rem !important;
+    border-radius: 8px !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    line-height: 1.22 !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+  .intl-a11y-toolbar .a11y-btn:nth-child(-n+3),
+  #intlAccessibilityToolbar .a11y-btn:nth-child(-n+3) {
+    grid-column: span 2 !important;
+  }
+  .intl-a11y-toolbar .a11y-btn:nth-child(n+4),
+  #intlAccessibilityToolbar .a11y-btn:nth-child(n+4) {
+    grid-column: span 3 !important;
+  }
+}
+
+/* High Contrast & Readable Spacing Modes across all pages */
+body.high-contrast-mode,
+body.a11y-high-contrast {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+body.high-contrast-mode .portal-main-content,
+body.high-contrast-mode .page-wrapper,
+body.high-contrast-mode .container,
+body.high-contrast-mode .card,
+body.high-contrast-mode .content-card,
+body.high-contrast-mode .section-card,
+body.high-contrast-mode .portal-card,
+body.high-contrast-mode .resource-card,
+body.high-contrast-mode .cat-card,
+body.high-contrast-mode .res-card,
+body.high-contrast-mode .step-card,
+body.high-contrast-mode table,
+body.high-contrast-mode th,
+body.high-contrast-mode td {
+  background: #0a0a0a !important;
+  color: #ffffff !important;
+  border-color: #fbbf24 !important;
+}
+body.high-contrast-mode h1,
+body.high-contrast-mode h2,
+body.high-contrast-mode h3,
+body.high-contrast-mode h4,
+body.high-contrast-mode a,
+body.high-contrast-mode strong,
+body.high-contrast-mode .resource-card-title,
+body.high-contrast-mode .section-title {
+  color: #fde047 !important;
+}
+
+body.readable-spacing-mode,
+body.readable-spacing-mode p,
+body.readable-spacing-mode li,
+body.readable-spacing-mode td,
+body.readable-spacing-mode th,
+body.readable-spacing-mode .resource-card-desc {
+  letter-spacing: 0.035em !important;
+  word-spacing: 0.1em !important;
+  line-height: 1.95 !important;
+}
+
+/* International Trending Color Themes across all pages */
+body.theme-emerald-luxe {
+  background-color: #ecfdf5 !important;
+}
+body.theme-emerald-luxe .portal-top-frame,
+body.theme-emerald-luxe .header-banner {
+  background: linear-gradient(135deg, #022c22 0%, #064e3b 45%, #047857 100%) !important;
+  border-color: rgba(52, 211, 153, 0.45) !important;
+}
+body.theme-sunset-velvet {
+  background-color: #fff1f2 !important;
+}
+body.theme-sunset-velvet .portal-top-frame,
+body.theme-sunset-velvet .header-banner {
+  background: linear-gradient(135deg, #4c0519 0%, #881337 45%, #be123c 100%) !important;
+  border-color: rgba(251, 113, 133, 0.45) !important;
+}
+body.theme-cyber-dark {
+  background-color: #090d16 !important;
+  color: #e2e8f0 !important;
+}
+body.theme-cyber-dark .portal-main-content,
+body.theme-cyber-dark .container,
+body.theme-cyber-dark .page-wrapper {
+  background-color: #090d16 !important;
+  color: #e2e8f0 !important;
+}
+body.theme-cyber-dark .content-card,
+body.theme-cyber-dark .section-card,
+body.theme-cyber-dark .resource-card,
+body.theme-cyber-dark .card {
+  background: #111827 !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+body.theme-cyber-dark .resource-card-title,
+body.theme-cyber-dark .section-title,
+body.theme-cyber-dark h2,
+body.theme-cyber-dark h3 {
+  color: #38bdf8 !important;
+}
+body.theme-cyber-dark .resource-card-desc,
+body.theme-cyber-dark p,
+body.theme-cyber-dark li {
+  color: #cbd5e1 !important;
+}
+
+/* Universal Quick Search / Voice Search Modal on Subpages */
+.univ-search-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(4px);
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.univ-search-modal-backdrop.open {
+  display: flex;
+}
+.univ-search-modal {
+  background: #ffffff;
+  color: #0f172a;
+  width: 100%;
+  max-width: 560px;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.35);
+  border: 2px solid #6366f1;
+  box-sizing: border-box;
+}
+.univ-search-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.univ-search-modal-title {
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #1e1b4b;
+}
+.univ-search-close-btn {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.univ-search-input-wrap {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.univ-search-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+.univ-search-results {
+  max-height: 260px;
+  overflow-y: auto;
+  font-size: 0.86rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 10px;
+}
+.univ-search-hit {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #f8fafc;
+  margin-bottom: 6px;
+  cursor: pointer;
+  border-left: 3px solid #6366f1;
+}
+.univ-search-hit:hover {
+  background: #eef2ff;
+}
+</style>
 </head>
 <body id="top">
 <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarMenu()"></div>
@@ -6602,7 +6889,19 @@
 </nav>
 </aside>
 <!-- Main Portal Content Column -->
-<main class="portal-main-content"><div class="portal-container"> <header class="portal-top-frame no-print">
+<main class="portal-main-content">
+<!-- 0. சர்வதேச அணுகல்தன்மைப் பட்டை, இருமொழி மாற்றி, குரல் தேடல் (International Accessibility & Bilingual Toolbar) -->
+<div class="intl-a11y-toolbar no-print" id="intlAccessibilityToolbar" role="toolbar" aria-label="ஒருங்கிணைந்த அணுகல்தன்மை மற்றும் இருமொழி மாற்றி பட்டை">
+  <button type="button" class="a11y-btn" onclick="adjustPortalFontSize(-1)" title="எழுத்து அளவைக் குறைக்க (Decrease Font Size)">அ- (A-)</button>
+  <button type="button" class="a11y-btn active" id="btnFontNormal" onclick="adjustPortalFontSize(0)" title="இயல்பான எழுத்து அளவு (Default Font Size)">அ (A)</button>
+  <button type="button" class="a11y-btn" onclick="adjustPortalFontSize(1)" title="எழுத்து அளவைப் பெரிதாக்க (Increase Font Size)">அ+ (A+)</button>
+  <button type="button" class="a11y-btn" id="btnHighContrast" onclick="toggleHighContrastMode()" title="உயர் நிறமாறுபாடு (WCAG High Contrast Mode)">🌓 உயர் நிறமாறுபாடு</button>
+  <button type="button" class="a11y-btn" id="btnReadableSpacing" onclick="toggleReadableSpacing()" title="எளிய வாசிப்பு இடைவெளி (Readable Line Spacing)">📖 எளிய வாசிப்பு</button>
+  <button type="button" class="a11y-btn" id="btnAudioGuide" onclick="togglePortalAudioGuide()" title="பக்கத்தின் சுருக்கத்தைக் குரல் வழியாகக் கேட்க (Audio Screen Reader)">🔊 குரல் வழிகாட்டி</button>
+  <button type="button" class="a11y-btn theme-palette-btn" id="btnThemePalette" onclick="cyclePortalColorTheme()" title="சர்வதேச டிரெண்டிங் வண்ணத்திட்ட மாற்றி (Switch International Trending Color Theme)">🎨 வண்ணம்: Neo-Aurora</button>
+  <button type="button" class="a11y-btn voice-quick-btn" id="btnVoiceQuickSearch" onclick="openVoiceSearchDirectly()" title="MDN Web Speech API குரல் வழித் தேடல் (Tamil & English Voice Search)">🎤 குரல் வழித் தேடல்</button>
+  <button type="button" class="a11y-btn lang-switch-btn" id="btnBilingualToggle" onclick="toggleBilingualMode()" title="தமிழ் மற்றும் ஆங்கிலம் இருமொழி மாற்றி (Switch Tamil / English UI)">🌐 மொழி: தமிழ் ⇄ English</button>
+</div><div class="portal-container"> <header class="portal-top-frame no-print">
 <!-- Center Branding Stack: 3D Gold Title, Aurora Tagline & English Sub-branding -->
 <div class="top-frame-center-stack">
 <h1 class="banner-title-tamil">உயர்கல்வி வழிகாட்டி</h1>
@@ -9808,5 +10107,283 @@ document.addEventListener('DOMContentLoaded', function() {
 <button aria-label="பக்கத்தின் மேலே செல்" class="floating-back-to-top" id="floatingBackToTop" title="பக்கத்தின் மேலே செல்">
 <span class="floating-btn-arrow">▲</span>
 <span class="floating-btn-text">மேலே செல்</span>
-</button></body>
+</button><script id="universalIntlA11yToolbarScript">
+(function() {
+  if (window.__hasUniversalIntl9BtnToolbar) return;
+  window.__hasUniversalIntl9BtnToolbar = true;
+
+  var currentFontStep = 0;
+  window.adjustPortalFontSize = window.adjustPortalFontSize || function(delta) {
+    if (delta === 0) currentFontStep = 0;
+    else currentFontStep = Math.max(-2, Math.min(3, currentFontStep + delta));
+    var scale = 100 + (currentFontStep * 6);
+    document.documentElement.style.fontSize = scale + "%";
+    var btnNormal = document.getElementById("btnFontNormal");
+    if (btnNormal) btnNormal.classList.toggle("active", currentFontStep === 0);
+    try { localStorage.setItem("svgnext_font_step", String(currentFontStep)); } catch(e) {}
+  };
+
+  window.toggleHighContrastMode = window.toggleHighContrastMode || function() {
+    var isHC = document.body.classList.toggle("high-contrast-mode");
+    var btn = document.getElementById("btnHighContrast");
+    if (btn) btn.classList.toggle("active", isHC);
+    try { localStorage.setItem("svgnext_hc", isHC ? "1" : "0"); } catch(e) {}
+  };
+
+  window.toggleReadableSpacing = window.toggleReadableSpacing || function() {
+    var isRS = document.body.classList.toggle("readable-spacing-mode");
+    var btn = document.getElementById("btnReadableSpacing");
+    if (btn) btn.classList.toggle("active", isRS);
+    try { localStorage.setItem("svgnext_rs", isRS ? "1" : "0"); } catch(e) {}
+  };
+
+  var audioSpeaking = false;
+  window.togglePortalAudioGuide = window.togglePortalAudioGuide || function() {
+    var btn = document.getElementById("btnAudioGuide");
+    if (!("speechSynthesis" in window)) {
+      alert("உங்கள் உலாவியில் குரல் வழிகாட்டி வசதி (Web Speech Synthesis) இல்லை.");
+      return;
+    }
+    if (audioSpeaking) {
+      window.speechSynthesis.cancel();
+      audioSpeaking = false;
+      if (btn) {
+        btn.classList.remove("active");
+        btn.innerHTML = (window.isEnglishMode ? "🔊 Audio Guide" : "🔊 குரல் வழிகாட்டி");
+      }
+      return;
+    }
+    var titleText = document.title || "உயர்கல்வி மற்றும் வேலைவாய்ப்பு வழிகாட்டி";
+    var h1El = document.querySelector("h1, .banner-main-title, .banner-title-tamil");
+    var descEl = document.querySelector(".banner-desc, h2, p");
+    var text = titleText + ". " + (h1El ? h1El.innerText : "") + ". " + (descEl ? descEl.innerText : "");
+    var utter = new SpeechSynthesisUtterance(text.slice(0, 480));
+    utter.lang = window.isEnglishMode ? "en-IN" : "ta-IN";
+    utter.rate = 0.95;
+    utter.onend = function() {
+      audioSpeaking = false;
+      if (btn) {
+        btn.classList.remove("active");
+        btn.innerHTML = (window.isEnglishMode ? "🔊 Audio Guide" : "🔊 குரல் வழிகாட்டி");
+      }
+    };
+    audioSpeaking = true;
+    if (btn) {
+      btn.classList.add("active");
+      btn.innerHTML = "⏹️ நிறுத்து (Stop)";
+    }
+    window.speechSynthesis.speak(utter);
+  };
+
+  var PORTAL_THEMES = [
+    { cls: "", labelTa: "🎨 வண்ணம்: Neo-Aurora", labelEn: "🎨 Theme: Neo-Aurora" },
+    { cls: "theme-emerald-luxe", labelTa: "🎨 வண்ணம்: Royal Emerald", labelEn: "🎨 Theme: Royal Emerald" },
+    { cls: "theme-sunset-velvet", labelTa: "🎨 வண்ணம்: Sunset Velvet", labelEn: "🎨 Theme: Sunset Velvet" },
+    { cls: "theme-cyber-dark", labelTa: "🎨 வண்ணம்: Cyber Dark", labelEn: "🎨 Theme: Cyber Dark" }
+  ];
+  var currentThemeIndex = 0;
+
+  function applyThemeByIndex(idx) {
+    currentThemeIndex = ((idx % PORTAL_THEMES.length) + PORTAL_THEMES.length) % PORTAL_THEMES.length;
+    PORTAL_THEMES.forEach(function(t) {
+      if (t.cls) document.body.classList.remove(t.cls);
+    });
+    var chosen = PORTAL_THEMES[currentThemeIndex];
+    if (chosen.cls) document.body.classList.add(chosen.cls);
+    var btn = document.getElementById("btnThemePalette");
+    if (btn) btn.innerHTML = window.isEnglishMode ? chosen.labelEn : chosen.labelTa;
+    try { localStorage.setItem("svgnext_theme_idx", String(currentThemeIndex)); } catch(e) {}
+  }
+
+  window.cyclePortalColorTheme = window.cyclePortalColorTheme || function() {
+    applyThemeByIndex(currentThemeIndex + 1);
+  };
+
+  function ensureSubpageSearchModal() {
+    var existing = document.getElementById("univSubpageSearchBackdrop");
+    if (existing) return existing;
+    var backdrop = document.createElement("div");
+    backdrop.id = "univSubpageSearchBackdrop";
+    backdrop.className = "univ-search-modal-backdrop";
+    backdrop.innerHTML = [
+      '<div class="univ-search-modal" role="dialog" aria-label="குரல் வழித் தேடல்">',
+      '  <div class="univ-search-modal-header">',
+      '    <div class="univ-search-modal-title">🎤 குரல் வழி & உடனடிப் பக்கத் தேடல்</div>',
+      '    <button type="button" class="univ-search-close-btn" id="univSearchCloseBtn">✕ மூடுக</button>',
+      '  </div>',
+      '  <div class="univ-search-input-wrap">',
+      '    <input type="text" id="univSearchInput" class="univ-search-input" placeholder="இப்பக்கத்தில் தேடச் சொல்லை உள்ளிடவும் அல்லது பேசவும்..." />',
+      '  </div>',
+      '  <div id="univSearchResults" class="univ-search-results">இப்பக்கத்தில் உள்ள தலைப்புகள், அட்டவணைகள் மற்றும் விவரங்களைத் தேடலாம்...</div>',
+      '</div>'
+    ].join("");
+    document.body.appendChild(backdrop);
+
+    document.getElementById("univSearchCloseBtn").onclick = function() {
+      backdrop.classList.remove("open");
+    };
+    backdrop.addEventListener("click", function(e) {
+      if (e.target === backdrop) backdrop.classList.remove("open");
+    });
+
+    var input = document.getElementById("univSearchInput");
+    input.addEventListener("input", function() {
+      runSubpageSearch(input.value);
+    });
+    return backdrop;
+  }
+
+  function runSubpageSearch(q) {
+    var resBox = document.getElementById("univSearchResults");
+    if (!resBox) return;
+    var query = (q || "").trim().toLowerCase();
+    if (!query) {
+      resBox.innerHTML = "இப்பக்கத்தில் உள்ள தலைப்புகள், அட்டவணைகள் மற்றும் விவரங்களைத் தேடலாம்.";
+      return;
+    }
+    var nodes = document.querySelectorAll("h1, h2, h3, h4, p, li, td, th, .resource-card, .card, .res-card");
+    var hits = [];
+    var seen = {};
+    for (var i = 0; i < nodes.length; i++) {
+      var el = nodes[i];
+      if (el.closest("#intlAccessibilityToolbar") || el.closest("#univSubpageSearchBackdrop")) continue;
+      var txt = (el.innerText || "").trim().replace(/\s+/g, " ");
+      if (txt.length > 8 && txt.toLowerCase().indexOf(query) !== -1 && !seen[txt.slice(0, 80)]) {
+        seen[txt.slice(0, 80)] = true;
+        hits.push({ el: el, text: txt.slice(0, 160) });
+        if (hits.length >= 12) break;
+      }
+    }
+    if (!hits.length) {
+      resBox.innerHTML = '<div>இப்பக்கத்தில் முடிவுகள் இல்லை. <a href="index.html" style="color:#4f46e5;font-weight:700;">🏠 முதன்மை வழிகாட்டிப் பக்கத்தில் தேட இங்கே சொடுக்கவும் →</a></div>';
+      return;
+    }
+    resBox.innerHTML = "";
+    hits.forEach(function(h) {
+      var div = document.createElement("div");
+      div.className = "univ-search-hit";
+      div.textContent = h.text;
+      div.onclick = function() {
+        document.getElementById("univSubpageSearchBackdrop").classList.remove("open");
+        h.el.scrollIntoView({ behavior: "smooth", block: "center" });
+        var origBg = h.el.style.backgroundColor;
+        h.el.style.transition = "background-color 0.4s ease";
+        h.el.style.backgroundColor = "#fef08a";
+        setTimeout(function() { h.el.style.backgroundColor = origBg; }, 2200);
+      };
+      resBox.appendChild(div);
+    });
+  }
+
+  window.openVoiceSearchDirectly = window.openVoiceSearchDirectly || function() {
+    var pageSearchInput = document.getElementById("searchInput") || document.getElementById("portalUniversalSearchInput");
+    var modal = ensureSubpageSearchModal();
+    modal.classList.add("open");
+    var univInput = document.getElementById("univSearchInput");
+    if (univInput) univInput.focus();
+
+    var SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+    var vBtn = document.getElementById("btnVoiceQuickSearch");
+    if (!SpeechRec) return;
+    try {
+      var rec = new SpeechRec();
+      rec.lang = window.isEnglishMode ? "en-IN" : "ta-IN";
+      rec.interimResults = false;
+      rec.maxAlternatives = 1;
+      if (vBtn) vBtn.innerHTML = "🔴 பேசுங்கள்...";
+      rec.onresult = function(event) {
+        var transcript = event.results[0][0].transcript || "";
+        if (univInput) {
+          univInput.value = transcript;
+          runSubpageSearch(transcript);
+        }
+        if (pageSearchInput) {
+          pageSearchInput.value = transcript;
+          pageSearchInput.dispatchEvent(new Event("input", { bubbles: true }));
+        }
+      };
+      rec.onend = function() {
+        if (vBtn) vBtn.innerHTML = window.isEnglishMode ? "🎤 Voice Search" : "🎤 குரல் வழித் தேடல்";
+      };
+      rec.onerror = function() {
+        if (vBtn) vBtn.innerHTML = window.isEnglishMode ? "🎤 Voice Search" : "🎤 குரல் வழித் தேடல்";
+      };
+      rec.start();
+    } catch(e) {}
+  };
+
+  window.isEnglishMode = false;
+  var COMMON_TA_EN_PAIRS = [
+    ["முகப்பு", "Home"],
+    ["வழிகாட்டி முகப்பு", "Guidance Home"],
+    ["தள வரைபடம்", "Sitemap"],
+    ["முழு தள வரைபடம் (Sitemap)", "Complete Sitemap"],
+    ["கல்வி வளங்கள்", "Educational Resources"],
+    ["உயர்கல்வி வழிகாட்டி", "Higher Education Guide"],
+    ["வேலைவாய்ப்பு", "Career & Employment"],
+    ["கல்வி உதவித்தொகை", "Scholarships"],
+    ["கல்விக் கடன்", "Education Loan"],
+    ["நுழைவுத் தேர்வுகள்", "Entrance Exams"],
+    ["கல்லூரிகள்", "Colleges"]
+  ];
+
+  window.toggleBilingualMode = window.toggleBilingualMode || function() {
+    window.isEnglishMode = !window.isEnglishMode;
+    var isEn = window.isEnglishMode;
+    var btnLang = document.getElementById("btnBilingualToggle");
+    if (btnLang) {
+      btnLang.classList.toggle("active", isEn);
+      btnLang.innerHTML = isEn ? "🌐 Language: English ⇄ தமிழ்" : "🌐 மொழி: தமிழ் ⇄ English";
+    }
+    var btnHC = document.getElementById("btnHighContrast");
+    if (btnHC) btnHC.innerHTML = isEn ? "🌓 High Contrast" : "🌓 உயர் நிறமாறுபாடு";
+    var btnRS = document.getElementById("btnReadableSpacing");
+    if (btnRS) btnRS.innerHTML = isEn ? "📖 Easy Reading" : "📖 எளிய வாசிப்பு";
+    var btnAG = document.getElementById("btnAudioGuide");
+    if (btnAG && !audioSpeaking) btnAG.innerHTML = isEn ? "🔊 Audio Guide" : "🔊 குரல் வழிகாட்டி";
+    var btnVQ = document.getElementById("btnVoiceQuickSearch");
+    if (btnVQ) btnVQ.innerHTML = isEn ? "🎤 Voice Search" : "🎤 குரல் வழித் தேடல்";
+    var btnTP = document.getElementById("btnThemePalette");
+    if (btnTP) {
+      var chosen = PORTAL_THEMES[currentThemeIndex];
+      btnTP.innerHTML = isEn ? chosen.labelEn : chosen.labelTa;
+    }
+
+    var els = document.querySelectorAll("a, button, span.btn-text, .nav-btn");
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      if (el.closest("#intlAccessibilityToolbar")) continue;
+      if (el.children.length === 0) {
+        var txt = (el.textContent || "").trim();
+        COMMON_TA_EN_PAIRS.forEach(function(pair) {
+          if (isEn && txt === pair[0]) {
+            el.setAttribute("data-orig-ta", txt);
+            el.textContent = pair[1];
+          } else if (!isEn && el.getAttribute("data-orig-ta")) {
+            el.textContent = el.getAttribute("data-orig-ta");
+          }
+        });
+      }
+    }
+    try { localStorage.setItem("svgnext_lang_en", isEn ? "1" : "0"); } catch(e) {}
+  };
+
+  function restorePrefs() {
+    try {
+      var fs = parseInt(localStorage.getItem("svgnext_font_step") || "0", 10);
+      if (fs) window.adjustPortalFontSize(fs);
+      if (localStorage.getItem("svgnext_hc") === "1") window.toggleHighContrastMode();
+      if (localStorage.getItem("svgnext_rs") === "1") window.toggleReadableSpacing();
+      var ti = parseInt(localStorage.getItem("svgnext_theme_idx") || "0", 10);
+      if (ti > 0) applyThemeByIndex(ti);
+    } catch(e) {}
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", restorePrefs);
+  } else {
+    restorePrefs();
+  }
+})();
+</script>
+</body>
 </html>
