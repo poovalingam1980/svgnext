@@ -6724,41 +6724,37 @@
     overflow-x: hidden !important;
   }
 
-  /* Accessibility Toolbar (#intlAccessibilityToolbar) - Zero Text Clipping */
+    /* Accessibility Toolbar (#intlAccessibilityToolbar) - 9 Icon-Only Single-Row Pill Bar on Mobile */
   .intl-a11y-toolbar,
   #intlAccessibilityToolbar {
     display: grid !important;
-    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
-    gap: 5px !important;
-    padding: 6px !important;
+    grid-template-columns: repeat(9, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+    padding: 5px 6px !important;
     margin: 0 0 8px 0 !important;
-    border-radius: 12px !important;
+    border-radius: 999px !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
   .intl-a11y-toolbar .a11y-btn,
-  #intlAccessibilityToolbar .a11y-btn {
+  #intlAccessibilityToolbar .a11y-btn,
+  .intl-a11y-toolbar .a11y-btn:nth-child(-n+3),
+  #intlAccessibilityToolbar .a11y-btn:nth-child(-n+3),
+  .intl-a11y-toolbar .a11y-btn:nth-child(n+4),
+  #intlAccessibilityToolbar .a11y-btn:nth-child(n+4) {
+    grid-column: span 1 !important;
     width: 100% !important;
     min-width: 0 !important;
     max-width: 100% !important;
-    padding: 6px 6px !important;
-    font-size: 0.72rem !important;
-    border-radius: 8px !important;
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
-    line-height: 1.22 !important;
+    padding: 6px 2px !important;
+    font-size: 0.86rem !important;
+    border-radius: 999px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    line-height: 1.15 !important;
     text-align: center !important;
     justify-content: center !important;
     box-sizing: border-box !important;
-  }
-  .intl-a11y-toolbar .a11y-btn:nth-child(-n+3),
-  #intlAccessibilityToolbar .a11y-btn:nth-child(-n+3) {
-    grid-column: span 2 !important;
-  }
-  .intl-a11y-toolbar .a11y-btn:nth-child(n+4),
-  #intlAccessibilityToolbar .a11y-btn:nth-child(n+4) {
-    grid-column: span 3 !important;
   }
 
   /* Top Frame Banner - Relative on mobile, compact padding */
@@ -7104,8 +7100,8 @@
 
 <style id="universalIntlA11yToolbarCss">
 /* ==========================================================================
-   UNIFIED 9-BUTTON ACCESSIBILITY, THEME, VOICE SEARCH & BILINGUAL TOOLBAR
-   Matches index.html 100% on Desktop (Pill Bar) & Mobile (6-Col 3+2+2+2 Grid)
+   UNIFIED 9-ICON ACCESSIBILITY, THEME, VOICE SEARCH & BILINGUAL TOOLBAR
+   Icon-Only Pill Bar on Desktop & Single-Row 9-Col Pill Bar on Mobile
    ========================================================================== */
 .intl-a11y-toolbar,
 #intlAccessibilityToolbar {
@@ -7116,12 +7112,12 @@
   gap: 6px !important;
   background: linear-gradient(90deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%) !important;
   color: #f8fafc !important;
-  padding: 7px 12px !important;
+  padding: 6px 12px !important;
   border-radius: 999px !important;
   margin: 0 auto 12px auto !important;
   width: 100% !important;
   max-width: 100% !important;
-  font-size: 0.78rem !important;
+  font-size: 0.88rem !important;
   box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18) !important;
   border: 1px solid rgba(99, 102, 241, 0.35) !important;
   overflow-x: auto !important;
@@ -7137,20 +7133,20 @@
   background: rgba(255, 255, 255, 0.1) !important;
   color: #f8fafc !important;
   border: 1px solid rgba(255, 255, 255, 0.22) !important;
-  padding: 5px 11px !important;
+  padding: 6px 12px !important;
   border-radius: 999px !important;
-  font-size: 0.74rem !important;
-  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+  font-weight: 800 !important;
   cursor: pointer !important;
   transition: all 0.18s ease !important;
   font-family: inherit !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 4px !important;
+  gap: 2px !important;
   white-space: nowrap !important;
-  flex: 1 1 auto !important;
-  line-height: 1.2 !important;
+  flex: 1 1 0% !important;
+  line-height: 1.15 !important;
 }
 .intl-a11y-toolbar .a11y-btn:hover,
 .intl-a11y-toolbar .a11y-btn.active,
@@ -7184,36 +7180,32 @@
   .intl-a11y-toolbar,
   #intlAccessibilityToolbar {
     display: grid !important;
-    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
-    gap: 5px !important;
-    padding: 6px !important;
+    grid-template-columns: repeat(9, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+    padding: 5px 6px !important;
     margin: 0 0 8px 0 !important;
-    border-radius: 12px !important;
+    border-radius: 999px !important;
     width: 100% !important;
     overflow: visible !important;
   }
   .intl-a11y-toolbar .a11y-btn,
-  #intlAccessibilityToolbar .a11y-btn {
+  #intlAccessibilityToolbar .a11y-btn,
+  .intl-a11y-toolbar .a11y-btn:nth-child(-n+3),
+  #intlAccessibilityToolbar .a11y-btn:nth-child(-n+3),
+  .intl-a11y-toolbar .a11y-btn:nth-child(n+4),
+  #intlAccessibilityToolbar .a11y-btn:nth-child(n+4) {
+    grid-column: span 1 !important;
     width: 100% !important;
     min-width: 0 !important;
     max-width: 100% !important;
-    padding: 6px 6px !important;
-    font-size: 0.72rem !important;
-    border-radius: 8px !important;
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
-    line-height: 1.22 !important;
+    padding: 6px 2px !important;
+    font-size: 0.86rem !important;
+    border-radius: 999px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    line-height: 1.15 !important;
     text-align: center !important;
     justify-content: center !important;
-  }
-  .intl-a11y-toolbar .a11y-btn:nth-child(-n+3),
-  #intlAccessibilityToolbar .a11y-btn:nth-child(-n+3) {
-    grid-column: span 2 !important;
-  }
-  .intl-a11y-toolbar .a11y-btn:nth-child(n+4),
-  #intlAccessibilityToolbar .a11y-btn:nth-child(n+4) {
-    grid-column: span 3 !important;
   }
 }
 
@@ -7478,15 +7470,15 @@ body.theme-cyber-dark li {
 <main class="portal-main-content">
 <!-- 0. சர்வதேச அணுகல்தன்மைப் பட்டை, இருமொழி மாற்றி, குரல் தேடல் (International Accessibility & Bilingual Toolbar) -->
 <div class="intl-a11y-toolbar no-print" id="intlAccessibilityToolbar" role="toolbar" aria-label="ஒருங்கிணைந்த அணுகல்தன்மை மற்றும் இருமொழி மாற்றி பட்டை">
-  <button type="button" class="a11y-btn" onclick="adjustPortalFontSize(-1)" title="எழுத்து அளவைக் குறைக்க (Decrease Font Size)">அ- (A-)</button>
-  <button type="button" class="a11y-btn active" id="btnFontNormal" onclick="adjustPortalFontSize(0)" title="இயல்பான எழுத்து அளவு (Default Font Size)">அ (A)</button>
-  <button type="button" class="a11y-btn" onclick="adjustPortalFontSize(1)" title="எழுத்து அளவைப் பெரிதாக்க (Increase Font Size)">அ+ (A+)</button>
-  <button type="button" class="a11y-btn" id="btnHighContrast" onclick="toggleHighContrastMode()" title="உயர் நிறமாறுபாடு (WCAG High Contrast Mode)">🌓 உயர் நிறமாறுபாடு</button>
-  <button type="button" class="a11y-btn" id="btnReadableSpacing" onclick="toggleReadableSpacing()" title="எளிய வாசிப்பு இடைவெளி (Readable Line Spacing)">📖 எளிய வாசிப்பு</button>
-  <button type="button" class="a11y-btn" id="btnAudioGuide" onclick="togglePortalAudioGuide()" title="பக்கத்தின் சுருக்கத்தைக் குரல் வழியாகக் கேட்க (Audio Screen Reader)">🔊 குரல் வழிகாட்டி</button>
-  <button type="button" class="a11y-btn theme-palette-btn" id="btnThemePalette" onclick="cyclePortalColorTheme()" title="சர்வதேச டிரெண்டிங் வண்ணத்திட்ட மாற்றி (Switch International Trending Color Theme)">🎨 வண்ணம்: Neo-Aurora</button>
-  <button type="button" class="a11y-btn voice-quick-btn" id="btnVoiceQuickSearch" onclick="openVoiceSearchDirectly()" title="MDN Web Speech API குரல் வழித் தேடல் (Tamil & English Voice Search)">🎤 குரல் வழித் தேடல்</button>
-  <button type="button" class="a11y-btn lang-switch-btn" id="btnBilingualToggle" onclick="toggleBilingualMode()" title="தமிழ் மற்றும் ஆங்கிலம் இருமொழி மாற்றி (Switch Tamil / English UI)">🌐 மொழி: தமிழ் ⇄ English</button>
+  <button type="button" class="a11y-btn" onclick="adjustPortalFontSize(-1)" title="எழுத்து அளவைக் குறைக்க (Decrease Font Size)" aria-label="Decrease Font Size">அ-</button>
+  <button type="button" class="a11y-btn active" id="btnFontNormal" onclick="adjustPortalFontSize(0)" title="இயல்பான எழுத்து அளவு (Default Font Size)" aria-label="Default Font Size">அ</button>
+  <button type="button" class="a11y-btn" onclick="adjustPortalFontSize(1)" title="எழுத்து அளவைப் பெரிதாக்க (Increase Font Size)" aria-label="Increase Font Size">அ+</button>
+  <button type="button" class="a11y-btn" id="btnHighContrast" onclick="toggleHighContrastMode()" title="உயர் நிறமாறுபாடு (WCAG High Contrast Mode)" aria-label="High Contrast Mode">🌓</button>
+  <button type="button" class="a11y-btn" id="btnReadableSpacing" onclick="toggleReadableSpacing()" title="எளிய வாசிப்பு இடைவெளி (Readable Line Spacing)" aria-label="Readable Spacing">📖</button>
+  <button type="button" class="a11y-btn" id="btnAudioGuide" onclick="togglePortalAudioGuide()" title="பக்கத்தின் சுருக்கத்தைக் குரல் வழியாகக் கேட்க (Audio Screen Reader)" aria-label="Audio Guide">🔊</button>
+  <button type="button" class="a11y-btn theme-palette-btn" id="btnThemePalette" onclick="cyclePortalColorTheme()" title="வண்ணத்திட்ட மாற்றி (Color Theme: Neo-Aurora)" aria-label="Switch Color Theme">🎨</button>
+  <button type="button" class="a11y-btn voice-quick-btn" id="btnVoiceQuickSearch" onclick="openVoiceSearchDirectly()" title="குரல் வழித் தேடல் (Tamil & English Voice Search)" aria-label="Voice Search">🎤</button>
+  <button type="button" class="a11y-btn lang-switch-btn" id="btnBilingualToggle" onclick="toggleBilingualMode()" title="இருமொழி மாற்றி: தமிழ் ⇄ English (Switch Language)" aria-label="Switch Language">🌐</button>
 </div>
 <div class="portal-container">
 <header class="portal-top-frame no-print">
@@ -9798,7 +9790,8 @@ document.addEventListener('DOMContentLoaded', function() {
       audioSpeaking = false;
       if (btn) {
         btn.classList.remove("active");
-        btn.innerHTML = (window.isEnglishMode ? "🔊 Audio Guide" : "🔊 குரல் வழிகாட்டி");
+        btn.innerHTML = "🔊";
+        btn.title = "பக்கத்தின் சுருக்கத்தைக் குரல் வழியாகக் கேட்க (Audio Screen Reader)";
       }
       return;
     }
@@ -9813,22 +9806,24 @@ document.addEventListener('DOMContentLoaded', function() {
       audioSpeaking = false;
       if (btn) {
         btn.classList.remove("active");
-        btn.innerHTML = (window.isEnglishMode ? "🔊 Audio Guide" : "🔊 குரல் வழிகாட்டி");
+        btn.innerHTML = "🔊";
+        btn.title = "பக்கத்தின் சுருக்கத்தைக் குரல் வழியாகக் கேட்க (Audio Screen Reader)";
       }
     };
     audioSpeaking = true;
     if (btn) {
       btn.classList.add("active");
-      btn.innerHTML = "⏹️ நிறுத்து (Stop)";
+      btn.innerHTML = "⏹️";
+      btn.title = "குரல் வழிகாட்டியை நிறுத்து (Stop Audio Guide)";
     }
     window.speechSynthesis.speak(utter);
   };
 
   var PORTAL_THEMES = [
-    { cls: "", labelTa: "🎨 வண்ணம்: Neo-Aurora", labelEn: "🎨 Theme: Neo-Aurora" },
-    { cls: "theme-emerald-luxe", labelTa: "🎨 வண்ணம்: Royal Emerald", labelEn: "🎨 Theme: Royal Emerald" },
-    { cls: "theme-sunset-velvet", labelTa: "🎨 வண்ணம்: Sunset Velvet", labelEn: "🎨 Theme: Sunset Velvet" },
-    { cls: "theme-cyber-dark", labelTa: "🎨 வண்ணம்: Cyber Dark", labelEn: "🎨 Theme: Cyber Dark" }
+    { cls: "", labelTa: "வண்ணம்: Neo-Aurora", labelEn: "Theme: Neo-Aurora" },
+    { cls: "theme-emerald-luxe", labelTa: "வண்ணம்: Royal Emerald", labelEn: "Theme: Royal Emerald" },
+    { cls: "theme-sunset-velvet", labelTa: "வண்ணம்: Sunset Velvet", labelEn: "Theme: Sunset Velvet" },
+    { cls: "theme-cyber-dark", labelTa: "வண்ணம்: Cyber Dark", labelEn: "Theme: Cyber Dark" }
   ];
   var currentThemeIndex = 0;
 
@@ -9840,7 +9835,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var chosen = PORTAL_THEMES[currentThemeIndex];
     if (chosen.cls) document.body.classList.add(chosen.cls);
     var btn = document.getElementById("btnThemePalette");
-    if (btn) btn.innerHTML = window.isEnglishMode ? chosen.labelEn : chosen.labelTa;
+    if (btn) {
+      btn.innerHTML = "🎨";
+      btn.title = window.isEnglishMode ? chosen.labelEn : chosen.labelTa;
+    }
     try { localStorage.setItem("svgnext_theme_idx", String(currentThemeIndex)); } catch(e) {}
   }
 
@@ -9939,7 +9937,7 @@ document.addEventListener('DOMContentLoaded', function() {
       rec.lang = window.isEnglishMode ? "en-IN" : "ta-IN";
       rec.interimResults = false;
       rec.maxAlternatives = 1;
-      if (vBtn) vBtn.innerHTML = "🔴 பேசுங்கள்...";
+      if (vBtn) vBtn.innerHTML = "🔴";
       rec.onresult = function(event) {
         var transcript = event.results[0][0].transcript || "";
         if (univInput) {
@@ -9952,10 +9950,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       };
       rec.onend = function() {
-        if (vBtn) vBtn.innerHTML = window.isEnglishMode ? "🎤 Voice Search" : "🎤 குரல் வழித் தேடல்";
+        if (vBtn) vBtn.innerHTML = "🎤";
       };
       rec.onerror = function() {
-        if (vBtn) vBtn.innerHTML = window.isEnglishMode ? "🎤 Voice Search" : "🎤 குரல் வழித் தேடல்";
+        if (vBtn) vBtn.innerHTML = "🎤";
       };
       rec.start();
     } catch(e) {}
@@ -9982,20 +9980,22 @@ document.addEventListener('DOMContentLoaded', function() {
     var btnLang = document.getElementById("btnBilingualToggle");
     if (btnLang) {
       btnLang.classList.toggle("active", isEn);
-      btnLang.innerHTML = isEn ? "🌐 Language: English ⇄ தமிழ்" : "🌐 மொழி: தமிழ் ⇄ English";
+      btnLang.innerHTML = "🌐";
+      btnLang.title = isEn ? "Language: English ⇄ தமிழ்" : "இருமொழி மாற்றி: தமிழ் ⇄ English";
     }
     var btnHC = document.getElementById("btnHighContrast");
-    if (btnHC) btnHC.innerHTML = isEn ? "🌓 High Contrast" : "🌓 உயர் நிறமாறுபாடு";
+    if (btnHC) btnHC.innerHTML = "🌓";
     var btnRS = document.getElementById("btnReadableSpacing");
-    if (btnRS) btnRS.innerHTML = isEn ? "📖 Easy Reading" : "📖 எளிய வாசிப்பு";
+    if (btnRS) btnRS.innerHTML = "📖";
     var btnAG = document.getElementById("btnAudioGuide");
-    if (btnAG && !audioSpeaking) btnAG.innerHTML = isEn ? "🔊 Audio Guide" : "🔊 குரல் வழிகாட்டி";
+    if (btnAG && !audioSpeaking) btnAG.innerHTML = "🔊";
     var btnVQ = document.getElementById("btnVoiceQuickSearch");
-    if (btnVQ) btnVQ.innerHTML = isEn ? "🎤 Voice Search" : "🎤 குரல் வழித் தேடல்";
+    if (btnVQ) btnVQ.innerHTML = "🎤";
     var btnTP = document.getElementById("btnThemePalette");
     if (btnTP) {
       var chosen = PORTAL_THEMES[currentThemeIndex];
-      btnTP.innerHTML = isEn ? chosen.labelEn : chosen.labelTa;
+      btnTP.innerHTML = "🎨";
+      btnTP.title = isEn ? chosen.labelEn : chosen.labelTa;
     }
 
     var els = document.querySelectorAll("a, button, span.btn-text, .nav-btn");
