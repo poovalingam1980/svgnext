@@ -426,20 +426,109 @@ body.a11y-readable-spacing li {
   50% { opacity: 0.18; transform: scale(0.82); box-shadow: 0 0 2px #ef4444; }
 }
 
-/* Compact 3-Card Row with Full Visibility of All Details & Days-Only Countdown */
-.hgl-cards-row {
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px;
+/* Responsive Auto-Sliding Right-to-Left Countdown Carousel (Mobile: 1x1, Desktop: 1x3, Wide Monitor: 1x4) */
+.hgl-carousel-viewport {
+  --hgl-cols: 3;
+  --hgl-gap: 10px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 2px 0;
+  box-sizing: border-box;
 }
-.hgl-card {
-  background: linear-gradient(155deg, rgba(15, 23, 42, 0.98) 0%, rgba(23, 37, 84, 0.6) 100%);
-  border: 1.4px solid rgba(212, 175, 55, 0.55); border-left: 4px solid #10b981;
-  border-radius: 10px; padding: 7px 9px;
-  display: flex; flex-direction: column; justify-content: space-between; gap: 5px;
-  transition: transform 0.18s ease, border-color 0.18s ease;
+@media (max-width: 768px) {
+  .hgl-carousel-viewport {
+    --hgl-cols: 1;
+    --hgl-gap: 0px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1379px) {
+  .hgl-carousel-viewport {
+    --hgl-cols: 3;
+    --hgl-gap: 10px;
+  }
+}
+@media (min-width: 1380px) {
+  .hgl-carousel-viewport {
+    --hgl-cols: 4;
+    --hgl-gap: 10px;
+  }
+}
+.hgl-carousel-track {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: var(--hgl-gap, 10px) !important;
+  width: 100%;
+  align-items: stretch;
+  will-change: transform;
+  box-sizing: border-box;
+}
+.hgl-carousel-track > .hgl-card {
+  flex: 0 0 calc((100% - (var(--hgl-cols, 3) - 1) * var(--hgl-gap, 10px)) / var(--hgl-cols, 3)) !important;
+  width: calc((100% - (var(--hgl-cols, 3) - 1) * var(--hgl-gap, 10px)) / var(--hgl-cols, 3)) !important;
+  max-width: calc((100% - (var(--hgl-cols, 3) - 1) * var(--hgl-gap, 10px)) / var(--hgl-cols, 3)) !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  background: linear-gradient(155deg, rgba(15, 23, 42, 0.98) 0%, rgba(23, 37, 84, 0.65) 100%);
+  border: 1.4px solid rgba(212, 175, 55, 0.55);
+  border-left: 4px solid #10b981;
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
 }
 .hgl-card.urgent { border-left-color: #ef4444; }
 .hgl-card.new-release { border-left-color: #f59e0b; }
-.hgl-card:hover { transform: translateY(-1.5px); border-color: #fef08a; }
+.hgl-card.exam-soon { border-left-color: #38bdf8; }
+.hgl-card:hover { border-color: #fef08a; box-shadow: 0 4px 14px rgba(250, 204, 21, 0.18); }
+.hgl-priority-pill {
+  font-size: 0.60rem;
+  font-weight: 900;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: rgba(250, 204, 21, 0.18);
+  color: #fde047;
+  border: 1px solid rgba(250, 204, 21, 0.45);
+  white-space: nowrap;
+}
+.hgl-ai-live-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.66rem;
+  font-weight: 800;
+  color: #a7f3d0;
+  background: rgba(6, 78, 59, 0.82);
+  border: 1px solid #10b981;
+  padding: 2px 9px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.hgl-ai-live-pill:hover {
+  background: #059669;
+  color: #ffffff;
+}
+.hgl-priority-legend {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #e2e8f0;
+}
+.hgl-priority-legend span {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  padding: 1.5px 7px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
 
 .hgl-card-top {
   display: flex; align-items: center; justify-content: space-between; gap: 5px; flex-wrap: wrap;
@@ -947,9 +1036,7 @@ body.a11y-readable-spacing li {
   text-decoration: underline;
 }
 
-@media (max-width: 980px) {
-  .hgl-cards-row { grid-template-columns: 1fr; gap: 8px; }
-}
+/* Responsive layout handled by .hgl-carousel-viewport (1x1 mobile, 1x3 desktop, 1x4 wide desktop) */
 
 /* 7 Gateway Cards Grid */
 .grid-container, #cardsGrid {
@@ -2328,7 +2415,13 @@ body.theme-cyber-dark #admissionTimelineSec p {
               <span class="hgl-blink-red-dot" title="2027 அதிகாரப்பூர்வ விண்ணப்ப அறிவிப்புகள்"></span>
               <span>2027-ஆம் ஆண்டிற்கான விண்ணப்ப அறிவிக்கை வெளியிடப்பட்ட உயர்கல்விப் படிப்புகள் &amp; நுழைவுத்தேர்வுகள்</span>
             </h3>
-            <span style="font-size: 0.68rem; font-weight: 800; color: #86efac; background: rgba(6, 78, 59, 0.7); border: 1px solid #10b981; padding: 2px 9px; border-radius: 999px;">✅ அதிகாரப்பூர்வ அறிவிக்கை வெளியானவை மட்டும் (6 தேர்வுகள்)</span>
+            <div style="display: inline-flex; align-items: center; flex-wrap: wrap; gap: 6px;">
+              <span id="hglTotalNotifiedBadge" style="font-size: 0.67rem; font-weight: 800; color: #86efac; background: rgba(6, 78, 59, 0.75); border: 1px solid #10b981; padding: 2px 9px; border-radius: 999px;">✅ அதிகாரப்பூர்வ அறிவிக்கை வெளியானவை (6 தேர்வுகள்)</span>
+              <button type="button" class="hgl-ai-live-pill" id="btnHglAiSync" onclick="triggerManualAiExamSync()" title="புதிய 2027 நுழைவுத்தேர்வு அறிவிப்புகளை AI மூலம் உடனடியாகத் தேடிப் புதுப்பிக்க">
+                <span id="hglAiSyncIcon">🤖</span>
+                <span id="hglAiSyncText">AI தானியங்கி கண்காணிப்பு: நேரலை</span>
+              </button>
+            </div>
           </div>
 
           <!-- கவுண்ட்டவுன் பெட்டிக்கு மேல்: News_Banner.html மாதிரியில் பாய் விரிவது போல் தோன்றும் நிலையான Flash News பட்டை -->
@@ -2348,15 +2441,26 @@ body.theme-cyber-dark #admissionTimelineSec p {
             </div>
           </div>
 
-          <!-- பிளாஷ் பட்டைக்குக் கீழ்: 50% சுருக்கப்பட்ட நாட்கள்-மட்டும் கவுண்ட்டவுன் பெட்டிகள் (3+3 மாற்றும் வசதியுடன்) -->
+          <!-- பிளாஷ் பட்டைக்குக் கீழ்: வலமிருந்து இடமாக நகரும் தானியங்கி கவுண்ட்டவுன் பெட்டிகள் (Mobile: 1x1 | Desktop: 1x3 / 1x4) -->
           <div class="hgl-countdown-subbar" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
-            <span style="font-size: 0.74rem; font-weight: 900; color: #fde047;">⏱️ 2027 நுழைவுத்தேர்வு நாட்கள் கவுண்ட்டவுன் &amp; முக்கியத் தேதிகள்:</span>
-            <div class="hgl-set-btn-group" style="display: inline-flex; gap: 5px;">
-              <button type="button" class="hgl-mat-ctrl-btn" id="btnHglSet1" onclick="switchHglExamPage(0)" style="background: #facc15; color: #090d16;">1–3 தேர்வுகள் (VITEEE / CLAT / UCEED)</button>
-              <button type="button" class="hgl-mat-ctrl-btn" id="btnHglSet2" onclick="switchHglExamPage(1)">4–6 தேர்வுகள் (AILET / NID / SLAT)</button>
+            <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
+              <span style="font-size: 0.74rem; font-weight: 900; color: #fde047;">⏱️ 2027 நுழைவுத்தேர்வு நாட்கள் கவுண்ட்டவுன் &amp; முக்கியத் தேதிகள்:</span>
+              <div class="hgl-priority-legend" aria-label="காட்சிப்படுத்தப்படும் வரிசை முறை">
+                <span style="border-color: #f59e0b; color: #fde047;">1️⃣ சமீபத்திய அறிவிப்பு</span>
+                <span style="border-color: #ef4444; color: #fca5a5;">2️⃣ விண்ணப்பிக்க குறைந்த நாட்கள்</span>
+                <span style="border-color: #38bdf8; color: #93c5fd;">3️⃣ தேர்வுக்கு குறைந்த நாட்கள்</span>
+              </div>
+            </div>
+            <div class="hgl-mat-controls" style="display: inline-flex; align-items: center; gap: 5px;">
+              <span id="hglLayoutModeBadge" style="font-size: 0.63rem; font-weight: 800; color: #cbd5e1; background: rgba(255,255,255,0.08); padding: 1.5px 7px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.18);">↔ தானியங்கி நகர்வு</span>
+              <button type="button" class="hgl-mat-ctrl-btn" id="btnHglCarouselPrev" title="முந்தைய தேர்வுப் பெட்டி">◀</button>
+              <button type="button" class="hgl-mat-ctrl-btn" id="btnHglCarouselPause" title="தானியங்கி நகர்வை நிறுத்த / தொடர">⏸</button>
+              <button type="button" class="hgl-mat-ctrl-btn" id="btnHglCarouselNext" title="அடுத்த தேர்வுப் பெட்டி (வலமிருந்து இடமாக)">▶</button>
             </div>
           </div>
-          <div class="hgl-cards-row" id="hglActiveExamsGrid"></div>
+          <div class="hgl-carousel-viewport" id="hglCarouselViewport" aria-live="polite">
+            <div class="hgl-carousel-track" id="hglActiveExamsGrid"></div>
+          </div>
         </section>
 
         <!-- 4. 7 முதன்மை வழிகாட்டி வாயில்கள் (7 Macro Portal Cards) -->
@@ -2972,8 +3076,8 @@ body.theme-cyber-dark #admissionTimelineSec p {
      ============================================================================ -->
 <script id="direct-gemini-flash-instant-engine">
 (function() {
-  // 2027-ஆம் ஆண்டிற்கு அதிகாரப்பூர்வமாக விண்ணப்ப அறிவிக்கை வெளியிடப்பட்ட 6 படிப்புகள் மட்டுமே (அக்டோபர் 2026 நிலவரப்படி)
-  const OFFICIALLY_NOTIFIED_2027_EXAMS = [
+  // 2027-ஆம் ஆண்டிற்கு அதிகாரப்பூர்வமாக விண்ணப்ப அறிவிக்கை வெளியிடப்பட்ட அடிப்படைத் தேர்வுகள்
+  const BASE_NOTIFIED_2027_EXAMS = [
     {
       id: "viteee-2027",
       nameTa: "VITEEE 2027 — VIT வேலூர் & சென்னை B.Tech பொறியியல்",
@@ -2983,7 +3087,9 @@ body.theme-cyber-dark #admissionTimelineSec p {
       examDate: "2027-04-28",
       officialUrl: "https://viteee.vit.ac.in/",
       guideUrl: "01_03_engineering_jee.html",
-      isNewRelease: true
+      isNewRelease: true,
+      flashBadge: "சமீபத்திய அறிவிப்பு • VITEEE 2027 (B.Tech)",
+      flashDesc: "வேலூர் மற்றும் சென்னை VIT வளாகங்களில் 2027–28 கல்வியாண்டு B.Tech பொறியியல் சேர்க்கைக்கான அதிகாரப்பூர்வ ஆன்லைன் விண்ணப்பப் பதிவு நடைபெறுகிறது."
     },
     {
       id: "clat-2027",
@@ -2993,7 +3099,10 @@ body.theme-cyber-dark #admissionTimelineSec p {
       appEndDate: "2026-10-31",
       examDate: "2026-12-06",
       officialUrl: "https://consortiumofnlus.ac.in/clat-2027/",
-      guideUrl: "01_06_law_clat_nlu.html"
+      guideUrl: "01_06_law_clat_nlu.html",
+      isNewRelease: false,
+      flashBadge: "விண்ணப்பிக்க குறைந்த நாட்கள் • CLAT 2027 (தேசிய சட்டம்)",
+      flashDesc: "திருச்சி தேசிய சட்டப் பல்கலைக்கழகம் (TNNLU) உள்ளிட்ட 24 NLU-களில் 2027–28 ஆம் ஆண்டு 5-ஆண்டு ஒருங்கிணைந்த B.A.LL.B சேர்க்கைக்கு விண்ணப்பிக்கலாம்."
     },
     {
       id: "uceed-2027",
@@ -3003,7 +3112,10 @@ body.theme-cyber-dark #admissionTimelineSec p {
       appEndDate: "2026-10-31",
       examDate: "2027-01-17",
       officialUrl: "https://www.uceed.iitb.ac.in/2027/important-dates.html",
-      guideUrl: "01_07_design_architecture_nata_nift.html"
+      guideUrl: "01_07_design_architecture_nata_nift.html",
+      isNewRelease: false,
+      flashBadge: "விண்ணப்பிக்க குறைந்த நாட்கள் • IIT UCEED 2027 (B.Des)",
+      flashDesc: "IIT Bombay, Delhi, Guwahati, Hyderabad, Roorkee நிறுவனங்களில் 2027-ஆம் ஆண்டு 4-ஆண்டு இளங்கலை வடிவமைப்பு (B.Des) பட்டப்படிப்பு விண்ணப்பப் பதிவு."
     },
     {
       id: "ailet-2027",
@@ -3013,7 +3125,10 @@ body.theme-cyber-dark #admissionTimelineSec p {
       appEndDate: "2026-11-10",
       examDate: "2026-12-13",
       officialUrl: "https://nationallawuniversitydelhi.in/",
-      guideUrl: "01_06_law_clat_nlu.html"
+      guideUrl: "01_06_law_clat_nlu.html",
+      isNewRelease: false,
+      flashBadge: "தேசிய சட்டம் • NLU DELHI AILET 2027",
+      flashDesc: "புதுடெல்லி தேசிய சட்டப் பல்கலைக்கழகத்தில் (NLU Delhi) 2027–28 கல்வியாண்டு 5-ஆண்டு B.A.LL.B (Hons.) படிப்பிற்கான ஆன்லைன் விண்ணப்பப் பதிவு."
     },
     {
       id: "nid-dat-2027",
@@ -3023,7 +3138,10 @@ body.theme-cyber-dark #admissionTimelineSec p {
       appEndDate: "2026-11-30",
       examDate: "2026-12-20",
       officialUrl: "https://admissions.nid.edu/",
-      guideUrl: "01_07_design_architecture_nata_nift.html"
+      guideUrl: "01_07_design_architecture_nata_nift.html",
+      isNewRelease: false,
+      flashBadge: "தேசிய வடிவமைப்பு • NID DAT 2027 (B.Des)",
+      flashDesc: "மத்திய அரசின் தேசிய வடிவமைப்பு நிறுவனங்களில் (NID Ahmedabad, AP, Assam, Haryana, MP) 2027 இளங்கலை டிசைன் (B.Des) சேர்க்கை அறிவிக்கை."
     },
     {
       id: "slat-2027",
@@ -3033,57 +3151,62 @@ body.theme-cyber-dark #admissionTimelineSec p {
       appEndDate: "2026-12-04",
       examDate: "2026-12-19",
       officialUrl: "https://www.slat-test.org/",
-      guideUrl: "01_06_law_clat_nlu.html"
+      guideUrl: "01_06_law_clat_nlu.html",
+      isNewRelease: false,
+      flashBadge: "சட்டப் பல்கலை • SLAT 2027 (5-ஆண்டு LL.B)",
+      flashDesc: "சிம்பயாசிஸ் சட்டப் பள்ளிகளில் (Pune, Noida, Hyderabad, Nagpur) 2027–28 கல்வியாண்டு 5-ஆண்டு ஒருங்கிணைந்த B.A.LL.B / B.B.A.LL.B விண்ணப்பப் பதிவு."
     }
   ];
 
-  // News_Banner.html மாதிரியில் பாய் விரிவது போல் தோன்றும் 2027 அதிகாரப்பூர்வ அறிவிப்புகள் மட்டுமே (6 அறிவிப்புகள்)
-  const FLASH_NEWS_2027_ONLY = [
+  // எதிர்காலத்தில் அறிவிப்பு வெளியாகும் போது தானியங்கியாகச் சேர்க்கப்படும் AI கண்காணிப்புப் பட்டியல் (Date-Triggered & AI Live Discovery)
+  const UPCOMING_2027_AUTO_WATCHLIST = [
     {
-      num: "01",
-      badge: "அறிவிக்கை வெளியானது • VITEEE 2027 (B.Tech)",
-      title: "தொடக்கம்: 20.10.2026 | கடைசி நாள்: 31.03.2027 | தேர்வு நாள்: 28.04.2027 – 03.05.2027",
-      desc: "வேலூர் மற்றும் சென்னை VIT வளாகங்களில் 2027–28 கல்வியாண்டு B.Tech பொறியியல் சேர்க்கைக்கான அதிகாரப்பூர்வ ஆன்லைன் விண்ணப்பப் பதிவு நடைபெறுகிறது.",
-      link: "https://viteee.vit.ac.in/"
+      id: "jee-main-2027-s1",
+      nameTa: "JEE Main 2027 (Session 1) — NIT / IIIT / IIT பொறியியல் நுழைவுத்தேர்வு",
+      body: "NTA (தேசியத் தேர்வு முகமை)",
+      appStartDate: "2026-10-28",
+      appEndDate: "2026-11-27",
+      examDate: "2027-01-24",
+      officialUrl: "https://jeemain.nta.nic.in/",
+      guideUrl: "01_03_engineering_jee.html",
+      isNewRelease: true,
+      autoActivateAfter: "2026-10-28",
+      flashBadge: "புதிய அறிவிக்கை • JEE Main 2027 (Session 1)",
+      flashDesc: "NIT திருச்சி, IIIT மற்றும் IIT உயர்கல்வி நிறுவனங்களில் B.E./B.Tech சேர்க்கைக்கான JEE Main 2027 முதல் அமர்வு ஆன்லைன் விண்ணப்பப் பதிவு."
     },
     {
-      num: "02",
-      badge: "கடைசி 10 நாட்கள் • CLAT 2027 (தேசிய சட்டம்)",
-      title: "தொடக்கம்: 15.07.2026 | கடைசி நாள்: 31.10.2026 | தேர்வு நாள்: 06.12.2026",
-      desc: "திருச்சி தேசிய சட்டப் பல்கலைக்கழகம் (TNNLU) உள்ளிட்ட 24 NLU-களில் 2027–28 ஆம் ஆண்டு 5-ஆண்டு ஒருங்கிணைந்த B.A.LL.B சேர்க்கைக்கு விண்ணப்பிக்கலாம்.",
-      link: "https://consortiumofnlus.ac.in/clat-2027/"
+      id: "nift-2027",
+      nameTa: "NIFT 2027 — தேசிய ஆடை வடிவமைப்பு நிறுவனம் (B.Des / B.FTech)",
+      body: "NTA / NIFT (மத்திய ஜவுளி அமைச்சகம்)",
+      appStartDate: "2026-11-05",
+      appEndDate: "2026-12-28",
+      examDate: "2027-02-09",
+      officialUrl: "https://exams.nta.ac.in/NIFT/",
+      guideUrl: "01_07_design_architecture_nata_nift.html",
+      isNewRelease: true,
+      autoActivateAfter: "2026-11-05",
+      flashBadge: "புதிய அறிவிக்கை • NIFT 2027 (Fashion Design)",
+      flashDesc: "சென்னை உள்ளிட்ட 19 NIFT வளாகங்களில் 2027–28 கல்வியாண்டு B.Des மற்றும் B.FTech பட்டப்படிப்புகளுக்கான நுழைவுத்தேர்வு அறிவிக்கை."
     },
     {
-      num: "03",
-      badge: "ஐஐடி வடிவமைப்பு • IIT UCEED 2027 (B.Des)",
-      title: "தொடக்கம்: 01.10.2026 | கடைசி நாள்: 31.10.2026 | தேர்வு நாள்: 17.01.2027",
-      desc: "IIT Bombay, Delhi, Guwahati, Hyderabad, Roorkee நிறுவனங்களில் 2027-ஆம் ஆண்டு 4-ஆண்டு இளங்கலை வடிவமைப்பு (B.Des) பட்டப்படிப்பு விண்ணப்பப் பதிவு.",
-      link: "https://www.uceed.iitb.ac.in/2027/important-dates.html"
-    },
-    {
-      num: "04",
-      badge: "தேசிய சட்டம் • NLU DELHI AILET 2027",
-      title: "தொடக்கம்: 07.08.2026 | கடைசி நாள்: 10.11.2026 | தேர்வு நாள்: 13.12.2026",
-      desc: "புதுடெல்லி தேசிய சட்டப் பல்கலைக்கழகத்தில் (NLU Delhi) 2027–28 கல்வியாண்டு 5-ஆண்டு B.A.LL.B (Hons.) படிப்பிற்கான ஆன்லைன் விண்ணப்பப் பதிவு.",
-      link: "https://nationallawuniversitydelhi.in/"
-    },
-    {
-      num: "05",
-      badge: "தேசிய வடிவமைப்பு • NID DAT 2027 (B.Des)",
-      title: "தொடக்கம்: 10.09.2026 | கடைசி நாள்: 30.11.2026 | முதல்நிலைத் தேர்வு: 20.12.2026",
-      desc: "மத்திய அரசின் தேசிய வடிவமைப்பு நிறுவனங்களில் (NID Ahmedabad, AP, Assam, Haryana, MP) 2027 இளங்கலை டிசைன் (B.Des) சேர்க்கை அறிவிக்கை.",
-      link: "https://admissions.nid.edu/"
-    },
-    {
-      num: "06",
-      badge: "சட்டப் பல்கலை • SLAT 2027 (5-ஆண்டு LL.B)",
-      title: "தொடக்கம்: 12.08.2026 | கடைசி நாள்: 04.12.2026 | தேர்வு: 19.12.2026 & 26.12.2026",
-      desc: "சிம்பயாசிஸ் சட்டப் பள்ளிகளில் (Pune, Noida, Hyderabad, Nagpur) 2027–28 கல்வியாண்டு 5-ஆண்டு ஒருங்கிணைந்த B.A.LL.B / B.B.A.LL.B விண்ணப்பப் பதிவு.",
-      link: "https://www.slat-test.org/"
+      id: "upsc-nda-1-2027",
+      nameTa: "UPSC NDA & NA (I) 2027 — முப்படை அதிகாரிகள் நுழைவுத்தேர்வு",
+      body: "UPSC (மத்திய அரசுப் பணியாளர் தேர்வாணையம்)",
+      appStartDate: "2026-12-11",
+      appEndDate: "2026-12-31",
+      examDate: "2027-04-13",
+      officialUrl: "https://upsconline.nic.in/",
+      guideUrl: "01_11_defence_armed_forces.html",
+      isNewRelease: true,
+      autoActivateAfter: "2026-12-11",
+      flashBadge: "புதிய அறிவிக்கை • UPSC NDA-I 2027",
+      flashDesc: "12-ஆம் வகுப்பு முடிக்கும் மாணவர்கள் ராணுவம், கடற்படை, விமானப்படையில் அதிகாரியாகச் சேர UPSC NDA-I 2027 விண்ணப்பப் பதிவு."
     }
   ];
 
+  const STORAGE_KEY_AI_EXAMS = "SVGNEXT_AI_2027_EXAMS_V3";
   const TA_MONTHS = ["ஜன", "பிப்", "மார்", "ஏப்", "மே", "ஜூன்", "ஜூலை", "ஆக", "செப்", "அக்", "நவ", "டிச"];
+
   function fmtDateTa(iso) {
     if (!iso) return "--";
     const p = String(iso).split("-");
@@ -3091,91 +3214,420 @@ body.theme-cyber-dark #admissionTimelineSec p {
     return parseInt(p[2], 10) + " " + (TA_MONTHS[parseInt(p[1], 10) - 1] || "") + " " + p[0];
   }
 
-  let activeExams = OFFICIALLY_NOTIFIED_2027_EXAMS.slice();
-  let currentExamPage = 0; // 0 => exams 0..2, 1 => exams 3..5
-  let allFlashNewsItems = FLASH_NEWS_2027_ONLY.slice();
+  function fmtDateDots(iso) {
+    if (!iso) return "--";
+    const p = String(iso).split("-");
+    if (p.length !== 3) return iso;
+    return p[2] + "." + p[1] + "." + p[0];
+  }
 
-  // கவுண்ட்டவுன் நாட்கள் மட்டும் கணக்கிடும் முறை (மணி, நிமிடம், விநாடி தேவையில்லை)
-  function calcDaysOnlyCountdown(exam, nowMs) {
-    const endMs  = new Date(exam.appEndDate + "T23:59:59+05:30").getTime();
-    const examMs = new Date(exam.examDate + "T09:00:00+05:30").getTime();
+  // ============================================================================
+  // 3-TIER PRIORITY SORTING ENGINE
+  // வரிசை முறை:
+  //   1. சமீபத்திய அறிவிப்பு முதலாவதாகவும் (Latest Notification First - Tier 1)
+  //   2. விண்ணப்பிக்க குறைந்த அளவு காலம் மட்டுமே உள்ளது அடுத்ததாகவும் (Fewest Days Left to Apply Next - Tier 2)
+  //   3. தேர்வு குறைந்த நாட்களே உள்ள அறிவிப்புகள் அதற்கடுத்ததாகவும் (Fewest Days Left Until Exam Next - Tier 3)
+  // ============================================================================
+  function computeExamMetrics(exam, nowMs) {
+    const startMs = new Date((exam.appStartDate || "2026-01-01") + "T00:00:00+05:30").getTime();
+    const endMs   = new Date((exam.appEndDate || "2027-03-31") + "T23:59:59+05:30").getTime();
+    const examMs  = new Date((exam.examDate || "2027-05-01") + "T09:00:00+05:30").getTime();
+
+    const daysSinceStart  = Math.floor((nowMs - startMs) / 86400000);
     const daysLeftToApply = Math.ceil((endMs - nowMs) / 86400000);
     const examDaysLeft    = Math.max(0, Math.ceil((examMs - nowMs) / 86400000));
-    const isUrgent = daysLeftToApply >= 0 && daysLeftToApply <= 12;
-    const isNew = Boolean(exam.isNewRelease);
-    const statusText = daysLeftToApply > 0
-      ? (isUrgent
-          ? "🚨 விண்ணப்பிக்க " + daysLeftToApply + " நாட்களே!"
-          : (isNew ? "🆕 புதிய அறிவிக்கை (" + daysLeftToApply + " நாட்கள்)" : "🟢 விண்ணப்பம் (" + daysLeftToApply + " நாட்கள்)"))
-      : "🔔 2027 அதிகாரப்பூர்வ அறிவிப்பு";
+
+    // Recent release: explicitly flagged or started within the last 14 days while still open
+    const isLatestRelease = Boolean(exam.isNewRelease) || (daysSinceStart >= 0 && daysSinceStart <= 14 && daysLeftToApply > 0);
+    const isAppOpen       = daysLeftToApply > 0;
+    const isUrgentApply   = isAppOpen && daysLeftToApply <= 15 && !isLatestRelease;
+
+    // Determine 3-Tier Priority Bucket:
+    // Tier 1: சமீபத்திய அறிவிப்பு (Latest Notification)
+    // Tier 2: விண்ணப்பிக்க குறைந்த நாட்கள் உள்ளவை (Open applications ordered by fewest days left to apply)
+    // Tier 3: தேர்வுக்கு குறைந்த நாட்கள் உள்ளவை (Closed/post-application exams ordered by fewest days left to exam)
+    let priorityTier = 3;
+    if (isLatestRelease && isAppOpen) {
+      priorityTier = 1;
+    } else if (isAppOpen) {
+      priorityTier = 2;
+    } else {
+      priorityTier = 3;
+    }
+
+    let statusText = "";
+    let priorityLabelTa = "";
+    let cardClass = "";
+    let tagClass = "";
+
+    if (priorityTier === 1) {
+      statusText = "🆕 சமீபத்திய அறிவிப்பு (" + daysLeftToApply + " நாட்கள்)";
+      priorityLabelTa = "1️⃣ சமீபத்திய அறிவிப்பு";
+      cardClass = "new-release";
+      tagClass = "new-release";
+    } else if (priorityTier === 2) {
+      if (daysLeftToApply <= 15) {
+        statusText = "🚨 விண்ணப்பிக்க " + daysLeftToApply + " நாட்களே!";
+        priorityLabelTa = "2️⃣ விண்ணப்பிக்க " + daysLeftToApply + " நாட்களே";
+        cardClass = "urgent";
+        tagClass = "urgent";
+      } else {
+        statusText = "⏳ விண்ணப்பிக்க " + daysLeftToApply + " நாட்கள்";
+        priorityLabelTa = "2️⃣ விண்ணப்பக் காலக்கெடு";
+        cardClass = "";
+        tagClass = "";
+      }
+    } else {
+      statusText = "🎯 தேர்வுக்கு " + examDaysLeft + " நாட்களே!";
+      priorityLabelTa = "3️⃣ தேர்வு நெருங்குகிறது";
+      cardClass = "exam-soon";
+      tagClass = "urgent";
+    }
 
     return {
-      isUrgent: isUrgent,
-      isNew: isNew,
+      startMs: startMs,
+      endMs: endMs,
+      examMs: examMs,
+      daysSinceStart: daysSinceStart,
+      daysLeftToApply: daysLeftToApply,
+      examDaysLeft: examDaysLeft,
+      priorityTier: priorityTier,
+      isLatestRelease: isLatestRelease,
+      isUrgent: isUrgentApply,
       statusText: statusText,
+      priorityLabelTa: priorityLabelTa,
+      cardClass: cardClass,
+      tagClass: tagClass,
       daysText: examDaysLeft + " நாட்கள்"
     };
   }
 
-  function renderActiveExamCards() {
-    const grid = document.getElementById("hglActiveExamsGrid");
-    if (!grid) return;
-    const nowMs = Date.now();
-    const sliceStart = currentExamPage * 3;
-    const visibleSlice = activeExams.slice(sliceStart, sliceStart + 3);
+  function sortExamsByPriority(examsList, nowMs) {
+    return examsList.slice().sort(function(a, b) {
+      const ma = computeExamMetrics(a, nowMs);
+      const mb = computeExamMetrics(b, nowMs);
 
-    grid.innerHTML = visibleSlice.map(function(ex) {
-      const c = calcDaysOnlyCountdown(ex, nowMs);
-      const cardClass = c.isUrgent ? "urgent" : (c.isNew ? "new-release" : "");
-      const tagClass  = c.isUrgent ? "urgent" : (c.isNew ? "new-release" : "");
-      return '<article class="hgl-card ' + cardClass + '">' +
-        '<div class="hgl-card-top">' +
-          '<span class="hgl-agency-mini">🏛️ ' + ex.body + '</span>' +
-          '<span class="hgl-status-tag ' + tagClass + '">' + c.statusText + '</span>' +
-        '</div>' +
-        '<div class="hgl-exam-name">' + ex.nameTa + '</div>' +
-        '<div class="hgl-dates-strip">' +
-          '<div class="hgl-d-box"><span class="hgl-d-lbl">📅 தொடக்கம்</span><span class="hgl-d-val start">' + fmtDateTa(ex.appStartDate) + '</span></div>' +
-          '<div class="hgl-d-box"><span class="hgl-d-lbl">⏰ கடைசி நாள்</span><span class="hgl-d-val last">' + fmtDateTa(ex.appEndDate) + '</span></div>' +
-          '<div class="hgl-d-box"><span class="hgl-d-lbl">🎯 தேர்வு நாள்</span><span class="hgl-d-val exam">' + fmtDateTa(ex.examDate) + '</span></div>' +
-        '</div>' +
-        '<div class="hgl-bottom-bar">' +
-          '<div class="hgl-cd-wrap">' +
-            '<span class="hgl-cd-label">⏱️ தேர்வு கவுண்ட்டவுன்:</span>' +
-            '<span class="hgl-cd-digits" data-hgl-clock="' + ex.id + '">' + c.daysText + '</span>' +
-          '</div>' +
-          '<div class="hgl-btn-group">' +
-            (ex.guideUrl ? '<a href="' + ex.guideUrl + '" class="hgl-guide-btn">📖 வழிகாட்டி</a>' : '') +
-            '<a href="' + ex.officialUrl + '" target="_blank" rel="noopener noreferrer" class="hgl-apply-btn">விண்ணப்பிக்க ➔</a>' +
-          '</div>' +
-        '</div>' +
-      '</article>';
-    }).join("");
+      // Primary sort: Tier 1 (Latest) -> Tier 2 (Fewest days to apply) -> Tier 3 (Fewest days to exam)
+      if (ma.priorityTier !== mb.priorityTier) {
+        return ma.priorityTier - mb.priorityTier;
+      }
+
+      // Within Tier 1 (Latest Notifications): Newest appStartDate first, then fewest days to apply, then fewest days to exam
+      if (ma.priorityTier === 1) {
+        if (mb.startMs !== ma.startMs) return mb.startMs - ma.startMs;
+        if (ma.daysLeftToApply !== mb.daysLeftToApply) return ma.daysLeftToApply - mb.daysLeftToApply;
+        return ma.examDaysLeft - mb.examDaysLeft;
+      }
+
+      // Within Tier 2 (Fewest Days Left to Apply): Smallest daysLeftToApply first, tie-broken by smallest examDaysLeft (Tier 3 rule)
+      if (ma.priorityTier === 2) {
+        if (ma.daysLeftToApply !== mb.daysLeftToApply) return ma.daysLeftToApply - mb.daysLeftToApply;
+        return ma.examDaysLeft - mb.examDaysLeft;
+      }
+
+      // Within Tier 3 (Fewest Days Left Until Exam): Smallest examDaysLeft first
+      return ma.examDaysLeft - mb.examDaysLeft;
+    });
   }
 
-  window.switchHglExamPage = function(pageIdx) {
-    currentExamPage = pageIdx === 1 ? 1 : 0;
-    const b1 = document.getElementById("btnHglSet1");
-    const b2 = document.getElementById("btnHglSet2");
-    if (b1 && b2) {
-      if (currentExamPage === 0) {
-        b1.style.background = "#facc15"; b1.style.color = "#090d16";
-        b2.style.background = "rgba(255,255,255,0.1)"; b2.style.color = "#fef08a";
-      } else {
-        b2.style.background = "#facc15"; b2.style.color = "#090d16";
-        b1.style.background = "rgba(255,255,255,0.1)"; b1.style.color = "#fef08a";
+  function buildFlashNewsFromExams(sortedExams, nowMs) {
+    return sortedExams.map(function(ex, idx) {
+      const m = computeExamMetrics(ex, nowMs);
+      const numStr = String(idx + 1).padStart(2, "0");
+      const badge = ex.flashBadge || (m.priorityTier === 1
+        ? "புதிய அறிவிக்கை • " + ex.nameTa.split("—")[0].trim()
+        : (m.daysLeftToApply > 0 && m.daysLeftToApply <= 15
+            ? "கடைசி " + m.daysLeftToApply + " நாட்கள் • " + ex.nameTa.split("—")[0].trim()
+            : "2027 அறிவிக்கை • " + ex.nameTa.split("—")[0].trim()));
+      const title = "தொடக்கம்: " + fmtDateDots(ex.appStartDate) + " | கடைசி நாள்: " + fmtDateDots(ex.appEndDate) + " | தேர்வு நாள்: " + fmtDateDots(ex.examDate);
+      const desc = ex.flashDesc || (ex.nameTa + " (" + ex.body + ") — 2027-28 கல்வியாண்டு சேர்க்கைக்கான அதிகாரப்பூர்வ ஆன்லைன் விண்ணப்பப் பதிவு நடைபெறுகிறது.");
+      return {
+        num: numStr,
+        badge: badge,
+        title: title,
+        desc: desc,
+        link: ex.officialUrl
+      };
+    });
+  }
+
+  let activeExams = [];
+  let allFlashNewsItems = [];
+
+  function syncAndSortActiveExams() {
+    const nowMs = Date.now();
+    const mapById = {};
+    BASE_NOTIFIED_2027_EXAMS.forEach(function(ex) { mapById[ex.id] = Object.assign({}, ex); });
+
+    // Auto-activate any date-triggered watchlist exams whose notification date has arrived
+    UPCOMING_2027_AUTO_WATCHLIST.forEach(function(w) {
+      const actMs = new Date(w.autoActivateAfter + "T00:00:00+05:30").getTime();
+      if (nowMs >= actMs && !mapById[w.id]) {
+        mapById[w.id] = Object.assign({}, w);
       }
+    });
+
+    // Merge any AI-discovered 2027 exams stored in localStorage
+    try {
+      const savedRaw = localStorage.getItem(STORAGE_KEY_AI_EXAMS);
+      if (savedRaw) {
+        const savedList = JSON.parse(savedRaw);
+        if (Array.isArray(savedList)) {
+          savedList.forEach(function(item) {
+            if (item && item.id && item.nameTa && item.appEndDate && item.examDate) {
+              mapById[item.id] = Object.assign({}, mapById[item.id] || {}, item);
+            }
+          });
+        }
+      }
+    } catch (e) {}
+
+    // Filter out exams whose exam date has already passed more than 5 days ago
+    const combined = Object.keys(mapById).map(function(k) { return mapById[k]; }).filter(function(ex) {
+      const examMs = new Date((ex.examDate || "2027-05-01") + "T23:59:59+05:30").getTime();
+      return examMs >= (nowMs - 5 * 86400000);
+    });
+
+    activeExams = sortExamsByPriority(combined, nowMs);
+    allFlashNewsItems = buildFlashNewsFromExams(activeExams, nowMs);
+
+    const totalBadge = document.getElementById("hglTotalNotifiedBadge");
+    if (totalBadge) {
+      totalBadge.textContent = "✅ அதிகாரப்பூர்வ அறிவிக்கை வெளியானவை (" + activeExams.length + " தேர்வுகள்)";
     }
-    renderActiveExamCards();
-  };
+  }
+
+  function createExamCardHTML(ex, rankIdx, nowMs) {
+    const c = computeExamMetrics(ex, nowMs);
+    const rankNum = String(rankIdx + 1).padStart(2, "0");
+    return '<article class="hgl-card ' + c.cardClass + '" data-exam-id="' + ex.id + '" data-priority-rank="' + rankNum + '">' +
+      '<div class="hgl-card-top">' +
+        '<span class="hgl-agency-mini">🏛️ ' + ex.body + '</span>' +
+        '<span class="hgl-priority-pill" title="காட்சி வரிசை எண் மற்றும் முன்னுரிமை">#' + rankNum + ' • ' + c.priorityLabelTa + '</span>' +
+        '<span class="hgl-status-tag ' + c.tagClass + '">' + c.statusText + '</span>' +
+      '</div>' +
+      '<div class="hgl-exam-name">' + ex.nameTa + '</div>' +
+      '<div class="hgl-dates-strip">' +
+        '<div class="hgl-d-box"><span class="hgl-d-lbl">📅 தொடக்கம்</span><span class="hgl-d-val start">' + fmtDateTa(ex.appStartDate) + '</span></div>' +
+        '<div class="hgl-d-box"><span class="hgl-d-lbl">⏰ கடைசி நாள்</span><span class="hgl-d-val last">' + fmtDateTa(ex.appEndDate) + '</span></div>' +
+        '<div class="hgl-d-box"><span class="hgl-d-lbl">🎯 தேர்வு நாள்</span><span class="hgl-d-val exam">' + fmtDateTa(ex.examDate) + '</span></div>' +
+      '</div>' +
+      '<div class="hgl-bottom-bar">' +
+        '<div class="hgl-cd-wrap">' +
+          '<span class="hgl-cd-label">⏱️ தேர்வு கவுண்ட்டவுன்:</span>' +
+          '<span class="hgl-cd-digits" data-hgl-clock="' + ex.id + '">' + c.daysText + '</span>' +
+        '</div>' +
+        '<div class="hgl-btn-group">' +
+          (ex.guideUrl ? '<a href="' + ex.guideUrl + '" class="hgl-guide-btn">📖 வழிகாட்டி</a>' : '') +
+          '<a href="' + ex.officialUrl + '" target="_blank" rel="noopener noreferrer" class="hgl-apply-btn">விண்ணப்பிக்க ➔</a>' +
+        '</div>' +
+      '</div>' +
+    '</article>';
+  }
+
+  // ============================================================================
+  // RIGHT-TO-LEFT STEP-BY-STEP CAROUSEL ENGINE (Mobile: 1x1, Desktop: 1x3 / 1x4)
+  // ============================================================================
+  const CAROUSEL_INTERVAL_MS = 3800;
+  const CAROUSEL_ANIM_MS = 650;
+  let carouselTimer = null;
+  let isCarouselPaused = false;
+  let isCarouselAnimating = false;
+
+  function updateLayoutModeIndicator() {
+    const badge = document.getElementById("hglLayoutModeBadge");
+    if (!badge) return;
+    const w = window.innerWidth || document.documentElement.clientWidth || 1024;
+    let modeText = "1×3 டெஸ்க்டாப் காட்சி";
+    if (w <= 768) modeText = "1×1 மொபைல் காட்சி";
+    else if (w >= 1380) modeText = "1×4 அகலத்திரை காட்சி";
+    badge.textContent = "↔ " + modeText + " • வலமிருந்து இடமாக நகர்வு";
+  }
+
+  function renderActiveExamCards() {
+    const track = document.getElementById("hglActiveExamsGrid");
+    if (!track) return;
+    const nowMs = Date.now();
+    track.style.transition = "none";
+    track.style.transform = "translate3d(0, 0, 0)";
+    track.innerHTML = activeExams.map(function(ex, idx) {
+      return createExamCardHTML(ex, idx, nowMs);
+    }).join("");
+    updateLayoutModeIndicator();
+  }
+
+  function getTrackStepPixels(track) {
+    const firstCard = track ? track.firstElementChild : null;
+    if (!firstCard) return 0;
+    const cardRect = firstCard.getBoundingClientRect();
+    const style = window.getComputedStyle(track);
+    const gapPx = parseFloat(style.columnGap || style.gap || "0") || 0;
+    return cardRect.width + gapPx;
+  }
+
+  // ஒவ்வொரு பெட்டியும் வலது புறத்திலிருந்து இடப்புறமாக (Right-to-Left) நகர்ந்து செல்லும் செயல்பாடு
+  function slideNextExamCard(forceManual) {
+    if ((!forceManual && isCarouselPaused) || isCarouselAnimating) return;
+    const track = document.getElementById("hglActiveExamsGrid");
+    if (!track || track.children.length < 2) return;
+
+    const stepPx = getTrackStepPixels(track);
+    if (stepPx <= 0) return;
+
+    isCarouselAnimating = true;
+    track.style.transition = "transform " + CAROUSEL_ANIM_MS + "ms cubic-bezier(0.25, 0.85, 0.25, 1)";
+    track.style.transform = "translate3d(-" + stepPx + "px, 0, 0)";
+
+    setTimeout(function() {
+      track.style.transition = "none";
+      const firstCard = track.firstElementChild;
+      if (firstCard) {
+        track.appendChild(firstCard);
+      }
+      track.style.transform = "translate3d(0, 0, 0)";
+      void track.offsetWidth;
+      isCarouselAnimating = false;
+    }, CAROUSEL_ANIM_MS + 25);
+  }
+
+  function slidePrevExamCard() {
+    if (isCarouselAnimating) return;
+    const track = document.getElementById("hglActiveExamsGrid");
+    if (!track || track.children.length < 2) return;
+
+    const stepPx = getTrackStepPixels(track);
+    if (stepPx <= 0) return;
+
+    isCarouselAnimating = true;
+    const lastCard = track.lastElementChild;
+    if (lastCard) {
+      track.insertBefore(lastCard, track.firstElementChild);
+    }
+    track.style.transition = "none";
+    track.style.transform = "translate3d(-" + stepPx + "px, 0, 0)";
+    void track.offsetWidth;
+
+    requestAnimationFrame(function() {
+      track.style.transition = "transform " + CAROUSEL_ANIM_MS + "ms cubic-bezier(0.25, 0.85, 0.25, 1)";
+      track.style.transform = "translate3d(0, 0, 0)";
+      setTimeout(function() {
+        track.style.transition = "none";
+        isCarouselAnimating = false;
+      }, CAROUSEL_ANIM_MS + 25);
+    });
+  }
+
+  function startCarouselAutoSlide() {
+    stopCarouselAutoSlide();
+    carouselTimer = setInterval(function() {
+      slideNextExamCard(false);
+    }, CAROUSEL_INTERVAL_MS);
+  }
+
+  function stopCarouselAutoSlide() {
+    if (carouselTimer) {
+      clearInterval(carouselTimer);
+      carouselTimer = null;
+    }
+  }
 
   function tickDaysClocks() {
     const nowMs = Date.now();
     activeExams.forEach(function(ex) {
-      const el = document.querySelector('[data-hgl-clock="' + ex.id + '"]');
-      if (el) el.textContent = calcDaysOnlyCountdown(ex, nowMs).daysText;
+      const els = document.querySelectorAll('[data-hgl-clock="' + ex.id + '"]');
+      const txt = computeExamMetrics(ex, nowMs).daysText;
+      els.forEach(function(el) { el.textContent = txt; });
     });
   }
+
+  // ============================================================================
+  // AI AUTOMATIC LIVE NOTIFICATION DISCOVERY ENGINE (Gemini Flash + Watchlist Sync)
+  // ============================================================================
+  let isAiSyncRunning = false;
+
+  async function runAiAutoDiscovery2027Exams(isManualTrigger) {
+    if (isAiSyncRunning) return;
+    isAiSyncRunning = true;
+    const syncIcon = document.getElementById("hglAiSyncIcon");
+    const syncText = document.getElementById("hglAiSyncText");
+    if (syncIcon) syncIcon.textContent = "⏳";
+    if (syncText) syncText.textContent = "AI புதிய அறிவிப்புகளை ஆராய்கிறது...";
+
+    let newlyFoundCount = 0;
+    try {
+      // Optional custom Gemini API key from localStorage if configured by admin
+      const apiKey = localStorage.getItem("SVGNEXT_GEMINI_API_KEY") || "";
+      if (apiKey) {
+        const prompt = 'List officially released 2027 Indian UG higher education entrance exam notifications (after 12th standard, such as JEE Main 2027, NEET UG 2027, NIFT 2027, VITEEE 2027, CLAT 2027, UCEED 2027, AILET 2027, NID DAT 2027, SLAT 2027, NDA 2027) whose online application dates have been officially announced. Return ONLY a valid JSON array of objects with fields: id, nameTa, body, appStartDate (YYYY-MM-DD), appEndDate (YYYY-MM-DD), examDate (YYYY-MM-DD), officialUrl, guideUrl, isNewRelease (boolean).';
+        const resp = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" + encodeURIComponent(apiKey), {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: prompt }] }],
+            generationConfig: { temperature: 0.1, responseMimeType: "application/json" }
+          })
+        });
+        if (resp.ok) {
+          const data = await resp.json();
+          const rawText = data?.candidates?.[0]?.content?.parts?.[0]?.text || "[]";
+          const parsed = JSON.parse(rawText);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            const validItems = parsed.filter(function(x) {
+              return x && x.id && x.nameTa && /^\d{4}-\d{2}-\d{2}$/.test(x.appEndDate) && /^\d{4}-\d{2}-\d{2}$/.test(x.examDate);
+            });
+            if (validItems.length > 0) {
+              localStorage.setItem(STORAGE_KEY_AI_EXAMS, JSON.stringify(validItems));
+              newlyFoundCount = validItems.length;
+            }
+          }
+        }
+      }
+    } catch (err) {
+      // Fallback to date-triggered watchlist & curated 2027 notifications seamlessly
+    }
+
+    const prevCount = activeExams.length;
+    syncAndSortActiveExams();
+    renderActiveExamCards();
+    initFlashMatDisplay();
+
+    setTimeout(function() {
+      isAiSyncRunning = false;
+      if (syncIcon) syncIcon.textContent = "🤖";
+      if (syncText) {
+        const diff = activeExams.length - prevCount;
+        if (diff > 0 || newlyFoundCount > 0) {
+          syncText.textContent = "AI புதுப்பிக்கப்பட்டது (" + activeExams.length + " அறிவிப்புகள்)";
+        } else if (isManualTrigger) {
+          syncText.textContent = "AI சரிபார்க்கப்பட்டது • வரிசைப்படுத்தப்பட்டது";
+        } else {
+          syncText.textContent = "AI தானியங்கி கண்காணிப்பு: நேரலை";
+        }
+      }
+    }, 550);
+  }
+
+  window.triggerManualAiExamSync = function() {
+    runAiAutoDiscovery2027Exams(true);
+  };
+
+  // Public helper so external scripts or admin console can inject a new 2027 exam notification at any time
+  window.registerNew2027ExamNotification = function(newExamObj) {
+    if (!newExamObj || !newExamObj.id || !newExamObj.nameTa) return false;
+    try {
+      const existing = JSON.parse(localStorage.getItem(STORAGE_KEY_AI_EXAMS) || "[]");
+      const filtered = existing.filter(function(x) { return x.id !== newExamObj.id; });
+      newExamObj.isNewRelease = true;
+      filtered.unshift(newExamObj);
+      localStorage.setItem(STORAGE_KEY_AI_EXAMS, JSON.stringify(filtered));
+      syncAndSortActiveExams();
+      renderActiveExamCards();
+      initFlashMatDisplay();
+      return true;
+    } catch (e) {
+      return false;
+    }
+  };
 
   // ============================================================================
   // News_Banner.html MAT-UNROLL FLASH NEWS CONTROLLER (2 Visible Stationary Ribbons ABOVE Countdown)
@@ -3244,7 +3696,7 @@ body.theme-cyber-dark #admissionTimelineSec p {
       }, 150 + idx * 500);
     });
 
-    nextInsertIdx = count % allFlashNewsItems.length;
+    nextInsertIdx = count % Math.max(1, allFlashNewsItems.length);
     setTimeout(function() {
       startFlashAutoScroll();
     }, 150 + count * 500 + 1800);
@@ -3296,6 +3748,7 @@ body.theme-cyber-dark #admissionTimelineSec p {
   function shiftFlashPrev() {
     if (isFlashTransitioning || !flowContainer) return;
     const total = allFlashNewsItems.length;
+    if (total < 2) return;
     nextInsertIdx = (nextInsertIdx - VISIBLE_FLASH_COUNT - 1 + total * 2) % total;
     flowContainer.innerHTML = "";
     const count = Math.min(total, VISIBLE_FLASH_COUNT);
@@ -3326,14 +3779,67 @@ body.theme-cyber-dark #admissionTimelineSec p {
     matContainer.addEventListener("touchend", function() { isFlashPaused = false; });
   }
 
-  const btnPrev = document.getElementById("btnHglPrevFlash");
-  const btnNext = document.getElementById("btnHglNextFlash");
-  if (btnPrev) btnPrev.addEventListener("click", function() { shiftFlashPrev(); });
-  if (btnNext) btnNext.addEventListener("click", function() { shiftFlashUp(true); });
+  const carouselViewport = document.getElementById("hglCarouselViewport");
+  if (carouselViewport) {
+    carouselViewport.addEventListener("mouseenter", function() { isCarouselPaused = true; });
+    carouselViewport.addEventListener("mouseleave", function() {
+      const pauseBtn = document.getElementById("btnHglCarouselPause");
+      if (!pauseBtn || pauseBtn.getAttribute("data-manual-paused") !== "1") {
+        isCarouselPaused = false;
+      }
+    });
+    carouselViewport.addEventListener("touchstart", function() { isCarouselPaused = true; }, { passive: true });
+    carouselViewport.addEventListener("touchend", function() {
+      const pauseBtn = document.getElementById("btnHglCarouselPause");
+      if (!pauseBtn || pauseBtn.getAttribute("data-manual-paused") !== "1") {
+        isCarouselPaused = false;
+      }
+    });
+  }
 
+  const btnPrevFlash = document.getElementById("btnHglPrevFlash");
+  const btnNextFlash = document.getElementById("btnHglNextFlash");
+  if (btnPrevFlash) btnPrevFlash.addEventListener("click", function() { shiftFlashPrev(); });
+  if (btnNextFlash) btnNextFlash.addEventListener("click", function() { shiftFlashUp(true); });
+
+  const btnCarPrev  = document.getElementById("btnHglCarouselPrev");
+  const btnCarNext  = document.getElementById("btnHglCarouselNext");
+  const btnCarPause = document.getElementById("btnHglCarouselPause");
+  if (btnCarPrev) btnCarPrev.addEventListener("click", function() { slidePrevExamCard(); });
+  if (btnCarNext) btnCarNext.addEventListener("click", function() { slideNextExamCard(true); });
+  if (btnCarPause) {
+    btnCarPause.addEventListener("click", function() {
+      const manualPaused = btnCarPause.getAttribute("data-manual-paused") === "1";
+      if (manualPaused) {
+        btnCarPause.setAttribute("data-manual-paused", "0");
+        isCarouselPaused = false;
+        btnCarPause.textContent = "⏸";
+        btnCarPause.style.background = "";
+        btnCarPause.style.color = "";
+      } else {
+        btnCarPause.setAttribute("data-manual-paused", "1");
+        isCarouselPaused = true;
+        btnCarPause.textContent = "▶";
+        btnCarPause.style.background = "#facc15";
+        btnCarPause.style.color = "#090d16";
+      }
+    });
+  }
+
+  window.addEventListener("resize", function() {
+    updateLayoutModeIndicator();
+  }, { passive: true });
+
+  // Initialize 3-Tier Priority Sort, Carousel, Flash News, and AI Live Discovery
+  syncAndSortActiveExams();
   renderActiveExamCards();
   initFlashMatDisplay();
+  startCarouselAutoSlide();
   setInterval(tickDaysClocks, 60000);
+
+  // Run AI automatic discovery check on startup and every 15 minutes
+  setTimeout(function() { runAiAutoDiscovery2027Exams(false); }, 1200);
+  setInterval(function() { runAiAutoDiscovery2027Exams(false); }, 900000);
 })();
 </script>
 
