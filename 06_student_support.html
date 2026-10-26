@@ -9105,19 +9105,22 @@ body.theme-cyber-dark li {
       <span class="btn-text">வழிகாட்டி முகப்பு</span>
     </a>
     <span class="nav-menu-separator">▶</span>
-    <a class="nav-menu-btn btn-current-page" href="#supportTwoBoxHubGrid" onclick="switchSupportHubView('all', 'supportTwoBoxHubGrid', true); return false;" title="கட்-ஆஃப் &amp; மாணவர் உதவி முதன்மைப் பக்கம் (2 பெட்டிகள்)" style="text-decoration: none; cursor: pointer;">
+    <a class="nav-menu-btn btn-current-page" href="#supportTwoBoxHubGrid" onclick="resetToTwoBoxesHome(); return false;" title="கட்-ஆஃப் &amp; மாணவர் உதவி முதன்மைப் பக்கம் (2 பெட்டிகள் மட்டும்)" style="text-decoration: none; cursor: pointer;">
       <span class="btn-icon">🧮</span>
-      <span class="btn-text">கட்-ஆஃப் &amp; மாணவர் உதவி முதன்மைப் பக்கம்</span>
+      <span class="btn-text">கட்-ஆஃப் &amp; மாணவர் உதவி (2 பெட்டிகள்)</span>
     </a>
     <span class="nav-menu-separator" id="activePillarBreadcrumbSep" style="display: none;">▶</span>
     <span id="activePillarBreadcrumbBadge" style="display: none; background: #ede9fe; color: #5b21b6; border: 1.2px solid #c4b5fd; padding: 4px 11px; border-radius: 999px; font-size: 0.78rem; font-weight: 900;"></span>
   </div>
   <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
-    <button type="button" onclick="switchSupportHubView('cutoff', 'cutoff-tools-sec', true)" style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: #ffffff; border: 1.2px solid #93c5fd; padding: 5px 12px; border-radius: 8px; font-family: inherit; font-weight: 800; font-size: 0.78rem; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);">
-      <span>🧮</span><span>1. கட்-ஆஃப் கருவிகள் ➔</span>
+    <button type="button" id="topNavBtnHome2Boxes" onclick="resetToTwoBoxesHome()" style="display: none; background: #f8fafc; color: #0f172a; border: 1.2px solid #94a3b8; padding: 5px 11px; border-radius: 8px; font-family: inherit; font-weight: 800; font-size: 0.76rem; cursor: pointer; align-items: center; gap: 4px;">
+      <span>🔙</span><span>2 பெட்டிகள் முகப்பு</span>
     </button>
-    <button type="button" onclick="switchSupportHubView('benefits', 'scholarship-matcher-sec', true)" style="background: linear-gradient(135deg, #6d28d9 0%, #059669 100%); color: #ffffff; border: 1.2px solid #fde047; padding: 5px 12px; border-radius: 8px; font-family: inherit; font-weight: 800; font-size: 0.78rem; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; box-shadow: 0 2px 6px rgba(109, 40, 217, 0.3);">
-      <span>🎁</span><span>2. சலுகைகள் &amp; உதவி மையம் ➔</span>
+    <button type="button" onclick="openSupportPillar('cutoff', null, true)" style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: #ffffff; border: 1.2px solid #93c5fd; padding: 5px 12px; border-radius: 8px; font-family: inherit; font-weight: 800; font-size: 0.78rem; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);">
+      <span>🧮</span><span>1. கட்-ஆஃப் கருவிகள்</span>
+    </button>
+    <button type="button" onclick="openSupportPillar('benefits', null, true)" style="background: linear-gradient(135deg, #6d28d9 0%, #059669 100%); color: #ffffff; border: 1.2px solid #fde047; padding: 5px 12px; border-radius: 8px; font-family: inherit; font-weight: 800; font-size: 0.78rem; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; box-shadow: 0 2px 6px rgba(109, 40, 217, 0.3);">
+      <span>🎁</span><span>2. சலுகைகள் &amp; உதவி மையம்</span>
     </button>
   </div>
 </nav>
@@ -9126,64 +9129,65 @@ body.theme-cyber-dark li {
   <header class="header-banner">
     <h1 class="banner-main-title">கட்-ஆஃப் கருவிகள் &amp; மாணவர் சலுகைகள் உதவி மையம்</h1>
     <div style="font-family: 'Inter', sans-serif; font-size: clamp(0.80rem, 1.05vw, 0.95rem); font-weight: 800; color: #cbd5e1; letter-spacing: 1.5px; margin: 0 0 6px 0; text-transform: uppercase; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
-      CUTOFF TOOLS &amp; STUDENT SUPPORT — TWO-PILLAR MAIN HUB PORTAL
+      CUTOFF TOOLS &amp; STUDENT SUPPORT — INTERACTIVE TWO-BOX PORTAL
     </div>
     <p class="banner-desc">
-      நுழைவுத்தேர்வுகள் முதன்மைப் பக்கம் போல இரு முதன்மைப் பெட்டிகளாகப் பிரிக்கப்பட்ட ஒருங்கிணைந்த தளம் — <strong>(1) உயர்கல்வி கட்-ஆஃப் கால்குலேட்டர்கள், Sports Quota கணிப்பான் &amp; சேர்க்கை நெறிமுறைகள்</strong> மற்றும் <strong>(2) மாணவர்களுக்கான உயர்கல்விச் சலுகைகள் (Popup &amp; 1-Click PDF), 7.5% &amp; 69% இடஒதுக்கீடு, ஆவண சரிபார்ப்பு &amp; 14417 உதவி மையம்</strong>.
+      கீழே உள்ள <strong>இரண்டு முதன்மைப் பெட்டிகளில்</strong> (அல்லது அதனுள் உள்ள <strong>மாத்திரை பொத்தான்களில்</strong>) உங்களுக்குத் தேவையானதை கிளிக் செய்தால், <strong>அந்தக் குறிப்பிட்ட பகுதி மட்டுமே</strong> உடனடியாகத் திரையில் தோன்றும்.
     </p>
     <div class="banner-features-ribbon">
-      <div class="ribbon-item" style="cursor: pointer;" onclick="switchSupportHubView('cutoff', 'cutoff-tools-sec', true)"><span class="ribbon-icon">🧮</span><span>பெட்டி 1: கட்-ஆஃப் கருவிகள் (7 பாடப்பிரிவுகள் + Sports Quota)</span></div>
+      <div class="ribbon-item" style="cursor: pointer;" onclick="openSupportPillar('cutoff', null, true)"><span class="ribbon-icon">🧮</span><span>பெட்டி 1: கட்-ஆஃப் கருவிகள் (4 பிரிவுகள்)</span></div>
       <div class="ribbon-dot">•</div>
-      <div class="ribbon-item" style="cursor: pointer;" onclick="switchSupportHubView('benefits', 'scholarship-matcher-sec', true)"><span class="ribbon-icon">🎁</span><span>பெட்டி 2: மாணவர் சலுகைகள் (1-Click PDF) &amp; 14417 உதவி மையம்</span></div>
+      <div class="ribbon-item" style="cursor: pointer;" onclick="openSupportPillar('benefits', null, true)"><span class="ribbon-icon">🎁</span><span>பெட்டி 2: சலுகைகள் &amp; 14417 உதவி மையம் (10 பிரிவுகள்)</span></div>
+      <div class="ribbon-dot">•</div>
+      <div class="ribbon-item" style="cursor: pointer;" onclick="openScholarshipEligibilityModal()"><span class="ribbon-icon">📄</span><span>1-Click சலுகை தகுதி PDF பாப்பப்</span></div>
     </div>
   </header>
 </div>
 
 <!-- ==========================================================================
-     ENTRANCE-MAIN-PAGE STYLE TWO-BOX HUB GRID (இரண்டு முதன்மைப் பெட்டிகள்)
-     Box 01: 🧮 கட்-ஆஃப் கருவிகள் (Cut-off Calculators & Admission Guidelines)
-     Box 02: 🎁 மாணவர்களுக்கான சலுகைகள் மற்றும் உதவி மையம் (Scholarships & Helpdesk)
+     INITIAL VIEW: ONLY THESE TWO BOXES ARE VISIBLE WHEN STUDENT CLICKS MENU 06
+     Clicking a Box shows all sections of that Box; clicking a Pill shows ONLY that specific section!
      ========================================================================== -->
 <style>
   .support-two-box-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    margin: 18px 0 20px 0;
+    gap: 22px;
+    margin: 18px 0 22px 0;
     width: 100%;
   }
   .support-hub-course-card {
     background: #ffffff;
-    border: 1.8px solid #cbd5e1;
+    border: 2px solid #cbd5e1;
     border-radius: 18px;
-    padding: 20px 20px 18px 20px;
+    padding: 22px 20px 18px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: all 0.24s ease;
-    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    transition: all 0.25s ease;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
     position: relative;
     cursor: pointer;
   }
   .support-hub-course-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.14);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.15);
   }
   .support-hub-course-card.hub-box-cutoff {
     border-top: 6px solid #2563eb;
-    background: linear-gradient(180deg, #eff6ff 0%, #ffffff 28%);
+    background: linear-gradient(180deg, #eff6ff 0%, #ffffff 30%);
   }
   .support-hub-course-card.hub-box-benefits {
     border-top: 6px solid #7c3aed;
-    background: linear-gradient(180deg, #faf5ff 0%, #ffffff 28%);
+    background: linear-gradient(180deg, #faf5ff 0%, #ffffff 30%);
   }
   .support-hub-course-card.active-hub-box.hub-box-cutoff {
     border-color: #2563eb;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.22), 0 12px 28px rgba(37, 99, 235, 0.15);
+    box-shadow: 0 0 0 3.5px rgba(37, 99, 235, 0.25), 0 14px 30px rgba(37, 99, 235, 0.16);
   }
   .support-hub-course-card.active-hub-box.hub-box-benefits {
     border-color: #7c3aed;
-    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.22), 0 12px 28px rgba(124, 58, 237, 0.15);
+    box-shadow: 0 0 0 3.5px rgba(124, 58, 237, 0.25), 0 14px 30px rgba(124, 58, 237, 0.16);
   }
   .hub-card-top-row {
     display: flex;
@@ -9230,13 +9234,13 @@ body.theme-cyber-dark li {
     margin-bottom: 12px;
   }
   .hub-card-icon-box {
-    width: 52px;
-    height: 52px;
+    width: 54px;
+    height: 54px;
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.65rem;
+    font-size: 1.7rem;
     flex-shrink: 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   }
@@ -9251,7 +9255,7 @@ body.theme-cyber-dark li {
     border: 1.5px solid #fde047;
   }
   .hub-card-title {
-    font-size: clamp(1.12rem, 1.55vw, 1.32rem);
+    font-size: clamp(1.14rem, 1.55vw, 1.34rem);
     font-weight: 900;
     color: #0f172a;
     line-height: 1.3;
@@ -9277,16 +9281,23 @@ body.theme-cyber-dark li {
   }
   .hub-mini-feature-item {
     background: #f8fafc;
-    border: 1.2px solid #e2e8f0;
+    border: 1.3px solid #e2e8f0;
     border-radius: 10px;
     padding: 8px 10px;
     transition: all 0.18s ease;
     text-align: left;
+    cursor: pointer;
   }
   .hub-mini-feature-item:hover {
     background: #ffffff;
-    border-color: #94a3b8;
-    transform: translateY(-1px);
+    border-color: #64748b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+  }
+  .hub-mini-feature-item.active-pill-card {
+    background: #eff6ff;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
   }
   .hub-mini-feature-title {
     font-size: 0.79rem;
@@ -9303,6 +9314,15 @@ body.theme-cyber-dark li {
     font-weight: 600;
     line-height: 1.35;
   }
+  .hub-pill-instruction {
+    font-size: 0.74rem;
+    font-weight: 800;
+    color: #475569;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
   .hub-card-tags {
     display: flex;
     flex-wrap: wrap;
@@ -9312,9 +9332,9 @@ body.theme-cyber-dark li {
   .hub-card-tag {
     font-size: 0.75rem;
     font-weight: 800;
-    padding: 4px 10px;
+    padding: 5px 10px;
     border-radius: 8px;
-    border: 1px solid;
+    border: 1.2px solid;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.18s ease;
@@ -9328,18 +9348,22 @@ body.theme-cyber-dark li {
     color: #1d4ed8;
     border-color: #bfdbfe;
   }
-  .hub-card-tag.blue:hover {
+  .hub-card-tag.blue:hover, .hub-card-tag.blue.active-pill {
     background: #2563eb;
     color: #ffffff;
+    border-color: #1e40af;
+    box-shadow: 0 3px 8px rgba(37, 99, 235, 0.3);
   }
   .hub-card-tag.purple {
     background: #faf5ff;
     color: #6d28d9;
     border-color: #ddd6fe;
   }
-  .hub-card-tag.purple:hover {
+  .hub-card-tag.purple:hover, .hub-card-tag.purple.active-pill {
     background: #6d28d9;
     color: #ffffff;
+    border-color: #4c1d95;
+    box-shadow: 0 3px 8px rgba(109, 40, 217, 0.3);
   }
   .hub-btn-details {
     display: flex;
@@ -9349,7 +9373,7 @@ body.theme-cyber-dark li {
     padding: 11px 16px;
     border-radius: 11px;
     font-family: inherit;
-    font-size: 0.88rem;
+    font-size: 0.86rem;
     font-weight: 900;
     color: #ffffff;
     text-decoration: none;
@@ -9369,61 +9393,74 @@ body.theme-cyber-dark li {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
   }
-  /* Module Switcher Bar */
-  .support-pillar-switcher-bar {
+  /* Active Selection Control Bar (Hidden initially when only 2 boxes are shown!) */
+  .support-active-selection-bar {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    border: 1.8px solid #334155;
+    border: 2px solid #eab308;
     border-radius: 14px;
-    padding: 10px 14px;
-    margin-bottom: 14px;
-    display: flex;
+    padding: 12px 16px;
+    margin: 6px 0 16px 0;
+    display: none;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px;
-    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.18);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.22);
   }
-  .support-pillar-tab-group {
+  .support-selection-status {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: #ffffff;
+    font-size: 0.86rem;
+    font-weight: 900;
+  }
+  .support-selection-actions {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 8px;
   }
-  .support-pillar-tab-btn {
-    background: rgba(255, 255, 255, 0.08);
-    color: #e2e8f0;
-    border: 1.5px solid rgba(148, 163, 184, 0.35);
-    border-radius: 10px;
-    padding: 8px 14px;
+  .support-ctrl-btn {
+    border-radius: 9px;
+    padding: 7px 13px;
     font-family: inherit;
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     font-weight: 800;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 7px;
-    transition: all 0.2s ease;
+    gap: 5px;
+    transition: all 0.18s ease;
+    border: 1.2px solid;
   }
-  .support-pillar-tab-btn:hover {
-    background: rgba(255, 255, 255, 0.16);
+  .support-ctrl-btn.btn-back-boxes {
+    background: #fef08a;
+    color: #0f172a;
+    border-color: #eab308;
+  }
+  .support-ctrl-btn.btn-back-boxes:hover {
+    background: #fde047;
+    transform: translateY(-1px);
+  }
+  .support-ctrl-btn.btn-show-pillar-all {
+    background: rgba(59, 130, 246, 0.22);
+    color: #bfdbfe;
+    border-color: #60a5fa;
+  }
+  .support-ctrl-btn.btn-show-pillar-all:hover {
+    background: #2563eb;
     color: #ffffff;
   }
-  .support-pillar-tab-btn.active-cutoff {
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-    color: #ffffff;
-    border-color: #fde047;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  .support-ctrl-btn.btn-switch-other-box {
+    background: rgba(168, 85, 247, 0.22);
+    color: #e9d5ff;
+    border-color: #c084fc;
   }
-  .support-pillar-tab-btn.active-benefits {
-    background: linear-gradient(135deg, #7c3aed 0%, #059669 100%);
+  .support-ctrl-btn.btn-switch-other-box:hover {
+    background: #7c3aed;
     color: #ffffff;
-    border-color: #fde047;
-    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
-  }
-  .support-pillar-tab-btn.active-all {
-    background: linear-gradient(135deg, #0284c7 0%, #0f766e 100%);
-    color: #ffffff;
-    border-color: #fde047;
   }
   @media (max-width: 900px) {
     .support-two-box-grid {
@@ -9447,10 +9484,10 @@ body.theme-cyber-dark li {
   <!-- ========================================================
        பெட்டி 01: 🧮 கட்-ஆஃப் கருவிகள் (CUTOFF TOOLS & CALCULATORS)
        ======================================================== -->
-  <div class="course-card support-hub-course-card hub-box-cutoff" id="hubCardCutoffTools" onclick="switchSupportHubView('cutoff', 'cutoff-tools-sec', true)">
+  <div class="course-card support-hub-course-card hub-box-cutoff" id="hubCardCutoffTools" onclick="openSupportPillar('cutoff', null, true)">
     <div>
       <div class="hub-card-top-row">
-        <span class="hub-card-badge blue">01 / CUTOFF TOOLS &amp; CALCULATORS</span>
+        <span class="hub-card-badge blue">பெட்டி 01 / CUTOFF TOOLS &amp; CALCULATORS</span>
         <span class="hub-card-count-pill">⚡ 7 கட்-ஆஃப் கணிப்பான்கள் + Sports Quota</span>
       </div>
       <div class="hub-card-header">
@@ -9464,38 +9501,39 @@ body.theme-cyber-dark li {
         பொறியியல் (TNEA 200), மருத்துவம் (NEET 720), வேளாண்மை (TNAU), கால்நடை &amp; துணை மருத்துவம் (TANUVAS / Paramedical), சட்டம் (TNDALU), கலை &amp; அறிவியல் (TNGASA 400), பாலிடெக்னிக் (500) ஆகிய 7 பிரிவுகளின் கட்-ஆஃப் கால்குலேட்டர்கள், விளையாட்டு வீரர்கள் (Sports Quota) சான்றிதழ் மதிப்பெண் கணிப்பான் மற்றும் சேர்க்கை நெறிமுறைகள்.
       </p>
 
-      <!-- 2x2 Mini Highlights inside Box 01 -->
+      <!-- 2x2 Mini Highlights inside Box 01 (Each opens ONLY that specific section!) -->
       <div class="hub-mini-feature-grid" onclick="event.stopPropagation();">
-        <div class="hub-mini-feature-item" onclick="switchSupportHubView('cutoff', 'cutoff-tools-sec', true)">
+        <div class="hub-mini-feature-item" data-target-sec="cutoff-tools-sec" onclick="openSupportPillar('cutoff', 'cutoff-tools-sec', true)">
           <div class="hub-mini-feature-title"><span>🧮</span><span>உயர்கல்வி கட்-ஆஃப் கால்குலேட்டர்</span></div>
           <div class="hub-mini-feature-sub">TNEA, NEET, TNAU, TANUVAS, சட்டம், கலை &amp; பாலிடெக்னிக் (7 பிரிவுகள்)</div>
         </div>
-        <div class="hub-mini-feature-item" onclick="switchSupportHubView('cutoff', 'sports-tools-sec', true)">
+        <div class="hub-mini-feature-item" data-target-sec="sports-tools-sec" onclick="openSupportPillar('cutoff', 'sports-tools-sec', true)">
           <div class="hub-mini-feature-title"><span>🏆</span><span>Sports Quota மதிப்பெண் கணிப்பான்</span></div>
           <div class="hub-mini-feature-sub">சர்வதேச / தேசிய / மாநில சான்றிதழ் 500 மதிப்பெண் கணக்கீடு &amp; PDF</div>
         </div>
-        <div class="hub-mini-feature-item" onclick="switchSupportHubView('cutoff', 'entrance-stream-sec', true)">
+        <div class="hub-mini-feature-item" data-target-sec="entrance-stream-sec" onclick="openSupportPillar('cutoff', 'entrance-stream-sec', true)">
           <div class="hub-mini-feature-title"><span>✍️</span><span>நுழைவுத்தேர்வு வழிகாட்டி</span></div>
           <div class="hub-mini-feature-sub">NEET, JEE, CUET, CLAT, NATA, IMU-CET சேர்க்கை நெறிமுறைகள்</div>
         </div>
-        <div class="hub-mini-feature-item" onclick="switchSupportHubView('cutoff', 'direct-stream-sec', true)">
+        <div class="hub-mini-feature-item" data-target-sec="direct-stream-sec" onclick="openSupportPillar('cutoff', 'direct-stream-sec', true)">
           <div class="hub-mini-feature-title"><span>🎯</span><span>நேரடிச் சேர்க்கை &amp; Choice Filling</span></div>
           <div class="hub-mini-feature-sub">+2 மதிப்பெண் ஒற்றைச் சாளர கலந்தாய்வு &amp; AI சாய்ஸ் ஃபில்லிங் ஆப்</div>
         </div>
       </div>
 
-      <!-- Clickable Quick Tags -->
+      <div class="hub-pill-instruction">👇 <span>குறிப்பிட்ட மாத்திரையை கிளிக் செய்தால் அப்பகுதி மட்டும் தோன்றும்:</span></div>
+      <!-- Clickable Quick Tags (Each Pill shows ONLY that specific section!) -->
       <div class="hub-card-tags" onclick="event.stopPropagation();">
-        <button type="button" class="hub-card-tag blue" onclick="switchSupportHubView('cutoff', 'cutoff-tools-sec', true)">🧮 7-பிரிவு கட்-ஆஃப் கால்குலேட்டர்</button>
-        <button type="button" class="hub-card-tag blue" onclick="switchSupportHubView('cutoff', 'sports-tools-sec', true)">🏆 விளையாட்டுப் பிரிவு (500 Marks)</button>
-        <button type="button" class="hub-card-tag blue" onclick="switchSupportHubView('cutoff', 'entrance-stream-sec', true)">✍️ நுழைவுத்தேர்வு நெறிமுறைகள்</button>
-        <button type="button" class="hub-card-tag blue" onclick="switchSupportHubView('cutoff', 'direct-stream-sec', true)">🎯 நேரடிச் சேர்க்கை நெறிமுறைகள்</button>
+        <button type="button" class="hub-card-tag blue" data-target-sec="cutoff-tools-sec" onclick="openSupportPillar('cutoff', 'cutoff-tools-sec', true)">🧮 7-பிரிவு கட்-ஆஃப் கால்குலேட்டர்</button>
+        <button type="button" class="hub-card-tag blue" data-target-sec="sports-tools-sec" onclick="openSupportPillar('cutoff', 'sports-tools-sec', true)">🏆 விளையாட்டுப் பிரிவு (500 Marks)</button>
+        <button type="button" class="hub-card-tag blue" data-target-sec="entrance-stream-sec" onclick="openSupportPillar('cutoff', 'entrance-stream-sec', true)">✍️ நுழைவுத்தேர்வு நெறிமுறைகள்</button>
+        <button type="button" class="hub-card-tag blue" data-target-sec="direct-stream-sec" onclick="openSupportPillar('cutoff', 'direct-stream-sec', true)">🎯 நேரடிச் சேர்க்கை நெறிமுறைகள்</button>
         <a class="hub-card-tag blue" href="01_02_C_Choice_Filling_App.html">🩺 NEET சாய்ஸ் ஃபில்லிங் ↗</a>
         <a class="hub-card-tag blue" href="01_03_C_Choice_Filling_App.html">⚙️ TNEA சாய்ஸ் ஃபில்லிங் ↗</a>
       </div>
     </div>
-    <button type="button" class="btn-details hub-btn-details blue" onclick="event.stopPropagation(); switchSupportHubView('cutoff', 'cutoff-tools-sec', true)">
-      <span>🧮 கட்-ஆஃப் கருவிகள் பகுதியைத் திறக்க (Open Cut-off Tools)</span>
+    <button type="button" class="btn-details hub-btn-details blue" onclick="event.stopPropagation(); openSupportPillar('cutoff', null, true)">
+      <span>🧮 கட்-ஆஃப் கருவிகள் (அனைத்து 4 பகுதிகளையும் திறக்க)</span>
       <span>›</span>
     </button>
   </div>
@@ -9504,10 +9542,10 @@ body.theme-cyber-dark li {
        பெட்டி 02: 🎁 மாணவர்களுக்கான சலுகைகள் மற்றும் உதவி மையம்
        (STUDENT SCHOLARSHIPS, RESERVATIONS & HELPDESK 14417)
        ======================================================== -->
-  <div class="course-card support-hub-course-card hub-box-benefits" id="hubCardStudentBenefits" onclick="switchSupportHubView('benefits', 'scholarship-matcher-sec', true)">
+  <div class="course-card support-hub-course-card hub-box-benefits" id="hubCardStudentBenefits" onclick="openSupportPillar('benefits', null, true)">
     <div>
       <div class="hub-card-top-row">
-        <span class="hub-card-badge purple">02 / STUDENT BENEFITS &amp; HELPDESK</span>
+        <span class="hub-card-badge purple">பெட்டி 02 / STUDENT BENEFITS &amp; HELPDESK</span>
         <span class="hub-card-count-pill">🎁 15+ சலுகைகள் (1-Click PDF) • ☎️ 14417</span>
       </div>
       <div class="hub-card-header">
@@ -9521,40 +9559,43 @@ body.theme-cyber-dark li {
         பள்ளி வகை, சமூகப் பிரிவு (Community), குடும்ப வருமானம் மற்றும் பின்னணி அடிப்படையில் மாணவருக்கான அனைத்து உயர்கல்விச் சலுகைகளையும் கண்டறியும் பாப்பப் &amp; 1-Click PDF வழிகாட்டி, 7.5% அரசுப் பள்ளி இடஒதுக்கீடு, 69% சமூக இடஒதுக்கீடு, 14 சான்றிதழ்கள் பட்டியல், கலந்தாய்வு படிநிலைகள் மற்றும் 14417 / மாவட்ட உதவி மையம்.
       </p>
 
-      <!-- 2x2 Mini Highlights inside Box 02 -->
+      <!-- 2x2 Mini Highlights inside Box 02 (Each opens ONLY that specific section!) -->
       <div class="hub-mini-feature-grid" onclick="event.stopPropagation();">
-        <div class="hub-mini-feature-item" onclick="switchSupportHubView('benefits', 'scholarship-matcher-sec', true)">
+        <div class="hub-mini-feature-item" data-target-sec="scholarship-matcher-sec" onclick="openSupportPillar('benefits', 'scholarship-matcher-sec', true)">
           <div class="hub-mini-feature-title"><span>🎁</span><span>சலுகை &amp; உதவித்தொகை வழிகாட்டி</span></div>
           <div class="hub-mini-feature-sub">பாப்பப் திரை, குரல் வழிகாட்டி &amp; 1-Click A4 PDF சான்றறிக்கை</div>
         </div>
-        <div class="hub-mini-feature-item" onclick="switchSupportHubView('benefits', 'quota-7point5-sec', true)">
-          <div class="hub-mini-feature-title"><span>🏫</span><span>7.5% &amp; 69% இடஒதுக்கீட்டுச் சலுகைகள்</span></div>
-          <div class="hub-mini-feature-sub">100% கட்டண விலக்கு, புதுமைப் பெண் / தமிழ்ப் புதல்வன் &amp; முதல் பட்டதாரி</div>
+        <div class="hub-mini-feature-item" data-target-sec="quota-7point5-sec" onclick="openSupportPillar('benefits', 'quota-7point5-sec', true)">
+          <div class="hub-mini-feature-title"><span>🏫</span><span>7.5% அரசுப் பள்ளி இடஒதுக்கீடு</span></div>
+          <div class="hub-mini-feature-sub">மருத்துவம், பொறியியல், வேளாண்மை, சட்டத்தில் 100% கட்டண விலக்கு</div>
         </div>
-        <div class="hub-mini-feature-item" onclick="switchSupportHubView('benefits', 'doc-checklist-sec', true)">
-          <div class="hub-mini-feature-title"><span>📄</span><span>14 சான்றிதழ்கள் &amp; கலந்தாய்வு நிலைகள்</span></div>
-          <div class="hub-mini-feature-sub">Interactive ஆவண சரிபார்ப்புப் பட்டியல் &amp; 6 கலந்தாய்வு படிநிலைகள்</div>
+        <div class="hub-mini-feature-item" data-target-sec="doc-checklist-sec" onclick="openSupportPillar('benefits', 'doc-checklist-sec', true)">
+          <div class="hub-mini-feature-title"><span>📄</span><span>14 சான்றிதழ்கள் சரிபார்ப்புப் பட்டியல்</span></div>
+          <div class="hub-mini-feature-sub">Interactive ஆவண சரிபார்ப்புப் பட்டியல் &amp; இ-சேவை வழிகாட்டி</div>
         </div>
-        <div class="hub-mini-feature-item" onclick="switchSupportHubView('benefits', 'helpline-bento-sec', true)">
-          <div class="hub-mini-feature-title"><span>📞</span><span>14417 &amp; மாவட்ட வழிகாட்டி மையம்</span></div>
-          <div class="hub-mini-feature-sub">14417, 14416, 1098, சிவகங்கை மையம் (04575-246233), FAQs &amp; போர்ட்டல்கள்</div>
+        <div class="hub-mini-feature-item" data-target-sec="helpline-bento-sec" onclick="openSupportPillar('benefits', 'helpline-bento-sec', true)">
+          <div class="hub-mini-feature-title"><span>📞</span><span>14417 &amp; உதவி எண்கள் (24x7)</span></div>
+          <div class="hub-mini-feature-sub">14417, 14416, 1098 &amp; சிவகங்கை மாவட்ட வழிகாட்டி மையம்</div>
         </div>
       </div>
 
-      <!-- Clickable Quick Tags -->
+      <div class="hub-pill-instruction">👇 <span>குறிப்பிட்ட மாத்திரையை கிளிக் செய்தால் அப்பகுதி மட்டும் தோன்றும்:</span></div>
+      <!-- Clickable Quick Tags (Each Pill shows ONLY that specific section!) -->
       <div class="hub-card-tags" onclick="event.stopPropagation();">
-        <button type="button" class="hub-card-tag purple" onclick="switchSupportHubView('benefits', 'scholarship-matcher-sec', true)">🎁 சலுகை &amp; உதவித்தொகை PDF</button>
-        <button type="button" class="hub-card-tag purple" onclick="switchSupportHubView('benefits', 'quota-7point5-sec', true)">🏫 7.5% அரசுப் பள்ளி சலுகை</button>
-        <button type="button" class="hub-card-tag purple" onclick="switchSupportHubView('benefits', 'reservation-sec', true)">🏛️ 69% &amp; மத்திய இடஒதுக்கீடு</button>
-        <button type="button" class="hub-card-tag purple" onclick="switchSupportHubView('benefits', 'doc-checklist-sec', true)">📄 14 சான்றிதழ்கள் பட்டியல்</button>
-        <button type="button" class="hub-card-tag purple" onclick="switchSupportHubView('benefits', 'counselling-flow-sec', true)">🔄 கலந்தாய்வு 6 படிநிலைகள்</button>
-        <button type="button" class="hub-card-tag purple" onclick="switchSupportHubView('benefits', 'helpline-bento-sec', true)">📞 14417 &amp; உதவி எண்கள்</button>
-        <button type="button" class="hub-card-tag purple" onclick="switchSupportHubView('benefits', 'district-centers-sec', true)">🏢 மாவட்ட மையங்கள்</button>
-        <button type="button" class="hub-card-tag purple" onclick="switchSupportHubView('benefits', 'faqs-sec', true)">❓ FAQs &amp; போர்ட்டல்கள்</button>
+        <button type="button" class="hub-card-tag purple" data-target-sec="scholarship-matcher-sec" onclick="openSupportPillar('benefits', 'scholarship-matcher-sec', true)">🎁 சலுகை &amp; உதவித்தொகை PDF</button>
+        <button type="button" class="hub-card-tag purple" data-target-sec="quota-7point5-sec" onclick="openSupportPillar('benefits', 'quota-7point5-sec', true)">🏫 7.5% அரசுப் பள்ளி சலுகை</button>
+        <button type="button" class="hub-card-tag purple" data-target-sec="reservation-sec" onclick="openSupportPillar('benefits', 'reservation-sec', true)">🏛️ 69% &amp; மத்திய இடஒதுக்கீடு</button>
+        <button type="button" class="hub-card-tag purple" data-target-sec="doc-checklist-sec" onclick="openSupportPillar('benefits', 'doc-checklist-sec', true)">📄 14 சான்றிதழ்கள் பட்டியல்</button>
+        <button type="button" class="hub-card-tag purple" data-target-sec="counselling-flow-sec" onclick="openSupportPillar('benefits', 'counselling-flow-sec', true)">🔄 கலந்தாய்வு 6 படிநிலைகள்</button>
+        <button type="button" class="hub-card-tag purple" data-target-sec="helpline-bento-sec" onclick="openSupportPillar('benefits', 'helpline-bento-sec', true)">📞 14417 &amp; அவசர எண்கள்</button>
+        <button type="button" class="hub-card-tag purple" data-target-sec="services-14417-sec" onclick="openSupportPillar('benefits', 'services-14417-sec', true)">☎️ 14417 சேவைகள் விவரம்</button>
+        <button type="button" class="hub-card-tag purple" data-target-sec="district-centers-sec" onclick="openSupportPillar('benefits', 'district-centers-sec', true)">🏢 மாவட்ட வழிகாட்டல் மையம்</button>
+        <button type="button" class="hub-card-tag purple" data-target-sec="faqs-sec" onclick="openSupportPillar('benefits', 'faqs-sec', true)">❓ வினா-விடை (FAQs)</button>
+        <button type="button" class="hub-card-tag purple" data-target-sec="portals-sec" onclick="openSupportPillar('benefits', 'portals-sec', true)">🌐 அதிகாரப்பூர்வ கல்வி தளங்கள்</button>
       </div>
     </div>
-    <button type="button" class="btn-details hub-btn-details purple" onclick="event.stopPropagation(); switchSupportHubView('benefits', 'scholarship-matcher-sec', true)">
-      <span>🎁 சலுகைகள் &amp; உதவி மையத்தைத் திறக்க (Open Benefits &amp; Helpdesk)</span>
+    <button type="button" class="btn-details hub-btn-details purple" onclick="event.stopPropagation(); openSupportPillar('benefits', null, true)">
+      <span>🎁 சலுகைகள் &amp; உதவி மையம் (அனைத்து 10 பகுதிகளையும் திறக்க)</span>
       <span>›</span>
     </button>
   </div>
@@ -9562,65 +9603,69 @@ body.theme-cyber-dark li {
 </div>
 
 <!-- ==========================================================================
-     TWO-PILLAR MODULE SWITCHER BAR (இரண்டு பெட்டிகளுக்கு இடையே உடனடி மாற்றி)
+     ACTIVE SELECTION CONTROL BAR (HIDDEN BY DEFAULT WHEN ONLY 2 BOXES ARE SHOWN)
+     Appears dynamically below the 2 boxes only after a Box or Pill is clicked!
      ========================================================================== -->
-<div class="support-pillar-switcher-bar no-print" id="supportPillarSwitcherBar" role="tablist" aria-label="கட்-ஆஃப் கருவிகள் மற்றும் மாணவர் சலுகைகள் உதவி மையம் பிரிவு மாற்றி">
-  <div class="support-pillar-tab-group">
-    <button type="button" class="support-pillar-tab-btn" id="btnPillarTabCutoff" onclick="switchSupportHubView('cutoff', null, false)" role="tab">
-      <span>🧮</span><span>பெட்டி 1: கட்-ஆஃப் கருவிகள் (4 பிரிவுகள்)</span>
-    </button>
-    <button type="button" class="support-pillar-tab-btn" id="btnPillarTabBenefits" onclick="switchSupportHubView('benefits', null, false)" role="tab">
-      <span>🎁</span><span>பெட்டி 2: மாணவர்களுக்கான சலுகைகள் &amp; உதவி மையம் (10 பிரிவுகள்)</span>
-    </button>
-    <button type="button" class="support-pillar-tab-btn active-all" id="btnPillarTabAll" onclick="switchSupportHubView('all', null, false)" role="tab">
-      <span>📋</span><span>இரண்டு பெட்டிகளின் அனைத்துப் பிரிவுகளும் (All 14)</span>
-    </button>
+<div class="support-active-selection-bar no-print" id="supportActiveSelectionBar" role="region" aria-label="தற்போது தேர்ந்தெடுக்கப்பட்ட பகுதி கட்டுப்பாட்டுப் பட்டை">
+  <div class="support-selection-status" id="supportActiveSelectionStatus">
+    <span>✨ தற்போது காண்பது:</span>
   </div>
-  <div id="supportActiveViewStatusText" style="font-size: 0.78rem; font-weight: 800; color: #fde047;">
-    ✨ மேலே உள்ள 2 பெட்டிகளில் ஒன்றைத் தேர்ந்தெடுத்துத் தனித்தனியாகவோ ஒருங்கேயோ காணலாம்
+  <div class="support-selection-actions">
+    <button type="button" class="support-ctrl-btn btn-show-pillar-all" id="btnShowFullActivePillar" style="display: none;" onclick="showFullCurrentPillar()">
+      <span>📂</span><span id="btnShowFullActivePillarText">இப்பெட்டியின் அனைத்துப் பகுதிகளையும் காட்டு</span>
+    </button>
+    <button type="button" class="support-ctrl-btn btn-switch-other-box" id="btnSwitchOtherPillar" onclick="switchToOtherPillar()">
+      <span>🔄</span><span id="btnSwitchOtherPillarText">மற்ற பெட்டிக்கு மாற</span>
+    </button>
+    <button type="button" class="support-ctrl-btn btn-back-boxes" onclick="resetToTwoBoxesHome()">
+      <span>✖</span><span>மூடிவிட்டு 2 பெட்டிகள் மட்டும் காட்டு</span>
+    </button>
   </div>
 </div>
 
-<nav aria-label="உயர்கல்வி வழிகாட்டல் வழிசெலுத்தல்" class="sticky-portal-nav" id="stickyPortalNavbar">
+<!-- Sticky Navbar (Also hidden initially until a Box or Pill is selected!) -->
+<nav aria-label="உயர்கல்வி வழிகாட்டல் வழிசெலுத்தல்" class="sticky-portal-nav no-print" id="stickyPortalNavbar" style="display: none;">
   <div class="nav-marquee-wrapper" id="navMarqueeWrapper" title="பொத்தான்களைத் தேர்ந்தெடுக்க மவுஸை இதன் மேல் வைக்கவும் (Hover to Pause)">
     <div class="nav-marquee-content" id="navMarqueeContent">
       <!-- Group 1 -->
       <div class="nav-marquee-group">
-        <button class="nav-anchor-pill" data-pillar="cutoff" onclick="smoothScrollToAnchor('cutoff-tools-sec', this)" type="button">🧮 கட்-ஆஃப் கருவிகள்</button>
-        <button class="nav-anchor-pill" data-pillar="cutoff" onclick="smoothScrollToAnchor('sports-tools-sec', this)" type="button">🏆 விளையாட்டுப் பிரிவு</button>
-        <button class="nav-anchor-pill" data-pillar="cutoff" onclick="smoothScrollToAnchor('entrance-stream-sec', this)" type="button">✍️ நுழைவுத்தேர்வுகள்</button>
-        <button class="nav-anchor-pill" data-pillar="cutoff" onclick="smoothScrollToAnchor('direct-stream-sec', this)" type="button">🎯 நேரடிச் சேர்க்கை</button>
-        <button class="nav-anchor-pill active" data-pillar="benefits" onclick="smoothScrollToAnchor('scholarship-matcher-sec', this)" type="button">🎁 சலுகை &amp; உதவித்தொகை வழிகாட்டி</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('helpline-bento-sec', this)" type="button">📞 14417 உதவி எண்கள்</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('reservation-sec', this)" type="button">🏛️ இடஒதுக்கீடு</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('quota-7point5-sec', this)" type="button">🏫 7.5% சலுகை</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('doc-checklist-sec', this)" type="button">📄 சான்றிதழ்கள் பட்டியல்</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('counselling-flow-sec', this)" type="button">🔄 கலந்தாய்வு நிலைகள்</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('district-centers-sec', this)" type="button">🏢 மாவட்ட மையங்கள்</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('faqs-sec', this)" type="button">❓ வினா-விடை (FAQs)</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('portals-sec', this)" type="button">🌐 கல்வி தளங்கள்</button>
+        <button class="nav-anchor-pill" data-pillar="cutoff" data-sec="cutoff-tools-sec" onclick="openSupportPillar('cutoff', 'cutoff-tools-sec', true)" type="button">🧮 கட்-ஆஃப் கருவிகள்</button>
+        <button class="nav-anchor-pill" data-pillar="cutoff" data-sec="sports-tools-sec" onclick="openSupportPillar('cutoff', 'sports-tools-sec', true)" type="button">🏆 விளையாட்டுப் பிரிவு</button>
+        <button class="nav-anchor-pill" data-pillar="cutoff" data-sec="entrance-stream-sec" onclick="openSupportPillar('cutoff', 'entrance-stream-sec', true)" type="button">✍️ நுழைவுத்தேர்வுகள்</button>
+        <button class="nav-anchor-pill" data-pillar="cutoff" data-sec="direct-stream-sec" onclick="openSupportPillar('cutoff', 'direct-stream-sec', true)" type="button">🎯 நேரடிச் சேர்க்கை</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="scholarship-matcher-sec" onclick="openSupportPillar('benefits', 'scholarship-matcher-sec', true)" type="button">🎁 சலுகை &amp; உதவித்தொகை வழிகாட்டி</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="helpline-bento-sec" onclick="openSupportPillar('benefits', 'helpline-bento-sec', true)" type="button">📞 14417 உதவி எண்கள்</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="reservation-sec" onclick="openSupportPillar('benefits', 'reservation-sec', true)" type="button">🏛️ இடஒதுக்கீடு</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="quota-7point5-sec" onclick="openSupportPillar('benefits', 'quota-7point5-sec', true)" type="button">🏫 7.5% சலுகை</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="doc-checklist-sec" onclick="openSupportPillar('benefits', 'doc-checklist-sec', true)" type="button">📄 சான்றிதழ்கள் பட்டியல்</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="counselling-flow-sec" onclick="openSupportPillar('benefits', 'counselling-flow-sec', true)" type="button">🔄 கலந்தாய்வு நிலைகள்</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="services-14417-sec" onclick="openSupportPillar('benefits', 'services-14417-sec', true)" type="button">☎️ 14417 சேவைகள்</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="district-centers-sec" onclick="openSupportPillar('benefits', 'district-centers-sec', true)" type="button">🏢 மாவட்ட மையங்கள்</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="faqs-sec" onclick="openSupportPillar('benefits', 'faqs-sec', true)" type="button">❓ வினா-விடை (FAQs)</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="portals-sec" onclick="openSupportPillar('benefits', 'portals-sec', true)" type="button">🌐 கல்வி தளங்கள்</button>
       </div>
       <!-- Group 2 (Duplicate for infinite seamless loop) -->
       <div aria-hidden="true" class="nav-marquee-group">
-        <button class="nav-anchor-pill" data-pillar="cutoff" onclick="smoothScrollToAnchor('cutoff-tools-sec', this)" type="button">🧮 கட்-ஆஃப் கருவிகள்</button>
-        <button class="nav-anchor-pill" data-pillar="cutoff" onclick="smoothScrollToAnchor('sports-tools-sec', this)" type="button">🏆 விளையாட்டுப் பிரிவு</button>
-        <button class="nav-anchor-pill" data-pillar="cutoff" onclick="smoothScrollToAnchor('entrance-stream-sec', this)" type="button">✍️ நுழைவுத்தேர்வுகள்</button>
-        <button class="nav-anchor-pill" data-pillar="cutoff" onclick="smoothScrollToAnchor('direct-stream-sec', this)" type="button">🎯 நேரடிச் சேர்க்கை</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('scholarship-matcher-sec', this)" type="button">🎁 சலுகை &amp; உதவித்தொகை வழிகாட்டி</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('helpline-bento-sec', this)" type="button">📞 14417 உதவி எண்கள்</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('reservation-sec', this)" type="button">🏛️ இடஒதுக்கீடு</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('quota-7point5-sec', this)" type="button">🏫 7.5% சலுகை</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('doc-checklist-sec', this)" type="button">📄 சான்றிதழ்கள் பட்டியல்</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('counselling-flow-sec', this)" type="button">🔄 கலந்தாய்வு நிலைகள்</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('district-centers-sec', this)" type="button">🏢 மாவட்ட மையங்கள்</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('faqs-sec', this)" type="button">❓ வினா-விடை (FAQs)</button>
-        <button class="nav-anchor-pill" data-pillar="benefits" onclick="smoothScrollToAnchor('portals-sec', this)" type="button">🌐 கல்வி தளங்கள்</button>
+        <button class="nav-anchor-pill" data-pillar="cutoff" data-sec="cutoff-tools-sec" onclick="openSupportPillar('cutoff', 'cutoff-tools-sec', true)" type="button">🧮 கட்-ஆஃப் கருவிகள்</button>
+        <button class="nav-anchor-pill" data-pillar="cutoff" data-sec="sports-tools-sec" onclick="openSupportPillar('cutoff', 'sports-tools-sec', true)" type="button">🏆 விளையாட்டுப் பிரிவு</button>
+        <button class="nav-anchor-pill" data-pillar="cutoff" data-sec="entrance-stream-sec" onclick="openSupportPillar('cutoff', 'entrance-stream-sec', true)" type="button">✍️ நுழைவுத்தேர்வுகள்</button>
+        <button class="nav-anchor-pill" data-pillar="cutoff" data-sec="direct-stream-sec" onclick="openSupportPillar('cutoff', 'direct-stream-sec', true)" type="button">🎯 நேரடிச் சேர்க்கை</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="scholarship-matcher-sec" onclick="openSupportPillar('benefits', 'scholarship-matcher-sec', true)" type="button">🎁 சலுகை &amp; உதவித்தொகை வழிகாட்டி</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="helpline-bento-sec" onclick="openSupportPillar('benefits', 'helpline-bento-sec', true)" type="button">📞 14417 உதவி எண்கள்</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="reservation-sec" onclick="openSupportPillar('benefits', 'reservation-sec', true)" type="button">🏛️ இடஒதுக்கீடு</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="quota-7point5-sec" onclick="openSupportPillar('benefits', 'quota-7point5-sec', true)" type="button">🏫 7.5% சலுகை</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="doc-checklist-sec" onclick="openSupportPillar('benefits', 'doc-checklist-sec', true)" type="button">📄 சான்றிதழ்கள் பட்டியல்</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="counselling-flow-sec" onclick="openSupportPillar('benefits', 'counselling-flow-sec', true)" type="button">🔄 கலந்தாய்வு நிலைகள்</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="services-14417-sec" onclick="openSupportPillar('benefits', 'services-14417-sec', true)" type="button">☎️ 14417 சேவைகள்</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="district-centers-sec" onclick="openSupportPillar('benefits', 'district-centers-sec', true)" type="button">🏢 மாவட்ட மையங்கள்</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="faqs-sec" onclick="openSupportPillar('benefits', 'faqs-sec', true)" type="button">❓ வினா-விடை (FAQs)</button>
+        <button class="nav-anchor-pill" data-pillar="benefits" data-sec="portals-sec" onclick="openSupportPillar('benefits', 'portals-sec', true)" type="button">🌐 கல்வி தளங்கள்</button>
       </div>
     </div>
   </div>
 </nav>
 
-<div class="helpline-bento-grid support-module-item" data-pillar="benefits" id="helpline-bento-sec">
+<div class="helpline-bento-grid support-module-item" data-pillar="benefits" id="helpline-bento-sec" style="display: none;">
   <!-- Card 1: 14417 -->
   <div class="bento-helpline-card mint">
     <div>
@@ -9671,10 +9716,10 @@ body.theme-cyber-dark li {
       <div class="bento-dial-num"><a href="tel:04575246233" style="color: inherit; text-decoration: none;">04575-246233</a></div>
       <p class="bento-info-desc">மாவட்ட ஆட்சியரகம், சிவகங்கை &amp; வழிகாட்டும் குழு (Guide Teachers Team).</p>
     </div>
-    <button class="bento-action-link" onclick="smoothScrollToAnchor('district-centers-sec');" type="button">🏢 வழிகாட்டும் குழு &amp; தொடர்பு விவரங்கள்</button>
+    <button class="bento-action-link" onclick="openSupportPillar('benefits', 'district-centers-sec', true);" type="button">🏢 வழிகாட்டும் குழு &amp; தொடர்பு விவரங்கள்</button>
   </div>
 </div>
-<span id="sec-nsp-esevai-checklist"></span><section class="section-card compact-calc-card support-module-item" data-pillar="benefits" id="scholarship-matcher-sec" style="border: 2px solid #7c3aed; border-top: 5px solid #6d28d9; background: linear-gradient(180deg, #faf5ff 0%, #ffffff 45%, #f8fafc 100%); box-shadow: 0 10px 26px rgba(109, 40, 217, 0.09); padding: 16px 18px !important; margin-bottom: 20px !important;">
+<span id="sec-nsp-esevai-checklist"></span><section class="section-card compact-calc-card support-module-item" data-pillar="benefits" id="scholarship-matcher-sec" style="border: 2px solid #7c3aed; border-top: 5px solid #6d28d9; background: linear-gradient(180deg, #faf5ff 0%, #ffffff 45%, #f8fafc 100%); box-shadow: 0 10px 26px rgba(109, 40, 217, 0.09); padding: 16px 18px !important; margin-bottom: 20px !important; display: none;">
 <style>
   #scholarship-matcher-sec .sch-name-school-grid {
     display: grid;
@@ -9898,7 +9943,7 @@ body.theme-cyber-dark li {
 </div>
 </section>
 
-<section class="section-card support-module-item" data-pillar="cutoff" id="cutoff-tools-sec">
+<section class="section-card support-module-item" data-pillar="cutoff" id="cutoff-tools-sec" style="display: none;">
 <div class="card-top-header">
 <h2 class="card-top-title">🧮 உயர்கல்வி சேர்க்கை கட்-ஆஃப் கால்குலேட்டர் (Academic Cut-off Tools)</h2>
 </div>
@@ -10215,7 +10260,7 @@ body.theme-cyber-dark li {
 </tbody>
 </table>
 </div>
-</div></section><section class="section-card compact-calc-card support-module-item" data-pillar="cutoff" id="sports-tools-sec" style="">
+</div></section><section class="section-card compact-calc-card support-module-item" data-pillar="cutoff" id="sports-tools-sec" style="display: none;">
 <div class="card-top-header" style="display: flex; align-items: center; justify-content: flex-start; margin-bottom: 8px;">
 <h2 class="card-top-title" style="font-size: clamp(1.02rem, 1.35vw, 1.25rem) !important; font-weight: 800; color: #1e3a8a; margin: 0;">
       🏆 தமிழ்நாடு மருத்துவ &amp; தொழிற்கல்வி விளையாட்டு வீரர்கள் (Sports Quota) சான்றிதழ் மதிப்பெண் கால்குலேட்டர்
@@ -10714,7 +10759,7 @@ body.theme-cyber-dark li {
 </div>
 </div>
 </section>
-<section class="section-card support-module-item" data-pillar="cutoff" id="entrance-stream-sec">
+<section class="section-card support-module-item" data-pillar="cutoff" id="entrance-stream-sec" style="display: none;">
 <div class="card-top-header">
 <h2 class="card-top-title">✍️ 1. தேசிய &amp; மாநில அளவிலான நுழைவுத் தேர்வு வழிகாட்டல் நெறிமுறைகள்</h2>
 <span class="card-tag-badge entrance">நுழைவுத்தேர்வு வழிகாட்டல்</span>
@@ -10774,7 +10819,7 @@ body.theme-cyber-dark li {
           </div>
 </div>
 </div>
-</section><section class="section-card support-module-item" data-pillar="cutoff" id="direct-stream-sec">
+</section><section class="section-card support-module-item" data-pillar="cutoff" id="direct-stream-sec" style="display: none;">
 <div class="card-top-header">
 <h2 class="card-top-title">🎯 2. தமிழ்நாடு அரசு நேரடிச் சேர்க்கைப் படிப்புகளின் வழிகாட்டல் நெறிமுறைகள்</h2>
 <span class="card-tag-badge direct">நேரடிச் சேர்க்கை வழிகாட்டல்</span>
@@ -10826,7 +10871,7 @@ body.theme-cyber-dark li {
           </div>
 </div>
 </div>
-</section><section class="section-card support-module-item" data-pillar="benefits" id="reservation-sec">
+</section><section class="section-card support-module-item" data-pillar="benefits" id="reservation-sec" style="display: none;">
 <div class="card-top-header">
 <h2 class="card-top-title">🏛️ தமிழ்நாடு அரசின் 69% &amp; மத்திய கல்வி நிறுவனங்களின் இடஒதுக்கீட்டுக் கட்டமைப்பு</h2>
 <span class="card-tag-badge">சமூக நீதி இடஒதுக்கீடு</span>
@@ -10941,7 +10986,7 @@ body.theme-cyber-dark li {
 </tbody>
 </table>
 </div>
-</section><section class="section-card support-module-item" data-pillar="benefits" id="quota-7point5-sec">
+</section><section class="section-card support-module-item" data-pillar="benefits" id="quota-7point5-sec" style="display: none;">
 <div class="card-top-header">
 <h2 class="card-top-title">🎯 அரசுப் பள்ளி மாணவர்களுக்கான 7.5% முன்னுரிமை இடஒதுக்கீடு &amp; சலுகைகள்</h2>
 <span class="card-tag-badge">தமிழ்நாடு அரசின் புரட்சிகரத் திட்டம்</span>
@@ -11010,7 +11055,7 @@ body.theme-cyber-dark li {
 <div id="finder-desc-text" style="font-size: 0.92rem; color: #334155; margin-top: 12px; line-height: 1.6;"></div>
 </div>
 </div>
-</section><section class="section-card support-module-item" data-pillar="benefits" id="doc-checklist-sec">
+</section><section class="section-card support-module-item" data-pillar="benefits" id="doc-checklist-sec" style="display: none;">
 <div class="card-top-header">
 <h2 class="card-top-title">📄 சேர்க்கைக்குத் தேவையான சான்றிதழ்கள் சரிபார்ப்பு பட்டியல் (14 ஆவணங்கள்)</h2>
 <span class="card-tag-badge">சான்றிதழ்கள் தயார் நிலை</span>
@@ -11085,7 +11130,7 @@ body.theme-cyber-dark li {
 </div>
 </div>
 </div>
-</section><section class="section-card support-module-item" data-pillar="benefits" id="counselling-flow-sec">
+</section><section class="section-card support-module-item" data-pillar="benefits" id="counselling-flow-sec" style="display: none;">
 <div class="card-top-header">
 <h2 class="card-top-title">🔄 ஒற்றைச் சாளர கலந்தாய்வு 6 முக்கிய படிநிலைகள்</h2>
 <span class="card-tag-badge">சேர்க்கை நடைமுறை வழிகாட்டல்</span>
@@ -11134,7 +11179,7 @@ body.theme-cyber-dark li {
 </div>
 </div>
 </div>
-</section><section class="section-card support-module-item" data-pillar="benefits" id="services-14417-sec">
+</section><section class="section-card support-module-item" data-pillar="benefits" id="services-14417-sec" style="display: none;">
 <div class="card-top-header">
 <h2 class="card-top-title">📞 14417 இலவச உதவி மையத்தின் விரிவான வழிகாட்டல் சேவைகள்</h2>
 <span class="card-tag-badge helpdesk">மாநில அளவிலான உதவி மையம்</span>
@@ -11168,7 +11213,7 @@ body.theme-cyber-dark li {
           </div>
 </div>
 </div>
-</section><section class="section-card support-module-item" data-pillar="benefits" id="district-centers-sec">
+</section><section class="section-card support-module-item" data-pillar="benefits" id="district-centers-sec" style="display: none;">
 <div class="card-top-header">
 <h2 class="card-top-title">🏢 மாவட்ட உயர்கல்வி வழிகாட்டல் மையங்கள் (District Cells)</h2>
 <span class="card-tag-badge">மாவட்ட ஒருங்கிணைப்பு நெட்வொர்க்</span>
@@ -11475,7 +11520,7 @@ CAREER GUIDANCE CENTER • DISCOVER | PLAN | SUCCEED
 <div class="dist-row-info"><b>பணி நேரம்:</b> <span>வேலை நாட்களில் காலை 10:00 - மாலை 5:30</span></div>
 </div>
 </div>
-</section><section class="section-card support-module-item" data-pillar="benefits" id="faqs-sec">
+</section><section class="section-card support-module-item" data-pillar="benefits" id="faqs-sec" style="display: none;">
 <div class="card-top-header">
 <h2 class="card-top-title">❓ அடிக்கடி கேட்கப்படும் பொதுவான வினாக்கள் (FAQs)</h2>
 <span class="card-tag-badge">அறிவுத் தொகுப்பு (Knowledge Base)</span>
@@ -11539,7 +11584,7 @@ CAREER GUIDANCE CENTER • DISCOVER | PLAN | SUCCEED
           </div>
 </div>
 </div>
-</section><section class="section-card support-module-item" data-pillar="benefits" id="portals-sec">
+</section><section class="section-card support-module-item" data-pillar="benefits" id="portals-sec" style="display: none;">
 <div class="card-top-header">
 <h2 class="card-top-title">🌐 அனைத்து முக்கிய உயர்கல்வி போர்ட்டல்களின் அதிகாரப்பூர்வ டைரக்டரி</h2>
 <span class="card-tag-badge">அதிகாரப்பூர்வ தளங்கள்</span>
@@ -16398,116 +16443,256 @@ async function handlePopupFeedbackSubmit(e) {
     "faqs-sec", "portals-sec", "hub-benefits"
   ];
 
-  window.currentSupportHubPillar = "all";
+  var SECTION_TITLES = {
+    "cutoff-tools-sec": "🧮 7-பிரிவு உயர்கல்வி கட்-ஆஃப் கால்குலேட்டர்",
+    "sports-tools-sec": "🏆 விளையாட்டு வீரர்கள் (Sports Quota - 500 Marks) கணிப்பான்",
+    "entrance-stream-sec": "✍️ தேசிய & மாநில நுழைவுத்தேர்வு நெறிமுறைகள்",
+    "direct-stream-sec": "🎯 தமிழ்நாடு அரசு நேரடிச் சேர்க்கை நெறிமுறைகள்",
+    "scholarship-matcher-sec": "🎁 உயர்கல்விச் சலுகை & உதவித்தொகை தகுதி வழிகாட்டி (PDF)",
+    "helpline-bento-sec": "📞 14417, 14416, 1098 & மாவட்ட உதவி எண்கள்",
+    "reservation-sec": "🏛️ தமிழ்நாடு 69% & மத்திய இடஒதுக்கீட்டுக் கட்டமைப்பு",
+    "quota-7point5-sec": "🏫 7.5% அரசுப் பள்ளி மாணவர் முன்னுரிமை இடஒதுக்கீடு",
+    "doc-checklist-sec": "📄 சேர்க்கைக்குத் தேவையான 14 சான்றிதழ்கள் சரிபார்ப்புப் பட்டியல்",
+    "counselling-flow-sec": "🔄 ஒற்றைச் சாளர கலந்தாய்வு 6 முக்கிய படிநிலைகள்",
+    "services-14417-sec": "☎️ 14417 இலவச உதவி மையத்தின் வழிகாட்டல் சேவைகள்",
+    "district-centers-sec": "🏢 மாவட்ட உயர்கல்வி வழிகாட்டல் மையங்கள் & குழு",
+    "faqs-sec": "❓ அடிக்கடி கேட்கப்படும் வினா-விடைகள் (FAQs)",
+    "portals-sec": "🌐 அதிகாரப்பூர்வ உயர்கல்வி போர்ட்டல்கள் டைரக்டரி"
+  };
 
-  window.switchSupportHubView = function(pillar, scrollToId, doScroll) {
-    if (!pillar) pillar = "all";
-    window.currentSupportHubPillar = pillar;
+  // Initial state: 'none' -> ONLY the 2 Boxes are shown!
+  window.currentSupportHubPillar = "none";
+  window.currentSupportSpecificSec = null;
 
-    var items = document.querySelectorAll(".support-module-item");
-    for (var i = 0; i < items.length; i++) {
-      var itemPillar = items[i].getAttribute("data-pillar");
-      if (pillar === "all" || itemPillar === pillar) {
-        items[i].style.display = "";
-      } else {
-        items[i].style.display = "none";
-      }
+  /**
+   * Opens either a full Box (specificSectionId = null) or ONLY the clicked Pill's section (specificSectionId = id).
+   */
+  window.openSupportPillar = function(pillar, specificSectionId, doScroll) {
+    if (!pillar || pillar === "none") {
+      window.resetToTwoBoxesHome();
+      return;
+    }
+    if (specificSectionId === "sec-nsp-esevai-checklist") {
+      specificSectionId = "scholarship-matcher-sec";
     }
 
-    // Filter sticky navbar pills to match active pillar
+    window.currentSupportHubPillar = pillar;
+    window.currentSupportSpecificSec = specificSectionId || null;
+
+    // 1. Show/hide content modules
+    var items = document.querySelectorAll(".support-module-item");
+    for (var i = 0; i < items.length; i++) {
+      var item = items[i];
+      var itemPillar = item.getAttribute("data-pillar");
+      var itemId = item.id;
+      var shouldShow = false;
+      if (specificSectionId) {
+        shouldShow = (itemId === specificSectionId);
+      } else {
+        shouldShow = (itemPillar === pillar);
+      }
+      item.style.display = shouldShow ? "" : "none";
+    }
+
+    // 2. Show & filter sticky navbar pills to match active pillar
+    var stickyNav = document.getElementById("stickyPortalNavbar");
+    if (stickyNav) stickyNav.style.display = "";
     var pills = document.querySelectorAll("#stickyPortalNavbar .nav-anchor-pill");
     for (var j = 0; j < pills.length; j++) {
       var pGroup = pills[j].getAttribute("data-pillar");
-      if (pillar === "all" || !pGroup || pGroup === pillar) {
+      var pSec = pills[j].getAttribute("data-sec");
+      if (!pGroup || pGroup === pillar) {
         pills[j].style.display = "inline-flex";
+        pills[j].classList.toggle("active", specificSectionId ? (pSec === specificSectionId) : false);
       } else {
         pills[j].style.display = "none";
+        pills[j].classList.remove("active");
       }
     }
 
-    // Update Hub Cards active visual ring
+    // 3. Highlight active Box & active Pill inside the 2 Boxes
     var cardCutoff = document.getElementById("hubCardCutoffTools");
     var cardBenefits = document.getElementById("hubCardStudentBenefits");
     if (cardCutoff) cardCutoff.classList.toggle("active-hub-box", pillar === "cutoff");
     if (cardBenefits) cardBenefits.classList.toggle("active-hub-box", pillar === "benefits");
 
-    // Update Switcher Bar tab buttons
-    var btnCutoff = document.getElementById("btnPillarTabCutoff");
-    var btnBenefits = document.getElementById("btnPillarTabBenefits");
-    var btnAll = document.getElementById("btnPillarTabAll");
-    if (btnCutoff) btnCutoff.className = "support-pillar-tab-btn" + (pillar === "cutoff" ? " active-cutoff" : "");
-    if (btnBenefits) btnBenefits.className = "support-pillar-tab-btn" + (pillar === "benefits" ? " active-benefits" : "");
-    if (btnAll) btnAll.className = "support-pillar-tab-btn" + (pillar === "all" ? " active-all" : "");
+    var tagBtns = document.querySelectorAll("[data-target-sec]");
+    for (var k = 0; k < tagBtns.length; k++) {
+      var tSec = tagBtns[k].getAttribute("data-target-sec");
+      var isAct = (specificSectionId && tSec === specificSectionId);
+      tagBtns[k].classList.toggle("active-pill", isAct);
+      tagBtns[k].classList.toggle("active-pill-card", isAct);
+    }
 
-    // Update Status Text & Breadcrumb Badge
-    var statusEl = document.getElementById("supportActiveViewStatusText");
+    // 4. Update Active Selection Control Bar & Breadcrumb
+    var selBar = document.getElementById("supportActiveSelectionBar");
+    var selStatus = document.getElementById("supportActiveSelectionStatus");
+    var btnFullPillar = document.getElementById("btnShowFullActivePillar");
+    var btnFullPillarText = document.getElementById("btnShowFullActivePillarText");
+    var btnOtherText = document.getElementById("btnSwitchOtherPillarText");
+    var topHomeBtn = document.getElementById("topNavBtnHome2Boxes");
     var bcSep = document.getElementById("activePillarBreadcrumbSep");
     var bcBadge = document.getElementById("activePillarBreadcrumbBadge");
-    if (pillar === "cutoff") {
-      if (statusEl) statusEl.innerHTML = '🧮 <strong>தற்போது காண்பது — பெட்டி 1: கட்-ஆஃப் கருவிகள் (4 பிரிவுகள்)</strong> • <a href="#supportPillarSwitcherBar" onclick="switchSupportHubView(\'benefits\', \'scholarship-matcher-sec\', true); return false;" style="color:#fde047;text-decoration:underline;">🎁 பெட்டி 2-க்கு மாற ➔</a>';
-      if (bcSep) bcSep.style.display = "inline";
-      if (bcBadge) {
-        bcBadge.style.display = "inline-flex";
+
+    if (selBar) selBar.style.display = "flex";
+    if (topHomeBtn) topHomeBtn.style.display = "inline-flex";
+    if (bcSep) bcSep.style.display = "inline";
+
+    var pillarTitle = (pillar === "cutoff")
+      ? "🧮 பெட்டி 1: கட்-ஆஃப் கருவிகள்"
+      : "🎁 பெட்டி 2: மாணவர்களுக்கான சலுகைகள் & உதவி மையம்";
+
+    if (specificSectionId && SECTION_TITLES[specificSectionId]) {
+      if (selStatus) {
+        selStatus.innerHTML = '<span style="background:rgba(250,204,21,0.2);color:#fde047;padding:3px 9px;border-radius:6px;border:1px solid rgba(250,204,21,0.45);font-size:0.75rem;">' + pillarTitle + '</span> <span>▶</span> <span>' + SECTION_TITLES[specificSectionId] + ' (மட்டும் தோன்றுகிறது)</span>';
+      }
+      if (btnFullPillar) {
+        btnFullPillar.style.display = "inline-flex";
+        if (btnFullPillarText) {
+          btnFullPillarText.textContent = (pillar === "cutoff")
+            ? "பெட்டி 1-ன் அனைத்து 4 பகுதிகளையும் காட்டு"
+            : "பெட்டி 2-ன் அனைத்து 10 பகுதிகளையும் காட்டு";
+        }
+      }
+    } else {
+      if (selStatus) {
+        selStatus.innerHTML = '<span>✨ தற்போது காண்பது:</span> <span style="color:#fde047;">' + pillarTitle + ' (அனைத்துப் பகுதிகளும்)</span>';
+      }
+      if (btnFullPillar) btnFullPillar.style.display = "none";
+    }
+
+    if (btnOtherText) {
+      btnOtherText.textContent = (pillar === "cutoff")
+        ? "🎁 பெட்டி 2: சலுகைகள் & உதவி மையத்திற்கு மாற"
+        : "🧮 பெட்டி 1: கட்-ஆஃப் கருவிகளுக்கு மாற";
+    }
+
+    if (bcBadge) {
+      bcBadge.style.display = "inline-flex";
+      if (pillar === "cutoff") {
         bcBadge.style.background = "#dbeafe";
         bcBadge.style.color = "#1e3a8a";
         bcBadge.style.borderColor = "#93c5fd";
-        bcBadge.textContent = "🧮 01. கட்-ஆஃப் கருவிகள்";
-      }
-    } else if (pillar === "benefits") {
-      if (statusEl) statusEl.innerHTML = '🎁 <strong>தற்போது காண்பது — பெட்டி 2: மாணவர்களுக்கான சலுகைகள் &amp; உதவி மையம் (10 பிரிவுகள்)</strong> • <a href="#supportPillarSwitcherBar" onclick="switchSupportHubView(\'cutoff\', \'cutoff-tools-sec\', true); return false;" style="color:#fde047;text-decoration:underline;">🧮 பெட்டி 1-க்கு மாற ➔</a>';
-      if (bcSep) bcSep.style.display = "inline";
-      if (bcBadge) {
-        bcBadge.style.display = "inline-flex";
+        bcBadge.textContent = specificSectionId ? (SECTION_TITLES[specificSectionId] || pillarTitle) : pillarTitle;
+      } else {
         bcBadge.style.background = "#ede9fe";
         bcBadge.style.color = "#5b21b6";
         bcBadge.style.borderColor = "#c4b5fd";
-        bcBadge.textContent = "🎁 02. மாணவர் சலுகைகள் & உதவி மையம்";
+        bcBadge.textContent = specificSectionId ? (SECTION_TITLES[specificSectionId] || pillarTitle) : pillarTitle;
       }
-    } else {
-      if (statusEl) statusEl.innerHTML = '✨ மேலே உள்ள 2 பெட்டிகளில் ஒன்றைத் தேர்ந்தெடுத்துத் தனித்தனியாகவோ ஒருங்கேயோ காணலாம்';
-      if (bcSep) bcSep.style.display = "none";
-      if (bcBadge) bcBadge.style.display = "none";
     }
 
+    // 5. Smooth scroll to the newly revealed section or control bar
     if (doScroll) {
-      var targetId = scrollToId || (pillar === "cutoff" ? "cutoff-tools-sec" : (pillar === "benefits" ? "scholarship-matcher-sec" : "supportTwoBoxHubGrid"));
+      var scrollTargetId = specificSectionId || "supportActiveSelectionBar";
       setTimeout(function() {
-        var targetEl = document.getElementById(targetId);
+        var targetEl = document.getElementById(scrollTargetId) || document.getElementById("supportActiveSelectionBar");
         if (targetEl) {
           var navBar = document.getElementById("stickyPortalNavbar");
-          var offset = navBar ? navBar.offsetHeight + 18 : 80;
+          var offset = (navBar && navBar.offsetHeight) ? navBar.offsetHeight + 16 : 24;
           var bodyTop = document.body.getBoundingClientRect().top;
           var elTop = targetEl.getBoundingClientRect().top;
-          window.scrollTo({ top: elTop - bodyTop - offset, behavior: "smooth" });
+          window.scrollTo({ top: Math.max(0, elTop - bodyTop - offset), behavior: "smooth" });
         }
-      }, 40);
+      }, 45);
     }
   };
 
-  // Enhance smoothScrollToAnchor so clicking any anchor pill automatically unhides its pillar if hidden
-  var origSmoothScroll = window.smoothScrollToAnchor;
+  /**
+   * Resets the page back to the clean initial state where ONLY the 2 Boxes are visible.
+   */
+  window.resetToTwoBoxesHome = function() {
+    window.currentSupportHubPillar = "none";
+    window.currentSupportSpecificSec = null;
+
+    var items = document.querySelectorAll(".support-module-item");
+    for (var i = 0; i < items.length; i++) {
+      items[i].style.display = "none";
+    }
+
+    var stickyNav = document.getElementById("stickyPortalNavbar");
+    if (stickyNav) stickyNav.style.display = "none";
+
+    var selBar = document.getElementById("supportActiveSelectionBar");
+    if (selBar) selBar.style.display = "none";
+
+    var topHomeBtn = document.getElementById("topNavBtnHome2Boxes");
+    if (topHomeBtn) topHomeBtn.style.display = "none";
+
+    var bcSep = document.getElementById("activePillarBreadcrumbSep");
+    var bcBadge = document.getElementById("activePillarBreadcrumbBadge");
+    if (bcSep) bcSep.style.display = "none";
+    if (bcBadge) bcBadge.style.display = "none";
+
+    var cardCutoff = document.getElementById("hubCardCutoffTools");
+    var cardBenefits = document.getElementById("hubCardStudentBenefits");
+    if (cardCutoff) cardCutoff.classList.remove("active-hub-box");
+    if (cardBenefits) cardBenefits.classList.remove("active-hub-box");
+
+    var tagBtns = document.querySelectorAll("[data-target-sec]");
+    for (var k = 0; k < tagBtns.length; k++) {
+      tagBtns[k].classList.remove("active-pill", "active-pill-card");
+    }
+
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+
+    var gridEl = document.getElementById("supportTwoBoxHubGrid");
+    if (gridEl) {
+      var bodyTop = document.body.getBoundingClientRect().top;
+      var elTop = gridEl.getBoundingClientRect().top;
+      window.scrollTo({ top: Math.max(0, elTop - bodyTop - 20), behavior: "smooth" });
+    }
+  };
+
+  window.showFullCurrentPillar = function() {
+    var p = (window.currentSupportHubPillar && window.currentSupportHubPillar !== "none") ? window.currentSupportHubPillar : "cutoff";
+    window.openSupportPillar(p, null, true);
+  };
+
+  window.switchToOtherPillar = function() {
+    var nextP = (window.currentSupportHubPillar === "cutoff") ? "benefits" : "cutoff";
+    window.openSupportPillar(nextP, null, true);
+  };
+
+  // Legacy alias so any external call to switchSupportHubView works seamlessly
+  window.switchSupportHubView = function(pillar, scrollToId, doScroll) {
+    if (!pillar || pillar === "all" || pillar === "none") {
+      window.resetToTwoBoxesHome();
+    } else {
+      window.openSupportPillar(pillar, scrollToId || null, doScroll !== false);
+    }
+  };
+
+  // Override smoothScrollToAnchor so clicking any anchor button shows that exact section
   window.smoothScrollToAnchor = function(targetId, buttonElement) {
+    if (targetId === "sec-nsp-esevai-checklist") targetId = "scholarship-matcher-sec";
     var target = document.getElementById(targetId);
     if (target) {
       var itemWrapper = target.closest(".support-module-item") || target;
       var itemPillar = itemWrapper.getAttribute ? itemWrapper.getAttribute("data-pillar") : null;
-      if (itemPillar && window.currentSupportHubPillar !== "all" && window.currentSupportHubPillar !== itemPillar) {
-        window.switchSupportHubView(itemPillar, targetId, false);
+      if (itemPillar) {
+        window.openSupportPillar(itemPillar, itemWrapper.id || targetId, true);
+        return;
       }
-    }
-    if (typeof origSmoothScroll === "function") {
-      origSmoothScroll(targetId, buttonElement);
     }
   };
 
   function handleHashRouting() {
     var h = (window.location.hash || "").replace(/^#/, "");
-    if (!h) return;
+    if (!h || h === "supportTwoBoxHubGrid") {
+      return;
+    }
     if (h === "sec-nsp-esevai-checklist") h = "scholarship-matcher-sec";
-    if (CUTOFF_IDS.indexOf(h) !== -1) {
-      window.switchSupportHubView("cutoff", h === "hub-cutoff" ? "cutoff-tools-sec" : h, true);
+    if (h === "hub-cutoff") {
+      window.openSupportPillar("cutoff", null, true);
+    } else if (h === "hub-benefits") {
+      window.openSupportPillar("benefits", null, true);
+    } else if (CUTOFF_IDS.indexOf(h) !== -1) {
+      window.openSupportPillar("cutoff", h, true);
     } else if (BENEFITS_IDS.indexOf(h) !== -1) {
-      window.switchSupportHubView("benefits", h === "hub-benefits" ? "scholarship-matcher-sec" : h, true);
+      window.openSupportPillar("benefits", h, true);
     }
   }
 
