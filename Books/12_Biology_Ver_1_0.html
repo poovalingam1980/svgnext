@@ -93,13 +93,16 @@
 
       <div class="flex flex-wrap items-center gap-2">
         <!-- Search Input -->
-        <div class="relative">
+        <div class="relative flex items-center gap-1.5">
           <input
             id="searchInput"
             type="text"
             placeholder="கலைச்சொற்களைத் தேடுக (Search)..."
             class="w-40 sm:w-56 px-3 py-1.5 rounded-lg text-xs sm:text-sm bg-emerald-800/90 text-white placeholder-emerald-300 border border-emerald-600 focus:outline-none focus:ring-2 focus:ring-amber-400"
           >
+          <span id="searchCountBadge" class="hidden px-2.5 py-1 rounded-full bg-amber-300 text-emerald-950 text-xs font-bold shrink-0">
+            தேடல் முடிவுகள்: 0
+          </span>
         </div>
 
         <!-- Toggle English Brackets -->
@@ -450,78 +453,8 @@
   <!-- Right-Side Main Content Wrapper (Offset by Left Fixed Menu Frame on Desktop) -->
   <div id="mainContentWrapper" class="pt-[64px] sm:pt-[68px] transition-all duration-300">
 
-  <!-- Student Guide Banner -->
-  <div class="max-w-7xl mx-auto px-4 pt-6">
-    <div class="bg-amber-50 dark:bg-slate-800 border-l-4 border-amber-500 p-4 rounded-r-xl shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-      <div class="text-sm text-slate-700 dark:text-slate-200 space-y-1">
-        <p class="font-bold text-amber-900 dark:text-amber-300">
-          தமிழ்வழி மற்றும் ஆங்கிலவழி மாணவர்களுக்கான வழிகாட்டி குறிப்பு (Bilingual Study Guide — Complete NCERT Class XII Biology Textbook: Contents + Units VI–X [Chapters 1–13 Complete]):
-        </p>
-        <p>
-          இத்தொகுப்பில் 12-ஆம் வகுப்பு உயிரியல் பாடநூலின் <span class="bilingual-term">பாடநூல் முகப்பு மற்றும் முழுப் பொருளடக்கம் <span class="eng-paren">(Textbook Title Page &amp; Complete Table of Contents — lebo1_1ps.pdf, அலகுகள் VI–X, அத்தியாயங்கள் 1–13, பக்கங்கள் i–xii)</span></span> தமிழ் மற்றும் ஆங்கிலம் ஆகிய இரு மொழிகளிலும் வடிவமைக்கப்பட்டு, <strong>அலகு VI முழுமையும் (அத்தியாயங்கள் 1–3)</strong>, <strong>அலகு VII முழுமையும் (அத்தியாயங்கள் 4–6)</strong>, <strong>அலகு VIII முழுமையும் (அத்தியாயங்கள் 7 &amp; 8)</strong>, <strong>அலகு IX முழுமையும் (அத்தியாயங்கள் 9 &amp; 10)</strong> மற்றும் <strong>அலகு X முழுமையும் (அத்தியாயங்கள் 11, 12 &amp; 13)</strong> ஆகிய அனைத்துப் பாடப்பகுதிகளுடனும் இணைக்கப்பட்டுள்ளது.
-        </p>
-        <p>
-          இத்தனிக்கோப்பில் <span class="bilingual-term">அத்தியாயம் 1: பூக்கும் தாவரங்களில் பாலினப் பெருக்கம் <span class="eng-paren">(Pages 1–25)</span></span>, <span class="bilingual-term">அத்தியாயம் 2: மனித இனப்பெருக்கம் <span class="eng-paren">(Pages 26–40)</span></span>, <span class="bilingual-term">அத்தியாயம் 3: இனப்பெருக்க நலன் <span class="eng-paren">(Pages 41–50)</span></span>, <span class="bilingual-term">அலகு VII முகப்பு + அத்தியாயம் 4: பாரம்பரியக் கொள்கைகள் <span class="eng-paren">(Pages 51–78)</span></span>, <span class="bilingual-term">அத்தியாயம் 5: பாரம்பரியத்தின் மூலக்கூறு அடிப்படை <span class="eng-paren">(Pages 79–109)</span></span>, <span class="bilingual-term">அத்தியாயம் 6: பரிணாமம் <span class="eng-paren">(Pages 110–126)</span></span>, <span class="bilingual-term">அலகு VIII முகப்பு + அத்தியாயம் 7: மனித நலன் மற்றும் நோய்கள் <span class="eng-paren">(Pages 127–148)</span></span>, <span class="bilingual-term">அத்தியாயம் 8: மனித நலனில் நுண்ணுயிரிகள் <span class="eng-paren">(Pages 149–160)</span></span>, <span class="bilingual-term">அலகு IX முகப்பு + அத்தியாயம் 9: உயிரி தொழில்நுட்பக் கொள்கைகள் <span class="eng-paren">(Pages 161–176)</span></span>, <span class="bilingual-term">அத்தியாயம் 10: உயிரி தொழில்நுட்பப் பயன்பாடுகள் <span class="eng-paren">(Pages 177–187)</span></span>, <span class="bilingual-term">அலகு X முகப்பு + அத்தியாயம் 11: உயிரினங்களும் இனத்தொகையும் <span class="eng-paren">(Pages 188–204)</span></span>, <span class="bilingual-term">அத்தியாயம் 12: சூழ்நிலைமண்டலம் <span class="eng-paren">(Pages 205–215)</span></span> மற்றும் <span class="bilingual-term">அத்தியாயம் 13: உயிரியப் பல்வகைமை மற்றும் பாதுகாப்பு <span class="eng-paren">(Chapter 13: Biodiversity and Conservation — lebo113.pdf, பக்கங்கள் 216–228)</span></span> ஆகிய பதின்மூன்று அத்தியாயங்களும் முழுமையாக இணைக்கப்பட்டுள்ளன. அனைத்துப் படங்களிலும் (படங்கள் 1.1–1.15, 2.1a–2.12, 3.1a–3.4b, 4.1–4.17, 5.1–5.16, 6.1–6.11, 7.1–7.11, 8.1–8.8, 9.1–9.7, 10.1–10.3, 11.1–11.5, 12.1–12.4d மற்றும் 13.1–13.2) வாட்டர்மார்க் நீக்கப்பட்டு, <span class="bilingual-term">படத்திலேயே ஆங்கிலப் பாகங்களுக்கு அருகில் தமிழ்ப் பெயர்கள் <span class="eng-paren">(On-Image Bilingual Labels)</span></span> தெளிவாகக் குறிக்கப்பட்டுள்ளன.
-        </p>
-      </div>
-      <div id="searchCountBadge" class="hidden px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-900 text-xs font-bold shrink-0">
-        தேடல் முடிவுகள்: 0
-      </div>
-    </div>
-  </div>
-
   <!-- Main Content Container -->
   <main class="max-w-7xl mx-auto px-4 py-6 space-y-10">
-
-    <!-- TEXTBOOK TITLE PAGE & CONTENTS BANNER (lebo1_1ps.pdf) -->
-    <div id="contents-banner" class="chapter-banner bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-400 text-emerald-950 rounded-2xl p-6 shadow-md border-2 border-amber-600 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-      <div>
-        <span class="text-xs font-extrabold uppercase tracking-widest px-3 py-1 rounded-full bg-emerald-950 text-amber-300">NCERT CLASS XII BIOLOGY • lebo1_1ps.pdf (பக்கங்கள் i–xii)</span>
-        <h2 class="text-xl sm:text-2xl font-extrabold mt-2 text-emerald-950">பாடநூல் முகப்பு மற்றும் பொருளடக்கம் (TEXTBOOK TITLE PAGE &amp; CONTENTS)</h2>
-        <p class="text-xs sm:text-sm text-emerald-900 font-semibold mt-1">மறுபதிப்பு 2026–27 (Reprint 2026-27) • அலகுகள் VI முதல் X வரை (Units VI–X) • அத்தியாயங்கள் 1 முதல் 13 வரை (Chapters 1–13 • பக்கங்கள் 1–227)</p>
-      </div>
-      <div class="flex flex-wrap gap-2 shrink-0">
-        <button type="button" data-jump-section="sec-unit6" class="jump-btn px-3.5 py-2 rounded-xl bg-emerald-900 hover:bg-emerald-800 text-white text-xs sm:text-sm font-bold shadow transition">
-          📘 அத்தியாயம் 1-க்குச் செல்க (Ch 1)
-        </button>
-        <button type="button" data-jump-section="sec-male" class="jump-btn px-3.5 py-2 rounded-xl bg-teal-900 hover:bg-teal-800 text-white text-xs sm:text-sm font-bold shadow transition">
-          📗 அத்தியாயம் 2-க்குச் செல்க (Ch 2)
-        </button>
-        <button type="button" data-jump-section="sec-ch3-intro-prob" class="jump-btn px-3.5 py-2 rounded-xl bg-cyan-900 hover:bg-cyan-800 text-white text-xs sm:text-sm font-bold shadow transition">
-          📙 அத்தியாயம் 3-க்குச் செல்க (Ch 3)
-        </button>
-        <button type="button" data-jump-section="sec-ch4-unit7-mendel" class="jump-btn px-3.5 py-2 rounded-xl bg-indigo-900 hover:bg-indigo-800 text-white text-xs sm:text-sm font-bold shadow transition">
-          🟣 அத்தியாயம் 4-க்குச் செல்க (Ch 4)
-        </button>
-        <button type="button" data-jump-section="sec-ch5-dna-packaging" class="jump-btn px-3.5 py-2 rounded-xl bg-rose-900 hover:bg-rose-800 text-white text-xs sm:text-sm font-bold shadow transition">
-          🔴 அத்தியாயம் 5-க்குச் செல்க (Ch 5)
-        </button>
-        <button type="button" data-jump-section="sec-ch6-origin-theory" class="jump-btn px-3.5 py-2 rounded-xl bg-amber-900 hover:bg-amber-800 text-white text-xs sm:text-sm font-bold shadow transition">
-          🟤 அத்தியாயம் 6-க்குச் செல்க (Ch 6)
-        </button>
-        <button type="button" data-jump-section="sec-ch7-unit8-diseases" class="jump-btn px-3.5 py-2 rounded-xl bg-cyan-900 hover:bg-cyan-800 text-white text-xs sm:text-sm font-bold shadow transition">
-          🩵 அத்தியாயம் 7-க்குச் செல்க (Ch 7)
-        </button>
-        <button type="button" data-jump-section="sec-ch8-household" class="jump-btn px-3.5 py-2 rounded-xl bg-teal-900 hover:bg-teal-800 text-white text-xs sm:text-sm font-bold shadow transition">
-          🟢 அத்தியாயம் 8-க்குச் செல்க (Ch 8)
-        </button>
-        <button type="button" data-jump-section="sec-ch9-unit9-principles" class="jump-btn px-3.5 py-2 rounded-xl bg-indigo-900 hover:bg-indigo-800 text-white text-xs sm:text-sm font-bold shadow transition">
-          🧬 அத்தியாயம் 9-க்குச் செல்க (Ch 9)
-        </button>
-        <button type="button" data-jump-section="sec-ch10-agriculture" class="jump-btn px-3.5 py-2 rounded-xl bg-purple-900 hover:bg-purple-800 text-white text-xs sm:text-sm font-bold shadow transition">
-          🧪 அத்தியாயம் 10-க்குச் செல்க (Ch 10)
-        </button>
-        <button type="button" data-jump-section="sec-ch11-unit10-attributes" class="jump-btn px-3.5 py-2 rounded-xl bg-emerald-900 hover:bg-emerald-800 text-white text-xs sm:text-sm font-bold shadow transition">
-          🌿 அத்தியாயம் 11-க்குச் செல்க (Ch 11)
-        </button>
-        <button type="button" data-jump-section="sec-ch12-structure-productivity" class="jump-btn px-3.5 py-2 rounded-xl bg-teal-900 hover:bg-teal-800 text-white text-xs sm:text-sm font-bold shadow transition">
-          ☀️ அத்தியாயம் 12-க்குச் செல்க (Ch 12)
-        </button>
-        <button type="button" data-jump-section="sec-ch13-biodiversity-patterns" class="jump-btn px-3.5 py-2 rounded-xl bg-green-900 hover:bg-green-800 text-white text-xs sm:text-sm font-bold shadow transition">
-          🌍 அத்தியாயம் 13-க்குச் செல்க (Ch 13)
-        </button>
-      </div>
-    </div>
 
     <section class="page-section space-y-6" data-chapter="contents" id="sec-contents">
       <!-- Page i (lebo1_1ps.pdf Page 1): Official Textbook Title Page (Bilingual Tamil & English) -->
