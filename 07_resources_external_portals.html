@@ -1122,6 +1122,71 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important;
     }
 
+
+/* === v4.12 UNIVERSAL FLOATING BACK-TO-TOP BUTTON === */
+.floating-back-to-top {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 99999 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  padding: 9px 18px !important;
+  background: linear-gradient(135deg, #0284c7 0%, #1e40af 100%) !important;
+  color: #ffffff !important;
+  border: 1.8px solid #38bdf8 !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), 0 0 12px rgba(56, 189, 248, 0.4) !important;
+  font-family: 'Noto Sans Tamil', 'Plus Jakarta Sans', 'Inter', sans-serif !important;
+  font-size: 0.86rem !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  outline: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(14px) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  backdrop-filter: blur(8px) !important;
+  text-decoration: none !important;
+}
+.floating-back-to-top.visible {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+.floating-back-to-top:hover {
+  transform: translateY(-3px) scale(1.04) !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(56, 189, 248, 0.6) !important;
+  background: linear-gradient(135deg, #0369a1 0%, #1e3a8a 100%) !important;
+  border-color: #facc15 !important;
+}
+.floating-btn-arrow {
+  font-size: 0.92rem !important;
+  line-height: 1 !important;
+  color: #facc15 !important;
+}
+.floating-btn-text {
+  letter-spacing: 0.3px !important;
+  color: #ffffff !important;
+}
+/* Hide any legacy duplicate fixed back-to-top buttons so only #floatingBackToTop shows */
+.back-to-top:not(#floatingBackToTop),
+.back-to-top-btn:not(#floatingBackToTop),
+#masterBackTopBtn,
+#backToTopBtn:not(#floatingBackToTop) {
+  display: none !important;
+}
+@media (max-width: 680px) {
+  .floating-back-to-top {
+    bottom: 16px !important;
+    right: 14px !important;
+    padding: 7px 14px !important;
+    font-size: 0.78rem !important;
+  }
+}
+
 </style>
 <style>
 
@@ -2902,713 +2967,546 @@
   }
 }
 </style>
-
-<style id="v428-universal-mobile-responsive">
+<style id="v414-crystal-typing-ribbon-css">
 /* ============================================================================
-   v4.28 UNIVERSAL MOBILE-FIRST EDGE-TO-EDGE & ZERO-CLIPPING ENGINE (ALL PAGES)
-   Fixes:
-   1. Eliminates triple/quadruple nested left-right padding on mobile (image_4fc1ff & image_4fc220)
-   2. Fixes CSS Grid 1fr (minmax(auto, 1fr)) right-side card cutoff by enforcing minmax(0, 1fr)
-      and min-width: 0 on all cards, flex children, and images/SVGs (image_4fc1ff)
-   3. Fixes Breadcrumb bar & current-page pill horizontal overflow by allowing text wrapping (image_4fc220)
-   4. Fixes Accessibility Toolbar (#intlAccessibilityToolbar) button text clipping on mobile using a
-      6-column grid: 3 short buttons in Row 1 (span 2) + 2 wide buttons per row in Rows 2-4 (span 3) (image_4fc9a1)
-   5. Makes sticky top header relative on mobile so it never blocks viewport while scrolling
+   v4.14 UNIFIED TRANSPARENT CRYSTAL GUIDANCE ANIMATION RIBBON
+   (மருத்துவ நுழைவுத்தேர்வுப் பக்க மாதிரி — Transparent Crystal Design)
    ============================================================================ */
-@media (max-width: 768px) {
-  html, body {
-    margin: 0 !important;
-    padding: 2px 2px !important;
-    width: 100% !important;
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-    box-sizing: border-box !important;
-    -webkit-text-size-adjust: 100% !important;
-  }
-
-  .portal-layout-wrapper,
-  .portal-container,
-  .portal-executive-wrapper,
-  .container,
-  .page-wrapper,
-  .main-wrapper {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-    overflow-x: hidden !important;
-  }
-
-  .portal-main-content,
-  main.portal-main-content {
-    margin-left: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 2px 2px 68px 2px !important;
-    box-sizing: border-box !important;
-    overflow-x: hidden !important;
-  }
-
-    /* Accessibility Toolbar (#intlAccessibilityToolbar) - 9 Icon-Only Single-Row Pill Bar on Mobile */
-  .intl-a11y-toolbar,
-  #intlAccessibilityToolbar {
-    display: grid !important;
-    grid-template-columns: repeat(9, minmax(0, 1fr)) !important;
-    gap: 4px !important;
-    padding: 5px 6px !important;
-    margin: 0 0 8px 0 !important;
-    border-radius: 999px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  .intl-a11y-toolbar .a11y-btn,
-  #intlAccessibilityToolbar .a11y-btn,
-  .intl-a11y-toolbar .a11y-btn:nth-child(-n+3),
-  #intlAccessibilityToolbar .a11y-btn:nth-child(-n+3),
-  .intl-a11y-toolbar .a11y-btn:nth-child(n+4),
-  #intlAccessibilityToolbar .a11y-btn:nth-child(n+4) {
-    grid-column: span 1 !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    padding: 6px 2px !important;
-    font-size: 0.86rem !important;
-    border-radius: 999px !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    line-height: 1.15 !important;
-    text-align: center !important;
-    justify-content: center !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Top Frame Banner - Relative on mobile, compact padding */
-  .portal-top-frame {
-    position: relative !important;
-    top: 0 !important;
-    padding: 10px 8px !important;
-    margin: 0 0 8px 0 !important;
-    border-radius: 12px !important;
-    flex-direction: column !important;
-    gap: 6px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  .banner-title-tamil {
-    font-size: clamp(1.15rem, 5vw, 1.38rem) !important;
-    line-height: 1.28 !important;
-  }
-  .banner-tagline-aurora {
-    font-size: 0.74rem !important;
-    line-height: 1.25 !important;
-  }
-  .banner-english-row,
-  .banner-title-english,
-  .banner-slogan-english {
-    font-size: 0.62rem !important;
-    letter-spacing: 0.6px !important;
-    line-height: 1.2 !important;
-  }
-  .top-frame-side-btn,
-  .top-frame-side-btn.btn-home {
-    position: static !important;
-    transform: none !important;
-    padding: 5px 12px !important;
-    font-size: 0.76rem !important;
-    margin-top: 2px !important;
-  }
-
-  /* Breadcrumb Bar - Full wrapping, zero right-edge overflow (image_4fc220 fix) */
-  .breadcrumb-bar,
-  .top-breadcrumb-nav {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 6px !important;
-    padding: 8px 8px !important;
-    margin: 0 0 8px 0 !important;
-    border-radius: 10px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  .breadcrumb-left-stack,
-  .breadcrumb-right-stack {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    align-items: center !important;
-    gap: 5px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
-  }
-  .nav-menu-btn,
-  .nav-menu-btn.btn-current-page,
-  .nav-menu-btn.btn-guidance-home,
-  .nav-menu-btn.btn-notice-link,
-  .breadcrumb-link,
-  .breadcrumb-current {
-    white-space: normal !important;
-    word-break: break-word !important;
-    overflow-wrap: anywhere !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    font-size: 0.76rem !important;
-    line-height: 1.3 !important;
-    padding: 5px 9px !important;
-    box-sizing: border-box !important;
-    height: auto !important;
-  }
-  .nav-menu-btn .btn-text {
-    white-space: normal !important;
-    word-break: break-word !important;
-    overflow-wrap: anywhere !important;
-    min-width: 0 !important;
-  }
-
-  /* Hero Banner & Section Cards - Compact padding to maximize card width */
-  .header-banner-wrap {
-    margin: 0 0 10px 0 !important;
-    border-radius: 12px !important;
-  }
-  .header-banner,
-  .header-banner.aurora-theme,
-  .hero-banner,
-  .crystal-hero-banner {
-    padding: 12px 10px !important;
-    border-radius: 10px !important;
-  }
-  .banner-main-title {
-    font-size: clamp(1.08rem, 4.6vw, 1.32rem) !important;
-    line-height: 1.32 !important;
-  }
-  .banner-sub-english {
-    font-size: 0.68rem !important;
-    letter-spacing: 0.6px !important;
-  }
-  .banner-desc {
-    font-size: 0.78rem !important;
-    line-height: 1.48 !important;
-  }
-
-  .content-card,
-  .section-card,
-  .section-container,
-  .card-section,
-  .feedback-section {
-    padding: 10px 8px !important;
-    margin: 0 0 12px 0 !important;
-    border-radius: 12px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-  }
-
-  .section-header-row {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 6px !important;
-    margin-bottom: 10px !important;
-    padding-bottom: 8px !important;
-  }
-  .section-title {
-    font-size: 0.96rem !important;
-    line-height: 1.35 !important;
-    word-break: break-word !important;
-  }
-  .section-badge-pill {
-    font-size: 0.72rem !important;
-    padding: 3px 9px !important;
-    white-space: normal !important;
-  }
-
-  /* Universal Single-Column Grid Collapse with minmax(0, 1fr) (image_4fc1ff fix) */
-  .resource-grid,
-  .cards-grid,
-  .portal-grid,
-  .portals-grid,
-  .portal-links-grid,
-  .grid-container,
-  #cardsGrid,
-  .gateway-grid,
-  .exam-grid,
-  .courses-grid,
-  .colleges-grid,
-  .branch-grid,
-  .departments-grid,
-  .comparison-grid,
-  .features-grid,
-  .feature-grid-4,
-  .highlights-grid,
-  .iiser-highlights-grid,
-  .loan-grid,
-  .metrics-grid,
-  .metrics-bar,
-  .official-portals-showcase,
-  .quick-nav-grid,
-  .quota-features-grid,
-  .roadmap-grid,
-  .showcase-grid,
-  .sports-4year-grid,
-  .stats-grid,
-  .stats-matrix,
-  .steps-container,
-  .strategy-flex-grid,
-  .strategy-subject-grid,
-  .sub-grid,
-  .sub-grid-3,
-  .tanuvas-2yr-diploma-grid,
-  .tri-directory-grid,
-  .dual-directory-grid,
-  .v410-advisory-grid,
-  .action-buttons-grid,
-  .action-row-split,
-  .boundary-grid,
-  .calc-grid,
-  .calc-inputs,
-  .calc-inputs-grid,
-  .calc-inputs-row,
-  .cards-2col,
-  .cards-3col,
-  .cards-4col,
-  .cf-filters-panel,
-  .cf-inputs-grid,
-  .checklist-grid,
-  .core-7-degrees-grid,
-  .dab-grid,
-  .district-center-info-grid,
-  .fb-grid,
-  .finder-select-grid,
-  .focus-blueprint-grid,
-  .form-inputs-grid,
-  .four-boxes-fluid-grid,
-  .grid-2,
-  .grid-2col,
-  .grid-3,
-  .grid-4,
-  .helpline-bento-grid,
-  .hero-luxury-cards-grid,
-  .nav-button-menu-container,
-  .sq-grid,
-  .cg-responsive-grid-2,
-  .cg-responsive-grid-3,
-  .cg-responsive-grid-4,
-  .cg-responsive-grid-5 {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) !important;
-    gap: 10px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Also collapse any inline grid-template-columns inside sections/cards */
-  .content-card [style*="grid-template-columns"]:not(.manarkeni-stat-grid),
-  .section-card [style*="grid-template-columns"]:not(.manarkeni-stat-grid) {
-    grid-template-columns: minmax(0, 1fr) !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Resource Cards & Portal Cards - Strict 100% width & zero horizontal overflow */
-  .resource-card,
-  .card,
-  .portal-card,
-  .exam-card,
-  .course-card,
-  .college-card,
-  .bento-card,
-  .feature-card,
-  .info-card {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    padding: 12px 10px !important;
-    border-radius: 12px !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-    word-break: break-word !important;
-    overflow-wrap: anywhere !important;
-  }
-
-  .resource-card *,
-  .content-card *,
-  .section-card * {
-    max-width: 100% !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  .resource-card-header {
-    display: flex !important;
-    align-items: flex-start !important;
-    gap: 8px !important;
-    width: 100% !important;
-    min-width: 0 !important;
-  }
-  .resource-card-icon {
-    font-size: 1.5rem !important;
-    padding: 6px !important;
-    flex-shrink: 0 !important;
-  }
-  .resource-card-title {
-    font-size: 0.96rem !important;
-    line-height: 1.32 !important;
-    word-break: break-word !important;
-    overflow-wrap: anywhere !important;
-  }
-  .resource-card-sub {
-    font-size: 0.68rem !important;
-    line-height: 1.25 !important;
-    word-break: break-word !important;
-    overflow-wrap: anywhere !important;
-  }
-  .resource-card-desc {
-    font-size: 0.82rem !important;
-    line-height: 1.5 !important;
-    margin-bottom: 10px !important;
-  }
-  .resource-card-banner-img {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 6px 8px !important;
-    margin-bottom: 10px !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-  }
-  .resource-card-banner-img img,
-  .resource-card-banner-img svg {
-    max-width: 100% !important;
-    height: auto !important;
-    max-height: 76px !important;
-    width: auto !important;
-    object-fit: contain !important;
-    display: block !important;
-    margin: 0 auto !important;
-  }
-  .action-btn {
-    padding: 9px 10px !important;
-    font-size: 0.82rem !important;
-    white-space: normal !important;
-    line-height: 1.25 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Compact Floating Bottom Buttons so they don't cover bottom content */
-  .mobile-menu-floating-btn,
-  .mobile-sidebar-toggle {
-    bottom: 10px !important;
-    left: 8px !important;
-    padding: 6px 12px !important;
-    font-size: 0.75rem !important;
-    border-radius: 999px !important;
-  }
-  .floating-back-to-top {
-    bottom: 10px !important;
-    right: 8px !important;
-    padding: 6px 12px !important;
-    font-size: 0.74rem !important;
-    border-radius: 999px !important;
-  }
-}
-</style>
-
-<style id="universalIntlA11yToolbarCss">
-/* ==========================================================================
-   UNIFIED 9-ICON ACCESSIBILITY, THEME, VOICE SEARCH & BILINGUAL TOOLBAR
-   Icon-Only Pill Bar on Desktop & Single-Row 9-Col Pill Bar on Mobile
-   ========================================================================== */
-.intl-a11y-toolbar,
-#intlAccessibilityToolbar {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  flex-wrap: nowrap !important;
-  gap: 6px !important;
-  background: linear-gradient(90deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%) !important;
-  color: #f8fafc !important;
-  padding: 6px 12px !important;
-  border-radius: 999px !important;
-  margin: 0 auto 12px auto !important;
+.typing-banner-wrap {
   width: 100% !important;
   max-width: 100% !important;
-  font-size: 0.88rem !important;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18) !important;
-  border: 1px solid rgba(99, 102, 241, 0.35) !important;
-  overflow-x: auto !important;
-  scrollbar-width: none !important;
   box-sizing: border-box !important;
+  text-align: center !important;
+  margin: 14px auto 16px auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  animation: none !important;
 }
-.intl-a11y-toolbar::-webkit-scrollbar,
-#intlAccessibilityToolbar::-webkit-scrollbar {
-  display: none !important;
-}
-.intl-a11y-toolbar .a11y-btn,
-#intlAccessibilityToolbar .a11y-btn {
-  background: rgba(255, 255, 255, 0.1) !important;
-  color: #f8fafc !important;
-  border: 1px solid rgba(255, 255, 255, 0.22) !important;
-  padding: 6px 12px !important;
-  border-radius: 999px !important;
-  font-size: 0.88rem !important;
-  font-weight: 800 !important;
-  cursor: pointer !important;
-  transition: all 0.18s ease !important;
-  font-family: inherit !important;
+
+.typing-container,
+.typing-banner-wrap .typing-container {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 2px !important;
-  white-space: nowrap !important;
-  flex: 1 1 0% !important;
-  line-height: 1.15 !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, rgba(240, 249, 255, 0.88) 0%, rgba(236, 253, 245, 0.82) 100%) !important;
+  backdrop-filter: blur(12px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(160%) !important;
+  border: 1.5px solid #38bdf8 !important;
+  padding: 8px 22px !important;
+  border-radius: 999px !important;
+  margin-bottom: 4px !important;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.16), inset 0 1.5px 2px rgba(255, 255, 255, 0.96) !important;
+  min-height: 44px !important;
+  max-width: 96% !important;
+  width: auto !important;
+  box-sizing: border-box !important;
 }
-.intl-a11y-toolbar .a11y-btn:hover,
-.intl-a11y-toolbar .a11y-btn.active,
-#intlAccessibilityToolbar .a11y-btn:hover,
-#intlAccessibilityToolbar .a11y-btn.active {
-  background: #fbbf24 !important;
-  color: #0f172a !important;
-  border-color: #fbbf24 !important;
-  transform: translateY(-1px) !important;
+
+.typing-badge,
+.typing-banner-wrap .typing-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  font-size: 0.86rem !important;
+  font-weight: 800 !important;
+  color: #0c4a6e !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid rgba(56, 189, 248, 0.85) !important;
+  padding: 4px 10px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), inset 0 1px 1px #ffffff !important;
+  flex-shrink: 0 !important;
 }
-.intl-a11y-toolbar .a11y-btn.lang-switch-btn,
-#intlAccessibilityToolbar .a11y-btn.lang-switch-btn {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
-  color: #ffffff !important;
-  border-color: #34d399 !important;
+
+.typing-text,
+.typing-banner-wrap .typing-text {
+  font-size: 0.98rem !important;
+  font-weight: 700 !important;
+  color: #0c4a6e !important;
+  letter-spacing: 0.2px !important;
+  line-height: 1.4 !important;
 }
-.intl-a11y-toolbar .a11y-btn.voice-quick-btn,
-#intlAccessibilityToolbar .a11y-btn.voice-quick-btn {
-  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
-  color: #ffffff !important;
-  border-color: #818cf8 !important;
+
+.typing-cursor,
+.typing-banner-wrap .typing-cursor {
+  display: inline-block !important;
+  font-weight: 800 !important;
+  font-size: 1.15rem !important;
+  color: #0284c7 !important;
+  margin-left: 2px !important;
+  animation: blinkCursorV414 0.8s infinite !important;
 }
-.intl-a11y-toolbar .a11y-btn.theme-palette-btn,
-#intlAccessibilityToolbar .a11y-btn.theme-palette-btn {
-  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%) !important;
-  color: #ffffff !important;
-  border-color: #f472b6 !important;
+
+@keyframes blinkCursorV414 {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.sparkle-icon,
+.typing-sparkle,
+.pulse-sparkle {
+  display: inline-block !important;
+  animation: sparkleSpinV414 3s linear infinite !important;
+}
+
+@keyframes sparkleSpinV414 {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.15) rotate(15deg); }
 }
 
 @media (max-width: 768px) {
-  .intl-a11y-toolbar,
-  #intlAccessibilityToolbar {
-    display: grid !important;
-    grid-template-columns: repeat(9, minmax(0, 1fr)) !important;
-    gap: 4px !important;
-    padding: 5px 6px !important;
-    margin: 0 0 8px 0 !important;
-    border-radius: 999px !important;
-    width: 100% !important;
-    overflow: visible !important;
+  .typing-container,
+  .typing-banner-wrap .typing-container {
+    padding: 6px 14px !important;
+    min-height: 40px !important;
+    border-radius: 14px !important;
+    flex-wrap: wrap !important;
   }
-  .intl-a11y-toolbar .a11y-btn,
-  #intlAccessibilityToolbar .a11y-btn,
-  .intl-a11y-toolbar .a11y-btn:nth-child(-n+3),
-  #intlAccessibilityToolbar .a11y-btn:nth-child(-n+3),
-  .intl-a11y-toolbar .a11y-btn:nth-child(n+4),
-  #intlAccessibilityToolbar .a11y-btn:nth-child(n+4) {
-    grid-column: span 1 !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    padding: 6px 2px !important;
+  .typing-badge,
+  .typing-banner-wrap .typing-badge {
+    font-size: 0.74rem !important;
+    padding: 2px 8px !important;
+  }
+  .typing-text,
+  .typing-banner-wrap .typing-text {
     font-size: 0.86rem !important;
-    border-radius: 999px !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    line-height: 1.15 !important;
-    text-align: center !important;
-    justify-content: center !important;
   }
-}
-
-/* High Contrast & Readable Spacing Modes across all pages */
-body.high-contrast-mode,
-body.a11y-high-contrast {
-  background: #000000 !important;
-  color: #ffffff !important;
-}
-body.high-contrast-mode .portal-main-content,
-body.high-contrast-mode .page-wrapper,
-body.high-contrast-mode .container,
-body.high-contrast-mode .card,
-body.high-contrast-mode .content-card,
-body.high-contrast-mode .section-card,
-body.high-contrast-mode .portal-card,
-body.high-contrast-mode .resource-card,
-body.high-contrast-mode .cat-card,
-body.high-contrast-mode .res-card,
-body.high-contrast-mode .step-card,
-body.high-contrast-mode table,
-body.high-contrast-mode th,
-body.high-contrast-mode td {
-  background: #0a0a0a !important;
-  color: #ffffff !important;
-  border-color: #fbbf24 !important;
-}
-body.high-contrast-mode h1,
-body.high-contrast-mode h2,
-body.high-contrast-mode h3,
-body.high-contrast-mode h4,
-body.high-contrast-mode a,
-body.high-contrast-mode strong,
-body.high-contrast-mode .resource-card-title,
-body.high-contrast-mode .section-title {
-  color: #fde047 !important;
-}
-
-body.readable-spacing-mode,
-body.readable-spacing-mode p,
-body.readable-spacing-mode li,
-body.readable-spacing-mode td,
-body.readable-spacing-mode th,
-body.readable-spacing-mode .resource-card-desc {
-  letter-spacing: 0.035em !important;
-  word-spacing: 0.1em !important;
-  line-height: 1.95 !important;
-}
-
-/* International Trending Color Themes across all pages */
-body.theme-emerald-luxe {
-  background-color: #ecfdf5 !important;
-}
-body.theme-emerald-luxe .portal-top-frame,
-body.theme-emerald-luxe .header-banner {
-  background: linear-gradient(135deg, #022c22 0%, #064e3b 45%, #047857 100%) !important;
-  border-color: rgba(52, 211, 153, 0.45) !important;
-}
-body.theme-sunset-velvet {
-  background-color: #fff1f2 !important;
-}
-body.theme-sunset-velvet .portal-top-frame,
-body.theme-sunset-velvet .header-banner {
-  background: linear-gradient(135deg, #4c0519 0%, #881337 45%, #be123c 100%) !important;
-  border-color: rgba(251, 113, 133, 0.45) !important;
-}
-body.theme-cyber-dark {
-  background-color: #090d16 !important;
-  color: #e2e8f0 !important;
-}
-body.theme-cyber-dark .portal-main-content,
-body.theme-cyber-dark .container,
-body.theme-cyber-dark .page-wrapper {
-  background-color: #090d16 !important;
-  color: #e2e8f0 !important;
-}
-body.theme-cyber-dark .content-card,
-body.theme-cyber-dark .section-card,
-body.theme-cyber-dark .resource-card,
-body.theme-cyber-dark .card {
-  background: #111827 !important;
-  color: #f1f5f9 !important;
-  border-color: #334155 !important;
-}
-body.theme-cyber-dark .resource-card-title,
-body.theme-cyber-dark .section-title,
-body.theme-cyber-dark h2,
-body.theme-cyber-dark h3 {
-  color: #38bdf8 !important;
-}
-body.theme-cyber-dark .resource-card-desc,
-body.theme-cyber-dark p,
-body.theme-cyber-dark li {
-  color: #cbd5e1 !important;
-}
-
-/* Universal Quick Search / Voice Search Modal on Subpages */
-.univ-search-modal-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(15, 23, 42, 0.72);
-  backdrop-filter: blur(4px);
-  z-index: 99999;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-}
-.univ-search-modal-backdrop.open {
-  display: flex;
-}
-.univ-search-modal {
-  background: #ffffff;
-  color: #0f172a;
-  width: 100%;
-  max-width: 560px;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.35);
-  border: 2px solid #6366f1;
-  box-sizing: border-box;
-}
-.univ-search-modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-.univ-search-modal-title {
-  font-size: 1.02rem;
-  font-weight: 800;
-  color: #1e1b4b;
-}
-.univ-search-close-btn {
-  background: #f1f5f9;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  padding: 4px 10px;
-  font-weight: 700;
-  cursor: pointer;
-}
-.univ-search-input-wrap {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-.univ-search-input {
-  flex: 1;
-  padding: 10px 14px;
-  border: 2px solid #cbd5e1;
-  border-radius: 10px;
-  font-size: 0.95rem;
-  font-family: inherit;
-  width: 100%;
-  box-sizing: border-box;
-}
-.univ-search-results {
-  max-height: 260px;
-  overflow-y: auto;
-  font-size: 0.86rem;
-  border-top: 1px solid #e2e8f0;
-  padding-top: 10px;
-}
-.univ-search-hit {
-  padding: 8px 10px;
-  border-radius: 8px;
-  background: #f8fafc;
-  margin-bottom: 6px;
-  cursor: pointer;
-  border-left: 3px solid #6366f1;
-}
-.univ-search-hit:hover {
-  background: #eef2ff;
 }
 </style>
-</head>
-<body>
+<style id="v415-portal-master-stabilizer">
+/* ============================================================================
+   v4.15 MASTER STABILIZER, ZERO-CLS TYPEWRITER, STEADY THIRUKKURAL,
+   MOBILE RESPONSIVENESS & UNIVERSAL PRINT STYLES
+   ============================================================================ */
+
+/* --- A. 100% STILL, EYE-FRIENDLY THIRUKKURAL PALM-LEAF MANUSCRIPT --- */
+.kural-box,
+.kural-box::before,
+.kural-box::after,
+.kural-header,
+.kural-icon,
+.kural-title,
+.kural-sparkle,
+.kural-verse-text,
+.kural-verse-text .kural-line,
+.kural-verse-text .kural-line-1,
+.kural-verse-text .kural-line-2,
+.kural-verse-text .stylus-nib,
+.kural-meaning {
+  animation: none !important;
+  -webkit-animation: none !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+  transition: none !important;
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
+}
+
+.kural-box {
+  box-shadow: 0 5px 16px rgba(74, 33, 5, 0.22), inset 0 0 14px rgba(139, 69, 19, 0.14) !important;
+}
+
+.kural-verse-text .stylus-nib {
+  display: inline-block !important;
+  opacity: 0.85 !important;
+}
+
+/* --- B. ZERO LAYOUT SHIFT (CLS = 0) FOR ALL TYPEWRITER BANNERS (1 OR 2 LINES) --- */
+.typing-banner-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 64px !important;
+  min-height: 64px !important;
+  max-height: 64px !important;
+  margin: 12px auto 14px auto !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  animation: none !important;
+}
+
+.typing-banner-wrap .typing-container,
+body:not(.is-home-page) .typing-container {
+  height: 58px !important;
+  min-height: 58px !important;
+  max-height: 58px !important;
+  width: 100% !important;
+  max-width: 980px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+  gap: 10px !important;
+  padding: 4px 20px !important;
+  margin: 0 auto !important;
+  border-radius: 16px !important;
+  background: linear-gradient(135deg, rgba(236, 253, 245, 0.94) 0%, rgba(240, 249, 255, 0.92) 100%) !important;
+  border: 1.5px solid #6ee7b7 !important;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.95) !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.typing-banner-wrap .typing-badge {
+  flex-shrink: 0 !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+.sparkle-icon,
+.typing-sparkle,
+.pulse-sparkle {
+  animation: none !important;
+  transform: none !important;
+}
+
+.typing-banner-wrap .typing-text,
+body:not(.is-home-page) .typing-text {
+  font-size: 0.92rem !important;
+  font-weight: 800 !important;
+  color: #0c4a6e !important;
+  line-height: 1.32 !important;
+  max-height: 2.68em !important;
+  overflow: hidden !important;
+  text-align: center !important;
+  display: inline-block !important;
+  white-space: normal !important;
+}
+
+/* Home Page (index.html) Control Panel Typewriter & Gateway Flip Box Fixed Heights */
+.control-panel .typing-container {
+  width: 100% !important;
+  max-width: 960px !important;
+  height: 52px !important;
+  min-height: 52px !important;
+  max-height: 52px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  margin: 0 auto 4px auto !important;
+  padding: 2px 12px !important;
+  box-sizing: border-box !important;
+}
+
+.control-panel .typing-text {
+  font-size: clamp(0.84rem, 1.02vw, 0.94rem) !important;
+  font-weight: 800 !important;
+  color: #38bdf8 !important;
+  -webkit-text-fill-color: #38bdf8 !important;
+  line-height: 1.32 !important;
+  max-height: 2.68em !important;
+  overflow: hidden !important;
+  text-align: center !important;
+}
+
+.compass-flip-strip {
+  height: 68px !important;
+  min-height: 68px !important;
+  max-height: 68px !important;
+  width: 100% !important;
+  max-width: 920px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  padding: 6px 14px !important;
+  margin: 8px auto 4px auto !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.compass-flip-viewport {
+  flex: 1 1 auto !important;
+  height: 54px !important;
+  min-height: 54px !important;
+  max-height: 54px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 0 4px !important;
+  box-sizing: border-box !important;
+}
+
+.compass-flip-card {
+  width: 100% !important;
+  height: 54px !important;
+  min-height: 54px !important;
+  max-height: 54px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  transform: none !important;
+  box-sizing: border-box !important;
+}
+
+.compass-flip-content {
+  width: 100% !important;
+  height: 52px !important;
+  min-height: 52px !important;
+  max-height: 52px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  align-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 4px 10px !important;
+  padding: 4px 14px !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  line-height: 1.28 !important;
+}
+
+/* Creator Card & Unified Dual Pill Zero-Bounce Stabilization */
+.creator-card {
+  min-height: 54px !important;
+  box-sizing: border-box !important;
+}
+
+.creator-typewriter-wrapper {
+  min-height: 32px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.cg-unified-dual-pill {
+  animation: dualBorderPulseV409 3.5s infinite ease-in-out !important;
+  transform: none !important;
+}
+
+/* --- C. COMPREHENSIVE MOBILE PHONE OPTIMIZATION (<= 1024px & <= 768px) --- */
+.cg-responsive-grid-4,
+.cg-responsive-grid-5 {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.cg-responsive-grid-3 {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.cg-responsive-grid-2 {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 1024px) {
+  .desktop-left-sidebar {
+    position: fixed !important;
+    left: -320px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 290px !important;
+    max-width: 85vw !important;
+    height: 100vh !important;
+    transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 10005 !important;
+  }
+  .desktop-left-sidebar.sidebar-open,
+  .desktop-left-sidebar.active {
+    left: 0 !important;
+  }
+  .sidebar-backdrop {
+    z-index: 10004 !important;
+  }
+  .sidebar-backdrop.active {
+    display: block !important;
+  }
+  .sidebar-close-btn {
+    display: inline-flex !important;
+  }
+  .portal-main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 8px 10px 75px 10px !important;
+  }
+  /* Keep Menu Button on Bottom-Left and Back-to-Top on Bottom-Right (Zero Overlap!) */
+  .mobile-menu-floating-btn {
+    display: inline-flex !important;
+    position: fixed !important;
+    bottom: 16px !important;
+    left: 14px !important;
+    right: auto !important;
+    z-index: 9998 !important;
+    padding: 9px 16px !important;
+    font-size: 0.84rem !important;
+  }
+  .floating-back-to-top {
+    bottom: 16px !important;
+    right: 14px !important;
+    left: auto !important;
+    z-index: 9998 !important;
+    padding: 8px 15px !important;
+    font-size: 0.80rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Fixed height on mobile for typewriter and gateway flip box so 1-line and 2-line never shift */
+  .typing-banner-wrap {
+    height: 74px !important;
+    min-height: 74px !important;
+    max-height: 74px !important;
+    margin: 8px auto 10px auto !important;
+  }
+  .typing-banner-wrap .typing-container,
+  body:not(.is-home-page) .typing-container {
+    height: 66px !important;
+    min-height: 66px !important;
+    max-height: 66px !important;
+    padding: 4px 12px !important;
+    border-radius: 14px !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+  }
+  .typing-banner-wrap .typing-text,
+  body:not(.is-home-page) .typing-text {
+    font-size: 0.80rem !important;
+    line-height: 1.28 !important;
+    max-height: 2.6em !important;
+  }
+  .control-panel .typing-container {
+    height: 58px !important;
+    min-height: 58px !important;
+    max-height: 58px !important;
+    padding: 2px 8px !important;
+  }
+  .control-panel .typing-text {
+    font-size: 0.80rem !important;
+    line-height: 1.28 !important;
+    max-height: 2.6em !important;
+  }
+  .compass-flip-strip {
+    height: 82px !important;
+    min-height: 82px !important;
+    max-height: 82px !important;
+    padding: 5px 8px !important;
+    gap: 6px !important;
+    border-radius: 14px !important;
+  }
+  .compass-flip-viewport,
+  .compass-flip-card,
+  .compass-flip-content {
+    height: 68px !important;
+    min-height: 68px !important;
+    max-height: 68px !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 3px !important;
+    padding: 2px 6px !important;
+    overflow: hidden !important;
+  }
+  .flip-part-title {
+    font-size: 0.78rem !important;
+    line-height: 1.22 !important;
+    text-align: center !important;
+  }
+  .flip-gateway-badge {
+    font-size: 0.70rem !important;
+    line-height: 1.2 !important;
+    padding: 2px 10px !important;
+  }
+  .creator-card {
+    min-height: 84px !important;
+    padding: 10px 12px !important;
+  }
+  .creator-typewriter-wrapper {
+    min-height: 40px !important;
+    height: 40px !important;
+    font-size: 0.78rem !important;
+    line-height: 1.25 !important;
+  }
+  /* Responsive Tables & Touch Scroll */
+  .table-container,
+  .table-responsive,
+  .table-wrapper,
+  .directory-table-container,
+  .college-table-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  table th,
+  table td {
+    font-size: 0.80rem !important;
+    padding: 8px 8px !important;
+  }
+  .cg-responsive-grid-4,
+  .cg-responsive-grid-5,
+  .cg-responsive-grid-3,
+  .cg-responsive-grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  #bottomStudentQueryBtn,
+  #bottomPortalFeedbackBtn {
+    min-width: 0 !important;
+    width: 100% !important;
+    padding: 12px 16px !important;
+  }
+}
+
+/* --- D. UNIVERSAL PRINT STYLES (@media print) --- */
+@media print {
+  .desktop-left-sidebar,
+  .mobile-menu-floating-btn,
+  .floating-back-to-top,
+  .sidebar-backdrop,
+  .quick-nav-marquee-container,
+  .bottom-page-nav-bar,
+  .portal-bottom-action-hub,
+  .cg-portal-modal-overlay,
+  .no-print {
+    display: none !important;
+  }
+  html, body, .portal-layout-wrapper, .portal-main-content, .container, .portal-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+  .card, .section-card, .kural-box, .creator-card, .portal-footer, table, th, td {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    box-shadow: none !important;
+  }
+}
+</style></head>
+<body class="">
 <div class="portal-layout-wrapper">
 <div class="portal-container">
 <div class="portal-executive-wrapper">
@@ -3683,7 +3581,7 @@ body.theme-cyber-dark li {
 <a class="sidebar-main-btn" href="06_student_support.html">
 <span class="icon">🧮</span>
 <span class="btn-text-group">
-<span class="menu-ta">கட்-ஆஃப் &amp; மாணவர் உதவி</span>
+<span class="menu-ta">கட்-ஆஃப் கருவிகள் &amp; உதவி மையம்</span>
 <span class="menu-en">CUTOFF TOOLS &amp; STUDENT SUPPORT</span>
 </span>
 </a>
@@ -3699,18 +3597,6 @@ body.theme-cyber-dark li {
 </aside>
 <!-- Main Content Area -->
 <main class="portal-main-content">
-<!-- 0. சர்வதேச அணுகல்தன்மைப் பட்டை, இருமொழி மாற்றி, குரல் தேடல் (International Accessibility & Bilingual Toolbar) -->
-<div class="intl-a11y-toolbar no-print" id="intlAccessibilityToolbar" role="toolbar" aria-label="ஒருங்கிணைந்த அணுகல்தன்மை மற்றும் இருமொழி மாற்றி பட்டை">
-  <button type="button" class="a11y-btn" onclick="adjustPortalFontSize(-1)" title="எழுத்து அளவைக் குறைக்க (Decrease Font Size)" aria-label="Decrease Font Size">அ-</button>
-  <button type="button" class="a11y-btn active" id="btnFontNormal" onclick="adjustPortalFontSize(0)" title="இயல்பான எழுத்து அளவு (Default Font Size)" aria-label="Default Font Size">அ</button>
-  <button type="button" class="a11y-btn" onclick="adjustPortalFontSize(1)" title="எழுத்து அளவைப் பெரிதாக்க (Increase Font Size)" aria-label="Increase Font Size">அ+</button>
-  <button type="button" class="a11y-btn" id="btnHighContrast" onclick="toggleHighContrastMode()" title="உயர் நிறமாறுபாடு (WCAG High Contrast Mode)" aria-label="High Contrast Mode">🌓</button>
-  <button type="button" class="a11y-btn" id="btnReadableSpacing" onclick="toggleReadableSpacing()" title="எளிய வாசிப்பு இடைவெளி (Readable Line Spacing)" aria-label="Readable Spacing">📖</button>
-  <button type="button" class="a11y-btn" id="btnAudioGuide" onclick="togglePortalAudioGuide()" title="பக்கத்தின் சுருக்கத்தைக் குரல் வழியாகக் கேட்க (Audio Screen Reader)" aria-label="Audio Guide">🔊</button>
-  <button type="button" class="a11y-btn theme-palette-btn" id="btnThemePalette" onclick="cyclePortalColorTheme()" title="வண்ணத்திட்ட மாற்றி (Color Theme: Neo-Aurora)" aria-label="Switch Color Theme">🎨</button>
-  <button type="button" class="a11y-btn voice-quick-btn" id="btnVoiceQuickSearch" onclick="openVoiceSearchDirectly()" title="குரல் வழித் தேடல் (Tamil & English Voice Search)" aria-label="Voice Search">🎤</button>
-  <button type="button" class="a11y-btn lang-switch-btn" id="btnBilingualToggle" onclick="toggleBilingualMode()" title="இருமொழி மாற்றி: தமிழ் ⇄ English (Switch Language)" aria-label="Switch Language">🌐</button>
-</div>
 <!-- Top Frame Banner -->
 <header class="portal-top-frame no-print">
 <!-- Center Branding Stack: 3D Gold Title, Aurora Tagline & English Sub-branding -->
@@ -3778,7 +3664,7 @@ body.theme-cyber-dark li {
 </div>
 </div>
 </div>
-</div>
+</div><div class="typing-banner-wrap no-print" style="text-align: center; margin: 14px auto 16px auto;"><div class="typing-container"><span aria-label="தகவல்கள்" class="typing-badge"><span class="sparkle-icon">✨</span></span><span class="typing-text" id="typingText">சிவகங்கை முதுகலை ஆசிரியர்களின் SVG Horizon தளம், STARS Sivagangai இலவச ஆன்லைன் பயிற்சி தளம் மற்றும் NCERT பாடப்புத்தகங்கள்!</span><span class="typing-cursor">|</span></div></div>
 <!-- SECTION 1: பாடநூல்கள் அதிகாரப்பூர்வ பதிவிறக்க இணையதளங்கள் -->
 <section class="content-card" id="sec-textbooks" style="border-top: 5px solid #0284c7;">
 <div class="section-header-row">
@@ -3816,49 +3702,56 @@ body.theme-cyber-dark li {
 <span>↗</span>
 </a>
 </div>
-<!-- 2. மணற்கேணி (Manarkeni Official Digital Learning Portal) -->
-<div class="resource-card" id="manarkeni-portal" style="border-top: 4px solid #0d9488; background: linear-gradient(180deg, #ffffff 0%, #f0fdfa 100%);">
-<div>
-<!-- Picture 1: Manarkeni Official Dark Navy Logo Banner -->
-<div class="resource-card-banner-img" style="width: 100%; text-align: center; margin-bottom: 12px; border-radius: 10px; overflow: hidden; background: linear-gradient(135deg, #0b192c 0%, #1e3a8a 60%, #0f766e 100%); padding: 12px 12px; border: 1.5px solid #5eead4; box-shadow: 0 3px 10px rgba(13, 148, 136, 0.2); box-sizing: border-box;">
-  <img alt="மணற்கேணி — கற்றனைத் தூறும் அறிவு (Manarkeni Logo)" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIwIiBoZWlnaHQ9IjcxIiB2aWV3Qm94PSIwIDAgMjUwMDAgODA2OSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2MDkuNTEgMTA1Ny40N0wxNzg2LjcyIDUyOTUuMjNINDA5MC4zNkM0MDkwLjM2IDUyOTUuMjMgNDg1Mi44NiA1MzI1LjYxIDQ4NTIuODYgNDg3Ni4zM0M0ODUyLjg2IDQ0MjcuMDQgMzIzNC4xOCAzOTQxLjM3IDMxMTYuMDIgNTE1NS42QzMxMTYuMDIgNTE1NS42IDI5MjYuOTUgMzg4MC42MSA0NTQ1LjcgNDI1Ny4wM0M1NzAzLjU4IDQ1OTcuMDYgNTA0MS45MyA1NjI5LjE2IDQxNDQuMDEgNTYyOS4xNkgxODY0LjU4QzE4NjQuNTggNTYyOS4xNiAxNDI2LjQzIDU3MTQuMTQgMTQzOC4yOCA1MzYyQzE0NTAuMDcgNTAwOS44NyAxNDg1LjU1IDEyMzMuNSAxNjA5LjY0IDEwNTcuNDdIMTYwOS41MVoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik05MjcxLjgxIDQzMDUuNjFDODg4MS45IDM5NjUuNTkgODM2Ny45IDQxMDUuMjkgODM2Ny45IDQxMDUuMjlDNTg3Ny42NyAzMzgyLjA5IDU0MDEuNSA1MzgxLjIxIDUzMzkuMjYgNTcyMC43NkM1MzM0LjkgNTc0NC43MSA1MzU0Ljg4IDU3NjUuOTIgNTM3OC4zOSA1NzYyLjUxQzY3NjUuMDQgNTU2NC4zMyA3MjA0LjEgNDMwNS42MSA3MjA0LjEgNDMwNS42MUM3NjA1Ljc5IDQyMzIuNzUgNzkyNC44NyA0MzE3LjcyIDc5MjQuODcgNDMxNy43MkM3MzU3Ljc1IDQ0OTkuODQgNjM2NS4yMyA1NzE0LjE0IDczNTcuNzUgNTcxNC4xNEM4MzUwLjI2IDU3MTQuMTQgODQ1Ni41OCA1MTkxLjk5IDg0NTYuNTggNTE5MS45OUM4NDU2LjU4IDUxOTEuOTkgODUwMy44NCA1NTgwLjU5IDg5NDEuMDIgNTU4MC41OUM5Njk3LjIgNTU4MC41OSA5NDM3LjI0IDQ1NDguNDggOTQzNy4yNCA0NTQ4LjQ4Qzk1MTkuOTIgNDQxNC45MyAxMDA3NS4zIDQyMjAuNjQgMTAwNzUuMyA0MjIwLjY0Qzk4MjcuMTUgNjA5MC42MiA5OTU3LjEgNjIyNC4xNyA5OTU3LjEgNjIyNC4xN0MxMDAwNC40IDYwNjYuMzQgMTAzMTEuNiAzOTc3Ljc2IDEwMzExLjYgMzk3Ny43NkM5ODk4LjA1IDM5MjkuMTkgOTI3MS44MSA0MzA1LjYxIDkyNzEuODEgNDMwNS42MVpNNzAyMy44MyA0MzU3LjMzQzY2MTUuMDQgNTEyMS42NyA1ODU3LjU1IDUzODkuNTcgNTY2NS44OSA1NDQ2Ljc4QzU2NDcuMDcgNTQ1Mi4zMyA1NjMwLjM0IDU0MzMuMDYgNTYzNy44OSA1NDE0LjQ2QzU5MTQuNTIgNDcyNy43OSA2NzcxLjU1IDQzOTguNzQgNjk5Ni4xNiA0MzIyLjk0QzcwMTYuMjggNDMxNi4xMSA3MDMzLjk4IDQzMzguMjYgNzAyMy44MyA0MzU3LjMzWk03NDE2LjggNTI3Ny4wM0M3NDE2LjggNTI3Ny4wMyA3NTQ2Ljc1IDQ4MDMuNDYgODI2Ny41MSA0NTI0LjE5QzgyNjcuNTEgNDUyNC4xOSA4NTk4LjM3IDU0MjIuNzYgNzQxNi44IDUyNzcuMDNaTTg1ODYuNTIgNDQ2My40NEg4OTY5LjAxQzg4NjcuMDYgNDUzNi4zIDg2MzMuNzkgNDc0Mi43MSA4NjMzLjc5IDQ3NDIuNzFDODY0NS41NyA0NTg0Ljg4IDg1ODYuNTIgNDQ2My40NCA4NTg2LjUyIDQ0NjMuNDRaTTg5MjkuMTcgNTIxNi4yOEM4OTI5LjE3IDUyMTYuMjggODU3NC42NyA1Mjc2Ljk3IDg3MjguMzIgNTAyMS45OEM4ODgxLjk3IDQ3NjcgOTE1My42NSA0NjU3LjY3IDkxNTMuNjUgNDY1Ny42N0M5MTUzLjY1IDQ2NTcuNjcgOTM4OS45NyA1MTc5LjgyIDg5MjkuMTcgNTIxNi4yMVY1MjE2LjI4WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTEwNzY2LjUgNDc2MC45OEMxMDc2Ni41IDQ3NjAuOTggMTA2NDMgNDY0NC4yMiAxMDYzMy45IDQ4ODQuNzZDMTA2MjQuNyA1MTI1LjI5IDEwODMxLjYgNTE3Ny42OCAxMDkxMS4zIDQ5MDguNjRDMTA5OTEgNDYzOS42MSAxMTAxNC42IDQzOTYuNzQgMTEwMTQuNiA0Mzk2Ljc0QzExMDE0LjYgNDM5Ni43NCAxMTA5Ny4zIDQzNjAuMzQgMTExNDQuNiA0NTc4Ljg2QzExMTkxLjkgNDc5Ny40NCAxMTM3NC40IDQ3OTcuNDQgMTE2NTUuMyA0NjAzLjE0QzExOTM2LjMgNDQwOC44NSAxMjA0Mi42IDQ0MDguODUgMTIwNjYuMiA0NDQ1LjMxQzEyMDg5LjggNDQ4MS43MSAxMTY0MC45IDUzNjguMTYgMTA4MzcuNCA2MzUxLjY5QzEwNTUzLjggNjcxNiAxMDQ1OS4zIDcwMTkuNTYgMTA0NTkuMyA3MDE5LjU2QzEwNDU5LjMgNzAxOS41NiAxMTIxNS41IDYyNTQuNTUgMTE0MTYuMyA2MDYwLjMxQzExNjE3LjIgNTg2Ni4wMiAxMjQwOC45IDUwNjQuNiAxMjQ0NC4zIDQyNTEuMDhDMTI0NzQuMSAzNTY2LjE1IDExNzE2LjcgNDEyOS4xNyAxMTQ3Ni41IDQzMjQuMzRDMTE0MzcuNCA0MzU2LjA2IDExMzgwLjUgNDM0Ny40OSAxMTM1Mi4xIDQzMDUuNDdDMTEyNTcgNDE2NC45NyAxMTA1OC43IDM4ODYuODQgMTA5NzkuMiAzODg2Ljg0QzEwODcyLjkgMzg4Ni44NCAxMDgwMiA0Mzg0LjY5IDEwNzY2LjUgNDc2MS4xMVY0NzYwLjk4WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTExNTEwLjggMzE1OC4xNUMxMTUxMC44IDMxNTguMTUgMTE1MzQuNCAzNjU2LjAxIDExNzM1LjMgMzUxMC4yOEMxMTkzNi4xIDMzNjQuNTYgMTIwODkuOCAzMDI0LjYgMTEzMjEuNyAyOTg4LjE0QzExMzIxLjcgMjk4OC4xNCAxMTg3Ny4xIDI1ODcuNDMgMTIyNjcgMzEwOS41OEMxMjY1Ni45IDM2MzEuNzIgMTE1MjMgNDE0OS41MSAxMTQzOS45IDM3ODkuNTVDMTEzODAuOSAzNDk4LjExIDExNDM5LjkgMzMwMy44NyAxMTUxMC44IDMxNTguMTVaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMjI3NjUgMzQ0My41MUMyMjMyNy44IDM0MDcuMTEgMjE1OTUuMiAzODkyLjc5IDIxNTk1LjIgMzg5Mi43OUMyMTMyMy41IDM3MTAuNjcgMjA4MjEuNCAzNzg5LjU1IDIwODIxLjQgMzc4OS41NUMxOTgwNS4yIDMyMTguODMgMTg4NjAgMzkxMC45OSAxODUyMS45IDQ1NjMuNjdDMTgxODMuOCA1MjE2LjM1IDE4OTA3LjIgNTc0NC41MSAxOTQyNy4xIDUwODguODJDMTk5NDEuNyA0NDM5LjgyIDE5NDcyLjQgNDExMS45OCAxOTQ2Mi43IDQxMDUuNDJDMTk3NDAuMiA0ODE1LjY0IDE5MjQ0IDUxNzkuOTUgMTg5MjUgNTE3OS45NUMxODYwNiA1MTc5Ljk1IDE4NTcwLjUgNDY1Ny44MSAxOTExNC4xIDQyMDguNTNDMTk2NTcuNSAzNzU5LjI0IDIwNTIwLjEgMzk3Ny44MyAyMDUyMC4xIDM5NzcuODNDMjAzNDIuOSA0MDc0Ljk4IDE5NTA0IDUyNDAuNjMgMjAzMzEuMSA1MjQwLjYzQzIxMTU4LjEgNTI0MC42MyAyMTA4Ny4yIDQxNDcuNzcgMjEwODcuMiA0MTQ3Ljc3QzIxMjA1LjQgNDExMS4zOCAyMTMzNS40IDQxMzUuNjYgMjEzMzUuNCA0MTM1LjY2QzIxMzM1LjQgNDEzNS42NiAyMDgwMy42IDQ5ODUuNjUgMjE1NDggNDk4NS42NUMyMjI5Mi40IDQ5ODUuNjUgMjE5MzMuOSA0MDEwLjYxIDIxOTMzLjkgNDAxMC42MUMyMjIzNy4xIDM4ODUuNTYgMjI0MzQuMiAzODQ0LjI4IDIyNDM0LjIgMzg0NC4yOEMyMjQyMi40IDQyOTMuNTYgMjI0MTAuNSA2MzQ1LjY3IDIyNDEwLjUgNjM0NS42N0wyMjc2NSAzNDQzLjU4SDIyNzY1VjM0NDMuNTFaTTIwNDAxLjkgNDg2NC4xNUMyMDQwMS45IDQ4NjQuMTUgMjA0MDEuOSA0NTM2LjMgMjA3NTYuNCA0MjQ0Ljg2QzIwNzU2LjQgNDI0NC44NiAyMDgyNy4zIDQ3NTQuODIgMjA0MDEuOSA0ODY0LjE1Wk0yMTczNi45IDQ1MDUuNDZDMjE3MzIuNiA0NTU5LjUyIDIxNjk0LjcgNDYwNC41NSAyMTY0My42IDQ2MThDMjE1NDYuMiA0NjQzLjYyIDIxMzg2LjUgNDY3MC40NSAyMTQzMy45IDQ1NTQuNUMyMTQ5OS4zIDQzOTMuOTkgMjE2MzYuNiA0MjI3LjczIDIxNjQyLjMgNDIyMC44NEMyMTY0Mi40IDQyMjAuNyAyMTY0Mi41IDQyMjAuNyAyMTY0Mi42IDQyMjAuODRDMjE2NDcuMiA0MjI2LjY2IDIxNzQ4LjcgNDM1OC42NiAyMTczNi44IDQ1MDUuNDZIMjE3MzYuOVoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0yMTgxOS43IDM2ODYuMzJDMjE4MTkuNyAzNjg2LjMyIDIxMTkzLjUgMTkxMy40OCAyMzYzOS4zIDE5NDkuOTRDMjM2MzkuMyAxOTQ5Ljk0IDIxODc4LjggMjQyMy41MSAyMTgxOS43IDM2ODYuMzJaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTI3NjguMSA2NDc2LjYxQzEyNzY4LjEgNjUxMS40NyAxMjc1OSA2NTQwLjkxIDEyNzQwLjggNjU2NC44NkMxMjcyMi43IDY1ODguODEgMTI3MDAuMyA2NjAwLjc5IDEyNjczLjYgNjYwMC43OUgxMjU4MUMxMjU5Mi41IDY1NzcuMTcgMTI2MTkuNSA2NTU5LjQ0IDEyNjYxLjggNjU0Ny42QzEyNjc1LjEgNjU0My44NSAxMjY4Ni4xIDY1MzUuNDkgMTI2OTQuNSA2NTIyLjM3QzEyNzAzIDY1MDkuMzMgMTI3MDcuMiA2NDk0LjA3IDEyNzA3LjIgNjQ3Ni42MUMxMjcwNy4yIDY0NjQuNzcgMTI3MDIuMSA2NDU0LjUzIDEyNjkxLjggNjQ0NS44M0MxMjY4MS41IDY0MzcuMTMgMTI2NjkuMSA2NDMyLjc5IDEyNjU0LjYgNjQzMi43OUgxMjU4Ni41VjY0ODUuMDRDMTI1ODYuNSA2NTE4LjAzIDEyNTcxLjMgNjU0Ni4zMyAxMjU0MSA2NTcwLjAxQzEyNTEwLjcgNjU5My43IDEyNDczLjggNjYwNS40NyAxMjQzMC4yIDY2MDUuNDdDMTIzODYuNiA2NjA1LjQ3IDEyMzUwLjYgNjU5Mi45NiAxMjMyMC4zIDY1NjcuOEMxMjI5MCA2NTQyLjcxIDEyMjc0LjkgNjUxMS45NCAxMjI3NC45IDY0NzUuNTRDMTIyNzQuOSA2NDQ5LjE4IDEyMjg1IDY0MjYuNjMgMTIzMDUuMyA2NDA3Ljc2QzEyMzI1LjUgNjM4OC45NiAxMjM0OS45IDYzNzkuNTMgMTIzNzguNCA2Mzc5LjUzVjYyOTcuNDNDMTIzNzguNCA2Mjc3Ljc2IDEyMzg1LjkgNjI2MS4xNyAxMjQwMS4xIDYyNDcuNjVDMTI0MTYuMiA2MjM0LjE0IDEyNDM0LjcgNjIyNy4zOCAxMjQ1Ni41IDYyMjcuMzhIMTI1OTkuMUMxMjYxOC41IDYyMjcuMzggMTI2MzYuMyA2MjMyLjA2IDEyNjUyLjcgNjI0MS4zNkMxMjY2OSA2MjUwLjY2IDEyNjgxLjcgNjI2My43OCAxMjY5MC44IDYyODAuNTdIMTI1ODYuNFY2Mzc5LjUzSDEyNjU1LjRDMTI2ODYuMyA2Mzc5LjUzIDEyNzEyLjggNjM4OS4wMyAxMjczNC45IDY0MDguMDNDMTI3NTcgNjQyNy4wMyAxMjc2OCA2NDQ5LjkxIDEyNzY4IDY0NzYuNjFIMTI3NjguMVpNMTI1MjUuNiA2NDg1LjA0VjYyODAuNjRIMTI0NTcuNUMxMjQ0NS40IDYyODEuOTEgMTI0MzkuMyA2Mjg3LjggMTI0MzkuMyA2Mjk4LjM3VjYzNzkuNTlIMTI1MTYuNUMxMjQ5Ni43IDY0MTUuMDYgMTI0NjUgNjQzMi43OSAxMjQyMS42IDY0MzIuNzlIMTIzODMuN0MxMjM3MC40IDY0MzIuNzkgMTIzNTkuMSA2NDM3IDEyMzQ5LjcgNjQ0NS4zNkMxMjM0MC40IDY0NTMuNzkgMTIzMzUuNyA2NDY0LjE3IDEyMzM1LjcgNjQ3Ni42MUMxMjMzNS43IDY0OTcuNzUgMTIzNDQuOSA2NTE1LjY4IDEyMzYzLjMgNjUzMC4yN0MxMjM4MS42IDY1NDQuOTIgMTI0MDQuMSA2NTUyLjIxIDEyNDMwLjcgNjU1Mi4yMUMxMjQ1Ny4yIDY1NTIuMjEgMTI0NzguOSA2NTQ1LjY2IDEyNDk3LjUgNjUzMi42MUMxMjUxNi4yIDY1MTkuNTYgMTI1MjUuNiA2NTAzLjY0IDEyNTI1LjYgNjQ4NC45N1Y2NDg1LjA0WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTEzMzQ2LjcgNjQ0MS4xNUMxMzM0Ni43IDY1MTIuNzQgMTMzMjUuNCA2NTczLjU2IDEzMjgyLjcgNjYyMy42N0MxMzI0MCA2NjczLjc5IDEzMTg4LjEgNjY5OC44MSAxMzEyNi45IDY2OTguODFIMTI5MjMuNEMxMjkxMS4zIDY2OTguODEgMTI5MDEgNjcwNC40MyAxMjg5Mi42IDY3MTUuNkMxMjg4NC4xIDY3MjYuNzggMTI4NzkuOSA2NzQwLjgzIDEyODc5LjkgNjc1Ny42MlY2ODE2LjQzQzEyODY0LjEgNjgxMi4wOCAxMjg1MS42IDY4MDEuOTggMTI4NDIuMiA2Nzg2LjA2QzEyODMyLjggNjc3MC4yIDEyODI4LjEgNjc1MS4zMyAxMjgyOC4xIDY3MjkuNTlDMTI4MjguMSA2NzA1LjkgMTI4MzcuMiA2Njg2LjAzIDEyODU1LjQgNjY2OS44NEMxMjg3My42IDY2NTMuNjUgMTI4OTYgNjY0NS41NSAxMjkyMi42IDY2NDUuNTVIMTMxMjZDMTMxNjkuNyA2NjQ1LjU1IDEzMjA3LjIgNjYyNS42MSAxMzIzOC43IDY1ODUuOEMxMzI3MC4yIDY1NDUuOTkgMTMyODUuOSA2NDk3Ljc1IDEzMjg1LjkgNjQ0MS4wOEMxMzI4NS45IDYzOTYuMjYgMTMyNzMuNSA2MzU4LjMyIDEzMjQ4LjcgNjMyNy4yMUMxMzIyMy44IDYyOTYuMDkgMTMxOTMuMyA2MjgwLjUxIDEzMTU3IDYyODAuNTFDMTMxNTAuOSA2MjgwLjUxIDEzMTQ0LjQgNjI4Mi4wNCAxMzEzNy40IDYyODUuMTlDMTMxMzAuNSA2Mjg4LjMzIDEzMTIzLjQgNjI5Mi42OCAxMzExNi4xIDYyOTguMjRDMTMxMDIuNyA2MzEwLjA4IDEzMDk2LjEgNjMyMS45MiAxMzA5Ni4xIDYzMzMuN1Y2NjA5LjA5QzEzMDU1LjUgNjU4NS40NyAxMzAzNS4yIDY1NTguOTcgMTMwMzUuMiA2NTI5LjczVjYzMzMuN0MxMzAzNS4yIDYzMjEuODUgMTMwMjguNyA2MzEwLjA4IDEzMDE1LjcgNjI5OC4yNEMxMzAwMi43IDYyODYuMzkgMTI5OTAuNCA2MjgwLjUxIDEyOTc4LjkgNjI4MC41MUMxMjk2Ni4yIDYyODAuNTEgMTI5NTUuMSA2Mjg1LjY2IDEyOTQ1LjggNjI5NS44OUMxMjkzNi40IDYzMDYuMiAxMjkzMS43IDYzMTguNzggMTI5MzEuNyA2MzMzLjdWNjYwOS4wOUMxMjg5MS4xIDY1ODUuNDcgMTI4NzAuOCA2NTU4Ljk3IDEyODcwLjggNjUyOS43M1Y2MzMzLjdDMTI4NzAuOCA2MzAzLjg2IDEyODgxLjEgNjI3OC42MyAxMjkwMS43IDYyNTguMDlDMTI5MjIuMyA2MjM3LjU1IDEyOTQ4IDYyMjcuMzEgMTI5NzguOSA2MjI3LjMxQzEzMDI0LjkgNjIyNy4zMSAxMzA1NC4zIDYyNDEuOTcgMTMwNjcgNjI3MS4yMUMxMzA4Ny42IDYyNDEuOTcgMTMxMTcuNiA2MjI3LjMxIDEzMTU2LjkgNjIyNy4zMUMxMzIwOS42IDYyMjcuMzEgMTMyNTQuNCA2MjQ4LjE5IDEzMjkxLjMgNjI4OS44N0MxMzMyOC4zIDYzMzEuNTYgMTMzNDYuNyA2MzgyIDEzMzQ2LjcgNjQ0MS4wOFY2NDQxLjE1WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTEzMjM2LjggNTk5OS42M0MxMzIzNi44IDYwMTguOSAxMzIzMC43IDYwMzQuOTYgMTMyMTguNiA2MDQ3LjY3QzEzMjA2LjUgNjA2MC40NSAxMzE4OS44IDYwNjYuOCAxMzE2OC43IDYwNjYuOEMxMzE0OC43IDYwNjYuOCAxMzEzMi45IDYwNjAuNTggMTMxMjEuNCA2MDQ4LjE0QzEzMTExLjEgNjAzNS42OSAxMzEwNiA2MDE4LjU2IDEzMTA2IDU5OTYuODJDMTMxMDYgNTk3Ni4yOCAxMzExMi40IDU5NjAuNDIgMTMxMjUuMSA1OTQ5LjE4QzEzMTM3LjggNTkzOC4wMSAxMzE1My4zIDU5MzIuMzkgMTMxNzEuNCA1OTMyLjM5QzEzMTkxLjQgNTkzMi4zOSAxMzIwNy43IDU5MzkuODggMTMyMjAuNCA1OTU0LjhDMTMyMzEuMyA1OTY3Ljg1IDEzMjM2LjggNTk4Mi44NCAxMzIzNi44IDU5OTkuNjNaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTM5NDMuNSA2NDQxLjE1QzEzOTQzLjUgNjUxMi43NCAxMzkyMi4xIDY1NzMuNTYgMTM4NzkuNCA2NjIzLjY3QzEzODM2LjcgNjY3My43OSAxMzc4NC44IDY2OTguODEgMTM3MjMuNiA2Njk4LjgxSDEzNTIwLjJDMTM1MDguMSA2Njk4LjgxIDEzNDk3LjggNjcwNC40MyAxMzQ4OS4zIDY3MTUuNkMxMzQ4MC45IDY3MjYuNzggMTM0NzYuNiA2NzQwLjgzIDEzNDc2LjYgNjc1Ny42MlY2ODE2LjQzQzEzNDYwLjkgNjgxMi4wOCAxMzQ0OC4zIDY4MDEuOTggMTM0MzguOSA2Nzg2LjA2QzEzNDI5LjYgNjc3MC4yIDEzNDI0LjkgNjc1MS4zMyAxMzQyNC45IDY3MjkuNTlDMTM0MjQuOSA2NzA1LjkgMTM0MzQgNjY4Ni4wMyAxMzQ1Mi4xIDY2NjkuODRDMTM0NzAuMyA2NjUzLjY1IDEzNDkyLjcgNjY0NS41NSAxMzUxOS40IDY2NDUuNTVIMTM3MjIuOUMxMzc2Ni41IDY2NDUuNTUgMTM4MDQgNjYyNS42MSAxMzgzNS41IDY1ODUuOEMxMzg2Ni45IDY1NDUuOTkgMTM4ODIuNyA2NDk3Ljc1IDEzODgyLjcgNjQ0MS4wOEMxMzg4Mi43IDYzOTYuMjYgMTM4NzAuMiA2MzU4LjMyIDEzODQ1LjQgNjMyNy4yMUMxMzgyMC42IDYyOTYuMDkgMTM3OTAgNjI4MC41MSAxMzc1My43IDYyODAuNTFDMTM3NDcuNyA2MjgwLjUxIDEzNzQxLjEgNjI4Mi4wNCAxMzczNC4yIDYyODUuMTlDMTM3MjcuMiA2Mjg4LjMzIDEzNzIwLjEgNjI5Mi42OCAxMzcxMi44IDYyOTguMjRDMTM2OTkuNSA2MzEwLjA4IDEzNjkyLjggNjMyMS45MiAxMzY5Mi44IDYzMzMuN1Y2NjA5LjA5QzEzNjUyLjMgNjU4NS40NyAxMzYzMiA2NTU4Ljk3IDEzNjMyIDY1MjkuNzNWNjMzMy43QzEzNjMyIDYzMjEuODUgMTM2MjUuNSA2MzEwLjA4IDEzNjEyLjQgNjI5OC4yNEMxMzU5OS40IDYyODYuMzkgMTM1ODcuMiA2MjgwLjUxIDEzNTc1LjYgNjI4MC41MUMxMzU2MyA2MjgwLjUxIDEzNTUxLjkgNjI4NS42NiAxMzU0Mi41IDYyOTUuODlDMTM1MzMuMSA2MzA2LjIgMTM1MjguNCA2MzE4Ljc4IDEzNTI4LjQgNjMzMy43VjY2MDkuMDlDMTM0ODcuOSA2NTg1LjQ3IDEzNDY3LjYgNjU1OC45NyAxMzQ2Ny42IDY1MjkuNzNWNjMzMy43QzEzNDY3LjYgNjMwMy44NiAxMzQ3Ny45IDYyNzguNjMgMTM0OTguNCA2MjU4LjA5QzEzNTE5IDYyMzcuNTUgMTM1NDQuOCA2MjI3LjMxIDEzNTc1LjYgNjIyNy4zMUMxMzYyMS43IDYyMjcuMzEgMTM2NTEgNjI0MS45NyAxMzY2My43IDYyNzEuMjFDMTM2ODQuMyA2MjQxLjk3IDEzNzE0LjMgNjIyNy4zMSAxMzc1My42IDYyMjcuMzFDMTM4MDYuMyA2MjI3LjMxIDEzODUxLjEgNjI0OC4xOSAxMzg4OC4xIDYyODkuODdDMTM5MjUgNjMzMS41NiAxMzk0My41IDYzODIgMTM5NDMuNSA2NDQxLjA4VjY0NDEuMTVaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTQ3NTcuNCA2NDMxLjcyQzE0NzU3LjQgNjQ4MC4yMiAxNDczOS4yIDY1MjEuOTEgMTQ3MDIuOSA2NTU2LjdDMTQ2NjYuNSA2NTkxLjQ5IDE0NjIyLjYgNjYwOC45NSAxNDU3MS4yIDY2MDguOTVDMTQ2MTAuMiA2NTg1Ljk0IDE0NjQwLjkgNjU1OC41NyAxNDY2My4xIDY1MjYuODZDMTQ2ODUuNCA2NDk1LjE0IDE0Njk2LjUgNjQ2My40MyAxNDY5Ni41IDY0MzEuNzJDMTQ2OTYuNSA2MzkwLjAzIDE0NjgyLjIgNjM1NC40NCAxNDY1My41IDYzMjQuOTNDMTQ2MjQuOSA2Mjk1LjM2IDE0NTkwLjQgNjI4MC42NCAxNDU0OS45IDYyODAuNjRDMTQ1MTkuMiA2MjgwLjY0IDE0NDk0LjUgNjI4OC43NCAxNDQ3NS44IDYzMDQuOTNDMTQ1MTMuOSA2MzQ0LjEzIDE0NTMzIDYzOTIuMzcgMTQ1MzMgNjQ0OS41OEMxNDUzMyA2NDkxLjI2IDE0NTIyLjYgNjUyNi45MiAxNDUwMS43IDY1NTYuNUMxNDQ4MC44IDY1ODYuMDcgMTQ0NTUuMiA2NjAwLjg2IDE0NDI0LjkgNjYwMC44NkMxNDM5Ny4xIDY2MDAuODYgMTQzNzMuNCA2NTg4Ljc1IDE0MzU0LjEgNjU2NC40NkMxNDMzNC43IDY1NDAuMTcgMTQzMjUuMSA2NTEwLjkzIDE0MzI1LjEgNjQ3Ni42OEMxNDMyNS4xIDY0NDIuNDIgMTQzMzIuOSA2NDE0LjEyIDE0MzQ4LjcgNjM4OS45QzE0MzY0LjUgNjM2NS42MSAxNDM4NS42IDYzNDkuNzUgMTQ0MTIuMyA2MzQyLjI2QzE0Mzk0LjcgNjM2My40IDE0Mzg1LjkgNjQwNy45IDE0Mzg1LjkgNjQ3NS43NEMxNDM4NS45IDY0OTYuMjggMTQzODkuNiA2NTEzLjQxIDE0Mzk2LjggNjUyNy4wNkMxNDQwNC4xIDY1NDAuNzcgMTQ0MTMuNSA2NTQ3LjYgMTQ0MjUgNjU0Ny42QzE0NDM4LjMgNjU0Ny42IDE0NDQ5LjUgNjUzOC4zIDE0NDU4LjYgNjUxOS41NkMxNDQ2Ny43IDY1MDAuOSAxNDQ3Mi4yIDY0NzcuNTUgMTQ0NzIuMiA2NDQ5LjU4QzE0NDcyLjIgNjM5OS44IDE0NDU0LjYgNjM1OS4xOSAxNDQxOS4yIDYzMjcuNzRDMTQzODMuOSA2Mjk2LjMgMTQzMzkuNiA2MjgwLjU3IDE0Mjg2LjUgNjI4MC41N0MxNDIzMy4zIDYyODAuNTcgMTQxOTEuMyA2Mjk1LjIzIDE0MTU1LjEgNjMyNC40NkMxNDExOC44IDYzNTMuNyAxNDEwMC43IDYzODkuNSAxNDEwMC43IDY0MzEuNzhDMTQxMDAuNyA2NDYzLjUgMTQxMDkuMyA2NDkwLjczIDE0MTI2LjQgNjUxMy40OEMxNDE0My42IDY1MzYuMjIgMTQxNjMuOSA2NTQ3LjUzIDE0MTg3LjQgNjU0Ny41M0MxNDIwMS4yIDY1NDcuNTMgMTQyMTMuMiA2NTQyLjI1IDE0MjIzLjQgNjUzMS42N0MxNDIzMy43IDY1MjEuMSAxNDIzOC44IDY1MDguNjYgMTQyMzguOCA2NDk0LjM0QzE0MjM4LjggNjQ4NC4zNyAxNDIzNS41IDY0NzYuMDEgMTQyMjguOCA2NDY5LjEyQzE0MjIyLjEgNjQ2Mi4yOSAxNDIxMy45IDY0NTguODEgMTQyMDQuMiA2NDU4LjgxQzE0MTk2LjkgNjQ1OC44MSAxNDE5MC44IDY0NjIuNjkgMTQxODUuNiA2NDcwLjQ2QzE0MTgwLjUgNjQ3OC4yMiAxNDE3Ny45IDY0ODcuNDUgMTQxNzcuOSA2NDk4LjAyVjY1MzcuMjNDMTQxNTAgNjUyMy4wNCAxNDEzNi4xIDY0OTguMjkgMTQxMzYuMSA2NDYzLjFDMTQxMzYuMSA2NDQ3LjA0IDE0MTQyLjcgNjQzMy40NiAxNDE1Ni4xIDY0MjIuMjhDMTQxNjkuMyA2NDExLjE4IDE0MTg1LjcgNjQwNS42MiAxNDIwNS4xIDY0MDUuNjJDMTQyMzAuNSA2NDA1LjYyIDE0MjUyLjYgNjQxNC4zMiAxNDI3MS40IDY0MzEuNjVDMTQyOTAuMSA2NDQ4Ljk4IDE0Mjk5LjUgNjQ3MC4wNSAxNDI5OS41IDY0OTQuODFDMTQyOTkuNSA2NTIzLjkxIDE0Mjg4LjcgNjU0OC44NyAxNDI2Ny4yIDY1NjkuNjFDMTQyNDUuNiA2NTkwLjM1IDE0MjE5IDY2MDAuNzIgMTQxODcuNCA2NjAwLjcyQzE0MTQ3LjMgNjYwMC43MiAxNDExMi43IDY1ODQuMjYgMTQwODMuNSA2NTUxLjI4QzE0MDU0LjQgNjUxOC4yOSAxNDAzOS44IDY0NzguNDggMTQwMzkuOCA2NDMxLjc4QzE0MDM5LjggNjM3NS4xOCAxNDA2My43IDYzMjYuOTQgMTQxMTEuNSA2Mjg3LjA2QzE0MTU5LjQgNjI0Ny4yNSAxNDIxNy41IDYyMjcuMzEgMTQyODUuOSA2MjI3LjMxQzE0MzM0LjQgNjIyNy4zMSAxNDM4MC40IDYyNDAuNyAxNDQyNCA2MjY3LjQ2QzE0NDYxLjYgNjI0MC43IDE0NTAzLjYgNjIyNy4zMSAxNDU1MC4zIDYyMjcuMzFDMTQ2MDcuMiA2MjI3LjMxIDE0NjU1LjkgNjI0Ny4yNSAxNDY5Ni41IDYyODdDMTQ3MzcgNjMyNi44MSAxNDc1Ny40IDYzNzQuOTggMTQ3NTcuNCA2NDMxLjU4VjY0MzEuNzJaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTU2MDYuNiA2MjgwLjU3SDE1NDgwLjRWNjYwOC4wMUMxNTQ2MiA2NTk5LjMyIDE1NDQ3LjIgNjU4Ny4wNyAxNTQzNi4xIDY1NzEuMTVDMTU0MjUuMSA2NTU1LjI5IDE1NDE5LjUgNjUzOC4zNiAxNTQxOS41IDY1MjAuM1Y2MjgwLjU3SDE1MzQxLjRDMTUzMDkuMyA2MjgwLjU3IDE1Mjg3LjIgNjI4OC4zMyAxNTI3NS4xIDYzMDMuOTJDMTUyOTQuMSA2MzI2LjM0IDE1MzA4LjYgNjM1MC43NiAxNTMxOC40IDYzNzcuMTlDMTUzMjguMyA2NDAzLjYxIDE1MzMzLjIgNjQzMC44NCAxNTMzMy4yIDY0NTguODhDMTUzMzMuMiA2NDk4LjA5IDE1MzIzIDY1MzEuNTQgMTUzMDIuOCA2NTU5LjI0QzE1MjgyLjUgNjU4Ni45NCAxNTI1OC4xIDY2MDAuNzkgMTUyMjkuNyA2NjAwLjc5QzE1MjAxLjIgNjYwMC43OSAxNTE3OS4xIDY1ODguNjggMTUxNTkuOCA2NTY0LjM5QzE1MTQwLjQgNjU0MC4xIDE1MTMwLjcgNjUxMC44NyAxNTEzMC43IDY0NzYuNjFDMTUxMzAuNyA2NDQ0LjkgMTUxMzkuNiA2NDE3LjIgMTUxNTcuNiA2MzkzLjUxQzE1MTc1LjQgNjM2OS44OSAxNTE5OC4yIDYzNTUuNTcgMTUyMjYuMSA2MzUwLjU2QzE1MjE0LjkgNjM2NC44NyAxNTIwNi4zIDYzODIuNiAxNTIwMC41IDY0MDMuNzVDMTUxOTQuNSA2NDI0Ljg5IDE1MTkxLjYgNjQ0OS4xOCAxNTE5MS42IDY0NzYuNTRDMTUxOTEuNiA2NDk2LjQ4IDE1MTk1LjEgNjUxMy4yNyAxNTIwMi4zIDY1MjYuOTJDMTUyMDkuNCA2NTQwLjY0IDE1MjE4LjYgNjU0Ny40NiAxNTIyOS44IDY1NDcuNDZDMTUyNDEuNyA2NTQ3LjQ2IDE1MjUxLjcgNjUzOC43NyAxNTI2MCA2NTIxLjNDMTUyNjguMyA2NTAzLjkxIDE1MjcyLjUgNjQ4My4wMyAxNTI3Mi41IDY0NTguNzVDMTUyNzIuNSA2NDA5LjU3IDE1MjUzLjQgNjM2Ny42MiAxNTIxNS40IDYzMzIuNzZDMTUxNzcuMyA2Mjk3LjkgMTUxMzEuNCA2MjgwLjUgMTUwNzcuNyA2MjgwLjVDMTUwMjkuOSA2MjgwLjUgMTQ5ODkuMyA2Mjk2LjIzIDE0OTU1LjggNjMyNy42N0MxNDkyMi4zIDYzNTkuMTIgMTQ5MDUuNSA2Mzk2LjkyIDE0OTA1LjUgNjQ0MS4wOEMxNDkwNS41IDY0NzAuOTIgMTQ5MTQuMyA2NDk2LjE1IDE0OTMxLjkgNjUxNi42OUMxNDk0OS41IDY1MzcuMjMgMTQ5NzEgNjU0Ny40NiAxNDk5Ni40IDY1NDcuNDZDMTUwMDkuMSA2NTQ3LjQ2IDE1MDIwLjIgNjU0Mi4zMSAxNTAyOS42IDY1MzIuMDdDMTUwMzguOSA2NTIxLjg0IDE1MDQzLjYgNjUwOS4xOSAxNTA0My42IDY0OTQuMjdDMTUwNDMuNiA2NDg0LjMgMTUwNDAuOSA2NDc1Ljk0IDE1MDM1LjQgNjQ2OS4wNUMxNTAyOS45IDY0NjIuMjIgMTUwMjIuNyA2NDU4Ljc1IDE1MDEzLjYgNjQ1OC43NUMxNTAwNyA2NDU4Ljc1IDE1MDAwLjkgNjQ2Mi4zNiAxNDk5NS40IDY0NjkuNDVDMTQ5OTAgNjQ3Ni42MSAxNDk4Ny4yIDY0ODQuODQgMTQ5ODcuMiA2NDk0LjIxVjY1MzAuNkMxNDk1OC44IDY1MTkuNSAxNDk0NC41IDY0OTkuNjkgMTQ5NDQuNSA2NDcxLjMyQzE0OTQ0LjUgNjQ1My4zOSAxNDk1MS4yIDY0MzggMTQ5NjQuNSA2NDI1LjAyQzE0OTc3LjggNjQxMi4wNCAxNDk5NC4yIDY0MDUuNTUgMTUwMTMuNSA2NDA1LjU1QzE1MDM5IDY0MDUuNTUgMTUwNjAuNSA2NDE0LjI1IDE1MDc4LjEgNjQzMS41OEMxNTA5NS42IDY0NDguOTEgMTUxMDQuNCA2NDY5Ljk5IDE1MTA0LjQgNjQ5NC43NEMxNTEwNC40IDY1MjQuNDUgMTUwOTQuMSA2NTQ5LjU0IDE1MDczLjYgNjU3MC4wMUMxNTA1MyA2NTkwLjQ5IDE1MDI3LjIgNjYwMC42NSAxNDk5Ni40IDY2MDAuNjVDMTQ5NTQuNiA2NjAwLjY1IDE0OTE4LjggNjU4NS4xMyAxNDg4OS4yIDY1NTMuOTVDMTQ4NTkuNSA2NTIyLjg0IDE0ODQ0LjcgNjQ4NS4xNyAxNDg0NC43IDY0NDEuMDFDMTQ4NDQuNyA2MzgxLjk0IDE0ODY3LjQgNjMzMS40OSAxNDkxMi44IDYyODkuOEMxNDk1OC4yIDYyNDguMTIgMTUwMTMuMyA2MjI3LjI1IDE1MDc4LjEgNjIyNy4yNUMxNTEzNi4yIDYyMjcuMjUgMTUxODUuMiA2MjQxLjkgMTUyMjUuMiA2MjcxLjE0QzE1MjU3LjkgNjI0MS45IDE1Mjk2LjkgNjIyNy4yNSAxNTM0Mi40IDYyMjcuMjVIMTU1MjRDMTU1NDAuOSA2MjI3LjI1IDE1NTU2LjYgNjIzMS45MyAxNTU3MC44IDYyNDEuMjNDMTU1ODUgNjI1MC41MyAxNTU5NyA2MjYzLjY0IDE1NjA2LjcgNjI4MC40NEwxNTYwNi42IDYyODAuNTdaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTYwODIuNiA2NTEyLjA3QzE2MDgyLjYgNjU2My4xMiAxNjA2NC4yIDY2MDYuOTQgMTYwMjcuMyA2NjQzLjY4QzE1OTkwLjQgNjY4MC40MSAxNTk0NS43IDY2OTguNzQgMTU4OTMuMSA2Njk4Ljc0SDE1NjYwLjFDMTU2NDkuOCA2Njk4Ljc0IDE1NjQxLjMgNjcwMy4wOSAxNTYzNC43IDY3MTEuNzlDMTU2MjguMSA2NzIwLjQ5IDE1NjI0LjcgNjczMS4wNiAxNTYyNC43IDY3NDMuNVY2ODA3QzE1NjA2LjMgNjgwMC4xNyAxNTU5MS41IDY3ODkuMjcgMTU1ODAuNSA2Nzc0LjM1QzE1NTY5LjQgNjc1OS40MyAxNTU2My45IDY3NDIuOSAxNTU2My45IDY3MjQuOUMxNTU2My45IDY3MDMuMDkgMTU1NzIuOSA2Njg0LjQyIDE1NTkxLjEgNjY2OC45QzE1NjA5LjMgNjY1My4zMSAxNTYzMS43IDY2NDUuNTUgMTU2NTguMyA2NjQ1LjU1SDE1ODkyLjdDMTU5MjcuOCA2NjQ1LjU1IDE1OTU4LjEgNjYzMi41IDE1OTgzLjUgNjYwNi4zNEMxNjAwOSA2NTgwLjE4IDE2MDIxLjcgNjU0OC44IDE2MDIxLjcgNjUxMi4wN0MxNjAyMS43IDY0ODkuNjYgMTYwMTUuOCA2NDcwLjg2IDE2MDA0IDY0NTUuNkMxNTk5Mi4yIDY0NDAuMzUgMTU5NzcuNSA2NDMyLjcyIDE1OTU5LjkgNjQzMi43MkgxNTg5Mi43VjY0ODQuOTdDMTU4OTIuNyA2NTE3Ljk2IDE1ODc4LjQgNjU0Ni4yNiAxNTg1MCA2NTY5Ljk1QzE1ODIxLjUgNjU5My42MyAxNTc4Ni43IDY2MDUuNDEgMTU3NDUuNiA2NjA1LjQxQzE1NzAxLjQgNjYwNS40MSAxNTY2My41IDY1OTMuMTYgMTU2MzIgNjU2OC42N0MxNTYwMC41IDY1NDQuMTkgMTU1ODQuOCA2NTE0LjQxIDE1NTg0LjggNjQ3OS4yOUMxNTU4NC44IDY0NTEuNjUgMTU1OTQuNSA2NDI4LjE3IDE1NjEzLjkgNjQwOC43QzE1NjMzLjMgNjM4OS4yMyAxNTY1Ni44IDYzNzkuNTMgMTU2ODQuNyA2Mzc5LjUzVjYzMDIuMDVDMTU2ODQuNyA2MjgxLjE3IDE1NjkyLjcgNjI2My41MSAxNTcwOC44IDYyNDkuMDZDMTU3MjQuOCA2MjM0LjYxIDE1NzQ0LjMgNjIyNy4zOCAxNTc2Ny40IDYyMjcuMzhIMTU5MjcuM0MxNTk0MS4yIDYyMjcuMzggMTU5NTQuNyA2MjMyLjA2IDE1OTY3LjcgNjI0MS4zNkMxNTk4MC43IDYyNTAuNjYgMTU5OTEuOCA2MjYzLjc4IDE2MDAwLjggNjI4MC41N0gxNTg5Mi44VjYzNzkuNTNIMTU5NjEuOEMxNTk5NS4xIDYzNzkuNTMgMTYwMjMuNiA2MzkyLjMxIDE2MDQ3LjIgNjQxNy44QzE2MDcwLjggNjQ0My4yOSAxNjA4Mi42IDY0NzQuNzQgMTYwODIuNiA2NTEyLjA3Wk0xNTgzMS45IDY0ODUuMDRWNjI4MC42NEgxNTc2OC4zQzE1NzYxLjcgNjI4MC42NCAxNTc1Ni4yIDYyODMuMTEgMTU3NTIgNjI4OC4xM0MxNTc0Ny43IDYyOTMuMTUgMTU3NDUuNiA2Mjk5LjY0IDE1NzQ1LjYgNjMwNy43NFY2Mzc5LjU5SDE1ODIyLjhDMTU4MDIuMiA2NDE1LjA2IDE1NzczLjQgNjQzMi43OSAxNTczNi41IDY0MzIuNzlIMTU3MDIuOUMxNTY4Ny4yIDY0MzIuNzkgMTU2NzMuNyA2NDM3LjM0IDE1NjYyLjUgNjQ0Ni4zQzE1NjUxLjMgNjQ1NS4zMyAxNTY0NS43IDY0NjYuNzEgMTU2NDUuNyA2NDgwLjM2QzE1NjQ1LjcgNjUwMC4zIDE1NjU1LjIgNjUxNy4yMiAxNTY3NC4zIDY1MzEuMjFDMTU2OTMuNCA2NTQ1LjE5IDE1NzE3LjEgNjU1Mi4yMSAxNTc0NS42IDY1NTIuMjFDMTU3NjkuMiA2NTUyLjIxIDE1Nzg5LjUgNjU0NS42NiAxNTgwNi40IDY1MzIuNjFDMTU4MjMuNCA2NTE5LjU2IDE1ODMxLjkgNjUwMy42NCAxNTgzMS45IDY0ODQuOTdWNjQ4NS4wNFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xNTk1OSA1OTk5LjYzQzE1OTU5IDYwMTguOSAxNTk1MyA2MDM0Ljk2IDE1OTQwLjkgNjA0Ny42N0MxNTkyOC44IDYwNjAuNDUgMTU5MTIuMSA2MDY2LjggMTU4OTAuOSA2MDY2LjhDMTU4NzEgNjA2Ni44IDE1ODU1LjIgNjA2MC41OCAxNTg0My43IDYwNDguMTRDMTU4MzMuNSA2MDM1LjY5IDE1ODI4LjMgNjAxOC41NiAxNTgyOC4zIDU5OTYuODJDMTU4MjguMyA1OTc2LjI4IDE1ODM0LjcgNTk2MC40MiAxNTg0Ny40IDU5NDkuMThDMTU4NjAuMSA1OTM4LjAxIDE1ODc1LjYgNTkzMi4zOSAxNTg5My43IDU5MzIuMzlDMTU5MTMuNyA1OTMyLjM5IDE1OTMwLjEgNTkzOS44OCAxNTk0Mi44IDU5NTQuOEMxNTk1My42IDU5NjcuODUgMTU5NTkuMSA1OTgyLjg0IDE1OTU5LjEgNTk5OS42M0gxNTk1OVoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xNzQ4OS42IDYyODAuNTdIMTczOTEuNVY2Njk3Ljg3QzE3MzUwLjkgNjY3My41OCAxNzMzMC42IDY2NDcuMTYgMTczMzAuNiA2NjE4LjUyVjYyODAuNTdIMTcyNTQuMUMxNzI0Mi4xIDYyODEuODQgMTcyMzYuMSA2Mjg3LjczIDE3MjM2LjEgNjI5OC4zVjY2MTguNTJDMTcyMzYuMSA2NjM3Ljc5IDE3MjI4LjcgNjY1NC40NSAxNzIxMy45IDY2NjguNDNDMTcxOTkgNjY4Mi40MiAxNzE4MC43IDY2ODkuNDQgMTcxNTguOSA2Njg5LjQ0SDE3MDQwLjhDMTcwMDYuOSA2NzMwLjUyIDE2OTY3LjMgNjc2Mi4yNCAxNjkyMS44IDY3ODQuNjVDMTY4NzYuNCA2ODA3LjA2IDE2ODI4LjMgNjgxOC4yNCAxNjc3Ny40IDY4MTguMjRDMTY3MTggNjgxOC4yNCAxNjY2OCA2ODA3LjUzIDE2NjI3LjEgNjc4Ni4wNkMxNjU4Ni4yIDY3NjQuNTggMTY1NjUuOCA2NzM4LjI4IDE2NTY1LjggNjcwNy4xN0MxNjU2NS44IDY2ODcuMjMgMTY1NzMuMyA2NjcwLjQ0IDE2NTg4LjUgNjY1Ni43OUMxNjYwMy42IDY2NDMuMDcgMTY2MjIuMSA2NjM2LjI1IDE2NjQzLjkgNjYzNi4yNUgxNzAxMEMxNzAzMS4xIDY1OTkuNTIgMTcwNDEuNyA2NTYwLjk4IDE3MDQxLjcgNjUyMC41QzE3MDQxLjcgNjQ5Ni4yMSAxNzAzMSA2NDc1LjU0IDE3MDA5LjUgNjQ1OC40MUMxNjk4OCA2NDQxLjI4IDE2OTYyLjQgNjQzMi43MiAxNjkzMi43IDY0MzIuNzJIMTY4ODEuOVY2NDg0Ljk3QzE2ODgxLjkgNjUxOS44MyAxNjg2Ni41IDY1NDkuNCAxNjgzNS41IDY1NzMuNjNDMTY4MDQuNyA2NTk3LjkxIDE2NzY2LjUgNjYxMC4wMiAxNjcyMS4xIDY2MTAuMDJDMTY2NzUuNyA2NjEwLjAyIDE2NjM5LjIgNjU5Ny4zMSAxNjYwOCA2NTcxLjg5QzE2NTc2LjggNjU0Ni40NiAxNjU2MS4yIDY1MTUuNTUgMTY1NjEuMiA2NDc5LjE1QzE2NTYxLjIgNjQ1MS41OSAxNjU3Mi4xIDY0MjguMDQgMTY1OTMuOSA2NDA4LjU3QzE2NjE1LjcgNjM4OS4xIDE2NjQyLjMgNjM3OS4zOSAxNjY3My44IDYzNzkuMzlWNjMwNi41M0MxNjY3My44IDYyODQuMzkgMTY2ODIuMyA2MjY1LjY1IDE2Njk5LjMgNjI1MC4yNkMxNjcxNi4yIDYyMzQuODcgMTY3MzYuOCA2MjI3LjE4IDE2NzYxLjEgNjIyNy4xOEgxNjkwNy4zQzE2OTIxLjIgNjIyNy4xOCAxNjkzNS42IDYyMzEuNzMgMTY5NTAuNSA2MjQwLjdDMTY5NjUuMyA2MjQ5LjczIDE2OTc5LjcgNjI2Mi45OCAxNjk5My42IDYyODAuMzdIMTY4ODEuOVY2Mzc5LjMzSDE2OTMzLjlDMTY5NzkuNSA2Mzc5LjMzIDE3MDE4LjQgNjM5My4wNCAxNzA1MC42IDY0MjAuNDFDMTcwODIuOSA2NDQ3Ljc3IDE3MDk5IDY0ODAuNzYgMTcwOTkgNjUxOS4zNlY2NTM3LjA5QzE3MDk5IDY1NzIuNTUgMTcwOTAuMiA2NjA1LjU0IDE3MDcyLjcgNjYzNi4wNUgxNzE1OC4xQzE3MTY5LjYgNjYzNC43OCAxNzE3NS4zIDY2MjguODkgMTcxNzUuMyA2NjE4LjMyVjYzMDcuNDdDMTcxNzUuMyA2Mjg1LjA1IDE3MTgzLjggNjI2Ni4xMiAxNzIwMC44IDYyNTAuNTNDMTcyMTcuNyA2MjM1LjAxIDE3MjM4LjMgNjIyNy4xOCAxNzI2Mi42IDYyMjcuMThIMTczODMuNEMxNzQwNy42IDYyMjcuMTggMTc0MjkgNjIzMS44NiAxNzQ0Ny41IDYyNDEuMTZDMTc0NjUuOSA2MjUwLjQ2IDE3NDgwIDYyNjMuNTggMTc0ODkuNyA2MjgwLjM3TDE3NDg5LjYgNjI4MC41N1pNMTY4MjEgNjQ4NS43MVY2MjgwLjU3SDE2NzYyQzE2NzU0LjcgNjI4MC41NyAxNjc0OC40IDYyODMuMDUgMTY3NDIuOSA2Mjg4LjA3QzE2NzM3LjQgNjI5My4wOCAxNjczNC43IDYyOTkuNTcgMTY3MzQuNyA2MzA3LjY3VjYzNzkuNTNIMTY4MTYuNUMxNjc5Ni41IDY0MTQuOTkgMTY3NzAuNCA2NDMyLjcyIDE2NzM4LjMgNjQzMi43MkgxNjY4My45QzE2NjY2LjkgNjQzMi43MiAxNjY1Mi4zIDY0MzcuNCAxNjY0MC4yIDY0NDYuODRDMTY2MjguMSA2NDU2LjI3IDE2NjIyLjEgNjQ2Ny41MSAxNjYyMi4xIDY0ODAuNjlDMTY2MjIuMSA2NTAxLjM3IDE2NjMxLjggNjUxOS4yMyAxNjY1MS4xIDY1MzQuMjhDMTY2NzAuNSA2NTQ5LjM0IDE2NjkzLjggNjU1Ni44MyAxNjcyMSA2NTU2LjgzQzE2NzQ4LjIgNjU1Ni44MyAxNjc3Mi41IDY1NDkuOTQgMTY3OTEuOSA2NTM2LjIyQzE2ODExLjMgNjUyMi41MSAxNjgyMC45IDY1MDUuNjUgMTY4MjAuOSA2NDg1LjY0TDE2ODIxIDY0ODUuNzFaTTE2OTY1LjUgNjY4OS40NEgxNjY0NC45QzE2NjMyLjcgNjY5MC42NSAxNjYyNi43IDY2OTYuNiAxNjYyNi43IDY3MDcuMTdDMTY2MjYuNyA2NzIzLjM2IDE2NjQxLjIgNjczNy4wMSAxNjY3MC4zIDY3NDguMjVDMTY2OTkuMyA2NzU5LjQzIDE2NzM1LjEgNjc2NS4wNSAxNjc3Ny41IDY3NjUuMDVDMTY4NTMuOCA2NzY1LjA1IDE2OTE2LjUgNjczOS44MiAxNjk2NS41IDY2ODkuNDRaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTgxNzQuNSA2NjE4LjUyQzE4MTc0LjUgNjYzNy43OSAxODE2Ny4xIDY2NTQuNDUgMTgxNTIuMiA2NjY4LjVDMTgxMzcuNCA2NjgyLjQ4IDE4MTE5LjEgNjY4OS41MSAxODA5Ny4zIDY2ODkuNTFIMTc5NzAuMUMxNzk0Mi44IDY3MjguMTEgMTc5MDcuNiA2NzU4LjU2IDE3ODY0LjMgNjc4MC45N0MxNzgyMSA2ODAzLjM4IDE3Nzc0LjUgNjgxNC41NiAxNzcyNC45IDY4MTQuNTZDMTc2NzIuOCA2ODE0LjU2IDE3NjI4LjcgNjgwNC4yNSAxNzU5Mi43IDY3ODMuNzhDMTc1NTYuNiA2NzYzLjI0IDE3NTM4LjcgNjczNy43NSAxNzUzOC43IDY3MDcuMjRDMTc1MzguNyA2Njg3LjMgMTc1NDcuNSA2NjcwLjUxIDE3NTY1IDY2NTYuODZDMTc1ODIuNSA2NjQzLjE0IDE3NjA0IDY2MzYuMzIgMTc2MjkuMyA2NjM2LjMySDE3OTMwLjJDMTc5NDguMyA2NjA1LjIxIDE3OTU3LjQgNjU1Ny45IDE3OTU3LjQgNjQ5NC40MUMxNzk1Ny40IDY0MzUuMjYgMTc5NDQuOCA2Mzg0Ljg4IDE3OTE5LjUgNjM0My4yQzE3ODk0LjEgNjMwMS41MSAxNzg2My43IDYyODAuNjQgMTc4MjguMSA2MjgwLjY0QzE3ODA4LjkgNjI4MC42NCAxNzc5Mi42IDYyODYuNTMgMTc3NzkuMyA2Mjk4LjM3QzE3NzY2IDYzMTAuMjEgMTc3NTkuNCA2MzI1LjEzIDE3NzU5LjQgNjM0My4yVjY2MDkuMjJDMTc3MTguOSA2NTg1LjYgMTc2OTguNiA2NTU5LjExIDE3Njk4LjYgNjUyOS44N1Y2MzM1LjdDMTc2OTMuNyA2MzE5LjUxIDE3Njg1LjkgNjMwNi4zMyAxNzY3NC45IDYyOTYuMDNDMTc2NjQuMSA2Mjg1Ljc5IDE3NjUxLjYgNjI4MC42NCAxNzYzNy43IDYyODAuNjRDMTc2MjUuNiA2MjgwLjY0IDE3NjE1LjQgNjI4Ni43MyAxNzYwNy4zIDYyOTguODRDMTc1OTkuMiA2MzEwLjk1IDE3NTk1LjEgNjMyNS43MyAxNzU5NS4xIDYzNDMuMlY2NjA5LjIyQzE3NTU0LjUgNjU4NS42IDE3NTM0LjIgNjU1OS4xMSAxNzUzNC4yIDY1MjkuODdWNjM0My4yQzE3NTM0LjIgNjMxMS40OCAxNzU0NC4zIDYyODQuMjUgMTc1NjQuNiA2MjYxLjVDMTc1ODQuOSA2MjM4LjgyIDE3NjA5LjIgNjIyNy40NSAxNzYzNy43IDYyMjcuNDVDMTc2NTguMyA2MjI3LjQ1IDE3Njc3IDYyMzEuOCAxNzY5NCA2MjQwLjQ5QzE3NzEwLjkgNjI0OS4xOSAxNzcyMi44IDYyNjAuNyAxNzcyOS40IDYyNzUuMDJDMTc3MzcuOSA2MjYwLjcgMTc3NTEgNjI0OS4xOSAxNzc2OC45IDYyNDAuNDlDMTc3ODYuOCA2MjMxLjggMTc4MDYuNiA2MjI3LjQ1IDE3ODI4LjQgNjIyNy40NUMxNzg4MS4xIDYyMjcuNDUgMTc5MjUuOSA2MjUzLjI3IDE3OTYyLjkgNjMwNC45M0MxNzk5OS44IDYzNTYuNTggMTgwMTguMyA2NDE5Ljc0IDE4MDE4LjMgNjQ5NC40MUMxODAxOC4zIDY1NTcuMyAxODAxMSA2NjA0LjU0IDE3OTk2LjUgNjYzNi4zMkgxODA5Ni40QzE4MTA3LjkgNjYzNS4wNSAxODExMy43IDY2MjkuMTYgMTgxMTMuNyA2NjE4LjU5VjYyMjMuNUMxODE1NC4yIDYyNDIuODQgMTgxNzQuNSA2MjY3LjczIDE4MTc0LjUgNjI5OC4yNFY2NjE4LjU5TDE4MTc0LjUgNjYxOC41MlpNMTc4OTcuNCA2Njg5LjQ0SDE3NjI5LjRDMTc2MjEgNjY4OS40NCAxNzYxMy44IDY2OTEuMTEgMTc2MDguMSA2Njk0LjU5QzE3NjAyLjMgNjY5OC4wMSAxNzU5OS40IDY3MDIuMjIgMTc1OTkuNCA2NzA3LjE3QzE3NTk5LjQgNjcyMC44MiAxNzYxMS43IDY3MzIuNTMgMTc2MzYuMiA2NzQyLjE2QzE3NjYwLjcgNjc1MS44IDE3NjkwLjIgNjc1Ni42MiAxNzcyNC43IDY3NTYuNjJDMTc4MDQgNjc1Ni42MiAxNzg2MS42IDY3MzQuMiAxNzg5Ny4zIDY2ODkuNDRIMTc4OTcuNFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xODgwMy45IDY0NDkuNThDMTg4MDMuOSA2NDkwLjY2IDE4NzkxLjggNjUyNi4xMiAxODc2Ny42IDY1NTYuMDNDMTg3NDMuNCA2NTg1Ljg3IDE4NzE0IDY2MDAuODYgMTg2NzkuNSA2NjAwLjg2SDE4NDAwLjdDMTgzNzcuNiA2NjAwLjg2IDE4MzU3LjYgNjU5Mi4xNiAxODM0MC43IDY1NzQuN0MxODMyMy44IDY1NTcuMyAxODMxNS4yIDY1MzYuNDIgMTgzMTUuMiA2NTEyLjE0VjYyMjAuODlDMTgzMzMuNyA2MjI3LjcyIDE4MzQ4LjQgNjIzOC4yOSAxODM1OS41IDYyNTIuNkMxODM3MC42IDYyNjYuOTIgMTgzNzYuMSA2MjgyLjE4IDE4Mzc2LjEgNjI5OC4zN1Y2NTEyLjE0QzE4Mzc2LjEgNjUyMi4xMSAxODM3OS40IDY1MzAuNTQgMTgzODYgNjUzNy4zNkMxODM5Mi42IDY1NDQuMTkgMTg0MDAuNyA2NTQ3LjYgMTg0MTAuNCA2NTQ3LjZIMTg1MjIuM1Y2MzExLjQyQzE4NTIyLjMgNjI4Ny44IDE4NTMyLjQgNjI2Ny44NiAxODU1Mi4zIDYyNTEuNjdDMTg1NzIuMyA2MjM1LjQ4IDE4NTk3LjEgNjIyNy4zOCAxODYyNi44IDYyMjcuMzhDMTg2NzUuOCA2MjI3LjM4IDE4NzE3LjYgNjI0OS4xOSAxODc1Mi4xIDYyOTIuNzVDMTg3ODYuNiA2MzM2LjMxIDE4ODAzLjggNjM4OC42MyAxODgwMy44IDY0NDkuNThIMTg4MDMuOVpNMTg3NDMuMSA2NDQ5LjU4QzE4NzQzLjEgNjQwMi4yOCAxODczMS45IDYzNjIuMzMgMTg3MDkuNSA2MzI5LjYxQzE4Njg3LjEgNjI5Ni45NiAxODY1OS42IDYyODAuNTcgMTg2MjYuOCA2MjgwLjU3QzE4NjE0LjcgNjI4MC41NyAxODYwNC40IDYyODMuOTggMTg1OTYgNjI5MC44OEMxODU4Ny41IDYyOTcuNyAxODU4My4zIDYzMDYuMTMgMTg1ODMuMyA2MzE2LjFWNjU0Ny42SDE4Njc4LjZDMTg2OTYuMiA2NTQ3LjYgMTg3MTEuMyA2NTM4LjEgMTg3MjQuMSA2NTE5LjE2QzE4NzM2LjggNjUwMC4xNiAxODc0My4yIDY0NzcuMDEgMTg3NDMuMiA2NDQ5LjY1TDE4NzQzLjEgNjQ0OS41OFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xODY5MS4zIDU5OTkuNjNDMTg2OTEuMyA2MDE4LjkgMTg2ODUuMiA2MDM0Ljk2IDE4NjczLjEgNjA0Ny42N0MxODY2MSA2MDYwLjQ1IDE4NjQ0LjMgNjA2Ni44IDE4NjIzLjIgNjA2Ni44QzE4NjAzLjIgNjA2Ni44IDE4NTg3LjQgNjA2MC41OCAxODU3NiA2MDQ4LjE0QzE4NTY1LjcgNjAzNS42OSAxODU2MC41IDYwMTguNTYgMTg1NjAuNSA1OTk2LjgyQzE4NTYwLjUgNTk3Ni4yOCAxODU2Ni45IDU5NjAuNDIgMTg1NzkuNiA1OTQ5LjE4QzE4NTkyLjMgNTkzOC4wMSAxODYwNy44IDU5MzIuMzkgMTg2MjYgNTkzMi4zOUMxODY0NiA1OTMyLjM5IDE4NjYyLjMgNTkzOS44OCAxODY3NSA1OTU0LjhDMTg2ODUuOSA1OTY3Ljg1IDE4NjkxLjMgNTk4Mi44NCAxODY5MS4zIDU5OTkuNjNIMTg2OTEuM1oiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0yMDAyNy40IDY3MzQuMDdDMTk5ODYuOCA2NzA5Ljg1IDE5OTY2LjUgNjY4MC4yNyAxOTk2Ni41IDY2NDUuNDhWNjUyOS44N0gxOTg1OC42QzE5ODQzLjUgNjU4Ny43NCAxOTgwNiA2NjM0LjcxIDE5NzQ2LjEgNjY3MC44NEMxOTY4Ni4yIDY3MDYuOSAxOTYxNS41IDY3MjQuOTcgMTk1MzMuOSA2NzI0Ljk3QzE5NDY0LjMgNjcyNC45NyAxOTQwNS4yIDY3MDguOTEgMTkzNTYuNSA2Njc2Ljg2QzE5MzA3LjggNjY0NC44MSAxOTI4My41IDY2MDYuMDcgMTkyODMuNSA2NTYwLjY0QzE5MjgzLjUgNjUzNy4wMyAxOTI5NC4zIDY1MTcuMDkgMTkzMTYuMSA2NTAwLjlDMTkzMzcuOCA2NDg0LjcgMTkzNjQuNSA2NDc2LjYxIDE5Mzk1LjkgNjQ3Ni42MUgxOTgwNC44QzE5ODA2LjEgNjQ2OS43OCAxOTgwNi42IDY0NjQuNSAxOTgwNi42IDY0NjAuNzVDMTk4MDYuNiA2NDExLjU3IDE5Nzg4LjIgNjM2OS4yOSAxOTc1MS4yIDYzMzMuODNDMTk3MTQuMyA2Mjk4LjM3IDE5NjY5LjUgNjI4MC42NCAxOTYxNi44IDYyODAuNjRDMTk1OTggNjI4MC42NCAxOTU4MS44IDYyODUuNzkgMTk1NjguMiA2Mjk2LjAzQzE5NTU0LjYgNjMwNi4zMyAxOTU0Ny44IDYzMTguOTEgMTk1NDcuOCA2MzMzLjgzQzE5NTQ3LjggNjM0Ni4yNyAxOTU1Mi45IDYzNTYuODUgMTk1NjMuMiA2MzY1LjU0QzE5NTczLjUgNjM3NC4yNCAxOTU4NS42IDYzNzguNTkgMTk1OTkuNSA2Mzc4LjU5QzE5NjEyLjIgNjM3OC41OSAxOTYyMi41IDYzNzMuNDQgMTk2MzAuNCA2MzYzLjJDMTk2MzguMyA2MzUyLjkgMTk2NDIuMiA2MzQwLjMyIDE5NjQyLjIgNjMyNS40QzE5NjQyLjIgNjMxNC44MyAxOTY0MCA2MzA1LjE5IDE5NjM1LjggNjI5Ni40M0MxOTY1MS42IDYyOTYuNDMgMTk2NjUuMiA2MzAxLjQ1IDE5Njc2LjcgNjMxMS4zNUMxOTY4OC4yIDYzMjEuMzIgMTk2OTMuOSA2MzMzLjQzIDE5NjkzLjkgNjM0Ny43NUMxOTY5My45IDYzNzIuMDMgMTk2ODQuOSA2MzkyLjg0IDE5NjY2LjcgNjQxMC4zQzE5NjQ4LjUgNjQyNy43IDE5NjI2LjEgNjQzNi40NiAxOTU5OS41IDY0MzYuNDZDMTk1NjguNiA2NDM2LjQ2IDE5NTQyLjEgNjQyNi4zNiAxOTUyMCA2NDA2LjE2QzE5NDk3LjkgNjM4NS45NSAxOTQ4Ni44IDYzNjEuOCAxOTQ4Ni44IDYzMzMuODNDMTk0ODYuOCA2MzA1Ljg2IDE5NDk5LjQgNjI3OS41NyAxOTUyNC41IDYyNTguNjlDMTk1NDkuNyA2MjM3LjgyIDE5NTgwLjQgNjIyNy40NSAxOTYxNi43IDYyMjcuNDVDMTk2ODUuNyA2MjI3LjQ1IDE5NzQ0LjUgNjI1MS43MyAxOTc5MyA2MzAwLjI0QzE5ODQxLjQgNjM0OC44MiAxOTg2NS42IDY0MDcuNTYgMTk4NjUuNiA2NDc2LjY4SDE5OTY2LjVWNjIyMS44M0MxOTk4NC45IDYyMjYuODQgMTk5OTkuNyA2MjM2LjE0IDIwMDEwLjcgNjI0OS43OUMyMDAyMS44IDYyNjMuNDQgMjAwMjcuMyA2Mjc5LjYzIDIwMDI3LjMgNjI5OC4zVjY3MzRMMjAwMjcuNCA2NzM0LjA3Wk0xOTc5NS44IDY1MjkuODdIMTkzOTcuMUMxOTM4MS45IDY1MjkuODcgMTkzNjkuNCA2NTMyLjgxIDE5MzU5LjQgNjUzOC43N0MxOTM0OS40IDY1NDQuNzIgMTkzNDQuNCA2NTUyLjAxIDE5MzQ0LjQgNjU2MC43MUMxOTM0NC40IDY1OTEuMjIgMTkzNjMgNjYxNy4zMSAxOTQwMC4zIDY2MzkuMTNDMTk0MzcuNSA2NjYwLjg3IDE5NDgyLjIgNjY3MS43OCAxOTUzNC4yIDY2NzEuNzhDMTk1OTcuMiA2NjcxLjc4IDE5NjUyLjggNjY1OC43MyAxOTcwMC45IDY2MzIuNTdDMTk3NDkgNjYwNi40MSAxOTc4MC43IDY1NzIuMjIgMTk3OTUuOCA2NTI5Ljg3WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTIwNjQ2IDY0NDEuMTVDMjA2NDYgNjUxMi43NCAyMDYyNC43IDY1NzMuNTYgMjA1ODIgNjYyMy42N0MyMDUzOS4zIDY2NzMuNzkgMjA0ODcuNCA2Njk4LjgxIDIwNDI2LjIgNjY5OC44MUgyMDIyMi43QzIwMjEwLjYgNjY5OC44MSAyMDIwMC4zIDY3MDQuNDMgMjAxOTEuOSA2NzE1LjZDMjAxODMuNCA2NzI2Ljc4IDIwMTc5LjIgNjc0MC44MyAyMDE3OS4yIDY3NTcuNjJWNjgxNi40M0MyMDE2My40IDY4MTIuMDggMjAxNTAuOCA2ODAxLjk4IDIwMTQxLjUgNjc4Ni4wNkMyMDEzMi4xIDY3NzAuMiAyMDEyNy40IDY3NTEuMzMgMjAxMjcuNCA2NzI5LjU5QzIwMTI3LjQgNjcwNS45IDIwMTM2LjUgNjY4Ni4wMyAyMDE1NC43IDY2NjkuODRDMjAxNzIuOSA2NjUzLjY1IDIwMTk1LjIgNjY0NS41NSAyMDIyMS45IDY2NDUuNTVIMjA0MjUuNEMyMDQ2OSA2NjQ1LjU1IDIwNTA2LjUgNjYyNS42MSAyMDUzOCA2NTg1LjhDMjA1NjkuNSA2NTQ1Ljk5IDIwNTg1LjIgNjQ5Ny43NSAyMDU4NS4yIDY0NDEuMDhDMjA1ODUuMiA2Mzk2LjI2IDIwNTcyLjggNjM1OC4zMiAyMDU0OCA2MzI3LjIxQzIwNTIzLjIgNjI5Ni4wOSAyMDQ5Mi42IDYyODAuNTEgMjA0NTYuMyA2MjgwLjUxQzIwNDUwLjIgNjI4MC41MSAyMDQ0My43IDYyODIuMDQgMjA0MzYuNyA2Mjg1LjE5QzIwNDI5LjggNjI4OC4zMyAyMDQyMi43IDYyOTIuNjggMjA0MTUuNCA2Mjk4LjI0QzIwNDAyIDYzMTAuMDggMjAzOTUuNCA2MzIxLjkyIDIwMzk1LjQgNjMzMy43VjY2MDkuMDlDMjAzNTQuOCA2NTg1LjQ3IDIwMzM0LjUgNjU1OC45NyAyMDMzNC41IDY1MjkuNzNWNjMzMy43QzIwMzM0LjUgNjMyMS44NSAyMDMyOCA2MzEwLjA4IDIwMzE1IDYyOTguMjRDMjAzMDIgNjI4Ni4zOSAyMDI4OS43IDYyODAuNTEgMjAyNzguMiA2MjgwLjUxQzIwMjY1LjUgNjI4MC41MSAyMDI1NC40IDYyODUuNjYgMjAyNDUuMSA2Mjk1Ljg5QzIwMjM1LjcgNjMwNi4yIDIwMjMxIDYzMTguNzggMjAyMzEgNjMzMy43VjY2MDkuMDlDMjAxOTAuNCA2NTg1LjQ3IDIwMTcwLjEgNjU1OC45NyAyMDE3MC4xIDY1MjkuNzNWNjMzMy43QzIwMTcwLjEgNjMwMy44NiAyMDE4MC40IDYyNzguNjMgMjAyMDEgNjI1OC4wOUMyMDIyMS42IDYyMzcuNTUgMjAyNDcuMyA2MjI3LjMxIDIwMjc4LjIgNjIyNy4zMUMyMDMyNC4yIDYyMjcuMzEgMjAzNTMuNiA2MjQxLjk3IDIwMzY2LjMgNjI3MS4yMUMyMDM4Ni44IDYyNDEuOTcgMjA0MTYuOCA2MjI3LjMxIDIwNDU2LjIgNjIyNy4zMUMyMDUwOC45IDYyMjcuMzEgMjA1NTMuNiA2MjQ4LjE5IDIwNTkwLjYgNjI4OS44N0MyMDYyNy41IDYzMzEuNTYgMjA2NDYgNjM4MiAyMDY0NiA2NDQxLjA4VjY0NDEuMTVaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMjA0ODMuNCA2MjI3LjM4QzIwNDU0LjkgNjE5Ni44NyAyMDQ0MC43IDYxNjIuNjggMjA0NDAuNyA2MTI0LjY4QzIwNDQwLjcgNjA4MC41MiAyMDQ1OS40IDYwNDIuODUgMjA0OTcgNjAxMS43NEMyMDUzNC42IDU5ODAuNjMgMjA1ODAuNiA1OTY1LjA0IDIwNjM1LjEgNTk2NS4wNEMyMDY5Mi42IDU5NjUuMDQgMjA3NDEuNSA1OTg0LjUxIDIwNzgxLjggNjAyMy4zOEMyMDgyMiA2MDYyLjI1IDIwODQyLjIgNjEwOS4zNiAyMDg0Mi4yIDYxNjQuNzZWNjYwOC45NUMyMDgwMS42IDY1ODQuNzMgMjA3ODEuMyA2NTU4LjI0IDIwNzgxLjMgNjUyOS42N1Y2MTY0LjgyQzIwNzgxLjMgNjEyNC40MSAyMDc2Ny4yIDYwODkuODkgMjA3MzguOSA2MDYxLjI1QzIwNzEwLjYgNjAzMi42MSAyMDY3NiA2MDE4LjMgMjA2MzUuMSA2MDE4LjNDMjA1OTcuOCA2MDE4LjMgMjA1NjYuMiA2MDI4LjYgMjA1NDAuMyA2MDQ5LjA3QzIwNTE0LjUgNjA2OS42MSAyMDUwMS41IDYwOTQuODQgMjA1MDEuNSA2MTI0LjY4QzIwNTAxLjUgNjE1MC44NCAyMDUwNi44IDYxNzMuNzIgMjA1MTcuNiA2MTkzLjI2QzIwNTI4LjMgNjIxMi44NiAyMDU0MiA2MjI0LjI0IDIwNTU4LjcgNjIyNy4zMUgyMDQ4My4zTDIwNDgzLjQgNjIyNy4zOFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0yMTU1MS42IDY3ODYuMzJDMjE1MTEuMSA2NzYyLjEgMjE0OTAuOCA2NzM1LjY3IDIxNDkwLjggNjcwNy4xMVY2NjAwLjc5SDIxMjI3LjNDMjEyMjEuMyA2NTk1LjI0IDIxMjE4LjMgNjU4Ny40OCAyMTIxOC4zIDY1NzcuNTFDMjEyMTguMyA2NTY5LjQxIDIxMjIwLjQgNjU2Mi4zMiAyMTIyNC43IDY1NTYuMUMyMTI1NS41IDY1MTguOSAyMTI3MSA2NDcxLjczIDIxMjcxIDY0MTQuNTlDMjEyNzEgNjM3Ni43MiAyMTI1Ni40IDYzNDQuMzQgMjEyMjcuMSA2MzE3LjNDMjExOTcuOCA2MjkwLjM0IDIxMTYyIDYyNzYuODMgMjExMTkuOCA2Mjc2LjgzQzIxMDc5LjkgNjI3Ni44MyAyMTA0NS41IDYyOTIuMDEgMjEwMTYuNSA2MzIyLjM5QzIwOTg3LjYgNjM1Mi43NyAyMDk3MyA2Mzg5LjM2IDIwOTczIDY0MzIuMThDMjA5NzMgNjQ2NS43IDIwOTgyLjIgNjQ5NC4wNyAyMTAwMC42IDY1MTcuMjlDMjEwMTguOSA2NTQwLjU3IDIxMDQxLjMgNjU1Mi4xNSAyMTA2Ny44IDY1NTIuMTVDMjEwODEuMSA2NTUyLjE1IDIxMDkyLjIgNjU0Ni41MyAyMTEwMS4yIDY1MzUuMTVDMjExMTAuMyA2NTIzLjg1IDIxMTE0LjggNjUxMCAyMTExNC44IDY0OTMuNjdDMjExMTQuOCA2NDgzLjY0IDIxMTExLjUgNjQ3NS4xNCAyMTEwNC44IDY0NjguMjVDMjEwOTguMSA2NDYxLjM2IDIxMDg5LjkgNjQ1Ny44OCAyMTA4MC4yIDY0NTcuODhDMjEwNzIuOSA2NDU3Ljg4IDIxMDY2LjkgNjQ2MS4zNiAyMTA2MiA2NDY4LjI1QzIxMDU3LjIgNjQ3NS4yMSAyMTA1NC44IDY0ODMuNyAyMTA1NC44IDY0OTMuNzRWNjUzNi4yMkMyMTA0MC44IDY1MzEuMjcgMjEwMjkuMyA2NTIzLjE4IDIxMDIwLjIgNjUxMS45NEMyMTAxMS4xIDY1MDAuNzYgMjEwMDYuNiA2NDg4LjkyIDIxMDA2LjYgNjQ3Ni40OEMyMTAwNi42IDY0NTUuOTQgMjEwMTMuNiA2NDM4LjgxIDIxMDI3LjUgNjQyNS4xNkMyMTA0MS41IDY0MTEuNTEgMjEwNTkgNjQwNC42MiAyMTA4MC4yIDY0MDQuNjJDMjExMDYuMiA2NDA0LjYyIDIxMTI4LjYgNjQxMy4zMiAyMTE0Ny40IDY0MzAuNzhDMjExNjYuMSA2NDQ4LjI0IDIxMTc1LjYgNjQ2OS4zOCAyMTE3NS42IDY0OTQuMjdDMjExNzUuNiA2NTI1LjM5IDIxMTY1LjIgNjU1MS42OCAyMTE0NC4zIDY1NzMuMTZDMjExMjMuNCA2NTk0LjYzIDIxMDk3LjggNjYwNS4zNCAyMTA2Ny41IDY2MDUuMzRDMjEwMjQuNSA2NjA1LjM0IDIwOTg3LjkgNjU4OC42MSAyMDk1Ny42IDY1NTUuMDlDMjA5MjcuMyA2NTIxLjU3IDIwOTEyLjIgNjQ4MC41NiAyMDkxMi4yIDY0MzIuMThDMjA5MTIuMiA2Mzc0LjQ0IDIwOTMyLjMgNjMyNS4yNyAyMDk3Mi42IDYyODQuNTlDMjEwMTIuOCA2MjQzLjkxIDIxMDYxLjcgNjIyMy41NyAyMTExOS4zIDYyMjMuNTdDMjExNzYuOCA2MjIzLjU3IDIxMjI3LjMgNjI0Mi4xNyAyMTI2OS4xIDYyNzkuNDRDMjEzMTAuOSA2MzE2LjcgMjEzMzEuOCA2MzYxLjY2IDIxMzMxLjggNjQxNC4zOUMyMTMzMS44IDY0NDMuNTYgMjEzMjkuMSA2NDY4Ljk4IDIxMzIzLjcgNjQ5MC43M0MyMTMxOC4yIDY1MTIuNDcgMjEzMTAuMSA2NTMxLjM0IDIxMjk5LjIgNjU0Ny40N0gyMTQ5MC44VjYyMjIuNjNDMjE1MDggNjIyNC41IDIxNTIyLjUgNjIzNC4xNCAyMTUzNC4yIDYyNTEuNTNDMjE1NDUuOCA2MjY4LjkzIDIxNTUxLjcgNjI5MC40MSAyMTU1MS43IDYzMTUuOVY2Nzg2LjE5TDIxNTUxLjYgNjc4Ni4zMloiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xNjg3OC4zIDQ0NzUuMzVDMTY5NDYuMiA0MzAxLjQ2IDE2OTgxLjkgNDE4My4yMyAxNjk4MS45IDQxODMuMjNDMTcxMDEuNCAzODQ3LjIzIDE3MTU4LjYgMzQ0OS42IDE3MTU4LjYgMzQ0OS42QzE2OTU3LjcgMzQ3My44OCAxNTEwMi43IDM1MjIuNDYgMTUxMDIuNyAzNTIyLjQ2QzE1MTE0LjUgMzc1My4xNiAxNTIyNy41IDUwMjQuMjYgMTUyMjcuNSA1MDI0LjI2QzE1MzEwLjkgNDU2NC44NyAxNTI5Ny43IDM3MzQuOTYgMTUyOTcuNyAzNzM0Ljk2TDE2NzM5LjEgMzc3MS4zNUMxNjcxNS41IDM4ODAuNjEgMTY0NDMuNyA0NTEyLjA4IDE2NDQzLjcgNDUxMi4wOEMxNTMwOS40IDQ2NDUuNjMgMTU0NjMuMSA1Njc3LjgxIDE1OTM1LjcgNTY3Ny44MUMxNjE2Mi42IDU2NzcuODEgMTYzNTEuNCA1NDcwLjY2IDE2NDg2LjMgNTI1NS4yOUMxNjU4OS4zIDUwOTguOTMgMTY2NzcuNSA0OTMxLjUyIDE2NzQ5LjcgNDc3Ni41QzE2OTUxLjQgNDc2MS4xOCAxNzk3OS44IDQ2OTMuNzQgMTc5NzkuOCA0OTEyLjc5QzE3OTc5LjggNTE1NS42NiAxNjkwNC42IDUxOTIuMDYgMTY5MDQuNiA1MTkyLjA2QzE3Mzc3LjEgNTMwMS4zMiAxODI1MS41IDUyNTIuNzQgMTgyMzkuNyA0ODUyLjA0QzE4MjI5IDQ0ODguMDYgMTcwODcuNyA0NDc0Ljc1IDE2ODc4LjQgNDQ3NS4zNUgxNjg3OC4zWk0xNTk2NS4yIDUzMTkuNTJDMTU5NjUuMiA1MzE5LjUyIDE1ODIzLjQgNDk0My4xIDE2MjEzLjMgNDk1NS4yMUMxNjIxMy4zIDQ5NTUuMjEgMTYxNDIuNCA1MTk4LjA4IDE1OTY1LjIgNTMxOS41MloiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xNTUwNC40IDIzMDguMTZDMTUyNTYuMyAyMDg5LjU4IDE0NzYwIDIyODMuODggMTQxODEuMSAyNzU3LjQ0QzEzOTcyLjYgMjkyOC4wNiAxMzgwOC41IDMxMjIuMjkgMTM2ODMuOSAzMzAwLjkzQzEzNjgzLjkgMzMwMC45MyAxMzY4My45IDMzMDEgMTM2ODMuOCAzMzAxLjA2QzEzNjQwLjIgMzM2My42OSAxMzYwMS40IDM0MjQuMzcgMTM1NjcuMiAzNDgxLjQ1QzEzNDcxLjcgMzYzMy43MyAxMzM5MyAzNzcxLjIyIDEzMzI4LjQgMzg5My42NkMxMjQzMS41IDQwNTUuMzEgMTIzOTYuOSAzNTcwLjk3IDEyMzk2LjkgMzU3MC45N0MxMjMyMy4zIDQxODIuMDMgMTMxNjYuOSA0MDg0LjY4IDEzMjM3IDQwNzUuNTFDMTMwNjMuNiA0NDM5Ljg5IDEzMDM1LjQgNDYyNy4xNiAxMzAzNS40IDQ2MjcuMTZDMTI4ODIuMyA1MjE1LjA4IDEyOTQ3LjEgNTc4NC4wNSAxMzQ2Ni4xIDU3NzQuODJDMTQxNTEuNCA1NzYyLjcxIDE0Mzg3LjggNTE1NS41MyAxNDM4Ny44IDUxNTUuNTNDMTQxMDQuMiA1MTA2Ljk1IDEzNjA3LjkgNTE2Ny42NCAxMzYwNy45IDUxNjcuNjRMMTQxNTEuNCA1MjQwLjVDMTQwOTIuNCA1MzI1LjQ3IDEzNTM3IDU3NTAuNDcgMTMzMjQuMyA1NDcxLjJDMTMwNDAuOCA1MDQ2LjIgMTM2MjUuNyA0MDQ0LjQ3IDEzNjI1LjcgNDA0NC40N0MxMzkzMi45IDQwMDguMDcgMTQyOTkuMiAzOTQ3LjMyIDE0ODg5LjkgMzU4My4wOEMxNTQ4MC43IDMyMTguNzcgMTU3NTIuNCAyNTI2LjY4IDE1NTA0LjMgMjMwOC4xSDE1NTA0LjRWMjMwOC4xNlpNMTQ2MTIuNCAzNDE5LjIyQzEzOTUwLjcgMzgxOS45MyAxMzc2MS43IDM3ODMuNTMgMTM3NjEuNyAzNzgzLjUzQzEzNzYxLjcgMzc4My41MyAxNDE5OC44IDI5NTcuODMgMTUyMjYuOCAyNTIwLjczQzE1MjI2LjggMjUyMC43MyAxNTI3NCAzMDE4LjU4IDE0NjEyLjQgMzQxOS4yOVYzNDE5LjIyWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==" style="max-width: 100%; width: 210px; height: auto; max-height: 64px; object-fit: contain; display: block; margin: 0 auto;"/>
-  <div style="font-size: 0.74rem; font-weight: 800; color: #99f6e4; margin-top: 4px; letter-spacing: 0.3px;">கற்றனைத் தூறும் அறிவு • பள்ளிக் கல்வித்துறை</div>
+<!-- 2. STARS Sivagangai Official Free Live Coaching Portal -->
+<div class="resource-card" style="border-top: 4px solid #1e3a8a; background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);">
+  <div>
+    <!-- STARS Sivagangai Banner Header -->
+    <div class="resource-card-banner-img" style="width: 100%; text-align: center; margin-bottom: 12px; border-radius: 10px; overflow: hidden; background: linear-gradient(135deg, #071328 0%, #1e3a8a 55%, #0f2942 100%); padding: 10px 12px; border: 1.5px solid #93c5fd; box-shadow: 0 3px 10px rgba(30, 58, 138, 0.18); box-sizing: border-box; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <span style="font-size: 1.85rem; line-height: 1; filter: drop-shadow(0 2px 6px rgba(250, 204, 21, 0.5));">🌟</span>
+      <div style="text-align: left;">
+        <div style="font-size: 1.02rem; font-weight: 900; color: #fef08a; letter-spacing: 0.4px; line-height: 1.2;">STARS SIVAGANGAI</div>
+        <div style="font-size: 0.68rem; font-weight: 800; color: #bae6fd; letter-spacing: 0.3px;">Specialized Training for Academic Rankers &amp; Scholars</div>
+      </div>
+    </div>
+    <p class="resource-card-desc">
+      சிவகங்கை மாவட்ட முதன்மைக் கல்வி அலுவலகத்தின் (CEO Office, Sivagangai) சிறப்பு முன்னெடுப்பு. அரசுப் பள்ளி மாணவர்களுக்கு <strong>NMMS, NEET, JEE (Main &amp; Advanced), CUET, CLAT</strong> போட்டித் தேர்வுகளுக்கான 100% இலவச நேரலை ஆன்லைன் வகுப்புகள், வாராந்திர மாதிரித் தேர்வுகள் மற்றும் <strong>SLAS 2027</strong> செயலி.
+    </p>
+    <div class="resource-card-tags">
+      <span class="resource-tag" style="background: #dbeafe; color: #1e3a8a; border-color: #93c5fd;">🏛️ CEO சிவகங்கை முன்னெடுப்பு</span>
+      <span class="resource-tag" style="background: #fef3c7; color: #92400e; border-color: #fde68a;">🎯 NMMS • NEET • JEE • CUET • CLAT</span>
+      <span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #bbf7d0;">💻 100% இலவச நேரலை வகுப்புகள்</span>
+      <span class="resource-tag" style="background: #f3e8ff; color: #6b21a8; border-color: #d8b4fe;">📲 SLAS 2027 ஆப்</span>
+    </div>
+  </div>
+  <a class="action-btn" href="https://starssivagangai.in/" rel="noopener noreferrer" style="background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #0284c7 100%);" target="_blank" title="STARS Sivagangai அதிகாரப்பூர்வ இணையதளம் செல்ல (புதிய தனித்தாவலில் திறக்கும்)">
+    <span>STARS Sivagangai தளம் செல்ல</span>
+    <span>↗</span>
+  </a>
 </div>
-<p class="resource-card-desc">
-  தமிழ்நாடு பள்ளிக் கல்வித்துறையின் அதிகாரப்பூர்வ மணற்கேணி டிஜிட்டல் கற்றல் தளம். 1 முதல் 12-ஆம் வகுப்பு வரையிலான மாநிலப் பாடத்திட்டம் (State Board) தமிழ் மற்றும் ஆங்கில வழியில் முழுமையான காணொளிப் பாடங்கள் மற்றும் கற்றல் வளங்கள்.
-</p>
-<div class="resource-card-tags">
-  <span class="resource-tag" style="background: #ccfbf1; color: #115e59; border-color: #5eead4;">🌐 தமிழ் &amp; English Medium</span>
-  <span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">🎬 20,000+ காணொளிகள் &amp; வினாக்கள்</span>
-  <span class="resource-tag" style="background: #fef3c7; color: #92400e; border-color: #fde68a;">NEET / JEE பயிற்சி</span>
+
+<!-- 3. Manarkeni Digital Learning Portal (TN School Education Dept) -->
+<div class="resource-card" style="border-top: 4px solid #0284c7; background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);">
+  <div>
+    <div class="resource-card-banner-img" style="width: 100%; text-align: center; margin-bottom: 12px; border-radius: 10px; overflow: hidden; background: linear-gradient(135deg, #0c4a6e 0%, #0284c7 60%, #0369a1 100%); padding: 10px 12px; border: 1.5px solid #7dd3fc; box-shadow: 0 3px 10px rgba(2, 132, 199, 0.16); box-sizing: border-box; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <span style="font-size: 1.75rem; line-height: 1;">🌊</span>
+      <div style="text-align: left;">
+        <div style="font-size: 1.02rem; font-weight: 900; color: #ffffff; letter-spacing: 0.4px; line-height: 1.2;">மணற்கேணி (MANARKENI)</div>
+      </div>
+    </div>
+    <p class="resource-card-desc">
+      தமிழ்நாடு பள்ளிக் கல்வித்துறையின் அதிகாரப்பூர்வ டிஜிட்டல் கற்றல் தளம் மற்றும் செயலி. பள்ளிப் பாடங்களை எளிதில் புரிந்துகொள்ளும் வகையில் 2D/3D அனிமேஷன் காணொளிப் பாடங்கள் மற்றும் பயிற்சி வினா-விடை வங்கி.
+    </p>
+    <div class="resource-card-tags">
+      <span class="resource-tag" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;">🌐 தமிழ் &amp; English Medium</span>
+      <span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #bbf7d0;">🎬 20,000+ காணொளிகள் &amp; வினாக்கள்</span>
+    </div>
+  </div>
+  <a class="action-btn" href="https://manarkeni.tnschools.gov.in/" rel="noopener noreferrer" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);" target="_blank" title="மணற்கேணி இணையதளம் செல்ல">
+    <span>மணற்கேணி தளம் செல்ல</span>
+    <span>↗</span>
+  </a>
 </div>
-</div>
-<a class="action-btn" href="https://manarkeni.tnschools.gov.in" rel="noopener noreferrer" style="background: linear-gradient(135deg, #0d9488 0%, #0f766e 50%, #115e59 100%);" target="_blank" title="மணற்கேணி அதிகாரப்பூர்வ இணையதளம் செல்ல">
-  <span>மணற்கேணி தளம் செல்ல (manarkeni.tnschools.gov.in)</span>
-  <span>↗</span>
-</a>
-</div>
-<!-- 3. தமிழ்நாடு அரசு வேலைவாய்ப்பு மற்றும் பயிற்சித் துறை (TN Career Services Portal) -->
-<div class="resource-card" id="tn-career-services-portal" style="border-top: 4px solid #2563eb; background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);">
-<div>
-<div class="resource-card-banner-img" style="width: 100%; text-align: center; margin-bottom: 12px; border-radius: 10px; overflow: hidden; background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 55%, #0284c7 100%); padding: 12px 12px; border: 1.5px solid #93c5fd; box-shadow: 0 3px 10px rgba(37, 99, 235, 0.18); box-sizing: border-box;">
-  <div style="font-size: 1.02rem; font-weight: 900; color: #fef08a; letter-spacing: 0.3px;">🏛️ தமிழ்நாடு அரசு வேலைவாய்ப்பு &amp; பயிற்சித் துறை</div>
-  <div style="font-size: 0.72rem; font-weight: 800; color: #e0f2fe; margin-top: 3px; letter-spacing: 0.5px;">TAMILNADU CAREER SERVICES PORTAL</div>
-</div>
-<p class="resource-card-desc">
-  தமிழ்நாடு அரசின் வேலைவாய்ப்பு மற்றும் பயிற்சித் துறையின் அதிகாரப்பூர்வ வழிகாட்டுதல் தளம். TNPSC, SSC, IBPS, RRB, UPSC உள்ளிட்ட போட்டித் தேர்வுகளுக்கான இலவச பாடக்குறிப்புகள், மாதிரித் தேர்வுகள், மெய்நிகர் கற்றல் (Virtual Learning) மற்றும் வேலைவாய்ப்பு முகாம் தகவல்கள்.
-</p>
-<div class="resource-card-tags">
-  <span class="resource-tag" style="background: #dbeafe; color: #1e40af; border-color: #93c5fd;">போட்டித் தேர்வு வளங்கள்</span>
-  <span class="resource-tag" style="background: #dcfce7; color: #166534; border-color: #86efac;">இலவச மாதிரித் தேர்வுகள்</span>
-  <span class="resource-tag" style="background: #fef3c7; color: #92400e; border-color: #fde68a;">வேலைவாய்ப்பு வழிகாட்டி</span>
-</div>
-</div>
-<a class="action-btn" href="https://tamilnaducareerservices.tn.gov.in/" rel="noopener noreferrer" style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e3a8a 100%);" target="_blank" title="தமிழ்நாடு அரசு வேலைவாய்ப்பு மற்றும் பயிற்சித் துறை தளம் செல்ல">
-  <span>TN Career Services தளம் செல்ல</span>
-  <span>↗</span>
-</a>
-</div>
+
 <!-- NCERT Textbooks Official -->
 <div class="resource-card" style="border-top: 4px solid #7c3aed;">
 <div>
@@ -3906,6 +3799,28 @@ body.theme-cyber-dark li {
 <span>DIKSHA போர்ட்டல் செல்ல</span>
 <span>↗</span>
 </a>
+</div>
+<!-- 6. Tamilnadu Career Services Portal (Virtual Learning Portal) -->
+<div class="resource-card" style="border-top: 4px solid #0d9488; background: linear-gradient(180deg, #ffffff 0%, #f0fdfa 100%);">
+  <div>
+    <div class="resource-card-banner-img" style="width: 100%; text-align: center; margin-bottom: 12px; border-radius: 10px; overflow: hidden; background: linear-gradient(135deg, #134e4a 0%, #0f766e 60%, #0d9488 100%); padding: 10px 12px; border: 1.5px solid #99f6e4; box-shadow: 0 3px 10px rgba(13, 148, 136, 0.16); box-sizing: border-box; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <span style="font-size: 1.75rem; line-height: 1;">💼</span>
+      <div style="text-align: left;">
+        <div style="font-size: 0.96rem; font-weight: 900; color: #ffffff; letter-spacing: 0.4px; line-height: 1.2;">TAMILNADU CAREER SERVICES PORTAL</div>
+      </div>
+    </div>
+    <p class="resource-card-desc">
+      TNPSC, SSC, RRB, IBPS உள்ளிட்ட போட்டித் தேர்வுகளுக்கான இலவச பாடத்திட்டங்கள், மெய்நிகர் கற்றல் பாடக்குறிப்புகள் (Virtual Learning Portal), மாதிரித் தேர்வுகள் மற்றும் வேலைவாய்ப்பு வழிகாட்டல் தளம்.
+    </p>
+    <div class="resource-card-tags">
+      <span class="resource-tag" style="background: #ccfbf1; color: #115e59; border-color: #99f6e4;">🏆 TNPSC / SSC / RRB / IBPS</span>
+      <span class="resource-tag" style="background: #fef3c7; color: #92400e; border-color: #fde68a;">📚 இலவச மாதிரித் தேர்வுகள்</span>
+    </div>
+  </div>
+  <a class="action-btn" href="https://tamilnaducareerservices.tn.gov.in/" rel="noopener noreferrer" style="background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);" target="_blank" title="Tamilnadu Career Services தளம் செல்ல">
+    <span>TN Career Services தளம் செல்ல</span>
+    <span>↗</span>
+  </a>
 </div>
 </div>
 </section>
@@ -4157,6 +4072,50 @@ body.theme-cyber-dark li {
 </div>
 </section>
 <!-- Thirukkural Motivational Box (குறள் 400 - கேடில் விழுச்செல்வம் கல்வி) -->
+
+<section class="section-card" id="sec-swayam-ndli-tva" style="background: #ffffff; border: 2px solid #0284c7; border-top: 5px solid #0284c7; border-radius: 16px; padding: 20px 22px; margin: 22px 0; box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);">
+<div style="display: inline-flex; align-items: center; gap: 8px; background: #e0f2fe; border: 1px solid #38bdf8; color: #0369a1; font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 999px; margin-bottom: 8px;">
+    🌐 தேசிய மின்னூலகம் &amp; இலவச சான்றிதழ் படிப்புகள் விரிவாக்கம்
+  </div>
+<h2 style="font-size: clamp(1.15rem, 1.8vw, 1.42rem); font-weight: 900; color: #0f172a; margin: 0 0 10px 0;">
+    🎓 SWAYAM / NPTEL இலவச ஆன்லைன் படிப்புகள், 📚 தேசிய மின்னூலகம் (NDLI) &amp; 🏛️ தமிழ் இணையக் கல்விக்கழகம் (TVA)
+  </h2>
+<div class="cg-responsive-grid-3" style="margin-top: 12px;">
+<div style="background: #f0f9ff; border: 1.5px solid #7dd3fc; border-radius: 12px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<h3 style="font-size: 0.98rem; font-weight: 900; color: #0c4a6e; margin: 0 0 6px 0;">🎓 SWAYAM &amp; NPTEL (மத்திய கல்வி அமைச்சகம் &amp; IIT)</h3>
+<p style="font-size: 0.82rem; color: #334155; line-height: 1.55; margin: 0 0 10px 0;">
+          9-ஆம் வகுப்பு முதல் முதுகலை வரை IIT, IIM மற்றும் மத்தியப் பல்கலைக்கழகப் பேராசிரியர்கள் நடத்தும் <strong>100% இலவச ஆன்லைன் சான்றிதழ் படிப்புகள்</strong> (Python, AI, Communication English, Accountancy).
+        </p>
+</div>
+<a href="https://swayam.gov.in" style="display: inline-flex; align-items: center; justify-content: space-between; background: #0284c7; color: #ffffff; padding: 7px 12px; border-radius: 8px; text-decoration: none; font-size: 0.80rem; font-weight: 800;" target="_blank">
+<span>swayam.gov.in தளம் திறக்க</span><span>↗</span>
+</a>
+</div>
+<div style="background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 12px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<h3 style="font-size: 0.98rem; font-weight: 900; color: #065f46; margin: 0 0 6px 0;">📚 தேசிய மின்னூலகம் (NDLI - IIT Kharagpur)</h3>
+<p style="font-size: 0.82rem; color: #334155; line-height: 1.55; margin: 0 0 10px 0;">
+          பள்ளி, கல்லூரிப் பாடநூல்கள், போட்டித் தேர்வு முந்தைய ஆண்டு வினாத்தாள்கள் (JEE, NEET, UPSC, GATE) மற்றும் 8 கோடிக்கும் மேற்பட்ட மின்நூல்களை இலவசமாகப் படிக்கலாம்.
+        </p>
+</div>
+<a href="https://ndl.iitkgp.ac.in" style="display: inline-flex; align-items: center; justify-content: space-between; background: #059669; color: #ffffff; padding: 7px 12px; border-radius: 8px; text-decoration: none; font-size: 0.80rem; font-weight: 800;" target="_blank">
+<span>ndl.iitkgp.ac.in தளம் திறக்க</span><span>↗</span>
+</a>
+</div>
+<div style="background: #fffbeb; border: 1.5px solid #fde047; border-radius: 12px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<h3 style="font-size: 0.98rem; font-weight: 900; color: #92400e; margin: 0 0 6px 0;">🏛️ தமிழ் இணையக் கல்விக்கழகம் (Tamil Virtual Academy)</h3>
+<p style="font-size: 0.82rem; color: #334155; line-height: 1.55; margin: 0 0 10px 0;">
+          தமிழக அரசின் அரிய தமிழ் நூல்கள், சங்க இலக்கியங்கள், கலைச்சொல் பேரகராதி, தமிழ் மென்பொருள்கள் மற்றும் தமிழ் சான்றிதழ்/பட்டயப் படிப்புகளுக்கான அதிகாரப்பூர்வ தளம்.
+        </p>
+</div>
+<a href="https://www.tamilvu.org" style="display: inline-flex; align-items: center; justify-content: space-between; background: #d97706; color: #ffffff; padding: 7px 12px; border-radius: 8px; text-decoration: none; font-size: 0.80rem; font-weight: 800;" target="_blank">
+<span>tamilvu.org தளம் திறக்க</span><span>↗</span>
+</a>
+</div>
+</div>
+</section>
 <nav aria-label="பக்க வழிசெலுத்தல்" class="bottom-page-nav-bar no-print">
 <a class="page-nav-btn btn-prev-animated" href="06_student_support.html" title="உதவி மையம் &amp; கட்-ஆஃப்">
 <span class="nav-btn-icon">◀</span>
@@ -4200,7 +4159,7 @@ body.theme-cyber-dark li {
 <!-- Creator Card -->
 <div class="creator-card">
 <div class="creator-typewriter-wrapper">
-<span class="creator-typewriter-target" id="creatorTypewriterTarget"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role">, பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role">, Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
+<span class="creator-typewriter-target" id="creatorTypewriterTarget"><span class="creator-label">இணையதள வடிவமைப்பு: </span><span class="creator-name-ta">கூ. பூவலிங்கம்</span><span class="creator-role"> பள்ளித் துணை ஆய்வாளர்  |  </span><span class="creator-name-en">K. Poovalingam</span><span class="creator-role"> Deputy Inspector of Schools</span></span><span class="creator-cursor" id="creatorCursor">|</span>
 </div>
 <a class="footer-phone-pill" href="tel:9626471035" id="footerPhonePill" title="அழைக்க">
 <span class="phone-icon">📱</span>
@@ -4219,12 +4178,12 @@ body.theme-cyber-dark li {
 <p class="footer-copyright" style="font-size: 0.86rem !important; color: #cbd5e1 !important; margin-top: 6px !important; font-weight: 500 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.6) !important; margin-bottom: 0 !important;">
     © 2026 Chief Educational Office, Sivagangai. All Rights Reserved. • வழிகாட்டுதல் நோக்கங்களுக்காக மட்டுமே.
   </p>
-<p class="footer-last-updated" style="font-size: 0.84rem !important; color: #fde047 !important; margin-top: 6px !important; font-weight: 700 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.8) !important;">📅 <span class="auto-last-updated-label">கடைசியாகப் புதுப்பிக்கப்பட்டது: </span><span id="portalLastUpdatedDate">26 அக்டோபர் 2026</span></p></footer>
+<p class="footer-last-updated" style="font-size: 0.84rem !important; color: #fde047 !important; margin-top: 6px !important; font-weight: 700 !important; text-shadow: 0 1px 2px rgba(0,0,0,0.8) !important;">📅 கடைசியாகப் புதுப்பிக்கப்பட்டது: <span id="portalLastUpdatedDate">15 நவம்பர் 2026</span></p></footer>
 </main>
 </div>
 </div>
 <!-- Floating Back to Top Button -->
-<a aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" href="#" id="floatingBackToTopBtn" role="button" title="பக்கத்தின் மேலே செல்ல">
+<a aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" href="#" id="floatingBackToTop" role="button" title="பக்கத்தின் மேலே செல்ல">
 <span style="font-size: 1.15rem; font-weight: 900;">▲</span>
 <span>மேலே செல்க</span>
 </a>
@@ -4252,7 +4211,7 @@ body.theme-cyber-dark li {
 function toggleSidebarMenu() {
   var sidebar = document.getElementById('desktopLeftSidebar');
   var backdrop = document.getElementById('sidebarBackdrop');
-  if (sidebar) sidebar.classList.toggle('sidebar-open');
+  if (sidebar) { sidebar.classList.toggle('sidebar-open'); sidebar.classList.toggle('active'); }
   if (backdrop) backdrop.classList.toggle('active');
 }
 
@@ -4262,9 +4221,9 @@ function toggleSidebarMenu() {
   const creatorSegments = [
     { text: "இணையதள வடிவமைப்பு: ", tag: "span", class: "creator-label" },
     { text: "கூ. பூவலிங்கம்", tag: "span", class: "creator-name-ta" },
-    { text: ", பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
+    { text: " பள்ளித் துணை ஆய்வாளர்  |  ", tag: "span", class: "creator-role" },
     { text: "K. Poovalingam", tag: "span", class: "creator-name-en" },
-    { text: ", Deputy Inspector of Schools", tag: "span", class: "creator-role" }
+    { text: " Deputy Inspector of Schools", tag: "span", class: "creator-role" }
   ];
 
   function runCreatorTypewriter() {
@@ -4472,375 +4431,81 @@ function fireCelebrationCrackers() {
 }
 </script>
 </div>
-<script id="universalIntlA11yToolbarScript">
+<script id="universalFloatingBttScript">
 (function() {
-  if (window.__hasUniversalIntl9BtnToolbar) return;
-  window.__hasUniversalIntl9BtnToolbar = true;
-
-  var currentFontStep = 0;
-  window.adjustPortalFontSize = window.adjustPortalFontSize || function(delta) {
-    if (delta === 0) currentFontStep = 0;
-    else currentFontStep = Math.max(-2, Math.min(3, currentFontStep + delta));
-    var scale = 100 + (currentFontStep * 6);
-    document.documentElement.style.fontSize = scale + "%";
-    var btnNormal = document.getElementById("btnFontNormal");
-    if (btnNormal) btnNormal.classList.toggle("active", currentFontStep === 0);
-    try { localStorage.setItem("svgnext_font_step", String(currentFontStep)); } catch(e) {}
-  };
-
-  window.toggleHighContrastMode = window.toggleHighContrastMode || function() {
-    var isHC = document.body.classList.toggle("high-contrast-mode");
-    var btn = document.getElementById("btnHighContrast");
-    if (btn) btn.classList.toggle("active", isHC);
-    try { localStorage.setItem("svgnext_hc", isHC ? "1" : "0"); } catch(e) {}
-  };
-
-  window.toggleReadableSpacing = window.toggleReadableSpacing || function() {
-    var isRS = document.body.classList.toggle("readable-spacing-mode");
-    var btn = document.getElementById("btnReadableSpacing");
-    if (btn) btn.classList.toggle("active", isRS);
-    try { localStorage.setItem("svgnext_rs", isRS ? "1" : "0"); } catch(e) {}
-  };
-
-  var audioSpeaking = false;
-  window.togglePortalAudioGuide = window.togglePortalAudioGuide || function() {
-    var btn = document.getElementById("btnAudioGuide");
-    if (!("speechSynthesis" in window)) {
-      alert("உங்கள் உலாவியில் குரல் வழிகாட்டி வசதி (Web Speech Synthesis) இல்லை.");
-      return;
-    }
-    if (audioSpeaking) {
-      window.speechSynthesis.cancel();
-      audioSpeaking = false;
-      if (btn) {
-        btn.classList.remove("active");
-        btn.innerHTML = "🔊";
-        btn.title = "பக்கத்தின் சுருக்கத்தைக் குரல் வழியாகக் கேட்க (Audio Screen Reader)";
-      }
-      return;
-    }
-    var titleText = document.title || "உயர்கல்வி மற்றும் வேலைவாய்ப்பு வழிகாட்டி";
-    var h1El = document.querySelector("h1, .banner-main-title, .banner-title-tamil");
-    var descEl = document.querySelector(".banner-desc, h2, p");
-    var text = titleText + ". " + (h1El ? h1El.innerText : "") + ". " + (descEl ? descEl.innerText : "");
-    var utter = new SpeechSynthesisUtterance(text.slice(0, 480));
-    utter.lang = window.isEnglishMode ? "en-IN" : "ta-IN";
-    utter.rate = 0.95;
-    utter.onend = function() {
-      audioSpeaking = false;
-      if (btn) {
-        btn.classList.remove("active");
-        btn.innerHTML = "🔊";
-        btn.title = "பக்கத்தின் சுருக்கத்தைக் குரல் வழியாகக் கேட்க (Audio Screen Reader)";
-      }
-    };
-    audioSpeaking = true;
-    if (btn) {
-      btn.classList.add("active");
-      btn.innerHTML = "⏹️";
-      btn.title = "குரல் வழிகாட்டியை நிறுத்து (Stop Audio Guide)";
-    }
-    window.speechSynthesis.speak(utter);
-  };
-
-  var PORTAL_THEMES = [
-    { cls: "", labelTa: "வண்ணம்: Neo-Aurora", labelEn: "Theme: Neo-Aurora" },
-    { cls: "theme-emerald-luxe", labelTa: "வண்ணம்: Royal Emerald", labelEn: "Theme: Royal Emerald" },
-    { cls: "theme-sunset-velvet", labelTa: "வண்ணம்: Sunset Velvet", labelEn: "Theme: Sunset Velvet" },
-    { cls: "theme-cyber-dark", labelTa: "வண்ணம்: Cyber Dark", labelEn: "Theme: Cyber Dark" }
-  ];
-  var currentThemeIndex = 0;
-
-  function applyThemeByIndex(idx) {
-    currentThemeIndex = ((idx % PORTAL_THEMES.length) + PORTAL_THEMES.length) % PORTAL_THEMES.length;
-    PORTAL_THEMES.forEach(function(t) {
-      if (t.cls) document.body.classList.remove(t.cls);
-    });
-    var chosen = PORTAL_THEMES[currentThemeIndex];
-    if (chosen.cls) document.body.classList.add(chosen.cls);
-    var btn = document.getElementById("btnThemePalette");
-    if (btn) {
-      btn.innerHTML = "🎨";
-      btn.title = window.isEnglishMode ? chosen.labelEn : chosen.labelTa;
-    }
-    try { localStorage.setItem("svgnext_theme_idx", String(currentThemeIndex)); } catch(e) {}
-  }
-
-  window.cyclePortalColorTheme = window.cyclePortalColorTheme || function() {
-    applyThemeByIndex(currentThemeIndex + 1);
-  };
-
-  function ensureSubpageSearchModal() {
-    var existing = document.getElementById("univSubpageSearchBackdrop");
-    if (existing) return existing;
-    var backdrop = document.createElement("div");
-    backdrop.id = "univSubpageSearchBackdrop";
-    backdrop.className = "univ-search-modal-backdrop";
-    backdrop.innerHTML = [
-      '<div class="univ-search-modal" role="dialog" aria-label="குரல் வழித் தேடல்">',
-      '  <div class="univ-search-modal-header">',
-      '    <div class="univ-search-modal-title">🎤 குரல் வழி & உடனடிப் பக்கத் தேடல்</div>',
-      '    <button type="button" class="univ-search-close-btn" id="univSearchCloseBtn">✕ மூடுக</button>',
-      '  </div>',
-      '  <div class="univ-search-input-wrap">',
-      '    <input type="text" id="univSearchInput" class="univ-search-input" placeholder="இப்பக்கத்தில் தேடச் சொல்லை உள்ளிடவும் அல்லது பேசவும்..." />',
-      '  </div>',
-      '  <div id="univSearchResults" class="univ-search-results">இப்பக்கத்தில் உள்ள தலைப்புகள், அட்டவணைகள் மற்றும் விவரங்களைத் தேடலாம்...</div>',
-      '</div>'
-    ].join("");
-    document.body.appendChild(backdrop);
-
-    document.getElementById("univSearchCloseBtn").onclick = function() {
-      backdrop.classList.remove("open");
-    };
-    backdrop.addEventListener("click", function(e) {
-      if (e.target === backdrop) backdrop.classList.remove("open");
-    });
-
-    var input = document.getElementById("univSearchInput");
-    input.addEventListener("input", function() {
-      runSubpageSearch(input.value);
-    });
-    return backdrop;
-  }
-
-  function runSubpageSearch(q) {
-    var resBox = document.getElementById("univSearchResults");
-    if (!resBox) return;
-    var query = (q || "").trim().toLowerCase();
-    if (!query) {
-      resBox.innerHTML = "இப்பக்கத்தில் உள்ள தலைப்புகள், அட்டவணைகள் மற்றும் விவரங்களைத் தேடலாம்.";
-      return;
-    }
-    var nodes = document.querySelectorAll("h1, h2, h3, h4, p, li, td, th, .resource-card, .card, .res-card");
-    var hits = [];
-    var seen = {};
-    for (var i = 0; i < nodes.length; i++) {
-      var el = nodes[i];
-      if (el.closest("#intlAccessibilityToolbar") || el.closest("#univSubpageSearchBackdrop")) continue;
-      var txt = (el.innerText || "").trim().replace(/\s+/g, " ");
-      if (txt.length > 8 && txt.toLowerCase().indexOf(query) !== -1 && !seen[txt.slice(0, 80)]) {
-        seen[txt.slice(0, 80)] = true;
-        hits.push({ el: el, text: txt.slice(0, 160) });
-        if (hits.length >= 12) break;
+  function initFloatingBtt() {
+    var btt = document.getElementById('floatingBackToTop');
+    if (!btt) return;
+    function checkScroll() {
+      var sy = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      if (sy > 100) {
+        btt.classList.add('visible');
+      } else {
+        btt.classList.remove('visible');
       }
     }
-    if (!hits.length) {
-      resBox.innerHTML = '<div>இப்பக்கத்தில் முடிவுகள் இல்லை. <a href="index.html" style="color:#4f46e5;font-weight:700;">🏠 முதன்மை வழிகாட்டிப் பக்கத்தில் தேட இங்கே சொடுக்கவும் →</a></div>';
-      return;
-    }
-    resBox.innerHTML = "";
-    hits.forEach(function(h) {
-      var div = document.createElement("div");
-      div.className = "univ-search-hit";
-      div.textContent = h.text;
-      div.onclick = function() {
-        document.getElementById("univSubpageSearchBackdrop").classList.remove("open");
-        h.el.scrollIntoView({ behavior: "smooth", block: "center" });
-        var origBg = h.el.style.backgroundColor;
-        h.el.style.transition = "background-color 0.4s ease";
-        h.el.style.backgroundColor = "#fef08a";
-        setTimeout(function() { h.el.style.backgroundColor = origBg; }, 2200);
-      };
-      resBox.appendChild(div);
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    btt.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+    checkScroll();
   }
-
-  window.openVoiceSearchDirectly = window.openVoiceSearchDirectly || function() {
-    var pageSearchInput = document.getElementById("searchInput") || document.getElementById("portalUniversalSearchInput");
-    var modal = ensureSubpageSearchModal();
-    modal.classList.add("open");
-    var univInput = document.getElementById("univSearchInput");
-    if (univInput) univInput.focus();
-
-    var SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
-    var vBtn = document.getElementById("btnVoiceQuickSearch");
-    if (!SpeechRec) return;
-    try {
-      var rec = new SpeechRec();
-      rec.lang = window.isEnglishMode ? "en-IN" : "ta-IN";
-      rec.interimResults = false;
-      rec.maxAlternatives = 1;
-      if (vBtn) vBtn.innerHTML = "🔴";
-      rec.onresult = function(event) {
-        var transcript = event.results[0][0].transcript || "";
-        if (univInput) {
-          univInput.value = transcript;
-          runSubpageSearch(transcript);
-        }
-        if (pageSearchInput) {
-          pageSearchInput.value = transcript;
-          pageSearchInput.dispatchEvent(new Event("input", { bubbles: true }));
-        }
-      };
-      rec.onend = function() {
-        if (vBtn) vBtn.innerHTML = "🎤";
-      };
-      rec.onerror = function() {
-        if (vBtn) vBtn.innerHTML = "🎤";
-      };
-      rec.start();
-    } catch(e) {}
-  };
-
-  window.isEnglishMode = false;
-  var COMMON_TA_EN_PAIRS = [
-    ["முகப்பு", "Home"],
-    ["வழிகாட்டி முகப்பு", "Guidance Home"],
-    ["தள வரைபடம்", "Sitemap"],
-    ["முழு தள வரைபடம் (Sitemap)", "Complete Sitemap"],
-    ["கல்வி வளங்கள்", "Educational Resources"],
-    ["உயர்கல்வி வழிகாட்டி", "Higher Education Guide"],
-    ["வேலைவாய்ப்பு", "Career & Employment"],
-    ["கல்வி உதவித்தொகை", "Scholarships"],
-    ["கல்விக் கடன்", "Education Loan"],
-    ["நுழைவுத் தேர்வுகள்", "Entrance Exams"],
-    ["கல்லூரிகள்", "Colleges"]
-  ];
-
-  window.toggleBilingualMode = window.toggleBilingualMode || function() {
-    window.isEnglishMode = !window.isEnglishMode;
-    var isEn = window.isEnglishMode;
-    var btnLang = document.getElementById("btnBilingualToggle");
-    if (btnLang) {
-      btnLang.classList.toggle("active", isEn);
-      btnLang.innerHTML = "🌐";
-      btnLang.title = isEn ? "Language: English ⇄ தமிழ்" : "இருமொழி மாற்றி: தமிழ் ⇄ English";
-    }
-    var btnHC = document.getElementById("btnHighContrast");
-    if (btnHC) btnHC.innerHTML = "🌓";
-    var btnRS = document.getElementById("btnReadableSpacing");
-    if (btnRS) btnRS.innerHTML = "📖";
-    var btnAG = document.getElementById("btnAudioGuide");
-    if (btnAG && !audioSpeaking) btnAG.innerHTML = "🔊";
-    var btnVQ = document.getElementById("btnVoiceQuickSearch");
-    if (btnVQ) btnVQ.innerHTML = "🎤";
-    var btnTP = document.getElementById("btnThemePalette");
-    if (btnTP) {
-      var chosen = PORTAL_THEMES[currentThemeIndex];
-      btnTP.innerHTML = "🎨";
-      btnTP.title = isEn ? chosen.labelEn : chosen.labelTa;
-    }
-
-    var els = document.querySelectorAll("a, button, span.btn-text, .nav-btn");
-    for (var i = 0; i < els.length; i++) {
-      var el = els[i];
-      if (el.closest("#intlAccessibilityToolbar")) continue;
-      if (el.children.length === 0) {
-        var txt = (el.textContent || "").trim();
-        COMMON_TA_EN_PAIRS.forEach(function(pair) {
-          if (isEn && txt === pair[0]) {
-            el.setAttribute("data-orig-ta", txt);
-            el.textContent = pair[1];
-          } else if (!isEn && el.getAttribute("data-orig-ta")) {
-            el.textContent = el.getAttribute("data-orig-ta");
-          }
-        });
-      }
-    }
-    try { localStorage.setItem("svgnext_lang_en", isEn ? "1" : "0"); } catch(e) {}
-  };
-
-  function restorePrefs() {
-    try {
-      var fs = parseInt(localStorage.getItem("svgnext_font_step") || "0", 10);
-      if (fs) window.adjustPortalFontSize(fs);
-      if (localStorage.getItem("svgnext_hc") === "1") window.toggleHighContrastMode();
-      if (localStorage.getItem("svgnext_rs") === "1") window.toggleReadableSpacing();
-      var ti = parseInt(localStorage.getItem("svgnext_theme_idx") || "0", 10);
-      if (ti > 0) applyThemeByIndex(ti);
-    } catch(e) {}
-  }
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", restorePrefs);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFloatingBtt);
   } else {
-    restorePrefs();
+    initFloatingBtt();
   }
 })();
 </script>
-<script id="universalAutoLastUpdatedScript">
-/* ==========================================================================
-   UNIVERSAL AUTOMATIC LAST-UPDATED DATE ENGINE (TAMIL & ENGLISH)
-   Automatically updates #portalLastUpdatedDate & .footer-last-updated across all pages
-   ========================================================================== */
+<script id="v414-crystal-typing-script">
 (function() {
-  var TAMIL_MONTHS = [
-    "ஜனவரி", "பிப்ரவரி", "மார்ச்", "ஏப்ரல்", "மே", "ஜூன்",
-    "ஜூலை", "ஆகஸ்ட்", "செப்டம்பர்", "அக்டோபர்", "நவம்பர்", "டிசம்பர்"
-  ];
-  var ENGLISH_MONTHS = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-
-  function getCurrentPortalDateParts() {
-    var now = new Date();
-    try {
-      var fmt = new Intl.DateTimeFormat("en-GB", {
-        timeZone: "Asia/Kolkata",
-        day: "numeric",
-        month: "numeric",
-        year: "numeric"
-      });
-      var parts = fmt.formatToParts(now);
-      var day = now.getDate(), month = now.getMonth(), year = now.getFullYear();
-      for (var i = 0; i < parts.length; i++) {
-        if (parts[i].type === "day") day = parseInt(parts[i].value, 10);
-        if (parts[i].type === "month") month = parseInt(parts[i].value, 10) - 1;
-        if (parts[i].type === "year") year = parseInt(parts[i].value, 10);
-      }
-      return { day: day, month: month, year: year };
-    } catch (e) {
-      return { day: now.getDate(), month: now.getMonth(), year: now.getFullYear() };
-    }
-  }
-
-  window.updatePortalLastUpdatedDate = function(langOverride) {
-    var d = getCurrentPortalDateParts();
-    var isEn = false;
-    if (langOverride) {
-      isEn = (langOverride === "en");
+  const crystalPhrases = ["சிவகங்கை முதுகலை ஆசிரியர்களின் SVG Horizon தளம், STARS Sivagangai இலவச ஆன்லைன் பயிற்சி தளம் மற்றும் NCERT பாடப்புத்தகங்கள்!", "மத்திய கல்வி அமைச்சகத்தின் IIT கான்பூர் SATHEE மற்றும் NTA National Test Abhyas 100% இலவச கணினி வழி மாதிரித் தேர்வுகள் (CBT)!", "SWAYAM, DIKSHA, e-Pathshala மற்றும் தேசிய டிஜிட்டல் நூலகம் (NDLI) உள்ளிட்ட விளம்பரமற்ற அதிகாரப்பூர்வ அரசு கல்வித் தளங்கள்!", "NEET, JEE, CUET, SSC, IBPS மற்றும் ரயில்வே போட்டித்தேர்வுகளுக்கு வீட்டிலிருந்தே இலவசமாகப் பயிற்சி பெறும் இணைய வாயில்கள்!"];
+  const target = document.getElementById('typingText');
+  if (!target || !crystalPhrases.length) return;
+  let phraseIdx = 0;
+  let charIdx = 0;
+  let isDeleting = false;
+  function typeCrystalEffect() {
+    const currentPhrase = crystalPhrases[phraseIdx];
+    if (isDeleting) {
+      charIdx--;
+      target.textContent = currentPhrase.substring(0, charIdx);
     } else {
-      try {
-        isEn = (localStorage.getItem("svgnext_lang") === "en") || (document.documentElement.lang === "en");
-      } catch (e) {}
+      charIdx++;
+      target.textContent = currentPhrase.substring(0, charIdx);
     }
-    var formattedDate = isEn
-      ? (d.day + " " + ENGLISH_MONTHS[d.month] + " " + d.year)
-      : (d.day + " " + TAMIL_MONTHS[d.month] + " " + d.year);
-
-    var dateNodes = document.querySelectorAll("#portalLastUpdatedDate, [data-auto-last-updated='date']");
-    for (var i = 0; i < dateNodes.length; i++) {
-      dateNodes[i].textContent = formattedDate;
-      dateNodes[i].setAttribute("data-ta-date", d.day + " " + TAMIL_MONTHS[d.month] + " " + d.year);
-      dateNodes[i].setAttribute("data-en-date", d.day + " " + ENGLISH_MONTHS[d.month] + " " + d.year);
+    let speed = isDeleting ? 30 : 65;
+    if (!isDeleting && charIdx === currentPhrase.length) {
+      speed = 2200;
+      isDeleting = true;
+    } else if (isDeleting && charIdx === 0) {
+      isDeleting = false;
+      phraseIdx = (phraseIdx + 1) % crystalPhrases.length;
+      speed = 450;
     }
-
-    var labelNodes = document.querySelectorAll(".auto-last-updated-label");
-    for (var j = 0; j < labelNodes.length; j++) {
-      labelNodes[j].textContent = isEn ? "Last Updated: " : "கடைசியாகப் புதுப்பிக்கப்பட்டது: ";
-    }
-
-    var badge = document.getElementById("footerAutoUpdatedBadge");
-    if (badge && !badge.querySelector("#portalLastUpdatedDate")) {
-      badge.innerHTML = '📅 <span class="auto-last-updated-label">' +
-        (isEn ? 'Last Updated: ' : 'கடைசியாகப் புதுப்பிக்கப்பட்டது: ') +
-        '</span><span id="portalLastUpdatedDate" data-auto-last-updated="date">' + formattedDate + '</span>';
-    }
-  };
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function() { window.updatePortalLastUpdatedDate(); });
-  } else {
-    window.updatePortalLastUpdatedDate();
+    setTimeout(typeCrystalEffect, speed);
   }
-
-  document.addEventListener("click", function(e) {
-    var btn = e.target && e.target.closest ? e.target.closest("#btnBilingualToggle, .lang-switch-btn") : null;
-    if (btn) {
-      setTimeout(function() { window.updatePortalLastUpdatedDate(); }, 60);
-    }
-  });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', typeCrystalEffect);
+  } else {
+    typeCrystalEffect();
+  }
+})();
+</script><script id="autoUpdateLastUpdatedDateScript">
+(function() {
+  var tamilMonths = ["ஜனவரி", "பிப்ரவரி", "மார்ச்", "ஏப்ரல்", "மே", "ஜூன்", "ஜூலை", "ஆகஸ்ட்", "செப்டம்பர்", "அக்டோபர்", "நவம்பர்", "டிசம்பர்"];
+  function updatePortalDate() {
+    var el = document.getElementById("portalLastUpdatedDate");
+    if (!el) return;
+    var now = new Date();
+    el.textContent = now.getDate() + " " + tamilMonths[now.getMonth()] + " " + now.getFullYear();
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", updatePortalDate);
+  } else {
+    updatePortalDate();
+  }
 })();
 </script>
 </body>
