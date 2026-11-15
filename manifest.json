@@ -1,0 +1,92 @@
+{
+  "id": "./index.html",
+  "name": "சிவகங்கை மாவட்ட பள்ளிக் கல்வித்துறை போர்ட்டல் & உயர்கல்வி வழிகாட்டி (CEO Sivagangai)",
+  "short_name": "CEO SVG Portal",
+  "description": "முதன்மைக் கல்வி அலுவலகம், சிவகங்கை மாவட்டம் — தலைமை ஆசிரியர்கள், அலுவலர்கள் மற்றும் மாணவர்களுக்கான ஒருங்கிணைந்த கல்வி போர்ட்டல் & உயர்கல்வி வழிகாட்டி (portal.ceosvg.in / cg.ceosvg.in)",
+  "lang": "ta-IN",
+  "dir": "ltr",
+  "start_url": "./index.html?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "any",
+  "background_color": "#071328",
+  "theme_color": "#0b1120",
+  "categories": [
+    "education",
+    "government",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "நுழைவுத்தேர்வுகள் (Entrance Exams)",
+      "short_name": "நுழைவுத்தேர்வுகள்",
+      "description": "தேசிய மற்றும் மாநில நுழைவுத்தேர்வுகள் வழிகாட்டி",
+      "url": "./01_00_entrance_main.html",
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "நேரடிச் சேர்க்கை (Direct Admissions)",
+      "short_name": "நேரடிச் சேர்க்கை",
+      "description": "+2 மதிப்பெண் நேரடிச் சேர்க்கைப் படிப்புகள்",
+      "url": "./02_00_direct_admissions.html",
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "கட்-ஆஃப் & மாணவர் உதவி மையம்",
+      "short_name": "உதவி மையம்",
+      "description": "கட்-ஆஃப் கால்குலேட்டர் & உதவித்தொகை தகுதி வழிகாட்டி",
+      "url": "./06_student_support.html",
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "கல்வி வளங்கள் & மாதிரித் தேர்வுகள்",
+      "short_name": "கல்வி வளங்கள்",
+      "description": "பாடநூல்கள், STARS சிவகங்கை & இலவச CBT மாதிரித் தேர்வுகள்",
+      "url": "./07_resources_external_portals.html",
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}
