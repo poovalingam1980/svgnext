@@ -2490,7 +2490,8 @@ body.theme-cyber-dark #admissionTimelineSec p {
 
 /* ============================================================================
    2. ZERO LAYOUT SHIFT: FIXED HEIGHT TYPING CONTAINER & FLASH NEWS BANNER
-   (உரைப்பகுதிக்கேற்ப பேனரின் உயரம் மாறி கீழ்ப்பகுதி மேலும் கீழும் ஆடுவதைத் தடுக்கும் நிலையான உயரம்)
+   - Desktop (>768px): 2 lines per Flash News ribbon (strict fixed height)
+   - Mobile (<=768px): 5 lines per Flash News ribbon (strict fixed height)
    ============================================================================ */
 .typing-container {
   height: 36px !important;
@@ -2507,11 +2508,11 @@ body.theme-cyber-dark #admissionTimelineSec p {
   white-space: nowrap !important;
 }
 
-/* Strict Constant Height for Each Flash News Ribbon & the 2-Ribbon Viewport */
+/* Desktop: 2 Lines Fixed Height per Ribbon (Line 1: Headline Row, Line 2: Description) */
 :root {
-  --hgl-ribbon-fixed-h: 64px;
+  --hgl-ribbon-fixed-h: 66px;
   --hgl-ribbon-gap: 6px;
-  --hgl-viewport-fixed-h: 134px; /* (64px * 2) + 6px */
+  --hgl-viewport-fixed-h: 138px; /* (66px * 2) + 6px */
 }
 .hgl-news-viewport,
 #hglNewsViewport {
@@ -2537,20 +2538,22 @@ body.theme-cyber-dark #admissionTimelineSec p {
   height: 100% !important;
   min-height: 100% !important;
   max-height: 100% !important;
-  padding: 5px 24px 5px 26px !important;
+  padding: 6px 24px 6px 26px !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
+  gap: 3px !important;
   overflow: hidden !important;
 }
 .hgl-headline-row {
   display: flex !important;
   align-items: center !important;
   gap: 7px !important;
-  margin-bottom: 2px !important;
+  margin-bottom: 0 !important;
   flex-wrap: nowrap !important;
   white-space: nowrap !important;
   overflow: hidden !important;
+  line-height: 1.3 !important;
 }
 .hgl-news-title-text {
   white-space: nowrap !important;
@@ -2565,13 +2568,12 @@ body.theme-cyber-dark #admissionTimelineSec p {
   -webkit-box-orient: vertical !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-  line-height: 1.3 !important;
+  white-space: normal !important;
+  line-height: 1.35 !important;
 }
 
 /* ============================================================================
-   3. SEPARATED FLASH NEWS SECTION & COUNTDOWN TIMER SECTION
-   (Flash News பகுதியும் கவுண்ட்டவுன் Timer பகுதியும் தனித்தனிப் பெட்டிகளாக)
+   3. SEPARATED FLASH NEWS SECTION & COUNTDOWN TIMER SECTION (ZERO CLIPPING)
    ============================================================================ */
 #heroGeminiLiveAlerts {
   margin: 0 0 14px 0 !important;
@@ -2590,31 +2592,178 @@ body.theme-cyber-dark #admissionTimelineSec p {
   background: linear-gradient(90deg, #38bdf8, #10b981, #fef08a, #6366f1) !important;
 }
 
-/* Uniform Fixed Height for Countdown Cards so Right-to-Left Sliding Never Shifts Height */
+/* Fix Countdown Card Clipping: Generous Auto-Stretch Height so Countdown Days & Buttons NEVER Clip */
+.hgl-carousel-track {
+  align-items: stretch !important;
+}
 .hgl-carousel-track > .hgl-card {
-  height: 148px !important;
-  min-height: 148px !important;
-  max-height: 148px !important;
+  height: auto !important;
+  min-height: 176px !important;
+  max-height: none !important;
+  overflow: visible !important;
+  padding: 9px 10px !important;
+  gap: 6px !important;
+  justify-content: space-between !important;
+}
+.hgl-card-top {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 5px !important;
+  flex-wrap: nowrap !important;
+}
+.hgl-agency-mini {
+  max-width: 52% !important;
+  white-space: nowrap !important;
   overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  font-size: 0.63rem !important;
+  padding: 2px 7px !important;
+}
+.hgl-status-tag {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  font-size: 0.62rem !important;
+  padding: 2px 7px !important;
 }
 .hgl-exam-name {
   display: -webkit-box !important;
-  -webkit-line-clamp: 1 !important;
+  -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
+  white-space: normal !important;
+  font-size: 0.80rem !important;
+  line-height: 1.3 !important;
+  min-height: 2.1em !important;
+}
+.hgl-dates-strip {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 3px !important;
+  padding: 5px 4px !important;
+}
+.hgl-d-box {
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+.hgl-d-lbl {
+  font-size: 0.58rem !important;
   white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 100% !important;
+}
+.hgl-d-val {
+  font-size: 0.68rem !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 100% !important;
 }
 .hgl-d-val.closed-date {
   color: #94a3b8 !important;
   text-decoration: line-through !important;
 }
+.hgl-bottom-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 6px !important;
+  padding: 6px 8px !important;
+  flex-wrap: wrap !important;
+}
+.hgl-cd-wrap {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+}
+.hgl-cd-label {
+  font-size: 0.66rem !important;
+  white-space: nowrap !important;
+}
+.hgl-cd-digits {
+  font-size: 0.74rem !important;
+  padding: 2px 9px !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
 
+/* ============================================================================
+   4. FLOATING-ONLY PWA INSTALL BUTTON (AUTO-HIDES AFTER 30s & HIDDEN IF INSTALLED)
+   ============================================================================ */
+.pwa-floating-install-wrap {
+  position: fixed !important;
+  bottom: 72px !important;
+  right: 20px !important;
+  z-index: 10004 !important;
+  display: none;
+  align-items: center !important;
+  gap: 6px !important;
+  background: linear-gradient(135deg, #064e3b 0%, #059669 55%, #047857 100%) !important;
+  border: 2px solid #fde047 !important;
+  border-radius: 999px !important;
+  padding: 6px 10px 6px 14px !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55), 0 0 18px rgba(16, 185, 129, 0.45) !important;
+  transition: opacity 0.5s ease, transform 0.5s ease !important;
+}
+.pwa-floating-install-wrap.visible {
+  display: inline-flex !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.pwa-floating-install-wrap.fading-out {
+  opacity: 0 !important;
+  transform: translateY(16px) !important;
+  pointer-events: none !important;
+}
+.pwa-floating-action-btn {
+  appearance: none !important;
+  background: transparent !important;
+  border: none !important;
+  color: #fef08a !important;
+  font-family: inherit !important;
+  font-size: 0.80rem !important;
+  font-weight: 900 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  white-space: nowrap !important;
+  padding: 2px 4px !important;
+}
+.pwa-floating-action-btn:hover {
+  color: #ffffff !important;
+}
+.pwa-floating-close-btn {
+  appearance: none !important;
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 50% !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+  border: 1px solid rgba(254, 240, 138, 0.55) !important;
+  color: #ffffff !important;
+  font-size: 0.68rem !important;
+  font-weight: 900 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+.pwa-floating-close-btn:hover {
+  background: #dc2626 !important;
+}
+
+/* Mobile (<= 768px): 5 Lines Fixed Height per Flash News Ribbon */
 @media (max-width: 768px) {
   :root {
-    --hgl-ribbon-fixed-h: 76px;
+    --hgl-ribbon-fixed-h: 122px;
     --hgl-ribbon-gap: 6px;
-    --hgl-viewport-fixed-h: 158px; /* (76px * 2) + 6px */
+    --hgl-viewport-fixed-h: 250px; /* (122px * 2) + 6px */
   }
   .top-frame-brand-row {
     flex-direction: row !important;
@@ -2625,77 +2774,47 @@ body.theme-cyber-dark #admissionTimelineSec p {
     height: 46px !important;
   }
   .hgl-main-content-body {
-    padding: 6px 8px 6px 10px !important;
+    padding: 7px 8px 7px 10px !important;
+    justify-content: flex-start !important;
+    gap: 4px !important;
   }
   .hgl-headline-row {
     flex-wrap: wrap !important;
+    white-space: normal !important;
+    max-height: 2.8em !important; /* Up to 2 lines */
+    overflow: hidden !important;
+  }
+  .hgl-news-title-text {
+    white-space: normal !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    font-size: 0.76rem !important;
+    line-height: 1.28 !important;
+  }
+  .hgl-news-desc-text {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important; /* Up to 3 lines -> Total 5 lines on Mobile */
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    white-space: normal !important;
+    font-size: 0.70rem !important;
+    line-height: 1.32 !important;
   }
   .hgl-carousel-track > .hgl-card {
-    height: 156px !important;
-    min-height: 156px !important;
-    max-height: 156px !important;
+    min-height: 170px !important;
+    height: auto !important;
+  }
+  .pwa-floating-install-wrap {
+    bottom: 54px !important;
+    right: 10px !important;
+    padding: 5px 8px 5px 12px !important;
+  }
+  .pwa-floating-action-btn {
+    font-size: 0.74rem !important;
   }
 }
-
-/* ============================================================================
-   4. PROGRESSIVE WEB APP (PWA) INSTALL BUTTON & MODAL STYLING
-   (கைபேசி மற்றும் கணினியில் தனிச் செயலியாக நிறுவும் வசதி — Install App / Add to Home Screen)
-   ============================================================================ */
-.pwa-header-install-btn {
-  position: absolute !important;
-  right: 16px !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  background: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%) !important;
-  color: #fef08a !important;
-  border: 1.8px solid #6ee7b7 !important;
-  border-radius: 999px !important;
-  padding: 7px 14px !important;
-  font-family: inherit !important;
-  font-size: 0.76rem !important;
-  font-weight: 900 !important;
-  cursor: pointer !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 6px !important;
-  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.45), 0 0 10px rgba(110, 231, 183, 0.25) !important;
-  transition: all 0.22s ease !important;
-  white-space: nowrap !important;
-  z-index: 5 !important;
-}
-.pwa-header-install-btn:hover {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
-  color: #ffffff !important;
-  border-color: #fde047 !important;
-  transform: translateY(-50%) scale(1.04) !important;
-}
-.pwa-sidebar-install-btn {
-  margin-top: 8px !important;
-  background: linear-gradient(135deg, rgba(5, 150, 105, 0.32) 0%, rgba(4, 120, 87, 0.48) 100%) !important;
-  border: 1.5px solid #34d399 !important;
-  color: #fef08a !important;
-  cursor: pointer !important;
-  width: 100% !important;
-  text-align: left !important;
-  font-family: inherit !important;
-}
-.pwa-sidebar-install-btn:hover {
-  background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
-  border-color: #fde047 !important;
-}
-@media (max-width: 920px) {
-  .pwa-header-install-btn {
-    position: static !important;
-    transform: none !important;
-    margin-top: 6px !important;
-    padding: 5px 12px !important;
-    font-size: 0.72rem !important;
-  }
-  .pwa-header-install-btn:hover {
-    transform: scale(1.02) !important;
-  }
-}
-
 </style>
 
 </head>
@@ -2727,13 +2846,7 @@ body.theme-cyber-dark #admissionTimelineSec p {
       <a class="sidebar-main-btn" href="05_direct_careers.html"><span class="icon">💼</span><span class="btn-text-group"><span class="menu-ta">திறன் &amp; வேலைவாய்ப்பு</span><span class="menu-en">SKILLS &amp; CAREERS</span></span></a>
       <a class="sidebar-main-btn" href="06_student_support.html"><span class="icon">🧮</span><span class="btn-text-group"><span class="menu-ta">கட்-ஆஃப் கருவிகள் &amp; உதவி மையம்</span><span class="menu-en">CUTOFF TOOLS &amp; STUDENT SUPPORT</span></span></a>
       <a class="sidebar-main-btn" href="07_resources_external_portals.html"><span class="icon">📚</span><span class="btn-text-group"><span class="menu-ta">கல்வி வளங்கள் &amp; போர்ட்டல்</span><span class="menu-en">RESOURCES &amp; PORTALS</span></span></a>
-      <button type="button" class="sidebar-main-btn pwa-sidebar-install-btn" id="sidebarInstallPwaBtn" onclick="triggerPortalPwaInstall()">
-        <span class="icon">📲</span>
-        <span class="btn-text-group">
-          <span class="menu-ta" style="color:#fef08a !important;">செயலியாக நிறுவவும்</span>
-          <span class="menu-en" style="color:#6ee7b7 !important;">INSTALL APP (PWA)</span>
-        </span>
-      </button>
+
     </nav>
   </aside>
 
@@ -2770,10 +2883,7 @@ body.theme-cyber-dark #admissionTimelineSec p {
             </div>
           </div>
         </div>
-        <button type="button" class="pwa-header-install-btn no-print" id="btnInstallPortalPwa" onclick="triggerPortalPwaInstall()" title="கைபேசி அல்லது கணினியில் தனிச் செயலியாக நிறுவவும் (Install App / Add to Home Screen)">
-          <span>📲</span>
-          <span id="pwaInstallBtnText">செயலியாக நிறுவ (Install App)</span>
-        </button>
+
       </header>
 
       <!-- 2. தலைப்பு ஹீரோ பேனர் & முதன்மைக் கட்டுப்பாட்டுப் பலகை (Title Hero Banner & Control Panel) -->
@@ -2867,11 +2977,7 @@ body.theme-cyber-dark #admissionTimelineSec p {
 
           <!-- News_Banner.html மாதிரியில் பாய் விரிவது போல் தோன்றும் நிலையான உயரம் கொண்ட Flash News பட்டை -->
           <div class="hgl-mat-flash-section" id="hglMatFlashContainer" aria-label="2027 விண்ணப்ப அறிவிக்கை வெளியான நுழைவுத்தேர்வுகள் - Flash News">
-            <div class="hgl-mat-flash-header">
-              <div class="hgl-mat-flash-title">
-                <span class="hgl-mat-flash-badge">⚡ 2027 FLASH NEWS</span>
-                <span>2027 விண்ணப்பப் பதிவு நடைபெறும் படிப்புகள் (விண்ணப்பக் காலக்கெடு முடிந்தவை தானாக மறையும்)</span>
-              </div>
+            <div class="hgl-mat-flash-header" style="justify-content: flex-end;">
               <div class="hgl-mat-controls">
                 <button type="button" class="hgl-mat-ctrl-btn" id="btnHglPrevFlash" title="முந்தைய அறிவிப்பு">◀ முந்தையது</button>
                 <button type="button" class="hgl-mat-ctrl-btn" id="btnHglNextFlash" title="அடுத்த அறிவிப்பு">அடுத்தது ▶</button>
@@ -2889,16 +2995,10 @@ body.theme-cyber-dark #admissionTimelineSec p {
              ============================================================================ -->
         <section class="hero-gemini-live-strip no-print" id="heroExamCountdownSec" aria-label="2027 உயர்கல்வி நுழைவுத்தேர்வு நேரலை கவுண்ட்டவுன் Timer பிரிவு">
           <div class="hgl-countdown-subbar" style="margin-bottom: 8px !important; padding-bottom: 6px !important; border-bottom: 1px solid rgba(56, 189, 248, 0.28) !important;">
-            <div style="display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-              <span class="hgl-cd-anim-badge" title="2027 நுழைவுத்தேர்வு நாட்கள் கவுண்ட்டவுன்" aria-label="2027 நுழைவுத்தேர்வு நாட்கள் கவுண்ட்டவுன்">
-                <span class="hgl-cd-pulse-ring" aria-hidden="true"></span>
-                <span class="hgl-cd-clock-icon" aria-hidden="true">⏱️</span>
-              </span>
-              <h3 class="hgl-heading" id="hglCountdownSecHeading" style="margin: 0;">
-                <span>2027 நுழைவுத்தேர்வு கவுண்ட்டவுன் Timer (தேர்வு முடிவடையும் வரை)</span>
-              </h3>
-              <span id="hglCountdownActiveBadge" style="font-size: 0.67rem; font-weight: 800; color: #7dd3fc; background: rgba(12, 74, 110, 0.75); border: 1px solid #38bdf8; padding: 2px 9px; border-radius: 999px;">🎯 தேர்வு முடிவடையும் வரை காட்சியளிக்கும்</span>
-            </div>
+            <span class="hgl-cd-anim-badge" title="2027 நுழைவுத்தேர்வு நாட்கள் கவுண்ட்டவுன்" aria-label="2027 நுழைவுத்தேர்வு நாட்கள் கவுண்ட்டவுன்">
+              <span class="hgl-cd-pulse-ring" aria-hidden="true"></span>
+              <span class="hgl-cd-clock-icon" aria-hidden="true">⏱️</span>
+            </span>
             <div class="hgl-unified-ctrl-pill" role="group" aria-label="கவுண்ட்டவுன் நகர்வு கட்டுப்பாடு">
               <button type="button" class="hgl-unified-seg-btn" id="btnHglCarouselPrev" title="முந்தைய தேர்வுப் பெட்டி" aria-label="Previous Exam">◀</button>
               <button type="button" class="hgl-unified-seg-btn" id="btnHglCarouselPause" title="தானியங்கி நகர்வை நிறுத்த / தொடர" aria-label="Pause or Play">⏸</button>
@@ -3470,6 +3570,13 @@ body.theme-cyber-dark #admissionTimelineSec p {
 </div>
 
 <button aria-label="பக்கத்தின் மேலே செல்க" class="floating-back-to-top" id="floatingBackToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="மேலே செல்க">↑ மேலே செல்க</button>
+<div class="pwa-floating-install-wrap no-print" id="floatingPwaInstallWrap" role="region" aria-label="செயலியாக நிறுவவும்">
+  <button type="button" class="pwa-floating-action-btn" id="btnFloatingPwaInstall" onclick="triggerPortalPwaInstall()" title="கைபேசி அல்லது கணினியில் தனிச் செயலியாக நிறுவவும் (Install App)">
+    <span>📲</span>
+    <span id="pwaInstallBtnText">செயலியாக நிறுவ (Install App)</span>
+  </button>
+  <button type="button" class="pwa-floating-close-btn" onclick="dismissFloatingPwaInstall()" title="மூடுக" aria-label="மூடுக">✕</button>
+</div>
 
 <!-- ============================================================================
      MODALS: CUTOFF CALCULATOR, STUDENT QUERY & PORTAL FEEDBACK
@@ -3494,6 +3601,7 @@ body.theme-cyber-dark #admissionTimelineSec p {
   </div>
 </div>
 
+<iframe id="hidden_form_sink" name="hidden_form_sink" style="display:none;" title="Google Sheet Form Sink"></iframe>
 <div class="cg-portal-modal-overlay" id="modalStudentQuery" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.85); z-index: 10000; align-items: flex-start; justify-content: center; padding: 75px 16px 30px 16px; overflow-y: auto;">
   <div style="position: relative; width: 100%; max-width: 760px; background: #ffffff; border: 2.5px solid #0284c7; border-radius: 18px; padding: 24px;">
     <button onclick="closeStudentQueryModal()" style="position: absolute; top: 14px; right: 16px; width: 34px; height: 34px; border-radius: 50%; background: #f1f5f9; border: 1px solid #cbd5e1; font-weight: 900; cursor: pointer;" type="button">✕</button>
@@ -3501,13 +3609,37 @@ body.theme-cyber-dark #admissionTimelineSec p {
     <form id="popupStudentQueryForm" onsubmit="handlePopupStudentQuerySubmit(event)">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; margin-bottom: 12px;">
         <input id="modal_sq_name" placeholder="மாணவர் பெயர் *" required style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px;"/>
+        <select id="modal_sq_class" required style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; background: #ffffff;">
+          <option value="12-ஆம் வகுப்பு (HSC)">12-ஆம் வகுப்பு (HSC)</option>
+          <option value="11-ஆம் வகுப்பு">11-ஆம் வகுப்பு</option>
+          <option value="10-ஆம் வகுப்பு">10-ஆம் வகுப்பு</option>
+          <option value="+2 தேர்ச்சி பெற்றவர்">+2 தேர்ச்சி பெற்றவர்</option>
+        </select>
+        <select id="modal_sq_school" required style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; background: #ffffff;">
+          <option value="அரசுப் பள்ளி (7.5% தகுதி)">அரசுப் பள்ளி (7.5% தகுதி)</option>
+          <option value="அரசு உதவிபெறும் பள்ளி">அரசு உதவிபெறும் பள்ளி</option>
+          <option value="சுயநிதி / தனியார் மெட்ரிக் பள்ளி">சுயநிதி / தனியார் மெட்ரிக் பள்ளி</option>
+        </select>
+        <input id="modal_sq_district" value="சிவகங்கை" required style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px;"/>
         <input id="modal_sq_phone" pattern="[0-9]{10}" placeholder="10 இலக்க மொபைல் எண் *" required style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px;"/>
         <input id="modal_sq_email" placeholder="மின்னஞ்சல் (Email) *" required type="email" style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px;"/>
-        <input id="modal_sq_district" value="சிவகங்கை" required style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px;"/>
+        <select id="modal_sq_category" required style="grid-column: 1 / -1; padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; background: #ffffff;">
+          <option value="பொது உயர்கல்வி வழிகாட்டுதல்">பொது உயர்கல்வி வழிகாட்டுதல்</option>
+          <option value="நுழைவுத்தேர்வுகள் (NEET / JEE / CUET / CLAT)">நுழைவுத்தேர்வுகள் (NEET / JEE / CUET / CLAT)</option>
+          <option value="நேரடிச் சேர்க்கை (TNEA / TNAU / TANUVAS / TNGASA)">நேரடிச் சேர்க்கை (TNEA / TNAU / TANUVAS / TNGASA)</option>
+          <option value="7.5% இடஒதுக்கீடு &amp; கல்வி உதவித்தொகைகள்">7.5% இடஒதுக்கீடு &amp; கல்வி உதவித்தொகைகள்</option>
+          <option value="அரசுப் போட்டித் தேர்வுகள் &amp; வேலைவாய்ப்பு">அரசுப் போட்டித் தேர்வுகள் &amp; வேலைவாய்ப்பு</option>
+        </select>
         <textarea id="modal_sq_query" placeholder="உங்கள் கேள்வி / சந்தேகம் *" required rows="3" style="grid-column: 1 / -1; padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px;"></textarea>
       </div>
       <button id="popupSqSubmitBtn" style="padding: 10px 24px; background: #0284c7; color: #ffffff; border: none; border-radius: 8px; font-weight: 800; cursor: pointer;" type="submit">கேள்வியைச் சமர்ப்பிக்க ➔</button>
     </form>
+    <div id="modalSqSuccessCard" style="display: none; text-align: center; padding: 18px 14px; background: #ecfdf5; border: 2px solid #10b981; border-radius: 12px; margin-top: 8px;">
+      <div style="font-size: 2rem; margin-bottom: 6px;">✅</div>
+      <h4 style="margin: 0 0 6px 0; color: #065f46; font-weight: 900;">தங்களது வினா Google Sheet-ல் வெற்றிகரமாகப் பதிவு செய்யப்பட்டது!</h4>
+      <p style="margin: 0; font-size: 0.86rem; color: #047857; font-weight: 700;">குறிப்பு எண் (Ticket ID): <strong id="modalTicketIdDisplay" style="color:#0f172a;"></strong></p>
+      <p style="margin: 6px 0 0 0; font-size: 0.80rem; color: #334155;">மாவட்ட வழிகாட்டுதல் குழுவினர் விரைவில் தொடர்பு கொள்வர்.</p>
+    </div>
   </div>
 </div>
 
@@ -3521,10 +3653,16 @@ body.theme-cyber-dark #admissionTimelineSec p {
         <input id="modal_fb_place" placeholder="பள்ளி / ஊர் *" required style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px;"/>
         <input id="modal_fb_phone" pattern="[0-9]{10}" placeholder="10 இலக்க தொலைபேசி எண் *" required style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px;"/>
         <input id="modal_fb_email" placeholder="மின்னஞ்சல் *" required type="email" style="padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px;"/>
+        <input id="modal_fb_link" placeholder="இணைக்க வேண்டிய இணையதள முகவரி (விருப்பமெனில்)" style="grid-column: 1 / -1; padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px;"/>
         <textarea id="modal_fb_message" placeholder="தங்களின் மேலான ஆலோசனைகள் / கருத்துகள் *" required rows="3" style="grid-column: 1 / -1; padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px;"></textarea>
       </div>
       <button id="popupFbSubmitBtn" style="padding: 10px 24px; background: #ea580c; color: #ffffff; border: none; border-radius: 8px; font-weight: 800; cursor: pointer;" type="submit">பதிவு செய்க ➔</button>
     </form>
+    <div id="modalFbSuccessCard" style="display: none; text-align: center; padding: 18px 14px; background: #fff7ed; border: 2px solid #f97316; border-radius: 12px; margin-top: 8px;">
+      <div style="font-size: 2rem; margin-bottom: 6px;">🎉</div>
+      <h4 style="margin: 0 0 6px 0; color: #9a3412; font-weight: 900;">தங்கள் மேலான ஆலோசனை Google Sheet-ல் வெற்றிகரமாகப் பதிவு செய்யப்பட்டது!</h4>
+      <p style="margin: 0; font-size: 0.84rem; color: #c2410c; font-weight: 700;">குறிப்பு எண்: <strong id="modalFbRefDisplay" style="color:#0f172a;"></strong></p>
+    </div>
   </div>
 </div>
 
@@ -4740,9 +4878,30 @@ function calculateUniversalCutoff() {
   document.getElementById('cutoffResultBox').style.display = 'block';
 }
 
-function openStudentQueryModal() { document.getElementById('modalStudentQuery').style.display = 'flex'; }
+const APPS_SCRIPT_FEEDBACK_URL = "https://script.google.com/macros/s/AKfycbweLUerXxEKeOq0lncL35mAJKQQwKnHKKMzzAiHTiDZnmsyuWEx0xm-8Dr-ZVM0ngw/exec";
+const APPS_SCRIPT_QUERIES_URL  = "https://script.google.com/macros/s/AKfycbwM7YF6emrFge4Xg3o2nt7dj4iTcnjpmnirjsfwAREtWsifhXrZ4QBqowDV2NB5FN8y8w/exec";
+
+function openStudentQueryModal() {
+  const m = document.getElementById('modalStudentQuery');
+  if (m) {
+    m.style.display = 'flex';
+    const sc = document.getElementById('modalSqSuccessCard');
+    const fm = document.getElementById('popupStudentQueryForm');
+    if (sc) sc.style.display = 'none';
+    if (fm) fm.style.display = 'block';
+  }
+}
 function closeStudentQueryModal() { document.getElementById('modalStudentQuery').style.display = 'none'; }
-function openFeedbackModal() { document.getElementById('modalPortalFeedback').style.display = 'flex'; }
+function openFeedbackModal() {
+  const m = document.getElementById('modalPortalFeedback');
+  if (m) {
+    m.style.display = 'flex';
+    const sc = document.getElementById('modalFbSuccessCard');
+    const fm = document.getElementById('popupFeedbackForm');
+    if (sc) sc.style.display = 'none';
+    if (fm) fm.style.display = 'block';
+  }
+}
 function closeFeedbackModal() { document.getElementById('modalPortalFeedback').style.display = 'none'; }
 
 function showPortalInlineToast(msg) {
@@ -4757,15 +4916,123 @@ function showPortalInlineToast(msg) {
   t.style.display = "block";
   setTimeout(function() { t.style.display = "none"; }, 4000);
 }
-function handlePopupStudentQuerySubmit(e) {
-  e.preventDefault();
-  showPortalInlineToast('தங்களது வினா வெற்றிகரமாகப் பதிவு செய்யப்பட்டது! வழிகாட்டுதல் குழுவினர் விரைவில் தொடர்பு கொள்வர்.');
-  closeStudentQueryModal();
+
+// Multi-Channel Google Sheet Submission Helper (Restored from v4.17)
+async function postToGoogleSheet(payload) {
+  const targetUrl = payload.formType === 'student_query' ? APPS_SCRIPT_QUERIES_URL : APPS_SCRIPT_FEEDBACK_URL;
+  try {
+    const storeKey = payload.formType === 'student_query' ? 'student_query_records' : 'portal_feedback_records';
+    const existing = JSON.parse(localStorage.getItem(storeKey) || '[]');
+    existing.push(payload);
+    localStorage.setItem(storeKey, JSON.stringify(existing));
+  } catch (err) {}
+
+  try {
+    await fetch(targetUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    });
+  } catch (err) {}
+
+  try {
+    const iframe = document.getElementById('hidden_form_sink');
+    if (iframe) {
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = targetUrl;
+      form.target = 'hidden_form_sink';
+      for (const k in payload) {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = k;
+        input.value = typeof payload[k] === 'object' ? JSON.stringify(payload[k]) : payload[k];
+        form.appendChild(input);
+      }
+      document.body.appendChild(form);
+      form.submit();
+      setTimeout(function() { form.remove(); }, 1000);
+    }
+  } catch (iframeErr) {}
 }
-function handlePopupFeedbackSubmit(e) {
+
+async function handlePopupStudentQuerySubmit(e) {
   e.preventDefault();
-  showPortalInlineToast('தங்கள் மேலான ஆலோசனைக்கு நன்றி!');
-  closeFeedbackModal();
+  const btn = document.getElementById('popupSqSubmitBtn');
+  const origText = btn ? btn.innerHTML : '';
+  if (btn) { btn.disabled = true; btn.innerHTML = '⏳ பதிவாகிறது...'; }
+
+  const ticketId = 'TN-CG-2026-' + Math.floor(1000 + Math.random() * 9000);
+  const payload = {
+    formType: 'student_query',
+    ticketId: ticketId,
+    name: (document.getElementById('modal_sq_name')?.value || '').trim(),
+    studentClass: document.getElementById('modal_sq_class')?.value || '12-ஆம் வகுப்பு (HSC)',
+    schoolType: document.getElementById('modal_sq_school')?.value || 'அரசுப் பள்ளி (7.5% தகுதி)',
+    district: (document.getElementById('modal_sq_district')?.value || 'சிவகங்கை').trim(),
+    phone: (document.getElementById('modal_sq_phone')?.value || '').trim(),
+    email: (document.getElementById('modal_sq_email')?.value || '').trim(),
+    category: document.getElementById('modal_sq_category')?.value || 'பொது உயர்கல்வி வழிகாட்டுதல்',
+    query: (document.getElementById('modal_sq_query')?.value || '').trim(),
+    spreadsheetId: '1-nkKQyAqE2IK31Rf4-qXBDVjLD88S2U3d_uF0AGrOZQ',
+    sheetName: 'Sheet1',
+    timestamp: new Date().toLocaleString('ta-IN', { timeZone: 'Asia/Kolkata' })
+  };
+
+  await postToGoogleSheet(payload);
+
+  const tidEl = document.getElementById('modalTicketIdDisplay');
+  if (tidEl) tidEl.textContent = ticketId;
+  const fm = document.getElementById('popupStudentQueryForm');
+  const sc = document.getElementById('modalSqSuccessCard');
+  if (fm) { fm.style.display = 'none'; fm.reset(); }
+  if (sc) sc.style.display = 'block';
+  if (btn) { btn.disabled = false; btn.innerHTML = origText; }
+  showPortalInlineToast('தங்களது வினா Google Sheet-ல் வெற்றிகரமாகப் பதிவு செய்யப்பட்டது! (' + ticketId + ')');
+
+  setTimeout(function() { closeStudentQueryModal(); }, 3200);
+}
+
+async function handlePopupFeedbackSubmit(e) {
+  e.preventDefault();
+  const email = (document.getElementById('modal_fb_email')?.value || '').trim();
+  if (!email || !email.includes('@') || !email.includes('.')) {
+    showPortalInlineToast('தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்.');
+    return;
+  }
+
+  const btn = document.getElementById('popupFbSubmitBtn');
+  const origText = btn ? btn.innerHTML : '';
+  if (btn) { btn.disabled = true; btn.innerHTML = '⏳ பதிவாகிறது...'; }
+
+  const refId = 'TN-FB-2026-' + Math.floor(1000 + Math.random() * 9000);
+  const payload = {
+    formType: 'portal_feedback',
+    refId: refId,
+    name: (document.getElementById('modal_fb_name')?.value || '').trim(),
+    place: (document.getElementById('modal_fb_place')?.value || '').trim(),
+    phone: (document.getElementById('modal_fb_phone')?.value || '').trim(),
+    email: email,
+    link: (document.getElementById('modal_fb_link')?.value || '').trim() || 'இல்லை',
+    message: (document.getElementById('modal_fb_message')?.value || '').trim(),
+    spreadsheetId: '1fSIyCI4AsqA2-8aqRr5XQb7KODEA6pvnyNhjKO_PBSc',
+    sheetName: 'Sheet1',
+    timestamp: new Date().toLocaleString('ta-IN', { timeZone: 'Asia/Kolkata' })
+  };
+
+  await postToGoogleSheet(payload);
+
+  const refEl = document.getElementById('modalFbRefDisplay');
+  if (refEl) refEl.textContent = refId;
+  const fm = document.getElementById('popupFeedbackForm');
+  const sc = document.getElementById('modalFbSuccessCard');
+  if (fm) { fm.style.display = 'none'; fm.reset(); }
+  if (sc) sc.style.display = 'block';
+  if (btn) { btn.disabled = false; btn.innerHTML = origText; }
+  showPortalInlineToast('தங்கள் மேலான ஆலோசனை Google Sheet-ல் பதிவு செய்யப்பட்டது! (' + refId + ')');
+
+  setTimeout(function() { closeFeedbackModal(); }, 3500);
 }
 
 
@@ -5480,12 +5747,75 @@ document.addEventListener('DOMContentLoaded', function() {
 <script id="portalPwaServiceWorkerEngine">
 (function() {
   let deferredPwaPrompt = null;
+  let floatingHideTimer = null;
+  const INSTALLED_STORAGE_KEY = "ceosvg_pwa_installed_v1";
 
-  // 1. Dynamic In-Memory Manifest Fallback (ensures PWA metadata is always available even in standalone preview)
+  // Check if app is already installed on this Mobile or Desktop device
+  function isPortalAlreadyInstalled() {
+    try {
+      if (window.matchMedia && (
+        window.matchMedia("(display-mode: standalone)").matches ||
+        window.matchMedia("(display-mode: window-controls-overlay)").matches ||
+        window.matchMedia("(display-mode: minimal-ui)").matches
+      )) {
+        return true;
+      }
+      if (window.navigator && window.navigator.standalone === true) {
+        return true;
+      }
+      if (localStorage.getItem(INSTALLED_STORAGE_KEY) === "1") {
+        return true;
+      }
+    } catch (e) {}
+    return false;
+  }
+
+  function hideFloatingPwaInstall(immediate) {
+    const wrap = document.getElementById("floatingPwaInstallWrap");
+    if (!wrap) return;
+    if (floatingHideTimer) {
+      clearTimeout(floatingHideTimer);
+      floatingHideTimer = null;
+    }
+    if (immediate) {
+      wrap.classList.remove("visible", "fading-out");
+      wrap.style.display = "none";
+      return;
+    }
+    wrap.classList.add("fading-out");
+    setTimeout(function() {
+      wrap.classList.remove("visible", "fading-out");
+      wrap.style.display = "none";
+    }, 520);
+  }
+
+  // Show Floating Install Button ONLY if not already installed, and auto-hide after 30 seconds
+  function showFloatingPwaInstallWithAutoHide() {
+    if (isPortalAlreadyInstalled()) {
+      hideFloatingPwaInstall(true);
+      return;
+    }
+    const wrap = document.getElementById("floatingPwaInstallWrap");
+    if (!wrap) return;
+    wrap.style.display = "";
+    wrap.classList.remove("fading-out");
+    wrap.classList.add("visible");
+
+    if (floatingHideTimer) clearTimeout(floatingHideTimer);
+    // 30 நொடிகளில் (30,000 ms) தானாக மறைந்துவிடும்
+    floatingHideTimer = setTimeout(function() {
+      hideFloatingPwaInstall(false);
+    }, 30000);
+  }
+
+  window.dismissFloatingPwaInstall = function() {
+    hideFloatingPwaInstall(false);
+  };
+
+  // 1. Dynamic In-Memory Manifest Fallback
   function attachDynamicManifestFallback() {
     const linkEl = document.getElementById("portalManifestLink");
     if (!linkEl) return;
-    // When running over file:// or sandbox preview where ./manifest.json might not resolve, provide a Blob manifest fallback on error
     fetch("./manifest.json", { method: "HEAD" }).catch(function() {
       const fallbackManifest = {
         name: "சிவகங்கை மாவட்ட பள்ளிக் கல்வித்துறை போர்ட்டல் & உயர்கல்வி வழிகாட்டி",
@@ -5505,7 +5835,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // 2. Register Service Worker (sw.js) for Offline Support & Installability on portal.ceosvg.in / cg.ceosvg.in
+  // 2. Register Service Worker (sw.js)
   function registerPortalServiceWorker() {
     if (!("serviceWorker" in navigator)) return;
     if (location.protocol !== "https:" && location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
@@ -5518,41 +5848,27 @@ document.addEventListener('DOMContentLoaded', function() {
           if (badge) {
             badge.textContent = "✅ Service Worker (sw.js) வெற்றிகரமாக இணைக்கப்பட்டது • ஆஃப்லைன் ஆதரவு தயார்";
           }
-          reg.addEventListener("updatefound", function() {
-            const newWorker = reg.installing;
-            if (newWorker) {
-              newWorker.addEventListener("statechange", function() {
-                if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
-                  if (typeof showPortalInlineToast === "function") {
-                    showPortalInlineToast("புதிய பதிப்பு தயாராக உள்ளது! பக்கத்தைப் புதுப்பிக்கவும்.");
-                  }
-                }
-              });
-            }
-          });
         })
-        .catch(function() {
-          // Graceful no-op in preview environments without sw.js at root
-        });
+        .catch(function() {});
     });
   }
 
-  // 3. Capture beforeinstallprompt for 1-Click Native Android / Desktop App Installation
+  // 3. Capture beforeinstallprompt for 1-Click Native Installation
   window.addEventListener("beforeinstallprompt", function(e) {
     e.preventDefault();
     deferredPwaPrompt = e;
     const directBox = document.getElementById("pwaDirectInstallBox");
     if (directBox) directBox.style.display = "block";
-    const btnText = document.getElementById("pwaInstallBtnText");
-    if (btnText) btnText.textContent = "செயலியாக நிறுவ (1-Click Install)";
+    showFloatingPwaInstallWithAutoHide();
   });
 
+  // 4. Mark permanently installed when user installs the app
   window.addEventListener("appinstalled", function() {
     deferredPwaPrompt = null;
+    try { localStorage.setItem(INSTALLED_STORAGE_KEY, "1"); } catch (e) {}
+    hideFloatingPwaInstall(true);
     const directBox = document.getElementById("pwaDirectInstallBox");
     if (directBox) directBox.style.display = "none";
-    const btnText = document.getElementById("pwaInstallBtnText");
-    if (btnText) btnText.textContent = "செயலி நிறுவப்பட்டுள்ளது ✓";
     if (typeof showPortalInlineToast === "function") {
       showPortalInlineToast("இத்தளம் தங்கள் சாதனத்தில் தனிச் செயலியாக (App) வெற்றிகரமாக நிறுவப்பட்டது!");
     }
@@ -5563,8 +5879,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (deferredPwaPrompt) {
       deferredPwaPrompt.prompt();
       deferredPwaPrompt.userChoice.then(function(choiceResult) {
-        if (choiceResult.outcome === "accepted") {
+        if (choiceResult && choiceResult.outcome === "accepted") {
+          try { localStorage.setItem(INSTALLED_STORAGE_KEY, "1"); } catch (e) {}
           deferredPwaPrompt = null;
+          hideFloatingPwaInstall(true);
         }
       });
     } else {
@@ -5576,7 +5894,11 @@ document.addEventListener('DOMContentLoaded', function() {
   window.confirmNativePwaPrompt = function() {
     if (deferredPwaPrompt) {
       deferredPwaPrompt.prompt();
-      deferredPwaPrompt.userChoice.then(function() {
+      deferredPwaPrompt.userChoice.then(function(choiceResult) {
+        if (choiceResult && choiceResult.outcome === "accepted") {
+          try { localStorage.setItem(INSTALLED_STORAGE_KEY, "1"); } catch (e) {}
+          hideFloatingPwaInstall(true);
+        }
         deferredPwaPrompt = null;
         closePwaInstallModal();
       });
@@ -5595,8 +5917,32 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // Also detect getInstalledRelatedApps if supported by Chrome/Edge
+  async function checkAndShowFloatingInstall() {
+    if (isPortalAlreadyInstalled()) {
+      hideFloatingPwaInstall(true);
+      return;
+    }
+    if (navigator.getInstalledRelatedApps) {
+      try {
+        const relatedApps = await navigator.getInstalledRelatedApps();
+        if (relatedApps && relatedApps.length > 0) {
+          try { localStorage.setItem(INSTALLED_STORAGE_KEY, "1"); } catch (e) {}
+          hideFloatingPwaInstall(true);
+          return;
+        }
+      } catch (e) {}
+    }
+    showFloatingPwaInstallWithAutoHide();
+  }
+
   attachDynamicManifestFallback();
   registerPortalServiceWorker();
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", checkAndShowFloatingInstall);
+  } else {
+    checkAndShowFloatingInstall();
+  }
 })();
 </script>
 
