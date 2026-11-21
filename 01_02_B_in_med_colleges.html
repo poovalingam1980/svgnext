@@ -12964,5 +12964,648 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 })();
 </script>
+
+<!-- ============================================================ -->
+<!-- UNIFIED FLOATING DUAL-PILL FORMS (STUDENT QUERY & FEEDBACK)  -->
+<!-- Connected to Google Sheets via Apps Script + Iframe Sink     -->
+<!-- ============================================================ -->
+<style id="cgUnifiedDualModalStyles">
+.cg-portal-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 100000;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 56px 14px 28px 14px;
+  overflow-y: auto;
+  animation: cgModalFadeIn 0.22s ease-out;
+}
+.cg-portal-modal-overlay.cg-modal-open {
+  display: flex !important;
+}
+@keyframes cgModalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes cgModalSlideUp {
+  from { opacity: 0; transform: translateY(18px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.cg-modal-card {
+  position: relative;
+  width: 100%;
+  max-width: 740px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px 24px 22px 24px;
+  box-shadow: 0 24px 60px rgba(2, 6, 23, 0.45);
+  animation: cgModalSlideUp 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #0f172a;
+  font-family: 'Noto Sans Tamil', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+.cg-modal-card.cg-theme-query {
+  border: 2.5px solid #0284c7;
+}
+.cg-modal-card.cg-theme-feedback {
+  border: 2.5px solid #ea580c;
+}
+.cg-modal-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  border: 1.5px solid #cbd5e1;
+  color: #334155;
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s ease;
+}
+.cg-modal-close-btn:hover {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #b91c1c;
+  transform: rotate(90deg);
+}
+.cg-modal-switcher {
+  display: inline-flex;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  padding: 4px;
+  gap: 4px;
+  margin-bottom: 14px;
+  max-width: calc(100% - 46px);
+  flex-wrap: wrap;
+}
+.cg-switch-tab {
+  border: none;
+  background: transparent;
+  color: #475569;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  font-family: inherit;
+}
+.cg-switch-tab.active-query {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  color: #ffffff;
+  box-shadow: 0 3px 10px rgba(2, 132, 199, 0.3);
+}
+.cg-switch-tab.active-feedback {
+  background: linear-gradient(135deg, #ea580c, #c2410c);
+  color: #ffffff;
+  box-shadow: 0 3px 10px rgba(234, 88, 12, 0.3);
+}
+.cg-modal-heading {
+  margin: 0 0 4px 0;
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
+.cg-modal-heading.query-title { color: #0c4a6e; }
+.cg-modal-heading.feedback-title { color: #9a3412; }
+.cg-modal-sub {
+  margin: 0 0 14px 0;
+  font-size: 0.82rem;
+  color: #475569;
+  font-weight: 600;
+}
+.cg-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+  margin-bottom: 14px;
+}
+.cg-modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.cg-modal-field.full-span {
+  grid-column: 1 / -1;
+}
+.cg-modal-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+.cg-modal-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  color: #0f172a;
+  background: #f8fafc;
+  font-family: inherit;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+.cg-modal-input:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.16);
+}
+.cg-theme-feedback .cg-modal-input:focus {
+  border-color: #ea580c;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.16);
+}
+.cg-modal-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.cg-modal-submit-btn {
+  padding: 11px 24px;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.94rem;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+.cg-modal-submit-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+.cg-modal-submit-btn:disabled {
+  opacity: 0.68;
+  cursor: not-allowed;
+}
+.cg-btn-query {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.3);
+}
+.cg-btn-feedback {
+  background: linear-gradient(135deg, #ea580c, #c2410c);
+  box-shadow: 0 6px 16px rgba(234, 88, 12, 0.3);
+}
+.cg-modal-sheet-badge {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #047857;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+.cg-modal-success-card {
+  display: none;
+  text-align: center;
+  padding: 20px 16px;
+  border-radius: 14px;
+  margin-top: 6px;
+}
+.cg-modal-success-card.sq-success {
+  background: #ecfdf5;
+  border: 2px solid #10b981;
+}
+.cg-modal-success-card.fb-success {
+  background: #fff7ed;
+  border: 2px solid #f97316;
+}
+.cg-success-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.cg-success-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  font-weight: 800;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  font-family: inherit;
+}
+.cg-success-btn-primary {
+  background: #0f172a;
+  color: #ffffff;
+}
+.cg-success-btn-secondary {
+  background: #ffffff;
+  color: #334155;
+  border-color: #cbd5e1;
+}
+@media (max-width: 640px) {
+  .cg-portal-modal-overlay {
+    padding: 22px 10px 24px 10px;
+  }
+  .cg-modal-card {
+    padding: 18px 15px 16px 15px;
+    border-radius: 16px;
+  }
+  .cg-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .cg-modal-input {
+    font-size: 16px;
+  }
+  .cg-modal-submit-btn {
+    width: 100%;
+  }
+}
+</style>
+
+<iframe class="no-print" id="hidden_form_sink" name="hidden_form_sink" style="display:none;" title="Google Sheet Form Sink"></iframe>
+
+<!-- 1. STUDENT QUERY MODAL (மாணவர் சந்தேகப் படிவம்) -->
+<div aria-labelledby="cgSqModalTitle" aria-modal="true" class="cg-portal-modal-overlay no-print" id="modalStudentQuery" onclick="if(event.target===this) closeStudentQueryModal();" role="dialog">
+  <div class="cg-modal-card cg-theme-query">
+    <button aria-label="படிவத்தை மூடு" class="cg-modal-close-btn" onclick="closeStudentQueryModal()" type="button">✕</button>
+    <div class="cg-modal-switcher">
+      <button class="cg-switch-tab active-query" type="button">✍️ சந்தேகம் கேட்க</button>
+      <button class="cg-switch-tab" onclick="switchModalToFeedback()" type="button">💡 ஆலோசனை பதிவிட</button>
+    </div>
+    <h3 class="cg-modal-heading query-title" id="cgSqModalTitle">✍️ மாணவர் சந்தேகப் படிவம் (Ask Student Query)</h3>
+    <p class="cg-modal-sub">உயர்கல்வி, நுழைவுத்தேர்வு, கவுன்சிலிங் மற்றும் 7.5% இடஒதுக்கீடு குறித்த சந்தேகங்களைப் பதிவு செய்யவும்.</p>
+    <form id="popupStudentQueryForm" onsubmit="handlePopupStudentQuerySubmit(event)">
+      <div class="cg-modal-grid">
+        <div class="cg-modal-field">
+          <label class="cg-modal-label" for="modal_sq_name">மாணவர் பெயர் *</label>
+          <input class="cg-modal-input" id="modal_sq_name" placeholder="உங்கள் முழுப் பெயர்" required type="text"/>
+        </div>
+        <div class="cg-modal-field">
+          <label class="cg-modal-label" for="modal_sq_class">வகுப்பு *</label>
+          <select class="cg-modal-input" id="modal_sq_class" required>
+            <option value="12-ஆம் வகுப்பு (HSC)">12-ஆம் வகுப்பு (HSC)</option>
+            <option value="11-ஆம் வகுப்பு">11-ஆம் வகுப்பு</option>
+            <option value="10-ஆம் வகுப்பு">10-ஆம் வகுப்பு</option>
+            <option value="+2 தேர்ச்சி பெற்றவர்">+2 தேர்ச்சி பெற்றவர்</option>
+          </select>
+        </div>
+        <div class="cg-modal-field">
+          <label class="cg-modal-label" for="modal_sq_school">பள்ளி வகை *</label>
+          <select class="cg-modal-input" id="modal_sq_school" required>
+            <option value="அரசுப் பள்ளி (7.5% தகுதி)">அரசுப் பள்ளி (7.5% தகுதி)</option>
+            <option value="அரசு உதவிபெறும் பள்ளி">அரசு உதவிபெறும் பள்ளி</option>
+            <option value="சுயநிதி / தனியார் மெட்ரிக் பள்ளி">சுயநிதி / தனியார் மெட்ரிக் பள்ளி</option>
+          </select>
+        </div>
+        <div class="cg-modal-field">
+          <label class="cg-modal-label" for="modal_sq_district">மாவட்டம் *</label>
+          <input class="cg-modal-input" id="modal_sq_district" required type="text" value="சிவகங்கை"/>
+        </div>
+        <div class="cg-modal-field">
+          <label class="cg-modal-label" for="modal_sq_phone">10 இலக்க மொபைல் எண் *</label>
+          <input class="cg-modal-input" id="modal_sq_phone" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" placeholder="எ.கா: 9876543210" required type="tel"/>
+        </div>
+        <div class="cg-modal-field">
+          <label class="cg-modal-label" for="modal_sq_email">மின்னஞ்சல் (Email) *</label>
+          <input class="cg-modal-input" id="modal_sq_email" placeholder="example@gmail.com" required type="email"/>
+        </div>
+        <div class="cg-modal-field full-span">
+          <label class="cg-modal-label" for="modal_sq_category">சந்தேகப் பிரிவு *</label>
+          <select class="cg-modal-input" id="modal_sq_category" required>
+            <option selected value="நுழைவுத்தேர்வுகள் (NEET / JEE / CUET / CLAT)">நுழைவுத்தேர்வுகள் (NEET / JEE / CUET / CLAT)</option>
+            <option value="பொது உயர்கல்வி வழிகாட்டுதல்">பொது உயர்கல்வி வழிகாட்டுதல்</option>
+            <option value="நேரடிச் சேர்க்கை (TNEA / TNAU / TANUVAS / TNGASA)">நேரடிச் சேர்க்கை (TNEA / TNAU / TANUVAS / TNGASA)</option>
+            <option value="7.5% இடஒதுக்கீடு &amp; கல்வி உதவித்தொகைகள்">7.5% இடஒதுக்கீடு &amp; கல்வி உதவித்தொகைகள்</option>
+            <option value="அரசுப் போட்டித் தேர்வுகள் &amp; வேலைவாய்ப்பு">அரசுப் போட்டித் தேர்வுகள் &amp; வேலைவாய்ப்பு</option>
+          </select>
+        </div>
+        <div class="cg-modal-field full-span">
+          <label class="cg-modal-label" for="modal_sq_query">உங்கள் கேள்வி / சந்தேகம் *</label>
+          <textarea class="cg-modal-input" id="modal_sq_query" placeholder="உங்கள் சந்தேகத்தைத் தெளிவாக எழுதவும்..." required rows="3"></textarea>
+        </div>
+      </div>
+      <div class="cg-modal-actions">
+        <button class="cg-modal-submit-btn cg-btn-query" id="popupSqSubmitBtn" type="submit">கேள்வியைச் சமர்ப்பிக்க ➔</button>
+        <span class="cg-modal-sheet-badge">🟢 Google Sheet நேரடி இணைப்பு</span>
+      </div>
+    </form>
+    <div class="cg-modal-success-card sq-success" id="modalSqSuccessCard">
+      <div style="font-size: 2.1rem; margin-bottom: 6px;">✅</div>
+      <h4 style="margin: 0 0 6px 0; color: #065f46; font-weight: 900; font-size: 1.05rem;">தங்களது வினா Google Sheet-ல் வெற்றிகரமாகப் பதிவு செய்யப்பட்டது!</h4>
+      <p style="margin: 0; font-size: 0.9rem; color: #047857; font-weight: 700;">குறிப்பு எண் (Ticket ID): <strong id="modalTicketIdDisplay" style="color:#0f172a;"></strong></p>
+      <p style="margin: 6px 0 0 0; font-size: 0.82rem; color: #334155;">சிவகங்கை மாவட்ட வழிகாட்டுதல் குழுவினர் விரைவில் தொடர்பு கொள்வர்.</p>
+      <div class="cg-success-actions">
+        <button class="cg-success-btn cg-success-btn-primary" onclick="resetStudentQueryModal()" type="button">மற்றொரு கேள்வி கேட்க</button>
+        <button class="cg-success-btn cg-success-btn-secondary" onclick="closeStudentQueryModal()" type="button">மூடு</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. PORTAL FEEDBACK MODAL (இணையதள ஆலோசனைக் களம்) -->
+<div aria-labelledby="cgFbModalTitle" aria-modal="true" class="cg-portal-modal-overlay no-print" id="modalPortalFeedback" onclick="if(event.target===this) closePortalFeedbackModal();" role="dialog">
+  <div class="cg-modal-card cg-theme-feedback">
+    <button aria-label="படிவத்தை மூடு" class="cg-modal-close-btn" onclick="closePortalFeedbackModal()" type="button">✕</button>
+    <div class="cg-modal-switcher">
+      <button class="cg-switch-tab" onclick="switchModalToQuery()" type="button">✍️ சந்தேகம் கேட்க</button>
+      <button class="cg-switch-tab active-feedback" type="button">💡 ஆலோசனை பதிவிட</button>
+    </div>
+    <h3 class="cg-modal-heading feedback-title" id="cgFbModalTitle">💡 இணையதள ஆலோசனைக் களம் (Feedback &amp; Ideas)</h3>
+    <p class="cg-modal-sub">இத்தளத்தை மேலும் மேம்படுத்த தங்களின் கருத்துகள், புதிய இணைப்புகள் மற்றும் ஆலோசனைகளைப் பகிரவும்.</p>
+    <form id="popupFeedbackForm" onsubmit="handlePopupFeedbackSubmit(event)">
+      <div class="cg-modal-grid">
+        <div class="cg-modal-field">
+          <label class="cg-modal-label" for="modal_fb_name">பெயர் *</label>
+          <input class="cg-modal-input" id="modal_fb_name" placeholder="உங்கள் பெயர்" required type="text"/>
+        </div>
+        <div class="cg-modal-field">
+          <label class="cg-modal-label" for="modal_fb_place">பள்ளி / ஊர் *</label>
+          <input class="cg-modal-input" id="modal_fb_place" placeholder="பள்ளி பெயர் அல்லது ஊர்" required type="text"/>
+        </div>
+        <div class="cg-modal-field">
+          <label class="cg-modal-label" for="modal_fb_phone">10 இலக்க தொலைபேசி எண் *</label>
+          <input class="cg-modal-input" id="modal_fb_phone" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" placeholder="எ.கா: 9876543210" required type="tel"/>
+        </div>
+        <div class="cg-modal-field">
+          <label class="cg-modal-label" for="modal_fb_email">மின்னஞ்சல் (Email) *</label>
+          <input class="cg-modal-input" id="modal_fb_email" placeholder="example@gmail.com" required type="email"/>
+        </div>
+        <div class="cg-modal-field full-span">
+          <label class="cg-modal-label" for="modal_fb_link">இணைக்க வேண்டிய இணையதள முகவரி (விருப்பமெனில்)</label>
+          <input class="cg-modal-input" id="modal_fb_link" placeholder="https://..." type="url"/>
+        </div>
+        <div class="cg-modal-field full-span">
+          <label class="cg-modal-label" for="modal_fb_message">தங்களின் மேலான ஆலோசனைகள் / கருத்துகள் *</label>
+          <textarea class="cg-modal-input" id="modal_fb_message" placeholder="தள மேம்பாட்டுக்கான ஆலோசனைகளைப் பதிவிடவும்..." required rows="3"></textarea>
+        </div>
+      </div>
+      <div class="cg-modal-actions">
+        <button class="cg-modal-submit-btn cg-btn-feedback" id="popupFbSubmitBtn" type="submit">ஆலோசனையைப் பதிவு செய்க ➔</button>
+        <span class="cg-modal-sheet-badge">🟢 Google Sheet நேரடி இணைப்பு</span>
+      </div>
+    </form>
+    <div class="cg-modal-success-card fb-success" id="modalFbSuccessCard">
+      <div style="font-size: 2.1rem; margin-bottom: 6px;">🎉</div>
+      <h4 style="margin: 0 0 6px 0; color: #9a3412; font-weight: 900; font-size: 1.05rem;">தங்கள் மேலான ஆலோசனை Google Sheet-ல் வெற்றிகரமாகப் பதிவு செய்யப்பட்டது!</h4>
+      <p style="margin: 0; font-size: 0.9rem; color: #c2410c; font-weight: 700;">குறிப்பு எண் (Ref ID): <strong id="modalFbRefDisplay" style="color:#0f172a;"></strong></p>
+      <p style="margin: 6px 0 0 0; font-size: 0.82rem; color: #334155;">உங்கள் பங்களிப்பிற்கு மனமார்ந்த நன்றி!</p>
+      <div class="cg-success-actions">
+        <button class="cg-success-btn cg-success-btn-primary" onclick="resetFeedbackModal()" type="button">மற்றொரு ஆலோசனை பதிவிட</button>
+        <button class="cg-success-btn cg-success-btn-secondary" onclick="closePortalFeedbackModal()" type="button">மூடு</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script id="cgUnifiedDualModalScript">
+(function() {
+  const CG_APPS_SCRIPT_FEEDBACK_URL = "https://script.google.com/macros/s/AKfycbweLUerXxEKeOq0lncL35mAJKQQwKnHKKMzzAiHTiDZnmsyuWEx0xm-8Dr-ZVM0ngw/exec";
+  const CG_APPS_SCRIPT_QUERIES_URL  = "https://script.google.com/macros/s/AKfycbwM7YF6emrFge4Xg3o2nt7dj4iTcnjpmnirjsfwAREtWsifhXrZ4QBqowDV2NB5FN8y8w/exec";
+
+  function lockBodyScroll(locked) {
+    document.body.style.overflow = locked ? 'hidden' : '';
+  }
+
+  window.openStudentQueryModal = function(e) {
+    if (e && typeof e.preventDefault === 'function') e.preventDefault();
+    const fb = document.getElementById('modalPortalFeedback');
+    if (fb) fb.classList.remove('cg-modal-open');
+    const m = document.getElementById('modalStudentQuery');
+    if (m) {
+      m.classList.add('cg-modal-open');
+      const sc = document.getElementById('modalSqSuccessCard');
+      const fm = document.getElementById('popupStudentQueryForm');
+      if (sc) sc.style.display = 'none';
+      if (fm) fm.style.display = 'block';
+      lockBodyScroll(true);
+      const nameInput = document.getElementById('modal_sq_name');
+      if (nameInput) setTimeout(function() { nameInput.focus(); }, 120);
+    }
+    return false;
+  };
+
+  window.closeStudentQueryModal = function() {
+    const m = document.getElementById('modalStudentQuery');
+    if (m) m.classList.remove('cg-modal-open');
+    lockBodyScroll(false);
+  };
+
+  window.resetStudentQueryModal = function() {
+    const sc = document.getElementById('modalSqSuccessCard');
+    const fm = document.getElementById('popupStudentQueryForm');
+    if (sc) sc.style.display = 'none';
+    if (fm) { fm.reset(); fm.style.display = 'block'; }
+  };
+
+  window.openPortalFeedbackModal = function(e) {
+    if (e && typeof e.preventDefault === 'function') e.preventDefault();
+    const sq = document.getElementById('modalStudentQuery');
+    if (sq) sq.classList.remove('cg-modal-open');
+    const m = document.getElementById('modalPortalFeedback');
+    if (m) {
+      m.classList.add('cg-modal-open');
+      const sc = document.getElementById('modalFbSuccessCard');
+      const fm = document.getElementById('popupFeedbackForm');
+      if (sc) sc.style.display = 'none';
+      if (fm) fm.style.display = 'block';
+      lockBodyScroll(true);
+      const nameInput = document.getElementById('modal_fb_name');
+      if (nameInput) setTimeout(function() { nameInput.focus(); }, 120);
+    }
+    return false;
+  };
+  window.openFeedbackModal = window.openPortalFeedbackModal;
+
+  window.closePortalFeedbackModal = function() {
+    const m = document.getElementById('modalPortalFeedback');
+    if (m) m.classList.remove('cg-modal-open');
+    lockBodyScroll(false);
+  };
+  window.closeFeedbackModal = window.closePortalFeedbackModal;
+
+  window.resetFeedbackModal = function() {
+    const sc = document.getElementById('modalFbSuccessCard');
+    const fm = document.getElementById('popupFeedbackForm');
+    if (sc) sc.style.display = 'none';
+    if (fm) { fm.reset(); fm.style.display = 'block'; }
+  };
+
+  window.switchModalToFeedback = function() {
+    window.openPortalFeedbackModal();
+  };
+  window.switchModalToQuery = function() {
+    window.openStudentQueryModal();
+  };
+
+  document.addEventListener('keydown', function(ev) {
+    if (ev.key === 'Escape') {
+      const sq = document.getElementById('modalStudentQuery');
+      const fb = document.getElementById('modalPortalFeedback');
+      if (sq && sq.classList.contains('cg-modal-open')) window.closeStudentQueryModal();
+      if (fb && fb.classList.contains('cg-modal-open')) window.closePortalFeedbackModal();
+    }
+  });
+
+  function showCgPortalToast(msg, isError) {
+    let t = document.getElementById("cgInlineSuccessToast");
+    if (!t) {
+      t = document.createElement("div");
+      t.id = "cgInlineSuccessToast";
+      t.className = "no-print";
+      t.style.cssText = "position:fixed;bottom:24px;left:50%;transform:translateX(-50%);padding:12px 22px;border-radius:12px;font-weight:800;font-size:0.9rem;z-index:110000;box-shadow:0 10px 28px rgba(0,0,0,0.45);max-width:92vw;text-align:center;";
+      document.body.appendChild(t);
+    }
+    if (isError) {
+      t.style.background = "linear-gradient(135deg,#991b1b,#b91c1c)";
+      t.style.color = "#fef2f2";
+      t.style.border = "2px solid #fca5a5";
+      t.textContent = "⚠️ " + msg;
+    } else {
+      t.style.background = "linear-gradient(135deg,#065f46,#047857)";
+      t.style.color = "#fef08a";
+      t.style.border = "2px solid #facc15";
+      t.textContent = "✅ " + msg;
+    }
+    t.style.display = "block";
+    clearTimeout(t._hideTimer);
+    t._hideTimer = setTimeout(function() { t.style.display = "none"; }, 4500);
+  }
+
+  async function postCgToGoogleSheet(payload) {
+    const targetUrl = payload.formType === 'student_query' ? CG_APPS_SCRIPT_QUERIES_URL : CG_APPS_SCRIPT_FEEDBACK_URL;
+    try {
+      const storeKey = payload.formType === 'student_query' ? 'student_query_records' : 'portal_feedback_records';
+      const existing = JSON.parse(localStorage.getItem(storeKey) || '[]');
+      existing.push(payload);
+      localStorage.setItem(storeKey, JSON.stringify(existing));
+    } catch (err) {}
+
+    try {
+      await fetch(targetUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      });
+    } catch (err) {}
+
+    try {
+      const iframe = document.getElementById('hidden_form_sink');
+      if (iframe) {
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = targetUrl;
+        form.target = 'hidden_form_sink';
+        for (const k in payload) {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = k;
+          input.value = typeof payload[k] === 'object' ? JSON.stringify(payload[k]) : payload[k];
+          form.appendChild(input);
+        }
+        document.body.appendChild(form);
+        form.submit();
+        setTimeout(function() { form.remove(); }, 1200);
+      }
+    } catch (iframeErr) {}
+  }
+
+  window.handlePopupStudentQuerySubmit = async function(e) {
+    e.preventDefault();
+    const phone = (document.getElementById('modal_sq_phone')?.value || '').trim();
+    if (!/^[0-9]{10}$/.test(phone)) {
+      showCgPortalToast('தயவுசெய்து சரியான 10 இலக்க மொபைல் எண்ணை உள்ளிடவும்.', true);
+      return;
+    }
+    const btn = document.getElementById('popupSqSubmitBtn');
+    const origText = btn ? btn.innerHTML : '';
+    if (btn) { btn.disabled = true; btn.innerHTML = '⏳ பதிவாகிறது...'; }
+
+    const ticketId = 'TN-CG-2026-' + Math.floor(1000 + Math.random() * 9000);
+    const pageName = (window.location.pathname.split('/').pop() || document.title || 'subpage').slice(0, 80);
+    const payload = {
+      formType: 'student_query',
+      ticketId: ticketId,
+      name: (document.getElementById('modal_sq_name')?.value || '').trim(),
+      studentClass: document.getElementById('modal_sq_class')?.value || '12-ஆம் வகுப்பு (HSC)',
+      schoolType: document.getElementById('modal_sq_school')?.value || 'அரசுப் பள்ளி (7.5% தகுதி)',
+      district: (document.getElementById('modal_sq_district')?.value || 'சிவகங்கை').trim(),
+      phone: phone,
+      email: (document.getElementById('modal_sq_email')?.value || '').trim(),
+      category: document.getElementById('modal_sq_category')?.value || 'நுழைவுத்தேர்வுகள் (NEET / JEE / CUET / CLAT)',
+      query: (document.getElementById('modal_sq_query')?.value || '').trim(),
+      sourcePage: pageName,
+      spreadsheetId: '1-nkKQyAqE2IK31Rf4-qXBDVjLD88S2U3d_uF0AGrOZQ',
+      sheetName: 'Sheet1',
+      timestamp: new Date().toLocaleString('ta-IN', { timeZone: 'Asia/Kolkata' })
+    };
+
+    await postCgToGoogleSheet(payload);
+
+    const tidEl = document.getElementById('modalTicketIdDisplay');
+    if (tidEl) tidEl.textContent = ticketId;
+    const fm = document.getElementById('popupStudentQueryForm');
+    const sc = document.getElementById('modalSqSuccessCard');
+    if (fm) { fm.style.display = 'none'; fm.reset(); }
+    if (sc) sc.style.display = 'block';
+    if (btn) { btn.disabled = false; btn.innerHTML = origText; }
+    showCgPortalToast('தங்களது வினா Google Sheet-ல் வெற்றிகரமாகப் பதிவு செய்யப்பட்டது! (' + ticketId + ')', false);
+  };
+
+  window.handlePopupFeedbackSubmit = async function(e) {
+    e.preventDefault();
+    const phone = (document.getElementById('modal_fb_phone')?.value || '').trim();
+    if (!/^[0-9]{10}$/.test(phone)) {
+      showCgPortalToast('தயவுசெய்து சரியான 10 இலக்க தொலைபேசி எண்ணை உள்ளிடவும்.', true);
+      return;
+    }
+    const email = (document.getElementById('modal_fb_email')?.value || '').trim();
+    if (!email || !email.includes('@') || !email.includes('.')) {
+      showCgPortalToast('தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்.', true);
+      return;
+    }
+
+    const btn = document.getElementById('popupFbSubmitBtn');
+    const origText = btn ? btn.innerHTML : '';
+    if (btn) { btn.disabled = true; btn.innerHTML = '⏳ பதிவாகிறது...'; }
+
+    const refId = 'TN-FB-2026-' + Math.floor(1000 + Math.random() * 9000);
+    const pageName = (window.location.pathname.split('/').pop() || document.title || 'subpage').slice(0, 80);
+    const payload = {
+      formType: 'portal_feedback',
+      refId: refId,
+      name: (document.getElementById('modal_fb_name')?.value || '').trim(),
+      place: (document.getElementById('modal_fb_place')?.value || '').trim(),
+      phone: phone,
+      email: email,
+      link: (document.getElementById('modal_fb_link')?.value || '').trim() || 'இல்லை',
+      message: (document.getElementById('modal_fb_message')?.value || '').trim(),
+      sourcePage: pageName,
+      spreadsheetId: '1fSIyCI4AsqA2-8aqRr5XQb7KODEA6pvnyNhjKO_PBSc',
+      sheetName: 'Sheet1',
+      timestamp: new Date().toLocaleString('ta-IN', { timeZone: 'Asia/Kolkata' })
+    };
+
+    await postCgToGoogleSheet(payload);
+
+    const refEl = document.getElementById('modalFbRefDisplay');
+    if (refEl) refEl.textContent = refId;
+    const fm = document.getElementById('popupFeedbackForm');
+    const sc = document.getElementById('modalFbSuccessCard');
+    if (fm) { fm.style.display = 'none'; fm.reset(); }
+    if (sc) sc.style.display = 'block';
+    if (btn) { btn.disabled = false; btn.innerHTML = origText; }
+    showCgPortalToast('தங்கள் மேலான ஆலோசனை Google Sheet-ல் பதிவு செய்யப்பட்டது! (' + refId + ')', false);
+  };
+})();
+</script>
+
 </body>
 </html>
